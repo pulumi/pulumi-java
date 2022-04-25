@@ -15,52 +15,52 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetIntegrationAccountPartnerResult {
     /**
-     * The changed time.
+     * @return The changed time.
      * 
      */
     private final String changedTime;
     /**
-     * The partner content.
+     * @return The partner content.
      * 
      */
     private final PartnerContentResponse content;
     /**
-     * The created time.
+     * @return The created time.
      * 
      */
     private final String createdTime;
     /**
-     * The resource id.
+     * @return The resource id.
      * 
      */
     private final String id;
     /**
-     * The resource location.
+     * @return The resource location.
      * 
      */
     private final @Nullable String location;
     /**
-     * The metadata.
+     * @return The metadata.
      * 
      */
     private final @Nullable Object metadata;
     /**
-     * Gets the resource name.
+     * @return Gets the resource name.
      * 
      */
     private final String name;
     /**
-     * The partner type.
+     * @return The partner type.
      * 
      */
     private final String partnerType;
     /**
-     * The resource tags.
+     * @return The resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Gets the resource type.
+     * @return Gets the resource type.
      * 
      */
     private final String type;
@@ -90,72 +90,72 @@ public final class GetIntegrationAccountPartnerResult {
     }
 
     /**
-     * The changed time.
+     * @return The changed time.
      * 
-    */
+     */
     public String changedTime() {
         return this.changedTime;
     }
     /**
-     * The partner content.
+     * @return The partner content.
      * 
-    */
+     */
     public PartnerContentResponse content() {
         return this.content;
     }
     /**
-     * The created time.
+     * @return The created time.
      * 
-    */
+     */
     public String createdTime() {
         return this.createdTime;
     }
     /**
-     * The resource id.
+     * @return The resource id.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The resource location.
+     * @return The resource location.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * The metadata.
+     * @return The metadata.
      * 
-    */
+     */
     public Optional<Object> metadata() {
         return Optional.ofNullable(this.metadata);
     }
     /**
-     * Gets the resource name.
+     * @return Gets the resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The partner type.
+     * @return The partner type.
      * 
-    */
+     */
     public String partnerType() {
         return this.partnerType;
     }
     /**
-     * The resource tags.
+     * @return The resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Gets the resource type.
+     * @return Gets the resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

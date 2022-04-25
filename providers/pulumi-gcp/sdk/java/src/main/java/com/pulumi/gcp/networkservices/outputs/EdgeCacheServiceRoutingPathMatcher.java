@@ -14,17 +14,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class EdgeCacheServiceRoutingPathMatcher {
     /**
-     * A human-readable description of the resource.
+     * @return A human-readable description of the resource.
      * 
      */
     private final @Nullable String description;
     /**
-     * The name of the query parameter to match. The query parameter must exist in the request, in the absence of which the request match fails.
+     * @return The name of the query parameter to match. The query parameter must exist in the request, in the absence of which the request match fails.
      * 
      */
     private final String name;
     /**
-     * The routeRules to match against. routeRules support advanced routing behaviour, and can match on paths, headers and query parameters, as well as status codes and HTTP methods.
+     * @return The routeRules to match against. routeRules support advanced routing behaviour, and can match on paths, headers and query parameters, as well as status codes and HTTP methods.
      * Structure is documented below.
      * 
      */
@@ -41,24 +41,24 @@ public final class EdgeCacheServiceRoutingPathMatcher {
     }
 
     /**
-     * A human-readable description of the resource.
+     * @return A human-readable description of the resource.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The name of the query parameter to match. The query parameter must exist in the request, in the absence of which the request match fails.
+     * @return The name of the query parameter to match. The query parameter must exist in the request, in the absence of which the request match fails.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The routeRules to match against. routeRules support advanced routing behaviour, and can match on paths, headers and query parameters, as well as status codes and HTTP methods.
+     * @return The routeRules to match against. routeRules support advanced routing behaviour, and can match on paths, headers and query parameters, as well as status codes and HTTP methods.
      * Structure is documented below.
      * 
-    */
+     */
     public List<EdgeCacheServiceRoutingPathMatcherRouteRule> routeRules() {
         return this.routeRules;
     }

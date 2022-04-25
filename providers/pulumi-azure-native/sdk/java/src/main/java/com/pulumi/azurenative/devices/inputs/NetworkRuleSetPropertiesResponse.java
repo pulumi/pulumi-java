@@ -29,6 +29,10 @@ public final class NetworkRuleSetPropertiesResponse extends com.pulumi.resources
     @Import(name="applyToBuiltInEventHubEndpoint", required=true)
     private Boolean applyToBuiltInEventHubEndpoint;
 
+    /**
+     * @return If True, then Network Rule Set is also applied to BuiltIn EventHub EndPoint of IotHub
+     * 
+     */
     public Boolean applyToBuiltInEventHubEndpoint() {
         return this.applyToBuiltInEventHubEndpoint;
     }
@@ -40,6 +44,10 @@ public final class NetworkRuleSetPropertiesResponse extends com.pulumi.resources
     @Import(name="defaultAction")
     private @Nullable String defaultAction;
 
+    /**
+     * @return Default Action for Network Rule Set
+     * 
+     */
     public Optional<String> defaultAction() {
         return Optional.ofNullable(this.defaultAction);
     }
@@ -51,6 +59,10 @@ public final class NetworkRuleSetPropertiesResponse extends com.pulumi.resources
     @Import(name="ipRules", required=true)
     private List<NetworkRuleSetIpRuleResponse> ipRules;
 
+    /**
+     * @return List of IP Rules
+     * 
+     */
     public List<NetworkRuleSetIpRuleResponse> ipRules() {
         return this.ipRules;
     }
@@ -81,21 +93,45 @@ public final class NetworkRuleSetPropertiesResponse extends com.pulumi.resources
             $ = new NetworkRuleSetPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param applyToBuiltInEventHubEndpoint If True, then Network Rule Set is also applied to BuiltIn EventHub EndPoint of IotHub
+         * 
+         * @return builder
+         * 
+         */
         public Builder applyToBuiltInEventHubEndpoint(Boolean applyToBuiltInEventHubEndpoint) {
             $.applyToBuiltInEventHubEndpoint = applyToBuiltInEventHubEndpoint;
             return this;
         }
 
+        /**
+         * @param defaultAction Default Action for Network Rule Set
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultAction(@Nullable String defaultAction) {
             $.defaultAction = defaultAction;
             return this;
         }
 
+        /**
+         * @param ipRules List of IP Rules
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipRules(List<NetworkRuleSetIpRuleResponse> ipRules) {
             $.ipRules = ipRules;
             return this;
         }
 
+        /**
+         * @param ipRules List of IP Rules
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipRules(NetworkRuleSetIpRuleResponse... ipRules) {
             return ipRules(List.of(ipRules));
         }

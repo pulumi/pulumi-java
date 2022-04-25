@@ -26,6 +26,10 @@ public final class ConnectorProvisionedCapacityArgs extends com.pulumi.resources
     @Import(name="mcuCount")
     private @Nullable Output<Integer> mcuCount;
 
+    /**
+     * @return Specifies how many MSK Connect Units (MCU) are allocated to the connector.
+     * 
+     */
     public Optional<Output<Integer>> mcuCount() {
         return Optional.ofNullable(this.mcuCount);
     }
@@ -37,6 +41,10 @@ public final class ConnectorProvisionedCapacityArgs extends com.pulumi.resources
     @Import(name="workerCount", required=true)
     private Output<Integer> workerCount;
 
+    /**
+     * @return Number of workers for a connector.
+     * 
+     */
     public Output<Integer> workerCount() {
         return this.workerCount;
     }
@@ -66,20 +74,44 @@ public final class ConnectorProvisionedCapacityArgs extends com.pulumi.resources
             $ = new ConnectorProvisionedCapacityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param mcuCount Specifies how many MSK Connect Units (MCU) are allocated to the connector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mcuCount(@Nullable Output<Integer> mcuCount) {
             $.mcuCount = mcuCount;
             return this;
         }
 
+        /**
+         * @param mcuCount Specifies how many MSK Connect Units (MCU) are allocated to the connector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mcuCount(Integer mcuCount) {
             return mcuCount(Output.of(mcuCount));
         }
 
+        /**
+         * @param workerCount Number of workers for a connector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workerCount(Output<Integer> workerCount) {
             $.workerCount = workerCount;
             return this;
         }
 
+        /**
+         * @param workerCount Number of workers for a connector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workerCount(Integer workerCount) {
             return workerCount(Output.of(workerCount));
         }

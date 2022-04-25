@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DayResponse {
     /**
-     * Date of the month
+     * @return Date of the month
      * 
      */
     private final @Nullable Integer date;
     /**
-     * Whether Date is last date of month
+     * @return Whether Date is last date of month
      * 
      */
     private final @Nullable Boolean isLast;
@@ -32,16 +32,16 @@ public final class DayResponse {
     }
 
     /**
-     * Date of the month
+     * @return Date of the month
      * 
-    */
+     */
     public Optional<Integer> date() {
         return Optional.ofNullable(this.date);
     }
     /**
-     * Whether Date is last date of month
+     * @return Whether Date is last date of month
      * 
-    */
+     */
     public Optional<Boolean> isLast() {
         return Optional.ofNullable(this.isLast);
     }

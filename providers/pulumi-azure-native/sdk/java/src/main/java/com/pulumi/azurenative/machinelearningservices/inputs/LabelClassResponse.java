@@ -26,6 +26,10 @@ public final class LabelClassResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="displayName")
     private @Nullable String displayName;
 
+    /**
+     * @return Display name of the label class.
+     * 
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -37,6 +41,10 @@ public final class LabelClassResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="subclasses")
     private @Nullable Map<String,LabelClassResponse> subclasses;
 
+    /**
+     * @return Dictionary of subclasses of the label class.
+     * 
+     */
     public Optional<Map<String,LabelClassResponse>> subclasses() {
         return Optional.ofNullable(this.subclasses);
     }
@@ -66,11 +74,23 @@ public final class LabelClassResponse extends com.pulumi.resources.InvokeArgs {
             $ = new LabelClassResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayName Display name of the label class.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable String displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param subclasses Dictionary of subclasses of the label class.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subclasses(@Nullable Map<String,LabelClassResponse> subclasses) {
             $.subclasses = subclasses;
             return this;

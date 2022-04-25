@@ -31,6 +31,10 @@ public final class ConsentStoreIamBindingState extends com.pulumi.resources.Reso
     @Import(name="consentStoreId")
     private @Nullable Output<String> consentStoreId;
 
+    /**
+     * @return Used to find the parent resource to bind the IAM policy to
+     * 
+     */
     public Optional<Output<String>> consentStoreId() {
         return Optional.ofNullable(this.consentStoreId);
     }
@@ -44,6 +48,12 @@ public final class ConsentStoreIamBindingState extends com.pulumi.resources.Reso
     @Import(name="dataset")
     private @Nullable Output<String> dataset;
 
+    /**
+     * @return Identifies the dataset addressed by this request. Must be in the format
+     * &#39;projects/{project}/locations/{location}/datasets/{dataset}&#39;
+     * Used to find the parent resource to bind the IAM policy to
+     * 
+     */
     public Optional<Output<String>> dataset() {
         return Optional.ofNullable(this.dataset);
     }
@@ -55,6 +65,10 @@ public final class ConsentStoreIamBindingState extends com.pulumi.resources.Reso
     @Import(name="etag")
     private @Nullable Output<String> etag;
 
+    /**
+     * @return (Computed) The etag of the IAM policy.
+     * 
+     */
     public Optional<Output<String>> etag() {
         return Optional.ofNullable(this.etag);
     }
@@ -75,6 +89,12 @@ public final class ConsentStoreIamBindingState extends com.pulumi.resources.Reso
     @Import(name="role")
     private @Nullable Output<String> role;
 
+    /**
+     * @return The role that should be applied. Only one
+     * `gcp.healthcare.ConsentStoreIamBinding` can be used per role. Note that custom roles must be of the format
+     * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+     * 
+     */
     public Optional<Output<String>> role() {
         return Optional.ofNullable(this.role);
     }
@@ -117,29 +137,69 @@ public final class ConsentStoreIamBindingState extends com.pulumi.resources.Reso
             return condition(Output.of(condition));
         }
 
+        /**
+         * @param consentStoreId Used to find the parent resource to bind the IAM policy to
+         * 
+         * @return builder
+         * 
+         */
         public Builder consentStoreId(@Nullable Output<String> consentStoreId) {
             $.consentStoreId = consentStoreId;
             return this;
         }
 
+        /**
+         * @param consentStoreId Used to find the parent resource to bind the IAM policy to
+         * 
+         * @return builder
+         * 
+         */
         public Builder consentStoreId(String consentStoreId) {
             return consentStoreId(Output.of(consentStoreId));
         }
 
+        /**
+         * @param dataset Identifies the dataset addressed by this request. Must be in the format
+         * &#39;projects/{project}/locations/{location}/datasets/{dataset}&#39;
+         * Used to find the parent resource to bind the IAM policy to
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataset(@Nullable Output<String> dataset) {
             $.dataset = dataset;
             return this;
         }
 
+        /**
+         * @param dataset Identifies the dataset addressed by this request. Must be in the format
+         * &#39;projects/{project}/locations/{location}/datasets/{dataset}&#39;
+         * Used to find the parent resource to bind the IAM policy to
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataset(String dataset) {
             return dataset(Output.of(dataset));
         }
 
+        /**
+         * @param etag (Computed) The etag of the IAM policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(@Nullable Output<String> etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param etag (Computed) The etag of the IAM policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             return etag(Output.of(etag));
         }
@@ -157,11 +217,27 @@ public final class ConsentStoreIamBindingState extends com.pulumi.resources.Reso
             return members(List.of(members));
         }
 
+        /**
+         * @param role The role that should be applied. Only one
+         * `gcp.healthcare.ConsentStoreIamBinding` can be used per role. Note that custom roles must be of the format
+         * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(@Nullable Output<String> role) {
             $.role = role;
             return this;
         }
 
+        /**
+         * @param role The role that should be applied. Only one
+         * `gcp.healthcare.ConsentStoreIamBinding` can be used per role. Note that custom roles must be of the format
+         * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(String role) {
             return role(Output.of(role));
         }

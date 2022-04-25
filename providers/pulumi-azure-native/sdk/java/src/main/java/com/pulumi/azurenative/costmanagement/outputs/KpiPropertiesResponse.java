@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class KpiPropertiesResponse {
     /**
-     * show the KPI in the UI?
+     * @return show the KPI in the UI?
      * 
      */
     private final @Nullable Boolean enabled;
     /**
-     * ID of resource related to metric (budget).
+     * @return ID of resource related to metric (budget).
      * 
      */
     private final @Nullable String id;
     /**
-     * KPI type (Forecast, Budget).
+     * @return KPI type (Forecast, Budget).
      * 
      */
     private final @Nullable String type;
@@ -39,23 +39,23 @@ public final class KpiPropertiesResponse {
     }
 
     /**
-     * show the KPI in the UI?
+     * @return show the KPI in the UI?
      * 
-    */
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
-     * ID of resource related to metric (budget).
+     * @return ID of resource related to metric (budget).
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * KPI type (Forecast, Budget).
+     * @return KPI type (Forecast, Budget).
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }

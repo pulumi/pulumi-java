@@ -25,6 +25,10 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="distributionConfigurationArn")
     private @Nullable Output<String> distributionConfigurationArn;
 
+    /**
+     * @return Amazon Resource Name (ARN) of the Image Builder Distribution Configuration.
+     * 
+     */
     public Optional<Output<String>> distributionConfigurationArn() {
         return Optional.ofNullable(this.distributionConfigurationArn);
     }
@@ -36,6 +40,10 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enhancedImageMetadataEnabled")
     private @Nullable Output<Boolean> enhancedImageMetadataEnabled;
 
+    /**
+     * @return Whether additional information about the image being created is collected. Defaults to `true`.
+     * 
+     */
     public Optional<Output<Boolean>> enhancedImageMetadataEnabled() {
         return Optional.ofNullable(this.enhancedImageMetadataEnabled);
     }
@@ -47,6 +55,10 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="imageRecipeArn", required=true)
     private Output<String> imageRecipeArn;
 
+    /**
+     * @return Amazon Resource Name (ARN) of the Image Builder Infrastructure Recipe.
+     * 
+     */
     public Output<String> imageRecipeArn() {
         return this.imageRecipeArn;
     }
@@ -58,6 +70,10 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="imageTestsConfiguration")
     private @Nullable Output<ImageImageTestsConfigurationArgs> imageTestsConfiguration;
 
+    /**
+     * @return Configuration block with image tests configuration. Detailed below.
+     * 
+     */
     public Optional<Output<ImageImageTestsConfigurationArgs>> imageTestsConfiguration() {
         return Optional.ofNullable(this.imageTestsConfiguration);
     }
@@ -69,6 +85,10 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="infrastructureConfigurationArn", required=true)
     private Output<String> infrastructureConfigurationArn;
 
+    /**
+     * @return Amazon Resource Name (ARN) of the Image Builder Infrastructure Configuration.
+     * 
+     */
     public Output<String> infrastructureConfigurationArn() {
         return this.infrastructureConfigurationArn;
     }
@@ -80,6 +100,10 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Key-value map of resource tags for the Image Builder Image. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -113,56 +137,128 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ImageArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param distributionConfigurationArn Amazon Resource Name (ARN) of the Image Builder Distribution Configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder distributionConfigurationArn(@Nullable Output<String> distributionConfigurationArn) {
             $.distributionConfigurationArn = distributionConfigurationArn;
             return this;
         }
 
+        /**
+         * @param distributionConfigurationArn Amazon Resource Name (ARN) of the Image Builder Distribution Configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder distributionConfigurationArn(String distributionConfigurationArn) {
             return distributionConfigurationArn(Output.of(distributionConfigurationArn));
         }
 
+        /**
+         * @param enhancedImageMetadataEnabled Whether additional information about the image being created is collected. Defaults to `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enhancedImageMetadataEnabled(@Nullable Output<Boolean> enhancedImageMetadataEnabled) {
             $.enhancedImageMetadataEnabled = enhancedImageMetadataEnabled;
             return this;
         }
 
+        /**
+         * @param enhancedImageMetadataEnabled Whether additional information about the image being created is collected. Defaults to `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enhancedImageMetadataEnabled(Boolean enhancedImageMetadataEnabled) {
             return enhancedImageMetadataEnabled(Output.of(enhancedImageMetadataEnabled));
         }
 
+        /**
+         * @param imageRecipeArn Amazon Resource Name (ARN) of the Image Builder Infrastructure Recipe.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageRecipeArn(Output<String> imageRecipeArn) {
             $.imageRecipeArn = imageRecipeArn;
             return this;
         }
 
+        /**
+         * @param imageRecipeArn Amazon Resource Name (ARN) of the Image Builder Infrastructure Recipe.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageRecipeArn(String imageRecipeArn) {
             return imageRecipeArn(Output.of(imageRecipeArn));
         }
 
+        /**
+         * @param imageTestsConfiguration Configuration block with image tests configuration. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageTestsConfiguration(@Nullable Output<ImageImageTestsConfigurationArgs> imageTestsConfiguration) {
             $.imageTestsConfiguration = imageTestsConfiguration;
             return this;
         }
 
+        /**
+         * @param imageTestsConfiguration Configuration block with image tests configuration. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageTestsConfiguration(ImageImageTestsConfigurationArgs imageTestsConfiguration) {
             return imageTestsConfiguration(Output.of(imageTestsConfiguration));
         }
 
+        /**
+         * @param infrastructureConfigurationArn Amazon Resource Name (ARN) of the Image Builder Infrastructure Configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder infrastructureConfigurationArn(Output<String> infrastructureConfigurationArn) {
             $.infrastructureConfigurationArn = infrastructureConfigurationArn;
             return this;
         }
 
+        /**
+         * @param infrastructureConfigurationArn Amazon Resource Name (ARN) of the Image Builder Infrastructure Configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder infrastructureConfigurationArn(String infrastructureConfigurationArn) {
             return infrastructureConfigurationArn(Output.of(infrastructureConfigurationArn));
         }
 
+        /**
+         * @param tags Key-value map of resource tags for the Image Builder Image. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Key-value map of resource tags for the Image Builder Image. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

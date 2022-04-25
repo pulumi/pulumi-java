@@ -22,6 +22,11 @@ public final class ServiceAttachmentConsumerAcceptListGetArgs extends com.pulumi
     @Import(name="connectionLimit", required=true)
     private Output<Integer> connectionLimit;
 
+    /**
+     * @return The number of consumer forwarding rules the consumer project can
+     * create.
+     * 
+     */
     public Output<Integer> connectionLimit() {
         return this.connectionLimit;
     }
@@ -33,6 +38,10 @@ public final class ServiceAttachmentConsumerAcceptListGetArgs extends com.pulumi
     @Import(name="projectIdOrNum", required=true)
     private Output<String> projectIdOrNum;
 
+    /**
+     * @return A project that is allowed to connect to this service attachment.
+     * 
+     */
     public Output<String> projectIdOrNum() {
         return this.projectIdOrNum;
     }
@@ -62,20 +71,46 @@ public final class ServiceAttachmentConsumerAcceptListGetArgs extends com.pulumi
             $ = new ServiceAttachmentConsumerAcceptListGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param connectionLimit The number of consumer forwarding rules the consumer project can
+         * create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionLimit(Output<Integer> connectionLimit) {
             $.connectionLimit = connectionLimit;
             return this;
         }
 
+        /**
+         * @param connectionLimit The number of consumer forwarding rules the consumer project can
+         * create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionLimit(Integer connectionLimit) {
             return connectionLimit(Output.of(connectionLimit));
         }
 
+        /**
+         * @param projectIdOrNum A project that is allowed to connect to this service attachment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectIdOrNum(Output<String> projectIdOrNum) {
             $.projectIdOrNum = projectIdOrNum;
             return this;
         }
 
+        /**
+         * @param projectIdOrNum A project that is allowed to connect to this service attachment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectIdOrNum(String projectIdOrNum) {
             return projectIdOrNum(Output.of(projectIdOrNum));
         }

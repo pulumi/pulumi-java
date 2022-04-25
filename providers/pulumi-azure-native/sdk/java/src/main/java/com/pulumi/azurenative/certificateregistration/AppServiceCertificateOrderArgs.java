@@ -28,6 +28,10 @@ public final class AppServiceCertificateOrderArgs extends com.pulumi.resources.R
     @Import(name="autoRenew")
     private @Nullable Output<Boolean> autoRenew;
 
+    /**
+     * @return &lt;code&gt;true&lt;/code&gt; if the certificate should be automatically renewed when it expires; otherwise, &lt;code&gt;false&lt;/code&gt;.
+     * 
+     */
     public Optional<Output<Boolean>> autoRenew() {
         return Optional.ofNullable(this.autoRenew);
     }
@@ -39,6 +43,10 @@ public final class AppServiceCertificateOrderArgs extends com.pulumi.resources.R
     @Import(name="certificateOrderName")
     private @Nullable Output<String> certificateOrderName;
 
+    /**
+     * @return Name of the certificate order.
+     * 
+     */
     public Optional<Output<String>> certificateOrderName() {
         return Optional.ofNullable(this.certificateOrderName);
     }
@@ -50,6 +58,10 @@ public final class AppServiceCertificateOrderArgs extends com.pulumi.resources.R
     @Import(name="certificates")
     private @Nullable Output<Map<String,AppServiceCertificateArgs>> certificates;
 
+    /**
+     * @return State of the Key Vault secret.
+     * 
+     */
     public Optional<Output<Map<String,AppServiceCertificateArgs>>> certificates() {
         return Optional.ofNullable(this.certificates);
     }
@@ -61,6 +73,10 @@ public final class AppServiceCertificateOrderArgs extends com.pulumi.resources.R
     @Import(name="csr")
     private @Nullable Output<String> csr;
 
+    /**
+     * @return Last CSR that was created for this order.
+     * 
+     */
     public Optional<Output<String>> csr() {
         return Optional.ofNullable(this.csr);
     }
@@ -72,6 +88,10 @@ public final class AppServiceCertificateOrderArgs extends com.pulumi.resources.R
     @Import(name="distinguishedName")
     private @Nullable Output<String> distinguishedName;
 
+    /**
+     * @return Certificate distinguished name.
+     * 
+     */
     public Optional<Output<String>> distinguishedName() {
         return Optional.ofNullable(this.distinguishedName);
     }
@@ -83,6 +103,10 @@ public final class AppServiceCertificateOrderArgs extends com.pulumi.resources.R
     @Import(name="keySize")
     private @Nullable Output<Integer> keySize;
 
+    /**
+     * @return Certificate key size.
+     * 
+     */
     public Optional<Output<Integer>> keySize() {
         return Optional.ofNullable(this.keySize);
     }
@@ -94,6 +118,10 @@ public final class AppServiceCertificateOrderArgs extends com.pulumi.resources.R
     @Import(name="kind")
     private @Nullable Output<String> kind;
 
+    /**
+     * @return Kind of resource.
+     * 
+     */
     public Optional<Output<String>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -105,6 +133,10 @@ public final class AppServiceCertificateOrderArgs extends com.pulumi.resources.R
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource Location.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -116,6 +148,10 @@ public final class AppServiceCertificateOrderArgs extends com.pulumi.resources.R
     @Import(name="productType", required=true)
     private Output<CertificateProductType> productType;
 
+    /**
+     * @return Certificate product type.
+     * 
+     */
     public Output<CertificateProductType> productType() {
         return this.productType;
     }
@@ -127,6 +163,10 @@ public final class AppServiceCertificateOrderArgs extends com.pulumi.resources.R
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of the resource group to which the resource belongs.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -138,6 +178,10 @@ public final class AppServiceCertificateOrderArgs extends com.pulumi.resources.R
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -149,6 +193,10 @@ public final class AppServiceCertificateOrderArgs extends com.pulumi.resources.R
     @Import(name="validityInYears")
     private @Nullable Output<Integer> validityInYears;
 
+    /**
+     * @return Duration in years (must be between 1 and 3).
+     * 
+     */
     public Optional<Output<Integer>> validityInYears() {
         return Optional.ofNullable(this.validityInYears);
     }
@@ -188,110 +236,254 @@ public final class AppServiceCertificateOrderArgs extends com.pulumi.resources.R
             $ = new AppServiceCertificateOrderArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoRenew &lt;code&gt;true&lt;/code&gt; if the certificate should be automatically renewed when it expires; otherwise, &lt;code&gt;false&lt;/code&gt;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoRenew(@Nullable Output<Boolean> autoRenew) {
             $.autoRenew = autoRenew;
             return this;
         }
 
+        /**
+         * @param autoRenew &lt;code&gt;true&lt;/code&gt; if the certificate should be automatically renewed when it expires; otherwise, &lt;code&gt;false&lt;/code&gt;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoRenew(Boolean autoRenew) {
             return autoRenew(Output.of(autoRenew));
         }
 
+        /**
+         * @param certificateOrderName Name of the certificate order.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateOrderName(@Nullable Output<String> certificateOrderName) {
             $.certificateOrderName = certificateOrderName;
             return this;
         }
 
+        /**
+         * @param certificateOrderName Name of the certificate order.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateOrderName(String certificateOrderName) {
             return certificateOrderName(Output.of(certificateOrderName));
         }
 
+        /**
+         * @param certificates State of the Key Vault secret.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificates(@Nullable Output<Map<String,AppServiceCertificateArgs>> certificates) {
             $.certificates = certificates;
             return this;
         }
 
+        /**
+         * @param certificates State of the Key Vault secret.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificates(Map<String,AppServiceCertificateArgs> certificates) {
             return certificates(Output.of(certificates));
         }
 
+        /**
+         * @param csr Last CSR that was created for this order.
+         * 
+         * @return builder
+         * 
+         */
         public Builder csr(@Nullable Output<String> csr) {
             $.csr = csr;
             return this;
         }
 
+        /**
+         * @param csr Last CSR that was created for this order.
+         * 
+         * @return builder
+         * 
+         */
         public Builder csr(String csr) {
             return csr(Output.of(csr));
         }
 
+        /**
+         * @param distinguishedName Certificate distinguished name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder distinguishedName(@Nullable Output<String> distinguishedName) {
             $.distinguishedName = distinguishedName;
             return this;
         }
 
+        /**
+         * @param distinguishedName Certificate distinguished name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder distinguishedName(String distinguishedName) {
             return distinguishedName(Output.of(distinguishedName));
         }
 
+        /**
+         * @param keySize Certificate key size.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keySize(@Nullable Output<Integer> keySize) {
             $.keySize = keySize;
             return this;
         }
 
+        /**
+         * @param keySize Certificate key size.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keySize(Integer keySize) {
             return keySize(Output.of(keySize));
         }
 
+        /**
+         * @param kind Kind of resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Kind of resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param location Resource Location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource Location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param productType Certificate product type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder productType(Output<CertificateProductType> productType) {
             $.productType = productType;
             return this;
         }
 
+        /**
+         * @param productType Certificate product type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder productType(CertificateProductType productType) {
             return productType(Output.of(productType));
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group to which the resource belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group to which the resource belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param validityInYears Duration in years (must be between 1 and 3).
+         * 
+         * @return builder
+         * 
+         */
         public Builder validityInYears(@Nullable Output<Integer> validityInYears) {
             $.validityInYears = validityInYears;
             return this;
         }
 
+        /**
+         * @param validityInYears Duration in years (must be between 1 and 3).
+         * 
+         * @return builder
+         * 
+         */
         public Builder validityInYears(Integer validityInYears) {
             return validityInYears(Output.of(validityInYears));
         }

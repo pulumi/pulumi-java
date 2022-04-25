@@ -20,6 +20,10 @@ public final class WorkerPoolNetworkConfigGetArgs extends com.pulumi.resources.R
     @Import(name="peeredNetwork", required=true)
     private Output<String> peeredNetwork;
 
+    /**
+     * @return Immutable. The network definition that the workers are peered to. If this section is left empty, the workers will be peered to `WorkerPool.project_id` on the service producer network. Must be in the format `projects/{project}/global/networks/{network}`, where `{project}` is a project number, such as `12345`, and `{network}` is the name of a VPC network in the project. See (https://cloud.google.com/cloud-build/docs/custom-workers/set-up-custom-worker-pool-environment#understanding_the_network_configuration_options)
+     * 
+     */
     public Output<String> peeredNetwork() {
         return this.peeredNetwork;
     }
@@ -48,11 +52,23 @@ public final class WorkerPoolNetworkConfigGetArgs extends com.pulumi.resources.R
             $ = new WorkerPoolNetworkConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param peeredNetwork Immutable. The network definition that the workers are peered to. If this section is left empty, the workers will be peered to `WorkerPool.project_id` on the service producer network. Must be in the format `projects/{project}/global/networks/{network}`, where `{project}` is a project number, such as `12345`, and `{network}` is the name of a VPC network in the project. See (https://cloud.google.com/cloud-build/docs/custom-workers/set-up-custom-worker-pool-environment#understanding_the_network_configuration_options)
+         * 
+         * @return builder
+         * 
+         */
         public Builder peeredNetwork(Output<String> peeredNetwork) {
             $.peeredNetwork = peeredNetwork;
             return this;
         }
 
+        /**
+         * @param peeredNetwork Immutable. The network definition that the workers are peered to. If this section is left empty, the workers will be peered to `WorkerPool.project_id` on the service producer network. Must be in the format `projects/{project}/global/networks/{network}`, where `{project}` is a project number, such as `12345`, and `{network}` is the name of a VPC network in the project. See (https://cloud.google.com/cloud-build/docs/custom-workers/set-up-custom-worker-pool-environment#understanding_the_network_configuration_options)
+         * 
+         * @return builder
+         * 
+         */
         public Builder peeredNetwork(String peeredNetwork) {
             return peeredNetwork(Output.of(peeredNetwork));
         }

@@ -26,6 +26,10 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kmsKeyName")
     private @Nullable Output<String> kmsKeyName;
 
+    /**
+     * @return The resource name of the Cloud KMS CryptoKey to be used to protect access to messages published on this topic. The expected format is `projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*`.
+     * 
+     */
     public Optional<Output<String>> kmsKeyName() {
         return Optional.ofNullable(this.kmsKeyName);
     }
@@ -37,6 +41,10 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return See [Creating and managing labels] (https://cloud.google.com/pubsub/docs/labels).
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -48,6 +56,10 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="messageRetentionDuration")
     private @Nullable Output<String> messageRetentionDuration;
 
+    /**
+     * @return Indicates the minimum duration to retain a message after it is published to the topic. If this field is set, messages published to the topic in the last `message_retention_duration` are always available to subscribers. For instance, it allows any attached subscription to [seek to a timestamp](https://cloud.google.com/pubsub/docs/replay-overview#seek_to_a_time) that is up to `message_retention_duration` in the past. If this field is not set, message retention is controlled by settings on individual subscriptions. Cannot be more than 31 days or less than 10 minutes.
+     * 
+     */
     public Optional<Output<String>> messageRetentionDuration() {
         return Optional.ofNullable(this.messageRetentionDuration);
     }
@@ -59,6 +71,10 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="messageStoragePolicy")
     private @Nullable Output<MessageStoragePolicyArgs> messageStoragePolicy;
 
+    /**
+     * @return Policy constraining the set of Google Cloud Platform regions where messages published to the topic may be stored. If not present, then no constraints are in effect.
+     * 
+     */
     public Optional<Output<MessageStoragePolicyArgs>> messageStoragePolicy() {
         return Optional.ofNullable(this.messageStoragePolicy);
     }
@@ -70,6 +86,10 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the topic. It must have the format `&#34;projects/{project}/topics/{topic}&#34;`. `{topic}` must start with a letter, and contain only letters (`[A-Za-z]`), numbers (`[0-9]`), dashes (`-`), underscores (`_`), periods (`.`), tildes (`~`), plus (`+`) or percent signs (`%`). It must be between 3 and 255 characters in length, and it must not start with `&#34;goog&#34;`.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -88,6 +108,10 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="satisfiesPzs")
     private @Nullable Output<Boolean> satisfiesPzs;
 
+    /**
+     * @return Reserved for future use. This field is set only in responses from the server; it is ignored if it is set in any requests.
+     * 
+     */
     public Optional<Output<Boolean>> satisfiesPzs() {
         return Optional.ofNullable(this.satisfiesPzs);
     }
@@ -99,6 +123,10 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="schemaSettings")
     private @Nullable Output<SchemaSettingsArgs> schemaSettings;
 
+    /**
+     * @return Settings for validating messages published against a schema.
+     * 
+     */
     public Optional<Output<SchemaSettingsArgs>> schemaSettings() {
         return Optional.ofNullable(this.schemaSettings);
     }
@@ -142,47 +170,107 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
             $ = new TopicArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kmsKeyName The resource name of the Cloud KMS CryptoKey to be used to protect access to messages published on this topic. The expected format is `projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyName(@Nullable Output<String> kmsKeyName) {
             $.kmsKeyName = kmsKeyName;
             return this;
         }
 
+        /**
+         * @param kmsKeyName The resource name of the Cloud KMS CryptoKey to be used to protect access to messages published on this topic. The expected format is `projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyName(String kmsKeyName) {
             return kmsKeyName(Output.of(kmsKeyName));
         }
 
+        /**
+         * @param labels See [Creating and managing labels] (https://cloud.google.com/pubsub/docs/labels).
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels See [Creating and managing labels] (https://cloud.google.com/pubsub/docs/labels).
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param messageRetentionDuration Indicates the minimum duration to retain a message after it is published to the topic. If this field is set, messages published to the topic in the last `message_retention_duration` are always available to subscribers. For instance, it allows any attached subscription to [seek to a timestamp](https://cloud.google.com/pubsub/docs/replay-overview#seek_to_a_time) that is up to `message_retention_duration` in the past. If this field is not set, message retention is controlled by settings on individual subscriptions. Cannot be more than 31 days or less than 10 minutes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageRetentionDuration(@Nullable Output<String> messageRetentionDuration) {
             $.messageRetentionDuration = messageRetentionDuration;
             return this;
         }
 
+        /**
+         * @param messageRetentionDuration Indicates the minimum duration to retain a message after it is published to the topic. If this field is set, messages published to the topic in the last `message_retention_duration` are always available to subscribers. For instance, it allows any attached subscription to [seek to a timestamp](https://cloud.google.com/pubsub/docs/replay-overview#seek_to_a_time) that is up to `message_retention_duration` in the past. If this field is not set, message retention is controlled by settings on individual subscriptions. Cannot be more than 31 days or less than 10 minutes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageRetentionDuration(String messageRetentionDuration) {
             return messageRetentionDuration(Output.of(messageRetentionDuration));
         }
 
+        /**
+         * @param messageStoragePolicy Policy constraining the set of Google Cloud Platform regions where messages published to the topic may be stored. If not present, then no constraints are in effect.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageStoragePolicy(@Nullable Output<MessageStoragePolicyArgs> messageStoragePolicy) {
             $.messageStoragePolicy = messageStoragePolicy;
             return this;
         }
 
+        /**
+         * @param messageStoragePolicy Policy constraining the set of Google Cloud Platform regions where messages published to the topic may be stored. If not present, then no constraints are in effect.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageStoragePolicy(MessageStoragePolicyArgs messageStoragePolicy) {
             return messageStoragePolicy(Output.of(messageStoragePolicy));
         }
 
+        /**
+         * @param name The name of the topic. It must have the format `&#34;projects/{project}/topics/{topic}&#34;`. `{topic}` must start with a letter, and contain only letters (`[A-Za-z]`), numbers (`[0-9]`), dashes (`-`), underscores (`_`), periods (`.`), tildes (`~`), plus (`+`) or percent signs (`%`). It must be between 3 and 255 characters in length, and it must not start with `&#34;goog&#34;`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the topic. It must have the format `&#34;projects/{project}/topics/{topic}&#34;`. `{topic}` must start with a letter, and contain only letters (`[A-Za-z]`), numbers (`[0-9]`), dashes (`-`), underscores (`_`), periods (`.`), tildes (`~`), plus (`+`) or percent signs (`%`). It must be between 3 and 255 characters in length, and it must not start with `&#34;goog&#34;`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -196,20 +284,44 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param satisfiesPzs Reserved for future use. This field is set only in responses from the server; it is ignored if it is set in any requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder satisfiesPzs(@Nullable Output<Boolean> satisfiesPzs) {
             $.satisfiesPzs = satisfiesPzs;
             return this;
         }
 
+        /**
+         * @param satisfiesPzs Reserved for future use. This field is set only in responses from the server; it is ignored if it is set in any requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder satisfiesPzs(Boolean satisfiesPzs) {
             return satisfiesPzs(Output.of(satisfiesPzs));
         }
 
+        /**
+         * @param schemaSettings Settings for validating messages published against a schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaSettings(@Nullable Output<SchemaSettingsArgs> schemaSettings) {
             $.schemaSettings = schemaSettings;
             return this;
         }
 
+        /**
+         * @param schemaSettings Settings for validating messages published against a schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaSettings(SchemaSettingsArgs schemaSettings) {
             return schemaSettings(Output.of(schemaSettings));
         }

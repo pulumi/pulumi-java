@@ -19,6 +19,10 @@ public final class GetVpcPeeringConnectionPeerCidrBlockSet extends com.pulumi.re
     @Import(name="cidrBlock", required=true)
     private String cidrBlock;
 
+    /**
+     * @return The primary CIDR block of the requester VPC of the specific VPC Peering Connection to retrieve.
+     * 
+     */
     public String cidrBlock() {
         return this.cidrBlock;
     }
@@ -47,6 +51,12 @@ public final class GetVpcPeeringConnectionPeerCidrBlockSet extends com.pulumi.re
             $ = new GetVpcPeeringConnectionPeerCidrBlockSet(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cidrBlock The primary CIDR block of the requester VPC of the specific VPC Peering Connection to retrieve.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cidrBlock(String cidrBlock) {
             $.cidrBlock = cidrBlock;
             return this;

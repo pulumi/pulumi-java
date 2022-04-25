@@ -26,6 +26,10 @@ public final class TimerTriggerResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the trigger.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -37,6 +41,10 @@ public final class TimerTriggerResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="schedule", required=true)
     private String schedule;
 
+    /**
+     * @return The CRON expression for the task schedule
+     * 
+     */
     public String schedule() {
         return this.schedule;
     }
@@ -48,6 +56,10 @@ public final class TimerTriggerResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="status")
     private @Nullable String status;
 
+    /**
+     * @return The current status of trigger.
+     * 
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
@@ -78,16 +90,34 @@ public final class TimerTriggerResponse extends com.pulumi.resources.InvokeArgs 
             $ = new TimerTriggerResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param schedule The CRON expression for the task schedule
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedule(String schedule) {
             $.schedule = schedule;
             return this;
         }
 
+        /**
+         * @param status The current status of trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable String status) {
             $.status = status;
             return this;

@@ -25,6 +25,11 @@ public final class CryptoKeyIAMBindingState extends com.pulumi.resources.Resourc
     @Import(name="condition")
     private @Nullable Output<CryptoKeyIAMBindingConditionGetArgs> condition;
 
+    /**
+     * @return ) An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<CryptoKeyIAMBindingConditionGetArgs>> condition() {
         return Optional.ofNullable(this.condition);
     }
@@ -39,6 +44,13 @@ public final class CryptoKeyIAMBindingState extends com.pulumi.resources.Resourc
     @Import(name="cryptoKeyId")
     private @Nullable Output<String> cryptoKeyId;
 
+    /**
+     * @return The crypto key ID, in the form
+     * `{project_id}/{location_name}/{key_ring_name}/{crypto_key_name}` or
+     * `{location_name}/{key_ring_name}/{crypto_key_name}`. In the second form,
+     * the provider&#39;s project setting will be used as a fallback.
+     * 
+     */
     public Optional<Output<String>> cryptoKeyId() {
         return Optional.ofNullable(this.cryptoKeyId);
     }
@@ -50,6 +62,10 @@ public final class CryptoKeyIAMBindingState extends com.pulumi.resources.Resourc
     @Import(name="etag")
     private @Nullable Output<String> etag;
 
+    /**
+     * @return (Computed) The etag of the project&#39;s IAM policy.
+     * 
+     */
     public Optional<Output<String>> etag() {
         return Optional.ofNullable(this.etag);
     }
@@ -69,6 +85,11 @@ public final class CryptoKeyIAMBindingState extends com.pulumi.resources.Resourc
     @Import(name="role")
     private @Nullable Output<String> role;
 
+    /**
+     * @return The role that should be applied. Note that custom roles must be of the format
+     * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+     * 
+     */
     public Optional<Output<String>> role() {
         return Optional.ofNullable(this.role);
     }
@@ -101,29 +122,73 @@ public final class CryptoKeyIAMBindingState extends com.pulumi.resources.Resourc
             $ = new CryptoKeyIAMBindingState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param condition ) An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder condition(@Nullable Output<CryptoKeyIAMBindingConditionGetArgs> condition) {
             $.condition = condition;
             return this;
         }
 
+        /**
+         * @param condition ) An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder condition(CryptoKeyIAMBindingConditionGetArgs condition) {
             return condition(Output.of(condition));
         }
 
+        /**
+         * @param cryptoKeyId The crypto key ID, in the form
+         * `{project_id}/{location_name}/{key_ring_name}/{crypto_key_name}` or
+         * `{location_name}/{key_ring_name}/{crypto_key_name}`. In the second form,
+         * the provider&#39;s project setting will be used as a fallback.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cryptoKeyId(@Nullable Output<String> cryptoKeyId) {
             $.cryptoKeyId = cryptoKeyId;
             return this;
         }
 
+        /**
+         * @param cryptoKeyId The crypto key ID, in the form
+         * `{project_id}/{location_name}/{key_ring_name}/{crypto_key_name}` or
+         * `{location_name}/{key_ring_name}/{crypto_key_name}`. In the second form,
+         * the provider&#39;s project setting will be used as a fallback.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cryptoKeyId(String cryptoKeyId) {
             return cryptoKeyId(Output.of(cryptoKeyId));
         }
 
+        /**
+         * @param etag (Computed) The etag of the project&#39;s IAM policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(@Nullable Output<String> etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param etag (Computed) The etag of the project&#39;s IAM policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             return etag(Output.of(etag));
         }
@@ -141,11 +206,25 @@ public final class CryptoKeyIAMBindingState extends com.pulumi.resources.Resourc
             return members(List.of(members));
         }
 
+        /**
+         * @param role The role that should be applied. Note that custom roles must be of the format
+         * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(@Nullable Output<String> role) {
             $.role = role;
             return this;
         }
 
+        /**
+         * @param role The role that should be applied. Note that custom roles must be of the format
+         * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(String role) {
             return role(Output.of(role));
         }

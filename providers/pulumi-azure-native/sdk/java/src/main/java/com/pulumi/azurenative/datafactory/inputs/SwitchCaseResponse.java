@@ -65,6 +65,10 @@ public final class SwitchCaseResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="activities")
     private @Nullable List<Object> activities;
 
+    /**
+     * @return List of activities to execute for satisfied case condition.
+     * 
+     */
     public Optional<List<Object>> activities() {
         return Optional.ofNullable(this.activities);
     }
@@ -76,6 +80,10 @@ public final class SwitchCaseResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="value")
     private @Nullable String value;
 
+    /**
+     * @return Expected value that satisfies the expression result of the &#39;on&#39; property.
+     * 
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
@@ -105,15 +113,33 @@ public final class SwitchCaseResponse extends com.pulumi.resources.InvokeArgs {
             $ = new SwitchCaseResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param activities List of activities to execute for satisfied case condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder activities(@Nullable List<Object> activities) {
             $.activities = activities;
             return this;
         }
 
+        /**
+         * @param activities List of activities to execute for satisfied case condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder activities(Object... activities) {
             return activities(List.of(activities));
         }
 
+        /**
+         * @param value Expected value that satisfies the expression result of the &#39;on&#39; property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable String value) {
             $.value = value;
             return this;

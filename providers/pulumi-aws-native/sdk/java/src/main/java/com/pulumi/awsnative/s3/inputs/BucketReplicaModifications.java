@@ -19,6 +19,10 @@ public final class BucketReplicaModifications extends com.pulumi.resources.Invok
     @Import(name="status", required=true)
     private BucketReplicaModificationsStatus status;
 
+    /**
+     * @return Specifies whether Amazon S3 replicates modifications on replicas.
+     * 
+     */
     public BucketReplicaModificationsStatus status() {
         return this.status;
     }
@@ -47,6 +51,12 @@ public final class BucketReplicaModifications extends com.pulumi.resources.Invok
             $ = new BucketReplicaModifications(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param status Specifies whether Amazon S3 replicates modifications on replicas.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(BucketReplicaModificationsStatus status) {
             $.status = status;
             return this;

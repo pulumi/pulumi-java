@@ -28,6 +28,10 @@ public final class StorageProfileResponse extends com.pulumi.resources.InvokeArg
     @Import(name="hanaSids")
     private @Nullable List<SAPSystemIDResponse> hanaSids;
 
+    /**
+     * @return Specifies information related to SAP system IDs for the hana instance.
+     * 
+     */
     public Optional<List<SAPSystemIDResponse>> hanaSids() {
         return Optional.ofNullable(this.hanaSids);
     }
@@ -39,6 +43,10 @@ public final class StorageProfileResponse extends com.pulumi.resources.InvokeArg
     @Import(name="nfsIpAddress", required=true)
     private String nfsIpAddress;
 
+    /**
+     * @return IP Address to connect to storage.
+     * 
+     */
     public String nfsIpAddress() {
         return this.nfsIpAddress;
     }
@@ -50,6 +58,10 @@ public final class StorageProfileResponse extends com.pulumi.resources.InvokeArg
     @Import(name="osDisks")
     private @Nullable List<DiskResponse> osDisks;
 
+    /**
+     * @return Specifies information about the operating system disk used by the hana instance.
+     * 
+     */
     public Optional<List<DiskResponse>> osDisks() {
         return Optional.ofNullable(this.osDisks);
     }
@@ -80,25 +92,55 @@ public final class StorageProfileResponse extends com.pulumi.resources.InvokeArg
             $ = new StorageProfileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hanaSids Specifies information related to SAP system IDs for the hana instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hanaSids(@Nullable List<SAPSystemIDResponse> hanaSids) {
             $.hanaSids = hanaSids;
             return this;
         }
 
+        /**
+         * @param hanaSids Specifies information related to SAP system IDs for the hana instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hanaSids(SAPSystemIDResponse... hanaSids) {
             return hanaSids(List.of(hanaSids));
         }
 
+        /**
+         * @param nfsIpAddress IP Address to connect to storage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nfsIpAddress(String nfsIpAddress) {
             $.nfsIpAddress = nfsIpAddress;
             return this;
         }
 
+        /**
+         * @param osDisks Specifies information about the operating system disk used by the hana instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osDisks(@Nullable List<DiskResponse> osDisks) {
             $.osDisks = osDisks;
             return this;
         }
 
+        /**
+         * @param osDisks Specifies information about the operating system disk used by the hana instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osDisks(DiskResponse... osDisks) {
             return osDisks(List.of(osDisks));
         }

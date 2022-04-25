@@ -24,6 +24,10 @@ public final class CertificateTemplatePredefinedValuesAdditionalExtensionGetArgs
     @Import(name="critical")
     private @Nullable Output<Boolean> critical;
 
+    /**
+     * @return Optional. Indicates whether or not this extension is critical (i.e., if the client does not know how to handle this extension, the client should consider this to be an error).
+     * 
+     */
     public Optional<Output<Boolean>> critical() {
         return Optional.ofNullable(this.critical);
     }
@@ -35,6 +39,10 @@ public final class CertificateTemplatePredefinedValuesAdditionalExtensionGetArgs
     @Import(name="objectId", required=true)
     private Output<CertificateTemplatePredefinedValuesAdditionalExtensionObjectIdGetArgs> objectId;
 
+    /**
+     * @return Required. The OID for this X.509 extension.
+     * 
+     */
     public Output<CertificateTemplatePredefinedValuesAdditionalExtensionObjectIdGetArgs> objectId() {
         return this.objectId;
     }
@@ -46,6 +54,10 @@ public final class CertificateTemplatePredefinedValuesAdditionalExtensionGetArgs
     @Import(name="value", required=true)
     private Output<String> value;
 
+    /**
+     * @return Required. The value of this X.509 extension.
+     * 
+     */
     public Output<String> value() {
         return this.value;
     }
@@ -76,29 +88,65 @@ public final class CertificateTemplatePredefinedValuesAdditionalExtensionGetArgs
             $ = new CertificateTemplatePredefinedValuesAdditionalExtensionGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param critical Optional. Indicates whether or not this extension is critical (i.e., if the client does not know how to handle this extension, the client should consider this to be an error).
+         * 
+         * @return builder
+         * 
+         */
         public Builder critical(@Nullable Output<Boolean> critical) {
             $.critical = critical;
             return this;
         }
 
+        /**
+         * @param critical Optional. Indicates whether or not this extension is critical (i.e., if the client does not know how to handle this extension, the client should consider this to be an error).
+         * 
+         * @return builder
+         * 
+         */
         public Builder critical(Boolean critical) {
             return critical(Output.of(critical));
         }
 
+        /**
+         * @param objectId Required. The OID for this X.509 extension.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectId(Output<CertificateTemplatePredefinedValuesAdditionalExtensionObjectIdGetArgs> objectId) {
             $.objectId = objectId;
             return this;
         }
 
+        /**
+         * @param objectId Required. The OID for this X.509 extension.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectId(CertificateTemplatePredefinedValuesAdditionalExtensionObjectIdGetArgs objectId) {
             return objectId(Output.of(objectId));
         }
 
+        /**
+         * @param value Required. The value of this X.509 extension.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value Required. The value of this X.509 extension.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

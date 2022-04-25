@@ -28,6 +28,10 @@ public final class GraphNodeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="assetId")
     private @Nullable Output<String> assetId;
 
+    /**
+     * @return The id of the asset represented by this node.
+     * 
+     */
     public Optional<Output<String>> assetId() {
         return Optional.ofNullable(this.assetId);
     }
@@ -39,6 +43,10 @@ public final class GraphNodeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="inputId")
     private @Nullable Output<String> inputId;
 
+    /**
+     * @return The id of the input element represented by this node.
+     * 
+     */
     public Optional<Output<String>> inputId() {
         return Optional.ofNullable(this.inputId);
     }
@@ -50,6 +58,10 @@ public final class GraphNodeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="outputId")
     private @Nullable Output<String> outputId;
 
+    /**
+     * @return The id of the output element represented by this node.
+     * 
+     */
     public Optional<Output<String>> outputId() {
         return Optional.ofNullable(this.outputId);
     }
@@ -61,6 +73,10 @@ public final class GraphNodeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="parameters")
     private @Nullable Output<Map<String,WebServiceParameterArgs>> parameters;
 
+    /**
+     * @return If applicable, parameters of the node. Global graph parameters map into these, with values set at runtime.
+     * 
+     */
     public Optional<Output<Map<String,WebServiceParameterArgs>>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -92,38 +108,86 @@ public final class GraphNodeArgs extends com.pulumi.resources.ResourceArgs {
             $ = new GraphNodeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param assetId The id of the asset represented by this node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assetId(@Nullable Output<String> assetId) {
             $.assetId = assetId;
             return this;
         }
 
+        /**
+         * @param assetId The id of the asset represented by this node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assetId(String assetId) {
             return assetId(Output.of(assetId));
         }
 
+        /**
+         * @param inputId The id of the input element represented by this node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputId(@Nullable Output<String> inputId) {
             $.inputId = inputId;
             return this;
         }
 
+        /**
+         * @param inputId The id of the input element represented by this node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputId(String inputId) {
             return inputId(Output.of(inputId));
         }
 
+        /**
+         * @param outputId The id of the output element represented by this node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputId(@Nullable Output<String> outputId) {
             $.outputId = outputId;
             return this;
         }
 
+        /**
+         * @param outputId The id of the output element represented by this node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputId(String outputId) {
             return outputId(Output.of(outputId));
         }
 
+        /**
+         * @param parameters If applicable, parameters of the node. Global graph parameters map into these, with values set at runtime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Output<Map<String,WebServiceParameterArgs>> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters If applicable, parameters of the node. Global graph parameters map into these, with values set at runtime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(Map<String,WebServiceParameterArgs> parameters) {
             return parameters(Output.of(parameters));
         }

@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DeploymentConfigurationResponse {
     /**
-     * This property and virtualMachineConfiguration are mutually exclusive and one of the properties must be specified. This property cannot be specified if the Batch account was created with its poolAllocationMode property set to &#39;UserSubscription&#39;.
+     * @return This property and virtualMachineConfiguration are mutually exclusive and one of the properties must be specified. This property cannot be specified if the Batch account was created with its poolAllocationMode property set to &#39;UserSubscription&#39;.
      * 
      */
     private final @Nullable CloudServiceConfigurationResponse cloudServiceConfiguration;
     /**
-     * This property and cloudServiceConfiguration are mutually exclusive and one of the properties must be specified.
+     * @return This property and cloudServiceConfiguration are mutually exclusive and one of the properties must be specified.
      * 
      */
     private final @Nullable VirtualMachineConfigurationResponse virtualMachineConfiguration;
@@ -32,16 +32,16 @@ public final class DeploymentConfigurationResponse {
     }
 
     /**
-     * This property and virtualMachineConfiguration are mutually exclusive and one of the properties must be specified. This property cannot be specified if the Batch account was created with its poolAllocationMode property set to &#39;UserSubscription&#39;.
+     * @return This property and virtualMachineConfiguration are mutually exclusive and one of the properties must be specified. This property cannot be specified if the Batch account was created with its poolAllocationMode property set to &#39;UserSubscription&#39;.
      * 
-    */
+     */
     public Optional<CloudServiceConfigurationResponse> cloudServiceConfiguration() {
         return Optional.ofNullable(this.cloudServiceConfiguration);
     }
     /**
-     * This property and cloudServiceConfiguration are mutually exclusive and one of the properties must be specified.
+     * @return This property and cloudServiceConfiguration are mutually exclusive and one of the properties must be specified.
      * 
-    */
+     */
     public Optional<VirtualMachineConfigurationResponse> virtualMachineConfiguration() {
         return Optional.ofNullable(this.virtualMachineConfiguration);
     }

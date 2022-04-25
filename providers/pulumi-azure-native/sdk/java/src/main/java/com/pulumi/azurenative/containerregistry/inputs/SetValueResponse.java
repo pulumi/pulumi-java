@@ -27,6 +27,10 @@ public final class SetValueResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="isSecret")
     private @Nullable Boolean isSecret;
 
+    /**
+     * @return Flag to indicate whether the value represents a secret or not.
+     * 
+     */
     public Optional<Boolean> isSecret() {
         return Optional.ofNullable(this.isSecret);
     }
@@ -38,6 +42,10 @@ public final class SetValueResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the overridable value.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -49,6 +57,10 @@ public final class SetValueResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="value", required=true)
     private String value;
 
+    /**
+     * @return The overridable value.
+     * 
+     */
     public String value() {
         return this.value;
     }
@@ -79,16 +91,34 @@ public final class SetValueResponse extends com.pulumi.resources.InvokeArgs {
             $ = new SetValueResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param isSecret Flag to indicate whether the value represents a secret or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isSecret(@Nullable Boolean isSecret) {
             $.isSecret = isSecret;
             return this;
         }
 
+        /**
+         * @param name The name of the overridable value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param value The overridable value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             $.value = value;
             return this;

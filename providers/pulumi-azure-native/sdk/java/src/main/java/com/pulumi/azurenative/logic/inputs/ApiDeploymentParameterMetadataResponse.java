@@ -26,6 +26,10 @@ public final class ApiDeploymentParameterMetadataResponse extends com.pulumi.res
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return The description.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -37,6 +41,10 @@ public final class ApiDeploymentParameterMetadataResponse extends com.pulumi.res
     @Import(name="displayName")
     private @Nullable String displayName;
 
+    /**
+     * @return The display name.
+     * 
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -48,6 +56,10 @@ public final class ApiDeploymentParameterMetadataResponse extends com.pulumi.res
     @Import(name="isRequired")
     private @Nullable Boolean isRequired;
 
+    /**
+     * @return Indicates whether its required.
+     * 
+     */
     public Optional<Boolean> isRequired() {
         return Optional.ofNullable(this.isRequired);
     }
@@ -59,6 +71,10 @@ public final class ApiDeploymentParameterMetadataResponse extends com.pulumi.res
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return The type.
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -70,6 +86,10 @@ public final class ApiDeploymentParameterMetadataResponse extends com.pulumi.res
     @Import(name="visibility")
     private @Nullable String visibility;
 
+    /**
+     * @return The visibility.
+     * 
+     */
     public Optional<String> visibility() {
         return Optional.ofNullable(this.visibility);
     }
@@ -102,26 +122,56 @@ public final class ApiDeploymentParameterMetadataResponse extends com.pulumi.res
             $ = new ApiDeploymentParameterMetadataResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description The description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param displayName The display name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable String displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param isRequired Indicates whether its required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isRequired(@Nullable Boolean isRequired) {
             $.isRequired = isRequired;
             return this;
         }
 
+        /**
+         * @param type The type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param visibility The visibility.
+         * 
+         * @return builder
+         * 
+         */
         public Builder visibility(@Nullable String visibility) {
             $.visibility = visibility;
             return this;

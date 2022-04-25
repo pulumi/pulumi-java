@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class UrlSigningParamIdentifierResponse {
     /**
-     * Indicates the purpose of the parameter
+     * @return Indicates the purpose of the parameter
      * 
      */
     private final String paramIndicator;
     /**
-     * Parameter name
+     * @return Parameter name
      * 
      */
     private final String paramName;
@@ -29,16 +29,16 @@ public final class UrlSigningParamIdentifierResponse {
     }
 
     /**
-     * Indicates the purpose of the parameter
+     * @return Indicates the purpose of the parameter
      * 
-    */
+     */
     public String paramIndicator() {
         return this.paramIndicator;
     }
     /**
-     * Parameter name
+     * @return Parameter name
      * 
-    */
+     */
     public String paramName() {
         return this.paramName;
     }

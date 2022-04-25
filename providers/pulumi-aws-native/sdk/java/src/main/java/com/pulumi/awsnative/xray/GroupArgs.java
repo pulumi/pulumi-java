@@ -25,6 +25,10 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="filterExpression")
     private @Nullable Output<String> filterExpression;
 
+    /**
+     * @return The filter expression defining criteria by which to group traces.
+     * 
+     */
     public Optional<Output<String>> filterExpression() {
         return Optional.ofNullable(this.filterExpression);
     }
@@ -36,6 +40,10 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="groupName")
     private @Nullable Output<String> groupName;
 
+    /**
+     * @return The case-sensitive name of the new group. Names must be unique.
+     * 
+     */
     public Optional<Output<String>> groupName() {
         return Optional.ofNullable(this.groupName);
     }
@@ -81,20 +89,44 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
             $ = new GroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param filterExpression The filter expression defining criteria by which to group traces.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filterExpression(@Nullable Output<String> filterExpression) {
             $.filterExpression = filterExpression;
             return this;
         }
 
+        /**
+         * @param filterExpression The filter expression defining criteria by which to group traces.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filterExpression(String filterExpression) {
             return filterExpression(Output.of(filterExpression));
         }
 
+        /**
+         * @param groupName The case-sensitive name of the new group. Names must be unique.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupName(@Nullable Output<String> groupName) {
             $.groupName = groupName;
             return this;
         }
 
+        /**
+         * @param groupName The case-sensitive name of the new group. Names must be unique.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupName(String groupName) {
             return groupName(Output.of(groupName));
         }

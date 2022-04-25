@@ -19,6 +19,10 @@ public final class GetADLSGen1FileDataSetArgs extends com.pulumi.resources.Invok
     @Import(name="accountName", required=true)
     private String accountName;
 
+    /**
+     * @return The name of the share account.
+     * 
+     */
     public String accountName() {
         return this.accountName;
     }
@@ -30,6 +34,10 @@ public final class GetADLSGen1FileDataSetArgs extends com.pulumi.resources.Invok
     @Import(name="dataSetName", required=true)
     private String dataSetName;
 
+    /**
+     * @return The name of the dataSet.
+     * 
+     */
     public String dataSetName() {
         return this.dataSetName;
     }
@@ -41,6 +49,10 @@ public final class GetADLSGen1FileDataSetArgs extends com.pulumi.resources.Invok
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -52,6 +64,10 @@ public final class GetADLSGen1FileDataSetArgs extends com.pulumi.resources.Invok
     @Import(name="shareName", required=true)
     private String shareName;
 
+    /**
+     * @return The name of the share.
+     * 
+     */
     public String shareName() {
         return this.shareName;
     }
@@ -83,21 +99,45 @@ public final class GetADLSGen1FileDataSetArgs extends com.pulumi.resources.Invok
             $ = new GetADLSGen1FileDataSetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The name of the share account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param dataSetName The name of the dataSet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSetName(String dataSetName) {
             $.dataSetName = dataSetName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param shareName The name of the share.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareName(String shareName) {
             $.shareName = shareName;
             return this;

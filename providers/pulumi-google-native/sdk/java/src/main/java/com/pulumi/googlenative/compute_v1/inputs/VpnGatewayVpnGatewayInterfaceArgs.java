@@ -26,6 +26,10 @@ public final class VpnGatewayVpnGatewayInterfaceArgs extends com.pulumi.resource
     @Import(name="interconnectAttachment")
     private @Nullable Output<String> interconnectAttachment;
 
+    /**
+     * @return URL of the VLAN attachment (interconnectAttachment) resource for this VPN gateway interface. When the value of this field is present, the VPN gateway is used for IPsec-encrypted Cloud Interconnect; all egress or ingress traffic for this VPN gateway interface goes through the specified VLAN attachment resource. Not currently available publicly.
+     * 
+     */
     public Optional<Output<String>> interconnectAttachment() {
         return Optional.ofNullable(this.interconnectAttachment);
     }
@@ -54,11 +58,23 @@ public final class VpnGatewayVpnGatewayInterfaceArgs extends com.pulumi.resource
             $ = new VpnGatewayVpnGatewayInterfaceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param interconnectAttachment URL of the VLAN attachment (interconnectAttachment) resource for this VPN gateway interface. When the value of this field is present, the VPN gateway is used for IPsec-encrypted Cloud Interconnect; all egress or ingress traffic for this VPN gateway interface goes through the specified VLAN attachment resource. Not currently available publicly.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interconnectAttachment(@Nullable Output<String> interconnectAttachment) {
             $.interconnectAttachment = interconnectAttachment;
             return this;
         }
 
+        /**
+         * @param interconnectAttachment URL of the VLAN attachment (interconnectAttachment) resource for this VPN gateway interface. When the value of this field is present, the VPN gateway is used for IPsec-encrypted Cloud Interconnect; all egress or ingress traffic for this VPN gateway interface goes through the specified VLAN attachment resource. Not currently available publicly.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interconnectAttachment(String interconnectAttachment) {
             return interconnectAttachment(Output.of(interconnectAttachment));
         }

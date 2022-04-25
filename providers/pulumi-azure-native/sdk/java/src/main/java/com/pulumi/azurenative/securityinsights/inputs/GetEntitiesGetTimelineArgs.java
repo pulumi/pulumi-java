@@ -25,6 +25,10 @@ public final class GetEntitiesGetTimelineArgs extends com.pulumi.resources.Invok
     @Import(name="endTime", required=true)
     private String endTime;
 
+    /**
+     * @return The end timeline date, so the results returned are before this date.
+     * 
+     */
     public String endTime() {
         return this.endTime;
     }
@@ -36,6 +40,10 @@ public final class GetEntitiesGetTimelineArgs extends com.pulumi.resources.Invok
     @Import(name="entityId", required=true)
     private String entityId;
 
+    /**
+     * @return entity ID
+     * 
+     */
     public String entityId() {
         return this.entityId;
     }
@@ -47,6 +55,10 @@ public final class GetEntitiesGetTimelineArgs extends com.pulumi.resources.Invok
     @Import(name="kinds")
     private @Nullable List<Either<String,EntityTimelineKind>> kinds;
 
+    /**
+     * @return Array of timeline Item kinds.
+     * 
+     */
     public Optional<List<Either<String,EntityTimelineKind>>> kinds() {
         return Optional.ofNullable(this.kinds);
     }
@@ -58,6 +70,10 @@ public final class GetEntitiesGetTimelineArgs extends com.pulumi.resources.Invok
     @Import(name="numberOfBucket")
     private @Nullable Integer numberOfBucket;
 
+    /**
+     * @return The number of bucket for timeline queries aggregation.
+     * 
+     */
     public Optional<Integer> numberOfBucket() {
         return Optional.ofNullable(this.numberOfBucket);
     }
@@ -69,6 +85,10 @@ public final class GetEntitiesGetTimelineArgs extends com.pulumi.resources.Invok
     @Import(name="operationalInsightsResourceProvider", required=true)
     private String operationalInsightsResourceProvider;
 
+    /**
+     * @return The namespace of workspaces resource provider- Microsoft.OperationalInsights.
+     * 
+     */
     public String operationalInsightsResourceProvider() {
         return this.operationalInsightsResourceProvider;
     }
@@ -80,6 +100,10 @@ public final class GetEntitiesGetTimelineArgs extends com.pulumi.resources.Invok
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -91,6 +115,10 @@ public final class GetEntitiesGetTimelineArgs extends com.pulumi.resources.Invok
     @Import(name="startTime", required=true)
     private String startTime;
 
+    /**
+     * @return The start timeline date, so the results returned are after this date.
+     * 
+     */
     public String startTime() {
         return this.startTime;
     }
@@ -102,6 +130,10 @@ public final class GetEntitiesGetTimelineArgs extends com.pulumi.resources.Invok
     @Import(name="workspaceName", required=true)
     private String workspaceName;
 
+    /**
+     * @return The name of the workspace.
+     * 
+     */
     public String workspaceName() {
         return this.workspaceName;
     }
@@ -137,45 +169,99 @@ public final class GetEntitiesGetTimelineArgs extends com.pulumi.resources.Invok
             $ = new GetEntitiesGetTimelineArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endTime The end timeline date, so the results returned are before this date.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTime(String endTime) {
             $.endTime = endTime;
             return this;
         }
 
+        /**
+         * @param entityId entity ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder entityId(String entityId) {
             $.entityId = entityId;
             return this;
         }
 
+        /**
+         * @param kinds Array of timeline Item kinds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kinds(@Nullable List<Either<String,EntityTimelineKind>> kinds) {
             $.kinds = kinds;
             return this;
         }
 
+        /**
+         * @param kinds Array of timeline Item kinds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kinds(Either<String,EntityTimelineKind>... kinds) {
             return kinds(List.of(kinds));
         }
 
+        /**
+         * @param numberOfBucket The number of bucket for timeline queries aggregation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numberOfBucket(@Nullable Integer numberOfBucket) {
             $.numberOfBucket = numberOfBucket;
             return this;
         }
 
+        /**
+         * @param operationalInsightsResourceProvider The namespace of workspaces resource provider- Microsoft.OperationalInsights.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
             $.operationalInsightsResourceProvider = operationalInsightsResourceProvider;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param startTime The start timeline date, so the results returned are after this date.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             $.startTime = startTime;
             return this;
         }
 
+        /**
+         * @param workspaceName The name of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             $.workspaceName = workspaceName;
             return this;

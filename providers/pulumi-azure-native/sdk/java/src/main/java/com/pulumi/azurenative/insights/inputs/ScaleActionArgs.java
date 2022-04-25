@@ -29,6 +29,10 @@ public final class ScaleActionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cooldown", required=true)
     private Output<String> cooldown;
 
+    /**
+     * @return the amount of time to wait since the last scaling action before this action occurs. It must be between 1 week and 1 minute in ISO 8601 format.
+     * 
+     */
     public Output<String> cooldown() {
         return this.cooldown;
     }
@@ -40,6 +44,10 @@ public final class ScaleActionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="direction", required=true)
     private Output<ScaleDirection> direction;
 
+    /**
+     * @return the scale direction. Whether the scaling action increases or decreases the number of instances.
+     * 
+     */
     public Output<ScaleDirection> direction() {
         return this.direction;
     }
@@ -51,6 +59,10 @@ public final class ScaleActionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
     private Output<ScaleType> type;
 
+    /**
+     * @return the type of action that should occur when the scale rule fires.
+     * 
+     */
     public Output<ScaleType> type() {
         return this.type;
     }
@@ -62,6 +74,10 @@ public final class ScaleActionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="value")
     private @Nullable Output<String> value;
 
+    /**
+     * @return the number of instances that are involved in the scaling action. This value must be 1 or greater. The default value is 1.
+     * 
+     */
     public Optional<Output<String>> value() {
         return Optional.ofNullable(this.value);
     }
@@ -93,38 +109,86 @@ public final class ScaleActionArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ScaleActionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cooldown the amount of time to wait since the last scaling action before this action occurs. It must be between 1 week and 1 minute in ISO 8601 format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cooldown(Output<String> cooldown) {
             $.cooldown = cooldown;
             return this;
         }
 
+        /**
+         * @param cooldown the amount of time to wait since the last scaling action before this action occurs. It must be between 1 week and 1 minute in ISO 8601 format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cooldown(String cooldown) {
             return cooldown(Output.of(cooldown));
         }
 
+        /**
+         * @param direction the scale direction. Whether the scaling action increases or decreases the number of instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder direction(Output<ScaleDirection> direction) {
             $.direction = direction;
             return this;
         }
 
+        /**
+         * @param direction the scale direction. Whether the scaling action increases or decreases the number of instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder direction(ScaleDirection direction) {
             return direction(Output.of(direction));
         }
 
+        /**
+         * @param type the type of action that should occur when the scale rule fires.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<ScaleType> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type the type of action that should occur when the scale rule fires.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(ScaleType type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param value the number of instances that are involved in the scaling action. This value must be 1 or greater. The default value is 1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value the number of instances that are involved in the scaling action. This value must be 1 or greater. The default value is 1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

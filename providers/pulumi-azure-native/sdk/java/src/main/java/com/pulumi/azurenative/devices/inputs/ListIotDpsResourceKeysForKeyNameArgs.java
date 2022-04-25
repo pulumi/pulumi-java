@@ -19,6 +19,10 @@ public final class ListIotDpsResourceKeysForKeyNameArgs extends com.pulumi.resou
     @Import(name="keyName", required=true)
     private String keyName;
 
+    /**
+     * @return Logical key name to get key-values for.
+     * 
+     */
     public String keyName() {
         return this.keyName;
     }
@@ -30,6 +34,10 @@ public final class ListIotDpsResourceKeysForKeyNameArgs extends com.pulumi.resou
     @Import(name="provisioningServiceName", required=true)
     private String provisioningServiceName;
 
+    /**
+     * @return Name of the provisioning service.
+     * 
+     */
     public String provisioningServiceName() {
         return this.provisioningServiceName;
     }
@@ -41,6 +49,10 @@ public final class ListIotDpsResourceKeysForKeyNameArgs extends com.pulumi.resou
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the provisioning service.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class ListIotDpsResourceKeysForKeyNameArgs extends com.pulumi.resou
             $ = new ListIotDpsResourceKeysForKeyNameArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyName Logical key name to get key-values for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyName(String keyName) {
             $.keyName = keyName;
             return this;
         }
 
+        /**
+         * @param provisioningServiceName Name of the provisioning service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningServiceName(String provisioningServiceName) {
             $.provisioningServiceName = provisioningServiceName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the provisioning service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

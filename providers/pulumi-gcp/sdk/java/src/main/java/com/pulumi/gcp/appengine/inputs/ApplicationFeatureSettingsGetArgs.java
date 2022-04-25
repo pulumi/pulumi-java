@@ -21,6 +21,11 @@ public final class ApplicationFeatureSettingsGetArgs extends com.pulumi.resource
     @Import(name="splitHealthChecks", required=true)
     private Output<Boolean> splitHealthChecks;
 
+    /**
+     * @return Set to false to use the legacy health check instead of the readiness
+     * and liveness checks.
+     * 
+     */
     public Output<Boolean> splitHealthChecks() {
         return this.splitHealthChecks;
     }
@@ -49,11 +54,25 @@ public final class ApplicationFeatureSettingsGetArgs extends com.pulumi.resource
             $ = new ApplicationFeatureSettingsGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param splitHealthChecks Set to false to use the legacy health check instead of the readiness
+         * and liveness checks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder splitHealthChecks(Output<Boolean> splitHealthChecks) {
             $.splitHealthChecks = splitHealthChecks;
             return this;
         }
 
+        /**
+         * @param splitHealthChecks Set to false to use the legacy health check instead of the readiness
+         * and liveness checks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder splitHealthChecks(Boolean splitHealthChecks) {
             return splitHealthChecks(Output.of(splitHealthChecks));
         }

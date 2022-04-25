@@ -28,6 +28,10 @@ public final class SecurityPolicyWebApplicationFirewallAssociationArgs extends c
     @Import(name="domains")
     private @Nullable Output<List<ResourceReferenceArgs>> domains;
 
+    /**
+     * @return List of domains.
+     * 
+     */
     public Optional<Output<List<ResourceReferenceArgs>>> domains() {
         return Optional.ofNullable(this.domains);
     }
@@ -39,6 +43,10 @@ public final class SecurityPolicyWebApplicationFirewallAssociationArgs extends c
     @Import(name="patternsToMatch")
     private @Nullable Output<List<String>> patternsToMatch;
 
+    /**
+     * @return List of paths
+     * 
+     */
     public Optional<Output<List<String>>> patternsToMatch() {
         return Optional.ofNullable(this.patternsToMatch);
     }
@@ -68,28 +76,64 @@ public final class SecurityPolicyWebApplicationFirewallAssociationArgs extends c
             $ = new SecurityPolicyWebApplicationFirewallAssociationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param domains List of domains.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domains(@Nullable Output<List<ResourceReferenceArgs>> domains) {
             $.domains = domains;
             return this;
         }
 
+        /**
+         * @param domains List of domains.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domains(List<ResourceReferenceArgs> domains) {
             return domains(Output.of(domains));
         }
 
+        /**
+         * @param domains List of domains.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domains(ResourceReferenceArgs... domains) {
             return domains(List.of(domains));
         }
 
+        /**
+         * @param patternsToMatch List of paths
+         * 
+         * @return builder
+         * 
+         */
         public Builder patternsToMatch(@Nullable Output<List<String>> patternsToMatch) {
             $.patternsToMatch = patternsToMatch;
             return this;
         }
 
+        /**
+         * @param patternsToMatch List of paths
+         * 
+         * @return builder
+         * 
+         */
         public Builder patternsToMatch(List<String> patternsToMatch) {
             return patternsToMatch(Output.of(patternsToMatch));
         }
 
+        /**
+         * @param patternsToMatch List of paths
+         * 
+         * @return builder
+         * 
+         */
         public Builder patternsToMatch(String... patternsToMatch) {
             return patternsToMatch(List.of(patternsToMatch));
         }

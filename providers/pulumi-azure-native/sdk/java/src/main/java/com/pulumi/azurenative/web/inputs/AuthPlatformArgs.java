@@ -28,6 +28,11 @@ public final class AuthPlatformArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="configFilePath")
     private @Nullable Output<String> configFilePath;
 
+    /**
+     * @return The path of the config file containing auth settings if they come from a file.
+     * If the path is relative, base will the site&#39;s root directory.
+     * 
+     */
     public Optional<Output<String>> configFilePath() {
         return Optional.ofNullable(this.configFilePath);
     }
@@ -39,6 +44,10 @@ public final class AuthPlatformArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return &lt;code&gt;true&lt;/code&gt; if the Authentication / Authorization feature is enabled for the current app; otherwise, &lt;code&gt;false&lt;/code&gt;.
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -51,6 +60,11 @@ public final class AuthPlatformArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="runtimeVersion")
     private @Nullable Output<String> runtimeVersion;
 
+    /**
+     * @return The RuntimeVersion of the Authentication / Authorization feature in use for the current app.
+     * The setting in this value can control the behavior of certain features in the Authentication / Authorization module.
+     * 
+     */
     public Optional<Output<String>> runtimeVersion() {
         return Optional.ofNullable(this.runtimeVersion);
     }
@@ -81,29 +95,69 @@ public final class AuthPlatformArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AuthPlatformArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param configFilePath The path of the config file containing auth settings if they come from a file.
+         * If the path is relative, base will the site&#39;s root directory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configFilePath(@Nullable Output<String> configFilePath) {
             $.configFilePath = configFilePath;
             return this;
         }
 
+        /**
+         * @param configFilePath The path of the config file containing auth settings if they come from a file.
+         * If the path is relative, base will the site&#39;s root directory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configFilePath(String configFilePath) {
             return configFilePath(Output.of(configFilePath));
         }
 
+        /**
+         * @param enabled &lt;code&gt;true&lt;/code&gt; if the Authentication / Authorization feature is enabled for the current app; otherwise, &lt;code&gt;false&lt;/code&gt;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled &lt;code&gt;true&lt;/code&gt; if the Authentication / Authorization feature is enabled for the current app; otherwise, &lt;code&gt;false&lt;/code&gt;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param runtimeVersion The RuntimeVersion of the Authentication / Authorization feature in use for the current app.
+         * The setting in this value can control the behavior of certain features in the Authentication / Authorization module.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runtimeVersion(@Nullable Output<String> runtimeVersion) {
             $.runtimeVersion = runtimeVersion;
             return this;
         }
 
+        /**
+         * @param runtimeVersion The RuntimeVersion of the Authentication / Authorization feature in use for the current app.
+         * The setting in this value can control the behavior of certain features in the Authentication / Authorization module.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runtimeVersion(String runtimeVersion) {
             return runtimeVersion(Output.of(runtimeVersion));
         }

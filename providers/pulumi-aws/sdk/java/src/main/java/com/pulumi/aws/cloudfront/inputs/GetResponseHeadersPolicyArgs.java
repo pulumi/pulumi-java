@@ -21,6 +21,10 @@ public final class GetResponseHeadersPolicyArgs extends com.pulumi.resources.Inv
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return The identifier for the response headers policy.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -32,6 +36,10 @@ public final class GetResponseHeadersPolicyArgs extends com.pulumi.resources.Inv
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return A unique name to identify the response headers policy.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -61,11 +69,23 @@ public final class GetResponseHeadersPolicyArgs extends com.pulumi.resources.Inv
             $ = new GetResponseHeadersPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id The identifier for the response headers policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param name A unique name to identify the response headers policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;

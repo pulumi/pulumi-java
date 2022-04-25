@@ -23,6 +23,10 @@ public final class FleetLocationCapacity extends com.pulumi.resources.InvokeArgs
     @Import(name="desiredEC2Instances", required=true)
     private Integer desiredEC2Instances;
 
+    /**
+     * @return The number of EC2 instances you want to maintain in the specified fleet location. This value must fall between the minimum and maximum size limits.
+     * 
+     */
     public Integer desiredEC2Instances() {
         return this.desiredEC2Instances;
     }
@@ -34,6 +38,10 @@ public final class FleetLocationCapacity extends com.pulumi.resources.InvokeArgs
     @Import(name="maxSize", required=true)
     private Integer maxSize;
 
+    /**
+     * @return The maximum value that is allowed for the fleet&#39;s instance count for a location. When creating a new fleet, GameLift automatically sets this value to &#34;1&#34;. Once the fleet is active, you can change this value.
+     * 
+     */
     public Integer maxSize() {
         return this.maxSize;
     }
@@ -45,6 +53,10 @@ public final class FleetLocationCapacity extends com.pulumi.resources.InvokeArgs
     @Import(name="minSize", required=true)
     private Integer minSize;
 
+    /**
+     * @return The minimum value allowed for the fleet&#39;s instance count for a location. When creating a new fleet, GameLift automatically sets this value to &#34;0&#34;. After the fleet is active, you can change this value.
+     * 
+     */
     public Integer minSize() {
         return this.minSize;
     }
@@ -75,16 +87,34 @@ public final class FleetLocationCapacity extends com.pulumi.resources.InvokeArgs
             $ = new FleetLocationCapacity(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param desiredEC2Instances The number of EC2 instances you want to maintain in the specified fleet location. This value must fall between the minimum and maximum size limits.
+         * 
+         * @return builder
+         * 
+         */
         public Builder desiredEC2Instances(Integer desiredEC2Instances) {
             $.desiredEC2Instances = desiredEC2Instances;
             return this;
         }
 
+        /**
+         * @param maxSize The maximum value that is allowed for the fleet&#39;s instance count for a location. When creating a new fleet, GameLift automatically sets this value to &#34;1&#34;. Once the fleet is active, you can change this value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxSize(Integer maxSize) {
             $.maxSize = maxSize;
             return this;
         }
 
+        /**
+         * @param minSize The minimum value allowed for the fleet&#39;s instance count for a location. When creating a new fleet, GameLift automatically sets this value to &#34;0&#34;. After the fleet is active, you can change this value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minSize(Integer minSize) {
             $.minSize = minSize;
             return this;

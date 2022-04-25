@@ -28,6 +28,10 @@ public final class OracleColumnArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="column")
     private @Nullable Output<String> column;
 
+    /**
+     * @return Column name.
+     * 
+     */
     public Optional<Output<String>> column() {
         return Optional.ofNullable(this.column);
     }
@@ -39,6 +43,10 @@ public final class OracleColumnArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dataType")
     private @Nullable Output<String> dataType;
 
+    /**
+     * @return The Oracle data type.
+     * 
+     */
     public Optional<Output<String>> dataType() {
         return Optional.ofNullable(this.dataType);
     }
@@ -50,6 +58,10 @@ public final class OracleColumnArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="encoding")
     private @Nullable Output<String> encoding;
 
+    /**
+     * @return Column encoding.
+     * 
+     */
     public Optional<Output<String>> encoding() {
         return Optional.ofNullable(this.encoding);
     }
@@ -61,6 +73,10 @@ public final class OracleColumnArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="length")
     private @Nullable Output<Integer> length;
 
+    /**
+     * @return Column length.
+     * 
+     */
     public Optional<Output<Integer>> length() {
         return Optional.ofNullable(this.length);
     }
@@ -72,6 +88,10 @@ public final class OracleColumnArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nullable")
     private @Nullable Output<Boolean> nullable;
 
+    /**
+     * @return Whether or not the column can accept a null value.
+     * 
+     */
     public Optional<Output<Boolean>> nullable() {
         return Optional.ofNullable(this.nullable);
     }
@@ -83,6 +103,10 @@ public final class OracleColumnArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ordinalPosition")
     private @Nullable Output<Integer> ordinalPosition;
 
+    /**
+     * @return The ordinal position of the column in the table.
+     * 
+     */
     public Optional<Output<Integer>> ordinalPosition() {
         return Optional.ofNullable(this.ordinalPosition);
     }
@@ -94,6 +118,10 @@ public final class OracleColumnArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="precision")
     private @Nullable Output<Integer> precision;
 
+    /**
+     * @return Column precision.
+     * 
+     */
     public Optional<Output<Integer>> precision() {
         return Optional.ofNullable(this.precision);
     }
@@ -105,6 +133,10 @@ public final class OracleColumnArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="primaryKey")
     private @Nullable Output<Boolean> primaryKey;
 
+    /**
+     * @return Whether or not the column represents a primary key.
+     * 
+     */
     public Optional<Output<Boolean>> primaryKey() {
         return Optional.ofNullable(this.primaryKey);
     }
@@ -116,6 +148,10 @@ public final class OracleColumnArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scale")
     private @Nullable Output<Integer> scale;
 
+    /**
+     * @return Column scale.
+     * 
+     */
     public Optional<Output<Integer>> scale() {
         return Optional.ofNullable(this.scale);
     }
@@ -152,83 +188,191 @@ public final class OracleColumnArgs extends com.pulumi.resources.ResourceArgs {
             $ = new OracleColumnArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param column Column name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder column(@Nullable Output<String> column) {
             $.column = column;
             return this;
         }
 
+        /**
+         * @param column Column name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder column(String column) {
             return column(Output.of(column));
         }
 
+        /**
+         * @param dataType The Oracle data type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataType(@Nullable Output<String> dataType) {
             $.dataType = dataType;
             return this;
         }
 
+        /**
+         * @param dataType The Oracle data type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataType(String dataType) {
             return dataType(Output.of(dataType));
         }
 
+        /**
+         * @param encoding Column encoding.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encoding(@Nullable Output<String> encoding) {
             $.encoding = encoding;
             return this;
         }
 
+        /**
+         * @param encoding Column encoding.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encoding(String encoding) {
             return encoding(Output.of(encoding));
         }
 
+        /**
+         * @param length Column length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder length(@Nullable Output<Integer> length) {
             $.length = length;
             return this;
         }
 
+        /**
+         * @param length Column length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder length(Integer length) {
             return length(Output.of(length));
         }
 
+        /**
+         * @param nullable Whether or not the column can accept a null value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nullable(@Nullable Output<Boolean> nullable) {
             $.nullable = nullable;
             return this;
         }
 
+        /**
+         * @param nullable Whether or not the column can accept a null value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nullable(Boolean nullable) {
             return nullable(Output.of(nullable));
         }
 
+        /**
+         * @param ordinalPosition The ordinal position of the column in the table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ordinalPosition(@Nullable Output<Integer> ordinalPosition) {
             $.ordinalPosition = ordinalPosition;
             return this;
         }
 
+        /**
+         * @param ordinalPosition The ordinal position of the column in the table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ordinalPosition(Integer ordinalPosition) {
             return ordinalPosition(Output.of(ordinalPosition));
         }
 
+        /**
+         * @param precision Column precision.
+         * 
+         * @return builder
+         * 
+         */
         public Builder precision(@Nullable Output<Integer> precision) {
             $.precision = precision;
             return this;
         }
 
+        /**
+         * @param precision Column precision.
+         * 
+         * @return builder
+         * 
+         */
         public Builder precision(Integer precision) {
             return precision(Output.of(precision));
         }
 
+        /**
+         * @param primaryKey Whether or not the column represents a primary key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryKey(@Nullable Output<Boolean> primaryKey) {
             $.primaryKey = primaryKey;
             return this;
         }
 
+        /**
+         * @param primaryKey Whether or not the column represents a primary key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryKey(Boolean primaryKey) {
             return primaryKey(Output.of(primaryKey));
         }
 
+        /**
+         * @param scale Column scale.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scale(@Nullable Output<Integer> scale) {
             $.scale = scale;
             return this;
         }
 
+        /**
+         * @param scale Column scale.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scale(Integer scale) {
             return scale(Output.of(scale));
         }

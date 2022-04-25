@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class RoutineReferenceResponse {
     /**
-     * [Required] The ID of the dataset containing this routine.
+     * @return [Required] The ID of the dataset containing this routine.
      * 
      */
     private final String datasetId;
     /**
-     * [Required] The ID of the project containing this routine.
+     * @return [Required] The ID of the project containing this routine.
      * 
      */
     private final String project;
     /**
-     * [Required] The ID of the routine. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 256 characters.
+     * @return [Required] The ID of the routine. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 256 characters.
      * 
      */
     private final String routineId;
@@ -36,23 +36,23 @@ public final class RoutineReferenceResponse {
     }
 
     /**
-     * [Required] The ID of the dataset containing this routine.
+     * @return [Required] The ID of the dataset containing this routine.
      * 
-    */
+     */
     public String datasetId() {
         return this.datasetId;
     }
     /**
-     * [Required] The ID of the project containing this routine.
+     * @return [Required] The ID of the project containing this routine.
      * 
-    */
+     */
     public String project() {
         return this.project;
     }
     /**
-     * [Required] The ID of the routine. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 256 characters.
+     * @return [Required] The ID of the routine. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 256 characters.
      * 
-    */
+     */
     public String routineId() {
         return this.routineId;
     }

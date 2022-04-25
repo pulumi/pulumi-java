@@ -26,6 +26,10 @@ public final class LogAnalyticsQueryPackQueryPropertiesResponseRelated extends c
     @Import(name="categories")
     private @Nullable List<String> categories;
 
+    /**
+     * @return The related categories for the function.
+     * 
+     */
     public Optional<List<String>> categories() {
         return Optional.ofNullable(this.categories);
     }
@@ -37,6 +41,10 @@ public final class LogAnalyticsQueryPackQueryPropertiesResponseRelated extends c
     @Import(name="resourceTypes")
     private @Nullable List<String> resourceTypes;
 
+    /**
+     * @return The related resource types for the function.
+     * 
+     */
     public Optional<List<String>> resourceTypes() {
         return Optional.ofNullable(this.resourceTypes);
     }
@@ -48,6 +56,10 @@ public final class LogAnalyticsQueryPackQueryPropertiesResponseRelated extends c
     @Import(name="solutions")
     private @Nullable List<String> solutions;
 
+    /**
+     * @return The related Log Analytics solutions for the function.
+     * 
+     */
     public Optional<List<String>> solutions() {
         return Optional.ofNullable(this.solutions);
     }
@@ -78,29 +90,65 @@ public final class LogAnalyticsQueryPackQueryPropertiesResponseRelated extends c
             $ = new LogAnalyticsQueryPackQueryPropertiesResponseRelated(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param categories The related categories for the function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder categories(@Nullable List<String> categories) {
             $.categories = categories;
             return this;
         }
 
+        /**
+         * @param categories The related categories for the function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder categories(String... categories) {
             return categories(List.of(categories));
         }
 
+        /**
+         * @param resourceTypes The related resource types for the function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceTypes(@Nullable List<String> resourceTypes) {
             $.resourceTypes = resourceTypes;
             return this;
         }
 
+        /**
+         * @param resourceTypes The related resource types for the function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceTypes(String... resourceTypes) {
             return resourceTypes(List.of(resourceTypes));
         }
 
+        /**
+         * @param solutions The related Log Analytics solutions for the function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder solutions(@Nullable List<String> solutions) {
             $.solutions = solutions;
             return this;
         }
 
+        /**
+         * @param solutions The related Log Analytics solutions for the function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder solutions(String... solutions) {
             return solutions(List.of(solutions));
         }

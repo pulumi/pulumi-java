@@ -19,6 +19,10 @@ public final class GetCassandraResourceCassandraKeyspaceArgs extends com.pulumi.
     @Import(name="accountName", required=true)
     private String accountName;
 
+    /**
+     * @return Cosmos DB database account name.
+     * 
+     */
     public String accountName() {
         return this.accountName;
     }
@@ -30,6 +34,10 @@ public final class GetCassandraResourceCassandraKeyspaceArgs extends com.pulumi.
     @Import(name="keyspaceName", required=true)
     private String keyspaceName;
 
+    /**
+     * @return Cosmos DB keyspace name.
+     * 
+     */
     public String keyspaceName() {
         return this.keyspaceName;
     }
@@ -41,6 +49,10 @@ public final class GetCassandraResourceCassandraKeyspaceArgs extends com.pulumi.
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetCassandraResourceCassandraKeyspaceArgs extends com.pulumi.
             $ = new GetCassandraResourceCassandraKeyspaceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName Cosmos DB database account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param keyspaceName Cosmos DB keyspace name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyspaceName(String keyspaceName) {
             $.keyspaceName = keyspaceName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

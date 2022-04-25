@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class DynamicThresholdFailingPeriodsResponse {
     /**
-     * The number of violations to trigger an alert. Should be smaller or equal to numberOfEvaluationPeriods.
+     * @return The number of violations to trigger an alert. Should be smaller or equal to numberOfEvaluationPeriods.
      * 
      */
     private final Double minFailingPeriodsToAlert;
     /**
-     * The number of aggregated lookback points. The lookback time window is calculated based on the aggregation granularity (windowSize) and the selected number of aggregated points.
+     * @return The number of aggregated lookback points. The lookback time window is calculated based on the aggregation granularity (windowSize) and the selected number of aggregated points.
      * 
      */
     private final Double numberOfEvaluationPeriods;
@@ -29,16 +29,16 @@ public final class DynamicThresholdFailingPeriodsResponse {
     }
 
     /**
-     * The number of violations to trigger an alert. Should be smaller or equal to numberOfEvaluationPeriods.
+     * @return The number of violations to trigger an alert. Should be smaller or equal to numberOfEvaluationPeriods.
      * 
-    */
+     */
     public Double minFailingPeriodsToAlert() {
         return this.minFailingPeriodsToAlert;
     }
     /**
-     * The number of aggregated lookback points. The lookback time window is calculated based on the aggregation granularity (windowSize) and the selected number of aggregated points.
+     * @return The number of aggregated lookback points. The lookback time window is calculated based on the aggregation granularity (windowSize) and the selected number of aggregated points.
      * 
-    */
+     */
     public Double numberOfEvaluationPeriods() {
         return this.numberOfEvaluationPeriods;
     }

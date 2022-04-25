@@ -26,6 +26,10 @@ public final class StorageMappingInputPropertiesArgs extends com.pulumi.resource
     @Import(name="targetStorageClassificationId")
     private @Nullable Output<String> targetStorageClassificationId;
 
+    /**
+     * @return The ID of the storage object.
+     * 
+     */
     public Optional<Output<String>> targetStorageClassificationId() {
         return Optional.ofNullable(this.targetStorageClassificationId);
     }
@@ -54,11 +58,23 @@ public final class StorageMappingInputPropertiesArgs extends com.pulumi.resource
             $ = new StorageMappingInputPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param targetStorageClassificationId The ID of the storage object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetStorageClassificationId(@Nullable Output<String> targetStorageClassificationId) {
             $.targetStorageClassificationId = targetStorageClassificationId;
             return this;
         }
 
+        /**
+         * @param targetStorageClassificationId The ID of the storage object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetStorageClassificationId(String targetStorageClassificationId) {
             return targetStorageClassificationId(Output.of(targetStorageClassificationId));
         }

@@ -22,6 +22,10 @@ public final class GlobalReplicationGroupArgs extends com.pulumi.resources.Resou
     @Import(name="globalReplicationGroupDescription")
     private @Nullable Output<String> globalReplicationGroupDescription;
 
+    /**
+     * @return A user-created description for the global replication group.
+     * 
+     */
     public Optional<Output<String>> globalReplicationGroupDescription() {
         return Optional.ofNullable(this.globalReplicationGroupDescription);
     }
@@ -33,6 +37,10 @@ public final class GlobalReplicationGroupArgs extends com.pulumi.resources.Resou
     @Import(name="globalReplicationGroupIdSuffix", required=true)
     private Output<String> globalReplicationGroupIdSuffix;
 
+    /**
+     * @return The suffix name of a Global Datastore. If `global_replication_group_id_suffix` is changed, creates a new resource.
+     * 
+     */
     public Output<String> globalReplicationGroupIdSuffix() {
         return this.globalReplicationGroupIdSuffix;
     }
@@ -44,6 +52,10 @@ public final class GlobalReplicationGroupArgs extends com.pulumi.resources.Resou
     @Import(name="primaryReplicationGroupId", required=true)
     private Output<String> primaryReplicationGroupId;
 
+    /**
+     * @return The ID of the primary cluster that accepts writes and will replicate updates to the secondary cluster. If `primary_replication_group_id` is changed, creates a new resource.
+     * 
+     */
     public Output<String> primaryReplicationGroupId() {
         return this.primaryReplicationGroupId;
     }
@@ -74,29 +86,65 @@ public final class GlobalReplicationGroupArgs extends com.pulumi.resources.Resou
             $ = new GlobalReplicationGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param globalReplicationGroupDescription A user-created description for the global replication group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder globalReplicationGroupDescription(@Nullable Output<String> globalReplicationGroupDescription) {
             $.globalReplicationGroupDescription = globalReplicationGroupDescription;
             return this;
         }
 
+        /**
+         * @param globalReplicationGroupDescription A user-created description for the global replication group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder globalReplicationGroupDescription(String globalReplicationGroupDescription) {
             return globalReplicationGroupDescription(Output.of(globalReplicationGroupDescription));
         }
 
+        /**
+         * @param globalReplicationGroupIdSuffix The suffix name of a Global Datastore. If `global_replication_group_id_suffix` is changed, creates a new resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder globalReplicationGroupIdSuffix(Output<String> globalReplicationGroupIdSuffix) {
             $.globalReplicationGroupIdSuffix = globalReplicationGroupIdSuffix;
             return this;
         }
 
+        /**
+         * @param globalReplicationGroupIdSuffix The suffix name of a Global Datastore. If `global_replication_group_id_suffix` is changed, creates a new resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder globalReplicationGroupIdSuffix(String globalReplicationGroupIdSuffix) {
             return globalReplicationGroupIdSuffix(Output.of(globalReplicationGroupIdSuffix));
         }
 
+        /**
+         * @param primaryReplicationGroupId The ID of the primary cluster that accepts writes and will replicate updates to the secondary cluster. If `primary_replication_group_id` is changed, creates a new resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryReplicationGroupId(Output<String> primaryReplicationGroupId) {
             $.primaryReplicationGroupId = primaryReplicationGroupId;
             return this;
         }
 
+        /**
+         * @param primaryReplicationGroupId The ID of the primary cluster that accepts writes and will replicate updates to the secondary cluster. If `primary_replication_group_id` is changed, creates a new resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryReplicationGroupId(String primaryReplicationGroupId) {
             return primaryReplicationGroupId(Output.of(primaryReplicationGroupId));
         }

@@ -25,6 +25,10 @@ public final class DatasetCompressionResponse extends com.pulumi.resources.Invok
     @Import(name="level")
     private @Nullable Object level;
 
+    /**
+     * @return The dataset compression level. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> level() {
         return Optional.ofNullable(this.level);
     }
@@ -36,6 +40,10 @@ public final class DatasetCompressionResponse extends com.pulumi.resources.Invok
     @Import(name="type", required=true)
     private Object type;
 
+    /**
+     * @return Type of dataset compression. Type: string (or Expression with resultType string).
+     * 
+     */
     public Object type() {
         return this.type;
     }
@@ -65,11 +73,23 @@ public final class DatasetCompressionResponse extends com.pulumi.resources.Invok
             $ = new DatasetCompressionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param level The dataset compression level. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder level(@Nullable Object level) {
             $.level = level;
             return this;
         }
 
+        /**
+         * @param type Type of dataset compression. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Object type) {
             $.type = type;
             return this;

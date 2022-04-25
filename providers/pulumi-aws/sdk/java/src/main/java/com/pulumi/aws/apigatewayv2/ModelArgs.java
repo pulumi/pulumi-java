@@ -22,6 +22,10 @@ public final class ModelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="apiId", required=true)
     private Output<String> apiId;
 
+    /**
+     * @return The API identifier.
+     * 
+     */
     public Output<String> apiId() {
         return this.apiId;
     }
@@ -33,6 +37,10 @@ public final class ModelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="contentType", required=true)
     private Output<String> contentType;
 
+    /**
+     * @return The content-type for the model, for example, `application/json`. Must be between 1 and 256 characters in length.
+     * 
+     */
     public Output<String> contentType() {
         return this.contentType;
     }
@@ -44,6 +52,10 @@ public final class ModelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description of the model. Must be between 1 and 128 characters in length.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -55,6 +67,10 @@ public final class ModelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the model. Must be alphanumeric. Must be between 1 and 128 characters in length.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -66,6 +82,10 @@ public final class ModelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="schema", required=true)
     private Output<String> schema;
 
+    /**
+     * @return The schema for the model. This should be a [JSON schema draft 4](https://tools.ietf.org/html/draft-zyp-json-schema-04) model. Must be less than or equal to 32768 characters in length.
+     * 
+     */
     public Output<String> schema() {
         return this.schema;
     }
@@ -98,47 +118,107 @@ public final class ModelArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ModelArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiId The API identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiId(Output<String> apiId) {
             $.apiId = apiId;
             return this;
         }
 
+        /**
+         * @param apiId The API identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiId(String apiId) {
             return apiId(Output.of(apiId));
         }
 
+        /**
+         * @param contentType The content-type for the model, for example, `application/json`. Must be between 1 and 256 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentType(Output<String> contentType) {
             $.contentType = contentType;
             return this;
         }
 
+        /**
+         * @param contentType The content-type for the model, for example, `application/json`. Must be between 1 and 256 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentType(String contentType) {
             return contentType(Output.of(contentType));
         }
 
+        /**
+         * @param description The description of the model. Must be between 1 and 128 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description of the model. Must be between 1 and 128 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param name The name of the model. Must be alphanumeric. Must be between 1 and 128 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the model. Must be alphanumeric. Must be between 1 and 128 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param schema The schema for the model. This should be a [JSON schema draft 4](https://tools.ietf.org/html/draft-zyp-json-schema-04) model. Must be less than or equal to 32768 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schema(Output<String> schema) {
             $.schema = schema;
             return this;
         }
 
+        /**
+         * @param schema The schema for the model. This should be a [JSON schema draft 4](https://tools.ietf.org/html/draft-zyp-json-schema-04) model. Must be less than or equal to 32768 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schema(String schema) {
             return schema(Output.of(schema));
         }

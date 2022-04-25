@@ -13,39 +13,39 @@ import java.util.Objects;
 @CustomType
 public final class GetMeshResult {
     /**
-     * The ARN of the service mesh.
+     * @return The ARN of the service mesh.
      * 
      */
     private final String arn;
     /**
-     * The creation date of the service mesh.
+     * @return The creation date of the service mesh.
      * 
      */
     private final String createdDate;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     /**
-     * The last update date of the service mesh.
+     * @return The last update date of the service mesh.
      * 
      */
     private final String lastUpdatedDate;
     private final String meshOwner;
     private final String name;
     /**
-     * The resource owner&#39;s AWS account ID.
+     * @return The resource owner&#39;s AWS account ID.
      * 
      */
     private final String resourceOwner;
     /**
-     * The service mesh specification.
+     * @return The service mesh specification.
      * 
      */
     private final List<GetMeshSpec> specs;
     /**
-     * A map of tags.
+     * @return A map of tags.
      * 
      */
     private final Map<String,String> tags;
@@ -73,30 +73,30 @@ public final class GetMeshResult {
     }
 
     /**
-     * The ARN of the service mesh.
+     * @return The ARN of the service mesh.
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
     /**
-     * The creation date of the service mesh.
+     * @return The creation date of the service mesh.
      * 
-    */
+     */
     public String createdDate() {
         return this.createdDate;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The last update date of the service mesh.
+     * @return The last update date of the service mesh.
      * 
-    */
+     */
     public String lastUpdatedDate() {
         return this.lastUpdatedDate;
     }
@@ -107,23 +107,23 @@ public final class GetMeshResult {
         return this.name;
     }
     /**
-     * The resource owner&#39;s AWS account ID.
+     * @return The resource owner&#39;s AWS account ID.
      * 
-    */
+     */
     public String resourceOwner() {
         return this.resourceOwner;
     }
     /**
-     * The service mesh specification.
+     * @return The service mesh specification.
      * 
-    */
+     */
     public List<GetMeshSpec> specs() {
         return this.specs;
     }
     /**
-     * A map of tags.
+     * @return A map of tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags;
     }

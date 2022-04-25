@@ -20,6 +20,10 @@ public final class FutureReservationSpecificSKUPropertiesResponse extends com.pu
     @Import(name="instanceProperties", required=true)
     private AllocationSpecificSKUAllocationReservedInstancePropertiesResponse instanceProperties;
 
+    /**
+     * @return Properties of the SKU instances being reserved.
+     * 
+     */
     public AllocationSpecificSKUAllocationReservedInstancePropertiesResponse instanceProperties() {
         return this.instanceProperties;
     }
@@ -31,6 +35,10 @@ public final class FutureReservationSpecificSKUPropertiesResponse extends com.pu
     @Import(name="totalCount", required=true)
     private String totalCount;
 
+    /**
+     * @return Total number of instances for which capacity assurance is requested at a future time period.
+     * 
+     */
     public String totalCount() {
         return this.totalCount;
     }
@@ -60,11 +68,23 @@ public final class FutureReservationSpecificSKUPropertiesResponse extends com.pu
             $ = new FutureReservationSpecificSKUPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param instanceProperties Properties of the SKU instances being reserved.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceProperties(AllocationSpecificSKUAllocationReservedInstancePropertiesResponse instanceProperties) {
             $.instanceProperties = instanceProperties;
             return this;
         }
 
+        /**
+         * @param totalCount Total number of instances for which capacity assurance is requested at a future time period.
+         * 
+         * @return builder
+         * 
+         */
         public Builder totalCount(String totalCount) {
             $.totalCount = totalCount;
             return this;

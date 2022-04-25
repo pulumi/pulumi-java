@@ -13,22 +13,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class EdgeUsageDataCollectionPolicyResponse {
     /**
-     * Usage data collection frequency in ISO 8601 duration format e.g. PT10M , PT5H.
+     * @return Usage data collection frequency in ISO 8601 duration format e.g. PT10M , PT5H.
      * 
      */
     private final @Nullable String dataCollectionFrequency;
     /**
-     * Usage data reporting frequency in ISO 8601 duration format e.g. PT10M , PT5H.
+     * @return Usage data reporting frequency in ISO 8601 duration format e.g. PT10M , PT5H.
      * 
      */
     private final @Nullable String dataReportingFrequency;
     /**
-     * Details of Event Hub where the usage will be reported.
+     * @return Details of Event Hub where the usage will be reported.
      * 
      */
     private final @Nullable EdgeUsageDataEventHubResponse eventHubDetails;
     /**
-     * Maximum time for which the functionality of the device will not be hampered for not reporting the usage data.
+     * @return Maximum time for which the functionality of the device will not be hampered for not reporting the usage data.
      * 
      */
     private final @Nullable String maxAllowedUnreportedUsageDuration;
@@ -46,30 +46,30 @@ public final class EdgeUsageDataCollectionPolicyResponse {
     }
 
     /**
-     * Usage data collection frequency in ISO 8601 duration format e.g. PT10M , PT5H.
+     * @return Usage data collection frequency in ISO 8601 duration format e.g. PT10M , PT5H.
      * 
-    */
+     */
     public Optional<String> dataCollectionFrequency() {
         return Optional.ofNullable(this.dataCollectionFrequency);
     }
     /**
-     * Usage data reporting frequency in ISO 8601 duration format e.g. PT10M , PT5H.
+     * @return Usage data reporting frequency in ISO 8601 duration format e.g. PT10M , PT5H.
      * 
-    */
+     */
     public Optional<String> dataReportingFrequency() {
         return Optional.ofNullable(this.dataReportingFrequency);
     }
     /**
-     * Details of Event Hub where the usage will be reported.
+     * @return Details of Event Hub where the usage will be reported.
      * 
-    */
+     */
     public Optional<EdgeUsageDataEventHubResponse> eventHubDetails() {
         return Optional.ofNullable(this.eventHubDetails);
     }
     /**
-     * Maximum time for which the functionality of the device will not be hampered for not reporting the usage data.
+     * @return Maximum time for which the functionality of the device will not be hampered for not reporting the usage data.
      * 
-    */
+     */
     public Optional<String> maxAllowedUnreportedUsageDuration() {
         return Optional.ofNullable(this.maxAllowedUnreportedUsageDuration);
     }

@@ -23,6 +23,10 @@ public final class BastionShareableLink extends com.pulumi.resources.InvokeArgs 
     @Import(name="vm", required=true)
     private VM vm;
 
+    /**
+     * @return Reference of the virtual machine resource.
+     * 
+     */
     public VM vm() {
         return this.vm;
     }
@@ -51,6 +55,12 @@ public final class BastionShareableLink extends com.pulumi.resources.InvokeArgs 
             $ = new BastionShareableLink(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param vm Reference of the virtual machine resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vm(VM vm) {
             $.vm = vm;
             return this;

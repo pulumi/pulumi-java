@@ -26,6 +26,10 @@ public final class NetworkResourcePropertiesResponse extends com.pulumi.resource
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return User readable description of the network.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -38,6 +42,11 @@ public final class NetworkResourcePropertiesResponse extends com.pulumi.resource
     @Import(name="kind", required=true)
     private String kind;
 
+    /**
+     * @return The type of a Service Fabric container network.
+     * Expected value is &#39;NetworkResourceProperties&#39;.
+     * 
+     */
     public String kind() {
         return this.kind;
     }
@@ -49,6 +58,10 @@ public final class NetworkResourcePropertiesResponse extends com.pulumi.resource
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return State of the resource.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -60,6 +73,10 @@ public final class NetworkResourcePropertiesResponse extends com.pulumi.resource
     @Import(name="status", required=true)
     private String status;
 
+    /**
+     * @return Status of the network.
+     * 
+     */
     public String status() {
         return this.status;
     }
@@ -71,6 +88,10 @@ public final class NetworkResourcePropertiesResponse extends com.pulumi.resource
     @Import(name="statusDetails", required=true)
     private String statusDetails;
 
+    /**
+     * @return Gives additional information about the current status of the network.
+     * 
+     */
     public String statusDetails() {
         return this.statusDetails;
     }
@@ -103,26 +124,57 @@ public final class NetworkResourcePropertiesResponse extends com.pulumi.resource
             $ = new NetworkResourcePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description User readable description of the network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param kind The type of a Service Fabric container network.
+         * Expected value is &#39;NetworkResourceProperties&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param provisioningState State of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param status Status of the network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param statusDetails Gives additional information about the current status of the network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statusDetails(String statusDetails) {
             $.statusDetails = statusDetails;
             return this;

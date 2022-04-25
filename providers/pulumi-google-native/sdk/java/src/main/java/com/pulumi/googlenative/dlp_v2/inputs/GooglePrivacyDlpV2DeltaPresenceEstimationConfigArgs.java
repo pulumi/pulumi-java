@@ -29,6 +29,10 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationConfigArgs extends c
     @Import(name="auxiliaryTables")
     private @Nullable Output<List<GooglePrivacyDlpV2StatisticalTableArgs>> auxiliaryTables;
 
+    /**
+     * @return Several auxiliary tables can be used in the analysis. Each custom_tag used to tag a quasi-identifiers field must appear in exactly one field of one auxiliary table.
+     * 
+     */
     public Optional<Output<List<GooglePrivacyDlpV2StatisticalTableArgs>>> auxiliaryTables() {
         return Optional.ofNullable(this.auxiliaryTables);
     }
@@ -40,6 +44,10 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationConfigArgs extends c
     @Import(name="quasiIds", required=true)
     private Output<List<GooglePrivacyDlpV2QuasiIdArgs>> quasiIds;
 
+    /**
+     * @return Fields considered to be quasi-identifiers. No two fields can have the same tag.
+     * 
+     */
     public Output<List<GooglePrivacyDlpV2QuasiIdArgs>> quasiIds() {
         return this.quasiIds;
     }
@@ -51,6 +59,10 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationConfigArgs extends c
     @Import(name="regionCode")
     private @Nullable Output<String> regionCode;
 
+    /**
+     * @return ISO 3166-1 alpha-2 region code to use in the statistical modeling. Set if no column is tagged with a region-specific InfoType (like US_ZIP_5) or a region code.
+     * 
+     */
     public Optional<Output<String>> regionCode() {
         return Optional.ofNullable(this.regionCode);
     }
@@ -81,37 +93,85 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationConfigArgs extends c
             $ = new GooglePrivacyDlpV2DeltaPresenceEstimationConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param auxiliaryTables Several auxiliary tables can be used in the analysis. Each custom_tag used to tag a quasi-identifiers field must appear in exactly one field of one auxiliary table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder auxiliaryTables(@Nullable Output<List<GooglePrivacyDlpV2StatisticalTableArgs>> auxiliaryTables) {
             $.auxiliaryTables = auxiliaryTables;
             return this;
         }
 
+        /**
+         * @param auxiliaryTables Several auxiliary tables can be used in the analysis. Each custom_tag used to tag a quasi-identifiers field must appear in exactly one field of one auxiliary table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder auxiliaryTables(List<GooglePrivacyDlpV2StatisticalTableArgs> auxiliaryTables) {
             return auxiliaryTables(Output.of(auxiliaryTables));
         }
 
+        /**
+         * @param auxiliaryTables Several auxiliary tables can be used in the analysis. Each custom_tag used to tag a quasi-identifiers field must appear in exactly one field of one auxiliary table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder auxiliaryTables(GooglePrivacyDlpV2StatisticalTableArgs... auxiliaryTables) {
             return auxiliaryTables(List.of(auxiliaryTables));
         }
 
+        /**
+         * @param quasiIds Fields considered to be quasi-identifiers. No two fields can have the same tag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder quasiIds(Output<List<GooglePrivacyDlpV2QuasiIdArgs>> quasiIds) {
             $.quasiIds = quasiIds;
             return this;
         }
 
+        /**
+         * @param quasiIds Fields considered to be quasi-identifiers. No two fields can have the same tag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder quasiIds(List<GooglePrivacyDlpV2QuasiIdArgs> quasiIds) {
             return quasiIds(Output.of(quasiIds));
         }
 
+        /**
+         * @param quasiIds Fields considered to be quasi-identifiers. No two fields can have the same tag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder quasiIds(GooglePrivacyDlpV2QuasiIdArgs... quasiIds) {
             return quasiIds(List.of(quasiIds));
         }
 
+        /**
+         * @param regionCode ISO 3166-1 alpha-2 region code to use in the statistical modeling. Set if no column is tagged with a region-specific InfoType (like US_ZIP_5) or a region code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regionCode(@Nullable Output<String> regionCode) {
             $.regionCode = regionCode;
             return this;
         }
 
+        /**
+         * @param regionCode ISO 3166-1 alpha-2 region code to use in the statistical modeling. Set if no column is tagged with a region-specific InfoType (like US_ZIP_5) or a region code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regionCode(String regionCode) {
             return regionCode(Output.of(regionCode));
         }

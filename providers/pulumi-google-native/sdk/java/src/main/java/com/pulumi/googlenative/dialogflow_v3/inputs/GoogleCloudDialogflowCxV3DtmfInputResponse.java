@@ -23,6 +23,10 @@ public final class GoogleCloudDialogflowCxV3DtmfInputResponse extends com.pulumi
     @Import(name="digits", required=true)
     private String digits;
 
+    /**
+     * @return The dtmf digits.
+     * 
+     */
     public String digits() {
         return this.digits;
     }
@@ -34,6 +38,10 @@ public final class GoogleCloudDialogflowCxV3DtmfInputResponse extends com.pulumi
     @Import(name="finishDigit", required=true)
     private String finishDigit;
 
+    /**
+     * @return The finish digit (if any).
+     * 
+     */
     public String finishDigit() {
         return this.finishDigit;
     }
@@ -63,11 +71,23 @@ public final class GoogleCloudDialogflowCxV3DtmfInputResponse extends com.pulumi
             $ = new GoogleCloudDialogflowCxV3DtmfInputResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param digits The dtmf digits.
+         * 
+         * @return builder
+         * 
+         */
         public Builder digits(String digits) {
             $.digits = digits;
             return this;
         }
 
+        /**
+         * @param finishDigit The finish digit (if any).
+         * 
+         * @return builder
+         * 
+         */
         public Builder finishDigit(String finishDigit) {
             $.finishDigit = finishDigit;
             return this;

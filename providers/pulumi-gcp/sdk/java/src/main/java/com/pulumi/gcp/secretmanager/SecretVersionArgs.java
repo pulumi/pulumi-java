@@ -23,6 +23,10 @@ public final class SecretVersionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return The current state of the SecretVersion.
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -34,6 +38,10 @@ public final class SecretVersionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="secret", required=true)
     private Output<String> secret;
 
+    /**
+     * @return Secret Manager secret resource
+     * 
+     */
     public Output<String> secret() {
         return this.secret;
     }
@@ -46,6 +54,11 @@ public final class SecretVersionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="secretData", required=true)
     private Output<String> secretData;
 
+    /**
+     * @return The secret data. Must be no larger than 64KiB.
+     * **Note**: This property is sensitive and will not be displayed in the plan.
+     * 
+     */
     public Output<String> secretData() {
         return this.secretData;
     }
@@ -76,29 +89,67 @@ public final class SecretVersionArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SecretVersionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled The current state of the SecretVersion.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled The current state of the SecretVersion.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param secret Secret Manager secret resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder secret(Output<String> secret) {
             $.secret = secret;
             return this;
         }
 
+        /**
+         * @param secret Secret Manager secret resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder secret(String secret) {
             return secret(Output.of(secret));
         }
 
+        /**
+         * @param secretData The secret data. Must be no larger than 64KiB.
+         * **Note**: This property is sensitive and will not be displayed in the plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretData(Output<String> secretData) {
             $.secretData = secretData;
             return this;
         }
 
+        /**
+         * @param secretData The secret data. Must be no larger than 64KiB.
+         * **Note**: This property is sensitive and will not be displayed in the plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretData(String secretData) {
             return secretData(Output.of(secretData));
         }

@@ -25,6 +25,10 @@ public final class CacheEncryptionSettingsResponse extends com.pulumi.resources.
     @Import(name="keyEncryptionKey")
     private @Nullable KeyVaultKeyReferenceResponse keyEncryptionKey;
 
+    /**
+     * @return Specifies the location of the key encryption key in Key Vault.
+     * 
+     */
     public Optional<KeyVaultKeyReferenceResponse> keyEncryptionKey() {
         return Optional.ofNullable(this.keyEncryptionKey);
     }
@@ -53,6 +57,12 @@ public final class CacheEncryptionSettingsResponse extends com.pulumi.resources.
             $ = new CacheEncryptionSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyEncryptionKey Specifies the location of the key encryption key in Key Vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyEncryptionKey(@Nullable KeyVaultKeyReferenceResponse keyEncryptionKey) {
             $.keyEncryptionKey = keyEncryptionKey;
             return this;

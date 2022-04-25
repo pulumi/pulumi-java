@@ -25,6 +25,10 @@ public final class ManagementLockOwnerResponse extends com.pulumi.resources.Invo
     @Import(name="applicationId")
     private @Nullable String applicationId;
 
+    /**
+     * @return The application ID of the lock owner.
+     * 
+     */
     public Optional<String> applicationId() {
         return Optional.ofNullable(this.applicationId);
     }
@@ -53,6 +57,12 @@ public final class ManagementLockOwnerResponse extends com.pulumi.resources.Invo
             $ = new ManagementLockOwnerResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param applicationId The application ID of the lock owner.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationId(@Nullable String applicationId) {
             $.applicationId = applicationId;
             return this;

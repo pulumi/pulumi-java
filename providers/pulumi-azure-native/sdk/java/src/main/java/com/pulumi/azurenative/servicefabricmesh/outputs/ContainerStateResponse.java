@@ -12,27 +12,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ContainerStateResponse {
     /**
-     * Human-readable status of this state.
+     * @return Human-readable status of this state.
      * 
      */
     private final @Nullable String detailStatus;
     /**
-     * The container exit code.
+     * @return The container exit code.
      * 
      */
     private final @Nullable String exitCode;
     /**
-     * Date/time when the container state finished.
+     * @return Date/time when the container state finished.
      * 
      */
     private final @Nullable String finishTime;
     /**
-     * Date/time when the container state started.
+     * @return Date/time when the container state started.
      * 
      */
     private final @Nullable String startTime;
     /**
-     * The state of this container
+     * @return The state of this container
      * 
      */
     private final @Nullable String state;
@@ -52,37 +52,37 @@ public final class ContainerStateResponse {
     }
 
     /**
-     * Human-readable status of this state.
+     * @return Human-readable status of this state.
      * 
-    */
+     */
     public Optional<String> detailStatus() {
         return Optional.ofNullable(this.detailStatus);
     }
     /**
-     * The container exit code.
+     * @return The container exit code.
      * 
-    */
+     */
     public Optional<String> exitCode() {
         return Optional.ofNullable(this.exitCode);
     }
     /**
-     * Date/time when the container state finished.
+     * @return Date/time when the container state finished.
      * 
-    */
+     */
     public Optional<String> finishTime() {
         return Optional.ofNullable(this.finishTime);
     }
     /**
-     * Date/time when the container state started.
+     * @return Date/time when the container state started.
      * 
-    */
+     */
     public Optional<String> startTime() {
         return Optional.ofNullable(this.startTime);
     }
     /**
-     * The state of this container
+     * @return The state of this container
      * 
-    */
+     */
     public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }

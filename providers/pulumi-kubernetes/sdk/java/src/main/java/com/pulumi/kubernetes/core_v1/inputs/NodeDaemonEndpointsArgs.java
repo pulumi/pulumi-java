@@ -26,6 +26,10 @@ public final class NodeDaemonEndpointsArgs extends com.pulumi.resources.Resource
     @Import(name="kubeletEndpoint")
     private @Nullable Output<DaemonEndpointArgs> kubeletEndpoint;
 
+    /**
+     * @return Endpoint on which Kubelet is listening.
+     * 
+     */
     public Optional<Output<DaemonEndpointArgs>> kubeletEndpoint() {
         return Optional.ofNullable(this.kubeletEndpoint);
     }
@@ -54,11 +58,23 @@ public final class NodeDaemonEndpointsArgs extends com.pulumi.resources.Resource
             $ = new NodeDaemonEndpointsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kubeletEndpoint Endpoint on which Kubelet is listening.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kubeletEndpoint(@Nullable Output<DaemonEndpointArgs> kubeletEndpoint) {
             $.kubeletEndpoint = kubeletEndpoint;
             return this;
         }
 
+        /**
+         * @param kubeletEndpoint Endpoint on which Kubelet is listening.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kubeletEndpoint(DaemonEndpointArgs kubeletEndpoint) {
             return kubeletEndpoint(Output.of(kubeletEndpoint));
         }

@@ -25,6 +25,10 @@ public final class SoftwareRecipeArtifactResponse extends com.pulumi.resources.I
     @Import(name="allowInsecure", required=true)
     private Boolean allowInsecure;
 
+    /**
+     * @return Defaults to false. When false, recipes are subject to validations based on the artifact type: Remote: A checksum must be specified, and only protocols with transport-layer security are permitted. GCS: An object generation number must be specified.
+     * 
+     */
     public Boolean allowInsecure() {
         return this.allowInsecure;
     }
@@ -36,6 +40,10 @@ public final class SoftwareRecipeArtifactResponse extends com.pulumi.resources.I
     @Import(name="gcs", required=true)
     private SoftwareRecipeArtifactGcsResponse gcs;
 
+    /**
+     * @return A Google Cloud Storage artifact.
+     * 
+     */
     public SoftwareRecipeArtifactGcsResponse gcs() {
         return this.gcs;
     }
@@ -47,6 +55,10 @@ public final class SoftwareRecipeArtifactResponse extends com.pulumi.resources.I
     @Import(name="remote", required=true)
     private SoftwareRecipeArtifactRemoteResponse remote;
 
+    /**
+     * @return A generic remote artifact.
+     * 
+     */
     public SoftwareRecipeArtifactRemoteResponse remote() {
         return this.remote;
     }
@@ -77,16 +89,34 @@ public final class SoftwareRecipeArtifactResponse extends com.pulumi.resources.I
             $ = new SoftwareRecipeArtifactResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowInsecure Defaults to false. When false, recipes are subject to validations based on the artifact type: Remote: A checksum must be specified, and only protocols with transport-layer security are permitted. GCS: An object generation number must be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowInsecure(Boolean allowInsecure) {
             $.allowInsecure = allowInsecure;
             return this;
         }
 
+        /**
+         * @param gcs A Google Cloud Storage artifact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gcs(SoftwareRecipeArtifactGcsResponse gcs) {
             $.gcs = gcs;
             return this;
         }
 
+        /**
+         * @param remote A generic remote artifact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder remote(SoftwareRecipeArtifactRemoteResponse remote) {
             $.remote = remote;
             return this;

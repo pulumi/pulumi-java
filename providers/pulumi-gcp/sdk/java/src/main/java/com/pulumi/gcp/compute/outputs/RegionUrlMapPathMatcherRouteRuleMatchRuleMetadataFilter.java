@@ -12,7 +12,7 @@ import java.util.Objects;
 @CustomType
 public final class RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilter {
     /**
-     * The list of label value pairs that must match labels in the provided metadata
+     * @return The list of label value pairs that must match labels in the provided metadata
      * based on filterMatchCriteria  This list must not be empty and can have at the
      * most 64 entries.
      * Structure is documented below.
@@ -20,7 +20,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilter {
      */
     private final List<RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabel> filterLabels;
     /**
-     * Specifies how individual filterLabel matches within the list of filterLabels
+     * @return Specifies how individual filterLabel matches within the list of filterLabels
      * contribute towards the overall metadataFilter match. Supported values are:
      * * MATCH_ANY: At least one of the filterLabels must have a matching label in the
      *   provided metadata.
@@ -40,17 +40,17 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilter {
     }
 
     /**
-     * The list of label value pairs that must match labels in the provided metadata
+     * @return The list of label value pairs that must match labels in the provided metadata
      * based on filterMatchCriteria  This list must not be empty and can have at the
      * most 64 entries.
      * Structure is documented below.
      * 
-    */
+     */
     public List<RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabel> filterLabels() {
         return this.filterLabels;
     }
     /**
-     * Specifies how individual filterLabel matches within the list of filterLabels
+     * @return Specifies how individual filterLabel matches within the list of filterLabels
      * contribute towards the overall metadataFilter match. Supported values are:
      * * MATCH_ANY: At least one of the filterLabels must have a matching label in the
      *   provided metadata.
@@ -58,7 +58,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilter {
      *   the provided metadata.
      *   Possible values are `MATCH_ALL` and `MATCH_ANY`.
      * 
-    */
+     */
     public String filterMatchCriteria() {
         return this.filterMatchCriteria;
     }

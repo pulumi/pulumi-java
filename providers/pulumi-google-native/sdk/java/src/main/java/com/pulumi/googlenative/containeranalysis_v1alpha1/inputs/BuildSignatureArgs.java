@@ -27,6 +27,10 @@ public final class BuildSignatureArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="keyId")
     private @Nullable Output<String> keyId;
 
+    /**
+     * @return An Id for the key used to sign. This could be either an Id for the key stored in `public_key` (such as the Id or fingerprint for a PGP key, or the CN for a cert), or a reference to an external key (such as a reference to a key in Cloud Key Management Service).
+     * 
+     */
     public Optional<Output<String>> keyId() {
         return Optional.ofNullable(this.keyId);
     }
@@ -38,6 +42,10 @@ public final class BuildSignatureArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="keyType")
     private @Nullable Output<BuildSignatureKeyType> keyType;
 
+    /**
+     * @return The type of the key, either stored in `public_key` or referenced in `key_id`
+     * 
+     */
     public Optional<Output<BuildSignatureKeyType>> keyType() {
         return Optional.ofNullable(this.keyType);
     }
@@ -49,6 +57,10 @@ public final class BuildSignatureArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="publicKey")
     private @Nullable Output<String> publicKey;
 
+    /**
+     * @return Public key of the builder which can be used to verify that the related findings are valid and unchanged. If `key_type` is empty, this defaults to PEM encoded public keys. This field may be empty if `key_id` references an external key. For Cloud Build based signatures, this is a PEM encoded public key. To verify the Cloud Build signature, place the contents of this field into a file (public.pem). The signature field is base64-decoded into its binary representation in signature.bin, and the provenance bytes from `BuildDetails` are base64-decoded into a binary representation in signed.bin. OpenSSL can then verify the signature: `openssl sha256 -verify public.pem -signature signature.bin signed.bin`
+     * 
+     */
     public Optional<Output<String>> publicKey() {
         return Optional.ofNullable(this.publicKey);
     }
@@ -60,6 +72,10 @@ public final class BuildSignatureArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="signature")
     private @Nullable Output<String> signature;
 
+    /**
+     * @return Signature of the related `BuildProvenance`, encoded in a base64 string.
+     * 
+     */
     public Optional<Output<String>> signature() {
         return Optional.ofNullable(this.signature);
     }
@@ -91,38 +107,86 @@ public final class BuildSignatureArgs extends com.pulumi.resources.ResourceArgs 
             $ = new BuildSignatureArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyId An Id for the key used to sign. This could be either an Id for the key stored in `public_key` (such as the Id or fingerprint for a PGP key, or the CN for a cert), or a reference to an external key (such as a reference to a key in Cloud Key Management Service).
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyId(@Nullable Output<String> keyId) {
             $.keyId = keyId;
             return this;
         }
 
+        /**
+         * @param keyId An Id for the key used to sign. This could be either an Id for the key stored in `public_key` (such as the Id or fingerprint for a PGP key, or the CN for a cert), or a reference to an external key (such as a reference to a key in Cloud Key Management Service).
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyId(String keyId) {
             return keyId(Output.of(keyId));
         }
 
+        /**
+         * @param keyType The type of the key, either stored in `public_key` or referenced in `key_id`
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyType(@Nullable Output<BuildSignatureKeyType> keyType) {
             $.keyType = keyType;
             return this;
         }
 
+        /**
+         * @param keyType The type of the key, either stored in `public_key` or referenced in `key_id`
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyType(BuildSignatureKeyType keyType) {
             return keyType(Output.of(keyType));
         }
 
+        /**
+         * @param publicKey Public key of the builder which can be used to verify that the related findings are valid and unchanged. If `key_type` is empty, this defaults to PEM encoded public keys. This field may be empty if `key_id` references an external key. For Cloud Build based signatures, this is a PEM encoded public key. To verify the Cloud Build signature, place the contents of this field into a file (public.pem). The signature field is base64-decoded into its binary representation in signature.bin, and the provenance bytes from `BuildDetails` are base64-decoded into a binary representation in signed.bin. OpenSSL can then verify the signature: `openssl sha256 -verify public.pem -signature signature.bin signed.bin`
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicKey(@Nullable Output<String> publicKey) {
             $.publicKey = publicKey;
             return this;
         }
 
+        /**
+         * @param publicKey Public key of the builder which can be used to verify that the related findings are valid and unchanged. If `key_type` is empty, this defaults to PEM encoded public keys. This field may be empty if `key_id` references an external key. For Cloud Build based signatures, this is a PEM encoded public key. To verify the Cloud Build signature, place the contents of this field into a file (public.pem). The signature field is base64-decoded into its binary representation in signature.bin, and the provenance bytes from `BuildDetails` are base64-decoded into a binary representation in signed.bin. OpenSSL can then verify the signature: `openssl sha256 -verify public.pem -signature signature.bin signed.bin`
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicKey(String publicKey) {
             return publicKey(Output.of(publicKey));
         }
 
+        /**
+         * @param signature Signature of the related `BuildProvenance`, encoded in a base64 string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder signature(@Nullable Output<String> signature) {
             $.signature = signature;
             return this;
         }
 
+        /**
+         * @param signature Signature of the related `BuildProvenance`, encoded in a base64 string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder signature(String signature) {
             return signature(Output.of(signature));
         }

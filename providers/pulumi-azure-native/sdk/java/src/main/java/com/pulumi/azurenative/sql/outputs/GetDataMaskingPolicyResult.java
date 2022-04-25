@@ -12,47 +12,47 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetDataMaskingPolicyResult {
     /**
-     * The list of the application principals. This is a legacy parameter and is no longer used.
+     * @return The list of the application principals. This is a legacy parameter and is no longer used.
      * 
      */
     private final String applicationPrincipals;
     /**
-     * The state of the data masking policy.
+     * @return The state of the data masking policy.
      * 
      */
     private final String dataMaskingState;
     /**
-     * The list of the exempt principals. Specifies the semicolon-separated list of database users for which the data masking policy does not apply. The specified users receive data results without masking for all of the database queries.
+     * @return The list of the exempt principals. Specifies the semicolon-separated list of database users for which the data masking policy does not apply. The specified users receive data results without masking for all of the database queries.
      * 
      */
     private final @Nullable String exemptPrincipals;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final String id;
     /**
-     * The kind of data masking policy. Metadata, used for Azure portal.
+     * @return The kind of data masking policy. Metadata, used for Azure portal.
      * 
      */
     private final String kind;
     /**
-     * The location of the data masking policy.
+     * @return The location of the data masking policy.
      * 
      */
     private final String location;
     /**
-     * The masking level. This is a legacy parameter and is no longer used.
+     * @return The masking level. This is a legacy parameter and is no longer used.
      * 
      */
     private final String maskingLevel;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
@@ -80,65 +80,65 @@ public final class GetDataMaskingPolicyResult {
     }
 
     /**
-     * The list of the application principals. This is a legacy parameter and is no longer used.
+     * @return The list of the application principals. This is a legacy parameter and is no longer used.
      * 
-    */
+     */
     public String applicationPrincipals() {
         return this.applicationPrincipals;
     }
     /**
-     * The state of the data masking policy.
+     * @return The state of the data masking policy.
      * 
-    */
+     */
     public String dataMaskingState() {
         return this.dataMaskingState;
     }
     /**
-     * The list of the exempt principals. Specifies the semicolon-separated list of database users for which the data masking policy does not apply. The specified users receive data results without masking for all of the database queries.
+     * @return The list of the exempt principals. Specifies the semicolon-separated list of database users for which the data masking policy does not apply. The specified users receive data results without masking for all of the database queries.
      * 
-    */
+     */
     public Optional<String> exemptPrincipals() {
         return Optional.ofNullable(this.exemptPrincipals);
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The kind of data masking policy. Metadata, used for Azure portal.
+     * @return The kind of data masking policy. Metadata, used for Azure portal.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * The location of the data masking policy.
+     * @return The location of the data masking policy.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * The masking level. This is a legacy parameter and is no longer used.
+     * @return The masking level. This is a legacy parameter and is no longer used.
      * 
-    */
+     */
     public String maskingLevel() {
         return this.maskingLevel;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

@@ -26,6 +26,10 @@ public final class NetworkManagerPropertiesResponseNetworkManagerScopes extends 
     @Import(name="managementGroups")
     private @Nullable List<String> managementGroups;
 
+    /**
+     * @return List of management groups.
+     * 
+     */
     public Optional<List<String>> managementGroups() {
         return Optional.ofNullable(this.managementGroups);
     }
@@ -37,6 +41,10 @@ public final class NetworkManagerPropertiesResponseNetworkManagerScopes extends 
     @Import(name="subscriptions")
     private @Nullable List<String> subscriptions;
 
+    /**
+     * @return List of subscriptions.
+     * 
+     */
     public Optional<List<String>> subscriptions() {
         return Optional.ofNullable(this.subscriptions);
     }
@@ -66,20 +74,44 @@ public final class NetworkManagerPropertiesResponseNetworkManagerScopes extends 
             $ = new NetworkManagerPropertiesResponseNetworkManagerScopes(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param managementGroups List of management groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managementGroups(@Nullable List<String> managementGroups) {
             $.managementGroups = managementGroups;
             return this;
         }
 
+        /**
+         * @param managementGroups List of management groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managementGroups(String... managementGroups) {
             return managementGroups(List.of(managementGroups));
         }
 
+        /**
+         * @param subscriptions List of subscriptions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptions(@Nullable List<String> subscriptions) {
             $.subscriptions = subscriptions;
             return this;
         }
 
+        /**
+         * @param subscriptions List of subscriptions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptions(String... subscriptions) {
             return subscriptions(List.of(subscriptions));
         }

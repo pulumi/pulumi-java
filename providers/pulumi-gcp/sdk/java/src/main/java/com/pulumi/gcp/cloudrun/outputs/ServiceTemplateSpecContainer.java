@@ -18,7 +18,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ServiceTemplateSpecContainer {
     /**
-     * Arguments to the entrypoint.
+     * @return Arguments to the entrypoint.
      * The docker image&#39;s CMD is used if this is not provided.
      * Variable references $(VAR_NAME) are expanded using the container&#39;s
      * environment. If a variable cannot be resolved, the reference in the input
@@ -31,7 +31,7 @@ public final class ServiceTemplateSpecContainer {
      */
     private final @Nullable List<String> args;
     /**
-     * Entrypoint array. Not executed within a shell.
+     * @return Entrypoint array. Not executed within a shell.
      * The docker image&#39;s ENTRYPOINT is used if this is not provided.
      * Variable references $(VAR_NAME) are expanded using the container&#39;s
      * environment. If a variable cannot be resolved, the reference in the input
@@ -44,7 +44,7 @@ public final class ServiceTemplateSpecContainer {
      */
     private final @Nullable List<String> commands;
     /**
-     * - 
+     * @return -
      * (Optional, Deprecated)
      * List of sources to populate environment variables in the container.
      * All invalid keys will be reported as an event when the container is starting.
@@ -57,23 +57,23 @@ public final class ServiceTemplateSpecContainer {
      * Not supported by Cloud Run fully managed
      * 
      */
-        @Deprecated /* Not supported by Cloud Run fully managed */
+    @Deprecated /* Not supported by Cloud Run fully managed */
     private final @Nullable List<ServiceTemplateSpecContainerEnvFrom> envFroms;
     /**
-     * List of environment variables to set in the container.
+     * @return List of environment variables to set in the container.
      * Structure is documented below.
      * 
      */
     private final @Nullable List<ServiceTemplateSpecContainerEnv> envs;
     /**
-     * Docker image name. This is most often a reference to a container located
+     * @return Docker image name. This is most often a reference to a container located
      * in the container registry, such as gcr.io/cloudrun/hello
      * More info: https://kubernetes.io/docs/concepts/containers/images
      * 
      */
     private final String image;
     /**
-     * List of open ports in the container.
+     * @return List of open ports in the container.
      * More Info:
      * https://cloud.google.com/run/docs/reference/rest/v1/RevisionSpec#ContainerPort
      * Structure is documented below.
@@ -81,7 +81,7 @@ public final class ServiceTemplateSpecContainer {
      */
     private final @Nullable List<ServiceTemplateSpecContainerPort> ports;
     /**
-     * Compute Resources required by this container. Used to set values such as max memory
+     * @return Compute Resources required by this container. Used to set values such as max memory
      * More info:
      * https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/#requests-and-limits
      * Structure is documented below.
@@ -89,14 +89,14 @@ public final class ServiceTemplateSpecContainer {
      */
     private final @Nullable ServiceTemplateSpecContainerResources resources;
     /**
-     * Volume to mount into the container&#39;s filesystem.
+     * @return Volume to mount into the container&#39;s filesystem.
      * Only supports SecretVolumeSources.
      * Structure is documented below.
      * 
      */
     private final @Nullable List<ServiceTemplateSpecContainerVolumeMount> volumeMounts;
     /**
-     * - 
+     * @return -
      * (Optional, Deprecated)
      * Container&#39;s working directory.
      * If not specified, the container runtime&#39;s default will be used, which
@@ -106,7 +106,7 @@ public final class ServiceTemplateSpecContainer {
      * Not supported by Cloud Run fully managed
      * 
      */
-        @Deprecated /* Not supported by Cloud Run fully managed */
+    @Deprecated /* Not supported by Cloud Run fully managed */
     private final @Nullable String workingDir;
 
     @CustomType.Constructor
@@ -132,7 +132,7 @@ public final class ServiceTemplateSpecContainer {
     }
 
     /**
-     * Arguments to the entrypoint.
+     * @return Arguments to the entrypoint.
      * The docker image&#39;s CMD is used if this is not provided.
      * Variable references $(VAR_NAME) are expanded using the container&#39;s
      * environment. If a variable cannot be resolved, the reference in the input
@@ -142,12 +142,12 @@ public final class ServiceTemplateSpecContainer {
      * More info:
      * https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
      * 
-    */
+     */
     public List<String> args() {
         return this.args == null ? List.of() : this.args;
     }
     /**
-     * Entrypoint array. Not executed within a shell.
+     * @return Entrypoint array. Not executed within a shell.
      * The docker image&#39;s ENTRYPOINT is used if this is not provided.
      * Variable references $(VAR_NAME) are expanded using the container&#39;s
      * environment. If a variable cannot be resolved, the reference in the input
@@ -157,12 +157,12 @@ public final class ServiceTemplateSpecContainer {
      * More info:
      * https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
      * 
-    */
+     */
     public List<String> commands() {
         return this.commands == null ? List.of() : this.commands;
     }
     /**
-     * - 
+     * @return -
      * (Optional, Deprecated)
      * List of sources to populate environment variables in the container.
      * All invalid keys will be reported as an event when the container is starting.
@@ -174,59 +174,59 @@ public final class ServiceTemplateSpecContainer {
      * @deprecated
      * Not supported by Cloud Run fully managed
      * 
-    */
+     */
     @Deprecated /* Not supported by Cloud Run fully managed */
     public List<ServiceTemplateSpecContainerEnvFrom> envFroms() {
         return this.envFroms == null ? List.of() : this.envFroms;
     }
     /**
-     * List of environment variables to set in the container.
+     * @return List of environment variables to set in the container.
      * Structure is documented below.
      * 
-    */
+     */
     public List<ServiceTemplateSpecContainerEnv> envs() {
         return this.envs == null ? List.of() : this.envs;
     }
     /**
-     * Docker image name. This is most often a reference to a container located
+     * @return Docker image name. This is most often a reference to a container located
      * in the container registry, such as gcr.io/cloudrun/hello
      * More info: https://kubernetes.io/docs/concepts/containers/images
      * 
-    */
+     */
     public String image() {
         return this.image;
     }
     /**
-     * List of open ports in the container.
+     * @return List of open ports in the container.
      * More Info:
      * https://cloud.google.com/run/docs/reference/rest/v1/RevisionSpec#ContainerPort
      * Structure is documented below.
      * 
-    */
+     */
     public List<ServiceTemplateSpecContainerPort> ports() {
         return this.ports == null ? List.of() : this.ports;
     }
     /**
-     * Compute Resources required by this container. Used to set values such as max memory
+     * @return Compute Resources required by this container. Used to set values such as max memory
      * More info:
      * https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/#requests-and-limits
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<ServiceTemplateSpecContainerResources> resources() {
         return Optional.ofNullable(this.resources);
     }
     /**
-     * Volume to mount into the container&#39;s filesystem.
+     * @return Volume to mount into the container&#39;s filesystem.
      * Only supports SecretVolumeSources.
      * Structure is documented below.
      * 
-    */
+     */
     public List<ServiceTemplateSpecContainerVolumeMount> volumeMounts() {
         return this.volumeMounts == null ? List.of() : this.volumeMounts;
     }
     /**
-     * - 
+     * @return -
      * (Optional, Deprecated)
      * Container&#39;s working directory.
      * If not specified, the container runtime&#39;s default will be used, which
@@ -235,7 +235,7 @@ public final class ServiceTemplateSpecContainer {
      * @deprecated
      * Not supported by Cloud Run fully managed
      * 
-    */
+     */
     @Deprecated /* Not supported by Cloud Run fully managed */
     public Optional<String> workingDir() {
         return Optional.ofNullable(this.workingDir);

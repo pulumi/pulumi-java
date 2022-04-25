@@ -19,6 +19,10 @@ public final class GetSkusNestedResourceTypeSecondArgs extends com.pulumi.resour
     @Import(name="nestedResourceTypeFirst", required=true)
     private String nestedResourceTypeFirst;
 
+    /**
+     * @return The first child resource type.
+     * 
+     */
     public String nestedResourceTypeFirst() {
         return this.nestedResourceTypeFirst;
     }
@@ -30,6 +34,10 @@ public final class GetSkusNestedResourceTypeSecondArgs extends com.pulumi.resour
     @Import(name="nestedResourceTypeSecond", required=true)
     private String nestedResourceTypeSecond;
 
+    /**
+     * @return The second child resource type.
+     * 
+     */
     public String nestedResourceTypeSecond() {
         return this.nestedResourceTypeSecond;
     }
@@ -41,6 +49,10 @@ public final class GetSkusNestedResourceTypeSecondArgs extends com.pulumi.resour
     @Import(name="providerNamespace", required=true)
     private String providerNamespace;
 
+    /**
+     * @return The name of the resource provider hosted within ProviderHub.
+     * 
+     */
     public String providerNamespace() {
         return this.providerNamespace;
     }
@@ -52,6 +64,10 @@ public final class GetSkusNestedResourceTypeSecondArgs extends com.pulumi.resour
     @Import(name="resourceType", required=true)
     private String resourceType;
 
+    /**
+     * @return The resource type.
+     * 
+     */
     public String resourceType() {
         return this.resourceType;
     }
@@ -63,6 +79,10 @@ public final class GetSkusNestedResourceTypeSecondArgs extends com.pulumi.resour
     @Import(name="sku", required=true)
     private String sku;
 
+    /**
+     * @return The SKU.
+     * 
+     */
     public String sku() {
         return this.sku;
     }
@@ -95,26 +115,56 @@ public final class GetSkusNestedResourceTypeSecondArgs extends com.pulumi.resour
             $ = new GetSkusNestedResourceTypeSecondArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param nestedResourceTypeFirst The first child resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nestedResourceTypeFirst(String nestedResourceTypeFirst) {
             $.nestedResourceTypeFirst = nestedResourceTypeFirst;
             return this;
         }
 
+        /**
+         * @param nestedResourceTypeSecond The second child resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nestedResourceTypeSecond(String nestedResourceTypeSecond) {
             $.nestedResourceTypeSecond = nestedResourceTypeSecond;
             return this;
         }
 
+        /**
+         * @param providerNamespace The name of the resource provider hosted within ProviderHub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerNamespace(String providerNamespace) {
             $.providerNamespace = providerNamespace;
             return this;
         }
 
+        /**
+         * @param resourceType The resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(String resourceType) {
             $.resourceType = resourceType;
             return this;
         }
 
+        /**
+         * @param sku The SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(String sku) {
             $.sku = sku;
             return this;

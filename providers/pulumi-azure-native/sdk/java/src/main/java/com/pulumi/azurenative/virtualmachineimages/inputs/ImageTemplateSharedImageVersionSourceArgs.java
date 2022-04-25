@@ -25,6 +25,10 @@ public final class ImageTemplateSharedImageVersionSourceArgs extends com.pulumi.
     @Import(name="imageVersionId", required=true)
     private Output<String> imageVersionId;
 
+    /**
+     * @return ARM resource id of the image version in the shared image gallery
+     * 
+     */
     public Output<String> imageVersionId() {
         return this.imageVersionId;
     }
@@ -37,6 +41,11 @@ public final class ImageTemplateSharedImageVersionSourceArgs extends com.pulumi.
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Specifies the type of source image you want to start with.
+     * Expected value is &#39;SharedImageVersion&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -66,20 +75,46 @@ public final class ImageTemplateSharedImageVersionSourceArgs extends com.pulumi.
             $ = new ImageTemplateSharedImageVersionSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param imageVersionId ARM resource id of the image version in the shared image gallery
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageVersionId(Output<String> imageVersionId) {
             $.imageVersionId = imageVersionId;
             return this;
         }
 
+        /**
+         * @param imageVersionId ARM resource id of the image version in the shared image gallery
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageVersionId(String imageVersionId) {
             return imageVersionId(Output.of(imageVersionId));
         }
 
+        /**
+         * @param type Specifies the type of source image you want to start with.
+         * Expected value is &#39;SharedImageVersion&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Specifies the type of source image you want to start with.
+         * Expected value is &#39;SharedImageVersion&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

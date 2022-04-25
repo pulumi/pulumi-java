@@ -25,6 +25,10 @@ public final class DataSourceRestrictionResponse extends com.pulumi.resources.In
     @Import(name="filterOptions", required=true)
     private List<FilterOptionsResponse> filterOptions;
 
+    /**
+     * @return Filter options restricting the results. If multiple filters are present, they are grouped by object type before joining. Filters with the same object type are joined conjunctively, then the resulting expressions are joined disjunctively. The maximum number of elements is 20. NOTE: Suggest API supports only few filters at the moment: &#34;objecttype&#34;, &#34;type&#34; and &#34;mimetype&#34;. For now, schema specific filters cannot be used to filter suggestions.
+     * 
+     */
     public List<FilterOptionsResponse> filterOptions() {
         return this.filterOptions;
     }
@@ -36,6 +40,10 @@ public final class DataSourceRestrictionResponse extends com.pulumi.resources.In
     @Import(name="source", required=true)
     private SourceResponse source;
 
+    /**
+     * @return The source of restriction.
+     * 
+     */
     public SourceResponse source() {
         return this.source;
     }
@@ -65,15 +73,33 @@ public final class DataSourceRestrictionResponse extends com.pulumi.resources.In
             $ = new DataSourceRestrictionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param filterOptions Filter options restricting the results. If multiple filters are present, they are grouped by object type before joining. Filters with the same object type are joined conjunctively, then the resulting expressions are joined disjunctively. The maximum number of elements is 20. NOTE: Suggest API supports only few filters at the moment: &#34;objecttype&#34;, &#34;type&#34; and &#34;mimetype&#34;. For now, schema specific filters cannot be used to filter suggestions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filterOptions(List<FilterOptionsResponse> filterOptions) {
             $.filterOptions = filterOptions;
             return this;
         }
 
+        /**
+         * @param filterOptions Filter options restricting the results. If multiple filters are present, they are grouped by object type before joining. Filters with the same object type are joined conjunctively, then the resulting expressions are joined disjunctively. The maximum number of elements is 20. NOTE: Suggest API supports only few filters at the moment: &#34;objecttype&#34;, &#34;type&#34; and &#34;mimetype&#34;. For now, schema specific filters cannot be used to filter suggestions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filterOptions(FilterOptionsResponse... filterOptions) {
             return filterOptions(List.of(filterOptions));
         }
 
+        /**
+         * @param source The source of restriction.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(SourceResponse source) {
             $.source = source;
             return this;

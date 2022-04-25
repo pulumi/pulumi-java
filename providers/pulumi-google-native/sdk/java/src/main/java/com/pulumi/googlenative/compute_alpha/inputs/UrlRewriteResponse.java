@@ -23,6 +23,10 @@ public final class UrlRewriteResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="hostRewrite", required=true)
     private String hostRewrite;
 
+    /**
+     * @return Before forwarding the request to the selected service, the request&#39;s host header is replaced with contents of hostRewrite. The value must be from 1 to 255 characters.
+     * 
+     */
     public String hostRewrite() {
         return this.hostRewrite;
     }
@@ -34,6 +38,10 @@ public final class UrlRewriteResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="pathPrefixRewrite", required=true)
     private String pathPrefixRewrite;
 
+    /**
+     * @return Before forwarding the request to the selected backend service, the matching portion of the request&#39;s path is replaced by pathPrefixRewrite. The value must be from 1 to 1024 characters.
+     * 
+     */
     public String pathPrefixRewrite() {
         return this.pathPrefixRewrite;
     }
@@ -63,11 +71,23 @@ public final class UrlRewriteResponse extends com.pulumi.resources.InvokeArgs {
             $ = new UrlRewriteResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hostRewrite Before forwarding the request to the selected service, the request&#39;s host header is replaced with contents of hostRewrite. The value must be from 1 to 255 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostRewrite(String hostRewrite) {
             $.hostRewrite = hostRewrite;
             return this;
         }
 
+        /**
+         * @param pathPrefixRewrite Before forwarding the request to the selected backend service, the matching portion of the request&#39;s path is replaced by pathPrefixRewrite. The value must be from 1 to 1024 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pathPrefixRewrite(String pathPrefixRewrite) {
             $.pathPrefixRewrite = pathPrefixRewrite;
             return this;

@@ -19,6 +19,10 @@ public final class GetJobTargetGroupArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="jobAgentName", required=true)
     private String jobAgentName;
 
+    /**
+     * @return The name of the job agent.
+     * 
+     */
     public String jobAgentName() {
         return this.jobAgentName;
     }
@@ -30,6 +34,10 @@ public final class GetJobTargetGroupArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetJobTargetGroupArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="serverName", required=true)
     private String serverName;
 
+    /**
+     * @return The name of the server.
+     * 
+     */
     public String serverName() {
         return this.serverName;
     }
@@ -52,6 +64,10 @@ public final class GetJobTargetGroupArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="targetGroupName", required=true)
     private String targetGroupName;
 
+    /**
+     * @return The name of the target group.
+     * 
+     */
     public String targetGroupName() {
         return this.targetGroupName;
     }
@@ -83,21 +99,45 @@ public final class GetJobTargetGroupArgs extends com.pulumi.resources.InvokeArgs
             $ = new GetJobTargetGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param jobAgentName The name of the job agent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobAgentName(String jobAgentName) {
             $.jobAgentName = jobAgentName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param serverName The name of the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverName(String serverName) {
             $.serverName = serverName;
             return this;
         }
 
+        /**
+         * @param targetGroupName The name of the target group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetGroupName(String targetGroupName) {
             $.targetGroupName = targetGroupName;
             return this;

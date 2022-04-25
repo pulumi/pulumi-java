@@ -30,6 +30,10 @@ public final class ClusterMasterAuthGetArgs extends com.pulumi.resources.Resourc
     @Import(name="clientCertificateConfig", required=true)
     private Output<ClusterMasterAuthClientCertificateConfigGetArgs> clientCertificateConfig;
 
+    /**
+     * @return Whether client certificate authorization is enabled for this cluster.  For example:
+     * 
+     */
     public Output<ClusterMasterAuthClientCertificateConfigGetArgs> clientCertificateConfig() {
         return this.clientCertificateConfig;
     }
@@ -84,11 +88,23 @@ public final class ClusterMasterAuthGetArgs extends com.pulumi.resources.Resourc
             return clientCertificate(Output.of(clientCertificate));
         }
 
+        /**
+         * @param clientCertificateConfig Whether client certificate authorization is enabled for this cluster.  For example:
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientCertificateConfig(Output<ClusterMasterAuthClientCertificateConfigGetArgs> clientCertificateConfig) {
             $.clientCertificateConfig = clientCertificateConfig;
             return this;
         }
 
+        /**
+         * @param clientCertificateConfig Whether client certificate authorization is enabled for this cluster.  For example:
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientCertificateConfig(ClusterMasterAuthClientCertificateConfigGetArgs clientCertificateConfig) {
             return clientCertificateConfig(Output.of(clientCertificateConfig));
         }

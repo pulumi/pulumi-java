@@ -15,37 +15,37 @@ import javax.annotation.Nullable;
 @CustomType
 public final class RateLimitRuleResponse {
     /**
-     * Describes what action to be applied when rule matches
+     * @return Describes what action to be applied when rule matches
      * 
      */
     private final String action;
     /**
-     * Describes if the custom rule is in enabled or disabled state. Defaults to Enabled if not specified.
+     * @return Describes if the custom rule is in enabled or disabled state. Defaults to Enabled if not specified.
      * 
      */
     private final @Nullable String enabledState;
     /**
-     * List of match conditions.
+     * @return List of match conditions.
      * 
      */
     private final List<MatchConditionResponse> matchConditions;
     /**
-     * Defines the name of the custom rule
+     * @return Defines the name of the custom rule
      * 
      */
     private final String name;
     /**
-     * Defines in what order this rule be evaluated in the overall list of custom rules
+     * @return Defines in what order this rule be evaluated in the overall list of custom rules
      * 
      */
     private final Integer priority;
     /**
-     * Defines rate limit duration. Default is 1 minute.
+     * @return Defines rate limit duration. Default is 1 minute.
      * 
      */
     private final Integer rateLimitDurationInMinutes;
     /**
-     * Defines rate limit threshold.
+     * @return Defines rate limit threshold.
      * 
      */
     private final Integer rateLimitThreshold;
@@ -69,51 +69,51 @@ public final class RateLimitRuleResponse {
     }
 
     /**
-     * Describes what action to be applied when rule matches
+     * @return Describes what action to be applied when rule matches
      * 
-    */
+     */
     public String action() {
         return this.action;
     }
     /**
-     * Describes if the custom rule is in enabled or disabled state. Defaults to Enabled if not specified.
+     * @return Describes if the custom rule is in enabled or disabled state. Defaults to Enabled if not specified.
      * 
-    */
+     */
     public Optional<String> enabledState() {
         return Optional.ofNullable(this.enabledState);
     }
     /**
-     * List of match conditions.
+     * @return List of match conditions.
      * 
-    */
+     */
     public List<MatchConditionResponse> matchConditions() {
         return this.matchConditions;
     }
     /**
-     * Defines the name of the custom rule
+     * @return Defines the name of the custom rule
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Defines in what order this rule be evaluated in the overall list of custom rules
+     * @return Defines in what order this rule be evaluated in the overall list of custom rules
      * 
-    */
+     */
     public Integer priority() {
         return this.priority;
     }
     /**
-     * Defines rate limit duration. Default is 1 minute.
+     * @return Defines rate limit duration. Default is 1 minute.
      * 
-    */
+     */
     public Integer rateLimitDurationInMinutes() {
         return this.rateLimitDurationInMinutes;
     }
     /**
-     * Defines rate limit threshold.
+     * @return Defines rate limit threshold.
      * 
-    */
+     */
     public Integer rateLimitThreshold() {
         return this.rateLimitThreshold;
     }

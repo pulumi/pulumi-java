@@ -24,6 +24,10 @@ public final class DimensionsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="depth", required=true)
     private Double depth;
 
+    /**
+     * @return Depth of the device.
+     * 
+     */
     public Double depth() {
         return this.depth;
     }
@@ -35,6 +39,10 @@ public final class DimensionsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="height", required=true)
     private Double height;
 
+    /**
+     * @return Height of the device.
+     * 
+     */
     public Double height() {
         return this.height;
     }
@@ -46,6 +54,10 @@ public final class DimensionsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="length", required=true)
     private Double length;
 
+    /**
+     * @return Length of the device.
+     * 
+     */
     public Double length() {
         return this.length;
     }
@@ -57,6 +69,10 @@ public final class DimensionsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="lengthHeightUnit", required=true)
     private String lengthHeightUnit;
 
+    /**
+     * @return Unit for the dimensions of length, height and width.
+     * 
+     */
     public String lengthHeightUnit() {
         return this.lengthHeightUnit;
     }
@@ -68,6 +84,10 @@ public final class DimensionsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="weight", required=true)
     private Double weight;
 
+    /**
+     * @return Weight of the device.
+     * 
+     */
     public Double weight() {
         return this.weight;
     }
@@ -79,6 +99,10 @@ public final class DimensionsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="weightUnit", required=true)
     private String weightUnit;
 
+    /**
+     * @return Unit for the dimensions of weight.
+     * 
+     */
     public String weightUnit() {
         return this.weightUnit;
     }
@@ -90,6 +114,10 @@ public final class DimensionsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="width", required=true)
     private Double width;
 
+    /**
+     * @return Width of the device.
+     * 
+     */
     public Double width() {
         return this.width;
     }
@@ -124,36 +152,78 @@ public final class DimensionsResponse extends com.pulumi.resources.InvokeArgs {
             $ = new DimensionsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param depth Depth of the device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder depth(Double depth) {
             $.depth = depth;
             return this;
         }
 
+        /**
+         * @param height Height of the device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder height(Double height) {
             $.height = height;
             return this;
         }
 
+        /**
+         * @param length Length of the device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder length(Double length) {
             $.length = length;
             return this;
         }
 
+        /**
+         * @param lengthHeightUnit Unit for the dimensions of length, height and width.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lengthHeightUnit(String lengthHeightUnit) {
             $.lengthHeightUnit = lengthHeightUnit;
             return this;
         }
 
+        /**
+         * @param weight Weight of the device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weight(Double weight) {
             $.weight = weight;
             return this;
         }
 
+        /**
+         * @param weightUnit Unit for the dimensions of weight.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weightUnit(String weightUnit) {
             $.weightUnit = weightUnit;
             return this;
         }
 
+        /**
+         * @param width Width of the device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder width(Double width) {
             $.width = width;
             return this;

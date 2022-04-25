@@ -12,22 +12,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class FleetComputeCapacity {
     /**
-     * Number of currently available instances that can be used to stream sessions.
+     * @return Number of currently available instances that can be used to stream sessions.
      * 
      */
     private final @Nullable Integer available;
     /**
-     * Desired number of streaming instances.
+     * @return Desired number of streaming instances.
      * 
      */
     private final Integer desiredInstances;
     /**
-     * Number of instances in use for streaming.
+     * @return Number of instances in use for streaming.
      * 
      */
     private final @Nullable Integer inUse;
     /**
-     * Total number of simultaneous streaming instances that are running.
+     * @return Total number of simultaneous streaming instances that are running.
      * 
      */
     private final @Nullable Integer running;
@@ -45,30 +45,30 @@ public final class FleetComputeCapacity {
     }
 
     /**
-     * Number of currently available instances that can be used to stream sessions.
+     * @return Number of currently available instances that can be used to stream sessions.
      * 
-    */
+     */
     public Optional<Integer> available() {
         return Optional.ofNullable(this.available);
     }
     /**
-     * Desired number of streaming instances.
+     * @return Desired number of streaming instances.
      * 
-    */
+     */
     public Integer desiredInstances() {
         return this.desiredInstances;
     }
     /**
-     * Number of instances in use for streaming.
+     * @return Number of instances in use for streaming.
      * 
-    */
+     */
     public Optional<Integer> inUse() {
         return Optional.ofNullable(this.inUse);
     }
     /**
-     * Total number of simultaneous streaming instances that are running.
+     * @return Total number of simultaneous streaming instances that are running.
      * 
-    */
+     */
     public Optional<Integer> running() {
         return Optional.ofNullable(this.running);
     }

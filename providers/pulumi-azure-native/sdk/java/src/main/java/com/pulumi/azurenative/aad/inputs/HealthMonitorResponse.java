@@ -23,6 +23,10 @@ public final class HealthMonitorResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="details", required=true)
     private String details;
 
+    /**
+     * @return Health Monitor Details
+     * 
+     */
     public String details() {
         return this.details;
     }
@@ -34,6 +38,10 @@ public final class HealthMonitorResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Health Monitor Id
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -45,6 +53,10 @@ public final class HealthMonitorResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Health Monitor Name
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -75,16 +87,34 @@ public final class HealthMonitorResponse extends com.pulumi.resources.InvokeArgs
             $ = new HealthMonitorResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param details Health Monitor Details
+         * 
+         * @return builder
+         * 
+         */
         public Builder details(String details) {
             $.details = details;
             return this;
         }
 
+        /**
+         * @param id Health Monitor Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param name Health Monitor Name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

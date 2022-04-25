@@ -22,6 +22,10 @@ public final class SpokeLinkedInterconnectAttachmentsGetArgs extends com.pulumi.
     @Import(name="siteToSiteDataTransfer", required=true)
     private Output<Boolean> siteToSiteDataTransfer;
 
+    /**
+     * @return A value that controls whether site-to-site data transfer is enabled for these resources. Note that data transfer is available only in supported locations.
+     * 
+     */
     public Output<Boolean> siteToSiteDataTransfer() {
         return this.siteToSiteDataTransfer;
     }
@@ -33,6 +37,10 @@ public final class SpokeLinkedInterconnectAttachmentsGetArgs extends com.pulumi.
     @Import(name="uris", required=true)
     private Output<List<String>> uris;
 
+    /**
+     * @return The URIs of linked VPN tunnel resources.
+     * 
+     */
     public Output<List<String>> uris() {
         return this.uris;
     }
@@ -62,24 +70,54 @@ public final class SpokeLinkedInterconnectAttachmentsGetArgs extends com.pulumi.
             $ = new SpokeLinkedInterconnectAttachmentsGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param siteToSiteDataTransfer A value that controls whether site-to-site data transfer is enabled for these resources. Note that data transfer is available only in supported locations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder siteToSiteDataTransfer(Output<Boolean> siteToSiteDataTransfer) {
             $.siteToSiteDataTransfer = siteToSiteDataTransfer;
             return this;
         }
 
+        /**
+         * @param siteToSiteDataTransfer A value that controls whether site-to-site data transfer is enabled for these resources. Note that data transfer is available only in supported locations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder siteToSiteDataTransfer(Boolean siteToSiteDataTransfer) {
             return siteToSiteDataTransfer(Output.of(siteToSiteDataTransfer));
         }
 
+        /**
+         * @param uris The URIs of linked VPN tunnel resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uris(Output<List<String>> uris) {
             $.uris = uris;
             return this;
         }
 
+        /**
+         * @param uris The URIs of linked VPN tunnel resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uris(List<String> uris) {
             return uris(Output.of(uris));
         }
 
+        /**
+         * @param uris The URIs of linked VPN tunnel resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uris(String... uris) {
             return uris(List.of(uris));
         }

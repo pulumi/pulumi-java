@@ -19,6 +19,10 @@ public final class GetRecordingConfigurationArgs extends com.pulumi.resources.In
     @Import(name="arn", required=true)
     private String arn;
 
+    /**
+     * @return Recording Configuration ARN is automatically generated on creation and assigned as the unique identifier.
+     * 
+     */
     public String arn() {
         return this.arn;
     }
@@ -47,6 +51,12 @@ public final class GetRecordingConfigurationArgs extends com.pulumi.resources.In
             $ = new GetRecordingConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn Recording Configuration ARN is automatically generated on creation and assigned as the unique identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             $.arn = arn;
             return this;

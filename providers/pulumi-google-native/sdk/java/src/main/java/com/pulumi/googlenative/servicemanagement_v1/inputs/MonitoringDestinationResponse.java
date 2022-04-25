@@ -24,6 +24,10 @@ public final class MonitoringDestinationResponse extends com.pulumi.resources.In
     @Import(name="metrics", required=true)
     private List<String> metrics;
 
+    /**
+     * @return Types of the metrics to report to this monitoring destination. Each type must be defined in Service.metrics section.
+     * 
+     */
     public List<String> metrics() {
         return this.metrics;
     }
@@ -35,6 +39,10 @@ public final class MonitoringDestinationResponse extends com.pulumi.resources.In
     @Import(name="monitoredResource", required=true)
     private String monitoredResource;
 
+    /**
+     * @return The monitored resource type. The type must be defined in Service.monitored_resources section.
+     * 
+     */
     public String monitoredResource() {
         return this.monitoredResource;
     }
@@ -64,15 +72,33 @@ public final class MonitoringDestinationResponse extends com.pulumi.resources.In
             $ = new MonitoringDestinationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param metrics Types of the metrics to report to this monitoring destination. Each type must be defined in Service.metrics section.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metrics(List<String> metrics) {
             $.metrics = metrics;
             return this;
         }
 
+        /**
+         * @param metrics Types of the metrics to report to this monitoring destination. Each type must be defined in Service.metrics section.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metrics(String... metrics) {
             return metrics(List.of(metrics));
         }
 
+        /**
+         * @param monitoredResource The monitored resource type. The type must be defined in Service.monitored_resources section.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitoredResource(String monitoredResource) {
             $.monitoredResource = monitoredResource;
             return this;

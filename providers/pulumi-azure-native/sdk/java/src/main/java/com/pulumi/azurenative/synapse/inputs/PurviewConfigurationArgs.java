@@ -26,6 +26,10 @@ public final class PurviewConfigurationArgs extends com.pulumi.resources.Resourc
     @Import(name="purviewResourceId")
     private @Nullable Output<String> purviewResourceId;
 
+    /**
+     * @return Purview Resource ID
+     * 
+     */
     public Optional<Output<String>> purviewResourceId() {
         return Optional.ofNullable(this.purviewResourceId);
     }
@@ -54,11 +58,23 @@ public final class PurviewConfigurationArgs extends com.pulumi.resources.Resourc
             $ = new PurviewConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param purviewResourceId Purview Resource ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder purviewResourceId(@Nullable Output<String> purviewResourceId) {
             $.purviewResourceId = purviewResourceId;
             return this;
         }
 
+        /**
+         * @param purviewResourceId Purview Resource ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder purviewResourceId(String purviewResourceId) {
             return purviewResourceId(Output.of(purviewResourceId));
         }

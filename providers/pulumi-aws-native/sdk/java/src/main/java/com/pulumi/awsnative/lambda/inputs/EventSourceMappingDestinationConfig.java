@@ -25,6 +25,10 @@ public final class EventSourceMappingDestinationConfig extends com.pulumi.resour
     @Import(name="onFailure")
     private @Nullable EventSourceMappingOnFailure onFailure;
 
+    /**
+     * @return The destination configuration for failed invocations.
+     * 
+     */
     public Optional<EventSourceMappingOnFailure> onFailure() {
         return Optional.ofNullable(this.onFailure);
     }
@@ -53,6 +57,12 @@ public final class EventSourceMappingDestinationConfig extends com.pulumi.resour
             $ = new EventSourceMappingDestinationConfig(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param onFailure The destination configuration for failed invocations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder onFailure(@Nullable EventSourceMappingOnFailure onFailure) {
             $.onFailure = onFailure;
             return this;

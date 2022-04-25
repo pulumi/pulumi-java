@@ -24,6 +24,10 @@ public final class LifecyclePolicyState extends com.pulumi.resources.ResourceArg
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return Amazon Resource Name (ARN) of the DLM Lifecycle Policy.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -35,6 +39,10 @@ public final class LifecyclePolicyState extends com.pulumi.resources.ResourceArg
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A description for the DLM lifecycle policy.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -46,6 +54,10 @@ public final class LifecyclePolicyState extends com.pulumi.resources.ResourceArg
     @Import(name="executionRoleArn")
     private @Nullable Output<String> executionRoleArn;
 
+    /**
+     * @return The ARN of an IAM role that is able to be assumed by the DLM service.
+     * 
+     */
     public Optional<Output<String>> executionRoleArn() {
         return Optional.ofNullable(this.executionRoleArn);
     }
@@ -57,6 +69,10 @@ public final class LifecyclePolicyState extends com.pulumi.resources.ResourceArg
     @Import(name="policyDetails")
     private @Nullable Output<LifecyclePolicyPolicyDetailsGetArgs> policyDetails;
 
+    /**
+     * @return See the `policy_details` configuration block. Max of 1.
+     * 
+     */
     public Optional<Output<LifecyclePolicyPolicyDetailsGetArgs>> policyDetails() {
         return Optional.ofNullable(this.policyDetails);
     }
@@ -68,6 +84,10 @@ public final class LifecyclePolicyState extends com.pulumi.resources.ResourceArg
     @Import(name="state")
     private @Nullable Output<String> state;
 
+    /**
+     * @return Whether the lifecycle policy should be enabled or disabled. `ENABLED` or `DISABLED` are valid values. Defaults to `ENABLED`.
+     * 
+     */
     public Optional<Output<String>> state() {
         return Optional.ofNullable(this.state);
     }
@@ -79,6 +99,10 @@ public final class LifecyclePolicyState extends com.pulumi.resources.ResourceArg
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -90,6 +114,10 @@ public final class LifecyclePolicyState extends com.pulumi.resources.ResourceArg
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider .
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -124,65 +152,149 @@ public final class LifecyclePolicyState extends com.pulumi.resources.ResourceArg
             $ = new LifecyclePolicyState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn Amazon Resource Name (ARN) of the DLM Lifecycle Policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn Amazon Resource Name (ARN) of the DLM Lifecycle Policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param description A description for the DLM lifecycle policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A description for the DLM lifecycle policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param executionRoleArn The ARN of an IAM role that is able to be assumed by the DLM service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder executionRoleArn(@Nullable Output<String> executionRoleArn) {
             $.executionRoleArn = executionRoleArn;
             return this;
         }
 
+        /**
+         * @param executionRoleArn The ARN of an IAM role that is able to be assumed by the DLM service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder executionRoleArn(String executionRoleArn) {
             return executionRoleArn(Output.of(executionRoleArn));
         }
 
+        /**
+         * @param policyDetails See the `policy_details` configuration block. Max of 1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyDetails(@Nullable Output<LifecyclePolicyPolicyDetailsGetArgs> policyDetails) {
             $.policyDetails = policyDetails;
             return this;
         }
 
+        /**
+         * @param policyDetails See the `policy_details` configuration block. Max of 1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyDetails(LifecyclePolicyPolicyDetailsGetArgs policyDetails) {
             return policyDetails(Output.of(policyDetails));
         }
 
+        /**
+         * @param state Whether the lifecycle policy should be enabled or disabled. `ENABLED` or `DISABLED` are valid values. Defaults to `ENABLED`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param state Whether the lifecycle policy should be enabled or disabled. `ENABLED` or `DISABLED` are valid values. Defaults to `ENABLED`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             return state(Output.of(state));
         }
 
+        /**
+         * @param tags Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }

@@ -26,6 +26,10 @@ public final class MasterProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="subnetId")
     private @Nullable Output<String> subnetId;
 
+    /**
+     * @return The Azure resource ID of the master subnet (immutable).
+     * 
+     */
     public Optional<Output<String>> subnetId() {
         return Optional.ofNullable(this.subnetId);
     }
@@ -37,6 +41,10 @@ public final class MasterProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vmSize")
     private @Nullable Output<String> vmSize;
 
+    /**
+     * @return The size of the master VMs (immutable).
+     * 
+     */
     public Optional<Output<String>> vmSize() {
         return Optional.ofNullable(this.vmSize);
     }
@@ -66,20 +74,44 @@ public final class MasterProfileArgs extends com.pulumi.resources.ResourceArgs {
             $ = new MasterProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param subnetId The Azure resource ID of the master subnet (immutable).
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetId(@Nullable Output<String> subnetId) {
             $.subnetId = subnetId;
             return this;
         }
 
+        /**
+         * @param subnetId The Azure resource ID of the master subnet (immutable).
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetId(String subnetId) {
             return subnetId(Output.of(subnetId));
         }
 
+        /**
+         * @param vmSize The size of the master VMs (immutable).
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmSize(@Nullable Output<String> vmSize) {
             $.vmSize = vmSize;
             return this;
         }
 
+        /**
+         * @param vmSize The size of the master VMs (immutable).
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmSize(String vmSize) {
             return vmSize(Output.of(vmSize));
         }

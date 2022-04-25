@@ -12,33 +12,33 @@ import java.util.Objects;
 public final class GetAddonResult {
     private final String addonName;
     /**
-     * The version of EKS add-on.
+     * @return The version of EKS add-on.
      * 
      */
     private final String addonVersion;
     /**
-     * Amazon Resource Name (ARN) of the EKS add-on.
+     * @return Amazon Resource Name (ARN) of the EKS add-on.
      * 
      */
     private final String arn;
     private final String clusterName;
     /**
-     * Date and time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) that the EKS add-on was created.
+     * @return Date and time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) that the EKS add-on was created.
      * 
      */
     private final String createdAt;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     /**
-     * Date and time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) that the EKS add-on was updated.
+     * @return Date and time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) that the EKS add-on was updated.
      * 
      */
     private final String modifiedAt;
     /**
-     * ARN of IAM role used for EKS add-on. If value is empty -
+     * @return ARN of IAM role used for EKS add-on. If value is empty -
      * then add-on uses the IAM role assigned to the EKS Cluster node.
      * 
      */
@@ -71,16 +71,16 @@ public final class GetAddonResult {
         return this.addonName;
     }
     /**
-     * The version of EKS add-on.
+     * @return The version of EKS add-on.
      * 
-    */
+     */
     public String addonVersion() {
         return this.addonVersion;
     }
     /**
-     * Amazon Resource Name (ARN) of the EKS add-on.
+     * @return Amazon Resource Name (ARN) of the EKS add-on.
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
@@ -88,31 +88,31 @@ public final class GetAddonResult {
         return this.clusterName;
     }
     /**
-     * Date and time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) that the EKS add-on was created.
+     * @return Date and time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) that the EKS add-on was created.
      * 
-    */
+     */
     public String createdAt() {
         return this.createdAt;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Date and time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) that the EKS add-on was updated.
+     * @return Date and time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) that the EKS add-on was updated.
      * 
-    */
+     */
     public String modifiedAt() {
         return this.modifiedAt;
     }
     /**
-     * ARN of IAM role used for EKS add-on. If value is empty -
+     * @return ARN of IAM role used for EKS add-on. If value is empty -
      * then add-on uses the IAM role assigned to the EKS Cluster node.
      * 
-    */
+     */
     public String serviceAccountRoleArn() {
         return this.serviceAccountRoleArn;
     }

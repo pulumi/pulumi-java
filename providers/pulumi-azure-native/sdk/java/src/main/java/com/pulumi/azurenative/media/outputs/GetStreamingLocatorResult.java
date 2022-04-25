@@ -15,72 +15,72 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetStreamingLocatorResult {
     /**
-     * Alternative Media ID of this Streaming Locator
+     * @return Alternative Media ID of this Streaming Locator
      * 
      */
     private final @Nullable String alternativeMediaId;
     /**
-     * Asset Name
+     * @return Asset Name
      * 
      */
     private final String assetName;
     /**
-     * The ContentKeys used by this Streaming Locator.
+     * @return The ContentKeys used by this Streaming Locator.
      * 
      */
     private final @Nullable List<StreamingLocatorContentKeyResponse> contentKeys;
     /**
-     * The creation time of the Streaming Locator.
+     * @return The creation time of the Streaming Locator.
      * 
      */
     private final String created;
     /**
-     * Name of the default ContentKeyPolicy used by this Streaming Locator.
+     * @return Name of the default ContentKeyPolicy used by this Streaming Locator.
      * 
      */
     private final @Nullable String defaultContentKeyPolicyName;
     /**
-     * The end time of the Streaming Locator.
+     * @return The end time of the Streaming Locator.
      * 
      */
     private final @Nullable String endTime;
     /**
-     * A list of asset or account filters which apply to this streaming locator
+     * @return A list of asset or account filters which apply to this streaming locator
      * 
      */
     private final @Nullable List<String> filters;
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
      */
     private final String id;
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
      */
     private final String name;
     /**
-     * The start time of the Streaming Locator.
+     * @return The start time of the Streaming Locator.
      * 
      */
     private final @Nullable String startTime;
     /**
-     * The StreamingLocatorId of the Streaming Locator.
+     * @return The StreamingLocatorId of the Streaming Locator.
      * 
      */
     private final @Nullable String streamingLocatorId;
     /**
-     * Name of the Streaming Policy used by this Streaming Locator. Either specify the name of Streaming Policy you created or use one of the predefined Streaming Policies. The predefined Streaming Policies available are: &#39;Predefined_DownloadOnly&#39;, &#39;Predefined_ClearStreamingOnly&#39;, &#39;Predefined_DownloadAndClearStreaming&#39;, &#39;Predefined_ClearKey&#39;, &#39;Predefined_MultiDrmCencStreaming&#39; and &#39;Predefined_MultiDrmStreaming&#39;
+     * @return Name of the Streaming Policy used by this Streaming Locator. Either specify the name of Streaming Policy you created or use one of the predefined Streaming Policies. The predefined Streaming Policies available are: &#39;Predefined_DownloadOnly&#39;, &#39;Predefined_ClearStreamingOnly&#39;, &#39;Predefined_DownloadAndClearStreaming&#39;, &#39;Predefined_ClearKey&#39;, &#39;Predefined_MultiDrmCencStreaming&#39; and &#39;Predefined_MultiDrmStreaming&#39;
      * 
      */
     private final String streamingPolicyName;
     /**
-     * The system metadata relating to this resource.
+     * @return The system metadata relating to this resource.
      * 
      */
     private final SystemDataResponse systemData;
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     private final String type;
@@ -118,100 +118,100 @@ public final class GetStreamingLocatorResult {
     }
 
     /**
-     * Alternative Media ID of this Streaming Locator
+     * @return Alternative Media ID of this Streaming Locator
      * 
-    */
+     */
     public Optional<String> alternativeMediaId() {
         return Optional.ofNullable(this.alternativeMediaId);
     }
     /**
-     * Asset Name
+     * @return Asset Name
      * 
-    */
+     */
     public String assetName() {
         return this.assetName;
     }
     /**
-     * The ContentKeys used by this Streaming Locator.
+     * @return The ContentKeys used by this Streaming Locator.
      * 
-    */
+     */
     public List<StreamingLocatorContentKeyResponse> contentKeys() {
         return this.contentKeys == null ? List.of() : this.contentKeys;
     }
     /**
-     * The creation time of the Streaming Locator.
+     * @return The creation time of the Streaming Locator.
      * 
-    */
+     */
     public String created() {
         return this.created;
     }
     /**
-     * Name of the default ContentKeyPolicy used by this Streaming Locator.
+     * @return Name of the default ContentKeyPolicy used by this Streaming Locator.
      * 
-    */
+     */
     public Optional<String> defaultContentKeyPolicyName() {
         return Optional.ofNullable(this.defaultContentKeyPolicyName);
     }
     /**
-     * The end time of the Streaming Locator.
+     * @return The end time of the Streaming Locator.
      * 
-    */
+     */
     public Optional<String> endTime() {
         return Optional.ofNullable(this.endTime);
     }
     /**
-     * A list of asset or account filters which apply to this streaming locator
+     * @return A list of asset or account filters which apply to this streaming locator
      * 
-    */
+     */
     public List<String> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The start time of the Streaming Locator.
+     * @return The start time of the Streaming Locator.
      * 
-    */
+     */
     public Optional<String> startTime() {
         return Optional.ofNullable(this.startTime);
     }
     /**
-     * The StreamingLocatorId of the Streaming Locator.
+     * @return The StreamingLocatorId of the Streaming Locator.
      * 
-    */
+     */
     public Optional<String> streamingLocatorId() {
         return Optional.ofNullable(this.streamingLocatorId);
     }
     /**
-     * Name of the Streaming Policy used by this Streaming Locator. Either specify the name of Streaming Policy you created or use one of the predefined Streaming Policies. The predefined Streaming Policies available are: &#39;Predefined_DownloadOnly&#39;, &#39;Predefined_ClearStreamingOnly&#39;, &#39;Predefined_DownloadAndClearStreaming&#39;, &#39;Predefined_ClearKey&#39;, &#39;Predefined_MultiDrmCencStreaming&#39; and &#39;Predefined_MultiDrmStreaming&#39;
+     * @return Name of the Streaming Policy used by this Streaming Locator. Either specify the name of Streaming Policy you created or use one of the predefined Streaming Policies. The predefined Streaming Policies available are: &#39;Predefined_DownloadOnly&#39;, &#39;Predefined_ClearStreamingOnly&#39;, &#39;Predefined_DownloadAndClearStreaming&#39;, &#39;Predefined_ClearKey&#39;, &#39;Predefined_MultiDrmCencStreaming&#39; and &#39;Predefined_MultiDrmStreaming&#39;
      * 
-    */
+     */
     public String streamingPolicyName() {
         return this.streamingPolicyName;
     }
     /**
-     * The system metadata relating to this resource.
+     * @return The system metadata relating to this resource.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

@@ -22,6 +22,10 @@ public final class OpenIdConnectProviderArgs extends com.pulumi.resources.Resour
     @Import(name="clientId", required=true)
     private Output<String> clientId;
 
+    /**
+     * @return Client ID of developer console which is the client application.
+     * 
+     */
     public Output<String> clientId() {
         return this.clientId;
     }
@@ -33,6 +37,10 @@ public final class OpenIdConnectProviderArgs extends com.pulumi.resources.Resour
     @Import(name="clientSecret")
     private @Nullable Output<String> clientSecret;
 
+    /**
+     * @return Client Secret of developer console which is the client application.
+     * 
+     */
     public Optional<Output<String>> clientSecret() {
         return Optional.ofNullable(this.clientSecret);
     }
@@ -44,6 +52,10 @@ public final class OpenIdConnectProviderArgs extends com.pulumi.resources.Resour
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return User-friendly description of OpenID Connect Provider.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -55,6 +67,10 @@ public final class OpenIdConnectProviderArgs extends com.pulumi.resources.Resour
     @Import(name="displayName", required=true)
     private Output<String> displayName;
 
+    /**
+     * @return User-friendly OpenID Connect Provider name.
+     * 
+     */
     public Output<String> displayName() {
         return this.displayName;
     }
@@ -66,6 +82,10 @@ public final class OpenIdConnectProviderArgs extends com.pulumi.resources.Resour
     @Import(name="metadataEndpoint", required=true)
     private Output<String> metadataEndpoint;
 
+    /**
+     * @return Metadata endpoint URI.
+     * 
+     */
     public Output<String> metadataEndpoint() {
         return this.metadataEndpoint;
     }
@@ -77,6 +97,10 @@ public final class OpenIdConnectProviderArgs extends com.pulumi.resources.Resour
     @Import(name="opid")
     private @Nullable Output<String> opid;
 
+    /**
+     * @return Identifier of the OpenID Connect Provider.
+     * 
+     */
     public Optional<Output<String>> opid() {
         return Optional.ofNullable(this.opid);
     }
@@ -88,6 +112,10 @@ public final class OpenIdConnectProviderArgs extends com.pulumi.resources.Resour
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -99,6 +127,10 @@ public final class OpenIdConnectProviderArgs extends com.pulumi.resources.Resour
     @Import(name="serviceName", required=true)
     private Output<String> serviceName;
 
+    /**
+     * @return The name of the API Management service.
+     * 
+     */
     public Output<String> serviceName() {
         return this.serviceName;
     }
@@ -134,74 +166,170 @@ public final class OpenIdConnectProviderArgs extends com.pulumi.resources.Resour
             $ = new OpenIdConnectProviderArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientId Client ID of developer console which is the client application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(Output<String> clientId) {
             $.clientId = clientId;
             return this;
         }
 
+        /**
+         * @param clientId Client ID of developer console which is the client application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(String clientId) {
             return clientId(Output.of(clientId));
         }
 
+        /**
+         * @param clientSecret Client Secret of developer console which is the client application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientSecret(@Nullable Output<String> clientSecret) {
             $.clientSecret = clientSecret;
             return this;
         }
 
+        /**
+         * @param clientSecret Client Secret of developer console which is the client application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientSecret(String clientSecret) {
             return clientSecret(Output.of(clientSecret));
         }
 
+        /**
+         * @param description User-friendly description of OpenID Connect Provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description User-friendly description of OpenID Connect Provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param displayName User-friendly OpenID Connect Provider name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName User-friendly OpenID Connect Provider name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param metadataEndpoint Metadata endpoint URI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadataEndpoint(Output<String> metadataEndpoint) {
             $.metadataEndpoint = metadataEndpoint;
             return this;
         }
 
+        /**
+         * @param metadataEndpoint Metadata endpoint URI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadataEndpoint(String metadataEndpoint) {
             return metadataEndpoint(Output.of(metadataEndpoint));
         }
 
+        /**
+         * @param opid Identifier of the OpenID Connect Provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder opid(@Nullable Output<String> opid) {
             $.opid = opid;
             return this;
         }
 
+        /**
+         * @param opid Identifier of the OpenID Connect Provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder opid(String opid) {
             return opid(Output.of(opid));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param serviceName The name of the API Management service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(Output<String> serviceName) {
             $.serviceName = serviceName;
             return this;
         }
 
+        /**
+         * @param serviceName The name of the API Management service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             return serviceName(Output.of(serviceName));
         }

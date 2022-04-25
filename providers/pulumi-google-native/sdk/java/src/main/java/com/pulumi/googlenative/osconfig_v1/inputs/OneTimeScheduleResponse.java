@@ -23,6 +23,10 @@ public final class OneTimeScheduleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="executeTime", required=true)
     private String executeTime;
 
+    /**
+     * @return The desired patch job execution time.
+     * 
+     */
     public String executeTime() {
         return this.executeTime;
     }
@@ -51,6 +55,12 @@ public final class OneTimeScheduleResponse extends com.pulumi.resources.InvokeAr
             $ = new OneTimeScheduleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param executeTime The desired patch job execution time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder executeTime(String executeTime) {
             $.executeTime = executeTime;
             return this;

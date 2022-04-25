@@ -25,6 +25,10 @@ public final class EncryptionServicesResponse extends com.pulumi.resources.Invok
     @Import(name="blob")
     private @Nullable EncryptionServiceResponse blob;
 
+    /**
+     * @return The encryption function of the blob storage service.
+     * 
+     */
     public Optional<EncryptionServiceResponse> blob() {
         return Optional.ofNullable(this.blob);
     }
@@ -36,6 +40,10 @@ public final class EncryptionServicesResponse extends com.pulumi.resources.Invok
     @Import(name="file")
     private @Nullable EncryptionServiceResponse file;
 
+    /**
+     * @return The encryption function of the file storage service.
+     * 
+     */
     public Optional<EncryptionServiceResponse> file() {
         return Optional.ofNullable(this.file);
     }
@@ -47,6 +55,10 @@ public final class EncryptionServicesResponse extends com.pulumi.resources.Invok
     @Import(name="queue")
     private @Nullable EncryptionServiceResponse queue;
 
+    /**
+     * @return The encryption function of the queue storage service.
+     * 
+     */
     public Optional<EncryptionServiceResponse> queue() {
         return Optional.ofNullable(this.queue);
     }
@@ -58,6 +70,10 @@ public final class EncryptionServicesResponse extends com.pulumi.resources.Invok
     @Import(name="table")
     private @Nullable EncryptionServiceResponse table;
 
+    /**
+     * @return The encryption function of the table storage service.
+     * 
+     */
     public Optional<EncryptionServiceResponse> table() {
         return Optional.ofNullable(this.table);
     }
@@ -89,21 +105,45 @@ public final class EncryptionServicesResponse extends com.pulumi.resources.Invok
             $ = new EncryptionServicesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param blob The encryption function of the blob storage service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blob(@Nullable EncryptionServiceResponse blob) {
             $.blob = blob;
             return this;
         }
 
+        /**
+         * @param file The encryption function of the file storage service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder file(@Nullable EncryptionServiceResponse file) {
             $.file = file;
             return this;
         }
 
+        /**
+         * @param queue The encryption function of the queue storage service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queue(@Nullable EncryptionServiceResponse queue) {
             $.queue = queue;
             return this;
         }
 
+        /**
+         * @param table The encryption function of the table storage service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder table(@Nullable EncryptionServiceResponse table) {
             $.table = table;
             return this;

@@ -27,6 +27,10 @@ public final class AccessPolicyEntryArgs extends com.pulumi.resources.ResourceAr
     @Import(name="applicationId")
     private @Nullable Output<String> applicationId;
 
+    /**
+     * @return  Application ID of the client making request on behalf of a principal
+     * 
+     */
     public Optional<Output<String>> applicationId() {
         return Optional.ofNullable(this.applicationId);
     }
@@ -38,6 +42,10 @@ public final class AccessPolicyEntryArgs extends com.pulumi.resources.ResourceAr
     @Import(name="objectId", required=true)
     private Output<String> objectId;
 
+    /**
+     * @return The object ID of a user, service principal or security group in the Azure Active Directory tenant for the vault. The object ID must be unique for the list of access policies.
+     * 
+     */
     public Output<String> objectId() {
         return this.objectId;
     }
@@ -49,6 +57,10 @@ public final class AccessPolicyEntryArgs extends com.pulumi.resources.ResourceAr
     @Import(name="permissions", required=true)
     private Output<PermissionsArgs> permissions;
 
+    /**
+     * @return Permissions the identity has for keys, secrets and certificates.
+     * 
+     */
     public Output<PermissionsArgs> permissions() {
         return this.permissions;
     }
@@ -60,6 +72,10 @@ public final class AccessPolicyEntryArgs extends com.pulumi.resources.ResourceAr
     @Import(name="tenantId", required=true)
     private Output<String> tenantId;
 
+    /**
+     * @return The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault.
+     * 
+     */
     public Output<String> tenantId() {
         return this.tenantId;
     }
@@ -91,38 +107,86 @@ public final class AccessPolicyEntryArgs extends com.pulumi.resources.ResourceAr
             $ = new AccessPolicyEntryArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param applicationId  Application ID of the client making request on behalf of a principal
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationId(@Nullable Output<String> applicationId) {
             $.applicationId = applicationId;
             return this;
         }
 
+        /**
+         * @param applicationId  Application ID of the client making request on behalf of a principal
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationId(String applicationId) {
             return applicationId(Output.of(applicationId));
         }
 
+        /**
+         * @param objectId The object ID of a user, service principal or security group in the Azure Active Directory tenant for the vault. The object ID must be unique for the list of access policies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectId(Output<String> objectId) {
             $.objectId = objectId;
             return this;
         }
 
+        /**
+         * @param objectId The object ID of a user, service principal or security group in the Azure Active Directory tenant for the vault. The object ID must be unique for the list of access policies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectId(String objectId) {
             return objectId(Output.of(objectId));
         }
 
+        /**
+         * @param permissions Permissions the identity has for keys, secrets and certificates.
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissions(Output<PermissionsArgs> permissions) {
             $.permissions = permissions;
             return this;
         }
 
+        /**
+         * @param permissions Permissions the identity has for keys, secrets and certificates.
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissions(PermissionsArgs permissions) {
             return permissions(Output.of(permissions));
         }
 
+        /**
+         * @param tenantId The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(Output<String> tenantId) {
             $.tenantId = tenantId;
             return this;
         }
 
+        /**
+         * @param tenantId The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(String tenantId) {
             return tenantId(Output.of(tenantId));
         }

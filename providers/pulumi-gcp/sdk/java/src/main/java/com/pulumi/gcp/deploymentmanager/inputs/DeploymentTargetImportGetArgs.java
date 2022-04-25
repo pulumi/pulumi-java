@@ -22,6 +22,10 @@ public final class DeploymentTargetImportGetArgs extends com.pulumi.resources.Re
     @Import(name="content")
     private @Nullable Output<String> content;
 
+    /**
+     * @return The full contents of the template that you want to import.
+     * 
+     */
     public Optional<Output<String>> content() {
         return Optional.ofNullable(this.content);
     }
@@ -34,6 +38,11 @@ public final class DeploymentTargetImportGetArgs extends com.pulumi.resources.Re
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the template to import, as declared in the YAML
+     * configuration.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -63,20 +72,46 @@ public final class DeploymentTargetImportGetArgs extends com.pulumi.resources.Re
             $ = new DeploymentTargetImportGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param content The full contents of the template that you want to import.
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(@Nullable Output<String> content) {
             $.content = content;
             return this;
         }
 
+        /**
+         * @param content The full contents of the template that you want to import.
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(String content) {
             return content(Output.of(content));
         }
 
+        /**
+         * @param name The name of the template to import, as declared in the YAML
+         * configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the template to import, as declared in the YAML
+         * configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

@@ -26,6 +26,10 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalAr
     @Import(name="confidenceLevel")
     private @Nullable Output<Double> confidenceLevel;
 
+    /**
+     * @return The confidence level used to construct the interval, i.e. there is X% chance that the true value is within this interval.
+     * 
+     */
     public Optional<Output<Double>> confidenceLevel() {
         return Optional.ofNullable(this.confidenceLevel);
     }
@@ -37,6 +41,10 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalAr
     @Import(name="lowerBound")
     private @Nullable Output<Double> lowerBound;
 
+    /**
+     * @return Lower bound of the interval.
+     * 
+     */
     public Optional<Output<Double>> lowerBound() {
         return Optional.ofNullable(this.lowerBound);
     }
@@ -48,6 +56,10 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalAr
     @Import(name="ratio")
     private @Nullable Output<Double> ratio;
 
+    /**
+     * @return The percent change between an experiment metric&#39;s value and the value for its control.
+     * 
+     */
     public Optional<Output<Double>> ratio() {
         return Optional.ofNullable(this.ratio);
     }
@@ -59,6 +71,10 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalAr
     @Import(name="upperBound")
     private @Nullable Output<Double> upperBound;
 
+    /**
+     * @return Upper bound of the interval.
+     * 
+     */
     public Optional<Output<Double>> upperBound() {
         return Optional.ofNullable(this.upperBound);
     }
@@ -90,38 +106,86 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalAr
             $ = new GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param confidenceLevel The confidence level used to construct the interval, i.e. there is X% chance that the true value is within this interval.
+         * 
+         * @return builder
+         * 
+         */
         public Builder confidenceLevel(@Nullable Output<Double> confidenceLevel) {
             $.confidenceLevel = confidenceLevel;
             return this;
         }
 
+        /**
+         * @param confidenceLevel The confidence level used to construct the interval, i.e. there is X% chance that the true value is within this interval.
+         * 
+         * @return builder
+         * 
+         */
         public Builder confidenceLevel(Double confidenceLevel) {
             return confidenceLevel(Output.of(confidenceLevel));
         }
 
+        /**
+         * @param lowerBound Lower bound of the interval.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lowerBound(@Nullable Output<Double> lowerBound) {
             $.lowerBound = lowerBound;
             return this;
         }
 
+        /**
+         * @param lowerBound Lower bound of the interval.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lowerBound(Double lowerBound) {
             return lowerBound(Output.of(lowerBound));
         }
 
+        /**
+         * @param ratio The percent change between an experiment metric&#39;s value and the value for its control.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ratio(@Nullable Output<Double> ratio) {
             $.ratio = ratio;
             return this;
         }
 
+        /**
+         * @param ratio The percent change between an experiment metric&#39;s value and the value for its control.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ratio(Double ratio) {
             return ratio(Output.of(ratio));
         }
 
+        /**
+         * @param upperBound Upper bound of the interval.
+         * 
+         * @return builder
+         * 
+         */
         public Builder upperBound(@Nullable Output<Double> upperBound) {
             $.upperBound = upperBound;
             return this;
         }
 
+        /**
+         * @param upperBound Upper bound of the interval.
+         * 
+         * @return builder
+         * 
+         */
         public Builder upperBound(Double upperBound) {
             return upperBound(Output.of(upperBound));
         }

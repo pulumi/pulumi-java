@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class WorkloadNetworkSegmentPortVifResponse {
     /**
-     * Name of port or VIF attached to segment.
+     * @return Name of port or VIF attached to segment.
      * 
      */
     private final @Nullable String portName;
@@ -23,9 +23,9 @@ public final class WorkloadNetworkSegmentPortVifResponse {
     }
 
     /**
-     * Name of port or VIF attached to segment.
+     * @return Name of port or VIF attached to segment.
      * 
-    */
+     */
     public Optional<String> portName() {
         return Optional.ofNullable(this.portName);
     }

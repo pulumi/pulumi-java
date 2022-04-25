@@ -26,6 +26,10 @@ public final class IntegrationRuntimeSsisCatalogInfoResponse extends com.pulumi.
     @Import(name="catalogAdminPassword")
     private @Nullable SecureStringResponse catalogAdminPassword;
 
+    /**
+     * @return The password of the administrator user account of the catalog database.
+     * 
+     */
     public Optional<SecureStringResponse> catalogAdminPassword() {
         return Optional.ofNullable(this.catalogAdminPassword);
     }
@@ -37,6 +41,10 @@ public final class IntegrationRuntimeSsisCatalogInfoResponse extends com.pulumi.
     @Import(name="catalogAdminUserName")
     private @Nullable String catalogAdminUserName;
 
+    /**
+     * @return The administrator user name of catalog database.
+     * 
+     */
     public Optional<String> catalogAdminUserName() {
         return Optional.ofNullable(this.catalogAdminUserName);
     }
@@ -48,6 +56,10 @@ public final class IntegrationRuntimeSsisCatalogInfoResponse extends com.pulumi.
     @Import(name="catalogPricingTier")
     private @Nullable String catalogPricingTier;
 
+    /**
+     * @return The pricing tier for the catalog database. The valid values could be found in https://azure.microsoft.com/en-us/pricing/details/sql-database/
+     * 
+     */
     public Optional<String> catalogPricingTier() {
         return Optional.ofNullable(this.catalogPricingTier);
     }
@@ -59,6 +71,10 @@ public final class IntegrationRuntimeSsisCatalogInfoResponse extends com.pulumi.
     @Import(name="catalogServerEndpoint")
     private @Nullable String catalogServerEndpoint;
 
+    /**
+     * @return The catalog database server URL.
+     * 
+     */
     public Optional<String> catalogServerEndpoint() {
         return Optional.ofNullable(this.catalogServerEndpoint);
     }
@@ -90,21 +106,45 @@ public final class IntegrationRuntimeSsisCatalogInfoResponse extends com.pulumi.
             $ = new IntegrationRuntimeSsisCatalogInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param catalogAdminPassword The password of the administrator user account of the catalog database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder catalogAdminPassword(@Nullable SecureStringResponse catalogAdminPassword) {
             $.catalogAdminPassword = catalogAdminPassword;
             return this;
         }
 
+        /**
+         * @param catalogAdminUserName The administrator user name of catalog database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder catalogAdminUserName(@Nullable String catalogAdminUserName) {
             $.catalogAdminUserName = catalogAdminUserName;
             return this;
         }
 
+        /**
+         * @param catalogPricingTier The pricing tier for the catalog database. The valid values could be found in https://azure.microsoft.com/en-us/pricing/details/sql-database/
+         * 
+         * @return builder
+         * 
+         */
         public Builder catalogPricingTier(@Nullable String catalogPricingTier) {
             $.catalogPricingTier = catalogPricingTier;
             return this;
         }
 
+        /**
+         * @param catalogServerEndpoint The catalog database server URL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder catalogServerEndpoint(@Nullable String catalogServerEndpoint) {
             $.catalogServerEndpoint = catalogServerEndpoint;
             return this;

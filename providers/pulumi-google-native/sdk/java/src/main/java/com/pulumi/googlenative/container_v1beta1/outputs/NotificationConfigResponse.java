@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class NotificationConfigResponse {
     /**
-     * Notification config for Pub/Sub.
+     * @return Notification config for Pub/Sub.
      * 
      */
     private final PubSubResponse pubsub;
@@ -21,9 +21,9 @@ public final class NotificationConfigResponse {
     }
 
     /**
-     * Notification config for Pub/Sub.
+     * @return Notification config for Pub/Sub.
      * 
-    */
+     */
     public PubSubResponse pubsub() {
         return this.pubsub;
     }

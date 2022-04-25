@@ -22,6 +22,10 @@ public final class ReplicationGroupClusterModeGetArgs extends com.pulumi.resourc
     @Import(name="numNodeGroups")
     private @Nullable Output<Integer> numNodeGroups;
 
+    /**
+     * @return Number of node groups (shards) for this Redis replication group. Changing this number will trigger an online resizing operation before other settings modifications. Required unless `global_replication_group_id` is set.
+     * 
+     */
     public Optional<Output<Integer>> numNodeGroups() {
         return Optional.ofNullable(this.numNodeGroups);
     }
@@ -33,6 +37,10 @@ public final class ReplicationGroupClusterModeGetArgs extends com.pulumi.resourc
     @Import(name="replicasPerNodeGroup", required=true)
     private Output<Integer> replicasPerNodeGroup;
 
+    /**
+     * @return Number of replica nodes in each node group. Valid values are 0 to 5. Changing this number will trigger an online resizing operation before other settings modifications.
+     * 
+     */
     public Output<Integer> replicasPerNodeGroup() {
         return this.replicasPerNodeGroup;
     }
@@ -62,20 +70,44 @@ public final class ReplicationGroupClusterModeGetArgs extends com.pulumi.resourc
             $ = new ReplicationGroupClusterModeGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param numNodeGroups Number of node groups (shards) for this Redis replication group. Changing this number will trigger an online resizing operation before other settings modifications. Required unless `global_replication_group_id` is set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numNodeGroups(@Nullable Output<Integer> numNodeGroups) {
             $.numNodeGroups = numNodeGroups;
             return this;
         }
 
+        /**
+         * @param numNodeGroups Number of node groups (shards) for this Redis replication group. Changing this number will trigger an online resizing operation before other settings modifications. Required unless `global_replication_group_id` is set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numNodeGroups(Integer numNodeGroups) {
             return numNodeGroups(Output.of(numNodeGroups));
         }
 
+        /**
+         * @param replicasPerNodeGroup Number of replica nodes in each node group. Valid values are 0 to 5. Changing this number will trigger an online resizing operation before other settings modifications.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicasPerNodeGroup(Output<Integer> replicasPerNodeGroup) {
             $.replicasPerNodeGroup = replicasPerNodeGroup;
             return this;
         }
 
+        /**
+         * @param replicasPerNodeGroup Number of replica nodes in each node group. Valid values are 0 to 5. Changing this number will trigger an online resizing operation before other settings modifications.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicasPerNodeGroup(Integer replicasPerNodeGroup) {
             return replicasPerNodeGroup(Output.of(replicasPerNodeGroup));
         }

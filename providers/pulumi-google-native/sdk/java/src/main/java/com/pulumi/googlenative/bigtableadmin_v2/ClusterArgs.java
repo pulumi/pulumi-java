@@ -26,6 +26,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clusterConfig")
     private @Nullable Output<ClusterConfigArgs> clusterConfig;
 
+    /**
+     * @return Configuration for this cluster.
+     * 
+     */
     public Optional<Output<ClusterConfigArgs>> clusterConfig() {
         return Optional.ofNullable(this.clusterConfig);
     }
@@ -44,6 +48,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultStorageType")
     private @Nullable Output<ClusterDefaultStorageType> defaultStorageType;
 
+    /**
+     * @return Immutable. The type of storage used by this cluster to serve its parent instance&#39;s tables, unless explicitly overridden.
+     * 
+     */
     public Optional<Output<ClusterDefaultStorageType>> defaultStorageType() {
         return Optional.ofNullable(this.defaultStorageType);
     }
@@ -55,6 +63,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="encryptionConfig")
     private @Nullable Output<EncryptionConfigArgs> encryptionConfig;
 
+    /**
+     * @return Immutable. The encryption configuration for CMEK-protected clusters.
+     * 
+     */
     public Optional<Output<EncryptionConfigArgs>> encryptionConfig() {
         return Optional.ofNullable(this.encryptionConfig);
     }
@@ -73,6 +85,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Immutable. The location where this cluster&#39;s nodes and storage reside. For best performance, clients should be located as close as possible to this cluster. Currently only zones are supported, so values should be of the form `projects/{project}/locations/{zone}`.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -84,6 +100,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The unique name of the cluster. Values are of the form `projects/{project}/instances/{instance}/clusters/a-z*`.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -102,6 +122,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serveNodes")
     private @Nullable Output<Integer> serveNodes;
 
+    /**
+     * @return The number of nodes allocated to this cluster. More nodes enable higher throughput and more consistent performance.
+     * 
+     */
     public Optional<Output<Integer>> serveNodes() {
         return Optional.ofNullable(this.serveNodes);
     }
@@ -138,11 +162,23 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ClusterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clusterConfig Configuration for this cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterConfig(@Nullable Output<ClusterConfigArgs> clusterConfig) {
             $.clusterConfig = clusterConfig;
             return this;
         }
 
+        /**
+         * @param clusterConfig Configuration for this cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterConfig(ClusterConfigArgs clusterConfig) {
             return clusterConfig(Output.of(clusterConfig));
         }
@@ -156,20 +192,44 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
             return clusterId(Output.of(clusterId));
         }
 
+        /**
+         * @param defaultStorageType Immutable. The type of storage used by this cluster to serve its parent instance&#39;s tables, unless explicitly overridden.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultStorageType(@Nullable Output<ClusterDefaultStorageType> defaultStorageType) {
             $.defaultStorageType = defaultStorageType;
             return this;
         }
 
+        /**
+         * @param defaultStorageType Immutable. The type of storage used by this cluster to serve its parent instance&#39;s tables, unless explicitly overridden.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultStorageType(ClusterDefaultStorageType defaultStorageType) {
             return defaultStorageType(Output.of(defaultStorageType));
         }
 
+        /**
+         * @param encryptionConfig Immutable. The encryption configuration for CMEK-protected clusters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionConfig(@Nullable Output<EncryptionConfigArgs> encryptionConfig) {
             $.encryptionConfig = encryptionConfig;
             return this;
         }
 
+        /**
+         * @param encryptionConfig Immutable. The encryption configuration for CMEK-protected clusters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionConfig(EncryptionConfigArgs encryptionConfig) {
             return encryptionConfig(Output.of(encryptionConfig));
         }
@@ -183,20 +243,44 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
             return instanceId(Output.of(instanceId));
         }
 
+        /**
+         * @param location Immutable. The location where this cluster&#39;s nodes and storage reside. For best performance, clients should be located as close as possible to this cluster. Currently only zones are supported, so values should be of the form `projects/{project}/locations/{zone}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Immutable. The location where this cluster&#39;s nodes and storage reside. For best performance, clients should be located as close as possible to this cluster. Currently only zones are supported, so values should be of the form `projects/{project}/locations/{zone}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param name The unique name of the cluster. Values are of the form `projects/{project}/instances/{instance}/clusters/a-z*`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The unique name of the cluster. Values are of the form `projects/{project}/instances/{instance}/clusters/a-z*`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -210,11 +294,23 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param serveNodes The number of nodes allocated to this cluster. More nodes enable higher throughput and more consistent performance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serveNodes(@Nullable Output<Integer> serveNodes) {
             $.serveNodes = serveNodes;
             return this;
         }
 
+        /**
+         * @param serveNodes The number of nodes allocated to this cluster. More nodes enable higher throughput and more consistent performance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serveNodes(Integer serveNodes) {
             return serveNodes(Output.of(serveNodes));
         }

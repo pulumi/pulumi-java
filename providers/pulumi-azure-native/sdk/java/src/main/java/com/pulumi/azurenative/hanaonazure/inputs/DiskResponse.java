@@ -26,6 +26,10 @@ public final class DiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="diskSizeGB")
     private @Nullable Integer diskSizeGB;
 
+    /**
+     * @return Specifies the size of an empty data disk in gigabytes.
+     * 
+     */
     public Optional<Integer> diskSizeGB() {
         return Optional.ofNullable(this.diskSizeGB);
     }
@@ -37,6 +41,10 @@ public final class DiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="lun", required=true)
     private Integer lun;
 
+    /**
+     * @return Specifies the logical unit number of the data disk. This value is used to identify data disks within the VM and therefore must be unique for each data disk attached to a VM.
+     * 
+     */
     public Integer lun() {
         return this.lun;
     }
@@ -48,6 +56,10 @@ public final class DiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The disk name.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -78,16 +90,34 @@ public final class DiskResponse extends com.pulumi.resources.InvokeArgs {
             $ = new DiskResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param diskSizeGB Specifies the size of an empty data disk in gigabytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
             $.diskSizeGB = diskSizeGB;
             return this;
         }
 
+        /**
+         * @param lun Specifies the logical unit number of the data disk. This value is used to identify data disks within the VM and therefore must be unique for each data disk attached to a VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lun(Integer lun) {
             $.lun = lun;
             return this;
         }
 
+        /**
+         * @param name The disk name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;

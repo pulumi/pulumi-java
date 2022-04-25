@@ -21,6 +21,10 @@ public final class GetCustomApiArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="apiName", required=true)
     private String apiName;
 
+    /**
+     * @return API name
+     * 
+     */
     public String apiName() {
         return this.apiName;
     }
@@ -32,6 +36,10 @@ public final class GetCustomApiArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The resource group
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -43,6 +51,10 @@ public final class GetCustomApiArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="subscriptionId")
     private @Nullable String subscriptionId;
 
+    /**
+     * @return Subscription Id
+     * 
+     */
     public Optional<String> subscriptionId() {
         return Optional.ofNullable(this.subscriptionId);
     }
@@ -73,16 +85,34 @@ public final class GetCustomApiArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetCustomApiArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiName API name
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiName(String apiName) {
             $.apiName = apiName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param subscriptionId Subscription Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptionId(@Nullable String subscriptionId) {
             $.subscriptionId = subscriptionId;
             return this;

@@ -26,6 +26,10 @@ public final class GoogleCloudDialogflowV2IntentMessageCardButtonArgs extends co
     @Import(name="postback")
     private @Nullable Output<String> postback;
 
+    /**
+     * @return Optional. The text to send back to the Dialogflow API or a URI to open.
+     * 
+     */
     public Optional<Output<String>> postback() {
         return Optional.ofNullable(this.postback);
     }
@@ -37,6 +41,10 @@ public final class GoogleCloudDialogflowV2IntentMessageCardButtonArgs extends co
     @Import(name="text")
     private @Nullable Output<String> text;
 
+    /**
+     * @return Optional. The text to show on the button.
+     * 
+     */
     public Optional<Output<String>> text() {
         return Optional.ofNullable(this.text);
     }
@@ -66,20 +74,44 @@ public final class GoogleCloudDialogflowV2IntentMessageCardButtonArgs extends co
             $ = new GoogleCloudDialogflowV2IntentMessageCardButtonArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param postback Optional. The text to send back to the Dialogflow API or a URI to open.
+         * 
+         * @return builder
+         * 
+         */
         public Builder postback(@Nullable Output<String> postback) {
             $.postback = postback;
             return this;
         }
 
+        /**
+         * @param postback Optional. The text to send back to the Dialogflow API or a URI to open.
+         * 
+         * @return builder
+         * 
+         */
         public Builder postback(String postback) {
             return postback(Output.of(postback));
         }
 
+        /**
+         * @param text Optional. The text to show on the button.
+         * 
+         * @return builder
+         * 
+         */
         public Builder text(@Nullable Output<String> text) {
             $.text = text;
             return this;
         }
 
+        /**
+         * @param text Optional. The text to show on the button.
+         * 
+         * @return builder
+         * 
+         */
         public Builder text(String text) {
             return text(Output.of(text));
         }

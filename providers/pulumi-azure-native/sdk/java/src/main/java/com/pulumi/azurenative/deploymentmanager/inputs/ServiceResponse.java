@@ -27,6 +27,10 @@ public final class ServiceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Name of the service.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -38,6 +42,10 @@ public final class ServiceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="serviceUnits")
     private @Nullable List<ServiceUnitResponse> serviceUnits;
 
+    /**
+     * @return The detailed information about the units that make up the service.
+     * 
+     */
     public Optional<List<ServiceUnitResponse>> serviceUnits() {
         return Optional.ofNullable(this.serviceUnits);
     }
@@ -49,6 +57,10 @@ public final class ServiceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="targetLocation", required=true)
     private String targetLocation;
 
+    /**
+     * @return The Azure location to which the resources in the service belong to or should be deployed to.
+     * 
+     */
     public String targetLocation() {
         return this.targetLocation;
     }
@@ -60,6 +72,10 @@ public final class ServiceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="targetSubscriptionId", required=true)
     private String targetSubscriptionId;
 
+    /**
+     * @return The subscription to which the resources in the service belong to or should be deployed to.
+     * 
+     */
     public String targetSubscriptionId() {
         return this.targetSubscriptionId;
     }
@@ -91,25 +107,55 @@ public final class ServiceResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ServiceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name of the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param serviceUnits The detailed information about the units that make up the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceUnits(@Nullable List<ServiceUnitResponse> serviceUnits) {
             $.serviceUnits = serviceUnits;
             return this;
         }
 
+        /**
+         * @param serviceUnits The detailed information about the units that make up the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceUnits(ServiceUnitResponse... serviceUnits) {
             return serviceUnits(List.of(serviceUnits));
         }
 
+        /**
+         * @param targetLocation The Azure location to which the resources in the service belong to or should be deployed to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetLocation(String targetLocation) {
             $.targetLocation = targetLocation;
             return this;
         }
 
+        /**
+         * @param targetSubscriptionId The subscription to which the resources in the service belong to or should be deployed to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetSubscriptionId(String targetSubscriptionId) {
             $.targetSubscriptionId = targetSubscriptionId;
             return this;

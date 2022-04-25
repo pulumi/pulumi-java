@@ -25,6 +25,10 @@ public final class WirelessGatewayArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description of Wireless Gateway.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -36,6 +40,10 @@ public final class WirelessGatewayArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="lastUplinkReceivedAt")
     private @Nullable Output<String> lastUplinkReceivedAt;
 
+    /**
+     * @return The date and time when the most recent uplink was received.
+     * 
+     */
     public Optional<Output<String>> lastUplinkReceivedAt() {
         return Optional.ofNullable(this.lastUplinkReceivedAt);
     }
@@ -47,6 +55,10 @@ public final class WirelessGatewayArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="loRaWAN", required=true)
     private Output<WirelessGatewayLoRaWANGatewayArgs> loRaWAN;
 
+    /**
+     * @return The combination of Package, Station and Model which represents the version of the LoRaWAN Wireless Gateway.
+     * 
+     */
     public Output<WirelessGatewayLoRaWANGatewayArgs> loRaWAN() {
         return this.loRaWAN;
     }
@@ -58,6 +70,10 @@ public final class WirelessGatewayArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of Wireless Gateway.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -69,6 +85,10 @@ public final class WirelessGatewayArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="tags")
     private @Nullable Output<List<WirelessGatewayTagArgs>> tags;
 
+    /**
+     * @return A list of key-value pairs that contain metadata for the gateway.
+     * 
+     */
     public Optional<Output<List<WirelessGatewayTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -80,6 +100,10 @@ public final class WirelessGatewayArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="thingArn")
     private @Nullable Output<String> thingArn;
 
+    /**
+     * @return Thing Arn. Passed into Update to associate a Thing with the Wireless Gateway.
+     * 
+     */
     public Optional<Output<String>> thingArn() {
         return Optional.ofNullable(this.thingArn);
     }
@@ -113,60 +137,138 @@ public final class WirelessGatewayArgs extends com.pulumi.resources.ResourceArgs
             $ = new WirelessGatewayArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Description of Wireless Gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description of Wireless Gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param lastUplinkReceivedAt The date and time when the most recent uplink was received.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastUplinkReceivedAt(@Nullable Output<String> lastUplinkReceivedAt) {
             $.lastUplinkReceivedAt = lastUplinkReceivedAt;
             return this;
         }
 
+        /**
+         * @param lastUplinkReceivedAt The date and time when the most recent uplink was received.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastUplinkReceivedAt(String lastUplinkReceivedAt) {
             return lastUplinkReceivedAt(Output.of(lastUplinkReceivedAt));
         }
 
+        /**
+         * @param loRaWAN The combination of Package, Station and Model which represents the version of the LoRaWAN Wireless Gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loRaWAN(Output<WirelessGatewayLoRaWANGatewayArgs> loRaWAN) {
             $.loRaWAN = loRaWAN;
             return this;
         }
 
+        /**
+         * @param loRaWAN The combination of Package, Station and Model which represents the version of the LoRaWAN Wireless Gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loRaWAN(WirelessGatewayLoRaWANGatewayArgs loRaWAN) {
             return loRaWAN(Output.of(loRaWAN));
         }
 
+        /**
+         * @param name Name of Wireless Gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of Wireless Gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param tags A list of key-value pairs that contain metadata for the gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<WirelessGatewayTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A list of key-value pairs that contain metadata for the gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<WirelessGatewayTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags A list of key-value pairs that contain metadata for the gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(WirelessGatewayTagArgs... tags) {
             return tags(List.of(tags));
         }
 
+        /**
+         * @param thingArn Thing Arn. Passed into Update to associate a Thing with the Wireless Gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thingArn(@Nullable Output<String> thingArn) {
             $.thingArn = thingArn;
             return this;
         }
 
+        /**
+         * @param thingArn Thing Arn. Passed into Update to associate a Thing with the Wireless Gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thingArn(String thingArn) {
             return thingArn(Output.of(thingArn));
         }

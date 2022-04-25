@@ -24,6 +24,10 @@ public final class HttpQueryParameterMatchResponse extends com.pulumi.resources.
     @Import(name="exactMatch", required=true)
     private String exactMatch;
 
+    /**
+     * @return The queryParameterMatch matches if the value of the parameter exactly matches the contents of exactMatch. Only one of presentMatch, exactMatch, or regexMatch must be set.
+     * 
+     */
     public String exactMatch() {
         return this.exactMatch;
     }
@@ -35,6 +39,10 @@ public final class HttpQueryParameterMatchResponse extends com.pulumi.resources.
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the query parameter to match. The query parameter must exist in the request, in the absence of which the request match fails.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -46,6 +54,10 @@ public final class HttpQueryParameterMatchResponse extends com.pulumi.resources.
     @Import(name="presentMatch", required=true)
     private Boolean presentMatch;
 
+    /**
+     * @return Specifies that the queryParameterMatch matches if the request contains the query parameter, irrespective of whether the parameter has a value or not. Only one of presentMatch, exactMatch, or regexMatch must be set.
+     * 
+     */
     public Boolean presentMatch() {
         return this.presentMatch;
     }
@@ -57,6 +69,10 @@ public final class HttpQueryParameterMatchResponse extends com.pulumi.resources.
     @Import(name="regexMatch", required=true)
     private String regexMatch;
 
+    /**
+     * @return The queryParameterMatch matches if the value of the parameter matches the regular expression specified by regexMatch. For more information about regular expression syntax, see Syntax. Only one of presentMatch, exactMatch, or regexMatch must be set. regexMatch only applies when the loadBalancingScheme is set to INTERNAL_SELF_MANAGED.
+     * 
+     */
     public String regexMatch() {
         return this.regexMatch;
     }
@@ -88,21 +104,45 @@ public final class HttpQueryParameterMatchResponse extends com.pulumi.resources.
             $ = new HttpQueryParameterMatchResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param exactMatch The queryParameterMatch matches if the value of the parameter exactly matches the contents of exactMatch. Only one of presentMatch, exactMatch, or regexMatch must be set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exactMatch(String exactMatch) {
             $.exactMatch = exactMatch;
             return this;
         }
 
+        /**
+         * @param name The name of the query parameter to match. The query parameter must exist in the request, in the absence of which the request match fails.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param presentMatch Specifies that the queryParameterMatch matches if the request contains the query parameter, irrespective of whether the parameter has a value or not. Only one of presentMatch, exactMatch, or regexMatch must be set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder presentMatch(Boolean presentMatch) {
             $.presentMatch = presentMatch;
             return this;
         }
 
+        /**
+         * @param regexMatch The queryParameterMatch matches if the value of the parameter matches the regular expression specified by regexMatch. For more information about regular expression syntax, see Syntax. Only one of presentMatch, exactMatch, or regexMatch must be set. regexMatch only applies when the loadBalancingScheme is set to INTERNAL_SELF_MANAGED.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regexMatch(String regexMatch) {
             $.regexMatch = regexMatch;
             return this;

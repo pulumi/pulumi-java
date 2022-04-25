@@ -20,112 +20,112 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetStreamingEndpointResult {
     /**
-     * The access control definition of the streaming endpoint.
+     * @return The access control definition of the streaming endpoint.
      * 
      */
     private final @Nullable StreamingEndpointAccessControlResponse accessControl;
     /**
-     * This feature is deprecated, do not set a value for this property.
+     * @return This feature is deprecated, do not set a value for this property.
      * 
      */
     private final @Nullable String availabilitySetName;
     /**
-     * The CDN enabled flag.
+     * @return The CDN enabled flag.
      * 
      */
     private final @Nullable Boolean cdnEnabled;
     /**
-     * The CDN profile name.
+     * @return The CDN profile name.
      * 
      */
     private final @Nullable String cdnProfile;
     /**
-     * The CDN provider name.
+     * @return The CDN provider name.
      * 
      */
     private final @Nullable String cdnProvider;
     /**
-     * The exact time the streaming endpoint was created.
+     * @return The exact time the streaming endpoint was created.
      * 
      */
     private final String created;
     /**
-     * The streaming endpoint access policies.
+     * @return The streaming endpoint access policies.
      * 
      */
     private final @Nullable CrossSiteAccessPoliciesResponse crossSiteAccessPolicies;
     /**
-     * The custom host names of the streaming endpoint
+     * @return The custom host names of the streaming endpoint
      * 
      */
     private final @Nullable List<String> customHostNames;
     /**
-     * The streaming endpoint description.
+     * @return The streaming endpoint description.
      * 
      */
     private final @Nullable String description;
     /**
-     * The free trial expiration time.
+     * @return The free trial expiration time.
      * 
      */
     private final String freeTrialEndTime;
     /**
-     * The streaming endpoint host name.
+     * @return The streaming endpoint host name.
      * 
      */
     private final String hostName;
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
      */
     private final String id;
     /**
-     * The exact time the streaming endpoint was last modified.
+     * @return The exact time the streaming endpoint was last modified.
      * 
      */
     private final String lastModified;
     /**
-     * The geo-location where the resource lives
+     * @return The geo-location where the resource lives
      * 
      */
     private final String location;
     /**
-     * Max cache age
+     * @return Max cache age
      * 
      */
     private final @Nullable Double maxCacheAge;
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
      */
     private final String name;
     /**
-     * The provisioning state of the streaming endpoint.
+     * @return The provisioning state of the streaming endpoint.
      * 
      */
     private final String provisioningState;
     /**
-     * The resource state of the streaming endpoint.
+     * @return The resource state of the streaming endpoint.
      * 
      */
     private final String resourceState;
     /**
-     * The number of scale units. Use the Scale operation to adjust this value.
+     * @return The number of scale units. Use the Scale operation to adjust this value.
      * 
      */
     private final Integer scaleUnits;
     /**
-     * The system metadata relating to this resource.
+     * @return The system metadata relating to this resource.
      * 
      */
     private final SystemDataResponse systemData;
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     private final String type;
@@ -179,156 +179,156 @@ public final class GetStreamingEndpointResult {
     }
 
     /**
-     * The access control definition of the streaming endpoint.
+     * @return The access control definition of the streaming endpoint.
      * 
-    */
+     */
     public Optional<StreamingEndpointAccessControlResponse> accessControl() {
         return Optional.ofNullable(this.accessControl);
     }
     /**
-     * This feature is deprecated, do not set a value for this property.
+     * @return This feature is deprecated, do not set a value for this property.
      * 
-    */
+     */
     public Optional<String> availabilitySetName() {
         return Optional.ofNullable(this.availabilitySetName);
     }
     /**
-     * The CDN enabled flag.
+     * @return The CDN enabled flag.
      * 
-    */
+     */
     public Optional<Boolean> cdnEnabled() {
         return Optional.ofNullable(this.cdnEnabled);
     }
     /**
-     * The CDN profile name.
+     * @return The CDN profile name.
      * 
-    */
+     */
     public Optional<String> cdnProfile() {
         return Optional.ofNullable(this.cdnProfile);
     }
     /**
-     * The CDN provider name.
+     * @return The CDN provider name.
      * 
-    */
+     */
     public Optional<String> cdnProvider() {
         return Optional.ofNullable(this.cdnProvider);
     }
     /**
-     * The exact time the streaming endpoint was created.
+     * @return The exact time the streaming endpoint was created.
      * 
-    */
+     */
     public String created() {
         return this.created;
     }
     /**
-     * The streaming endpoint access policies.
+     * @return The streaming endpoint access policies.
      * 
-    */
+     */
     public Optional<CrossSiteAccessPoliciesResponse> crossSiteAccessPolicies() {
         return Optional.ofNullable(this.crossSiteAccessPolicies);
     }
     /**
-     * The custom host names of the streaming endpoint
+     * @return The custom host names of the streaming endpoint
      * 
-    */
+     */
     public List<String> customHostNames() {
         return this.customHostNames == null ? List.of() : this.customHostNames;
     }
     /**
-     * The streaming endpoint description.
+     * @return The streaming endpoint description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The free trial expiration time.
+     * @return The free trial expiration time.
      * 
-    */
+     */
     public String freeTrialEndTime() {
         return this.freeTrialEndTime;
     }
     /**
-     * The streaming endpoint host name.
+     * @return The streaming endpoint host name.
      * 
-    */
+     */
     public String hostName() {
         return this.hostName;
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The exact time the streaming endpoint was last modified.
+     * @return The exact time the streaming endpoint was last modified.
      * 
-    */
+     */
     public String lastModified() {
         return this.lastModified;
     }
     /**
-     * The geo-location where the resource lives
+     * @return The geo-location where the resource lives
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Max cache age
+     * @return Max cache age
      * 
-    */
+     */
     public Optional<Double> maxCacheAge() {
         return Optional.ofNullable(this.maxCacheAge);
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The provisioning state of the streaming endpoint.
+     * @return The provisioning state of the streaming endpoint.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The resource state of the streaming endpoint.
+     * @return The resource state of the streaming endpoint.
      * 
-    */
+     */
     public String resourceState() {
         return this.resourceState;
     }
     /**
-     * The number of scale units. Use the Scale operation to adjust this value.
+     * @return The number of scale units. Use the Scale operation to adjust this value.
      * 
-    */
+     */
     public Integer scaleUnits() {
         return this.scaleUnits;
     }
     /**
-     * The system metadata relating to this resource.
+     * @return The system metadata relating to this resource.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

@@ -23,6 +23,10 @@ public final class DomainAssociationSubDomainGetArgs extends com.pulumi.resource
     @Import(name="branchName", required=true)
     private Output<String> branchName;
 
+    /**
+     * @return The branch name setting for the subdomain.
+     * 
+     */
     public Output<String> branchName() {
         return this.branchName;
     }
@@ -34,6 +38,10 @@ public final class DomainAssociationSubDomainGetArgs extends com.pulumi.resource
     @Import(name="dnsRecord")
     private @Nullable Output<String> dnsRecord;
 
+    /**
+     * @return The DNS record for the subdomain.
+     * 
+     */
     public Optional<Output<String>> dnsRecord() {
         return Optional.ofNullable(this.dnsRecord);
     }
@@ -45,6 +53,10 @@ public final class DomainAssociationSubDomainGetArgs extends com.pulumi.resource
     @Import(name="prefix", required=true)
     private Output<String> prefix;
 
+    /**
+     * @return The prefix setting for the subdomain.
+     * 
+     */
     public Output<String> prefix() {
         return this.prefix;
     }
@@ -56,6 +68,10 @@ public final class DomainAssociationSubDomainGetArgs extends com.pulumi.resource
     @Import(name="verified")
     private @Nullable Output<Boolean> verified;
 
+    /**
+     * @return The verified status of the subdomain.
+     * 
+     */
     public Optional<Output<Boolean>> verified() {
         return Optional.ofNullable(this.verified);
     }
@@ -87,38 +103,86 @@ public final class DomainAssociationSubDomainGetArgs extends com.pulumi.resource
             $ = new DomainAssociationSubDomainGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param branchName The branch name setting for the subdomain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder branchName(Output<String> branchName) {
             $.branchName = branchName;
             return this;
         }
 
+        /**
+         * @param branchName The branch name setting for the subdomain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder branchName(String branchName) {
             return branchName(Output.of(branchName));
         }
 
+        /**
+         * @param dnsRecord The DNS record for the subdomain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsRecord(@Nullable Output<String> dnsRecord) {
             $.dnsRecord = dnsRecord;
             return this;
         }
 
+        /**
+         * @param dnsRecord The DNS record for the subdomain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsRecord(String dnsRecord) {
             return dnsRecord(Output.of(dnsRecord));
         }
 
+        /**
+         * @param prefix The prefix setting for the subdomain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefix(Output<String> prefix) {
             $.prefix = prefix;
             return this;
         }
 
+        /**
+         * @param prefix The prefix setting for the subdomain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefix(String prefix) {
             return prefix(Output.of(prefix));
         }
 
+        /**
+         * @param verified The verified status of the subdomain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder verified(@Nullable Output<Boolean> verified) {
             $.verified = verified;
             return this;
         }
 
+        /**
+         * @param verified The verified status of the subdomain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder verified(Boolean verified) {
             return verified(Output.of(verified));
         }

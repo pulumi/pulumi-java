@@ -27,6 +27,10 @@ public final class GoogleCloudApigeeV1RevenueShareRangeArgs extends com.pulumi.r
     @Import(name="end")
     private @Nullable Output<String> end;
 
+    /**
+     * @return Ending value of the range. Set to 0 or `null` for the last range of values.
+     * 
+     */
     public Optional<Output<String>> end() {
         return Optional.ofNullable(this.end);
     }
@@ -38,6 +42,10 @@ public final class GoogleCloudApigeeV1RevenueShareRangeArgs extends com.pulumi.r
     @Import(name="sharePercentage")
     private @Nullable Output<Double> sharePercentage;
 
+    /**
+     * @return Percentage of the revenue to be shared with the developer. For example, to share 21 percent of the total revenue with the developer, set this value to 21. Specify a decimal number with a maximum of two digits following the decimal point.
+     * 
+     */
     public Optional<Output<Double>> sharePercentage() {
         return Optional.ofNullable(this.sharePercentage);
     }
@@ -49,6 +57,10 @@ public final class GoogleCloudApigeeV1RevenueShareRangeArgs extends com.pulumi.r
     @Import(name="start")
     private @Nullable Output<String> start;
 
+    /**
+     * @return Starting value of the range. Set to 0 or `null` for the initial range of values.
+     * 
+     */
     public Optional<Output<String>> start() {
         return Optional.ofNullable(this.start);
     }
@@ -79,29 +91,65 @@ public final class GoogleCloudApigeeV1RevenueShareRangeArgs extends com.pulumi.r
             $ = new GoogleCloudApigeeV1RevenueShareRangeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param end Ending value of the range. Set to 0 or `null` for the last range of values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder end(@Nullable Output<String> end) {
             $.end = end;
             return this;
         }
 
+        /**
+         * @param end Ending value of the range. Set to 0 or `null` for the last range of values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder end(String end) {
             return end(Output.of(end));
         }
 
+        /**
+         * @param sharePercentage Percentage of the revenue to be shared with the developer. For example, to share 21 percent of the total revenue with the developer, set this value to 21. Specify a decimal number with a maximum of two digits following the decimal point.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sharePercentage(@Nullable Output<Double> sharePercentage) {
             $.sharePercentage = sharePercentage;
             return this;
         }
 
+        /**
+         * @param sharePercentage Percentage of the revenue to be shared with the developer. For example, to share 21 percent of the total revenue with the developer, set this value to 21. Specify a decimal number with a maximum of two digits following the decimal point.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sharePercentage(Double sharePercentage) {
             return sharePercentage(Output.of(sharePercentage));
         }
 
+        /**
+         * @param start Starting value of the range. Set to 0 or `null` for the initial range of values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder start(@Nullable Output<String> start) {
             $.start = start;
             return this;
         }
 
+        /**
+         * @param start Starting value of the range. Set to 0 or `null` for the initial range of values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder start(String start) {
             return start(Output.of(start));
         }

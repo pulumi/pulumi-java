@@ -22,6 +22,10 @@ public final class WebAclRuleActionBlockGetArgs extends com.pulumi.resources.Res
     @Import(name="customResponse")
     private @Nullable Output<WebAclRuleActionBlockCustomResponseGetArgs> customResponse;
 
+    /**
+     * @return Defines a custom response for the web request. See Custom Response below for details.
+     * 
+     */
     public Optional<Output<WebAclRuleActionBlockCustomResponseGetArgs>> customResponse() {
         return Optional.ofNullable(this.customResponse);
     }
@@ -50,11 +54,23 @@ public final class WebAclRuleActionBlockGetArgs extends com.pulumi.resources.Res
             $ = new WebAclRuleActionBlockGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customResponse Defines a custom response for the web request. See Custom Response below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customResponse(@Nullable Output<WebAclRuleActionBlockCustomResponseGetArgs> customResponse) {
             $.customResponse = customResponse;
             return this;
         }
 
+        /**
+         * @param customResponse Defines a custom response for the web request. See Custom Response below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customResponse(WebAclRuleActionBlockCustomResponseGetArgs customResponse) {
             return customResponse(Output.of(customResponse));
         }

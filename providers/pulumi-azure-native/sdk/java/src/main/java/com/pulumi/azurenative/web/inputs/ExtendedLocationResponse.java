@@ -25,6 +25,10 @@ public final class ExtendedLocationResponse extends com.pulumi.resources.InvokeA
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Name of extended location.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -36,6 +40,10 @@ public final class ExtendedLocationResponse extends com.pulumi.resources.InvokeA
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of extended location.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -65,11 +73,23 @@ public final class ExtendedLocationResponse extends com.pulumi.resources.InvokeA
             $ = new ExtendedLocationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name of extended location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param type Type of extended location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

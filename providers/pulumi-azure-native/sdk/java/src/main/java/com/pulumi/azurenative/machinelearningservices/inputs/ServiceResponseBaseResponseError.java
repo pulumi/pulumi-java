@@ -23,6 +23,10 @@ public final class ServiceResponseBaseResponseError extends com.pulumi.resources
     @Import(name="error", required=true)
     private ErrorResponseResponse error;
 
+    /**
+     * @return The error response.
+     * 
+     */
     public ErrorResponseResponse error() {
         return this.error;
     }
@@ -51,6 +55,12 @@ public final class ServiceResponseBaseResponseError extends com.pulumi.resources
             $ = new ServiceResponseBaseResponseError(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param error The error response.
+         * 
+         * @return builder
+         * 
+         */
         public Builder error(ErrorResponseResponse error) {
             $.error = error;
             return this;

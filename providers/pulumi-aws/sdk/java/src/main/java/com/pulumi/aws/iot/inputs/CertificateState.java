@@ -23,6 +23,10 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
     @Import(name="active")
     private @Nullable Output<Boolean> active;
 
+    /**
+     * @return Boolean flag to indicate if the certificate should be active
+     * 
+     */
     public Optional<Output<Boolean>> active() {
         return Optional.ofNullable(this.active);
     }
@@ -34,6 +38,10 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return The ARN of the created certificate.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -45,6 +53,10 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
     @Import(name="certificatePem")
     private @Nullable Output<String> certificatePem;
 
+    /**
+     * @return The certificate data, in PEM format.
+     * 
+     */
     public Optional<Output<String>> certificatePem() {
         return Optional.ofNullable(this.certificatePem);
     }
@@ -60,6 +72,14 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
     @Import(name="csr")
     private @Nullable Output<String> csr;
 
+    /**
+     * @return The certificate signing request. Review
+     * [CreateCertificateFromCsr](https://docs.aws.amazon.com/iot/latest/apireference/API_CreateCertificateFromCsr.html)
+     * for more information on generating a certificate from a certificate signing request (CSR).
+     * If none is specified both the certificate and keys will be generated, review [CreateKeysAndCertificate](https://docs.aws.amazon.com/iot/latest/apireference/API_CreateKeysAndCertificate.html)
+     * for more information on generating keys and a certificate.
+     * 
+     */
     public Optional<Output<String>> csr() {
         return Optional.ofNullable(this.csr);
     }
@@ -71,6 +91,10 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
     @Import(name="privateKey")
     private @Nullable Output<String> privateKey;
 
+    /**
+     * @return When no CSR is provided, the private key.
+     * 
+     */
     public Optional<Output<String>> privateKey() {
         return Optional.ofNullable(this.privateKey);
     }
@@ -82,6 +106,10 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
     @Import(name="publicKey")
     private @Nullable Output<String> publicKey;
 
+    /**
+     * @return When no CSR is provided, the public key.
+     * 
+     */
     public Optional<Output<String>> publicKey() {
         return Optional.ofNullable(this.publicKey);
     }
@@ -115,56 +143,136 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
             $ = new CertificateState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param active Boolean flag to indicate if the certificate should be active
+         * 
+         * @return builder
+         * 
+         */
         public Builder active(@Nullable Output<Boolean> active) {
             $.active = active;
             return this;
         }
 
+        /**
+         * @param active Boolean flag to indicate if the certificate should be active
+         * 
+         * @return builder
+         * 
+         */
         public Builder active(Boolean active) {
             return active(Output.of(active));
         }
 
+        /**
+         * @param arn The ARN of the created certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn The ARN of the created certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param certificatePem The certificate data, in PEM format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificatePem(@Nullable Output<String> certificatePem) {
             $.certificatePem = certificatePem;
             return this;
         }
 
+        /**
+         * @param certificatePem The certificate data, in PEM format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificatePem(String certificatePem) {
             return certificatePem(Output.of(certificatePem));
         }
 
+        /**
+         * @param csr The certificate signing request. Review
+         * [CreateCertificateFromCsr](https://docs.aws.amazon.com/iot/latest/apireference/API_CreateCertificateFromCsr.html)
+         * for more information on generating a certificate from a certificate signing request (CSR).
+         * If none is specified both the certificate and keys will be generated, review [CreateKeysAndCertificate](https://docs.aws.amazon.com/iot/latest/apireference/API_CreateKeysAndCertificate.html)
+         * for more information on generating keys and a certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder csr(@Nullable Output<String> csr) {
             $.csr = csr;
             return this;
         }
 
+        /**
+         * @param csr The certificate signing request. Review
+         * [CreateCertificateFromCsr](https://docs.aws.amazon.com/iot/latest/apireference/API_CreateCertificateFromCsr.html)
+         * for more information on generating a certificate from a certificate signing request (CSR).
+         * If none is specified both the certificate and keys will be generated, review [CreateKeysAndCertificate](https://docs.aws.amazon.com/iot/latest/apireference/API_CreateKeysAndCertificate.html)
+         * for more information on generating keys and a certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder csr(String csr) {
             return csr(Output.of(csr));
         }
 
+        /**
+         * @param privateKey When no CSR is provided, the private key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateKey(@Nullable Output<String> privateKey) {
             $.privateKey = privateKey;
             return this;
         }
 
+        /**
+         * @param privateKey When no CSR is provided, the private key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateKey(String privateKey) {
             return privateKey(Output.of(privateKey));
         }
 
+        /**
+         * @param publicKey When no CSR is provided, the public key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicKey(@Nullable Output<String> publicKey) {
             $.publicKey = publicKey;
             return this;
         }
 
+        /**
+         * @param publicKey When no CSR is provided, the public key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicKey(String publicKey) {
             return publicKey(Output.of(publicKey));
         }

@@ -36,6 +36,10 @@ public final class EdifactProtocolSettingsResponse extends com.pulumi.resources.
     @Import(name="acknowledgementSettings", required=true)
     private EdifactAcknowledgementSettingsResponse acknowledgementSettings;
 
+    /**
+     * @return The EDIFACT acknowledgement settings.
+     * 
+     */
     public EdifactAcknowledgementSettingsResponse acknowledgementSettings() {
         return this.acknowledgementSettings;
     }
@@ -47,6 +51,10 @@ public final class EdifactProtocolSettingsResponse extends com.pulumi.resources.
     @Import(name="edifactDelimiterOverrides")
     private @Nullable List<EdifactDelimiterOverrideResponse> edifactDelimiterOverrides;
 
+    /**
+     * @return The EDIFACT delimiter override settings.
+     * 
+     */
     public Optional<List<EdifactDelimiterOverrideResponse>> edifactDelimiterOverrides() {
         return Optional.ofNullable(this.edifactDelimiterOverrides);
     }
@@ -58,6 +66,10 @@ public final class EdifactProtocolSettingsResponse extends com.pulumi.resources.
     @Import(name="envelopeOverrides")
     private @Nullable List<EdifactEnvelopeOverrideResponse> envelopeOverrides;
 
+    /**
+     * @return The EDIFACT envelope override settings.
+     * 
+     */
     public Optional<List<EdifactEnvelopeOverrideResponse>> envelopeOverrides() {
         return Optional.ofNullable(this.envelopeOverrides);
     }
@@ -69,6 +81,10 @@ public final class EdifactProtocolSettingsResponse extends com.pulumi.resources.
     @Import(name="envelopeSettings", required=true)
     private EdifactEnvelopeSettingsResponse envelopeSettings;
 
+    /**
+     * @return The EDIFACT envelope settings.
+     * 
+     */
     public EdifactEnvelopeSettingsResponse envelopeSettings() {
         return this.envelopeSettings;
     }
@@ -80,6 +96,10 @@ public final class EdifactProtocolSettingsResponse extends com.pulumi.resources.
     @Import(name="framingSettings", required=true)
     private EdifactFramingSettingsResponse framingSettings;
 
+    /**
+     * @return The EDIFACT framing settings.
+     * 
+     */
     public EdifactFramingSettingsResponse framingSettings() {
         return this.framingSettings;
     }
@@ -91,6 +111,10 @@ public final class EdifactProtocolSettingsResponse extends com.pulumi.resources.
     @Import(name="messageFilter", required=true)
     private EdifactMessageFilterResponse messageFilter;
 
+    /**
+     * @return The EDIFACT message filter.
+     * 
+     */
     public EdifactMessageFilterResponse messageFilter() {
         return this.messageFilter;
     }
@@ -102,6 +126,10 @@ public final class EdifactProtocolSettingsResponse extends com.pulumi.resources.
     @Import(name="messageFilterList")
     private @Nullable List<EdifactMessageIdentifierResponse> messageFilterList;
 
+    /**
+     * @return The EDIFACT message filter list.
+     * 
+     */
     public Optional<List<EdifactMessageIdentifierResponse>> messageFilterList() {
         return Optional.ofNullable(this.messageFilterList);
     }
@@ -113,6 +141,10 @@ public final class EdifactProtocolSettingsResponse extends com.pulumi.resources.
     @Import(name="processingSettings", required=true)
     private EdifactProcessingSettingsResponse processingSettings;
 
+    /**
+     * @return The EDIFACT processing Settings.
+     * 
+     */
     public EdifactProcessingSettingsResponse processingSettings() {
         return this.processingSettings;
     }
@@ -124,6 +156,10 @@ public final class EdifactProtocolSettingsResponse extends com.pulumi.resources.
     @Import(name="schemaReferences", required=true)
     private List<EdifactSchemaReferenceResponse> schemaReferences;
 
+    /**
+     * @return The EDIFACT schema references.
+     * 
+     */
     public List<EdifactSchemaReferenceResponse> schemaReferences() {
         return this.schemaReferences;
     }
@@ -135,6 +171,10 @@ public final class EdifactProtocolSettingsResponse extends com.pulumi.resources.
     @Import(name="validationOverrides")
     private @Nullable List<EdifactValidationOverrideResponse> validationOverrides;
 
+    /**
+     * @return The EDIFACT validation override settings.
+     * 
+     */
     public Optional<List<EdifactValidationOverrideResponse>> validationOverrides() {
         return Optional.ofNullable(this.validationOverrides);
     }
@@ -146,6 +186,10 @@ public final class EdifactProtocolSettingsResponse extends com.pulumi.resources.
     @Import(name="validationSettings", required=true)
     private EdifactValidationSettingsResponse validationSettings;
 
+    /**
+     * @return The EDIFACT validation settings.
+     * 
+     */
     public EdifactValidationSettingsResponse validationSettings() {
         return this.validationSettings;
     }
@@ -184,76 +228,172 @@ public final class EdifactProtocolSettingsResponse extends com.pulumi.resources.
             $ = new EdifactProtocolSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param acknowledgementSettings The EDIFACT acknowledgement settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acknowledgementSettings(EdifactAcknowledgementSettingsResponse acknowledgementSettings) {
             $.acknowledgementSettings = acknowledgementSettings;
             return this;
         }
 
+        /**
+         * @param edifactDelimiterOverrides The EDIFACT delimiter override settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder edifactDelimiterOverrides(@Nullable List<EdifactDelimiterOverrideResponse> edifactDelimiterOverrides) {
             $.edifactDelimiterOverrides = edifactDelimiterOverrides;
             return this;
         }
 
+        /**
+         * @param edifactDelimiterOverrides The EDIFACT delimiter override settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder edifactDelimiterOverrides(EdifactDelimiterOverrideResponse... edifactDelimiterOverrides) {
             return edifactDelimiterOverrides(List.of(edifactDelimiterOverrides));
         }
 
+        /**
+         * @param envelopeOverrides The EDIFACT envelope override settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder envelopeOverrides(@Nullable List<EdifactEnvelopeOverrideResponse> envelopeOverrides) {
             $.envelopeOverrides = envelopeOverrides;
             return this;
         }
 
+        /**
+         * @param envelopeOverrides The EDIFACT envelope override settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder envelopeOverrides(EdifactEnvelopeOverrideResponse... envelopeOverrides) {
             return envelopeOverrides(List.of(envelopeOverrides));
         }
 
+        /**
+         * @param envelopeSettings The EDIFACT envelope settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder envelopeSettings(EdifactEnvelopeSettingsResponse envelopeSettings) {
             $.envelopeSettings = envelopeSettings;
             return this;
         }
 
+        /**
+         * @param framingSettings The EDIFACT framing settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder framingSettings(EdifactFramingSettingsResponse framingSettings) {
             $.framingSettings = framingSettings;
             return this;
         }
 
+        /**
+         * @param messageFilter The EDIFACT message filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageFilter(EdifactMessageFilterResponse messageFilter) {
             $.messageFilter = messageFilter;
             return this;
         }
 
+        /**
+         * @param messageFilterList The EDIFACT message filter list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageFilterList(@Nullable List<EdifactMessageIdentifierResponse> messageFilterList) {
             $.messageFilterList = messageFilterList;
             return this;
         }
 
+        /**
+         * @param messageFilterList The EDIFACT message filter list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageFilterList(EdifactMessageIdentifierResponse... messageFilterList) {
             return messageFilterList(List.of(messageFilterList));
         }
 
+        /**
+         * @param processingSettings The EDIFACT processing Settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder processingSettings(EdifactProcessingSettingsResponse processingSettings) {
             $.processingSettings = processingSettings;
             return this;
         }
 
+        /**
+         * @param schemaReferences The EDIFACT schema references.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaReferences(List<EdifactSchemaReferenceResponse> schemaReferences) {
             $.schemaReferences = schemaReferences;
             return this;
         }
 
+        /**
+         * @param schemaReferences The EDIFACT schema references.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaReferences(EdifactSchemaReferenceResponse... schemaReferences) {
             return schemaReferences(List.of(schemaReferences));
         }
 
+        /**
+         * @param validationOverrides The EDIFACT validation override settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validationOverrides(@Nullable List<EdifactValidationOverrideResponse> validationOverrides) {
             $.validationOverrides = validationOverrides;
             return this;
         }
 
+        /**
+         * @param validationOverrides The EDIFACT validation override settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validationOverrides(EdifactValidationOverrideResponse... validationOverrides) {
             return validationOverrides(List.of(validationOverrides));
         }
 
+        /**
+         * @param validationSettings The EDIFACT validation settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validationSettings(EdifactValidationSettingsResponse validationSettings) {
             $.validationSettings = validationSettings;
             return this;

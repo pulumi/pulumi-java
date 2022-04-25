@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class TemplateDataSetSchema {
     /**
-     * &lt;p&gt;A structure containing the list of column schemas.&lt;/p&gt;
+     * @return &lt;p&gt;A structure containing the list of column schemas.&lt;/p&gt;
      * 
      */
     private final @Nullable List<TemplateColumnSchema> columnSchemaList;
@@ -23,9 +23,9 @@ public final class TemplateDataSetSchema {
     }
 
     /**
-     * &lt;p&gt;A structure containing the list of column schemas.&lt;/p&gt;
+     * @return &lt;p&gt;A structure containing the list of column schemas.&lt;/p&gt;
      * 
-    */
+     */
     public List<TemplateColumnSchema> columnSchemaList() {
         return this.columnSchemaList == null ? List.of() : this.columnSchemaList;
     }

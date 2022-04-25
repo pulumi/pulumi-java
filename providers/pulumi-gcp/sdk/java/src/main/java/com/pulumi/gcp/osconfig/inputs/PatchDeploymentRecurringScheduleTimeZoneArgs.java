@@ -22,6 +22,10 @@ public final class PatchDeploymentRecurringScheduleTimeZoneArgs extends com.pulu
     @Import(name="id", required=true)
     private Output<String> id;
 
+    /**
+     * @return IANA Time Zone Database time zone, e.g. &#34;America/New_York&#34;.
+     * 
+     */
     public Output<String> id() {
         return this.id;
     }
@@ -33,6 +37,10 @@ public final class PatchDeploymentRecurringScheduleTimeZoneArgs extends com.pulu
     @Import(name="version")
     private @Nullable Output<String> version;
 
+    /**
+     * @return IANA Time Zone Database version number, e.g. &#34;2019a&#34;.
+     * 
+     */
     public Optional<Output<String>> version() {
         return Optional.ofNullable(this.version);
     }
@@ -62,20 +70,44 @@ public final class PatchDeploymentRecurringScheduleTimeZoneArgs extends com.pulu
             $ = new PatchDeploymentRecurringScheduleTimeZoneArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id IANA Time Zone Database time zone, e.g. &#34;America/New_York&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id IANA Time Zone Database time zone, e.g. &#34;America/New_York&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param version IANA Time Zone Database version number, e.g. &#34;2019a&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable Output<String> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version IANA Time Zone Database version number, e.g. &#34;2019a&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             return version(Output.of(version));
         }

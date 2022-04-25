@@ -38,6 +38,10 @@ public final class TaskOptions extends com.pulumi.resources.InvokeArgs {
     @Import(name="atime")
     private @Nullable TaskOptionsAtime atime;
 
+    /**
+     * @return A file metadata value that shows the last time a file was accessed (that is, when the file was read or written to).
+     * 
+     */
     public Optional<TaskOptionsAtime> atime() {
         return Optional.ofNullable(this.atime);
     }
@@ -49,6 +53,10 @@ public final class TaskOptions extends com.pulumi.resources.InvokeArgs {
     @Import(name="bytesPerSecond")
     private @Nullable Integer bytesPerSecond;
 
+    /**
+     * @return A value that limits the bandwidth used by AWS DataSync.
+     * 
+     */
     public Optional<Integer> bytesPerSecond() {
         return Optional.ofNullable(this.bytesPerSecond);
     }
@@ -60,6 +68,10 @@ public final class TaskOptions extends com.pulumi.resources.InvokeArgs {
     @Import(name="gid")
     private @Nullable TaskOptionsGid gid;
 
+    /**
+     * @return The group ID (GID) of the file&#39;s owners.
+     * 
+     */
     public Optional<TaskOptionsGid> gid() {
         return Optional.ofNullable(this.gid);
     }
@@ -71,6 +83,10 @@ public final class TaskOptions extends com.pulumi.resources.InvokeArgs {
     @Import(name="logLevel")
     private @Nullable TaskOptionsLogLevel logLevel;
 
+    /**
+     * @return A value that determines the types of logs that DataSync publishes to a log stream in the Amazon CloudWatch log group that you provide.
+     * 
+     */
     public Optional<TaskOptionsLogLevel> logLevel() {
         return Optional.ofNullable(this.logLevel);
     }
@@ -82,6 +98,10 @@ public final class TaskOptions extends com.pulumi.resources.InvokeArgs {
     @Import(name="mtime")
     private @Nullable TaskOptionsMtime mtime;
 
+    /**
+     * @return A value that indicates the last time that a file was modified (that is, a file was written to) before the PREPARING phase.
+     * 
+     */
     public Optional<TaskOptionsMtime> mtime() {
         return Optional.ofNullable(this.mtime);
     }
@@ -93,6 +113,10 @@ public final class TaskOptions extends com.pulumi.resources.InvokeArgs {
     @Import(name="overwriteMode")
     private @Nullable TaskOptionsOverwriteMode overwriteMode;
 
+    /**
+     * @return A value that determines whether files at the destination should be overwritten or preserved when copying files.
+     * 
+     */
     public Optional<TaskOptionsOverwriteMode> overwriteMode() {
         return Optional.ofNullable(this.overwriteMode);
     }
@@ -104,6 +128,10 @@ public final class TaskOptions extends com.pulumi.resources.InvokeArgs {
     @Import(name="posixPermissions")
     private @Nullable TaskOptionsPosixPermissions posixPermissions;
 
+    /**
+     * @return A value that determines which users or groups can access a file for a specific purpose such as reading, writing, or execution of the file.
+     * 
+     */
     public Optional<TaskOptionsPosixPermissions> posixPermissions() {
         return Optional.ofNullable(this.posixPermissions);
     }
@@ -115,6 +143,10 @@ public final class TaskOptions extends com.pulumi.resources.InvokeArgs {
     @Import(name="preserveDeletedFiles")
     private @Nullable TaskOptionsPreserveDeletedFiles preserveDeletedFiles;
 
+    /**
+     * @return A value that specifies whether files in the destination that don&#39;t exist in the source file system should be preserved.
+     * 
+     */
     public Optional<TaskOptionsPreserveDeletedFiles> preserveDeletedFiles() {
         return Optional.ofNullable(this.preserveDeletedFiles);
     }
@@ -126,6 +158,10 @@ public final class TaskOptions extends com.pulumi.resources.InvokeArgs {
     @Import(name="preserveDevices")
     private @Nullable TaskOptionsPreserveDevices preserveDevices;
 
+    /**
+     * @return A value that determines whether AWS DataSync should preserve the metadata of block and character devices in the source file system, and recreate the files with that device name and metadata on the destination.
+     * 
+     */
     public Optional<TaskOptionsPreserveDevices> preserveDevices() {
         return Optional.ofNullable(this.preserveDevices);
     }
@@ -137,6 +173,10 @@ public final class TaskOptions extends com.pulumi.resources.InvokeArgs {
     @Import(name="securityDescriptorCopyFlags")
     private @Nullable TaskOptionsSecurityDescriptorCopyFlags securityDescriptorCopyFlags;
 
+    /**
+     * @return A value that determines which components of the SMB security descriptor are copied during transfer.
+     * 
+     */
     public Optional<TaskOptionsSecurityDescriptorCopyFlags> securityDescriptorCopyFlags() {
         return Optional.ofNullable(this.securityDescriptorCopyFlags);
     }
@@ -148,6 +188,10 @@ public final class TaskOptions extends com.pulumi.resources.InvokeArgs {
     @Import(name="taskQueueing")
     private @Nullable TaskOptionsTaskQueueing taskQueueing;
 
+    /**
+     * @return A value that determines whether tasks should be queued before executing the tasks.
+     * 
+     */
     public Optional<TaskOptionsTaskQueueing> taskQueueing() {
         return Optional.ofNullable(this.taskQueueing);
     }
@@ -159,6 +203,10 @@ public final class TaskOptions extends com.pulumi.resources.InvokeArgs {
     @Import(name="transferMode")
     private @Nullable TaskOptionsTransferMode transferMode;
 
+    /**
+     * @return A value that determines whether DataSync transfers only the data and metadata that differ between the source and the destination location, or whether DataSync transfers all the content from the source, without comparing to the destination location.
+     * 
+     */
     public Optional<TaskOptionsTransferMode> transferMode() {
         return Optional.ofNullable(this.transferMode);
     }
@@ -170,6 +218,10 @@ public final class TaskOptions extends com.pulumi.resources.InvokeArgs {
     @Import(name="uid")
     private @Nullable TaskOptionsUid uid;
 
+    /**
+     * @return The user ID (UID) of the file&#39;s owner.
+     * 
+     */
     public Optional<TaskOptionsUid> uid() {
         return Optional.ofNullable(this.uid);
     }
@@ -181,6 +233,10 @@ public final class TaskOptions extends com.pulumi.resources.InvokeArgs {
     @Import(name="verifyMode")
     private @Nullable TaskOptionsVerifyMode verifyMode;
 
+    /**
+     * @return A value that determines whether a data integrity verification should be performed at the end of a task execution after all data and metadata have been transferred.
+     * 
+     */
     public Optional<TaskOptionsVerifyMode> verifyMode() {
         return Optional.ofNullable(this.verifyMode);
     }
@@ -222,71 +278,155 @@ public final class TaskOptions extends com.pulumi.resources.InvokeArgs {
             $ = new TaskOptions(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param atime A file metadata value that shows the last time a file was accessed (that is, when the file was read or written to).
+         * 
+         * @return builder
+         * 
+         */
         public Builder atime(@Nullable TaskOptionsAtime atime) {
             $.atime = atime;
             return this;
         }
 
+        /**
+         * @param bytesPerSecond A value that limits the bandwidth used by AWS DataSync.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bytesPerSecond(@Nullable Integer bytesPerSecond) {
             $.bytesPerSecond = bytesPerSecond;
             return this;
         }
 
+        /**
+         * @param gid The group ID (GID) of the file&#39;s owners.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gid(@Nullable TaskOptionsGid gid) {
             $.gid = gid;
             return this;
         }
 
+        /**
+         * @param logLevel A value that determines the types of logs that DataSync publishes to a log stream in the Amazon CloudWatch log group that you provide.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logLevel(@Nullable TaskOptionsLogLevel logLevel) {
             $.logLevel = logLevel;
             return this;
         }
 
+        /**
+         * @param mtime A value that indicates the last time that a file was modified (that is, a file was written to) before the PREPARING phase.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mtime(@Nullable TaskOptionsMtime mtime) {
             $.mtime = mtime;
             return this;
         }
 
+        /**
+         * @param overwriteMode A value that determines whether files at the destination should be overwritten or preserved when copying files.
+         * 
+         * @return builder
+         * 
+         */
         public Builder overwriteMode(@Nullable TaskOptionsOverwriteMode overwriteMode) {
             $.overwriteMode = overwriteMode;
             return this;
         }
 
+        /**
+         * @param posixPermissions A value that determines which users or groups can access a file for a specific purpose such as reading, writing, or execution of the file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder posixPermissions(@Nullable TaskOptionsPosixPermissions posixPermissions) {
             $.posixPermissions = posixPermissions;
             return this;
         }
 
+        /**
+         * @param preserveDeletedFiles A value that specifies whether files in the destination that don&#39;t exist in the source file system should be preserved.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preserveDeletedFiles(@Nullable TaskOptionsPreserveDeletedFiles preserveDeletedFiles) {
             $.preserveDeletedFiles = preserveDeletedFiles;
             return this;
         }
 
+        /**
+         * @param preserveDevices A value that determines whether AWS DataSync should preserve the metadata of block and character devices in the source file system, and recreate the files with that device name and metadata on the destination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preserveDevices(@Nullable TaskOptionsPreserveDevices preserveDevices) {
             $.preserveDevices = preserveDevices;
             return this;
         }
 
+        /**
+         * @param securityDescriptorCopyFlags A value that determines which components of the SMB security descriptor are copied during transfer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityDescriptorCopyFlags(@Nullable TaskOptionsSecurityDescriptorCopyFlags securityDescriptorCopyFlags) {
             $.securityDescriptorCopyFlags = securityDescriptorCopyFlags;
             return this;
         }
 
+        /**
+         * @param taskQueueing A value that determines whether tasks should be queued before executing the tasks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder taskQueueing(@Nullable TaskOptionsTaskQueueing taskQueueing) {
             $.taskQueueing = taskQueueing;
             return this;
         }
 
+        /**
+         * @param transferMode A value that determines whether DataSync transfers only the data and metadata that differ between the source and the destination location, or whether DataSync transfers all the content from the source, without comparing to the destination location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transferMode(@Nullable TaskOptionsTransferMode transferMode) {
             $.transferMode = transferMode;
             return this;
         }
 
+        /**
+         * @param uid The user ID (UID) of the file&#39;s owner.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uid(@Nullable TaskOptionsUid uid) {
             $.uid = uid;
             return this;
         }
 
+        /**
+         * @param verifyMode A value that determines whether a data integrity verification should be performed at the end of a task execution after all data and metadata have been transferred.
+         * 
+         * @return builder
+         * 
+         */
         public Builder verifyMode(@Nullable TaskOptionsVerifyMode verifyMode) {
             $.verifyMode = verifyMode;
             return this;

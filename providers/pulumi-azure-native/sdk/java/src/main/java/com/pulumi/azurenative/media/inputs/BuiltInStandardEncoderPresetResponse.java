@@ -25,6 +25,11 @@ public final class BuiltInStandardEncoderPresetResponse extends com.pulumi.resou
     @Import(name="odataType", required=true)
     private String odataType;
 
+    /**
+     * @return The discriminator for derived types.
+     * Expected value is &#39;#Microsoft.Media.BuiltInStandardEncoderPreset&#39;.
+     * 
+     */
     public String odataType() {
         return this.odataType;
     }
@@ -36,6 +41,10 @@ public final class BuiltInStandardEncoderPresetResponse extends com.pulumi.resou
     @Import(name="presetName", required=true)
     private String presetName;
 
+    /**
+     * @return The built-in preset to be used for encoding videos.
+     * 
+     */
     public String presetName() {
         return this.presetName;
     }
@@ -65,11 +74,24 @@ public final class BuiltInStandardEncoderPresetResponse extends com.pulumi.resou
             $ = new BuiltInStandardEncoderPresetResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param odataType The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.BuiltInStandardEncoderPreset&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(String odataType) {
             $.odataType = odataType;
             return this;
         }
 
+        /**
+         * @param presetName The built-in preset to be used for encoding videos.
+         * 
+         * @return builder
+         * 
+         */
         public Builder presetName(String presetName) {
             $.presetName = presetName;
             return this;

@@ -35,6 +35,10 @@ public final class EventTypeEventVariableArgs extends com.pulumi.resources.Resou
     @Import(name="createdTime")
     private @Nullable Output<String> createdTime;
 
+    /**
+     * @return The time when the event type was created.
+     * 
+     */
     public Optional<Output<String>> createdTime() {
         return Optional.ofNullable(this.createdTime);
     }
@@ -67,6 +71,10 @@ public final class EventTypeEventVariableArgs extends com.pulumi.resources.Resou
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -85,6 +93,10 @@ public final class EventTypeEventVariableArgs extends com.pulumi.resources.Resou
     @Import(name="lastUpdatedTime")
     private @Nullable Output<String> lastUpdatedTime;
 
+    /**
+     * @return The time when the event type was last updated.
+     * 
+     */
     public Optional<Output<String>> lastUpdatedTime() {
         return Optional.ofNullable(this.lastUpdatedTime);
     }
@@ -103,6 +115,10 @@ public final class EventTypeEventVariableArgs extends com.pulumi.resources.Resou
     @Import(name="tags")
     private @Nullable Output<List<EventTypeTagArgs>> tags;
 
+    /**
+     * @return Tags associated with this event type.
+     * 
+     */
     public Optional<Output<List<EventTypeTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -157,11 +173,23 @@ public final class EventTypeEventVariableArgs extends com.pulumi.resources.Resou
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param createdTime The time when the event type was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdTime(@Nullable Output<String> createdTime) {
             $.createdTime = createdTime;
             return this;
         }
 
+        /**
+         * @param createdTime The time when the event type was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdTime(String createdTime) {
             return createdTime(Output.of(createdTime));
         }
@@ -193,11 +221,23 @@ public final class EventTypeEventVariableArgs extends com.pulumi.resources.Resou
             return defaultValue(Output.of(defaultValue));
         }
 
+        /**
+         * @param description The description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
@@ -211,11 +251,23 @@ public final class EventTypeEventVariableArgs extends com.pulumi.resources.Resou
             return inline(Output.of(inline));
         }
 
+        /**
+         * @param lastUpdatedTime The time when the event type was last updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastUpdatedTime(@Nullable Output<String> lastUpdatedTime) {
             $.lastUpdatedTime = lastUpdatedTime;
             return this;
         }
 
+        /**
+         * @param lastUpdatedTime The time when the event type was last updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastUpdatedTime(String lastUpdatedTime) {
             return lastUpdatedTime(Output.of(lastUpdatedTime));
         }
@@ -229,15 +281,33 @@ public final class EventTypeEventVariableArgs extends com.pulumi.resources.Resou
             return name(Output.of(name));
         }
 
+        /**
+         * @param tags Tags associated with this event type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<EventTypeTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Tags associated with this event type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<EventTypeTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags Tags associated with this event type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(EventTypeTagArgs... tags) {
             return tags(List.of(tags));
         }

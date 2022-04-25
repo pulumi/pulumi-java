@@ -21,6 +21,10 @@ public final class GetReleaseLabelsFilters extends com.pulumi.resources.InvokeAr
     @Import(name="application")
     private @Nullable String application;
 
+    /**
+     * @return Optional release label application filter. For example, `Spark@2.1.0` or `Spark`.
+     * 
+     */
     public Optional<String> application() {
         return Optional.ofNullable(this.application);
     }
@@ -32,6 +36,10 @@ public final class GetReleaseLabelsFilters extends com.pulumi.resources.InvokeAr
     @Import(name="prefix")
     private @Nullable String prefix;
 
+    /**
+     * @return Optional release label version prefix filter. For example, `emr-5`.
+     * 
+     */
     public Optional<String> prefix() {
         return Optional.ofNullable(this.prefix);
     }
@@ -61,11 +69,23 @@ public final class GetReleaseLabelsFilters extends com.pulumi.resources.InvokeAr
             $ = new GetReleaseLabelsFilters(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param application Optional release label application filter. For example, `Spark@2.1.0` or `Spark`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder application(@Nullable String application) {
             $.application = application;
             return this;
         }
 
+        /**
+         * @param prefix Optional release label version prefix filter. For example, `emr-5`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefix(@Nullable String prefix) {
             $.prefix = prefix;
             return this;

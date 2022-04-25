@@ -22,6 +22,10 @@ public final class ServiceConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="data", required=true)
     private Output<String> data;
 
+    /**
+     * @return Base64-url-safe-encoded config data
+     * 
+     */
     public Output<String> data() {
         return this.data;
     }
@@ -33,6 +37,10 @@ public final class ServiceConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return User-defined name of the config
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -62,20 +70,44 @@ public final class ServiceConfigArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ServiceConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param data Base64-url-safe-encoded config data
+         * 
+         * @return builder
+         * 
+         */
         public Builder data(Output<String> data) {
             $.data = data;
             return this;
         }
 
+        /**
+         * @param data Base64-url-safe-encoded config data
+         * 
+         * @return builder
+         * 
+         */
         public Builder data(String data) {
             return data(Output.of(data));
         }
 
+        /**
+         * @param name User-defined name of the config
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name User-defined name of the config
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

@@ -27,6 +27,10 @@ public final class MonitoringScheduleNetworkConfigArgs extends com.pulumi.resour
     @Import(name="enableInterContainerTrafficEncryption")
     private @Nullable Output<Boolean> enableInterContainerTrafficEncryption;
 
+    /**
+     * @return Whether to encrypt all communications between distributed processing jobs. Choose True to encrypt communications. Encryption provides greater security for distributed processing jobs, but the processing might take longer.
+     * 
+     */
     public Optional<Output<Boolean>> enableInterContainerTrafficEncryption() {
         return Optional.ofNullable(this.enableInterContainerTrafficEncryption);
     }
@@ -38,6 +42,10 @@ public final class MonitoringScheduleNetworkConfigArgs extends com.pulumi.resour
     @Import(name="enableNetworkIsolation")
     private @Nullable Output<Boolean> enableNetworkIsolation;
 
+    /**
+     * @return Whether to allow inbound and outbound network calls to and from the containers used for the processing job.
+     * 
+     */
     public Optional<Output<Boolean>> enableNetworkIsolation() {
         return Optional.ofNullable(this.enableNetworkIsolation);
     }
@@ -75,20 +83,44 @@ public final class MonitoringScheduleNetworkConfigArgs extends com.pulumi.resour
             $ = new MonitoringScheduleNetworkConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enableInterContainerTrafficEncryption Whether to encrypt all communications between distributed processing jobs. Choose True to encrypt communications. Encryption provides greater security for distributed processing jobs, but the processing might take longer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableInterContainerTrafficEncryption(@Nullable Output<Boolean> enableInterContainerTrafficEncryption) {
             $.enableInterContainerTrafficEncryption = enableInterContainerTrafficEncryption;
             return this;
         }
 
+        /**
+         * @param enableInterContainerTrafficEncryption Whether to encrypt all communications between distributed processing jobs. Choose True to encrypt communications. Encryption provides greater security for distributed processing jobs, but the processing might take longer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableInterContainerTrafficEncryption(Boolean enableInterContainerTrafficEncryption) {
             return enableInterContainerTrafficEncryption(Output.of(enableInterContainerTrafficEncryption));
         }
 
+        /**
+         * @param enableNetworkIsolation Whether to allow inbound and outbound network calls to and from the containers used for the processing job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableNetworkIsolation(@Nullable Output<Boolean> enableNetworkIsolation) {
             $.enableNetworkIsolation = enableNetworkIsolation;
             return this;
         }
 
+        /**
+         * @param enableNetworkIsolation Whether to allow inbound and outbound network calls to and from the containers used for the processing job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableNetworkIsolation(Boolean enableNetworkIsolation) {
             return enableNetworkIsolation(Output.of(enableNetworkIsolation));
         }

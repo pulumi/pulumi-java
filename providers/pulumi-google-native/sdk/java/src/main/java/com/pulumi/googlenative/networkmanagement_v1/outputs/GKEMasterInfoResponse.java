@@ -10,22 +10,22 @@ import java.util.Objects;
 @CustomType
 public final class GKEMasterInfoResponse {
     /**
-     * URI of a GKE cluster network.
+     * @return URI of a GKE cluster network.
      * 
      */
     private final String clusterNetworkUri;
     /**
-     * URI of a GKE cluster.
+     * @return URI of a GKE cluster.
      * 
      */
     private final String clusterUri;
     /**
-     * External IP address of a GKE cluster master.
+     * @return External IP address of a GKE cluster master.
      * 
      */
     private final String externalIp;
     /**
-     * Internal IP address of a GKE cluster master.
+     * @return Internal IP address of a GKE cluster master.
      * 
      */
     private final String internalIp;
@@ -43,30 +43,30 @@ public final class GKEMasterInfoResponse {
     }
 
     /**
-     * URI of a GKE cluster network.
+     * @return URI of a GKE cluster network.
      * 
-    */
+     */
     public String clusterNetworkUri() {
         return this.clusterNetworkUri;
     }
     /**
-     * URI of a GKE cluster.
+     * @return URI of a GKE cluster.
      * 
-    */
+     */
     public String clusterUri() {
         return this.clusterUri;
     }
     /**
-     * External IP address of a GKE cluster master.
+     * @return External IP address of a GKE cluster master.
      * 
-    */
+     */
     public String externalIp() {
         return this.externalIp;
     }
     /**
-     * Internal IP address of a GKE cluster master.
+     * @return Internal IP address of a GKE cluster master.
      * 
-    */
+     */
     public String internalIp() {
         return this.internalIp;
     }

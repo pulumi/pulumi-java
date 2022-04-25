@@ -13,52 +13,52 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetViewResult {
     /**
-     * Date time when view was last modified.
+     * @return Date time when view was last modified.
      * 
      */
     private final String changed;
     /**
-     * Date time when view was created.
+     * @return Date time when view was created.
      * 
      */
     private final String created;
     /**
-     * View definition.
+     * @return View definition.
      * 
      */
     private final String definition;
     /**
-     * Localized display name for the view.
+     * @return Localized display name for the view.
      * 
      */
     private final @Nullable Map<String,String> displayName;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final String id;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * the hub name.
+     * @return the hub name.
      * 
      */
     private final String tenantId;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
     /**
-     * the user ID.
+     * @return the user ID.
      * 
      */
     private final @Nullable String userId;
     /**
-     * Name of the view.
+     * @return Name of the view.
      * 
      */
     private final String viewName;
@@ -88,72 +88,72 @@ public final class GetViewResult {
     }
 
     /**
-     * Date time when view was last modified.
+     * @return Date time when view was last modified.
      * 
-    */
+     */
     public String changed() {
         return this.changed;
     }
     /**
-     * Date time when view was created.
+     * @return Date time when view was created.
      * 
-    */
+     */
     public String created() {
         return this.created;
     }
     /**
-     * View definition.
+     * @return View definition.
      * 
-    */
+     */
     public String definition() {
         return this.definition;
     }
     /**
-     * Localized display name for the view.
+     * @return Localized display name for the view.
      * 
-    */
+     */
     public Map<String,String> displayName() {
         return this.displayName == null ? Map.of() : this.displayName;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * the hub name.
+     * @return the hub name.
      * 
-    */
+     */
     public String tenantId() {
         return this.tenantId;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * the user ID.
+     * @return the user ID.
      * 
-    */
+     */
     public Optional<String> userId() {
         return Optional.ofNullable(this.userId);
     }
     /**
-     * Name of the view.
+     * @return Name of the view.
      * 
-    */
+     */
     public String viewName() {
         return this.viewName;
     }

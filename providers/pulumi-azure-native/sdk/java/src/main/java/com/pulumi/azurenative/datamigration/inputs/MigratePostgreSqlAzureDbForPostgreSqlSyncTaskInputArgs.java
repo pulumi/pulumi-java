@@ -26,6 +26,10 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputArgs extend
     @Import(name="selectedDatabases", required=true)
     private Output<List<MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputArgs>> selectedDatabases;
 
+    /**
+     * @return Databases to migrate
+     * 
+     */
     public Output<List<MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputArgs>> selectedDatabases() {
         return this.selectedDatabases;
     }
@@ -37,6 +41,10 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputArgs extend
     @Import(name="sourceConnectionInfo", required=true)
     private Output<PostgreSqlConnectionInfoArgs> sourceConnectionInfo;
 
+    /**
+     * @return Connection information for source PostgreSQL
+     * 
+     */
     public Output<PostgreSqlConnectionInfoArgs> sourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
@@ -48,6 +56,10 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputArgs extend
     @Import(name="targetConnectionInfo", required=true)
     private Output<PostgreSqlConnectionInfoArgs> targetConnectionInfo;
 
+    /**
+     * @return Connection information for target Azure Database for PostgreSQL
+     * 
+     */
     public Output<PostgreSqlConnectionInfoArgs> targetConnectionInfo() {
         return this.targetConnectionInfo;
     }
@@ -78,33 +90,75 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputArgs extend
             $ = new MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param selectedDatabases Databases to migrate
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectedDatabases(Output<List<MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputArgs>> selectedDatabases) {
             $.selectedDatabases = selectedDatabases;
             return this;
         }
 
+        /**
+         * @param selectedDatabases Databases to migrate
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectedDatabases(List<MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputArgs> selectedDatabases) {
             return selectedDatabases(Output.of(selectedDatabases));
         }
 
+        /**
+         * @param selectedDatabases Databases to migrate
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectedDatabases(MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputArgs... selectedDatabases) {
             return selectedDatabases(List.of(selectedDatabases));
         }
 
+        /**
+         * @param sourceConnectionInfo Connection information for source PostgreSQL
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceConnectionInfo(Output<PostgreSqlConnectionInfoArgs> sourceConnectionInfo) {
             $.sourceConnectionInfo = sourceConnectionInfo;
             return this;
         }
 
+        /**
+         * @param sourceConnectionInfo Connection information for source PostgreSQL
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceConnectionInfo(PostgreSqlConnectionInfoArgs sourceConnectionInfo) {
             return sourceConnectionInfo(Output.of(sourceConnectionInfo));
         }
 
+        /**
+         * @param targetConnectionInfo Connection information for target Azure Database for PostgreSQL
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetConnectionInfo(Output<PostgreSqlConnectionInfoArgs> targetConnectionInfo) {
             $.targetConnectionInfo = targetConnectionInfo;
             return this;
         }
 
+        /**
+         * @param targetConnectionInfo Connection information for target Azure Database for PostgreSQL
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetConnectionInfo(PostgreSqlConnectionInfoArgs targetConnectionInfo) {
             return targetConnectionInfo(Output.of(targetConnectionInfo));
         }

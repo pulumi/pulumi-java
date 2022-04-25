@@ -25,6 +25,10 @@ public final class CacheUsernameDownloadSettingsResponseCredentials extends com.
     @Import(name="bindDn")
     private @Nullable String bindDn;
 
+    /**
+     * @return The Bind Distinguished Name identity to be used in the secure LDAP connection. This value is stored encrypted and not returned on response.
+     * 
+     */
     public Optional<String> bindDn() {
         return Optional.ofNullable(this.bindDn);
     }
@@ -36,6 +40,10 @@ public final class CacheUsernameDownloadSettingsResponseCredentials extends com.
     @Import(name="bindPassword")
     private @Nullable String bindPassword;
 
+    /**
+     * @return The Bind password to be used in the secure LDAP connection. This value is stored encrypted and not returned on response.
+     * 
+     */
     public Optional<String> bindPassword() {
         return Optional.ofNullable(this.bindPassword);
     }
@@ -65,11 +73,23 @@ public final class CacheUsernameDownloadSettingsResponseCredentials extends com.
             $ = new CacheUsernameDownloadSettingsResponseCredentials(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bindDn The Bind Distinguished Name identity to be used in the secure LDAP connection. This value is stored encrypted and not returned on response.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bindDn(@Nullable String bindDn) {
             $.bindDn = bindDn;
             return this;
         }
 
+        /**
+         * @param bindPassword The Bind password to be used in the secure LDAP connection. This value is stored encrypted and not returned on response.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bindPassword(@Nullable String bindPassword) {
             $.bindPassword = bindPassword;
             return this;

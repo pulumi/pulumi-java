@@ -15,32 +15,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetStreamResult {
     /**
-     * The Amazon Resource Name (ARN) of the Kinesis Video stream.
+     * @return The Amazon Resource Name (ARN) of the Kinesis Video stream.
      * 
      */
     private final @Nullable String arn;
     /**
-     * The number of hours till which Kinesis Video will retain the data in the stream
+     * @return The number of hours till which Kinesis Video will retain the data in the stream
      * 
      */
     private final @Nullable Integer dataRetentionInHours;
     /**
-     * The name of the device that is writing to the stream.
+     * @return The name of the device that is writing to the stream.
      * 
      */
     private final @Nullable String deviceName;
     /**
-     * AWS KMS key ID that Kinesis Video Streams uses to encrypt stream data.
+     * @return AWS KMS key ID that Kinesis Video Streams uses to encrypt stream data.
      * 
      */
     private final @Nullable String kmsKeyId;
     /**
-     * The media type of the stream. Consumers of the stream can use this information when processing the stream.
+     * @return The media type of the stream. Consumers of the stream can use this information when processing the stream.
      * 
      */
     private final @Nullable String mediaType;
     /**
-     * An array of key-value pairs associated with the Kinesis Video Stream.
+     * @return An array of key-value pairs associated with the Kinesis Video Stream.
      * 
      */
     private final @Nullable List<StreamTag> tags;
@@ -62,44 +62,44 @@ public final class GetStreamResult {
     }
 
     /**
-     * The Amazon Resource Name (ARN) of the Kinesis Video stream.
+     * @return The Amazon Resource Name (ARN) of the Kinesis Video stream.
      * 
-    */
+     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * The number of hours till which Kinesis Video will retain the data in the stream
+     * @return The number of hours till which Kinesis Video will retain the data in the stream
      * 
-    */
+     */
     public Optional<Integer> dataRetentionInHours() {
         return Optional.ofNullable(this.dataRetentionInHours);
     }
     /**
-     * The name of the device that is writing to the stream.
+     * @return The name of the device that is writing to the stream.
      * 
-    */
+     */
     public Optional<String> deviceName() {
         return Optional.ofNullable(this.deviceName);
     }
     /**
-     * AWS KMS key ID that Kinesis Video Streams uses to encrypt stream data.
+     * @return AWS KMS key ID that Kinesis Video Streams uses to encrypt stream data.
      * 
-    */
+     */
     public Optional<String> kmsKeyId() {
         return Optional.ofNullable(this.kmsKeyId);
     }
     /**
-     * The media type of the stream. Consumers of the stream can use this information when processing the stream.
+     * @return The media type of the stream. Consumers of the stream can use this information when processing the stream.
      * 
-    */
+     */
     public Optional<String> mediaType() {
         return Optional.ofNullable(this.mediaType);
     }
     /**
-     * An array of key-value pairs associated with the Kinesis Video Stream.
+     * @return An array of key-value pairs associated with the Kinesis Video Stream.
      * 
-    */
+     */
     public List<StreamTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

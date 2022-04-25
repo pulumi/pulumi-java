@@ -20,19 +20,19 @@ import javax.annotation.Nullable;
 @CustomType
 public final class TriggerBuild {
     /**
-     * Artifacts produced by the build that should be uploaded upon successful completion of all build steps.
+     * @return Artifacts produced by the build that should be uploaded upon successful completion of all build steps.
      * Structure is documented below.
      * 
      */
     private final @Nullable TriggerBuildArtifacts artifacts;
     /**
-     * Secrets and secret environment variables.
+     * @return Secrets and secret environment variables.
      * Structure is documented below.
      * 
      */
     private final @Nullable TriggerBuildAvailableSecrets availableSecrets;
     /**
-     * A list of images to be pushed upon the successful completion of all build steps.
+     * @return A list of images to be pushed upon the successful completion of all build steps.
      * The images will be pushed using the builder service account&#39;s credentials.
      * The digests of the pushed images will be stored in the Build resource&#39;s results field.
      * If any of the images fail to be pushed, the build is marked FAILURE.
@@ -40,19 +40,19 @@ public final class TriggerBuild {
      */
     private final @Nullable List<String> images;
     /**
-     * Google Cloud Storage bucket where logs should be written.
+     * @return Google Cloud Storage bucket where logs should be written.
      * Logs file names will be of the format ${logsBucket}/log-${build_id}.txt.
      * 
      */
     private final @Nullable String logsBucket;
     /**
-     * Special options for this build.
+     * @return Special options for this build.
      * Structure is documented below.
      * 
      */
     private final @Nullable TriggerBuildOptions options;
     /**
-     * TTL in queue for this build. If provided and the build is enqueued longer than this value,
+     * @return TTL in queue for this build. If provided and the build is enqueued longer than this value,
      * the build will expire and the build status will be EXPIRED.
      * The TTL starts ticking from createTime.
      * A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
@@ -60,36 +60,36 @@ public final class TriggerBuild {
      */
     private final @Nullable String queueTtl;
     /**
-     * Secrets to decrypt using Cloud Key Management Service.
+     * @return Secrets to decrypt using Cloud Key Management Service.
      * Structure is documented below.
      * 
      */
     private final @Nullable List<TriggerBuildSecret> secrets;
     /**
-     * The location of the source files to build.
+     * @return The location of the source files to build.
      * One of `storageSource` or `repoSource` must be provided.
      * Structure is documented below.
      * 
      */
     private final @Nullable TriggerBuildSource source;
     /**
-     * The operations to be performed on the workspace.
+     * @return The operations to be performed on the workspace.
      * Structure is documented below.
      * 
      */
     private final List<TriggerBuildStep> steps;
     /**
-     * Substitutions to use in a triggered build. Should only be used with triggers.run
+     * @return Substitutions to use in a triggered build. Should only be used with triggers.run
      * 
      */
     private final @Nullable Map<String,String> substitutions;
     /**
-     * Tags for annotation of a Build. These are not docker tags.
+     * @return Tags for annotation of a Build. These are not docker tags.
      * 
      */
     private final @Nullable List<String> tags;
     /**
-     * Time limit for executing this build step. If not defined,
+     * @return Time limit for executing this build step. If not defined,
      * the step has no
      * time limit and will be allowed to continue to run until either it
      * completes or the build itself times out.
@@ -126,103 +126,103 @@ public final class TriggerBuild {
     }
 
     /**
-     * Artifacts produced by the build that should be uploaded upon successful completion of all build steps.
+     * @return Artifacts produced by the build that should be uploaded upon successful completion of all build steps.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<TriggerBuildArtifacts> artifacts() {
         return Optional.ofNullable(this.artifacts);
     }
     /**
-     * Secrets and secret environment variables.
+     * @return Secrets and secret environment variables.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<TriggerBuildAvailableSecrets> availableSecrets() {
         return Optional.ofNullable(this.availableSecrets);
     }
     /**
-     * A list of images to be pushed upon the successful completion of all build steps.
+     * @return A list of images to be pushed upon the successful completion of all build steps.
      * The images will be pushed using the builder service account&#39;s credentials.
      * The digests of the pushed images will be stored in the Build resource&#39;s results field.
      * If any of the images fail to be pushed, the build is marked FAILURE.
      * 
-    */
+     */
     public List<String> images() {
         return this.images == null ? List.of() : this.images;
     }
     /**
-     * Google Cloud Storage bucket where logs should be written.
+     * @return Google Cloud Storage bucket where logs should be written.
      * Logs file names will be of the format ${logsBucket}/log-${build_id}.txt.
      * 
-    */
+     */
     public Optional<String> logsBucket() {
         return Optional.ofNullable(this.logsBucket);
     }
     /**
-     * Special options for this build.
+     * @return Special options for this build.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<TriggerBuildOptions> options() {
         return Optional.ofNullable(this.options);
     }
     /**
-     * TTL in queue for this build. If provided and the build is enqueued longer than this value,
+     * @return TTL in queue for this build. If provided and the build is enqueued longer than this value,
      * the build will expire and the build status will be EXPIRED.
      * The TTL starts ticking from createTime.
      * A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
      * 
-    */
+     */
     public Optional<String> queueTtl() {
         return Optional.ofNullable(this.queueTtl);
     }
     /**
-     * Secrets to decrypt using Cloud Key Management Service.
+     * @return Secrets to decrypt using Cloud Key Management Service.
      * Structure is documented below.
      * 
-    */
+     */
     public List<TriggerBuildSecret> secrets() {
         return this.secrets == null ? List.of() : this.secrets;
     }
     /**
-     * The location of the source files to build.
+     * @return The location of the source files to build.
      * One of `storageSource` or `repoSource` must be provided.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<TriggerBuildSource> source() {
         return Optional.ofNullable(this.source);
     }
     /**
-     * The operations to be performed on the workspace.
+     * @return The operations to be performed on the workspace.
      * Structure is documented below.
      * 
-    */
+     */
     public List<TriggerBuildStep> steps() {
         return this.steps;
     }
     /**
-     * Substitutions to use in a triggered build. Should only be used with triggers.run
+     * @return Substitutions to use in a triggered build. Should only be used with triggers.run
      * 
-    */
+     */
     public Map<String,String> substitutions() {
         return this.substitutions == null ? Map.of() : this.substitutions;
     }
     /**
-     * Tags for annotation of a Build. These are not docker tags.
+     * @return Tags for annotation of a Build. These are not docker tags.
      * 
-    */
+     */
     public List<String> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
-     * Time limit for executing this build step. If not defined,
+     * @return Time limit for executing this build step. If not defined,
      * the step has no
      * time limit and will be allowed to continue to run until either it
      * completes or the build itself times out.
      * 
-    */
+     */
     public Optional<String> timeout() {
         return Optional.ofNullable(this.timeout);
     }

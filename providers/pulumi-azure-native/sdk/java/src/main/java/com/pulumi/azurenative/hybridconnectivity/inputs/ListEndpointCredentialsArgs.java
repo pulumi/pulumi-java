@@ -22,6 +22,10 @@ public final class ListEndpointCredentialsArgs extends com.pulumi.resources.Invo
     @Import(name="endpointName", required=true)
     private String endpointName;
 
+    /**
+     * @return The endpoint name.
+     * 
+     */
     public String endpointName() {
         return this.endpointName;
     }
@@ -33,6 +37,10 @@ public final class ListEndpointCredentialsArgs extends com.pulumi.resources.Invo
     @Import(name="expiresin")
     private @Nullable Integer expiresin;
 
+    /**
+     * @return The is how long the endpoint access token is valid (in seconds).
+     * 
+     */
     public Optional<Integer> expiresin() {
         return Optional.ofNullable(this.expiresin);
     }
@@ -44,6 +52,10 @@ public final class ListEndpointCredentialsArgs extends com.pulumi.resources.Invo
     @Import(name="resourceUri", required=true)
     private String resourceUri;
 
+    /**
+     * @return The fully qualified Azure Resource manager identifier of the resource to be connected.
+     * 
+     */
     public String resourceUri() {
         return this.resourceUri;
     }
@@ -74,16 +86,34 @@ public final class ListEndpointCredentialsArgs extends com.pulumi.resources.Invo
             $ = new ListEndpointCredentialsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endpointName The endpoint name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointName(String endpointName) {
             $.endpointName = endpointName;
             return this;
         }
 
+        /**
+         * @param expiresin The is how long the endpoint access token is valid (in seconds).
+         * 
+         * @return builder
+         * 
+         */
         public Builder expiresin(@Nullable Integer expiresin) {
             $.expiresin = expiresin;
             return this;
         }
 
+        /**
+         * @param resourceUri The fully qualified Azure Resource manager identifier of the resource to be connected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceUri(String resourceUri) {
             $.resourceUri = resourceUri;
             return this;

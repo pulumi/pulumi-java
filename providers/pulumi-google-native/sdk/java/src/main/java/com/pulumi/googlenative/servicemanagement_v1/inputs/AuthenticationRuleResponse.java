@@ -27,6 +27,10 @@ public final class AuthenticationRuleResponse extends com.pulumi.resources.Invok
     @Import(name="allowWithoutCredential", required=true)
     private Boolean allowWithoutCredential;
 
+    /**
+     * @return If true, the service accepts API keys without any other credential. This flag only applies to HTTP and gRPC requests.
+     * 
+     */
     public Boolean allowWithoutCredential() {
         return this.allowWithoutCredential;
     }
@@ -38,6 +42,10 @@ public final class AuthenticationRuleResponse extends com.pulumi.resources.Invok
     @Import(name="oauth", required=true)
     private OAuthRequirementsResponse oauth;
 
+    /**
+     * @return The requirements for OAuth credentials.
+     * 
+     */
     public OAuthRequirementsResponse oauth() {
         return this.oauth;
     }
@@ -49,6 +57,10 @@ public final class AuthenticationRuleResponse extends com.pulumi.resources.Invok
     @Import(name="requirements", required=true)
     private List<AuthRequirementResponse> requirements;
 
+    /**
+     * @return Requirements for additional authentication providers.
+     * 
+     */
     public List<AuthRequirementResponse> requirements() {
         return this.requirements;
     }
@@ -60,6 +72,10 @@ public final class AuthenticationRuleResponse extends com.pulumi.resources.Invok
     @Import(name="selector", required=true)
     private String selector;
 
+    /**
+     * @return Selects the methods to which this rule applies. Refer to selector for syntax details.
+     * 
+     */
     public String selector() {
         return this.selector;
     }
@@ -91,25 +107,55 @@ public final class AuthenticationRuleResponse extends com.pulumi.resources.Invok
             $ = new AuthenticationRuleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowWithoutCredential If true, the service accepts API keys without any other credential. This flag only applies to HTTP and gRPC requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowWithoutCredential(Boolean allowWithoutCredential) {
             $.allowWithoutCredential = allowWithoutCredential;
             return this;
         }
 
+        /**
+         * @param oauth The requirements for OAuth credentials.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oauth(OAuthRequirementsResponse oauth) {
             $.oauth = oauth;
             return this;
         }
 
+        /**
+         * @param requirements Requirements for additional authentication providers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requirements(List<AuthRequirementResponse> requirements) {
             $.requirements = requirements;
             return this;
         }
 
+        /**
+         * @param requirements Requirements for additional authentication providers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requirements(AuthRequirementResponse... requirements) {
             return requirements(List.of(requirements));
         }
 
+        /**
+         * @param selector Selects the methods to which this rule applies. Refer to selector for syntax details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selector(String selector) {
             $.selector = selector;
             return this;

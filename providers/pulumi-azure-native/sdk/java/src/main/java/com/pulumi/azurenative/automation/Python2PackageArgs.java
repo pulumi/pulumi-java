@@ -24,6 +24,10 @@ public final class Python2PackageArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="automationAccountName", required=true)
     private Output<String> automationAccountName;
 
+    /**
+     * @return The name of the automation account.
+     * 
+     */
     public Output<String> automationAccountName() {
         return this.automationAccountName;
     }
@@ -35,6 +39,10 @@ public final class Python2PackageArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="contentLink", required=true)
     private Output<ContentLinkArgs> contentLink;
 
+    /**
+     * @return Gets or sets the module content link.
+     * 
+     */
     public Output<ContentLinkArgs> contentLink() {
         return this.contentLink;
     }
@@ -46,6 +54,10 @@ public final class Python2PackageArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="packageName")
     private @Nullable Output<String> packageName;
 
+    /**
+     * @return The name of python package.
+     * 
+     */
     public Optional<Output<String>> packageName() {
         return Optional.ofNullable(this.packageName);
     }
@@ -57,6 +69,10 @@ public final class Python2PackageArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of an Azure Resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -68,6 +84,10 @@ public final class Python2PackageArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Gets or sets the tags attached to the resource.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -100,47 +120,107 @@ public final class Python2PackageArgs extends com.pulumi.resources.ResourceArgs 
             $ = new Python2PackageArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param automationAccountName The name of the automation account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automationAccountName(Output<String> automationAccountName) {
             $.automationAccountName = automationAccountName;
             return this;
         }
 
+        /**
+         * @param automationAccountName The name of the automation account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automationAccountName(String automationAccountName) {
             return automationAccountName(Output.of(automationAccountName));
         }
 
+        /**
+         * @param contentLink Gets or sets the module content link.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentLink(Output<ContentLinkArgs> contentLink) {
             $.contentLink = contentLink;
             return this;
         }
 
+        /**
+         * @param contentLink Gets or sets the module content link.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentLink(ContentLinkArgs contentLink) {
             return contentLink(Output.of(contentLink));
         }
 
+        /**
+         * @param packageName The name of python package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packageName(@Nullable Output<String> packageName) {
             $.packageName = packageName;
             return this;
         }
 
+        /**
+         * @param packageName The name of python package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packageName(String packageName) {
             return packageName(Output.of(packageName));
         }
 
+        /**
+         * @param resourceGroupName Name of an Azure Resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of an Azure Resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags Gets or sets the tags attached to the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Gets or sets the tags attached to the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

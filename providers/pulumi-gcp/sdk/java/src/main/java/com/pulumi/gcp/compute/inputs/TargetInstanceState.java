@@ -22,6 +22,10 @@ public final class TargetInstanceState extends com.pulumi.resources.ResourceArgs
     @Import(name="creationTimestamp")
     private @Nullable Output<String> creationTimestamp;
 
+    /**
+     * @return Creation timestamp in RFC3339 text format.
+     * 
+     */
     public Optional<Output<String>> creationTimestamp() {
         return Optional.ofNullable(this.creationTimestamp);
     }
@@ -33,6 +37,10 @@ public final class TargetInstanceState extends com.pulumi.resources.ResourceArgs
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return An optional description of this resource.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -49,6 +57,15 @@ public final class TargetInstanceState extends com.pulumi.resources.ResourceArgs
     @Import(name="instance")
     private @Nullable Output<String> instance;
 
+    /**
+     * @return The Compute instance VM handling traffic for this target instance.
+     * Accepts the instance self-link, relative path
+     * (e.g. `projects/project/zones/zone/instances/instance`) or name. If
+     * name is given, the zone will default to the given zone or
+     * the provider-default zone and the project will default to the
+     * provider-level project.
+     * 
+     */
     public Optional<Output<String>> instance() {
         return Optional.ofNullable(this.instance);
     }
@@ -66,6 +83,16 @@ public final class TargetInstanceState extends com.pulumi.resources.ResourceArgs
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the resource. Provided by the client when the resource is
+     * created. The name must be 1-63 characters long, and comply with
+     * RFC1035. Specifically, the name must be 1-63 characters long and match
+     * the regular expression `a-z?` which means the
+     * first character must be a lowercase letter, and all following
+     * characters must be a dash, lowercase letter, or digit, except the last
+     * character, which cannot be a dash.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -80,6 +107,13 @@ public final class TargetInstanceState extends com.pulumi.resources.ResourceArgs
     @Import(name="natPolicy")
     private @Nullable Output<String> natPolicy;
 
+    /**
+     * @return NAT option controlling how IPs are NAT&#39;ed to the instance.
+     * Currently only NO_NAT (default value) is supported.
+     * Default value is `NO_NAT`.
+     * Possible values are `NO_NAT`.
+     * 
+     */
     public Optional<Output<String>> natPolicy() {
         return Optional.ofNullable(this.natPolicy);
     }
@@ -91,6 +125,10 @@ public final class TargetInstanceState extends com.pulumi.resources.ResourceArgs
     @Import(name="network")
     private @Nullable Output<String> network;
 
+    /**
+     * @return The URL of the network this target instance uses to forward traffic. If not specified, the traffic will be forwarded to the network that the default network interface belongs to.
+     * 
+     */
     public Optional<Output<String>> network() {
         return Optional.ofNullable(this.network);
     }
@@ -103,6 +141,11 @@ public final class TargetInstanceState extends com.pulumi.resources.ResourceArgs
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -114,6 +157,10 @@ public final class TargetInstanceState extends com.pulumi.resources.ResourceArgs
     @Import(name="selfLink")
     private @Nullable Output<String> selfLink;
 
+    /**
+     * @return The URI of the created resource.
+     * 
+     */
     public Optional<Output<String>> selfLink() {
         return Optional.ofNullable(this.selfLink);
     }
@@ -125,6 +172,10 @@ public final class TargetInstanceState extends com.pulumi.resources.ResourceArgs
     @Import(name="zone")
     private @Nullable Output<String> zone;
 
+    /**
+     * @return URL of the zone where the target instance resides.
+     * 
+     */
     public Optional<Output<String>> zone() {
         return Optional.ofNullable(this.zone);
     }
@@ -161,83 +212,221 @@ public final class TargetInstanceState extends com.pulumi.resources.ResourceArgs
             $ = new TargetInstanceState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param creationTimestamp Creation timestamp in RFC3339 text format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder creationTimestamp(@Nullable Output<String> creationTimestamp) {
             $.creationTimestamp = creationTimestamp;
             return this;
         }
 
+        /**
+         * @param creationTimestamp Creation timestamp in RFC3339 text format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder creationTimestamp(String creationTimestamp) {
             return creationTimestamp(Output.of(creationTimestamp));
         }
 
+        /**
+         * @param description An optional description of this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description An optional description of this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param instance The Compute instance VM handling traffic for this target instance.
+         * Accepts the instance self-link, relative path
+         * (e.g. `projects/project/zones/zone/instances/instance`) or name. If
+         * name is given, the zone will default to the given zone or
+         * the provider-default zone and the project will default to the
+         * provider-level project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instance(@Nullable Output<String> instance) {
             $.instance = instance;
             return this;
         }
 
+        /**
+         * @param instance The Compute instance VM handling traffic for this target instance.
+         * Accepts the instance self-link, relative path
+         * (e.g. `projects/project/zones/zone/instances/instance`) or name. If
+         * name is given, the zone will default to the given zone or
+         * the provider-default zone and the project will default to the
+         * provider-level project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instance(String instance) {
             return instance(Output.of(instance));
         }
 
+        /**
+         * @param name Name of the resource. Provided by the client when the resource is
+         * created. The name must be 1-63 characters long, and comply with
+         * RFC1035. Specifically, the name must be 1-63 characters long and match
+         * the regular expression `a-z?` which means the
+         * first character must be a lowercase letter, and all following
+         * characters must be a dash, lowercase letter, or digit, except the last
+         * character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the resource. Provided by the client when the resource is
+         * created. The name must be 1-63 characters long, and comply with
+         * RFC1035. Specifically, the name must be 1-63 characters long and match
+         * the regular expression `a-z?` which means the
+         * first character must be a lowercase letter, and all following
+         * characters must be a dash, lowercase letter, or digit, except the last
+         * character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param natPolicy NAT option controlling how IPs are NAT&#39;ed to the instance.
+         * Currently only NO_NAT (default value) is supported.
+         * Default value is `NO_NAT`.
+         * Possible values are `NO_NAT`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder natPolicy(@Nullable Output<String> natPolicy) {
             $.natPolicy = natPolicy;
             return this;
         }
 
+        /**
+         * @param natPolicy NAT option controlling how IPs are NAT&#39;ed to the instance.
+         * Currently only NO_NAT (default value) is supported.
+         * Default value is `NO_NAT`.
+         * Possible values are `NO_NAT`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder natPolicy(String natPolicy) {
             return natPolicy(Output.of(natPolicy));
         }
 
+        /**
+         * @param network The URL of the network this target instance uses to forward traffic. If not specified, the traffic will be forwarded to the network that the default network interface belongs to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(@Nullable Output<String> network) {
             $.network = network;
             return this;
         }
 
+        /**
+         * @param network The URL of the network this target instance uses to forward traffic. If not specified, the traffic will be forwarded to the network that the default network interface belongs to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(String network) {
             return network(Output.of(network));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param selfLink The URI of the created resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selfLink(@Nullable Output<String> selfLink) {
             $.selfLink = selfLink;
             return this;
         }
 
+        /**
+         * @param selfLink The URI of the created resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selfLink(String selfLink) {
             return selfLink(Output.of(selfLink));
         }
 
+        /**
+         * @param zone URL of the zone where the target instance resides.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zone(@Nullable Output<String> zone) {
             $.zone = zone;
             return this;
         }
 
+        /**
+         * @param zone URL of the zone where the target instance resides.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zone(String zone) {
             return zone(Output.of(zone));
         }

@@ -25,6 +25,10 @@ public final class BlobNfsTargetResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="target")
     private @Nullable String target;
 
+    /**
+     * @return Resource ID of the storage container.
+     * 
+     */
     public Optional<String> target() {
         return Optional.ofNullable(this.target);
     }
@@ -36,6 +40,10 @@ public final class BlobNfsTargetResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="usageModel")
     private @Nullable String usageModel;
 
+    /**
+     * @return Identifies the StorageCache usage model to be used for this storage target.
+     * 
+     */
     public Optional<String> usageModel() {
         return Optional.ofNullable(this.usageModel);
     }
@@ -65,11 +73,23 @@ public final class BlobNfsTargetResponse extends com.pulumi.resources.InvokeArgs
             $ = new BlobNfsTargetResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param target Resource ID of the storage container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder target(@Nullable String target) {
             $.target = target;
             return this;
         }
 
+        /**
+         * @param usageModel Identifies the StorageCache usage model to be used for this storage target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder usageModel(@Nullable String usageModel) {
             $.usageModel = usageModel;
             return this;

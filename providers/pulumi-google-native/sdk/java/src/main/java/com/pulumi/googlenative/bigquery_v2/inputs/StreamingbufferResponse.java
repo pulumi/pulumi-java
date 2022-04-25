@@ -19,6 +19,10 @@ public final class StreamingbufferResponse extends com.pulumi.resources.InvokeAr
     @Import(name="estimatedBytes", required=true)
     private String estimatedBytes;
 
+    /**
+     * @return A lower-bound estimate of the number of bytes currently in the streaming buffer.
+     * 
+     */
     public String estimatedBytes() {
         return this.estimatedBytes;
     }
@@ -30,6 +34,10 @@ public final class StreamingbufferResponse extends com.pulumi.resources.InvokeAr
     @Import(name="estimatedRows", required=true)
     private String estimatedRows;
 
+    /**
+     * @return A lower-bound estimate of the number of rows currently in the streaming buffer.
+     * 
+     */
     public String estimatedRows() {
         return this.estimatedRows;
     }
@@ -41,6 +49,10 @@ public final class StreamingbufferResponse extends com.pulumi.resources.InvokeAr
     @Import(name="oldestEntryTime", required=true)
     private String oldestEntryTime;
 
+    /**
+     * @return Contains the timestamp of the oldest entry in the streaming buffer, in milliseconds since the epoch, if the streaming buffer is available.
+     * 
+     */
     public String oldestEntryTime() {
         return this.oldestEntryTime;
     }
@@ -71,16 +83,34 @@ public final class StreamingbufferResponse extends com.pulumi.resources.InvokeAr
             $ = new StreamingbufferResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param estimatedBytes A lower-bound estimate of the number of bytes currently in the streaming buffer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder estimatedBytes(String estimatedBytes) {
             $.estimatedBytes = estimatedBytes;
             return this;
         }
 
+        /**
+         * @param estimatedRows A lower-bound estimate of the number of rows currently in the streaming buffer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder estimatedRows(String estimatedRows) {
             $.estimatedRows = estimatedRows;
             return this;
         }
 
+        /**
+         * @param oldestEntryTime Contains the timestamp of the oldest entry in the streaming buffer, in milliseconds since the epoch, if the streaming buffer is available.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oldestEntryTime(String oldestEntryTime) {
             $.oldestEntryTime = oldestEntryTime;
             return this;

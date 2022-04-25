@@ -35,6 +35,10 @@ public final class RunResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="agentConfiguration")
     private @Nullable AgentPropertiesResponse agentConfiguration;
 
+    /**
+     * @return The machine configuration of the run agent.
+     * 
+     */
     public Optional<AgentPropertiesResponse> agentConfiguration() {
         return Optional.ofNullable(this.agentConfiguration);
     }
@@ -46,6 +50,10 @@ public final class RunResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="agentPoolName")
     private @Nullable String agentPoolName;
 
+    /**
+     * @return The dedicated agent pool for the run.
+     * 
+     */
     public Optional<String> agentPoolName() {
         return Optional.ofNullable(this.agentPoolName);
     }
@@ -57,6 +65,10 @@ public final class RunResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="createTime")
     private @Nullable String createTime;
 
+    /**
+     * @return The time the run was scheduled.
+     * 
+     */
     public Optional<String> createTime() {
         return Optional.ofNullable(this.createTime);
     }
@@ -68,6 +80,10 @@ public final class RunResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="customRegistries")
     private @Nullable List<String> customRegistries;
 
+    /**
+     * @return The list of custom registries that were logged in during this run.
+     * 
+     */
     public Optional<List<String>> customRegistries() {
         return Optional.ofNullable(this.customRegistries);
     }
@@ -79,6 +95,10 @@ public final class RunResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="finishTime")
     private @Nullable String finishTime;
 
+    /**
+     * @return The time the run finished.
+     * 
+     */
     public Optional<String> finishTime() {
         return Optional.ofNullable(this.finishTime);
     }
@@ -90,6 +110,10 @@ public final class RunResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return The resource ID.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -101,6 +125,10 @@ public final class RunResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="imageUpdateTrigger")
     private @Nullable ImageUpdateTriggerResponse imageUpdateTrigger;
 
+    /**
+     * @return The image update trigger that caused the run. This is applicable if the task has base image trigger configured.
+     * 
+     */
     public Optional<ImageUpdateTriggerResponse> imageUpdateTrigger() {
         return Optional.ofNullable(this.imageUpdateTrigger);
     }
@@ -112,6 +140,10 @@ public final class RunResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="isArchiveEnabled")
     private @Nullable Boolean isArchiveEnabled;
 
+    /**
+     * @return The value that indicates whether archiving is enabled or not.
+     * 
+     */
     public Optional<Boolean> isArchiveEnabled() {
         return Optional.ofNullable(this.isArchiveEnabled);
     }
@@ -123,6 +155,10 @@ public final class RunResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="lastUpdatedTime")
     private @Nullable String lastUpdatedTime;
 
+    /**
+     * @return The last updated time for the run.
+     * 
+     */
     public Optional<String> lastUpdatedTime() {
         return Optional.ofNullable(this.lastUpdatedTime);
     }
@@ -134,6 +170,10 @@ public final class RunResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="logArtifact", required=true)
     private ImageDescriptorResponse logArtifact;
 
+    /**
+     * @return The image description for the log artifact.
+     * 
+     */
     public ImageDescriptorResponse logArtifact() {
         return this.logArtifact;
     }
@@ -145,6 +185,10 @@ public final class RunResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the resource.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -156,6 +200,10 @@ public final class RunResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="outputImages")
     private @Nullable List<ImageDescriptorResponse> outputImages;
 
+    /**
+     * @return The list of all images that were generated from the run. This is applicable if the run generates base image dependencies.
+     * 
+     */
     public Optional<List<ImageDescriptorResponse>> outputImages() {
         return Optional.ofNullable(this.outputImages);
     }
@@ -167,6 +215,10 @@ public final class RunResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="platform")
     private @Nullable PlatformPropertiesResponse platform;
 
+    /**
+     * @return The platform properties against which the run will happen.
+     * 
+     */
     public Optional<PlatformPropertiesResponse> platform() {
         return Optional.ofNullable(this.platform);
     }
@@ -178,6 +230,10 @@ public final class RunResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="provisioningState")
     private @Nullable String provisioningState;
 
+    /**
+     * @return The provisioning state of a run.
+     * 
+     */
     public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
@@ -189,6 +245,10 @@ public final class RunResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="runErrorMessage", required=true)
     private String runErrorMessage;
 
+    /**
+     * @return The error message received from backend systems after the run is scheduled.
+     * 
+     */
     public String runErrorMessage() {
         return this.runErrorMessage;
     }
@@ -200,6 +260,10 @@ public final class RunResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="runId")
     private @Nullable String runId;
 
+    /**
+     * @return The unique identifier for the run.
+     * 
+     */
     public Optional<String> runId() {
         return Optional.ofNullable(this.runId);
     }
@@ -211,6 +275,10 @@ public final class RunResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="runType")
     private @Nullable String runType;
 
+    /**
+     * @return The type of run.
+     * 
+     */
     public Optional<String> runType() {
         return Optional.ofNullable(this.runType);
     }
@@ -222,6 +290,10 @@ public final class RunResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="sourceRegistryAuth")
     private @Nullable String sourceRegistryAuth;
 
+    /**
+     * @return The scope of the credentials that were used to login to the source registry during this run.
+     * 
+     */
     public Optional<String> sourceRegistryAuth() {
         return Optional.ofNullable(this.sourceRegistryAuth);
     }
@@ -233,6 +305,10 @@ public final class RunResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="sourceTrigger")
     private @Nullable SourceTriggerDescriptorResponse sourceTrigger;
 
+    /**
+     * @return The source trigger that caused the run.
+     * 
+     */
     public Optional<SourceTriggerDescriptorResponse> sourceTrigger() {
         return Optional.ofNullable(this.sourceTrigger);
     }
@@ -244,6 +320,10 @@ public final class RunResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="startTime")
     private @Nullable String startTime;
 
+    /**
+     * @return The time the run started.
+     * 
+     */
     public Optional<String> startTime() {
         return Optional.ofNullable(this.startTime);
     }
@@ -255,6 +335,10 @@ public final class RunResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="status")
     private @Nullable String status;
 
+    /**
+     * @return The current status of the run.
+     * 
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
@@ -266,6 +350,10 @@ public final class RunResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="systemData", required=true)
     private SystemDataResponse systemData;
 
+    /**
+     * @return Metadata pertaining to creation and last modification of the resource.
+     * 
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
@@ -277,6 +365,10 @@ public final class RunResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="task")
     private @Nullable String task;
 
+    /**
+     * @return The task against which run was scheduled.
+     * 
+     */
     public Optional<String> task() {
         return Optional.ofNullable(this.task);
     }
@@ -288,6 +380,10 @@ public final class RunResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="timerTrigger")
     private @Nullable TimerTriggerDescriptorResponse timerTrigger;
 
+    /**
+     * @return The timer trigger that caused the run.
+     * 
+     */
     public Optional<TimerTriggerDescriptorResponse> timerTrigger() {
         return Optional.ofNullable(this.timerTrigger);
     }
@@ -299,6 +395,10 @@ public final class RunResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The type of the resource.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -310,6 +410,10 @@ public final class RunResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="updateTriggerToken")
     private @Nullable String updateTriggerToken;
 
+    /**
+     * @return The update trigger token passed for the Run.
+     * 
+     */
     public Optional<String> updateTriggerToken() {
         return Optional.ofNullable(this.updateTriggerToken);
     }
@@ -363,139 +467,307 @@ public final class RunResponse extends com.pulumi.resources.InvokeArgs {
             $ = new RunResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param agentConfiguration The machine configuration of the run agent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentConfiguration(@Nullable AgentPropertiesResponse agentConfiguration) {
             $.agentConfiguration = agentConfiguration;
             return this;
         }
 
+        /**
+         * @param agentPoolName The dedicated agent pool for the run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentPoolName(@Nullable String agentPoolName) {
             $.agentPoolName = agentPoolName;
             return this;
         }
 
+        /**
+         * @param createTime The time the run was scheduled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTime(@Nullable String createTime) {
             $.createTime = createTime;
             return this;
         }
 
+        /**
+         * @param customRegistries The list of custom registries that were logged in during this run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customRegistries(@Nullable List<String> customRegistries) {
             $.customRegistries = customRegistries;
             return this;
         }
 
+        /**
+         * @param customRegistries The list of custom registries that were logged in during this run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customRegistries(String... customRegistries) {
             return customRegistries(List.of(customRegistries));
         }
 
+        /**
+         * @param finishTime The time the run finished.
+         * 
+         * @return builder
+         * 
+         */
         public Builder finishTime(@Nullable String finishTime) {
             $.finishTime = finishTime;
             return this;
         }
 
+        /**
+         * @param id The resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param imageUpdateTrigger The image update trigger that caused the run. This is applicable if the task has base image trigger configured.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageUpdateTrigger(@Nullable ImageUpdateTriggerResponse imageUpdateTrigger) {
             $.imageUpdateTrigger = imageUpdateTrigger;
             return this;
         }
 
+        /**
+         * @param isArchiveEnabled The value that indicates whether archiving is enabled or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isArchiveEnabled(@Nullable Boolean isArchiveEnabled) {
             $.isArchiveEnabled = isArchiveEnabled;
             return this;
         }
 
+        /**
+         * @param lastUpdatedTime The last updated time for the run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastUpdatedTime(@Nullable String lastUpdatedTime) {
             $.lastUpdatedTime = lastUpdatedTime;
             return this;
         }
 
+        /**
+         * @param logArtifact The image description for the log artifact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logArtifact(ImageDescriptorResponse logArtifact) {
             $.logArtifact = logArtifact;
             return this;
         }
 
+        /**
+         * @param name The name of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param outputImages The list of all images that were generated from the run. This is applicable if the run generates base image dependencies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputImages(@Nullable List<ImageDescriptorResponse> outputImages) {
             $.outputImages = outputImages;
             return this;
         }
 
+        /**
+         * @param outputImages The list of all images that were generated from the run. This is applicable if the run generates base image dependencies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputImages(ImageDescriptorResponse... outputImages) {
             return outputImages(List.of(outputImages));
         }
 
+        /**
+         * @param platform The platform properties against which the run will happen.
+         * 
+         * @return builder
+         * 
+         */
         public Builder platform(@Nullable PlatformPropertiesResponse platform) {
             $.platform = platform;
             return this;
         }
 
+        /**
+         * @param provisioningState The provisioning state of a run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(@Nullable String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param runErrorMessage The error message received from backend systems after the run is scheduled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runErrorMessage(String runErrorMessage) {
             $.runErrorMessage = runErrorMessage;
             return this;
         }
 
+        /**
+         * @param runId The unique identifier for the run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runId(@Nullable String runId) {
             $.runId = runId;
             return this;
         }
 
+        /**
+         * @param runType The type of run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runType(@Nullable String runType) {
             $.runType = runType;
             return this;
         }
 
+        /**
+         * @param sourceRegistryAuth The scope of the credentials that were used to login to the source registry during this run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceRegistryAuth(@Nullable String sourceRegistryAuth) {
             $.sourceRegistryAuth = sourceRegistryAuth;
             return this;
         }
 
+        /**
+         * @param sourceTrigger The source trigger that caused the run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceTrigger(@Nullable SourceTriggerDescriptorResponse sourceTrigger) {
             $.sourceTrigger = sourceTrigger;
             return this;
         }
 
+        /**
+         * @param startTime The time the run started.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(@Nullable String startTime) {
             $.startTime = startTime;
             return this;
         }
 
+        /**
+         * @param status The current status of the run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable String status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param systemData Metadata pertaining to creation and last modification of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder systemData(SystemDataResponse systemData) {
             $.systemData = systemData;
             return this;
         }
 
+        /**
+         * @param task The task against which run was scheduled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder task(@Nullable String task) {
             $.task = task;
             return this;
         }
 
+        /**
+         * @param timerTrigger The timer trigger that caused the run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timerTrigger(@Nullable TimerTriggerDescriptorResponse timerTrigger) {
             $.timerTrigger = timerTrigger;
             return this;
         }
 
+        /**
+         * @param type The type of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param updateTriggerToken The update trigger token passed for the Run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateTriggerToken(@Nullable String updateTriggerToken) {
             $.updateTriggerToken = updateTriggerToken;
             return this;

@@ -25,6 +25,10 @@ public final class SourceConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="crowdingConfig", required=true)
     private SourceCrowdingConfigResponse crowdingConfig;
 
+    /**
+     * @return The crowding configuration for the source.
+     * 
+     */
     public SourceCrowdingConfigResponse crowdingConfig() {
         return this.crowdingConfig;
     }
@@ -36,6 +40,10 @@ public final class SourceConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="scoringConfig", required=true)
     private SourceScoringConfigResponse scoringConfig;
 
+    /**
+     * @return The scoring configuration for the source.
+     * 
+     */
     public SourceScoringConfigResponse scoringConfig() {
         return this.scoringConfig;
     }
@@ -47,6 +55,10 @@ public final class SourceConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="source", required=true)
     private SourceResponse source;
 
+    /**
+     * @return The source for which this configuration is to be used.
+     * 
+     */
     public SourceResponse source() {
         return this.source;
     }
@@ -77,16 +89,34 @@ public final class SourceConfigResponse extends com.pulumi.resources.InvokeArgs 
             $ = new SourceConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param crowdingConfig The crowding configuration for the source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder crowdingConfig(SourceCrowdingConfigResponse crowdingConfig) {
             $.crowdingConfig = crowdingConfig;
             return this;
         }
 
+        /**
+         * @param scoringConfig The scoring configuration for the source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scoringConfig(SourceScoringConfigResponse scoringConfig) {
             $.scoringConfig = scoringConfig;
             return this;
         }
 
+        /**
+         * @param source The source for which this configuration is to be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(SourceResponse source) {
             $.source = source;
             return this;

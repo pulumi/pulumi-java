@@ -27,6 +27,10 @@ public final class PrivateEndpointPropertiesArgs extends com.pulumi.resources.Re
     @Import(name="manualPrivateLinkServiceConnections")
     private @Nullable Output<List<PrivateLinkServiceConnectionArgs>> manualPrivateLinkServiceConnections;
 
+    /**
+     * @return A list of connections to the remote resource. Immutable after it is set.
+     * 
+     */
     public Optional<Output<List<PrivateLinkServiceConnectionArgs>>> manualPrivateLinkServiceConnections() {
         return Optional.ofNullable(this.manualPrivateLinkServiceConnections);
     }
@@ -55,15 +59,33 @@ public final class PrivateEndpointPropertiesArgs extends com.pulumi.resources.Re
             $ = new PrivateEndpointPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param manualPrivateLinkServiceConnections A list of connections to the remote resource. Immutable after it is set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder manualPrivateLinkServiceConnections(@Nullable Output<List<PrivateLinkServiceConnectionArgs>> manualPrivateLinkServiceConnections) {
             $.manualPrivateLinkServiceConnections = manualPrivateLinkServiceConnections;
             return this;
         }
 
+        /**
+         * @param manualPrivateLinkServiceConnections A list of connections to the remote resource. Immutable after it is set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder manualPrivateLinkServiceConnections(List<PrivateLinkServiceConnectionArgs> manualPrivateLinkServiceConnections) {
             return manualPrivateLinkServiceConnections(Output.of(manualPrivateLinkServiceConnections));
         }
 
+        /**
+         * @param manualPrivateLinkServiceConnections A list of connections to the remote resource. Immutable after it is set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder manualPrivateLinkServiceConnections(PrivateLinkServiceConnectionArgs... manualPrivateLinkServiceConnections) {
             return manualPrivateLinkServiceConnections(List.of(manualPrivateLinkServiceConnections));
         }

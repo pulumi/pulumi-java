@@ -16,52 +16,52 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetDomainClusterConfig {
     /**
-     * Number of dedicated master nodes in the cluster.
+     * @return Number of dedicated master nodes in the cluster.
      * 
      */
     private final Integer dedicatedMasterCount;
     /**
-     * Indicates whether dedicated master nodes are enabled for the cluster.
+     * @return Indicates whether dedicated master nodes are enabled for the cluster.
      * 
      */
     private final Boolean dedicatedMasterEnabled;
     /**
-     * Instance type of the dedicated master nodes in the cluster.
+     * @return Instance type of the dedicated master nodes in the cluster.
      * 
      */
     private final String dedicatedMasterType;
     /**
-     * Number of instances in the cluster.
+     * @return Number of instances in the cluster.
      * 
      */
     private final Integer instanceCount;
     /**
-     * Instance type of data nodes in the cluster.
+     * @return Instance type of data nodes in the cluster.
      * 
      */
     private final String instanceType;
     /**
-     * The number of warm nodes in the cluster.
+     * @return The number of warm nodes in the cluster.
      * 
      */
     private final Integer warmCount;
     /**
-     * Indicates warm storage is enabled.
+     * @return Indicates warm storage is enabled.
      * 
      */
     private final @Nullable Boolean warmEnabled;
     /**
-     * The instance type for the Elasticsearch cluster&#39;s warm nodes.
+     * @return The instance type for the Elasticsearch cluster&#39;s warm nodes.
      * 
      */
     private final String warmType;
     /**
-     * Configuration block containing zone awareness settings.
+     * @return Configuration block containing zone awareness settings.
      * 
      */
     private final List<GetDomainClusterConfigZoneAwarenessConfig> zoneAwarenessConfigs;
     /**
-     * Indicates whether zone awareness is enabled.
+     * @return Indicates whether zone awareness is enabled.
      * 
      */
     private final Boolean zoneAwarenessEnabled;
@@ -91,72 +91,72 @@ public final class GetDomainClusterConfig {
     }
 
     /**
-     * Number of dedicated master nodes in the cluster.
+     * @return Number of dedicated master nodes in the cluster.
      * 
-    */
+     */
     public Integer dedicatedMasterCount() {
         return this.dedicatedMasterCount;
     }
     /**
-     * Indicates whether dedicated master nodes are enabled for the cluster.
+     * @return Indicates whether dedicated master nodes are enabled for the cluster.
      * 
-    */
+     */
     public Boolean dedicatedMasterEnabled() {
         return this.dedicatedMasterEnabled;
     }
     /**
-     * Instance type of the dedicated master nodes in the cluster.
+     * @return Instance type of the dedicated master nodes in the cluster.
      * 
-    */
+     */
     public String dedicatedMasterType() {
         return this.dedicatedMasterType;
     }
     /**
-     * Number of instances in the cluster.
+     * @return Number of instances in the cluster.
      * 
-    */
+     */
     public Integer instanceCount() {
         return this.instanceCount;
     }
     /**
-     * Instance type of data nodes in the cluster.
+     * @return Instance type of data nodes in the cluster.
      * 
-    */
+     */
     public String instanceType() {
         return this.instanceType;
     }
     /**
-     * The number of warm nodes in the cluster.
+     * @return The number of warm nodes in the cluster.
      * 
-    */
+     */
     public Integer warmCount() {
         return this.warmCount;
     }
     /**
-     * Indicates warm storage is enabled.
+     * @return Indicates warm storage is enabled.
      * 
-    */
+     */
     public Optional<Boolean> warmEnabled() {
         return Optional.ofNullable(this.warmEnabled);
     }
     /**
-     * The instance type for the Elasticsearch cluster&#39;s warm nodes.
+     * @return The instance type for the Elasticsearch cluster&#39;s warm nodes.
      * 
-    */
+     */
     public String warmType() {
         return this.warmType;
     }
     /**
-     * Configuration block containing zone awareness settings.
+     * @return Configuration block containing zone awareness settings.
      * 
-    */
+     */
     public List<GetDomainClusterConfigZoneAwarenessConfig> zoneAwarenessConfigs() {
         return this.zoneAwarenessConfigs;
     }
     /**
-     * Indicates whether zone awareness is enabled.
+     * @return Indicates whether zone awareness is enabled.
      * 
-    */
+     */
     public Boolean zoneAwarenessEnabled() {
         return this.zoneAwarenessEnabled;
     }

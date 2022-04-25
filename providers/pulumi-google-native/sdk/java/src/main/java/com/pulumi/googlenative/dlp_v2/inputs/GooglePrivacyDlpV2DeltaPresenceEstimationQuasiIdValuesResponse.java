@@ -25,6 +25,10 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValuesRespons
     @Import(name="estimatedProbability", required=true)
     private Double estimatedProbability;
 
+    /**
+     * @return The estimated probability that a given individual sharing these quasi-identifier values is in the dataset. This value, typically called δ, is the ratio between the number of records in the dataset with these quasi-identifier values, and the total number of individuals (inside *and* outside the dataset) with these quasi-identifier values. For example, if there are 15 individuals in the dataset who share the same quasi-identifier values, and an estimated 100 people in the entire population with these values, then δ is 0.15.
+     * 
+     */
     public Double estimatedProbability() {
         return this.estimatedProbability;
     }
@@ -36,6 +40,10 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValuesRespons
     @Import(name="quasiIdsValues", required=true)
     private List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues;
 
+    /**
+     * @return The quasi-identifier values.
+     * 
+     */
     public List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues() {
         return this.quasiIdsValues;
     }
@@ -65,16 +73,34 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValuesRespons
             $ = new GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValuesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param estimatedProbability The estimated probability that a given individual sharing these quasi-identifier values is in the dataset. This value, typically called δ, is the ratio between the number of records in the dataset with these quasi-identifier values, and the total number of individuals (inside *and* outside the dataset) with these quasi-identifier values. For example, if there are 15 individuals in the dataset who share the same quasi-identifier values, and an estimated 100 people in the entire population with these values, then δ is 0.15.
+         * 
+         * @return builder
+         * 
+         */
         public Builder estimatedProbability(Double estimatedProbability) {
             $.estimatedProbability = estimatedProbability;
             return this;
         }
 
+        /**
+         * @param quasiIdsValues The quasi-identifier values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder quasiIdsValues(List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues) {
             $.quasiIdsValues = quasiIdsValues;
             return this;
         }
 
+        /**
+         * @param quasiIdsValues The quasi-identifier values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder quasiIdsValues(GooglePrivacyDlpV2ValueResponse... quasiIdsValues) {
             return quasiIdsValues(List.of(quasiIdsValues));
         }

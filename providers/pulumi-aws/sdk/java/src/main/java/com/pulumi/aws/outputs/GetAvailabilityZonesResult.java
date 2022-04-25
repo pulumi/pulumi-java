@@ -20,18 +20,18 @@ public final class GetAvailabilityZonesResult {
     private final @Nullable List<GetAvailabilityZonesFilter> filters;
     private final List<String> groupNames;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     /**
-     * A list of the Availability Zone names available to the account.
+     * @return A list of the Availability Zone names available to the account.
      * 
      */
     private final List<String> names;
     private final @Nullable String state;
     /**
-     * A list of the Availability Zone IDs available to the account.
+     * @return A list of the Availability Zone IDs available to the account.
      * 
      */
     private final List<String> zoneIds;
@@ -74,16 +74,16 @@ public final class GetAvailabilityZonesResult {
         return this.groupNames;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * A list of the Availability Zone names available to the account.
+     * @return A list of the Availability Zone names available to the account.
      * 
-    */
+     */
     public List<String> names() {
         return this.names;
     }
@@ -91,9 +91,9 @@ public final class GetAvailabilityZonesResult {
         return Optional.ofNullable(this.state);
     }
     /**
-     * A list of the Availability Zone IDs available to the account.
+     * @return A list of the Availability Zone IDs available to the account.
      * 
-    */
+     */
     public List<String> zoneIds() {
         return this.zoneIds;
     }

@@ -14,62 +14,62 @@ import java.util.Objects;
 @CustomType
 public final class GetTransferJobResult {
     /**
-     * The time that the transfer job was created.
+     * @return The time that the transfer job was created.
      * 
      */
     private final String creationTime;
     /**
-     * The time that the transfer job was deleted.
+     * @return The time that the transfer job was deleted.
      * 
      */
     private final String deletionTime;
     /**
-     * A description provided by the user for the job. Its max length is 1024 bytes when Unicode-encoded.
+     * @return A description provided by the user for the job. Its max length is 1024 bytes when Unicode-encoded.
      * 
      */
     private final String description;
     /**
-     * The time that the transfer job was last modified.
+     * @return The time that the transfer job was last modified.
      * 
      */
     private final String lastModificationTime;
     /**
-     * The name of the most recently started TransferOperation of this JobConfig. Present if a TransferOperation has been created for this JobConfig.
+     * @return The name of the most recently started TransferOperation of this JobConfig. Present if a TransferOperation has been created for this JobConfig.
      * 
      */
     private final String latestOperationName;
     /**
-     * Logging configuration.
+     * @return Logging configuration.
      * 
      */
     private final LoggingConfigResponse loggingConfig;
     /**
-     * A unique name (within the transfer project) assigned when the job is created. If this field is empty in a CreateTransferJobRequest, Storage Transfer Service assigns a unique name. Otherwise, the specified name is used as the unique name for this job. If the specified name is in use by a job, the creation request fails with an ALREADY_EXISTS error. This name must start with `&#34;transferJobs/&#34;` prefix and end with a letter or a number, and should be no more than 128 characters. For transfers involving PosixFilesystem, this name must start with `transferJobs/OPI` specifically. For all other transfer types, this name must not start with `transferJobs/OPI`. Non-PosixFilesystem example: `&#34;transferJobs/^(?!OPI)[A-Za-z0-9-._~]*[A-Za-z0-9]$&#34;` PosixFilesystem example: `&#34;transferJobs/OPI^[A-Za-z0-9-._~]*[A-Za-z0-9]$&#34;` Applications must not rely on the enforcement of naming requirements involving OPI. Invalid job names fail with an INVALID_ARGUMENT error.
+     * @return A unique name (within the transfer project) assigned when the job is created. If this field is empty in a CreateTransferJobRequest, Storage Transfer Service assigns a unique name. Otherwise, the specified name is used as the unique name for this job. If the specified name is in use by a job, the creation request fails with an ALREADY_EXISTS error. This name must start with `&#34;transferJobs/&#34;` prefix and end with a letter or a number, and should be no more than 128 characters. For transfers involving PosixFilesystem, this name must start with `transferJobs/OPI` specifically. For all other transfer types, this name must not start with `transferJobs/OPI`. Non-PosixFilesystem example: `&#34;transferJobs/^(?!OPI)[A-Za-z0-9-._~]*[A-Za-z0-9]$&#34;` PosixFilesystem example: `&#34;transferJobs/OPI^[A-Za-z0-9-._~]*[A-Za-z0-9]$&#34;` Applications must not rely on the enforcement of naming requirements involving OPI. Invalid job names fail with an INVALID_ARGUMENT error.
      * 
      */
     private final String name;
     /**
-     * Notification configuration. This is not supported for transfers involving PosixFilesystem.
+     * @return Notification configuration. This is not supported for transfers involving PosixFilesystem.
      * 
      */
     private final NotificationConfigResponse notificationConfig;
     /**
-     * The ID of the Google Cloud project that owns the job.
+     * @return The ID of the Google Cloud project that owns the job.
      * 
      */
     private final String project;
     /**
-     * Specifies schedule for the transfer job. This is an optional field. When the field is not set, the job never executes a transfer, unless you invoke RunTransferJob or update the job to have a non-empty schedule.
+     * @return Specifies schedule for the transfer job. This is an optional field. When the field is not set, the job never executes a transfer, unless you invoke RunTransferJob or update the job to have a non-empty schedule.
      * 
      */
     private final ScheduleResponse schedule;
     /**
-     * Status of the job. This value MUST be specified for `CreateTransferJobRequests`. **Note:** The effect of the new job status takes place during a subsequent job run. For example, if you change the job status from ENABLED to DISABLED, and an operation spawned by the transfer is running, the status change would not affect the current operation.
+     * @return Status of the job. This value MUST be specified for `CreateTransferJobRequests`. **Note:** The effect of the new job status takes place during a subsequent job run. For example, if you change the job status from ENABLED to DISABLED, and an operation spawned by the transfer is running, the status change would not affect the current operation.
      * 
      */
     private final String status;
     /**
-     * Transfer specification.
+     * @return Transfer specification.
      * 
      */
     private final TransferSpecResponse transferSpec;
@@ -103,86 +103,86 @@ public final class GetTransferJobResult {
     }
 
     /**
-     * The time that the transfer job was created.
+     * @return The time that the transfer job was created.
      * 
-    */
+     */
     public String creationTime() {
         return this.creationTime;
     }
     /**
-     * The time that the transfer job was deleted.
+     * @return The time that the transfer job was deleted.
      * 
-    */
+     */
     public String deletionTime() {
         return this.deletionTime;
     }
     /**
-     * A description provided by the user for the job. Its max length is 1024 bytes when Unicode-encoded.
+     * @return A description provided by the user for the job. Its max length is 1024 bytes when Unicode-encoded.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * The time that the transfer job was last modified.
+     * @return The time that the transfer job was last modified.
      * 
-    */
+     */
     public String lastModificationTime() {
         return this.lastModificationTime;
     }
     /**
-     * The name of the most recently started TransferOperation of this JobConfig. Present if a TransferOperation has been created for this JobConfig.
+     * @return The name of the most recently started TransferOperation of this JobConfig. Present if a TransferOperation has been created for this JobConfig.
      * 
-    */
+     */
     public String latestOperationName() {
         return this.latestOperationName;
     }
     /**
-     * Logging configuration.
+     * @return Logging configuration.
      * 
-    */
+     */
     public LoggingConfigResponse loggingConfig() {
         return this.loggingConfig;
     }
     /**
-     * A unique name (within the transfer project) assigned when the job is created. If this field is empty in a CreateTransferJobRequest, Storage Transfer Service assigns a unique name. Otherwise, the specified name is used as the unique name for this job. If the specified name is in use by a job, the creation request fails with an ALREADY_EXISTS error. This name must start with `&#34;transferJobs/&#34;` prefix and end with a letter or a number, and should be no more than 128 characters. For transfers involving PosixFilesystem, this name must start with `transferJobs/OPI` specifically. For all other transfer types, this name must not start with `transferJobs/OPI`. Non-PosixFilesystem example: `&#34;transferJobs/^(?!OPI)[A-Za-z0-9-._~]*[A-Za-z0-9]$&#34;` PosixFilesystem example: `&#34;transferJobs/OPI^[A-Za-z0-9-._~]*[A-Za-z0-9]$&#34;` Applications must not rely on the enforcement of naming requirements involving OPI. Invalid job names fail with an INVALID_ARGUMENT error.
+     * @return A unique name (within the transfer project) assigned when the job is created. If this field is empty in a CreateTransferJobRequest, Storage Transfer Service assigns a unique name. Otherwise, the specified name is used as the unique name for this job. If the specified name is in use by a job, the creation request fails with an ALREADY_EXISTS error. This name must start with `&#34;transferJobs/&#34;` prefix and end with a letter or a number, and should be no more than 128 characters. For transfers involving PosixFilesystem, this name must start with `transferJobs/OPI` specifically. For all other transfer types, this name must not start with `transferJobs/OPI`. Non-PosixFilesystem example: `&#34;transferJobs/^(?!OPI)[A-Za-z0-9-._~]*[A-Za-z0-9]$&#34;` PosixFilesystem example: `&#34;transferJobs/OPI^[A-Za-z0-9-._~]*[A-Za-z0-9]$&#34;` Applications must not rely on the enforcement of naming requirements involving OPI. Invalid job names fail with an INVALID_ARGUMENT error.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Notification configuration. This is not supported for transfers involving PosixFilesystem.
+     * @return Notification configuration. This is not supported for transfers involving PosixFilesystem.
      * 
-    */
+     */
     public NotificationConfigResponse notificationConfig() {
         return this.notificationConfig;
     }
     /**
-     * The ID of the Google Cloud project that owns the job.
+     * @return The ID of the Google Cloud project that owns the job.
      * 
-    */
+     */
     public String project() {
         return this.project;
     }
     /**
-     * Specifies schedule for the transfer job. This is an optional field. When the field is not set, the job never executes a transfer, unless you invoke RunTransferJob or update the job to have a non-empty schedule.
+     * @return Specifies schedule for the transfer job. This is an optional field. When the field is not set, the job never executes a transfer, unless you invoke RunTransferJob or update the job to have a non-empty schedule.
      * 
-    */
+     */
     public ScheduleResponse schedule() {
         return this.schedule;
     }
     /**
-     * Status of the job. This value MUST be specified for `CreateTransferJobRequests`. **Note:** The effect of the new job status takes place during a subsequent job run. For example, if you change the job status from ENABLED to DISABLED, and an operation spawned by the transfer is running, the status change would not affect the current operation.
+     * @return Status of the job. This value MUST be specified for `CreateTransferJobRequests`. **Note:** The effect of the new job status takes place during a subsequent job run. For example, if you change the job status from ENABLED to DISABLED, and an operation spawned by the transfer is running, the status change would not affect the current operation.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * Transfer specification.
+     * @return Transfer specification.
      * 
-    */
+     */
     public TransferSpecResponse transferSpec() {
         return this.transferSpec;
     }

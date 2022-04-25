@@ -25,6 +25,10 @@ public final class ErrorDetailResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="additionalInfo", required=true)
     private List<ErrorAdditionalInfoResponse> additionalInfo;
 
+    /**
+     * @return The error additional info.
+     * 
+     */
     public List<ErrorAdditionalInfoResponse> additionalInfo() {
         return this.additionalInfo;
     }
@@ -36,6 +40,10 @@ public final class ErrorDetailResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="code", required=true)
     private String code;
 
+    /**
+     * @return The error code.
+     * 
+     */
     public String code() {
         return this.code;
     }
@@ -47,6 +55,10 @@ public final class ErrorDetailResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="details", required=true)
     private List<ErrorDetailResponse> details;
 
+    /**
+     * @return The error details.
+     * 
+     */
     public List<ErrorDetailResponse> details() {
         return this.details;
     }
@@ -58,6 +70,10 @@ public final class ErrorDetailResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="message", required=true)
     private String message;
 
+    /**
+     * @return The error message.
+     * 
+     */
     public String message() {
         return this.message;
     }
@@ -69,6 +85,10 @@ public final class ErrorDetailResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="target", required=true)
     private String target;
 
+    /**
+     * @return The error target.
+     * 
+     */
     public String target() {
         return this.target;
     }
@@ -101,34 +121,76 @@ public final class ErrorDetailResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ErrorDetailResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param additionalInfo The error additional info.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalInfo(List<ErrorAdditionalInfoResponse> additionalInfo) {
             $.additionalInfo = additionalInfo;
             return this;
         }
 
+        /**
+         * @param additionalInfo The error additional info.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalInfo(ErrorAdditionalInfoResponse... additionalInfo) {
             return additionalInfo(List.of(additionalInfo));
         }
 
+        /**
+         * @param code The error code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(String code) {
             $.code = code;
             return this;
         }
 
+        /**
+         * @param details The error details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder details(List<ErrorDetailResponse> details) {
             $.details = details;
             return this;
         }
 
+        /**
+         * @param details The error details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder details(ErrorDetailResponse... details) {
             return details(List.of(details));
         }
 
+        /**
+         * @param message The error message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(String message) {
             $.message = message;
             return this;
         }
 
+        /**
+         * @param target The error target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder target(String target) {
             $.target = target;
             return this;

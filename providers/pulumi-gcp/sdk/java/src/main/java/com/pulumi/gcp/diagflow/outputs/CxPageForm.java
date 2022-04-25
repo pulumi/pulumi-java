@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CxPageForm {
     /**
-     * Parameters to collect from the user.
+     * @return Parameters to collect from the user.
      * Structure is documented below.
      * 
      */
@@ -24,10 +24,10 @@ public final class CxPageForm {
     }
 
     /**
-     * Parameters to collect from the user.
+     * @return Parameters to collect from the user.
      * Structure is documented below.
      * 
-    */
+     */
     public List<CxPageFormParameter> parameters() {
         return this.parameters == null ? List.of() : this.parameters;
     }

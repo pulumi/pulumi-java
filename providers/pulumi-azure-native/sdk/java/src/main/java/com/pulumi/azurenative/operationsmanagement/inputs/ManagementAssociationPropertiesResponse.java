@@ -23,6 +23,10 @@ public final class ManagementAssociationPropertiesResponse extends com.pulumi.re
     @Import(name="applicationId", required=true)
     private String applicationId;
 
+    /**
+     * @return The applicationId of the appliance for this association.
+     * 
+     */
     public String applicationId() {
         return this.applicationId;
     }
@@ -51,6 +55,12 @@ public final class ManagementAssociationPropertiesResponse extends com.pulumi.re
             $ = new ManagementAssociationPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param applicationId The applicationId of the appliance for this association.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationId(String applicationId) {
             $.applicationId = applicationId;
             return this;

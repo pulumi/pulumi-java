@@ -22,6 +22,10 @@ public final class ResourceModelWithAllowedPropertySetPlanArgs extends com.pulum
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return A user defined name of the 3rd Party Artifact that is being procured.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -33,6 +37,10 @@ public final class ResourceModelWithAllowedPropertySetPlanArgs extends com.pulum
     @Import(name="product", required=true)
     private Output<String> product;
 
+    /**
+     * @return The 3rd Party artifact that is being procured. E.g. NewRelic. Product maps to the OfferID specified for the artifact at the time of Data Market onboarding.
+     * 
+     */
     public Output<String> product() {
         return this.product;
     }
@@ -44,6 +52,10 @@ public final class ResourceModelWithAllowedPropertySetPlanArgs extends com.pulum
     @Import(name="promotionCode")
     private @Nullable Output<String> promotionCode;
 
+    /**
+     * @return A publisher provided promotion code as provisioned in Data Market for the said product/artifact.
+     * 
+     */
     public Optional<Output<String>> promotionCode() {
         return Optional.ofNullable(this.promotionCode);
     }
@@ -55,6 +67,10 @@ public final class ResourceModelWithAllowedPropertySetPlanArgs extends com.pulum
     @Import(name="publisher", required=true)
     private Output<String> publisher;
 
+    /**
+     * @return The publisher of the 3rd Party Artifact that is being bought. E.g. NewRelic
+     * 
+     */
     public Output<String> publisher() {
         return this.publisher;
     }
@@ -66,6 +82,10 @@ public final class ResourceModelWithAllowedPropertySetPlanArgs extends com.pulum
     @Import(name="version")
     private @Nullable Output<String> version;
 
+    /**
+     * @return The version of the desired product/artifact.
+     * 
+     */
     public Optional<Output<String>> version() {
         return Optional.ofNullable(this.version);
     }
@@ -98,47 +118,107 @@ public final class ResourceModelWithAllowedPropertySetPlanArgs extends com.pulum
             $ = new ResourceModelWithAllowedPropertySetPlanArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name A user defined name of the 3rd Party Artifact that is being procured.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name A user defined name of the 3rd Party Artifact that is being procured.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param product The 3rd Party artifact that is being procured. E.g. NewRelic. Product maps to the OfferID specified for the artifact at the time of Data Market onboarding.
+         * 
+         * @return builder
+         * 
+         */
         public Builder product(Output<String> product) {
             $.product = product;
             return this;
         }
 
+        /**
+         * @param product The 3rd Party artifact that is being procured. E.g. NewRelic. Product maps to the OfferID specified for the artifact at the time of Data Market onboarding.
+         * 
+         * @return builder
+         * 
+         */
         public Builder product(String product) {
             return product(Output.of(product));
         }
 
+        /**
+         * @param promotionCode A publisher provided promotion code as provisioned in Data Market for the said product/artifact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder promotionCode(@Nullable Output<String> promotionCode) {
             $.promotionCode = promotionCode;
             return this;
         }
 
+        /**
+         * @param promotionCode A publisher provided promotion code as provisioned in Data Market for the said product/artifact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder promotionCode(String promotionCode) {
             return promotionCode(Output.of(promotionCode));
         }
 
+        /**
+         * @param publisher The publisher of the 3rd Party Artifact that is being bought. E.g. NewRelic
+         * 
+         * @return builder
+         * 
+         */
         public Builder publisher(Output<String> publisher) {
             $.publisher = publisher;
             return this;
         }
 
+        /**
+         * @param publisher The publisher of the 3rd Party Artifact that is being bought. E.g. NewRelic
+         * 
+         * @return builder
+         * 
+         */
         public Builder publisher(String publisher) {
             return publisher(Output.of(publisher));
         }
 
+        /**
+         * @param version The version of the desired product/artifact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable Output<String> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version The version of the desired product/artifact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             return version(Output.of(version));
         }

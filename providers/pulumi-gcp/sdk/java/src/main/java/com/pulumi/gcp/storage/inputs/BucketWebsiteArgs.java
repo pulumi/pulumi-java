@@ -23,6 +23,11 @@ public final class BucketWebsiteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="mainPageSuffix")
     private @Nullable Output<String> mainPageSuffix;
 
+    /**
+     * @return Behaves as the bucket&#39;s directory index where
+     * missing objects are treated as potential directories.
+     * 
+     */
     public Optional<Output<String>> mainPageSuffix() {
         return Optional.ofNullable(this.mainPageSuffix);
     }
@@ -35,6 +40,11 @@ public final class BucketWebsiteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="notFoundPage")
     private @Nullable Output<String> notFoundPage;
 
+    /**
+     * @return The custom object to return when a requested
+     * resource is not found.
+     * 
+     */
     public Optional<Output<String>> notFoundPage() {
         return Optional.ofNullable(this.notFoundPage);
     }
@@ -64,20 +74,48 @@ public final class BucketWebsiteArgs extends com.pulumi.resources.ResourceArgs {
             $ = new BucketWebsiteArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param mainPageSuffix Behaves as the bucket&#39;s directory index where
+         * missing objects are treated as potential directories.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mainPageSuffix(@Nullable Output<String> mainPageSuffix) {
             $.mainPageSuffix = mainPageSuffix;
             return this;
         }
 
+        /**
+         * @param mainPageSuffix Behaves as the bucket&#39;s directory index where
+         * missing objects are treated as potential directories.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mainPageSuffix(String mainPageSuffix) {
             return mainPageSuffix(Output.of(mainPageSuffix));
         }
 
+        /**
+         * @param notFoundPage The custom object to return when a requested
+         * resource is not found.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notFoundPage(@Nullable Output<String> notFoundPage) {
             $.notFoundPage = notFoundPage;
             return this;
         }
 
+        /**
+         * @param notFoundPage The custom object to return when a requested
+         * resource is not found.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notFoundPage(String notFoundPage) {
             return notFoundPage(Output.of(notFoundPage));
         }

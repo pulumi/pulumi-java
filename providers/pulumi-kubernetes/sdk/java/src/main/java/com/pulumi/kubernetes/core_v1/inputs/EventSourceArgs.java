@@ -26,6 +26,10 @@ public final class EventSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="component")
     private @Nullable Output<String> component;
 
+    /**
+     * @return Component from which the event is generated.
+     * 
+     */
     public Optional<Output<String>> component() {
         return Optional.ofNullable(this.component);
     }
@@ -37,6 +41,10 @@ public final class EventSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="host")
     private @Nullable Output<String> host;
 
+    /**
+     * @return Node name on which the event is generated.
+     * 
+     */
     public Optional<Output<String>> host() {
         return Optional.ofNullable(this.host);
     }
@@ -66,20 +74,44 @@ public final class EventSourceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new EventSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param component Component from which the event is generated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder component(@Nullable Output<String> component) {
             $.component = component;
             return this;
         }
 
+        /**
+         * @param component Component from which the event is generated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder component(String component) {
             return component(Output.of(component));
         }
 
+        /**
+         * @param host Node name on which the event is generated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder host(@Nullable Output<String> host) {
             $.host = host;
             return this;
         }
 
+        /**
+         * @param host Node name on which the event is generated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder host(String host) {
             return host(Output.of(host));
         }

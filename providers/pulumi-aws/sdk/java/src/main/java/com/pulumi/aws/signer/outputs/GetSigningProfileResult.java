@@ -14,53 +14,53 @@ import java.util.Objects;
 @CustomType
 public final class GetSigningProfileResult {
     /**
-     * The Amazon Resource Name (ARN) for the signing profile.
+     * @return The Amazon Resource Name (ARN) for the signing profile.
      * 
      */
     private final String arn;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     private final String name;
     /**
-     * A human-readable name for the signing platform associated with the signing profile.
+     * @return A human-readable name for the signing platform associated with the signing profile.
      * 
      */
     private final String platformDisplayName;
     /**
-     * The ID of the platform that is used by the target signing profile.
+     * @return The ID of the platform that is used by the target signing profile.
      * 
      */
     private final String platformId;
     /**
-     * Revocation information for a signing profile.
+     * @return Revocation information for a signing profile.
      * 
      */
     private final List<GetSigningProfileRevocationRecord> revocationRecords;
     /**
-     * The validity period for a signing job.
+     * @return The validity period for a signing job.
      * 
      */
     private final List<GetSigningProfileSignatureValidityPeriod> signatureValidityPeriods;
     /**
-     * The status of the target signing profile.
+     * @return The status of the target signing profile.
      * 
      */
     private final String status;
     /**
-     * A list of tags associated with the signing profile.
+     * @return A list of tags associated with the signing profile.
      * 
      */
     private final Map<String,String> tags;
     /**
-     * The current version of the signing profile.
+     * @return The current version of the signing profile.
      * 
      */
     private final String version;
     /**
-     * The signing profile ARN, including the profile version.
+     * @return The signing profile ARN, including the profile version.
      * 
      */
     private final String versionArn;
@@ -92,16 +92,16 @@ public final class GetSigningProfileResult {
     }
 
     /**
-     * The Amazon Resource Name (ARN) for the signing profile.
+     * @return The Amazon Resource Name (ARN) for the signing profile.
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
@@ -109,58 +109,58 @@ public final class GetSigningProfileResult {
         return this.name;
     }
     /**
-     * A human-readable name for the signing platform associated with the signing profile.
+     * @return A human-readable name for the signing platform associated with the signing profile.
      * 
-    */
+     */
     public String platformDisplayName() {
         return this.platformDisplayName;
     }
     /**
-     * The ID of the platform that is used by the target signing profile.
+     * @return The ID of the platform that is used by the target signing profile.
      * 
-    */
+     */
     public String platformId() {
         return this.platformId;
     }
     /**
-     * Revocation information for a signing profile.
+     * @return Revocation information for a signing profile.
      * 
-    */
+     */
     public List<GetSigningProfileRevocationRecord> revocationRecords() {
         return this.revocationRecords;
     }
     /**
-     * The validity period for a signing job.
+     * @return The validity period for a signing job.
      * 
-    */
+     */
     public List<GetSigningProfileSignatureValidityPeriod> signatureValidityPeriods() {
         return this.signatureValidityPeriods;
     }
     /**
-     * The status of the target signing profile.
+     * @return The status of the target signing profile.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * A list of tags associated with the signing profile.
+     * @return A list of tags associated with the signing profile.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags;
     }
     /**
-     * The current version of the signing profile.
+     * @return The current version of the signing profile.
      * 
-    */
+     */
     public String version() {
         return this.version;
     }
     /**
-     * The signing profile ARN, including the profile version.
+     * @return The signing profile ARN, including the profile version.
      * 
-    */
+     */
     public String versionArn() {
         return this.versionArn;
     }

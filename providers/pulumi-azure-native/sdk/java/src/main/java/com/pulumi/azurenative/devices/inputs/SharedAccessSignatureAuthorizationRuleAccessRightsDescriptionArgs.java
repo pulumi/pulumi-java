@@ -28,6 +28,10 @@ public final class SharedAccessSignatureAuthorizationRuleAccessRightsDescription
     @Import(name="keyName", required=true)
     private Output<String> keyName;
 
+    /**
+     * @return Name of the key.
+     * 
+     */
     public Output<String> keyName() {
         return this.keyName;
     }
@@ -39,6 +43,10 @@ public final class SharedAccessSignatureAuthorizationRuleAccessRightsDescription
     @Import(name="primaryKey")
     private @Nullable Output<String> primaryKey;
 
+    /**
+     * @return Primary SAS key value.
+     * 
+     */
     public Optional<Output<String>> primaryKey() {
         return Optional.ofNullable(this.primaryKey);
     }
@@ -50,6 +58,10 @@ public final class SharedAccessSignatureAuthorizationRuleAccessRightsDescription
     @Import(name="rights", required=true)
     private Output<Either<String,AccessRightsDescription>> rights;
 
+    /**
+     * @return Rights that this key has.
+     * 
+     */
     public Output<Either<String,AccessRightsDescription>> rights() {
         return this.rights;
     }
@@ -61,6 +73,10 @@ public final class SharedAccessSignatureAuthorizationRuleAccessRightsDescription
     @Import(name="secondaryKey")
     private @Nullable Output<String> secondaryKey;
 
+    /**
+     * @return Secondary SAS key value.
+     * 
+     */
     public Optional<Output<String>> secondaryKey() {
         return Optional.ofNullable(this.secondaryKey);
     }
@@ -92,46 +108,106 @@ public final class SharedAccessSignatureAuthorizationRuleAccessRightsDescription
             $ = new SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyName Name of the key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyName(Output<String> keyName) {
             $.keyName = keyName;
             return this;
         }
 
+        /**
+         * @param keyName Name of the key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyName(String keyName) {
             return keyName(Output.of(keyName));
         }
 
+        /**
+         * @param primaryKey Primary SAS key value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryKey(@Nullable Output<String> primaryKey) {
             $.primaryKey = primaryKey;
             return this;
         }
 
+        /**
+         * @param primaryKey Primary SAS key value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryKey(String primaryKey) {
             return primaryKey(Output.of(primaryKey));
         }
 
+        /**
+         * @param rights Rights that this key has.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rights(Output<Either<String,AccessRightsDescription>> rights) {
             $.rights = rights;
             return this;
         }
 
+        /**
+         * @param rights Rights that this key has.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rights(Either<String,AccessRightsDescription> rights) {
             return rights(Output.of(rights));
         }
 
+        /**
+         * @param rights Rights that this key has.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rights(String rights) {
             return rights(Either.ofLeft(rights));
         }
 
+        /**
+         * @param rights Rights that this key has.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rights(AccessRightsDescription rights) {
             return rights(Either.ofRight(rights));
         }
 
+        /**
+         * @param secondaryKey Secondary SAS key value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondaryKey(@Nullable Output<String> secondaryKey) {
             $.secondaryKey = secondaryKey;
             return this;
         }
 
+        /**
+         * @param secondaryKey Secondary SAS key value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondaryKey(String secondaryKey) {
             return secondaryKey(Output.of(secondaryKey));
         }

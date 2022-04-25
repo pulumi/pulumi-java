@@ -11,17 +11,17 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudDialogflowCxV3ResponseMessageOutputAudioTextResponse {
     /**
-     * Whether the playback of this message can be interrupted by the end user&#39;s speech and the client can then starts the next Dialogflow request.
+     * @return Whether the playback of this message can be interrupted by the end user&#39;s speech and the client can then starts the next Dialogflow request.
      * 
      */
     private final Boolean allowPlaybackInterruption;
     /**
-     * The SSML text to be synthesized. For more information, see [SSML](/speech/text-to-speech/docs/ssml).
+     * @return The SSML text to be synthesized. For more information, see [SSML](/speech/text-to-speech/docs/ssml).
      * 
      */
     private final String ssml;
     /**
-     * The raw text to be synthesized.
+     * @return The raw text to be synthesized.
      * 
      */
     private final String text;
@@ -37,23 +37,23 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageOutputAudioTextRespon
     }
 
     /**
-     * Whether the playback of this message can be interrupted by the end user&#39;s speech and the client can then starts the next Dialogflow request.
+     * @return Whether the playback of this message can be interrupted by the end user&#39;s speech and the client can then starts the next Dialogflow request.
      * 
-    */
+     */
     public Boolean allowPlaybackInterruption() {
         return this.allowPlaybackInterruption;
     }
     /**
-     * The SSML text to be synthesized. For more information, see [SSML](/speech/text-to-speech/docs/ssml).
+     * @return The SSML text to be synthesized. For more information, see [SSML](/speech/text-to-speech/docs/ssml).
      * 
-    */
+     */
     public String ssml() {
         return this.ssml;
     }
     /**
-     * The raw text to be synthesized.
+     * @return The raw text to be synthesized.
      * 
-    */
+     */
     public String text() {
         return this.text;
     }

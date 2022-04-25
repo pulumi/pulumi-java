@@ -23,6 +23,10 @@ public final class ProjectSampleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="size")
     private @Nullable Output<Integer> size;
 
+    /**
+     * @return Sample size
+     * 
+     */
     public Optional<Output<Integer>> size() {
         return Optional.ofNullable(this.size);
     }
@@ -34,6 +38,10 @@ public final class ProjectSampleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
     private Output<ProjectSampleType> type;
 
+    /**
+     * @return Sample type
+     * 
+     */
     public Output<ProjectSampleType> type() {
         return this.type;
     }
@@ -63,20 +71,44 @@ public final class ProjectSampleArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ProjectSampleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param size Sample size
+         * 
+         * @return builder
+         * 
+         */
         public Builder size(@Nullable Output<Integer> size) {
             $.size = size;
             return this;
         }
 
+        /**
+         * @param size Sample size
+         * 
+         * @return builder
+         * 
+         */
         public Builder size(Integer size) {
             return size(Output.of(size));
         }
 
+        /**
+         * @param type Sample type
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<ProjectSampleType> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Sample type
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(ProjectSampleType type) {
             return type(Output.of(type));
         }

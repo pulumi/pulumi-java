@@ -24,6 +24,11 @@ public final class PatchDeploymentPatchConfigPreStepGetArgs extends com.pulumi.r
     @Import(name="linuxExecStepConfig")
     private @Nullable Output<PatchDeploymentPatchConfigPreStepLinuxExecStepConfigGetArgs> linuxExecStepConfig;
 
+    /**
+     * @return The ExecStepConfig for all Linux VMs targeted by the PatchJob.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<PatchDeploymentPatchConfigPreStepLinuxExecStepConfigGetArgs>> linuxExecStepConfig() {
         return Optional.ofNullable(this.linuxExecStepConfig);
     }
@@ -36,6 +41,11 @@ public final class PatchDeploymentPatchConfigPreStepGetArgs extends com.pulumi.r
     @Import(name="windowsExecStepConfig")
     private @Nullable Output<PatchDeploymentPatchConfigPreStepWindowsExecStepConfigGetArgs> windowsExecStepConfig;
 
+    /**
+     * @return The ExecStepConfig for all Windows VMs targeted by the PatchJob.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<PatchDeploymentPatchConfigPreStepWindowsExecStepConfigGetArgs>> windowsExecStepConfig() {
         return Optional.ofNullable(this.windowsExecStepConfig);
     }
@@ -65,20 +75,48 @@ public final class PatchDeploymentPatchConfigPreStepGetArgs extends com.pulumi.r
             $ = new PatchDeploymentPatchConfigPreStepGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param linuxExecStepConfig The ExecStepConfig for all Linux VMs targeted by the PatchJob.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linuxExecStepConfig(@Nullable Output<PatchDeploymentPatchConfigPreStepLinuxExecStepConfigGetArgs> linuxExecStepConfig) {
             $.linuxExecStepConfig = linuxExecStepConfig;
             return this;
         }
 
+        /**
+         * @param linuxExecStepConfig The ExecStepConfig for all Linux VMs targeted by the PatchJob.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linuxExecStepConfig(PatchDeploymentPatchConfigPreStepLinuxExecStepConfigGetArgs linuxExecStepConfig) {
             return linuxExecStepConfig(Output.of(linuxExecStepConfig));
         }
 
+        /**
+         * @param windowsExecStepConfig The ExecStepConfig for all Windows VMs targeted by the PatchJob.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder windowsExecStepConfig(@Nullable Output<PatchDeploymentPatchConfigPreStepWindowsExecStepConfigGetArgs> windowsExecStepConfig) {
             $.windowsExecStepConfig = windowsExecStepConfig;
             return this;
         }
 
+        /**
+         * @param windowsExecStepConfig The ExecStepConfig for all Windows VMs targeted by the PatchJob.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder windowsExecStepConfig(PatchDeploymentPatchConfigPreStepWindowsExecStepConfigGetArgs windowsExecStepConfig) {
             return windowsExecStepConfig(Output.of(windowsExecStepConfig));
         }

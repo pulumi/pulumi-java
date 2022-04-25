@@ -22,6 +22,10 @@ public final class GetRolloutArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -33,6 +37,10 @@ public final class GetRolloutArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="retryAttempt")
     private @Nullable Integer retryAttempt;
 
+    /**
+     * @return Rollout retry attempt ordinal to get the result of. If not specified, result of the latest attempt will be returned.
+     * 
+     */
     public Optional<Integer> retryAttempt() {
         return Optional.ofNullable(this.retryAttempt);
     }
@@ -44,6 +52,10 @@ public final class GetRolloutArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="rolloutName", required=true)
     private String rolloutName;
 
+    /**
+     * @return The rollout name.
+     * 
+     */
     public String rolloutName() {
         return this.rolloutName;
     }
@@ -74,16 +86,34 @@ public final class GetRolloutArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetRolloutArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param retryAttempt Rollout retry attempt ordinal to get the result of. If not specified, result of the latest attempt will be returned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retryAttempt(@Nullable Integer retryAttempt) {
             $.retryAttempt = retryAttempt;
             return this;
         }
 
+        /**
+         * @param rolloutName The rollout name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rolloutName(String rolloutName) {
             $.rolloutName = rolloutName;
             return this;

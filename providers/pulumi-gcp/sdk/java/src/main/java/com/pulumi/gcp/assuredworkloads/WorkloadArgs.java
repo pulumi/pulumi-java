@@ -26,6 +26,10 @@ public final class WorkloadArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="billingAccount", required=true)
     private Output<String> billingAccount;
 
+    /**
+     * @return Required. Input only. The billing account used for the resources which are direct children of workload. This billing account is initially associated with the resources created as part of Workload creation. After the initial creation of these resources, the customer can change the assigned billing account. The resource name has the form `billingAccounts/{billing_account_id}`. For example, &#39;billingAccounts/012345-567890-ABCDEF`.
+     * 
+     */
     public Output<String> billingAccount() {
         return this.billingAccount;
     }
@@ -37,6 +41,10 @@ public final class WorkloadArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="complianceRegime", required=true)
     private Output<String> complianceRegime;
 
+    /**
+     * @return Required. Immutable. Compliance Regime associated with this workload. Possible values: COMPLIANCE_REGIME_UNSPECIFIED, IL4, CJIS, FEDRAMP_HIGH, FEDRAMP_MODERATE, US_REGIONAL_ACCESS
+     * 
+     */
     public Output<String> complianceRegime() {
         return this.complianceRegime;
     }
@@ -48,6 +56,10 @@ public final class WorkloadArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
     private Output<String> displayName;
 
+    /**
+     * @return Required. The user-assigned display name of the Workload. When present it must be between 4 to 30 characters. Allowed characters are: lowercase and uppercase letters, numbers, hyphen, and spaces. Example: My Workload
+     * 
+     */
     public Output<String> displayName() {
         return this.displayName;
     }
@@ -59,6 +71,10 @@ public final class WorkloadArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kmsSettings")
     private @Nullable Output<WorkloadKmsSettingsArgs> kmsSettings;
 
+    /**
+     * @return Input only. Settings used to create a CMEK crypto key. When set a project with a KMS CMEK key is provisioned. This field is mandatory for a subset of Compliance Regimes.
+     * 
+     */
     public Optional<Output<WorkloadKmsSettingsArgs>> kmsSettings() {
         return Optional.ofNullable(this.kmsSettings);
     }
@@ -70,6 +86,10 @@ public final class WorkloadArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return Optional. Labels applied to the workload.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -81,6 +101,10 @@ public final class WorkloadArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location", required=true)
     private Output<String> location;
 
+    /**
+     * @return The location for the resource
+     * 
+     */
     public Output<String> location() {
         return this.location;
     }
@@ -92,6 +116,10 @@ public final class WorkloadArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="organization", required=true)
     private Output<String> organization;
 
+    /**
+     * @return The organization for the resource
+     * 
+     */
     public Output<String> organization() {
         return this.organization;
     }
@@ -103,6 +131,10 @@ public final class WorkloadArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="provisionedResourcesParent")
     private @Nullable Output<String> provisionedResourcesParent;
 
+    /**
+     * @return Input only. The parent resource for the resources managed by this Assured Workload. May be either an organization or a folder. Must be the same or a child of the Workload parent. If not specified all resources are created under the Workload parent. Formats: folders/{folder_id}, organizations/{organization_id}
+     * 
+     */
     public Optional<Output<String>> provisionedResourcesParent() {
         return Optional.ofNullable(this.provisionedResourcesParent);
     }
@@ -114,6 +146,10 @@ public final class WorkloadArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceSettings")
     private @Nullable Output<List<WorkloadResourceSettingArgs>> resourceSettings;
 
+    /**
+     * @return Input only. Resource properties that are used to customize workload resources. These properties (such as custom project id) will be used to create workload resources if possible. This field is optional.
+     * 
+     */
     public Optional<Output<List<WorkloadResourceSettingArgs>>> resourceSettings() {
         return Optional.ofNullable(this.resourceSettings);
     }
@@ -150,87 +186,201 @@ public final class WorkloadArgs extends com.pulumi.resources.ResourceArgs {
             $ = new WorkloadArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param billingAccount Required. Input only. The billing account used for the resources which are direct children of workload. This billing account is initially associated with the resources created as part of Workload creation. After the initial creation of these resources, the customer can change the assigned billing account. The resource name has the form `billingAccounts/{billing_account_id}`. For example, &#39;billingAccounts/012345-567890-ABCDEF`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder billingAccount(Output<String> billingAccount) {
             $.billingAccount = billingAccount;
             return this;
         }
 
+        /**
+         * @param billingAccount Required. Input only. The billing account used for the resources which are direct children of workload. This billing account is initially associated with the resources created as part of Workload creation. After the initial creation of these resources, the customer can change the assigned billing account. The resource name has the form `billingAccounts/{billing_account_id}`. For example, &#39;billingAccounts/012345-567890-ABCDEF`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder billingAccount(String billingAccount) {
             return billingAccount(Output.of(billingAccount));
         }
 
+        /**
+         * @param complianceRegime Required. Immutable. Compliance Regime associated with this workload. Possible values: COMPLIANCE_REGIME_UNSPECIFIED, IL4, CJIS, FEDRAMP_HIGH, FEDRAMP_MODERATE, US_REGIONAL_ACCESS
+         * 
+         * @return builder
+         * 
+         */
         public Builder complianceRegime(Output<String> complianceRegime) {
             $.complianceRegime = complianceRegime;
             return this;
         }
 
+        /**
+         * @param complianceRegime Required. Immutable. Compliance Regime associated with this workload. Possible values: COMPLIANCE_REGIME_UNSPECIFIED, IL4, CJIS, FEDRAMP_HIGH, FEDRAMP_MODERATE, US_REGIONAL_ACCESS
+         * 
+         * @return builder
+         * 
+         */
         public Builder complianceRegime(String complianceRegime) {
             return complianceRegime(Output.of(complianceRegime));
         }
 
+        /**
+         * @param displayName Required. The user-assigned display name of the Workload. When present it must be between 4 to 30 characters. Allowed characters are: lowercase and uppercase letters, numbers, hyphen, and spaces. Example: My Workload
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName Required. The user-assigned display name of the Workload. When present it must be between 4 to 30 characters. Allowed characters are: lowercase and uppercase letters, numbers, hyphen, and spaces. Example: My Workload
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param kmsSettings Input only. Settings used to create a CMEK crypto key. When set a project with a KMS CMEK key is provisioned. This field is mandatory for a subset of Compliance Regimes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsSettings(@Nullable Output<WorkloadKmsSettingsArgs> kmsSettings) {
             $.kmsSettings = kmsSettings;
             return this;
         }
 
+        /**
+         * @param kmsSettings Input only. Settings used to create a CMEK crypto key. When set a project with a KMS CMEK key is provisioned. This field is mandatory for a subset of Compliance Regimes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsSettings(WorkloadKmsSettingsArgs kmsSettings) {
             return kmsSettings(Output.of(kmsSettings));
         }
 
+        /**
+         * @param labels Optional. Labels applied to the workload.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Optional. Labels applied to the workload.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param location The location for the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The location for the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param organization The organization for the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder organization(Output<String> organization) {
             $.organization = organization;
             return this;
         }
 
+        /**
+         * @param organization The organization for the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder organization(String organization) {
             return organization(Output.of(organization));
         }
 
+        /**
+         * @param provisionedResourcesParent Input only. The parent resource for the resources managed by this Assured Workload. May be either an organization or a folder. Must be the same or a child of the Workload parent. If not specified all resources are created under the Workload parent. Formats: folders/{folder_id}, organizations/{organization_id}
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisionedResourcesParent(@Nullable Output<String> provisionedResourcesParent) {
             $.provisionedResourcesParent = provisionedResourcesParent;
             return this;
         }
 
+        /**
+         * @param provisionedResourcesParent Input only. The parent resource for the resources managed by this Assured Workload. May be either an organization or a folder. Must be the same or a child of the Workload parent. If not specified all resources are created under the Workload parent. Formats: folders/{folder_id}, organizations/{organization_id}
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisionedResourcesParent(String provisionedResourcesParent) {
             return provisionedResourcesParent(Output.of(provisionedResourcesParent));
         }
 
+        /**
+         * @param resourceSettings Input only. Resource properties that are used to customize workload resources. These properties (such as custom project id) will be used to create workload resources if possible. This field is optional.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceSettings(@Nullable Output<List<WorkloadResourceSettingArgs>> resourceSettings) {
             $.resourceSettings = resourceSettings;
             return this;
         }
 
+        /**
+         * @param resourceSettings Input only. Resource properties that are used to customize workload resources. These properties (such as custom project id) will be used to create workload resources if possible. This field is optional.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceSettings(List<WorkloadResourceSettingArgs> resourceSettings) {
             return resourceSettings(Output.of(resourceSettings));
         }
 
+        /**
+         * @param resourceSettings Input only. Resource properties that are used to customize workload resources. These properties (such as custom project id) will be used to create workload resources if possible. This field is optional.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceSettings(WorkloadResourceSettingArgs... resourceSettings) {
             return resourceSettings(List.of(resourceSettings));
         }

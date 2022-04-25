@@ -24,6 +24,10 @@ public final class GoogleCloudDatacatalogV1BusinessContextResponse extends com.p
     @Import(name="contacts", required=true)
     private GoogleCloudDatacatalogV1ContactsResponse contacts;
 
+    /**
+     * @return Contact people for the entry.
+     * 
+     */
     public GoogleCloudDatacatalogV1ContactsResponse contacts() {
         return this.contacts;
     }
@@ -35,6 +39,10 @@ public final class GoogleCloudDatacatalogV1BusinessContextResponse extends com.p
     @Import(name="entryOverview", required=true)
     private GoogleCloudDatacatalogV1EntryOverviewResponse entryOverview;
 
+    /**
+     * @return Entry overview fields for rich text descriptions of entries.
+     * 
+     */
     public GoogleCloudDatacatalogV1EntryOverviewResponse entryOverview() {
         return this.entryOverview;
     }
@@ -64,11 +72,23 @@ public final class GoogleCloudDatacatalogV1BusinessContextResponse extends com.p
             $ = new GoogleCloudDatacatalogV1BusinessContextResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param contacts Contact people for the entry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contacts(GoogleCloudDatacatalogV1ContactsResponse contacts) {
             $.contacts = contacts;
             return this;
         }
 
+        /**
+         * @param entryOverview Entry overview fields for rich text descriptions of entries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entryOverview(GoogleCloudDatacatalogV1EntryOverviewResponse entryOverview) {
             $.entryOverview = entryOverview;
             return this;

@@ -32,6 +32,10 @@ public final class RestResourceDatasetResponse extends com.pulumi.resources.Invo
     @Import(name="additionalHeaders")
     private @Nullable Object additionalHeaders;
 
+    /**
+     * @return The additional HTTP headers in the request to the RESTful API. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> additionalHeaders() {
         return Optional.ofNullable(this.additionalHeaders);
     }
@@ -43,6 +47,10 @@ public final class RestResourceDatasetResponse extends com.pulumi.resources.Invo
     @Import(name="annotations")
     private @Nullable List<Object> annotations;
 
+    /**
+     * @return List of tags that can be used for describing the Dataset.
+     * 
+     */
     public Optional<List<Object>> annotations() {
         return Optional.ofNullable(this.annotations);
     }
@@ -54,6 +62,10 @@ public final class RestResourceDatasetResponse extends com.pulumi.resources.Invo
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Dataset description.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -65,6 +77,10 @@ public final class RestResourceDatasetResponse extends com.pulumi.resources.Invo
     @Import(name="folder")
     private @Nullable DatasetResponseFolder folder;
 
+    /**
+     * @return The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
+     * 
+     */
     public Optional<DatasetResponseFolder> folder() {
         return Optional.ofNullable(this.folder);
     }
@@ -76,6 +92,10 @@ public final class RestResourceDatasetResponse extends com.pulumi.resources.Invo
     @Import(name="linkedServiceName", required=true)
     private LinkedServiceReferenceResponse linkedServiceName;
 
+    /**
+     * @return Linked service reference.
+     * 
+     */
     public LinkedServiceReferenceResponse linkedServiceName() {
         return this.linkedServiceName;
     }
@@ -87,6 +107,10 @@ public final class RestResourceDatasetResponse extends com.pulumi.resources.Invo
     @Import(name="paginationRules")
     private @Nullable Object paginationRules;
 
+    /**
+     * @return The pagination rules to compose next page requests. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> paginationRules() {
         return Optional.ofNullable(this.paginationRules);
     }
@@ -98,6 +122,10 @@ public final class RestResourceDatasetResponse extends com.pulumi.resources.Invo
     @Import(name="parameters")
     private @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
+    /**
+     * @return Parameters for dataset.
+     * 
+     */
     public Optional<Map<String,ParameterSpecificationResponse>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -109,6 +137,10 @@ public final class RestResourceDatasetResponse extends com.pulumi.resources.Invo
     @Import(name="relativeUrl")
     private @Nullable Object relativeUrl;
 
+    /**
+     * @return The relative URL to the resource that the RESTful API provides. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> relativeUrl() {
         return Optional.ofNullable(this.relativeUrl);
     }
@@ -120,6 +152,10 @@ public final class RestResourceDatasetResponse extends com.pulumi.resources.Invo
     @Import(name="requestBody")
     private @Nullable Object requestBody;
 
+    /**
+     * @return The HTTP request body to the RESTful API if requestMethod is POST. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> requestBody() {
         return Optional.ofNullable(this.requestBody);
     }
@@ -131,6 +167,10 @@ public final class RestResourceDatasetResponse extends com.pulumi.resources.Invo
     @Import(name="requestMethod")
     private @Nullable Object requestMethod;
 
+    /**
+     * @return The HTTP method used to call the RESTful API. The default is GET. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> requestMethod() {
         return Optional.ofNullable(this.requestMethod);
     }
@@ -142,6 +182,10 @@ public final class RestResourceDatasetResponse extends com.pulumi.resources.Invo
     @Import(name="schema")
     private @Nullable Object schema;
 
+    /**
+     * @return Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.
+     * 
+     */
     public Optional<Object> schema() {
         return Optional.ofNullable(this.schema);
     }
@@ -153,6 +197,10 @@ public final class RestResourceDatasetResponse extends com.pulumi.resources.Invo
     @Import(name="structure")
     private @Nullable Object structure;
 
+    /**
+     * @return Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.
+     * 
+     */
     public Optional<Object> structure() {
         return Optional.ofNullable(this.structure);
     }
@@ -165,6 +213,11 @@ public final class RestResourceDatasetResponse extends com.pulumi.resources.Invo
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of dataset.
+     * Expected value is &#39;RestResource&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -205,70 +258,155 @@ public final class RestResourceDatasetResponse extends com.pulumi.resources.Invo
             $ = new RestResourceDatasetResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param additionalHeaders The additional HTTP headers in the request to the RESTful API. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalHeaders(@Nullable Object additionalHeaders) {
             $.additionalHeaders = additionalHeaders;
             return this;
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the Dataset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(@Nullable List<Object> annotations) {
             $.annotations = annotations;
             return this;
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the Dataset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
 
+        /**
+         * @param description Dataset description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param folder The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder folder(@Nullable DatasetResponseFolder folder) {
             $.folder = folder;
             return this;
         }
 
+        /**
+         * @param linkedServiceName Linked service reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedServiceName(LinkedServiceReferenceResponse linkedServiceName) {
             $.linkedServiceName = linkedServiceName;
             return this;
         }
 
+        /**
+         * @param paginationRules The pagination rules to compose next page requests. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder paginationRules(@Nullable Object paginationRules) {
             $.paginationRules = paginationRules;
             return this;
         }
 
+        /**
+         * @param parameters Parameters for dataset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param relativeUrl The relative URL to the resource that the RESTful API provides. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder relativeUrl(@Nullable Object relativeUrl) {
             $.relativeUrl = relativeUrl;
             return this;
         }
 
+        /**
+         * @param requestBody The HTTP request body to the RESTful API if requestMethod is POST. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestBody(@Nullable Object requestBody) {
             $.requestBody = requestBody;
             return this;
         }
 
+        /**
+         * @param requestMethod The HTTP method used to call the RESTful API. The default is GET. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestMethod(@Nullable Object requestMethod) {
             $.requestMethod = requestMethod;
             return this;
         }
 
+        /**
+         * @param schema Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schema(@Nullable Object schema) {
             $.schema = schema;
             return this;
         }
 
+        /**
+         * @param structure Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder structure(@Nullable Object structure) {
             $.structure = structure;
             return this;
         }
 
+        /**
+         * @param type Type of dataset.
+         * Expected value is &#39;RestResource&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

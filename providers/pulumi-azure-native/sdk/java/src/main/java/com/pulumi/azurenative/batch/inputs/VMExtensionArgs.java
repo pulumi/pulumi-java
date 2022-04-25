@@ -25,6 +25,10 @@ public final class VMExtensionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="autoUpgradeMinorVersion")
     private @Nullable Output<Boolean> autoUpgradeMinorVersion;
 
+    /**
+     * @return Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
+     * 
+     */
     public Optional<Output<Boolean>> autoUpgradeMinorVersion() {
         return Optional.ofNullable(this.autoUpgradeMinorVersion);
     }
@@ -43,6 +47,10 @@ public final class VMExtensionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="protectedSettings")
     private @Nullable Output<Object> protectedSettings;
 
+    /**
+     * @return The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.
+     * 
+     */
     public Optional<Output<Object>> protectedSettings() {
         return Optional.ofNullable(this.protectedSettings);
     }
@@ -54,6 +62,10 @@ public final class VMExtensionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="provisionAfterExtensions")
     private @Nullable Output<List<String>> provisionAfterExtensions;
 
+    /**
+     * @return Collection of extension names after which this extension needs to be provisioned.
+     * 
+     */
     public Optional<Output<List<String>>> provisionAfterExtensions() {
         return Optional.ofNullable(this.provisionAfterExtensions);
     }
@@ -117,11 +129,23 @@ public final class VMExtensionArgs extends com.pulumi.resources.ResourceArgs {
             $ = new VMExtensionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoUpgradeMinorVersion Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoUpgradeMinorVersion(@Nullable Output<Boolean> autoUpgradeMinorVersion) {
             $.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
             return this;
         }
 
+        /**
+         * @param autoUpgradeMinorVersion Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoUpgradeMinorVersion(Boolean autoUpgradeMinorVersion) {
             return autoUpgradeMinorVersion(Output.of(autoUpgradeMinorVersion));
         }
@@ -135,24 +159,54 @@ public final class VMExtensionArgs extends com.pulumi.resources.ResourceArgs {
             return name(Output.of(name));
         }
 
+        /**
+         * @param protectedSettings The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectedSettings(@Nullable Output<Object> protectedSettings) {
             $.protectedSettings = protectedSettings;
             return this;
         }
 
+        /**
+         * @param protectedSettings The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectedSettings(Object protectedSettings) {
             return protectedSettings(Output.of(protectedSettings));
         }
 
+        /**
+         * @param provisionAfterExtensions Collection of extension names after which this extension needs to be provisioned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisionAfterExtensions(@Nullable Output<List<String>> provisionAfterExtensions) {
             $.provisionAfterExtensions = provisionAfterExtensions;
             return this;
         }
 
+        /**
+         * @param provisionAfterExtensions Collection of extension names after which this extension needs to be provisioned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisionAfterExtensions(List<String> provisionAfterExtensions) {
             return provisionAfterExtensions(Output.of(provisionAfterExtensions));
         }
 
+        /**
+         * @param provisionAfterExtensions Collection of extension names after which this extension needs to be provisioned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisionAfterExtensions(String... provisionAfterExtensions) {
             return provisionAfterExtensions(List.of(provisionAfterExtensions));
         }

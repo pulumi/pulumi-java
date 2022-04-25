@@ -11,18 +11,18 @@ import java.util.Objects;
 public final class GetCertificateResult {
     private final String arn;
     /**
-     * The PEM-encoded certificate value.
+     * @return The PEM-encoded certificate value.
      * 
      */
     private final String certificate;
     private final String certificateAuthorityArn;
     /**
-     * The PEM-encoded certificate chain that includes any intermediate certificates and chains up to root CA.
+     * @return The PEM-encoded certificate chain that includes any intermediate certificates and chains up to root CA.
      * 
      */
     private final String certificateChain;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
@@ -45,9 +45,9 @@ public final class GetCertificateResult {
         return this.arn;
     }
     /**
-     * The PEM-encoded certificate value.
+     * @return The PEM-encoded certificate value.
      * 
-    */
+     */
     public String certificate() {
         return this.certificate;
     }
@@ -55,16 +55,16 @@ public final class GetCertificateResult {
         return this.certificateAuthorityArn;
     }
     /**
-     * The PEM-encoded certificate chain that includes any intermediate certificates and chains up to root CA.
+     * @return The PEM-encoded certificate chain that includes any intermediate certificates and chains up to root CA.
      * 
-    */
+     */
     public String certificateChain() {
         return this.certificateChain;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

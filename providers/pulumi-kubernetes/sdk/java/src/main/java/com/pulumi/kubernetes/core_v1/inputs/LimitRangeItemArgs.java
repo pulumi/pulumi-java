@@ -27,6 +27,10 @@ public final class LimitRangeItemArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="default")
     private @Nullable Output<Map<String,String>> default_;
 
+    /**
+     * @return Default resource requirement limit value by resource name if resource limit is omitted.
+     * 
+     */
     public Optional<Output<Map<String,String>>> default_() {
         return Optional.ofNullable(this.default_);
     }
@@ -38,6 +42,10 @@ public final class LimitRangeItemArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="defaultRequest")
     private @Nullable Output<Map<String,String>> defaultRequest;
 
+    /**
+     * @return DefaultRequest is the default resource requirement request value by resource name if resource request is omitted.
+     * 
+     */
     public Optional<Output<Map<String,String>>> defaultRequest() {
         return Optional.ofNullable(this.defaultRequest);
     }
@@ -49,6 +57,10 @@ public final class LimitRangeItemArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="max")
     private @Nullable Output<Map<String,String>> max;
 
+    /**
+     * @return Max usage constraints on this kind by resource name.
+     * 
+     */
     public Optional<Output<Map<String,String>>> max() {
         return Optional.ofNullable(this.max);
     }
@@ -60,6 +72,10 @@ public final class LimitRangeItemArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="maxLimitRequestRatio")
     private @Nullable Output<Map<String,String>> maxLimitRequestRatio;
 
+    /**
+     * @return MaxLimitRequestRatio if specified, the named resource must have a request and limit that are both non-zero where limit divided by request is less than or equal to the enumerated value; this represents the max burst for the named resource.
+     * 
+     */
     public Optional<Output<Map<String,String>>> maxLimitRequestRatio() {
         return Optional.ofNullable(this.maxLimitRequestRatio);
     }
@@ -71,6 +87,10 @@ public final class LimitRangeItemArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="min")
     private @Nullable Output<Map<String,String>> min;
 
+    /**
+     * @return Min usage constraints on this kind by resource name.
+     * 
+     */
     public Optional<Output<Map<String,String>>> min() {
         return Optional.ofNullable(this.min);
     }
@@ -87,6 +107,15 @@ public final class LimitRangeItemArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Type of resource that this limit applies to.
+     * 
+     * Possible enum values:
+     *  - `&#34;Container&#34;` Limit that applies to all containers in a namespace
+     *  - `&#34;PersistentVolumeClaim&#34;` Limit that applies to all persistent volume claims in a namespace
+     *  - `&#34;Pod&#34;` Limit that applies to all pods in a namespace
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -120,56 +149,138 @@ public final class LimitRangeItemArgs extends com.pulumi.resources.ResourceArgs 
             $ = new LimitRangeItemArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param default_ Default resource requirement limit value by resource name if resource limit is omitted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder default_(@Nullable Output<Map<String,String>> default_) {
             $.default_ = default_;
             return this;
         }
 
+        /**
+         * @param default_ Default resource requirement limit value by resource name if resource limit is omitted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder default_(Map<String,String> default_) {
             return default_(Output.of(default_));
         }
 
+        /**
+         * @param defaultRequest DefaultRequest is the default resource requirement request value by resource name if resource request is omitted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultRequest(@Nullable Output<Map<String,String>> defaultRequest) {
             $.defaultRequest = defaultRequest;
             return this;
         }
 
+        /**
+         * @param defaultRequest DefaultRequest is the default resource requirement request value by resource name if resource request is omitted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultRequest(Map<String,String> defaultRequest) {
             return defaultRequest(Output.of(defaultRequest));
         }
 
+        /**
+         * @param max Max usage constraints on this kind by resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder max(@Nullable Output<Map<String,String>> max) {
             $.max = max;
             return this;
         }
 
+        /**
+         * @param max Max usage constraints on this kind by resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder max(Map<String,String> max) {
             return max(Output.of(max));
         }
 
+        /**
+         * @param maxLimitRequestRatio MaxLimitRequestRatio if specified, the named resource must have a request and limit that are both non-zero where limit divided by request is less than or equal to the enumerated value; this represents the max burst for the named resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxLimitRequestRatio(@Nullable Output<Map<String,String>> maxLimitRequestRatio) {
             $.maxLimitRequestRatio = maxLimitRequestRatio;
             return this;
         }
 
+        /**
+         * @param maxLimitRequestRatio MaxLimitRequestRatio if specified, the named resource must have a request and limit that are both non-zero where limit divided by request is less than or equal to the enumerated value; this represents the max burst for the named resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxLimitRequestRatio(Map<String,String> maxLimitRequestRatio) {
             return maxLimitRequestRatio(Output.of(maxLimitRequestRatio));
         }
 
+        /**
+         * @param min Min usage constraints on this kind by resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder min(@Nullable Output<Map<String,String>> min) {
             $.min = min;
             return this;
         }
 
+        /**
+         * @param min Min usage constraints on this kind by resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder min(Map<String,String> min) {
             return min(Output.of(min));
         }
 
+        /**
+         * @param type Type of resource that this limit applies to.
+         * 
+         * Possible enum values:
+         *  - `&#34;Container&#34;` Limit that applies to all containers in a namespace
+         *  - `&#34;PersistentVolumeClaim&#34;` Limit that applies to all persistent volume claims in a namespace
+         *  - `&#34;Pod&#34;` Limit that applies to all pods in a namespace
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of resource that this limit applies to.
+         * 
+         * Possible enum values:
+         *  - `&#34;Container&#34;` Limit that applies to all containers in a namespace
+         *  - `&#34;PersistentVolumeClaim&#34;` Limit that applies to all persistent volume claims in a namespace
+         *  - `&#34;Pod&#34;` Limit that applies to all pods in a namespace
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

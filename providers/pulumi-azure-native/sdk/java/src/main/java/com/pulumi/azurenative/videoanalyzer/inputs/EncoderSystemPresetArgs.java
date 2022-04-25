@@ -27,6 +27,10 @@ public final class EncoderSystemPresetArgs extends com.pulumi.resources.Resource
     @Import(name="name", required=true)
     private Output<Either<String,EncoderSystemPresetType>> name;
 
+    /**
+     * @return Name of the built-in encoding preset.
+     * 
+     */
     public Output<Either<String,EncoderSystemPresetType>> name() {
         return this.name;
     }
@@ -39,6 +43,11 @@ public final class EncoderSystemPresetArgs extends com.pulumi.resources.Resource
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return The discriminator for derived types.
+     * Expected value is &#39;#Microsoft.VideoAnalyzer.EncoderSystemPreset&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -68,28 +77,66 @@ public final class EncoderSystemPresetArgs extends com.pulumi.resources.Resource
             $ = new EncoderSystemPresetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name of the built-in encoding preset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<Either<String,EncoderSystemPresetType>> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the built-in encoding preset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Either<String,EncoderSystemPresetType> name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param name Name of the built-in encoding preset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Either.ofLeft(name));
         }
 
+        /**
+         * @param name Name of the built-in encoding preset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(EncoderSystemPresetType name) {
             return name(Either.ofRight(name));
         }
 
+        /**
+         * @param type The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.VideoAnalyzer.EncoderSystemPreset&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.VideoAnalyzer.EncoderSystemPreset&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

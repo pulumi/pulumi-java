@@ -23,6 +23,10 @@ public final class NamespacedGkeDeploymentTargetResponse extends com.pulumi.reso
     @Import(name="clusterNamespace", required=true)
     private String clusterNamespace;
 
+    /**
+     * @return Optional. A namespace within the GKE cluster to deploy into.
+     * 
+     */
     public String clusterNamespace() {
         return this.clusterNamespace;
     }
@@ -34,6 +38,10 @@ public final class NamespacedGkeDeploymentTargetResponse extends com.pulumi.reso
     @Import(name="targetGkeCluster", required=true)
     private String targetGkeCluster;
 
+    /**
+     * @return Optional. The target GKE cluster to deploy to. Format: &#39;projects/{project}/locations/{location}/clusters/{cluster_id}&#39;
+     * 
+     */
     public String targetGkeCluster() {
         return this.targetGkeCluster;
     }
@@ -63,11 +71,23 @@ public final class NamespacedGkeDeploymentTargetResponse extends com.pulumi.reso
             $ = new NamespacedGkeDeploymentTargetResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clusterNamespace Optional. A namespace within the GKE cluster to deploy into.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterNamespace(String clusterNamespace) {
             $.clusterNamespace = clusterNamespace;
             return this;
         }
 
+        /**
+         * @param targetGkeCluster Optional. The target GKE cluster to deploy to. Format: &#39;projects/{project}/locations/{location}/clusters/{cluster_id}&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetGkeCluster(String targetGkeCluster) {
             $.targetGkeCluster = targetGkeCluster;
             return this;

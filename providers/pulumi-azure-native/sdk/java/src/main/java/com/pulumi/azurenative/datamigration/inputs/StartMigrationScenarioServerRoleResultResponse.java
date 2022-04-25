@@ -25,6 +25,10 @@ public final class StartMigrationScenarioServerRoleResultResponse extends com.pu
     @Import(name="exceptionsAndWarnings", required=true)
     private List<ReportableExceptionResponse> exceptionsAndWarnings;
 
+    /**
+     * @return Migration exceptions and warnings.
+     * 
+     */
     public List<ReportableExceptionResponse> exceptionsAndWarnings() {
         return this.exceptionsAndWarnings;
     }
@@ -36,6 +40,10 @@ public final class StartMigrationScenarioServerRoleResultResponse extends com.pu
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of server role.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -47,6 +55,10 @@ public final class StartMigrationScenarioServerRoleResultResponse extends com.pu
     @Import(name="state", required=true)
     private String state;
 
+    /**
+     * @return Current state of migration
+     * 
+     */
     public String state() {
         return this.state;
     }
@@ -77,20 +89,44 @@ public final class StartMigrationScenarioServerRoleResultResponse extends com.pu
             $ = new StartMigrationScenarioServerRoleResultResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param exceptionsAndWarnings Migration exceptions and warnings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exceptionsAndWarnings(List<ReportableExceptionResponse> exceptionsAndWarnings) {
             $.exceptionsAndWarnings = exceptionsAndWarnings;
             return this;
         }
 
+        /**
+         * @param exceptionsAndWarnings Migration exceptions and warnings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exceptionsAndWarnings(ReportableExceptionResponse... exceptionsAndWarnings) {
             return exceptionsAndWarnings(List.of(exceptionsAndWarnings));
         }
 
+        /**
+         * @param name Name of server role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param state Current state of migration
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             $.state = state;
             return this;

@@ -29,6 +29,10 @@ public final class BackupConfigurationArgs extends com.pulumi.resources.Resource
     @Import(name="backupRetentionSettings")
     private @Nullable Output<BackupRetentionSettingsArgs> backupRetentionSettings;
 
+    /**
+     * @return Backup retention settings.
+     * 
+     */
     public Optional<Output<BackupRetentionSettingsArgs>> backupRetentionSettings() {
         return Optional.ofNullable(this.backupRetentionSettings);
     }
@@ -40,6 +44,10 @@ public final class BackupConfigurationArgs extends com.pulumi.resources.Resource
     @Import(name="binaryLogEnabled")
     private @Nullable Output<Boolean> binaryLogEnabled;
 
+    /**
+     * @return (MySQL only) Whether binary log is enabled. If backup configuration is disabled, binarylog must be disabled as well.
+     * 
+     */
     public Optional<Output<Boolean>> binaryLogEnabled() {
         return Optional.ofNullable(this.binaryLogEnabled);
     }
@@ -51,6 +59,10 @@ public final class BackupConfigurationArgs extends com.pulumi.resources.Resource
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return Whether this configuration is enabled.
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -62,6 +74,10 @@ public final class BackupConfigurationArgs extends com.pulumi.resources.Resource
     @Import(name="kind")
     private @Nullable Output<String> kind;
 
+    /**
+     * @return This is always `sql#backupConfiguration`.
+     * 
+     */
     public Optional<Output<String>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -73,6 +89,10 @@ public final class BackupConfigurationArgs extends com.pulumi.resources.Resource
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Location of the backup
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -84,6 +104,10 @@ public final class BackupConfigurationArgs extends com.pulumi.resources.Resource
     @Import(name="pointInTimeRecoveryEnabled")
     private @Nullable Output<Boolean> pointInTimeRecoveryEnabled;
 
+    /**
+     * @return (Postgres only) Whether point in time recovery is enabled.
+     * 
+     */
     public Optional<Output<Boolean>> pointInTimeRecoveryEnabled() {
         return Optional.ofNullable(this.pointInTimeRecoveryEnabled);
     }
@@ -95,6 +119,10 @@ public final class BackupConfigurationArgs extends com.pulumi.resources.Resource
     @Import(name="replicationLogArchivingEnabled")
     private @Nullable Output<Boolean> replicationLogArchivingEnabled;
 
+    /**
+     * @return Reserved for future use.
+     * 
+     */
     public Optional<Output<Boolean>> replicationLogArchivingEnabled() {
         return Optional.ofNullable(this.replicationLogArchivingEnabled);
     }
@@ -106,6 +134,10 @@ public final class BackupConfigurationArgs extends com.pulumi.resources.Resource
     @Import(name="startTime")
     private @Nullable Output<String> startTime;
 
+    /**
+     * @return Start time for the daily backup configuration in UTC timezone in the 24 hour format - `HH:MM`.
+     * 
+     */
     public Optional<Output<String>> startTime() {
         return Optional.ofNullable(this.startTime);
     }
@@ -117,6 +149,10 @@ public final class BackupConfigurationArgs extends com.pulumi.resources.Resource
     @Import(name="transactionLogRetentionDays")
     private @Nullable Output<Integer> transactionLogRetentionDays;
 
+    /**
+     * @return The number of days of transaction logs we retain for point in time restore, from 1-7.
+     * 
+     */
     public Optional<Output<Integer>> transactionLogRetentionDays() {
         return Optional.ofNullable(this.transactionLogRetentionDays);
     }
@@ -153,83 +189,191 @@ public final class BackupConfigurationArgs extends com.pulumi.resources.Resource
             $ = new BackupConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backupRetentionSettings Backup retention settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupRetentionSettings(@Nullable Output<BackupRetentionSettingsArgs> backupRetentionSettings) {
             $.backupRetentionSettings = backupRetentionSettings;
             return this;
         }
 
+        /**
+         * @param backupRetentionSettings Backup retention settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupRetentionSettings(BackupRetentionSettingsArgs backupRetentionSettings) {
             return backupRetentionSettings(Output.of(backupRetentionSettings));
         }
 
+        /**
+         * @param binaryLogEnabled (MySQL only) Whether binary log is enabled. If backup configuration is disabled, binarylog must be disabled as well.
+         * 
+         * @return builder
+         * 
+         */
         public Builder binaryLogEnabled(@Nullable Output<Boolean> binaryLogEnabled) {
             $.binaryLogEnabled = binaryLogEnabled;
             return this;
         }
 
+        /**
+         * @param binaryLogEnabled (MySQL only) Whether binary log is enabled. If backup configuration is disabled, binarylog must be disabled as well.
+         * 
+         * @return builder
+         * 
+         */
         public Builder binaryLogEnabled(Boolean binaryLogEnabled) {
             return binaryLogEnabled(Output.of(binaryLogEnabled));
         }
 
+        /**
+         * @param enabled Whether this configuration is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Whether this configuration is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param kind This is always `sql#backupConfiguration`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind This is always `sql#backupConfiguration`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param location Location of the backup
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Location of the backup
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param pointInTimeRecoveryEnabled (Postgres only) Whether point in time recovery is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pointInTimeRecoveryEnabled(@Nullable Output<Boolean> pointInTimeRecoveryEnabled) {
             $.pointInTimeRecoveryEnabled = pointInTimeRecoveryEnabled;
             return this;
         }
 
+        /**
+         * @param pointInTimeRecoveryEnabled (Postgres only) Whether point in time recovery is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pointInTimeRecoveryEnabled(Boolean pointInTimeRecoveryEnabled) {
             return pointInTimeRecoveryEnabled(Output.of(pointInTimeRecoveryEnabled));
         }
 
+        /**
+         * @param replicationLogArchivingEnabled Reserved for future use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicationLogArchivingEnabled(@Nullable Output<Boolean> replicationLogArchivingEnabled) {
             $.replicationLogArchivingEnabled = replicationLogArchivingEnabled;
             return this;
         }
 
+        /**
+         * @param replicationLogArchivingEnabled Reserved for future use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicationLogArchivingEnabled(Boolean replicationLogArchivingEnabled) {
             return replicationLogArchivingEnabled(Output.of(replicationLogArchivingEnabled));
         }
 
+        /**
+         * @param startTime Start time for the daily backup configuration in UTC timezone in the 24 hour format - `HH:MM`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(@Nullable Output<String> startTime) {
             $.startTime = startTime;
             return this;
         }
 
+        /**
+         * @param startTime Start time for the daily backup configuration in UTC timezone in the 24 hour format - `HH:MM`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             return startTime(Output.of(startTime));
         }
 
+        /**
+         * @param transactionLogRetentionDays The number of days of transaction logs we retain for point in time restore, from 1-7.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transactionLogRetentionDays(@Nullable Output<Integer> transactionLogRetentionDays) {
             $.transactionLogRetentionDays = transactionLogRetentionDays;
             return this;
         }
 
+        /**
+         * @param transactionLogRetentionDays The number of days of transaction logs we retain for point in time restore, from 1-7.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transactionLogRetentionDays(Integer transactionLogRetentionDays) {
             return transactionLogRetentionDays(Output.of(transactionLogRetentionDays));
         }

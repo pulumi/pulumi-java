@@ -27,6 +27,10 @@ public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseC
     @Import(name="url", required=true)
     private Output<String> url;
 
+    /**
+     * @return URL
+     * 
+     */
     public Output<String> url() {
         return this.url;
     }
@@ -38,6 +42,10 @@ public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseC
     @Import(name="urlTypeHint")
     private @Nullable Output<GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionUrlTypeHint> urlTypeHint;
 
+    /**
+     * @return Optional. Specifies the type of viewer that is used when opening the URL. Defaults to opening via web browser.
+     * 
+     */
     public Optional<Output<GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionUrlTypeHint>> urlTypeHint() {
         return Optional.ofNullable(this.urlTypeHint);
     }
@@ -67,20 +75,44 @@ public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseC
             $ = new GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param url URL
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(Output<String> url) {
             $.url = url;
             return this;
         }
 
+        /**
+         * @param url URL
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(String url) {
             return url(Output.of(url));
         }
 
+        /**
+         * @param urlTypeHint Optional. Specifies the type of viewer that is used when opening the URL. Defaults to opening via web browser.
+         * 
+         * @return builder
+         * 
+         */
         public Builder urlTypeHint(@Nullable Output<GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionUrlTypeHint> urlTypeHint) {
             $.urlTypeHint = urlTypeHint;
             return this;
         }
 
+        /**
+         * @param urlTypeHint Optional. Specifies the type of viewer that is used when opening the URL. Defaults to opening via web browser.
+         * 
+         * @return builder
+         * 
+         */
         public Builder urlTypeHint(GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionUrlTypeHint urlTypeHint) {
             return urlTypeHint(Output.of(urlTypeHint));
         }

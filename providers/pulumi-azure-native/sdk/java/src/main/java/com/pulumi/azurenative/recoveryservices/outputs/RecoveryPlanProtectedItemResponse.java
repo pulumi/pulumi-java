@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class RecoveryPlanProtectedItemResponse {
     /**
-     * The ARM Id of the recovery plan protected item.
+     * @return The ARM Id of the recovery plan protected item.
      * 
      */
     private final @Nullable String id;
     /**
-     * The virtual machine Id.
+     * @return The virtual machine Id.
      * 
      */
     private final @Nullable String virtualMachineId;
@@ -31,16 +31,16 @@ public final class RecoveryPlanProtectedItemResponse {
     }
 
     /**
-     * The ARM Id of the recovery plan protected item.
+     * @return The ARM Id of the recovery plan protected item.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * The virtual machine Id.
+     * @return The virtual machine Id.
      * 
-    */
+     */
     public Optional<String> virtualMachineId() {
         return Optional.ofNullable(this.virtualMachineId);
     }

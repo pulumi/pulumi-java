@@ -25,6 +25,10 @@ public final class ContactDetailsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="companyName", required=true)
     private Output<String> companyName;
 
+    /**
+     * @return The name of the company.
+     * 
+     */
     public Output<String> companyName() {
         return this.companyName;
     }
@@ -36,6 +40,10 @@ public final class ContactDetailsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="contactPerson", required=true)
     private Output<String> contactPerson;
 
+    /**
+     * @return The contact person name.
+     * 
+     */
     public Output<String> contactPerson() {
         return this.contactPerson;
     }
@@ -47,6 +55,10 @@ public final class ContactDetailsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="emailList", required=true)
     private Output<List<String>> emailList;
 
+    /**
+     * @return The email list.
+     * 
+     */
     public Output<List<String>> emailList() {
         return this.emailList;
     }
@@ -58,6 +70,10 @@ public final class ContactDetailsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="phone", required=true)
     private Output<String> phone;
 
+    /**
+     * @return The phone number.
+     * 
+     */
     public Output<String> phone() {
         return this.phone;
     }
@@ -89,42 +105,96 @@ public final class ContactDetailsArgs extends com.pulumi.resources.ResourceArgs 
             $ = new ContactDetailsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param companyName The name of the company.
+         * 
+         * @return builder
+         * 
+         */
         public Builder companyName(Output<String> companyName) {
             $.companyName = companyName;
             return this;
         }
 
+        /**
+         * @param companyName The name of the company.
+         * 
+         * @return builder
+         * 
+         */
         public Builder companyName(String companyName) {
             return companyName(Output.of(companyName));
         }
 
+        /**
+         * @param contactPerson The contact person name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contactPerson(Output<String> contactPerson) {
             $.contactPerson = contactPerson;
             return this;
         }
 
+        /**
+         * @param contactPerson The contact person name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contactPerson(String contactPerson) {
             return contactPerson(Output.of(contactPerson));
         }
 
+        /**
+         * @param emailList The email list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder emailList(Output<List<String>> emailList) {
             $.emailList = emailList;
             return this;
         }
 
+        /**
+         * @param emailList The email list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder emailList(List<String> emailList) {
             return emailList(Output.of(emailList));
         }
 
+        /**
+         * @param emailList The email list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder emailList(String... emailList) {
             return emailList(List.of(emailList));
         }
 
+        /**
+         * @param phone The phone number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder phone(Output<String> phone) {
             $.phone = phone;
             return this;
         }
 
+        /**
+         * @param phone The phone number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder phone(String phone) {
             return phone(Output.of(phone));
         }

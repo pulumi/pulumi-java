@@ -31,6 +31,10 @@ public final class WebActivityAuthenticationArgs extends com.pulumi.resources.Re
     @Import(name="credential")
     private @Nullable Output<CredentialReferenceArgs> credential;
 
+    /**
+     * @return The credential reference containing authentication information.
+     * 
+     */
     public Optional<Output<CredentialReferenceArgs>> credential() {
         return Optional.ofNullable(this.credential);
     }
@@ -42,6 +46,10 @@ public final class WebActivityAuthenticationArgs extends com.pulumi.resources.Re
     @Import(name="password")
     private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
+    /**
+     * @return Password for the PFX file or basic authentication / Secret when used for ServicePrincipal
+     * 
+     */
     public Optional<Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>>> password() {
         return Optional.ofNullable(this.password);
     }
@@ -53,6 +61,10 @@ public final class WebActivityAuthenticationArgs extends com.pulumi.resources.Re
     @Import(name="pfx")
     private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> pfx;
 
+    /**
+     * @return Base64-encoded contents of a PFX file or Certificate when used for ServicePrincipal
+     * 
+     */
     public Optional<Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>>> pfx() {
         return Optional.ofNullable(this.pfx);
     }
@@ -64,6 +76,10 @@ public final class WebActivityAuthenticationArgs extends com.pulumi.resources.Re
     @Import(name="resource")
     private @Nullable Output<Object> resource;
 
+    /**
+     * @return Resource for which Azure Auth token will be requested when using MSI Authentication. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> resource() {
         return Optional.ofNullable(this.resource);
     }
@@ -75,6 +91,10 @@ public final class WebActivityAuthenticationArgs extends com.pulumi.resources.Re
     @Import(name="type")
     private @Nullable Output<String> type;
 
+    /**
+     * @return Web activity authentication (Basic/ClientCertificate/MSI/ServicePrincipal)
+     * 
+     */
     public Optional<Output<String>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -86,6 +106,10 @@ public final class WebActivityAuthenticationArgs extends com.pulumi.resources.Re
     @Import(name="userTenant")
     private @Nullable Output<Object> userTenant;
 
+    /**
+     * @return TenantId for which Azure Auth token will be requested when using ServicePrincipal Authentication. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> userTenant() {
         return Optional.ofNullable(this.userTenant);
     }
@@ -97,6 +121,10 @@ public final class WebActivityAuthenticationArgs extends com.pulumi.resources.Re
     @Import(name="username")
     private @Nullable Output<Object> username;
 
+    /**
+     * @return Web activity authentication user name for basic authentication or ClientID when used for ServicePrincipal. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> username() {
         return Optional.ofNullable(this.username);
     }
@@ -131,81 +159,189 @@ public final class WebActivityAuthenticationArgs extends com.pulumi.resources.Re
             $ = new WebActivityAuthenticationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param credential The credential reference containing authentication information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder credential(@Nullable Output<CredentialReferenceArgs> credential) {
             $.credential = credential;
             return this;
         }
 
+        /**
+         * @param credential The credential reference containing authentication information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder credential(CredentialReferenceArgs credential) {
             return credential(Output.of(credential));
         }
 
+        /**
+         * @param password Password for the PFX file or basic authentication / Secret when used for ServicePrincipal
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param password Password for the PFX file or basic authentication / Secret when used for ServicePrincipal
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
             return password(Output.of(password));
         }
 
+        /**
+         * @param password Password for the PFX file or basic authentication / Secret when used for ServicePrincipal
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(AzureKeyVaultSecretReferenceArgs password) {
             return password(Either.ofLeft(password));
         }
 
+        /**
+         * @param password Password for the PFX file or basic authentication / Secret when used for ServicePrincipal
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(SecureStringArgs password) {
             return password(Either.ofRight(password));
         }
 
+        /**
+         * @param pfx Base64-encoded contents of a PFX file or Certificate when used for ServicePrincipal
+         * 
+         * @return builder
+         * 
+         */
         public Builder pfx(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> pfx) {
             $.pfx = pfx;
             return this;
         }
 
+        /**
+         * @param pfx Base64-encoded contents of a PFX file or Certificate when used for ServicePrincipal
+         * 
+         * @return builder
+         * 
+         */
         public Builder pfx(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> pfx) {
             return pfx(Output.of(pfx));
         }
 
+        /**
+         * @param pfx Base64-encoded contents of a PFX file or Certificate when used for ServicePrincipal
+         * 
+         * @return builder
+         * 
+         */
         public Builder pfx(AzureKeyVaultSecretReferenceArgs pfx) {
             return pfx(Either.ofLeft(pfx));
         }
 
+        /**
+         * @param pfx Base64-encoded contents of a PFX file or Certificate when used for ServicePrincipal
+         * 
+         * @return builder
+         * 
+         */
         public Builder pfx(SecureStringArgs pfx) {
             return pfx(Either.ofRight(pfx));
         }
 
+        /**
+         * @param resource Resource for which Azure Auth token will be requested when using MSI Authentication. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder resource(@Nullable Output<Object> resource) {
             $.resource = resource;
             return this;
         }
 
+        /**
+         * @param resource Resource for which Azure Auth token will be requested when using MSI Authentication. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder resource(Object resource) {
             return resource(Output.of(resource));
         }
 
+        /**
+         * @param type Web activity authentication (Basic/ClientCertificate/MSI/ServicePrincipal)
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Web activity authentication (Basic/ClientCertificate/MSI/ServicePrincipal)
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param userTenant TenantId for which Azure Auth token will be requested when using ServicePrincipal Authentication. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder userTenant(@Nullable Output<Object> userTenant) {
             $.userTenant = userTenant;
             return this;
         }
 
+        /**
+         * @param userTenant TenantId for which Azure Auth token will be requested when using ServicePrincipal Authentication. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder userTenant(Object userTenant) {
             return userTenant(Output.of(userTenant));
         }
 
+        /**
+         * @param username Web activity authentication user name for basic authentication or ClientID when used for ServicePrincipal. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(@Nullable Output<Object> username) {
             $.username = username;
             return this;
         }
 
+        /**
+         * @param username Web activity authentication user name for basic authentication or ClientID when used for ServicePrincipal. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(Object username) {
             return username(Output.of(username));
         }

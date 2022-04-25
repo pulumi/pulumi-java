@@ -28,6 +28,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmTextArgs extends 
     @Import(name="rbmSuggestion")
     private @Nullable Output<List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs>> rbmSuggestion;
 
+    /**
+     * @return Optional. One or more suggestions to show to the user.
+     * 
+     */
     public Optional<Output<List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs>>> rbmSuggestion() {
         return Optional.ofNullable(this.rbmSuggestion);
     }
@@ -39,6 +43,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmTextArgs extends 
     @Import(name="text", required=true)
     private Output<String> text;
 
+    /**
+     * @return Text sent and displayed to the user.
+     * 
+     */
     public Output<String> text() {
         return this.text;
     }
@@ -68,24 +76,54 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmTextArgs extends 
             $ = new GoogleCloudDialogflowV2beta1IntentMessageRbmTextArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param rbmSuggestion Optional. One or more suggestions to show to the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rbmSuggestion(@Nullable Output<List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs>> rbmSuggestion) {
             $.rbmSuggestion = rbmSuggestion;
             return this;
         }
 
+        /**
+         * @param rbmSuggestion Optional. One or more suggestions to show to the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rbmSuggestion(List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs> rbmSuggestion) {
             return rbmSuggestion(Output.of(rbmSuggestion));
         }
 
+        /**
+         * @param rbmSuggestion Optional. One or more suggestions to show to the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rbmSuggestion(GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs... rbmSuggestion) {
             return rbmSuggestion(List.of(rbmSuggestion));
         }
 
+        /**
+         * @param text Text sent and displayed to the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder text(Output<String> text) {
             $.text = text;
             return this;
         }
 
+        /**
+         * @param text Text sent and displayed to the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder text(String text) {
             return text(Output.of(text));
         }

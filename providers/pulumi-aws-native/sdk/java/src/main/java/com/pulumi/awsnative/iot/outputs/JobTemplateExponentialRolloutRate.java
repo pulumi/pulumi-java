@@ -12,17 +12,17 @@ import java.util.Objects;
 @CustomType
 public final class JobTemplateExponentialRolloutRate {
     /**
-     * The minimum number of things that will be notified of a pending job, per minute at the start of job rollout. This parameter allows you to define the initial rate of rollout.
+     * @return The minimum number of things that will be notified of a pending job, per minute at the start of job rollout. This parameter allows you to define the initial rate of rollout.
      * 
      */
     private final Integer baseRatePerMinute;
     /**
-     * The exponential factor to increase the rate of rollout for a job.
+     * @return The exponential factor to increase the rate of rollout for a job.
      * 
      */
     private final Double incrementFactor;
     /**
-     * The criteria to initiate the increase in rate of rollout for a job.
+     * @return The criteria to initiate the increase in rate of rollout for a job.
      * 
      */
     private final JobTemplateRateIncreaseCriteria rateIncreaseCriteria;
@@ -38,23 +38,23 @@ public final class JobTemplateExponentialRolloutRate {
     }
 
     /**
-     * The minimum number of things that will be notified of a pending job, per minute at the start of job rollout. This parameter allows you to define the initial rate of rollout.
+     * @return The minimum number of things that will be notified of a pending job, per minute at the start of job rollout. This parameter allows you to define the initial rate of rollout.
      * 
-    */
+     */
     public Integer baseRatePerMinute() {
         return this.baseRatePerMinute;
     }
     /**
-     * The exponential factor to increase the rate of rollout for a job.
+     * @return The exponential factor to increase the rate of rollout for a job.
      * 
-    */
+     */
     public Double incrementFactor() {
         return this.incrementFactor;
     }
     /**
-     * The criteria to initiate the increase in rate of rollout for a job.
+     * @return The criteria to initiate the increase in rate of rollout for a job.
      * 
-    */
+     */
     public JobTemplateRateIncreaseCriteria rateIncreaseCriteria() {
         return this.rateIncreaseCriteria;
     }

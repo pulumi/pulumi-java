@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class MediaGraphTlsValidationOptionsResponse {
     /**
-     * Ignore the host name (common name) during validation.
+     * @return Ignore the host name (common name) during validation.
      * 
      */
     private final Boolean ignoreHostname;
     /**
-     * Ignore the integrity of the certificate chain at the current time.
+     * @return Ignore the integrity of the certificate chain at the current time.
      * 
      */
     private final Boolean ignoreSignature;
@@ -29,16 +29,16 @@ public final class MediaGraphTlsValidationOptionsResponse {
     }
 
     /**
-     * Ignore the host name (common name) during validation.
+     * @return Ignore the host name (common name) during validation.
      * 
-    */
+     */
     public Boolean ignoreHostname() {
         return this.ignoreHostname;
     }
     /**
-     * Ignore the integrity of the certificate chain at the current time.
+     * @return Ignore the integrity of the certificate chain at the current time.
      * 
-    */
+     */
     public Boolean ignoreSignature() {
         return this.ignoreSignature;
     }

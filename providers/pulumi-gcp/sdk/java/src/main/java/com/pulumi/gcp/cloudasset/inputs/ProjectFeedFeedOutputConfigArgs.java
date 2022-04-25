@@ -21,6 +21,11 @@ public final class ProjectFeedFeedOutputConfigArgs extends com.pulumi.resources.
     @Import(name="pubsubDestination", required=true)
     private Output<ProjectFeedFeedOutputConfigPubsubDestinationArgs> pubsubDestination;
 
+    /**
+     * @return Destination on Cloud Pubsub.
+     * Structure is documented below.
+     * 
+     */
     public Output<ProjectFeedFeedOutputConfigPubsubDestinationArgs> pubsubDestination() {
         return this.pubsubDestination;
     }
@@ -49,11 +54,25 @@ public final class ProjectFeedFeedOutputConfigArgs extends com.pulumi.resources.
             $ = new ProjectFeedFeedOutputConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param pubsubDestination Destination on Cloud Pubsub.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pubsubDestination(Output<ProjectFeedFeedOutputConfigPubsubDestinationArgs> pubsubDestination) {
             $.pubsubDestination = pubsubDestination;
             return this;
         }
 
+        /**
+         * @param pubsubDestination Destination on Cloud Pubsub.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pubsubDestination(ProjectFeedFeedOutputConfigPubsubDestinationArgs pubsubDestination) {
             return pubsubDestination(Output.of(pubsubDestination));
         }

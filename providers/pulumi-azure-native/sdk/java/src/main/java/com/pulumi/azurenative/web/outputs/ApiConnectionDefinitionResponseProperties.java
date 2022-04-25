@@ -18,42 +18,42 @@ import javax.annotation.Nullable;
 public final class ApiConnectionDefinitionResponseProperties {
     private final @Nullable ApiReferenceResponse api;
     /**
-     * Timestamp of last connection change
+     * @return Timestamp of last connection change
      * 
      */
     private final @Nullable String changedTime;
     /**
-     * Timestamp of the connection creation
+     * @return Timestamp of the connection creation
      * 
      */
     private final @Nullable String createdTime;
     /**
-     * Dictionary of custom parameter values
+     * @return Dictionary of custom parameter values
      * 
      */
     private final @Nullable Map<String,String> customParameterValues;
     /**
-     * Display name
+     * @return Display name
      * 
      */
     private final @Nullable String displayName;
     /**
-     * Dictionary of nonsecret parameter values
+     * @return Dictionary of nonsecret parameter values
      * 
      */
     private final @Nullable Map<String,String> nonSecretParameterValues;
     /**
-     * Dictionary of parameter values
+     * @return Dictionary of parameter values
      * 
      */
     private final @Nullable Map<String,String> parameterValues;
     /**
-     * Status of the connection
+     * @return Status of the connection
      * 
      */
     private final @Nullable List<ConnectionStatusDefinitionResponse> statuses;
     /**
-     * Links to test the API connection
+     * @return Links to test the API connection
      * 
      */
     private final @Nullable List<ApiConnectionTestLinkResponse> testLinks;
@@ -84,58 +84,58 @@ public final class ApiConnectionDefinitionResponseProperties {
         return Optional.ofNullable(this.api);
     }
     /**
-     * Timestamp of last connection change
+     * @return Timestamp of last connection change
      * 
-    */
+     */
     public Optional<String> changedTime() {
         return Optional.ofNullable(this.changedTime);
     }
     /**
-     * Timestamp of the connection creation
+     * @return Timestamp of the connection creation
      * 
-    */
+     */
     public Optional<String> createdTime() {
         return Optional.ofNullable(this.createdTime);
     }
     /**
-     * Dictionary of custom parameter values
+     * @return Dictionary of custom parameter values
      * 
-    */
+     */
     public Map<String,String> customParameterValues() {
         return this.customParameterValues == null ? Map.of() : this.customParameterValues;
     }
     /**
-     * Display name
+     * @return Display name
      * 
-    */
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
-     * Dictionary of nonsecret parameter values
+     * @return Dictionary of nonsecret parameter values
      * 
-    */
+     */
     public Map<String,String> nonSecretParameterValues() {
         return this.nonSecretParameterValues == null ? Map.of() : this.nonSecretParameterValues;
     }
     /**
-     * Dictionary of parameter values
+     * @return Dictionary of parameter values
      * 
-    */
+     */
     public Map<String,String> parameterValues() {
         return this.parameterValues == null ? Map.of() : this.parameterValues;
     }
     /**
-     * Status of the connection
+     * @return Status of the connection
      * 
-    */
+     */
     public List<ConnectionStatusDefinitionResponse> statuses() {
         return this.statuses == null ? List.of() : this.statuses;
     }
     /**
-     * Links to test the API connection
+     * @return Links to test the API connection
      * 
-    */
+     */
     public List<ApiConnectionTestLinkResponse> testLinks() {
         return this.testLinks == null ? List.of() : this.testLinks;
     }

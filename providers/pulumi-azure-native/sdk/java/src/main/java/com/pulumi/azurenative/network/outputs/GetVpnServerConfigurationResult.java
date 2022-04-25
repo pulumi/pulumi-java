@@ -22,97 +22,97 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetVpnServerConfigurationResult {
     /**
-     * The set of aad vpn authentication parameters.
+     * @return The set of aad vpn authentication parameters.
      * 
      */
     private final @Nullable AadAuthenticationParametersResponse aadAuthenticationParameters;
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
     private final String etag;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final @Nullable String id;
     /**
-     * Resource location.
+     * @return Resource location.
      * 
      */
     private final @Nullable String location;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * List of references to P2SVpnGateways.
+     * @return List of references to P2SVpnGateways.
      * 
      */
     private final List<P2SVpnGatewayResponse> p2SVpnGateways;
     /**
-     * The provisioning state of the VpnServerConfiguration resource. Possible values are: &#39;Updating&#39;, &#39;Deleting&#39;, and &#39;Failed&#39;.
+     * @return The provisioning state of the VpnServerConfiguration resource. Possible values are: &#39;Updating&#39;, &#39;Deleting&#39;, and &#39;Failed&#39;.
      * 
      */
     private final String provisioningState;
     /**
-     * Radius client root certificate of VpnServerConfiguration.
+     * @return Radius client root certificate of VpnServerConfiguration.
      * 
      */
     private final @Nullable List<VpnServerConfigRadiusClientRootCertificateResponse> radiusClientRootCertificates;
     /**
-     * The radius server address property of the VpnServerConfiguration resource for point to site client connection.
+     * @return The radius server address property of the VpnServerConfiguration resource for point to site client connection.
      * 
      */
     private final @Nullable String radiusServerAddress;
     /**
-     * Radius Server root certificate of VpnServerConfiguration.
+     * @return Radius Server root certificate of VpnServerConfiguration.
      * 
      */
     private final @Nullable List<VpnServerConfigRadiusServerRootCertificateResponse> radiusServerRootCertificates;
     /**
-     * The radius secret property of the VpnServerConfiguration resource for point to site client connection.
+     * @return The radius secret property of the VpnServerConfiguration resource for point to site client connection.
      * 
      */
     private final @Nullable String radiusServerSecret;
     /**
-     * Multiple Radius Server configuration for VpnServerConfiguration.
+     * @return Multiple Radius Server configuration for VpnServerConfiguration.
      * 
      */
     private final @Nullable List<RadiusServerResponse> radiusServers;
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
     /**
-     * VPN authentication types for the VpnServerConfiguration.
+     * @return VPN authentication types for the VpnServerConfiguration.
      * 
      */
     private final @Nullable List<String> vpnAuthenticationTypes;
     /**
-     * VpnClientIpsecPolicies for VpnServerConfiguration.
+     * @return VpnClientIpsecPolicies for VpnServerConfiguration.
      * 
      */
     private final @Nullable List<IpsecPolicyResponse> vpnClientIpsecPolicies;
     /**
-     * VPN client revoked certificate of VpnServerConfiguration.
+     * @return VPN client revoked certificate of VpnServerConfiguration.
      * 
      */
     private final @Nullable List<VpnServerConfigVpnClientRevokedCertificateResponse> vpnClientRevokedCertificates;
     /**
-     * VPN client root certificate of VpnServerConfiguration.
+     * @return VPN client root certificate of VpnServerConfiguration.
      * 
      */
     private final @Nullable List<VpnServerConfigVpnClientRootCertificateResponse> vpnClientRootCertificates;
     /**
-     * VPN protocols for the VpnServerConfiguration.
+     * @return VPN protocols for the VpnServerConfiguration.
      * 
      */
     private final @Nullable List<String> vpnProtocols;
@@ -160,135 +160,135 @@ public final class GetVpnServerConfigurationResult {
     }
 
     /**
-     * The set of aad vpn authentication parameters.
+     * @return The set of aad vpn authentication parameters.
      * 
-    */
+     */
     public Optional<AadAuthenticationParametersResponse> aadAuthenticationParameters() {
         return Optional.ofNullable(this.aadAuthenticationParameters);
     }
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * Resource location.
+     * @return Resource location.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * List of references to P2SVpnGateways.
+     * @return List of references to P2SVpnGateways.
      * 
-    */
+     */
     public List<P2SVpnGatewayResponse> p2SVpnGateways() {
         return this.p2SVpnGateways;
     }
     /**
-     * The provisioning state of the VpnServerConfiguration resource. Possible values are: &#39;Updating&#39;, &#39;Deleting&#39;, and &#39;Failed&#39;.
+     * @return The provisioning state of the VpnServerConfiguration resource. Possible values are: &#39;Updating&#39;, &#39;Deleting&#39;, and &#39;Failed&#39;.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Radius client root certificate of VpnServerConfiguration.
+     * @return Radius client root certificate of VpnServerConfiguration.
      * 
-    */
+     */
     public List<VpnServerConfigRadiusClientRootCertificateResponse> radiusClientRootCertificates() {
         return this.radiusClientRootCertificates == null ? List.of() : this.radiusClientRootCertificates;
     }
     /**
-     * The radius server address property of the VpnServerConfiguration resource for point to site client connection.
+     * @return The radius server address property of the VpnServerConfiguration resource for point to site client connection.
      * 
-    */
+     */
     public Optional<String> radiusServerAddress() {
         return Optional.ofNullable(this.radiusServerAddress);
     }
     /**
-     * Radius Server root certificate of VpnServerConfiguration.
+     * @return Radius Server root certificate of VpnServerConfiguration.
      * 
-    */
+     */
     public List<VpnServerConfigRadiusServerRootCertificateResponse> radiusServerRootCertificates() {
         return this.radiusServerRootCertificates == null ? List.of() : this.radiusServerRootCertificates;
     }
     /**
-     * The radius secret property of the VpnServerConfiguration resource for point to site client connection.
+     * @return The radius secret property of the VpnServerConfiguration resource for point to site client connection.
      * 
-    */
+     */
     public Optional<String> radiusServerSecret() {
         return Optional.ofNullable(this.radiusServerSecret);
     }
     /**
-     * Multiple Radius Server configuration for VpnServerConfiguration.
+     * @return Multiple Radius Server configuration for VpnServerConfiguration.
      * 
-    */
+     */
     public List<RadiusServerResponse> radiusServers() {
         return this.radiusServers == null ? List.of() : this.radiusServers;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * VPN authentication types for the VpnServerConfiguration.
+     * @return VPN authentication types for the VpnServerConfiguration.
      * 
-    */
+     */
     public List<String> vpnAuthenticationTypes() {
         return this.vpnAuthenticationTypes == null ? List.of() : this.vpnAuthenticationTypes;
     }
     /**
-     * VpnClientIpsecPolicies for VpnServerConfiguration.
+     * @return VpnClientIpsecPolicies for VpnServerConfiguration.
      * 
-    */
+     */
     public List<IpsecPolicyResponse> vpnClientIpsecPolicies() {
         return this.vpnClientIpsecPolicies == null ? List.of() : this.vpnClientIpsecPolicies;
     }
     /**
-     * VPN client revoked certificate of VpnServerConfiguration.
+     * @return VPN client revoked certificate of VpnServerConfiguration.
      * 
-    */
+     */
     public List<VpnServerConfigVpnClientRevokedCertificateResponse> vpnClientRevokedCertificates() {
         return this.vpnClientRevokedCertificates == null ? List.of() : this.vpnClientRevokedCertificates;
     }
     /**
-     * VPN client root certificate of VpnServerConfiguration.
+     * @return VPN client root certificate of VpnServerConfiguration.
      * 
-    */
+     */
     public List<VpnServerConfigVpnClientRootCertificateResponse> vpnClientRootCertificates() {
         return this.vpnClientRootCertificates == null ? List.of() : this.vpnClientRootCertificates;
     }
     /**
-     * VPN protocols for the VpnServerConfiguration.
+     * @return VPN protocols for the VpnServerConfiguration.
      * 
-    */
+     */
     public List<String> vpnProtocols() {
         return this.vpnProtocols == null ? List.of() : this.vpnProtocols;
     }

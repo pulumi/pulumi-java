@@ -29,6 +29,10 @@ public final class AdvancedScheduleArgs extends com.pulumi.resources.ResourceArg
     @Import(name="monthDays")
     private @Nullable Output<List<Integer>> monthDays;
 
+    /**
+     * @return Days of the month that the job should execute on. Must be between 1 and 31.
+     * 
+     */
     public Optional<Output<List<Integer>>> monthDays() {
         return Optional.ofNullable(this.monthDays);
     }
@@ -40,6 +44,10 @@ public final class AdvancedScheduleArgs extends com.pulumi.resources.ResourceArg
     @Import(name="monthlyOccurrences")
     private @Nullable Output<List<AdvancedScheduleMonthlyOccurrenceArgs>> monthlyOccurrences;
 
+    /**
+     * @return Occurrences of days within a month.
+     * 
+     */
     public Optional<Output<List<AdvancedScheduleMonthlyOccurrenceArgs>>> monthlyOccurrences() {
         return Optional.ofNullable(this.monthlyOccurrences);
     }
@@ -51,6 +59,10 @@ public final class AdvancedScheduleArgs extends com.pulumi.resources.ResourceArg
     @Import(name="weekDays")
     private @Nullable Output<List<String>> weekDays;
 
+    /**
+     * @return Days of the week that the job should execute on.
+     * 
+     */
     public Optional<Output<List<String>>> weekDays() {
         return Optional.ofNullable(this.weekDays);
     }
@@ -81,41 +93,95 @@ public final class AdvancedScheduleArgs extends com.pulumi.resources.ResourceArg
             $ = new AdvancedScheduleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param monthDays Days of the month that the job should execute on. Must be between 1 and 31.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monthDays(@Nullable Output<List<Integer>> monthDays) {
             $.monthDays = monthDays;
             return this;
         }
 
+        /**
+         * @param monthDays Days of the month that the job should execute on. Must be between 1 and 31.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monthDays(List<Integer> monthDays) {
             return monthDays(Output.of(monthDays));
         }
 
+        /**
+         * @param monthDays Days of the month that the job should execute on. Must be between 1 and 31.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monthDays(Integer... monthDays) {
             return monthDays(List.of(monthDays));
         }
 
+        /**
+         * @param monthlyOccurrences Occurrences of days within a month.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monthlyOccurrences(@Nullable Output<List<AdvancedScheduleMonthlyOccurrenceArgs>> monthlyOccurrences) {
             $.monthlyOccurrences = monthlyOccurrences;
             return this;
         }
 
+        /**
+         * @param monthlyOccurrences Occurrences of days within a month.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monthlyOccurrences(List<AdvancedScheduleMonthlyOccurrenceArgs> monthlyOccurrences) {
             return monthlyOccurrences(Output.of(monthlyOccurrences));
         }
 
+        /**
+         * @param monthlyOccurrences Occurrences of days within a month.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monthlyOccurrences(AdvancedScheduleMonthlyOccurrenceArgs... monthlyOccurrences) {
             return monthlyOccurrences(List.of(monthlyOccurrences));
         }
 
+        /**
+         * @param weekDays Days of the week that the job should execute on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weekDays(@Nullable Output<List<String>> weekDays) {
             $.weekDays = weekDays;
             return this;
         }
 
+        /**
+         * @param weekDays Days of the week that the job should execute on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weekDays(List<String> weekDays) {
             return weekDays(Output.of(weekDays));
         }
 
+        /**
+         * @param weekDays Days of the week that the job should execute on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weekDays(String... weekDays) {
             return weekDays(List.of(weekDays));
         }

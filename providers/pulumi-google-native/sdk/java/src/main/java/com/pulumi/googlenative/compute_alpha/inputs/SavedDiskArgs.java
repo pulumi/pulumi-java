@@ -26,6 +26,10 @@ public final class SavedDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceDisk")
     private @Nullable Output<String> sourceDisk;
 
+    /**
+     * @return Specifies a URL of the disk attached to the source instance.
+     * 
+     */
     public Optional<Output<String>> sourceDisk() {
         return Optional.ofNullable(this.sourceDisk);
     }
@@ -54,11 +58,23 @@ public final class SavedDiskArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SavedDiskArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param sourceDisk Specifies a URL of the disk attached to the source instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceDisk(@Nullable Output<String> sourceDisk) {
             $.sourceDisk = sourceDisk;
             return this;
         }
 
+        /**
+         * @param sourceDisk Specifies a URL of the disk attached to the source instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceDisk(String sourceDisk) {
             return sourceDisk(Output.of(sourceDisk));
         }

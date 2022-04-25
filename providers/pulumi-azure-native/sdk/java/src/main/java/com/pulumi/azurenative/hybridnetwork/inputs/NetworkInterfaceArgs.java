@@ -30,6 +30,10 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="ipConfigurations")
     private @Nullable Output<List<NetworkInterfaceIPConfigurationArgs>> ipConfigurations;
 
+    /**
+     * @return A list of IP configurations of the network interface.
+     * 
+     */
     public Optional<Output<List<NetworkInterfaceIPConfigurationArgs>>> ipConfigurations() {
         return Optional.ofNullable(this.ipConfigurations);
     }
@@ -41,6 +45,10 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="macAddress")
     private @Nullable Output<String> macAddress;
 
+    /**
+     * @return The MAC address of the network interface.
+     * 
+     */
     public Optional<Output<String>> macAddress() {
         return Optional.ofNullable(this.macAddress);
     }
@@ -52,6 +60,10 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="networkInterfaceName")
     private @Nullable Output<String> networkInterfaceName;
 
+    /**
+     * @return The name of the network interface.
+     * 
+     */
     public Optional<Output<String>> networkInterfaceName() {
         return Optional.ofNullable(this.networkInterfaceName);
     }
@@ -63,6 +75,10 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="vmSwitchType")
     private @Nullable Output<Either<String,VMSwitchType>> vmSwitchType;
 
+    /**
+     * @return The type of the VM switch.
+     * 
+     */
     public Optional<Output<Either<String,VMSwitchType>>> vmSwitchType() {
         return Optional.ofNullable(this.vmSwitchType);
     }
@@ -94,50 +110,116 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
             $ = new NetworkInterfaceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ipConfigurations A list of IP configurations of the network interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipConfigurations(@Nullable Output<List<NetworkInterfaceIPConfigurationArgs>> ipConfigurations) {
             $.ipConfigurations = ipConfigurations;
             return this;
         }
 
+        /**
+         * @param ipConfigurations A list of IP configurations of the network interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipConfigurations(List<NetworkInterfaceIPConfigurationArgs> ipConfigurations) {
             return ipConfigurations(Output.of(ipConfigurations));
         }
 
+        /**
+         * @param ipConfigurations A list of IP configurations of the network interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipConfigurations(NetworkInterfaceIPConfigurationArgs... ipConfigurations) {
             return ipConfigurations(List.of(ipConfigurations));
         }
 
+        /**
+         * @param macAddress The MAC address of the network interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder macAddress(@Nullable Output<String> macAddress) {
             $.macAddress = macAddress;
             return this;
         }
 
+        /**
+         * @param macAddress The MAC address of the network interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder macAddress(String macAddress) {
             return macAddress(Output.of(macAddress));
         }
 
+        /**
+         * @param networkInterfaceName The name of the network interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaceName(@Nullable Output<String> networkInterfaceName) {
             $.networkInterfaceName = networkInterfaceName;
             return this;
         }
 
+        /**
+         * @param networkInterfaceName The name of the network interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaceName(String networkInterfaceName) {
             return networkInterfaceName(Output.of(networkInterfaceName));
         }
 
+        /**
+         * @param vmSwitchType The type of the VM switch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmSwitchType(@Nullable Output<Either<String,VMSwitchType>> vmSwitchType) {
             $.vmSwitchType = vmSwitchType;
             return this;
         }
 
+        /**
+         * @param vmSwitchType The type of the VM switch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmSwitchType(Either<String,VMSwitchType> vmSwitchType) {
             return vmSwitchType(Output.of(vmSwitchType));
         }
 
+        /**
+         * @param vmSwitchType The type of the VM switch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmSwitchType(String vmSwitchType) {
             return vmSwitchType(Either.ofLeft(vmSwitchType));
         }
 
+        /**
+         * @param vmSwitchType The type of the VM switch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmSwitchType(VMSwitchType vmSwitchType) {
             return vmSwitchType(Either.ofRight(vmSwitchType));
         }

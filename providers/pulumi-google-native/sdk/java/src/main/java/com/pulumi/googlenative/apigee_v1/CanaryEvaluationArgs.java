@@ -21,6 +21,10 @@ public final class CanaryEvaluationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="control", required=true)
     private Output<String> control;
 
+    /**
+     * @return The stable version that is serving requests.
+     * 
+     */
     public Output<String> control() {
         return this.control;
     }
@@ -32,6 +36,10 @@ public final class CanaryEvaluationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="endTime", required=true)
     private Output<String> endTime;
 
+    /**
+     * @return End time for the evaluation&#39;s analysis.
+     * 
+     */
     public Output<String> endTime() {
         return this.endTime;
     }
@@ -50,6 +58,10 @@ public final class CanaryEvaluationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="metricLabels", required=true)
     private Output<GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs> metricLabels;
 
+    /**
+     * @return Labels used to filter the metrics used for a canary evaluation.
+     * 
+     */
     public Output<GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs> metricLabels() {
         return this.metricLabels;
     }
@@ -68,6 +80,10 @@ public final class CanaryEvaluationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="startTime", required=true)
     private Output<String> startTime;
 
+    /**
+     * @return Start time for the canary evaluation&#39;s analysis.
+     * 
+     */
     public Output<String> startTime() {
         return this.startTime;
     }
@@ -79,6 +95,10 @@ public final class CanaryEvaluationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="treatment", required=true)
     private Output<String> treatment;
 
+    /**
+     * @return The newer version that is serving requests.
+     * 
+     */
     public Output<String> treatment() {
         return this.treatment;
     }
@@ -113,20 +133,44 @@ public final class CanaryEvaluationArgs extends com.pulumi.resources.ResourceArg
             $ = new CanaryEvaluationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param control The stable version that is serving requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder control(Output<String> control) {
             $.control = control;
             return this;
         }
 
+        /**
+         * @param control The stable version that is serving requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder control(String control) {
             return control(Output.of(control));
         }
 
+        /**
+         * @param endTime End time for the evaluation&#39;s analysis.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTime(Output<String> endTime) {
             $.endTime = endTime;
             return this;
         }
 
+        /**
+         * @param endTime End time for the evaluation&#39;s analysis.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTime(String endTime) {
             return endTime(Output.of(endTime));
         }
@@ -140,11 +184,23 @@ public final class CanaryEvaluationArgs extends com.pulumi.resources.ResourceArg
             return instanceId(Output.of(instanceId));
         }
 
+        /**
+         * @param metricLabels Labels used to filter the metrics used for a canary evaluation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricLabels(Output<GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs> metricLabels) {
             $.metricLabels = metricLabels;
             return this;
         }
 
+        /**
+         * @param metricLabels Labels used to filter the metrics used for a canary evaluation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricLabels(GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs metricLabels) {
             return metricLabels(Output.of(metricLabels));
         }
@@ -158,20 +214,44 @@ public final class CanaryEvaluationArgs extends com.pulumi.resources.ResourceArg
             return organizationId(Output.of(organizationId));
         }
 
+        /**
+         * @param startTime Start time for the canary evaluation&#39;s analysis.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(Output<String> startTime) {
             $.startTime = startTime;
             return this;
         }
 
+        /**
+         * @param startTime Start time for the canary evaluation&#39;s analysis.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             return startTime(Output.of(startTime));
         }
 
+        /**
+         * @param treatment The newer version that is serving requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder treatment(Output<String> treatment) {
             $.treatment = treatment;
             return this;
         }
 
+        /**
+         * @param treatment The newer version that is serving requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder treatment(String treatment) {
             return treatment(Output.of(treatment));
         }

@@ -24,6 +24,10 @@ public final class BillingDestinationResponse extends com.pulumi.resources.Invok
     @Import(name="metrics", required=true)
     private List<String> metrics;
 
+    /**
+     * @return Names of the metrics to report to this billing destination. Each name must be defined in Service.metrics section.
+     * 
+     */
     public List<String> metrics() {
         return this.metrics;
     }
@@ -35,6 +39,10 @@ public final class BillingDestinationResponse extends com.pulumi.resources.Invok
     @Import(name="monitoredResource", required=true)
     private String monitoredResource;
 
+    /**
+     * @return The monitored resource type. The type must be defined in Service.monitored_resources section.
+     * 
+     */
     public String monitoredResource() {
         return this.monitoredResource;
     }
@@ -64,15 +72,33 @@ public final class BillingDestinationResponse extends com.pulumi.resources.Invok
             $ = new BillingDestinationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param metrics Names of the metrics to report to this billing destination. Each name must be defined in Service.metrics section.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metrics(List<String> metrics) {
             $.metrics = metrics;
             return this;
         }
 
+        /**
+         * @param metrics Names of the metrics to report to this billing destination. Each name must be defined in Service.metrics section.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metrics(String... metrics) {
             return metrics(List.of(metrics));
         }
 
+        /**
+         * @param monitoredResource The monitored resource type. The type must be defined in Service.monitored_resources section.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitoredResource(String monitoredResource) {
             $.monitoredResource = monitoredResource;
             return this;

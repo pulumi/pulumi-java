@@ -27,6 +27,10 @@ public final class SharingProfileResponse extends com.pulumi.resources.InvokeArg
     @Import(name="groups", required=true)
     private List<SharingProfileGroupResponse> groups;
 
+    /**
+     * @return A list of sharing profile groups.
+     * 
+     */
     public List<SharingProfileGroupResponse> groups() {
         return this.groups;
     }
@@ -38,6 +42,10 @@ public final class SharingProfileResponse extends com.pulumi.resources.InvokeArg
     @Import(name="permissions")
     private @Nullable String permissions;
 
+    /**
+     * @return This property allows you to specify the permission of sharing gallery. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **Private** &lt;br&gt;&lt;br&gt; **Groups**
+     * 
+     */
     public Optional<String> permissions() {
         return Optional.ofNullable(this.permissions);
     }
@@ -67,15 +75,33 @@ public final class SharingProfileResponse extends com.pulumi.resources.InvokeArg
             $ = new SharingProfileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param groups A list of sharing profile groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groups(List<SharingProfileGroupResponse> groups) {
             $.groups = groups;
             return this;
         }
 
+        /**
+         * @param groups A list of sharing profile groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groups(SharingProfileGroupResponse... groups) {
             return groups(List.of(groups));
         }
 
+        /**
+         * @param permissions This property allows you to specify the permission of sharing gallery. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **Private** &lt;br&gt;&lt;br&gt; **Groups**
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissions(@Nullable String permissions) {
             $.permissions = permissions;
             return this;

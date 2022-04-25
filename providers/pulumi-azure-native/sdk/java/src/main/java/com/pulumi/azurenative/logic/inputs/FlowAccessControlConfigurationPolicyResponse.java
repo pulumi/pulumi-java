@@ -27,6 +27,10 @@ public final class FlowAccessControlConfigurationPolicyResponse extends com.pulu
     @Import(name="allowedCallerIpAddresses")
     private @Nullable List<IpAddressRangeResponse> allowedCallerIpAddresses;
 
+    /**
+     * @return The allowed caller IP address ranges.
+     * 
+     */
     public Optional<List<IpAddressRangeResponse>> allowedCallerIpAddresses() {
         return Optional.ofNullable(this.allowedCallerIpAddresses);
     }
@@ -38,6 +42,10 @@ public final class FlowAccessControlConfigurationPolicyResponse extends com.pulu
     @Import(name="openAuthenticationPolicies")
     private @Nullable OpenAuthenticationAccessPoliciesResponse openAuthenticationPolicies;
 
+    /**
+     * @return The authentication policies for workflow.
+     * 
+     */
     public Optional<OpenAuthenticationAccessPoliciesResponse> openAuthenticationPolicies() {
         return Optional.ofNullable(this.openAuthenticationPolicies);
     }
@@ -67,15 +75,33 @@ public final class FlowAccessControlConfigurationPolicyResponse extends com.pulu
             $ = new FlowAccessControlConfigurationPolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowedCallerIpAddresses The allowed caller IP address ranges.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedCallerIpAddresses(@Nullable List<IpAddressRangeResponse> allowedCallerIpAddresses) {
             $.allowedCallerIpAddresses = allowedCallerIpAddresses;
             return this;
         }
 
+        /**
+         * @param allowedCallerIpAddresses The allowed caller IP address ranges.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedCallerIpAddresses(IpAddressRangeResponse... allowedCallerIpAddresses) {
             return allowedCallerIpAddresses(List.of(allowedCallerIpAddresses));
         }
 
+        /**
+         * @param openAuthenticationPolicies The authentication policies for workflow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder openAuthenticationPolicies(@Nullable OpenAuthenticationAccessPoliciesResponse openAuthenticationPolicies) {
             $.openAuthenticationPolicies = openAuthenticationPolicies;
             return this;

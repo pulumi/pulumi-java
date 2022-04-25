@@ -30,6 +30,10 @@ public final class KeyVaultSigningKeyParametersResponse extends com.pulumi.resou
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Resource group of the user&#39;s Key Vault containing the secret
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +45,10 @@ public final class KeyVaultSigningKeyParametersResponse extends com.pulumi.resou
     @Import(name="secretName", required=true)
     private String secretName;
 
+    /**
+     * @return The name of secret in Key Vault.
+     * 
+     */
     public String secretName() {
         return this.secretName;
     }
@@ -52,6 +60,10 @@ public final class KeyVaultSigningKeyParametersResponse extends com.pulumi.resou
     @Import(name="secretVersion", required=true)
     private String secretVersion;
 
+    /**
+     * @return The version(GUID) of secret in Key Vault.
+     * 
+     */
     public String secretVersion() {
         return this.secretVersion;
     }
@@ -63,6 +75,10 @@ public final class KeyVaultSigningKeyParametersResponse extends com.pulumi.resou
     @Import(name="subscriptionId", required=true)
     private String subscriptionId;
 
+    /**
+     * @return Subscription Id of the user&#39;s Key Vault containing the secret
+     * 
+     */
     public String subscriptionId() {
         return this.subscriptionId;
     }
@@ -74,6 +90,10 @@ public final class KeyVaultSigningKeyParametersResponse extends com.pulumi.resou
     @Import(name="vaultName", required=true)
     private String vaultName;
 
+    /**
+     * @return The name of the user&#39;s Key Vault containing the secret
+     * 
+     */
     public String vaultName() {
         return this.vaultName;
     }
@@ -112,26 +132,56 @@ public final class KeyVaultSigningKeyParametersResponse extends com.pulumi.resou
             return this;
         }
 
+        /**
+         * @param resourceGroupName Resource group of the user&#39;s Key Vault containing the secret
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param secretName The name of secret in Key Vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretName(String secretName) {
             $.secretName = secretName;
             return this;
         }
 
+        /**
+         * @param secretVersion The version(GUID) of secret in Key Vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretVersion(String secretVersion) {
             $.secretVersion = secretVersion;
             return this;
         }
 
+        /**
+         * @param subscriptionId Subscription Id of the user&#39;s Key Vault containing the secret
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptionId(String subscriptionId) {
             $.subscriptionId = subscriptionId;
             return this;
         }
 
+        /**
+         * @param vaultName The name of the user&#39;s Key Vault containing the secret
+         * 
+         * @return builder
+         * 
+         */
         public Builder vaultName(String vaultName) {
             $.vaultName = vaultName;
             return this;

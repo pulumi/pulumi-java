@@ -24,6 +24,10 @@ public final class ArtifactSourceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="artifactRoot")
     private @Nullable Output<String> artifactRoot;
 
+    /**
+     * @return The path from the location that the &#39;authentication&#39; property [say, a SAS URI to the blob container] refers to, to the location of the artifacts. This can be used to differentiate different versions of the artifacts. Or, different types of artifacts like binaries or templates. The location referenced by the authentication property concatenated with this optional artifactRoot path forms the artifact source location where the artifacts are expected to be found.
+     * 
+     */
     public Optional<Output<String>> artifactRoot() {
         return Optional.ofNullable(this.artifactRoot);
     }
@@ -35,6 +39,10 @@ public final class ArtifactSourceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="artifactSourceName")
     private @Nullable Output<String> artifactSourceName;
 
+    /**
+     * @return The name of the artifact source.
+     * 
+     */
     public Optional<Output<String>> artifactSourceName() {
         return Optional.ofNullable(this.artifactSourceName);
     }
@@ -46,6 +54,10 @@ public final class ArtifactSourceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="authentication", required=true)
     private Output<SasAuthenticationArgs> authentication;
 
+    /**
+     * @return The authentication method to use to access the artifact source.
+     * 
+     */
     public Output<SasAuthenticationArgs> authentication() {
         return this.authentication;
     }
@@ -57,6 +69,10 @@ public final class ArtifactSourceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The geo-location where the resource lives
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -68,6 +84,10 @@ public final class ArtifactSourceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -79,6 +99,10 @@ public final class ArtifactSourceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="sourceType", required=true)
     private Output<String> sourceType;
 
+    /**
+     * @return The type of artifact source used.
+     * 
+     */
     public Output<String> sourceType() {
         return this.sourceType;
     }
@@ -90,6 +114,10 @@ public final class ArtifactSourceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -124,65 +152,149 @@ public final class ArtifactSourceArgs extends com.pulumi.resources.ResourceArgs 
             $ = new ArtifactSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param artifactRoot The path from the location that the &#39;authentication&#39; property [say, a SAS URI to the blob container] refers to, to the location of the artifacts. This can be used to differentiate different versions of the artifacts. Or, different types of artifacts like binaries or templates. The location referenced by the authentication property concatenated with this optional artifactRoot path forms the artifact source location where the artifacts are expected to be found.
+         * 
+         * @return builder
+         * 
+         */
         public Builder artifactRoot(@Nullable Output<String> artifactRoot) {
             $.artifactRoot = artifactRoot;
             return this;
         }
 
+        /**
+         * @param artifactRoot The path from the location that the &#39;authentication&#39; property [say, a SAS URI to the blob container] refers to, to the location of the artifacts. This can be used to differentiate different versions of the artifacts. Or, different types of artifacts like binaries or templates. The location referenced by the authentication property concatenated with this optional artifactRoot path forms the artifact source location where the artifacts are expected to be found.
+         * 
+         * @return builder
+         * 
+         */
         public Builder artifactRoot(String artifactRoot) {
             return artifactRoot(Output.of(artifactRoot));
         }
 
+        /**
+         * @param artifactSourceName The name of the artifact source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder artifactSourceName(@Nullable Output<String> artifactSourceName) {
             $.artifactSourceName = artifactSourceName;
             return this;
         }
 
+        /**
+         * @param artifactSourceName The name of the artifact source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder artifactSourceName(String artifactSourceName) {
             return artifactSourceName(Output.of(artifactSourceName));
         }
 
+        /**
+         * @param authentication The authentication method to use to access the artifact source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authentication(Output<SasAuthenticationArgs> authentication) {
             $.authentication = authentication;
             return this;
         }
 
+        /**
+         * @param authentication The authentication method to use to access the artifact source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authentication(SasAuthenticationArgs authentication) {
             return authentication(Output.of(authentication));
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param sourceType The type of artifact source used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceType(Output<String> sourceType) {
             $.sourceType = sourceType;
             return this;
         }
 
+        /**
+         * @param sourceType The type of artifact source used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceType(String sourceType) {
             return sourceType(Output.of(sourceType));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

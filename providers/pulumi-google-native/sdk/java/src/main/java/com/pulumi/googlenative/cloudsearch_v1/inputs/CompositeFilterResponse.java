@@ -21,6 +21,10 @@ public final class CompositeFilterResponse extends com.pulumi.resources.InvokeAr
     @Import(name="logicOperator", required=true)
     private String logicOperator;
 
+    /**
+     * @return The logic operator of the sub filter.
+     * 
+     */
     public String logicOperator() {
         return this.logicOperator;
     }
@@ -32,6 +36,10 @@ public final class CompositeFilterResponse extends com.pulumi.resources.InvokeAr
     @Import(name="subFilters", required=true)
     private List<FilterResponse> subFilters;
 
+    /**
+     * @return Sub filters.
+     * 
+     */
     public List<FilterResponse> subFilters() {
         return this.subFilters;
     }
@@ -61,16 +69,34 @@ public final class CompositeFilterResponse extends com.pulumi.resources.InvokeAr
             $ = new CompositeFilterResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param logicOperator The logic operator of the sub filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logicOperator(String logicOperator) {
             $.logicOperator = logicOperator;
             return this;
         }
 
+        /**
+         * @param subFilters Sub filters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subFilters(List<FilterResponse> subFilters) {
             $.subFilters = subFilters;
             return this;
         }
 
+        /**
+         * @param subFilters Sub filters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subFilters(FilterResponse... subFilters) {
             return subFilters(List.of(subFilters));
         }

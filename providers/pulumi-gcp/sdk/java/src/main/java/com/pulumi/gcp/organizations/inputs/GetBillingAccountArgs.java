@@ -22,6 +22,10 @@ public final class GetBillingAccountArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="billingAccount")
     private @Nullable String billingAccount;
 
+    /**
+     * @return The name of the billing account in the form `{billing_account_id}` or `billingAccounts/{billing_account_id}`.
+     * 
+     */
     public Optional<String> billingAccount() {
         return Optional.ofNullable(this.billingAccount);
     }
@@ -33,6 +37,10 @@ public final class GetBillingAccountArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="displayName")
     private @Nullable String displayName;
 
+    /**
+     * @return The display name of the billing account.
+     * 
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -44,6 +52,10 @@ public final class GetBillingAccountArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="open")
     private @Nullable Boolean open;
 
+    /**
+     * @return `true` if the billing account is open, `false` if the billing account is closed.
+     * 
+     */
     public Optional<Boolean> open() {
         return Optional.ofNullable(this.open);
     }
@@ -74,16 +86,34 @@ public final class GetBillingAccountArgs extends com.pulumi.resources.InvokeArgs
             $ = new GetBillingAccountArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param billingAccount The name of the billing account in the form `{billing_account_id}` or `billingAccounts/{billing_account_id}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder billingAccount(@Nullable String billingAccount) {
             $.billingAccount = billingAccount;
             return this;
         }
 
+        /**
+         * @param displayName The display name of the billing account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable String displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param open `true` if the billing account is open, `false` if the billing account is closed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder open(@Nullable Boolean open) {
             $.open = open;
             return this;

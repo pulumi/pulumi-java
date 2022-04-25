@@ -23,6 +23,10 @@ public final class GoogleCloudNetworksecurityV1beta1GrpcEndpointResponse extends
     @Import(name="targetUri", required=true)
     private String targetUri;
 
+    /**
+     * @return The target URI of the gRPC endpoint. Only UDS path is supported, and should start with “unix:”.
+     * 
+     */
     public String targetUri() {
         return this.targetUri;
     }
@@ -51,6 +55,12 @@ public final class GoogleCloudNetworksecurityV1beta1GrpcEndpointResponse extends
             $ = new GoogleCloudNetworksecurityV1beta1GrpcEndpointResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param targetUri The target URI of the gRPC endpoint. Only UDS path is supported, and should start with “unix:”.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetUri(String targetUri) {
             $.targetUri = targetUri;
             return this;

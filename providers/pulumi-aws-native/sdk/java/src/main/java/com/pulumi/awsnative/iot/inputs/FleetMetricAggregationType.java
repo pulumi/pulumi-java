@@ -24,6 +24,10 @@ public final class FleetMetricAggregationType extends com.pulumi.resources.Invok
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Fleet Indexing aggregation type names such as Statistics, Percentiles and Cardinality
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -35,6 +39,10 @@ public final class FleetMetricAggregationType extends com.pulumi.resources.Invok
     @Import(name="values", required=true)
     private List<String> values;
 
+    /**
+     * @return Fleet Indexing aggregation type values
+     * 
+     */
     public List<String> values() {
         return this.values;
     }
@@ -64,16 +72,34 @@ public final class FleetMetricAggregationType extends com.pulumi.resources.Invok
             $ = new FleetMetricAggregationType(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Fleet Indexing aggregation type names such as Statistics, Percentiles and Cardinality
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param values Fleet Indexing aggregation type values
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(List<String> values) {
             $.values = values;
             return this;
         }
 
+        /**
+         * @param values Fleet Indexing aggregation type values
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(String... values) {
             return values(List.of(values));
         }

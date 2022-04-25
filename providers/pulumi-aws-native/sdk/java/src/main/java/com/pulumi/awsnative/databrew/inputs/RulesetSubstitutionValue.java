@@ -23,6 +23,10 @@ public final class RulesetSubstitutionValue extends com.pulumi.resources.InvokeA
     @Import(name="value", required=true)
     private String value;
 
+    /**
+     * @return Value or column name
+     * 
+     */
     public String value() {
         return this.value;
     }
@@ -34,6 +38,10 @@ public final class RulesetSubstitutionValue extends com.pulumi.resources.InvokeA
     @Import(name="valueReference", required=true)
     private String valueReference;
 
+    /**
+     * @return Variable name
+     * 
+     */
     public String valueReference() {
         return this.valueReference;
     }
@@ -63,11 +71,23 @@ public final class RulesetSubstitutionValue extends com.pulumi.resources.InvokeA
             $ = new RulesetSubstitutionValue(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param value Value or column name
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param valueReference Variable name
+         * 
+         * @return builder
+         * 
+         */
         public Builder valueReference(String valueReference) {
             $.valueReference = valueReference;
             return this;

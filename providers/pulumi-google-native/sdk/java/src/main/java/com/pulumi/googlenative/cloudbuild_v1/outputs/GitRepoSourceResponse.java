@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class GitRepoSourceResponse {
     /**
-     * The branch or tag to use. Must start with &#34;refs/&#34; (required).
+     * @return The branch or tag to use. Must start with &#34;refs/&#34; (required).
      * 
      */
     private final String ref;
     /**
-     * See RepoType below.
+     * @return See RepoType below.
      * 
      */
     private final String repoType;
     /**
-     * The URI of the repo (required).
+     * @return The URI of the repo (required).
      * 
      */
     private final String uri;
@@ -36,23 +36,23 @@ public final class GitRepoSourceResponse {
     }
 
     /**
-     * The branch or tag to use. Must start with &#34;refs/&#34; (required).
+     * @return The branch or tag to use. Must start with &#34;refs/&#34; (required).
      * 
-    */
+     */
     public String ref() {
         return this.ref;
     }
     /**
-     * See RepoType below.
+     * @return See RepoType below.
      * 
-    */
+     */
     public String repoType() {
         return this.repoType;
     }
     /**
-     * The URI of the repo (required).
+     * @return The URI of the repo (required).
      * 
-    */
+     */
     public String uri() {
         return this.uri;
     }

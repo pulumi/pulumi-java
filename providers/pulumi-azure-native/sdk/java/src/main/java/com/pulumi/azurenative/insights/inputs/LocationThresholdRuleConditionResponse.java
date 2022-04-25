@@ -30,6 +30,10 @@ public final class LocationThresholdRuleConditionResponse extends com.pulumi.res
     @Import(name="dataSource")
     private @Nullable Either<RuleManagementEventDataSourceResponse,RuleMetricDataSourceResponse> dataSource;
 
+    /**
+     * @return the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.
+     * 
+     */
     public Optional<Either<RuleManagementEventDataSourceResponse,RuleMetricDataSourceResponse>> dataSource() {
         return Optional.ofNullable(this.dataSource);
     }
@@ -41,6 +45,10 @@ public final class LocationThresholdRuleConditionResponse extends com.pulumi.res
     @Import(name="failedLocationCount", required=true)
     private Integer failedLocationCount;
 
+    /**
+     * @return the number of locations that must fail to activate the alert.
+     * 
+     */
     public Integer failedLocationCount() {
         return this.failedLocationCount;
     }
@@ -53,6 +61,11 @@ public final class LocationThresholdRuleConditionResponse extends com.pulumi.res
     @Import(name="odataType", required=true)
     private String odataType;
 
+    /**
+     * @return specifies the type of condition. This can be one of three types: ManagementEventRuleCondition (occurrences of management events), LocationThresholdRuleCondition (based on the number of failures of a web test), and ThresholdRuleCondition (based on the threshold of a metric).
+     * Expected value is &#39;Microsoft.Azure.Management.Insights.Models.LocationThresholdRuleCondition&#39;.
+     * 
+     */
     public String odataType() {
         return this.odataType;
     }
@@ -64,6 +77,10 @@ public final class LocationThresholdRuleConditionResponse extends com.pulumi.res
     @Import(name="windowSize")
     private @Nullable String windowSize;
 
+    /**
+     * @return the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.
+     * 
+     */
     public Optional<String> windowSize() {
         return Optional.ofNullable(this.windowSize);
     }
@@ -95,29 +112,66 @@ public final class LocationThresholdRuleConditionResponse extends com.pulumi.res
             $ = new LocationThresholdRuleConditionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataSource the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSource(@Nullable Either<RuleManagementEventDataSourceResponse,RuleMetricDataSourceResponse> dataSource) {
             $.dataSource = dataSource;
             return this;
         }
 
+        /**
+         * @param dataSource the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSource(RuleManagementEventDataSourceResponse dataSource) {
             return dataSource(Either.ofLeft(dataSource));
         }
 
+        /**
+         * @param dataSource the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSource(RuleMetricDataSourceResponse dataSource) {
             return dataSource(Either.ofRight(dataSource));
         }
 
+        /**
+         * @param failedLocationCount the number of locations that must fail to activate the alert.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failedLocationCount(Integer failedLocationCount) {
             $.failedLocationCount = failedLocationCount;
             return this;
         }
 
+        /**
+         * @param odataType specifies the type of condition. This can be one of three types: ManagementEventRuleCondition (occurrences of management events), LocationThresholdRuleCondition (based on the number of failures of a web test), and ThresholdRuleCondition (based on the threshold of a metric).
+         * Expected value is &#39;Microsoft.Azure.Management.Insights.Models.LocationThresholdRuleCondition&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(String odataType) {
             $.odataType = odataType;
             return this;
         }
 
+        /**
+         * @param windowSize the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.
+         * 
+         * @return builder
+         * 
+         */
         public Builder windowSize(@Nullable String windowSize) {
             $.windowSize = windowSize;
             return this;

@@ -29,6 +29,10 @@ public final class TimerTriggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The name of the trigger.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -40,6 +44,10 @@ public final class TimerTriggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="schedule", required=true)
     private Output<String> schedule;
 
+    /**
+     * @return The CRON expression for the task schedule
+     * 
+     */
     public Output<String> schedule() {
         return this.schedule;
     }
@@ -51,6 +59,10 @@ public final class TimerTriggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="status")
     private @Nullable Output<Either<String,TriggerStatus>> status;
 
+    /**
+     * @return The current status of trigger.
+     * 
+     */
     public Optional<Output<Either<String,TriggerStatus>>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -81,37 +93,85 @@ public final class TimerTriggerArgs extends com.pulumi.resources.ResourceArgs {
             $ = new TimerTriggerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param schedule The CRON expression for the task schedule
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedule(Output<String> schedule) {
             $.schedule = schedule;
             return this;
         }
 
+        /**
+         * @param schedule The CRON expression for the task schedule
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedule(String schedule) {
             return schedule(Output.of(schedule));
         }
 
+        /**
+         * @param status The current status of trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<Either<String,TriggerStatus>> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status The current status of trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(Either<String,TriggerStatus> status) {
             return status(Output.of(status));
         }
 
+        /**
+         * @param status The current status of trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             return status(Either.ofLeft(status));
         }
 
+        /**
+         * @param status The current status of trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(TriggerStatus status) {
             return status(Either.ofRight(status));
         }

@@ -26,6 +26,10 @@ public final class BlobInventoryPolicySchemaResponse extends com.pulumi.resource
     @Import(name="destination", required=true)
     private String destination;
 
+    /**
+     * @return Container name where blob inventory files are stored. Must be pre-created.
+     * 
+     */
     public String destination() {
         return this.destination;
     }
@@ -37,6 +41,10 @@ public final class BlobInventoryPolicySchemaResponse extends com.pulumi.resource
     @Import(name="enabled", required=true)
     private Boolean enabled;
 
+    /**
+     * @return Policy is enabled if set to true.
+     * 
+     */
     public Boolean enabled() {
         return this.enabled;
     }
@@ -48,6 +56,10 @@ public final class BlobInventoryPolicySchemaResponse extends com.pulumi.resource
     @Import(name="rules", required=true)
     private List<BlobInventoryPolicyRuleResponse> rules;
 
+    /**
+     * @return The storage account blob inventory policy rules. The rule is applied when it is enabled.
+     * 
+     */
     public List<BlobInventoryPolicyRuleResponse> rules() {
         return this.rules;
     }
@@ -59,6 +71,10 @@ public final class BlobInventoryPolicySchemaResponse extends com.pulumi.resource
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The valid value is Inventory
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -90,25 +106,55 @@ public final class BlobInventoryPolicySchemaResponse extends com.pulumi.resource
             $ = new BlobInventoryPolicySchemaResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param destination Container name where blob inventory files are stored. Must be pre-created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destination(String destination) {
             $.destination = destination;
             return this;
         }
 
+        /**
+         * @param enabled Policy is enabled if set to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param rules The storage account blob inventory policy rules. The rule is applied when it is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(List<BlobInventoryPolicyRuleResponse> rules) {
             $.rules = rules;
             return this;
         }
 
+        /**
+         * @param rules The storage account blob inventory policy rules. The rule is applied when it is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(BlobInventoryPolicyRuleResponse... rules) {
             return rules(List.of(rules));
         }
 
+        /**
+         * @param type The valid value is Inventory
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

@@ -12,14 +12,14 @@ import javax.annotation.Nullable;
 @CustomType
 public final class RegionNetworkEndpointGroupCloudFunction {
     /**
-     * A user-defined name of the Cloud Function.
+     * @return A user-defined name of the Cloud Function.
      * The function name is case-sensitive and must be 1-63 characters long.
      * Example value: &#34;func1&#34;.
      * 
      */
     private final @Nullable String function;
     /**
-     * A template to parse function field from a request URL. URL mask allows
+     * @return A template to parse function field from a request URL. URL mask allows
      * for routing to multiple Cloud Functions without having to create
      * multiple Network Endpoint Groups and backend services.
      * For example, request URLs &#34;mydomain.com/function1&#34; and &#34;mydomain.com/function2&#34;
@@ -38,23 +38,23 @@ public final class RegionNetworkEndpointGroupCloudFunction {
     }
 
     /**
-     * A user-defined name of the Cloud Function.
+     * @return A user-defined name of the Cloud Function.
      * The function name is case-sensitive and must be 1-63 characters long.
      * Example value: &#34;func1&#34;.
      * 
-    */
+     */
     public Optional<String> function() {
         return Optional.ofNullable(this.function);
     }
     /**
-     * A template to parse function field from a request URL. URL mask allows
+     * @return A template to parse function field from a request URL. URL mask allows
      * for routing to multiple Cloud Functions without having to create
      * multiple Network Endpoint Groups and backend services.
      * For example, request URLs &#34;mydomain.com/function1&#34; and &#34;mydomain.com/function2&#34;
      * can be backed by the same Serverless NEG with URL mask &#34;/&#34;. The URL mask
      * will parse them to { function = &#34;function1&#34; } and { function = &#34;function2&#34; } respectively.
      * 
-    */
+     */
     public Optional<String> urlMask() {
         return Optional.ofNullable(this.urlMask);
     }

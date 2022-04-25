@@ -29,6 +29,10 @@ public final class ConflictResolutionPolicyArgs extends com.pulumi.resources.Res
     @Import(name="conflictResolutionPath")
     private @Nullable Output<String> conflictResolutionPath;
 
+    /**
+     * @return The conflict resolution path in the case of LastWriterWins mode.
+     * 
+     */
     public Optional<Output<String>> conflictResolutionPath() {
         return Optional.ofNullable(this.conflictResolutionPath);
     }
@@ -40,6 +44,10 @@ public final class ConflictResolutionPolicyArgs extends com.pulumi.resources.Res
     @Import(name="conflictResolutionProcedure")
     private @Nullable Output<String> conflictResolutionProcedure;
 
+    /**
+     * @return The procedure to resolve conflicts in the case of custom mode.
+     * 
+     */
     public Optional<Output<String>> conflictResolutionProcedure() {
         return Optional.ofNullable(this.conflictResolutionProcedure);
     }
@@ -51,6 +59,10 @@ public final class ConflictResolutionPolicyArgs extends com.pulumi.resources.Res
     @Import(name="mode")
     private @Nullable Output<Either<String,ConflictResolutionMode>> mode;
 
+    /**
+     * @return Indicates the conflict resolution mode.
+     * 
+     */
     public Optional<Output<Either<String,ConflictResolutionMode>>> mode() {
         return Optional.ofNullable(this.mode);
     }
@@ -81,37 +93,85 @@ public final class ConflictResolutionPolicyArgs extends com.pulumi.resources.Res
             $ = new ConflictResolutionPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param conflictResolutionPath The conflict resolution path in the case of LastWriterWins mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conflictResolutionPath(@Nullable Output<String> conflictResolutionPath) {
             $.conflictResolutionPath = conflictResolutionPath;
             return this;
         }
 
+        /**
+         * @param conflictResolutionPath The conflict resolution path in the case of LastWriterWins mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conflictResolutionPath(String conflictResolutionPath) {
             return conflictResolutionPath(Output.of(conflictResolutionPath));
         }
 
+        /**
+         * @param conflictResolutionProcedure The procedure to resolve conflicts in the case of custom mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conflictResolutionProcedure(@Nullable Output<String> conflictResolutionProcedure) {
             $.conflictResolutionProcedure = conflictResolutionProcedure;
             return this;
         }
 
+        /**
+         * @param conflictResolutionProcedure The procedure to resolve conflicts in the case of custom mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conflictResolutionProcedure(String conflictResolutionProcedure) {
             return conflictResolutionProcedure(Output.of(conflictResolutionProcedure));
         }
 
+        /**
+         * @param mode Indicates the conflict resolution mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(@Nullable Output<Either<String,ConflictResolutionMode>> mode) {
             $.mode = mode;
             return this;
         }
 
+        /**
+         * @param mode Indicates the conflict resolution mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(Either<String,ConflictResolutionMode> mode) {
             return mode(Output.of(mode));
         }
 
+        /**
+         * @param mode Indicates the conflict resolution mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(String mode) {
             return mode(Either.ofLeft(mode));
         }
 
+        /**
+         * @param mode Indicates the conflict resolution mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(ConflictResolutionMode mode) {
             return mode(Either.ofRight(mode));
         }

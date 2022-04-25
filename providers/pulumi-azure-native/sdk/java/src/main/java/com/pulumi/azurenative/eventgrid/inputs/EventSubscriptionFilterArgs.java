@@ -42,6 +42,10 @@ public final class EventSubscriptionFilterArgs extends com.pulumi.resources.Reso
     @Import(name="advancedFilters")
     private @Nullable Output<List<Object>> advancedFilters;
 
+    /**
+     * @return An array of advanced filters that are used for filtering event subscriptions.
+     * 
+     */
     public Optional<Output<List<Object>>> advancedFilters() {
         return Optional.ofNullable(this.advancedFilters);
     }
@@ -53,6 +57,10 @@ public final class EventSubscriptionFilterArgs extends com.pulumi.resources.Reso
     @Import(name="includedEventTypes")
     private @Nullable Output<List<String>> includedEventTypes;
 
+    /**
+     * @return A list of applicable event types that need to be part of the event subscription. If it is desired to subscribe to all default event types, set the IncludedEventTypes to null.
+     * 
+     */
     public Optional<Output<List<String>>> includedEventTypes() {
         return Optional.ofNullable(this.includedEventTypes);
     }
@@ -65,6 +73,11 @@ public final class EventSubscriptionFilterArgs extends com.pulumi.resources.Reso
     @Import(name="isSubjectCaseSensitive")
     private @Nullable Output<Boolean> isSubjectCaseSensitive;
 
+    /**
+     * @return Specifies if the SubjectBeginsWith and SubjectEndsWith properties of the filter
+     * should be compared in a case sensitive manner.
+     * 
+     */
     public Optional<Output<Boolean>> isSubjectCaseSensitive() {
         return Optional.ofNullable(this.isSubjectCaseSensitive);
     }
@@ -78,6 +91,12 @@ public final class EventSubscriptionFilterArgs extends com.pulumi.resources.Reso
     @Import(name="subjectBeginsWith")
     private @Nullable Output<String> subjectBeginsWith;
 
+    /**
+     * @return An optional string to filter events for an event subscription based on a resource path prefix.
+     * The format of this depends on the publisher of the events.
+     * Wildcard characters are not supported in this path.
+     * 
+     */
     public Optional<Output<String>> subjectBeginsWith() {
         return Optional.ofNullable(this.subjectBeginsWith);
     }
@@ -90,6 +109,11 @@ public final class EventSubscriptionFilterArgs extends com.pulumi.resources.Reso
     @Import(name="subjectEndsWith")
     private @Nullable Output<String> subjectEndsWith;
 
+    /**
+     * @return An optional string to filter events for an event subscription based on a resource path suffix.
+     * Wildcard characters are not supported in this path.
+     * 
+     */
     public Optional<Output<String>> subjectEndsWith() {
         return Optional.ofNullable(this.subjectEndsWith);
     }
@@ -122,55 +146,135 @@ public final class EventSubscriptionFilterArgs extends com.pulumi.resources.Reso
             $ = new EventSubscriptionFilterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param advancedFilters An array of advanced filters that are used for filtering event subscriptions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder advancedFilters(@Nullable Output<List<Object>> advancedFilters) {
             $.advancedFilters = advancedFilters;
             return this;
         }
 
+        /**
+         * @param advancedFilters An array of advanced filters that are used for filtering event subscriptions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder advancedFilters(List<Object> advancedFilters) {
             return advancedFilters(Output.of(advancedFilters));
         }
 
+        /**
+         * @param advancedFilters An array of advanced filters that are used for filtering event subscriptions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder advancedFilters(Object... advancedFilters) {
             return advancedFilters(List.of(advancedFilters));
         }
 
+        /**
+         * @param includedEventTypes A list of applicable event types that need to be part of the event subscription. If it is desired to subscribe to all default event types, set the IncludedEventTypes to null.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includedEventTypes(@Nullable Output<List<String>> includedEventTypes) {
             $.includedEventTypes = includedEventTypes;
             return this;
         }
 
+        /**
+         * @param includedEventTypes A list of applicable event types that need to be part of the event subscription. If it is desired to subscribe to all default event types, set the IncludedEventTypes to null.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includedEventTypes(List<String> includedEventTypes) {
             return includedEventTypes(Output.of(includedEventTypes));
         }
 
+        /**
+         * @param includedEventTypes A list of applicable event types that need to be part of the event subscription. If it is desired to subscribe to all default event types, set the IncludedEventTypes to null.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includedEventTypes(String... includedEventTypes) {
             return includedEventTypes(List.of(includedEventTypes));
         }
 
+        /**
+         * @param isSubjectCaseSensitive Specifies if the SubjectBeginsWith and SubjectEndsWith properties of the filter
+         * should be compared in a case sensitive manner.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isSubjectCaseSensitive(@Nullable Output<Boolean> isSubjectCaseSensitive) {
             $.isSubjectCaseSensitive = isSubjectCaseSensitive;
             return this;
         }
 
+        /**
+         * @param isSubjectCaseSensitive Specifies if the SubjectBeginsWith and SubjectEndsWith properties of the filter
+         * should be compared in a case sensitive manner.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isSubjectCaseSensitive(Boolean isSubjectCaseSensitive) {
             return isSubjectCaseSensitive(Output.of(isSubjectCaseSensitive));
         }
 
+        /**
+         * @param subjectBeginsWith An optional string to filter events for an event subscription based on a resource path prefix.
+         * The format of this depends on the publisher of the events.
+         * Wildcard characters are not supported in this path.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subjectBeginsWith(@Nullable Output<String> subjectBeginsWith) {
             $.subjectBeginsWith = subjectBeginsWith;
             return this;
         }
 
+        /**
+         * @param subjectBeginsWith An optional string to filter events for an event subscription based on a resource path prefix.
+         * The format of this depends on the publisher of the events.
+         * Wildcard characters are not supported in this path.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subjectBeginsWith(String subjectBeginsWith) {
             return subjectBeginsWith(Output.of(subjectBeginsWith));
         }
 
+        /**
+         * @param subjectEndsWith An optional string to filter events for an event subscription based on a resource path suffix.
+         * Wildcard characters are not supported in this path.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subjectEndsWith(@Nullable Output<String> subjectEndsWith) {
             $.subjectEndsWith = subjectEndsWith;
             return this;
         }
 
+        /**
+         * @param subjectEndsWith An optional string to filter events for an event subscription based on a resource path suffix.
+         * Wildcard characters are not supported in this path.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subjectEndsWith(String subjectEndsWith) {
             return subjectEndsWith(Output.of(subjectEndsWith));
         }

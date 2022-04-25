@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class KeyPolicyResponse {
     /**
-     * The key expiration period in days.
+     * @return The key expiration period in days.
      * 
      */
     private final Integer keyExpirationPeriodInDays;
@@ -21,9 +21,9 @@ public final class KeyPolicyResponse {
     }
 
     /**
-     * The key expiration period in days.
+     * @return The key expiration period in days.
      * 
-    */
+     */
     public Integer keyExpirationPeriodInDays() {
         return this.keyExpirationPeriodInDays;
     }

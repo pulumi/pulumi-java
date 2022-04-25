@@ -16,27 +16,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ManagementGroupDetailsResponse {
     /**
-     * (Optional) The ID of the parent management group.
+     * @return (Optional) The ID of the parent management group.
      * 
      */
     private final @Nullable ParentGroupInfoResponse parent;
     /**
-     * The path from the root to the current group.
+     * @return The path from the root to the current group.
      * 
      */
     private final @Nullable List<ManagementGroupPathElementResponse> path;
     /**
-     * The identity of the principal or process that updated the object.
+     * @return The identity of the principal or process that updated the object.
      * 
      */
     private final @Nullable String updatedBy;
     /**
-     * The date and time when this object was last updated.
+     * @return The date and time when this object was last updated.
      * 
      */
     private final @Nullable String updatedTime;
     /**
-     * The version number of the object.
+     * @return The version number of the object.
      * 
      */
     private final @Nullable Double version;
@@ -56,37 +56,37 @@ public final class ManagementGroupDetailsResponse {
     }
 
     /**
-     * (Optional) The ID of the parent management group.
+     * @return (Optional) The ID of the parent management group.
      * 
-    */
+     */
     public Optional<ParentGroupInfoResponse> parent() {
         return Optional.ofNullable(this.parent);
     }
     /**
-     * The path from the root to the current group.
+     * @return The path from the root to the current group.
      * 
-    */
+     */
     public List<ManagementGroupPathElementResponse> path() {
         return this.path == null ? List.of() : this.path;
     }
     /**
-     * The identity of the principal or process that updated the object.
+     * @return The identity of the principal or process that updated the object.
      * 
-    */
+     */
     public Optional<String> updatedBy() {
         return Optional.ofNullable(this.updatedBy);
     }
     /**
-     * The date and time when this object was last updated.
+     * @return The date and time when this object was last updated.
      * 
-    */
+     */
     public Optional<String> updatedTime() {
         return Optional.ofNullable(this.updatedTime);
     }
     /**
-     * The version number of the object.
+     * @return The version number of the object.
      * 
-    */
+     */
     public Optional<Double> version() {
         return Optional.ofNullable(this.version);
     }

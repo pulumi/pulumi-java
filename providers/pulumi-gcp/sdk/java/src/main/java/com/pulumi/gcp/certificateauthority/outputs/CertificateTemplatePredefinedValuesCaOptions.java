@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CertificateTemplatePredefinedValuesCaOptions {
     /**
-     * Optional. Refers to the &#34;CA&#34; X.509 extension, which is a boolean value. When this value is missing, the extension will be omitted from the CA certificate.
+     * @return Optional. Refers to the &#34;CA&#34; X.509 extension, which is a boolean value. When this value is missing, the extension will be omitted from the CA certificate.
      * 
      */
     private final @Nullable Boolean isCa;
     /**
-     * Optional. Refers to the path length restriction X.509 extension. For a CA certificate, this value describes the depth of subordinate CA certificates that are allowed. If this value is less than 0, the request will fail. If this value is missing, the max path length will be omitted from the CA certificate.
+     * @return Optional. Refers to the path length restriction X.509 extension. For a CA certificate, this value describes the depth of subordinate CA certificates that are allowed. If this value is less than 0, the request will fail. If this value is missing, the max path length will be omitted from the CA certificate.
      * 
      */
     private final @Nullable Integer maxIssuerPathLength;
@@ -32,16 +32,16 @@ public final class CertificateTemplatePredefinedValuesCaOptions {
     }
 
     /**
-     * Optional. Refers to the &#34;CA&#34; X.509 extension, which is a boolean value. When this value is missing, the extension will be omitted from the CA certificate.
+     * @return Optional. Refers to the &#34;CA&#34; X.509 extension, which is a boolean value. When this value is missing, the extension will be omitted from the CA certificate.
      * 
-    */
+     */
     public Optional<Boolean> isCa() {
         return Optional.ofNullable(this.isCa);
     }
     /**
-     * Optional. Refers to the path length restriction X.509 extension. For a CA certificate, this value describes the depth of subordinate CA certificates that are allowed. If this value is less than 0, the request will fail. If this value is missing, the max path length will be omitted from the CA certificate.
+     * @return Optional. Refers to the path length restriction X.509 extension. For a CA certificate, this value describes the depth of subordinate CA certificates that are allowed. If this value is less than 0, the request will fail. If this value is missing, the max path length will be omitted from the CA certificate.
      * 
-    */
+     */
     public Optional<Integer> maxIssuerPathLength() {
         return Optional.ofNullable(this.maxIssuerPathLength);
     }

@@ -24,6 +24,10 @@ public final class FutureReservationStatusResponse extends com.pulumi.resources.
     @Import(name="autoCreatedReservations", required=true)
     private List<String> autoCreatedReservations;
 
+    /**
+     * @return Fully qualified urls of the automatically created reservations at start_time.
+     * 
+     */
     public List<String> autoCreatedReservations() {
         return this.autoCreatedReservations;
     }
@@ -35,6 +39,10 @@ public final class FutureReservationStatusResponse extends com.pulumi.resources.
     @Import(name="fulfilledCount", required=true)
     private String fulfilledCount;
 
+    /**
+     * @return This count indicates the fulfilled capacity so far. This is set during &#34;PROVISIONING&#34; state. This count also includes capacity delivered as part of existing matching reservations.
+     * 
+     */
     public String fulfilledCount() {
         return this.fulfilledCount;
     }
@@ -46,6 +54,10 @@ public final class FutureReservationStatusResponse extends com.pulumi.resources.
     @Import(name="lockTime", required=true)
     private String lockTime;
 
+    /**
+     * @return Time when Future Reservation would become LOCKED, after which no modifications to Future Reservation will be allowed. Applicable only after the Future Reservation is in the APPROVED state. The lock_time is an RFC3339 string. The procurement_status will transition to PROCURING state at this time.
+     * 
+     */
     public String lockTime() {
         return this.lockTime;
     }
@@ -57,6 +69,10 @@ public final class FutureReservationStatusResponse extends com.pulumi.resources.
     @Import(name="procurementStatus", required=true)
     private String procurementStatus;
 
+    /**
+     * @return Current state of this Future Reservation
+     * 
+     */
     public String procurementStatus() {
         return this.procurementStatus;
     }
@@ -88,25 +104,55 @@ public final class FutureReservationStatusResponse extends com.pulumi.resources.
             $ = new FutureReservationStatusResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoCreatedReservations Fully qualified urls of the automatically created reservations at start_time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoCreatedReservations(List<String> autoCreatedReservations) {
             $.autoCreatedReservations = autoCreatedReservations;
             return this;
         }
 
+        /**
+         * @param autoCreatedReservations Fully qualified urls of the automatically created reservations at start_time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoCreatedReservations(String... autoCreatedReservations) {
             return autoCreatedReservations(List.of(autoCreatedReservations));
         }
 
+        /**
+         * @param fulfilledCount This count indicates the fulfilled capacity so far. This is set during &#34;PROVISIONING&#34; state. This count also includes capacity delivered as part of existing matching reservations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fulfilledCount(String fulfilledCount) {
             $.fulfilledCount = fulfilledCount;
             return this;
         }
 
+        /**
+         * @param lockTime Time when Future Reservation would become LOCKED, after which no modifications to Future Reservation will be allowed. Applicable only after the Future Reservation is in the APPROVED state. The lock_time is an RFC3339 string. The procurement_status will transition to PROCURING state at this time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lockTime(String lockTime) {
             $.lockTime = lockTime;
             return this;
         }
 
+        /**
+         * @param procurementStatus Current state of this Future Reservation
+         * 
+         * @return builder
+         * 
+         */
         public Builder procurementStatus(String procurementStatus) {
             $.procurementStatus = procurementStatus;
             return this;

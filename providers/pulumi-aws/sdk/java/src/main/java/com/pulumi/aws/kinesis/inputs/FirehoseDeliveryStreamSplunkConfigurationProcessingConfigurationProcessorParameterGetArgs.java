@@ -20,6 +20,10 @@ public final class FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurat
     @Import(name="parameterName", required=true)
     private Output<String> parameterName;
 
+    /**
+     * @return Parameter name. Valid Values: `LambdaArn`, `NumberOfRetries`, `RoleArn`, `BufferSizeInMBs`, `BufferIntervalInSeconds`
+     * 
+     */
     public Output<String> parameterName() {
         return this.parameterName;
     }
@@ -31,6 +35,10 @@ public final class FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurat
     @Import(name="parameterValue", required=true)
     private Output<String> parameterValue;
 
+    /**
+     * @return Parameter value. Must be between 1 and 512 length (inclusive). When providing a Lambda ARN, you should specify the resource version as well.
+     * 
+     */
     public Output<String> parameterValue() {
         return this.parameterValue;
     }
@@ -60,20 +68,44 @@ public final class FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurat
             $ = new FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorParameterGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param parameterName Parameter name. Valid Values: `LambdaArn`, `NumberOfRetries`, `RoleArn`, `BufferSizeInMBs`, `BufferIntervalInSeconds`
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameterName(Output<String> parameterName) {
             $.parameterName = parameterName;
             return this;
         }
 
+        /**
+         * @param parameterName Parameter name. Valid Values: `LambdaArn`, `NumberOfRetries`, `RoleArn`, `BufferSizeInMBs`, `BufferIntervalInSeconds`
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameterName(String parameterName) {
             return parameterName(Output.of(parameterName));
         }
 
+        /**
+         * @param parameterValue Parameter value. Must be between 1 and 512 length (inclusive). When providing a Lambda ARN, you should specify the resource version as well.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameterValue(Output<String> parameterValue) {
             $.parameterValue = parameterValue;
             return this;
         }
 
+        /**
+         * @param parameterValue Parameter value. Must be between 1 and 512 length (inclusive). When providing a Lambda ARN, you should specify the resource version as well.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameterValue(String parameterValue) {
             return parameterValue(Output.of(parameterValue));
         }

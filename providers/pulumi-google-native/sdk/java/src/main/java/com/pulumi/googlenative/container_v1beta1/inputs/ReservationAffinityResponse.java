@@ -24,6 +24,10 @@ public final class ReservationAffinityResponse extends com.pulumi.resources.Invo
     @Import(name="consumeReservationType", required=true)
     private String consumeReservationType;
 
+    /**
+     * @return Corresponds to the type of reservation consumption.
+     * 
+     */
     public String consumeReservationType() {
         return this.consumeReservationType;
     }
@@ -35,6 +39,10 @@ public final class ReservationAffinityResponse extends com.pulumi.resources.Invo
     @Import(name="key", required=true)
     private String key;
 
+    /**
+     * @return Corresponds to the label key of a reservation resource. To target a SPECIFIC_RESERVATION by name, specify &#34;googleapis.com/reservation-name&#34; as the key and specify the name of your reservation as its value.
+     * 
+     */
     public String key() {
         return this.key;
     }
@@ -46,6 +54,10 @@ public final class ReservationAffinityResponse extends com.pulumi.resources.Invo
     @Import(name="values", required=true)
     private List<String> values;
 
+    /**
+     * @return Corresponds to the label value(s) of reservation resource(s).
+     * 
+     */
     public List<String> values() {
         return this.values;
     }
@@ -76,21 +88,45 @@ public final class ReservationAffinityResponse extends com.pulumi.resources.Invo
             $ = new ReservationAffinityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param consumeReservationType Corresponds to the type of reservation consumption.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consumeReservationType(String consumeReservationType) {
             $.consumeReservationType = consumeReservationType;
             return this;
         }
 
+        /**
+         * @param key Corresponds to the label key of a reservation resource. To target a SPECIFIC_RESERVATION by name, specify &#34;googleapis.com/reservation-name&#34; as the key and specify the name of your reservation as its value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param values Corresponds to the label value(s) of reservation resource(s).
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(List<String> values) {
             $.values = values;
             return this;
         }
 
+        /**
+         * @param values Corresponds to the label value(s) of reservation resource(s).
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(String... values) {
             return values(List.of(values));
         }

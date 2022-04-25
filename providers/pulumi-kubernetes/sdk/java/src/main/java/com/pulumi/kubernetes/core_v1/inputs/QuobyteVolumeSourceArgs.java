@@ -27,6 +27,10 @@ public final class QuobyteVolumeSourceArgs extends com.pulumi.resources.Resource
     @Import(name="group")
     private @Nullable Output<String> group;
 
+    /**
+     * @return Group to map volume access to Default is no group
+     * 
+     */
     public Optional<Output<String>> group() {
         return Optional.ofNullable(this.group);
     }
@@ -38,6 +42,10 @@ public final class QuobyteVolumeSourceArgs extends com.pulumi.resources.Resource
     @Import(name="readOnly")
     private @Nullable Output<Boolean> readOnly;
 
+    /**
+     * @return ReadOnly here will force the Quobyte volume to be mounted with read-only permissions. Defaults to false.
+     * 
+     */
     public Optional<Output<Boolean>> readOnly() {
         return Optional.ofNullable(this.readOnly);
     }
@@ -49,6 +57,10 @@ public final class QuobyteVolumeSourceArgs extends com.pulumi.resources.Resource
     @Import(name="registry", required=true)
     private Output<String> registry;
 
+    /**
+     * @return Registry represents a single or multiple Quobyte Registry services specified as a string as host:port pair (multiple entries are separated with commas) which acts as the central registry for volumes
+     * 
+     */
     public Output<String> registry() {
         return this.registry;
     }
@@ -60,6 +72,10 @@ public final class QuobyteVolumeSourceArgs extends com.pulumi.resources.Resource
     @Import(name="tenant")
     private @Nullable Output<String> tenant;
 
+    /**
+     * @return Tenant owning the given Quobyte volume in the Backend Used with dynamically provisioned Quobyte volumes, value is set by the plugin
+     * 
+     */
     public Optional<Output<String>> tenant() {
         return Optional.ofNullable(this.tenant);
     }
@@ -71,6 +87,10 @@ public final class QuobyteVolumeSourceArgs extends com.pulumi.resources.Resource
     @Import(name="user")
     private @Nullable Output<String> user;
 
+    /**
+     * @return User to map volume access to Defaults to serivceaccount user
+     * 
+     */
     public Optional<Output<String>> user() {
         return Optional.ofNullable(this.user);
     }
@@ -82,6 +102,10 @@ public final class QuobyteVolumeSourceArgs extends com.pulumi.resources.Resource
     @Import(name="volume", required=true)
     private Output<String> volume;
 
+    /**
+     * @return Volume is a string that references an already created Quobyte volume by name.
+     * 
+     */
     public Output<String> volume() {
         return this.volume;
     }
@@ -115,56 +139,128 @@ public final class QuobyteVolumeSourceArgs extends com.pulumi.resources.Resource
             $ = new QuobyteVolumeSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param group Group to map volume access to Default is no group
+         * 
+         * @return builder
+         * 
+         */
         public Builder group(@Nullable Output<String> group) {
             $.group = group;
             return this;
         }
 
+        /**
+         * @param group Group to map volume access to Default is no group
+         * 
+         * @return builder
+         * 
+         */
         public Builder group(String group) {
             return group(Output.of(group));
         }
 
+        /**
+         * @param readOnly ReadOnly here will force the Quobyte volume to be mounted with read-only permissions. Defaults to false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
             $.readOnly = readOnly;
             return this;
         }
 
+        /**
+         * @param readOnly ReadOnly here will force the Quobyte volume to be mounted with read-only permissions. Defaults to false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readOnly(Boolean readOnly) {
             return readOnly(Output.of(readOnly));
         }
 
+        /**
+         * @param registry Registry represents a single or multiple Quobyte Registry services specified as a string as host:port pair (multiple entries are separated with commas) which acts as the central registry for volumes
+         * 
+         * @return builder
+         * 
+         */
         public Builder registry(Output<String> registry) {
             $.registry = registry;
             return this;
         }
 
+        /**
+         * @param registry Registry represents a single or multiple Quobyte Registry services specified as a string as host:port pair (multiple entries are separated with commas) which acts as the central registry for volumes
+         * 
+         * @return builder
+         * 
+         */
         public Builder registry(String registry) {
             return registry(Output.of(registry));
         }
 
+        /**
+         * @param tenant Tenant owning the given Quobyte volume in the Backend Used with dynamically provisioned Quobyte volumes, value is set by the plugin
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenant(@Nullable Output<String> tenant) {
             $.tenant = tenant;
             return this;
         }
 
+        /**
+         * @param tenant Tenant owning the given Quobyte volume in the Backend Used with dynamically provisioned Quobyte volumes, value is set by the plugin
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenant(String tenant) {
             return tenant(Output.of(tenant));
         }
 
+        /**
+         * @param user User to map volume access to Defaults to serivceaccount user
+         * 
+         * @return builder
+         * 
+         */
         public Builder user(@Nullable Output<String> user) {
             $.user = user;
             return this;
         }
 
+        /**
+         * @param user User to map volume access to Defaults to serivceaccount user
+         * 
+         * @return builder
+         * 
+         */
         public Builder user(String user) {
             return user(Output.of(user));
         }
 
+        /**
+         * @param volume Volume is a string that references an already created Quobyte volume by name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volume(Output<String> volume) {
             $.volume = volume;
             return this;
         }
 
+        /**
+         * @param volume Volume is a string that references an already created Quobyte volume by name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volume(String volume) {
             return volume(Output.of(volume));
         }

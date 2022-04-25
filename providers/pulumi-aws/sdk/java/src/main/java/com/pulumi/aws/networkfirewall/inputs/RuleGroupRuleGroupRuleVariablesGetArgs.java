@@ -24,6 +24,10 @@ public final class RuleGroupRuleGroupRuleVariablesGetArgs extends com.pulumi.res
     @Import(name="ipSets")
     private @Nullable Output<List<RuleGroupRuleGroupRuleVariablesIpSetGetArgs>> ipSets;
 
+    /**
+     * @return Set of configuration blocks that define IP address information. See IP Sets below for details.
+     * 
+     */
     public Optional<Output<List<RuleGroupRuleGroupRuleVariablesIpSetGetArgs>>> ipSets() {
         return Optional.ofNullable(this.ipSets);
     }
@@ -35,6 +39,10 @@ public final class RuleGroupRuleGroupRuleVariablesGetArgs extends com.pulumi.res
     @Import(name="portSets")
     private @Nullable Output<List<RuleGroupRuleGroupRuleVariablesPortSetGetArgs>> portSets;
 
+    /**
+     * @return Set of configuration blocks that define port range information. See Port Sets below for details.
+     * 
+     */
     public Optional<Output<List<RuleGroupRuleGroupRuleVariablesPortSetGetArgs>>> portSets() {
         return Optional.ofNullable(this.portSets);
     }
@@ -64,28 +72,64 @@ public final class RuleGroupRuleGroupRuleVariablesGetArgs extends com.pulumi.res
             $ = new RuleGroupRuleGroupRuleVariablesGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ipSets Set of configuration blocks that define IP address information. See IP Sets below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipSets(@Nullable Output<List<RuleGroupRuleGroupRuleVariablesIpSetGetArgs>> ipSets) {
             $.ipSets = ipSets;
             return this;
         }
 
+        /**
+         * @param ipSets Set of configuration blocks that define IP address information. See IP Sets below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipSets(List<RuleGroupRuleGroupRuleVariablesIpSetGetArgs> ipSets) {
             return ipSets(Output.of(ipSets));
         }
 
+        /**
+         * @param ipSets Set of configuration blocks that define IP address information. See IP Sets below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipSets(RuleGroupRuleGroupRuleVariablesIpSetGetArgs... ipSets) {
             return ipSets(List.of(ipSets));
         }
 
+        /**
+         * @param portSets Set of configuration blocks that define port range information. See Port Sets below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder portSets(@Nullable Output<List<RuleGroupRuleGroupRuleVariablesPortSetGetArgs>> portSets) {
             $.portSets = portSets;
             return this;
         }
 
+        /**
+         * @param portSets Set of configuration blocks that define port range information. See Port Sets below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder portSets(List<RuleGroupRuleGroupRuleVariablesPortSetGetArgs> portSets) {
             return portSets(Output.of(portSets));
         }
 
+        /**
+         * @param portSets Set of configuration blocks that define port range information. See Port Sets below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder portSets(RuleGroupRuleGroupRuleVariablesPortSetGetArgs... portSets) {
             return portSets(List.of(portSets));
         }

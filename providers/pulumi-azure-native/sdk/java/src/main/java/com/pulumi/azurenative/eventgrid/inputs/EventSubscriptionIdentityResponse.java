@@ -25,6 +25,10 @@ public final class EventSubscriptionIdentityResponse extends com.pulumi.resource
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return The type of managed identity used. The type &#39;SystemAssigned, UserAssigned&#39; includes both an implicitly created identity and a set of user-assigned identities. The type &#39;None&#39; will remove any identity.
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -36,6 +40,10 @@ public final class EventSubscriptionIdentityResponse extends com.pulumi.resource
     @Import(name="userAssignedIdentity")
     private @Nullable String userAssignedIdentity;
 
+    /**
+     * @return The user identity associated with the resource.
+     * 
+     */
     public Optional<String> userAssignedIdentity() {
         return Optional.ofNullable(this.userAssignedIdentity);
     }
@@ -65,11 +73,23 @@ public final class EventSubscriptionIdentityResponse extends com.pulumi.resource
             $ = new EventSubscriptionIdentityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type The type of managed identity used. The type &#39;SystemAssigned, UserAssigned&#39; includes both an implicitly created identity and a set of user-assigned identities. The type &#39;None&#39; will remove any identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param userAssignedIdentity The user identity associated with the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userAssignedIdentity(@Nullable String userAssignedIdentity) {
             $.userAssignedIdentity = userAssignedIdentity;
             return this;

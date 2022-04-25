@@ -23,6 +23,10 @@ public final class EndPointResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="endPointName", required=true)
     private String endPointName;
 
+    /**
+     * @return Name of an end point.
+     * 
+     */
     public String endPointName() {
         return this.endPointName;
     }
@@ -34,6 +38,10 @@ public final class EndPointResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="ipAddress", required=true)
     private String ipAddress;
 
+    /**
+     * @return IP Address.
+     * 
+     */
     public String ipAddress() {
         return this.ipAddress;
     }
@@ -45,6 +53,10 @@ public final class EndPointResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="port", required=true)
     private String port;
 
+    /**
+     * @return TCP port to listen on to receive data.
+     * 
+     */
     public String port() {
         return this.port;
     }
@@ -56,6 +68,10 @@ public final class EndPointResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="protocol", required=true)
     private String protocol;
 
+    /**
+     * @return Protocol either UDP or TCP.
+     * 
+     */
     public String protocol() {
         return this.protocol;
     }
@@ -87,21 +103,45 @@ public final class EndPointResponse extends com.pulumi.resources.InvokeArgs {
             $ = new EndPointResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endPointName Name of an end point.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endPointName(String endPointName) {
             $.endPointName = endPointName;
             return this;
         }
 
+        /**
+         * @param ipAddress IP Address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddress(String ipAddress) {
             $.ipAddress = ipAddress;
             return this;
         }
 
+        /**
+         * @param port TCP port to listen on to receive data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(String port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param protocol Protocol either UDP or TCP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(String protocol) {
             $.protocol = protocol;
             return this;

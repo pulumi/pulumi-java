@@ -23,6 +23,10 @@ public final class PubsubResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="subscription", required=true)
     private String subscription;
 
+    /**
+     * @return The name of the Pub/Sub subscription created and managed by Eventarc system as a transport for the event delivery. Format: `projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_NAME}`.
+     * 
+     */
     public String subscription() {
         return this.subscription;
     }
@@ -34,6 +38,10 @@ public final class PubsubResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="topic", required=true)
     private String topic;
 
+    /**
+     * @return Optional. The name of the Pub/Sub topic created and managed by Eventarc system as a transport for the event delivery. Format: `projects/{PROJECT_ID}/topics/{TOPIC_NAME}`. You may set an existing topic for triggers of the type `google.cloud.pubsub.topic.v1.messagePublished` only. The topic you provide here will not be deleted by Eventarc at trigger deletion.
+     * 
+     */
     public String topic() {
         return this.topic;
     }
@@ -63,11 +71,23 @@ public final class PubsubResponse extends com.pulumi.resources.InvokeArgs {
             $ = new PubsubResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param subscription The name of the Pub/Sub subscription created and managed by Eventarc system as a transport for the event delivery. Format: `projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_NAME}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscription(String subscription) {
             $.subscription = subscription;
             return this;
         }
 
+        /**
+         * @param topic Optional. The name of the Pub/Sub topic created and managed by Eventarc system as a transport for the event delivery. Format: `projects/{PROJECT_ID}/topics/{TOPIC_NAME}`. You may set an existing topic for triggers of the type `google.cloud.pubsub.topic.v1.messagePublished` only. The topic you provide here will not be deleted by Eventarc at trigger deletion.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topic(String topic) {
             $.topic = topic;
             return this;

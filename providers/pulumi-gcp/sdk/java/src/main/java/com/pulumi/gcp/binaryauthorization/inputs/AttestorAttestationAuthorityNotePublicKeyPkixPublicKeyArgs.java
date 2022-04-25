@@ -23,6 +23,11 @@ public final class AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyArgs ex
     @Import(name="publicKeyPem")
     private @Nullable Output<String> publicKeyPem;
 
+    /**
+     * @return A PEM-encoded public key, as described in
+     * `https://tools.ietf.org/html/rfc7468#section-13`
+     * 
+     */
     public Optional<Output<String>> publicKeyPem() {
         return Optional.ofNullable(this.publicKeyPem);
     }
@@ -38,6 +43,14 @@ public final class AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyArgs ex
     @Import(name="signatureAlgorithm")
     private @Nullable Output<String> signatureAlgorithm;
 
+    /**
+     * @return The signature algorithm used to verify a message against
+     * a signature using this key. These signature algorithm must
+     * match the structure and any object identifiers encoded in
+     * publicKeyPem (i.e. this algorithm must match that of the
+     * public key).
+     * 
+     */
     public Optional<Output<String>> signatureAlgorithm() {
         return Optional.ofNullable(this.signatureAlgorithm);
     }
@@ -67,20 +80,54 @@ public final class AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyArgs ex
             $ = new AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param publicKeyPem A PEM-encoded public key, as described in
+         * `https://tools.ietf.org/html/rfc7468#section-13`
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicKeyPem(@Nullable Output<String> publicKeyPem) {
             $.publicKeyPem = publicKeyPem;
             return this;
         }
 
+        /**
+         * @param publicKeyPem A PEM-encoded public key, as described in
+         * `https://tools.ietf.org/html/rfc7468#section-13`
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicKeyPem(String publicKeyPem) {
             return publicKeyPem(Output.of(publicKeyPem));
         }
 
+        /**
+         * @param signatureAlgorithm The signature algorithm used to verify a message against
+         * a signature using this key. These signature algorithm must
+         * match the structure and any object identifiers encoded in
+         * publicKeyPem (i.e. this algorithm must match that of the
+         * public key).
+         * 
+         * @return builder
+         * 
+         */
         public Builder signatureAlgorithm(@Nullable Output<String> signatureAlgorithm) {
             $.signatureAlgorithm = signatureAlgorithm;
             return this;
         }
 
+        /**
+         * @param signatureAlgorithm The signature algorithm used to verify a message against
+         * a signature using this key. These signature algorithm must
+         * match the structure and any object identifiers encoded in
+         * publicKeyPem (i.e. this algorithm must match that of the
+         * public key).
+         * 
+         * @return builder
+         * 
+         */
         public Builder signatureAlgorithm(String signatureAlgorithm) {
             return signatureAlgorithm(Output.of(signatureAlgorithm));
         }

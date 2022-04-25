@@ -25,6 +25,10 @@ public final class MigrationRequestPropertiesResponse extends com.pulumi.resourc
     @Import(name="migrationPath")
     private @Nullable String migrationPath;
 
+    /**
+     * @return The path to the legacy object to migrate.
+     * 
+     */
     public Optional<String> migrationPath() {
         return Optional.ofNullable(this.migrationPath);
     }
@@ -36,6 +40,10 @@ public final class MigrationRequestPropertiesResponse extends com.pulumi.resourc
     @Import(name="operation")
     private @Nullable String operation;
 
+    /**
+     * @return The type of operation for migration.
+     * 
+     */
     public Optional<String> operation() {
         return Optional.ofNullable(this.operation);
     }
@@ -65,11 +73,23 @@ public final class MigrationRequestPropertiesResponse extends com.pulumi.resourc
             $ = new MigrationRequestPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param migrationPath The path to the legacy object to migrate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder migrationPath(@Nullable String migrationPath) {
             $.migrationPath = migrationPath;
             return this;
         }
 
+        /**
+         * @param operation The type of operation for migration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operation(@Nullable String operation) {
             $.operation = operation;
             return this;

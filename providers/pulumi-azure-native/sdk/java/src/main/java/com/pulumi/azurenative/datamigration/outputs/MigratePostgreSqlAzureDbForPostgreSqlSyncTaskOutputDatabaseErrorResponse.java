@@ -14,22 +14,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputDatabaseErrorResponse {
     /**
-     * Error message
+     * @return Error message
      * 
      */
     private final @Nullable String errorMessage;
     /**
-     * List of error events.
+     * @return List of error events.
      * 
      */
     private final @Nullable List<SyncMigrationDatabaseErrorEventResponse> events;
     /**
-     * Result identifier
+     * @return Result identifier
      * 
      */
     private final String id;
     /**
-     * Result type
+     * @return Result type
      * Expected value is &#39;DatabaseLevelErrorOutput&#39;.
      * 
      */
@@ -48,31 +48,31 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputDatabaseEr
     }
 
     /**
-     * Error message
+     * @return Error message
      * 
-    */
+     */
     public Optional<String> errorMessage() {
         return Optional.ofNullable(this.errorMessage);
     }
     /**
-     * List of error events.
+     * @return List of error events.
      * 
-    */
+     */
     public List<SyncMigrationDatabaseErrorEventResponse> events() {
         return this.events == null ? List.of() : this.events;
     }
     /**
-     * Result identifier
+     * @return Result identifier
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Result type
+     * @return Result type
      * Expected value is &#39;DatabaseLevelErrorOutput&#39;.
      * 
-    */
+     */
     public String resultType() {
         return this.resultType;
     }

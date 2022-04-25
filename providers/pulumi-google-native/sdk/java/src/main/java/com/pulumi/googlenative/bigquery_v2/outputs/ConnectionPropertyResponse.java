@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class ConnectionPropertyResponse {
     /**
-     * [Required] Name of the connection property to set.
+     * @return [Required] Name of the connection property to set.
      * 
      */
     private final String key;
     /**
-     * [Required] Value of the connection property.
+     * @return [Required] Value of the connection property.
      * 
      */
     private final String value;
@@ -29,16 +29,16 @@ public final class ConnectionPropertyResponse {
     }
 
     /**
-     * [Required] Name of the connection property to set.
+     * @return [Required] Name of the connection property to set.
      * 
-    */
+     */
     public String key() {
         return this.key;
     }
     /**
-     * [Required] Value of the connection property.
+     * @return [Required] Value of the connection property.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

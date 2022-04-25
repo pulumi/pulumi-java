@@ -21,6 +21,10 @@ public final class AzureBlobFileSystemConfigurationResponse extends com.pulumi.r
     @Import(name="accountKey")
     private @Nullable String accountKey;
 
+    /**
+     * @return This property is mutually exclusive with sasKey and one must be specified.
+     * 
+     */
     public Optional<String> accountKey() {
         return Optional.ofNullable(this.accountKey);
     }
@@ -39,6 +43,10 @@ public final class AzureBlobFileSystemConfigurationResponse extends com.pulumi.r
     @Import(name="blobfuseOptions")
     private @Nullable String blobfuseOptions;
 
+    /**
+     * @return These are &#39;net use&#39; options in Windows and &#39;mount&#39; options in Linux.
+     * 
+     */
     public Optional<String> blobfuseOptions() {
         return Optional.ofNullable(this.blobfuseOptions);
     }
@@ -57,6 +65,10 @@ public final class AzureBlobFileSystemConfigurationResponse extends com.pulumi.r
     @Import(name="relativeMountPath", required=true)
     private String relativeMountPath;
 
+    /**
+     * @return All file systems are mounted relative to the Batch mounts directory, accessible via the AZ_BATCH_NODE_MOUNTS_DIR environment variable.
+     * 
+     */
     public String relativeMountPath() {
         return this.relativeMountPath;
     }
@@ -68,6 +80,10 @@ public final class AzureBlobFileSystemConfigurationResponse extends com.pulumi.r
     @Import(name="sasKey")
     private @Nullable String sasKey;
 
+    /**
+     * @return This property is mutually exclusive with accountKey and one must be specified.
+     * 
+     */
     public Optional<String> sasKey() {
         return Optional.ofNullable(this.sasKey);
     }
@@ -101,6 +117,12 @@ public final class AzureBlobFileSystemConfigurationResponse extends com.pulumi.r
             $ = new AzureBlobFileSystemConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountKey This property is mutually exclusive with sasKey and one must be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountKey(@Nullable String accountKey) {
             $.accountKey = accountKey;
             return this;
@@ -111,6 +133,12 @@ public final class AzureBlobFileSystemConfigurationResponse extends com.pulumi.r
             return this;
         }
 
+        /**
+         * @param blobfuseOptions These are &#39;net use&#39; options in Windows and &#39;mount&#39; options in Linux.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blobfuseOptions(@Nullable String blobfuseOptions) {
             $.blobfuseOptions = blobfuseOptions;
             return this;
@@ -121,11 +149,23 @@ public final class AzureBlobFileSystemConfigurationResponse extends com.pulumi.r
             return this;
         }
 
+        /**
+         * @param relativeMountPath All file systems are mounted relative to the Batch mounts directory, accessible via the AZ_BATCH_NODE_MOUNTS_DIR environment variable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder relativeMountPath(String relativeMountPath) {
             $.relativeMountPath = relativeMountPath;
             return this;
         }
 
+        /**
+         * @param sasKey This property is mutually exclusive with accountKey and one must be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sasKey(@Nullable String sasKey) {
             $.sasKey = sasKey;
             return this;

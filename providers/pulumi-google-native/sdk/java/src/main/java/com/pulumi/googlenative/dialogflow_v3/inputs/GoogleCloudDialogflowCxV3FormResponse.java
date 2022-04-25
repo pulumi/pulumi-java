@@ -24,6 +24,10 @@ public final class GoogleCloudDialogflowCxV3FormResponse extends com.pulumi.reso
     @Import(name="parameters", required=true)
     private List<GoogleCloudDialogflowCxV3FormParameterResponse> parameters;
 
+    /**
+     * @return Parameters to collect from the user.
+     * 
+     */
     public List<GoogleCloudDialogflowCxV3FormParameterResponse> parameters() {
         return this.parameters;
     }
@@ -52,11 +56,23 @@ public final class GoogleCloudDialogflowCxV3FormResponse extends com.pulumi.reso
             $ = new GoogleCloudDialogflowCxV3FormResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param parameters Parameters to collect from the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(List<GoogleCloudDialogflowCxV3FormParameterResponse> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters Parameters to collect from the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(GoogleCloudDialogflowCxV3FormParameterResponse... parameters) {
             return parameters(List.of(parameters));
         }

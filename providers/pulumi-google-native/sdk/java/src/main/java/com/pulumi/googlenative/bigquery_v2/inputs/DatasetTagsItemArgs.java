@@ -22,6 +22,10 @@ public final class DatasetTagsItemArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="tagKey")
     private @Nullable Output<String> tagKey;
 
+    /**
+     * @return [Required] The namespaced friendly name of the tag key, e.g. &#34;12345/environment&#34; where 12345 is org id.
+     * 
+     */
     public Optional<Output<String>> tagKey() {
         return Optional.ofNullable(this.tagKey);
     }
@@ -33,6 +37,10 @@ public final class DatasetTagsItemArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="tagValue")
     private @Nullable Output<String> tagValue;
 
+    /**
+     * @return [Required] Friendly short name of the tag value, e.g. &#34;production&#34;.
+     * 
+     */
     public Optional<Output<String>> tagValue() {
         return Optional.ofNullable(this.tagValue);
     }
@@ -62,20 +70,44 @@ public final class DatasetTagsItemArgs extends com.pulumi.resources.ResourceArgs
             $ = new DatasetTagsItemArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param tagKey [Required] The namespaced friendly name of the tag key, e.g. &#34;12345/environment&#34; where 12345 is org id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagKey(@Nullable Output<String> tagKey) {
             $.tagKey = tagKey;
             return this;
         }
 
+        /**
+         * @param tagKey [Required] The namespaced friendly name of the tag key, e.g. &#34;12345/environment&#34; where 12345 is org id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagKey(String tagKey) {
             return tagKey(Output.of(tagKey));
         }
 
+        /**
+         * @param tagValue [Required] Friendly short name of the tag value, e.g. &#34;production&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagValue(@Nullable Output<String> tagValue) {
             $.tagValue = tagValue;
             return this;
         }
 
+        /**
+         * @param tagValue [Required] Friendly short name of the tag value, e.g. &#34;production&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagValue(String tagValue) {
             return tagValue(Output.of(tagValue));
         }

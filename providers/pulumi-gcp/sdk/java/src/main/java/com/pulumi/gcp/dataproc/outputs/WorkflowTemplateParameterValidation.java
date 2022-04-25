@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class WorkflowTemplateParameterValidation {
     /**
-     * Validation based on regular expressions.
+     * @return Validation based on regular expressions.
      * 
      */
     private final @Nullable WorkflowTemplateParameterValidationRegex regex;
     /**
-     * Optional. Corresponds to the label values of reservation resource.
+     * @return Optional. Corresponds to the label values of reservation resource.
      * 
      */
     private final @Nullable WorkflowTemplateParameterValidationValues values;
@@ -32,16 +32,16 @@ public final class WorkflowTemplateParameterValidation {
     }
 
     /**
-     * Validation based on regular expressions.
+     * @return Validation based on regular expressions.
      * 
-    */
+     */
     public Optional<WorkflowTemplateParameterValidationRegex> regex() {
         return Optional.ofNullable(this.regex);
     }
     /**
-     * Optional. Corresponds to the label values of reservation resource.
+     * @return Optional. Corresponds to the label values of reservation resource.
      * 
-    */
+     */
     public Optional<WorkflowTemplateParameterValidationValues> values() {
         return Optional.ofNullable(this.values);
     }

@@ -24,6 +24,10 @@ public final class GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse exte
     @Import(name="clicked", required=true)
     private Boolean clicked;
 
+    /**
+     * @return Indicates whether an answer or item was clicked by the human agent.
+     * 
+     */
     public Boolean clicked() {
         return this.clicked;
     }
@@ -35,6 +39,10 @@ public final class GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse exte
     @Import(name="correctnessLevel", required=true)
     private String correctnessLevel;
 
+    /**
+     * @return The correctness level of an answer.
+     * 
+     */
     public String correctnessLevel() {
         return this.correctnessLevel;
     }
@@ -46,6 +54,10 @@ public final class GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse exte
     @Import(name="displayed", required=true)
     private Boolean displayed;
 
+    /**
+     * @return Indicates whether an answer or item was displayed to the human agent in the agent desktop UI.
+     * 
+     */
     public Boolean displayed() {
         return this.displayed;
     }
@@ -76,16 +88,34 @@ public final class GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse exte
             $ = new GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clicked Indicates whether an answer or item was clicked by the human agent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clicked(Boolean clicked) {
             $.clicked = clicked;
             return this;
         }
 
+        /**
+         * @param correctnessLevel The correctness level of an answer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder correctnessLevel(String correctnessLevel) {
             $.correctnessLevel = correctnessLevel;
             return this;
         }
 
+        /**
+         * @param displayed Indicates whether an answer or item was displayed to the human agent in the agent desktop UI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayed(Boolean displayed) {
             $.displayed = displayed;
             return this;

@@ -28,6 +28,10 @@ public final class RemotePrivateEndpointConnectionResponse extends com.pulumi.re
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Resource Id.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -39,6 +43,10 @@ public final class RemotePrivateEndpointConnectionResponse extends com.pulumi.re
     @Import(name="ipAddresses")
     private @Nullable List<String> ipAddresses;
 
+    /**
+     * @return Private IPAddresses mapped to the remote private endpoint
+     * 
+     */
     public Optional<List<String>> ipAddresses() {
         return Optional.ofNullable(this.ipAddresses);
     }
@@ -50,6 +58,10 @@ public final class RemotePrivateEndpointConnectionResponse extends com.pulumi.re
     @Import(name="kind")
     private @Nullable String kind;
 
+    /**
+     * @return Kind of resource.
+     * 
+     */
     public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -61,6 +73,10 @@ public final class RemotePrivateEndpointConnectionResponse extends com.pulumi.re
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Resource Name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -72,6 +88,10 @@ public final class RemotePrivateEndpointConnectionResponse extends com.pulumi.re
     @Import(name="privateEndpoint")
     private @Nullable ArmIdWrapperResponse privateEndpoint;
 
+    /**
+     * @return PrivateEndpoint of a remote private endpoint connection
+     * 
+     */
     public Optional<ArmIdWrapperResponse> privateEndpoint() {
         return Optional.ofNullable(this.privateEndpoint);
     }
@@ -83,6 +103,10 @@ public final class RemotePrivateEndpointConnectionResponse extends com.pulumi.re
     @Import(name="privateLinkServiceConnectionState")
     private @Nullable PrivateLinkConnectionStateResponse privateLinkServiceConnectionState;
 
+    /**
+     * @return The state of a private link connection
+     * 
+     */
     public Optional<PrivateLinkConnectionStateResponse> privateLinkServiceConnectionState() {
         return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
@@ -101,6 +125,10 @@ public final class RemotePrivateEndpointConnectionResponse extends com.pulumi.re
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Resource type.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -136,35 +164,77 @@ public final class RemotePrivateEndpointConnectionResponse extends com.pulumi.re
             $ = new RemotePrivateEndpointConnectionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Resource Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param ipAddresses Private IPAddresses mapped to the remote private endpoint
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddresses(@Nullable List<String> ipAddresses) {
             $.ipAddresses = ipAddresses;
             return this;
         }
 
+        /**
+         * @param ipAddresses Private IPAddresses mapped to the remote private endpoint
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddresses(String... ipAddresses) {
             return ipAddresses(List.of(ipAddresses));
         }
 
+        /**
+         * @param kind Kind of resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable String kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param name Resource Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param privateEndpoint PrivateEndpoint of a remote private endpoint connection
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpoint(@Nullable ArmIdWrapperResponse privateEndpoint) {
             $.privateEndpoint = privateEndpoint;
             return this;
         }
 
+        /**
+         * @param privateLinkServiceConnectionState The state of a private link connection
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkServiceConnectionState(@Nullable PrivateLinkConnectionStateResponse privateLinkServiceConnectionState) {
             $.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
             return this;
@@ -175,6 +245,12 @@ public final class RemotePrivateEndpointConnectionResponse extends com.pulumi.re
             return this;
         }
 
+        /**
+         * @param type Resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

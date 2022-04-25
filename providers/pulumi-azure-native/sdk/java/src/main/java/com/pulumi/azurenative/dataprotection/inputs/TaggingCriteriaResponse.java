@@ -29,6 +29,10 @@ public final class TaggingCriteriaResponse extends com.pulumi.resources.InvokeAr
     @Import(name="criteria")
     private @Nullable List<ScheduleBasedBackupCriteriaResponse> criteria;
 
+    /**
+     * @return Criteria which decides whether the tag can be applied to a triggered backup.
+     * 
+     */
     public Optional<List<ScheduleBasedBackupCriteriaResponse>> criteria() {
         return Optional.ofNullable(this.criteria);
     }
@@ -40,6 +44,10 @@ public final class TaggingCriteriaResponse extends com.pulumi.resources.InvokeAr
     @Import(name="isDefault", required=true)
     private Boolean isDefault;
 
+    /**
+     * @return Specifies if tag is default.
+     * 
+     */
     public Boolean isDefault() {
         return this.isDefault;
     }
@@ -51,6 +59,10 @@ public final class TaggingCriteriaResponse extends com.pulumi.resources.InvokeAr
     @Import(name="tagInfo", required=true)
     private RetentionTagResponse tagInfo;
 
+    /**
+     * @return Retention tag information
+     * 
+     */
     public RetentionTagResponse tagInfo() {
         return this.tagInfo;
     }
@@ -62,6 +74,10 @@ public final class TaggingCriteriaResponse extends com.pulumi.resources.InvokeAr
     @Import(name="taggingPriority", required=true)
     private Double taggingPriority;
 
+    /**
+     * @return Retention Tag priority.
+     * 
+     */
     public Double taggingPriority() {
         return this.taggingPriority;
     }
@@ -93,25 +109,55 @@ public final class TaggingCriteriaResponse extends com.pulumi.resources.InvokeAr
             $ = new TaggingCriteriaResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param criteria Criteria which decides whether the tag can be applied to a triggered backup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder criteria(@Nullable List<ScheduleBasedBackupCriteriaResponse> criteria) {
             $.criteria = criteria;
             return this;
         }
 
+        /**
+         * @param criteria Criteria which decides whether the tag can be applied to a triggered backup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder criteria(ScheduleBasedBackupCriteriaResponse... criteria) {
             return criteria(List.of(criteria));
         }
 
+        /**
+         * @param isDefault Specifies if tag is default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isDefault(Boolean isDefault) {
             $.isDefault = isDefault;
             return this;
         }
 
+        /**
+         * @param tagInfo Retention tag information
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagInfo(RetentionTagResponse tagInfo) {
             $.tagInfo = tagInfo;
             return this;
         }
 
+        /**
+         * @param taggingPriority Retention Tag priority.
+         * 
+         * @return builder
+         * 
+         */
         public Builder taggingPriority(Double taggingPriority) {
             $.taggingPriority = taggingPriority;
             return this;

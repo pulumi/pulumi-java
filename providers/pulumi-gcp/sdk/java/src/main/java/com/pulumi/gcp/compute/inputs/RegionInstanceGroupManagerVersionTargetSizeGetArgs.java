@@ -22,6 +22,10 @@ public final class RegionInstanceGroupManagerVersionTargetSizeGetArgs extends co
     @Import(name="fixed")
     private @Nullable Output<Integer> fixed;
 
+    /**
+     * @return , The number of instances which are managed for this version. Conflicts with `percent`.
+     * 
+     */
     public Optional<Output<Integer>> fixed() {
         return Optional.ofNullable(this.fixed);
     }
@@ -35,6 +39,12 @@ public final class RegionInstanceGroupManagerVersionTargetSizeGetArgs extends co
     @Import(name="percent")
     private @Nullable Output<Integer> percent;
 
+    /**
+     * @return , The number of instances (calculated as percentage) which are managed for this version. Conflicts with `fixed`.
+     * Note that when using `percent`, rounding will be in favor of explicitly set `target_size` values; a managed instance group with 2 instances and 2 `version`s,
+     * one of which has a `target_size.percent` of `60` will create 2 instances of that `version`.
+     * 
+     */
     public Optional<Output<Integer>> percent() {
         return Optional.ofNullable(this.percent);
     }
@@ -64,20 +74,48 @@ public final class RegionInstanceGroupManagerVersionTargetSizeGetArgs extends co
             $ = new RegionInstanceGroupManagerVersionTargetSizeGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fixed , The number of instances which are managed for this version. Conflicts with `percent`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fixed(@Nullable Output<Integer> fixed) {
             $.fixed = fixed;
             return this;
         }
 
+        /**
+         * @param fixed , The number of instances which are managed for this version. Conflicts with `percent`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fixed(Integer fixed) {
             return fixed(Output.of(fixed));
         }
 
+        /**
+         * @param percent , The number of instances (calculated as percentage) which are managed for this version. Conflicts with `fixed`.
+         * Note that when using `percent`, rounding will be in favor of explicitly set `target_size` values; a managed instance group with 2 instances and 2 `version`s,
+         * one of which has a `target_size.percent` of `60` will create 2 instances of that `version`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder percent(@Nullable Output<Integer> percent) {
             $.percent = percent;
             return this;
         }
 
+        /**
+         * @param percent , The number of instances (calculated as percentage) which are managed for this version. Conflicts with `fixed`.
+         * Note that when using `percent`, rounding will be in favor of explicitly set `target_size` values; a managed instance group with 2 instances and 2 `version`s,
+         * one of which has a `target_size.percent` of `60` will create 2 instances of that `version`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder percent(Integer percent) {
             return percent(Output.of(percent));
         }

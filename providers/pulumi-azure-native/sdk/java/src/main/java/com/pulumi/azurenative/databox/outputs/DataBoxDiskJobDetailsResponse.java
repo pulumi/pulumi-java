@@ -28,93 +28,93 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DataBoxDiskJobDetailsResponse {
     /**
-     * Shared access key to download the chain of custody logs
+     * @return Shared access key to download the chain of custody logs
      * 
      */
     private final String chainOfCustodySasKey;
     /**
-     * Contact details for notification and shipping.
+     * @return Contact details for notification and shipping.
      * 
      */
     private final ContactDetailsResponse contactDetails;
     /**
-     * List of copy log details.
+     * @return List of copy log details.
      * 
      */
     private final List<Object> copyLogDetails;
     /**
-     * Copy progress per disk.
+     * @return Copy progress per disk.
      * 
      */
     private final List<DataBoxDiskCopyProgressResponse> copyProgress;
     /**
-     * Details of the data to be exported from azure.
+     * @return Details of the data to be exported from azure.
      * 
      */
     private final @Nullable List<DataExportDetailsResponse> dataExportDetails;
     /**
-     * Details of the data to be imported into azure.
+     * @return Details of the data to be imported into azure.
      * 
      */
     private final @Nullable List<DataImportDetailsResponse> dataImportDetails;
     /**
-     * Delivery package shipping details.
+     * @return Delivery package shipping details.
      * 
      */
     private final PackageShippingDetailsResponse deliveryPackage;
     /**
-     * Contains the map of disk serial number to the disk size being used for the job. Is returned only after the disks are shipped to the customer.
+     * @return Contains the map of disk serial number to the disk size being used for the job. Is returned only after the disks are shipped to the customer.
      * 
      */
     private final Map<String,Integer> disksAndSizeDetails;
     /**
-     * The expected size of the data, which needs to be transferred in this job, in terabytes.
+     * @return The expected size of the data, which needs to be transferred in this job, in terabytes.
      * 
      */
     private final @Nullable Integer expectedDataSizeInTeraBytes;
     /**
-     * Indicates the type of job details.
+     * @return Indicates the type of job details.
      * Expected value is &#39;DataBoxDisk&#39;.
      * 
      */
     private final String jobDetailsType;
     /**
-     * List of stages that run in the job.
+     * @return List of stages that run in the job.
      * 
      */
     private final List<JobStagesResponse> jobStages;
     /**
-     * Details about which key encryption type is being used.
+     * @return Details about which key encryption type is being used.
      * 
      */
     private final @Nullable KeyEncryptionKeyResponse keyEncryptionKey;
     /**
-     * User entered passkey for DataBox Disk job.
+     * @return User entered passkey for DataBox Disk job.
      * 
      */
     private final @Nullable String passkey;
     /**
-     * Preferences for the order.
+     * @return Preferences for the order.
      * 
      */
     private final @Nullable PreferencesResponse preferences;
     /**
-     * User preference on what size disks are needed for the job. The map is from the disk size in TB to the count. Eg. {2,5} means 5 disks of 2 TB size. Key is string but will be checked against an int.
+     * @return User preference on what size disks are needed for the job. The map is from the disk size in TB to the count. Eg. {2,5} means 5 disks of 2 TB size. Key is string but will be checked against an int.
      * 
      */
     private final @Nullable Map<String,Integer> preferredDisks;
     /**
-     * Return package shipping details.
+     * @return Return package shipping details.
      * 
      */
     private final PackageShippingDetailsResponse returnPackage;
     /**
-     * Shared access key to download the return shipment label
+     * @return Shared access key to download the return shipment label
      * 
      */
     private final String reverseShipmentLabelSasKey;
     /**
-     * Shipping address of the customer.
+     * @return Shipping address of the customer.
      * 
      */
     private final @Nullable ShippingAddressResponse shippingAddress;
@@ -160,129 +160,129 @@ public final class DataBoxDiskJobDetailsResponse {
     }
 
     /**
-     * Shared access key to download the chain of custody logs
+     * @return Shared access key to download the chain of custody logs
      * 
-    */
+     */
     public String chainOfCustodySasKey() {
         return this.chainOfCustodySasKey;
     }
     /**
-     * Contact details for notification and shipping.
+     * @return Contact details for notification and shipping.
      * 
-    */
+     */
     public ContactDetailsResponse contactDetails() {
         return this.contactDetails;
     }
     /**
-     * List of copy log details.
+     * @return List of copy log details.
      * 
-    */
+     */
     public List<Object> copyLogDetails() {
         return this.copyLogDetails;
     }
     /**
-     * Copy progress per disk.
+     * @return Copy progress per disk.
      * 
-    */
+     */
     public List<DataBoxDiskCopyProgressResponse> copyProgress() {
         return this.copyProgress;
     }
     /**
-     * Details of the data to be exported from azure.
+     * @return Details of the data to be exported from azure.
      * 
-    */
+     */
     public List<DataExportDetailsResponse> dataExportDetails() {
         return this.dataExportDetails == null ? List.of() : this.dataExportDetails;
     }
     /**
-     * Details of the data to be imported into azure.
+     * @return Details of the data to be imported into azure.
      * 
-    */
+     */
     public List<DataImportDetailsResponse> dataImportDetails() {
         return this.dataImportDetails == null ? List.of() : this.dataImportDetails;
     }
     /**
-     * Delivery package shipping details.
+     * @return Delivery package shipping details.
      * 
-    */
+     */
     public PackageShippingDetailsResponse deliveryPackage() {
         return this.deliveryPackage;
     }
     /**
-     * Contains the map of disk serial number to the disk size being used for the job. Is returned only after the disks are shipped to the customer.
+     * @return Contains the map of disk serial number to the disk size being used for the job. Is returned only after the disks are shipped to the customer.
      * 
-    */
+     */
     public Map<String,Integer> disksAndSizeDetails() {
         return this.disksAndSizeDetails;
     }
     /**
-     * The expected size of the data, which needs to be transferred in this job, in terabytes.
+     * @return The expected size of the data, which needs to be transferred in this job, in terabytes.
      * 
-    */
+     */
     public Optional<Integer> expectedDataSizeInTeraBytes() {
         return Optional.ofNullable(this.expectedDataSizeInTeraBytes);
     }
     /**
-     * Indicates the type of job details.
+     * @return Indicates the type of job details.
      * Expected value is &#39;DataBoxDisk&#39;.
      * 
-    */
+     */
     public String jobDetailsType() {
         return this.jobDetailsType;
     }
     /**
-     * List of stages that run in the job.
+     * @return List of stages that run in the job.
      * 
-    */
+     */
     public List<JobStagesResponse> jobStages() {
         return this.jobStages;
     }
     /**
-     * Details about which key encryption type is being used.
+     * @return Details about which key encryption type is being used.
      * 
-    */
+     */
     public Optional<KeyEncryptionKeyResponse> keyEncryptionKey() {
         return Optional.ofNullable(this.keyEncryptionKey);
     }
     /**
-     * User entered passkey for DataBox Disk job.
+     * @return User entered passkey for DataBox Disk job.
      * 
-    */
+     */
     public Optional<String> passkey() {
         return Optional.ofNullable(this.passkey);
     }
     /**
-     * Preferences for the order.
+     * @return Preferences for the order.
      * 
-    */
+     */
     public Optional<PreferencesResponse> preferences() {
         return Optional.ofNullable(this.preferences);
     }
     /**
-     * User preference on what size disks are needed for the job. The map is from the disk size in TB to the count. Eg. {2,5} means 5 disks of 2 TB size. Key is string but will be checked against an int.
+     * @return User preference on what size disks are needed for the job. The map is from the disk size in TB to the count. Eg. {2,5} means 5 disks of 2 TB size. Key is string but will be checked against an int.
      * 
-    */
+     */
     public Map<String,Integer> preferredDisks() {
         return this.preferredDisks == null ? Map.of() : this.preferredDisks;
     }
     /**
-     * Return package shipping details.
+     * @return Return package shipping details.
      * 
-    */
+     */
     public PackageShippingDetailsResponse returnPackage() {
         return this.returnPackage;
     }
     /**
-     * Shared access key to download the return shipment label
+     * @return Shared access key to download the return shipment label
      * 
-    */
+     */
     public String reverseShipmentLabelSasKey() {
         return this.reverseShipmentLabelSasKey;
     }
     /**
-     * Shipping address of the customer.
+     * @return Shipping address of the customer.
      * 
-    */
+     */
     public Optional<ShippingAddressResponse> shippingAddress() {
         return Optional.ofNullable(this.shippingAddress);
     }

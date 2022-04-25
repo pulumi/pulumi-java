@@ -29,6 +29,10 @@ public final class ProbeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="exec")
     private @Nullable Output<ExecActionArgs> exec;
 
+    /**
+     * @return (Optional) One and only one of the following should be specified. Exec specifies the action to take. A field inlined from the Handler message.
+     * 
+     */
     public Optional<Output<ExecActionArgs>> exec() {
         return Optional.ofNullable(this.exec);
     }
@@ -40,6 +44,10 @@ public final class ProbeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="failureThreshold")
     private @Nullable Output<Integer> failureThreshold;
 
+    /**
+     * @return (Optional) Minimum consecutive failures for the probe to be considered failed after having succeeded. Defaults to 3. Minimum value is 1.
+     * 
+     */
     public Optional<Output<Integer>> failureThreshold() {
         return Optional.ofNullable(this.failureThreshold);
     }
@@ -51,6 +59,10 @@ public final class ProbeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="httpGet")
     private @Nullable Output<HTTPGetActionArgs> httpGet;
 
+    /**
+     * @return (Optional) HTTPGet specifies the http request to perform. A field inlined from the Handler message.
+     * 
+     */
     public Optional<Output<HTTPGetActionArgs>> httpGet() {
         return Optional.ofNullable(this.httpGet);
     }
@@ -62,6 +74,10 @@ public final class ProbeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="initialDelaySeconds")
     private @Nullable Output<Integer> initialDelaySeconds;
 
+    /**
+     * @return (Optional) Number of seconds after the container has started before liveness probes are initiated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
+     * 
+     */
     public Optional<Output<Integer>> initialDelaySeconds() {
         return Optional.ofNullable(this.initialDelaySeconds);
     }
@@ -73,6 +89,10 @@ public final class ProbeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="periodSeconds")
     private @Nullable Output<Integer> periodSeconds;
 
+    /**
+     * @return (Optional) How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1.
+     * 
+     */
     public Optional<Output<Integer>> periodSeconds() {
         return Optional.ofNullable(this.periodSeconds);
     }
@@ -84,6 +104,10 @@ public final class ProbeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="successThreshold")
     private @Nullable Output<Integer> successThreshold;
 
+    /**
+     * @return (Optional) Minimum consecutive successes for the probe to be considered successful after having failed. Defaults to 1. Must be 1 for liveness. Minimum value is 1.
+     * 
+     */
     public Optional<Output<Integer>> successThreshold() {
         return Optional.ofNullable(this.successThreshold);
     }
@@ -95,6 +119,10 @@ public final class ProbeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tcpSocket")
     private @Nullable Output<TCPSocketActionArgs> tcpSocket;
 
+    /**
+     * @return (Optional) TCPSocket specifies an action involving a TCP port. TCP hooks not yet supported A field inlined from the Handler message.
+     * 
+     */
     public Optional<Output<TCPSocketActionArgs>> tcpSocket() {
         return Optional.ofNullable(this.tcpSocket);
     }
@@ -106,6 +134,10 @@ public final class ProbeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="timeoutSeconds")
     private @Nullable Output<Integer> timeoutSeconds;
 
+    /**
+     * @return (Optional) Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
+     * 
+     */
     public Optional<Output<Integer>> timeoutSeconds() {
         return Optional.ofNullable(this.timeoutSeconds);
     }
@@ -141,74 +173,170 @@ public final class ProbeArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ProbeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param exec (Optional) One and only one of the following should be specified. Exec specifies the action to take. A field inlined from the Handler message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exec(@Nullable Output<ExecActionArgs> exec) {
             $.exec = exec;
             return this;
         }
 
+        /**
+         * @param exec (Optional) One and only one of the following should be specified. Exec specifies the action to take. A field inlined from the Handler message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exec(ExecActionArgs exec) {
             return exec(Output.of(exec));
         }
 
+        /**
+         * @param failureThreshold (Optional) Minimum consecutive failures for the probe to be considered failed after having succeeded. Defaults to 3. Minimum value is 1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failureThreshold(@Nullable Output<Integer> failureThreshold) {
             $.failureThreshold = failureThreshold;
             return this;
         }
 
+        /**
+         * @param failureThreshold (Optional) Minimum consecutive failures for the probe to be considered failed after having succeeded. Defaults to 3. Minimum value is 1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failureThreshold(Integer failureThreshold) {
             return failureThreshold(Output.of(failureThreshold));
         }
 
+        /**
+         * @param httpGet (Optional) HTTPGet specifies the http request to perform. A field inlined from the Handler message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpGet(@Nullable Output<HTTPGetActionArgs> httpGet) {
             $.httpGet = httpGet;
             return this;
         }
 
+        /**
+         * @param httpGet (Optional) HTTPGet specifies the http request to perform. A field inlined from the Handler message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpGet(HTTPGetActionArgs httpGet) {
             return httpGet(Output.of(httpGet));
         }
 
+        /**
+         * @param initialDelaySeconds (Optional) Number of seconds after the container has started before liveness probes are initiated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
+         * 
+         * @return builder
+         * 
+         */
         public Builder initialDelaySeconds(@Nullable Output<Integer> initialDelaySeconds) {
             $.initialDelaySeconds = initialDelaySeconds;
             return this;
         }
 
+        /**
+         * @param initialDelaySeconds (Optional) Number of seconds after the container has started before liveness probes are initiated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
+         * 
+         * @return builder
+         * 
+         */
         public Builder initialDelaySeconds(Integer initialDelaySeconds) {
             return initialDelaySeconds(Output.of(initialDelaySeconds));
         }
 
+        /**
+         * @param periodSeconds (Optional) How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder periodSeconds(@Nullable Output<Integer> periodSeconds) {
             $.periodSeconds = periodSeconds;
             return this;
         }
 
+        /**
+         * @param periodSeconds (Optional) How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder periodSeconds(Integer periodSeconds) {
             return periodSeconds(Output.of(periodSeconds));
         }
 
+        /**
+         * @param successThreshold (Optional) Minimum consecutive successes for the probe to be considered successful after having failed. Defaults to 1. Must be 1 for liveness. Minimum value is 1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder successThreshold(@Nullable Output<Integer> successThreshold) {
             $.successThreshold = successThreshold;
             return this;
         }
 
+        /**
+         * @param successThreshold (Optional) Minimum consecutive successes for the probe to be considered successful after having failed. Defaults to 1. Must be 1 for liveness. Minimum value is 1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder successThreshold(Integer successThreshold) {
             return successThreshold(Output.of(successThreshold));
         }
 
+        /**
+         * @param tcpSocket (Optional) TCPSocket specifies an action involving a TCP port. TCP hooks not yet supported A field inlined from the Handler message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tcpSocket(@Nullable Output<TCPSocketActionArgs> tcpSocket) {
             $.tcpSocket = tcpSocket;
             return this;
         }
 
+        /**
+         * @param tcpSocket (Optional) TCPSocket specifies an action involving a TCP port. TCP hooks not yet supported A field inlined from the Handler message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tcpSocket(TCPSocketActionArgs tcpSocket) {
             return tcpSocket(Output.of(tcpSocket));
         }
 
+        /**
+         * @param timeoutSeconds (Optional) Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeoutSeconds(@Nullable Output<Integer> timeoutSeconds) {
             $.timeoutSeconds = timeoutSeconds;
             return this;
         }
 
+        /**
+         * @param timeoutSeconds (Optional) Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeoutSeconds(Integer timeoutSeconds) {
             return timeoutSeconds(Output.of(timeoutSeconds));
         }

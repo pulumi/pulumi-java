@@ -23,6 +23,10 @@ public final class LatLngResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="latitude", required=true)
     private Double latitude;
 
+    /**
+     * @return The latitude in degrees. It must be in the range [-90.0, +90.0].
+     * 
+     */
     public Double latitude() {
         return this.latitude;
     }
@@ -34,6 +38,10 @@ public final class LatLngResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="longitude", required=true)
     private Double longitude;
 
+    /**
+     * @return The longitude in degrees. It must be in the range [-180.0, +180.0].
+     * 
+     */
     public Double longitude() {
         return this.longitude;
     }
@@ -63,11 +71,23 @@ public final class LatLngResponse extends com.pulumi.resources.InvokeArgs {
             $ = new LatLngResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param latitude The latitude in degrees. It must be in the range [-90.0, +90.0].
+         * 
+         * @return builder
+         * 
+         */
         public Builder latitude(Double latitude) {
             $.latitude = latitude;
             return this;
         }
 
+        /**
+         * @param longitude The longitude in degrees. It must be in the range [-180.0, +180.0].
+         * 
+         * @return builder
+         * 
+         */
         public Builder longitude(Double longitude) {
             $.longitude = longitude;
             return this;

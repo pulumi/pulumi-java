@@ -30,6 +30,11 @@ public final class WebClientCertificateAuthenticationArgs extends com.pulumi.res
     @Import(name="authenticationType", required=true)
     private Output<String> authenticationType;
 
+    /**
+     * @return Type of authentication used to connect to the web table source.
+     * Expected value is &#39;ClientCertificate&#39;.
+     * 
+     */
     public Output<String> authenticationType() {
         return this.authenticationType;
     }
@@ -41,6 +46,10 @@ public final class WebClientCertificateAuthenticationArgs extends com.pulumi.res
     @Import(name="password", required=true)
     private Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
+    /**
+     * @return Password for the PFX file.
+     * 
+     */
     public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password() {
         return this.password;
     }
@@ -52,6 +61,10 @@ public final class WebClientCertificateAuthenticationArgs extends com.pulumi.res
     @Import(name="pfx", required=true)
     private Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> pfx;
 
+    /**
+     * @return Base64-encoded contents of a PFX file.
+     * 
+     */
     public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> pfx() {
         return this.pfx;
     }
@@ -63,6 +76,10 @@ public final class WebClientCertificateAuthenticationArgs extends com.pulumi.res
     @Import(name="url", required=true)
     private Output<Object> url;
 
+    /**
+     * @return The URL of the web service endpoint, e.g. http://www.microsoft.com . Type: string (or Expression with resultType string).
+     * 
+     */
     public Output<Object> url() {
         return this.url;
     }
@@ -94,54 +111,128 @@ public final class WebClientCertificateAuthenticationArgs extends com.pulumi.res
             $ = new WebClientCertificateAuthenticationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authenticationType Type of authentication used to connect to the web table source.
+         * Expected value is &#39;ClientCertificate&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationType(Output<String> authenticationType) {
             $.authenticationType = authenticationType;
             return this;
         }
 
+        /**
+         * @param authenticationType Type of authentication used to connect to the web table source.
+         * Expected value is &#39;ClientCertificate&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationType(String authenticationType) {
             return authenticationType(Output.of(authenticationType));
         }
 
+        /**
+         * @param password Password for the PFX file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param password Password for the PFX file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
             return password(Output.of(password));
         }
 
+        /**
+         * @param password Password for the PFX file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(AzureKeyVaultSecretReferenceArgs password) {
             return password(Either.ofLeft(password));
         }
 
+        /**
+         * @param password Password for the PFX file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(SecureStringArgs password) {
             return password(Either.ofRight(password));
         }
 
+        /**
+         * @param pfx Base64-encoded contents of a PFX file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pfx(Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> pfx) {
             $.pfx = pfx;
             return this;
         }
 
+        /**
+         * @param pfx Base64-encoded contents of a PFX file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pfx(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> pfx) {
             return pfx(Output.of(pfx));
         }
 
+        /**
+         * @param pfx Base64-encoded contents of a PFX file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pfx(AzureKeyVaultSecretReferenceArgs pfx) {
             return pfx(Either.ofLeft(pfx));
         }
 
+        /**
+         * @param pfx Base64-encoded contents of a PFX file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pfx(SecureStringArgs pfx) {
             return pfx(Either.ofRight(pfx));
         }
 
+        /**
+         * @param url The URL of the web service endpoint, e.g. http://www.microsoft.com . Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(Output<Object> url) {
             $.url = url;
             return this;
         }
 
+        /**
+         * @param url The URL of the web service endpoint, e.g. http://www.microsoft.com . Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(Object url) {
             return url(Output.of(url));
         }

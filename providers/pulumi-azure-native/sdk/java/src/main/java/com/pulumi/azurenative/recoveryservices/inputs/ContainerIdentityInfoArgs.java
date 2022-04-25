@@ -26,6 +26,10 @@ public final class ContainerIdentityInfoArgs extends com.pulumi.resources.Resour
     @Import(name="aadTenantId")
     private @Nullable Output<String> aadTenantId;
 
+    /**
+     * @return Protection container identity - AAD Tenant
+     * 
+     */
     public Optional<Output<String>> aadTenantId() {
         return Optional.ofNullable(this.aadTenantId);
     }
@@ -37,6 +41,10 @@ public final class ContainerIdentityInfoArgs extends com.pulumi.resources.Resour
     @Import(name="audience")
     private @Nullable Output<String> audience;
 
+    /**
+     * @return Protection container identity - Audience
+     * 
+     */
     public Optional<Output<String>> audience() {
         return Optional.ofNullable(this.audience);
     }
@@ -48,6 +56,10 @@ public final class ContainerIdentityInfoArgs extends com.pulumi.resources.Resour
     @Import(name="servicePrincipalClientId")
     private @Nullable Output<String> servicePrincipalClientId;
 
+    /**
+     * @return Protection container identity - AAD Service Principal
+     * 
+     */
     public Optional<Output<String>> servicePrincipalClientId() {
         return Optional.ofNullable(this.servicePrincipalClientId);
     }
@@ -59,6 +71,10 @@ public final class ContainerIdentityInfoArgs extends com.pulumi.resources.Resour
     @Import(name="uniqueName")
     private @Nullable Output<String> uniqueName;
 
+    /**
+     * @return Unique name of the container
+     * 
+     */
     public Optional<Output<String>> uniqueName() {
         return Optional.ofNullable(this.uniqueName);
     }
@@ -90,38 +106,86 @@ public final class ContainerIdentityInfoArgs extends com.pulumi.resources.Resour
             $ = new ContainerIdentityInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param aadTenantId Protection container identity - AAD Tenant
+         * 
+         * @return builder
+         * 
+         */
         public Builder aadTenantId(@Nullable Output<String> aadTenantId) {
             $.aadTenantId = aadTenantId;
             return this;
         }
 
+        /**
+         * @param aadTenantId Protection container identity - AAD Tenant
+         * 
+         * @return builder
+         * 
+         */
         public Builder aadTenantId(String aadTenantId) {
             return aadTenantId(Output.of(aadTenantId));
         }
 
+        /**
+         * @param audience Protection container identity - Audience
+         * 
+         * @return builder
+         * 
+         */
         public Builder audience(@Nullable Output<String> audience) {
             $.audience = audience;
             return this;
         }
 
+        /**
+         * @param audience Protection container identity - Audience
+         * 
+         * @return builder
+         * 
+         */
         public Builder audience(String audience) {
             return audience(Output.of(audience));
         }
 
+        /**
+         * @param servicePrincipalClientId Protection container identity - AAD Service Principal
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipalClientId(@Nullable Output<String> servicePrincipalClientId) {
             $.servicePrincipalClientId = servicePrincipalClientId;
             return this;
         }
 
+        /**
+         * @param servicePrincipalClientId Protection container identity - AAD Service Principal
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipalClientId(String servicePrincipalClientId) {
             return servicePrincipalClientId(Output.of(servicePrincipalClientId));
         }
 
+        /**
+         * @param uniqueName Unique name of the container
+         * 
+         * @return builder
+         * 
+         */
         public Builder uniqueName(@Nullable Output<String> uniqueName) {
             $.uniqueName = uniqueName;
             return this;
         }
 
+        /**
+         * @param uniqueName Unique name of the container
+         * 
+         * @return builder
+         * 
+         */
         public Builder uniqueName(String uniqueName) {
             return uniqueName(Output.of(uniqueName));
         }

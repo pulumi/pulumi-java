@@ -35,6 +35,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="autoRenew")
     private @Nullable Output<Boolean> autoRenew;
 
+    /**
+     * @return &lt;code&gt;true&lt;/code&gt; if the domain should be automatically renewed; otherwise, &lt;code&gt;false&lt;/code&gt;.
+     * 
+     */
     public Optional<Output<Boolean>> autoRenew() {
         return Optional.ofNullable(this.autoRenew);
     }
@@ -46,6 +50,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="consent", required=true)
     private Output<DomainPurchaseConsentArgs> consent;
 
+    /**
+     * @return Legal agreement consent.
+     * 
+     */
     public Output<DomainPurchaseConsentArgs> consent() {
         return this.consent;
     }
@@ -57,6 +65,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="contactAdmin", required=true)
     private Output<ContactArgs> contactAdmin;
 
+    /**
+     * @return Administrative contact.
+     * 
+     */
     public Output<ContactArgs> contactAdmin() {
         return this.contactAdmin;
     }
@@ -68,6 +80,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="contactBilling", required=true)
     private Output<ContactArgs> contactBilling;
 
+    /**
+     * @return Billing contact.
+     * 
+     */
     public Output<ContactArgs> contactBilling() {
         return this.contactBilling;
     }
@@ -79,6 +95,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="contactRegistrant", required=true)
     private Output<ContactArgs> contactRegistrant;
 
+    /**
+     * @return Registrant contact.
+     * 
+     */
     public Output<ContactArgs> contactRegistrant() {
         return this.contactRegistrant;
     }
@@ -90,6 +110,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="contactTech", required=true)
     private Output<ContactArgs> contactTech;
 
+    /**
+     * @return Technical contact.
+     * 
+     */
     public Output<ContactArgs> contactTech() {
         return this.contactTech;
     }
@@ -101,6 +125,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dnsType")
     private @Nullable Output<DnsType> dnsType;
 
+    /**
+     * @return Current DNS type
+     * 
+     */
     public Optional<Output<DnsType>> dnsType() {
         return Optional.ofNullable(this.dnsType);
     }
@@ -112,6 +140,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dnsZoneId")
     private @Nullable Output<String> dnsZoneId;
 
+    /**
+     * @return Azure DNS Zone to use
+     * 
+     */
     public Optional<Output<String>> dnsZoneId() {
         return Optional.ofNullable(this.dnsZoneId);
     }
@@ -123,6 +155,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="domainName")
     private @Nullable Output<String> domainName;
 
+    /**
+     * @return Name of the domain.
+     * 
+     */
     public Optional<Output<String>> domainName() {
         return Optional.ofNullable(this.domainName);
     }
@@ -134,6 +170,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kind")
     private @Nullable Output<String> kind;
 
+    /**
+     * @return Kind of resource.
+     * 
+     */
     public Optional<Output<String>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -145,6 +185,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource Location.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -156,6 +200,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="privacy")
     private @Nullable Output<Boolean> privacy;
 
+    /**
+     * @return &lt;code&gt;true&lt;/code&gt; if domain privacy is enabled for this domain; otherwise, &lt;code&gt;false&lt;/code&gt;.
+     * 
+     */
     public Optional<Output<Boolean>> privacy() {
         return Optional.ofNullable(this.privacy);
     }
@@ -167,6 +215,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of the resource group to which the resource belongs.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -178,6 +230,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -189,6 +245,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="targetDnsType")
     private @Nullable Output<DnsType> targetDnsType;
 
+    /**
+     * @return Target DNS type (would be used for migration)
+     * 
+     */
     public Optional<Output<DnsType>> targetDnsType() {
         return Optional.ofNullable(this.targetDnsType);
     }
@@ -241,137 +301,317 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
             return authCode(Output.of(authCode));
         }
 
+        /**
+         * @param autoRenew &lt;code&gt;true&lt;/code&gt; if the domain should be automatically renewed; otherwise, &lt;code&gt;false&lt;/code&gt;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoRenew(@Nullable Output<Boolean> autoRenew) {
             $.autoRenew = autoRenew;
             return this;
         }
 
+        /**
+         * @param autoRenew &lt;code&gt;true&lt;/code&gt; if the domain should be automatically renewed; otherwise, &lt;code&gt;false&lt;/code&gt;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoRenew(Boolean autoRenew) {
             return autoRenew(Output.of(autoRenew));
         }
 
+        /**
+         * @param consent Legal agreement consent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consent(Output<DomainPurchaseConsentArgs> consent) {
             $.consent = consent;
             return this;
         }
 
+        /**
+         * @param consent Legal agreement consent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consent(DomainPurchaseConsentArgs consent) {
             return consent(Output.of(consent));
         }
 
+        /**
+         * @param contactAdmin Administrative contact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contactAdmin(Output<ContactArgs> contactAdmin) {
             $.contactAdmin = contactAdmin;
             return this;
         }
 
+        /**
+         * @param contactAdmin Administrative contact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contactAdmin(ContactArgs contactAdmin) {
             return contactAdmin(Output.of(contactAdmin));
         }
 
+        /**
+         * @param contactBilling Billing contact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contactBilling(Output<ContactArgs> contactBilling) {
             $.contactBilling = contactBilling;
             return this;
         }
 
+        /**
+         * @param contactBilling Billing contact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contactBilling(ContactArgs contactBilling) {
             return contactBilling(Output.of(contactBilling));
         }
 
+        /**
+         * @param contactRegistrant Registrant contact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contactRegistrant(Output<ContactArgs> contactRegistrant) {
             $.contactRegistrant = contactRegistrant;
             return this;
         }
 
+        /**
+         * @param contactRegistrant Registrant contact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contactRegistrant(ContactArgs contactRegistrant) {
             return contactRegistrant(Output.of(contactRegistrant));
         }
 
+        /**
+         * @param contactTech Technical contact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contactTech(Output<ContactArgs> contactTech) {
             $.contactTech = contactTech;
             return this;
         }
 
+        /**
+         * @param contactTech Technical contact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contactTech(ContactArgs contactTech) {
             return contactTech(Output.of(contactTech));
         }
 
+        /**
+         * @param dnsType Current DNS type
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsType(@Nullable Output<DnsType> dnsType) {
             $.dnsType = dnsType;
             return this;
         }
 
+        /**
+         * @param dnsType Current DNS type
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsType(DnsType dnsType) {
             return dnsType(Output.of(dnsType));
         }
 
+        /**
+         * @param dnsZoneId Azure DNS Zone to use
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsZoneId(@Nullable Output<String> dnsZoneId) {
             $.dnsZoneId = dnsZoneId;
             return this;
         }
 
+        /**
+         * @param dnsZoneId Azure DNS Zone to use
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsZoneId(String dnsZoneId) {
             return dnsZoneId(Output.of(dnsZoneId));
         }
 
+        /**
+         * @param domainName Name of the domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(@Nullable Output<String> domainName) {
             $.domainName = domainName;
             return this;
         }
 
+        /**
+         * @param domainName Name of the domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(String domainName) {
             return domainName(Output.of(domainName));
         }
 
+        /**
+         * @param kind Kind of resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Kind of resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param location Resource Location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource Location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param privacy &lt;code&gt;true&lt;/code&gt; if domain privacy is enabled for this domain; otherwise, &lt;code&gt;false&lt;/code&gt;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privacy(@Nullable Output<Boolean> privacy) {
             $.privacy = privacy;
             return this;
         }
 
+        /**
+         * @param privacy &lt;code&gt;true&lt;/code&gt; if domain privacy is enabled for this domain; otherwise, &lt;code&gt;false&lt;/code&gt;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privacy(Boolean privacy) {
             return privacy(Output.of(privacy));
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group to which the resource belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group to which the resource belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param targetDnsType Target DNS type (would be used for migration)
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetDnsType(@Nullable Output<DnsType> targetDnsType) {
             $.targetDnsType = targetDnsType;
             return this;
         }
 
+        /**
+         * @param targetDnsType Target DNS type (would be used for migration)
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetDnsType(DnsType targetDnsType) {
             return targetDnsType(Output.of(targetDnsType));
         }

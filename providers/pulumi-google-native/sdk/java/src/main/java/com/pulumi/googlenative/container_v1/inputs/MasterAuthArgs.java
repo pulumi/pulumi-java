@@ -27,6 +27,10 @@ public final class MasterAuthArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clientCertificateConfig")
     private @Nullable Output<ClientCertificateConfigArgs> clientCertificateConfig;
 
+    /**
+     * @return Configuration for client certificate authentication on the cluster. For clusters before v1.12, if no configuration is specified, a client certificate is issued.
+     * 
+     */
     public Optional<Output<ClientCertificateConfigArgs>> clientCertificateConfig() {
         return Optional.ofNullable(this.clientCertificateConfig);
     }
@@ -38,6 +42,10 @@ public final class MasterAuthArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="password")
     private @Nullable Output<String> password;
 
+    /**
+     * @return The password to use for HTTP basic authentication to the master endpoint. Because the master endpoint is open to the Internet, you should create a strong password. If a password is provided for cluster creation, username must be non-empty. Warning: basic authentication is deprecated, and will be removed in GKE control plane versions 1.19 and newer. For a list of recommended authentication methods, see: https://cloud.google.com/kubernetes-engine/docs/how-to/api-server-authentication
+     * 
+     */
     public Optional<Output<String>> password() {
         return Optional.ofNullable(this.password);
     }
@@ -49,6 +57,10 @@ public final class MasterAuthArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="username")
     private @Nullable Output<String> username;
 
+    /**
+     * @return The username to use for HTTP basic authentication to the master endpoint. For clusters v1.6.0 and later, basic authentication can be disabled by leaving username unspecified (or setting it to the empty string). Warning: basic authentication is deprecated, and will be removed in GKE control plane versions 1.19 and newer. For a list of recommended authentication methods, see: https://cloud.google.com/kubernetes-engine/docs/how-to/api-server-authentication
+     * 
+     */
     public Optional<Output<String>> username() {
         return Optional.ofNullable(this.username);
     }
@@ -79,29 +91,65 @@ public final class MasterAuthArgs extends com.pulumi.resources.ResourceArgs {
             $ = new MasterAuthArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientCertificateConfig Configuration for client certificate authentication on the cluster. For clusters before v1.12, if no configuration is specified, a client certificate is issued.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientCertificateConfig(@Nullable Output<ClientCertificateConfigArgs> clientCertificateConfig) {
             $.clientCertificateConfig = clientCertificateConfig;
             return this;
         }
 
+        /**
+         * @param clientCertificateConfig Configuration for client certificate authentication on the cluster. For clusters before v1.12, if no configuration is specified, a client certificate is issued.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientCertificateConfig(ClientCertificateConfigArgs clientCertificateConfig) {
             return clientCertificateConfig(Output.of(clientCertificateConfig));
         }
 
+        /**
+         * @param password The password to use for HTTP basic authentication to the master endpoint. Because the master endpoint is open to the Internet, you should create a strong password. If a password is provided for cluster creation, username must be non-empty. Warning: basic authentication is deprecated, and will be removed in GKE control plane versions 1.19 and newer. For a list of recommended authentication methods, see: https://cloud.google.com/kubernetes-engine/docs/how-to/api-server-authentication
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(@Nullable Output<String> password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param password The password to use for HTTP basic authentication to the master endpoint. Because the master endpoint is open to the Internet, you should create a strong password. If a password is provided for cluster creation, username must be non-empty. Warning: basic authentication is deprecated, and will be removed in GKE control plane versions 1.19 and newer. For a list of recommended authentication methods, see: https://cloud.google.com/kubernetes-engine/docs/how-to/api-server-authentication
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(String password) {
             return password(Output.of(password));
         }
 
+        /**
+         * @param username The username to use for HTTP basic authentication to the master endpoint. For clusters v1.6.0 and later, basic authentication can be disabled by leaving username unspecified (or setting it to the empty string). Warning: basic authentication is deprecated, and will be removed in GKE control plane versions 1.19 and newer. For a list of recommended authentication methods, see: https://cloud.google.com/kubernetes-engine/docs/how-to/api-server-authentication
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(@Nullable Output<String> username) {
             $.username = username;
             return this;
         }
 
+        /**
+         * @param username The username to use for HTTP basic authentication to the master endpoint. For clusters v1.6.0 and later, basic authentication can be disabled by leaving username unspecified (or setting it to the empty string). Warning: basic authentication is deprecated, and will be removed in GKE control plane versions 1.19 and newer. For a list of recommended authentication methods, see: https://cloud.google.com/kubernetes-engine/docs/how-to/api-server-authentication
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(String username) {
             return username(Output.of(username));
         }

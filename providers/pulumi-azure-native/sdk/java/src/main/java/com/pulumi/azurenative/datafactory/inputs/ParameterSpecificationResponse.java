@@ -26,6 +26,10 @@ public final class ParameterSpecificationResponse extends com.pulumi.resources.I
     @Import(name="defaultValue")
     private @Nullable Object defaultValue;
 
+    /**
+     * @return Default value of parameter.
+     * 
+     */
     public Optional<Object> defaultValue() {
         return Optional.ofNullable(this.defaultValue);
     }
@@ -37,6 +41,10 @@ public final class ParameterSpecificationResponse extends com.pulumi.resources.I
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Parameter type.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -66,11 +74,23 @@ public final class ParameterSpecificationResponse extends com.pulumi.resources.I
             $ = new ParameterSpecificationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param defaultValue Default value of parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultValue(@Nullable Object defaultValue) {
             $.defaultValue = defaultValue;
             return this;
         }
 
+        /**
+         * @param type Parameter type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

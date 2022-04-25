@@ -27,6 +27,10 @@ public final class ConnectorCloudWatchLogsLogDeliveryArgs extends com.pulumi.res
     @Import(name="enabled", required=true)
     private Output<Boolean> enabled;
 
+    /**
+     * @return Specifies whether the logs get sent to the specified CloudWatch Logs destination.
+     * 
+     */
     public Output<Boolean> enabled() {
         return this.enabled;
     }
@@ -38,6 +42,10 @@ public final class ConnectorCloudWatchLogsLogDeliveryArgs extends com.pulumi.res
     @Import(name="logGroup")
     private @Nullable Output<String> logGroup;
 
+    /**
+     * @return The CloudWatch log group that is the destination for log delivery.
+     * 
+     */
     public Optional<Output<String>> logGroup() {
         return Optional.ofNullable(this.logGroup);
     }
@@ -67,20 +75,44 @@ public final class ConnectorCloudWatchLogsLogDeliveryArgs extends com.pulumi.res
             $ = new ConnectorCloudWatchLogsLogDeliveryArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Specifies whether the logs get sent to the specified CloudWatch Logs destination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Specifies whether the logs get sent to the specified CloudWatch Logs destination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param logGroup The CloudWatch log group that is the destination for log delivery.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logGroup(@Nullable Output<String> logGroup) {
             $.logGroup = logGroup;
             return this;
         }
 
+        /**
+         * @param logGroup The CloudWatch log group that is the destination for log delivery.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logGroup(String logGroup) {
             return logGroup(Output.of(logGroup));
         }

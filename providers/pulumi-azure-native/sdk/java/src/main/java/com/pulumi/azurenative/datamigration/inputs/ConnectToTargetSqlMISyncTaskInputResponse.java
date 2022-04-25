@@ -24,6 +24,10 @@ public final class ConnectToTargetSqlMISyncTaskInputResponse extends com.pulumi.
     @Import(name="azureApp", required=true)
     private AzureActiveDirectoryAppResponse azureApp;
 
+    /**
+     * @return Azure Active Directory Application the DMS instance will use to connect to the target instance of Azure SQL Database Managed Instance and the Azure Storage Account
+     * 
+     */
     public AzureActiveDirectoryAppResponse azureApp() {
         return this.azureApp;
     }
@@ -35,6 +39,10 @@ public final class ConnectToTargetSqlMISyncTaskInputResponse extends com.pulumi.
     @Import(name="targetConnectionInfo", required=true)
     private MiSqlConnectionInfoResponse targetConnectionInfo;
 
+    /**
+     * @return Connection information for Azure SQL Database Managed Instance
+     * 
+     */
     public MiSqlConnectionInfoResponse targetConnectionInfo() {
         return this.targetConnectionInfo;
     }
@@ -64,11 +72,23 @@ public final class ConnectToTargetSqlMISyncTaskInputResponse extends com.pulumi.
             $ = new ConnectToTargetSqlMISyncTaskInputResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param azureApp Azure Active Directory Application the DMS instance will use to connect to the target instance of Azure SQL Database Managed Instance and the Azure Storage Account
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureApp(AzureActiveDirectoryAppResponse azureApp) {
             $.azureApp = azureApp;
             return this;
         }
 
+        /**
+         * @param targetConnectionInfo Connection information for Azure SQL Database Managed Instance
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetConnectionInfo(MiSqlConnectionInfoResponse targetConnectionInfo) {
             $.targetConnectionInfo = targetConnectionInfo;
             return this;

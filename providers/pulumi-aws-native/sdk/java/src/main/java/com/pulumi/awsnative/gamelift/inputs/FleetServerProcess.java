@@ -26,6 +26,10 @@ public final class FleetServerProcess extends com.pulumi.resources.InvokeArgs {
     @Import(name="concurrentExecutions", required=true)
     private Integer concurrentExecutions;
 
+    /**
+     * @return The number of server processes that use this configuration to run concurrently on an instance.
+     * 
+     */
     public Integer concurrentExecutions() {
         return this.concurrentExecutions;
     }
@@ -41,6 +45,14 @@ public final class FleetServerProcess extends com.pulumi.resources.InvokeArgs {
     @Import(name="launchPath", required=true)
     private String launchPath;
 
+    /**
+     * @return The location of the server executable in a custom game build or the name of the Realtime script file that contains the Init() function. Game builds and Realtime scripts are installed on instances at the root:
+     * 
+     * Windows (for custom game builds only): C:\game. Example: &#34;C:\game\MyGame\server.exe&#34;
+     * 
+     * Linux: /local/game. Examples: &#34;/local/game/MyGame/server.exe&#34; or &#34;/local/game/MyRealtimeScript.js&#34;
+     * 
+     */
     public String launchPath() {
         return this.launchPath;
     }
@@ -52,6 +64,10 @@ public final class FleetServerProcess extends com.pulumi.resources.InvokeArgs {
     @Import(name="parameters")
     private @Nullable String parameters;
 
+    /**
+     * @return An optional list of parameters to pass to the server executable or Realtime script on launch.
+     * 
+     */
     public Optional<String> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -82,16 +98,38 @@ public final class FleetServerProcess extends com.pulumi.resources.InvokeArgs {
             $ = new FleetServerProcess(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param concurrentExecutions The number of server processes that use this configuration to run concurrently on an instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder concurrentExecutions(Integer concurrentExecutions) {
             $.concurrentExecutions = concurrentExecutions;
             return this;
         }
 
+        /**
+         * @param launchPath The location of the server executable in a custom game build or the name of the Realtime script file that contains the Init() function. Game builds and Realtime scripts are installed on instances at the root:
+         * 
+         * Windows (for custom game builds only): C:\game. Example: &#34;C:\game\MyGame\server.exe&#34;
+         * 
+         * Linux: /local/game. Examples: &#34;/local/game/MyGame/server.exe&#34; or &#34;/local/game/MyRealtimeScript.js&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder launchPath(String launchPath) {
             $.launchPath = launchPath;
             return this;
         }
 
+        /**
+         * @param parameters An optional list of parameters to pass to the server executable or Realtime script on launch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable String parameters) {
             $.parameters = parameters;
             return this;

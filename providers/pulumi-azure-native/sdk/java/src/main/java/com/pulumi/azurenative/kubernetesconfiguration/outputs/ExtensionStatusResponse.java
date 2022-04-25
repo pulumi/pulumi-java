@@ -12,27 +12,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ExtensionStatusResponse {
     /**
-     * Status code provided by the Extension
+     * @return Status code provided by the Extension
      * 
      */
     private final @Nullable String code;
     /**
-     * Short description of status of this instance of the extension.
+     * @return Short description of status of this instance of the extension.
      * 
      */
     private final @Nullable String displayStatus;
     /**
-     * Level of the status.
+     * @return Level of the status.
      * 
      */
     private final @Nullable String level;
     /**
-     * Detailed message of the status from the Extension instance.
+     * @return Detailed message of the status from the Extension instance.
      * 
      */
     private final @Nullable String message;
     /**
-     * DateLiteral (per ISO8601) noting the time of installation status.
+     * @return DateLiteral (per ISO8601) noting the time of installation status.
      * 
      */
     private final @Nullable String time;
@@ -52,37 +52,37 @@ public final class ExtensionStatusResponse {
     }
 
     /**
-     * Status code provided by the Extension
+     * @return Status code provided by the Extension
      * 
-    */
+     */
     public Optional<String> code() {
         return Optional.ofNullable(this.code);
     }
     /**
-     * Short description of status of this instance of the extension.
+     * @return Short description of status of this instance of the extension.
      * 
-    */
+     */
     public Optional<String> displayStatus() {
         return Optional.ofNullable(this.displayStatus);
     }
     /**
-     * Level of the status.
+     * @return Level of the status.
      * 
-    */
+     */
     public Optional<String> level() {
         return Optional.ofNullable(this.level);
     }
     /**
-     * Detailed message of the status from the Extension instance.
+     * @return Detailed message of the status from the Extension instance.
      * 
-    */
+     */
     public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
     /**
-     * DateLiteral (per ISO8601) noting the time of installation status.
+     * @return DateLiteral (per ISO8601) noting the time of installation status.
      * 
-    */
+     */
     public Optional<String> time() {
         return Optional.ofNullable(this.time);
     }

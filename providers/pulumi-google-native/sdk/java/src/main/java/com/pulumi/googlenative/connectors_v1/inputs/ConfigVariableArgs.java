@@ -28,6 +28,10 @@ public final class ConfigVariableArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="boolValue")
     private @Nullable Output<Boolean> boolValue;
 
+    /**
+     * @return Value is a bool.
+     * 
+     */
     public Optional<Output<Boolean>> boolValue() {
         return Optional.ofNullable(this.boolValue);
     }
@@ -39,6 +43,10 @@ public final class ConfigVariableArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="intValue")
     private @Nullable Output<String> intValue;
 
+    /**
+     * @return Value is an integer
+     * 
+     */
     public Optional<Output<String>> intValue() {
         return Optional.ofNullable(this.intValue);
     }
@@ -50,6 +58,10 @@ public final class ConfigVariableArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="key")
     private @Nullable Output<String> key;
 
+    /**
+     * @return Key of the config variable.
+     * 
+     */
     public Optional<Output<String>> key() {
         return Optional.ofNullable(this.key);
     }
@@ -61,6 +73,10 @@ public final class ConfigVariableArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="secretValue")
     private @Nullable Output<SecretArgs> secretValue;
 
+    /**
+     * @return Value is a secret.
+     * 
+     */
     public Optional<Output<SecretArgs>> secretValue() {
         return Optional.ofNullable(this.secretValue);
     }
@@ -72,6 +88,10 @@ public final class ConfigVariableArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="stringValue")
     private @Nullable Output<String> stringValue;
 
+    /**
+     * @return Value is a string.
+     * 
+     */
     public Optional<Output<String>> stringValue() {
         return Optional.ofNullable(this.stringValue);
     }
@@ -104,47 +124,107 @@ public final class ConfigVariableArgs extends com.pulumi.resources.ResourceArgs 
             $ = new ConfigVariableArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param boolValue Value is a bool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder boolValue(@Nullable Output<Boolean> boolValue) {
             $.boolValue = boolValue;
             return this;
         }
 
+        /**
+         * @param boolValue Value is a bool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder boolValue(Boolean boolValue) {
             return boolValue(Output.of(boolValue));
         }
 
+        /**
+         * @param intValue Value is an integer
+         * 
+         * @return builder
+         * 
+         */
         public Builder intValue(@Nullable Output<String> intValue) {
             $.intValue = intValue;
             return this;
         }
 
+        /**
+         * @param intValue Value is an integer
+         * 
+         * @return builder
+         * 
+         */
         public Builder intValue(String intValue) {
             return intValue(Output.of(intValue));
         }
 
+        /**
+         * @param key Key of the config variable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(@Nullable Output<String> key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param key Key of the config variable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             return key(Output.of(key));
         }
 
+        /**
+         * @param secretValue Value is a secret.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretValue(@Nullable Output<SecretArgs> secretValue) {
             $.secretValue = secretValue;
             return this;
         }
 
+        /**
+         * @param secretValue Value is a secret.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretValue(SecretArgs secretValue) {
             return secretValue(Output.of(secretValue));
         }
 
+        /**
+         * @param stringValue Value is a string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stringValue(@Nullable Output<String> stringValue) {
             $.stringValue = stringValue;
             return this;
         }
 
+        /**
+         * @param stringValue Value is a string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stringValue(String stringValue) {
             return stringValue(Output.of(stringValue));
         }

@@ -23,6 +23,10 @@ public final class LatencyCriteriaResponse extends com.pulumi.resources.InvokeAr
     @Import(name="threshold", required=true)
     private String threshold;
 
+    /**
+     * @return Good service is defined to be the count of requests made to this service that return in no more than threshold.
+     * 
+     */
     public String threshold() {
         return this.threshold;
     }
@@ -51,6 +55,12 @@ public final class LatencyCriteriaResponse extends com.pulumi.resources.InvokeAr
             $ = new LatencyCriteriaResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param threshold Good service is defined to be the count of requests made to this service that return in no more than threshold.
+         * 
+         * @return builder
+         * 
+         */
         public Builder threshold(String threshold) {
             $.threshold = threshold;
             return this;

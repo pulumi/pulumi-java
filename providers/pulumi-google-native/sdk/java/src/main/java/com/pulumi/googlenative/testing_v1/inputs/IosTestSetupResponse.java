@@ -26,6 +26,10 @@ public final class IosTestSetupResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="additionalIpas", required=true)
     private List<FileReferenceResponse> additionalIpas;
 
+    /**
+     * @return iOS apps to install in addition to those being directly tested.
+     * 
+     */
     public List<FileReferenceResponse> additionalIpas() {
         return this.additionalIpas;
     }
@@ -37,6 +41,10 @@ public final class IosTestSetupResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="networkProfile", required=true)
     private String networkProfile;
 
+    /**
+     * @return The network traffic profile used for running the test. Available network profiles can be queried by using the NETWORK_CONFIGURATION environment type when calling TestEnvironmentDiscoveryService.GetTestEnvironmentCatalog.
+     * 
+     */
     public String networkProfile() {
         return this.networkProfile;
     }
@@ -48,6 +56,10 @@ public final class IosTestSetupResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="pullDirectories", required=true)
     private List<IosDeviceFileResponse> pullDirectories;
 
+    /**
+     * @return List of directories on the device to upload to Cloud Storage at the end of the test. Directories should either be in a shared directory (such as /private/var/mobile/Media) or within an accessible directory inside the app&#39;s filesystem (such as /Documents) by specifying the bundle ID.
+     * 
+     */
     public List<IosDeviceFileResponse> pullDirectories() {
         return this.pullDirectories;
     }
@@ -59,6 +71,10 @@ public final class IosTestSetupResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="pushFiles", required=true)
     private List<IosDeviceFileResponse> pushFiles;
 
+    /**
+     * @return List of files to push to the device before starting the test.
+     * 
+     */
     public List<IosDeviceFileResponse> pushFiles() {
         return this.pushFiles;
     }
@@ -90,34 +106,76 @@ public final class IosTestSetupResponse extends com.pulumi.resources.InvokeArgs 
             $ = new IosTestSetupResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param additionalIpas iOS apps to install in addition to those being directly tested.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalIpas(List<FileReferenceResponse> additionalIpas) {
             $.additionalIpas = additionalIpas;
             return this;
         }
 
+        /**
+         * @param additionalIpas iOS apps to install in addition to those being directly tested.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalIpas(FileReferenceResponse... additionalIpas) {
             return additionalIpas(List.of(additionalIpas));
         }
 
+        /**
+         * @param networkProfile The network traffic profile used for running the test. Available network profiles can be queried by using the NETWORK_CONFIGURATION environment type when calling TestEnvironmentDiscoveryService.GetTestEnvironmentCatalog.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkProfile(String networkProfile) {
             $.networkProfile = networkProfile;
             return this;
         }
 
+        /**
+         * @param pullDirectories List of directories on the device to upload to Cloud Storage at the end of the test. Directories should either be in a shared directory (such as /private/var/mobile/Media) or within an accessible directory inside the app&#39;s filesystem (such as /Documents) by specifying the bundle ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pullDirectories(List<IosDeviceFileResponse> pullDirectories) {
             $.pullDirectories = pullDirectories;
             return this;
         }
 
+        /**
+         * @param pullDirectories List of directories on the device to upload to Cloud Storage at the end of the test. Directories should either be in a shared directory (such as /private/var/mobile/Media) or within an accessible directory inside the app&#39;s filesystem (such as /Documents) by specifying the bundle ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pullDirectories(IosDeviceFileResponse... pullDirectories) {
             return pullDirectories(List.of(pullDirectories));
         }
 
+        /**
+         * @param pushFiles List of files to push to the device before starting the test.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pushFiles(List<IosDeviceFileResponse> pushFiles) {
             $.pushFiles = pushFiles;
             return this;
         }
 
+        /**
+         * @param pushFiles List of files to push to the device before starting the test.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pushFiles(IosDeviceFileResponse... pushFiles) {
             return pushFiles(List.of(pushFiles));
         }

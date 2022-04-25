@@ -23,6 +23,10 @@ public final class AzureFirewallIpGroupsResponse extends com.pulumi.resources.In
     @Import(name="changeNumber", required=true)
     private String changeNumber;
 
+    /**
+     * @return The iteration number.
+     * 
+     */
     public String changeNumber() {
         return this.changeNumber;
     }
@@ -34,6 +38,10 @@ public final class AzureFirewallIpGroupsResponse extends com.pulumi.resources.In
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -63,11 +71,23 @@ public final class AzureFirewallIpGroupsResponse extends com.pulumi.resources.In
             $ = new AzureFirewallIpGroupsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param changeNumber The iteration number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder changeNumber(String changeNumber) {
             $.changeNumber = changeNumber;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;

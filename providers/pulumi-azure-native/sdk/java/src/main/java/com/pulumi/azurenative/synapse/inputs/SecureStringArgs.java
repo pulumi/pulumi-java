@@ -26,6 +26,11 @@ public final class SecureStringArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Type of the secret.
+     * Expected value is &#39;SecureString&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -37,6 +42,10 @@ public final class SecureStringArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="value", required=true)
     private Output<String> value;
 
+    /**
+     * @return Value of secure string.
+     * 
+     */
     public Output<String> value() {
         return this.value;
     }
@@ -66,20 +75,46 @@ public final class SecureStringArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SecureStringArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type Type of the secret.
+         * Expected value is &#39;SecureString&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of the secret.
+         * Expected value is &#39;SecureString&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param value Value of secure string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value Value of secure string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

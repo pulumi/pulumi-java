@@ -12,52 +12,52 @@ import java.util.Objects;
 @CustomType
 public final class GetWorkerPoolResult {
     /**
-     * Time at which the request to create the `WorkerPool` was received.
+     * @return Time at which the request to create the `WorkerPool` was received.
      * 
      */
     private final String createTime;
     /**
-     * Time at which the request to delete the `WorkerPool` was received.
+     * @return Time at which the request to delete the `WorkerPool` was received.
      * 
      */
     private final String deleteTime;
     /**
-     * User-defined name of the `WorkerPool`.
+     * @return User-defined name of the `WorkerPool`.
      * 
      */
     private final String name;
     /**
-     * The project ID of the GCP project for which the `WorkerPool` is created.
+     * @return The project ID of the GCP project for which the `WorkerPool` is created.
      * 
      */
     private final String project;
     /**
-     * List of regions to create the `WorkerPool`. Regions can&#39;t be empty. If Cloud Build adds a new GCP region in the future, the existing `WorkerPool` will not be enabled in the new region automatically; you must add the new region to the `regions` field to enable the `WorkerPool` in that region.
+     * @return List of regions to create the `WorkerPool`. Regions can&#39;t be empty. If Cloud Build adds a new GCP region in the future, the existing `WorkerPool` will not be enabled in the new region automatically; you must add the new region to the `regions` field to enable the `WorkerPool` in that region.
      * 
      */
     private final List<String> regions;
     /**
-     * The service account used to manage the `WorkerPool`. The service account must have the Compute Instance Admin (Beta) permission at the project level.
+     * @return The service account used to manage the `WorkerPool`. The service account must have the Compute Instance Admin (Beta) permission at the project level.
      * 
      */
     private final String serviceAccountEmail;
     /**
-     * WorkerPool Status.
+     * @return WorkerPool Status.
      * 
      */
     private final String status;
     /**
-     * Time at which the request to update the `WorkerPool` was received.
+     * @return Time at which the request to update the `WorkerPool` was received.
      * 
      */
     private final String updateTime;
     /**
-     * Configuration to be used for a creating workers in the `WorkerPool`.
+     * @return Configuration to be used for a creating workers in the `WorkerPool`.
      * 
      */
     private final WorkerConfigResponse workerConfig;
     /**
-     * Total number of workers to be created across all requested regions.
+     * @return Total number of workers to be created across all requested regions.
      * 
      */
     private final String workerCount;
@@ -87,72 +87,72 @@ public final class GetWorkerPoolResult {
     }
 
     /**
-     * Time at which the request to create the `WorkerPool` was received.
+     * @return Time at which the request to create the `WorkerPool` was received.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * Time at which the request to delete the `WorkerPool` was received.
+     * @return Time at which the request to delete the `WorkerPool` was received.
      * 
-    */
+     */
     public String deleteTime() {
         return this.deleteTime;
     }
     /**
-     * User-defined name of the `WorkerPool`.
+     * @return User-defined name of the `WorkerPool`.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The project ID of the GCP project for which the `WorkerPool` is created.
+     * @return The project ID of the GCP project for which the `WorkerPool` is created.
      * 
-    */
+     */
     public String project() {
         return this.project;
     }
     /**
-     * List of regions to create the `WorkerPool`. Regions can&#39;t be empty. If Cloud Build adds a new GCP region in the future, the existing `WorkerPool` will not be enabled in the new region automatically; you must add the new region to the `regions` field to enable the `WorkerPool` in that region.
+     * @return List of regions to create the `WorkerPool`. Regions can&#39;t be empty. If Cloud Build adds a new GCP region in the future, the existing `WorkerPool` will not be enabled in the new region automatically; you must add the new region to the `regions` field to enable the `WorkerPool` in that region.
      * 
-    */
+     */
     public List<String> regions() {
         return this.regions;
     }
     /**
-     * The service account used to manage the `WorkerPool`. The service account must have the Compute Instance Admin (Beta) permission at the project level.
+     * @return The service account used to manage the `WorkerPool`. The service account must have the Compute Instance Admin (Beta) permission at the project level.
      * 
-    */
+     */
     public String serviceAccountEmail() {
         return this.serviceAccountEmail;
     }
     /**
-     * WorkerPool Status.
+     * @return WorkerPool Status.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * Time at which the request to update the `WorkerPool` was received.
+     * @return Time at which the request to update the `WorkerPool` was received.
      * 
-    */
+     */
     public String updateTime() {
         return this.updateTime;
     }
     /**
-     * Configuration to be used for a creating workers in the `WorkerPool`.
+     * @return Configuration to be used for a creating workers in the `WorkerPool`.
      * 
-    */
+     */
     public WorkerConfigResponse workerConfig() {
         return this.workerConfig;
     }
     /**
-     * Total number of workers to be created across all requested regions.
+     * @return Total number of workers to be created across all requested regions.
      * 
-    */
+     */
     public String workerCount() {
         return this.workerCount;
     }

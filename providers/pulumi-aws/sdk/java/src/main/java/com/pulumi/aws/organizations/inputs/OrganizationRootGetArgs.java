@@ -24,6 +24,10 @@ public final class OrganizationRootGetArgs extends com.pulumi.resources.Resource
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return ARN of the root
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -35,6 +39,10 @@ public final class OrganizationRootGetArgs extends com.pulumi.resources.Resource
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Identifier of the root
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -46,6 +54,10 @@ public final class OrganizationRootGetArgs extends com.pulumi.resources.Resource
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the policy type
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -57,6 +69,10 @@ public final class OrganizationRootGetArgs extends com.pulumi.resources.Resource
     @Import(name="policyTypes")
     private @Nullable Output<List<OrganizationRootPolicyTypeGetArgs>> policyTypes;
 
+    /**
+     * @return List of policy types enabled for this root. All elements have these attributes:
+     * 
+     */
     public Optional<Output<List<OrganizationRootPolicyTypeGetArgs>>> policyTypes() {
         return Optional.ofNullable(this.policyTypes);
     }
@@ -88,42 +104,96 @@ public final class OrganizationRootGetArgs extends com.pulumi.resources.Resource
             $ = new OrganizationRootGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn ARN of the root
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn ARN of the root
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param id Identifier of the root
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Identifier of the root
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param name The name of the policy type
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the policy type
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param policyTypes List of policy types enabled for this root. All elements have these attributes:
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyTypes(@Nullable Output<List<OrganizationRootPolicyTypeGetArgs>> policyTypes) {
             $.policyTypes = policyTypes;
             return this;
         }
 
+        /**
+         * @param policyTypes List of policy types enabled for this root. All elements have these attributes:
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyTypes(List<OrganizationRootPolicyTypeGetArgs> policyTypes) {
             return policyTypes(Output.of(policyTypes));
         }
 
+        /**
+         * @param policyTypes List of policy types enabled for this root. All elements have these attributes:
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyTypes(OrganizationRootPolicyTypeGetArgs... policyTypes) {
             return policyTypes(List.of(policyTypes));
         }

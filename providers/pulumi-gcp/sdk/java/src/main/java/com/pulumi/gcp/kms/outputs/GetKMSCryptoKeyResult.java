@@ -15,7 +15,7 @@ import java.util.Objects;
 public final class GetKMSCryptoKeyResult {
     private final String destroyScheduledDuration;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
@@ -24,12 +24,12 @@ public final class GetKMSCryptoKeyResult {
     private final Map<String,String> labels;
     private final String name;
     /**
-     * Defines the cryptographic capabilities of the key.
+     * @return Defines the cryptographic capabilities of the key.
      * 
      */
     private final String purpose;
     /**
-     * Every time this period passes, generate a new CryptoKeyVersion and set it as
+     * @return Every time this period passes, generate a new CryptoKeyVersion and set it as
      * the primary. The first rotation will take place after the specified period. The rotation period has the format
      * of a decimal number with up to 9 fractional digits, followed by the letter s (seconds).
      * 
@@ -66,9 +66,9 @@ public final class GetKMSCryptoKeyResult {
         return this.destroyScheduledDuration;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
@@ -85,18 +85,18 @@ public final class GetKMSCryptoKeyResult {
         return this.name;
     }
     /**
-     * Defines the cryptographic capabilities of the key.
+     * @return Defines the cryptographic capabilities of the key.
      * 
-    */
+     */
     public String purpose() {
         return this.purpose;
     }
     /**
-     * Every time this period passes, generate a new CryptoKeyVersion and set it as
+     * @return Every time this period passes, generate a new CryptoKeyVersion and set it as
      * the primary. The first rotation will take place after the specified period. The rotation period has the format
      * of a decimal number with up to 9 fractional digits, followed by the letter s (seconds).
      * 
-    */
+     */
     public String rotationPeriod() {
         return this.rotationPeriod;
     }

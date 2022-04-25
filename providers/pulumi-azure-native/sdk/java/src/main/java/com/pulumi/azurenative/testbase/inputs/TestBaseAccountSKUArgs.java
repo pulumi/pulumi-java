@@ -29,6 +29,10 @@ public final class TestBaseAccountSKUArgs extends com.pulumi.resources.ResourceA
     @Import(name="locations")
     private @Nullable Output<List<String>> locations;
 
+    /**
+     * @return The locations that the SKU is available.
+     * 
+     */
     public Optional<Output<List<String>>> locations() {
         return Optional.ofNullable(this.locations);
     }
@@ -40,6 +44,10 @@ public final class TestBaseAccountSKUArgs extends com.pulumi.resources.ResourceA
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The name of the SKU. This is typically a letter + number code, such as B0 or S0.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -51,6 +59,10 @@ public final class TestBaseAccountSKUArgs extends com.pulumi.resources.ResourceA
     @Import(name="resourceType")
     private @Nullable Output<String> resourceType;
 
+    /**
+     * @return The type of resource the SKU applies to.
+     * 
+     */
     public Optional<Output<String>> resourceType() {
         return Optional.ofNullable(this.resourceType);
     }
@@ -62,6 +74,10 @@ public final class TestBaseAccountSKUArgs extends com.pulumi.resources.ResourceA
     @Import(name="tier", required=true)
     private Output<Either<String,Tier>> tier;
 
+    /**
+     * @return The tier of this particular SKU.
+     * 
+     */
     public Output<Either<String,Tier>> tier() {
         return this.tier;
     }
@@ -93,50 +109,116 @@ public final class TestBaseAccountSKUArgs extends com.pulumi.resources.ResourceA
             $ = new TestBaseAccountSKUArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param locations The locations that the SKU is available.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locations(@Nullable Output<List<String>> locations) {
             $.locations = locations;
             return this;
         }
 
+        /**
+         * @param locations The locations that the SKU is available.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locations(List<String> locations) {
             return locations(Output.of(locations));
         }
 
+        /**
+         * @param locations The locations that the SKU is available.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locations(String... locations) {
             return locations(List.of(locations));
         }
 
+        /**
+         * @param name The name of the SKU. This is typically a letter + number code, such as B0 or S0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the SKU. This is typically a letter + number code, such as B0 or S0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param resourceType The type of resource the SKU applies to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(@Nullable Output<String> resourceType) {
             $.resourceType = resourceType;
             return this;
         }
 
+        /**
+         * @param resourceType The type of resource the SKU applies to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(String resourceType) {
             return resourceType(Output.of(resourceType));
         }
 
+        /**
+         * @param tier The tier of this particular SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(Output<Either<String,Tier>> tier) {
             $.tier = tier;
             return this;
         }
 
+        /**
+         * @param tier The tier of this particular SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(Either<String,Tier> tier) {
             return tier(Output.of(tier));
         }
 
+        /**
+         * @param tier The tier of this particular SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(String tier) {
             return tier(Either.ofLeft(tier));
         }
 
+        /**
+         * @param tier The tier of this particular SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(Tier tier) {
             return tier(Either.ofRight(tier));
         }

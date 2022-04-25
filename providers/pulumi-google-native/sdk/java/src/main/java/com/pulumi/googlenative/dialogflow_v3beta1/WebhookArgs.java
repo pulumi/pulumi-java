@@ -32,6 +32,10 @@ public final class WebhookArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="disabled")
     private @Nullable Output<Boolean> disabled;
 
+    /**
+     * @return Indicates whether the webhook is disabled.
+     * 
+     */
     public Optional<Output<Boolean>> disabled() {
         return Optional.ofNullable(this.disabled);
     }
@@ -43,6 +47,10 @@ public final class WebhookArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
     private Output<String> displayName;
 
+    /**
+     * @return The human-readable name of the webhook, unique within the agent.
+     * 
+     */
     public Output<String> displayName() {
         return this.displayName;
     }
@@ -54,6 +62,10 @@ public final class WebhookArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="genericWebService")
     private @Nullable Output<GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceArgs> genericWebService;
 
+    /**
+     * @return Configuration for a generic web service.
+     * 
+     */
     public Optional<Output<GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceArgs>> genericWebService() {
         return Optional.ofNullable(this.genericWebService);
     }
@@ -72,6 +84,10 @@ public final class WebhookArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The unique identifier of the webhook. Required for the Webhooks.UpdateWebhook method. Webhooks.CreateWebhook populates the name automatically. Format: `projects//locations//agents//webhooks/`.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -90,6 +106,10 @@ public final class WebhookArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceDirectory")
     private @Nullable Output<GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfigArgs> serviceDirectory;
 
+    /**
+     * @return Configuration for a [Service Directory](https://cloud.google.com/service-directory) service.
+     * 
+     */
     public Optional<Output<GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfigArgs>> serviceDirectory() {
         return Optional.ofNullable(this.serviceDirectory);
     }
@@ -101,6 +121,10 @@ public final class WebhookArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="timeout")
     private @Nullable Output<String> timeout;
 
+    /**
+     * @return Webhook execution timeout. Execution is considered failed if Dialogflow doesn&#39;t receive a response from webhook at the end of the timeout period. Defaults to 5 seconds, maximum allowed timeout is 30 seconds.
+     * 
+     */
     public Optional<Output<String>> timeout() {
         return Optional.ofNullable(this.timeout);
     }
@@ -146,29 +170,65 @@ public final class WebhookArgs extends com.pulumi.resources.ResourceArgs {
             return agentId(Output.of(agentId));
         }
 
+        /**
+         * @param disabled Indicates whether the webhook is disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disabled(@Nullable Output<Boolean> disabled) {
             $.disabled = disabled;
             return this;
         }
 
+        /**
+         * @param disabled Indicates whether the webhook is disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disabled(Boolean disabled) {
             return disabled(Output.of(disabled));
         }
 
+        /**
+         * @param displayName The human-readable name of the webhook, unique within the agent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName The human-readable name of the webhook, unique within the agent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param genericWebService Configuration for a generic web service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder genericWebService(@Nullable Output<GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceArgs> genericWebService) {
             $.genericWebService = genericWebService;
             return this;
         }
 
+        /**
+         * @param genericWebService Configuration for a generic web service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder genericWebService(GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceArgs genericWebService) {
             return genericWebService(Output.of(genericWebService));
         }
@@ -182,11 +242,23 @@ public final class WebhookArgs extends com.pulumi.resources.ResourceArgs {
             return location(Output.of(location));
         }
 
+        /**
+         * @param name The unique identifier of the webhook. Required for the Webhooks.UpdateWebhook method. Webhooks.CreateWebhook populates the name automatically. Format: `projects//locations//agents//webhooks/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The unique identifier of the webhook. Required for the Webhooks.UpdateWebhook method. Webhooks.CreateWebhook populates the name automatically. Format: `projects//locations//agents//webhooks/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -200,20 +272,44 @@ public final class WebhookArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param serviceDirectory Configuration for a [Service Directory](https://cloud.google.com/service-directory) service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceDirectory(@Nullable Output<GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfigArgs> serviceDirectory) {
             $.serviceDirectory = serviceDirectory;
             return this;
         }
 
+        /**
+         * @param serviceDirectory Configuration for a [Service Directory](https://cloud.google.com/service-directory) service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceDirectory(GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfigArgs serviceDirectory) {
             return serviceDirectory(Output.of(serviceDirectory));
         }
 
+        /**
+         * @param timeout Webhook execution timeout. Execution is considered failed if Dialogflow doesn&#39;t receive a response from webhook at the end of the timeout period. Defaults to 5 seconds, maximum allowed timeout is 30 seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeout(@Nullable Output<String> timeout) {
             $.timeout = timeout;
             return this;
         }
 
+        /**
+         * @param timeout Webhook execution timeout. Execution is considered failed if Dialogflow doesn&#39;t receive a response from webhook at the end of the timeout period. Defaults to 5 seconds, maximum allowed timeout is 30 seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeout(String timeout) {
             return timeout(Output.of(timeout));
         }

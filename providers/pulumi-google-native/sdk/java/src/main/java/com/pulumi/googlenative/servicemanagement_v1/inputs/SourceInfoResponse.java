@@ -25,6 +25,10 @@ public final class SourceInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="sourceFiles", required=true)
     private List<Map<String,String>> sourceFiles;
 
+    /**
+     * @return All files used during config generation.
+     * 
+     */
     public List<Map<String,String>> sourceFiles() {
         return this.sourceFiles;
     }
@@ -53,11 +57,23 @@ public final class SourceInfoResponse extends com.pulumi.resources.InvokeArgs {
             $ = new SourceInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param sourceFiles All files used during config generation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceFiles(List<Map<String,String>> sourceFiles) {
             $.sourceFiles = sourceFiles;
             return this;
         }
 
+        /**
+         * @param sourceFiles All files used during config generation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceFiles(Map<String,String>... sourceFiles) {
             return sourceFiles(List.of(sourceFiles));
         }

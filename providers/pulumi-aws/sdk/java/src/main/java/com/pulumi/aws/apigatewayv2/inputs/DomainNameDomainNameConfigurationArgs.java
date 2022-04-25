@@ -23,6 +23,11 @@ public final class DomainNameDomainNameConfigurationArgs extends com.pulumi.reso
     @Import(name="certificateArn", required=true)
     private Output<String> certificateArn;
 
+    /**
+     * @return The ARN of an AWS-managed certificate that will be used by the endpoint for the domain name. AWS Certificate Manager is the only supported source.
+     * Use the `aws.acm.Certificate` resource to configure an ACM certificate.
+     * 
+     */
     public Output<String> certificateArn() {
         return this.certificateArn;
     }
@@ -34,6 +39,10 @@ public final class DomainNameDomainNameConfigurationArgs extends com.pulumi.reso
     @Import(name="endpointType", required=true)
     private Output<String> endpointType;
 
+    /**
+     * @return The endpoint type. Valid values: `REGIONAL`.
+     * 
+     */
     public Output<String> endpointType() {
         return this.endpointType;
     }
@@ -45,6 +54,10 @@ public final class DomainNameDomainNameConfigurationArgs extends com.pulumi.reso
     @Import(name="hostedZoneId")
     private @Nullable Output<String> hostedZoneId;
 
+    /**
+     * @return The Amazon Route 53 Hosted Zone ID of the endpoint.
+     * 
+     */
     public Optional<Output<String>> hostedZoneId() {
         return Optional.ofNullable(this.hostedZoneId);
     }
@@ -56,6 +69,10 @@ public final class DomainNameDomainNameConfigurationArgs extends com.pulumi.reso
     @Import(name="securityPolicy", required=true)
     private Output<String> securityPolicy;
 
+    /**
+     * @return The Transport Layer Security (TLS) version of the [security policy](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-custom-domain-tls-version.html) for the domain name. Valid values: `TLS_1_2`.
+     * 
+     */
     public Output<String> securityPolicy() {
         return this.securityPolicy;
     }
@@ -67,6 +84,10 @@ public final class DomainNameDomainNameConfigurationArgs extends com.pulumi.reso
     @Import(name="targetDomainName")
     private @Nullable Output<String> targetDomainName;
 
+    /**
+     * @return The target domain name.
+     * 
+     */
     public Optional<Output<String>> targetDomainName() {
         return Optional.ofNullable(this.targetDomainName);
     }
@@ -99,47 +120,109 @@ public final class DomainNameDomainNameConfigurationArgs extends com.pulumi.reso
             $ = new DomainNameDomainNameConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificateArn The ARN of an AWS-managed certificate that will be used by the endpoint for the domain name. AWS Certificate Manager is the only supported source.
+         * Use the `aws.acm.Certificate` resource to configure an ACM certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateArn(Output<String> certificateArn) {
             $.certificateArn = certificateArn;
             return this;
         }
 
+        /**
+         * @param certificateArn The ARN of an AWS-managed certificate that will be used by the endpoint for the domain name. AWS Certificate Manager is the only supported source.
+         * Use the `aws.acm.Certificate` resource to configure an ACM certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateArn(String certificateArn) {
             return certificateArn(Output.of(certificateArn));
         }
 
+        /**
+         * @param endpointType The endpoint type. Valid values: `REGIONAL`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointType(Output<String> endpointType) {
             $.endpointType = endpointType;
             return this;
         }
 
+        /**
+         * @param endpointType The endpoint type. Valid values: `REGIONAL`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointType(String endpointType) {
             return endpointType(Output.of(endpointType));
         }
 
+        /**
+         * @param hostedZoneId The Amazon Route 53 Hosted Zone ID of the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostedZoneId(@Nullable Output<String> hostedZoneId) {
             $.hostedZoneId = hostedZoneId;
             return this;
         }
 
+        /**
+         * @param hostedZoneId The Amazon Route 53 Hosted Zone ID of the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostedZoneId(String hostedZoneId) {
             return hostedZoneId(Output.of(hostedZoneId));
         }
 
+        /**
+         * @param securityPolicy The Transport Layer Security (TLS) version of the [security policy](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-custom-domain-tls-version.html) for the domain name. Valid values: `TLS_1_2`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityPolicy(Output<String> securityPolicy) {
             $.securityPolicy = securityPolicy;
             return this;
         }
 
+        /**
+         * @param securityPolicy The Transport Layer Security (TLS) version of the [security policy](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-custom-domain-tls-version.html) for the domain name. Valid values: `TLS_1_2`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityPolicy(String securityPolicy) {
             return securityPolicy(Output.of(securityPolicy));
         }
 
+        /**
+         * @param targetDomainName The target domain name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetDomainName(@Nullable Output<String> targetDomainName) {
             $.targetDomainName = targetDomainName;
             return this;
         }
 
+        /**
+         * @param targetDomainName The target domain name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetDomainName(String targetDomainName) {
             return targetDomainName(Output.of(targetDomainName));
         }

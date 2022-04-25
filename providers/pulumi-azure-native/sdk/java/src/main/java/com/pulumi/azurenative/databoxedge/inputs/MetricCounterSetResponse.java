@@ -24,6 +24,10 @@ public final class MetricCounterSetResponse extends com.pulumi.resources.InvokeA
     @Import(name="counters", required=true)
     private List<MetricCounterResponse> counters;
 
+    /**
+     * @return The counters that should be collected in this set.
+     * 
+     */
     public List<MetricCounterResponse> counters() {
         return this.counters;
     }
@@ -52,11 +56,23 @@ public final class MetricCounterSetResponse extends com.pulumi.resources.InvokeA
             $ = new MetricCounterSetResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param counters The counters that should be collected in this set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder counters(List<MetricCounterResponse> counters) {
             $.counters = counters;
             return this;
         }
 
+        /**
+         * @param counters The counters that should be collected in this set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder counters(MetricCounterResponse... counters) {
             return counters(List.of(counters));
         }

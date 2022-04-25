@@ -23,6 +23,10 @@ public final class TagPropertyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="objectIdentifier", required=true)
     private String objectIdentifier;
 
+    /**
+     * @return Returns the Object ID of the user who added the tag.
+     * 
+     */
     public String objectIdentifier() {
         return this.objectIdentifier;
     }
@@ -34,6 +38,10 @@ public final class TagPropertyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="tag", required=true)
     private String tag;
 
+    /**
+     * @return The tag value.
+     * 
+     */
     public String tag() {
         return this.tag;
     }
@@ -45,6 +53,10 @@ public final class TagPropertyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="tenantId", required=true)
     private String tenantId;
 
+    /**
+     * @return Returns the Tenant ID that issued the token for the user who added the tag.
+     * 
+     */
     public String tenantId() {
         return this.tenantId;
     }
@@ -56,6 +68,10 @@ public final class TagPropertyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="timestamp", required=true)
     private String timestamp;
 
+    /**
+     * @return Returns the date and time the tag was added.
+     * 
+     */
     public String timestamp() {
         return this.timestamp;
     }
@@ -67,6 +83,10 @@ public final class TagPropertyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="upn", required=true)
     private String upn;
 
+    /**
+     * @return Returns the User Principal Name of the user who added the tag.
+     * 
+     */
     public String upn() {
         return this.upn;
     }
@@ -99,26 +119,56 @@ public final class TagPropertyResponse extends com.pulumi.resources.InvokeArgs {
             $ = new TagPropertyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param objectIdentifier Returns the Object ID of the user who added the tag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectIdentifier(String objectIdentifier) {
             $.objectIdentifier = objectIdentifier;
             return this;
         }
 
+        /**
+         * @param tag The tag value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tag(String tag) {
             $.tag = tag;
             return this;
         }
 
+        /**
+         * @param tenantId Returns the Tenant ID that issued the token for the user who added the tag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(String tenantId) {
             $.tenantId = tenantId;
             return this;
         }
 
+        /**
+         * @param timestamp Returns the date and time the tag was added.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timestamp(String timestamp) {
             $.timestamp = timestamp;
             return this;
         }
 
+        /**
+         * @param upn Returns the User Principal Name of the user who added the tag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder upn(String upn) {
             $.upn = upn;
             return this;

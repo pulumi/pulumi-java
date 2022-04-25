@@ -26,6 +26,10 @@ public final class DscConfigurationAssociationPropertyArgs extends com.pulumi.re
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Gets or sets the name of the Dsc configuration.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -54,11 +58,23 @@ public final class DscConfigurationAssociationPropertyArgs extends com.pulumi.re
             $ = new DscConfigurationAssociationPropertyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Gets or sets the name of the Dsc configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Gets or sets the name of the Dsc configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

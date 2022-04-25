@@ -26,6 +26,10 @@ public final class RestoredLogsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="endRestoreTime")
     private @Nullable Output<String> endRestoreTime;
 
+    /**
+     * @return The timestamp to end the restore by (UTC).
+     * 
+     */
     public Optional<Output<String>> endRestoreTime() {
         return Optional.ofNullable(this.endRestoreTime);
     }
@@ -37,6 +41,10 @@ public final class RestoredLogsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="startRestoreTime")
     private @Nullable Output<String> startRestoreTime;
 
+    /**
+     * @return The timestamp to start the restore from (UTC).
+     * 
+     */
     public Optional<Output<String>> startRestoreTime() {
         return Optional.ofNullable(this.startRestoreTime);
     }
@@ -66,20 +74,44 @@ public final class RestoredLogsArgs extends com.pulumi.resources.ResourceArgs {
             $ = new RestoredLogsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endRestoreTime The timestamp to end the restore by (UTC).
+         * 
+         * @return builder
+         * 
+         */
         public Builder endRestoreTime(@Nullable Output<String> endRestoreTime) {
             $.endRestoreTime = endRestoreTime;
             return this;
         }
 
+        /**
+         * @param endRestoreTime The timestamp to end the restore by (UTC).
+         * 
+         * @return builder
+         * 
+         */
         public Builder endRestoreTime(String endRestoreTime) {
             return endRestoreTime(Output.of(endRestoreTime));
         }
 
+        /**
+         * @param startRestoreTime The timestamp to start the restore from (UTC).
+         * 
+         * @return builder
+         * 
+         */
         public Builder startRestoreTime(@Nullable Output<String> startRestoreTime) {
             $.startRestoreTime = startRestoreTime;
             return this;
         }
 
+        /**
+         * @param startRestoreTime The timestamp to start the restore from (UTC).
+         * 
+         * @return builder
+         * 
+         */
         public Builder startRestoreTime(String startRestoreTime) {
             return startRestoreTime(Output.of(startRestoreTime));
         }

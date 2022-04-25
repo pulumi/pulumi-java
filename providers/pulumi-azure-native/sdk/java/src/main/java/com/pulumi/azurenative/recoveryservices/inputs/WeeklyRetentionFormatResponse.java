@@ -26,6 +26,10 @@ public final class WeeklyRetentionFormatResponse extends com.pulumi.resources.In
     @Import(name="daysOfTheWeek")
     private @Nullable List<String> daysOfTheWeek;
 
+    /**
+     * @return List of days of the week.
+     * 
+     */
     public Optional<List<String>> daysOfTheWeek() {
         return Optional.ofNullable(this.daysOfTheWeek);
     }
@@ -37,6 +41,10 @@ public final class WeeklyRetentionFormatResponse extends com.pulumi.resources.In
     @Import(name="weeksOfTheMonth")
     private @Nullable List<String> weeksOfTheMonth;
 
+    /**
+     * @return List of weeks of month.
+     * 
+     */
     public Optional<List<String>> weeksOfTheMonth() {
         return Optional.ofNullable(this.weeksOfTheMonth);
     }
@@ -66,20 +74,44 @@ public final class WeeklyRetentionFormatResponse extends com.pulumi.resources.In
             $ = new WeeklyRetentionFormatResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param daysOfTheWeek List of days of the week.
+         * 
+         * @return builder
+         * 
+         */
         public Builder daysOfTheWeek(@Nullable List<String> daysOfTheWeek) {
             $.daysOfTheWeek = daysOfTheWeek;
             return this;
         }
 
+        /**
+         * @param daysOfTheWeek List of days of the week.
+         * 
+         * @return builder
+         * 
+         */
         public Builder daysOfTheWeek(String... daysOfTheWeek) {
             return daysOfTheWeek(List.of(daysOfTheWeek));
         }
 
+        /**
+         * @param weeksOfTheMonth List of weeks of month.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weeksOfTheMonth(@Nullable List<String> weeksOfTheMonth) {
             $.weeksOfTheMonth = weeksOfTheMonth;
             return this;
         }
 
+        /**
+         * @param weeksOfTheMonth List of weeks of month.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weeksOfTheMonth(String... weeksOfTheMonth) {
             return weeksOfTheMonth(List.of(weeksOfTheMonth));
         }

@@ -23,6 +23,10 @@ public final class BillingAccountBucketConfigState extends com.pulumi.resources.
     @Import(name="billingAccount")
     private @Nullable Output<String> billingAccount;
 
+    /**
+     * @return The parent resource that contains the logging bucket.
+     * 
+     */
     public Optional<Output<String>> billingAccount() {
         return Optional.ofNullable(this.billingAccount);
     }
@@ -34,6 +38,10 @@ public final class BillingAccountBucketConfigState extends com.pulumi.resources.
     @Import(name="bucketId")
     private @Nullable Output<String> bucketId;
 
+    /**
+     * @return The name of the logging bucket. Logging automatically creates two log buckets: `_Required` and `_Default`.
+     * 
+     */
     public Optional<Output<String>> bucketId() {
         return Optional.ofNullable(this.bucketId);
     }
@@ -45,6 +53,10 @@ public final class BillingAccountBucketConfigState extends com.pulumi.resources.
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Describes this bucket.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -56,6 +68,10 @@ public final class BillingAccountBucketConfigState extends com.pulumi.resources.
     @Import(name="lifecycleState")
     private @Nullable Output<String> lifecycleState;
 
+    /**
+     * @return The bucket&#39;s lifecycle such as active or deleted. See [LifecycleState](https://cloud.google.com/logging/docs/reference/v2/rest/v2/billingAccounts.buckets#LogBucket.LifecycleState).
+     * 
+     */
     public Optional<Output<String>> lifecycleState() {
         return Optional.ofNullable(this.lifecycleState);
     }
@@ -67,6 +83,10 @@ public final class BillingAccountBucketConfigState extends com.pulumi.resources.
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The location of the bucket.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -78,6 +98,10 @@ public final class BillingAccountBucketConfigState extends com.pulumi.resources.
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The resource name of the bucket. For example: &#34;projects/my-project-id/locations/my-location/buckets/my-bucket-id&#34;
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -89,6 +113,10 @@ public final class BillingAccountBucketConfigState extends com.pulumi.resources.
     @Import(name="retentionDays")
     private @Nullable Output<Integer> retentionDays;
 
+    /**
+     * @return Logs will be retained by default for this amount of time, after which they will automatically be deleted. The minimum retention period is 1 day. If this value is set to zero at bucket creation time, the default time of 30 days will be used. Bucket retention can not be increased on buckets outside of projects.
+     * 
+     */
     public Optional<Output<Integer>> retentionDays() {
         return Optional.ofNullable(this.retentionDays);
     }
@@ -123,65 +151,149 @@ public final class BillingAccountBucketConfigState extends com.pulumi.resources.
             $ = new BillingAccountBucketConfigState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param billingAccount The parent resource that contains the logging bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder billingAccount(@Nullable Output<String> billingAccount) {
             $.billingAccount = billingAccount;
             return this;
         }
 
+        /**
+         * @param billingAccount The parent resource that contains the logging bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder billingAccount(String billingAccount) {
             return billingAccount(Output.of(billingAccount));
         }
 
+        /**
+         * @param bucketId The name of the logging bucket. Logging automatically creates two log buckets: `_Required` and `_Default`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketId(@Nullable Output<String> bucketId) {
             $.bucketId = bucketId;
             return this;
         }
 
+        /**
+         * @param bucketId The name of the logging bucket. Logging automatically creates two log buckets: `_Required` and `_Default`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketId(String bucketId) {
             return bucketId(Output.of(bucketId));
         }
 
+        /**
+         * @param description Describes this bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Describes this bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param lifecycleState The bucket&#39;s lifecycle such as active or deleted. See [LifecycleState](https://cloud.google.com/logging/docs/reference/v2/rest/v2/billingAccounts.buckets#LogBucket.LifecycleState).
+         * 
+         * @return builder
+         * 
+         */
         public Builder lifecycleState(@Nullable Output<String> lifecycleState) {
             $.lifecycleState = lifecycleState;
             return this;
         }
 
+        /**
+         * @param lifecycleState The bucket&#39;s lifecycle such as active or deleted. See [LifecycleState](https://cloud.google.com/logging/docs/reference/v2/rest/v2/billingAccounts.buckets#LogBucket.LifecycleState).
+         * 
+         * @return builder
+         * 
+         */
         public Builder lifecycleState(String lifecycleState) {
             return lifecycleState(Output.of(lifecycleState));
         }
 
+        /**
+         * @param location The location of the bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The location of the bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param name The resource name of the bucket. For example: &#34;projects/my-project-id/locations/my-location/buckets/my-bucket-id&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The resource name of the bucket. For example: &#34;projects/my-project-id/locations/my-location/buckets/my-bucket-id&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param retentionDays Logs will be retained by default for this amount of time, after which they will automatically be deleted. The minimum retention period is 1 day. If this value is set to zero at bucket creation time, the default time of 30 days will be used. Bucket retention can not be increased on buckets outside of projects.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionDays(@Nullable Output<Integer> retentionDays) {
             $.retentionDays = retentionDays;
             return this;
         }
 
+        /**
+         * @param retentionDays Logs will be retained by default for this amount of time, after which they will automatically be deleted. The minimum retention period is 1 day. If this value is set to zero at bucket creation time, the default time of 30 days will be used. Bucket retention can not be increased on buckets outside of projects.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionDays(Integer retentionDays) {
             return retentionDays(Output.of(retentionDays));
         }

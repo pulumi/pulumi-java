@@ -16,32 +16,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class InitContainerDefinitionResponse {
     /**
-     * The command to execute within the init container in exec form.
+     * @return The command to execute within the init container in exec form.
      * 
      */
     private final @Nullable List<String> command;
     /**
-     * The environment variables to set in the init container.
+     * @return The environment variables to set in the init container.
      * 
      */
     private final @Nullable List<EnvironmentVariableResponse> environmentVariables;
     /**
-     * The image of the init container.
+     * @return The image of the init container.
      * 
      */
     private final @Nullable String image;
     /**
-     * The instance view of the init container. Only valid in response.
+     * @return The instance view of the init container. Only valid in response.
      * 
      */
     private final InitContainerPropertiesDefinitionResponseInstanceView instanceView;
     /**
-     * The name for the init container.
+     * @return The name for the init container.
      * 
      */
     private final String name;
     /**
-     * The volume mounts available to the init container.
+     * @return The volume mounts available to the init container.
      * 
      */
     private final @Nullable List<VolumeMountResponse> volumeMounts;
@@ -63,44 +63,44 @@ public final class InitContainerDefinitionResponse {
     }
 
     /**
-     * The command to execute within the init container in exec form.
+     * @return The command to execute within the init container in exec form.
      * 
-    */
+     */
     public List<String> command() {
         return this.command == null ? List.of() : this.command;
     }
     /**
-     * The environment variables to set in the init container.
+     * @return The environment variables to set in the init container.
      * 
-    */
+     */
     public List<EnvironmentVariableResponse> environmentVariables() {
         return this.environmentVariables == null ? List.of() : this.environmentVariables;
     }
     /**
-     * The image of the init container.
+     * @return The image of the init container.
      * 
-    */
+     */
     public Optional<String> image() {
         return Optional.ofNullable(this.image);
     }
     /**
-     * The instance view of the init container. Only valid in response.
+     * @return The instance view of the init container. Only valid in response.
      * 
-    */
+     */
     public InitContainerPropertiesDefinitionResponseInstanceView instanceView() {
         return this.instanceView;
     }
     /**
-     * The name for the init container.
+     * @return The name for the init container.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The volume mounts available to the init container.
+     * @return The volume mounts available to the init container.
      * 
-    */
+     */
     public List<VolumeMountResponse> volumeMounts() {
         return this.volumeMounts == null ? List.of() : this.volumeMounts;
     }

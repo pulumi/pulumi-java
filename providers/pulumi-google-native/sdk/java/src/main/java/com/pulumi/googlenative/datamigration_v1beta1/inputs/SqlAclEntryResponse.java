@@ -23,6 +23,10 @@ public final class SqlAclEntryResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="expireTime", required=true)
     private String expireTime;
 
+    /**
+     * @return The time when this access control entry expires in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example: `2012-11-15T16:19:00.094Z`.
+     * 
+     */
     public String expireTime() {
         return this.expireTime;
     }
@@ -34,6 +38,10 @@ public final class SqlAclEntryResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="label", required=true)
     private String label;
 
+    /**
+     * @return A label to identify this entry.
+     * 
+     */
     public String label() {
         return this.label;
     }
@@ -45,6 +53,10 @@ public final class SqlAclEntryResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="ttl", required=true)
     private String ttl;
 
+    /**
+     * @return Input only. The time-to-leave of this access control entry.
+     * 
+     */
     public String ttl() {
         return this.ttl;
     }
@@ -56,6 +68,10 @@ public final class SqlAclEntryResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="value", required=true)
     private String value;
 
+    /**
+     * @return The allowlisted value for the access control list.
+     * 
+     */
     public String value() {
         return this.value;
     }
@@ -87,21 +103,45 @@ public final class SqlAclEntryResponse extends com.pulumi.resources.InvokeArgs {
             $ = new SqlAclEntryResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expireTime The time when this access control entry expires in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example: `2012-11-15T16:19:00.094Z`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expireTime(String expireTime) {
             $.expireTime = expireTime;
             return this;
         }
 
+        /**
+         * @param label A label to identify this entry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder label(String label) {
             $.label = label;
             return this;
         }
 
+        /**
+         * @param ttl Input only. The time-to-leave of this access control entry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ttl(String ttl) {
             $.ttl = ttl;
             return this;
         }
 
+        /**
+         * @param value The allowlisted value for the access control list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             $.value = value;
             return this;

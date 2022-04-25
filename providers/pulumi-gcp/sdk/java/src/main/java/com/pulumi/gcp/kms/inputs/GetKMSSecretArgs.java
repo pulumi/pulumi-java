@@ -21,6 +21,10 @@ public final class GetKMSSecretArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="additionalAuthenticatedData")
     private @Nullable String additionalAuthenticatedData;
 
+    /**
+     * @return The [additional authenticated data](https://cloud.google.com/kms/docs/additional-authenticated-data) used for integrity checks during encryption and decryption.
+     * 
+     */
     public Optional<String> additionalAuthenticatedData() {
         return Optional.ofNullable(this.additionalAuthenticatedData);
     }
@@ -32,6 +36,10 @@ public final class GetKMSSecretArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="ciphertext", required=true)
     private String ciphertext;
 
+    /**
+     * @return The ciphertext to be decrypted, encoded in base64
+     * 
+     */
     public String ciphertext() {
         return this.ciphertext;
     }
@@ -45,6 +53,12 @@ public final class GetKMSSecretArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="cryptoKey", required=true)
     private String cryptoKey;
 
+    /**
+     * @return The id of the CryptoKey that will be used to
+     * decrypt the provided ciphertext. This is represented by the format
+     * `{projectId}/{location}/{keyRingName}/{cryptoKeyName}`.
+     * 
+     */
     public String cryptoKey() {
         return this.cryptoKey;
     }
@@ -75,16 +89,36 @@ public final class GetKMSSecretArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetKMSSecretArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param additionalAuthenticatedData The [additional authenticated data](https://cloud.google.com/kms/docs/additional-authenticated-data) used for integrity checks during encryption and decryption.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalAuthenticatedData(@Nullable String additionalAuthenticatedData) {
             $.additionalAuthenticatedData = additionalAuthenticatedData;
             return this;
         }
 
+        /**
+         * @param ciphertext The ciphertext to be decrypted, encoded in base64
+         * 
+         * @return builder
+         * 
+         */
         public Builder ciphertext(String ciphertext) {
             $.ciphertext = ciphertext;
             return this;
         }
 
+        /**
+         * @param cryptoKey The id of the CryptoKey that will be used to
+         * decrypt the provided ciphertext. This is represented by the format
+         * `{projectId}/{location}/{keyRingName}/{cryptoKeyName}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cryptoKey(String cryptoKey) {
             $.cryptoKey = cryptoKey;
             return this;

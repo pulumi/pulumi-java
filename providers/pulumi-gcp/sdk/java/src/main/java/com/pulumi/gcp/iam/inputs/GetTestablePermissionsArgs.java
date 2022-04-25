@@ -22,6 +22,10 @@ public final class GetTestablePermissionsArgs extends com.pulumi.resources.Invok
     @Import(name="customSupportLevel")
     private @Nullable String customSupportLevel;
 
+    /**
+     * @return The level of support for custom roles. Can be one of `&#34;NOT_SUPPORTED&#34;`, `&#34;SUPPORTED&#34;`, `&#34;TESTING&#34;`. Default is `&#34;SUPPORTED&#34;`
+     * 
+     */
     public Optional<String> customSupportLevel() {
         return Optional.ofNullable(this.customSupportLevel);
     }
@@ -33,6 +37,10 @@ public final class GetTestablePermissionsArgs extends com.pulumi.resources.Invok
     @Import(name="fullResourceName", required=true)
     private String fullResourceName;
 
+    /**
+     * @return See [full resource name documentation](https://cloud.google.com/apis/design/resource_names#full_resource_name) for more detail.
+     * 
+     */
     public String fullResourceName() {
         return this.fullResourceName;
     }
@@ -44,6 +52,10 @@ public final class GetTestablePermissionsArgs extends com.pulumi.resources.Invok
     @Import(name="stages")
     private @Nullable List<String> stages;
 
+    /**
+     * @return The acceptable release stages of the permission in the output. Note that `BETA` does not include permissions in `GA`, but you can specify both with `[&#34;GA&#34;, &#34;BETA&#34;]` for example. Can be a list of `&#34;ALPHA&#34;`, `&#34;BETA&#34;`, `&#34;GA&#34;`, `&#34;DEPRECATED&#34;`. Default is `[&#34;GA&#34;]`.
+     * 
+     */
     public Optional<List<String>> stages() {
         return Optional.ofNullable(this.stages);
     }
@@ -74,21 +86,45 @@ public final class GetTestablePermissionsArgs extends com.pulumi.resources.Invok
             $ = new GetTestablePermissionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customSupportLevel The level of support for custom roles. Can be one of `&#34;NOT_SUPPORTED&#34;`, `&#34;SUPPORTED&#34;`, `&#34;TESTING&#34;`. Default is `&#34;SUPPORTED&#34;`
+         * 
+         * @return builder
+         * 
+         */
         public Builder customSupportLevel(@Nullable String customSupportLevel) {
             $.customSupportLevel = customSupportLevel;
             return this;
         }
 
+        /**
+         * @param fullResourceName See [full resource name documentation](https://cloud.google.com/apis/design/resource_names#full_resource_name) for more detail.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fullResourceName(String fullResourceName) {
             $.fullResourceName = fullResourceName;
             return this;
         }
 
+        /**
+         * @param stages The acceptable release stages of the permission in the output. Note that `BETA` does not include permissions in `GA`, but you can specify both with `[&#34;GA&#34;, &#34;BETA&#34;]` for example. Can be a list of `&#34;ALPHA&#34;`, `&#34;BETA&#34;`, `&#34;GA&#34;`, `&#34;DEPRECATED&#34;`. Default is `[&#34;GA&#34;]`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stages(@Nullable List<String> stages) {
             $.stages = stages;
             return this;
         }
 
+        /**
+         * @param stages The acceptable release stages of the permission in the output. Note that `BETA` does not include permissions in `GA`, but you can specify both with `[&#34;GA&#34;, &#34;BETA&#34;]` for example. Can be a list of `&#34;ALPHA&#34;`, `&#34;BETA&#34;`, `&#34;GA&#34;`, `&#34;DEPRECATED&#34;`. Default is `[&#34;GA&#34;]`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stages(String... stages) {
             return stages(List.of(stages));
         }

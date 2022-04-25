@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class JsonFileFormatResponse {
     /**
-     * Compression of the loaded JSON file.
+     * @return Compression of the loaded JSON file.
      * 
      */
     private final String compression;
     /**
-     * The schema file format along JSON data files.
+     * @return The schema file format along JSON data files.
      * 
      */
     private final String schemaFileFormat;
@@ -29,16 +29,16 @@ public final class JsonFileFormatResponse {
     }
 
     /**
-     * Compression of the loaded JSON file.
+     * @return Compression of the loaded JSON file.
      * 
-    */
+     */
     public String compression() {
         return this.compression;
     }
     /**
-     * The schema file format along JSON data files.
+     * @return The schema file format along JSON data files.
      * 
-    */
+     */
     public String schemaFileFormat() {
         return this.schemaFileFormat;
     }

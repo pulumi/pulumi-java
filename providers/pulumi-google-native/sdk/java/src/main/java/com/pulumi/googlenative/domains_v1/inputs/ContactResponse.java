@@ -24,6 +24,10 @@ public final class ContactResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="email", required=true)
     private String email;
 
+    /**
+     * @return Email address of the contact.
+     * 
+     */
     public String email() {
         return this.email;
     }
@@ -35,6 +39,10 @@ public final class ContactResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="faxNumber", required=true)
     private String faxNumber;
 
+    /**
+     * @return Fax number of the contact in international format. For example, `&#34;+1-800-555-0123&#34;`.
+     * 
+     */
     public String faxNumber() {
         return this.faxNumber;
     }
@@ -46,6 +54,10 @@ public final class ContactResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="phoneNumber", required=true)
     private String phoneNumber;
 
+    /**
+     * @return Phone number of the contact in international format. For example, `&#34;+1-800-555-0123&#34;`.
+     * 
+     */
     public String phoneNumber() {
         return this.phoneNumber;
     }
@@ -57,6 +69,10 @@ public final class ContactResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="postalAddress", required=true)
     private PostalAddressResponse postalAddress;
 
+    /**
+     * @return Postal address of the contact.
+     * 
+     */
     public PostalAddressResponse postalAddress() {
         return this.postalAddress;
     }
@@ -88,21 +104,45 @@ public final class ContactResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ContactResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param email Email address of the contact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder email(String email) {
             $.email = email;
             return this;
         }
 
+        /**
+         * @param faxNumber Fax number of the contact in international format. For example, `&#34;+1-800-555-0123&#34;`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder faxNumber(String faxNumber) {
             $.faxNumber = faxNumber;
             return this;
         }
 
+        /**
+         * @param phoneNumber Phone number of the contact in international format. For example, `&#34;+1-800-555-0123&#34;`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder phoneNumber(String phoneNumber) {
             $.phoneNumber = phoneNumber;
             return this;
         }
 
+        /**
+         * @param postalAddress Postal address of the contact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder postalAddress(PostalAddressResponse postalAddress) {
             $.postalAddress = postalAddress;
             return this;

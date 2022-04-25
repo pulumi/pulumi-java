@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SecurityProfileMetricDimension {
     /**
-     * A unique identifier for the dimension.
+     * @return A unique identifier for the dimension.
      * 
      */
     private final String dimensionName;
     /**
-     * Defines how the dimensionValues of a dimension are interpreted.
+     * @return Defines how the dimensionValues of a dimension are interpreted.
      * 
      */
     private final @Nullable SecurityProfileMetricDimensionOperator operator;
@@ -32,16 +32,16 @@ public final class SecurityProfileMetricDimension {
     }
 
     /**
-     * A unique identifier for the dimension.
+     * @return A unique identifier for the dimension.
      * 
-    */
+     */
     public String dimensionName() {
         return this.dimensionName;
     }
     /**
-     * Defines how the dimensionValues of a dimension are interpreted.
+     * @return Defines how the dimensionValues of a dimension are interpreted.
      * 
-    */
+     */
     public Optional<SecurityProfileMetricDimensionOperator> operator() {
         return Optional.ofNullable(this.operator);
     }

@@ -26,6 +26,11 @@ public final class CertificateConfigX509ConfigKeyUsageArgs extends com.pulumi.re
     @Import(name="baseKeyUsage", required=true)
     private Output<CertificateConfigX509ConfigKeyUsageBaseKeyUsageArgs> baseKeyUsage;
 
+    /**
+     * @return Describes high-level ways in which a key may be used.
+     * Structure is documented below.
+     * 
+     */
     public Output<CertificateConfigX509ConfigKeyUsageBaseKeyUsageArgs> baseKeyUsage() {
         return this.baseKeyUsage;
     }
@@ -38,6 +43,11 @@ public final class CertificateConfigX509ConfigKeyUsageArgs extends com.pulumi.re
     @Import(name="extendedKeyUsage", required=true)
     private Output<CertificateConfigX509ConfigKeyUsageExtendedKeyUsageArgs> extendedKeyUsage;
 
+    /**
+     * @return Describes high-level ways in which a key may be used.
+     * Structure is documented below.
+     * 
+     */
     public Output<CertificateConfigX509ConfigKeyUsageExtendedKeyUsageArgs> extendedKeyUsage() {
         return this.extendedKeyUsage;
     }
@@ -50,6 +60,11 @@ public final class CertificateConfigX509ConfigKeyUsageArgs extends com.pulumi.re
     @Import(name="unknownExtendedKeyUsages")
     private @Nullable Output<List<CertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsageArgs>> unknownExtendedKeyUsages;
 
+    /**
+     * @return An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<CertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsageArgs>>> unknownExtendedKeyUsages() {
         return Optional.ofNullable(this.unknownExtendedKeyUsages);
     }
@@ -80,33 +95,82 @@ public final class CertificateConfigX509ConfigKeyUsageArgs extends com.pulumi.re
             $ = new CertificateConfigX509ConfigKeyUsageArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param baseKeyUsage Describes high-level ways in which a key may be used.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder baseKeyUsage(Output<CertificateConfigX509ConfigKeyUsageBaseKeyUsageArgs> baseKeyUsage) {
             $.baseKeyUsage = baseKeyUsage;
             return this;
         }
 
+        /**
+         * @param baseKeyUsage Describes high-level ways in which a key may be used.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder baseKeyUsage(CertificateConfigX509ConfigKeyUsageBaseKeyUsageArgs baseKeyUsage) {
             return baseKeyUsage(Output.of(baseKeyUsage));
         }
 
+        /**
+         * @param extendedKeyUsage Describes high-level ways in which a key may be used.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extendedKeyUsage(Output<CertificateConfigX509ConfigKeyUsageExtendedKeyUsageArgs> extendedKeyUsage) {
             $.extendedKeyUsage = extendedKeyUsage;
             return this;
         }
 
+        /**
+         * @param extendedKeyUsage Describes high-level ways in which a key may be used.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extendedKeyUsage(CertificateConfigX509ConfigKeyUsageExtendedKeyUsageArgs extendedKeyUsage) {
             return extendedKeyUsage(Output.of(extendedKeyUsage));
         }
 
+        /**
+         * @param unknownExtendedKeyUsages An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder unknownExtendedKeyUsages(@Nullable Output<List<CertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsageArgs>> unknownExtendedKeyUsages) {
             $.unknownExtendedKeyUsages = unknownExtendedKeyUsages;
             return this;
         }
 
+        /**
+         * @param unknownExtendedKeyUsages An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder unknownExtendedKeyUsages(List<CertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsageArgs> unknownExtendedKeyUsages) {
             return unknownExtendedKeyUsages(Output.of(unknownExtendedKeyUsages));
         }
 
+        /**
+         * @param unknownExtendedKeyUsages An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder unknownExtendedKeyUsages(CertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsageArgs... unknownExtendedKeyUsages) {
             return unknownExtendedKeyUsages(List.of(unknownExtendedKeyUsages));
         }

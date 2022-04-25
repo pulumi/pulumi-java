@@ -26,6 +26,10 @@ public final class OptionsPropertiesArgs extends com.pulumi.resources.ResourceAr
     @Import(name="applianceModeSupport")
     private @Nullable Output<String> applianceModeSupport;
 
+    /**
+     * @return Indicates whether to enable Ipv6 Support for Vpc Attachment. Valid Values: enable | disable
+     * 
+     */
     public Optional<Output<String>> applianceModeSupport() {
         return Optional.ofNullable(this.applianceModeSupport);
     }
@@ -37,6 +41,10 @@ public final class OptionsPropertiesArgs extends com.pulumi.resources.ResourceAr
     @Import(name="dnsSupport")
     private @Nullable Output<String> dnsSupport;
 
+    /**
+     * @return Indicates whether to enable DNS Support for Vpc Attachment. Valid Values: enable | disable
+     * 
+     */
     public Optional<Output<String>> dnsSupport() {
         return Optional.ofNullable(this.dnsSupport);
     }
@@ -48,6 +56,10 @@ public final class OptionsPropertiesArgs extends com.pulumi.resources.ResourceAr
     @Import(name="ipv6Support")
     private @Nullable Output<String> ipv6Support;
 
+    /**
+     * @return Indicates whether to enable Ipv6 Support for Vpc Attachment. Valid Values: enable | disable
+     * 
+     */
     public Optional<Output<String>> ipv6Support() {
         return Optional.ofNullable(this.ipv6Support);
     }
@@ -78,29 +90,65 @@ public final class OptionsPropertiesArgs extends com.pulumi.resources.ResourceAr
             $ = new OptionsPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param applianceModeSupport Indicates whether to enable Ipv6 Support for Vpc Attachment. Valid Values: enable | disable
+         * 
+         * @return builder
+         * 
+         */
         public Builder applianceModeSupport(@Nullable Output<String> applianceModeSupport) {
             $.applianceModeSupport = applianceModeSupport;
             return this;
         }
 
+        /**
+         * @param applianceModeSupport Indicates whether to enable Ipv6 Support for Vpc Attachment. Valid Values: enable | disable
+         * 
+         * @return builder
+         * 
+         */
         public Builder applianceModeSupport(String applianceModeSupport) {
             return applianceModeSupport(Output.of(applianceModeSupport));
         }
 
+        /**
+         * @param dnsSupport Indicates whether to enable DNS Support for Vpc Attachment. Valid Values: enable | disable
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsSupport(@Nullable Output<String> dnsSupport) {
             $.dnsSupport = dnsSupport;
             return this;
         }
 
+        /**
+         * @param dnsSupport Indicates whether to enable DNS Support for Vpc Attachment. Valid Values: enable | disable
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsSupport(String dnsSupport) {
             return dnsSupport(Output.of(dnsSupport));
         }
 
+        /**
+         * @param ipv6Support Indicates whether to enable Ipv6 Support for Vpc Attachment. Valid Values: enable | disable
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipv6Support(@Nullable Output<String> ipv6Support) {
             $.ipv6Support = ipv6Support;
             return this;
         }
 
+        /**
+         * @param ipv6Support Indicates whether to enable Ipv6 Support for Vpc Attachment. Valid Values: enable | disable
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipv6Support(String ipv6Support) {
             return ipv6Support(Output.of(ipv6Support));
         }

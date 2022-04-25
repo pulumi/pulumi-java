@@ -19,6 +19,10 @@ public final class GetDomainClusterConfigZoneAwarenessConfig extends com.pulumi.
     @Import(name="availabilityZoneCount", required=true)
     private Integer availabilityZoneCount;
 
+    /**
+     * @return Number of availability zones used.
+     * 
+     */
     public Integer availabilityZoneCount() {
         return this.availabilityZoneCount;
     }
@@ -47,6 +51,12 @@ public final class GetDomainClusterConfigZoneAwarenessConfig extends com.pulumi.
             $ = new GetDomainClusterConfigZoneAwarenessConfig(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param availabilityZoneCount Number of availability zones used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availabilityZoneCount(Integer availabilityZoneCount) {
             $.availabilityZoneCount = availabilityZoneCount;
             return this;

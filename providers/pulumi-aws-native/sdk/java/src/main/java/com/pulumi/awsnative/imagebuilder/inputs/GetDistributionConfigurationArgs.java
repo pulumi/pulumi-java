@@ -19,6 +19,10 @@ public final class GetDistributionConfigurationArgs extends com.pulumi.resources
     @Import(name="arn", required=true)
     private String arn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the distribution configuration.
+     * 
+     */
     public String arn() {
         return this.arn;
     }
@@ -47,6 +51,12 @@ public final class GetDistributionConfigurationArgs extends com.pulumi.resources
             $ = new GetDistributionConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn The Amazon Resource Name (ARN) of the distribution configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             $.arn = arn;
             return this;

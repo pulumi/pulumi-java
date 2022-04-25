@@ -23,6 +23,10 @@ public final class DocumentNoteResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="dataLicence", required=true)
     private String dataLicence;
 
+    /**
+     * @return Compliance with the SPDX specification includes populating the SPDX fields therein with data related to such fields (&#34;SPDX-Metadata&#34;)
+     * 
+     */
     public String dataLicence() {
         return this.dataLicence;
     }
@@ -34,6 +38,10 @@ public final class DocumentNoteResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="spdxVersion", required=true)
     private String spdxVersion;
 
+    /**
+     * @return Provide a reference number that can be used to understand how to parse and interpret the rest of the file
+     * 
+     */
     public String spdxVersion() {
         return this.spdxVersion;
     }
@@ -63,11 +71,23 @@ public final class DocumentNoteResponse extends com.pulumi.resources.InvokeArgs 
             $ = new DocumentNoteResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataLicence Compliance with the SPDX specification includes populating the SPDX fields therein with data related to such fields (&#34;SPDX-Metadata&#34;)
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataLicence(String dataLicence) {
             $.dataLicence = dataLicence;
             return this;
         }
 
+        /**
+         * @param spdxVersion Provide a reference number that can be used to understand how to parse and interpret the rest of the file
+         * 
+         * @return builder
+         * 
+         */
         public Builder spdxVersion(String spdxVersion) {
             $.spdxVersion = spdxVersion;
             return this;

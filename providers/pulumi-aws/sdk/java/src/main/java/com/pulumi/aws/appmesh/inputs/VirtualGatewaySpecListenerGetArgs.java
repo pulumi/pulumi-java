@@ -25,6 +25,10 @@ public final class VirtualGatewaySpecListenerGetArgs extends com.pulumi.resource
     @Import(name="connectionPool")
     private @Nullable Output<VirtualGatewaySpecListenerConnectionPoolGetArgs> connectionPool;
 
+    /**
+     * @return The connection pool information for the listener.
+     * 
+     */
     public Optional<Output<VirtualGatewaySpecListenerConnectionPoolGetArgs>> connectionPool() {
         return Optional.ofNullable(this.connectionPool);
     }
@@ -36,6 +40,10 @@ public final class VirtualGatewaySpecListenerGetArgs extends com.pulumi.resource
     @Import(name="healthCheck")
     private @Nullable Output<VirtualGatewaySpecListenerHealthCheckGetArgs> healthCheck;
 
+    /**
+     * @return The health check information for the listener.
+     * 
+     */
     public Optional<Output<VirtualGatewaySpecListenerHealthCheckGetArgs>> healthCheck() {
         return Optional.ofNullable(this.healthCheck);
     }
@@ -47,6 +55,10 @@ public final class VirtualGatewaySpecListenerGetArgs extends com.pulumi.resource
     @Import(name="portMapping", required=true)
     private Output<VirtualGatewaySpecListenerPortMappingGetArgs> portMapping;
 
+    /**
+     * @return The port mapping information for the listener.
+     * 
+     */
     public Output<VirtualGatewaySpecListenerPortMappingGetArgs> portMapping() {
         return this.portMapping;
     }
@@ -58,6 +70,10 @@ public final class VirtualGatewaySpecListenerGetArgs extends com.pulumi.resource
     @Import(name="tls")
     private @Nullable Output<VirtualGatewaySpecListenerTlsGetArgs> tls;
 
+    /**
+     * @return The Transport Layer Security (TLS) properties for the listener
+     * 
+     */
     public Optional<Output<VirtualGatewaySpecListenerTlsGetArgs>> tls() {
         return Optional.ofNullable(this.tls);
     }
@@ -89,38 +105,86 @@ public final class VirtualGatewaySpecListenerGetArgs extends com.pulumi.resource
             $ = new VirtualGatewaySpecListenerGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param connectionPool The connection pool information for the listener.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionPool(@Nullable Output<VirtualGatewaySpecListenerConnectionPoolGetArgs> connectionPool) {
             $.connectionPool = connectionPool;
             return this;
         }
 
+        /**
+         * @param connectionPool The connection pool information for the listener.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionPool(VirtualGatewaySpecListenerConnectionPoolGetArgs connectionPool) {
             return connectionPool(Output.of(connectionPool));
         }
 
+        /**
+         * @param healthCheck The health check information for the listener.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthCheck(@Nullable Output<VirtualGatewaySpecListenerHealthCheckGetArgs> healthCheck) {
             $.healthCheck = healthCheck;
             return this;
         }
 
+        /**
+         * @param healthCheck The health check information for the listener.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthCheck(VirtualGatewaySpecListenerHealthCheckGetArgs healthCheck) {
             return healthCheck(Output.of(healthCheck));
         }
 
+        /**
+         * @param portMapping The port mapping information for the listener.
+         * 
+         * @return builder
+         * 
+         */
         public Builder portMapping(Output<VirtualGatewaySpecListenerPortMappingGetArgs> portMapping) {
             $.portMapping = portMapping;
             return this;
         }
 
+        /**
+         * @param portMapping The port mapping information for the listener.
+         * 
+         * @return builder
+         * 
+         */
         public Builder portMapping(VirtualGatewaySpecListenerPortMappingGetArgs portMapping) {
             return portMapping(Output.of(portMapping));
         }
 
+        /**
+         * @param tls The Transport Layer Security (TLS) properties for the listener
+         * 
+         * @return builder
+         * 
+         */
         public Builder tls(@Nullable Output<VirtualGatewaySpecListenerTlsGetArgs> tls) {
             $.tls = tls;
             return this;
         }
 
+        /**
+         * @param tls The Transport Layer Security (TLS) properties for the listener
+         * 
+         * @return builder
+         * 
+         */
         public Builder tls(VirtualGatewaySpecListenerTlsGetArgs tls) {
             return tls(Output.of(tls));
         }

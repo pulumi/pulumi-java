@@ -28,6 +28,10 @@ public final class ModeValueInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="interfaceString")
     private @Nullable Output<String> interfaceString;
 
+    /**
+     * @return The interface string name for the nested parameter.
+     * 
+     */
     public Optional<Output<String>> interfaceString() {
         return Optional.ofNullable(this.interfaceString);
     }
@@ -39,6 +43,10 @@ public final class ModeValueInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="parameters")
     private @Nullable Output<List<ModuleAssetParameterArgs>> parameters;
 
+    /**
+     * @return The definition of the parameter.
+     * 
+     */
     public Optional<Output<List<ModuleAssetParameterArgs>>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -68,24 +76,54 @@ public final class ModeValueInfoArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ModeValueInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param interfaceString The interface string name for the nested parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interfaceString(@Nullable Output<String> interfaceString) {
             $.interfaceString = interfaceString;
             return this;
         }
 
+        /**
+         * @param interfaceString The interface string name for the nested parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interfaceString(String interfaceString) {
             return interfaceString(Output.of(interfaceString));
         }
 
+        /**
+         * @param parameters The definition of the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Output<List<ModuleAssetParameterArgs>> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters The definition of the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(List<ModuleAssetParameterArgs> parameters) {
             return parameters(Output.of(parameters));
         }
 
+        /**
+         * @param parameters The definition of the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(ModuleAssetParameterArgs... parameters) {
             return parameters(List.of(parameters));
         }

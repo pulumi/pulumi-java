@@ -25,6 +25,10 @@ public final class TokenCertificateResponse extends com.pulumi.resources.InvokeA
     @Import(name="encodedPemCertificate")
     private @Nullable String encodedPemCertificate;
 
+    /**
+     * @return Base 64 encoded string of the public certificate1 in PEM format that will be used for authenticating the token.
+     * 
+     */
     public Optional<String> encodedPemCertificate() {
         return Optional.ofNullable(this.encodedPemCertificate);
     }
@@ -36,6 +40,10 @@ public final class TokenCertificateResponse extends com.pulumi.resources.InvokeA
     @Import(name="expiry")
     private @Nullable String expiry;
 
+    /**
+     * @return The expiry datetime of the certificate.
+     * 
+     */
     public Optional<String> expiry() {
         return Optional.ofNullable(this.expiry);
     }
@@ -54,6 +62,10 @@ public final class TokenCertificateResponse extends com.pulumi.resources.InvokeA
     @Import(name="thumbprint")
     private @Nullable String thumbprint;
 
+    /**
+     * @return The thumbprint of the certificate.
+     * 
+     */
     public Optional<String> thumbprint() {
         return Optional.ofNullable(this.thumbprint);
     }
@@ -85,11 +97,23 @@ public final class TokenCertificateResponse extends com.pulumi.resources.InvokeA
             $ = new TokenCertificateResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param encodedPemCertificate Base 64 encoded string of the public certificate1 in PEM format that will be used for authenticating the token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encodedPemCertificate(@Nullable String encodedPemCertificate) {
             $.encodedPemCertificate = encodedPemCertificate;
             return this;
         }
 
+        /**
+         * @param expiry The expiry datetime of the certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expiry(@Nullable String expiry) {
             $.expiry = expiry;
             return this;
@@ -100,6 +124,12 @@ public final class TokenCertificateResponse extends com.pulumi.resources.InvokeA
             return this;
         }
 
+        /**
+         * @param thumbprint The thumbprint of the certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thumbprint(@Nullable String thumbprint) {
             $.thumbprint = thumbprint;
             return this;

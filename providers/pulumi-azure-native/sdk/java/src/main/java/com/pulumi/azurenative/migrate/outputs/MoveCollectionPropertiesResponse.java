@@ -11,22 +11,22 @@ import java.util.Objects;
 @CustomType
 public final class MoveCollectionPropertiesResponse {
     /**
-     * Defines the move collection errors.
+     * @return Defines the move collection errors.
      * 
      */
     private final MoveCollectionPropertiesResponseErrors errors;
     /**
-     * Defines the provisioning states.
+     * @return Defines the provisioning states.
      * 
      */
     private final String provisioningState;
     /**
-     * Gets or sets the source region.
+     * @return Gets or sets the source region.
      * 
      */
     private final String sourceRegion;
     /**
-     * Gets or sets the target region.
+     * @return Gets or sets the target region.
      * 
      */
     private final String targetRegion;
@@ -44,30 +44,30 @@ public final class MoveCollectionPropertiesResponse {
     }
 
     /**
-     * Defines the move collection errors.
+     * @return Defines the move collection errors.
      * 
-    */
+     */
     public MoveCollectionPropertiesResponseErrors errors() {
         return this.errors;
     }
     /**
-     * Defines the provisioning states.
+     * @return Defines the provisioning states.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Gets or sets the source region.
+     * @return Gets or sets the source region.
      * 
-    */
+     */
     public String sourceRegion() {
         return this.sourceRegion;
     }
     /**
-     * Gets or sets the target region.
+     * @return Gets or sets the target region.
      * 
-    */
+     */
     public String targetRegion() {
         return this.targetRegion;
     }

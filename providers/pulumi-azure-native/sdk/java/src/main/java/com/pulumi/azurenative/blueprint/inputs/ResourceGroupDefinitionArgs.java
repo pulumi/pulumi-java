@@ -28,6 +28,10 @@ public final class ResourceGroupDefinitionArgs extends com.pulumi.resources.Reso
     @Import(name="dependsOn")
     private @Nullable Output<List<String>> dependsOn;
 
+    /**
+     * @return Artifacts which need to be deployed before this resource group.
+     * 
+     */
     public Optional<Output<List<String>>> dependsOn() {
         return Optional.ofNullable(this.dependsOn);
     }
@@ -39,6 +43,10 @@ public final class ResourceGroupDefinitionArgs extends com.pulumi.resources.Reso
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description of this parameter/resourceGroup.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -50,6 +58,10 @@ public final class ResourceGroupDefinitionArgs extends com.pulumi.resources.Reso
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return DisplayName of this parameter/resourceGroup.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -61,6 +73,10 @@ public final class ResourceGroupDefinitionArgs extends com.pulumi.resources.Reso
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Location of this resourceGroup. Leave empty if the resource group location will be specified during the blueprint assignment.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -72,6 +88,10 @@ public final class ResourceGroupDefinitionArgs extends com.pulumi.resources.Reso
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of this resourceGroup. Leave empty if the resource group name will be specified during the blueprint assignment.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -83,6 +103,10 @@ public final class ResourceGroupDefinitionArgs extends com.pulumi.resources.Reso
     @Import(name="strongType")
     private @Nullable Output<String> strongType;
 
+    /**
+     * @return StrongType for UI to render rich experience during blueprint assignment. Supported strong types are resourceType, principalId and location.
+     * 
+     */
     public Optional<Output<String>> strongType() {
         return Optional.ofNullable(this.strongType);
     }
@@ -94,6 +118,10 @@ public final class ResourceGroupDefinitionArgs extends com.pulumi.resources.Reso
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Tags to be assigned to this resource group.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -128,69 +156,159 @@ public final class ResourceGroupDefinitionArgs extends com.pulumi.resources.Reso
             $ = new ResourceGroupDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dependsOn Artifacts which need to be deployed before this resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(@Nullable Output<List<String>> dependsOn) {
             $.dependsOn = dependsOn;
             return this;
         }
 
+        /**
+         * @param dependsOn Artifacts which need to be deployed before this resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(List<String> dependsOn) {
             return dependsOn(Output.of(dependsOn));
         }
 
+        /**
+         * @param dependsOn Artifacts which need to be deployed before this resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(String... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
 
+        /**
+         * @param description Description of this parameter/resourceGroup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description of this parameter/resourceGroup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param displayName DisplayName of this parameter/resourceGroup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName DisplayName of this parameter/resourceGroup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param location Location of this resourceGroup. Leave empty if the resource group location will be specified during the blueprint assignment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Location of this resourceGroup. Leave empty if the resource group location will be specified during the blueprint assignment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param name Name of this resourceGroup. Leave empty if the resource group name will be specified during the blueprint assignment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of this resourceGroup. Leave empty if the resource group name will be specified during the blueprint assignment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param strongType StrongType for UI to render rich experience during blueprint assignment. Supported strong types are resourceType, principalId and location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder strongType(@Nullable Output<String> strongType) {
             $.strongType = strongType;
             return this;
         }
 
+        /**
+         * @param strongType StrongType for UI to render rich experience during blueprint assignment. Supported strong types are resourceType, principalId and location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder strongType(String strongType) {
             return strongType(Output.of(strongType));
         }
 
+        /**
+         * @param tags Tags to be assigned to this resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Tags to be assigned to this resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

@@ -10,32 +10,32 @@ import java.util.Objects;
 @CustomType
 public final class ResourceStatusResponse {
     /**
-     * The last update time for this condition.
+     * @return The last update time for this condition.
      * 
      */
     private final String lastUpdatedAt;
     /**
-     * A human readable message indicating details about the status.
+     * @return A human readable message indicating details about the status.
      * 
      */
     private final String message;
     /**
-     * The reason for the condition&#39;s status.
+     * @return The reason for the condition&#39;s status.
      * 
      */
     private final String reason;
     /**
-     * Severity with which to treat failures of this type of condition.
+     * @return Severity with which to treat failures of this type of condition.
      * 
      */
     private final String severity;
     /**
-     * Status of the condition.
+     * @return Status of the condition.
      * 
      */
     private final String status;
     /**
-     * The type of the condition.
+     * @return The type of the condition.
      * 
      */
     private final String type;
@@ -57,44 +57,44 @@ public final class ResourceStatusResponse {
     }
 
     /**
-     * The last update time for this condition.
+     * @return The last update time for this condition.
      * 
-    */
+     */
     public String lastUpdatedAt() {
         return this.lastUpdatedAt;
     }
     /**
-     * A human readable message indicating details about the status.
+     * @return A human readable message indicating details about the status.
      * 
-    */
+     */
     public String message() {
         return this.message;
     }
     /**
-     * The reason for the condition&#39;s status.
+     * @return The reason for the condition&#39;s status.
      * 
-    */
+     */
     public String reason() {
         return this.reason;
     }
     /**
-     * Severity with which to treat failures of this type of condition.
+     * @return Severity with which to treat failures of this type of condition.
      * 
-    */
+     */
     public String severity() {
         return this.severity;
     }
     /**
-     * Status of the condition.
+     * @return Status of the condition.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * The type of the condition.
+     * @return The type of the condition.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

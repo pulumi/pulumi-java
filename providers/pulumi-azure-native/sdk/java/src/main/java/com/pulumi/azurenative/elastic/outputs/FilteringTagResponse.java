@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class FilteringTagResponse {
     /**
-     * Valid actions for a filtering tag.
+     * @return Valid actions for a filtering tag.
      * 
      */
     private final @Nullable String action;
     /**
-     * The name (also known as the key) of the tag.
+     * @return The name (also known as the key) of the tag.
      * 
      */
     private final @Nullable String name;
     /**
-     * The value of the tag.
+     * @return The value of the tag.
      * 
      */
     private final @Nullable String value;
@@ -38,23 +38,23 @@ public final class FilteringTagResponse {
     }
 
     /**
-     * Valid actions for a filtering tag.
+     * @return Valid actions for a filtering tag.
      * 
-    */
+     */
     public Optional<String> action() {
         return Optional.ofNullable(this.action);
     }
     /**
-     * The name (also known as the key) of the tag.
+     * @return The name (also known as the key) of the tag.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The value of the tag.
+     * @return The value of the tag.
      * 
-    */
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }

@@ -28,6 +28,10 @@ public final class MetadataFilterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="filterLabels")
     private @Nullable Output<List<MetadataFilterLabelMatchArgs>> filterLabels;
 
+    /**
+     * @return The list of label value pairs that must match labels in the provided metadata based on filterMatchCriteria This list must not be empty and can have at the most 64 entries.
+     * 
+     */
     public Optional<Output<List<MetadataFilterLabelMatchArgs>>> filterLabels() {
         return Optional.ofNullable(this.filterLabels);
     }
@@ -39,6 +43,10 @@ public final class MetadataFilterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="filterMatchCriteria")
     private @Nullable Output<MetadataFilterFilterMatchCriteria> filterMatchCriteria;
 
+    /**
+     * @return Specifies how individual filter label matches within the list of filterLabels and contributes toward the overall metadataFilter match. Supported values are: - MATCH_ANY: at least one of the filterLabels must have a matching label in the provided metadata. - MATCH_ALL: all filterLabels must have matching labels in the provided metadata.
+     * 
+     */
     public Optional<Output<MetadataFilterFilterMatchCriteria>> filterMatchCriteria() {
         return Optional.ofNullable(this.filterMatchCriteria);
     }
@@ -68,24 +76,54 @@ public final class MetadataFilterArgs extends com.pulumi.resources.ResourceArgs 
             $ = new MetadataFilterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param filterLabels The list of label value pairs that must match labels in the provided metadata based on filterMatchCriteria This list must not be empty and can have at the most 64 entries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filterLabels(@Nullable Output<List<MetadataFilterLabelMatchArgs>> filterLabels) {
             $.filterLabels = filterLabels;
             return this;
         }
 
+        /**
+         * @param filterLabels The list of label value pairs that must match labels in the provided metadata based on filterMatchCriteria This list must not be empty and can have at the most 64 entries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filterLabels(List<MetadataFilterLabelMatchArgs> filterLabels) {
             return filterLabels(Output.of(filterLabels));
         }
 
+        /**
+         * @param filterLabels The list of label value pairs that must match labels in the provided metadata based on filterMatchCriteria This list must not be empty and can have at the most 64 entries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filterLabels(MetadataFilterLabelMatchArgs... filterLabels) {
             return filterLabels(List.of(filterLabels));
         }
 
+        /**
+         * @param filterMatchCriteria Specifies how individual filter label matches within the list of filterLabels and contributes toward the overall metadataFilter match. Supported values are: - MATCH_ANY: at least one of the filterLabels must have a matching label in the provided metadata. - MATCH_ALL: all filterLabels must have matching labels in the provided metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filterMatchCriteria(@Nullable Output<MetadataFilterFilterMatchCriteria> filterMatchCriteria) {
             $.filterMatchCriteria = filterMatchCriteria;
             return this;
         }
 
+        /**
+         * @param filterMatchCriteria Specifies how individual filter label matches within the list of filterLabels and contributes toward the overall metadataFilter match. Supported values are: - MATCH_ANY: at least one of the filterLabels must have a matching label in the provided metadata. - MATCH_ALL: all filterLabels must have matching labels in the provided metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filterMatchCriteria(MetadataFilterFilterMatchCriteria filterMatchCriteria) {
             return filterMatchCriteria(Output.of(filterMatchCriteria));
         }

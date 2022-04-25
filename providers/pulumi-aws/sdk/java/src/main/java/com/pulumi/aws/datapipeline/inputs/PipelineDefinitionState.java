@@ -26,6 +26,10 @@ public final class PipelineDefinitionState extends com.pulumi.resources.Resource
     @Import(name="parameterObjects")
     private @Nullable Output<List<PipelineDefinitionParameterObjectGetArgs>> parameterObjects;
 
+    /**
+     * @return Configuration block for the parameter objects used in the pipeline definition. See below
+     * 
+     */
     public Optional<Output<List<PipelineDefinitionParameterObjectGetArgs>>> parameterObjects() {
         return Optional.ofNullable(this.parameterObjects);
     }
@@ -37,6 +41,10 @@ public final class PipelineDefinitionState extends com.pulumi.resources.Resource
     @Import(name="parameterValues")
     private @Nullable Output<List<PipelineDefinitionParameterValueGetArgs>> parameterValues;
 
+    /**
+     * @return Configuration block for the parameter values used in the pipeline definition. See below
+     * 
+     */
     public Optional<Output<List<PipelineDefinitionParameterValueGetArgs>>> parameterValues() {
         return Optional.ofNullable(this.parameterValues);
     }
@@ -48,6 +56,10 @@ public final class PipelineDefinitionState extends com.pulumi.resources.Resource
     @Import(name="pipelineId")
     private @Nullable Output<String> pipelineId;
 
+    /**
+     * @return ID of the pipeline.
+     * 
+     */
     public Optional<Output<String>> pipelineId() {
         return Optional.ofNullable(this.pipelineId);
     }
@@ -59,6 +71,10 @@ public final class PipelineDefinitionState extends com.pulumi.resources.Resource
     @Import(name="pipelineObjects")
     private @Nullable Output<List<PipelineDefinitionPipelineObjectGetArgs>> pipelineObjects;
 
+    /**
+     * @return Configuration block for the objects that define the pipeline. See below
+     * 
+     */
     public Optional<Output<List<PipelineDefinitionPipelineObjectGetArgs>>> pipelineObjects() {
         return Optional.ofNullable(this.pipelineObjects);
     }
@@ -90,50 +106,116 @@ public final class PipelineDefinitionState extends com.pulumi.resources.Resource
             $ = new PipelineDefinitionState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param parameterObjects Configuration block for the parameter objects used in the pipeline definition. See below
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameterObjects(@Nullable Output<List<PipelineDefinitionParameterObjectGetArgs>> parameterObjects) {
             $.parameterObjects = parameterObjects;
             return this;
         }
 
+        /**
+         * @param parameterObjects Configuration block for the parameter objects used in the pipeline definition. See below
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameterObjects(List<PipelineDefinitionParameterObjectGetArgs> parameterObjects) {
             return parameterObjects(Output.of(parameterObjects));
         }
 
+        /**
+         * @param parameterObjects Configuration block for the parameter objects used in the pipeline definition. See below
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameterObjects(PipelineDefinitionParameterObjectGetArgs... parameterObjects) {
             return parameterObjects(List.of(parameterObjects));
         }
 
+        /**
+         * @param parameterValues Configuration block for the parameter values used in the pipeline definition. See below
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameterValues(@Nullable Output<List<PipelineDefinitionParameterValueGetArgs>> parameterValues) {
             $.parameterValues = parameterValues;
             return this;
         }
 
+        /**
+         * @param parameterValues Configuration block for the parameter values used in the pipeline definition. See below
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameterValues(List<PipelineDefinitionParameterValueGetArgs> parameterValues) {
             return parameterValues(Output.of(parameterValues));
         }
 
+        /**
+         * @param parameterValues Configuration block for the parameter values used in the pipeline definition. See below
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameterValues(PipelineDefinitionParameterValueGetArgs... parameterValues) {
             return parameterValues(List.of(parameterValues));
         }
 
+        /**
+         * @param pipelineId ID of the pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pipelineId(@Nullable Output<String> pipelineId) {
             $.pipelineId = pipelineId;
             return this;
         }
 
+        /**
+         * @param pipelineId ID of the pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pipelineId(String pipelineId) {
             return pipelineId(Output.of(pipelineId));
         }
 
+        /**
+         * @param pipelineObjects Configuration block for the objects that define the pipeline. See below
+         * 
+         * @return builder
+         * 
+         */
         public Builder pipelineObjects(@Nullable Output<List<PipelineDefinitionPipelineObjectGetArgs>> pipelineObjects) {
             $.pipelineObjects = pipelineObjects;
             return this;
         }
 
+        /**
+         * @param pipelineObjects Configuration block for the objects that define the pipeline. See below
+         * 
+         * @return builder
+         * 
+         */
         public Builder pipelineObjects(List<PipelineDefinitionPipelineObjectGetArgs> pipelineObjects) {
             return pipelineObjects(Output.of(pipelineObjects));
         }
 
+        /**
+         * @param pipelineObjects Configuration block for the objects that define the pipeline. See below
+         * 
+         * @return builder
+         * 
+         */
         public Builder pipelineObjects(PipelineDefinitionPipelineObjectGetArgs... pipelineObjects) {
             return pipelineObjects(List.of(pipelineObjects));
         }

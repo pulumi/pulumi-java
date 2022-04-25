@@ -26,6 +26,10 @@ public final class DatabaseBackupInfoResponse extends com.pulumi.resources.Invok
     @Import(name="backupFiles", required=true)
     private List<String> backupFiles;
 
+    /**
+     * @return The list of backup files for the current database.
+     * 
+     */
     public List<String> backupFiles() {
         return this.backupFiles;
     }
@@ -37,6 +41,10 @@ public final class DatabaseBackupInfoResponse extends com.pulumi.resources.Invok
     @Import(name="backupFinishDate", required=true)
     private String backupFinishDate;
 
+    /**
+     * @return Date and time when the backup operation finished.
+     * 
+     */
     public String backupFinishDate() {
         return this.backupFinishDate;
     }
@@ -48,6 +56,10 @@ public final class DatabaseBackupInfoResponse extends com.pulumi.resources.Invok
     @Import(name="backupType", required=true)
     private String backupType;
 
+    /**
+     * @return Backup Type.
+     * 
+     */
     public String backupType() {
         return this.backupType;
     }
@@ -59,6 +71,10 @@ public final class DatabaseBackupInfoResponse extends com.pulumi.resources.Invok
     @Import(name="databaseName", required=true)
     private String databaseName;
 
+    /**
+     * @return Database name.
+     * 
+     */
     public String databaseName() {
         return this.databaseName;
     }
@@ -70,6 +86,10 @@ public final class DatabaseBackupInfoResponse extends com.pulumi.resources.Invok
     @Import(name="familyCount", required=true)
     private Integer familyCount;
 
+    /**
+     * @return Number of files in the backup set.
+     * 
+     */
     public Integer familyCount() {
         return this.familyCount;
     }
@@ -81,6 +101,10 @@ public final class DatabaseBackupInfoResponse extends com.pulumi.resources.Invok
     @Import(name="isCompressed", required=true)
     private Boolean isCompressed;
 
+    /**
+     * @return Whether the backup set is compressed
+     * 
+     */
     public Boolean isCompressed() {
         return this.isCompressed;
     }
@@ -92,6 +116,10 @@ public final class DatabaseBackupInfoResponse extends com.pulumi.resources.Invok
     @Import(name="isDamaged", required=true)
     private Boolean isDamaged;
 
+    /**
+     * @return Database was damaged when backed up, but the backup operation was requested to continue despite errors.
+     * 
+     */
     public Boolean isDamaged() {
         return this.isDamaged;
     }
@@ -103,6 +131,10 @@ public final class DatabaseBackupInfoResponse extends com.pulumi.resources.Invok
     @Import(name="position", required=true)
     private Integer position;
 
+    /**
+     * @return Position of current database backup in the file.
+     * 
+     */
     public Integer position() {
         return this.position;
     }
@@ -138,45 +170,99 @@ public final class DatabaseBackupInfoResponse extends com.pulumi.resources.Invok
             $ = new DatabaseBackupInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backupFiles The list of backup files for the current database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupFiles(List<String> backupFiles) {
             $.backupFiles = backupFiles;
             return this;
         }
 
+        /**
+         * @param backupFiles The list of backup files for the current database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupFiles(String... backupFiles) {
             return backupFiles(List.of(backupFiles));
         }
 
+        /**
+         * @param backupFinishDate Date and time when the backup operation finished.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupFinishDate(String backupFinishDate) {
             $.backupFinishDate = backupFinishDate;
             return this;
         }
 
+        /**
+         * @param backupType Backup Type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupType(String backupType) {
             $.backupType = backupType;
             return this;
         }
 
+        /**
+         * @param databaseName Database name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(String databaseName) {
             $.databaseName = databaseName;
             return this;
         }
 
+        /**
+         * @param familyCount Number of files in the backup set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder familyCount(Integer familyCount) {
             $.familyCount = familyCount;
             return this;
         }
 
+        /**
+         * @param isCompressed Whether the backup set is compressed
+         * 
+         * @return builder
+         * 
+         */
         public Builder isCompressed(Boolean isCompressed) {
             $.isCompressed = isCompressed;
             return this;
         }
 
+        /**
+         * @param isDamaged Database was damaged when backed up, but the backup operation was requested to continue despite errors.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isDamaged(Boolean isDamaged) {
             $.isDamaged = isDamaged;
             return this;
         }
 
+        /**
+         * @param position Position of current database backup in the file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder position(Integer position) {
             $.position = position;
             return this;

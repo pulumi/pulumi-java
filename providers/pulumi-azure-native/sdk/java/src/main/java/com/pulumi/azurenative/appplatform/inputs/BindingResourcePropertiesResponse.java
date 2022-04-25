@@ -27,6 +27,10 @@ public final class BindingResourcePropertiesResponse extends com.pulumi.resource
     @Import(name="bindingParameters")
     private @Nullable Map<String,Object> bindingParameters;
 
+    /**
+     * @return Binding parameters of the Binding resource
+     * 
+     */
     public Optional<Map<String,Object>> bindingParameters() {
         return Optional.ofNullable(this.bindingParameters);
     }
@@ -38,6 +42,10 @@ public final class BindingResourcePropertiesResponse extends com.pulumi.resource
     @Import(name="createdAt", required=true)
     private String createdAt;
 
+    /**
+     * @return Creation time of the Binding resource
+     * 
+     */
     public String createdAt() {
         return this.createdAt;
     }
@@ -49,6 +57,10 @@ public final class BindingResourcePropertiesResponse extends com.pulumi.resource
     @Import(name="generatedProperties", required=true)
     private String generatedProperties;
 
+    /**
+     * @return The generated Spring Boot property file for this binding. The secret will be deducted.
+     * 
+     */
     public String generatedProperties() {
         return this.generatedProperties;
     }
@@ -60,6 +72,10 @@ public final class BindingResourcePropertiesResponse extends com.pulumi.resource
     @Import(name="key")
     private @Nullable String key;
 
+    /**
+     * @return The key of the bound resource
+     * 
+     */
     public Optional<String> key() {
         return Optional.ofNullable(this.key);
     }
@@ -71,6 +87,10 @@ public final class BindingResourcePropertiesResponse extends com.pulumi.resource
     @Import(name="resourceId")
     private @Nullable String resourceId;
 
+    /**
+     * @return The Azure resource id of the bound resource
+     * 
+     */
     public Optional<String> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
@@ -82,6 +102,10 @@ public final class BindingResourcePropertiesResponse extends com.pulumi.resource
     @Import(name="resourceName", required=true)
     private String resourceName;
 
+    /**
+     * @return The name of the bound resource
+     * 
+     */
     public String resourceName() {
         return this.resourceName;
     }
@@ -93,6 +117,10 @@ public final class BindingResourcePropertiesResponse extends com.pulumi.resource
     @Import(name="resourceType", required=true)
     private String resourceType;
 
+    /**
+     * @return The standard Azure resource type of the bound resource
+     * 
+     */
     public String resourceType() {
         return this.resourceType;
     }
@@ -104,6 +132,10 @@ public final class BindingResourcePropertiesResponse extends com.pulumi.resource
     @Import(name="updatedAt", required=true)
     private String updatedAt;
 
+    /**
+     * @return Update time of the Binding resource
+     * 
+     */
     public String updatedAt() {
         return this.updatedAt;
     }
@@ -139,41 +171,89 @@ public final class BindingResourcePropertiesResponse extends com.pulumi.resource
             $ = new BindingResourcePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bindingParameters Binding parameters of the Binding resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder bindingParameters(@Nullable Map<String,Object> bindingParameters) {
             $.bindingParameters = bindingParameters;
             return this;
         }
 
+        /**
+         * @param createdAt Creation time of the Binding resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdAt(String createdAt) {
             $.createdAt = createdAt;
             return this;
         }
 
+        /**
+         * @param generatedProperties The generated Spring Boot property file for this binding. The secret will be deducted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder generatedProperties(String generatedProperties) {
             $.generatedProperties = generatedProperties;
             return this;
         }
 
+        /**
+         * @param key The key of the bound resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(@Nullable String key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param resourceId The Azure resource id of the bound resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(@Nullable String resourceId) {
             $.resourceId = resourceId;
             return this;
         }
 
+        /**
+         * @param resourceName The name of the bound resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(String resourceName) {
             $.resourceName = resourceName;
             return this;
         }
 
+        /**
+         * @param resourceType The standard Azure resource type of the bound resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(String resourceType) {
             $.resourceType = resourceType;
             return this;
         }
 
+        /**
+         * @param updatedAt Update time of the Binding resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder updatedAt(String updatedAt) {
             $.updatedAt = updatedAt;
             return this;

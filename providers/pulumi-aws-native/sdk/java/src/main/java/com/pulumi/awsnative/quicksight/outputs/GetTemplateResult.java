@@ -15,22 +15,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetTemplateResult {
     /**
-     * &lt;p&gt;The Amazon Resource Name (ARN) of the template.&lt;/p&gt;
+     * @return &lt;p&gt;The Amazon Resource Name (ARN) of the template.&lt;/p&gt;
      * 
      */
     private final @Nullable String arn;
     /**
-     * &lt;p&gt;A display name for the template.&lt;/p&gt;
+     * @return &lt;p&gt;A display name for the template.&lt;/p&gt;
      * 
      */
     private final @Nullable String name;
     /**
-     * &lt;p&gt;A list of resource permissions to be set on the template. &lt;/p&gt;
+     * @return &lt;p&gt;A list of resource permissions to be set on the template. &lt;/p&gt;
      * 
      */
     private final @Nullable List<TemplateResourcePermission> permissions;
     /**
-     * &lt;p&gt;Contains a map of the key-value pairs for the resource tag or tags assigned to the resource.&lt;/p&gt;
+     * @return &lt;p&gt;Contains a map of the key-value pairs for the resource tag or tags assigned to the resource.&lt;/p&gt;
      * 
      */
     private final @Nullable List<TemplateTag> tags;
@@ -48,30 +48,30 @@ public final class GetTemplateResult {
     }
 
     /**
-     * &lt;p&gt;The Amazon Resource Name (ARN) of the template.&lt;/p&gt;
+     * @return &lt;p&gt;The Amazon Resource Name (ARN) of the template.&lt;/p&gt;
      * 
-    */
+     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * &lt;p&gt;A display name for the template.&lt;/p&gt;
+     * @return &lt;p&gt;A display name for the template.&lt;/p&gt;
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * &lt;p&gt;A list of resource permissions to be set on the template. &lt;/p&gt;
+     * @return &lt;p&gt;A list of resource permissions to be set on the template. &lt;/p&gt;
      * 
-    */
+     */
     public List<TemplateResourcePermission> permissions() {
         return this.permissions == null ? List.of() : this.permissions;
     }
     /**
-     * &lt;p&gt;Contains a map of the key-value pairs for the resource tag or tags assigned to the resource.&lt;/p&gt;
+     * @return &lt;p&gt;Contains a map of the key-value pairs for the resource tag or tags assigned to the resource.&lt;/p&gt;
      * 
-    */
+     */
     public List<TemplateTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

@@ -12,7 +12,7 @@ import java.util.Objects;
 @CustomType
 public final class DatasetFilterExpression {
     /**
-     * Filtering expression for a parameter
+     * @return Filtering expression for a parameter
      * 
      */
     private final String expression;
@@ -27,9 +27,9 @@ public final class DatasetFilterExpression {
     }
 
     /**
-     * Filtering expression for a parameter
+     * @return Filtering expression for a parameter
      * 
-    */
+     */
     public String expression() {
         return this.expression;
     }

@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class DomainRedirectResponse {
     /**
-     * The domain name to redirect to.
+     * @return The domain name to redirect to.
      * 
      */
     private final String domainName;
     /**
-     * The redirect status code.
+     * @return The redirect status code.
      * 
      */
     private final String type;
@@ -29,16 +29,16 @@ public final class DomainRedirectResponse {
     }
 
     /**
-     * The domain name to redirect to.
+     * @return The domain name to redirect to.
      * 
-    */
+     */
     public String domainName() {
         return this.domainName;
     }
     /**
-     * The redirect status code.
+     * @return The redirect status code.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

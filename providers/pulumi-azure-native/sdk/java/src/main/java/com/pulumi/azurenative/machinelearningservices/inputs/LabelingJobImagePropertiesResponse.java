@@ -21,6 +21,10 @@ public final class LabelingJobImagePropertiesResponse extends com.pulumi.resourc
     @Import(name="annotationType")
     private @Nullable String annotationType;
 
+    /**
+     * @return Annotation type of image labeling tasks.
+     * 
+     */
     public Optional<String> annotationType() {
         return Optional.ofNullable(this.annotationType);
     }
@@ -32,6 +36,10 @@ public final class LabelingJobImagePropertiesResponse extends com.pulumi.resourc
     @Import(name="mediaType", required=true)
     private String mediaType;
 
+    /**
+     * @return Media type of data asset.
+     * 
+     */
     public String mediaType() {
         return this.mediaType;
     }
@@ -61,11 +69,23 @@ public final class LabelingJobImagePropertiesResponse extends com.pulumi.resourc
             $ = new LabelingJobImagePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param annotationType Annotation type of image labeling tasks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotationType(@Nullable String annotationType) {
             $.annotationType = annotationType;
             return this;
         }
 
+        /**
+         * @param mediaType Media type of data asset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mediaType(String mediaType) {
             $.mediaType = mediaType;
             return this;

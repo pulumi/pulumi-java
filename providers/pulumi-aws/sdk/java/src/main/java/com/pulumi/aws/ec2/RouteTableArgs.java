@@ -25,6 +25,10 @@ public final class RouteTableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="propagatingVgws")
     private @Nullable Output<List<String>> propagatingVgws;
 
+    /**
+     * @return A list of virtual gateways for propagation.
+     * 
+     */
     public Optional<Output<List<String>>> propagatingVgws() {
         return Optional.ofNullable(this.propagatingVgws);
     }
@@ -36,6 +40,10 @@ public final class RouteTableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="routes")
     private @Nullable Output<List<RouteTableRouteArgs>> routes;
 
+    /**
+     * @return A list of route objects. Their keys are documented below.
+     * 
+     */
     public Optional<Output<List<RouteTableRouteArgs>>> routes() {
         return Optional.ofNullable(this.routes);
     }
@@ -47,6 +55,10 @@ public final class RouteTableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A map of tags to assign to the resource.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -58,6 +70,10 @@ public final class RouteTableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vpcId", required=true)
     private Output<String> vpcId;
 
+    /**
+     * @return The VPC ID.
+     * 
+     */
     public Output<String> vpcId() {
         return this.vpcId;
     }
@@ -89,46 +105,106 @@ public final class RouteTableArgs extends com.pulumi.resources.ResourceArgs {
             $ = new RouteTableArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param propagatingVgws A list of virtual gateways for propagation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder propagatingVgws(@Nullable Output<List<String>> propagatingVgws) {
             $.propagatingVgws = propagatingVgws;
             return this;
         }
 
+        /**
+         * @param propagatingVgws A list of virtual gateways for propagation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder propagatingVgws(List<String> propagatingVgws) {
             return propagatingVgws(Output.of(propagatingVgws));
         }
 
+        /**
+         * @param propagatingVgws A list of virtual gateways for propagation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder propagatingVgws(String... propagatingVgws) {
             return propagatingVgws(List.of(propagatingVgws));
         }
 
+        /**
+         * @param routes A list of route objects. Their keys are documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routes(@Nullable Output<List<RouteTableRouteArgs>> routes) {
             $.routes = routes;
             return this;
         }
 
+        /**
+         * @param routes A list of route objects. Their keys are documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routes(List<RouteTableRouteArgs> routes) {
             return routes(Output.of(routes));
         }
 
+        /**
+         * @param routes A list of route objects. Their keys are documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routes(RouteTableRouteArgs... routes) {
             return routes(List.of(routes));
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param vpcId The VPC ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcId(Output<String> vpcId) {
             $.vpcId = vpcId;
             return this;
         }
 
+        /**
+         * @param vpcId The VPC ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcId(String vpcId) {
             return vpcId(Output.of(vpcId));
         }

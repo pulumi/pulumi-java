@@ -23,6 +23,10 @@ public final class GatewayCertificateAuthorityArgs extends com.pulumi.resources.
     @Import(name="certificateId")
     private @Nullable Output<String> certificateId;
 
+    /**
+     * @return Identifier of the certificate entity. Must be unique in the current API Management service instance.
+     * 
+     */
     public Optional<Output<String>> certificateId() {
         return Optional.ofNullable(this.certificateId);
     }
@@ -34,6 +38,10 @@ public final class GatewayCertificateAuthorityArgs extends com.pulumi.resources.
     @Import(name="gatewayId", required=true)
     private Output<String> gatewayId;
 
+    /**
+     * @return Gateway entity identifier. Must be unique in the current API Management service instance. Must not have value &#39;managed&#39;
+     * 
+     */
     public Output<String> gatewayId() {
         return this.gatewayId;
     }
@@ -45,6 +53,10 @@ public final class GatewayCertificateAuthorityArgs extends com.pulumi.resources.
     @Import(name="isTrusted")
     private @Nullable Output<Boolean> isTrusted;
 
+    /**
+     * @return Determines whether certificate authority is trusted.
+     * 
+     */
     public Optional<Output<Boolean>> isTrusted() {
         return Optional.ofNullable(this.isTrusted);
     }
@@ -56,6 +68,10 @@ public final class GatewayCertificateAuthorityArgs extends com.pulumi.resources.
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -67,6 +83,10 @@ public final class GatewayCertificateAuthorityArgs extends com.pulumi.resources.
     @Import(name="serviceName", required=true)
     private Output<String> serviceName;
 
+    /**
+     * @return The name of the API Management service.
+     * 
+     */
     public Output<String> serviceName() {
         return this.serviceName;
     }
@@ -99,47 +119,107 @@ public final class GatewayCertificateAuthorityArgs extends com.pulumi.resources.
             $ = new GatewayCertificateAuthorityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificateId Identifier of the certificate entity. Must be unique in the current API Management service instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateId(@Nullable Output<String> certificateId) {
             $.certificateId = certificateId;
             return this;
         }
 
+        /**
+         * @param certificateId Identifier of the certificate entity. Must be unique in the current API Management service instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateId(String certificateId) {
             return certificateId(Output.of(certificateId));
         }
 
+        /**
+         * @param gatewayId Gateway entity identifier. Must be unique in the current API Management service instance. Must not have value &#39;managed&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayId(Output<String> gatewayId) {
             $.gatewayId = gatewayId;
             return this;
         }
 
+        /**
+         * @param gatewayId Gateway entity identifier. Must be unique in the current API Management service instance. Must not have value &#39;managed&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayId(String gatewayId) {
             return gatewayId(Output.of(gatewayId));
         }
 
+        /**
+         * @param isTrusted Determines whether certificate authority is trusted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isTrusted(@Nullable Output<Boolean> isTrusted) {
             $.isTrusted = isTrusted;
             return this;
         }
 
+        /**
+         * @param isTrusted Determines whether certificate authority is trusted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isTrusted(Boolean isTrusted) {
             return isTrusted(Output.of(isTrusted));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param serviceName The name of the API Management service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(Output<String> serviceName) {
             $.serviceName = serviceName;
             return this;
         }
 
+        /**
+         * @param serviceName The name of the API Management service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             return serviceName(Output.of(serviceName));
         }

@@ -24,6 +24,10 @@ public final class VpnClientConnectionHealthDetailResponse extends com.pulumi.re
     @Import(name="egressBytesTransferred", required=true)
     private Double egressBytesTransferred;
 
+    /**
+     * @return The egress bytes per second.
+     * 
+     */
     public Double egressBytesTransferred() {
         return this.egressBytesTransferred;
     }
@@ -35,6 +39,10 @@ public final class VpnClientConnectionHealthDetailResponse extends com.pulumi.re
     @Import(name="egressPacketsTransferred", required=true)
     private Double egressPacketsTransferred;
 
+    /**
+     * @return The egress packets per second.
+     * 
+     */
     public Double egressPacketsTransferred() {
         return this.egressPacketsTransferred;
     }
@@ -46,6 +54,10 @@ public final class VpnClientConnectionHealthDetailResponse extends com.pulumi.re
     @Import(name="ingressBytesTransferred", required=true)
     private Double ingressBytesTransferred;
 
+    /**
+     * @return The ingress bytes per second.
+     * 
+     */
     public Double ingressBytesTransferred() {
         return this.ingressBytesTransferred;
     }
@@ -57,6 +69,10 @@ public final class VpnClientConnectionHealthDetailResponse extends com.pulumi.re
     @Import(name="ingressPacketsTransferred", required=true)
     private Double ingressPacketsTransferred;
 
+    /**
+     * @return The ingress packets per second.
+     * 
+     */
     public Double ingressPacketsTransferred() {
         return this.ingressPacketsTransferred;
     }
@@ -68,6 +84,10 @@ public final class VpnClientConnectionHealthDetailResponse extends com.pulumi.re
     @Import(name="maxBandwidth", required=true)
     private Double maxBandwidth;
 
+    /**
+     * @return The max band width.
+     * 
+     */
     public Double maxBandwidth() {
         return this.maxBandwidth;
     }
@@ -79,6 +99,10 @@ public final class VpnClientConnectionHealthDetailResponse extends com.pulumi.re
     @Import(name="maxPacketsPerSecond", required=true)
     private Double maxPacketsPerSecond;
 
+    /**
+     * @return The max packets transferred per second.
+     * 
+     */
     public Double maxPacketsPerSecond() {
         return this.maxPacketsPerSecond;
     }
@@ -90,6 +114,10 @@ public final class VpnClientConnectionHealthDetailResponse extends com.pulumi.re
     @Import(name="privateIpAddress", required=true)
     private String privateIpAddress;
 
+    /**
+     * @return The assigned private Ip of a connected vpn client.
+     * 
+     */
     public String privateIpAddress() {
         return this.privateIpAddress;
     }
@@ -101,6 +129,10 @@ public final class VpnClientConnectionHealthDetailResponse extends com.pulumi.re
     @Import(name="publicIpAddress", required=true)
     private String publicIpAddress;
 
+    /**
+     * @return The public Ip of a connected vpn client.
+     * 
+     */
     public String publicIpAddress() {
         return this.publicIpAddress;
     }
@@ -112,6 +144,10 @@ public final class VpnClientConnectionHealthDetailResponse extends com.pulumi.re
     @Import(name="vpnConnectionDuration", required=true)
     private Double vpnConnectionDuration;
 
+    /**
+     * @return The duration time of a connected vpn client.
+     * 
+     */
     public Double vpnConnectionDuration() {
         return this.vpnConnectionDuration;
     }
@@ -123,6 +159,10 @@ public final class VpnClientConnectionHealthDetailResponse extends com.pulumi.re
     @Import(name="vpnConnectionId", required=true)
     private String vpnConnectionId;
 
+    /**
+     * @return The vpn client Id.
+     * 
+     */
     public String vpnConnectionId() {
         return this.vpnConnectionId;
     }
@@ -134,6 +174,10 @@ public final class VpnClientConnectionHealthDetailResponse extends com.pulumi.re
     @Import(name="vpnConnectionTime", required=true)
     private String vpnConnectionTime;
 
+    /**
+     * @return The start time of a connected vpn client.
+     * 
+     */
     public String vpnConnectionTime() {
         return this.vpnConnectionTime;
     }
@@ -145,6 +189,10 @@ public final class VpnClientConnectionHealthDetailResponse extends com.pulumi.re
     @Import(name="vpnUserName", required=true)
     private String vpnUserName;
 
+    /**
+     * @return The user name of a connected vpn client.
+     * 
+     */
     public String vpnUserName() {
         return this.vpnUserName;
     }
@@ -184,61 +232,133 @@ public final class VpnClientConnectionHealthDetailResponse extends com.pulumi.re
             $ = new VpnClientConnectionHealthDetailResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param egressBytesTransferred The egress bytes per second.
+         * 
+         * @return builder
+         * 
+         */
         public Builder egressBytesTransferred(Double egressBytesTransferred) {
             $.egressBytesTransferred = egressBytesTransferred;
             return this;
         }
 
+        /**
+         * @param egressPacketsTransferred The egress packets per second.
+         * 
+         * @return builder
+         * 
+         */
         public Builder egressPacketsTransferred(Double egressPacketsTransferred) {
             $.egressPacketsTransferred = egressPacketsTransferred;
             return this;
         }
 
+        /**
+         * @param ingressBytesTransferred The ingress bytes per second.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ingressBytesTransferred(Double ingressBytesTransferred) {
             $.ingressBytesTransferred = ingressBytesTransferred;
             return this;
         }
 
+        /**
+         * @param ingressPacketsTransferred The ingress packets per second.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ingressPacketsTransferred(Double ingressPacketsTransferred) {
             $.ingressPacketsTransferred = ingressPacketsTransferred;
             return this;
         }
 
+        /**
+         * @param maxBandwidth The max band width.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxBandwidth(Double maxBandwidth) {
             $.maxBandwidth = maxBandwidth;
             return this;
         }
 
+        /**
+         * @param maxPacketsPerSecond The max packets transferred per second.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxPacketsPerSecond(Double maxPacketsPerSecond) {
             $.maxPacketsPerSecond = maxPacketsPerSecond;
             return this;
         }
 
+        /**
+         * @param privateIpAddress The assigned private Ip of a connected vpn client.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIpAddress(String privateIpAddress) {
             $.privateIpAddress = privateIpAddress;
             return this;
         }
 
+        /**
+         * @param publicIpAddress The public Ip of a connected vpn client.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIpAddress(String publicIpAddress) {
             $.publicIpAddress = publicIpAddress;
             return this;
         }
 
+        /**
+         * @param vpnConnectionDuration The duration time of a connected vpn client.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpnConnectionDuration(Double vpnConnectionDuration) {
             $.vpnConnectionDuration = vpnConnectionDuration;
             return this;
         }
 
+        /**
+         * @param vpnConnectionId The vpn client Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpnConnectionId(String vpnConnectionId) {
             $.vpnConnectionId = vpnConnectionId;
             return this;
         }
 
+        /**
+         * @param vpnConnectionTime The start time of a connected vpn client.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpnConnectionTime(String vpnConnectionTime) {
             $.vpnConnectionTime = vpnConnectionTime;
             return this;
         }
 
+        /**
+         * @param vpnUserName The user name of a connected vpn client.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpnUserName(String vpnUserName) {
             $.vpnUserName = vpnUserName;
             return this;

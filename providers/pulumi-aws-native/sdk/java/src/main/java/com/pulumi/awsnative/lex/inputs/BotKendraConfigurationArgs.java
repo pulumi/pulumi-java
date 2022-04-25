@@ -41,6 +41,10 @@ public final class BotKendraConfigurationArgs extends com.pulumi.resources.Resou
     @Import(name="queryFilterStringEnabled")
     private @Nullable Output<Boolean> queryFilterStringEnabled;
 
+    /**
+     * @return Determines whether the AMAZON.KendraSearchIntent intent uses a custom query string to query the Amazon Kendra index.
+     * 
+     */
     public Optional<Output<Boolean>> queryFilterStringEnabled() {
         return Optional.ofNullable(this.queryFilterStringEnabled);
     }
@@ -89,11 +93,23 @@ public final class BotKendraConfigurationArgs extends com.pulumi.resources.Resou
             return queryFilterString(Output.of(queryFilterString));
         }
 
+        /**
+         * @param queryFilterStringEnabled Determines whether the AMAZON.KendraSearchIntent intent uses a custom query string to query the Amazon Kendra index.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryFilterStringEnabled(@Nullable Output<Boolean> queryFilterStringEnabled) {
             $.queryFilterStringEnabled = queryFilterStringEnabled;
             return this;
         }
 
+        /**
+         * @param queryFilterStringEnabled Determines whether the AMAZON.KendraSearchIntent intent uses a custom query string to query the Amazon Kendra index.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryFilterStringEnabled(Boolean queryFilterStringEnabled) {
             return queryFilterStringEnabled(Output.of(queryFilterStringEnabled));
         }

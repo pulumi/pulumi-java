@@ -23,6 +23,10 @@ public final class TextResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="content", required=true)
     private String content;
 
+    /**
+     * @return The text content to be displayed.
+     * 
+     */
     public String content() {
         return this.content;
     }
@@ -34,6 +38,10 @@ public final class TextResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="format", required=true)
     private String format;
 
+    /**
+     * @return How the text content is formatted.
+     * 
+     */
     public String format() {
         return this.format;
     }
@@ -63,11 +71,23 @@ public final class TextResponse extends com.pulumi.resources.InvokeArgs {
             $ = new TextResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param content The text content to be displayed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(String content) {
             $.content = content;
             return this;
         }
 
+        /**
+         * @param format How the text content is formatted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder format(String format) {
             $.format = format;
             return this;

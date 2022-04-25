@@ -19,6 +19,10 @@ public final class ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissi
     @Import(name="billingAccountName", required=true)
     private String billingAccountName;
 
+    /**
+     * @return The ID that uniquely identifies a billing account.
+     * 
+     */
     public String billingAccountName() {
         return this.billingAccountName;
     }
@@ -47,6 +51,12 @@ public final class ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissi
             $ = new ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param billingAccountName The ID that uniquely identifies a billing account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder billingAccountName(String billingAccountName) {
             $.billingAccountName = billingAccountName;
             return this;

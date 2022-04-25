@@ -25,6 +25,10 @@ public final class TlsValidationOptionsResponse extends com.pulumi.resources.Inv
     @Import(name="ignoreHostname")
     private @Nullable String ignoreHostname;
 
+    /**
+     * @return When set to &#39;true&#39; causes the certificate subject name validation to be skipped. Default is &#39;false&#39;.
+     * 
+     */
     public Optional<String> ignoreHostname() {
         return Optional.ofNullable(this.ignoreHostname);
     }
@@ -36,6 +40,10 @@ public final class TlsValidationOptionsResponse extends com.pulumi.resources.Inv
     @Import(name="ignoreSignature")
     private @Nullable String ignoreSignature;
 
+    /**
+     * @return When set to &#39;true&#39; causes the certificate chain trust validation to be skipped. Default is &#39;false&#39;.
+     * 
+     */
     public Optional<String> ignoreSignature() {
         return Optional.ofNullable(this.ignoreSignature);
     }
@@ -65,11 +73,23 @@ public final class TlsValidationOptionsResponse extends com.pulumi.resources.Inv
             $ = new TlsValidationOptionsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ignoreHostname When set to &#39;true&#39; causes the certificate subject name validation to be skipped. Default is &#39;false&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ignoreHostname(@Nullable String ignoreHostname) {
             $.ignoreHostname = ignoreHostname;
             return this;
         }
 
+        /**
+         * @param ignoreSignature When set to &#39;true&#39; causes the certificate chain trust validation to be skipped. Default is &#39;false&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ignoreSignature(@Nullable String ignoreSignature) {
             $.ignoreSignature = ignoreSignature;
             return this;

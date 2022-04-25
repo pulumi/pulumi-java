@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class IdentityResponse {
     /**
-     * The principal ID of resource identity.
+     * @return The principal ID of resource identity.
      * 
      */
     private final String principalId;
     /**
-     * The tenant ID of resource.
+     * @return The tenant ID of resource.
      * 
      */
     private final String tenantId;
     /**
-     * The identity type.
+     * @return The identity type.
      * 
      */
     private final String type;
@@ -36,23 +36,23 @@ public final class IdentityResponse {
     }
 
     /**
-     * The principal ID of resource identity.
+     * @return The principal ID of resource identity.
      * 
-    */
+     */
     public String principalId() {
         return this.principalId;
     }
     /**
-     * The tenant ID of resource.
+     * @return The tenant ID of resource.
      * 
-    */
+     */
     public String tenantId() {
         return this.tenantId;
     }
     /**
-     * The identity type.
+     * @return The identity type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

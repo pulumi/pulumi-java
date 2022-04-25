@@ -20,6 +20,10 @@ public final class InsightFiltersNetworkDestinationIpv6Args extends com.pulumi.r
     @Import(name="cidr", required=true)
     private Output<String> cidr;
 
+    /**
+     * @return A finding&#39;s CIDR value.
+     * 
+     */
     public Output<String> cidr() {
         return this.cidr;
     }
@@ -48,11 +52,23 @@ public final class InsightFiltersNetworkDestinationIpv6Args extends com.pulumi.r
             $ = new InsightFiltersNetworkDestinationIpv6Args(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cidr A finding&#39;s CIDR value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cidr(Output<String> cidr) {
             $.cidr = cidr;
             return this;
         }
 
+        /**
+         * @param cidr A finding&#39;s CIDR value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cidr(String cidr) {
             return cidr(Output.of(cidr));
         }

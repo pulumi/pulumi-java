@@ -19,6 +19,10 @@ public final class GetContactListArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="contactListName", required=true)
     private String contactListName;
 
+    /**
+     * @return The name of the contact list.
+     * 
+     */
     public String contactListName() {
         return this.contactListName;
     }
@@ -47,6 +51,12 @@ public final class GetContactListArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetContactListArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param contactListName The name of the contact list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contactListName(String contactListName) {
             $.contactListName = contactListName;
             return this;

@@ -14,28 +14,28 @@ import javax.annotation.Nullable;
 @CustomType
 public final class OrderStatusResponse {
     /**
-     * Dictionary to hold generic information which is not stored
+     * @return Dictionary to hold generic information which is not stored
      * by the already existing properties
      * 
      */
     private final Map<String,String> additionalOrderDetails;
     /**
-     * Comments related to this status change.
+     * @return Comments related to this status change.
      * 
      */
     private final @Nullable String comments;
     /**
-     * Status of the order as per the allowed status types.
+     * @return Status of the order as per the allowed status types.
      * 
      */
     private final String status;
     /**
-     * Tracking information related to the state in the ordering flow
+     * @return Tracking information related to the state in the ordering flow
      * 
      */
     private final TrackingInfoResponse trackingInformation;
     /**
-     * Time of status update.
+     * @return Time of status update.
      * 
      */
     private final String updateDateTime;
@@ -55,38 +55,38 @@ public final class OrderStatusResponse {
     }
 
     /**
-     * Dictionary to hold generic information which is not stored
+     * @return Dictionary to hold generic information which is not stored
      * by the already existing properties
      * 
-    */
+     */
     public Map<String,String> additionalOrderDetails() {
         return this.additionalOrderDetails;
     }
     /**
-     * Comments related to this status change.
+     * @return Comments related to this status change.
      * 
-    */
+     */
     public Optional<String> comments() {
         return Optional.ofNullable(this.comments);
     }
     /**
-     * Status of the order as per the allowed status types.
+     * @return Status of the order as per the allowed status types.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * Tracking information related to the state in the ordering flow
+     * @return Tracking information related to the state in the ordering flow
      * 
-    */
+     */
     public TrackingInfoResponse trackingInformation() {
         return this.trackingInformation;
     }
     /**
-     * Time of status update.
+     * @return Time of status update.
      * 
-    */
+     */
     public String updateDateTime() {
         return this.updateDateTime;
     }

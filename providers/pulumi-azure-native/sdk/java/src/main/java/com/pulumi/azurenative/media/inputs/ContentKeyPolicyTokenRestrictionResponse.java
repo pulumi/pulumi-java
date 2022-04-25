@@ -32,6 +32,10 @@ public final class ContentKeyPolicyTokenRestrictionResponse extends com.pulumi.r
     @Import(name="alternateVerificationKeys")
     private @Nullable List<Object> alternateVerificationKeys;
 
+    /**
+     * @return A list of alternative verification keys.
+     * 
+     */
     public Optional<List<Object>> alternateVerificationKeys() {
         return Optional.ofNullable(this.alternateVerificationKeys);
     }
@@ -43,6 +47,10 @@ public final class ContentKeyPolicyTokenRestrictionResponse extends com.pulumi.r
     @Import(name="audience", required=true)
     private String audience;
 
+    /**
+     * @return The audience for the token.
+     * 
+     */
     public String audience() {
         return this.audience;
     }
@@ -54,6 +62,10 @@ public final class ContentKeyPolicyTokenRestrictionResponse extends com.pulumi.r
     @Import(name="issuer", required=true)
     private String issuer;
 
+    /**
+     * @return The token issuer.
+     * 
+     */
     public String issuer() {
         return this.issuer;
     }
@@ -66,6 +78,11 @@ public final class ContentKeyPolicyTokenRestrictionResponse extends com.pulumi.r
     @Import(name="odataType", required=true)
     private String odataType;
 
+    /**
+     * @return The discriminator for derived types.
+     * Expected value is &#39;#Microsoft.Media.ContentKeyPolicyTokenRestriction&#39;.
+     * 
+     */
     public String odataType() {
         return this.odataType;
     }
@@ -77,6 +94,10 @@ public final class ContentKeyPolicyTokenRestrictionResponse extends com.pulumi.r
     @Import(name="openIdConnectDiscoveryDocument")
     private @Nullable String openIdConnectDiscoveryDocument;
 
+    /**
+     * @return The OpenID connect discovery document.
+     * 
+     */
     public Optional<String> openIdConnectDiscoveryDocument() {
         return Optional.ofNullable(this.openIdConnectDiscoveryDocument);
     }
@@ -88,6 +109,10 @@ public final class ContentKeyPolicyTokenRestrictionResponse extends com.pulumi.r
     @Import(name="primaryVerificationKey", required=true)
     private Object primaryVerificationKey;
 
+    /**
+     * @return The primary verification key.
+     * 
+     */
     public Object primaryVerificationKey() {
         return this.primaryVerificationKey;
     }
@@ -99,6 +124,10 @@ public final class ContentKeyPolicyTokenRestrictionResponse extends com.pulumi.r
     @Import(name="requiredClaims")
     private @Nullable List<ContentKeyPolicyTokenClaimResponse> requiredClaims;
 
+    /**
+     * @return A list of required token claims.
+     * 
+     */
     public Optional<List<ContentKeyPolicyTokenClaimResponse>> requiredClaims() {
         return Optional.ofNullable(this.requiredClaims);
     }
@@ -110,6 +139,10 @@ public final class ContentKeyPolicyTokenRestrictionResponse extends com.pulumi.r
     @Import(name="restrictionTokenType", required=true)
     private String restrictionTokenType;
 
+    /**
+     * @return The type of token.
+     * 
+     */
     public String restrictionTokenType() {
         return this.restrictionTokenType;
     }
@@ -145,49 +178,110 @@ public final class ContentKeyPolicyTokenRestrictionResponse extends com.pulumi.r
             $ = new ContentKeyPolicyTokenRestrictionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param alternateVerificationKeys A list of alternative verification keys.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alternateVerificationKeys(@Nullable List<Object> alternateVerificationKeys) {
             $.alternateVerificationKeys = alternateVerificationKeys;
             return this;
         }
 
+        /**
+         * @param alternateVerificationKeys A list of alternative verification keys.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alternateVerificationKeys(Object... alternateVerificationKeys) {
             return alternateVerificationKeys(List.of(alternateVerificationKeys));
         }
 
+        /**
+         * @param audience The audience for the token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder audience(String audience) {
             $.audience = audience;
             return this;
         }
 
+        /**
+         * @param issuer The token issuer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder issuer(String issuer) {
             $.issuer = issuer;
             return this;
         }
 
+        /**
+         * @param odataType The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.ContentKeyPolicyTokenRestriction&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(String odataType) {
             $.odataType = odataType;
             return this;
         }
 
+        /**
+         * @param openIdConnectDiscoveryDocument The OpenID connect discovery document.
+         * 
+         * @return builder
+         * 
+         */
         public Builder openIdConnectDiscoveryDocument(@Nullable String openIdConnectDiscoveryDocument) {
             $.openIdConnectDiscoveryDocument = openIdConnectDiscoveryDocument;
             return this;
         }
 
+        /**
+         * @param primaryVerificationKey The primary verification key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryVerificationKey(Object primaryVerificationKey) {
             $.primaryVerificationKey = primaryVerificationKey;
             return this;
         }
 
+        /**
+         * @param requiredClaims A list of required token claims.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requiredClaims(@Nullable List<ContentKeyPolicyTokenClaimResponse> requiredClaims) {
             $.requiredClaims = requiredClaims;
             return this;
         }
 
+        /**
+         * @param requiredClaims A list of required token claims.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requiredClaims(ContentKeyPolicyTokenClaimResponse... requiredClaims) {
             return requiredClaims(List.of(requiredClaims));
         }
 
+        /**
+         * @param restrictionTokenType The type of token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restrictionTokenType(String restrictionTokenType) {
             $.restrictionTokenType = restrictionTokenType;
             return this;

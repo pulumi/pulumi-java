@@ -26,6 +26,10 @@ public final class StreamingLocatorContentKeyArgs extends com.pulumi.resources.R
     @Import(name="id", required=true)
     private Output<String> id;
 
+    /**
+     * @return ID of Content Key
+     * 
+     */
     public Output<String> id() {
         return this.id;
     }
@@ -37,6 +41,10 @@ public final class StreamingLocatorContentKeyArgs extends com.pulumi.resources.R
     @Import(name="labelReferenceInStreamingPolicy")
     private @Nullable Output<String> labelReferenceInStreamingPolicy;
 
+    /**
+     * @return Label of Content Key as specified in the Streaming Policy
+     * 
+     */
     public Optional<Output<String>> labelReferenceInStreamingPolicy() {
         return Optional.ofNullable(this.labelReferenceInStreamingPolicy);
     }
@@ -48,6 +56,10 @@ public final class StreamingLocatorContentKeyArgs extends com.pulumi.resources.R
     @Import(name="value")
     private @Nullable Output<String> value;
 
+    /**
+     * @return Value of Content Key
+     * 
+     */
     public Optional<Output<String>> value() {
         return Optional.ofNullable(this.value);
     }
@@ -78,29 +90,65 @@ public final class StreamingLocatorContentKeyArgs extends com.pulumi.resources.R
             $ = new StreamingLocatorContentKeyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id ID of Content Key
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id ID of Content Key
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param labelReferenceInStreamingPolicy Label of Content Key as specified in the Streaming Policy
+         * 
+         * @return builder
+         * 
+         */
         public Builder labelReferenceInStreamingPolicy(@Nullable Output<String> labelReferenceInStreamingPolicy) {
             $.labelReferenceInStreamingPolicy = labelReferenceInStreamingPolicy;
             return this;
         }
 
+        /**
+         * @param labelReferenceInStreamingPolicy Label of Content Key as specified in the Streaming Policy
+         * 
+         * @return builder
+         * 
+         */
         public Builder labelReferenceInStreamingPolicy(String labelReferenceInStreamingPolicy) {
             return labelReferenceInStreamingPolicy(Output.of(labelReferenceInStreamingPolicy));
         }
 
+        /**
+         * @param value Value of Content Key
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value Value of Content Key
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

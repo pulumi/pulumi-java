@@ -25,6 +25,10 @@ public final class AzureVmDiskDetailsResponse extends com.pulumi.resources.Invok
     @Import(name="diskEncryptionSetId")
     private @Nullable String diskEncryptionSetId;
 
+    /**
+     * @return The DiskEncryptionSet ARM ID.
+     * 
+     */
     public Optional<String> diskEncryptionSetId() {
         return Optional.ofNullable(this.diskEncryptionSetId);
     }
@@ -36,6 +40,10 @@ public final class AzureVmDiskDetailsResponse extends com.pulumi.resources.Invok
     @Import(name="diskId")
     private @Nullable String diskId;
 
+    /**
+     * @return The disk resource id.
+     * 
+     */
     public Optional<String> diskId() {
         return Optional.ofNullable(this.diskId);
     }
@@ -47,6 +55,10 @@ public final class AzureVmDiskDetailsResponse extends com.pulumi.resources.Invok
     @Import(name="lunId")
     private @Nullable String lunId;
 
+    /**
+     * @return Ordinal\LunId of the disk for the Azure VM.
+     * 
+     */
     public Optional<String> lunId() {
         return Optional.ofNullable(this.lunId);
     }
@@ -58,6 +70,10 @@ public final class AzureVmDiskDetailsResponse extends com.pulumi.resources.Invok
     @Import(name="maxSizeMB")
     private @Nullable String maxSizeMB;
 
+    /**
+     * @return Max side in MB.
+     * 
+     */
     public Optional<String> maxSizeMB() {
         return Optional.ofNullable(this.maxSizeMB);
     }
@@ -69,6 +85,10 @@ public final class AzureVmDiskDetailsResponse extends com.pulumi.resources.Invok
     @Import(name="targetDiskLocation")
     private @Nullable String targetDiskLocation;
 
+    /**
+     * @return Blob uri of the Azure disk.
+     * 
+     */
     public Optional<String> targetDiskLocation() {
         return Optional.ofNullable(this.targetDiskLocation);
     }
@@ -80,6 +100,10 @@ public final class AzureVmDiskDetailsResponse extends com.pulumi.resources.Invok
     @Import(name="targetDiskName")
     private @Nullable String targetDiskName;
 
+    /**
+     * @return The target Azure disk name.
+     * 
+     */
     public Optional<String> targetDiskName() {
         return Optional.ofNullable(this.targetDiskName);
     }
@@ -91,6 +115,10 @@ public final class AzureVmDiskDetailsResponse extends com.pulumi.resources.Invok
     @Import(name="vhdId")
     private @Nullable String vhdId;
 
+    /**
+     * @return The VHD id.
+     * 
+     */
     public Optional<String> vhdId() {
         return Optional.ofNullable(this.vhdId);
     }
@@ -102,6 +130,10 @@ public final class AzureVmDiskDetailsResponse extends com.pulumi.resources.Invok
     @Import(name="vhdName")
     private @Nullable String vhdName;
 
+    /**
+     * @return VHD name.
+     * 
+     */
     public Optional<String> vhdName() {
         return Optional.ofNullable(this.vhdName);
     }
@@ -113,6 +145,10 @@ public final class AzureVmDiskDetailsResponse extends com.pulumi.resources.Invok
     @Import(name="vhdType")
     private @Nullable String vhdType;
 
+    /**
+     * @return VHD type.
+     * 
+     */
     public Optional<String> vhdType() {
         return Optional.ofNullable(this.vhdType);
     }
@@ -149,46 +185,100 @@ public final class AzureVmDiskDetailsResponse extends com.pulumi.resources.Invok
             $ = new AzureVmDiskDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param diskEncryptionSetId The DiskEncryptionSet ARM ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskEncryptionSetId(@Nullable String diskEncryptionSetId) {
             $.diskEncryptionSetId = diskEncryptionSetId;
             return this;
         }
 
+        /**
+         * @param diskId The disk resource id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskId(@Nullable String diskId) {
             $.diskId = diskId;
             return this;
         }
 
+        /**
+         * @param lunId Ordinal\LunId of the disk for the Azure VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lunId(@Nullable String lunId) {
             $.lunId = lunId;
             return this;
         }
 
+        /**
+         * @param maxSizeMB Max side in MB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxSizeMB(@Nullable String maxSizeMB) {
             $.maxSizeMB = maxSizeMB;
             return this;
         }
 
+        /**
+         * @param targetDiskLocation Blob uri of the Azure disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetDiskLocation(@Nullable String targetDiskLocation) {
             $.targetDiskLocation = targetDiskLocation;
             return this;
         }
 
+        /**
+         * @param targetDiskName The target Azure disk name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetDiskName(@Nullable String targetDiskName) {
             $.targetDiskName = targetDiskName;
             return this;
         }
 
+        /**
+         * @param vhdId The VHD id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vhdId(@Nullable String vhdId) {
             $.vhdId = vhdId;
             return this;
         }
 
+        /**
+         * @param vhdName VHD name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vhdName(@Nullable String vhdName) {
             $.vhdName = vhdName;
             return this;
         }
 
+        /**
+         * @param vhdType VHD type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vhdType(@Nullable String vhdType) {
             $.vhdType = vhdType;
             return this;

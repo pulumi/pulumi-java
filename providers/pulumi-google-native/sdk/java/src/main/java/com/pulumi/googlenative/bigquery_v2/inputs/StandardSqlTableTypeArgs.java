@@ -27,6 +27,10 @@ public final class StandardSqlTableTypeArgs extends com.pulumi.resources.Resourc
     @Import(name="columns")
     private @Nullable Output<List<StandardSqlFieldArgs>> columns;
 
+    /**
+     * @return The columns in this table type
+     * 
+     */
     public Optional<Output<List<StandardSqlFieldArgs>>> columns() {
         return Optional.ofNullable(this.columns);
     }
@@ -55,15 +59,33 @@ public final class StandardSqlTableTypeArgs extends com.pulumi.resources.Resourc
             $ = new StandardSqlTableTypeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param columns The columns in this table type
+         * 
+         * @return builder
+         * 
+         */
         public Builder columns(@Nullable Output<List<StandardSqlFieldArgs>> columns) {
             $.columns = columns;
             return this;
         }
 
+        /**
+         * @param columns The columns in this table type
+         * 
+         * @return builder
+         * 
+         */
         public Builder columns(List<StandardSqlFieldArgs> columns) {
             return columns(Output.of(columns));
         }
 
+        /**
+         * @param columns The columns in this table type
+         * 
+         * @return builder
+         * 
+         */
         public Builder columns(StandardSqlFieldArgs... columns) {
             return columns(List.of(columns));
         }

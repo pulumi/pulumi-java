@@ -25,6 +25,10 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description of the device.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -36,6 +40,10 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="globalNetworkId", required=true)
     private Output<String> globalNetworkId;
 
+    /**
+     * @return The ID of the global network.
+     * 
+     */
     public Output<String> globalNetworkId() {
         return this.globalNetworkId;
     }
@@ -47,6 +55,10 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<DeviceLocationArgs> location;
 
+    /**
+     * @return The site location.
+     * 
+     */
     public Optional<Output<DeviceLocationArgs>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -58,6 +70,10 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="model")
     private @Nullable Output<String> model;
 
+    /**
+     * @return The device model
+     * 
+     */
     public Optional<Output<String>> model() {
         return Optional.ofNullable(this.model);
     }
@@ -69,6 +85,10 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serialNumber")
     private @Nullable Output<String> serialNumber;
 
+    /**
+     * @return The device serial number.
+     * 
+     */
     public Optional<Output<String>> serialNumber() {
         return Optional.ofNullable(this.serialNumber);
     }
@@ -80,6 +100,10 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="siteId")
     private @Nullable Output<String> siteId;
 
+    /**
+     * @return The site ID.
+     * 
+     */
     public Optional<Output<String>> siteId() {
         return Optional.ofNullable(this.siteId);
     }
@@ -91,6 +115,10 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<DeviceTagArgs>> tags;
 
+    /**
+     * @return The tags for the device.
+     * 
+     */
     public Optional<Output<List<DeviceTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -102,6 +130,10 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type")
     private @Nullable Output<String> type;
 
+    /**
+     * @return The device type.
+     * 
+     */
     public Optional<Output<String>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -113,6 +145,10 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vendor")
     private @Nullable Output<String> vendor;
 
+    /**
+     * @return The device vendor.
+     * 
+     */
     public Optional<Output<String>> vendor() {
         return Optional.ofNullable(this.vendor);
     }
@@ -149,87 +185,201 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DeviceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description The description of the device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description of the device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param globalNetworkId The ID of the global network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder globalNetworkId(Output<String> globalNetworkId) {
             $.globalNetworkId = globalNetworkId;
             return this;
         }
 
+        /**
+         * @param globalNetworkId The ID of the global network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder globalNetworkId(String globalNetworkId) {
             return globalNetworkId(Output.of(globalNetworkId));
         }
 
+        /**
+         * @param location The site location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<DeviceLocationArgs> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The site location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(DeviceLocationArgs location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param model The device model
+         * 
+         * @return builder
+         * 
+         */
         public Builder model(@Nullable Output<String> model) {
             $.model = model;
             return this;
         }
 
+        /**
+         * @param model The device model
+         * 
+         * @return builder
+         * 
+         */
         public Builder model(String model) {
             return model(Output.of(model));
         }
 
+        /**
+         * @param serialNumber The device serial number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serialNumber(@Nullable Output<String> serialNumber) {
             $.serialNumber = serialNumber;
             return this;
         }
 
+        /**
+         * @param serialNumber The device serial number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serialNumber(String serialNumber) {
             return serialNumber(Output.of(serialNumber));
         }
 
+        /**
+         * @param siteId The site ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder siteId(@Nullable Output<String> siteId) {
             $.siteId = siteId;
             return this;
         }
 
+        /**
+         * @param siteId The site ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder siteId(String siteId) {
             return siteId(Output.of(siteId));
         }
 
+        /**
+         * @param tags The tags for the device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<DeviceTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The tags for the device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<DeviceTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags The tags for the device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(DeviceTagArgs... tags) {
             return tags(List.of(tags));
         }
 
+        /**
+         * @param type The device type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The device type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param vendor The device vendor.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vendor(@Nullable Output<String> vendor) {
             $.vendor = vendor;
             return this;
         }
 
+        /**
+         * @param vendor The device vendor.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vendor(String vendor) {
             return vendor(Output.of(vendor));
         }

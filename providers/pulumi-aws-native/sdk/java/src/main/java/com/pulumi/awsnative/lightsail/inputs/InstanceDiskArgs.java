@@ -28,6 +28,10 @@ public final class InstanceDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="attachedTo")
     private @Nullable Output<String> attachedTo;
 
+    /**
+     * @return Instance attached to the disk.
+     * 
+     */
     public Optional<Output<String>> attachedTo() {
         return Optional.ofNullable(this.attachedTo);
     }
@@ -39,6 +43,10 @@ public final class InstanceDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="attachmentState")
     private @Nullable Output<String> attachmentState;
 
+    /**
+     * @return Attachment state of the disk.
+     * 
+     */
     public Optional<Output<String>> attachmentState() {
         return Optional.ofNullable(this.attachmentState);
     }
@@ -50,6 +58,10 @@ public final class InstanceDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="diskName", required=true)
     private Output<String> diskName;
 
+    /**
+     * @return The names to use for your new Lightsail disk.
+     * 
+     */
     public Output<String> diskName() {
         return this.diskName;
     }
@@ -61,6 +73,10 @@ public final class InstanceDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="iOPS")
     private @Nullable Output<Integer> iOPS;
 
+    /**
+     * @return IOPS of disk.
+     * 
+     */
     public Optional<Output<Integer>> iOPS() {
         return Optional.ofNullable(this.iOPS);
     }
@@ -72,6 +88,10 @@ public final class InstanceDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="isSystemDisk")
     private @Nullable Output<Boolean> isSystemDisk;
 
+    /**
+     * @return Is the Attached disk is the system disk of the Instance.
+     * 
+     */
     public Optional<Output<Boolean>> isSystemDisk() {
         return Optional.ofNullable(this.isSystemDisk);
     }
@@ -83,6 +103,10 @@ public final class InstanceDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="path", required=true)
     private Output<String> path;
 
+    /**
+     * @return Path of the disk attached to the instance.
+     * 
+     */
     public Output<String> path() {
         return this.path;
     }
@@ -94,6 +118,10 @@ public final class InstanceDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sizeInGb")
     private @Nullable Output<String> sizeInGb;
 
+    /**
+     * @return Size of the disk attached to the Instance.
+     * 
+     */
     public Optional<Output<String>> sizeInGb() {
         return Optional.ofNullable(this.sizeInGb);
     }
@@ -128,65 +156,149 @@ public final class InstanceDiskArgs extends com.pulumi.resources.ResourceArgs {
             $ = new InstanceDiskArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param attachedTo Instance attached to the disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attachedTo(@Nullable Output<String> attachedTo) {
             $.attachedTo = attachedTo;
             return this;
         }
 
+        /**
+         * @param attachedTo Instance attached to the disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attachedTo(String attachedTo) {
             return attachedTo(Output.of(attachedTo));
         }
 
+        /**
+         * @param attachmentState Attachment state of the disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attachmentState(@Nullable Output<String> attachmentState) {
             $.attachmentState = attachmentState;
             return this;
         }
 
+        /**
+         * @param attachmentState Attachment state of the disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attachmentState(String attachmentState) {
             return attachmentState(Output.of(attachmentState));
         }
 
+        /**
+         * @param diskName The names to use for your new Lightsail disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskName(Output<String> diskName) {
             $.diskName = diskName;
             return this;
         }
 
+        /**
+         * @param diskName The names to use for your new Lightsail disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskName(String diskName) {
             return diskName(Output.of(diskName));
         }
 
+        /**
+         * @param iOPS IOPS of disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iOPS(@Nullable Output<Integer> iOPS) {
             $.iOPS = iOPS;
             return this;
         }
 
+        /**
+         * @param iOPS IOPS of disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iOPS(Integer iOPS) {
             return iOPS(Output.of(iOPS));
         }
 
+        /**
+         * @param isSystemDisk Is the Attached disk is the system disk of the Instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isSystemDisk(@Nullable Output<Boolean> isSystemDisk) {
             $.isSystemDisk = isSystemDisk;
             return this;
         }
 
+        /**
+         * @param isSystemDisk Is the Attached disk is the system disk of the Instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isSystemDisk(Boolean isSystemDisk) {
             return isSystemDisk(Output.of(isSystemDisk));
         }
 
+        /**
+         * @param path Path of the disk attached to the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(Output<String> path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param path Path of the disk attached to the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             return path(Output.of(path));
         }
 
+        /**
+         * @param sizeInGb Size of the disk attached to the Instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sizeInGb(@Nullable Output<String> sizeInGb) {
             $.sizeInGb = sizeInGb;
             return this;
         }
 
+        /**
+         * @param sizeInGb Size of the disk attached to the Instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sizeInGb(String sizeInGb) {
             return sizeInGb(Output.of(sizeInGb));
         }

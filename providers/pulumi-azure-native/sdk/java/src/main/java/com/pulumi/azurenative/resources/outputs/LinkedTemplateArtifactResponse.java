@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class LinkedTemplateArtifactResponse {
     /**
-     * A filesystem safe relative path of the artifact.
+     * @return A filesystem safe relative path of the artifact.
      * 
      */
     private final String path;
     /**
-     * The Azure Resource Manager template.
+     * @return The Azure Resource Manager template.
      * 
      */
     private final Object template;
@@ -30,16 +30,16 @@ public final class LinkedTemplateArtifactResponse {
     }
 
     /**
-     * A filesystem safe relative path of the artifact.
+     * @return A filesystem safe relative path of the artifact.
      * 
-    */
+     */
     public String path() {
         return this.path;
     }
     /**
-     * The Azure Resource Manager template.
+     * @return The Azure Resource Manager template.
      * 
-    */
+     */
     public Object template() {
         return this.template;
     }

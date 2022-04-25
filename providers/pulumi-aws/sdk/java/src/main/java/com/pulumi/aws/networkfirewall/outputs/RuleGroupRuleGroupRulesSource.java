@@ -16,22 +16,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class RuleGroupRuleGroupRulesSource {
     /**
-     * A configuration block containing **stateful** inspection criteria for a domain list rule group. See Rules Source List below for details.
+     * @return A configuration block containing **stateful** inspection criteria for a domain list rule group. See Rules Source List below for details.
      * 
      */
     private final @Nullable RuleGroupRuleGroupRulesSourceRulesSourceList rulesSourceList;
     /**
-     * The fully qualified name of a file in an S3 bucket that contains Suricata compatible intrusion preventions system (IPS) rules or the Suricata rules as a string. These rules contain **stateful** inspection criteria and the action to take for traffic that matches the criteria.
+     * @return The fully qualified name of a file in an S3 bucket that contains Suricata compatible intrusion preventions system (IPS) rules or the Suricata rules as a string. These rules contain **stateful** inspection criteria and the action to take for traffic that matches the criteria.
      * 
      */
     private final @Nullable String rulesString;
     /**
-     * Set of configuration blocks containing **stateful** inspection criteria for 5-tuple rules to be used together in a rule group. See Stateful Rule below for details.
+     * @return Set of configuration blocks containing **stateful** inspection criteria for 5-tuple rules to be used together in a rule group. See Stateful Rule below for details.
      * 
      */
     private final @Nullable List<RuleGroupRuleGroupRulesSourceStatefulRule> statefulRules;
     /**
-     * A configuration block containing **stateless** inspection criteria for a stateless rule group. See Stateless Rules and Custom Actions below for details.
+     * @return A configuration block containing **stateless** inspection criteria for a stateless rule group. See Stateless Rules and Custom Actions below for details.
      * 
      */
     private final @Nullable RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActions statelessRulesAndCustomActions;
@@ -49,30 +49,30 @@ public final class RuleGroupRuleGroupRulesSource {
     }
 
     /**
-     * A configuration block containing **stateful** inspection criteria for a domain list rule group. See Rules Source List below for details.
+     * @return A configuration block containing **stateful** inspection criteria for a domain list rule group. See Rules Source List below for details.
      * 
-    */
+     */
     public Optional<RuleGroupRuleGroupRulesSourceRulesSourceList> rulesSourceList() {
         return Optional.ofNullable(this.rulesSourceList);
     }
     /**
-     * The fully qualified name of a file in an S3 bucket that contains Suricata compatible intrusion preventions system (IPS) rules or the Suricata rules as a string. These rules contain **stateful** inspection criteria and the action to take for traffic that matches the criteria.
+     * @return The fully qualified name of a file in an S3 bucket that contains Suricata compatible intrusion preventions system (IPS) rules or the Suricata rules as a string. These rules contain **stateful** inspection criteria and the action to take for traffic that matches the criteria.
      * 
-    */
+     */
     public Optional<String> rulesString() {
         return Optional.ofNullable(this.rulesString);
     }
     /**
-     * Set of configuration blocks containing **stateful** inspection criteria for 5-tuple rules to be used together in a rule group. See Stateful Rule below for details.
+     * @return Set of configuration blocks containing **stateful** inspection criteria for 5-tuple rules to be used together in a rule group. See Stateful Rule below for details.
      * 
-    */
+     */
     public List<RuleGroupRuleGroupRulesSourceStatefulRule> statefulRules() {
         return this.statefulRules == null ? List.of() : this.statefulRules;
     }
     /**
-     * A configuration block containing **stateless** inspection criteria for a stateless rule group. See Stateless Rules and Custom Actions below for details.
+     * @return A configuration block containing **stateless** inspection criteria for a stateless rule group. See Stateless Rules and Custom Actions below for details.
      * 
-    */
+     */
     public Optional<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActions> statelessRulesAndCustomActions() {
         return Optional.ofNullable(this.statelessRulesAndCustomActions);
     }

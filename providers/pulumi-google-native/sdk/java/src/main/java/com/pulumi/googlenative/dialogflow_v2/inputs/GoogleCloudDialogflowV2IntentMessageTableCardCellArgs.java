@@ -24,6 +24,10 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCardCellArgs extends
     @Import(name="text", required=true)
     private Output<String> text;
 
+    /**
+     * @return Text in this cell.
+     * 
+     */
     public Output<String> text() {
         return this.text;
     }
@@ -52,11 +56,23 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCardCellArgs extends
             $ = new GoogleCloudDialogflowV2IntentMessageTableCardCellArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param text Text in this cell.
+         * 
+         * @return builder
+         * 
+         */
         public Builder text(Output<String> text) {
             $.text = text;
             return this;
         }
 
+        /**
+         * @param text Text in this cell.
+         * 
+         * @return builder
+         * 
+         */
         public Builder text(String text) {
             return text(Output.of(text));
         }

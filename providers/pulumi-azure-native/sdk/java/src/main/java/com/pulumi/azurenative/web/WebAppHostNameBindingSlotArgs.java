@@ -26,6 +26,10 @@ public final class WebAppHostNameBindingSlotArgs extends com.pulumi.resources.Re
     @Import(name="azureResourceName")
     private @Nullable Output<String> azureResourceName;
 
+    /**
+     * @return Azure resource name.
+     * 
+     */
     public Optional<Output<String>> azureResourceName() {
         return Optional.ofNullable(this.azureResourceName);
     }
@@ -37,6 +41,10 @@ public final class WebAppHostNameBindingSlotArgs extends com.pulumi.resources.Re
     @Import(name="azureResourceType")
     private @Nullable Output<AzureResourceType> azureResourceType;
 
+    /**
+     * @return Azure resource type.
+     * 
+     */
     public Optional<Output<AzureResourceType>> azureResourceType() {
         return Optional.ofNullable(this.azureResourceType);
     }
@@ -48,6 +56,10 @@ public final class WebAppHostNameBindingSlotArgs extends com.pulumi.resources.Re
     @Import(name="customHostNameDnsRecordType")
     private @Nullable Output<CustomHostNameDnsRecordType> customHostNameDnsRecordType;
 
+    /**
+     * @return Custom DNS record type.
+     * 
+     */
     public Optional<Output<CustomHostNameDnsRecordType>> customHostNameDnsRecordType() {
         return Optional.ofNullable(this.customHostNameDnsRecordType);
     }
@@ -59,6 +71,10 @@ public final class WebAppHostNameBindingSlotArgs extends com.pulumi.resources.Re
     @Import(name="domainId")
     private @Nullable Output<String> domainId;
 
+    /**
+     * @return Fully qualified ARM domain resource URI.
+     * 
+     */
     public Optional<Output<String>> domainId() {
         return Optional.ofNullable(this.domainId);
     }
@@ -70,6 +86,10 @@ public final class WebAppHostNameBindingSlotArgs extends com.pulumi.resources.Re
     @Import(name="hostName")
     private @Nullable Output<String> hostName;
 
+    /**
+     * @return Hostname in the hostname binding.
+     * 
+     */
     public Optional<Output<String>> hostName() {
         return Optional.ofNullable(this.hostName);
     }
@@ -81,6 +101,10 @@ public final class WebAppHostNameBindingSlotArgs extends com.pulumi.resources.Re
     @Import(name="hostNameType")
     private @Nullable Output<HostNameType> hostNameType;
 
+    /**
+     * @return Hostname type.
+     * 
+     */
     public Optional<Output<HostNameType>> hostNameType() {
         return Optional.ofNullable(this.hostNameType);
     }
@@ -92,6 +116,10 @@ public final class WebAppHostNameBindingSlotArgs extends com.pulumi.resources.Re
     @Import(name="kind")
     private @Nullable Output<String> kind;
 
+    /**
+     * @return Kind of resource.
+     * 
+     */
     public Optional<Output<String>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -103,6 +131,10 @@ public final class WebAppHostNameBindingSlotArgs extends com.pulumi.resources.Re
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Name of the app.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -114,6 +146,10 @@ public final class WebAppHostNameBindingSlotArgs extends com.pulumi.resources.Re
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of the resource group to which the resource belongs.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -125,6 +161,10 @@ public final class WebAppHostNameBindingSlotArgs extends com.pulumi.resources.Re
     @Import(name="siteName")
     private @Nullable Output<String> siteName;
 
+    /**
+     * @return App Service app name.
+     * 
+     */
     public Optional<Output<String>> siteName() {
         return Optional.ofNullable(this.siteName);
     }
@@ -136,6 +176,10 @@ public final class WebAppHostNameBindingSlotArgs extends com.pulumi.resources.Re
     @Import(name="slot", required=true)
     private Output<String> slot;
 
+    /**
+     * @return Name of the deployment slot. If a slot is not specified, the API will create a binding for the production slot.
+     * 
+     */
     public Output<String> slot() {
         return this.slot;
     }
@@ -147,6 +191,10 @@ public final class WebAppHostNameBindingSlotArgs extends com.pulumi.resources.Re
     @Import(name="sslState")
     private @Nullable Output<SslState> sslState;
 
+    /**
+     * @return SSL type
+     * 
+     */
     public Optional<Output<SslState>> sslState() {
         return Optional.ofNullable(this.sslState);
     }
@@ -158,6 +206,10 @@ public final class WebAppHostNameBindingSlotArgs extends com.pulumi.resources.Re
     @Import(name="thumbprint")
     private @Nullable Output<String> thumbprint;
 
+    /**
+     * @return SSL certificate thumbprint
+     * 
+     */
     public Optional<Output<String>> thumbprint() {
         return Optional.ofNullable(this.thumbprint);
     }
@@ -198,119 +250,275 @@ public final class WebAppHostNameBindingSlotArgs extends com.pulumi.resources.Re
             $ = new WebAppHostNameBindingSlotArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param azureResourceName Azure resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureResourceName(@Nullable Output<String> azureResourceName) {
             $.azureResourceName = azureResourceName;
             return this;
         }
 
+        /**
+         * @param azureResourceName Azure resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureResourceName(String azureResourceName) {
             return azureResourceName(Output.of(azureResourceName));
         }
 
+        /**
+         * @param azureResourceType Azure resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureResourceType(@Nullable Output<AzureResourceType> azureResourceType) {
             $.azureResourceType = azureResourceType;
             return this;
         }
 
+        /**
+         * @param azureResourceType Azure resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureResourceType(AzureResourceType azureResourceType) {
             return azureResourceType(Output.of(azureResourceType));
         }
 
+        /**
+         * @param customHostNameDnsRecordType Custom DNS record type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customHostNameDnsRecordType(@Nullable Output<CustomHostNameDnsRecordType> customHostNameDnsRecordType) {
             $.customHostNameDnsRecordType = customHostNameDnsRecordType;
             return this;
         }
 
+        /**
+         * @param customHostNameDnsRecordType Custom DNS record type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customHostNameDnsRecordType(CustomHostNameDnsRecordType customHostNameDnsRecordType) {
             return customHostNameDnsRecordType(Output.of(customHostNameDnsRecordType));
         }
 
+        /**
+         * @param domainId Fully qualified ARM domain resource URI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainId(@Nullable Output<String> domainId) {
             $.domainId = domainId;
             return this;
         }
 
+        /**
+         * @param domainId Fully qualified ARM domain resource URI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainId(String domainId) {
             return domainId(Output.of(domainId));
         }
 
+        /**
+         * @param hostName Hostname in the hostname binding.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostName(@Nullable Output<String> hostName) {
             $.hostName = hostName;
             return this;
         }
 
+        /**
+         * @param hostName Hostname in the hostname binding.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostName(String hostName) {
             return hostName(Output.of(hostName));
         }
 
+        /**
+         * @param hostNameType Hostname type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostNameType(@Nullable Output<HostNameType> hostNameType) {
             $.hostNameType = hostNameType;
             return this;
         }
 
+        /**
+         * @param hostNameType Hostname type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostNameType(HostNameType hostNameType) {
             return hostNameType(Output.of(hostNameType));
         }
 
+        /**
+         * @param kind Kind of resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Kind of resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param name Name of the app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group to which the resource belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group to which the resource belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param siteName App Service app name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder siteName(@Nullable Output<String> siteName) {
             $.siteName = siteName;
             return this;
         }
 
+        /**
+         * @param siteName App Service app name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder siteName(String siteName) {
             return siteName(Output.of(siteName));
         }
 
+        /**
+         * @param slot Name of the deployment slot. If a slot is not specified, the API will create a binding for the production slot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder slot(Output<String> slot) {
             $.slot = slot;
             return this;
         }
 
+        /**
+         * @param slot Name of the deployment slot. If a slot is not specified, the API will create a binding for the production slot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder slot(String slot) {
             return slot(Output.of(slot));
         }
 
+        /**
+         * @param sslState SSL type
+         * 
+         * @return builder
+         * 
+         */
         public Builder sslState(@Nullable Output<SslState> sslState) {
             $.sslState = sslState;
             return this;
         }
 
+        /**
+         * @param sslState SSL type
+         * 
+         * @return builder
+         * 
+         */
         public Builder sslState(SslState sslState) {
             return sslState(Output.of(sslState));
         }
 
+        /**
+         * @param thumbprint SSL certificate thumbprint
+         * 
+         * @return builder
+         * 
+         */
         public Builder thumbprint(@Nullable Output<String> thumbprint) {
             $.thumbprint = thumbprint;
             return this;
         }
 
+        /**
+         * @param thumbprint SSL certificate thumbprint
+         * 
+         * @return builder
+         * 
+         */
         public Builder thumbprint(String thumbprint) {
             return thumbprint(Output.of(thumbprint));
         }

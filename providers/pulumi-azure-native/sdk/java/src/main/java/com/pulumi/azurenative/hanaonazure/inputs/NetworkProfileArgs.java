@@ -27,6 +27,10 @@ public final class NetworkProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="networkInterfaces")
     private @Nullable Output<List<IpAddressArgs>> networkInterfaces;
 
+    /**
+     * @return Specifies the network interfaces for the HANA instance.
+     * 
+     */
     public Optional<Output<List<IpAddressArgs>>> networkInterfaces() {
         return Optional.ofNullable(this.networkInterfaces);
     }
@@ -55,15 +59,33 @@ public final class NetworkProfileArgs extends com.pulumi.resources.ResourceArgs 
             $ = new NetworkProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param networkInterfaces Specifies the network interfaces for the HANA instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaces(@Nullable Output<List<IpAddressArgs>> networkInterfaces) {
             $.networkInterfaces = networkInterfaces;
             return this;
         }
 
+        /**
+         * @param networkInterfaces Specifies the network interfaces for the HANA instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaces(List<IpAddressArgs> networkInterfaces) {
             return networkInterfaces(Output.of(networkInterfaces));
         }
 
+        /**
+         * @param networkInterfaces Specifies the network interfaces for the HANA instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaces(IpAddressArgs... networkInterfaces) {
             return networkInterfaces(List.of(networkInterfaces));
         }

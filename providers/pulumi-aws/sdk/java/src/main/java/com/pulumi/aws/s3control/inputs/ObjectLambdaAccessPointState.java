@@ -30,6 +30,10 @@ public final class ObjectLambdaAccessPointState extends com.pulumi.resources.Res
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return Amazon Resource Name (ARN) of the Object Lambda Access Point.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -41,6 +45,10 @@ public final class ObjectLambdaAccessPointState extends com.pulumi.resources.Res
     @Import(name="configuration")
     private @Nullable Output<ObjectLambdaAccessPointConfigurationGetArgs> configuration;
 
+    /**
+     * @return A configuration block containing details about the Object Lambda Access Point. See Configuration below for more details.
+     * 
+     */
     public Optional<Output<ObjectLambdaAccessPointConfigurationGetArgs>> configuration() {
         return Optional.ofNullable(this.configuration);
     }
@@ -52,6 +60,10 @@ public final class ObjectLambdaAccessPointState extends com.pulumi.resources.Res
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name for this Object Lambda Access Point.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -92,29 +104,65 @@ public final class ObjectLambdaAccessPointState extends com.pulumi.resources.Res
             return accountId(Output.of(accountId));
         }
 
+        /**
+         * @param arn Amazon Resource Name (ARN) of the Object Lambda Access Point.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn Amazon Resource Name (ARN) of the Object Lambda Access Point.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param configuration A configuration block containing details about the Object Lambda Access Point. See Configuration below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configuration(@Nullable Output<ObjectLambdaAccessPointConfigurationGetArgs> configuration) {
             $.configuration = configuration;
             return this;
         }
 
+        /**
+         * @param configuration A configuration block containing details about the Object Lambda Access Point. See Configuration below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configuration(ObjectLambdaAccessPointConfigurationGetArgs configuration) {
             return configuration(Output.of(configuration));
         }
 
+        /**
+         * @param name The name for this Object Lambda Access Point.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name for this Object Lambda Access Point.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

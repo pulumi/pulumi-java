@@ -31,6 +31,11 @@ public final class TriggerBuildGetArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="artifacts")
     private @Nullable Output<TriggerBuildArtifactsGetArgs> artifacts;
 
+    /**
+     * @return Artifacts produced by the build that should be uploaded upon successful completion of all build steps.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<TriggerBuildArtifactsGetArgs>> artifacts() {
         return Optional.ofNullable(this.artifacts);
     }
@@ -43,6 +48,11 @@ public final class TriggerBuildGetArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="availableSecrets")
     private @Nullable Output<TriggerBuildAvailableSecretsGetArgs> availableSecrets;
 
+    /**
+     * @return Secrets and secret environment variables.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<TriggerBuildAvailableSecretsGetArgs>> availableSecrets() {
         return Optional.ofNullable(this.availableSecrets);
     }
@@ -57,6 +67,13 @@ public final class TriggerBuildGetArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="images")
     private @Nullable Output<List<String>> images;
 
+    /**
+     * @return A list of images to be pushed upon the successful completion of all build steps.
+     * The images will be pushed using the builder service account&#39;s credentials.
+     * The digests of the pushed images will be stored in the Build resource&#39;s results field.
+     * If any of the images fail to be pushed, the build is marked FAILURE.
+     * 
+     */
     public Optional<Output<List<String>>> images() {
         return Optional.ofNullable(this.images);
     }
@@ -69,6 +86,11 @@ public final class TriggerBuildGetArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="logsBucket")
     private @Nullable Output<String> logsBucket;
 
+    /**
+     * @return Google Cloud Storage bucket where logs should be written.
+     * Logs file names will be of the format ${logsBucket}/log-${build_id}.txt.
+     * 
+     */
     public Optional<Output<String>> logsBucket() {
         return Optional.ofNullable(this.logsBucket);
     }
@@ -81,6 +103,11 @@ public final class TriggerBuildGetArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="options")
     private @Nullable Output<TriggerBuildOptionsGetArgs> options;
 
+    /**
+     * @return Special options for this build.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<TriggerBuildOptionsGetArgs>> options() {
         return Optional.ofNullable(this.options);
     }
@@ -95,6 +122,13 @@ public final class TriggerBuildGetArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="queueTtl")
     private @Nullable Output<String> queueTtl;
 
+    /**
+     * @return TTL in queue for this build. If provided and the build is enqueued longer than this value,
+     * the build will expire and the build status will be EXPIRED.
+     * The TTL starts ticking from createTime.
+     * A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
+     * 
+     */
     public Optional<Output<String>> queueTtl() {
         return Optional.ofNullable(this.queueTtl);
     }
@@ -107,6 +141,11 @@ public final class TriggerBuildGetArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="secrets")
     private @Nullable Output<List<TriggerBuildSecretGetArgs>> secrets;
 
+    /**
+     * @return Secrets to decrypt using Cloud Key Management Service.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<TriggerBuildSecretGetArgs>>> secrets() {
         return Optional.ofNullable(this.secrets);
     }
@@ -120,6 +159,12 @@ public final class TriggerBuildGetArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="source")
     private @Nullable Output<TriggerBuildSourceGetArgs> source;
 
+    /**
+     * @return The location of the source files to build.
+     * One of `storageSource` or `repoSource` must be provided.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<TriggerBuildSourceGetArgs>> source() {
         return Optional.ofNullable(this.source);
     }
@@ -132,6 +177,11 @@ public final class TriggerBuildGetArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="steps", required=true)
     private Output<List<TriggerBuildStepGetArgs>> steps;
 
+    /**
+     * @return The operations to be performed on the workspace.
+     * Structure is documented below.
+     * 
+     */
     public Output<List<TriggerBuildStepGetArgs>> steps() {
         return this.steps;
     }
@@ -143,6 +193,10 @@ public final class TriggerBuildGetArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="substitutions")
     private @Nullable Output<Map<String,String>> substitutions;
 
+    /**
+     * @return Substitutions to use in a triggered build. Should only be used with triggers.run
+     * 
+     */
     public Optional<Output<Map<String,String>>> substitutions() {
         return Optional.ofNullable(this.substitutions);
     }
@@ -154,6 +208,10 @@ public final class TriggerBuildGetArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="tags")
     private @Nullable Output<List<String>> tags;
 
+    /**
+     * @return Tags for annotation of a Build. These are not docker tags.
+     * 
+     */
     public Optional<Output<List<String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -168,6 +226,13 @@ public final class TriggerBuildGetArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="timeout")
     private @Nullable Output<String> timeout;
 
+    /**
+     * @return Time limit for executing this build step. If not defined,
+     * the step has no
+     * time limit and will be allowed to continue to run until either it
+     * completes or the build itself times out.
+     * 
+     */
     public Optional<Output<String>> timeout() {
         return Optional.ofNullable(this.timeout);
     }
@@ -207,126 +272,333 @@ public final class TriggerBuildGetArgs extends com.pulumi.resources.ResourceArgs
             $ = new TriggerBuildGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param artifacts Artifacts produced by the build that should be uploaded upon successful completion of all build steps.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder artifacts(@Nullable Output<TriggerBuildArtifactsGetArgs> artifacts) {
             $.artifacts = artifacts;
             return this;
         }
 
+        /**
+         * @param artifacts Artifacts produced by the build that should be uploaded upon successful completion of all build steps.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder artifacts(TriggerBuildArtifactsGetArgs artifacts) {
             return artifacts(Output.of(artifacts));
         }
 
+        /**
+         * @param availableSecrets Secrets and secret environment variables.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availableSecrets(@Nullable Output<TriggerBuildAvailableSecretsGetArgs> availableSecrets) {
             $.availableSecrets = availableSecrets;
             return this;
         }
 
+        /**
+         * @param availableSecrets Secrets and secret environment variables.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availableSecrets(TriggerBuildAvailableSecretsGetArgs availableSecrets) {
             return availableSecrets(Output.of(availableSecrets));
         }
 
+        /**
+         * @param images A list of images to be pushed upon the successful completion of all build steps.
+         * The images will be pushed using the builder service account&#39;s credentials.
+         * The digests of the pushed images will be stored in the Build resource&#39;s results field.
+         * If any of the images fail to be pushed, the build is marked FAILURE.
+         * 
+         * @return builder
+         * 
+         */
         public Builder images(@Nullable Output<List<String>> images) {
             $.images = images;
             return this;
         }
 
+        /**
+         * @param images A list of images to be pushed upon the successful completion of all build steps.
+         * The images will be pushed using the builder service account&#39;s credentials.
+         * The digests of the pushed images will be stored in the Build resource&#39;s results field.
+         * If any of the images fail to be pushed, the build is marked FAILURE.
+         * 
+         * @return builder
+         * 
+         */
         public Builder images(List<String> images) {
             return images(Output.of(images));
         }
 
+        /**
+         * @param images A list of images to be pushed upon the successful completion of all build steps.
+         * The images will be pushed using the builder service account&#39;s credentials.
+         * The digests of the pushed images will be stored in the Build resource&#39;s results field.
+         * If any of the images fail to be pushed, the build is marked FAILURE.
+         * 
+         * @return builder
+         * 
+         */
         public Builder images(String... images) {
             return images(List.of(images));
         }
 
+        /**
+         * @param logsBucket Google Cloud Storage bucket where logs should be written.
+         * Logs file names will be of the format ${logsBucket}/log-${build_id}.txt.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logsBucket(@Nullable Output<String> logsBucket) {
             $.logsBucket = logsBucket;
             return this;
         }
 
+        /**
+         * @param logsBucket Google Cloud Storage bucket where logs should be written.
+         * Logs file names will be of the format ${logsBucket}/log-${build_id}.txt.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logsBucket(String logsBucket) {
             return logsBucket(Output.of(logsBucket));
         }
 
+        /**
+         * @param options Special options for this build.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder options(@Nullable Output<TriggerBuildOptionsGetArgs> options) {
             $.options = options;
             return this;
         }
 
+        /**
+         * @param options Special options for this build.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder options(TriggerBuildOptionsGetArgs options) {
             return options(Output.of(options));
         }
 
+        /**
+         * @param queueTtl TTL in queue for this build. If provided and the build is enqueued longer than this value,
+         * the build will expire and the build status will be EXPIRED.
+         * The TTL starts ticking from createTime.
+         * A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queueTtl(@Nullable Output<String> queueTtl) {
             $.queueTtl = queueTtl;
             return this;
         }
 
+        /**
+         * @param queueTtl TTL in queue for this build. If provided and the build is enqueued longer than this value,
+         * the build will expire and the build status will be EXPIRED.
+         * The TTL starts ticking from createTime.
+         * A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queueTtl(String queueTtl) {
             return queueTtl(Output.of(queueTtl));
         }
 
+        /**
+         * @param secrets Secrets to decrypt using Cloud Key Management Service.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secrets(@Nullable Output<List<TriggerBuildSecretGetArgs>> secrets) {
             $.secrets = secrets;
             return this;
         }
 
+        /**
+         * @param secrets Secrets to decrypt using Cloud Key Management Service.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secrets(List<TriggerBuildSecretGetArgs> secrets) {
             return secrets(Output.of(secrets));
         }
 
+        /**
+         * @param secrets Secrets to decrypt using Cloud Key Management Service.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secrets(TriggerBuildSecretGetArgs... secrets) {
             return secrets(List.of(secrets));
         }
 
+        /**
+         * @param source The location of the source files to build.
+         * One of `storageSource` or `repoSource` must be provided.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(@Nullable Output<TriggerBuildSourceGetArgs> source) {
             $.source = source;
             return this;
         }
 
+        /**
+         * @param source The location of the source files to build.
+         * One of `storageSource` or `repoSource` must be provided.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(TriggerBuildSourceGetArgs source) {
             return source(Output.of(source));
         }
 
+        /**
+         * @param steps The operations to be performed on the workspace.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder steps(Output<List<TriggerBuildStepGetArgs>> steps) {
             $.steps = steps;
             return this;
         }
 
+        /**
+         * @param steps The operations to be performed on the workspace.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder steps(List<TriggerBuildStepGetArgs> steps) {
             return steps(Output.of(steps));
         }
 
+        /**
+         * @param steps The operations to be performed on the workspace.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder steps(TriggerBuildStepGetArgs... steps) {
             return steps(List.of(steps));
         }
 
+        /**
+         * @param substitutions Substitutions to use in a triggered build. Should only be used with triggers.run
+         * 
+         * @return builder
+         * 
+         */
         public Builder substitutions(@Nullable Output<Map<String,String>> substitutions) {
             $.substitutions = substitutions;
             return this;
         }
 
+        /**
+         * @param substitutions Substitutions to use in a triggered build. Should only be used with triggers.run
+         * 
+         * @return builder
+         * 
+         */
         public Builder substitutions(Map<String,String> substitutions) {
             return substitutions(Output.of(substitutions));
         }
 
+        /**
+         * @param tags Tags for annotation of a Build. These are not docker tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Tags for annotation of a Build. These are not docker tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags Tags for annotation of a Build. These are not docker tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(String... tags) {
             return tags(List.of(tags));
         }
 
+        /**
+         * @param timeout Time limit for executing this build step. If not defined,
+         * the step has no
+         * time limit and will be allowed to continue to run until either it
+         * completes or the build itself times out.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeout(@Nullable Output<String> timeout) {
             $.timeout = timeout;
             return this;
         }
 
+        /**
+         * @param timeout Time limit for executing this build step. If not defined,
+         * the step has no
+         * time limit and will be allowed to continue to run until either it
+         * completes or the build itself times out.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeout(String timeout) {
             return timeout(Output.of(timeout));
         }

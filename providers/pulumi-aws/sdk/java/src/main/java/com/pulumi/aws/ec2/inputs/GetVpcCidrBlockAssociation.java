@@ -19,6 +19,10 @@ public final class GetVpcCidrBlockAssociation extends com.pulumi.resources.Invok
     @Import(name="associationId", required=true)
     private String associationId;
 
+    /**
+     * @return The association ID for the the IPv4 CIDR block.
+     * 
+     */
     public String associationId() {
         return this.associationId;
     }
@@ -30,6 +34,10 @@ public final class GetVpcCidrBlockAssociation extends com.pulumi.resources.Invok
     @Import(name="cidrBlock", required=true)
     private String cidrBlock;
 
+    /**
+     * @return The cidr block of the desired VPC.
+     * 
+     */
     public String cidrBlock() {
         return this.cidrBlock;
     }
@@ -42,6 +50,11 @@ public final class GetVpcCidrBlockAssociation extends com.pulumi.resources.Invok
     @Import(name="state", required=true)
     private String state;
 
+    /**
+     * @return The current state of the desired VPC.
+     * Can be either `&#34;pending&#34;` or `&#34;available&#34;`.
+     * 
+     */
     public String state() {
         return this.state;
     }
@@ -72,16 +85,35 @@ public final class GetVpcCidrBlockAssociation extends com.pulumi.resources.Invok
             $ = new GetVpcCidrBlockAssociation(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param associationId The association ID for the the IPv4 CIDR block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder associationId(String associationId) {
             $.associationId = associationId;
             return this;
         }
 
+        /**
+         * @param cidrBlock The cidr block of the desired VPC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cidrBlock(String cidrBlock) {
             $.cidrBlock = cidrBlock;
             return this;
         }
 
+        /**
+         * @param state The current state of the desired VPC.
+         * Can be either `&#34;pending&#34;` or `&#34;available&#34;`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             $.state = state;
             return this;

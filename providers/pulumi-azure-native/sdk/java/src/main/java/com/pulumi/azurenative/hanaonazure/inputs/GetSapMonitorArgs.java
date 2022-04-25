@@ -19,6 +19,10 @@ public final class GetSapMonitorArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -30,6 +34,10 @@ public final class GetSapMonitorArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="sapMonitorName", required=true)
     private String sapMonitorName;
 
+    /**
+     * @return Name of the SAP monitor resource.
+     * 
+     */
     public String sapMonitorName() {
         return this.sapMonitorName;
     }
@@ -59,11 +67,23 @@ public final class GetSapMonitorArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetSapMonitorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param sapMonitorName Name of the SAP monitor resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sapMonitorName(String sapMonitorName) {
             $.sapMonitorName = sapMonitorName;
             return this;

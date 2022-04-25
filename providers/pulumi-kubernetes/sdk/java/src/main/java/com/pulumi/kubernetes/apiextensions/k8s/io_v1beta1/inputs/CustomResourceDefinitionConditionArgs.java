@@ -26,6 +26,10 @@ public final class CustomResourceDefinitionConditionArgs extends com.pulumi.reso
     @Import(name="lastTransitionTime")
     private @Nullable Output<String> lastTransitionTime;
 
+    /**
+     * @return lastTransitionTime last time the condition transitioned from one status to another.
+     * 
+     */
     public Optional<Output<String>> lastTransitionTime() {
         return Optional.ofNullable(this.lastTransitionTime);
     }
@@ -37,6 +41,10 @@ public final class CustomResourceDefinitionConditionArgs extends com.pulumi.reso
     @Import(name="message")
     private @Nullable Output<String> message;
 
+    /**
+     * @return message is a human-readable message indicating details about last transition.
+     * 
+     */
     public Optional<Output<String>> message() {
         return Optional.ofNullable(this.message);
     }
@@ -48,6 +56,10 @@ public final class CustomResourceDefinitionConditionArgs extends com.pulumi.reso
     @Import(name="reason")
     private @Nullable Output<String> reason;
 
+    /**
+     * @return reason is a unique, one-word, CamelCase reason for the condition&#39;s last transition.
+     * 
+     */
     public Optional<Output<String>> reason() {
         return Optional.ofNullable(this.reason);
     }
@@ -59,6 +71,10 @@ public final class CustomResourceDefinitionConditionArgs extends com.pulumi.reso
     @Import(name="status", required=true)
     private Output<String> status;
 
+    /**
+     * @return status is the status of the condition. Can be True, False, Unknown.
+     * 
+     */
     public Output<String> status() {
         return this.status;
     }
@@ -70,6 +86,10 @@ public final class CustomResourceDefinitionConditionArgs extends com.pulumi.reso
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return type is the type of the condition. Types include Established, NamesAccepted and Terminating.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -102,47 +122,107 @@ public final class CustomResourceDefinitionConditionArgs extends com.pulumi.reso
             $ = new CustomResourceDefinitionConditionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param lastTransitionTime lastTransitionTime last time the condition transitioned from one status to another.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastTransitionTime(@Nullable Output<String> lastTransitionTime) {
             $.lastTransitionTime = lastTransitionTime;
             return this;
         }
 
+        /**
+         * @param lastTransitionTime lastTransitionTime last time the condition transitioned from one status to another.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastTransitionTime(String lastTransitionTime) {
             return lastTransitionTime(Output.of(lastTransitionTime));
         }
 
+        /**
+         * @param message message is a human-readable message indicating details about last transition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(@Nullable Output<String> message) {
             $.message = message;
             return this;
         }
 
+        /**
+         * @param message message is a human-readable message indicating details about last transition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(String message) {
             return message(Output.of(message));
         }
 
+        /**
+         * @param reason reason is a unique, one-word, CamelCase reason for the condition&#39;s last transition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reason(@Nullable Output<String> reason) {
             $.reason = reason;
             return this;
         }
 
+        /**
+         * @param reason reason is a unique, one-word, CamelCase reason for the condition&#39;s last transition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reason(String reason) {
             return reason(Output.of(reason));
         }
 
+        /**
+         * @param status status is the status of the condition. Can be True, False, Unknown.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(Output<String> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status status is the status of the condition. Can be True, False, Unknown.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             return status(Output.of(status));
         }
 
+        /**
+         * @param type type is the type of the condition. Types include Established, NamesAccepted and Terminating.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type type is the type of the condition. Types include Established, NamesAccepted and Terminating.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

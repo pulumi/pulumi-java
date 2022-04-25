@@ -25,6 +25,10 @@ public final class SymmetricKeyResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="connectionString")
     private @Nullable AsymmetricEncryptedSecretResponse connectionString;
 
+    /**
+     * @return Connection string based on the symmetric key.
+     * 
+     */
     public Optional<AsymmetricEncryptedSecretResponse> connectionString() {
         return Optional.ofNullable(this.connectionString);
     }
@@ -53,6 +57,12 @@ public final class SymmetricKeyResponse extends com.pulumi.resources.InvokeArgs 
             $ = new SymmetricKeyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param connectionString Connection string based on the symmetric key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionString(@Nullable AsymmetricEncryptedSecretResponse connectionString) {
             $.connectionString = connectionString;
             return this;

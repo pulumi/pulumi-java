@@ -27,6 +27,10 @@ public final class ApplicationGatewayPrivateEndpointConnectionResponse extends c
     @Import(name="etag", required=true)
     private String etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public String etag() {
         return this.etag;
     }
@@ -38,6 +42,10 @@ public final class ApplicationGatewayPrivateEndpointConnectionResponse extends c
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -49,6 +57,10 @@ public final class ApplicationGatewayPrivateEndpointConnectionResponse extends c
     @Import(name="linkIdentifier", required=true)
     private String linkIdentifier;
 
+    /**
+     * @return The consumer link id.
+     * 
+     */
     public String linkIdentifier() {
         return this.linkIdentifier;
     }
@@ -60,6 +72,10 @@ public final class ApplicationGatewayPrivateEndpointConnectionResponse extends c
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Name of the private endpoint connection on an application gateway.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -71,6 +87,10 @@ public final class ApplicationGatewayPrivateEndpointConnectionResponse extends c
     @Import(name="privateEndpoint", required=true)
     private PrivateEndpointResponse privateEndpoint;
 
+    /**
+     * @return The resource of private end point.
+     * 
+     */
     public PrivateEndpointResponse privateEndpoint() {
         return this.privateEndpoint;
     }
@@ -82,6 +102,10 @@ public final class ApplicationGatewayPrivateEndpointConnectionResponse extends c
     @Import(name="privateLinkServiceConnectionState")
     private @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
 
+    /**
+     * @return A collection of information about the state of the connection between service consumer and provider.
+     * 
+     */
     public Optional<PrivateLinkServiceConnectionStateResponse> privateLinkServiceConnectionState() {
         return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
@@ -93,6 +117,10 @@ public final class ApplicationGatewayPrivateEndpointConnectionResponse extends c
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The provisioning state of the application gateway private endpoint connection resource.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -104,6 +132,10 @@ public final class ApplicationGatewayPrivateEndpointConnectionResponse extends c
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of the resource.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -139,41 +171,89 @@ public final class ApplicationGatewayPrivateEndpointConnectionResponse extends c
             $ = new ApplicationGatewayPrivateEndpointConnectionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param etag A unique read-only string that changes whenever the resource is updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param linkIdentifier The consumer link id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkIdentifier(String linkIdentifier) {
             $.linkIdentifier = linkIdentifier;
             return this;
         }
 
+        /**
+         * @param name Name of the private endpoint connection on an application gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param privateEndpoint The resource of private end point.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpoint(PrivateEndpointResponse privateEndpoint) {
             $.privateEndpoint = privateEndpoint;
             return this;
         }
 
+        /**
+         * @param privateLinkServiceConnectionState A collection of information about the state of the connection between service consumer and provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkServiceConnectionState(@Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState) {
             $.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
             return this;
         }
 
+        /**
+         * @param provisioningState The provisioning state of the application gateway private endpoint connection resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param type Type of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

@@ -12,62 +12,62 @@ import javax.annotation.Nullable;
 @CustomType
 public final class InnerHealthErrorResponse {
     /**
-     * Error creation time (UTC)
+     * @return Error creation time (UTC)
      * 
      */
     private final @Nullable String creationTimeUtc;
     /**
-     * ID of the entity.
+     * @return ID of the entity.
      * 
      */
     private final @Nullable String entityId;
     /**
-     * Category of error.
+     * @return Category of error.
      * 
      */
     private final @Nullable String errorCategory;
     /**
-     * Error code.
+     * @return Error code.
      * 
      */
     private final @Nullable String errorCode;
     /**
-     * Level of error.
+     * @return Level of error.
      * 
      */
     private final @Nullable String errorLevel;
     /**
-     * Error message.
+     * @return Error message.
      * 
      */
     private final @Nullable String errorMessage;
     /**
-     * Source of error.
+     * @return Source of error.
      * 
      */
     private final @Nullable String errorSource;
     /**
-     * Type of error.
+     * @return Type of error.
      * 
      */
     private final @Nullable String errorType;
     /**
-     * Possible causes of error.
+     * @return Possible causes of error.
      * 
      */
     private final @Nullable String possibleCauses;
     /**
-     * Recommended action to resolve error.
+     * @return Recommended action to resolve error.
      * 
      */
     private final @Nullable String recommendedAction;
     /**
-     * DRA error message.
+     * @return DRA error message.
      * 
      */
     private final @Nullable String recoveryProviderErrorMessage;
     /**
-     * Summary message of the entity.
+     * @return Summary message of the entity.
      * 
      */
     private final @Nullable String summaryMessage;
@@ -101,86 +101,86 @@ public final class InnerHealthErrorResponse {
     }
 
     /**
-     * Error creation time (UTC)
+     * @return Error creation time (UTC)
      * 
-    */
+     */
     public Optional<String> creationTimeUtc() {
         return Optional.ofNullable(this.creationTimeUtc);
     }
     /**
-     * ID of the entity.
+     * @return ID of the entity.
      * 
-    */
+     */
     public Optional<String> entityId() {
         return Optional.ofNullable(this.entityId);
     }
     /**
-     * Category of error.
+     * @return Category of error.
      * 
-    */
+     */
     public Optional<String> errorCategory() {
         return Optional.ofNullable(this.errorCategory);
     }
     /**
-     * Error code.
+     * @return Error code.
      * 
-    */
+     */
     public Optional<String> errorCode() {
         return Optional.ofNullable(this.errorCode);
     }
     /**
-     * Level of error.
+     * @return Level of error.
      * 
-    */
+     */
     public Optional<String> errorLevel() {
         return Optional.ofNullable(this.errorLevel);
     }
     /**
-     * Error message.
+     * @return Error message.
      * 
-    */
+     */
     public Optional<String> errorMessage() {
         return Optional.ofNullable(this.errorMessage);
     }
     /**
-     * Source of error.
+     * @return Source of error.
      * 
-    */
+     */
     public Optional<String> errorSource() {
         return Optional.ofNullable(this.errorSource);
     }
     /**
-     * Type of error.
+     * @return Type of error.
      * 
-    */
+     */
     public Optional<String> errorType() {
         return Optional.ofNullable(this.errorType);
     }
     /**
-     * Possible causes of error.
+     * @return Possible causes of error.
      * 
-    */
+     */
     public Optional<String> possibleCauses() {
         return Optional.ofNullable(this.possibleCauses);
     }
     /**
-     * Recommended action to resolve error.
+     * @return Recommended action to resolve error.
      * 
-    */
+     */
     public Optional<String> recommendedAction() {
         return Optional.ofNullable(this.recommendedAction);
     }
     /**
-     * DRA error message.
+     * @return DRA error message.
      * 
-    */
+     */
     public Optional<String> recoveryProviderErrorMessage() {
         return Optional.ofNullable(this.recoveryProviderErrorMessage);
     }
     /**
-     * Summary message of the entity.
+     * @return Summary message of the entity.
      * 
-    */
+     */
     public Optional<String> summaryMessage() {
         return Optional.ofNullable(this.summaryMessage);
     }

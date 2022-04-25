@@ -25,6 +25,10 @@ public final class GitHubClientSecret extends com.pulumi.resources.InvokeArgs {
     @Import(name="byoaSecretAkvUrl")
     private @Nullable String byoaSecretAkvUrl;
 
+    /**
+     * @return Bring your own app client secret AKV URL.
+     * 
+     */
     public Optional<String> byoaSecretAkvUrl() {
         return Optional.ofNullable(this.byoaSecretAkvUrl);
     }
@@ -36,6 +40,10 @@ public final class GitHubClientSecret extends com.pulumi.resources.InvokeArgs {
     @Import(name="byoaSecretName")
     private @Nullable String byoaSecretName;
 
+    /**
+     * @return Bring your own app client secret name in AKV.
+     * 
+     */
     public Optional<String> byoaSecretName() {
         return Optional.ofNullable(this.byoaSecretName);
     }
@@ -65,11 +73,23 @@ public final class GitHubClientSecret extends com.pulumi.resources.InvokeArgs {
             $ = new GitHubClientSecret(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param byoaSecretAkvUrl Bring your own app client secret AKV URL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder byoaSecretAkvUrl(@Nullable String byoaSecretAkvUrl) {
             $.byoaSecretAkvUrl = byoaSecretAkvUrl;
             return this;
         }
 
+        /**
+         * @param byoaSecretName Bring your own app client secret name in AKV.
+         * 
+         * @return builder
+         * 
+         */
         public Builder byoaSecretName(@Nullable String byoaSecretName) {
             $.byoaSecretName = byoaSecretName;
             return this;

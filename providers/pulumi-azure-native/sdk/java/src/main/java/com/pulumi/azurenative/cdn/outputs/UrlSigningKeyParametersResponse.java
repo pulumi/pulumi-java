@@ -13,22 +13,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class UrlSigningKeyParametersResponse {
     /**
-     * Defines the customer defined key Id. This id will exist in the incoming request to indicate the key used to form the hash.
+     * @return Defines the customer defined key Id. This id will exist in the incoming request to indicate the key used to form the hash.
      * 
      */
     private final String keyId;
     /**
-     * Resource reference to the KV secret
+     * @return Resource reference to the KV secret
      * 
      */
     private final ResourceReferenceResponse secretSource;
     /**
-     * Version of the secret to be used
+     * @return Version of the secret to be used
      * 
      */
     private final @Nullable String secretVersion;
     /**
-     * The type of the Secret to create.
+     * @return The type of the Secret to create.
      * Expected value is &#39;UrlSigningKey&#39;.
      * 
      */
@@ -47,31 +47,31 @@ public final class UrlSigningKeyParametersResponse {
     }
 
     /**
-     * Defines the customer defined key Id. This id will exist in the incoming request to indicate the key used to form the hash.
+     * @return Defines the customer defined key Id. This id will exist in the incoming request to indicate the key used to form the hash.
      * 
-    */
+     */
     public String keyId() {
         return this.keyId;
     }
     /**
-     * Resource reference to the KV secret
+     * @return Resource reference to the KV secret
      * 
-    */
+     */
     public ResourceReferenceResponse secretSource() {
         return this.secretSource;
     }
     /**
-     * Version of the secret to be used
+     * @return Version of the secret to be used
      * 
-    */
+     */
     public Optional<String> secretVersion() {
         return Optional.ofNullable(this.secretVersion);
     }
     /**
-     * The type of the Secret to create.
+     * @return The type of the Secret to create.
      * Expected value is &#39;UrlSigningKey&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

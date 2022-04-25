@@ -27,6 +27,10 @@ public final class PrivateEndpointConnectionPropertiesResponse extends com.pulum
     @Import(name="privateEndpoint", required=true)
     private ResourceIdResponse privateEndpoint;
 
+    /**
+     * @return ARM id for the private endpoint resource corresponding to the connection.
+     * 
+     */
     public ResourceIdResponse privateEndpoint() {
         return this.privateEndpoint;
     }
@@ -38,6 +42,10 @@ public final class PrivateEndpointConnectionPropertiesResponse extends com.pulum
     @Import(name="privateLinkServiceConnectionState")
     private @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
 
+    /**
+     * @return State of the private endpoint connection.
+     * 
+     */
     public Optional<PrivateLinkServiceConnectionStateResponse> privateLinkServiceConnectionState() {
         return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
@@ -49,6 +57,10 @@ public final class PrivateEndpointConnectionPropertiesResponse extends com.pulum
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return Indicates whether there is an ongoing operation on the private endpoint.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -79,16 +91,34 @@ public final class PrivateEndpointConnectionPropertiesResponse extends com.pulum
             $ = new PrivateEndpointConnectionPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param privateEndpoint ARM id for the private endpoint resource corresponding to the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpoint(ResourceIdResponse privateEndpoint) {
             $.privateEndpoint = privateEndpoint;
             return this;
         }
 
+        /**
+         * @param privateLinkServiceConnectionState State of the private endpoint connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkServiceConnectionState(@Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState) {
             $.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
             return this;
         }
 
+        /**
+         * @param provisioningState Indicates whether there is an ongoing operation on the private endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;

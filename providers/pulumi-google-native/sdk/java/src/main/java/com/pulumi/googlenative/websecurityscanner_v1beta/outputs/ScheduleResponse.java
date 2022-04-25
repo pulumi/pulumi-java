@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class ScheduleResponse {
     /**
-     * The duration of time between executions in days.
+     * @return The duration of time between executions in days.
      * 
      */
     private final Integer intervalDurationDays;
     /**
-     * A timestamp indicates when the next run will be scheduled. The value is refreshed by the server after each run. If unspecified, it will default to current server time, which means the scan will be scheduled to start immediately.
+     * @return A timestamp indicates when the next run will be scheduled. The value is refreshed by the server after each run. If unspecified, it will default to current server time, which means the scan will be scheduled to start immediately.
      * 
      */
     private final String scheduleTime;
@@ -30,16 +30,16 @@ public final class ScheduleResponse {
     }
 
     /**
-     * The duration of time between executions in days.
+     * @return The duration of time between executions in days.
      * 
-    */
+     */
     public Integer intervalDurationDays() {
         return this.intervalDurationDays;
     }
     /**
-     * A timestamp indicates when the next run will be scheduled. The value is refreshed by the server after each run. If unspecified, it will default to current server time, which means the scan will be scheduled to start immediately.
+     * @return A timestamp indicates when the next run will be scheduled. The value is refreshed by the server after each run. If unspecified, it will default to current server time, which means the scan will be scheduled to start immediately.
      * 
-    */
+     */
     public String scheduleTime() {
         return this.scheduleTime;
     }

@@ -13,27 +13,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class VoiceConnectorOrganizationRoute {
     /**
-     * The FQDN or IP address to contact for origination traffic.
+     * @return The FQDN or IP address to contact for origination traffic.
      * 
      */
     private final String host;
     /**
-     * The designated origination route port. Defaults to `5060`.
+     * @return The designated origination route port. Defaults to `5060`.
      * 
      */
     private final @Nullable Integer port;
     /**
-     * The priority associated with the host, with 1 being the highest priority. Higher priority hosts are attempted first.
+     * @return The priority associated with the host, with 1 being the highest priority. Higher priority hosts are attempted first.
      * 
      */
     private final Integer priority;
     /**
-     * The protocol to use for the origination route. Encryption-enabled Amazon Chime Voice Connectors use TCP protocol by default.
+     * @return The protocol to use for the origination route. Encryption-enabled Amazon Chime Voice Connectors use TCP protocol by default.
      * 
      */
     private final String protocol;
     /**
-     * The weight associated with the host. If hosts are equal in priority, calls are redistributed among them based on their relative weight.
+     * @return The weight associated with the host. If hosts are equal in priority, calls are redistributed among them based on their relative weight.
      * 
      */
     private final Integer weight;
@@ -53,37 +53,37 @@ public final class VoiceConnectorOrganizationRoute {
     }
 
     /**
-     * The FQDN or IP address to contact for origination traffic.
+     * @return The FQDN or IP address to contact for origination traffic.
      * 
-    */
+     */
     public String host() {
         return this.host;
     }
     /**
-     * The designated origination route port. Defaults to `5060`.
+     * @return The designated origination route port. Defaults to `5060`.
      * 
-    */
+     */
     public Optional<Integer> port() {
         return Optional.ofNullable(this.port);
     }
     /**
-     * The priority associated with the host, with 1 being the highest priority. Higher priority hosts are attempted first.
+     * @return The priority associated with the host, with 1 being the highest priority. Higher priority hosts are attempted first.
      * 
-    */
+     */
     public Integer priority() {
         return this.priority;
     }
     /**
-     * The protocol to use for the origination route. Encryption-enabled Amazon Chime Voice Connectors use TCP protocol by default.
+     * @return The protocol to use for the origination route. Encryption-enabled Amazon Chime Voice Connectors use TCP protocol by default.
      * 
-    */
+     */
     public String protocol() {
         return this.protocol;
     }
     /**
-     * The weight associated with the host. If hosts are equal in priority, calls are redistributed among them based on their relative weight.
+     * @return The weight associated with the host. If hosts are equal in priority, calls are redistributed among them based on their relative weight.
      * 
-    */
+     */
     public Integer weight() {
         return this.weight;
     }

@@ -27,6 +27,10 @@ public final class StreamingEndpointAccessControlArgs extends com.pulumi.resourc
     @Import(name="akamai")
     private @Nullable Output<AkamaiAccessControlArgs> akamai;
 
+    /**
+     * @return The access control of Akamai
+     * 
+     */
     public Optional<Output<AkamaiAccessControlArgs>> akamai() {
         return Optional.ofNullable(this.akamai);
     }
@@ -38,6 +42,10 @@ public final class StreamingEndpointAccessControlArgs extends com.pulumi.resourc
     @Import(name="ip")
     private @Nullable Output<IPAccessControlArgs> ip;
 
+    /**
+     * @return The IP access control of the streaming endpoint.
+     * 
+     */
     public Optional<Output<IPAccessControlArgs>> ip() {
         return Optional.ofNullable(this.ip);
     }
@@ -67,20 +75,44 @@ public final class StreamingEndpointAccessControlArgs extends com.pulumi.resourc
             $ = new StreamingEndpointAccessControlArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param akamai The access control of Akamai
+         * 
+         * @return builder
+         * 
+         */
         public Builder akamai(@Nullable Output<AkamaiAccessControlArgs> akamai) {
             $.akamai = akamai;
             return this;
         }
 
+        /**
+         * @param akamai The access control of Akamai
+         * 
+         * @return builder
+         * 
+         */
         public Builder akamai(AkamaiAccessControlArgs akamai) {
             return akamai(Output.of(akamai));
         }
 
+        /**
+         * @param ip The IP access control of the streaming endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ip(@Nullable Output<IPAccessControlArgs> ip) {
             $.ip = ip;
             return this;
         }
 
+        /**
+         * @param ip The IP access control of the streaming endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ip(IPAccessControlArgs ip) {
             return ip(Output.of(ip));
         }

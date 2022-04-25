@@ -21,6 +21,10 @@ public final class PlanResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="accessibility")
     private @Nullable String accessibility;
 
+    /**
+     * @return Plan accessibility
+     * 
+     */
     public Optional<String> accessibility() {
         return Optional.ofNullable(this.accessibility);
     }
@@ -32,6 +36,10 @@ public final class PlanResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="altStackReference", required=true)
     private String altStackReference;
 
+    /**
+     * @return Alternative stack type
+     * 
+     */
     public String altStackReference() {
         return this.altStackReference;
     }
@@ -43,6 +51,10 @@ public final class PlanResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="planDisplayName", required=true)
     private String planDisplayName;
 
+    /**
+     * @return Friendly name for the plan for display in the marketplace
+     * 
+     */
     public String planDisplayName() {
         return this.planDisplayName;
     }
@@ -54,6 +66,10 @@ public final class PlanResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="planId", required=true)
     private String planId;
 
+    /**
+     * @return Text identifier for this plan
+     * 
+     */
     public String planId() {
         return this.planId;
     }
@@ -65,6 +81,10 @@ public final class PlanResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="skuId", required=true)
     private String skuId;
 
+    /**
+     * @return Identifier for this plan
+     * 
+     */
     public String skuId() {
         return this.skuId;
     }
@@ -76,6 +96,10 @@ public final class PlanResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="stackType", required=true)
     private String stackType;
 
+    /**
+     * @return Stack type (classic or arm)
+     * 
+     */
     public String stackType() {
         return this.stackType;
     }
@@ -109,31 +133,67 @@ public final class PlanResponse extends com.pulumi.resources.InvokeArgs {
             $ = new PlanResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessibility Plan accessibility
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessibility(@Nullable String accessibility) {
             $.accessibility = accessibility;
             return this;
         }
 
+        /**
+         * @param altStackReference Alternative stack type
+         * 
+         * @return builder
+         * 
+         */
         public Builder altStackReference(String altStackReference) {
             $.altStackReference = altStackReference;
             return this;
         }
 
+        /**
+         * @param planDisplayName Friendly name for the plan for display in the marketplace
+         * 
+         * @return builder
+         * 
+         */
         public Builder planDisplayName(String planDisplayName) {
             $.planDisplayName = planDisplayName;
             return this;
         }
 
+        /**
+         * @param planId Text identifier for this plan
+         * 
+         * @return builder
+         * 
+         */
         public Builder planId(String planId) {
             $.planId = planId;
             return this;
         }
 
+        /**
+         * @param skuId Identifier for this plan
+         * 
+         * @return builder
+         * 
+         */
         public Builder skuId(String skuId) {
             $.skuId = skuId;
             return this;
         }
 
+        /**
+         * @param stackType Stack type (classic or arm)
+         * 
+         * @return builder
+         * 
+         */
         public Builder stackType(String stackType) {
             $.stackType = stackType;
             return this;

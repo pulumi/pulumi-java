@@ -12,27 +12,27 @@ import java.util.Objects;
 @CustomType
 public final class GetAnnotationSpecSetResult {
     /**
-     * The array of AnnotationSpecs that you define when you create the AnnotationSpecSet. These are the possible labels for the labeling task.
+     * @return The array of AnnotationSpecs that you define when you create the AnnotationSpecSet. These are the possible labels for the labeling task.
      * 
      */
     private final List<GoogleCloudDatalabelingV1beta1AnnotationSpecResponse> annotationSpecs;
     /**
-     * The names of any related resources that are blocking changes to the annotation spec set.
+     * @return The names of any related resources that are blocking changes to the annotation spec set.
      * 
      */
     private final List<String> blockingResources;
     /**
-     * Optional. User-provided description of the annotation specification set. The description can be up to 10,000 characters long.
+     * @return Optional. User-provided description of the annotation specification set. The description can be up to 10,000 characters long.
      * 
      */
     private final String description;
     /**
-     * The display name for AnnotationSpecSet that you define when you create it. Maximum of 64 characters.
+     * @return The display name for AnnotationSpecSet that you define when you create it. Maximum of 64 characters.
      * 
      */
     private final String displayName;
     /**
-     * The AnnotationSpecSet resource name in the following format: &#34;projects/{project_id}/annotationSpecSets/{annotation_spec_set_id}&#34;
+     * @return The AnnotationSpecSet resource name in the following format: &#34;projects/{project_id}/annotationSpecSets/{annotation_spec_set_id}&#34;
      * 
      */
     private final String name;
@@ -52,37 +52,37 @@ public final class GetAnnotationSpecSetResult {
     }
 
     /**
-     * The array of AnnotationSpecs that you define when you create the AnnotationSpecSet. These are the possible labels for the labeling task.
+     * @return The array of AnnotationSpecs that you define when you create the AnnotationSpecSet. These are the possible labels for the labeling task.
      * 
-    */
+     */
     public List<GoogleCloudDatalabelingV1beta1AnnotationSpecResponse> annotationSpecs() {
         return this.annotationSpecs;
     }
     /**
-     * The names of any related resources that are blocking changes to the annotation spec set.
+     * @return The names of any related resources that are blocking changes to the annotation spec set.
      * 
-    */
+     */
     public List<String> blockingResources() {
         return this.blockingResources;
     }
     /**
-     * Optional. User-provided description of the annotation specification set. The description can be up to 10,000 characters long.
+     * @return Optional. User-provided description of the annotation specification set. The description can be up to 10,000 characters long.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * The display name for AnnotationSpecSet that you define when you create it. Maximum of 64 characters.
+     * @return The display name for AnnotationSpecSet that you define when you create it. Maximum of 64 characters.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * The AnnotationSpecSet resource name in the following format: &#34;projects/{project_id}/annotationSpecSets/{annotation_spec_set_id}&#34;
+     * @return The AnnotationSpecSet resource name in the following format: &#34;projects/{project_id}/annotationSpecSets/{annotation_spec_set_id}&#34;
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

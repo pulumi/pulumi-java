@@ -21,6 +21,10 @@ public final class GetVirtualMachineArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="expand")
     private @Nullable String expand;
 
+    /**
+     * @return The expand expression to apply on the operation. &#39;InstanceView&#39; retrieves a snapshot of the runtime properties of the virtual machine that is managed by the platform and can change outside of control plane operations. &#39;UserData&#39; retrieves the UserData property as part of the VM model view that was provided by the user during the VM Create/Update operation.
+     * 
+     */
     public Optional<String> expand() {
         return Optional.ofNullable(this.expand);
     }
@@ -32,6 +36,10 @@ public final class GetVirtualMachineArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -43,6 +51,10 @@ public final class GetVirtualMachineArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="vmName", required=true)
     private String vmName;
 
+    /**
+     * @return The name of the virtual machine.
+     * 
+     */
     public String vmName() {
         return this.vmName;
     }
@@ -73,16 +85,34 @@ public final class GetVirtualMachineArgs extends com.pulumi.resources.InvokeArgs
             $ = new GetVirtualMachineArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expand The expand expression to apply on the operation. &#39;InstanceView&#39; retrieves a snapshot of the runtime properties of the virtual machine that is managed by the platform and can change outside of control plane operations. &#39;UserData&#39; retrieves the UserData property as part of the VM model view that was provided by the user during the VM Create/Update operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expand(@Nullable String expand) {
             $.expand = expand;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param vmName The name of the virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmName(String vmName) {
             $.vmName = vmName;
             return this;

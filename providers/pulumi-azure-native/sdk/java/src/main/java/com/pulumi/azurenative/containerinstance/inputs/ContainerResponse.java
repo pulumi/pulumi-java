@@ -32,6 +32,10 @@ public final class ContainerResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="command")
     private @Nullable List<String> command;
 
+    /**
+     * @return The commands to execute within the container instance in exec form.
+     * 
+     */
     public Optional<List<String>> command() {
         return Optional.ofNullable(this.command);
     }
@@ -43,6 +47,10 @@ public final class ContainerResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="environmentVariables")
     private @Nullable List<EnvironmentVariableResponse> environmentVariables;
 
+    /**
+     * @return The environment variables to set in the container instance.
+     * 
+     */
     public Optional<List<EnvironmentVariableResponse>> environmentVariables() {
         return Optional.ofNullable(this.environmentVariables);
     }
@@ -54,6 +62,10 @@ public final class ContainerResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="image", required=true)
     private String image;
 
+    /**
+     * @return The name of the image used to create the container instance.
+     * 
+     */
     public String image() {
         return this.image;
     }
@@ -65,6 +77,10 @@ public final class ContainerResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="instanceView", required=true)
     private ContainerPropertiesResponseInstanceView instanceView;
 
+    /**
+     * @return The instance view of the container instance. Only valid in response.
+     * 
+     */
     public ContainerPropertiesResponseInstanceView instanceView() {
         return this.instanceView;
     }
@@ -76,6 +92,10 @@ public final class ContainerResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="livenessProbe")
     private @Nullable ContainerProbeResponse livenessProbe;
 
+    /**
+     * @return The liveness probe.
+     * 
+     */
     public Optional<ContainerProbeResponse> livenessProbe() {
         return Optional.ofNullable(this.livenessProbe);
     }
@@ -87,6 +107,10 @@ public final class ContainerResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The user-provided name of the container instance.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -98,6 +122,10 @@ public final class ContainerResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="ports")
     private @Nullable List<ContainerPortResponse> ports;
 
+    /**
+     * @return The exposed ports on the container instance.
+     * 
+     */
     public Optional<List<ContainerPortResponse>> ports() {
         return Optional.ofNullable(this.ports);
     }
@@ -109,6 +137,10 @@ public final class ContainerResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="readinessProbe")
     private @Nullable ContainerProbeResponse readinessProbe;
 
+    /**
+     * @return The readiness probe.
+     * 
+     */
     public Optional<ContainerProbeResponse> readinessProbe() {
         return Optional.ofNullable(this.readinessProbe);
     }
@@ -120,6 +152,10 @@ public final class ContainerResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="resources", required=true)
     private ResourceRequirementsResponse resources;
 
+    /**
+     * @return The resource requirements of the container instance.
+     * 
+     */
     public ResourceRequirementsResponse resources() {
         return this.resources;
     }
@@ -131,6 +167,10 @@ public final class ContainerResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="volumeMounts")
     private @Nullable List<VolumeMountResponse> volumeMounts;
 
+    /**
+     * @return The volume mounts available to the container instance.
+     * 
+     */
     public Optional<List<VolumeMountResponse>> volumeMounts() {
         return Optional.ofNullable(this.volumeMounts);
     }
@@ -168,68 +208,152 @@ public final class ContainerResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ContainerResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param command The commands to execute within the container instance in exec form.
+         * 
+         * @return builder
+         * 
+         */
         public Builder command(@Nullable List<String> command) {
             $.command = command;
             return this;
         }
 
+        /**
+         * @param command The commands to execute within the container instance in exec form.
+         * 
+         * @return builder
+         * 
+         */
         public Builder command(String... command) {
             return command(List.of(command));
         }
 
+        /**
+         * @param environmentVariables The environment variables to set in the container instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentVariables(@Nullable List<EnvironmentVariableResponse> environmentVariables) {
             $.environmentVariables = environmentVariables;
             return this;
         }
 
+        /**
+         * @param environmentVariables The environment variables to set in the container instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentVariables(EnvironmentVariableResponse... environmentVariables) {
             return environmentVariables(List.of(environmentVariables));
         }
 
+        /**
+         * @param image The name of the image used to create the container instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder image(String image) {
             $.image = image;
             return this;
         }
 
+        /**
+         * @param instanceView The instance view of the container instance. Only valid in response.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceView(ContainerPropertiesResponseInstanceView instanceView) {
             $.instanceView = instanceView;
             return this;
         }
 
+        /**
+         * @param livenessProbe The liveness probe.
+         * 
+         * @return builder
+         * 
+         */
         public Builder livenessProbe(@Nullable ContainerProbeResponse livenessProbe) {
             $.livenessProbe = livenessProbe;
             return this;
         }
 
+        /**
+         * @param name The user-provided name of the container instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param ports The exposed ports on the container instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ports(@Nullable List<ContainerPortResponse> ports) {
             $.ports = ports;
             return this;
         }
 
+        /**
+         * @param ports The exposed ports on the container instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ports(ContainerPortResponse... ports) {
             return ports(List.of(ports));
         }
 
+        /**
+         * @param readinessProbe The readiness probe.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readinessProbe(@Nullable ContainerProbeResponse readinessProbe) {
             $.readinessProbe = readinessProbe;
             return this;
         }
 
+        /**
+         * @param resources The resource requirements of the container instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resources(ResourceRequirementsResponse resources) {
             $.resources = resources;
             return this;
         }
 
+        /**
+         * @param volumeMounts The volume mounts available to the container instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeMounts(@Nullable List<VolumeMountResponse> volumeMounts) {
             $.volumeMounts = volumeMounts;
             return this;
         }
 
+        /**
+         * @param volumeMounts The volume mounts available to the container instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeMounts(VolumeMountResponse... volumeMounts) {
             return volumeMounts(List.of(volumeMounts));
         }

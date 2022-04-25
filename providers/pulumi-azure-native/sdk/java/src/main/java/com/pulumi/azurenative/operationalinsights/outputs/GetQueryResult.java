@@ -17,67 +17,67 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetQueryResult {
     /**
-     * Object Id of user creating the query.
+     * @return Object Id of user creating the query.
      * 
      */
     private final String author;
     /**
-     * Body of the query.
+     * @return Body of the query.
      * 
      */
     private final String body;
     /**
-     * Description of the query.
+     * @return Description of the query.
      * 
      */
     private final @Nullable String description;
     /**
-     * Unique display name for your query within the Query Pack.
+     * @return Unique display name for your query within the Query Pack.
      * 
      */
     private final String displayName;
     /**
-     * Azure resource Id
+     * @return Azure resource Id
      * 
      */
     private final String id;
     /**
-     * Azure resource name
+     * @return Azure resource name
      * 
      */
     private final String name;
     /**
-     * Additional properties that can be set for the query.
+     * @return Additional properties that can be set for the query.
      * 
      */
     private final Object properties;
     /**
-     * The related metadata items for the function.
+     * @return The related metadata items for the function.
      * 
      */
     private final @Nullable LogAnalyticsQueryPackQueryPropertiesResponseRelated related;
     /**
-     * Read only system data
+     * @return Read only system data
      * 
      */
     private final SystemDataResponse systemData;
     /**
-     * Tags associated with the query.
+     * @return Tags associated with the query.
      * 
      */
     private final @Nullable Map<String,List<String>> tags;
     /**
-     * Creation Date for the Log Analytics Query, in ISO 8601 format.
+     * @return Creation Date for the Log Analytics Query, in ISO 8601 format.
      * 
      */
     private final String timeCreated;
     /**
-     * Last modified date of the Log Analytics Query, in ISO 8601 format.
+     * @return Last modified date of the Log Analytics Query, in ISO 8601 format.
      * 
      */
     private final String timeModified;
     /**
-     * Azure resource type
+     * @return Azure resource type
      * 
      */
     private final String type;
@@ -113,93 +113,93 @@ public final class GetQueryResult {
     }
 
     /**
-     * Object Id of user creating the query.
+     * @return Object Id of user creating the query.
      * 
-    */
+     */
     public String author() {
         return this.author;
     }
     /**
-     * Body of the query.
+     * @return Body of the query.
      * 
-    */
+     */
     public String body() {
         return this.body;
     }
     /**
-     * Description of the query.
+     * @return Description of the query.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Unique display name for your query within the Query Pack.
+     * @return Unique display name for your query within the Query Pack.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * Azure resource Id
+     * @return Azure resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Azure resource name
+     * @return Azure resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Additional properties that can be set for the query.
+     * @return Additional properties that can be set for the query.
      * 
-    */
+     */
     public Object properties() {
         return this.properties;
     }
     /**
-     * The related metadata items for the function.
+     * @return The related metadata items for the function.
      * 
-    */
+     */
     public Optional<LogAnalyticsQueryPackQueryPropertiesResponseRelated> related() {
         return Optional.ofNullable(this.related);
     }
     /**
-     * Read only system data
+     * @return Read only system data
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Tags associated with the query.
+     * @return Tags associated with the query.
      * 
-    */
+     */
     public Map<String,List<String>> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Creation Date for the Log Analytics Query, in ISO 8601 format.
+     * @return Creation Date for the Log Analytics Query, in ISO 8601 format.
      * 
-    */
+     */
     public String timeCreated() {
         return this.timeCreated;
     }
     /**
-     * Last modified date of the Log Analytics Query, in ISO 8601 format.
+     * @return Last modified date of the Log Analytics Query, in ISO 8601 format.
      * 
-    */
+     */
     public String timeModified() {
         return this.timeModified;
     }
     /**
-     * Azure resource type
+     * @return Azure resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

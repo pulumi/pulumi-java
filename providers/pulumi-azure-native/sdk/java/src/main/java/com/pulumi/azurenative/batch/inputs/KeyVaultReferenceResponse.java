@@ -23,6 +23,10 @@ public final class KeyVaultReferenceResponse extends com.pulumi.resources.Invoke
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return The resource ID of the Azure key vault associated with the Batch account.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -34,6 +38,10 @@ public final class KeyVaultReferenceResponse extends com.pulumi.resources.Invoke
     @Import(name="url", required=true)
     private String url;
 
+    /**
+     * @return The URL of the Azure key vault associated with the Batch account.
+     * 
+     */
     public String url() {
         return this.url;
     }
@@ -63,11 +71,23 @@ public final class KeyVaultReferenceResponse extends com.pulumi.resources.Invoke
             $ = new KeyVaultReferenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id The resource ID of the Azure key vault associated with the Batch account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param url The URL of the Azure key vault associated with the Batch account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(String url) {
             $.url = url;
             return this;

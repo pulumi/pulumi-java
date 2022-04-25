@@ -24,6 +24,10 @@ public final class ApplicationNotificationEndpointArgs extends com.pulumi.resour
     @Import(name="uri", required=true)
     private Output<String> uri;
 
+    /**
+     * @return The managed application notification endpoint uri.
+     * 
+     */
     public Output<String> uri() {
         return this.uri;
     }
@@ -52,11 +56,23 @@ public final class ApplicationNotificationEndpointArgs extends com.pulumi.resour
             $ = new ApplicationNotificationEndpointArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param uri The managed application notification endpoint uri.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(Output<String> uri) {
             $.uri = uri;
             return this;
         }
 
+        /**
+         * @param uri The managed application notification endpoint uri.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(String uri) {
             return uri(Output.of(uri));
         }

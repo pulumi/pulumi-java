@@ -22,6 +22,10 @@ public final class RetryPolicyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="retryCount")
     private @Nullable Integer retryCount;
 
+    /**
+     * @return Gets or sets the number of times a retry should be attempted.
+     * 
+     */
     public Optional<Integer> retryCount() {
         return Optional.ofNullable(this.retryCount);
     }
@@ -33,6 +37,10 @@ public final class RetryPolicyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="retryInterval")
     private @Nullable String retryInterval;
 
+    /**
+     * @return Gets or sets the retry interval between retries, specify duration in ISO 8601 format.
+     * 
+     */
     public Optional<String> retryInterval() {
         return Optional.ofNullable(this.retryInterval);
     }
@@ -44,6 +52,10 @@ public final class RetryPolicyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="retryType")
     private @Nullable String retryType;
 
+    /**
+     * @return Gets or sets the retry strategy to be used.
+     * 
+     */
     public Optional<String> retryType() {
         return Optional.ofNullable(this.retryType);
     }
@@ -74,16 +86,34 @@ public final class RetryPolicyResponse extends com.pulumi.resources.InvokeArgs {
             $ = new RetryPolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param retryCount Gets or sets the number of times a retry should be attempted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retryCount(@Nullable Integer retryCount) {
             $.retryCount = retryCount;
             return this;
         }
 
+        /**
+         * @param retryInterval Gets or sets the retry interval between retries, specify duration in ISO 8601 format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retryInterval(@Nullable String retryInterval) {
             $.retryInterval = retryInterval;
             return this;
         }
 
+        /**
+         * @param retryType Gets or sets the retry strategy to be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retryType(@Nullable String retryType) {
             $.retryType = retryType;
             return this;

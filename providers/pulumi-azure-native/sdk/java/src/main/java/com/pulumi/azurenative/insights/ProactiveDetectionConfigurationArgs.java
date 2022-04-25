@@ -25,6 +25,10 @@ public final class ProactiveDetectionConfigurationArgs extends com.pulumi.resour
     @Import(name="configurationId")
     private @Nullable Output<String> configurationId;
 
+    /**
+     * @return The ProactiveDetection configuration ID. This is unique within a Application Insights component.
+     * 
+     */
     public Optional<Output<String>> configurationId() {
         return Optional.ofNullable(this.configurationId);
     }
@@ -36,6 +40,10 @@ public final class ProactiveDetectionConfigurationArgs extends com.pulumi.resour
     @Import(name="customEmails")
     private @Nullable Output<List<String>> customEmails;
 
+    /**
+     * @return Custom email addresses for this rule notifications
+     * 
+     */
     public Optional<Output<List<String>>> customEmails() {
         return Optional.ofNullable(this.customEmails);
     }
@@ -47,6 +55,10 @@ public final class ProactiveDetectionConfigurationArgs extends com.pulumi.resour
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return A flag that indicates whether this rule is enabled by the user
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -58,6 +70,10 @@ public final class ProactiveDetectionConfigurationArgs extends com.pulumi.resour
     @Import(name="lastUpdatedTime")
     private @Nullable Output<String> lastUpdatedTime;
 
+    /**
+     * @return The last time this rule was updated
+     * 
+     */
     public Optional<Output<String>> lastUpdatedTime() {
         return Optional.ofNullable(this.lastUpdatedTime);
     }
@@ -69,6 +85,10 @@ public final class ProactiveDetectionConfigurationArgs extends com.pulumi.resour
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The rule name
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -80,6 +100,10 @@ public final class ProactiveDetectionConfigurationArgs extends com.pulumi.resour
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -91,6 +115,10 @@ public final class ProactiveDetectionConfigurationArgs extends com.pulumi.resour
     @Import(name="resourceName", required=true)
     private Output<String> resourceName;
 
+    /**
+     * @return The name of the Application Insights component resource.
+     * 
+     */
     public Output<String> resourceName() {
         return this.resourceName;
     }
@@ -102,6 +130,10 @@ public final class ProactiveDetectionConfigurationArgs extends com.pulumi.resour
     @Import(name="ruleDefinitions")
     private @Nullable Output<ApplicationInsightsComponentProactiveDetectionConfigurationRuleDefinitionsArgs> ruleDefinitions;
 
+    /**
+     * @return Static definitions of the ProactiveDetection configuration rule (same values for all components).
+     * 
+     */
     public Optional<Output<ApplicationInsightsComponentProactiveDetectionConfigurationRuleDefinitionsArgs>> ruleDefinitions() {
         return Optional.ofNullable(this.ruleDefinitions);
     }
@@ -113,6 +145,10 @@ public final class ProactiveDetectionConfigurationArgs extends com.pulumi.resour
     @Import(name="sendEmailsToSubscriptionOwners")
     private @Nullable Output<Boolean> sendEmailsToSubscriptionOwners;
 
+    /**
+     * @return A flag that indicated whether notifications on this rule should be sent to subscription owners
+     * 
+     */
     public Optional<Output<Boolean>> sendEmailsToSubscriptionOwners() {
         return Optional.ofNullable(this.sendEmailsToSubscriptionOwners);
     }
@@ -149,87 +185,201 @@ public final class ProactiveDetectionConfigurationArgs extends com.pulumi.resour
             $ = new ProactiveDetectionConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param configurationId The ProactiveDetection configuration ID. This is unique within a Application Insights component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationId(@Nullable Output<String> configurationId) {
             $.configurationId = configurationId;
             return this;
         }
 
+        /**
+         * @param configurationId The ProactiveDetection configuration ID. This is unique within a Application Insights component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationId(String configurationId) {
             return configurationId(Output.of(configurationId));
         }
 
+        /**
+         * @param customEmails Custom email addresses for this rule notifications
+         * 
+         * @return builder
+         * 
+         */
         public Builder customEmails(@Nullable Output<List<String>> customEmails) {
             $.customEmails = customEmails;
             return this;
         }
 
+        /**
+         * @param customEmails Custom email addresses for this rule notifications
+         * 
+         * @return builder
+         * 
+         */
         public Builder customEmails(List<String> customEmails) {
             return customEmails(Output.of(customEmails));
         }
 
+        /**
+         * @param customEmails Custom email addresses for this rule notifications
+         * 
+         * @return builder
+         * 
+         */
         public Builder customEmails(String... customEmails) {
             return customEmails(List.of(customEmails));
         }
 
+        /**
+         * @param enabled A flag that indicates whether this rule is enabled by the user
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled A flag that indicates whether this rule is enabled by the user
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param lastUpdatedTime The last time this rule was updated
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastUpdatedTime(@Nullable Output<String> lastUpdatedTime) {
             $.lastUpdatedTime = lastUpdatedTime;
             return this;
         }
 
+        /**
+         * @param lastUpdatedTime The last time this rule was updated
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastUpdatedTime(String lastUpdatedTime) {
             return lastUpdatedTime(Output.of(lastUpdatedTime));
         }
 
+        /**
+         * @param name The rule name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The rule name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param resourceName The name of the Application Insights component resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(Output<String> resourceName) {
             $.resourceName = resourceName;
             return this;
         }
 
+        /**
+         * @param resourceName The name of the Application Insights component resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(String resourceName) {
             return resourceName(Output.of(resourceName));
         }
 
+        /**
+         * @param ruleDefinitions Static definitions of the ProactiveDetection configuration rule (same values for all components).
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleDefinitions(@Nullable Output<ApplicationInsightsComponentProactiveDetectionConfigurationRuleDefinitionsArgs> ruleDefinitions) {
             $.ruleDefinitions = ruleDefinitions;
             return this;
         }
 
+        /**
+         * @param ruleDefinitions Static definitions of the ProactiveDetection configuration rule (same values for all components).
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleDefinitions(ApplicationInsightsComponentProactiveDetectionConfigurationRuleDefinitionsArgs ruleDefinitions) {
             return ruleDefinitions(Output.of(ruleDefinitions));
         }
 
+        /**
+         * @param sendEmailsToSubscriptionOwners A flag that indicated whether notifications on this rule should be sent to subscription owners
+         * 
+         * @return builder
+         * 
+         */
         public Builder sendEmailsToSubscriptionOwners(@Nullable Output<Boolean> sendEmailsToSubscriptionOwners) {
             $.sendEmailsToSubscriptionOwners = sendEmailsToSubscriptionOwners;
             return this;
         }
 
+        /**
+         * @param sendEmailsToSubscriptionOwners A flag that indicated whether notifications on this rule should be sent to subscription owners
+         * 
+         * @return builder
+         * 
+         */
         public Builder sendEmailsToSubscriptionOwners(Boolean sendEmailsToSubscriptionOwners) {
             return sendEmailsToSubscriptionOwners(Output.of(sendEmailsToSubscriptionOwners));
         }

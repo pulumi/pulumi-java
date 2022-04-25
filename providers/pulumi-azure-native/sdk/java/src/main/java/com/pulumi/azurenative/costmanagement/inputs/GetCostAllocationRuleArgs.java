@@ -19,6 +19,10 @@ public final class GetCostAllocationRuleArgs extends com.pulumi.resources.Invoke
     @Import(name="billingAccountId", required=true)
     private String billingAccountId;
 
+    /**
+     * @return BillingAccount ID
+     * 
+     */
     public String billingAccountId() {
         return this.billingAccountId;
     }
@@ -30,6 +34,10 @@ public final class GetCostAllocationRuleArgs extends com.pulumi.resources.Invoke
     @Import(name="ruleName", required=true)
     private String ruleName;
 
+    /**
+     * @return Cost allocation rule name. The name cannot include spaces or any non alphanumeric characters other than &#39;_&#39; and &#39;-&#39;. The max length is 260 characters.
+     * 
+     */
     public String ruleName() {
         return this.ruleName;
     }
@@ -59,11 +67,23 @@ public final class GetCostAllocationRuleArgs extends com.pulumi.resources.Invoke
             $ = new GetCostAllocationRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param billingAccountId BillingAccount ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder billingAccountId(String billingAccountId) {
             $.billingAccountId = billingAccountId;
             return this;
         }
 
+        /**
+         * @param ruleName Cost allocation rule name. The name cannot include spaces or any non alphanumeric characters other than &#39;_&#39; and &#39;-&#39;. The max length is 260 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleName(String ruleName) {
             $.ruleName = ruleName;
             return this;

@@ -12,17 +12,17 @@ import java.util.Objects;
 @CustomType
 public final class RosettaNetPipActivitySettingsResponse {
     /**
-     * The RosettaNet ProcessConfiguration acknowledgement settings.
+     * @return The RosettaNet ProcessConfiguration acknowledgement settings.
      * 
      */
     private final RosettaNetPipAcknowledgmentOfReceiptSettingsResponse acknowledgmentOfReceiptSettings;
     /**
-     * The RosettaNet ProcessConfiguration activity behavior.
+     * @return The RosettaNet ProcessConfiguration activity behavior.
      * 
      */
     private final RosettaNetPipActivityBehaviorResponse activityBehavior;
     /**
-     * The RosettaNet ProcessConfiguration activity type.
+     * @return The RosettaNet ProcessConfiguration activity type.
      * 
      */
     private final String activityType;
@@ -38,23 +38,23 @@ public final class RosettaNetPipActivitySettingsResponse {
     }
 
     /**
-     * The RosettaNet ProcessConfiguration acknowledgement settings.
+     * @return The RosettaNet ProcessConfiguration acknowledgement settings.
      * 
-    */
+     */
     public RosettaNetPipAcknowledgmentOfReceiptSettingsResponse acknowledgmentOfReceiptSettings() {
         return this.acknowledgmentOfReceiptSettings;
     }
     /**
-     * The RosettaNet ProcessConfiguration activity behavior.
+     * @return The RosettaNet ProcessConfiguration activity behavior.
      * 
-    */
+     */
     public RosettaNetPipActivityBehaviorResponse activityBehavior() {
         return this.activityBehavior;
     }
     /**
-     * The RosettaNet ProcessConfiguration activity type.
+     * @return The RosettaNet ProcessConfiguration activity type.
      * 
-    */
+     */
     public String activityType() {
         return this.activityType;
     }

@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class GetSitesResult {
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     /**
-     * Set of Outposts Site identifiers.
+     * @return Set of Outposts Site identifiers.
      * 
      */
     private final List<String> ids;
@@ -30,16 +30,16 @@ public final class GetSitesResult {
     }
 
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Set of Outposts Site identifiers.
+     * @return Set of Outposts Site identifiers.
      * 
-    */
+     */
     public List<String> ids() {
         return this.ids;
     }

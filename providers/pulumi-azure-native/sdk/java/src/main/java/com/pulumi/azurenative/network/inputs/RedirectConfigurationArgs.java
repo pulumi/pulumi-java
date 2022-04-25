@@ -30,6 +30,10 @@ public final class RedirectConfigurationArgs extends com.pulumi.resources.Resour
     @Import(name="customFragment")
     private @Nullable Output<String> customFragment;
 
+    /**
+     * @return Fragment to add to the redirect URL. Fragment is the part of the URL that comes after #. Do not include the #.
+     * 
+     */
     public Optional<Output<String>> customFragment() {
         return Optional.ofNullable(this.customFragment);
     }
@@ -41,6 +45,10 @@ public final class RedirectConfigurationArgs extends com.pulumi.resources.Resour
     @Import(name="customHost")
     private @Nullable Output<String> customHost;
 
+    /**
+     * @return Host to redirect. Leave empty to use the incoming host as the destination host.
+     * 
+     */
     public Optional<Output<String>> customHost() {
         return Optional.ofNullable(this.customHost);
     }
@@ -52,6 +60,10 @@ public final class RedirectConfigurationArgs extends com.pulumi.resources.Resour
     @Import(name="customPath")
     private @Nullable Output<String> customPath;
 
+    /**
+     * @return The full path to redirect. Path cannot be empty and must start with /. Leave empty to use the incoming path as destination path.
+     * 
+     */
     public Optional<Output<String>> customPath() {
         return Optional.ofNullable(this.customPath);
     }
@@ -63,6 +75,10 @@ public final class RedirectConfigurationArgs extends com.pulumi.resources.Resour
     @Import(name="customQueryString")
     private @Nullable Output<String> customQueryString;
 
+    /**
+     * @return The set of query strings to be placed in the redirect URL. Setting this value would replace any existing query string; leave empty to preserve the incoming query string. Query string must be in &lt;key&gt;=&lt;value&gt; format. The first ? and &amp; will be added automatically so do not include them in the front, but do separate multiple query strings with &amp;.
+     * 
+     */
     public Optional<Output<String>> customQueryString() {
         return Optional.ofNullable(this.customQueryString);
     }
@@ -74,6 +90,11 @@ public final class RedirectConfigurationArgs extends com.pulumi.resources.Resour
     @Import(name="odataType", required=true)
     private Output<String> odataType;
 
+    /**
+     * @return
+     * Expected value is &#39;#Microsoft.Azure.FrontDoor.Models.FrontdoorRedirectConfiguration&#39;.
+     * 
+     */
     public Output<String> odataType() {
         return this.odataType;
     }
@@ -85,6 +106,10 @@ public final class RedirectConfigurationArgs extends com.pulumi.resources.Resour
     @Import(name="redirectProtocol")
     private @Nullable Output<Either<String,FrontDoorRedirectProtocol>> redirectProtocol;
 
+    /**
+     * @return The protocol of the destination to where the traffic is redirected
+     * 
+     */
     public Optional<Output<Either<String,FrontDoorRedirectProtocol>>> redirectProtocol() {
         return Optional.ofNullable(this.redirectProtocol);
     }
@@ -96,6 +121,10 @@ public final class RedirectConfigurationArgs extends com.pulumi.resources.Resour
     @Import(name="redirectType")
     private @Nullable Output<Either<String,FrontDoorRedirectType>> redirectType;
 
+    /**
+     * @return The redirect type the rule will use when redirecting traffic.
+     * 
+     */
     public Optional<Output<Either<String,FrontDoorRedirectType>>> redirectType() {
         return Optional.ofNullable(this.redirectType);
     }
@@ -130,81 +159,191 @@ public final class RedirectConfigurationArgs extends com.pulumi.resources.Resour
             $ = new RedirectConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customFragment Fragment to add to the redirect URL. Fragment is the part of the URL that comes after #. Do not include the #.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customFragment(@Nullable Output<String> customFragment) {
             $.customFragment = customFragment;
             return this;
         }
 
+        /**
+         * @param customFragment Fragment to add to the redirect URL. Fragment is the part of the URL that comes after #. Do not include the #.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customFragment(String customFragment) {
             return customFragment(Output.of(customFragment));
         }
 
+        /**
+         * @param customHost Host to redirect. Leave empty to use the incoming host as the destination host.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customHost(@Nullable Output<String> customHost) {
             $.customHost = customHost;
             return this;
         }
 
+        /**
+         * @param customHost Host to redirect. Leave empty to use the incoming host as the destination host.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customHost(String customHost) {
             return customHost(Output.of(customHost));
         }
 
+        /**
+         * @param customPath The full path to redirect. Path cannot be empty and must start with /. Leave empty to use the incoming path as destination path.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customPath(@Nullable Output<String> customPath) {
             $.customPath = customPath;
             return this;
         }
 
+        /**
+         * @param customPath The full path to redirect. Path cannot be empty and must start with /. Leave empty to use the incoming path as destination path.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customPath(String customPath) {
             return customPath(Output.of(customPath));
         }
 
+        /**
+         * @param customQueryString The set of query strings to be placed in the redirect URL. Setting this value would replace any existing query string; leave empty to preserve the incoming query string. Query string must be in &lt;key&gt;=&lt;value&gt; format. The first ? and &amp; will be added automatically so do not include them in the front, but do separate multiple query strings with &amp;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customQueryString(@Nullable Output<String> customQueryString) {
             $.customQueryString = customQueryString;
             return this;
         }
 
+        /**
+         * @param customQueryString The set of query strings to be placed in the redirect URL. Setting this value would replace any existing query string; leave empty to preserve the incoming query string. Query string must be in &lt;key&gt;=&lt;value&gt; format. The first ? and &amp; will be added automatically so do not include them in the front, but do separate multiple query strings with &amp;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customQueryString(String customQueryString) {
             return customQueryString(Output.of(customQueryString));
         }
 
+        /**
+         * @param odataType
+         * Expected value is &#39;#Microsoft.Azure.FrontDoor.Models.FrontdoorRedirectConfiguration&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(Output<String> odataType) {
             $.odataType = odataType;
             return this;
         }
 
+        /**
+         * @param odataType
+         * Expected value is &#39;#Microsoft.Azure.FrontDoor.Models.FrontdoorRedirectConfiguration&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(String odataType) {
             return odataType(Output.of(odataType));
         }
 
+        /**
+         * @param redirectProtocol The protocol of the destination to where the traffic is redirected
+         * 
+         * @return builder
+         * 
+         */
         public Builder redirectProtocol(@Nullable Output<Either<String,FrontDoorRedirectProtocol>> redirectProtocol) {
             $.redirectProtocol = redirectProtocol;
             return this;
         }
 
+        /**
+         * @param redirectProtocol The protocol of the destination to where the traffic is redirected
+         * 
+         * @return builder
+         * 
+         */
         public Builder redirectProtocol(Either<String,FrontDoorRedirectProtocol> redirectProtocol) {
             return redirectProtocol(Output.of(redirectProtocol));
         }
 
+        /**
+         * @param redirectProtocol The protocol of the destination to where the traffic is redirected
+         * 
+         * @return builder
+         * 
+         */
         public Builder redirectProtocol(String redirectProtocol) {
             return redirectProtocol(Either.ofLeft(redirectProtocol));
         }
 
+        /**
+         * @param redirectProtocol The protocol of the destination to where the traffic is redirected
+         * 
+         * @return builder
+         * 
+         */
         public Builder redirectProtocol(FrontDoorRedirectProtocol redirectProtocol) {
             return redirectProtocol(Either.ofRight(redirectProtocol));
         }
 
+        /**
+         * @param redirectType The redirect type the rule will use when redirecting traffic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder redirectType(@Nullable Output<Either<String,FrontDoorRedirectType>> redirectType) {
             $.redirectType = redirectType;
             return this;
         }
 
+        /**
+         * @param redirectType The redirect type the rule will use when redirecting traffic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder redirectType(Either<String,FrontDoorRedirectType> redirectType) {
             return redirectType(Output.of(redirectType));
         }
 
+        /**
+         * @param redirectType The redirect type the rule will use when redirecting traffic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder redirectType(String redirectType) {
             return redirectType(Either.ofLeft(redirectType));
         }
 
+        /**
+         * @param redirectType The redirect type the rule will use when redirecting traffic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder redirectType(FrontDoorRedirectType redirectType) {
             return redirectType(Either.ofRight(redirectType));
         }

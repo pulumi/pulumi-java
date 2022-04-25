@@ -26,6 +26,10 @@ public final class SqlServerAuditConfigArgs extends com.pulumi.resources.Resourc
     @Import(name="bucket")
     private @Nullable Output<String> bucket;
 
+    /**
+     * @return The name of the destination bucket (e.g., gs://mybucket).
+     * 
+     */
     public Optional<Output<String>> bucket() {
         return Optional.ofNullable(this.bucket);
     }
@@ -37,6 +41,10 @@ public final class SqlServerAuditConfigArgs extends com.pulumi.resources.Resourc
     @Import(name="kind")
     private @Nullable Output<String> kind;
 
+    /**
+     * @return This is always sql#sqlServerAuditConfig
+     * 
+     */
     public Optional<Output<String>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -66,20 +74,44 @@ public final class SqlServerAuditConfigArgs extends com.pulumi.resources.Resourc
             $ = new SqlServerAuditConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bucket The name of the destination bucket (e.g., gs://mybucket).
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucket(@Nullable Output<String> bucket) {
             $.bucket = bucket;
             return this;
         }
 
+        /**
+         * @param bucket The name of the destination bucket (e.g., gs://mybucket).
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucket(String bucket) {
             return bucket(Output.of(bucket));
         }
 
+        /**
+         * @param kind This is always sql#sqlServerAuditConfig
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind This is always sql#sqlServerAuditConfig
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }

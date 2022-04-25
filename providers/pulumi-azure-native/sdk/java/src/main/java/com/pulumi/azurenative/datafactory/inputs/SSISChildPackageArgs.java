@@ -27,6 +27,10 @@ public final class SSISChildPackageArgs extends com.pulumi.resources.ResourceArg
     @Import(name="packageContent", required=true)
     private Output<Object> packageContent;
 
+    /**
+     * @return Content for embedded child package. Type: string (or Expression with resultType string).
+     * 
+     */
     public Output<Object> packageContent() {
         return this.packageContent;
     }
@@ -38,6 +42,10 @@ public final class SSISChildPackageArgs extends com.pulumi.resources.ResourceArg
     @Import(name="packageLastModifiedDate")
     private @Nullable Output<String> packageLastModifiedDate;
 
+    /**
+     * @return Last modified date for embedded child package.
+     * 
+     */
     public Optional<Output<String>> packageLastModifiedDate() {
         return Optional.ofNullable(this.packageLastModifiedDate);
     }
@@ -49,6 +57,10 @@ public final class SSISChildPackageArgs extends com.pulumi.resources.ResourceArg
     @Import(name="packageName")
     private @Nullable Output<String> packageName;
 
+    /**
+     * @return Name for embedded child package.
+     * 
+     */
     public Optional<Output<String>> packageName() {
         return Optional.ofNullable(this.packageName);
     }
@@ -60,6 +72,10 @@ public final class SSISChildPackageArgs extends com.pulumi.resources.ResourceArg
     @Import(name="packagePath", required=true)
     private Output<Object> packagePath;
 
+    /**
+     * @return Path for embedded child package. Type: string (or Expression with resultType string).
+     * 
+     */
     public Output<Object> packagePath() {
         return this.packagePath;
     }
@@ -91,38 +107,86 @@ public final class SSISChildPackageArgs extends com.pulumi.resources.ResourceArg
             $ = new SSISChildPackageArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param packageContent Content for embedded child package. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder packageContent(Output<Object> packageContent) {
             $.packageContent = packageContent;
             return this;
         }
 
+        /**
+         * @param packageContent Content for embedded child package. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder packageContent(Object packageContent) {
             return packageContent(Output.of(packageContent));
         }
 
+        /**
+         * @param packageLastModifiedDate Last modified date for embedded child package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packageLastModifiedDate(@Nullable Output<String> packageLastModifiedDate) {
             $.packageLastModifiedDate = packageLastModifiedDate;
             return this;
         }
 
+        /**
+         * @param packageLastModifiedDate Last modified date for embedded child package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packageLastModifiedDate(String packageLastModifiedDate) {
             return packageLastModifiedDate(Output.of(packageLastModifiedDate));
         }
 
+        /**
+         * @param packageName Name for embedded child package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packageName(@Nullable Output<String> packageName) {
             $.packageName = packageName;
             return this;
         }
 
+        /**
+         * @param packageName Name for embedded child package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packageName(String packageName) {
             return packageName(Output.of(packageName));
         }
 
+        /**
+         * @param packagePath Path for embedded child package. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder packagePath(Output<Object> packagePath) {
             $.packagePath = packagePath;
             return this;
         }
 
+        /**
+         * @param packagePath Path for embedded child package. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder packagePath(Object packagePath) {
             return packagePath(Output.of(packagePath));
         }

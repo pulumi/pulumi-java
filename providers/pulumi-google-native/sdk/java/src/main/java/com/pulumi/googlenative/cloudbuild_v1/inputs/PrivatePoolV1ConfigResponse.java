@@ -24,6 +24,10 @@ public final class PrivatePoolV1ConfigResponse extends com.pulumi.resources.Invo
     @Import(name="networkConfig", required=true)
     private NetworkConfigResponse networkConfig;
 
+    /**
+     * @return Network configuration for the pool.
+     * 
+     */
     public NetworkConfigResponse networkConfig() {
         return this.networkConfig;
     }
@@ -35,6 +39,10 @@ public final class PrivatePoolV1ConfigResponse extends com.pulumi.resources.Invo
     @Import(name="workerConfig", required=true)
     private WorkerConfigResponse workerConfig;
 
+    /**
+     * @return Machine configuration for the workers in the pool.
+     * 
+     */
     public WorkerConfigResponse workerConfig() {
         return this.workerConfig;
     }
@@ -64,11 +72,23 @@ public final class PrivatePoolV1ConfigResponse extends com.pulumi.resources.Invo
             $ = new PrivatePoolV1ConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param networkConfig Network configuration for the pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkConfig(NetworkConfigResponse networkConfig) {
             $.networkConfig = networkConfig;
             return this;
         }
 
+        /**
+         * @param workerConfig Machine configuration for the workers in the pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workerConfig(WorkerConfigResponse workerConfig) {
             $.workerConfig = workerConfig;
             return this;

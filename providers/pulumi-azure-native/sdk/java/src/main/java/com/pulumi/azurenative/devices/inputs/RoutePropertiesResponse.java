@@ -27,6 +27,10 @@ public final class RoutePropertiesResponse extends com.pulumi.resources.InvokeAr
     @Import(name="condition")
     private @Nullable String condition;
 
+    /**
+     * @return The condition that is evaluated to apply the routing rule. If no condition is provided, it evaluates to true by default. For grammar, see: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language
+     * 
+     */
     public Optional<String> condition() {
         return Optional.ofNullable(this.condition);
     }
@@ -38,6 +42,10 @@ public final class RoutePropertiesResponse extends com.pulumi.resources.InvokeAr
     @Import(name="endpointNames", required=true)
     private List<String> endpointNames;
 
+    /**
+     * @return The list of endpoints to which messages that satisfy the condition are routed. Currently only one endpoint is allowed.
+     * 
+     */
     public List<String> endpointNames() {
         return this.endpointNames;
     }
@@ -49,6 +57,10 @@ public final class RoutePropertiesResponse extends com.pulumi.resources.InvokeAr
     @Import(name="isEnabled", required=true)
     private Boolean isEnabled;
 
+    /**
+     * @return Used to specify whether a route is enabled.
+     * 
+     */
     public Boolean isEnabled() {
         return this.isEnabled;
     }
@@ -60,6 +72,10 @@ public final class RoutePropertiesResponse extends com.pulumi.resources.InvokeAr
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the route. The name can only include alphanumeric characters, periods, underscores, hyphens, has a maximum length of 64 characters, and must be unique.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -71,6 +87,10 @@ public final class RoutePropertiesResponse extends com.pulumi.resources.InvokeAr
     @Import(name="source", required=true)
     private String source;
 
+    /**
+     * @return The source that the routing rule is to be applied to, such as DeviceMessages.
+     * 
+     */
     public String source() {
         return this.source;
     }
@@ -103,30 +123,66 @@ public final class RoutePropertiesResponse extends com.pulumi.resources.InvokeAr
             $ = new RoutePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param condition The condition that is evaluated to apply the routing rule. If no condition is provided, it evaluates to true by default. For grammar, see: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language
+         * 
+         * @return builder
+         * 
+         */
         public Builder condition(@Nullable String condition) {
             $.condition = condition;
             return this;
         }
 
+        /**
+         * @param endpointNames The list of endpoints to which messages that satisfy the condition are routed. Currently only one endpoint is allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointNames(List<String> endpointNames) {
             $.endpointNames = endpointNames;
             return this;
         }
 
+        /**
+         * @param endpointNames The list of endpoints to which messages that satisfy the condition are routed. Currently only one endpoint is allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointNames(String... endpointNames) {
             return endpointNames(List.of(endpointNames));
         }
 
+        /**
+         * @param isEnabled Used to specify whether a route is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEnabled(Boolean isEnabled) {
             $.isEnabled = isEnabled;
             return this;
         }
 
+        /**
+         * @param name The name of the route. The name can only include alphanumeric characters, periods, underscores, hyphens, has a maximum length of 64 characters, and must be unique.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param source The source that the routing rule is to be applied to, such as DeviceMessages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(String source) {
             $.source = source;
             return this;

@@ -39,6 +39,10 @@ public final class NodeConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="accelerators", required=true)
     private List<AcceleratorConfigResponse> accelerators;
 
+    /**
+     * @return A list of hardware accelerators to be attached to each node. See https://cloud.google.com/compute/docs/gpus for more information about support for GPUs.
+     * 
+     */
     public List<AcceleratorConfigResponse> accelerators() {
         return this.accelerators;
     }
@@ -50,6 +54,10 @@ public final class NodeConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="advancedMachineFeatures", required=true)
     private AdvancedMachineFeaturesResponse advancedMachineFeatures;
 
+    /**
+     * @return Advanced features for the Compute Engine VM.
+     * 
+     */
     public AdvancedMachineFeaturesResponse advancedMachineFeatures() {
         return this.advancedMachineFeatures;
     }
@@ -61,6 +69,10 @@ public final class NodeConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="bootDiskKmsKey", required=true)
     private String bootDiskKmsKey;
 
+    /**
+     * @return  The Customer Managed Encryption Key used to encrypt the boot disk attached to each node in the node pool. This should be of the form projects/[KEY_PROJECT_ID]/locations/[LOCATION]/keyRings/[RING_NAME]/cryptoKeys/[KEY_NAME]. For more information about protecting resources with Cloud KMS Keys please see: https://cloud.google.com/compute/docs/disks/customer-managed-encryption
+     * 
+     */
     public String bootDiskKmsKey() {
         return this.bootDiskKmsKey;
     }
@@ -72,6 +84,10 @@ public final class NodeConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="diskSizeGb", required=true)
     private Integer diskSizeGb;
 
+    /**
+     * @return Size of the disk attached to each node, specified in GB. The smallest allowed disk size is 10GB. If unspecified, the default disk size is 100GB.
+     * 
+     */
     public Integer diskSizeGb() {
         return this.diskSizeGb;
     }
@@ -83,6 +99,10 @@ public final class NodeConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="diskType", required=true)
     private String diskType;
 
+    /**
+     * @return Type of the disk attached to each node (e.g. &#39;pd-standard&#39;, &#39;pd-ssd&#39; or &#39;pd-balanced&#39;) If unspecified, the default disk type is &#39;pd-standard&#39;
+     * 
+     */
     public String diskType() {
         return this.diskType;
     }
@@ -94,6 +114,10 @@ public final class NodeConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="ephemeralStorageConfig", required=true)
     private EphemeralStorageConfigResponse ephemeralStorageConfig;
 
+    /**
+     * @return Parameters for the ephemeral storage filesystem. If unspecified, ephemeral storage is backed by the boot disk.
+     * 
+     */
     public EphemeralStorageConfigResponse ephemeralStorageConfig() {
         return this.ephemeralStorageConfig;
     }
@@ -105,6 +129,10 @@ public final class NodeConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="gcfsConfig", required=true)
     private GcfsConfigResponse gcfsConfig;
 
+    /**
+     * @return GCFS (Google Container File System) configs.
+     * 
+     */
     public GcfsConfigResponse gcfsConfig() {
         return this.gcfsConfig;
     }
@@ -116,6 +144,10 @@ public final class NodeConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="gvnic", required=true)
     private VirtualNICResponse gvnic;
 
+    /**
+     * @return Enable or disable gvnic on the node pool.
+     * 
+     */
     public VirtualNICResponse gvnic() {
         return this.gvnic;
     }
@@ -127,6 +159,10 @@ public final class NodeConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="imageType", required=true)
     private String imageType;
 
+    /**
+     * @return The image type to use for this node. Note that for a given image type, the latest version of it will be used.
+     * 
+     */
     public String imageType() {
         return this.imageType;
     }
@@ -138,6 +174,10 @@ public final class NodeConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="kubeletConfig", required=true)
     private NodeKubeletConfigResponse kubeletConfig;
 
+    /**
+     * @return Node kubelet configs.
+     * 
+     */
     public NodeKubeletConfigResponse kubeletConfig() {
         return this.kubeletConfig;
     }
@@ -149,6 +189,10 @@ public final class NodeConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="labels", required=true)
     private Map<String,String> labels;
 
+    /**
+     * @return The map of Kubernetes labels (key/value pairs) to be applied to each node. These will added in addition to any default label(s) that Kubernetes may apply to the node. In case of conflict in label keys, the applied set may differ depending on the Kubernetes version -- it&#39;s best to assume the behavior is undefined and conflicts should be avoided. For more information, including usage and the valid values, see: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/
+     * 
+     */
     public Map<String,String> labels() {
         return this.labels;
     }
@@ -160,6 +204,10 @@ public final class NodeConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="linuxNodeConfig", required=true)
     private LinuxNodeConfigResponse linuxNodeConfig;
 
+    /**
+     * @return Parameters that can be configured on Linux nodes.
+     * 
+     */
     public LinuxNodeConfigResponse linuxNodeConfig() {
         return this.linuxNodeConfig;
     }
@@ -171,6 +219,10 @@ public final class NodeConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="localSsdCount", required=true)
     private Integer localSsdCount;
 
+    /**
+     * @return The number of local SSD disks to be attached to the node. The limit for this value is dependent upon the maximum number of disks available on a machine per zone. See: https://cloud.google.com/compute/docs/disks/local-ssd for more information.
+     * 
+     */
     public Integer localSsdCount() {
         return this.localSsdCount;
     }
@@ -182,6 +234,10 @@ public final class NodeConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="machineType", required=true)
     private String machineType;
 
+    /**
+     * @return The name of a Google Compute Engine [machine type](https://cloud.google.com/compute/docs/machine-types). If unspecified, the default machine type is `e2-medium`.
+     * 
+     */
     public String machineType() {
         return this.machineType;
     }
@@ -193,6 +249,10 @@ public final class NodeConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="metadata", required=true)
     private Map<String,String> metadata;
 
+    /**
+     * @return The metadata key/value pairs assigned to instances in the cluster. Keys must conform to the regexp `[a-zA-Z0-9-_]+` and be less than 128 bytes in length. These are reflected as part of a URL in the metadata server. Additionally, to avoid ambiguity, keys must not conflict with any other metadata keys for the project or be one of the reserved keys: - &#34;cluster-location&#34; - &#34;cluster-name&#34; - &#34;cluster-uid&#34; - &#34;configure-sh&#34; - &#34;containerd-configure-sh&#34; - &#34;enable-oslogin&#34; - &#34;gci-ensure-gke-docker&#34; - &#34;gci-metrics-enabled&#34; - &#34;gci-update-strategy&#34; - &#34;instance-template&#34; - &#34;kube-env&#34; - &#34;startup-script&#34; - &#34;user-data&#34; - &#34;disable-address-manager&#34; - &#34;windows-startup-script-ps1&#34; - &#34;common-psm1&#34; - &#34;k8s-node-setup-psm1&#34; - &#34;install-ssh-psm1&#34; - &#34;user-profile-psm1&#34; Values are free-form strings, and only have meaning as interpreted by the image running in the instance. The only restriction placed on them is that each value&#39;s size must be less than or equal to 32 KB. The total size of all keys and values must be less than 512 KB.
+     * 
+     */
     public Map<String,String> metadata() {
         return this.metadata;
     }
@@ -204,6 +264,10 @@ public final class NodeConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="minCpuPlatform", required=true)
     private String minCpuPlatform;
 
+    /**
+     * @return Minimum CPU platform to be used by this instance. The instance may be scheduled on the specified or newer CPU platform. Applicable values are the friendly names of CPU platforms, such as `minCpuPlatform: &#34;Intel Haswell&#34;` or `minCpuPlatform: &#34;Intel Sandy Bridge&#34;`. For more information, read [how to specify min CPU platform](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform)
+     * 
+     */
     public String minCpuPlatform() {
         return this.minCpuPlatform;
     }
@@ -215,6 +279,10 @@ public final class NodeConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="nodeGroup", required=true)
     private String nodeGroup;
 
+    /**
+     * @return Setting this field will assign instances of this pool to run on the specified node group. This is useful for running workloads on [sole tenant nodes](https://cloud.google.com/compute/docs/nodes/sole-tenant-nodes).
+     * 
+     */
     public String nodeGroup() {
         return this.nodeGroup;
     }
@@ -226,6 +294,10 @@ public final class NodeConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="oauthScopes", required=true)
     private List<String> oauthScopes;
 
+    /**
+     * @return The set of Google API scopes to be made available on all of the node VMs under the &#34;default&#34; service account. The following scopes are recommended, but not required, and by default are not included: * `https://www.googleapis.com/auth/compute` is required for mounting persistent storage on your nodes. * `https://www.googleapis.com/auth/devstorage.read_only` is required for communicating with **gcr.io** (the [Google Container Registry](https://cloud.google.com/container-registry/)). If unspecified, no scopes are added, unless Cloud Logging or Cloud Monitoring are enabled, in which case their required scopes will be added.
+     * 
+     */
     public List<String> oauthScopes() {
         return this.oauthScopes;
     }
@@ -237,6 +309,10 @@ public final class NodeConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="preemptible", required=true)
     private Boolean preemptible;
 
+    /**
+     * @return Whether the nodes are created as preemptible VM instances. See: https://cloud.google.com/compute/docs/instances/preemptible for more inforamtion about preemptible VM instances.
+     * 
+     */
     public Boolean preemptible() {
         return this.preemptible;
     }
@@ -248,6 +324,10 @@ public final class NodeConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="reservationAffinity", required=true)
     private ReservationAffinityResponse reservationAffinity;
 
+    /**
+     * @return The optional reservation affinity. Setting this field will apply the specified [Zonal Compute Reservation](https://cloud.google.com/compute/docs/instances/reserving-zonal-resources) to this node pool.
+     * 
+     */
     public ReservationAffinityResponse reservationAffinity() {
         return this.reservationAffinity;
     }
@@ -259,6 +339,10 @@ public final class NodeConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="sandboxConfig", required=true)
     private SandboxConfigResponse sandboxConfig;
 
+    /**
+     * @return Sandbox configuration for this node.
+     * 
+     */
     public SandboxConfigResponse sandboxConfig() {
         return this.sandboxConfig;
     }
@@ -270,6 +354,10 @@ public final class NodeConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="serviceAccount", required=true)
     private String serviceAccount;
 
+    /**
+     * @return The Google Cloud Platform Service Account to be used by the node VMs. Specify the email address of the Service Account; otherwise, if no Service Account is specified, the &#34;default&#34; service account is used.
+     * 
+     */
     public String serviceAccount() {
         return this.serviceAccount;
     }
@@ -281,6 +369,10 @@ public final class NodeConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="shieldedInstanceConfig", required=true)
     private ShieldedInstanceConfigResponse shieldedInstanceConfig;
 
+    /**
+     * @return Shielded Instance options.
+     * 
+     */
     public ShieldedInstanceConfigResponse shieldedInstanceConfig() {
         return this.shieldedInstanceConfig;
     }
@@ -292,6 +384,10 @@ public final class NodeConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="spot", required=true)
     private Boolean spot;
 
+    /**
+     * @return Spot flag for enabling Spot VM, which is a rebrand of the existing preemptible flag.
+     * 
+     */
     public Boolean spot() {
         return this.spot;
     }
@@ -303,6 +399,10 @@ public final class NodeConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="tags", required=true)
     private List<String> tags;
 
+    /**
+     * @return The list of instance tags applied to all nodes. Tags are used to identify valid sources or targets for network firewalls and are specified by the client during cluster or node pool creation. Each tag within the list must comply with RFC1035.
+     * 
+     */
     public List<String> tags() {
         return this.tags;
     }
@@ -314,6 +414,10 @@ public final class NodeConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="taints", required=true)
     private List<NodeTaintResponse> taints;
 
+    /**
+     * @return List of kubernetes taints to be applied to each node. For more information, including usage and the valid values, see: https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
+     * 
+     */
     public List<NodeTaintResponse> taints() {
         return this.taints;
     }
@@ -325,6 +429,10 @@ public final class NodeConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="workloadMetadataConfig", required=true)
     private WorkloadMetadataConfigResponse workloadMetadataConfig;
 
+    /**
+     * @return The workload metadata configuration for this node.
+     * 
+     */
     public WorkloadMetadataConfigResponse workloadMetadataConfig() {
         return this.workloadMetadataConfig;
     }
@@ -379,152 +487,338 @@ public final class NodeConfigResponse extends com.pulumi.resources.InvokeArgs {
             $ = new NodeConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accelerators A list of hardware accelerators to be attached to each node. See https://cloud.google.com/compute/docs/gpus for more information about support for GPUs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accelerators(List<AcceleratorConfigResponse> accelerators) {
             $.accelerators = accelerators;
             return this;
         }
 
+        /**
+         * @param accelerators A list of hardware accelerators to be attached to each node. See https://cloud.google.com/compute/docs/gpus for more information about support for GPUs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accelerators(AcceleratorConfigResponse... accelerators) {
             return accelerators(List.of(accelerators));
         }
 
+        /**
+         * @param advancedMachineFeatures Advanced features for the Compute Engine VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder advancedMachineFeatures(AdvancedMachineFeaturesResponse advancedMachineFeatures) {
             $.advancedMachineFeatures = advancedMachineFeatures;
             return this;
         }
 
+        /**
+         * @param bootDiskKmsKey  The Customer Managed Encryption Key used to encrypt the boot disk attached to each node in the node pool. This should be of the form projects/[KEY_PROJECT_ID]/locations/[LOCATION]/keyRings/[RING_NAME]/cryptoKeys/[KEY_NAME]. For more information about protecting resources with Cloud KMS Keys please see: https://cloud.google.com/compute/docs/disks/customer-managed-encryption
+         * 
+         * @return builder
+         * 
+         */
         public Builder bootDiskKmsKey(String bootDiskKmsKey) {
             $.bootDiskKmsKey = bootDiskKmsKey;
             return this;
         }
 
+        /**
+         * @param diskSizeGb Size of the disk attached to each node, specified in GB. The smallest allowed disk size is 10GB. If unspecified, the default disk size is 100GB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskSizeGb(Integer diskSizeGb) {
             $.diskSizeGb = diskSizeGb;
             return this;
         }
 
+        /**
+         * @param diskType Type of the disk attached to each node (e.g. &#39;pd-standard&#39;, &#39;pd-ssd&#39; or &#39;pd-balanced&#39;) If unspecified, the default disk type is &#39;pd-standard&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskType(String diskType) {
             $.diskType = diskType;
             return this;
         }
 
+        /**
+         * @param ephemeralStorageConfig Parameters for the ephemeral storage filesystem. If unspecified, ephemeral storage is backed by the boot disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ephemeralStorageConfig(EphemeralStorageConfigResponse ephemeralStorageConfig) {
             $.ephemeralStorageConfig = ephemeralStorageConfig;
             return this;
         }
 
+        /**
+         * @param gcfsConfig GCFS (Google Container File System) configs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gcfsConfig(GcfsConfigResponse gcfsConfig) {
             $.gcfsConfig = gcfsConfig;
             return this;
         }
 
+        /**
+         * @param gvnic Enable or disable gvnic on the node pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gvnic(VirtualNICResponse gvnic) {
             $.gvnic = gvnic;
             return this;
         }
 
+        /**
+         * @param imageType The image type to use for this node. Note that for a given image type, the latest version of it will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageType(String imageType) {
             $.imageType = imageType;
             return this;
         }
 
+        /**
+         * @param kubeletConfig Node kubelet configs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kubeletConfig(NodeKubeletConfigResponse kubeletConfig) {
             $.kubeletConfig = kubeletConfig;
             return this;
         }
 
+        /**
+         * @param labels The map of Kubernetes labels (key/value pairs) to be applied to each node. These will added in addition to any default label(s) that Kubernetes may apply to the node. In case of conflict in label keys, the applied set may differ depending on the Kubernetes version -- it&#39;s best to assume the behavior is undefined and conflicts should be avoided. For more information, including usage and the valid values, see: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param linuxNodeConfig Parameters that can be configured on Linux nodes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linuxNodeConfig(LinuxNodeConfigResponse linuxNodeConfig) {
             $.linuxNodeConfig = linuxNodeConfig;
             return this;
         }
 
+        /**
+         * @param localSsdCount The number of local SSD disks to be attached to the node. The limit for this value is dependent upon the maximum number of disks available on a machine per zone. See: https://cloud.google.com/compute/docs/disks/local-ssd for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localSsdCount(Integer localSsdCount) {
             $.localSsdCount = localSsdCount;
             return this;
         }
 
+        /**
+         * @param machineType The name of a Google Compute Engine [machine type](https://cloud.google.com/compute/docs/machine-types). If unspecified, the default machine type is `e2-medium`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder machineType(String machineType) {
             $.machineType = machineType;
             return this;
         }
 
+        /**
+         * @param metadata The metadata key/value pairs assigned to instances in the cluster. Keys must conform to the regexp `[a-zA-Z0-9-_]+` and be less than 128 bytes in length. These are reflected as part of a URL in the metadata server. Additionally, to avoid ambiguity, keys must not conflict with any other metadata keys for the project or be one of the reserved keys: - &#34;cluster-location&#34; - &#34;cluster-name&#34; - &#34;cluster-uid&#34; - &#34;configure-sh&#34; - &#34;containerd-configure-sh&#34; - &#34;enable-oslogin&#34; - &#34;gci-ensure-gke-docker&#34; - &#34;gci-metrics-enabled&#34; - &#34;gci-update-strategy&#34; - &#34;instance-template&#34; - &#34;kube-env&#34; - &#34;startup-script&#34; - &#34;user-data&#34; - &#34;disable-address-manager&#34; - &#34;windows-startup-script-ps1&#34; - &#34;common-psm1&#34; - &#34;k8s-node-setup-psm1&#34; - &#34;install-ssh-psm1&#34; - &#34;user-profile-psm1&#34; Values are free-form strings, and only have meaning as interpreted by the image running in the instance. The only restriction placed on them is that each value&#39;s size must be less than or equal to 32 KB. The total size of all keys and values must be less than 512 KB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(Map<String,String> metadata) {
             $.metadata = metadata;
             return this;
         }
 
+        /**
+         * @param minCpuPlatform Minimum CPU platform to be used by this instance. The instance may be scheduled on the specified or newer CPU platform. Applicable values are the friendly names of CPU platforms, such as `minCpuPlatform: &#34;Intel Haswell&#34;` or `minCpuPlatform: &#34;Intel Sandy Bridge&#34;`. For more information, read [how to specify min CPU platform](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform)
+         * 
+         * @return builder
+         * 
+         */
         public Builder minCpuPlatform(String minCpuPlatform) {
             $.minCpuPlatform = minCpuPlatform;
             return this;
         }
 
+        /**
+         * @param nodeGroup Setting this field will assign instances of this pool to run on the specified node group. This is useful for running workloads on [sole tenant nodes](https://cloud.google.com/compute/docs/nodes/sole-tenant-nodes).
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeGroup(String nodeGroup) {
             $.nodeGroup = nodeGroup;
             return this;
         }
 
+        /**
+         * @param oauthScopes The set of Google API scopes to be made available on all of the node VMs under the &#34;default&#34; service account. The following scopes are recommended, but not required, and by default are not included: * `https://www.googleapis.com/auth/compute` is required for mounting persistent storage on your nodes. * `https://www.googleapis.com/auth/devstorage.read_only` is required for communicating with **gcr.io** (the [Google Container Registry](https://cloud.google.com/container-registry/)). If unspecified, no scopes are added, unless Cloud Logging or Cloud Monitoring are enabled, in which case their required scopes will be added.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oauthScopes(List<String> oauthScopes) {
             $.oauthScopes = oauthScopes;
             return this;
         }
 
+        /**
+         * @param oauthScopes The set of Google API scopes to be made available on all of the node VMs under the &#34;default&#34; service account. The following scopes are recommended, but not required, and by default are not included: * `https://www.googleapis.com/auth/compute` is required for mounting persistent storage on your nodes. * `https://www.googleapis.com/auth/devstorage.read_only` is required for communicating with **gcr.io** (the [Google Container Registry](https://cloud.google.com/container-registry/)). If unspecified, no scopes are added, unless Cloud Logging or Cloud Monitoring are enabled, in which case their required scopes will be added.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oauthScopes(String... oauthScopes) {
             return oauthScopes(List.of(oauthScopes));
         }
 
+        /**
+         * @param preemptible Whether the nodes are created as preemptible VM instances. See: https://cloud.google.com/compute/docs/instances/preemptible for more inforamtion about preemptible VM instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preemptible(Boolean preemptible) {
             $.preemptible = preemptible;
             return this;
         }
 
+        /**
+         * @param reservationAffinity The optional reservation affinity. Setting this field will apply the specified [Zonal Compute Reservation](https://cloud.google.com/compute/docs/instances/reserving-zonal-resources) to this node pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reservationAffinity(ReservationAffinityResponse reservationAffinity) {
             $.reservationAffinity = reservationAffinity;
             return this;
         }
 
+        /**
+         * @param sandboxConfig Sandbox configuration for this node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sandboxConfig(SandboxConfigResponse sandboxConfig) {
             $.sandboxConfig = sandboxConfig;
             return this;
         }
 
+        /**
+         * @param serviceAccount The Google Cloud Platform Service Account to be used by the node VMs. Specify the email address of the Service Account; otherwise, if no Service Account is specified, the &#34;default&#34; service account is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccount(String serviceAccount) {
             $.serviceAccount = serviceAccount;
             return this;
         }
 
+        /**
+         * @param shieldedInstanceConfig Shielded Instance options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shieldedInstanceConfig(ShieldedInstanceConfigResponse shieldedInstanceConfig) {
             $.shieldedInstanceConfig = shieldedInstanceConfig;
             return this;
         }
 
+        /**
+         * @param spot Spot flag for enabling Spot VM, which is a rebrand of the existing preemptible flag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder spot(Boolean spot) {
             $.spot = spot;
             return this;
         }
 
+        /**
+         * @param tags The list of instance tags applied to all nodes. Tags are used to identify valid sources or targets for network firewalls and are specified by the client during cluster or node pool creation. Each tag within the list must comply with RFC1035.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<String> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The list of instance tags applied to all nodes. Tags are used to identify valid sources or targets for network firewalls and are specified by the client during cluster or node pool creation. Each tag within the list must comply with RFC1035.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(String... tags) {
             return tags(List.of(tags));
         }
 
+        /**
+         * @param taints List of kubernetes taints to be applied to each node. For more information, including usage and the valid values, see: https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
+         * 
+         * @return builder
+         * 
+         */
         public Builder taints(List<NodeTaintResponse> taints) {
             $.taints = taints;
             return this;
         }
 
+        /**
+         * @param taints List of kubernetes taints to be applied to each node. For more information, including usage and the valid values, see: https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
+         * 
+         * @return builder
+         * 
+         */
         public Builder taints(NodeTaintResponse... taints) {
             return taints(List.of(taints));
         }
 
+        /**
+         * @param workloadMetadataConfig The workload metadata configuration for this node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workloadMetadataConfig(WorkloadMetadataConfigResponse workloadMetadataConfig) {
             $.workloadMetadataConfig = workloadMetadataConfig;
             return this;

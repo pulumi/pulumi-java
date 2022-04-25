@@ -21,6 +21,10 @@ public final class GetFormulaArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="expand")
     private @Nullable String expand;
 
+    /**
+     * @return Specify the $expand query. Example: &#39;properties($select=description)&#39;
+     * 
+     */
     public Optional<String> expand() {
         return Optional.ofNullable(this.expand);
     }
@@ -32,6 +36,10 @@ public final class GetFormulaArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="labName", required=true)
     private String labName;
 
+    /**
+     * @return The name of the lab.
+     * 
+     */
     public String labName() {
         return this.labName;
     }
@@ -43,6 +51,10 @@ public final class GetFormulaArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the formula.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -54,6 +66,10 @@ public final class GetFormulaArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -85,21 +101,45 @@ public final class GetFormulaArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetFormulaArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expand Specify the $expand query. Example: &#39;properties($select=description)&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder expand(@Nullable String expand) {
             $.expand = expand;
             return this;
         }
 
+        /**
+         * @param labName The name of the lab.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labName(String labName) {
             $.labName = labName;
             return this;
         }
 
+        /**
+         * @param name The name of the formula.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

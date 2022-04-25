@@ -23,6 +23,10 @@ public final class ReplicationStorageClassificationMappingArgs extends com.pulum
     @Import(name="fabricName", required=true)
     private Output<String> fabricName;
 
+    /**
+     * @return Fabric name.
+     * 
+     */
     public Output<String> fabricName() {
         return this.fabricName;
     }
@@ -34,6 +38,10 @@ public final class ReplicationStorageClassificationMappingArgs extends com.pulum
     @Import(name="properties")
     private @Nullable Output<StorageMappingInputPropertiesArgs> properties;
 
+    /**
+     * @return Storage mapping input properties.
+     * 
+     */
     public Optional<Output<StorageMappingInputPropertiesArgs>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -45,6 +53,10 @@ public final class ReplicationStorageClassificationMappingArgs extends com.pulum
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group where the recovery services vault is present.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -56,6 +68,10 @@ public final class ReplicationStorageClassificationMappingArgs extends com.pulum
     @Import(name="resourceName", required=true)
     private Output<String> resourceName;
 
+    /**
+     * @return The name of the recovery services vault.
+     * 
+     */
     public Output<String> resourceName() {
         return this.resourceName;
     }
@@ -67,6 +83,10 @@ public final class ReplicationStorageClassificationMappingArgs extends com.pulum
     @Import(name="storageClassificationMappingName")
     private @Nullable Output<String> storageClassificationMappingName;
 
+    /**
+     * @return Storage classification mapping name.
+     * 
+     */
     public Optional<Output<String>> storageClassificationMappingName() {
         return Optional.ofNullable(this.storageClassificationMappingName);
     }
@@ -78,6 +98,10 @@ public final class ReplicationStorageClassificationMappingArgs extends com.pulum
     @Import(name="storageClassificationName", required=true)
     private Output<String> storageClassificationName;
 
+    /**
+     * @return Storage classification name.
+     * 
+     */
     public Output<String> storageClassificationName() {
         return this.storageClassificationName;
     }
@@ -111,56 +135,128 @@ public final class ReplicationStorageClassificationMappingArgs extends com.pulum
             $ = new ReplicationStorageClassificationMappingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fabricName Fabric name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fabricName(Output<String> fabricName) {
             $.fabricName = fabricName;
             return this;
         }
 
+        /**
+         * @param fabricName Fabric name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fabricName(String fabricName) {
             return fabricName(Output.of(fabricName));
         }
 
+        /**
+         * @param properties Storage mapping input properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<StorageMappingInputPropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Storage mapping input properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(StorageMappingInputPropertiesArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group where the recovery services vault is present.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group where the recovery services vault is present.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param resourceName The name of the recovery services vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(Output<String> resourceName) {
             $.resourceName = resourceName;
             return this;
         }
 
+        /**
+         * @param resourceName The name of the recovery services vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(String resourceName) {
             return resourceName(Output.of(resourceName));
         }
 
+        /**
+         * @param storageClassificationMappingName Storage classification mapping name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageClassificationMappingName(@Nullable Output<String> storageClassificationMappingName) {
             $.storageClassificationMappingName = storageClassificationMappingName;
             return this;
         }
 
+        /**
+         * @param storageClassificationMappingName Storage classification mapping name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageClassificationMappingName(String storageClassificationMappingName) {
             return storageClassificationMappingName(Output.of(storageClassificationMappingName));
         }
 
+        /**
+         * @param storageClassificationName Storage classification name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageClassificationName(Output<String> storageClassificationName) {
             $.storageClassificationName = storageClassificationName;
             return this;
         }
 
+        /**
+         * @param storageClassificationName Storage classification name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageClassificationName(String storageClassificationName) {
             return storageClassificationName(Output.of(storageClassificationName));
         }

@@ -19,6 +19,10 @@ public final class GetLinkedStorageAccountArgs extends com.pulumi.resources.Invo
     @Import(name="dataSourceType", required=true)
     private String dataSourceType;
 
+    /**
+     * @return Linked storage accounts type.
+     * 
+     */
     public String dataSourceType() {
         return this.dataSourceType;
     }
@@ -30,6 +34,10 @@ public final class GetLinkedStorageAccountArgs extends com.pulumi.resources.Invo
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetLinkedStorageAccountArgs extends com.pulumi.resources.Invo
     @Import(name="workspaceName", required=true)
     private String workspaceName;
 
+    /**
+     * @return The name of the workspace.
+     * 
+     */
     public String workspaceName() {
         return this.workspaceName;
     }
@@ -71,16 +83,34 @@ public final class GetLinkedStorageAccountArgs extends com.pulumi.resources.Invo
             $ = new GetLinkedStorageAccountArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataSourceType Linked storage accounts type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSourceType(String dataSourceType) {
             $.dataSourceType = dataSourceType;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param workspaceName The name of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             $.workspaceName = workspaceName;
             return this;

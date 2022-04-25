@@ -13,57 +13,57 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetEncryptionProtectorResult {
     /**
-     * Key auto rotation opt-in flag. Either true or false.
+     * @return Key auto rotation opt-in flag. Either true or false.
      * 
      */
     private final @Nullable Boolean autoRotationEnabled;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final String id;
     /**
-     * Kind of encryption protector. This is metadata used for the Azure portal experience.
+     * @return Kind of encryption protector. This is metadata used for the Azure portal experience.
      * 
      */
     private final String kind;
     /**
-     * Resource location.
+     * @return Resource location.
      * 
      */
     private final String location;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * The name of the server key.
+     * @return The name of the server key.
      * 
      */
     private final @Nullable String serverKeyName;
     /**
-     * The encryption protector type like &#39;ServiceManaged&#39;, &#39;AzureKeyVault&#39;.
+     * @return The encryption protector type like &#39;ServiceManaged&#39;, &#39;AzureKeyVault&#39;.
      * 
      */
     private final String serverKeyType;
     /**
-     * Subregion of the encryption protector.
+     * @return Subregion of the encryption protector.
      * 
      */
     private final String subregion;
     /**
-     * Thumbprint of the server key.
+     * @return Thumbprint of the server key.
      * 
      */
     private final String thumbprint;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
     /**
-     * The URI of the server key.
+     * @return The URI of the server key.
      * 
      */
     private final String uri;
@@ -95,79 +95,79 @@ public final class GetEncryptionProtectorResult {
     }
 
     /**
-     * Key auto rotation opt-in flag. Either true or false.
+     * @return Key auto rotation opt-in flag. Either true or false.
      * 
-    */
+     */
     public Optional<Boolean> autoRotationEnabled() {
         return Optional.ofNullable(this.autoRotationEnabled);
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Kind of encryption protector. This is metadata used for the Azure portal experience.
+     * @return Kind of encryption protector. This is metadata used for the Azure portal experience.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * Resource location.
+     * @return Resource location.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The name of the server key.
+     * @return The name of the server key.
      * 
-    */
+     */
     public Optional<String> serverKeyName() {
         return Optional.ofNullable(this.serverKeyName);
     }
     /**
-     * The encryption protector type like &#39;ServiceManaged&#39;, &#39;AzureKeyVault&#39;.
+     * @return The encryption protector type like &#39;ServiceManaged&#39;, &#39;AzureKeyVault&#39;.
      * 
-    */
+     */
     public String serverKeyType() {
         return this.serverKeyType;
     }
     /**
-     * Subregion of the encryption protector.
+     * @return Subregion of the encryption protector.
      * 
-    */
+     */
     public String subregion() {
         return this.subregion;
     }
     /**
-     * Thumbprint of the server key.
+     * @return Thumbprint of the server key.
      * 
-    */
+     */
     public String thumbprint() {
         return this.thumbprint;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The URI of the server key.
+     * @return The URI of the server key.
      * 
-    */
+     */
     public String uri() {
         return this.uri;
     }

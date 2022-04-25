@@ -25,6 +25,10 @@ public final class GoogleCloudMlV1__AutoScalingResponse extends com.pulumi.resou
     @Import(name="maxNodes", required=true)
     private Integer maxNodes;
 
+    /**
+     * @return The maximum number of nodes to scale this model under load. The actual value will depend on resource quota and availability.
+     * 
+     */
     public Integer maxNodes() {
         return this.maxNodes;
     }
@@ -36,6 +40,10 @@ public final class GoogleCloudMlV1__AutoScalingResponse extends com.pulumi.resou
     @Import(name="metrics", required=true)
     private List<GoogleCloudMlV1__MetricSpecResponse> metrics;
 
+    /**
+     * @return MetricSpec contains the specifications to use to calculate the desired nodes count.
+     * 
+     */
     public List<GoogleCloudMlV1__MetricSpecResponse> metrics() {
         return this.metrics;
     }
@@ -47,6 +55,10 @@ public final class GoogleCloudMlV1__AutoScalingResponse extends com.pulumi.resou
     @Import(name="minNodes", required=true)
     private Integer minNodes;
 
+    /**
+     * @return Optional. The minimum number of nodes to allocate for this model. These nodes are always up, starting from the time the model is deployed. Therefore, the cost of operating this model will be at least `rate` * `min_nodes` * number of hours since last billing cycle, where `rate` is the cost per node-hour as documented in the [pricing guide](/ml-engine/docs/pricing), even if no predictions are performed. There is additional cost for each prediction performed. Unlike manual scaling, if the load gets too heavy for the nodes that are up, the service will automatically add nodes to handle the increased load as well as scale back as traffic drops, always maintaining at least `min_nodes`. You will be charged for the time in which additional nodes are used. If `min_nodes` is not specified and AutoScaling is used with a [legacy (MLS1) machine type](/ml-engine/docs/machine-types-online-prediction), `min_nodes` defaults to 0, in which case, when traffic to a model stops (and after a cool-down period), nodes will be shut down and no charges will be incurred until traffic to the model resumes. If `min_nodes` is not specified and AutoScaling is used with a [Compute Engine (N1) machine type](/ml-engine/docs/machine-types-online-prediction), `min_nodes` defaults to 1. `min_nodes` must be at least 1 for use with a Compute Engine machine type. You can set `min_nodes` when creating the model version, and you can also update `min_nodes` for an existing version: update_body.json: { &#39;autoScaling&#39;: { &#39;minNodes&#39;: 5 } } HTTP request: PATCH https://ml.googleapis.com/v1/{name=projects/*{@literal /}models/*{@literal /}versions/*}?update_mask=autoScaling.minNodes -d @./update_body.json
+     * 
+     */
     public Integer minNodes() {
         return this.minNodes;
     }
@@ -77,20 +89,44 @@ public final class GoogleCloudMlV1__AutoScalingResponse extends com.pulumi.resou
             $ = new GoogleCloudMlV1__AutoScalingResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxNodes The maximum number of nodes to scale this model under load. The actual value will depend on resource quota and availability.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxNodes(Integer maxNodes) {
             $.maxNodes = maxNodes;
             return this;
         }
 
+        /**
+         * @param metrics MetricSpec contains the specifications to use to calculate the desired nodes count.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metrics(List<GoogleCloudMlV1__MetricSpecResponse> metrics) {
             $.metrics = metrics;
             return this;
         }
 
+        /**
+         * @param metrics MetricSpec contains the specifications to use to calculate the desired nodes count.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metrics(GoogleCloudMlV1__MetricSpecResponse... metrics) {
             return metrics(List.of(metrics));
         }
 
+        /**
+         * @param minNodes Optional. The minimum number of nodes to allocate for this model. These nodes are always up, starting from the time the model is deployed. Therefore, the cost of operating this model will be at least `rate` * `min_nodes` * number of hours since last billing cycle, where `rate` is the cost per node-hour as documented in the [pricing guide](/ml-engine/docs/pricing), even if no predictions are performed. There is additional cost for each prediction performed. Unlike manual scaling, if the load gets too heavy for the nodes that are up, the service will automatically add nodes to handle the increased load as well as scale back as traffic drops, always maintaining at least `min_nodes`. You will be charged for the time in which additional nodes are used. If `min_nodes` is not specified and AutoScaling is used with a [legacy (MLS1) machine type](/ml-engine/docs/machine-types-online-prediction), `min_nodes` defaults to 0, in which case, when traffic to a model stops (and after a cool-down period), nodes will be shut down and no charges will be incurred until traffic to the model resumes. If `min_nodes` is not specified and AutoScaling is used with a [Compute Engine (N1) machine type](/ml-engine/docs/machine-types-online-prediction), `min_nodes` defaults to 1. `min_nodes` must be at least 1 for use with a Compute Engine machine type. You can set `min_nodes` when creating the model version, and you can also update `min_nodes` for an existing version: update_body.json: { &#39;autoScaling&#39;: { &#39;minNodes&#39;: 5 } } HTTP request: PATCH https://ml.googleapis.com/v1/{name=projects/*{@literal /}models/*{@literal /}versions/*}?update_mask=autoScaling.minNodes -d @./update_body.json
+         * 
+         * @return builder
+         * 
+         */
         public Builder minNodes(Integer minNodes) {
             $.minNodes = minNodes;
             return this;

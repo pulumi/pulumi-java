@@ -24,6 +24,10 @@ public final class SoftwareRecipeStepInstallRpmArgs extends com.pulumi.resources
     @Import(name="artifactId", required=true)
     private Output<String> artifactId;
 
+    /**
+     * @return The id of the relevant artifact in the recipe.
+     * 
+     */
     public Output<String> artifactId() {
         return this.artifactId;
     }
@@ -52,11 +56,23 @@ public final class SoftwareRecipeStepInstallRpmArgs extends com.pulumi.resources
             $ = new SoftwareRecipeStepInstallRpmArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param artifactId The id of the relevant artifact in the recipe.
+         * 
+         * @return builder
+         * 
+         */
         public Builder artifactId(Output<String> artifactId) {
             $.artifactId = artifactId;
             return this;
         }
 
+        /**
+         * @param artifactId The id of the relevant artifact in the recipe.
+         * 
+         * @return builder
+         * 
+         */
         public Builder artifactId(String artifactId) {
             return artifactId(Output.of(artifactId));
         }

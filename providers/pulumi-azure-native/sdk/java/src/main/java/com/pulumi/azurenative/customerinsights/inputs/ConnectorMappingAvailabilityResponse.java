@@ -26,6 +26,10 @@ public final class ConnectorMappingAvailabilityResponse extends com.pulumi.resou
     @Import(name="frequency")
     private @Nullable String frequency;
 
+    /**
+     * @return The frequency to update.
+     * 
+     */
     public Optional<String> frequency() {
         return Optional.ofNullable(this.frequency);
     }
@@ -37,6 +41,10 @@ public final class ConnectorMappingAvailabilityResponse extends com.pulumi.resou
     @Import(name="interval", required=true)
     private Integer interval;
 
+    /**
+     * @return The interval of the given frequency to use.
+     * 
+     */
     public Integer interval() {
         return this.interval;
     }
@@ -66,11 +74,23 @@ public final class ConnectorMappingAvailabilityResponse extends com.pulumi.resou
             $ = new ConnectorMappingAvailabilityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param frequency The frequency to update.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frequency(@Nullable String frequency) {
             $.frequency = frequency;
             return this;
         }
 
+        /**
+         * @param interval The interval of the given frequency to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interval(Integer interval) {
             $.interval = interval;
             return this;

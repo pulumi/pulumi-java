@@ -24,6 +24,10 @@ public final class SelectedCertificateInputArgs extends com.pulumi.resources.Res
     @Import(name="certificateName", required=true)
     private Output<String> certificateName;
 
+    /**
+     * @return Name of certificate to be exported.
+     * 
+     */
     public Output<String> certificateName() {
         return this.certificateName;
     }
@@ -35,6 +39,10 @@ public final class SelectedCertificateInputArgs extends com.pulumi.resources.Res
     @Import(name="password", required=true)
     private Output<String> password;
 
+    /**
+     * @return Password to use for encrypting the exported certificate.
+     * 
+     */
     public Output<String> password() {
         return this.password;
     }
@@ -64,20 +72,44 @@ public final class SelectedCertificateInputArgs extends com.pulumi.resources.Res
             $ = new SelectedCertificateInputArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificateName Name of certificate to be exported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateName(Output<String> certificateName) {
             $.certificateName = certificateName;
             return this;
         }
 
+        /**
+         * @param certificateName Name of certificate to be exported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateName(String certificateName) {
             return certificateName(Output.of(certificateName));
         }
 
+        /**
+         * @param password Password to use for encrypting the exported certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(Output<String> password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param password Password to use for encrypting the exported certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(String password) {
             return password(Output.of(password));
         }

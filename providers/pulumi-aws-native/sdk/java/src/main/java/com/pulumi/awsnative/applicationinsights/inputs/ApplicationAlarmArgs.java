@@ -27,6 +27,10 @@ public final class ApplicationAlarmArgs extends com.pulumi.resources.ResourceArg
     @Import(name="alarmName", required=true)
     private Output<String> alarmName;
 
+    /**
+     * @return The name of the CloudWatch alarm to be monitored for the component.
+     * 
+     */
     public Output<String> alarmName() {
         return this.alarmName;
     }
@@ -38,6 +42,10 @@ public final class ApplicationAlarmArgs extends com.pulumi.resources.ResourceArg
     @Import(name="severity")
     private @Nullable Output<ApplicationAlarmSeverity> severity;
 
+    /**
+     * @return Indicates the degree of outage when the alarm goes off.
+     * 
+     */
     public Optional<Output<ApplicationAlarmSeverity>> severity() {
         return Optional.ofNullable(this.severity);
     }
@@ -67,20 +75,44 @@ public final class ApplicationAlarmArgs extends com.pulumi.resources.ResourceArg
             $ = new ApplicationAlarmArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param alarmName The name of the CloudWatch alarm to be monitored for the component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alarmName(Output<String> alarmName) {
             $.alarmName = alarmName;
             return this;
         }
 
+        /**
+         * @param alarmName The name of the CloudWatch alarm to be monitored for the component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alarmName(String alarmName) {
             return alarmName(Output.of(alarmName));
         }
 
+        /**
+         * @param severity Indicates the degree of outage when the alarm goes off.
+         * 
+         * @return builder
+         * 
+         */
         public Builder severity(@Nullable Output<ApplicationAlarmSeverity> severity) {
             $.severity = severity;
             return this;
         }
 
+        /**
+         * @param severity Indicates the degree of outage when the alarm goes off.
+         * 
+         * @return builder
+         * 
+         */
         public Builder severity(ApplicationAlarmSeverity severity) {
             return severity(Output.of(severity));
         }

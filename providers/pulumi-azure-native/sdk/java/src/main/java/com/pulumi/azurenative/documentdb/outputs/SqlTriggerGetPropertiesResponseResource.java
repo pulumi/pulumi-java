@@ -13,37 +13,37 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SqlTriggerGetPropertiesResponseResource {
     /**
-     * Body of the Trigger
+     * @return Body of the Trigger
      * 
      */
     private final @Nullable String body;
     /**
-     * A system generated property representing the resource etag required for optimistic concurrency control.
+     * @return A system generated property representing the resource etag required for optimistic concurrency control.
      * 
      */
     private final String etag;
     /**
-     * Name of the Cosmos DB SQL trigger
+     * @return Name of the Cosmos DB SQL trigger
      * 
      */
     private final String id;
     /**
-     * A system generated property. A unique identifier.
+     * @return A system generated property. A unique identifier.
      * 
      */
     private final String rid;
     /**
-     * The operation the trigger is associated with
+     * @return The operation the trigger is associated with
      * 
      */
     private final @Nullable String triggerOperation;
     /**
-     * Type of the Trigger
+     * @return Type of the Trigger
      * 
      */
     private final @Nullable String triggerType;
     /**
-     * A system generated property that denotes the last updated timestamp of the resource.
+     * @return A system generated property that denotes the last updated timestamp of the resource.
      * 
      */
     private final Double ts;
@@ -67,51 +67,51 @@ public final class SqlTriggerGetPropertiesResponseResource {
     }
 
     /**
-     * Body of the Trigger
+     * @return Body of the Trigger
      * 
-    */
+     */
     public Optional<String> body() {
         return Optional.ofNullable(this.body);
     }
     /**
-     * A system generated property representing the resource etag required for optimistic concurrency control.
+     * @return A system generated property representing the resource etag required for optimistic concurrency control.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Name of the Cosmos DB SQL trigger
+     * @return Name of the Cosmos DB SQL trigger
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * A system generated property. A unique identifier.
+     * @return A system generated property. A unique identifier.
      * 
-    */
+     */
     public String rid() {
         return this.rid;
     }
     /**
-     * The operation the trigger is associated with
+     * @return The operation the trigger is associated with
      * 
-    */
+     */
     public Optional<String> triggerOperation() {
         return Optional.ofNullable(this.triggerOperation);
     }
     /**
-     * Type of the Trigger
+     * @return Type of the Trigger
      * 
-    */
+     */
     public Optional<String> triggerType() {
         return Optional.ofNullable(this.triggerType);
     }
     /**
-     * A system generated property that denotes the last updated timestamp of the resource.
+     * @return A system generated property that denotes the last updated timestamp of the resource.
      * 
-    */
+     */
     public Double ts() {
         return this.ts;
     }

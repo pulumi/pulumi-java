@@ -27,6 +27,10 @@ public final class WeeklyRetentionScheduleResponse extends com.pulumi.resources.
     @Import(name="daysOfTheWeek")
     private @Nullable List<String> daysOfTheWeek;
 
+    /**
+     * @return List of days of week for weekly retention policy.
+     * 
+     */
     public Optional<List<String>> daysOfTheWeek() {
         return Optional.ofNullable(this.daysOfTheWeek);
     }
@@ -38,6 +42,10 @@ public final class WeeklyRetentionScheduleResponse extends com.pulumi.resources.
     @Import(name="retentionDuration")
     private @Nullable RetentionDurationResponse retentionDuration;
 
+    /**
+     * @return Retention duration of retention Policy.
+     * 
+     */
     public Optional<RetentionDurationResponse> retentionDuration() {
         return Optional.ofNullable(this.retentionDuration);
     }
@@ -49,6 +57,10 @@ public final class WeeklyRetentionScheduleResponse extends com.pulumi.resources.
     @Import(name="retentionTimes")
     private @Nullable List<String> retentionTimes;
 
+    /**
+     * @return Retention times of retention policy.
+     * 
+     */
     public Optional<List<String>> retentionTimes() {
         return Optional.ofNullable(this.retentionTimes);
     }
@@ -79,25 +91,55 @@ public final class WeeklyRetentionScheduleResponse extends com.pulumi.resources.
             $ = new WeeklyRetentionScheduleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param daysOfTheWeek List of days of week for weekly retention policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder daysOfTheWeek(@Nullable List<String> daysOfTheWeek) {
             $.daysOfTheWeek = daysOfTheWeek;
             return this;
         }
 
+        /**
+         * @param daysOfTheWeek List of days of week for weekly retention policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder daysOfTheWeek(String... daysOfTheWeek) {
             return daysOfTheWeek(List.of(daysOfTheWeek));
         }
 
+        /**
+         * @param retentionDuration Retention duration of retention Policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionDuration(@Nullable RetentionDurationResponse retentionDuration) {
             $.retentionDuration = retentionDuration;
             return this;
         }
 
+        /**
+         * @param retentionTimes Retention times of retention policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionTimes(@Nullable List<String> retentionTimes) {
             $.retentionTimes = retentionTimes;
             return this;
         }
 
+        /**
+         * @param retentionTimes Retention times of retention policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionTimes(String... retentionTimes) {
             return retentionTimes(List.of(retentionTimes));
         }

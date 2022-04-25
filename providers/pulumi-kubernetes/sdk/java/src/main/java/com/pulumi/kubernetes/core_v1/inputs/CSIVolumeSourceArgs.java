@@ -29,6 +29,10 @@ public final class CSIVolumeSourceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="driver", required=true)
     private Output<String> driver;
 
+    /**
+     * @return Driver is the name of the CSI driver that handles this volume. Consult with your admin for the correct name as registered in the cluster.
+     * 
+     */
     public Output<String> driver() {
         return this.driver;
     }
@@ -40,6 +44,10 @@ public final class CSIVolumeSourceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="fsType")
     private @Nullable Output<String> fsType;
 
+    /**
+     * @return Filesystem type to mount. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. If not provided, the empty value is passed to the associated CSI driver which will determine the default filesystem to apply.
+     * 
+     */
     public Optional<Output<String>> fsType() {
         return Optional.ofNullable(this.fsType);
     }
@@ -51,6 +59,10 @@ public final class CSIVolumeSourceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="nodePublishSecretRef")
     private @Nullable Output<LocalObjectReferenceArgs> nodePublishSecretRef;
 
+    /**
+     * @return NodePublishSecretRef is a reference to the secret object containing sensitive information to pass to the CSI driver to complete the CSI NodePublishVolume and NodeUnpublishVolume calls. This field is optional, and  may be empty if no secret is required. If the secret object contains more than one secret, all secret references are passed.
+     * 
+     */
     public Optional<Output<LocalObjectReferenceArgs>> nodePublishSecretRef() {
         return Optional.ofNullable(this.nodePublishSecretRef);
     }
@@ -62,6 +74,10 @@ public final class CSIVolumeSourceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="readOnly")
     private @Nullable Output<Boolean> readOnly;
 
+    /**
+     * @return Specifies a read-only configuration for the volume. Defaults to false (read/write).
+     * 
+     */
     public Optional<Output<Boolean>> readOnly() {
         return Optional.ofNullable(this.readOnly);
     }
@@ -73,6 +89,10 @@ public final class CSIVolumeSourceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="volumeAttributes")
     private @Nullable Output<Map<String,String>> volumeAttributes;
 
+    /**
+     * @return VolumeAttributes stores driver-specific properties that are passed to the CSI driver. Consult your driver&#39;s documentation for supported values.
+     * 
+     */
     public Optional<Output<Map<String,String>>> volumeAttributes() {
         return Optional.ofNullable(this.volumeAttributes);
     }
@@ -105,47 +125,107 @@ public final class CSIVolumeSourceArgs extends com.pulumi.resources.ResourceArgs
             $ = new CSIVolumeSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param driver Driver is the name of the CSI driver that handles this volume. Consult with your admin for the correct name as registered in the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder driver(Output<String> driver) {
             $.driver = driver;
             return this;
         }
 
+        /**
+         * @param driver Driver is the name of the CSI driver that handles this volume. Consult with your admin for the correct name as registered in the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder driver(String driver) {
             return driver(Output.of(driver));
         }
 
+        /**
+         * @param fsType Filesystem type to mount. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. If not provided, the empty value is passed to the associated CSI driver which will determine the default filesystem to apply.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fsType(@Nullable Output<String> fsType) {
             $.fsType = fsType;
             return this;
         }
 
+        /**
+         * @param fsType Filesystem type to mount. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. If not provided, the empty value is passed to the associated CSI driver which will determine the default filesystem to apply.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fsType(String fsType) {
             return fsType(Output.of(fsType));
         }
 
+        /**
+         * @param nodePublishSecretRef NodePublishSecretRef is a reference to the secret object containing sensitive information to pass to the CSI driver to complete the CSI NodePublishVolume and NodeUnpublishVolume calls. This field is optional, and  may be empty if no secret is required. If the secret object contains more than one secret, all secret references are passed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodePublishSecretRef(@Nullable Output<LocalObjectReferenceArgs> nodePublishSecretRef) {
             $.nodePublishSecretRef = nodePublishSecretRef;
             return this;
         }
 
+        /**
+         * @param nodePublishSecretRef NodePublishSecretRef is a reference to the secret object containing sensitive information to pass to the CSI driver to complete the CSI NodePublishVolume and NodeUnpublishVolume calls. This field is optional, and  may be empty if no secret is required. If the secret object contains more than one secret, all secret references are passed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodePublishSecretRef(LocalObjectReferenceArgs nodePublishSecretRef) {
             return nodePublishSecretRef(Output.of(nodePublishSecretRef));
         }
 
+        /**
+         * @param readOnly Specifies a read-only configuration for the volume. Defaults to false (read/write).
+         * 
+         * @return builder
+         * 
+         */
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
             $.readOnly = readOnly;
             return this;
         }
 
+        /**
+         * @param readOnly Specifies a read-only configuration for the volume. Defaults to false (read/write).
+         * 
+         * @return builder
+         * 
+         */
         public Builder readOnly(Boolean readOnly) {
             return readOnly(Output.of(readOnly));
         }
 
+        /**
+         * @param volumeAttributes VolumeAttributes stores driver-specific properties that are passed to the CSI driver. Consult your driver&#39;s documentation for supported values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeAttributes(@Nullable Output<Map<String,String>> volumeAttributes) {
             $.volumeAttributes = volumeAttributes;
             return this;
         }
 
+        /**
+         * @param volumeAttributes VolumeAttributes stores driver-specific properties that are passed to the CSI driver. Consult your driver&#39;s documentation for supported values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeAttributes(Map<String,String> volumeAttributes) {
             return volumeAttributes(Output.of(volumeAttributes));
         }

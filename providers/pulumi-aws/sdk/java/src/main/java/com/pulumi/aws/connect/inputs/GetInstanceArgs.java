@@ -21,6 +21,10 @@ public final class GetInstanceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="instanceAlias")
     private @Nullable String instanceAlias;
 
+    /**
+     * @return Returns information on a specific connect instance by alias
+     * 
+     */
     public Optional<String> instanceAlias() {
         return Optional.ofNullable(this.instanceAlias);
     }
@@ -32,6 +36,10 @@ public final class GetInstanceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="instanceId")
     private @Nullable String instanceId;
 
+    /**
+     * @return Returns information on a specific connect instance by id
+     * 
+     */
     public Optional<String> instanceId() {
         return Optional.ofNullable(this.instanceId);
     }
@@ -61,11 +69,23 @@ public final class GetInstanceArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetInstanceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param instanceAlias Returns information on a specific connect instance by alias
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceAlias(@Nullable String instanceAlias) {
             $.instanceAlias = instanceAlias;
             return this;
         }
 
+        /**
+         * @param instanceId Returns information on a specific connect instance by id
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceId(@Nullable String instanceId) {
             $.instanceId = instanceId;
             return this;

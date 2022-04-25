@@ -20,6 +20,10 @@ public final class GcpUserAccessBindingArgs extends com.pulumi.resources.Resourc
     @Import(name="accessLevels", required=true)
     private Output<String> accessLevels;
 
+    /**
+     * @return Required. Access level that a user must have to be granted access. Only one access level is supported, not multiple. This repeated field must have exactly one element. Example: &#34;accessPolicies/9522/accessLevels/device_trusted&#34;
+     * 
+     */
     public Output<String> accessLevels() {
         return this.accessLevels;
     }
@@ -31,6 +35,10 @@ public final class GcpUserAccessBindingArgs extends com.pulumi.resources.Resourc
     @Import(name="groupKey", required=true)
     private Output<String> groupKey;
 
+    /**
+     * @return Required. Immutable. Google Group id whose members are subject to this binding&#39;s restrictions. See &#34;id&#34; in the G Suite Directory API&#39;s Groups resource. If a group&#39;s email address/alias is changed, this resource will continue to point at the changed group. This field does not accept group email addresses or aliases. Example: &#34;01d520gv4vjcrht&#34;
+     * 
+     */
     public Output<String> groupKey() {
         return this.groupKey;
     }
@@ -42,6 +50,10 @@ public final class GcpUserAccessBindingArgs extends com.pulumi.resources.Resourc
     @Import(name="organizationId", required=true)
     private Output<String> organizationId;
 
+    /**
+     * @return Required. ID of the parent organization.
+     * 
+     */
     public Output<String> organizationId() {
         return this.organizationId;
     }
@@ -72,29 +84,65 @@ public final class GcpUserAccessBindingArgs extends com.pulumi.resources.Resourc
             $ = new GcpUserAccessBindingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessLevels Required. Access level that a user must have to be granted access. Only one access level is supported, not multiple. This repeated field must have exactly one element. Example: &#34;accessPolicies/9522/accessLevels/device_trusted&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessLevels(Output<String> accessLevels) {
             $.accessLevels = accessLevels;
             return this;
         }
 
+        /**
+         * @param accessLevels Required. Access level that a user must have to be granted access. Only one access level is supported, not multiple. This repeated field must have exactly one element. Example: &#34;accessPolicies/9522/accessLevels/device_trusted&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessLevels(String accessLevels) {
             return accessLevels(Output.of(accessLevels));
         }
 
+        /**
+         * @param groupKey Required. Immutable. Google Group id whose members are subject to this binding&#39;s restrictions. See &#34;id&#34; in the G Suite Directory API&#39;s Groups resource. If a group&#39;s email address/alias is changed, this resource will continue to point at the changed group. This field does not accept group email addresses or aliases. Example: &#34;01d520gv4vjcrht&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupKey(Output<String> groupKey) {
             $.groupKey = groupKey;
             return this;
         }
 
+        /**
+         * @param groupKey Required. Immutable. Google Group id whose members are subject to this binding&#39;s restrictions. See &#34;id&#34; in the G Suite Directory API&#39;s Groups resource. If a group&#39;s email address/alias is changed, this resource will continue to point at the changed group. This field does not accept group email addresses or aliases. Example: &#34;01d520gv4vjcrht&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupKey(String groupKey) {
             return groupKey(Output.of(groupKey));
         }
 
+        /**
+         * @param organizationId Required. ID of the parent organization.
+         * 
+         * @return builder
+         * 
+         */
         public Builder organizationId(Output<String> organizationId) {
             $.organizationId = organizationId;
             return this;
         }
 
+        /**
+         * @param organizationId Required. ID of the parent organization.
+         * 
+         * @return builder
+         * 
+         */
         public Builder organizationId(String organizationId) {
             return organizationId(Output.of(organizationId));
         }

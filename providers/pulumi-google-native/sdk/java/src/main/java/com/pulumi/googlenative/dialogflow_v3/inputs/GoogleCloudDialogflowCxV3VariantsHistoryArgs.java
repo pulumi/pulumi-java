@@ -27,6 +27,10 @@ public final class GoogleCloudDialogflowCxV3VariantsHistoryArgs extends com.pulu
     @Import(name="updateTime")
     private @Nullable Output<String> updateTime;
 
+    /**
+     * @return Update time of the variants.
+     * 
+     */
     public Optional<Output<String>> updateTime() {
         return Optional.ofNullable(this.updateTime);
     }
@@ -38,6 +42,10 @@ public final class GoogleCloudDialogflowCxV3VariantsHistoryArgs extends com.pulu
     @Import(name="versionVariants")
     private @Nullable Output<GoogleCloudDialogflowCxV3VersionVariantsArgs> versionVariants;
 
+    /**
+     * @return The flow versions as the variants.
+     * 
+     */
     public Optional<Output<GoogleCloudDialogflowCxV3VersionVariantsArgs>> versionVariants() {
         return Optional.ofNullable(this.versionVariants);
     }
@@ -67,20 +75,44 @@ public final class GoogleCloudDialogflowCxV3VariantsHistoryArgs extends com.pulu
             $ = new GoogleCloudDialogflowCxV3VariantsHistoryArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param updateTime Update time of the variants.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateTime(@Nullable Output<String> updateTime) {
             $.updateTime = updateTime;
             return this;
         }
 
+        /**
+         * @param updateTime Update time of the variants.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateTime(String updateTime) {
             return updateTime(Output.of(updateTime));
         }
 
+        /**
+         * @param versionVariants The flow versions as the variants.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionVariants(@Nullable Output<GoogleCloudDialogflowCxV3VersionVariantsArgs> versionVariants) {
             $.versionVariants = versionVariants;
             return this;
         }
 
+        /**
+         * @param versionVariants The flow versions as the variants.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionVariants(GoogleCloudDialogflowCxV3VersionVariantsArgs versionVariants) {
             return versionVariants(Output.of(versionVariants));
         }

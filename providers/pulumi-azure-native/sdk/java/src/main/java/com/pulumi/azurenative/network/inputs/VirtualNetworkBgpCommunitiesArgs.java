@@ -24,6 +24,10 @@ public final class VirtualNetworkBgpCommunitiesArgs extends com.pulumi.resources
     @Import(name="virtualNetworkCommunity", required=true)
     private Output<String> virtualNetworkCommunity;
 
+    /**
+     * @return The BGP community associated with the virtual network.
+     * 
+     */
     public Output<String> virtualNetworkCommunity() {
         return this.virtualNetworkCommunity;
     }
@@ -52,11 +56,23 @@ public final class VirtualNetworkBgpCommunitiesArgs extends com.pulumi.resources
             $ = new VirtualNetworkBgpCommunitiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param virtualNetworkCommunity The BGP community associated with the virtual network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetworkCommunity(Output<String> virtualNetworkCommunity) {
             $.virtualNetworkCommunity = virtualNetworkCommunity;
             return this;
         }
 
+        /**
+         * @param virtualNetworkCommunity The BGP community associated with the virtual network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetworkCommunity(String virtualNetworkCommunity) {
             return virtualNetworkCommunity(Output.of(virtualNetworkCommunity));
         }

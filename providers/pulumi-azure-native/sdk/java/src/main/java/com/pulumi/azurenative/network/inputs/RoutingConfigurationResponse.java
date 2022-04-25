@@ -27,6 +27,10 @@ public final class RoutingConfigurationResponse extends com.pulumi.resources.Inv
     @Import(name="associatedRouteTable")
     private @Nullable SubResourceResponse associatedRouteTable;
 
+    /**
+     * @return The resource id RouteTable associated with this RoutingConfiguration.
+     * 
+     */
     public Optional<SubResourceResponse> associatedRouteTable() {
         return Optional.ofNullable(this.associatedRouteTable);
     }
@@ -38,6 +42,10 @@ public final class RoutingConfigurationResponse extends com.pulumi.resources.Inv
     @Import(name="propagatedRouteTables")
     private @Nullable PropagatedRouteTableResponse propagatedRouteTables;
 
+    /**
+     * @return The list of RouteTables to advertise the routes to.
+     * 
+     */
     public Optional<PropagatedRouteTableResponse> propagatedRouteTables() {
         return Optional.ofNullable(this.propagatedRouteTables);
     }
@@ -49,6 +57,10 @@ public final class RoutingConfigurationResponse extends com.pulumi.resources.Inv
     @Import(name="vnetRoutes")
     private @Nullable VnetRouteResponse vnetRoutes;
 
+    /**
+     * @return List of routes that control routing from VirtualHub into a virtual network connection.
+     * 
+     */
     public Optional<VnetRouteResponse> vnetRoutes() {
         return Optional.ofNullable(this.vnetRoutes);
     }
@@ -79,16 +91,34 @@ public final class RoutingConfigurationResponse extends com.pulumi.resources.Inv
             $ = new RoutingConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param associatedRouteTable The resource id RouteTable associated with this RoutingConfiguration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder associatedRouteTable(@Nullable SubResourceResponse associatedRouteTable) {
             $.associatedRouteTable = associatedRouteTable;
             return this;
         }
 
+        /**
+         * @param propagatedRouteTables The list of RouteTables to advertise the routes to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder propagatedRouteTables(@Nullable PropagatedRouteTableResponse propagatedRouteTables) {
             $.propagatedRouteTables = propagatedRouteTables;
             return this;
         }
 
+        /**
+         * @param vnetRoutes List of routes that control routing from VirtualHub into a virtual network connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vnetRoutes(@Nullable VnetRouteResponse vnetRoutes) {
             $.vnetRoutes = vnetRoutes;
             return this;

@@ -30,6 +30,10 @@ public final class OSPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="allowNoResourceGroupMatch")
     private @Nullable Output<Boolean> allowNoResourceGroupMatch;
 
+    /**
+     * @return This flag determines the OS policy compliance status when none of the resource groups within the policy are applicable for a VM. Set this value to `true` if the policy needs to be reported as compliant even if the policy has nothing to validate or enforce.
+     * 
+     */
     public Optional<Output<Boolean>> allowNoResourceGroupMatch() {
         return Optional.ofNullable(this.allowNoResourceGroupMatch);
     }
@@ -41,6 +45,10 @@ public final class OSPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Policy description. Length of the description is limited to 1024 characters.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -52,6 +60,10 @@ public final class OSPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="id", required=true)
     private Output<String> id;
 
+    /**
+     * @return The id of the OS policy with the following restrictions: * Must contain only lowercase letters, numbers, and hyphens. * Must start with a letter. * Must be between 1-63 characters. * Must end with a number or a letter. * Must be unique within the assignment.
+     * 
+     */
     public Output<String> id() {
         return this.id;
     }
@@ -63,6 +75,10 @@ public final class OSPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="mode", required=true)
     private Output<OSPolicyMode> mode;
 
+    /**
+     * @return Policy mode
+     * 
+     */
     public Output<OSPolicyMode> mode() {
         return this.mode;
     }
@@ -74,6 +90,10 @@ public final class OSPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroups", required=true)
     private Output<List<OSPolicyResourceGroupArgs>> resourceGroups;
 
+    /**
+     * @return List of resource groups for the policy. For a particular VM, resource groups are evaluated in the order specified and the first resource group that is applicable is selected and the rest are ignored. If none of the resource groups are applicable for a VM, the VM is considered to be non-compliant w.r.t this policy. This behavior can be toggled by the flag `allow_no_resource_group_match`
+     * 
+     */
     public Output<List<OSPolicyResourceGroupArgs>> resourceGroups() {
         return this.resourceGroups;
     }
@@ -106,51 +126,117 @@ public final class OSPolicyArgs extends com.pulumi.resources.ResourceArgs {
             $ = new OSPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowNoResourceGroupMatch This flag determines the OS policy compliance status when none of the resource groups within the policy are applicable for a VM. Set this value to `true` if the policy needs to be reported as compliant even if the policy has nothing to validate or enforce.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowNoResourceGroupMatch(@Nullable Output<Boolean> allowNoResourceGroupMatch) {
             $.allowNoResourceGroupMatch = allowNoResourceGroupMatch;
             return this;
         }
 
+        /**
+         * @param allowNoResourceGroupMatch This flag determines the OS policy compliance status when none of the resource groups within the policy are applicable for a VM. Set this value to `true` if the policy needs to be reported as compliant even if the policy has nothing to validate or enforce.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowNoResourceGroupMatch(Boolean allowNoResourceGroupMatch) {
             return allowNoResourceGroupMatch(Output.of(allowNoResourceGroupMatch));
         }
 
+        /**
+         * @param description Policy description. Length of the description is limited to 1024 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Policy description. Length of the description is limited to 1024 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param id The id of the OS policy with the following restrictions: * Must contain only lowercase letters, numbers, and hyphens. * Must start with a letter. * Must be between 1-63 characters. * Must end with a number or a letter. * Must be unique within the assignment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id The id of the OS policy with the following restrictions: * Must contain only lowercase letters, numbers, and hyphens. * Must start with a letter. * Must be between 1-63 characters. * Must end with a number or a letter. * Must be unique within the assignment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param mode Policy mode
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(Output<OSPolicyMode> mode) {
             $.mode = mode;
             return this;
         }
 
+        /**
+         * @param mode Policy mode
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(OSPolicyMode mode) {
             return mode(Output.of(mode));
         }
 
+        /**
+         * @param resourceGroups List of resource groups for the policy. For a particular VM, resource groups are evaluated in the order specified and the first resource group that is applicable is selected and the rest are ignored. If none of the resource groups are applicable for a VM, the VM is considered to be non-compliant w.r.t this policy. This behavior can be toggled by the flag `allow_no_resource_group_match`
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroups(Output<List<OSPolicyResourceGroupArgs>> resourceGroups) {
             $.resourceGroups = resourceGroups;
             return this;
         }
 
+        /**
+         * @param resourceGroups List of resource groups for the policy. For a particular VM, resource groups are evaluated in the order specified and the first resource group that is applicable is selected and the rest are ignored. If none of the resource groups are applicable for a VM, the VM is considered to be non-compliant w.r.t this policy. This behavior can be toggled by the flag `allow_no_resource_group_match`
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroups(List<OSPolicyResourceGroupArgs> resourceGroups) {
             return resourceGroups(Output.of(resourceGroups));
         }
 
+        /**
+         * @param resourceGroups List of resource groups for the policy. For a particular VM, resource groups are evaluated in the order specified and the first resource group that is applicable is selected and the rest are ignored. If none of the resource groups are applicable for a VM, the VM is considered to be non-compliant w.r.t this policy. This behavior can be toggled by the flag `allow_no_resource_group_match`
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroups(OSPolicyResourceGroupArgs... resourceGroups) {
             return resourceGroups(List.of(resourceGroups));
         }

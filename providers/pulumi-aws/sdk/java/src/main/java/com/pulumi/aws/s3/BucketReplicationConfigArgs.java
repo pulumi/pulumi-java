@@ -22,6 +22,10 @@ public final class BucketReplicationConfigArgs extends com.pulumi.resources.Reso
     @Import(name="bucket", required=true)
     private Output<String> bucket;
 
+    /**
+     * @return The name of the source S3 bucket you want Amazon S3 to monitor.
+     * 
+     */
     public Output<String> bucket() {
         return this.bucket;
     }
@@ -33,6 +37,10 @@ public final class BucketReplicationConfigArgs extends com.pulumi.resources.Reso
     @Import(name="role", required=true)
     private Output<String> role;
 
+    /**
+     * @return The ARN of the IAM role for Amazon S3 to assume when replicating the objects.
+     * 
+     */
     public Output<String> role() {
         return this.role;
     }
@@ -44,6 +52,10 @@ public final class BucketReplicationConfigArgs extends com.pulumi.resources.Reso
     @Import(name="rules", required=true)
     private Output<List<BucketReplicationConfigRuleArgs>> rules;
 
+    /**
+     * @return Set of configuration blocks describing the rules managing the replication documented below.
+     * 
+     */
     public Output<List<BucketReplicationConfigRuleArgs>> rules() {
         return this.rules;
     }
@@ -74,33 +86,75 @@ public final class BucketReplicationConfigArgs extends com.pulumi.resources.Reso
             $ = new BucketReplicationConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bucket The name of the source S3 bucket you want Amazon S3 to monitor.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucket(Output<String> bucket) {
             $.bucket = bucket;
             return this;
         }
 
+        /**
+         * @param bucket The name of the source S3 bucket you want Amazon S3 to monitor.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucket(String bucket) {
             return bucket(Output.of(bucket));
         }
 
+        /**
+         * @param role The ARN of the IAM role for Amazon S3 to assume when replicating the objects.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(Output<String> role) {
             $.role = role;
             return this;
         }
 
+        /**
+         * @param role The ARN of the IAM role for Amazon S3 to assume when replicating the objects.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(String role) {
             return role(Output.of(role));
         }
 
+        /**
+         * @param rules Set of configuration blocks describing the rules managing the replication documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(Output<List<BucketReplicationConfigRuleArgs>> rules) {
             $.rules = rules;
             return this;
         }
 
+        /**
+         * @param rules Set of configuration blocks describing the rules managing the replication documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(List<BucketReplicationConfigRuleArgs> rules) {
             return rules(Output.of(rules));
         }
 
+        /**
+         * @param rules Set of configuration blocks describing the rules managing the replication documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(BucketReplicationConfigRuleArgs... rules) {
             return rules(List.of(rules));
         }

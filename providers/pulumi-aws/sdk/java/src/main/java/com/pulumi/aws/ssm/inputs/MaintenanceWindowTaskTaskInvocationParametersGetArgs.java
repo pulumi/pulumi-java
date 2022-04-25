@@ -25,6 +25,10 @@ public final class MaintenanceWindowTaskTaskInvocationParametersGetArgs extends 
     @Import(name="automationParameters")
     private @Nullable Output<MaintenanceWindowTaskTaskInvocationParametersAutomationParametersGetArgs> automationParameters;
 
+    /**
+     * @return The parameters for an AUTOMATION task type. Documented below.
+     * 
+     */
     public Optional<Output<MaintenanceWindowTaskTaskInvocationParametersAutomationParametersGetArgs>> automationParameters() {
         return Optional.ofNullable(this.automationParameters);
     }
@@ -36,6 +40,10 @@ public final class MaintenanceWindowTaskTaskInvocationParametersGetArgs extends 
     @Import(name="lambdaParameters")
     private @Nullable Output<MaintenanceWindowTaskTaskInvocationParametersLambdaParametersGetArgs> lambdaParameters;
 
+    /**
+     * @return The parameters for a LAMBDA task type. Documented below.
+     * 
+     */
     public Optional<Output<MaintenanceWindowTaskTaskInvocationParametersLambdaParametersGetArgs>> lambdaParameters() {
         return Optional.ofNullable(this.lambdaParameters);
     }
@@ -47,6 +55,10 @@ public final class MaintenanceWindowTaskTaskInvocationParametersGetArgs extends 
     @Import(name="runCommandParameters")
     private @Nullable Output<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersGetArgs> runCommandParameters;
 
+    /**
+     * @return The parameters for a RUN_COMMAND task type. Documented below.
+     * 
+     */
     public Optional<Output<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersGetArgs>> runCommandParameters() {
         return Optional.ofNullable(this.runCommandParameters);
     }
@@ -58,6 +70,10 @@ public final class MaintenanceWindowTaskTaskInvocationParametersGetArgs extends 
     @Import(name="stepFunctionsParameters")
     private @Nullable Output<MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParametersGetArgs> stepFunctionsParameters;
 
+    /**
+     * @return The parameters for a STEP_FUNCTIONS task type. Documented below.
+     * 
+     */
     public Optional<Output<MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParametersGetArgs>> stepFunctionsParameters() {
         return Optional.ofNullable(this.stepFunctionsParameters);
     }
@@ -89,38 +105,86 @@ public final class MaintenanceWindowTaskTaskInvocationParametersGetArgs extends 
             $ = new MaintenanceWindowTaskTaskInvocationParametersGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param automationParameters The parameters for an AUTOMATION task type. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automationParameters(@Nullable Output<MaintenanceWindowTaskTaskInvocationParametersAutomationParametersGetArgs> automationParameters) {
             $.automationParameters = automationParameters;
             return this;
         }
 
+        /**
+         * @param automationParameters The parameters for an AUTOMATION task type. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automationParameters(MaintenanceWindowTaskTaskInvocationParametersAutomationParametersGetArgs automationParameters) {
             return automationParameters(Output.of(automationParameters));
         }
 
+        /**
+         * @param lambdaParameters The parameters for a LAMBDA task type. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lambdaParameters(@Nullable Output<MaintenanceWindowTaskTaskInvocationParametersLambdaParametersGetArgs> lambdaParameters) {
             $.lambdaParameters = lambdaParameters;
             return this;
         }
 
+        /**
+         * @param lambdaParameters The parameters for a LAMBDA task type. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lambdaParameters(MaintenanceWindowTaskTaskInvocationParametersLambdaParametersGetArgs lambdaParameters) {
             return lambdaParameters(Output.of(lambdaParameters));
         }
 
+        /**
+         * @param runCommandParameters The parameters for a RUN_COMMAND task type. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runCommandParameters(@Nullable Output<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersGetArgs> runCommandParameters) {
             $.runCommandParameters = runCommandParameters;
             return this;
         }
 
+        /**
+         * @param runCommandParameters The parameters for a RUN_COMMAND task type. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runCommandParameters(MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersGetArgs runCommandParameters) {
             return runCommandParameters(Output.of(runCommandParameters));
         }
 
+        /**
+         * @param stepFunctionsParameters The parameters for a STEP_FUNCTIONS task type. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stepFunctionsParameters(@Nullable Output<MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParametersGetArgs> stepFunctionsParameters) {
             $.stepFunctionsParameters = stepFunctionsParameters;
             return this;
         }
 
+        /**
+         * @param stepFunctionsParameters The parameters for a STEP_FUNCTIONS task type. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stepFunctionsParameters(MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParametersGetArgs stepFunctionsParameters) {
             return stepFunctionsParameters(Output.of(stepFunctionsParameters));
         }

@@ -19,6 +19,10 @@ public final class GetRequestValidatorArgs extends com.pulumi.resources.InvokeAr
     @Import(name="requestValidatorId", required=true)
     private String requestValidatorId;
 
+    /**
+     * @return ID of the request validator.
+     * 
+     */
     public String requestValidatorId() {
         return this.requestValidatorId;
     }
@@ -30,6 +34,10 @@ public final class GetRequestValidatorArgs extends com.pulumi.resources.InvokeAr
     @Import(name="restApiId", required=true)
     private String restApiId;
 
+    /**
+     * @return The identifier of the targeted API entity.
+     * 
+     */
     public String restApiId() {
         return this.restApiId;
     }
@@ -59,11 +67,23 @@ public final class GetRequestValidatorArgs extends com.pulumi.resources.InvokeAr
             $ = new GetRequestValidatorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param requestValidatorId ID of the request validator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestValidatorId(String requestValidatorId) {
             $.requestValidatorId = requestValidatorId;
             return this;
         }
 
+        /**
+         * @param restApiId The identifier of the targeted API entity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restApiId(String restApiId) {
             $.restApiId = restApiId;
             return this;

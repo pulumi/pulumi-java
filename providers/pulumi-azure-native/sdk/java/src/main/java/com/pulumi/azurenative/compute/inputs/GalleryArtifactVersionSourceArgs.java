@@ -26,6 +26,10 @@ public final class GalleryArtifactVersionSourceArgs extends com.pulumi.resources
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return The id of the gallery artifact version source. Can specify a disk uri, snapshot uri, user image or storage account resource.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -37,6 +41,10 @@ public final class GalleryArtifactVersionSourceArgs extends com.pulumi.resources
     @Import(name="uri")
     private @Nullable Output<String> uri;
 
+    /**
+     * @return The uri of the gallery artifact version source. Currently used to specify vhd/blob source.
+     * 
+     */
     public Optional<Output<String>> uri() {
         return Optional.ofNullable(this.uri);
     }
@@ -66,20 +74,44 @@ public final class GalleryArtifactVersionSourceArgs extends com.pulumi.resources
             $ = new GalleryArtifactVersionSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id The id of the gallery artifact version source. Can specify a disk uri, snapshot uri, user image or storage account resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id The id of the gallery artifact version source. Can specify a disk uri, snapshot uri, user image or storage account resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param uri The uri of the gallery artifact version source. Currently used to specify vhd/blob source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(@Nullable Output<String> uri) {
             $.uri = uri;
             return this;
         }
 
+        /**
+         * @param uri The uri of the gallery artifact version source. Currently used to specify vhd/blob source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(String uri) {
             return uri(Output.of(uri));
         }

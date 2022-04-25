@@ -23,6 +23,10 @@ public final class ReturnShippingResponse extends com.pulumi.resources.InvokeArg
     @Import(name="carrierAccountNumber", required=true)
     private String carrierAccountNumber;
 
+    /**
+     * @return The customer&#39;s account number with the carrier.
+     * 
+     */
     public String carrierAccountNumber() {
         return this.carrierAccountNumber;
     }
@@ -34,6 +38,10 @@ public final class ReturnShippingResponse extends com.pulumi.resources.InvokeArg
     @Import(name="carrierName", required=true)
     private String carrierName;
 
+    /**
+     * @return The carrier&#39;s name.
+     * 
+     */
     public String carrierName() {
         return this.carrierName;
     }
@@ -63,11 +71,23 @@ public final class ReturnShippingResponse extends com.pulumi.resources.InvokeArg
             $ = new ReturnShippingResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param carrierAccountNumber The customer&#39;s account number with the carrier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder carrierAccountNumber(String carrierAccountNumber) {
             $.carrierAccountNumber = carrierAccountNumber;
             return this;
         }
 
+        /**
+         * @param carrierName The carrier&#39;s name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder carrierName(String carrierName) {
             $.carrierName = carrierName;
             return this;

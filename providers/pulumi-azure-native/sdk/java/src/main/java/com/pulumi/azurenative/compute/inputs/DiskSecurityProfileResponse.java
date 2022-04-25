@@ -25,6 +25,10 @@ public final class DiskSecurityProfileResponse extends com.pulumi.resources.Invo
     @Import(name="securityType")
     private @Nullable String securityType;
 
+    /**
+     * @return Specifies the SecurityType of the VM. Applicable for OS disks only.
+     * 
+     */
     public Optional<String> securityType() {
         return Optional.ofNullable(this.securityType);
     }
@@ -53,6 +57,12 @@ public final class DiskSecurityProfileResponse extends com.pulumi.resources.Invo
             $ = new DiskSecurityProfileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param securityType Specifies the SecurityType of the VM. Applicable for OS disks only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityType(@Nullable String securityType) {
             $.securityType = securityType;
             return this;

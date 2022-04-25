@@ -13,27 +13,27 @@ import java.util.Objects;
 @CustomType
 public final class DataBoxHeavySecretResponse {
     /**
-     * Per account level access credentials.
+     * @return Per account level access credentials.
      * 
      */
     private final List<AccountCredentialDetailsResponse> accountCredentialDetails;
     /**
-     * Password for out of the box experience on device.
+     * @return Password for out of the box experience on device.
      * 
      */
     private final String devicePassword;
     /**
-     * Serial number of the assigned device.
+     * @return Serial number of the assigned device.
      * 
      */
     private final String deviceSerialNumber;
     /**
-     * The base 64 encoded public key to authenticate with the device
+     * @return The base 64 encoded public key to authenticate with the device
      * 
      */
     private final String encodedValidationCertPubKey;
     /**
-     * Network configuration of the appliance.
+     * @return Network configuration of the appliance.
      * 
      */
     private final List<ApplianceNetworkConfigurationResponse> networkConfigurations;
@@ -53,37 +53,37 @@ public final class DataBoxHeavySecretResponse {
     }
 
     /**
-     * Per account level access credentials.
+     * @return Per account level access credentials.
      * 
-    */
+     */
     public List<AccountCredentialDetailsResponse> accountCredentialDetails() {
         return this.accountCredentialDetails;
     }
     /**
-     * Password for out of the box experience on device.
+     * @return Password for out of the box experience on device.
      * 
-    */
+     */
     public String devicePassword() {
         return this.devicePassword;
     }
     /**
-     * Serial number of the assigned device.
+     * @return Serial number of the assigned device.
      * 
-    */
+     */
     public String deviceSerialNumber() {
         return this.deviceSerialNumber;
     }
     /**
-     * The base 64 encoded public key to authenticate with the device
+     * @return The base 64 encoded public key to authenticate with the device
      * 
-    */
+     */
     public String encodedValidationCertPubKey() {
         return this.encodedValidationCertPubKey;
     }
     /**
-     * Network configuration of the appliance.
+     * @return Network configuration of the appliance.
      * 
-    */
+     */
     public List<ApplianceNetworkConfigurationResponse> networkConfigurations() {
         return this.networkConfigurations;
     }

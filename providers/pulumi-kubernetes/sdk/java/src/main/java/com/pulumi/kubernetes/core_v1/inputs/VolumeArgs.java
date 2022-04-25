@@ -55,6 +55,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="awsElasticBlockStore")
     private @Nullable Output<AWSElasticBlockStoreVolumeSourceArgs> awsElasticBlockStore;
 
+    /**
+     * @return AWSElasticBlockStore represents an AWS Disk resource that is attached to a kubelet&#39;s host machine and then exposed to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore
+     * 
+     */
     public Optional<Output<AWSElasticBlockStoreVolumeSourceArgs>> awsElasticBlockStore() {
         return Optional.ofNullable(this.awsElasticBlockStore);
     }
@@ -66,6 +70,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="azureDisk")
     private @Nullable Output<AzureDiskVolumeSourceArgs> azureDisk;
 
+    /**
+     * @return AzureDisk represents an Azure Data Disk mount on the host and bind mount to the pod.
+     * 
+     */
     public Optional<Output<AzureDiskVolumeSourceArgs>> azureDisk() {
         return Optional.ofNullable(this.azureDisk);
     }
@@ -77,6 +85,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="azureFile")
     private @Nullable Output<AzureFileVolumeSourceArgs> azureFile;
 
+    /**
+     * @return AzureFile represents an Azure File Service mount on the host and bind mount to the pod.
+     * 
+     */
     public Optional<Output<AzureFileVolumeSourceArgs>> azureFile() {
         return Optional.ofNullable(this.azureFile);
     }
@@ -88,6 +100,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cephfs")
     private @Nullable Output<CephFSVolumeSourceArgs> cephfs;
 
+    /**
+     * @return CephFS represents a Ceph FS mount on the host that shares a pod&#39;s lifetime
+     * 
+     */
     public Optional<Output<CephFSVolumeSourceArgs>> cephfs() {
         return Optional.ofNullable(this.cephfs);
     }
@@ -99,6 +115,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cinder")
     private @Nullable Output<CinderVolumeSourceArgs> cinder;
 
+    /**
+     * @return Cinder represents a cinder volume attached and mounted on kubelets host machine. More info: https://examples.k8s.io/mysql-cinder-pd/README.md
+     * 
+     */
     public Optional<Output<CinderVolumeSourceArgs>> cinder() {
         return Optional.ofNullable(this.cinder);
     }
@@ -110,6 +130,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="configMap")
     private @Nullable Output<ConfigMapVolumeSourceArgs> configMap;
 
+    /**
+     * @return ConfigMap represents a configMap that should populate this volume
+     * 
+     */
     public Optional<Output<ConfigMapVolumeSourceArgs>> configMap() {
         return Optional.ofNullable(this.configMap);
     }
@@ -121,6 +145,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="csi")
     private @Nullable Output<CSIVolumeSourceArgs> csi;
 
+    /**
+     * @return CSI (Container Storage Interface) represents ephemeral storage that is handled by certain external CSI drivers (Beta feature).
+     * 
+     */
     public Optional<Output<CSIVolumeSourceArgs>> csi() {
         return Optional.ofNullable(this.csi);
     }
@@ -132,6 +160,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="downwardAPI")
     private @Nullable Output<DownwardAPIVolumeSourceArgs> downwardAPI;
 
+    /**
+     * @return DownwardAPI represents downward API about the pod that should populate this volume
+     * 
+     */
     public Optional<Output<DownwardAPIVolumeSourceArgs>> downwardAPI() {
         return Optional.ofNullable(this.downwardAPI);
     }
@@ -143,6 +175,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="emptyDir")
     private @Nullable Output<EmptyDirVolumeSourceArgs> emptyDir;
 
+    /**
+     * @return EmptyDir represents a temporary directory that shares a pod&#39;s lifetime. More info: https://kubernetes.io/docs/concepts/storage/volumes#emptydir
+     * 
+     */
     public Optional<Output<EmptyDirVolumeSourceArgs>> emptyDir() {
         return Optional.ofNullable(this.emptyDir);
     }
@@ -167,6 +203,23 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ephemeral")
     private @Nullable Output<EphemeralVolumeSourceArgs> ephemeral;
 
+    /**
+     * @return Ephemeral represents a volume that is handled by a cluster storage driver. The volume&#39;s lifecycle is tied to the pod that defines it - it will be created before the pod starts, and deleted when the pod is removed.
+     * 
+     * Use this if: a) the volume is only needed while the pod runs, b) features of normal volumes like restoring from snapshot or capacity
+     *    tracking are needed,
+     * c) the storage driver is specified through a storage class, and d) the storage driver supports dynamic volume provisioning through
+     *    a PersistentVolumeClaim (see EphemeralVolumeSource for more
+     *    information on the connection between this volume type
+     *    and PersistentVolumeClaim).
+     * 
+     * Use PersistentVolumeClaim or one of the vendor-specific APIs for volumes that persist for longer than the lifecycle of an individual pod.
+     * 
+     * Use CSI for light-weight local ephemeral volumes if the CSI driver is meant to be used that way - see the documentation of the driver for more information.
+     * 
+     * A pod can use both types of ephemeral volumes and persistent volumes at the same time.
+     * 
+     */
     public Optional<Output<EphemeralVolumeSourceArgs>> ephemeral() {
         return Optional.ofNullable(this.ephemeral);
     }
@@ -178,6 +231,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="fc")
     private @Nullable Output<FCVolumeSourceArgs> fc;
 
+    /**
+     * @return FC represents a Fibre Channel resource that is attached to a kubelet&#39;s host machine and then exposed to the pod.
+     * 
+     */
     public Optional<Output<FCVolumeSourceArgs>> fc() {
         return Optional.ofNullable(this.fc);
     }
@@ -189,6 +246,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="flexVolume")
     private @Nullable Output<FlexVolumeSourceArgs> flexVolume;
 
+    /**
+     * @return FlexVolume represents a generic volume resource that is provisioned/attached using an exec based plugin.
+     * 
+     */
     public Optional<Output<FlexVolumeSourceArgs>> flexVolume() {
         return Optional.ofNullable(this.flexVolume);
     }
@@ -200,6 +261,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="flocker")
     private @Nullable Output<FlockerVolumeSourceArgs> flocker;
 
+    /**
+     * @return Flocker represents a Flocker volume attached to a kubelet&#39;s host machine. This depends on the Flocker control service being running
+     * 
+     */
     public Optional<Output<FlockerVolumeSourceArgs>> flocker() {
         return Optional.ofNullable(this.flocker);
     }
@@ -211,6 +276,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="gcePersistentDisk")
     private @Nullable Output<GCEPersistentDiskVolumeSourceArgs> gcePersistentDisk;
 
+    /**
+     * @return GCEPersistentDisk represents a GCE Disk resource that is attached to a kubelet&#39;s host machine and then exposed to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk
+     * 
+     */
     public Optional<Output<GCEPersistentDiskVolumeSourceArgs>> gcePersistentDisk() {
         return Optional.ofNullable(this.gcePersistentDisk);
     }
@@ -222,6 +291,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="gitRepo")
     private @Nullable Output<GitRepoVolumeSourceArgs> gitRepo;
 
+    /**
+     * @return GitRepo represents a git repository at a particular revision. DEPRECATED: GitRepo is deprecated. To provision a container with a git repo, mount an EmptyDir into an InitContainer that clones the repo using git, then mount the EmptyDir into the Pod&#39;s container.
+     * 
+     */
     public Optional<Output<GitRepoVolumeSourceArgs>> gitRepo() {
         return Optional.ofNullable(this.gitRepo);
     }
@@ -233,6 +306,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="glusterfs")
     private @Nullable Output<GlusterfsVolumeSourceArgs> glusterfs;
 
+    /**
+     * @return Glusterfs represents a Glusterfs mount on the host that shares a pod&#39;s lifetime. More info: https://examples.k8s.io/volumes/glusterfs/README.md
+     * 
+     */
     public Optional<Output<GlusterfsVolumeSourceArgs>> glusterfs() {
         return Optional.ofNullable(this.glusterfs);
     }
@@ -244,6 +321,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hostPath")
     private @Nullable Output<HostPathVolumeSourceArgs> hostPath;
 
+    /**
+     * @return HostPath represents a pre-existing file or directory on the host machine that is directly exposed to the container. This is generally used for system agents or other privileged things that are allowed to see the host machine. Most containers will NOT need this. More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath
+     * 
+     */
     public Optional<Output<HostPathVolumeSourceArgs>> hostPath() {
         return Optional.ofNullable(this.hostPath);
     }
@@ -255,6 +336,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="iscsi")
     private @Nullable Output<ISCSIVolumeSourceArgs> iscsi;
 
+    /**
+     * @return ISCSI represents an ISCSI Disk resource that is attached to a kubelet&#39;s host machine and then exposed to the pod. More info: https://examples.k8s.io/volumes/iscsi/README.md
+     * 
+     */
     public Optional<Output<ISCSIVolumeSourceArgs>> iscsi() {
         return Optional.ofNullable(this.iscsi);
     }
@@ -266,6 +351,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Volume&#39;s name. Must be a DNS_LABEL and unique within the pod. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -277,6 +366,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nfs")
     private @Nullable Output<NFSVolumeSourceArgs> nfs;
 
+    /**
+     * @return NFS represents an NFS mount on the host that shares a pod&#39;s lifetime More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
+     * 
+     */
     public Optional<Output<NFSVolumeSourceArgs>> nfs() {
         return Optional.ofNullable(this.nfs);
     }
@@ -288,6 +381,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="persistentVolumeClaim")
     private @Nullable Output<PersistentVolumeClaimVolumeSourceArgs> persistentVolumeClaim;
 
+    /**
+     * @return PersistentVolumeClaimVolumeSource represents a reference to a PersistentVolumeClaim in the same namespace. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
+     * 
+     */
     public Optional<Output<PersistentVolumeClaimVolumeSourceArgs>> persistentVolumeClaim() {
         return Optional.ofNullable(this.persistentVolumeClaim);
     }
@@ -299,6 +396,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="photonPersistentDisk")
     private @Nullable Output<PhotonPersistentDiskVolumeSourceArgs> photonPersistentDisk;
 
+    /**
+     * @return PhotonPersistentDisk represents a PhotonController persistent disk attached and mounted on kubelets host machine
+     * 
+     */
     public Optional<Output<PhotonPersistentDiskVolumeSourceArgs>> photonPersistentDisk() {
         return Optional.ofNullable(this.photonPersistentDisk);
     }
@@ -310,6 +411,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="portworxVolume")
     private @Nullable Output<PortworxVolumeSourceArgs> portworxVolume;
 
+    /**
+     * @return PortworxVolume represents a portworx volume attached and mounted on kubelets host machine
+     * 
+     */
     public Optional<Output<PortworxVolumeSourceArgs>> portworxVolume() {
         return Optional.ofNullable(this.portworxVolume);
     }
@@ -321,6 +426,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="projected")
     private @Nullable Output<ProjectedVolumeSourceArgs> projected;
 
+    /**
+     * @return Items for all in one resources secrets, configmaps, and downward API
+     * 
+     */
     public Optional<Output<ProjectedVolumeSourceArgs>> projected() {
         return Optional.ofNullable(this.projected);
     }
@@ -332,6 +441,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="quobyte")
     private @Nullable Output<QuobyteVolumeSourceArgs> quobyte;
 
+    /**
+     * @return Quobyte represents a Quobyte mount on the host that shares a pod&#39;s lifetime
+     * 
+     */
     public Optional<Output<QuobyteVolumeSourceArgs>> quobyte() {
         return Optional.ofNullable(this.quobyte);
     }
@@ -343,6 +456,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="rbd")
     private @Nullable Output<RBDVolumeSourceArgs> rbd;
 
+    /**
+     * @return RBD represents a Rados Block Device mount on the host that shares a pod&#39;s lifetime. More info: https://examples.k8s.io/volumes/rbd/README.md
+     * 
+     */
     public Optional<Output<RBDVolumeSourceArgs>> rbd() {
         return Optional.ofNullable(this.rbd);
     }
@@ -354,6 +471,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scaleIO")
     private @Nullable Output<ScaleIOVolumeSourceArgs> scaleIO;
 
+    /**
+     * @return ScaleIO represents a ScaleIO persistent volume attached and mounted on Kubernetes nodes.
+     * 
+     */
     public Optional<Output<ScaleIOVolumeSourceArgs>> scaleIO() {
         return Optional.ofNullable(this.scaleIO);
     }
@@ -365,6 +486,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="secret")
     private @Nullable Output<SecretVolumeSourceArgs> secret;
 
+    /**
+     * @return Secret represents a secret that should populate this volume. More info: https://kubernetes.io/docs/concepts/storage/volumes#secret
+     * 
+     */
     public Optional<Output<SecretVolumeSourceArgs>> secret() {
         return Optional.ofNullable(this.secret);
     }
@@ -376,6 +501,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="storageos")
     private @Nullable Output<StorageOSVolumeSourceArgs> storageos;
 
+    /**
+     * @return StorageOS represents a StorageOS volume attached and mounted on Kubernetes nodes.
+     * 
+     */
     public Optional<Output<StorageOSVolumeSourceArgs>> storageos() {
         return Optional.ofNullable(this.storageos);
     }
@@ -387,6 +516,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vsphereVolume")
     private @Nullable Output<VsphereVirtualDiskVolumeSourceArgs> vsphereVolume;
 
+    /**
+     * @return VsphereVolume represents a vSphere volume attached and mounted on kubelets host machine
+     * 
+     */
     public Optional<Output<VsphereVirtualDiskVolumeSourceArgs>> vsphereVolume() {
         return Optional.ofNullable(this.vsphereVolume);
     }
@@ -444,272 +577,658 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
             $ = new VolumeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param awsElasticBlockStore AWSElasticBlockStore represents an AWS Disk resource that is attached to a kubelet&#39;s host machine and then exposed to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore
+         * 
+         * @return builder
+         * 
+         */
         public Builder awsElasticBlockStore(@Nullable Output<AWSElasticBlockStoreVolumeSourceArgs> awsElasticBlockStore) {
             $.awsElasticBlockStore = awsElasticBlockStore;
             return this;
         }
 
+        /**
+         * @param awsElasticBlockStore AWSElasticBlockStore represents an AWS Disk resource that is attached to a kubelet&#39;s host machine and then exposed to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore
+         * 
+         * @return builder
+         * 
+         */
         public Builder awsElasticBlockStore(AWSElasticBlockStoreVolumeSourceArgs awsElasticBlockStore) {
             return awsElasticBlockStore(Output.of(awsElasticBlockStore));
         }
 
+        /**
+         * @param azureDisk AzureDisk represents an Azure Data Disk mount on the host and bind mount to the pod.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureDisk(@Nullable Output<AzureDiskVolumeSourceArgs> azureDisk) {
             $.azureDisk = azureDisk;
             return this;
         }
 
+        /**
+         * @param azureDisk AzureDisk represents an Azure Data Disk mount on the host and bind mount to the pod.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureDisk(AzureDiskVolumeSourceArgs azureDisk) {
             return azureDisk(Output.of(azureDisk));
         }
 
+        /**
+         * @param azureFile AzureFile represents an Azure File Service mount on the host and bind mount to the pod.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureFile(@Nullable Output<AzureFileVolumeSourceArgs> azureFile) {
             $.azureFile = azureFile;
             return this;
         }
 
+        /**
+         * @param azureFile AzureFile represents an Azure File Service mount on the host and bind mount to the pod.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureFile(AzureFileVolumeSourceArgs azureFile) {
             return azureFile(Output.of(azureFile));
         }
 
+        /**
+         * @param cephfs CephFS represents a Ceph FS mount on the host that shares a pod&#39;s lifetime
+         * 
+         * @return builder
+         * 
+         */
         public Builder cephfs(@Nullable Output<CephFSVolumeSourceArgs> cephfs) {
             $.cephfs = cephfs;
             return this;
         }
 
+        /**
+         * @param cephfs CephFS represents a Ceph FS mount on the host that shares a pod&#39;s lifetime
+         * 
+         * @return builder
+         * 
+         */
         public Builder cephfs(CephFSVolumeSourceArgs cephfs) {
             return cephfs(Output.of(cephfs));
         }
 
+        /**
+         * @param cinder Cinder represents a cinder volume attached and mounted on kubelets host machine. More info: https://examples.k8s.io/mysql-cinder-pd/README.md
+         * 
+         * @return builder
+         * 
+         */
         public Builder cinder(@Nullable Output<CinderVolumeSourceArgs> cinder) {
             $.cinder = cinder;
             return this;
         }
 
+        /**
+         * @param cinder Cinder represents a cinder volume attached and mounted on kubelets host machine. More info: https://examples.k8s.io/mysql-cinder-pd/README.md
+         * 
+         * @return builder
+         * 
+         */
         public Builder cinder(CinderVolumeSourceArgs cinder) {
             return cinder(Output.of(cinder));
         }
 
+        /**
+         * @param configMap ConfigMap represents a configMap that should populate this volume
+         * 
+         * @return builder
+         * 
+         */
         public Builder configMap(@Nullable Output<ConfigMapVolumeSourceArgs> configMap) {
             $.configMap = configMap;
             return this;
         }
 
+        /**
+         * @param configMap ConfigMap represents a configMap that should populate this volume
+         * 
+         * @return builder
+         * 
+         */
         public Builder configMap(ConfigMapVolumeSourceArgs configMap) {
             return configMap(Output.of(configMap));
         }
 
+        /**
+         * @param csi CSI (Container Storage Interface) represents ephemeral storage that is handled by certain external CSI drivers (Beta feature).
+         * 
+         * @return builder
+         * 
+         */
         public Builder csi(@Nullable Output<CSIVolumeSourceArgs> csi) {
             $.csi = csi;
             return this;
         }
 
+        /**
+         * @param csi CSI (Container Storage Interface) represents ephemeral storage that is handled by certain external CSI drivers (Beta feature).
+         * 
+         * @return builder
+         * 
+         */
         public Builder csi(CSIVolumeSourceArgs csi) {
             return csi(Output.of(csi));
         }
 
+        /**
+         * @param downwardAPI DownwardAPI represents downward API about the pod that should populate this volume
+         * 
+         * @return builder
+         * 
+         */
         public Builder downwardAPI(@Nullable Output<DownwardAPIVolumeSourceArgs> downwardAPI) {
             $.downwardAPI = downwardAPI;
             return this;
         }
 
+        /**
+         * @param downwardAPI DownwardAPI represents downward API about the pod that should populate this volume
+         * 
+         * @return builder
+         * 
+         */
         public Builder downwardAPI(DownwardAPIVolumeSourceArgs downwardAPI) {
             return downwardAPI(Output.of(downwardAPI));
         }
 
+        /**
+         * @param emptyDir EmptyDir represents a temporary directory that shares a pod&#39;s lifetime. More info: https://kubernetes.io/docs/concepts/storage/volumes#emptydir
+         * 
+         * @return builder
+         * 
+         */
         public Builder emptyDir(@Nullable Output<EmptyDirVolumeSourceArgs> emptyDir) {
             $.emptyDir = emptyDir;
             return this;
         }
 
+        /**
+         * @param emptyDir EmptyDir represents a temporary directory that shares a pod&#39;s lifetime. More info: https://kubernetes.io/docs/concepts/storage/volumes#emptydir
+         * 
+         * @return builder
+         * 
+         */
         public Builder emptyDir(EmptyDirVolumeSourceArgs emptyDir) {
             return emptyDir(Output.of(emptyDir));
         }
 
+        /**
+         * @param ephemeral Ephemeral represents a volume that is handled by a cluster storage driver. The volume&#39;s lifecycle is tied to the pod that defines it - it will be created before the pod starts, and deleted when the pod is removed.
+         * 
+         * Use this if: a) the volume is only needed while the pod runs, b) features of normal volumes like restoring from snapshot or capacity
+         *    tracking are needed,
+         * c) the storage driver is specified through a storage class, and d) the storage driver supports dynamic volume provisioning through
+         *    a PersistentVolumeClaim (see EphemeralVolumeSource for more
+         *    information on the connection between this volume type
+         *    and PersistentVolumeClaim).
+         * 
+         * Use PersistentVolumeClaim or one of the vendor-specific APIs for volumes that persist for longer than the lifecycle of an individual pod.
+         * 
+         * Use CSI for light-weight local ephemeral volumes if the CSI driver is meant to be used that way - see the documentation of the driver for more information.
+         * 
+         * A pod can use both types of ephemeral volumes and persistent volumes at the same time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ephemeral(@Nullable Output<EphemeralVolumeSourceArgs> ephemeral) {
             $.ephemeral = ephemeral;
             return this;
         }
 
+        /**
+         * @param ephemeral Ephemeral represents a volume that is handled by a cluster storage driver. The volume&#39;s lifecycle is tied to the pod that defines it - it will be created before the pod starts, and deleted when the pod is removed.
+         * 
+         * Use this if: a) the volume is only needed while the pod runs, b) features of normal volumes like restoring from snapshot or capacity
+         *    tracking are needed,
+         * c) the storage driver is specified through a storage class, and d) the storage driver supports dynamic volume provisioning through
+         *    a PersistentVolumeClaim (see EphemeralVolumeSource for more
+         *    information on the connection between this volume type
+         *    and PersistentVolumeClaim).
+         * 
+         * Use PersistentVolumeClaim or one of the vendor-specific APIs for volumes that persist for longer than the lifecycle of an individual pod.
+         * 
+         * Use CSI for light-weight local ephemeral volumes if the CSI driver is meant to be used that way - see the documentation of the driver for more information.
+         * 
+         * A pod can use both types of ephemeral volumes and persistent volumes at the same time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ephemeral(EphemeralVolumeSourceArgs ephemeral) {
             return ephemeral(Output.of(ephemeral));
         }
 
+        /**
+         * @param fc FC represents a Fibre Channel resource that is attached to a kubelet&#39;s host machine and then exposed to the pod.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fc(@Nullable Output<FCVolumeSourceArgs> fc) {
             $.fc = fc;
             return this;
         }
 
+        /**
+         * @param fc FC represents a Fibre Channel resource that is attached to a kubelet&#39;s host machine and then exposed to the pod.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fc(FCVolumeSourceArgs fc) {
             return fc(Output.of(fc));
         }
 
+        /**
+         * @param flexVolume FlexVolume represents a generic volume resource that is provisioned/attached using an exec based plugin.
+         * 
+         * @return builder
+         * 
+         */
         public Builder flexVolume(@Nullable Output<FlexVolumeSourceArgs> flexVolume) {
             $.flexVolume = flexVolume;
             return this;
         }
 
+        /**
+         * @param flexVolume FlexVolume represents a generic volume resource that is provisioned/attached using an exec based plugin.
+         * 
+         * @return builder
+         * 
+         */
         public Builder flexVolume(FlexVolumeSourceArgs flexVolume) {
             return flexVolume(Output.of(flexVolume));
         }
 
+        /**
+         * @param flocker Flocker represents a Flocker volume attached to a kubelet&#39;s host machine. This depends on the Flocker control service being running
+         * 
+         * @return builder
+         * 
+         */
         public Builder flocker(@Nullable Output<FlockerVolumeSourceArgs> flocker) {
             $.flocker = flocker;
             return this;
         }
 
+        /**
+         * @param flocker Flocker represents a Flocker volume attached to a kubelet&#39;s host machine. This depends on the Flocker control service being running
+         * 
+         * @return builder
+         * 
+         */
         public Builder flocker(FlockerVolumeSourceArgs flocker) {
             return flocker(Output.of(flocker));
         }
 
+        /**
+         * @param gcePersistentDisk GCEPersistentDisk represents a GCE Disk resource that is attached to a kubelet&#39;s host machine and then exposed to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk
+         * 
+         * @return builder
+         * 
+         */
         public Builder gcePersistentDisk(@Nullable Output<GCEPersistentDiskVolumeSourceArgs> gcePersistentDisk) {
             $.gcePersistentDisk = gcePersistentDisk;
             return this;
         }
 
+        /**
+         * @param gcePersistentDisk GCEPersistentDisk represents a GCE Disk resource that is attached to a kubelet&#39;s host machine and then exposed to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk
+         * 
+         * @return builder
+         * 
+         */
         public Builder gcePersistentDisk(GCEPersistentDiskVolumeSourceArgs gcePersistentDisk) {
             return gcePersistentDisk(Output.of(gcePersistentDisk));
         }
 
+        /**
+         * @param gitRepo GitRepo represents a git repository at a particular revision. DEPRECATED: GitRepo is deprecated. To provision a container with a git repo, mount an EmptyDir into an InitContainer that clones the repo using git, then mount the EmptyDir into the Pod&#39;s container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gitRepo(@Nullable Output<GitRepoVolumeSourceArgs> gitRepo) {
             $.gitRepo = gitRepo;
             return this;
         }
 
+        /**
+         * @param gitRepo GitRepo represents a git repository at a particular revision. DEPRECATED: GitRepo is deprecated. To provision a container with a git repo, mount an EmptyDir into an InitContainer that clones the repo using git, then mount the EmptyDir into the Pod&#39;s container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gitRepo(GitRepoVolumeSourceArgs gitRepo) {
             return gitRepo(Output.of(gitRepo));
         }
 
+        /**
+         * @param glusterfs Glusterfs represents a Glusterfs mount on the host that shares a pod&#39;s lifetime. More info: https://examples.k8s.io/volumes/glusterfs/README.md
+         * 
+         * @return builder
+         * 
+         */
         public Builder glusterfs(@Nullable Output<GlusterfsVolumeSourceArgs> glusterfs) {
             $.glusterfs = glusterfs;
             return this;
         }
 
+        /**
+         * @param glusterfs Glusterfs represents a Glusterfs mount on the host that shares a pod&#39;s lifetime. More info: https://examples.k8s.io/volumes/glusterfs/README.md
+         * 
+         * @return builder
+         * 
+         */
         public Builder glusterfs(GlusterfsVolumeSourceArgs glusterfs) {
             return glusterfs(Output.of(glusterfs));
         }
 
+        /**
+         * @param hostPath HostPath represents a pre-existing file or directory on the host machine that is directly exposed to the container. This is generally used for system agents or other privileged things that are allowed to see the host machine. Most containers will NOT need this. More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostPath(@Nullable Output<HostPathVolumeSourceArgs> hostPath) {
             $.hostPath = hostPath;
             return this;
         }
 
+        /**
+         * @param hostPath HostPath represents a pre-existing file or directory on the host machine that is directly exposed to the container. This is generally used for system agents or other privileged things that are allowed to see the host machine. Most containers will NOT need this. More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostPath(HostPathVolumeSourceArgs hostPath) {
             return hostPath(Output.of(hostPath));
         }
 
+        /**
+         * @param iscsi ISCSI represents an ISCSI Disk resource that is attached to a kubelet&#39;s host machine and then exposed to the pod. More info: https://examples.k8s.io/volumes/iscsi/README.md
+         * 
+         * @return builder
+         * 
+         */
         public Builder iscsi(@Nullable Output<ISCSIVolumeSourceArgs> iscsi) {
             $.iscsi = iscsi;
             return this;
         }
 
+        /**
+         * @param iscsi ISCSI represents an ISCSI Disk resource that is attached to a kubelet&#39;s host machine and then exposed to the pod. More info: https://examples.k8s.io/volumes/iscsi/README.md
+         * 
+         * @return builder
+         * 
+         */
         public Builder iscsi(ISCSIVolumeSourceArgs iscsi) {
             return iscsi(Output.of(iscsi));
         }
 
+        /**
+         * @param name Volume&#39;s name. Must be a DNS_LABEL and unique within the pod. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Volume&#39;s name. Must be a DNS_LABEL and unique within the pod. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param nfs NFS represents an NFS mount on the host that shares a pod&#39;s lifetime More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
+         * 
+         * @return builder
+         * 
+         */
         public Builder nfs(@Nullable Output<NFSVolumeSourceArgs> nfs) {
             $.nfs = nfs;
             return this;
         }
 
+        /**
+         * @param nfs NFS represents an NFS mount on the host that shares a pod&#39;s lifetime More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
+         * 
+         * @return builder
+         * 
+         */
         public Builder nfs(NFSVolumeSourceArgs nfs) {
             return nfs(Output.of(nfs));
         }
 
+        /**
+         * @param persistentVolumeClaim PersistentVolumeClaimVolumeSource represents a reference to a PersistentVolumeClaim in the same namespace. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
+         * 
+         * @return builder
+         * 
+         */
         public Builder persistentVolumeClaim(@Nullable Output<PersistentVolumeClaimVolumeSourceArgs> persistentVolumeClaim) {
             $.persistentVolumeClaim = persistentVolumeClaim;
             return this;
         }
 
+        /**
+         * @param persistentVolumeClaim PersistentVolumeClaimVolumeSource represents a reference to a PersistentVolumeClaim in the same namespace. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
+         * 
+         * @return builder
+         * 
+         */
         public Builder persistentVolumeClaim(PersistentVolumeClaimVolumeSourceArgs persistentVolumeClaim) {
             return persistentVolumeClaim(Output.of(persistentVolumeClaim));
         }
 
+        /**
+         * @param photonPersistentDisk PhotonPersistentDisk represents a PhotonController persistent disk attached and mounted on kubelets host machine
+         * 
+         * @return builder
+         * 
+         */
         public Builder photonPersistentDisk(@Nullable Output<PhotonPersistentDiskVolumeSourceArgs> photonPersistentDisk) {
             $.photonPersistentDisk = photonPersistentDisk;
             return this;
         }
 
+        /**
+         * @param photonPersistentDisk PhotonPersistentDisk represents a PhotonController persistent disk attached and mounted on kubelets host machine
+         * 
+         * @return builder
+         * 
+         */
         public Builder photonPersistentDisk(PhotonPersistentDiskVolumeSourceArgs photonPersistentDisk) {
             return photonPersistentDisk(Output.of(photonPersistentDisk));
         }
 
+        /**
+         * @param portworxVolume PortworxVolume represents a portworx volume attached and mounted on kubelets host machine
+         * 
+         * @return builder
+         * 
+         */
         public Builder portworxVolume(@Nullable Output<PortworxVolumeSourceArgs> portworxVolume) {
             $.portworxVolume = portworxVolume;
             return this;
         }
 
+        /**
+         * @param portworxVolume PortworxVolume represents a portworx volume attached and mounted on kubelets host machine
+         * 
+         * @return builder
+         * 
+         */
         public Builder portworxVolume(PortworxVolumeSourceArgs portworxVolume) {
             return portworxVolume(Output.of(portworxVolume));
         }
 
+        /**
+         * @param projected Items for all in one resources secrets, configmaps, and downward API
+         * 
+         * @return builder
+         * 
+         */
         public Builder projected(@Nullable Output<ProjectedVolumeSourceArgs> projected) {
             $.projected = projected;
             return this;
         }
 
+        /**
+         * @param projected Items for all in one resources secrets, configmaps, and downward API
+         * 
+         * @return builder
+         * 
+         */
         public Builder projected(ProjectedVolumeSourceArgs projected) {
             return projected(Output.of(projected));
         }
 
+        /**
+         * @param quobyte Quobyte represents a Quobyte mount on the host that shares a pod&#39;s lifetime
+         * 
+         * @return builder
+         * 
+         */
         public Builder quobyte(@Nullable Output<QuobyteVolumeSourceArgs> quobyte) {
             $.quobyte = quobyte;
             return this;
         }
 
+        /**
+         * @param quobyte Quobyte represents a Quobyte mount on the host that shares a pod&#39;s lifetime
+         * 
+         * @return builder
+         * 
+         */
         public Builder quobyte(QuobyteVolumeSourceArgs quobyte) {
             return quobyte(Output.of(quobyte));
         }
 
+        /**
+         * @param rbd RBD represents a Rados Block Device mount on the host that shares a pod&#39;s lifetime. More info: https://examples.k8s.io/volumes/rbd/README.md
+         * 
+         * @return builder
+         * 
+         */
         public Builder rbd(@Nullable Output<RBDVolumeSourceArgs> rbd) {
             $.rbd = rbd;
             return this;
         }
 
+        /**
+         * @param rbd RBD represents a Rados Block Device mount on the host that shares a pod&#39;s lifetime. More info: https://examples.k8s.io/volumes/rbd/README.md
+         * 
+         * @return builder
+         * 
+         */
         public Builder rbd(RBDVolumeSourceArgs rbd) {
             return rbd(Output.of(rbd));
         }
 
+        /**
+         * @param scaleIO ScaleIO represents a ScaleIO persistent volume attached and mounted on Kubernetes nodes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scaleIO(@Nullable Output<ScaleIOVolumeSourceArgs> scaleIO) {
             $.scaleIO = scaleIO;
             return this;
         }
 
+        /**
+         * @param scaleIO ScaleIO represents a ScaleIO persistent volume attached and mounted on Kubernetes nodes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scaleIO(ScaleIOVolumeSourceArgs scaleIO) {
             return scaleIO(Output.of(scaleIO));
         }
 
+        /**
+         * @param secret Secret represents a secret that should populate this volume. More info: https://kubernetes.io/docs/concepts/storage/volumes#secret
+         * 
+         * @return builder
+         * 
+         */
         public Builder secret(@Nullable Output<SecretVolumeSourceArgs> secret) {
             $.secret = secret;
             return this;
         }
 
+        /**
+         * @param secret Secret represents a secret that should populate this volume. More info: https://kubernetes.io/docs/concepts/storage/volumes#secret
+         * 
+         * @return builder
+         * 
+         */
         public Builder secret(SecretVolumeSourceArgs secret) {
             return secret(Output.of(secret));
         }
 
+        /**
+         * @param storageos StorageOS represents a StorageOS volume attached and mounted on Kubernetes nodes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageos(@Nullable Output<StorageOSVolumeSourceArgs> storageos) {
             $.storageos = storageos;
             return this;
         }
 
+        /**
+         * @param storageos StorageOS represents a StorageOS volume attached and mounted on Kubernetes nodes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageos(StorageOSVolumeSourceArgs storageos) {
             return storageos(Output.of(storageos));
         }
 
+        /**
+         * @param vsphereVolume VsphereVolume represents a vSphere volume attached and mounted on kubelets host machine
+         * 
+         * @return builder
+         * 
+         */
         public Builder vsphereVolume(@Nullable Output<VsphereVirtualDiskVolumeSourceArgs> vsphereVolume) {
             $.vsphereVolume = vsphereVolume;
             return this;
         }
 
+        /**
+         * @param vsphereVolume VsphereVolume represents a vSphere volume attached and mounted on kubelets host machine
+         * 
+         * @return builder
+         * 
+         */
         public Builder vsphereVolume(VsphereVirtualDiskVolumeSourceArgs vsphereVolume) {
             return vsphereVolume(Output.of(vsphereVolume));
         }

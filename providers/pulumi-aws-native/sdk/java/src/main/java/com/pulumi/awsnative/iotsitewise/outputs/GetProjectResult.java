@@ -14,32 +14,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetProjectResult {
     /**
-     * The IDs of the assets to be associated to the project.
+     * @return The IDs of the assets to be associated to the project.
      * 
      */
     private final @Nullable List<String> assetIds;
     /**
-     * The ARN of the project.
+     * @return The ARN of the project.
      * 
      */
     private final @Nullable String projectArn;
     /**
-     * A description for the project.
+     * @return A description for the project.
      * 
      */
     private final @Nullable String projectDescription;
     /**
-     * The ID of the project.
+     * @return The ID of the project.
      * 
      */
     private final @Nullable String projectId;
     /**
-     * A friendly name for the project.
+     * @return A friendly name for the project.
      * 
      */
     private final @Nullable String projectName;
     /**
-     * A list of key-value pairs that contain metadata for the project.
+     * @return A list of key-value pairs that contain metadata for the project.
      * 
      */
     private final @Nullable List<ProjectTag> tags;
@@ -61,44 +61,44 @@ public final class GetProjectResult {
     }
 
     /**
-     * The IDs of the assets to be associated to the project.
+     * @return The IDs of the assets to be associated to the project.
      * 
-    */
+     */
     public List<String> assetIds() {
         return this.assetIds == null ? List.of() : this.assetIds;
     }
     /**
-     * The ARN of the project.
+     * @return The ARN of the project.
      * 
-    */
+     */
     public Optional<String> projectArn() {
         return Optional.ofNullable(this.projectArn);
     }
     /**
-     * A description for the project.
+     * @return A description for the project.
      * 
-    */
+     */
     public Optional<String> projectDescription() {
         return Optional.ofNullable(this.projectDescription);
     }
     /**
-     * The ID of the project.
+     * @return The ID of the project.
      * 
-    */
+     */
     public Optional<String> projectId() {
         return Optional.ofNullable(this.projectId);
     }
     /**
-     * A friendly name for the project.
+     * @return A friendly name for the project.
      * 
-    */
+     */
     public Optional<String> projectName() {
         return Optional.ofNullable(this.projectName);
     }
     /**
-     * A list of key-value pairs that contain metadata for the project.
+     * @return A list of key-value pairs that contain metadata for the project.
      * 
-    */
+     */
     public List<ProjectTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

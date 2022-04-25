@@ -28,6 +28,10 @@ public final class FilteringTagArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="action")
     private @Nullable Output<Either<String,TagAction>> action;
 
+    /**
+     * @return Valid actions for a filtering tag.
+     * 
+     */
     public Optional<Output<Either<String,TagAction>>> action() {
         return Optional.ofNullable(this.action);
     }
@@ -39,6 +43,10 @@ public final class FilteringTagArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name (also known as the key) of the tag.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -50,6 +58,10 @@ public final class FilteringTagArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="value")
     private @Nullable Output<String> value;
 
+    /**
+     * @return The value of the tag.
+     * 
+     */
     public Optional<Output<String>> value() {
         return Optional.ofNullable(this.value);
     }
@@ -80,37 +92,85 @@ public final class FilteringTagArgs extends com.pulumi.resources.ResourceArgs {
             $ = new FilteringTagArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action Valid actions for a filtering tag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(@Nullable Output<Either<String,TagAction>> action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param action Valid actions for a filtering tag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(Either<String,TagAction> action) {
             return action(Output.of(action));
         }
 
+        /**
+         * @param action Valid actions for a filtering tag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(String action) {
             return action(Either.ofLeft(action));
         }
 
+        /**
+         * @param action Valid actions for a filtering tag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(TagAction action) {
             return action(Either.ofRight(action));
         }
 
+        /**
+         * @param name The name (also known as the key) of the tag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name (also known as the key) of the tag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param value The value of the tag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value The value of the tag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

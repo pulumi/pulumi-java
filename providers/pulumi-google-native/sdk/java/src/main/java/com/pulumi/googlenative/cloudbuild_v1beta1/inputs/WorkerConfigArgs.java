@@ -27,6 +27,10 @@ public final class WorkerConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="diskSizeGb")
     private @Nullable Output<String> diskSizeGb;
 
+    /**
+     * @return Size of the disk attached to the worker, in GB. See [Worker pool config file](https://cloud.google.com/cloud-build/docs/custom-workers/worker-pool-config-file). Specify a value of up to 1000. If `0` is specified, Cloud Build will use a standard disk size.
+     * 
+     */
     public Optional<Output<String>> diskSizeGb() {
         return Optional.ofNullable(this.diskSizeGb);
     }
@@ -38,6 +42,10 @@ public final class WorkerConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="machineType")
     private @Nullable Output<String> machineType;
 
+    /**
+     * @return Machine type of a worker, such as `n1-standard-1`. See [Worker pool config file](https://cloud.google.com/cloud-build/docs/custom-workers/worker-pool-config-file). If left blank, Cloud Build will use `n1-standard-1`.
+     * 
+     */
     public Optional<Output<String>> machineType() {
         return Optional.ofNullable(this.machineType);
     }
@@ -49,6 +57,10 @@ public final class WorkerConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="noExternalIp")
     private @Nullable Output<Boolean> noExternalIp;
 
+    /**
+     * @return If true, workers are created without any public address, which prevents network egress to public IPs.
+     * 
+     */
     public Optional<Output<Boolean>> noExternalIp() {
         return Optional.ofNullable(this.noExternalIp);
     }
@@ -79,29 +91,65 @@ public final class WorkerConfigArgs extends com.pulumi.resources.ResourceArgs {
             $ = new WorkerConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param diskSizeGb Size of the disk attached to the worker, in GB. See [Worker pool config file](https://cloud.google.com/cloud-build/docs/custom-workers/worker-pool-config-file). Specify a value of up to 1000. If `0` is specified, Cloud Build will use a standard disk size.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskSizeGb(@Nullable Output<String> diskSizeGb) {
             $.diskSizeGb = diskSizeGb;
             return this;
         }
 
+        /**
+         * @param diskSizeGb Size of the disk attached to the worker, in GB. See [Worker pool config file](https://cloud.google.com/cloud-build/docs/custom-workers/worker-pool-config-file). Specify a value of up to 1000. If `0` is specified, Cloud Build will use a standard disk size.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskSizeGb(String diskSizeGb) {
             return diskSizeGb(Output.of(diskSizeGb));
         }
 
+        /**
+         * @param machineType Machine type of a worker, such as `n1-standard-1`. See [Worker pool config file](https://cloud.google.com/cloud-build/docs/custom-workers/worker-pool-config-file). If left blank, Cloud Build will use `n1-standard-1`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder machineType(@Nullable Output<String> machineType) {
             $.machineType = machineType;
             return this;
         }
 
+        /**
+         * @param machineType Machine type of a worker, such as `n1-standard-1`. See [Worker pool config file](https://cloud.google.com/cloud-build/docs/custom-workers/worker-pool-config-file). If left blank, Cloud Build will use `n1-standard-1`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder machineType(String machineType) {
             return machineType(Output.of(machineType));
         }
 
+        /**
+         * @param noExternalIp If true, workers are created without any public address, which prevents network egress to public IPs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder noExternalIp(@Nullable Output<Boolean> noExternalIp) {
             $.noExternalIp = noExternalIp;
             return this;
         }
 
+        /**
+         * @param noExternalIp If true, workers are created without any public address, which prevents network egress to public IPs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder noExternalIp(Boolean noExternalIp) {
             return noExternalIp(Output.of(noExternalIp));
         }

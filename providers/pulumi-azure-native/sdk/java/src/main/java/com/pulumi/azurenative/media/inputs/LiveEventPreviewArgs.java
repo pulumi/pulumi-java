@@ -29,6 +29,10 @@ public final class LiveEventPreviewArgs extends com.pulumi.resources.ResourceArg
     @Import(name="accessControl")
     private @Nullable Output<LiveEventPreviewAccessControlArgs> accessControl;
 
+    /**
+     * @return The access control for live event preview.
+     * 
+     */
     public Optional<Output<LiveEventPreviewAccessControlArgs>> accessControl() {
         return Optional.ofNullable(this.accessControl);
     }
@@ -40,6 +44,10 @@ public final class LiveEventPreviewArgs extends com.pulumi.resources.ResourceArg
     @Import(name="alternativeMediaId")
     private @Nullable Output<String> alternativeMediaId;
 
+    /**
+     * @return An alternative media identifier associated with the streaming locator created for the preview. This value is specified at creation time and cannot be updated. The identifier can be used in the CustomLicenseAcquisitionUrlTemplate or the CustomKeyAcquisitionUrlTemplate of the StreamingPolicy specified in the StreamingPolicyName field.
+     * 
+     */
     public Optional<Output<String>> alternativeMediaId() {
         return Optional.ofNullable(this.alternativeMediaId);
     }
@@ -51,6 +59,10 @@ public final class LiveEventPreviewArgs extends com.pulumi.resources.ResourceArg
     @Import(name="endpoints")
     private @Nullable Output<List<LiveEventEndpointArgs>> endpoints;
 
+    /**
+     * @return The endpoints for preview. Do not share the preview URL with the live event audience.
+     * 
+     */
     public Optional<Output<List<LiveEventEndpointArgs>>> endpoints() {
         return Optional.ofNullable(this.endpoints);
     }
@@ -62,6 +74,10 @@ public final class LiveEventPreviewArgs extends com.pulumi.resources.ResourceArg
     @Import(name="previewLocator")
     private @Nullable Output<String> previewLocator;
 
+    /**
+     * @return The identifier of the preview locator in Guid format. Specifying this at creation time allows the caller to know the preview locator url before the event is created. If omitted, the service will generate a random identifier. This value cannot be updated once the live event is created.
+     * 
+     */
     public Optional<Output<String>> previewLocator() {
         return Optional.ofNullable(this.previewLocator);
     }
@@ -73,6 +89,10 @@ public final class LiveEventPreviewArgs extends com.pulumi.resources.ResourceArg
     @Import(name="streamingPolicyName")
     private @Nullable Output<String> streamingPolicyName;
 
+    /**
+     * @return The name of streaming policy used for the live event preview. This value is specified at creation time and cannot be updated.
+     * 
+     */
     public Optional<Output<String>> streamingPolicyName() {
         return Optional.ofNullable(this.streamingPolicyName);
     }
@@ -105,51 +125,117 @@ public final class LiveEventPreviewArgs extends com.pulumi.resources.ResourceArg
             $ = new LiveEventPreviewArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessControl The access control for live event preview.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessControl(@Nullable Output<LiveEventPreviewAccessControlArgs> accessControl) {
             $.accessControl = accessControl;
             return this;
         }
 
+        /**
+         * @param accessControl The access control for live event preview.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessControl(LiveEventPreviewAccessControlArgs accessControl) {
             return accessControl(Output.of(accessControl));
         }
 
+        /**
+         * @param alternativeMediaId An alternative media identifier associated with the streaming locator created for the preview. This value is specified at creation time and cannot be updated. The identifier can be used in the CustomLicenseAcquisitionUrlTemplate or the CustomKeyAcquisitionUrlTemplate of the StreamingPolicy specified in the StreamingPolicyName field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alternativeMediaId(@Nullable Output<String> alternativeMediaId) {
             $.alternativeMediaId = alternativeMediaId;
             return this;
         }
 
+        /**
+         * @param alternativeMediaId An alternative media identifier associated with the streaming locator created for the preview. This value is specified at creation time and cannot be updated. The identifier can be used in the CustomLicenseAcquisitionUrlTemplate or the CustomKeyAcquisitionUrlTemplate of the StreamingPolicy specified in the StreamingPolicyName field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alternativeMediaId(String alternativeMediaId) {
             return alternativeMediaId(Output.of(alternativeMediaId));
         }
 
+        /**
+         * @param endpoints The endpoints for preview. Do not share the preview URL with the live event audience.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoints(@Nullable Output<List<LiveEventEndpointArgs>> endpoints) {
             $.endpoints = endpoints;
             return this;
         }
 
+        /**
+         * @param endpoints The endpoints for preview. Do not share the preview URL with the live event audience.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoints(List<LiveEventEndpointArgs> endpoints) {
             return endpoints(Output.of(endpoints));
         }
 
+        /**
+         * @param endpoints The endpoints for preview. Do not share the preview URL with the live event audience.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoints(LiveEventEndpointArgs... endpoints) {
             return endpoints(List.of(endpoints));
         }
 
+        /**
+         * @param previewLocator The identifier of the preview locator in Guid format. Specifying this at creation time allows the caller to know the preview locator url before the event is created. If omitted, the service will generate a random identifier. This value cannot be updated once the live event is created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder previewLocator(@Nullable Output<String> previewLocator) {
             $.previewLocator = previewLocator;
             return this;
         }
 
+        /**
+         * @param previewLocator The identifier of the preview locator in Guid format. Specifying this at creation time allows the caller to know the preview locator url before the event is created. If omitted, the service will generate a random identifier. This value cannot be updated once the live event is created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder previewLocator(String previewLocator) {
             return previewLocator(Output.of(previewLocator));
         }
 
+        /**
+         * @param streamingPolicyName The name of streaming policy used for the live event preview. This value is specified at creation time and cannot be updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streamingPolicyName(@Nullable Output<String> streamingPolicyName) {
             $.streamingPolicyName = streamingPolicyName;
             return this;
         }
 
+        /**
+         * @param streamingPolicyName The name of streaming policy used for the live event preview. This value is specified at creation time and cannot be updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streamingPolicyName(String streamingPolicyName) {
             return streamingPolicyName(Output.of(streamingPolicyName));
         }

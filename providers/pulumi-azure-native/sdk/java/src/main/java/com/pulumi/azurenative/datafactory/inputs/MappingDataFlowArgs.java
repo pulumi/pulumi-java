@@ -33,6 +33,10 @@ public final class MappingDataFlowArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="annotations")
     private @Nullable Output<List<Object>> annotations;
 
+    /**
+     * @return List of tags that can be used for describing the data flow.
+     * 
+     */
     public Optional<Output<List<Object>>> annotations() {
         return Optional.ofNullable(this.annotations);
     }
@@ -44,6 +48,10 @@ public final class MappingDataFlowArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description of the data flow.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -55,6 +63,10 @@ public final class MappingDataFlowArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="folder")
     private @Nullable Output<DataFlowFolderArgs> folder;
 
+    /**
+     * @return The folder that this data flow is in. If not specified, Data flow will appear at the root level.
+     * 
+     */
     public Optional<Output<DataFlowFolderArgs>> folder() {
         return Optional.ofNullable(this.folder);
     }
@@ -66,6 +78,10 @@ public final class MappingDataFlowArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="script")
     private @Nullable Output<String> script;
 
+    /**
+     * @return DataFlow script.
+     * 
+     */
     public Optional<Output<String>> script() {
         return Optional.ofNullable(this.script);
     }
@@ -77,6 +93,10 @@ public final class MappingDataFlowArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="scriptLines")
     private @Nullable Output<List<String>> scriptLines;
 
+    /**
+     * @return Data flow script lines.
+     * 
+     */
     public Optional<Output<List<String>>> scriptLines() {
         return Optional.ofNullable(this.scriptLines);
     }
@@ -88,6 +108,10 @@ public final class MappingDataFlowArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="sinks")
     private @Nullable Output<List<DataFlowSinkArgs>> sinks;
 
+    /**
+     * @return List of sinks in data flow.
+     * 
+     */
     public Optional<Output<List<DataFlowSinkArgs>>> sinks() {
         return Optional.ofNullable(this.sinks);
     }
@@ -99,6 +123,10 @@ public final class MappingDataFlowArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="sources")
     private @Nullable Output<List<DataFlowSourceArgs>> sources;
 
+    /**
+     * @return List of sources in data flow.
+     * 
+     */
     public Optional<Output<List<DataFlowSourceArgs>>> sources() {
         return Optional.ofNullable(this.sources);
     }
@@ -110,6 +138,10 @@ public final class MappingDataFlowArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="transformations")
     private @Nullable Output<List<TransformationArgs>> transformations;
 
+    /**
+     * @return List of transformations in data flow.
+     * 
+     */
     public Optional<Output<List<TransformationArgs>>> transformations() {
         return Optional.ofNullable(this.transformations);
     }
@@ -122,6 +154,11 @@ public final class MappingDataFlowArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Type of data flow.
+     * Expected value is &#39;MappingDataFlow&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -158,103 +195,243 @@ public final class MappingDataFlowArgs extends com.pulumi.resources.ResourceArgs
             $ = new MappingDataFlowArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the data flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(@Nullable Output<List<Object>> annotations) {
             $.annotations = annotations;
             return this;
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the data flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(List<Object> annotations) {
             return annotations(Output.of(annotations));
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the data flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
 
+        /**
+         * @param description The description of the data flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description of the data flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param folder The folder that this data flow is in. If not specified, Data flow will appear at the root level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder folder(@Nullable Output<DataFlowFolderArgs> folder) {
             $.folder = folder;
             return this;
         }
 
+        /**
+         * @param folder The folder that this data flow is in. If not specified, Data flow will appear at the root level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder folder(DataFlowFolderArgs folder) {
             return folder(Output.of(folder));
         }
 
+        /**
+         * @param script DataFlow script.
+         * 
+         * @return builder
+         * 
+         */
         public Builder script(@Nullable Output<String> script) {
             $.script = script;
             return this;
         }
 
+        /**
+         * @param script DataFlow script.
+         * 
+         * @return builder
+         * 
+         */
         public Builder script(String script) {
             return script(Output.of(script));
         }
 
+        /**
+         * @param scriptLines Data flow script lines.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scriptLines(@Nullable Output<List<String>> scriptLines) {
             $.scriptLines = scriptLines;
             return this;
         }
 
+        /**
+         * @param scriptLines Data flow script lines.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scriptLines(List<String> scriptLines) {
             return scriptLines(Output.of(scriptLines));
         }
 
+        /**
+         * @param scriptLines Data flow script lines.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scriptLines(String... scriptLines) {
             return scriptLines(List.of(scriptLines));
         }
 
+        /**
+         * @param sinks List of sinks in data flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sinks(@Nullable Output<List<DataFlowSinkArgs>> sinks) {
             $.sinks = sinks;
             return this;
         }
 
+        /**
+         * @param sinks List of sinks in data flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sinks(List<DataFlowSinkArgs> sinks) {
             return sinks(Output.of(sinks));
         }
 
+        /**
+         * @param sinks List of sinks in data flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sinks(DataFlowSinkArgs... sinks) {
             return sinks(List.of(sinks));
         }
 
+        /**
+         * @param sources List of sources in data flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sources(@Nullable Output<List<DataFlowSourceArgs>> sources) {
             $.sources = sources;
             return this;
         }
 
+        /**
+         * @param sources List of sources in data flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sources(List<DataFlowSourceArgs> sources) {
             return sources(Output.of(sources));
         }
 
+        /**
+         * @param sources List of sources in data flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sources(DataFlowSourceArgs... sources) {
             return sources(List.of(sources));
         }
 
+        /**
+         * @param transformations List of transformations in data flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transformations(@Nullable Output<List<TransformationArgs>> transformations) {
             $.transformations = transformations;
             return this;
         }
 
+        /**
+         * @param transformations List of transformations in data flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transformations(List<TransformationArgs> transformations) {
             return transformations(Output.of(transformations));
         }
 
+        /**
+         * @param transformations List of transformations in data flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transformations(TransformationArgs... transformations) {
             return transformations(List.of(transformations));
         }
 
+        /**
+         * @param type Type of data flow.
+         * Expected value is &#39;MappingDataFlow&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of data flow.
+         * Expected value is &#39;MappingDataFlow&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

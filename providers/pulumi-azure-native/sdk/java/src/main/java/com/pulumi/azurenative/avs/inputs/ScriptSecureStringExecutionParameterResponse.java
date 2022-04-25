@@ -26,6 +26,10 @@ public final class ScriptSecureStringExecutionParameterResponse extends com.pulu
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The parameter name
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -37,6 +41,10 @@ public final class ScriptSecureStringExecutionParameterResponse extends com.pulu
     @Import(name="secureValue")
     private @Nullable String secureValue;
 
+    /**
+     * @return A secure value for the passed parameter, not to be stored in logs
+     * 
+     */
     public Optional<String> secureValue() {
         return Optional.ofNullable(this.secureValue);
     }
@@ -49,6 +57,11 @@ public final class ScriptSecureStringExecutionParameterResponse extends com.pulu
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The type of execution parameter
+     * Expected value is &#39;SecureValue&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -79,16 +92,35 @@ public final class ScriptSecureStringExecutionParameterResponse extends com.pulu
             $ = new ScriptSecureStringExecutionParameterResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The parameter name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param secureValue A secure value for the passed parameter, not to be stored in logs
+         * 
+         * @return builder
+         * 
+         */
         public Builder secureValue(@Nullable String secureValue) {
             $.secureValue = secureValue;
             return this;
         }
 
+        /**
+         * @param type The type of execution parameter
+         * Expected value is &#39;SecureValue&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

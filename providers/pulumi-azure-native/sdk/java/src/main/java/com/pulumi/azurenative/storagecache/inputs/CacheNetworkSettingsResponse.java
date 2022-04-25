@@ -28,6 +28,10 @@ public final class CacheNetworkSettingsResponse extends com.pulumi.resources.Inv
     @Import(name="dnsSearchDomain")
     private @Nullable String dnsSearchDomain;
 
+    /**
+     * @return DNS search domain
+     * 
+     */
     public Optional<String> dnsSearchDomain() {
         return Optional.ofNullable(this.dnsSearchDomain);
     }
@@ -39,6 +43,10 @@ public final class CacheNetworkSettingsResponse extends com.pulumi.resources.Inv
     @Import(name="dnsServers")
     private @Nullable List<String> dnsServers;
 
+    /**
+     * @return DNS servers for the cache to use.  It will be set from the network configuration if no value is provided.
+     * 
+     */
     public Optional<List<String>> dnsServers() {
         return Optional.ofNullable(this.dnsServers);
     }
@@ -50,6 +58,10 @@ public final class CacheNetworkSettingsResponse extends com.pulumi.resources.Inv
     @Import(name="mtu")
     private @Nullable Integer mtu;
 
+    /**
+     * @return The IPv4 maximum transmission unit configured for the subnet.
+     * 
+     */
     public Optional<Integer> mtu() {
         return Optional.ofNullable(this.mtu);
     }
@@ -61,6 +73,10 @@ public final class CacheNetworkSettingsResponse extends com.pulumi.resources.Inv
     @Import(name="ntpServer")
     private @Nullable String ntpServer;
 
+    /**
+     * @return NTP server IP Address or FQDN for the cache to use. The default is time.windows.com.
+     * 
+     */
     public Optional<String> ntpServer() {
         return Optional.ofNullable(this.ntpServer);
     }
@@ -72,6 +88,10 @@ public final class CacheNetworkSettingsResponse extends com.pulumi.resources.Inv
     @Import(name="utilityAddresses", required=true)
     private List<String> utilityAddresses;
 
+    /**
+     * @return Array of additional IP addresses used by this Cache.
+     * 
+     */
     public List<String> utilityAddresses() {
         return this.utilityAddresses;
     }
@@ -104,35 +124,77 @@ public final class CacheNetworkSettingsResponse extends com.pulumi.resources.Inv
             $ = new CacheNetworkSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dnsSearchDomain DNS search domain
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsSearchDomain(@Nullable String dnsSearchDomain) {
             $.dnsSearchDomain = dnsSearchDomain;
             return this;
         }
 
+        /**
+         * @param dnsServers DNS servers for the cache to use.  It will be set from the network configuration if no value is provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsServers(@Nullable List<String> dnsServers) {
             $.dnsServers = dnsServers;
             return this;
         }
 
+        /**
+         * @param dnsServers DNS servers for the cache to use.  It will be set from the network configuration if no value is provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsServers(String... dnsServers) {
             return dnsServers(List.of(dnsServers));
         }
 
+        /**
+         * @param mtu The IPv4 maximum transmission unit configured for the subnet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mtu(@Nullable Integer mtu) {
             $.mtu = mtu;
             return this;
         }
 
+        /**
+         * @param ntpServer NTP server IP Address or FQDN for the cache to use. The default is time.windows.com.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ntpServer(@Nullable String ntpServer) {
             $.ntpServer = ntpServer;
             return this;
         }
 
+        /**
+         * @param utilityAddresses Array of additional IP addresses used by this Cache.
+         * 
+         * @return builder
+         * 
+         */
         public Builder utilityAddresses(List<String> utilityAddresses) {
             $.utilityAddresses = utilityAddresses;
             return this;
         }
 
+        /**
+         * @param utilityAddresses Array of additional IP addresses used by this Cache.
+         * 
+         * @return builder
+         * 
+         */
         public Builder utilityAddresses(String... utilityAddresses) {
             return utilityAddresses(List.of(utilityAddresses));
         }

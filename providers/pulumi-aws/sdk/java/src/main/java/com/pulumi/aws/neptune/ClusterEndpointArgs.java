@@ -31,6 +31,10 @@ public final class ClusterEndpointArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="clusterIdentifier", required=true)
     private Output<String> clusterIdentifier;
 
+    /**
+     * @return The DB cluster identifier of the DB cluster associated with the endpoint.
+     * 
+     */
     public Output<String> clusterIdentifier() {
         return this.clusterIdentifier;
     }
@@ -42,6 +46,10 @@ public final class ClusterEndpointArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="endpointType", required=true)
     private Output<String> endpointType;
 
+    /**
+     * @return The type of the endpoint. One of: `READER`, `WRITER`, `ANY`.
+     * 
+     */
     public Output<String> endpointType() {
         return this.endpointType;
     }
@@ -53,6 +61,10 @@ public final class ClusterEndpointArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="excludedMembers")
     private @Nullable Output<List<String>> excludedMembers;
 
+    /**
+     * @return List of DB instance identifiers that aren&#39;t part of the custom endpoint group. All other eligible instances are reachable through the custom endpoint. Only relevant if the list of static members is empty.
+     * 
+     */
     public Optional<Output<List<String>>> excludedMembers() {
         return Optional.ofNullable(this.excludedMembers);
     }
@@ -64,6 +76,10 @@ public final class ClusterEndpointArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="staticMembers")
     private @Nullable Output<List<String>> staticMembers;
 
+    /**
+     * @return List of DB instance identifiers that are part of the custom endpoint group.
+     * 
+     */
     public Optional<Output<List<String>>> staticMembers() {
         return Optional.ofNullable(this.staticMembers);
     }
@@ -75,6 +91,10 @@ public final class ClusterEndpointArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A map of tags to assign to the Neptune cluster. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -117,55 +137,127 @@ public final class ClusterEndpointArgs extends com.pulumi.resources.ResourceArgs
             return clusterEndpointIdentifier(Output.of(clusterEndpointIdentifier));
         }
 
+        /**
+         * @param clusterIdentifier The DB cluster identifier of the DB cluster associated with the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterIdentifier(Output<String> clusterIdentifier) {
             $.clusterIdentifier = clusterIdentifier;
             return this;
         }
 
+        /**
+         * @param clusterIdentifier The DB cluster identifier of the DB cluster associated with the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterIdentifier(String clusterIdentifier) {
             return clusterIdentifier(Output.of(clusterIdentifier));
         }
 
+        /**
+         * @param endpointType The type of the endpoint. One of: `READER`, `WRITER`, `ANY`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointType(Output<String> endpointType) {
             $.endpointType = endpointType;
             return this;
         }
 
+        /**
+         * @param endpointType The type of the endpoint. One of: `READER`, `WRITER`, `ANY`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointType(String endpointType) {
             return endpointType(Output.of(endpointType));
         }
 
+        /**
+         * @param excludedMembers List of DB instance identifiers that aren&#39;t part of the custom endpoint group. All other eligible instances are reachable through the custom endpoint. Only relevant if the list of static members is empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludedMembers(@Nullable Output<List<String>> excludedMembers) {
             $.excludedMembers = excludedMembers;
             return this;
         }
 
+        /**
+         * @param excludedMembers List of DB instance identifiers that aren&#39;t part of the custom endpoint group. All other eligible instances are reachable through the custom endpoint. Only relevant if the list of static members is empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludedMembers(List<String> excludedMembers) {
             return excludedMembers(Output.of(excludedMembers));
         }
 
+        /**
+         * @param excludedMembers List of DB instance identifiers that aren&#39;t part of the custom endpoint group. All other eligible instances are reachable through the custom endpoint. Only relevant if the list of static members is empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludedMembers(String... excludedMembers) {
             return excludedMembers(List.of(excludedMembers));
         }
 
+        /**
+         * @param staticMembers List of DB instance identifiers that are part of the custom endpoint group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder staticMembers(@Nullable Output<List<String>> staticMembers) {
             $.staticMembers = staticMembers;
             return this;
         }
 
+        /**
+         * @param staticMembers List of DB instance identifiers that are part of the custom endpoint group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder staticMembers(List<String> staticMembers) {
             return staticMembers(Output.of(staticMembers));
         }
 
+        /**
+         * @param staticMembers List of DB instance identifiers that are part of the custom endpoint group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder staticMembers(String... staticMembers) {
             return staticMembers(List.of(staticMembers));
         }
 
+        /**
+         * @param tags A map of tags to assign to the Neptune cluster. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A map of tags to assign to the Neptune cluster. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

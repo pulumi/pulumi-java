@@ -19,6 +19,10 @@ public final class GetSettingArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="settingName", required=true)
     private String settingName;
 
+    /**
+     * @return Name of the setting. Allowed values: myscope
+     * 
+     */
     public String settingName() {
         return this.settingName;
     }
@@ -47,6 +51,12 @@ public final class GetSettingArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetSettingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param settingName Name of the setting. Allowed values: myscope
+         * 
+         * @return builder
+         * 
+         */
         public Builder settingName(String settingName) {
             $.settingName = settingName;
             return this;

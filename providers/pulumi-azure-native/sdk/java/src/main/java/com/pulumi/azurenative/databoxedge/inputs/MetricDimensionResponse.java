@@ -23,6 +23,10 @@ public final class MetricDimensionResponse extends com.pulumi.resources.InvokeAr
     @Import(name="sourceName", required=true)
     private String sourceName;
 
+    /**
+     * @return The dimension value.
+     * 
+     */
     public String sourceName() {
         return this.sourceName;
     }
@@ -34,6 +38,10 @@ public final class MetricDimensionResponse extends com.pulumi.resources.InvokeAr
     @Import(name="sourceType", required=true)
     private String sourceType;
 
+    /**
+     * @return The dimension type.
+     * 
+     */
     public String sourceType() {
         return this.sourceType;
     }
@@ -63,11 +71,23 @@ public final class MetricDimensionResponse extends com.pulumi.resources.InvokeAr
             $ = new MetricDimensionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param sourceName The dimension value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceName(String sourceName) {
             $.sourceName = sourceName;
             return this;
         }
 
+        /**
+         * @param sourceType The dimension type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceType(String sourceType) {
             $.sourceType = sourceType;
             return this;

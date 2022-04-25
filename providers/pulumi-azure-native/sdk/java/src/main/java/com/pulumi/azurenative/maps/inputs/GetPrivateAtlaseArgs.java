@@ -19,6 +19,10 @@ public final class GetPrivateAtlaseArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="accountName", required=true)
     private String accountName;
 
+    /**
+     * @return The name of the Maps Account.
+     * 
+     */
     public String accountName() {
         return this.accountName;
     }
@@ -30,6 +34,10 @@ public final class GetPrivateAtlaseArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="privateAtlasName", required=true)
     private String privateAtlasName;
 
+    /**
+     * @return The name of the Private Atlas instance.
+     * 
+     */
     public String privateAtlasName() {
         return this.privateAtlasName;
     }
@@ -41,6 +49,10 @@ public final class GetPrivateAtlaseArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetPrivateAtlaseArgs extends com.pulumi.resources.InvokeArgs 
             $ = new GetPrivateAtlaseArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The name of the Maps Account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param privateAtlasName The name of the Private Atlas instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateAtlasName(String privateAtlasName) {
             $.privateAtlasName = privateAtlasName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

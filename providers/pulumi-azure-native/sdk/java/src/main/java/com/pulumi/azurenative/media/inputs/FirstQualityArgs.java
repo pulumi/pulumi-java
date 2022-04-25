@@ -24,6 +24,10 @@ public final class FirstQualityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="bitrate", required=true)
     private Output<Integer> bitrate;
 
+    /**
+     * @return The first quality bitrate.
+     * 
+     */
     public Output<Integer> bitrate() {
         return this.bitrate;
     }
@@ -52,11 +56,23 @@ public final class FirstQualityArgs extends com.pulumi.resources.ResourceArgs {
             $ = new FirstQualityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bitrate The first quality bitrate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bitrate(Output<Integer> bitrate) {
             $.bitrate = bitrate;
             return this;
         }
 
+        /**
+         * @param bitrate The first quality bitrate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bitrate(Integer bitrate) {
             return bitrate(Output.of(bitrate));
         }

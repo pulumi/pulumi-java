@@ -27,6 +27,10 @@ public final class ManagementPolicyActionResponse extends com.pulumi.resources.I
     @Import(name="baseBlob")
     private @Nullable ManagementPolicyBaseBlobResponse baseBlob;
 
+    /**
+     * @return The management policy action for base blob
+     * 
+     */
     public Optional<ManagementPolicyBaseBlobResponse> baseBlob() {
         return Optional.ofNullable(this.baseBlob);
     }
@@ -38,6 +42,10 @@ public final class ManagementPolicyActionResponse extends com.pulumi.resources.I
     @Import(name="snapshot")
     private @Nullable ManagementPolicySnapShotResponse snapshot;
 
+    /**
+     * @return The management policy action for snapshot
+     * 
+     */
     public Optional<ManagementPolicySnapShotResponse> snapshot() {
         return Optional.ofNullable(this.snapshot);
     }
@@ -49,6 +57,10 @@ public final class ManagementPolicyActionResponse extends com.pulumi.resources.I
     @Import(name="version")
     private @Nullable ManagementPolicyVersionResponse version;
 
+    /**
+     * @return The management policy action for version
+     * 
+     */
     public Optional<ManagementPolicyVersionResponse> version() {
         return Optional.ofNullable(this.version);
     }
@@ -79,16 +91,34 @@ public final class ManagementPolicyActionResponse extends com.pulumi.resources.I
             $ = new ManagementPolicyActionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param baseBlob The management policy action for base blob
+         * 
+         * @return builder
+         * 
+         */
         public Builder baseBlob(@Nullable ManagementPolicyBaseBlobResponse baseBlob) {
             $.baseBlob = baseBlob;
             return this;
         }
 
+        /**
+         * @param snapshot The management policy action for snapshot
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshot(@Nullable ManagementPolicySnapShotResponse snapshot) {
             $.snapshot = snapshot;
             return this;
         }
 
+        /**
+         * @param version The management policy action for version
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable ManagementPolicyVersionResponse version) {
             $.version = version;
             return this;

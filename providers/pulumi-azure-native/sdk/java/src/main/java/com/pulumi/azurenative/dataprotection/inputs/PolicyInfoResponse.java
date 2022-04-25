@@ -33,6 +33,10 @@ public final class PolicyInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="policyParameters")
     private @Nullable PolicyParametersResponse policyParameters;
 
+    /**
+     * @return Policy parameters for the backup instance
+     * 
+     */
     public Optional<PolicyParametersResponse> policyParameters() {
         return Optional.ofNullable(this.policyParameters);
     }
@@ -75,6 +79,12 @@ public final class PolicyInfoResponse extends com.pulumi.resources.InvokeArgs {
             return this;
         }
 
+        /**
+         * @param policyParameters Policy parameters for the backup instance
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyParameters(@Nullable PolicyParametersResponse policyParameters) {
             $.policyParameters = policyParameters;
             return this;

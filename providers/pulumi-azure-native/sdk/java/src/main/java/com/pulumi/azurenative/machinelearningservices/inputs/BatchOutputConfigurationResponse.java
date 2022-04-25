@@ -25,6 +25,10 @@ public final class BatchOutputConfigurationResponse extends com.pulumi.resources
     @Import(name="appendRowFileName")
     private @Nullable String appendRowFileName;
 
+    /**
+     * @return Customized output file name for append_row output action.
+     * 
+     */
     public Optional<String> appendRowFileName() {
         return Optional.ofNullable(this.appendRowFileName);
     }
@@ -36,6 +40,10 @@ public final class BatchOutputConfigurationResponse extends com.pulumi.resources
     @Import(name="outputAction")
     private @Nullable String outputAction;
 
+    /**
+     * @return Indicates how the output will be organized.
+     * 
+     */
     public Optional<String> outputAction() {
         return Optional.ofNullable(this.outputAction);
     }
@@ -65,11 +73,23 @@ public final class BatchOutputConfigurationResponse extends com.pulumi.resources
             $ = new BatchOutputConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param appendRowFileName Customized output file name for append_row output action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appendRowFileName(@Nullable String appendRowFileName) {
             $.appendRowFileName = appendRowFileName;
             return this;
         }
 
+        /**
+         * @param outputAction Indicates how the output will be organized.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputAction(@Nullable String outputAction) {
             $.outputAction = outputAction;
             return this;

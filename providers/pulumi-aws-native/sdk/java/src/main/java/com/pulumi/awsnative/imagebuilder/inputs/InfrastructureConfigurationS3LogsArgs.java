@@ -26,6 +26,10 @@ public final class InfrastructureConfigurationS3LogsArgs extends com.pulumi.reso
     @Import(name="s3BucketName")
     private @Nullable Output<String> s3BucketName;
 
+    /**
+     * @return S3BucketName
+     * 
+     */
     public Optional<Output<String>> s3BucketName() {
         return Optional.ofNullable(this.s3BucketName);
     }
@@ -37,6 +41,10 @@ public final class InfrastructureConfigurationS3LogsArgs extends com.pulumi.reso
     @Import(name="s3KeyPrefix")
     private @Nullable Output<String> s3KeyPrefix;
 
+    /**
+     * @return S3KeyPrefix
+     * 
+     */
     public Optional<Output<String>> s3KeyPrefix() {
         return Optional.ofNullable(this.s3KeyPrefix);
     }
@@ -66,20 +74,44 @@ public final class InfrastructureConfigurationS3LogsArgs extends com.pulumi.reso
             $ = new InfrastructureConfigurationS3LogsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param s3BucketName S3BucketName
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3BucketName(@Nullable Output<String> s3BucketName) {
             $.s3BucketName = s3BucketName;
             return this;
         }
 
+        /**
+         * @param s3BucketName S3BucketName
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3BucketName(String s3BucketName) {
             return s3BucketName(Output.of(s3BucketName));
         }
 
+        /**
+         * @param s3KeyPrefix S3KeyPrefix
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3KeyPrefix(@Nullable Output<String> s3KeyPrefix) {
             $.s3KeyPrefix = s3KeyPrefix;
             return this;
         }
 
+        /**
+         * @param s3KeyPrefix S3KeyPrefix
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3KeyPrefix(String s3KeyPrefix) {
             return s3KeyPrefix(Output.of(s3KeyPrefix));
         }

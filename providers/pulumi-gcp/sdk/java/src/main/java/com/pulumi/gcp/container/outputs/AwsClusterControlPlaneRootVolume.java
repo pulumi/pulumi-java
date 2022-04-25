@@ -13,22 +13,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AwsClusterControlPlaneRootVolume {
     /**
-     * Optional. The number of I/O operations per second (IOPS) to provision for GP3 volume.
+     * @return Optional. The number of I/O operations per second (IOPS) to provision for GP3 volume.
      * 
      */
     private final @Nullable Integer iops;
     /**
-     * Optional. The Amazon Resource Name (ARN) of the Customer Managed Key (CMK) used to encrypt AWS EBS volumes. If not specified, the default Amazon managed key associated to the AWS region where this cluster runs will be used.
+     * @return Optional. The Amazon Resource Name (ARN) of the Customer Managed Key (CMK) used to encrypt AWS EBS volumes. If not specified, the default Amazon managed key associated to the AWS region where this cluster runs will be used.
      * 
      */
     private final @Nullable String kmsKeyArn;
     /**
-     * Optional. The size of the volume, in GiBs. When unspecified, a default value is provided. See the specific reference in the parent resource.
+     * @return Optional. The size of the volume, in GiBs. When unspecified, a default value is provided. See the specific reference in the parent resource.
      * 
      */
     private final @Nullable Integer sizeGib;
     /**
-     * Optional. Type of the EBS volume. When unspecified, it defaults to GP2 volume. Possible values: VOLUME_TYPE_UNSPECIFIED, GP2, GP3
+     * @return Optional. Type of the EBS volume. When unspecified, it defaults to GP2 volume. Possible values: VOLUME_TYPE_UNSPECIFIED, GP2, GP3
      * 
      */
     private final @Nullable String volumeType;
@@ -46,30 +46,30 @@ public final class AwsClusterControlPlaneRootVolume {
     }
 
     /**
-     * Optional. The number of I/O operations per second (IOPS) to provision for GP3 volume.
+     * @return Optional. The number of I/O operations per second (IOPS) to provision for GP3 volume.
      * 
-    */
+     */
     public Optional<Integer> iops() {
         return Optional.ofNullable(this.iops);
     }
     /**
-     * Optional. The Amazon Resource Name (ARN) of the Customer Managed Key (CMK) used to encrypt AWS EBS volumes. If not specified, the default Amazon managed key associated to the AWS region where this cluster runs will be used.
+     * @return Optional. The Amazon Resource Name (ARN) of the Customer Managed Key (CMK) used to encrypt AWS EBS volumes. If not specified, the default Amazon managed key associated to the AWS region where this cluster runs will be used.
      * 
-    */
+     */
     public Optional<String> kmsKeyArn() {
         return Optional.ofNullable(this.kmsKeyArn);
     }
     /**
-     * Optional. The size of the volume, in GiBs. When unspecified, a default value is provided. See the specific reference in the parent resource.
+     * @return Optional. The size of the volume, in GiBs. When unspecified, a default value is provided. See the specific reference in the parent resource.
      * 
-    */
+     */
     public Optional<Integer> sizeGib() {
         return Optional.ofNullable(this.sizeGib);
     }
     /**
-     * Optional. Type of the EBS volume. When unspecified, it defaults to GP2 volume. Possible values: VOLUME_TYPE_UNSPECIFIED, GP2, GP3
+     * @return Optional. Type of the EBS volume. When unspecified, it defaults to GP2 volume. Possible values: VOLUME_TYPE_UNSPECIFIED, GP2, GP3
      * 
-    */
+     */
     public Optional<String> volumeType() {
         return Optional.ofNullable(this.volumeType);
     }

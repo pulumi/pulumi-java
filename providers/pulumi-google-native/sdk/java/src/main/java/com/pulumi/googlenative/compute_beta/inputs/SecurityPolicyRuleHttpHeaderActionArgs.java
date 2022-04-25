@@ -23,6 +23,10 @@ public final class SecurityPolicyRuleHttpHeaderActionArgs extends com.pulumi.res
     @Import(name="requestHeadersToAdds")
     private @Nullable Output<List<SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs>> requestHeadersToAdds;
 
+    /**
+     * @return The list of request headers to add or overwrite if they&#39;re already present.
+     * 
+     */
     public Optional<Output<List<SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs>>> requestHeadersToAdds() {
         return Optional.ofNullable(this.requestHeadersToAdds);
     }
@@ -51,15 +55,33 @@ public final class SecurityPolicyRuleHttpHeaderActionArgs extends com.pulumi.res
             $ = new SecurityPolicyRuleHttpHeaderActionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param requestHeadersToAdds The list of request headers to add or overwrite if they&#39;re already present.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestHeadersToAdds(@Nullable Output<List<SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs>> requestHeadersToAdds) {
             $.requestHeadersToAdds = requestHeadersToAdds;
             return this;
         }
 
+        /**
+         * @param requestHeadersToAdds The list of request headers to add or overwrite if they&#39;re already present.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestHeadersToAdds(List<SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs> requestHeadersToAdds) {
             return requestHeadersToAdds(Output.of(requestHeadersToAdds));
         }
 
+        /**
+         * @param requestHeadersToAdds The list of request headers to add or overwrite if they&#39;re already present.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestHeadersToAdds(SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs... requestHeadersToAdds) {
             return requestHeadersToAdds(List.of(requestHeadersToAdds));
         }

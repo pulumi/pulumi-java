@@ -19,6 +19,10 @@ public final class GetLaunchConfigurationEphemeralBlockDevice extends com.pulumi
     @Import(name="deviceName", required=true)
     private String deviceName;
 
+    /**
+     * @return The Name of the device.
+     * 
+     */
     public String deviceName() {
         return this.deviceName;
     }
@@ -30,6 +34,10 @@ public final class GetLaunchConfigurationEphemeralBlockDevice extends com.pulumi
     @Import(name="virtualName", required=true)
     private String virtualName;
 
+    /**
+     * @return The Virtual Name of the device.
+     * 
+     */
     public String virtualName() {
         return this.virtualName;
     }
@@ -59,11 +67,23 @@ public final class GetLaunchConfigurationEphemeralBlockDevice extends com.pulumi
             $ = new GetLaunchConfigurationEphemeralBlockDevice(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deviceName The Name of the device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(String deviceName) {
             $.deviceName = deviceName;
             return this;
         }
 
+        /**
+         * @param virtualName The Virtual Name of the device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualName(String virtualName) {
             $.virtualName = virtualName;
             return this;

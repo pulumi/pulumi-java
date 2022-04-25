@@ -29,6 +29,10 @@ public final class TokenRequestSpecArgs extends com.pulumi.resources.ResourceArg
     @Import(name="audiences", required=true)
     private Output<List<String>> audiences;
 
+    /**
+     * @return Audiences are the intendend audiences of the token. A recipient of a token must identitfy themself with an identifier in the list of audiences of the token, and otherwise should reject the token. A token issued for multiple audiences may be used to authenticate against any of the audiences listed but implies a high degree of trust between the target audiences.
+     * 
+     */
     public Output<List<String>> audiences() {
         return this.audiences;
     }
@@ -40,6 +44,10 @@ public final class TokenRequestSpecArgs extends com.pulumi.resources.ResourceArg
     @Import(name="boundObjectRef")
     private @Nullable Output<BoundObjectReferenceArgs> boundObjectRef;
 
+    /**
+     * @return BoundObjectRef is a reference to an object that the token will be bound to. The token will only be valid for as long as the bound object exists. NOTE: The API server&#39;s TokenReview endpoint will validate the BoundObjectRef, but other audiences may not. Keep ExpirationSeconds small if you want prompt revocation.
+     * 
+     */
     public Optional<Output<BoundObjectReferenceArgs>> boundObjectRef() {
         return Optional.ofNullable(this.boundObjectRef);
     }
@@ -51,6 +59,10 @@ public final class TokenRequestSpecArgs extends com.pulumi.resources.ResourceArg
     @Import(name="expirationSeconds")
     private @Nullable Output<Integer> expirationSeconds;
 
+    /**
+     * @return ExpirationSeconds is the requested duration of validity of the request. The token issuer may return a token with a different validity duration so a client needs to check the &#39;expiration&#39; field in a response.
+     * 
+     */
     public Optional<Output<Integer>> expirationSeconds() {
         return Optional.ofNullable(this.expirationSeconds);
     }
@@ -81,33 +93,75 @@ public final class TokenRequestSpecArgs extends com.pulumi.resources.ResourceArg
             $ = new TokenRequestSpecArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param audiences Audiences are the intendend audiences of the token. A recipient of a token must identitfy themself with an identifier in the list of audiences of the token, and otherwise should reject the token. A token issued for multiple audiences may be used to authenticate against any of the audiences listed but implies a high degree of trust between the target audiences.
+         * 
+         * @return builder
+         * 
+         */
         public Builder audiences(Output<List<String>> audiences) {
             $.audiences = audiences;
             return this;
         }
 
+        /**
+         * @param audiences Audiences are the intendend audiences of the token. A recipient of a token must identitfy themself with an identifier in the list of audiences of the token, and otherwise should reject the token. A token issued for multiple audiences may be used to authenticate against any of the audiences listed but implies a high degree of trust between the target audiences.
+         * 
+         * @return builder
+         * 
+         */
         public Builder audiences(List<String> audiences) {
             return audiences(Output.of(audiences));
         }
 
+        /**
+         * @param audiences Audiences are the intendend audiences of the token. A recipient of a token must identitfy themself with an identifier in the list of audiences of the token, and otherwise should reject the token. A token issued for multiple audiences may be used to authenticate against any of the audiences listed but implies a high degree of trust between the target audiences.
+         * 
+         * @return builder
+         * 
+         */
         public Builder audiences(String... audiences) {
             return audiences(List.of(audiences));
         }
 
+        /**
+         * @param boundObjectRef BoundObjectRef is a reference to an object that the token will be bound to. The token will only be valid for as long as the bound object exists. NOTE: The API server&#39;s TokenReview endpoint will validate the BoundObjectRef, but other audiences may not. Keep ExpirationSeconds small if you want prompt revocation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder boundObjectRef(@Nullable Output<BoundObjectReferenceArgs> boundObjectRef) {
             $.boundObjectRef = boundObjectRef;
             return this;
         }
 
+        /**
+         * @param boundObjectRef BoundObjectRef is a reference to an object that the token will be bound to. The token will only be valid for as long as the bound object exists. NOTE: The API server&#39;s TokenReview endpoint will validate the BoundObjectRef, but other audiences may not. Keep ExpirationSeconds small if you want prompt revocation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder boundObjectRef(BoundObjectReferenceArgs boundObjectRef) {
             return boundObjectRef(Output.of(boundObjectRef));
         }
 
+        /**
+         * @param expirationSeconds ExpirationSeconds is the requested duration of validity of the request. The token issuer may return a token with a different validity duration so a client needs to check the &#39;expiration&#39; field in a response.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expirationSeconds(@Nullable Output<Integer> expirationSeconds) {
             $.expirationSeconds = expirationSeconds;
             return this;
         }
 
+        /**
+         * @param expirationSeconds ExpirationSeconds is the requested duration of validity of the request. The token issuer may return a token with a different validity duration so a client needs to check the &#39;expiration&#39; field in a response.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expirationSeconds(Integer expirationSeconds) {
             return expirationSeconds(Output.of(expirationSeconds));
         }

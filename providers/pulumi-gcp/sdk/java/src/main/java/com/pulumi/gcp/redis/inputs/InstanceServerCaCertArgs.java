@@ -32,6 +32,13 @@ public final class InstanceServerCaCertArgs extends com.pulumi.resources.Resourc
     @Import(name="createTime")
     private @Nullable Output<String> createTime;
 
+    /**
+     * @return -
+     * Output only. The time when the policy was created.
+     * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond
+     * resolution and up to nine fractional digits.
+     * 
+     */
     public Optional<Output<String>> createTime() {
         return Optional.ofNullable(this.createTime);
     }
@@ -94,11 +101,29 @@ public final class InstanceServerCaCertArgs extends com.pulumi.resources.Resourc
             return cert(Output.of(cert));
         }
 
+        /**
+         * @param createTime -
+         * Output only. The time when the policy was created.
+         * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond
+         * resolution and up to nine fractional digits.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTime(@Nullable Output<String> createTime) {
             $.createTime = createTime;
             return this;
         }
 
+        /**
+         * @param createTime -
+         * Output only. The time when the policy was created.
+         * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond
+         * resolution and up to nine fractional digits.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTime(String createTime) {
             return createTime(Output.of(createTime));
         }

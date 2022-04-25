@@ -27,6 +27,10 @@ public final class BucketLifecycleArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="rule")
     private @Nullable Output<List<BucketLifecycleRuleItemArgs>> rule;
 
+    /**
+     * @return A lifecycle management rule, which is made of an action to take and the condition(s) under which the action will be taken.
+     * 
+     */
     public Optional<Output<List<BucketLifecycleRuleItemArgs>>> rule() {
         return Optional.ofNullable(this.rule);
     }
@@ -55,15 +59,33 @@ public final class BucketLifecycleArgs extends com.pulumi.resources.ResourceArgs
             $ = new BucketLifecycleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param rule A lifecycle management rule, which is made of an action to take and the condition(s) under which the action will be taken.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rule(@Nullable Output<List<BucketLifecycleRuleItemArgs>> rule) {
             $.rule = rule;
             return this;
         }
 
+        /**
+         * @param rule A lifecycle management rule, which is made of an action to take and the condition(s) under which the action will be taken.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rule(List<BucketLifecycleRuleItemArgs> rule) {
             return rule(Output.of(rule));
         }
 
+        /**
+         * @param rule A lifecycle management rule, which is made of an action to take and the condition(s) under which the action will be taken.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rule(BucketLifecycleRuleItemArgs... rule) {
             return rule(List.of(rule));
         }

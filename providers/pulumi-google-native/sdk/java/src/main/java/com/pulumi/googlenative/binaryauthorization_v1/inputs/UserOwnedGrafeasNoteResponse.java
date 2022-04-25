@@ -25,6 +25,10 @@ public final class UserOwnedGrafeasNoteResponse extends com.pulumi.resources.Inv
     @Import(name="delegationServiceAccountEmail", required=true)
     private String delegationServiceAccountEmail;
 
+    /**
+     * @return This field will contain the service account email address that this Attestor will use as the principal when querying Container Analysis. Attestor administrators must grant this service account the IAM role needed to read attestations from the note_reference in Container Analysis (`containeranalysis.notes.occurrences.viewer`). This email address is fixed for the lifetime of the Attestor, but callers should not make any other assumptions about the service account email; future versions may use an email based on a different naming pattern.
+     * 
+     */
     public String delegationServiceAccountEmail() {
         return this.delegationServiceAccountEmail;
     }
@@ -36,6 +40,10 @@ public final class UserOwnedGrafeasNoteResponse extends com.pulumi.resources.Inv
     @Import(name="noteReference", required=true)
     private String noteReference;
 
+    /**
+     * @return The Grafeas resource name of a Attestation.Authority Note, created by the user, in the format: `projects/*{@literal /}notes/*`. This field may not be updated. An attestation by this attestor is stored as a Grafeas Attestation.Authority Occurrence that names a container image and that links to this Note. Grafeas is an external dependency.
+     * 
+     */
     public String noteReference() {
         return this.noteReference;
     }
@@ -47,6 +55,10 @@ public final class UserOwnedGrafeasNoteResponse extends com.pulumi.resources.Inv
     @Import(name="publicKeys", required=true)
     private List<AttestorPublicKeyResponse> publicKeys;
 
+    /**
+     * @return Optional. Public keys that verify attestations signed by this attestor. This field may be updated. If this field is non-empty, one of the specified public keys must verify that an attestation was signed by this attestor for the image specified in the admission request. If this field is empty, this attestor always returns that no valid attestations exist.
+     * 
+     */
     public List<AttestorPublicKeyResponse> publicKeys() {
         return this.publicKeys;
     }
@@ -77,21 +89,45 @@ public final class UserOwnedGrafeasNoteResponse extends com.pulumi.resources.Inv
             $ = new UserOwnedGrafeasNoteResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param delegationServiceAccountEmail This field will contain the service account email address that this Attestor will use as the principal when querying Container Analysis. Attestor administrators must grant this service account the IAM role needed to read attestations from the note_reference in Container Analysis (`containeranalysis.notes.occurrences.viewer`). This email address is fixed for the lifetime of the Attestor, but callers should not make any other assumptions about the service account email; future versions may use an email based on a different naming pattern.
+         * 
+         * @return builder
+         * 
+         */
         public Builder delegationServiceAccountEmail(String delegationServiceAccountEmail) {
             $.delegationServiceAccountEmail = delegationServiceAccountEmail;
             return this;
         }
 
+        /**
+         * @param noteReference The Grafeas resource name of a Attestation.Authority Note, created by the user, in the format: `projects/*{@literal /}notes/*`. This field may not be updated. An attestation by this attestor is stored as a Grafeas Attestation.Authority Occurrence that names a container image and that links to this Note. Grafeas is an external dependency.
+         * 
+         * @return builder
+         * 
+         */
         public Builder noteReference(String noteReference) {
             $.noteReference = noteReference;
             return this;
         }
 
+        /**
+         * @param publicKeys Optional. Public keys that verify attestations signed by this attestor. This field may be updated. If this field is non-empty, one of the specified public keys must verify that an attestation was signed by this attestor for the image specified in the admission request. If this field is empty, this attestor always returns that no valid attestations exist.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicKeys(List<AttestorPublicKeyResponse> publicKeys) {
             $.publicKeys = publicKeys;
             return this;
         }
 
+        /**
+         * @param publicKeys Optional. Public keys that verify attestations signed by this attestor. This field may be updated. If this field is non-empty, one of the specified public keys must verify that an attestation was signed by this attestor for the image specified in the admission request. If this field is empty, this attestor always returns that no valid attestations exist.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicKeys(AttestorPublicKeyResponse... publicKeys) {
             return publicKeys(List.of(publicKeys));
         }

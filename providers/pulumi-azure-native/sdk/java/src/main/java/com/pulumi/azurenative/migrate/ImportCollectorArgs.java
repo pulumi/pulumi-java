@@ -30,6 +30,10 @@ public final class ImportCollectorArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="importCollectorName")
     private @Nullable Output<String> importCollectorName;
 
+    /**
+     * @return Unique name of a Import collector within a project.
+     * 
+     */
     public Optional<Output<String>> importCollectorName() {
         return Optional.ofNullable(this.importCollectorName);
     }
@@ -41,6 +45,10 @@ public final class ImportCollectorArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="projectName", required=true)
     private Output<String> projectName;
 
+    /**
+     * @return Name of the Azure Migrate project.
+     * 
+     */
     public Output<String> projectName() {
         return this.projectName;
     }
@@ -59,6 +67,10 @@ public final class ImportCollectorArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of the Azure Resource Group that project is part of.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -100,20 +112,44 @@ public final class ImportCollectorArgs extends com.pulumi.resources.ResourceArgs
             return eTag(Output.of(eTag));
         }
 
+        /**
+         * @param importCollectorName Unique name of a Import collector within a project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder importCollectorName(@Nullable Output<String> importCollectorName) {
             $.importCollectorName = importCollectorName;
             return this;
         }
 
+        /**
+         * @param importCollectorName Unique name of a Import collector within a project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder importCollectorName(String importCollectorName) {
             return importCollectorName(Output.of(importCollectorName));
         }
 
+        /**
+         * @param projectName Name of the Azure Migrate project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectName(Output<String> projectName) {
             $.projectName = projectName;
             return this;
         }
 
+        /**
+         * @param projectName Name of the Azure Migrate project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectName(String projectName) {
             return projectName(Output.of(projectName));
         }
@@ -127,11 +163,23 @@ public final class ImportCollectorArgs extends com.pulumi.resources.ResourceArgs
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroupName Name of the Azure Resource Group that project is part of.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the Azure Resource Group that project is part of.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }

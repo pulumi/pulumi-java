@@ -14,33 +14,33 @@ import java.util.Objects;
 @CustomType
 public final class GetPolicyResult {
     /**
-     * Sets an alternative name server for the associated networks. When specified, all DNS queries are forwarded to a name server that you choose. Names such as .internal are not available when an alternative name server is specified.
+     * @return Sets an alternative name server for the associated networks. When specified, all DNS queries are forwarded to a name server that you choose. Names such as .internal are not available when an alternative name server is specified.
      * 
      */
     private final PolicyAlternativeNameServerConfigResponse alternativeNameServerConfig;
     /**
-     * A mutable string of at most 1024 characters associated with this resource for the user&#39;s convenience. Has no effect on the policy&#39;s function.
+     * @return A mutable string of at most 1024 characters associated with this resource for the user&#39;s convenience. Has no effect on the policy&#39;s function.
      * 
      */
     private final String description;
     /**
-     * Allows networks bound to this policy to receive DNS queries sent by VMs or applications over VPN connections. When enabled, a virtual IP address is allocated from each of the subnetworks that are bound to this policy.
+     * @return Allows networks bound to this policy to receive DNS queries sent by VMs or applications over VPN connections. When enabled, a virtual IP address is allocated from each of the subnetworks that are bound to this policy.
      * 
      */
     private final Boolean enableInboundForwarding;
     /**
-     * Controls whether logging is enabled for the networks bound to this policy. Defaults to no logging if not set.
+     * @return Controls whether logging is enabled for the networks bound to this policy. Defaults to no logging if not set.
      * 
      */
     private final Boolean enableLogging;
     private final String kind;
     /**
-     * User-assigned name for this policy.
+     * @return User-assigned name for this policy.
      * 
      */
     private final String name;
     /**
-     * List of network names specifying networks to which this policy is applied.
+     * @return List of network names specifying networks to which this policy is applied.
      * 
      */
     private final List<PolicyNetworkResponse> networks;
@@ -64,30 +64,30 @@ public final class GetPolicyResult {
     }
 
     /**
-     * Sets an alternative name server for the associated networks. When specified, all DNS queries are forwarded to a name server that you choose. Names such as .internal are not available when an alternative name server is specified.
+     * @return Sets an alternative name server for the associated networks. When specified, all DNS queries are forwarded to a name server that you choose. Names such as .internal are not available when an alternative name server is specified.
      * 
-    */
+     */
     public PolicyAlternativeNameServerConfigResponse alternativeNameServerConfig() {
         return this.alternativeNameServerConfig;
     }
     /**
-     * A mutable string of at most 1024 characters associated with this resource for the user&#39;s convenience. Has no effect on the policy&#39;s function.
+     * @return A mutable string of at most 1024 characters associated with this resource for the user&#39;s convenience. Has no effect on the policy&#39;s function.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * Allows networks bound to this policy to receive DNS queries sent by VMs or applications over VPN connections. When enabled, a virtual IP address is allocated from each of the subnetworks that are bound to this policy.
+     * @return Allows networks bound to this policy to receive DNS queries sent by VMs or applications over VPN connections. When enabled, a virtual IP address is allocated from each of the subnetworks that are bound to this policy.
      * 
-    */
+     */
     public Boolean enableInboundForwarding() {
         return this.enableInboundForwarding;
     }
     /**
-     * Controls whether logging is enabled for the networks bound to this policy. Defaults to no logging if not set.
+     * @return Controls whether logging is enabled for the networks bound to this policy. Defaults to no logging if not set.
      * 
-    */
+     */
     public Boolean enableLogging() {
         return this.enableLogging;
     }
@@ -95,16 +95,16 @@ public final class GetPolicyResult {
         return this.kind;
     }
     /**
-     * User-assigned name for this policy.
+     * @return User-assigned name for this policy.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * List of network names specifying networks to which this policy is applied.
+     * @return List of network names specifying networks to which this policy is applied.
      * 
-    */
+     */
     public List<PolicyNetworkResponse> networks() {
         return this.networks;
     }

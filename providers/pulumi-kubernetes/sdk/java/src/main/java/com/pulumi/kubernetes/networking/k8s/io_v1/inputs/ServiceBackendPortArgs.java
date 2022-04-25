@@ -27,6 +27,10 @@ public final class ServiceBackendPortArgs extends com.pulumi.resources.ResourceA
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name is the name of the port on the Service. This is a mutually exclusive setting with &#34;Number&#34;.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -38,6 +42,10 @@ public final class ServiceBackendPortArgs extends com.pulumi.resources.ResourceA
     @Import(name="number")
     private @Nullable Output<Integer> number;
 
+    /**
+     * @return Number is the numerical port number (e.g. 80) on the Service. This is a mutually exclusive setting with &#34;Name&#34;.
+     * 
+     */
     public Optional<Output<Integer>> number() {
         return Optional.ofNullable(this.number);
     }
@@ -67,20 +75,44 @@ public final class ServiceBackendPortArgs extends com.pulumi.resources.ResourceA
             $ = new ServiceBackendPortArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name is the name of the port on the Service. This is a mutually exclusive setting with &#34;Number&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name is the name of the port on the Service. This is a mutually exclusive setting with &#34;Number&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param number Number is the numerical port number (e.g. 80) on the Service. This is a mutually exclusive setting with &#34;Name&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder number(@Nullable Output<Integer> number) {
             $.number = number;
             return this;
         }
 
+        /**
+         * @param number Number is the numerical port number (e.g. 80) on the Service. This is a mutually exclusive setting with &#34;Name&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder number(Integer number) {
             return number(Output.of(number));
         }

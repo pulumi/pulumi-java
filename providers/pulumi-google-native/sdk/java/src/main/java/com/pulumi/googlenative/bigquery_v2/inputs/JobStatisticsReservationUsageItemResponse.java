@@ -19,6 +19,10 @@ public final class JobStatisticsReservationUsageItemResponse extends com.pulumi.
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Reservation name or &#34;unreserved&#34; for on-demand resources usage.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -30,6 +34,10 @@ public final class JobStatisticsReservationUsageItemResponse extends com.pulumi.
     @Import(name="slotMs", required=true)
     private String slotMs;
 
+    /**
+     * @return Slot-milliseconds the job spent in the given reservation.
+     * 
+     */
     public String slotMs() {
         return this.slotMs;
     }
@@ -59,11 +67,23 @@ public final class JobStatisticsReservationUsageItemResponse extends com.pulumi.
             $ = new JobStatisticsReservationUsageItemResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Reservation name or &#34;unreserved&#34; for on-demand resources usage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param slotMs Slot-milliseconds the job spent in the given reservation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder slotMs(String slotMs) {
             $.slotMs = slotMs;
             return this;

@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class DatasetTagsItemResponse {
     /**
-     * [Required] The namespaced friendly name of the tag key, e.g. &#34;12345/environment&#34; where 12345 is org id.
+     * @return [Required] The namespaced friendly name of the tag key, e.g. &#34;12345/environment&#34; where 12345 is org id.
      * 
      */
     private final String tagKey;
     /**
-     * [Required] Friendly short name of the tag value, e.g. &#34;production&#34;.
+     * @return [Required] Friendly short name of the tag value, e.g. &#34;production&#34;.
      * 
      */
     private final String tagValue;
@@ -29,16 +29,16 @@ public final class DatasetTagsItemResponse {
     }
 
     /**
-     * [Required] The namespaced friendly name of the tag key, e.g. &#34;12345/environment&#34; where 12345 is org id.
+     * @return [Required] The namespaced friendly name of the tag key, e.g. &#34;12345/environment&#34; where 12345 is org id.
      * 
-    */
+     */
     public String tagKey() {
         return this.tagKey;
     }
     /**
-     * [Required] Friendly short name of the tag value, e.g. &#34;production&#34;.
+     * @return [Required] Friendly short name of the tag value, e.g. &#34;production&#34;.
      * 
-    */
+     */
     public String tagValue() {
         return this.tagValue;
     }

@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class EventFilterResponse {
     /**
-     * The name of a CloudEvents attribute. Currently, only a subset of attributes are supported for filtering. All triggers MUST provide a filter for the &#39;type&#39; attribute.
+     * @return The name of a CloudEvents attribute. Currently, only a subset of attributes are supported for filtering. All triggers MUST provide a filter for the &#39;type&#39; attribute.
      * 
      */
     private final String attribute;
     /**
-     * The value for the attribute.
+     * @return The value for the attribute.
      * 
      */
     private final String value;
@@ -29,16 +29,16 @@ public final class EventFilterResponse {
     }
 
     /**
-     * The name of a CloudEvents attribute. Currently, only a subset of attributes are supported for filtering. All triggers MUST provide a filter for the &#39;type&#39; attribute.
+     * @return The name of a CloudEvents attribute. Currently, only a subset of attributes are supported for filtering. All triggers MUST provide a filter for the &#39;type&#39; attribute.
      * 
-    */
+     */
     public String attribute() {
         return this.attribute;
     }
     /**
-     * The value for the attribute.
+     * @return The value for the attribute.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

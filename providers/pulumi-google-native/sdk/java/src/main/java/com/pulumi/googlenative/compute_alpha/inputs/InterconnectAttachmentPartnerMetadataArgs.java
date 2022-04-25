@@ -26,6 +26,10 @@ public final class InterconnectAttachmentPartnerMetadataArgs extends com.pulumi.
     @Import(name="interconnectName")
     private @Nullable Output<String> interconnectName;
 
+    /**
+     * @return Plain text name of the Interconnect this attachment is connected to, as displayed in the Partner&#39;s portal. For instance &#34;Chicago 1&#34;. This value may be validated to match approved Partner values.
+     * 
+     */
     public Optional<Output<String>> interconnectName() {
         return Optional.ofNullable(this.interconnectName);
     }
@@ -37,6 +41,10 @@ public final class InterconnectAttachmentPartnerMetadataArgs extends com.pulumi.
     @Import(name="partnerName")
     private @Nullable Output<String> partnerName;
 
+    /**
+     * @return Plain text name of the Partner providing this attachment. This value may be validated to match approved Partner values.
+     * 
+     */
     public Optional<Output<String>> partnerName() {
         return Optional.ofNullable(this.partnerName);
     }
@@ -48,6 +56,10 @@ public final class InterconnectAttachmentPartnerMetadataArgs extends com.pulumi.
     @Import(name="portalUrl")
     private @Nullable Output<String> portalUrl;
 
+    /**
+     * @return URL of the Partner&#39;s portal for this Attachment. Partners may customise this to be a deep link to the specific resource on the Partner portal. This value may be validated to match approved Partner values.
+     * 
+     */
     public Optional<Output<String>> portalUrl() {
         return Optional.ofNullable(this.portalUrl);
     }
@@ -78,29 +90,65 @@ public final class InterconnectAttachmentPartnerMetadataArgs extends com.pulumi.
             $ = new InterconnectAttachmentPartnerMetadataArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param interconnectName Plain text name of the Interconnect this attachment is connected to, as displayed in the Partner&#39;s portal. For instance &#34;Chicago 1&#34;. This value may be validated to match approved Partner values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interconnectName(@Nullable Output<String> interconnectName) {
             $.interconnectName = interconnectName;
             return this;
         }
 
+        /**
+         * @param interconnectName Plain text name of the Interconnect this attachment is connected to, as displayed in the Partner&#39;s portal. For instance &#34;Chicago 1&#34;. This value may be validated to match approved Partner values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interconnectName(String interconnectName) {
             return interconnectName(Output.of(interconnectName));
         }
 
+        /**
+         * @param partnerName Plain text name of the Partner providing this attachment. This value may be validated to match approved Partner values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partnerName(@Nullable Output<String> partnerName) {
             $.partnerName = partnerName;
             return this;
         }
 
+        /**
+         * @param partnerName Plain text name of the Partner providing this attachment. This value may be validated to match approved Partner values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partnerName(String partnerName) {
             return partnerName(Output.of(partnerName));
         }
 
+        /**
+         * @param portalUrl URL of the Partner&#39;s portal for this Attachment. Partners may customise this to be a deep link to the specific resource on the Partner portal. This value may be validated to match approved Partner values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder portalUrl(@Nullable Output<String> portalUrl) {
             $.portalUrl = portalUrl;
             return this;
         }
 
+        /**
+         * @param portalUrl URL of the Partner&#39;s portal for this Attachment. Partners may customise this to be a deep link to the specific resource on the Partner portal. This value may be validated to match approved Partner values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder portalUrl(String portalUrl) {
             return portalUrl(Output.of(portalUrl));
         }

@@ -27,6 +27,10 @@ public final class ManagedIntegrationRuntimeNodeResponse extends com.pulumi.reso
     @Import(name="errors")
     private @Nullable List<ManagedIntegrationRuntimeErrorResponse> errors;
 
+    /**
+     * @return The errors that occurred on this integration runtime node.
+     * 
+     */
     public Optional<List<ManagedIntegrationRuntimeErrorResponse>> errors() {
         return Optional.ofNullable(this.errors);
     }
@@ -38,6 +42,10 @@ public final class ManagedIntegrationRuntimeNodeResponse extends com.pulumi.reso
     @Import(name="nodeId", required=true)
     private String nodeId;
 
+    /**
+     * @return The managed integration runtime node id.
+     * 
+     */
     public String nodeId() {
         return this.nodeId;
     }
@@ -49,6 +57,10 @@ public final class ManagedIntegrationRuntimeNodeResponse extends com.pulumi.reso
     @Import(name="status", required=true)
     private String status;
 
+    /**
+     * @return The managed integration runtime node status.
+     * 
+     */
     public String status() {
         return this.status;
     }
@@ -79,20 +91,44 @@ public final class ManagedIntegrationRuntimeNodeResponse extends com.pulumi.reso
             $ = new ManagedIntegrationRuntimeNodeResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param errors The errors that occurred on this integration runtime node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errors(@Nullable List<ManagedIntegrationRuntimeErrorResponse> errors) {
             $.errors = errors;
             return this;
         }
 
+        /**
+         * @param errors The errors that occurred on this integration runtime node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errors(ManagedIntegrationRuntimeErrorResponse... errors) {
             return errors(List.of(errors));
         }
 
+        /**
+         * @param nodeId The managed integration runtime node id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeId(String nodeId) {
             $.nodeId = nodeId;
             return this;
         }
 
+        /**
+         * @param status The managed integration runtime node status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             $.status = status;
             return this;

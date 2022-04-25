@@ -12,22 +12,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AdditionalUnattendContentResponse {
     /**
-     * The component name. Currently, the only allowable value is Microsoft-Windows-Shell-Setup.
+     * @return The component name. Currently, the only allowable value is Microsoft-Windows-Shell-Setup.
      * 
      */
     private final @Nullable String componentName;
     /**
-     * Specifies the XML formatted content that is added to the unattend.xml file for the specified path and component. The XML must be less than 4KB and must include the root element for the setting or feature that is being inserted.
+     * @return Specifies the XML formatted content that is added to the unattend.xml file for the specified path and component. The XML must be less than 4KB and must include the root element for the setting or feature that is being inserted.
      * 
      */
     private final @Nullable String content;
     /**
-     * The pass name. Currently, the only allowable value is OobeSystem.
+     * @return The pass name. Currently, the only allowable value is OobeSystem.
      * 
      */
     private final @Nullable String passName;
     /**
-     * Specifies the name of the setting to which the content applies. Possible values are: FirstLogonCommands and AutoLogon.
+     * @return Specifies the name of the setting to which the content applies. Possible values are: FirstLogonCommands and AutoLogon.
      * 
      */
     private final @Nullable String settingName;
@@ -45,30 +45,30 @@ public final class AdditionalUnattendContentResponse {
     }
 
     /**
-     * The component name. Currently, the only allowable value is Microsoft-Windows-Shell-Setup.
+     * @return The component name. Currently, the only allowable value is Microsoft-Windows-Shell-Setup.
      * 
-    */
+     */
     public Optional<String> componentName() {
         return Optional.ofNullable(this.componentName);
     }
     /**
-     * Specifies the XML formatted content that is added to the unattend.xml file for the specified path and component. The XML must be less than 4KB and must include the root element for the setting or feature that is being inserted.
+     * @return Specifies the XML formatted content that is added to the unattend.xml file for the specified path and component. The XML must be less than 4KB and must include the root element for the setting or feature that is being inserted.
      * 
-    */
+     */
     public Optional<String> content() {
         return Optional.ofNullable(this.content);
     }
     /**
-     * The pass name. Currently, the only allowable value is OobeSystem.
+     * @return The pass name. Currently, the only allowable value is OobeSystem.
      * 
-    */
+     */
     public Optional<String> passName() {
         return Optional.ofNullable(this.passName);
     }
     /**
-     * Specifies the name of the setting to which the content applies. Possible values are: FirstLogonCommands and AutoLogon.
+     * @return Specifies the name of the setting to which the content applies. Possible values are: FirstLogonCommands and AutoLogon.
      * 
-    */
+     */
     public Optional<String> settingName() {
         return Optional.ofNullable(this.settingName);
     }

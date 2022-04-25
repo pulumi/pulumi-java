@@ -26,6 +26,10 @@ public final class EnvironmentFederationParameters extends com.pulumi.resources.
     @Import(name="applicationCallBackURL")
     private @Nullable String applicationCallBackURL;
 
+    /**
+     * @return SAML metadata URL to link with the Environment
+     * 
+     */
     public Optional<String> applicationCallBackURL() {
         return Optional.ofNullable(this.applicationCallBackURL);
     }
@@ -37,6 +41,10 @@ public final class EnvironmentFederationParameters extends com.pulumi.resources.
     @Import(name="attributeMap")
     private @Nullable Object attributeMap;
 
+    /**
+     * @return Attribute map for SAML configuration
+     * 
+     */
     public Optional<Object> attributeMap() {
         return Optional.ofNullable(this.attributeMap);
     }
@@ -48,6 +56,10 @@ public final class EnvironmentFederationParameters extends com.pulumi.resources.
     @Import(name="federationProviderName")
     private @Nullable String federationProviderName;
 
+    /**
+     * @return Federation provider name to link with the Environment
+     * 
+     */
     public Optional<String> federationProviderName() {
         return Optional.ofNullable(this.federationProviderName);
     }
@@ -59,6 +71,10 @@ public final class EnvironmentFederationParameters extends com.pulumi.resources.
     @Import(name="federationURN")
     private @Nullable String federationURN;
 
+    /**
+     * @return SAML metadata URL to link with the Environment
+     * 
+     */
     public Optional<String> federationURN() {
         return Optional.ofNullable(this.federationURN);
     }
@@ -70,6 +86,10 @@ public final class EnvironmentFederationParameters extends com.pulumi.resources.
     @Import(name="samlMetadataDocument")
     private @Nullable String samlMetadataDocument;
 
+    /**
+     * @return SAML metadata document to link the federation provider to the Environment
+     * 
+     */
     public Optional<String> samlMetadataDocument() {
         return Optional.ofNullable(this.samlMetadataDocument);
     }
@@ -81,6 +101,10 @@ public final class EnvironmentFederationParameters extends com.pulumi.resources.
     @Import(name="samlMetadataURL")
     private @Nullable String samlMetadataURL;
 
+    /**
+     * @return SAML metadata URL to link with the Environment
+     * 
+     */
     public Optional<String> samlMetadataURL() {
         return Optional.ofNullable(this.samlMetadataURL);
     }
@@ -114,31 +138,67 @@ public final class EnvironmentFederationParameters extends com.pulumi.resources.
             $ = new EnvironmentFederationParameters(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param applicationCallBackURL SAML metadata URL to link with the Environment
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationCallBackURL(@Nullable String applicationCallBackURL) {
             $.applicationCallBackURL = applicationCallBackURL;
             return this;
         }
 
+        /**
+         * @param attributeMap Attribute map for SAML configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder attributeMap(@Nullable Object attributeMap) {
             $.attributeMap = attributeMap;
             return this;
         }
 
+        /**
+         * @param federationProviderName Federation provider name to link with the Environment
+         * 
+         * @return builder
+         * 
+         */
         public Builder federationProviderName(@Nullable String federationProviderName) {
             $.federationProviderName = federationProviderName;
             return this;
         }
 
+        /**
+         * @param federationURN SAML metadata URL to link with the Environment
+         * 
+         * @return builder
+         * 
+         */
         public Builder federationURN(@Nullable String federationURN) {
             $.federationURN = federationURN;
             return this;
         }
 
+        /**
+         * @param samlMetadataDocument SAML metadata document to link the federation provider to the Environment
+         * 
+         * @return builder
+         * 
+         */
         public Builder samlMetadataDocument(@Nullable String samlMetadataDocument) {
             $.samlMetadataDocument = samlMetadataDocument;
             return this;
         }
 
+        /**
+         * @param samlMetadataURL SAML metadata URL to link with the Environment
+         * 
+         * @return builder
+         * 
+         */
         public Builder samlMetadataURL(@Nullable String samlMetadataURL) {
             $.samlMetadataURL = samlMetadataURL;
             return this;

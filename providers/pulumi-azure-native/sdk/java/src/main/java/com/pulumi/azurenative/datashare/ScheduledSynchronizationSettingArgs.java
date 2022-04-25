@@ -25,6 +25,10 @@ public final class ScheduledSynchronizationSettingArgs extends com.pulumi.resour
     @Import(name="accountName", required=true)
     private Output<String> accountName;
 
+    /**
+     * @return The name of the share account.
+     * 
+     */
     public Output<String> accountName() {
         return this.accountName;
     }
@@ -37,6 +41,11 @@ public final class ScheduledSynchronizationSettingArgs extends com.pulumi.resour
     @Import(name="kind", required=true)
     private Output<String> kind;
 
+    /**
+     * @return Kind of synchronization setting.
+     * Expected value is &#39;ScheduleBased&#39;.
+     * 
+     */
     public Output<String> kind() {
         return this.kind;
     }
@@ -48,6 +57,10 @@ public final class ScheduledSynchronizationSettingArgs extends com.pulumi.resour
     @Import(name="recurrenceInterval", required=true)
     private Output<Either<String,RecurrenceInterval>> recurrenceInterval;
 
+    /**
+     * @return Recurrence Interval
+     * 
+     */
     public Output<Either<String,RecurrenceInterval>> recurrenceInterval() {
         return this.recurrenceInterval;
     }
@@ -59,6 +72,10 @@ public final class ScheduledSynchronizationSettingArgs extends com.pulumi.resour
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -70,6 +87,10 @@ public final class ScheduledSynchronizationSettingArgs extends com.pulumi.resour
     @Import(name="shareName", required=true)
     private Output<String> shareName;
 
+    /**
+     * @return The name of the share to add the synchronization setting to.
+     * 
+     */
     public Output<String> shareName() {
         return this.shareName;
     }
@@ -81,6 +102,10 @@ public final class ScheduledSynchronizationSettingArgs extends com.pulumi.resour
     @Import(name="synchronizationSettingName")
     private @Nullable Output<String> synchronizationSettingName;
 
+    /**
+     * @return The name of the synchronizationSetting.
+     * 
+     */
     public Optional<Output<String>> synchronizationSettingName() {
         return Optional.ofNullable(this.synchronizationSettingName);
     }
@@ -92,6 +117,10 @@ public final class ScheduledSynchronizationSettingArgs extends com.pulumi.resour
     @Import(name="synchronizationTime", required=true)
     private Output<String> synchronizationTime;
 
+    /**
+     * @return Synchronization time
+     * 
+     */
     public Output<String> synchronizationTime() {
         return this.synchronizationTime;
     }
@@ -126,73 +155,171 @@ public final class ScheduledSynchronizationSettingArgs extends com.pulumi.resour
             $ = new ScheduledSynchronizationSettingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The name of the share account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param accountName The name of the share account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             return accountName(Output.of(accountName));
         }
 
+        /**
+         * @param kind Kind of synchronization setting.
+         * Expected value is &#39;ScheduleBased&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Kind of synchronization setting.
+         * Expected value is &#39;ScheduleBased&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param recurrenceInterval Recurrence Interval
+         * 
+         * @return builder
+         * 
+         */
         public Builder recurrenceInterval(Output<Either<String,RecurrenceInterval>> recurrenceInterval) {
             $.recurrenceInterval = recurrenceInterval;
             return this;
         }
 
+        /**
+         * @param recurrenceInterval Recurrence Interval
+         * 
+         * @return builder
+         * 
+         */
         public Builder recurrenceInterval(Either<String,RecurrenceInterval> recurrenceInterval) {
             return recurrenceInterval(Output.of(recurrenceInterval));
         }
 
+        /**
+         * @param recurrenceInterval Recurrence Interval
+         * 
+         * @return builder
+         * 
+         */
         public Builder recurrenceInterval(String recurrenceInterval) {
             return recurrenceInterval(Either.ofLeft(recurrenceInterval));
         }
 
+        /**
+         * @param recurrenceInterval Recurrence Interval
+         * 
+         * @return builder
+         * 
+         */
         public Builder recurrenceInterval(RecurrenceInterval recurrenceInterval) {
             return recurrenceInterval(Either.ofRight(recurrenceInterval));
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param shareName The name of the share to add the synchronization setting to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareName(Output<String> shareName) {
             $.shareName = shareName;
             return this;
         }
 
+        /**
+         * @param shareName The name of the share to add the synchronization setting to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareName(String shareName) {
             return shareName(Output.of(shareName));
         }
 
+        /**
+         * @param synchronizationSettingName The name of the synchronizationSetting.
+         * 
+         * @return builder
+         * 
+         */
         public Builder synchronizationSettingName(@Nullable Output<String> synchronizationSettingName) {
             $.synchronizationSettingName = synchronizationSettingName;
             return this;
         }
 
+        /**
+         * @param synchronizationSettingName The name of the synchronizationSetting.
+         * 
+         * @return builder
+         * 
+         */
         public Builder synchronizationSettingName(String synchronizationSettingName) {
             return synchronizationSettingName(Output.of(synchronizationSettingName));
         }
 
+        /**
+         * @param synchronizationTime Synchronization time
+         * 
+         * @return builder
+         * 
+         */
         public Builder synchronizationTime(Output<String> synchronizationTime) {
             $.synchronizationTime = synchronizationTime;
             return this;
         }
 
+        /**
+         * @param synchronizationTime Synchronization time
+         * 
+         * @return builder
+         * 
+         */
         public Builder synchronizationTime(String synchronizationTime) {
             return synchronizationTime(Output.of(synchronizationTime));
         }

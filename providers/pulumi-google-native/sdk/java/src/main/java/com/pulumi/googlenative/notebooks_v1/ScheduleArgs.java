@@ -24,6 +24,10 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cronSchedule")
     private @Nullable Output<String> cronSchedule;
 
+    /**
+     * @return Cron-tab formatted schedule by which the job will execute. Format: minute, hour, day of month, month, day of week, e.g. 0 0 * * WED = every Wednesday More examples: https://crontab.guru/examples.html
+     * 
+     */
     public Optional<Output<String>> cronSchedule() {
         return Optional.ofNullable(this.cronSchedule);
     }
@@ -35,6 +39,10 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A brief description of this environment.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -46,6 +54,10 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="executionTemplate")
     private @Nullable Output<ExecutionTemplateArgs> executionTemplate;
 
+    /**
+     * @return Notebook Execution Template corresponding to this schedule.
+     * 
+     */
     public Optional<Output<ExecutionTemplateArgs>> executionTemplate() {
         return Optional.ofNullable(this.executionTemplate);
     }
@@ -85,6 +97,10 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="timeZone")
     private @Nullable Output<String> timeZone;
 
+    /**
+     * @return Timezone on which the cron_schedule. The value of this field must be a time zone name from the tz database. TZ Database: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones Note that some time zones include a provision for daylight savings time. The rules for daylight saving time are determined by the chosen tz. For UTC use the string &#34;utc&#34;. If a time zone is not specified, the default will be in UTC (also known as GMT).
+     * 
+     */
     public Optional<Output<String>> timeZone() {
         return Optional.ofNullable(this.timeZone);
     }
@@ -120,29 +136,65 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ScheduleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cronSchedule Cron-tab formatted schedule by which the job will execute. Format: minute, hour, day of month, month, day of week, e.g. 0 0 * * WED = every Wednesday More examples: https://crontab.guru/examples.html
+         * 
+         * @return builder
+         * 
+         */
         public Builder cronSchedule(@Nullable Output<String> cronSchedule) {
             $.cronSchedule = cronSchedule;
             return this;
         }
 
+        /**
+         * @param cronSchedule Cron-tab formatted schedule by which the job will execute. Format: minute, hour, day of month, month, day of week, e.g. 0 0 * * WED = every Wednesday More examples: https://crontab.guru/examples.html
+         * 
+         * @return builder
+         * 
+         */
         public Builder cronSchedule(String cronSchedule) {
             return cronSchedule(Output.of(cronSchedule));
         }
 
+        /**
+         * @param description A brief description of this environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A brief description of this environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param executionTemplate Notebook Execution Template corresponding to this schedule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder executionTemplate(@Nullable Output<ExecutionTemplateArgs> executionTemplate) {
             $.executionTemplate = executionTemplate;
             return this;
         }
 
+        /**
+         * @param executionTemplate Notebook Execution Template corresponding to this schedule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder executionTemplate(ExecutionTemplateArgs executionTemplate) {
             return executionTemplate(Output.of(executionTemplate));
         }
@@ -183,11 +235,23 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
             return state(Output.of(state));
         }
 
+        /**
+         * @param timeZone Timezone on which the cron_schedule. The value of this field must be a time zone name from the tz database. TZ Database: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones Note that some time zones include a provision for daylight savings time. The rules for daylight saving time are determined by the chosen tz. For UTC use the string &#34;utc&#34;. If a time zone is not specified, the default will be in UTC (also known as GMT).
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeZone(@Nullable Output<String> timeZone) {
             $.timeZone = timeZone;
             return this;
         }
 
+        /**
+         * @param timeZone Timezone on which the cron_schedule. The value of this field must be a time zone name from the tz database. TZ Database: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones Note that some time zones include a provision for daylight savings time. The rules for daylight saving time are determined by the chosen tz. For UTC use the string &#34;utc&#34;. If a time zone is not specified, the default will be in UTC (also known as GMT).
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeZone(String timeZone) {
             return timeZone(Output.of(timeZone));
         }

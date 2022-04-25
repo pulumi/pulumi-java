@@ -21,6 +21,10 @@ public final class ListMonitorUserRolesArgs extends com.pulumi.resources.InvokeA
     @Import(name="emailAddress")
     private @Nullable String emailAddress;
 
+    /**
+     * @return Email of the user used by Logz for contacting them if needed
+     * 
+     */
     public Optional<String> emailAddress() {
         return Optional.ofNullable(this.emailAddress);
     }
@@ -32,6 +36,10 @@ public final class ListMonitorUserRolesArgs extends com.pulumi.resources.InvokeA
     @Import(name="monitorName", required=true)
     private String monitorName;
 
+    /**
+     * @return Monitor resource name
+     * 
+     */
     public String monitorName() {
         return this.monitorName;
     }
@@ -43,6 +51,10 @@ public final class ListMonitorUserRolesArgs extends com.pulumi.resources.InvokeA
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -73,16 +85,34 @@ public final class ListMonitorUserRolesArgs extends com.pulumi.resources.InvokeA
             $ = new ListMonitorUserRolesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param emailAddress Email of the user used by Logz for contacting them if needed
+         * 
+         * @return builder
+         * 
+         */
         public Builder emailAddress(@Nullable String emailAddress) {
             $.emailAddress = emailAddress;
             return this;
         }
 
+        /**
+         * @param monitorName Monitor resource name
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitorName(String monitorName) {
             $.monitorName = monitorName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

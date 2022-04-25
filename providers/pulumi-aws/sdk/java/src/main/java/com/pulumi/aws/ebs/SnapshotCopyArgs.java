@@ -25,6 +25,10 @@ public final class SnapshotCopyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A description of what the snapshot is.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -36,6 +40,10 @@ public final class SnapshotCopyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="encrypted")
     private @Nullable Output<Boolean> encrypted;
 
+    /**
+     * @return Whether the snapshot is encrypted.
+     * 
+     */
     public Optional<Output<Boolean>> encrypted() {
         return Optional.ofNullable(this.encrypted);
     }
@@ -47,6 +55,10 @@ public final class SnapshotCopyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kmsKeyId")
     private @Nullable Output<String> kmsKeyId;
 
+    /**
+     * @return The ARN for the KMS encryption key.
+     * 
+     */
     public Optional<Output<String>> kmsKeyId() {
         return Optional.ofNullable(this.kmsKeyId);
     }
@@ -58,6 +70,10 @@ public final class SnapshotCopyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="permanentRestore")
     private @Nullable Output<Boolean> permanentRestore;
 
+    /**
+     * @return Indicates whether to permanently restore an archived snapshot.
+     * 
+     */
     public Optional<Output<Boolean>> permanentRestore() {
         return Optional.ofNullable(this.permanentRestore);
     }
@@ -69,6 +85,10 @@ public final class SnapshotCopyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceRegion", required=true)
     private Output<String> sourceRegion;
 
+    /**
+     * @return The region of the source snapshot.
+     * 
+     */
     public Output<String> sourceRegion() {
         return this.sourceRegion;
     }
@@ -80,6 +100,10 @@ public final class SnapshotCopyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceSnapshotId", required=true)
     private Output<String> sourceSnapshotId;
 
+    /**
+     * @return The ARN for the snapshot to be copied.
+     * 
+     */
     public Output<String> sourceSnapshotId() {
         return this.sourceSnapshotId;
     }
@@ -91,6 +115,10 @@ public final class SnapshotCopyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="storageTier")
     private @Nullable Output<String> storageTier;
 
+    /**
+     * @return The name of the storage tier. Valid values are `archive` and `standard`. Default value is `standard`.
+     * 
+     */
     public Optional<Output<String>> storageTier() {
         return Optional.ofNullable(this.storageTier);
     }
@@ -109,6 +137,10 @@ public final class SnapshotCopyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="temporaryRestoreDays")
     private @Nullable Output<Integer> temporaryRestoreDays;
 
+    /**
+     * @return Specifies the number of days for which to temporarily restore an archived snapshot. Required for temporary restores only. The snapshot will be automatically re-archived after this period.
+     * 
+     */
     public Optional<Output<Integer>> temporaryRestoreDays() {
         return Optional.ofNullable(this.temporaryRestoreDays);
     }
@@ -145,65 +177,149 @@ public final class SnapshotCopyArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SnapshotCopyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description A description of what the snapshot is.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A description of what the snapshot is.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param encrypted Whether the snapshot is encrypted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encrypted(@Nullable Output<Boolean> encrypted) {
             $.encrypted = encrypted;
             return this;
         }
 
+        /**
+         * @param encrypted Whether the snapshot is encrypted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encrypted(Boolean encrypted) {
             return encrypted(Output.of(encrypted));
         }
 
+        /**
+         * @param kmsKeyId The ARN for the KMS encryption key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             $.kmsKeyId = kmsKeyId;
             return this;
         }
 
+        /**
+         * @param kmsKeyId The ARN for the KMS encryption key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyId(String kmsKeyId) {
             return kmsKeyId(Output.of(kmsKeyId));
         }
 
+        /**
+         * @param permanentRestore Indicates whether to permanently restore an archived snapshot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder permanentRestore(@Nullable Output<Boolean> permanentRestore) {
             $.permanentRestore = permanentRestore;
             return this;
         }
 
+        /**
+         * @param permanentRestore Indicates whether to permanently restore an archived snapshot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder permanentRestore(Boolean permanentRestore) {
             return permanentRestore(Output.of(permanentRestore));
         }
 
+        /**
+         * @param sourceRegion The region of the source snapshot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceRegion(Output<String> sourceRegion) {
             $.sourceRegion = sourceRegion;
             return this;
         }
 
+        /**
+         * @param sourceRegion The region of the source snapshot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceRegion(String sourceRegion) {
             return sourceRegion(Output.of(sourceRegion));
         }
 
+        /**
+         * @param sourceSnapshotId The ARN for the snapshot to be copied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceSnapshotId(Output<String> sourceSnapshotId) {
             $.sourceSnapshotId = sourceSnapshotId;
             return this;
         }
 
+        /**
+         * @param sourceSnapshotId The ARN for the snapshot to be copied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceSnapshotId(String sourceSnapshotId) {
             return sourceSnapshotId(Output.of(sourceSnapshotId));
         }
 
+        /**
+         * @param storageTier The name of the storage tier. Valid values are `archive` and `standard`. Default value is `standard`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageTier(@Nullable Output<String> storageTier) {
             $.storageTier = storageTier;
             return this;
         }
 
+        /**
+         * @param storageTier The name of the storage tier. Valid values are `archive` and `standard`. Default value is `standard`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageTier(String storageTier) {
             return storageTier(Output.of(storageTier));
         }
@@ -217,11 +333,23 @@ public final class SnapshotCopyArgs extends com.pulumi.resources.ResourceArgs {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param temporaryRestoreDays Specifies the number of days for which to temporarily restore an archived snapshot. Required for temporary restores only. The snapshot will be automatically re-archived after this period.
+         * 
+         * @return builder
+         * 
+         */
         public Builder temporaryRestoreDays(@Nullable Output<Integer> temporaryRestoreDays) {
             $.temporaryRestoreDays = temporaryRestoreDays;
             return this;
         }
 
+        /**
+         * @param temporaryRestoreDays Specifies the number of days for which to temporarily restore an archived snapshot. Required for temporary restores only. The snapshot will be automatically re-archived after this period.
+         * 
+         * @return builder
+         * 
+         */
         public Builder temporaryRestoreDays(Integer temporaryRestoreDays) {
             return temporaryRestoreDays(Output.of(temporaryRestoreDays));
         }

@@ -10,13 +10,13 @@ import java.util.Objects;
 @CustomType
 public final class GetInstanceTemplateNetworkInterfaceAccessConfig {
     /**
-     * The IP address that will be 1:1 mapped to the instance&#39;s
+     * @return The IP address that will be 1:1 mapped to the instance&#39;s
      * network ip. If not given, one will be generated.
      * 
      */
     private final String natIp;
     /**
-     * The [networking tier][network-tier] used for configuring
+     * @return The [networking tier][network-tier] used for configuring
      * this instance template. This field can take the following values: PREMIUM or
      * STANDARD. If this field is not specified, it is assumed to be PREMIUM.
      * 
@@ -35,19 +35,19 @@ public final class GetInstanceTemplateNetworkInterfaceAccessConfig {
     }
 
     /**
-     * The IP address that will be 1:1 mapped to the instance&#39;s
+     * @return The IP address that will be 1:1 mapped to the instance&#39;s
      * network ip. If not given, one will be generated.
      * 
-    */
+     */
     public String natIp() {
         return this.natIp;
     }
     /**
-     * The [networking tier][network-tier] used for configuring
+     * @return The [networking tier][network-tier] used for configuring
      * this instance template. This field can take the following values: PREMIUM or
      * STANDARD. If this field is not specified, it is assumed to be PREMIUM.
      * 
-    */
+     */
     public String networkTier() {
         return this.networkTier;
     }

@@ -19,6 +19,10 @@ public final class GetIscsiTargetArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="diskPoolName", required=true)
     private String diskPoolName;
 
+    /**
+     * @return The name of the Disk pool.
+     * 
+     */
     public String diskPoolName() {
         return this.diskPoolName;
     }
@@ -30,6 +34,10 @@ public final class GetIscsiTargetArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="iscsiTargetName", required=true)
     private String iscsiTargetName;
 
+    /**
+     * @return The name of the iSCSI target.
+     * 
+     */
     public String iscsiTargetName() {
         return this.iscsiTargetName;
     }
@@ -41,6 +49,10 @@ public final class GetIscsiTargetArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetIscsiTargetArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetIscsiTargetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param diskPoolName The name of the Disk pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskPoolName(String diskPoolName) {
             $.diskPoolName = diskPoolName;
             return this;
         }
 
+        /**
+         * @param iscsiTargetName The name of the iSCSI target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iscsiTargetName(String iscsiTargetName) {
             $.iscsiTargetName = iscsiTargetName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

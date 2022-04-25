@@ -26,6 +26,10 @@ public final class NamedPartitionSchemeDescriptionResponse extends com.pulumi.re
     @Import(name="count", required=true)
     private Integer count;
 
+    /**
+     * @return The number of partitions.
+     * 
+     */
     public Integer count() {
         return this.count;
     }
@@ -37,6 +41,10 @@ public final class NamedPartitionSchemeDescriptionResponse extends com.pulumi.re
     @Import(name="names", required=true)
     private List<String> names;
 
+    /**
+     * @return Array of size specified by the ‘count’ parameter, for the names of the partitions.
+     * 
+     */
     public List<String> names() {
         return this.names;
     }
@@ -49,6 +57,11 @@ public final class NamedPartitionSchemeDescriptionResponse extends com.pulumi.re
     @Import(name="partitionScheme", required=true)
     private String partitionScheme;
 
+    /**
+     * @return Enumerates the ways that a service can be partitioned.
+     * Expected value is &#39;Named&#39;.
+     * 
+     */
     public String partitionScheme() {
         return this.partitionScheme;
     }
@@ -79,20 +92,45 @@ public final class NamedPartitionSchemeDescriptionResponse extends com.pulumi.re
             $ = new NamedPartitionSchemeDescriptionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param count The number of partitions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(Integer count) {
             $.count = count;
             return this;
         }
 
+        /**
+         * @param names Array of size specified by the ‘count’ parameter, for the names of the partitions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder names(List<String> names) {
             $.names = names;
             return this;
         }
 
+        /**
+         * @param names Array of size specified by the ‘count’ parameter, for the names of the partitions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder names(String... names) {
             return names(List.of(names));
         }
 
+        /**
+         * @param partitionScheme Enumerates the ways that a service can be partitioned.
+         * Expected value is &#39;Named&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionScheme(String partitionScheme) {
             $.partitionScheme = partitionScheme;
             return this;

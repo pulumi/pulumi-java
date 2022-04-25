@@ -23,6 +23,10 @@ public final class PolicyAlternativeNameServerConfigTargetNameServerArgs extends
     @Import(name="forwardingPath")
     private @Nullable Output<PolicyAlternativeNameServerConfigTargetNameServerForwardingPath> forwardingPath;
 
+    /**
+     * @return Forwarding path for this TargetNameServer. If unset or set to DEFAULT, Cloud DNS makes forwarding decisions based on address ranges; that is, RFC1918 addresses go to the VPC network, non-RFC1918 addresses go to the internet. When set to PRIVATE, Cloud DNS always sends queries through the VPC network for this target.
+     * 
+     */
     public Optional<Output<PolicyAlternativeNameServerConfigTargetNameServerForwardingPath>> forwardingPath() {
         return Optional.ofNullable(this.forwardingPath);
     }
@@ -34,6 +38,10 @@ public final class PolicyAlternativeNameServerConfigTargetNameServerArgs extends
     @Import(name="ipv4Address")
     private @Nullable Output<String> ipv4Address;
 
+    /**
+     * @return IPv4 address to forward to.
+     * 
+     */
     public Optional<Output<String>> ipv4Address() {
         return Optional.ofNullable(this.ipv4Address);
     }
@@ -45,6 +53,10 @@ public final class PolicyAlternativeNameServerConfigTargetNameServerArgs extends
     @Import(name="ipv6Address")
     private @Nullable Output<String> ipv6Address;
 
+    /**
+     * @return IPv6 address to forward to. Does not accept both fields (ipv4 &amp; ipv6) being populated.
+     * 
+     */
     public Optional<Output<String>> ipv6Address() {
         return Optional.ofNullable(this.ipv6Address);
     }
@@ -83,29 +95,65 @@ public final class PolicyAlternativeNameServerConfigTargetNameServerArgs extends
             $ = new PolicyAlternativeNameServerConfigTargetNameServerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param forwardingPath Forwarding path for this TargetNameServer. If unset or set to DEFAULT, Cloud DNS makes forwarding decisions based on address ranges; that is, RFC1918 addresses go to the VPC network, non-RFC1918 addresses go to the internet. When set to PRIVATE, Cloud DNS always sends queries through the VPC network for this target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forwardingPath(@Nullable Output<PolicyAlternativeNameServerConfigTargetNameServerForwardingPath> forwardingPath) {
             $.forwardingPath = forwardingPath;
             return this;
         }
 
+        /**
+         * @param forwardingPath Forwarding path for this TargetNameServer. If unset or set to DEFAULT, Cloud DNS makes forwarding decisions based on address ranges; that is, RFC1918 addresses go to the VPC network, non-RFC1918 addresses go to the internet. When set to PRIVATE, Cloud DNS always sends queries through the VPC network for this target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forwardingPath(PolicyAlternativeNameServerConfigTargetNameServerForwardingPath forwardingPath) {
             return forwardingPath(Output.of(forwardingPath));
         }
 
+        /**
+         * @param ipv4Address IPv4 address to forward to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipv4Address(@Nullable Output<String> ipv4Address) {
             $.ipv4Address = ipv4Address;
             return this;
         }
 
+        /**
+         * @param ipv4Address IPv4 address to forward to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipv4Address(String ipv4Address) {
             return ipv4Address(Output.of(ipv4Address));
         }
 
+        /**
+         * @param ipv6Address IPv6 address to forward to. Does not accept both fields (ipv4 &amp; ipv6) being populated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipv6Address(@Nullable Output<String> ipv6Address) {
             $.ipv6Address = ipv6Address;
             return this;
         }
 
+        /**
+         * @param ipv6Address IPv6 address to forward to. Does not accept both fields (ipv4 &amp; ipv6) being populated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipv6Address(String ipv6Address) {
             return ipv6Address(Output.of(ipv6Address));
         }

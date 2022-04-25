@@ -25,6 +25,10 @@ public final class MetadataResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="buildFinishedOn", required=true)
     private String buildFinishedOn;
 
+    /**
+     * @return The timestamp of when the build completed.
+     * 
+     */
     public String buildFinishedOn() {
         return this.buildFinishedOn;
     }
@@ -36,6 +40,10 @@ public final class MetadataResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="buildInvocationId", required=true)
     private String buildInvocationId;
 
+    /**
+     * @return Identifies the particular build invocation, which can be useful for finding associated logs or other ad-hoc analysis. The value SHOULD be globally unique, per in-toto Provenance spec.
+     * 
+     */
     public String buildInvocationId() {
         return this.buildInvocationId;
     }
@@ -47,6 +55,10 @@ public final class MetadataResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="buildStartedOn", required=true)
     private String buildStartedOn;
 
+    /**
+     * @return The timestamp of when the build started.
+     * 
+     */
     public String buildStartedOn() {
         return this.buildStartedOn;
     }
@@ -58,6 +70,10 @@ public final class MetadataResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="completeness", required=true)
     private CompletenessResponse completeness;
 
+    /**
+     * @return Indicates that the builder claims certain fields in this message to be complete.
+     * 
+     */
     public CompletenessResponse completeness() {
         return this.completeness;
     }
@@ -69,6 +85,10 @@ public final class MetadataResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="reproducible", required=true)
     private Boolean reproducible;
 
+    /**
+     * @return If true, the builder claims that running the recipe on materials will produce bit-for-bit identical output.
+     * 
+     */
     public Boolean reproducible() {
         return this.reproducible;
     }
@@ -101,26 +121,56 @@ public final class MetadataResponse extends com.pulumi.resources.InvokeArgs {
             $ = new MetadataResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param buildFinishedOn The timestamp of when the build completed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder buildFinishedOn(String buildFinishedOn) {
             $.buildFinishedOn = buildFinishedOn;
             return this;
         }
 
+        /**
+         * @param buildInvocationId Identifies the particular build invocation, which can be useful for finding associated logs or other ad-hoc analysis. The value SHOULD be globally unique, per in-toto Provenance spec.
+         * 
+         * @return builder
+         * 
+         */
         public Builder buildInvocationId(String buildInvocationId) {
             $.buildInvocationId = buildInvocationId;
             return this;
         }
 
+        /**
+         * @param buildStartedOn The timestamp of when the build started.
+         * 
+         * @return builder
+         * 
+         */
         public Builder buildStartedOn(String buildStartedOn) {
             $.buildStartedOn = buildStartedOn;
             return this;
         }
 
+        /**
+         * @param completeness Indicates that the builder claims certain fields in this message to be complete.
+         * 
+         * @return builder
+         * 
+         */
         public Builder completeness(CompletenessResponse completeness) {
             $.completeness = completeness;
             return this;
         }
 
+        /**
+         * @param reproducible If true, the builder claims that running the recipe on materials will produce bit-for-bit identical output.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reproducible(Boolean reproducible) {
             $.reproducible = reproducible;
             return this;

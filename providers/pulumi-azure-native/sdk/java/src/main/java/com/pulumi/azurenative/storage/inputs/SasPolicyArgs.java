@@ -27,6 +27,10 @@ public final class SasPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="expirationAction", required=true)
     private Output<Either<String,ExpirationAction>> expirationAction;
 
+    /**
+     * @return The SAS expiration action. Can only be Log.
+     * 
+     */
     public Output<Either<String,ExpirationAction>> expirationAction() {
         return this.expirationAction;
     }
@@ -38,6 +42,10 @@ public final class SasPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sasExpirationPeriod", required=true)
     private Output<String> sasExpirationPeriod;
 
+    /**
+     * @return The SAS expiration period, DD.HH:MM:SS.
+     * 
+     */
     public Output<String> sasExpirationPeriod() {
         return this.sasExpirationPeriod;
     }
@@ -67,28 +75,64 @@ public final class SasPolicyArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SasPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expirationAction The SAS expiration action. Can only be Log.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expirationAction(Output<Either<String,ExpirationAction>> expirationAction) {
             $.expirationAction = expirationAction;
             return this;
         }
 
+        /**
+         * @param expirationAction The SAS expiration action. Can only be Log.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expirationAction(Either<String,ExpirationAction> expirationAction) {
             return expirationAction(Output.of(expirationAction));
         }
 
+        /**
+         * @param expirationAction The SAS expiration action. Can only be Log.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expirationAction(String expirationAction) {
             return expirationAction(Either.ofLeft(expirationAction));
         }
 
+        /**
+         * @param expirationAction The SAS expiration action. Can only be Log.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expirationAction(ExpirationAction expirationAction) {
             return expirationAction(Either.ofRight(expirationAction));
         }
 
+        /**
+         * @param sasExpirationPeriod The SAS expiration period, DD.HH:MM:SS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sasExpirationPeriod(Output<String> sasExpirationPeriod) {
             $.sasExpirationPeriod = sasExpirationPeriod;
             return this;
         }
 
+        /**
+         * @param sasExpirationPeriod The SAS expiration period, DD.HH:MM:SS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sasExpirationPeriod(String sasExpirationPeriod) {
             return sasExpirationPeriod(Output.of(sasExpirationPeriod));
         }

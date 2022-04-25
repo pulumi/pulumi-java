@@ -16,44 +16,44 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetClusterResult {
     /**
-     * The ARN of the cluster, such as arn:aws:eks:us-west-2:666666666666:cluster/prod.
+     * @return The ARN of the cluster, such as arn:aws:eks:us-west-2:666666666666:cluster/prod.
      * 
      */
     private final @Nullable String arn;
     /**
-     * The certificate-authority-data for your cluster.
+     * @return The certificate-authority-data for your cluster.
      * 
      */
     private final @Nullable String certificateAuthorityData;
     /**
-     * The cluster security group that was created by Amazon EKS for the cluster. Managed node groups use this security group for control plane to data plane communication.
+     * @return The cluster security group that was created by Amazon EKS for the cluster. Managed node groups use this security group for control plane to data plane communication.
      * 
      */
     private final @Nullable String clusterSecurityGroupId;
     /**
-     * Amazon Resource Name (ARN) or alias of the customer master key (CMK).
+     * @return Amazon Resource Name (ARN) or alias of the customer master key (CMK).
      * 
      */
     private final @Nullable String encryptionConfigKeyArn;
     /**
-     * The endpoint for your Kubernetes API server, such as https://5E1D0CEXAMPLEA591B746AFC5AB30262.yl4.us-west-2.eks.amazonaws.com.
+     * @return The endpoint for your Kubernetes API server, such as https://5E1D0CEXAMPLEA591B746AFC5AB30262.yl4.us-west-2.eks.amazonaws.com.
      * 
      */
     private final @Nullable String endpoint;
     private final @Nullable ClusterLogging logging;
     /**
-     * The issuer URL for the cluster&#39;s OIDC identity provider, such as https://oidc.eks.us-west-2.amazonaws.com/id/EXAMPLED539D4633E53DE1B716D3041E. If you need to remove https:// from this output value, you can include the following code in your template.
+     * @return The issuer URL for the cluster&#39;s OIDC identity provider, such as https://oidc.eks.us-west-2.amazonaws.com/id/EXAMPLED539D4633E53DE1B716D3041E. If you need to remove https:// from this output value, you can include the following code in your template.
      * 
      */
     private final @Nullable String openIdConnectIssuerUrl;
     private final @Nullable ClusterResourcesVpcConfig resourcesVpcConfig;
     /**
-     * An array of key-value pairs to apply to this resource.
+     * @return An array of key-value pairs to apply to this resource.
      * 
      */
     private final @Nullable List<ClusterTag> tags;
     /**
-     * The desired Kubernetes version for your cluster. If you don&#39;t specify a value here, the latest version available in Amazon EKS is used.
+     * @return The desired Kubernetes version for your cluster. If you don&#39;t specify a value here, the latest version available in Amazon EKS is used.
      * 
      */
     private final @Nullable String version;
@@ -83,37 +83,37 @@ public final class GetClusterResult {
     }
 
     /**
-     * The ARN of the cluster, such as arn:aws:eks:us-west-2:666666666666:cluster/prod.
+     * @return The ARN of the cluster, such as arn:aws:eks:us-west-2:666666666666:cluster/prod.
      * 
-    */
+     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * The certificate-authority-data for your cluster.
+     * @return The certificate-authority-data for your cluster.
      * 
-    */
+     */
     public Optional<String> certificateAuthorityData() {
         return Optional.ofNullable(this.certificateAuthorityData);
     }
     /**
-     * The cluster security group that was created by Amazon EKS for the cluster. Managed node groups use this security group for control plane to data plane communication.
+     * @return The cluster security group that was created by Amazon EKS for the cluster. Managed node groups use this security group for control plane to data plane communication.
      * 
-    */
+     */
     public Optional<String> clusterSecurityGroupId() {
         return Optional.ofNullable(this.clusterSecurityGroupId);
     }
     /**
-     * Amazon Resource Name (ARN) or alias of the customer master key (CMK).
+     * @return Amazon Resource Name (ARN) or alias of the customer master key (CMK).
      * 
-    */
+     */
     public Optional<String> encryptionConfigKeyArn() {
         return Optional.ofNullable(this.encryptionConfigKeyArn);
     }
     /**
-     * The endpoint for your Kubernetes API server, such as https://5E1D0CEXAMPLEA591B746AFC5AB30262.yl4.us-west-2.eks.amazonaws.com.
+     * @return The endpoint for your Kubernetes API server, such as https://5E1D0CEXAMPLEA591B746AFC5AB30262.yl4.us-west-2.eks.amazonaws.com.
      * 
-    */
+     */
     public Optional<String> endpoint() {
         return Optional.ofNullable(this.endpoint);
     }
@@ -121,9 +121,9 @@ public final class GetClusterResult {
         return Optional.ofNullable(this.logging);
     }
     /**
-     * The issuer URL for the cluster&#39;s OIDC identity provider, such as https://oidc.eks.us-west-2.amazonaws.com/id/EXAMPLED539D4633E53DE1B716D3041E. If you need to remove https:// from this output value, you can include the following code in your template.
+     * @return The issuer URL for the cluster&#39;s OIDC identity provider, such as https://oidc.eks.us-west-2.amazonaws.com/id/EXAMPLED539D4633E53DE1B716D3041E. If you need to remove https:// from this output value, you can include the following code in your template.
      * 
-    */
+     */
     public Optional<String> openIdConnectIssuerUrl() {
         return Optional.ofNullable(this.openIdConnectIssuerUrl);
     }
@@ -131,16 +131,16 @@ public final class GetClusterResult {
         return Optional.ofNullable(this.resourcesVpcConfig);
     }
     /**
-     * An array of key-value pairs to apply to this resource.
+     * @return An array of key-value pairs to apply to this resource.
      * 
-    */
+     */
     public List<ClusterTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
-     * The desired Kubernetes version for your cluster. If you don&#39;t specify a value here, the latest version available in Amazon EKS is used.
+     * @return The desired Kubernetes version for your cluster. If you don&#39;t specify a value here, the latest version available in Amazon EKS is used.
      * 
-    */
+     */
     public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }

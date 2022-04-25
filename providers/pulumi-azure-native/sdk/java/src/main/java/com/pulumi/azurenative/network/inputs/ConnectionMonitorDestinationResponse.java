@@ -26,6 +26,10 @@ public final class ConnectionMonitorDestinationResponse extends com.pulumi.resou
     @Import(name="address")
     private @Nullable String address;
 
+    /**
+     * @return Address of the connection monitor destination (IP or domain name).
+     * 
+     */
     public Optional<String> address() {
         return Optional.ofNullable(this.address);
     }
@@ -37,6 +41,10 @@ public final class ConnectionMonitorDestinationResponse extends com.pulumi.resou
     @Import(name="port")
     private @Nullable Integer port;
 
+    /**
+     * @return The destination port used by connection monitor.
+     * 
+     */
     public Optional<Integer> port() {
         return Optional.ofNullable(this.port);
     }
@@ -48,6 +56,10 @@ public final class ConnectionMonitorDestinationResponse extends com.pulumi.resou
     @Import(name="resourceId")
     private @Nullable String resourceId;
 
+    /**
+     * @return The ID of the resource used as the destination by connection monitor.
+     * 
+     */
     public Optional<String> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
@@ -78,16 +90,34 @@ public final class ConnectionMonitorDestinationResponse extends com.pulumi.resou
             $ = new ConnectionMonitorDestinationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param address Address of the connection monitor destination (IP or domain name).
+         * 
+         * @return builder
+         * 
+         */
         public Builder address(@Nullable String address) {
             $.address = address;
             return this;
         }
 
+        /**
+         * @param port The destination port used by connection monitor.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(@Nullable Integer port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param resourceId The ID of the resource used as the destination by connection monitor.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(@Nullable String resourceId) {
             $.resourceId = resourceId;
             return this;

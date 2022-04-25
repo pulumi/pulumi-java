@@ -28,6 +28,10 @@ public final class PackagingConfigurationHlsEncryptionArgs extends com.pulumi.re
     @Import(name="constantInitializationVector")
     private @Nullable Output<String> constantInitializationVector;
 
+    /**
+     * @return An HTTP Live Streaming (HLS) encryption configuration.
+     * 
+     */
     public Optional<Output<String>> constantInitializationVector() {
         return Optional.ofNullable(this.constantInitializationVector);
     }
@@ -39,6 +43,10 @@ public final class PackagingConfigurationHlsEncryptionArgs extends com.pulumi.re
     @Import(name="encryptionMethod")
     private @Nullable Output<PackagingConfigurationHlsEncryptionEncryptionMethod> encryptionMethod;
 
+    /**
+     * @return The encryption method to use.
+     * 
+     */
     public Optional<Output<PackagingConfigurationHlsEncryptionEncryptionMethod>> encryptionMethod() {
         return Optional.ofNullable(this.encryptionMethod);
     }
@@ -76,20 +84,44 @@ public final class PackagingConfigurationHlsEncryptionArgs extends com.pulumi.re
             $ = new PackagingConfigurationHlsEncryptionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param constantInitializationVector An HTTP Live Streaming (HLS) encryption configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder constantInitializationVector(@Nullable Output<String> constantInitializationVector) {
             $.constantInitializationVector = constantInitializationVector;
             return this;
         }
 
+        /**
+         * @param constantInitializationVector An HTTP Live Streaming (HLS) encryption configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder constantInitializationVector(String constantInitializationVector) {
             return constantInitializationVector(Output.of(constantInitializationVector));
         }
 
+        /**
+         * @param encryptionMethod The encryption method to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionMethod(@Nullable Output<PackagingConfigurationHlsEncryptionEncryptionMethod> encryptionMethod) {
             $.encryptionMethod = encryptionMethod;
             return this;
         }
 
+        /**
+         * @param encryptionMethod The encryption method to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionMethod(PackagingConfigurationHlsEncryptionEncryptionMethod encryptionMethod) {
             return encryptionMethod(Output.of(encryptionMethod));
         }

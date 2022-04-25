@@ -40,6 +40,11 @@ public final class PartnerTopicEventSubscriptionArgs extends com.pulumi.resource
     @Import(name="deadLetterDestination")
     private @Nullable Output<StorageBlobDeadLetterDestinationArgs> deadLetterDestination;
 
+    /**
+     * @return The dead letter destination of the event subscription. Any event that cannot be delivered to its&#39; destination is sent to the dead letter destination.
+     * Uses Azure Event Grid&#39;s identity to acquire the authentication tokens being used during delivery / dead-lettering.
+     * 
+     */
     public Optional<Output<StorageBlobDeadLetterDestinationArgs>> deadLetterDestination() {
         return Optional.ofNullable(this.deadLetterDestination);
     }
@@ -52,6 +57,11 @@ public final class PartnerTopicEventSubscriptionArgs extends com.pulumi.resource
     @Import(name="deadLetterWithResourceIdentity")
     private @Nullable Output<DeadLetterWithResourceIdentityArgs> deadLetterWithResourceIdentity;
 
+    /**
+     * @return The dead letter destination of the event subscription. Any event that cannot be delivered to its&#39; destination is sent to the dead letter destination.
+     * Uses the managed identity setup on the parent resource (namely, topic or domain) to acquire the authentication tokens being used during delivery / dead-lettering.
+     * 
+     */
     public Optional<Output<DeadLetterWithResourceIdentityArgs>> deadLetterWithResourceIdentity() {
         return Optional.ofNullable(this.deadLetterWithResourceIdentity);
     }
@@ -64,6 +74,11 @@ public final class PartnerTopicEventSubscriptionArgs extends com.pulumi.resource
     @Import(name="deliveryWithResourceIdentity")
     private @Nullable Output<DeliveryWithResourceIdentityArgs> deliveryWithResourceIdentity;
 
+    /**
+     * @return Information about the destination where events have to be delivered for the event subscription.
+     * Uses the managed identity setup on the parent resource (namely, topic or domain) to acquire the authentication tokens being used during delivery / dead-lettering.
+     * 
+     */
     public Optional<Output<DeliveryWithResourceIdentityArgs>> deliveryWithResourceIdentity() {
         return Optional.ofNullable(this.deliveryWithResourceIdentity);
     }
@@ -76,6 +91,11 @@ public final class PartnerTopicEventSubscriptionArgs extends com.pulumi.resource
     @Import(name="destination")
     private @Nullable Output<Object> destination;
 
+    /**
+     * @return Information about the destination where events have to be delivered for the event subscription.
+     * Uses Azure Event Grid&#39;s identity to acquire the authentication tokens being used during delivery / dead-lettering.
+     * 
+     */
     public Optional<Output<Object>> destination() {
         return Optional.ofNullable(this.destination);
     }
@@ -87,6 +107,10 @@ public final class PartnerTopicEventSubscriptionArgs extends com.pulumi.resource
     @Import(name="eventDeliverySchema")
     private @Nullable Output<Either<String,EventDeliverySchema>> eventDeliverySchema;
 
+    /**
+     * @return The event delivery schema for the event subscription.
+     * 
+     */
     public Optional<Output<Either<String,EventDeliverySchema>>> eventDeliverySchema() {
         return Optional.ofNullable(this.eventDeliverySchema);
     }
@@ -98,6 +122,10 @@ public final class PartnerTopicEventSubscriptionArgs extends com.pulumi.resource
     @Import(name="eventSubscriptionName")
     private @Nullable Output<String> eventSubscriptionName;
 
+    /**
+     * @return Name of the event subscription to be created. Event subscription names must be between 3 and 100 characters in length and use alphanumeric letters only.
+     * 
+     */
     public Optional<Output<String>> eventSubscriptionName() {
         return Optional.ofNullable(this.eventSubscriptionName);
     }
@@ -109,6 +137,10 @@ public final class PartnerTopicEventSubscriptionArgs extends com.pulumi.resource
     @Import(name="expirationTimeUtc")
     private @Nullable Output<String> expirationTimeUtc;
 
+    /**
+     * @return Expiration time of the event subscription.
+     * 
+     */
     public Optional<Output<String>> expirationTimeUtc() {
         return Optional.ofNullable(this.expirationTimeUtc);
     }
@@ -120,6 +152,10 @@ public final class PartnerTopicEventSubscriptionArgs extends com.pulumi.resource
     @Import(name="filter")
     private @Nullable Output<EventSubscriptionFilterArgs> filter;
 
+    /**
+     * @return Information about the filter for the event subscription.
+     * 
+     */
     public Optional<Output<EventSubscriptionFilterArgs>> filter() {
         return Optional.ofNullable(this.filter);
     }
@@ -131,6 +167,10 @@ public final class PartnerTopicEventSubscriptionArgs extends com.pulumi.resource
     @Import(name="labels")
     private @Nullable Output<List<String>> labels;
 
+    /**
+     * @return List of user defined labels.
+     * 
+     */
     public Optional<Output<List<String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -142,6 +182,10 @@ public final class PartnerTopicEventSubscriptionArgs extends com.pulumi.resource
     @Import(name="partnerTopicName", required=true)
     private Output<String> partnerTopicName;
 
+    /**
+     * @return Name of the partner topic.
+     * 
+     */
     public Output<String> partnerTopicName() {
         return this.partnerTopicName;
     }
@@ -153,6 +197,10 @@ public final class PartnerTopicEventSubscriptionArgs extends com.pulumi.resource
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group within the user&#39;s subscription.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -164,6 +212,10 @@ public final class PartnerTopicEventSubscriptionArgs extends com.pulumi.resource
     @Import(name="retryPolicy")
     private @Nullable Output<RetryPolicyArgs> retryPolicy;
 
+    /**
+     * @return The retry policy for events. This can be used to configure maximum number of delivery attempts and time to live for events.
+     * 
+     */
     public Optional<Output<RetryPolicyArgs>> retryPolicy() {
         return Optional.ofNullable(this.retryPolicy);
     }
@@ -203,122 +255,292 @@ public final class PartnerTopicEventSubscriptionArgs extends com.pulumi.resource
             $ = new PartnerTopicEventSubscriptionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deadLetterDestination The dead letter destination of the event subscription. Any event that cannot be delivered to its&#39; destination is sent to the dead letter destination.
+         * Uses Azure Event Grid&#39;s identity to acquire the authentication tokens being used during delivery / dead-lettering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deadLetterDestination(@Nullable Output<StorageBlobDeadLetterDestinationArgs> deadLetterDestination) {
             $.deadLetterDestination = deadLetterDestination;
             return this;
         }
 
+        /**
+         * @param deadLetterDestination The dead letter destination of the event subscription. Any event that cannot be delivered to its&#39; destination is sent to the dead letter destination.
+         * Uses Azure Event Grid&#39;s identity to acquire the authentication tokens being used during delivery / dead-lettering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deadLetterDestination(StorageBlobDeadLetterDestinationArgs deadLetterDestination) {
             return deadLetterDestination(Output.of(deadLetterDestination));
         }
 
+        /**
+         * @param deadLetterWithResourceIdentity The dead letter destination of the event subscription. Any event that cannot be delivered to its&#39; destination is sent to the dead letter destination.
+         * Uses the managed identity setup on the parent resource (namely, topic or domain) to acquire the authentication tokens being used during delivery / dead-lettering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deadLetterWithResourceIdentity(@Nullable Output<DeadLetterWithResourceIdentityArgs> deadLetterWithResourceIdentity) {
             $.deadLetterWithResourceIdentity = deadLetterWithResourceIdentity;
             return this;
         }
 
+        /**
+         * @param deadLetterWithResourceIdentity The dead letter destination of the event subscription. Any event that cannot be delivered to its&#39; destination is sent to the dead letter destination.
+         * Uses the managed identity setup on the parent resource (namely, topic or domain) to acquire the authentication tokens being used during delivery / dead-lettering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deadLetterWithResourceIdentity(DeadLetterWithResourceIdentityArgs deadLetterWithResourceIdentity) {
             return deadLetterWithResourceIdentity(Output.of(deadLetterWithResourceIdentity));
         }
 
+        /**
+         * @param deliveryWithResourceIdentity Information about the destination where events have to be delivered for the event subscription.
+         * Uses the managed identity setup on the parent resource (namely, topic or domain) to acquire the authentication tokens being used during delivery / dead-lettering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deliveryWithResourceIdentity(@Nullable Output<DeliveryWithResourceIdentityArgs> deliveryWithResourceIdentity) {
             $.deliveryWithResourceIdentity = deliveryWithResourceIdentity;
             return this;
         }
 
+        /**
+         * @param deliveryWithResourceIdentity Information about the destination where events have to be delivered for the event subscription.
+         * Uses the managed identity setup on the parent resource (namely, topic or domain) to acquire the authentication tokens being used during delivery / dead-lettering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deliveryWithResourceIdentity(DeliveryWithResourceIdentityArgs deliveryWithResourceIdentity) {
             return deliveryWithResourceIdentity(Output.of(deliveryWithResourceIdentity));
         }
 
+        /**
+         * @param destination Information about the destination where events have to be delivered for the event subscription.
+         * Uses Azure Event Grid&#39;s identity to acquire the authentication tokens being used during delivery / dead-lettering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destination(@Nullable Output<Object> destination) {
             $.destination = destination;
             return this;
         }
 
+        /**
+         * @param destination Information about the destination where events have to be delivered for the event subscription.
+         * Uses Azure Event Grid&#39;s identity to acquire the authentication tokens being used during delivery / dead-lettering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destination(Object destination) {
             return destination(Output.of(destination));
         }
 
+        /**
+         * @param eventDeliverySchema The event delivery schema for the event subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventDeliverySchema(@Nullable Output<Either<String,EventDeliverySchema>> eventDeliverySchema) {
             $.eventDeliverySchema = eventDeliverySchema;
             return this;
         }
 
+        /**
+         * @param eventDeliverySchema The event delivery schema for the event subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventDeliverySchema(Either<String,EventDeliverySchema> eventDeliverySchema) {
             return eventDeliverySchema(Output.of(eventDeliverySchema));
         }
 
+        /**
+         * @param eventDeliverySchema The event delivery schema for the event subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventDeliverySchema(String eventDeliverySchema) {
             return eventDeliverySchema(Either.ofLeft(eventDeliverySchema));
         }
 
+        /**
+         * @param eventDeliverySchema The event delivery schema for the event subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventDeliverySchema(EventDeliverySchema eventDeliverySchema) {
             return eventDeliverySchema(Either.ofRight(eventDeliverySchema));
         }
 
+        /**
+         * @param eventSubscriptionName Name of the event subscription to be created. Event subscription names must be between 3 and 100 characters in length and use alphanumeric letters only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventSubscriptionName(@Nullable Output<String> eventSubscriptionName) {
             $.eventSubscriptionName = eventSubscriptionName;
             return this;
         }
 
+        /**
+         * @param eventSubscriptionName Name of the event subscription to be created. Event subscription names must be between 3 and 100 characters in length and use alphanumeric letters only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventSubscriptionName(String eventSubscriptionName) {
             return eventSubscriptionName(Output.of(eventSubscriptionName));
         }
 
+        /**
+         * @param expirationTimeUtc Expiration time of the event subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expirationTimeUtc(@Nullable Output<String> expirationTimeUtc) {
             $.expirationTimeUtc = expirationTimeUtc;
             return this;
         }
 
+        /**
+         * @param expirationTimeUtc Expiration time of the event subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expirationTimeUtc(String expirationTimeUtc) {
             return expirationTimeUtc(Output.of(expirationTimeUtc));
         }
 
+        /**
+         * @param filter Information about the filter for the event subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(@Nullable Output<EventSubscriptionFilterArgs> filter) {
             $.filter = filter;
             return this;
         }
 
+        /**
+         * @param filter Information about the filter for the event subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(EventSubscriptionFilterArgs filter) {
             return filter(Output.of(filter));
         }
 
+        /**
+         * @param labels List of user defined labels.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<List<String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels List of user defined labels.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(List<String> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param labels List of user defined labels.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(String... labels) {
             return labels(List.of(labels));
         }
 
+        /**
+         * @param partnerTopicName Name of the partner topic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partnerTopicName(Output<String> partnerTopicName) {
             $.partnerTopicName = partnerTopicName;
             return this;
         }
 
+        /**
+         * @param partnerTopicName Name of the partner topic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partnerTopicName(String partnerTopicName) {
             return partnerTopicName(Output.of(partnerTopicName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param retryPolicy The retry policy for events. This can be used to configure maximum number of delivery attempts and time to live for events.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retryPolicy(@Nullable Output<RetryPolicyArgs> retryPolicy) {
             $.retryPolicy = retryPolicy;
             return this;
         }
 
+        /**
+         * @param retryPolicy The retry policy for events. This can be used to configure maximum number of delivery attempts and time to live for events.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retryPolicy(RetryPolicyArgs retryPolicy) {
             return retryPolicy(Output.of(retryPolicy));
         }

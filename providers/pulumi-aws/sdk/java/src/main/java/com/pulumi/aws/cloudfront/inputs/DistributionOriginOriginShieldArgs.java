@@ -21,6 +21,10 @@ public final class DistributionOriginOriginShieldArgs extends com.pulumi.resourc
     @Import(name="enabled", required=true)
     private Output<Boolean> enabled;
 
+    /**
+     * @return A flag that specifies whether Origin Shield is enabled.
+     * 
+     */
     public Output<Boolean> enabled() {
         return this.enabled;
     }
@@ -32,6 +36,10 @@ public final class DistributionOriginOriginShieldArgs extends com.pulumi.resourc
     @Import(name="originShieldRegion", required=true)
     private Output<String> originShieldRegion;
 
+    /**
+     * @return The AWS Region for Origin Shield. To specify a region, use the region code, not the region name. For example, specify the US East (Ohio) region as us-east-2.
+     * 
+     */
     public Output<String> originShieldRegion() {
         return this.originShieldRegion;
     }
@@ -61,20 +69,44 @@ public final class DistributionOriginOriginShieldArgs extends com.pulumi.resourc
             $ = new DistributionOriginOriginShieldArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled A flag that specifies whether Origin Shield is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled A flag that specifies whether Origin Shield is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param originShieldRegion The AWS Region for Origin Shield. To specify a region, use the region code, not the region name. For example, specify the US East (Ohio) region as us-east-2.
+         * 
+         * @return builder
+         * 
+         */
         public Builder originShieldRegion(Output<String> originShieldRegion) {
             $.originShieldRegion = originShieldRegion;
             return this;
         }
 
+        /**
+         * @param originShieldRegion The AWS Region for Origin Shield. To specify a region, use the region code, not the region name. For example, specify the US East (Ohio) region as us-east-2.
+         * 
+         * @return builder
+         * 
+         */
         public Builder originShieldRegion(String originShieldRegion) {
             return originShieldRegion(Output.of(originShieldRegion));
         }

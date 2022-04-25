@@ -28,6 +28,13 @@ public final class DatabaseState extends com.pulumi.resources.ResourceArgs {
     @Import(name="ddls")
     private @Nullable Output<List<String>> ddls;
 
+    /**
+     * @return An optional list of DDL statements to run inside the newly created
+     * database. Statements can create tables, indexes, etc. These statements
+     * execute atomically with the creation of the database: if there is an
+     * error in any statement, the database is not created.
+     * 
+     */
     public Optional<Output<List<String>>> ddls() {
         return Optional.ofNullable(this.ddls);
     }
@@ -40,6 +47,11 @@ public final class DatabaseState extends com.pulumi.resources.ResourceArgs {
     @Import(name="deletionProtection")
     private @Nullable Output<Boolean> deletionProtection;
 
+    /**
+     * @return Whether or not to allow the provider to destroy the instance. Unless this field is set to false
+     * in state, a `destroy` or `update` that would delete the instance will fail.
+     * 
+     */
     public Optional<Output<Boolean>> deletionProtection() {
         return Optional.ofNullable(this.deletionProtection);
     }
@@ -52,6 +64,11 @@ public final class DatabaseState extends com.pulumi.resources.ResourceArgs {
     @Import(name="encryptionConfig")
     private @Nullable Output<DatabaseEncryptionConfigGetArgs> encryptionConfig;
 
+    /**
+     * @return Encryption configuration for the database
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<DatabaseEncryptionConfigGetArgs>> encryptionConfig() {
         return Optional.ofNullable(this.encryptionConfig);
     }
@@ -63,6 +80,10 @@ public final class DatabaseState extends com.pulumi.resources.ResourceArgs {
     @Import(name="instance")
     private @Nullable Output<String> instance;
 
+    /**
+     * @return The instance to create the database on.
+     * 
+     */
     public Optional<Output<String>> instance() {
         return Optional.ofNullable(this.instance);
     }
@@ -75,6 +96,11 @@ public final class DatabaseState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return A unique identifier for the database, which cannot be changed after
+     * the instance is created. Values are of the form [a-z][-a-z0-9]*[a-z0-9].
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -87,6 +113,11 @@ public final class DatabaseState extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -98,6 +129,10 @@ public final class DatabaseState extends com.pulumi.resources.ResourceArgs {
     @Import(name="state")
     private @Nullable Output<String> state;
 
+    /**
+     * @return An explanation of the status of the database.
+     * 
+     */
     public Optional<Output<String>> state() {
         return Optional.ofNullable(this.state);
     }
@@ -132,69 +167,176 @@ public final class DatabaseState extends com.pulumi.resources.ResourceArgs {
             $ = new DatabaseState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ddls An optional list of DDL statements to run inside the newly created
+         * database. Statements can create tables, indexes, etc. These statements
+         * execute atomically with the creation of the database: if there is an
+         * error in any statement, the database is not created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ddls(@Nullable Output<List<String>> ddls) {
             $.ddls = ddls;
             return this;
         }
 
+        /**
+         * @param ddls An optional list of DDL statements to run inside the newly created
+         * database. Statements can create tables, indexes, etc. These statements
+         * execute atomically with the creation of the database: if there is an
+         * error in any statement, the database is not created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ddls(List<String> ddls) {
             return ddls(Output.of(ddls));
         }
 
+        /**
+         * @param ddls An optional list of DDL statements to run inside the newly created
+         * database. Statements can create tables, indexes, etc. These statements
+         * execute atomically with the creation of the database: if there is an
+         * error in any statement, the database is not created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ddls(String... ddls) {
             return ddls(List.of(ddls));
         }
 
+        /**
+         * @param deletionProtection Whether or not to allow the provider to destroy the instance. Unless this field is set to false
+         * in state, a `destroy` or `update` that would delete the instance will fail.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deletionProtection(@Nullable Output<Boolean> deletionProtection) {
             $.deletionProtection = deletionProtection;
             return this;
         }
 
+        /**
+         * @param deletionProtection Whether or not to allow the provider to destroy the instance. Unless this field is set to false
+         * in state, a `destroy` or `update` that would delete the instance will fail.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deletionProtection(Boolean deletionProtection) {
             return deletionProtection(Output.of(deletionProtection));
         }
 
+        /**
+         * @param encryptionConfig Encryption configuration for the database
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionConfig(@Nullable Output<DatabaseEncryptionConfigGetArgs> encryptionConfig) {
             $.encryptionConfig = encryptionConfig;
             return this;
         }
 
+        /**
+         * @param encryptionConfig Encryption configuration for the database
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionConfig(DatabaseEncryptionConfigGetArgs encryptionConfig) {
             return encryptionConfig(Output.of(encryptionConfig));
         }
 
+        /**
+         * @param instance The instance to create the database on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instance(@Nullable Output<String> instance) {
             $.instance = instance;
             return this;
         }
 
+        /**
+         * @param instance The instance to create the database on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instance(String instance) {
             return instance(Output.of(instance));
         }
 
+        /**
+         * @param name A unique identifier for the database, which cannot be changed after
+         * the instance is created. Values are of the form [a-z][-a-z0-9]*[a-z0-9].
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name A unique identifier for the database, which cannot be changed after
+         * the instance is created. Values are of the form [a-z][-a-z0-9]*[a-z0-9].
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param state An explanation of the status of the database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param state An explanation of the status of the database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             return state(Output.of(state));
         }

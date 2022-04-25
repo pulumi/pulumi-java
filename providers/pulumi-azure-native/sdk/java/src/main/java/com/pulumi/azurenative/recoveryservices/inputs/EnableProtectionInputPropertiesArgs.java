@@ -33,6 +33,10 @@ public final class EnableProtectionInputPropertiesArgs extends com.pulumi.resour
     @Import(name="policyId")
     private @Nullable Output<String> policyId;
 
+    /**
+     * @return The Policy Id.
+     * 
+     */
     public Optional<Output<String>> policyId() {
         return Optional.ofNullable(this.policyId);
     }
@@ -44,6 +48,10 @@ public final class EnableProtectionInputPropertiesArgs extends com.pulumi.resour
     @Import(name="protectableItemId")
     private @Nullable Output<String> protectableItemId;
 
+    /**
+     * @return The protectable item Id.
+     * 
+     */
     public Optional<Output<String>> protectableItemId() {
         return Optional.ofNullable(this.protectableItemId);
     }
@@ -55,6 +63,10 @@ public final class EnableProtectionInputPropertiesArgs extends com.pulumi.resour
     @Import(name="providerSpecificDetails")
     private @Nullable Output<Object> providerSpecificDetails;
 
+    /**
+     * @return The ReplicationProviderInput. For HyperVReplicaAzure provider, it will be AzureEnableProtectionInput object. For San provider, it will be SanEnableProtectionInput object. For HyperVReplicaAzure provider, it can be null.
+     * 
+     */
     public Optional<Output<Object>> providerSpecificDetails() {
         return Optional.ofNullable(this.providerSpecificDetails);
     }
@@ -85,29 +97,65 @@ public final class EnableProtectionInputPropertiesArgs extends com.pulumi.resour
             $ = new EnableProtectionInputPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param policyId The Policy Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyId(@Nullable Output<String> policyId) {
             $.policyId = policyId;
             return this;
         }
 
+        /**
+         * @param policyId The Policy Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyId(String policyId) {
             return policyId(Output.of(policyId));
         }
 
+        /**
+         * @param protectableItemId The protectable item Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectableItemId(@Nullable Output<String> protectableItemId) {
             $.protectableItemId = protectableItemId;
             return this;
         }
 
+        /**
+         * @param protectableItemId The protectable item Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectableItemId(String protectableItemId) {
             return protectableItemId(Output.of(protectableItemId));
         }
 
+        /**
+         * @param providerSpecificDetails The ReplicationProviderInput. For HyperVReplicaAzure provider, it will be AzureEnableProtectionInput object. For San provider, it will be SanEnableProtectionInput object. For HyperVReplicaAzure provider, it can be null.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerSpecificDetails(@Nullable Output<Object> providerSpecificDetails) {
             $.providerSpecificDetails = providerSpecificDetails;
             return this;
         }
 
+        /**
+         * @param providerSpecificDetails The ReplicationProviderInput. For HyperVReplicaAzure provider, it will be AzureEnableProtectionInput object. For San provider, it will be SanEnableProtectionInput object. For HyperVReplicaAzure provider, it can be null.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerSpecificDetails(Object providerSpecificDetails) {
             return providerSpecificDetails(Output.of(providerSpecificDetails));
         }

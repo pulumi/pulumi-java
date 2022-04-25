@@ -24,6 +24,10 @@ public final class ProjectBuildBatchConfigRestrictionsGetArgs extends com.pulumi
     @Import(name="computeTypesAlloweds")
     private @Nullable Output<List<String>> computeTypesAlloweds;
 
+    /**
+     * @return An array of strings that specify the compute types that are allowed for the batch build. See [Build environment compute types](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html) in the AWS CodeBuild User Guide for these values.
+     * 
+     */
     public Optional<Output<List<String>>> computeTypesAlloweds() {
         return Optional.ofNullable(this.computeTypesAlloweds);
     }
@@ -35,6 +39,10 @@ public final class ProjectBuildBatchConfigRestrictionsGetArgs extends com.pulumi
     @Import(name="maximumBuildsAllowed")
     private @Nullable Output<Integer> maximumBuildsAllowed;
 
+    /**
+     * @return Specifies the maximum number of builds allowed.
+     * 
+     */
     public Optional<Output<Integer>> maximumBuildsAllowed() {
         return Optional.ofNullable(this.maximumBuildsAllowed);
     }
@@ -64,24 +72,54 @@ public final class ProjectBuildBatchConfigRestrictionsGetArgs extends com.pulumi
             $ = new ProjectBuildBatchConfigRestrictionsGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param computeTypesAlloweds An array of strings that specify the compute types that are allowed for the batch build. See [Build environment compute types](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html) in the AWS CodeBuild User Guide for these values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder computeTypesAlloweds(@Nullable Output<List<String>> computeTypesAlloweds) {
             $.computeTypesAlloweds = computeTypesAlloweds;
             return this;
         }
 
+        /**
+         * @param computeTypesAlloweds An array of strings that specify the compute types that are allowed for the batch build. See [Build environment compute types](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html) in the AWS CodeBuild User Guide for these values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder computeTypesAlloweds(List<String> computeTypesAlloweds) {
             return computeTypesAlloweds(Output.of(computeTypesAlloweds));
         }
 
+        /**
+         * @param computeTypesAlloweds An array of strings that specify the compute types that are allowed for the batch build. See [Build environment compute types](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html) in the AWS CodeBuild User Guide for these values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder computeTypesAlloweds(String... computeTypesAlloweds) {
             return computeTypesAlloweds(List.of(computeTypesAlloweds));
         }
 
+        /**
+         * @param maximumBuildsAllowed Specifies the maximum number of builds allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maximumBuildsAllowed(@Nullable Output<Integer> maximumBuildsAllowed) {
             $.maximumBuildsAllowed = maximumBuildsAllowed;
             return this;
         }
 
+        /**
+         * @param maximumBuildsAllowed Specifies the maximum number of builds allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maximumBuildsAllowed(Integer maximumBuildsAllowed) {
             return maximumBuildsAllowed(Output.of(maximumBuildsAllowed));
         }

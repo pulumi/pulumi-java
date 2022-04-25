@@ -23,6 +23,10 @@ public final class ApprovalResultResponse extends com.pulumi.resources.InvokeArg
     @Import(name="approvalTime", required=true)
     private String approvalTime;
 
+    /**
+     * @return The time when the approval decision was made.
+     * 
+     */
     public String approvalTime() {
         return this.approvalTime;
     }
@@ -34,6 +38,10 @@ public final class ApprovalResultResponse extends com.pulumi.resources.InvokeArg
     @Import(name="approverAccount", required=true)
     private String approverAccount;
 
+    /**
+     * @return Email of the user that called the ApproveBuild API to approve or reject a build at the time that the API was called.
+     * 
+     */
     public String approverAccount() {
         return this.approverAccount;
     }
@@ -45,6 +53,10 @@ public final class ApprovalResultResponse extends com.pulumi.resources.InvokeArg
     @Import(name="comment", required=true)
     private String comment;
 
+    /**
+     * @return Optional. An optional comment for this manual approval result.
+     * 
+     */
     public String comment() {
         return this.comment;
     }
@@ -56,6 +68,10 @@ public final class ApprovalResultResponse extends com.pulumi.resources.InvokeArg
     @Import(name="decision", required=true)
     private String decision;
 
+    /**
+     * @return The decision of this manual approval.
+     * 
+     */
     public String decision() {
         return this.decision;
     }
@@ -67,6 +83,10 @@ public final class ApprovalResultResponse extends com.pulumi.resources.InvokeArg
     @Import(name="url", required=true)
     private String url;
 
+    /**
+     * @return Optional. An optional URL tied to this manual approval result. This field is essentially the same as comment, except that it will be rendered by the UI differently. An example use case is a link to an external job that approved this Build.
+     * 
+     */
     public String url() {
         return this.url;
     }
@@ -99,26 +119,56 @@ public final class ApprovalResultResponse extends com.pulumi.resources.InvokeArg
             $ = new ApprovalResultResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param approvalTime The time when the approval decision was made.
+         * 
+         * @return builder
+         * 
+         */
         public Builder approvalTime(String approvalTime) {
             $.approvalTime = approvalTime;
             return this;
         }
 
+        /**
+         * @param approverAccount Email of the user that called the ApproveBuild API to approve or reject a build at the time that the API was called.
+         * 
+         * @return builder
+         * 
+         */
         public Builder approverAccount(String approverAccount) {
             $.approverAccount = approverAccount;
             return this;
         }
 
+        /**
+         * @param comment Optional. An optional comment for this manual approval result.
+         * 
+         * @return builder
+         * 
+         */
         public Builder comment(String comment) {
             $.comment = comment;
             return this;
         }
 
+        /**
+         * @param decision The decision of this manual approval.
+         * 
+         * @return builder
+         * 
+         */
         public Builder decision(String decision) {
             $.decision = decision;
             return this;
         }
 
+        /**
+         * @param url Optional. An optional URL tied to this manual approval result. This field is essentially the same as comment, except that it will be rendered by the UI differently. An example use case is a link to an external job that approved this Build.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(String url) {
             $.url = url;
             return this;

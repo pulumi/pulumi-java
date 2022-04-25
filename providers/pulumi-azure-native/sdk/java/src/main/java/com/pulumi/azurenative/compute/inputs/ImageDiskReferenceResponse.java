@@ -26,6 +26,10 @@ public final class ImageDiskReferenceResponse extends com.pulumi.resources.Invok
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return A relative uri containing either a Platform Image Repository or user image reference.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -37,6 +41,10 @@ public final class ImageDiskReferenceResponse extends com.pulumi.resources.Invok
     @Import(name="lun")
     private @Nullable Integer lun;
 
+    /**
+     * @return If the disk is created from an image&#39;s data disk, this is an index that indicates which of the data disks in the image to use. For OS disks, this field is null.
+     * 
+     */
     public Optional<Integer> lun() {
         return Optional.ofNullable(this.lun);
     }
@@ -66,11 +74,23 @@ public final class ImageDiskReferenceResponse extends com.pulumi.resources.Invok
             $ = new ImageDiskReferenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id A relative uri containing either a Platform Image Repository or user image reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param lun If the disk is created from an image&#39;s data disk, this is an index that indicates which of the data disks in the image to use. For OS disks, this field is null.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lun(@Nullable Integer lun) {
             $.lun = lun;
             return this;

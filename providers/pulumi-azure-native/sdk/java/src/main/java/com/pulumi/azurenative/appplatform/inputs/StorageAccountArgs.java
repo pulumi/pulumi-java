@@ -25,6 +25,10 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="accountKey", required=true)
     private Output<String> accountKey;
 
+    /**
+     * @return The account key of the Azure Storage Account.
+     * 
+     */
     public Output<String> accountKey() {
         return this.accountKey;
     }
@@ -36,6 +40,10 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="accountName", required=true)
     private Output<String> accountName;
 
+    /**
+     * @return The account name of the Azure Storage Account.
+     * 
+     */
     public Output<String> accountName() {
         return this.accountName;
     }
@@ -48,6 +56,11 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="storageType", required=true)
     private Output<String> storageType;
 
+    /**
+     * @return The type of the storage.
+     * Expected value is &#39;StorageAccount&#39;.
+     * 
+     */
     public Output<String> storageType() {
         return this.storageType;
     }
@@ -78,29 +91,67 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
             $ = new StorageAccountArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountKey The account key of the Azure Storage Account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountKey(Output<String> accountKey) {
             $.accountKey = accountKey;
             return this;
         }
 
+        /**
+         * @param accountKey The account key of the Azure Storage Account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountKey(String accountKey) {
             return accountKey(Output.of(accountKey));
         }
 
+        /**
+         * @param accountName The account name of the Azure Storage Account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param accountName The account name of the Azure Storage Account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             return accountName(Output.of(accountName));
         }
 
+        /**
+         * @param storageType The type of the storage.
+         * Expected value is &#39;StorageAccount&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageType(Output<String> storageType) {
             $.storageType = storageType;
             return this;
         }
 
+        /**
+         * @param storageType The type of the storage.
+         * Expected value is &#39;StorageAccount&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageType(String storageType) {
             return storageType(Output.of(storageType));
         }

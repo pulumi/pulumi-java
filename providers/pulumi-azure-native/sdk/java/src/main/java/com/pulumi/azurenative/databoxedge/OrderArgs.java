@@ -26,6 +26,10 @@ public final class OrderArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="contactInformation", required=true)
     private Output<ContactDetailsArgs> contactInformation;
 
+    /**
+     * @return The contact details.
+     * 
+     */
     public Output<ContactDetailsArgs> contactInformation() {
         return this.contactInformation;
     }
@@ -37,6 +41,10 @@ public final class OrderArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deviceName", required=true)
     private Output<String> deviceName;
 
+    /**
+     * @return The order details of a device.
+     * 
+     */
     public Output<String> deviceName() {
         return this.deviceName;
     }
@@ -48,6 +56,10 @@ public final class OrderArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,6 +71,10 @@ public final class OrderArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="shipmentType")
     private @Nullable Output<Either<String,ShipmentType>> shipmentType;
 
+    /**
+     * @return ShipmentType of the order
+     * 
+     */
     public Optional<Output<Either<String,ShipmentType>>> shipmentType() {
         return Optional.ofNullable(this.shipmentType);
     }
@@ -70,6 +86,10 @@ public final class OrderArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="shippingAddress")
     private @Nullable Output<AddressArgs> shippingAddress;
 
+    /**
+     * @return The shipping address.
+     * 
+     */
     public Optional<Output<AddressArgs>> shippingAddress() {
         return Optional.ofNullable(this.shippingAddress);
     }
@@ -102,55 +122,127 @@ public final class OrderArgs extends com.pulumi.resources.ResourceArgs {
             $ = new OrderArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param contactInformation The contact details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contactInformation(Output<ContactDetailsArgs> contactInformation) {
             $.contactInformation = contactInformation;
             return this;
         }
 
+        /**
+         * @param contactInformation The contact details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contactInformation(ContactDetailsArgs contactInformation) {
             return contactInformation(Output.of(contactInformation));
         }
 
+        /**
+         * @param deviceName The order details of a device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(Output<String> deviceName) {
             $.deviceName = deviceName;
             return this;
         }
 
+        /**
+         * @param deviceName The order details of a device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(String deviceName) {
             return deviceName(Output.of(deviceName));
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param shipmentType ShipmentType of the order
+         * 
+         * @return builder
+         * 
+         */
         public Builder shipmentType(@Nullable Output<Either<String,ShipmentType>> shipmentType) {
             $.shipmentType = shipmentType;
             return this;
         }
 
+        /**
+         * @param shipmentType ShipmentType of the order
+         * 
+         * @return builder
+         * 
+         */
         public Builder shipmentType(Either<String,ShipmentType> shipmentType) {
             return shipmentType(Output.of(shipmentType));
         }
 
+        /**
+         * @param shipmentType ShipmentType of the order
+         * 
+         * @return builder
+         * 
+         */
         public Builder shipmentType(String shipmentType) {
             return shipmentType(Either.ofLeft(shipmentType));
         }
 
+        /**
+         * @param shipmentType ShipmentType of the order
+         * 
+         * @return builder
+         * 
+         */
         public Builder shipmentType(ShipmentType shipmentType) {
             return shipmentType(Either.ofRight(shipmentType));
         }
 
+        /**
+         * @param shippingAddress The shipping address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shippingAddress(@Nullable Output<AddressArgs> shippingAddress) {
             $.shippingAddress = shippingAddress;
             return this;
         }
 
+        /**
+         * @param shippingAddress The shipping address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shippingAddress(AddressArgs shippingAddress) {
             return shippingAddress(Output.of(shippingAddress));
         }

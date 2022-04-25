@@ -30,6 +30,14 @@ public final class SecurityPolicyRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="action", required=true)
     private Output<String> action;
 
+    /**
+     * @return Action to take when `match` matches the request. Valid values:
+     * * &#34;allow&#34; : allow access to target
+     * * &#34;deny(status)&#34; : deny access to target, returns the  HTTP response code specified (valid values are 403, 404 and 502)
+     * * &#34;rate_based_ban&#34; : limit client traffic to the configured threshold and ban the client if the traffic exceeds the threshold. Configure parameters for this action in RateLimitOptions. Requires rateLimitOptions to be set.
+     * * &#34;threshold&#34; : limit client traffic to the configured threshold. Configure parameters for this action in rateLimitOptions. Requires rateLimitOptions to be set for this.
+     * 
+     */
     public Output<String> action() {
         return this.action;
     }
@@ -41,6 +49,10 @@ public final class SecurityPolicyRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return An optional description of this rule. Max size is 64.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -53,6 +65,11 @@ public final class SecurityPolicyRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="match", required=true)
     private Output<SecurityPolicyRuleMatchArgs> match;
 
+    /**
+     * @return A match condition that incoming traffic is evaluated against.
+     * If it evaluates to true, the corresponding `action` is enforced. Structure is documented below.
+     * 
+     */
     public Output<SecurityPolicyRuleMatchArgs> match() {
         return this.match;
     }
@@ -65,6 +82,11 @@ public final class SecurityPolicyRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="preview")
     private @Nullable Output<Boolean> preview;
 
+    /**
+     * @return When set to true, the `action` specified above is not enforced.
+     * Stackdriver logs for requests that trigger a preview action are annotated as such.
+     * 
+     */
     public Optional<Output<Boolean>> preview() {
         return Optional.ofNullable(this.preview);
     }
@@ -77,6 +99,11 @@ public final class SecurityPolicyRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="priority", required=true)
     private Output<Integer> priority;
 
+    /**
+     * @return An unique positive integer indicating the priority of evaluation for a rule.
+     * Rules are evaluated from highest priority (lowest numerically) to lowest priority (highest numerically) in order.
+     * 
+     */
     public Output<Integer> priority() {
         return this.priority;
     }
@@ -89,6 +116,11 @@ public final class SecurityPolicyRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="rateLimitOptions")
     private @Nullable Output<SecurityPolicyRuleRateLimitOptionsArgs> rateLimitOptions;
 
+    /**
+     * @return )
+     * Must be specified if the `action` is &#34;rate_based_bad&#34; or &#34;throttle&#34;. Cannot be specified for other actions. Structure is documented below.
+     * 
+     */
     public Optional<Output<SecurityPolicyRuleRateLimitOptionsArgs>> rateLimitOptions() {
         return Optional.ofNullable(this.rateLimitOptions);
     }
@@ -122,56 +154,144 @@ public final class SecurityPolicyRuleArgs extends com.pulumi.resources.ResourceA
             $ = new SecurityPolicyRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action Action to take when `match` matches the request. Valid values:
+         * * &#34;allow&#34; : allow access to target
+         * * &#34;deny(status)&#34; : deny access to target, returns the  HTTP response code specified (valid values are 403, 404 and 502)
+         * * &#34;rate_based_ban&#34; : limit client traffic to the configured threshold and ban the client if the traffic exceeds the threshold. Configure parameters for this action in RateLimitOptions. Requires rateLimitOptions to be set.
+         * * &#34;threshold&#34; : limit client traffic to the configured threshold. Configure parameters for this action in rateLimitOptions. Requires rateLimitOptions to be set for this.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(Output<String> action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param action Action to take when `match` matches the request. Valid values:
+         * * &#34;allow&#34; : allow access to target
+         * * &#34;deny(status)&#34; : deny access to target, returns the  HTTP response code specified (valid values are 403, 404 and 502)
+         * * &#34;rate_based_ban&#34; : limit client traffic to the configured threshold and ban the client if the traffic exceeds the threshold. Configure parameters for this action in RateLimitOptions. Requires rateLimitOptions to be set.
+         * * &#34;threshold&#34; : limit client traffic to the configured threshold. Configure parameters for this action in rateLimitOptions. Requires rateLimitOptions to be set for this.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(String action) {
             return action(Output.of(action));
         }
 
+        /**
+         * @param description An optional description of this rule. Max size is 64.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description An optional description of this rule. Max size is 64.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param match A match condition that incoming traffic is evaluated against.
+         * If it evaluates to true, the corresponding `action` is enforced. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder match(Output<SecurityPolicyRuleMatchArgs> match) {
             $.match = match;
             return this;
         }
 
+        /**
+         * @param match A match condition that incoming traffic is evaluated against.
+         * If it evaluates to true, the corresponding `action` is enforced. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder match(SecurityPolicyRuleMatchArgs match) {
             return match(Output.of(match));
         }
 
+        /**
+         * @param preview When set to true, the `action` specified above is not enforced.
+         * Stackdriver logs for requests that trigger a preview action are annotated as such.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preview(@Nullable Output<Boolean> preview) {
             $.preview = preview;
             return this;
         }
 
+        /**
+         * @param preview When set to true, the `action` specified above is not enforced.
+         * Stackdriver logs for requests that trigger a preview action are annotated as such.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preview(Boolean preview) {
             return preview(Output.of(preview));
         }
 
+        /**
+         * @param priority An unique positive integer indicating the priority of evaluation for a rule.
+         * Rules are evaluated from highest priority (lowest numerically) to lowest priority (highest numerically) in order.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(Output<Integer> priority) {
             $.priority = priority;
             return this;
         }
 
+        /**
+         * @param priority An unique positive integer indicating the priority of evaluation for a rule.
+         * Rules are evaluated from highest priority (lowest numerically) to lowest priority (highest numerically) in order.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(Integer priority) {
             return priority(Output.of(priority));
         }
 
+        /**
+         * @param rateLimitOptions )
+         * Must be specified if the `action` is &#34;rate_based_bad&#34; or &#34;throttle&#34;. Cannot be specified for other actions. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rateLimitOptions(@Nullable Output<SecurityPolicyRuleRateLimitOptionsArgs> rateLimitOptions) {
             $.rateLimitOptions = rateLimitOptions;
             return this;
         }
 
+        /**
+         * @param rateLimitOptions )
+         * Must be specified if the `action` is &#34;rate_based_bad&#34; or &#34;throttle&#34;. Cannot be specified for other actions. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rateLimitOptions(SecurityPolicyRuleRateLimitOptionsArgs rateLimitOptions) {
             return rateLimitOptions(Output.of(rateLimitOptions));
         }

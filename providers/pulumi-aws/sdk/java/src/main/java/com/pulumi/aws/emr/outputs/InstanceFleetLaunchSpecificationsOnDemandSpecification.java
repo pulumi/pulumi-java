@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class InstanceFleetLaunchSpecificationsOnDemandSpecification {
     /**
-     * Specifies the strategy to use in launching Spot instance fleets. Currently, the only option is `capacity-optimized` (the default), which launches instances from Spot instance pools with optimal capacity for the number of instances that are launching.
+     * @return Specifies the strategy to use in launching Spot instance fleets. Currently, the only option is `capacity-optimized` (the default), which launches instances from Spot instance pools with optimal capacity for the number of instances that are launching.
      * 
      */
     private final String allocationStrategy;
@@ -21,9 +21,9 @@ public final class InstanceFleetLaunchSpecificationsOnDemandSpecification {
     }
 
     /**
-     * Specifies the strategy to use in launching Spot instance fleets. Currently, the only option is `capacity-optimized` (the default), which launches instances from Spot instance pools with optimal capacity for the number of instances that are launching.
+     * @return Specifies the strategy to use in launching Spot instance fleets. Currently, the only option is `capacity-optimized` (the default), which launches instances from Spot instance pools with optimal capacity for the number of instances that are launching.
      * 
-    */
+     */
     public String allocationStrategy() {
         return this.allocationStrategy;
     }

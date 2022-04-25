@@ -24,6 +24,10 @@ public final class AddressDetailsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="forwardAddress", required=true)
     private Output<AddressPropertiesArgs> forwardAddress;
 
+    /**
+     * @return Customer address and contact details. It should be address resource
+     * 
+     */
     public Output<AddressPropertiesArgs> forwardAddress() {
         return this.forwardAddress;
     }
@@ -52,11 +56,23 @@ public final class AddressDetailsArgs extends com.pulumi.resources.ResourceArgs 
             $ = new AddressDetailsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param forwardAddress Customer address and contact details. It should be address resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder forwardAddress(Output<AddressPropertiesArgs> forwardAddress) {
             $.forwardAddress = forwardAddress;
             return this;
         }
 
+        /**
+         * @param forwardAddress Customer address and contact details. It should be address resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder forwardAddress(AddressPropertiesArgs forwardAddress) {
             return forwardAddress(Output.of(forwardAddress));
         }

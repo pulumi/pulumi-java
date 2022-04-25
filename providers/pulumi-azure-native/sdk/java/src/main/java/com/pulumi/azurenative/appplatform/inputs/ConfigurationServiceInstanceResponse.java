@@ -23,6 +23,10 @@ public final class ConfigurationServiceInstanceResponse extends com.pulumi.resou
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of the Application Configuration Service instance
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -34,6 +38,10 @@ public final class ConfigurationServiceInstanceResponse extends com.pulumi.resou
     @Import(name="status", required=true)
     private String status;
 
+    /**
+     * @return Status of the Application Configuration Service instance
+     * 
+     */
     public String status() {
         return this.status;
     }
@@ -63,11 +71,23 @@ public final class ConfigurationServiceInstanceResponse extends com.pulumi.resou
             $ = new ConfigurationServiceInstanceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name of the Application Configuration Service instance
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param status Status of the Application Configuration Service instance
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             $.status = status;
             return this;

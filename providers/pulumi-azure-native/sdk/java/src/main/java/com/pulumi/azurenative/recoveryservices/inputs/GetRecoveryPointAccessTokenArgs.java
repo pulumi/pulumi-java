@@ -23,6 +23,10 @@ public final class GetRecoveryPointAccessTokenArgs extends com.pulumi.resources.
     @Import(name="containerName", required=true)
     private String containerName;
 
+    /**
+     * @return Name of the container.
+     * 
+     */
     public String containerName() {
         return this.containerName;
     }
@@ -34,6 +38,10 @@ public final class GetRecoveryPointAccessTokenArgs extends com.pulumi.resources.
     @Import(name="eTag")
     private @Nullable String eTag;
 
+    /**
+     * @return Optional ETag.
+     * 
+     */
     public Optional<String> eTag() {
         return Optional.ofNullable(this.eTag);
     }
@@ -45,6 +53,10 @@ public final class GetRecoveryPointAccessTokenArgs extends com.pulumi.resources.
     @Import(name="fabricName", required=true)
     private String fabricName;
 
+    /**
+     * @return Fabric name associated with the container.
+     * 
+     */
     public String fabricName() {
         return this.fabricName;
     }
@@ -56,6 +68,10 @@ public final class GetRecoveryPointAccessTokenArgs extends com.pulumi.resources.
     @Import(name="location")
     private @Nullable String location;
 
+    /**
+     * @return Resource location.
+     * 
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
@@ -67,6 +83,10 @@ public final class GetRecoveryPointAccessTokenArgs extends com.pulumi.resources.
     @Import(name="properties")
     private @Nullable AADProperties properties;
 
+    /**
+     * @return AADPropertiesResource properties
+     * 
+     */
     public Optional<AADProperties> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -78,6 +98,10 @@ public final class GetRecoveryPointAccessTokenArgs extends com.pulumi.resources.
     @Import(name="protectedItemName", required=true)
     private String protectedItemName;
 
+    /**
+     * @return Name of the Protected Item.
+     * 
+     */
     public String protectedItemName() {
         return this.protectedItemName;
     }
@@ -89,6 +113,10 @@ public final class GetRecoveryPointAccessTokenArgs extends com.pulumi.resources.
     @Import(name="recoveryPointId", required=true)
     private String recoveryPointId;
 
+    /**
+     * @return Recovery Point Id
+     * 
+     */
     public String recoveryPointId() {
         return this.recoveryPointId;
     }
@@ -100,6 +128,10 @@ public final class GetRecoveryPointAccessTokenArgs extends com.pulumi.resources.
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group where the recovery services vault is present.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -111,6 +143,10 @@ public final class GetRecoveryPointAccessTokenArgs extends com.pulumi.resources.
     @Import(name="tags")
     private @Nullable Map<String,String> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Map<String,String>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -122,6 +158,10 @@ public final class GetRecoveryPointAccessTokenArgs extends com.pulumi.resources.
     @Import(name="vaultName", required=true)
     private String vaultName;
 
+    /**
+     * @return The name of the recovery services vault.
+     * 
+     */
     public String vaultName() {
         return this.vaultName;
     }
@@ -159,51 +199,111 @@ public final class GetRecoveryPointAccessTokenArgs extends com.pulumi.resources.
             $ = new GetRecoveryPointAccessTokenArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param containerName Name of the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerName(String containerName) {
             $.containerName = containerName;
             return this;
         }
 
+        /**
+         * @param eTag Optional ETag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eTag(@Nullable String eTag) {
             $.eTag = eTag;
             return this;
         }
 
+        /**
+         * @param fabricName Fabric name associated with the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fabricName(String fabricName) {
             $.fabricName = fabricName;
             return this;
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable String location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param properties AADPropertiesResource properties
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable AADProperties properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param protectedItemName Name of the Protected Item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectedItemName(String protectedItemName) {
             $.protectedItemName = protectedItemName;
             return this;
         }
 
+        /**
+         * @param recoveryPointId Recovery Point Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryPointId(String recoveryPointId) {
             $.recoveryPointId = recoveryPointId;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group where the recovery services vault is present.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Map<String,String> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param vaultName The name of the recovery services vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vaultName(String vaultName) {
             $.vaultName = vaultName;
             return this;

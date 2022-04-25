@@ -19,6 +19,10 @@ public final class GetVpnConnectionArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="connectionName", required=true)
     private String connectionName;
 
+    /**
+     * @return The name of the vpn connection.
+     * 
+     */
     public String connectionName() {
         return this.connectionName;
     }
@@ -30,6 +34,10 @@ public final class GetVpnConnectionArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="gatewayName", required=true)
     private String gatewayName;
 
+    /**
+     * @return The name of the gateway.
+     * 
+     */
     public String gatewayName() {
         return this.gatewayName;
     }
@@ -41,6 +49,10 @@ public final class GetVpnConnectionArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The resource group name of the VpnGateway.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetVpnConnectionArgs extends com.pulumi.resources.InvokeArgs 
             $ = new GetVpnConnectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param connectionName The name of the vpn connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionName(String connectionName) {
             $.connectionName = connectionName;
             return this;
         }
 
+        /**
+         * @param gatewayName The name of the gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayName(String gatewayName) {
             $.gatewayName = gatewayName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name of the VpnGateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

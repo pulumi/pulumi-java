@@ -29,6 +29,10 @@ public final class SchedulingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nodeSelector")
     private @Nullable Output<Map<String,String>> nodeSelector;
 
+    /**
+     * @return nodeSelector lists labels that must be present on nodes that support this RuntimeClass. Pods using this RuntimeClass can only be scheduled to a node matched by this selector. The RuntimeClass nodeSelector is merged with a pod&#39;s existing nodeSelector. Any conflicts will cause the pod to be rejected in admission.
+     * 
+     */
     public Optional<Output<Map<String,String>>> nodeSelector() {
         return Optional.ofNullable(this.nodeSelector);
     }
@@ -40,6 +44,10 @@ public final class SchedulingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tolerations")
     private @Nullable Output<List<TolerationArgs>> tolerations;
 
+    /**
+     * @return tolerations are appended (excluding duplicates) to pods running with this RuntimeClass during admission, effectively unioning the set of nodes tolerated by the pod and the RuntimeClass.
+     * 
+     */
     public Optional<Output<List<TolerationArgs>>> tolerations() {
         return Optional.ofNullable(this.tolerations);
     }
@@ -69,24 +77,54 @@ public final class SchedulingArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SchedulingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param nodeSelector nodeSelector lists labels that must be present on nodes that support this RuntimeClass. Pods using this RuntimeClass can only be scheduled to a node matched by this selector. The RuntimeClass nodeSelector is merged with a pod&#39;s existing nodeSelector. Any conflicts will cause the pod to be rejected in admission.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeSelector(@Nullable Output<Map<String,String>> nodeSelector) {
             $.nodeSelector = nodeSelector;
             return this;
         }
 
+        /**
+         * @param nodeSelector nodeSelector lists labels that must be present on nodes that support this RuntimeClass. Pods using this RuntimeClass can only be scheduled to a node matched by this selector. The RuntimeClass nodeSelector is merged with a pod&#39;s existing nodeSelector. Any conflicts will cause the pod to be rejected in admission.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeSelector(Map<String,String> nodeSelector) {
             return nodeSelector(Output.of(nodeSelector));
         }
 
+        /**
+         * @param tolerations tolerations are appended (excluding duplicates) to pods running with this RuntimeClass during admission, effectively unioning the set of nodes tolerated by the pod and the RuntimeClass.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tolerations(@Nullable Output<List<TolerationArgs>> tolerations) {
             $.tolerations = tolerations;
             return this;
         }
 
+        /**
+         * @param tolerations tolerations are appended (excluding duplicates) to pods running with this RuntimeClass during admission, effectively unioning the set of nodes tolerated by the pod and the RuntimeClass.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tolerations(List<TolerationArgs> tolerations) {
             return tolerations(Output.of(tolerations));
         }
 
+        /**
+         * @param tolerations tolerations are appended (excluding duplicates) to pods running with this RuntimeClass during admission, effectively unioning the set of nodes tolerated by the pod and the RuntimeClass.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tolerations(TolerationArgs... tolerations) {
             return tolerations(List.of(tolerations));
         }

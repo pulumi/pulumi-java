@@ -27,6 +27,10 @@ public final class GooglePrivacyDlpV2TableOptionsArgs extends com.pulumi.resourc
     @Import(name="identifyingFields")
     private @Nullable Output<List<GooglePrivacyDlpV2FieldIdArgs>> identifyingFields;
 
+    /**
+     * @return The columns that are the primary keys for table objects included in ContentItem. A copy of this cell&#39;s value will stored alongside alongside each finding so that the finding can be traced to the specific row it came from. No more than 3 may be provided.
+     * 
+     */
     public Optional<Output<List<GooglePrivacyDlpV2FieldIdArgs>>> identifyingFields() {
         return Optional.ofNullable(this.identifyingFields);
     }
@@ -55,15 +59,33 @@ public final class GooglePrivacyDlpV2TableOptionsArgs extends com.pulumi.resourc
             $ = new GooglePrivacyDlpV2TableOptionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param identifyingFields The columns that are the primary keys for table objects included in ContentItem. A copy of this cell&#39;s value will stored alongside alongside each finding so that the finding can be traced to the specific row it came from. No more than 3 may be provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identifyingFields(@Nullable Output<List<GooglePrivacyDlpV2FieldIdArgs>> identifyingFields) {
             $.identifyingFields = identifyingFields;
             return this;
         }
 
+        /**
+         * @param identifyingFields The columns that are the primary keys for table objects included in ContentItem. A copy of this cell&#39;s value will stored alongside alongside each finding so that the finding can be traced to the specific row it came from. No more than 3 may be provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identifyingFields(List<GooglePrivacyDlpV2FieldIdArgs> identifyingFields) {
             return identifyingFields(Output.of(identifyingFields));
         }
 
+        /**
+         * @param identifyingFields The columns that are the primary keys for table objects included in ContentItem. A copy of this cell&#39;s value will stored alongside alongside each finding so that the finding can be traced to the specific row it came from. No more than 3 may be provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identifyingFields(GooglePrivacyDlpV2FieldIdArgs... identifyingFields) {
             return identifyingFields(List.of(identifyingFields));
         }

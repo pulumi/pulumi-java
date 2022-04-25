@@ -10,27 +10,27 @@ import java.util.Objects;
 @CustomType
 public final class CapabilityPropertiesResponse {
     /**
-     * Localized string of the description.
+     * @return Localized string of the description.
      * 
      */
     private final String description;
     /**
-     * URL to retrieve JSON schema of the Capability parameters.
+     * @return URL to retrieve JSON schema of the Capability parameters.
      * 
      */
     private final String parametersSchema;
     /**
-     * String of the Publisher that this Capability extends.
+     * @return String of the Publisher that this Capability extends.
      * 
      */
     private final String publisher;
     /**
-     * String of the Target Type that this Capability extends.
+     * @return String of the Target Type that this Capability extends.
      * 
      */
     private final String targetType;
     /**
-     * String of the URN for this Capability Type.
+     * @return String of the URN for this Capability Type.
      * 
      */
     private final String urn;
@@ -50,37 +50,37 @@ public final class CapabilityPropertiesResponse {
     }
 
     /**
-     * Localized string of the description.
+     * @return Localized string of the description.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * URL to retrieve JSON schema of the Capability parameters.
+     * @return URL to retrieve JSON schema of the Capability parameters.
      * 
-    */
+     */
     public String parametersSchema() {
         return this.parametersSchema;
     }
     /**
-     * String of the Publisher that this Capability extends.
+     * @return String of the Publisher that this Capability extends.
      * 
-    */
+     */
     public String publisher() {
         return this.publisher;
     }
     /**
-     * String of the Target Type that this Capability extends.
+     * @return String of the Target Type that this Capability extends.
      * 
-    */
+     */
     public String targetType() {
         return this.targetType;
     }
     /**
-     * String of the URN for this Capability Type.
+     * @return String of the URN for this Capability Type.
      * 
-    */
+     */
     public String urn() {
         return this.urn;
     }

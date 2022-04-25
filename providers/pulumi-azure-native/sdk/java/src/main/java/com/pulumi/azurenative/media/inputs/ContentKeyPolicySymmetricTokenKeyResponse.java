@@ -24,6 +24,10 @@ public final class ContentKeyPolicySymmetricTokenKeyResponse extends com.pulumi.
     @Import(name="keyValue", required=true)
     private String keyValue;
 
+    /**
+     * @return The key value of the key
+     * 
+     */
     public String keyValue() {
         return this.keyValue;
     }
@@ -36,6 +40,11 @@ public final class ContentKeyPolicySymmetricTokenKeyResponse extends com.pulumi.
     @Import(name="odataType", required=true)
     private String odataType;
 
+    /**
+     * @return The discriminator for derived types.
+     * Expected value is &#39;#Microsoft.Media.ContentKeyPolicySymmetricTokenKey&#39;.
+     * 
+     */
     public String odataType() {
         return this.odataType;
     }
@@ -65,11 +74,24 @@ public final class ContentKeyPolicySymmetricTokenKeyResponse extends com.pulumi.
             $ = new ContentKeyPolicySymmetricTokenKeyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyValue The key value of the key
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyValue(String keyValue) {
             $.keyValue = keyValue;
             return this;
         }
 
+        /**
+         * @param odataType The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.ContentKeyPolicySymmetricTokenKey&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(String odataType) {
             $.odataType = odataType;
             return this;

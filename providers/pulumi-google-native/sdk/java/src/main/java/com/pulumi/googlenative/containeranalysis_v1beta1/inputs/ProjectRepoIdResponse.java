@@ -23,6 +23,10 @@ public final class ProjectRepoIdResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="project", required=true)
     private String project;
 
+    /**
+     * @return The ID of the project.
+     * 
+     */
     public String project() {
         return this.project;
     }
@@ -34,6 +38,10 @@ public final class ProjectRepoIdResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="repoName", required=true)
     private String repoName;
 
+    /**
+     * @return The name of the repo. Leave empty for the default repo.
+     * 
+     */
     public String repoName() {
         return this.repoName;
     }
@@ -63,11 +71,23 @@ public final class ProjectRepoIdResponse extends com.pulumi.resources.InvokeArgs
             $ = new ProjectRepoIdResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param project The ID of the project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param repoName The name of the repo. Leave empty for the default repo.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repoName(String repoName) {
             $.repoName = repoName;
             return this;

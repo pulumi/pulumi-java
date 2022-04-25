@@ -19,6 +19,10 @@ public final class GetProjectArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="filter", required=true)
     private String filter;
 
+    /**
+     * @return A string filter as defined in the [REST API](https://cloud.google.com/resource-manager/reference/rest/v1/projects/list#query-parameters).
+     * 
+     */
     public String filter() {
         return this.filter;
     }
@@ -47,6 +51,12 @@ public final class GetProjectArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetProjectArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param filter A string filter as defined in the [REST API](https://cloud.google.com/resource-manager/reference/rest/v1/projects/list#query-parameters).
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(String filter) {
             $.filter = filter;
             return this;

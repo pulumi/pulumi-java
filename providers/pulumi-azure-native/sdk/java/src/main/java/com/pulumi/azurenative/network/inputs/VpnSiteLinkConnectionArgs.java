@@ -34,6 +34,10 @@ public final class VpnSiteLinkConnectionArgs extends com.pulumi.resources.Resour
     @Import(name="connectionBandwidth")
     private @Nullable Output<Integer> connectionBandwidth;
 
+    /**
+     * @return Expected bandwidth in MBPS.
+     * 
+     */
     public Optional<Output<Integer>> connectionBandwidth() {
         return Optional.ofNullable(this.connectionBandwidth);
     }
@@ -45,6 +49,10 @@ public final class VpnSiteLinkConnectionArgs extends com.pulumi.resources.Resour
     @Import(name="egressNatRules")
     private @Nullable Output<List<SubResourceArgs>> egressNatRules;
 
+    /**
+     * @return List of egress NatRules.
+     * 
+     */
     public Optional<Output<List<SubResourceArgs>>> egressNatRules() {
         return Optional.ofNullable(this.egressNatRules);
     }
@@ -56,6 +64,10 @@ public final class VpnSiteLinkConnectionArgs extends com.pulumi.resources.Resour
     @Import(name="enableBgp")
     private @Nullable Output<Boolean> enableBgp;
 
+    /**
+     * @return EnableBgp flag.
+     * 
+     */
     public Optional<Output<Boolean>> enableBgp() {
         return Optional.ofNullable(this.enableBgp);
     }
@@ -67,6 +79,10 @@ public final class VpnSiteLinkConnectionArgs extends com.pulumi.resources.Resour
     @Import(name="enableRateLimiting")
     private @Nullable Output<Boolean> enableRateLimiting;
 
+    /**
+     * @return EnableBgp flag.
+     * 
+     */
     public Optional<Output<Boolean>> enableRateLimiting() {
         return Optional.ofNullable(this.enableRateLimiting);
     }
@@ -78,6 +94,10 @@ public final class VpnSiteLinkConnectionArgs extends com.pulumi.resources.Resour
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -89,6 +109,10 @@ public final class VpnSiteLinkConnectionArgs extends com.pulumi.resources.Resour
     @Import(name="ingressNatRules")
     private @Nullable Output<List<SubResourceArgs>> ingressNatRules;
 
+    /**
+     * @return List of ingress NatRules.
+     * 
+     */
     public Optional<Output<List<SubResourceArgs>>> ingressNatRules() {
         return Optional.ofNullable(this.ingressNatRules);
     }
@@ -100,6 +124,10 @@ public final class VpnSiteLinkConnectionArgs extends com.pulumi.resources.Resour
     @Import(name="ipsecPolicies")
     private @Nullable Output<List<IpsecPolicyArgs>> ipsecPolicies;
 
+    /**
+     * @return The IPSec Policies to be considered by this connection.
+     * 
+     */
     public Optional<Output<List<IpsecPolicyArgs>>> ipsecPolicies() {
         return Optional.ofNullable(this.ipsecPolicies);
     }
@@ -111,6 +139,10 @@ public final class VpnSiteLinkConnectionArgs extends com.pulumi.resources.Resour
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -122,6 +154,10 @@ public final class VpnSiteLinkConnectionArgs extends com.pulumi.resources.Resour
     @Import(name="routingWeight")
     private @Nullable Output<Integer> routingWeight;
 
+    /**
+     * @return Routing weight for vpn connection.
+     * 
+     */
     public Optional<Output<Integer>> routingWeight() {
         return Optional.ofNullable(this.routingWeight);
     }
@@ -133,6 +169,10 @@ public final class VpnSiteLinkConnectionArgs extends com.pulumi.resources.Resour
     @Import(name="sharedKey")
     private @Nullable Output<String> sharedKey;
 
+    /**
+     * @return SharedKey for the vpn connection.
+     * 
+     */
     public Optional<Output<String>> sharedKey() {
         return Optional.ofNullable(this.sharedKey);
     }
@@ -144,6 +184,10 @@ public final class VpnSiteLinkConnectionArgs extends com.pulumi.resources.Resour
     @Import(name="useLocalAzureIpAddress")
     private @Nullable Output<Boolean> useLocalAzureIpAddress;
 
+    /**
+     * @return Use local azure ip to initiate connection.
+     * 
+     */
     public Optional<Output<Boolean>> useLocalAzureIpAddress() {
         return Optional.ofNullable(this.useLocalAzureIpAddress);
     }
@@ -155,6 +199,10 @@ public final class VpnSiteLinkConnectionArgs extends com.pulumi.resources.Resour
     @Import(name="usePolicyBasedTrafficSelectors")
     private @Nullable Output<Boolean> usePolicyBasedTrafficSelectors;
 
+    /**
+     * @return Enable policy-based traffic selectors.
+     * 
+     */
     public Optional<Output<Boolean>> usePolicyBasedTrafficSelectors() {
         return Optional.ofNullable(this.usePolicyBasedTrafficSelectors);
     }
@@ -166,6 +214,10 @@ public final class VpnSiteLinkConnectionArgs extends com.pulumi.resources.Resour
     @Import(name="vpnConnectionProtocolType")
     private @Nullable Output<Either<String,VirtualNetworkGatewayConnectionProtocol>> vpnConnectionProtocolType;
 
+    /**
+     * @return Connection protocol used for this connection.
+     * 
+     */
     public Optional<Output<Either<String,VirtualNetworkGatewayConnectionProtocol>>> vpnConnectionProtocolType() {
         return Optional.ofNullable(this.vpnConnectionProtocolType);
     }
@@ -177,6 +229,10 @@ public final class VpnSiteLinkConnectionArgs extends com.pulumi.resources.Resour
     @Import(name="vpnLinkConnectionMode")
     private @Nullable Output<Either<String,VpnLinkConnectionMode>> vpnLinkConnectionMode;
 
+    /**
+     * @return Vpn link connection mode.
+     * 
+     */
     public Optional<Output<Either<String,VpnLinkConnectionMode>>> vpnLinkConnectionMode() {
         return Optional.ofNullable(this.vpnLinkConnectionMode);
     }
@@ -188,6 +244,10 @@ public final class VpnSiteLinkConnectionArgs extends com.pulumi.resources.Resour
     @Import(name="vpnSiteLink")
     private @Nullable Output<SubResourceArgs> vpnSiteLink;
 
+    /**
+     * @return Id of the connected vpn site link.
+     * 
+     */
     public Optional<Output<SubResourceArgs>> vpnSiteLink() {
         return Optional.ofNullable(this.vpnSiteLink);
     }
@@ -230,165 +290,387 @@ public final class VpnSiteLinkConnectionArgs extends com.pulumi.resources.Resour
             $ = new VpnSiteLinkConnectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param connectionBandwidth Expected bandwidth in MBPS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionBandwidth(@Nullable Output<Integer> connectionBandwidth) {
             $.connectionBandwidth = connectionBandwidth;
             return this;
         }
 
+        /**
+         * @param connectionBandwidth Expected bandwidth in MBPS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionBandwidth(Integer connectionBandwidth) {
             return connectionBandwidth(Output.of(connectionBandwidth));
         }
 
+        /**
+         * @param egressNatRules List of egress NatRules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder egressNatRules(@Nullable Output<List<SubResourceArgs>> egressNatRules) {
             $.egressNatRules = egressNatRules;
             return this;
         }
 
+        /**
+         * @param egressNatRules List of egress NatRules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder egressNatRules(List<SubResourceArgs> egressNatRules) {
             return egressNatRules(Output.of(egressNatRules));
         }
 
+        /**
+         * @param egressNatRules List of egress NatRules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder egressNatRules(SubResourceArgs... egressNatRules) {
             return egressNatRules(List.of(egressNatRules));
         }
 
+        /**
+         * @param enableBgp EnableBgp flag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableBgp(@Nullable Output<Boolean> enableBgp) {
             $.enableBgp = enableBgp;
             return this;
         }
 
+        /**
+         * @param enableBgp EnableBgp flag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableBgp(Boolean enableBgp) {
             return enableBgp(Output.of(enableBgp));
         }
 
+        /**
+         * @param enableRateLimiting EnableBgp flag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableRateLimiting(@Nullable Output<Boolean> enableRateLimiting) {
             $.enableRateLimiting = enableRateLimiting;
             return this;
         }
 
+        /**
+         * @param enableRateLimiting EnableBgp flag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableRateLimiting(Boolean enableRateLimiting) {
             return enableRateLimiting(Output.of(enableRateLimiting));
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param ingressNatRules List of ingress NatRules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ingressNatRules(@Nullable Output<List<SubResourceArgs>> ingressNatRules) {
             $.ingressNatRules = ingressNatRules;
             return this;
         }
 
+        /**
+         * @param ingressNatRules List of ingress NatRules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ingressNatRules(List<SubResourceArgs> ingressNatRules) {
             return ingressNatRules(Output.of(ingressNatRules));
         }
 
+        /**
+         * @param ingressNatRules List of ingress NatRules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ingressNatRules(SubResourceArgs... ingressNatRules) {
             return ingressNatRules(List.of(ingressNatRules));
         }
 
+        /**
+         * @param ipsecPolicies The IPSec Policies to be considered by this connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipsecPolicies(@Nullable Output<List<IpsecPolicyArgs>> ipsecPolicies) {
             $.ipsecPolicies = ipsecPolicies;
             return this;
         }
 
+        /**
+         * @param ipsecPolicies The IPSec Policies to be considered by this connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipsecPolicies(List<IpsecPolicyArgs> ipsecPolicies) {
             return ipsecPolicies(Output.of(ipsecPolicies));
         }
 
+        /**
+         * @param ipsecPolicies The IPSec Policies to be considered by this connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipsecPolicies(IpsecPolicyArgs... ipsecPolicies) {
             return ipsecPolicies(List.of(ipsecPolicies));
         }
 
+        /**
+         * @param name The name of the resource that is unique within a resource group. This name can be used to access the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the resource that is unique within a resource group. This name can be used to access the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param routingWeight Routing weight for vpn connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routingWeight(@Nullable Output<Integer> routingWeight) {
             $.routingWeight = routingWeight;
             return this;
         }
 
+        /**
+         * @param routingWeight Routing weight for vpn connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routingWeight(Integer routingWeight) {
             return routingWeight(Output.of(routingWeight));
         }
 
+        /**
+         * @param sharedKey SharedKey for the vpn connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sharedKey(@Nullable Output<String> sharedKey) {
             $.sharedKey = sharedKey;
             return this;
         }
 
+        /**
+         * @param sharedKey SharedKey for the vpn connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sharedKey(String sharedKey) {
             return sharedKey(Output.of(sharedKey));
         }
 
+        /**
+         * @param useLocalAzureIpAddress Use local azure ip to initiate connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useLocalAzureIpAddress(@Nullable Output<Boolean> useLocalAzureIpAddress) {
             $.useLocalAzureIpAddress = useLocalAzureIpAddress;
             return this;
         }
 
+        /**
+         * @param useLocalAzureIpAddress Use local azure ip to initiate connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useLocalAzureIpAddress(Boolean useLocalAzureIpAddress) {
             return useLocalAzureIpAddress(Output.of(useLocalAzureIpAddress));
         }
 
+        /**
+         * @param usePolicyBasedTrafficSelectors Enable policy-based traffic selectors.
+         * 
+         * @return builder
+         * 
+         */
         public Builder usePolicyBasedTrafficSelectors(@Nullable Output<Boolean> usePolicyBasedTrafficSelectors) {
             $.usePolicyBasedTrafficSelectors = usePolicyBasedTrafficSelectors;
             return this;
         }
 
+        /**
+         * @param usePolicyBasedTrafficSelectors Enable policy-based traffic selectors.
+         * 
+         * @return builder
+         * 
+         */
         public Builder usePolicyBasedTrafficSelectors(Boolean usePolicyBasedTrafficSelectors) {
             return usePolicyBasedTrafficSelectors(Output.of(usePolicyBasedTrafficSelectors));
         }
 
+        /**
+         * @param vpnConnectionProtocolType Connection protocol used for this connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpnConnectionProtocolType(@Nullable Output<Either<String,VirtualNetworkGatewayConnectionProtocol>> vpnConnectionProtocolType) {
             $.vpnConnectionProtocolType = vpnConnectionProtocolType;
             return this;
         }
 
+        /**
+         * @param vpnConnectionProtocolType Connection protocol used for this connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpnConnectionProtocolType(Either<String,VirtualNetworkGatewayConnectionProtocol> vpnConnectionProtocolType) {
             return vpnConnectionProtocolType(Output.of(vpnConnectionProtocolType));
         }
 
+        /**
+         * @param vpnConnectionProtocolType Connection protocol used for this connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpnConnectionProtocolType(String vpnConnectionProtocolType) {
             return vpnConnectionProtocolType(Either.ofLeft(vpnConnectionProtocolType));
         }
 
+        /**
+         * @param vpnConnectionProtocolType Connection protocol used for this connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpnConnectionProtocolType(VirtualNetworkGatewayConnectionProtocol vpnConnectionProtocolType) {
             return vpnConnectionProtocolType(Either.ofRight(vpnConnectionProtocolType));
         }
 
+        /**
+         * @param vpnLinkConnectionMode Vpn link connection mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpnLinkConnectionMode(@Nullable Output<Either<String,VpnLinkConnectionMode>> vpnLinkConnectionMode) {
             $.vpnLinkConnectionMode = vpnLinkConnectionMode;
             return this;
         }
 
+        /**
+         * @param vpnLinkConnectionMode Vpn link connection mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpnLinkConnectionMode(Either<String,VpnLinkConnectionMode> vpnLinkConnectionMode) {
             return vpnLinkConnectionMode(Output.of(vpnLinkConnectionMode));
         }
 
+        /**
+         * @param vpnLinkConnectionMode Vpn link connection mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpnLinkConnectionMode(String vpnLinkConnectionMode) {
             return vpnLinkConnectionMode(Either.ofLeft(vpnLinkConnectionMode));
         }
 
+        /**
+         * @param vpnLinkConnectionMode Vpn link connection mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpnLinkConnectionMode(VpnLinkConnectionMode vpnLinkConnectionMode) {
             return vpnLinkConnectionMode(Either.ofRight(vpnLinkConnectionMode));
         }
 
+        /**
+         * @param vpnSiteLink Id of the connected vpn site link.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpnSiteLink(@Nullable Output<SubResourceArgs> vpnSiteLink) {
             $.vpnSiteLink = vpnSiteLink;
             return this;
         }
 
+        /**
+         * @param vpnSiteLink Id of the connected vpn site link.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpnSiteLink(SubResourceArgs vpnSiteLink) {
             return vpnSiteLink(Output.of(vpnSiteLink));
         }

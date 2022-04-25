@@ -24,6 +24,10 @@ public final class ReferenceImageArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="boundingPolys")
     private @Nullable Output<List<BoundingPolyArgs>> boundingPolys;
 
+    /**
+     * @return Optional. Bounding polygons around the areas of interest in the reference image. If this field is empty, the system will try to detect regions of interest. At most 10 bounding polygons will be used. The provided shape is converted into a non-rotated rectangle. Once converted, the small edge of the rectangle must be greater than or equal to 300 pixels. The aspect ratio must be 1:4 or less (i.e. 1:3 is ok; 1:5 is not).
+     * 
+     */
     public Optional<Output<List<BoundingPolyArgs>>> boundingPolys() {
         return Optional.ofNullable(this.boundingPolys);
     }
@@ -42,6 +46,10 @@ public final class ReferenceImageArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The resource name of the reference image. Format is: `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID/referenceImages/IMAGE_ID`. This field is ignored when creating a reference image.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -74,6 +82,10 @@ public final class ReferenceImageArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="uri", required=true)
     private Output<String> uri;
 
+    /**
+     * @return The Google Cloud Storage URI of the reference image. The URI must start with `gs://`.
+     * 
+     */
     public Output<String> uri() {
         return this.uri;
     }
@@ -108,15 +120,33 @@ public final class ReferenceImageArgs extends com.pulumi.resources.ResourceArgs 
             $ = new ReferenceImageArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param boundingPolys Optional. Bounding polygons around the areas of interest in the reference image. If this field is empty, the system will try to detect regions of interest. At most 10 bounding polygons will be used. The provided shape is converted into a non-rotated rectangle. Once converted, the small edge of the rectangle must be greater than or equal to 300 pixels. The aspect ratio must be 1:4 or less (i.e. 1:3 is ok; 1:5 is not).
+         * 
+         * @return builder
+         * 
+         */
         public Builder boundingPolys(@Nullable Output<List<BoundingPolyArgs>> boundingPolys) {
             $.boundingPolys = boundingPolys;
             return this;
         }
 
+        /**
+         * @param boundingPolys Optional. Bounding polygons around the areas of interest in the reference image. If this field is empty, the system will try to detect regions of interest. At most 10 bounding polygons will be used. The provided shape is converted into a non-rotated rectangle. Once converted, the small edge of the rectangle must be greater than or equal to 300 pixels. The aspect ratio must be 1:4 or less (i.e. 1:3 is ok; 1:5 is not).
+         * 
+         * @return builder
+         * 
+         */
         public Builder boundingPolys(List<BoundingPolyArgs> boundingPolys) {
             return boundingPolys(Output.of(boundingPolys));
         }
 
+        /**
+         * @param boundingPolys Optional. Bounding polygons around the areas of interest in the reference image. If this field is empty, the system will try to detect regions of interest. At most 10 bounding polygons will be used. The provided shape is converted into a non-rotated rectangle. Once converted, the small edge of the rectangle must be greater than or equal to 300 pixels. The aspect ratio must be 1:4 or less (i.e. 1:3 is ok; 1:5 is not).
+         * 
+         * @return builder
+         * 
+         */
         public Builder boundingPolys(BoundingPolyArgs... boundingPolys) {
             return boundingPolys(List.of(boundingPolys));
         }
@@ -130,11 +160,23 @@ public final class ReferenceImageArgs extends com.pulumi.resources.ResourceArgs 
             return location(Output.of(location));
         }
 
+        /**
+         * @param name The resource name of the reference image. Format is: `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID/referenceImages/IMAGE_ID`. This field is ignored when creating a reference image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The resource name of the reference image. Format is: `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID/referenceImages/IMAGE_ID`. This field is ignored when creating a reference image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -166,11 +208,23 @@ public final class ReferenceImageArgs extends com.pulumi.resources.ResourceArgs 
             return referenceImageId(Output.of(referenceImageId));
         }
 
+        /**
+         * @param uri The Google Cloud Storage URI of the reference image. The URI must start with `gs://`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(Output<String> uri) {
             $.uri = uri;
             return this;
         }
 
+        /**
+         * @param uri The Google Cloud Storage URI of the reference image. The URI must start with `gs://`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(String uri) {
             return uri(Output.of(uri));
         }

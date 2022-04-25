@@ -25,6 +25,10 @@ public final class UsageResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="producerNotificationChannel", required=true)
     private String producerNotificationChannel;
 
+    /**
+     * @return The full resource name of a channel used for sending notifications to the service producer. Google Service Management currently only supports [Google Cloud Pub/Sub](https://cloud.google.com/pubsub) as a notification channel. To use Google Cloud Pub/Sub as the channel, this must be the name of a Cloud Pub/Sub topic that uses the Cloud Pub/Sub topic name format documented in https://cloud.google.com/pubsub/docs/overview.
+     * 
+     */
     public String producerNotificationChannel() {
         return this.producerNotificationChannel;
     }
@@ -36,6 +40,10 @@ public final class UsageResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="requirements", required=true)
     private List<String> requirements;
 
+    /**
+     * @return Requirements that must be satisfied before a consumer project can use the service. Each requirement is of the form /; for example &#39;serviceusage.googleapis.com/billing-enabled&#39;. For Google APIs, a Terms of Service requirement must be included here. Google Cloud APIs must include &#34;serviceusage.googleapis.com/tos/cloud&#34;. Other Google APIs should include &#34;serviceusage.googleapis.com/tos/universal&#34;. Additional ToS can be included based on the business needs.
+     * 
+     */
     public List<String> requirements() {
         return this.requirements;
     }
@@ -47,6 +55,10 @@ public final class UsageResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="rules", required=true)
     private List<UsageRuleResponse> rules;
 
+    /**
+     * @return A list of usage rules that apply to individual API methods. **NOTE:** All service configuration rules follow &#34;last one wins&#34; order.
+     * 
+     */
     public List<UsageRuleResponse> rules() {
         return this.rules;
     }
@@ -77,25 +89,55 @@ public final class UsageResponse extends com.pulumi.resources.InvokeArgs {
             $ = new UsageResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param producerNotificationChannel The full resource name of a channel used for sending notifications to the service producer. Google Service Management currently only supports [Google Cloud Pub/Sub](https://cloud.google.com/pubsub) as a notification channel. To use Google Cloud Pub/Sub as the channel, this must be the name of a Cloud Pub/Sub topic that uses the Cloud Pub/Sub topic name format documented in https://cloud.google.com/pubsub/docs/overview.
+         * 
+         * @return builder
+         * 
+         */
         public Builder producerNotificationChannel(String producerNotificationChannel) {
             $.producerNotificationChannel = producerNotificationChannel;
             return this;
         }
 
+        /**
+         * @param requirements Requirements that must be satisfied before a consumer project can use the service. Each requirement is of the form /; for example &#39;serviceusage.googleapis.com/billing-enabled&#39;. For Google APIs, a Terms of Service requirement must be included here. Google Cloud APIs must include &#34;serviceusage.googleapis.com/tos/cloud&#34;. Other Google APIs should include &#34;serviceusage.googleapis.com/tos/universal&#34;. Additional ToS can be included based on the business needs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requirements(List<String> requirements) {
             $.requirements = requirements;
             return this;
         }
 
+        /**
+         * @param requirements Requirements that must be satisfied before a consumer project can use the service. Each requirement is of the form /; for example &#39;serviceusage.googleapis.com/billing-enabled&#39;. For Google APIs, a Terms of Service requirement must be included here. Google Cloud APIs must include &#34;serviceusage.googleapis.com/tos/cloud&#34;. Other Google APIs should include &#34;serviceusage.googleapis.com/tos/universal&#34;. Additional ToS can be included based on the business needs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requirements(String... requirements) {
             return requirements(List.of(requirements));
         }
 
+        /**
+         * @param rules A list of usage rules that apply to individual API methods. **NOTE:** All service configuration rules follow &#34;last one wins&#34; order.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(List<UsageRuleResponse> rules) {
             $.rules = rules;
             return this;
         }
 
+        /**
+         * @param rules A list of usage rules that apply to individual API methods. **NOTE:** All service configuration rules follow &#34;last one wins&#34; order.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(UsageRuleResponse... rules) {
             return rules(List.of(rules));
         }

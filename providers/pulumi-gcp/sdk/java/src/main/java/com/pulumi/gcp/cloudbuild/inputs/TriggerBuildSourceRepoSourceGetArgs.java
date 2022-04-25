@@ -26,6 +26,12 @@ public final class TriggerBuildSourceRepoSourceGetArgs extends com.pulumi.resour
     @Import(name="branchName")
     private @Nullable Output<String> branchName;
 
+    /**
+     * @return Regex matching branches to build. Exactly one a of branch name, tag, or commit SHA must be provided.
+     * The syntax of the regular expressions accepted is the syntax accepted by RE2 and
+     * described at https://github.com/google/re2/wiki/Syntax
+     * 
+     */
     public Optional<Output<String>> branchName() {
         return Optional.ofNullable(this.branchName);
     }
@@ -37,6 +43,10 @@ public final class TriggerBuildSourceRepoSourceGetArgs extends com.pulumi.resour
     @Import(name="commitSha")
     private @Nullable Output<String> commitSha;
 
+    /**
+     * @return Explicit commit SHA to build. Exactly one a of branch name, tag, or commit SHA must be provided.
+     * 
+     */
     public Optional<Output<String>> commitSha() {
         return Optional.ofNullable(this.commitSha);
     }
@@ -56,6 +66,18 @@ public final class TriggerBuildSourceRepoSourceGetArgs extends com.pulumi.resour
     @Import(name="dir")
     private @Nullable Output<String> dir;
 
+    /**
+     * @return Working directory to use when running this step&#39;s container.
+     * If this value is a relative path, it is relative to the build&#39;s working
+     * directory. If this value is absolute, it may be outside the build&#39;s working
+     * directory, in which case the contents of the path may not be persisted
+     * across build step executions, unless a `volume` for that path is specified.
+     * If the build specifies a `RepoSource` with `dir` and a step with a
+     * `dir`,
+     * which specifies an absolute path, the `RepoSource` `dir` is ignored
+     * for the step&#39;s execution.
+     * 
+     */
     public Optional<Output<String>> dir() {
         return Optional.ofNullable(this.dir);
     }
@@ -67,6 +89,10 @@ public final class TriggerBuildSourceRepoSourceGetArgs extends com.pulumi.resour
     @Import(name="invertRegex")
     private @Nullable Output<Boolean> invertRegex;
 
+    /**
+     * @return Only trigger a build if the revision regex does NOT match the revision regex.
+     * 
+     */
     public Optional<Output<Boolean>> invertRegex() {
         return Optional.ofNullable(this.invertRegex);
     }
@@ -79,6 +105,11 @@ public final class TriggerBuildSourceRepoSourceGetArgs extends com.pulumi.resour
     @Import(name="projectId")
     private @Nullable Output<String> projectId;
 
+    /**
+     * @return ID of the project that owns the Cloud Source Repository.
+     * If omitted, the project ID requesting the build is assumed.
+     * 
+     */
     public Optional<Output<String>> projectId() {
         return Optional.ofNullable(this.projectId);
     }
@@ -90,6 +121,10 @@ public final class TriggerBuildSourceRepoSourceGetArgs extends com.pulumi.resour
     @Import(name="repoName", required=true)
     private Output<String> repoName;
 
+    /**
+     * @return Name of the Cloud Source Repository.
+     * 
+     */
     public Output<String> repoName() {
         return this.repoName;
     }
@@ -101,6 +136,10 @@ public final class TriggerBuildSourceRepoSourceGetArgs extends com.pulumi.resour
     @Import(name="substitutions")
     private @Nullable Output<Map<String,String>> substitutions;
 
+    /**
+     * @return Substitutions to use in a triggered build. Should only be used with triggers.run
+     * 
+     */
     public Optional<Output<Map<String,String>>> substitutions() {
         return Optional.ofNullable(this.substitutions);
     }
@@ -114,6 +153,12 @@ public final class TriggerBuildSourceRepoSourceGetArgs extends com.pulumi.resour
     @Import(name="tagName")
     private @Nullable Output<String> tagName;
 
+    /**
+     * @return Regex matching tags to build. Exactly one a of branch name, tag, or commit SHA must be provided.
+     * The syntax of the regular expressions accepted is the syntax accepted by RE2 and
+     * described at https://github.com/google/re2/wiki/Syntax
+     * 
+     */
     public Optional<Output<String>> tagName() {
         return Optional.ofNullable(this.tagName);
     }
@@ -149,74 +194,196 @@ public final class TriggerBuildSourceRepoSourceGetArgs extends com.pulumi.resour
             $ = new TriggerBuildSourceRepoSourceGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param branchName Regex matching branches to build. Exactly one a of branch name, tag, or commit SHA must be provided.
+         * The syntax of the regular expressions accepted is the syntax accepted by RE2 and
+         * described at https://github.com/google/re2/wiki/Syntax
+         * 
+         * @return builder
+         * 
+         */
         public Builder branchName(@Nullable Output<String> branchName) {
             $.branchName = branchName;
             return this;
         }
 
+        /**
+         * @param branchName Regex matching branches to build. Exactly one a of branch name, tag, or commit SHA must be provided.
+         * The syntax of the regular expressions accepted is the syntax accepted by RE2 and
+         * described at https://github.com/google/re2/wiki/Syntax
+         * 
+         * @return builder
+         * 
+         */
         public Builder branchName(String branchName) {
             return branchName(Output.of(branchName));
         }
 
+        /**
+         * @param commitSha Explicit commit SHA to build. Exactly one a of branch name, tag, or commit SHA must be provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder commitSha(@Nullable Output<String> commitSha) {
             $.commitSha = commitSha;
             return this;
         }
 
+        /**
+         * @param commitSha Explicit commit SHA to build. Exactly one a of branch name, tag, or commit SHA must be provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder commitSha(String commitSha) {
             return commitSha(Output.of(commitSha));
         }
 
+        /**
+         * @param dir Working directory to use when running this step&#39;s container.
+         * If this value is a relative path, it is relative to the build&#39;s working
+         * directory. If this value is absolute, it may be outside the build&#39;s working
+         * directory, in which case the contents of the path may not be persisted
+         * across build step executions, unless a `volume` for that path is specified.
+         * If the build specifies a `RepoSource` with `dir` and a step with a
+         * `dir`,
+         * which specifies an absolute path, the `RepoSource` `dir` is ignored
+         * for the step&#39;s execution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dir(@Nullable Output<String> dir) {
             $.dir = dir;
             return this;
         }
 
+        /**
+         * @param dir Working directory to use when running this step&#39;s container.
+         * If this value is a relative path, it is relative to the build&#39;s working
+         * directory. If this value is absolute, it may be outside the build&#39;s working
+         * directory, in which case the contents of the path may not be persisted
+         * across build step executions, unless a `volume` for that path is specified.
+         * If the build specifies a `RepoSource` with `dir` and a step with a
+         * `dir`,
+         * which specifies an absolute path, the `RepoSource` `dir` is ignored
+         * for the step&#39;s execution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dir(String dir) {
             return dir(Output.of(dir));
         }
 
+        /**
+         * @param invertRegex Only trigger a build if the revision regex does NOT match the revision regex.
+         * 
+         * @return builder
+         * 
+         */
         public Builder invertRegex(@Nullable Output<Boolean> invertRegex) {
             $.invertRegex = invertRegex;
             return this;
         }
 
+        /**
+         * @param invertRegex Only trigger a build if the revision regex does NOT match the revision regex.
+         * 
+         * @return builder
+         * 
+         */
         public Builder invertRegex(Boolean invertRegex) {
             return invertRegex(Output.of(invertRegex));
         }
 
+        /**
+         * @param projectId ID of the project that owns the Cloud Source Repository.
+         * If omitted, the project ID requesting the build is assumed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectId(@Nullable Output<String> projectId) {
             $.projectId = projectId;
             return this;
         }
 
+        /**
+         * @param projectId ID of the project that owns the Cloud Source Repository.
+         * If omitted, the project ID requesting the build is assumed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectId(String projectId) {
             return projectId(Output.of(projectId));
         }
 
+        /**
+         * @param repoName Name of the Cloud Source Repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repoName(Output<String> repoName) {
             $.repoName = repoName;
             return this;
         }
 
+        /**
+         * @param repoName Name of the Cloud Source Repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repoName(String repoName) {
             return repoName(Output.of(repoName));
         }
 
+        /**
+         * @param substitutions Substitutions to use in a triggered build. Should only be used with triggers.run
+         * 
+         * @return builder
+         * 
+         */
         public Builder substitutions(@Nullable Output<Map<String,String>> substitutions) {
             $.substitutions = substitutions;
             return this;
         }
 
+        /**
+         * @param substitutions Substitutions to use in a triggered build. Should only be used with triggers.run
+         * 
+         * @return builder
+         * 
+         */
         public Builder substitutions(Map<String,String> substitutions) {
             return substitutions(Output.of(substitutions));
         }
 
+        /**
+         * @param tagName Regex matching tags to build. Exactly one a of branch name, tag, or commit SHA must be provided.
+         * The syntax of the regular expressions accepted is the syntax accepted by RE2 and
+         * described at https://github.com/google/re2/wiki/Syntax
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagName(@Nullable Output<String> tagName) {
             $.tagName = tagName;
             return this;
         }
 
+        /**
+         * @param tagName Regex matching tags to build. Exactly one a of branch name, tag, or commit SHA must be provided.
+         * The syntax of the regular expressions accepted is the syntax accepted by RE2 and
+         * described at https://github.com/google/re2/wiki/Syntax
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagName(String tagName) {
             return tagName(Output.of(tagName));
         }

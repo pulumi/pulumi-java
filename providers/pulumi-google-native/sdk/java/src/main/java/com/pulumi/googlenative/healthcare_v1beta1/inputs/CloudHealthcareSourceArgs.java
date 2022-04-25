@@ -26,6 +26,10 @@ public final class CloudHealthcareSourceArgs extends com.pulumi.resources.Resour
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Full path of a Cloud Healthcare API resource.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -54,11 +58,23 @@ public final class CloudHealthcareSourceArgs extends com.pulumi.resources.Resour
             $ = new CloudHealthcareSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Full path of a Cloud Healthcare API resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Full path of a Cloud Healthcare API resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

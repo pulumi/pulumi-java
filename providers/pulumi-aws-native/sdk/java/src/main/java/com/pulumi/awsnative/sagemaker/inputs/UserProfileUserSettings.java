@@ -29,6 +29,10 @@ public final class UserProfileUserSettings extends com.pulumi.resources.InvokeAr
     @Import(name="executionRole")
     private @Nullable String executionRole;
 
+    /**
+     * @return The user profile Amazon Resource Name (ARN).
+     * 
+     */
     public Optional<String> executionRole() {
         return Optional.ofNullable(this.executionRole);
     }
@@ -40,6 +44,10 @@ public final class UserProfileUserSettings extends com.pulumi.resources.InvokeAr
     @Import(name="jupyterServerAppSettings")
     private @Nullable UserProfileJupyterServerAppSettings jupyterServerAppSettings;
 
+    /**
+     * @return The Jupyter server&#39;s app settings.
+     * 
+     */
     public Optional<UserProfileJupyterServerAppSettings> jupyterServerAppSettings() {
         return Optional.ofNullable(this.jupyterServerAppSettings);
     }
@@ -51,6 +59,10 @@ public final class UserProfileUserSettings extends com.pulumi.resources.InvokeAr
     @Import(name="kernelGatewayAppSettings")
     private @Nullable UserProfileKernelGatewayAppSettings kernelGatewayAppSettings;
 
+    /**
+     * @return The kernel gateway app settings.
+     * 
+     */
     public Optional<UserProfileKernelGatewayAppSettings> kernelGatewayAppSettings() {
         return Optional.ofNullable(this.kernelGatewayAppSettings);
     }
@@ -62,6 +74,10 @@ public final class UserProfileUserSettings extends com.pulumi.resources.InvokeAr
     @Import(name="securityGroups")
     private @Nullable List<String> securityGroups;
 
+    /**
+     * @return The security groups for the Amazon Virtual Private Cloud (VPC) that Studio uses for communication.
+     * 
+     */
     public Optional<List<String>> securityGroups() {
         return Optional.ofNullable(this.securityGroups);
     }
@@ -73,6 +89,10 @@ public final class UserProfileUserSettings extends com.pulumi.resources.InvokeAr
     @Import(name="sharingSettings")
     private @Nullable UserProfileSharingSettings sharingSettings;
 
+    /**
+     * @return The sharing settings.
+     * 
+     */
     public Optional<UserProfileSharingSettings> sharingSettings() {
         return Optional.ofNullable(this.sharingSettings);
     }
@@ -105,30 +125,66 @@ public final class UserProfileUserSettings extends com.pulumi.resources.InvokeAr
             $ = new UserProfileUserSettings(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param executionRole The user profile Amazon Resource Name (ARN).
+         * 
+         * @return builder
+         * 
+         */
         public Builder executionRole(@Nullable String executionRole) {
             $.executionRole = executionRole;
             return this;
         }
 
+        /**
+         * @param jupyterServerAppSettings The Jupyter server&#39;s app settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jupyterServerAppSettings(@Nullable UserProfileJupyterServerAppSettings jupyterServerAppSettings) {
             $.jupyterServerAppSettings = jupyterServerAppSettings;
             return this;
         }
 
+        /**
+         * @param kernelGatewayAppSettings The kernel gateway app settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kernelGatewayAppSettings(@Nullable UserProfileKernelGatewayAppSettings kernelGatewayAppSettings) {
             $.kernelGatewayAppSettings = kernelGatewayAppSettings;
             return this;
         }
 
+        /**
+         * @param securityGroups The security groups for the Amazon Virtual Private Cloud (VPC) that Studio uses for communication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroups(@Nullable List<String> securityGroups) {
             $.securityGroups = securityGroups;
             return this;
         }
 
+        /**
+         * @param securityGroups The security groups for the Amazon Virtual Private Cloud (VPC) that Studio uses for communication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroups(String... securityGroups) {
             return securityGroups(List.of(securityGroups));
         }
 
+        /**
+         * @param sharingSettings The sharing settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sharingSettings(@Nullable UserProfileSharingSettings sharingSettings) {
             $.sharingSettings = sharingSettings;
             return this;

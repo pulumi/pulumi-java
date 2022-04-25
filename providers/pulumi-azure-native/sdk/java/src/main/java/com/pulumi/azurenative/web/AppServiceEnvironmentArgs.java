@@ -29,6 +29,10 @@ public final class AppServiceEnvironmentArgs extends com.pulumi.resources.Resour
     @Import(name="clusterSettings")
     private @Nullable Output<List<NameValuePairArgs>> clusterSettings;
 
+    /**
+     * @return Custom settings for changing the behavior of the App Service Environment.
+     * 
+     */
     public Optional<Output<List<NameValuePairArgs>>> clusterSettings() {
         return Optional.ofNullable(this.clusterSettings);
     }
@@ -40,6 +44,10 @@ public final class AppServiceEnvironmentArgs extends com.pulumi.resources.Resour
     @Import(name="dnsSuffix")
     private @Nullable Output<String> dnsSuffix;
 
+    /**
+     * @return DNS suffix of the App Service Environment.
+     * 
+     */
     public Optional<Output<String>> dnsSuffix() {
         return Optional.ofNullable(this.dnsSuffix);
     }
@@ -51,6 +59,10 @@ public final class AppServiceEnvironmentArgs extends com.pulumi.resources.Resour
     @Import(name="frontEndScaleFactor")
     private @Nullable Output<Integer> frontEndScaleFactor;
 
+    /**
+     * @return Scale factor for front-ends.
+     * 
+     */
     public Optional<Output<Integer>> frontEndScaleFactor() {
         return Optional.ofNullable(this.frontEndScaleFactor);
     }
@@ -62,6 +74,10 @@ public final class AppServiceEnvironmentArgs extends com.pulumi.resources.Resour
     @Import(name="internalLoadBalancingMode")
     private @Nullable Output<Either<String,LoadBalancingMode>> internalLoadBalancingMode;
 
+    /**
+     * @return Specifies which endpoints to serve internally in the Virtual Network for the App Service Environment.
+     * 
+     */
     public Optional<Output<Either<String,LoadBalancingMode>>> internalLoadBalancingMode() {
         return Optional.ofNullable(this.internalLoadBalancingMode);
     }
@@ -73,6 +89,10 @@ public final class AppServiceEnvironmentArgs extends com.pulumi.resources.Resour
     @Import(name="ipsslAddressCount")
     private @Nullable Output<Integer> ipsslAddressCount;
 
+    /**
+     * @return Number of IP SSL addresses reserved for the App Service Environment.
+     * 
+     */
     public Optional<Output<Integer>> ipsslAddressCount() {
         return Optional.ofNullable(this.ipsslAddressCount);
     }
@@ -84,6 +104,10 @@ public final class AppServiceEnvironmentArgs extends com.pulumi.resources.Resour
     @Import(name="kind")
     private @Nullable Output<String> kind;
 
+    /**
+     * @return Kind of resource.
+     * 
+     */
     public Optional<Output<String>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -95,6 +119,10 @@ public final class AppServiceEnvironmentArgs extends com.pulumi.resources.Resour
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource Location.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -106,6 +134,10 @@ public final class AppServiceEnvironmentArgs extends com.pulumi.resources.Resour
     @Import(name="multiSize")
     private @Nullable Output<String> multiSize;
 
+    /**
+     * @return Front-end VM size, e.g. &#34;Medium&#34;, &#34;Large&#34;.
+     * 
+     */
     public Optional<Output<String>> multiSize() {
         return Optional.ofNullable(this.multiSize);
     }
@@ -117,6 +149,10 @@ public final class AppServiceEnvironmentArgs extends com.pulumi.resources.Resour
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the App Service Environment.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -128,6 +164,10 @@ public final class AppServiceEnvironmentArgs extends com.pulumi.resources.Resour
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of the resource group to which the resource belongs.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -139,6 +179,10 @@ public final class AppServiceEnvironmentArgs extends com.pulumi.resources.Resour
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -150,6 +194,10 @@ public final class AppServiceEnvironmentArgs extends com.pulumi.resources.Resour
     @Import(name="userWhitelistedIpRanges")
     private @Nullable Output<List<String>> userWhitelistedIpRanges;
 
+    /**
+     * @return User added ip ranges to whitelist on ASE db
+     * 
+     */
     public Optional<Output<List<String>>> userWhitelistedIpRanges() {
         return Optional.ofNullable(this.userWhitelistedIpRanges);
     }
@@ -161,6 +209,10 @@ public final class AppServiceEnvironmentArgs extends com.pulumi.resources.Resour
     @Import(name="virtualNetwork", required=true)
     private Output<VirtualNetworkProfileArgs> virtualNetwork;
 
+    /**
+     * @return Description of the Virtual Network.
+     * 
+     */
     public Output<VirtualNetworkProfileArgs> virtualNetwork() {
         return this.virtualNetwork;
     }
@@ -201,135 +253,315 @@ public final class AppServiceEnvironmentArgs extends com.pulumi.resources.Resour
             $ = new AppServiceEnvironmentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clusterSettings Custom settings for changing the behavior of the App Service Environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterSettings(@Nullable Output<List<NameValuePairArgs>> clusterSettings) {
             $.clusterSettings = clusterSettings;
             return this;
         }
 
+        /**
+         * @param clusterSettings Custom settings for changing the behavior of the App Service Environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterSettings(List<NameValuePairArgs> clusterSettings) {
             return clusterSettings(Output.of(clusterSettings));
         }
 
+        /**
+         * @param clusterSettings Custom settings for changing the behavior of the App Service Environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterSettings(NameValuePairArgs... clusterSettings) {
             return clusterSettings(List.of(clusterSettings));
         }
 
+        /**
+         * @param dnsSuffix DNS suffix of the App Service Environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsSuffix(@Nullable Output<String> dnsSuffix) {
             $.dnsSuffix = dnsSuffix;
             return this;
         }
 
+        /**
+         * @param dnsSuffix DNS suffix of the App Service Environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsSuffix(String dnsSuffix) {
             return dnsSuffix(Output.of(dnsSuffix));
         }
 
+        /**
+         * @param frontEndScaleFactor Scale factor for front-ends.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frontEndScaleFactor(@Nullable Output<Integer> frontEndScaleFactor) {
             $.frontEndScaleFactor = frontEndScaleFactor;
             return this;
         }
 
+        /**
+         * @param frontEndScaleFactor Scale factor for front-ends.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frontEndScaleFactor(Integer frontEndScaleFactor) {
             return frontEndScaleFactor(Output.of(frontEndScaleFactor));
         }
 
+        /**
+         * @param internalLoadBalancingMode Specifies which endpoints to serve internally in the Virtual Network for the App Service Environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder internalLoadBalancingMode(@Nullable Output<Either<String,LoadBalancingMode>> internalLoadBalancingMode) {
             $.internalLoadBalancingMode = internalLoadBalancingMode;
             return this;
         }
 
+        /**
+         * @param internalLoadBalancingMode Specifies which endpoints to serve internally in the Virtual Network for the App Service Environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder internalLoadBalancingMode(Either<String,LoadBalancingMode> internalLoadBalancingMode) {
             return internalLoadBalancingMode(Output.of(internalLoadBalancingMode));
         }
 
+        /**
+         * @param internalLoadBalancingMode Specifies which endpoints to serve internally in the Virtual Network for the App Service Environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder internalLoadBalancingMode(String internalLoadBalancingMode) {
             return internalLoadBalancingMode(Either.ofLeft(internalLoadBalancingMode));
         }
 
+        /**
+         * @param internalLoadBalancingMode Specifies which endpoints to serve internally in the Virtual Network for the App Service Environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder internalLoadBalancingMode(LoadBalancingMode internalLoadBalancingMode) {
             return internalLoadBalancingMode(Either.ofRight(internalLoadBalancingMode));
         }
 
+        /**
+         * @param ipsslAddressCount Number of IP SSL addresses reserved for the App Service Environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipsslAddressCount(@Nullable Output<Integer> ipsslAddressCount) {
             $.ipsslAddressCount = ipsslAddressCount;
             return this;
         }
 
+        /**
+         * @param ipsslAddressCount Number of IP SSL addresses reserved for the App Service Environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipsslAddressCount(Integer ipsslAddressCount) {
             return ipsslAddressCount(Output.of(ipsslAddressCount));
         }
 
+        /**
+         * @param kind Kind of resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Kind of resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param location Resource Location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource Location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param multiSize Front-end VM size, e.g. &#34;Medium&#34;, &#34;Large&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder multiSize(@Nullable Output<String> multiSize) {
             $.multiSize = multiSize;
             return this;
         }
 
+        /**
+         * @param multiSize Front-end VM size, e.g. &#34;Medium&#34;, &#34;Large&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder multiSize(String multiSize) {
             return multiSize(Output.of(multiSize));
         }
 
+        /**
+         * @param name Name of the App Service Environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the App Service Environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group to which the resource belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group to which the resource belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param userWhitelistedIpRanges User added ip ranges to whitelist on ASE db
+         * 
+         * @return builder
+         * 
+         */
         public Builder userWhitelistedIpRanges(@Nullable Output<List<String>> userWhitelistedIpRanges) {
             $.userWhitelistedIpRanges = userWhitelistedIpRanges;
             return this;
         }
 
+        /**
+         * @param userWhitelistedIpRanges User added ip ranges to whitelist on ASE db
+         * 
+         * @return builder
+         * 
+         */
         public Builder userWhitelistedIpRanges(List<String> userWhitelistedIpRanges) {
             return userWhitelistedIpRanges(Output.of(userWhitelistedIpRanges));
         }
 
+        /**
+         * @param userWhitelistedIpRanges User added ip ranges to whitelist on ASE db
+         * 
+         * @return builder
+         * 
+         */
         public Builder userWhitelistedIpRanges(String... userWhitelistedIpRanges) {
             return userWhitelistedIpRanges(List.of(userWhitelistedIpRanges));
         }
 
+        /**
+         * @param virtualNetwork Description of the Virtual Network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetwork(Output<VirtualNetworkProfileArgs> virtualNetwork) {
             $.virtualNetwork = virtualNetwork;
             return this;
         }
 
+        /**
+         * @param virtualNetwork Description of the Virtual Network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetwork(VirtualNetworkProfileArgs virtualNetwork) {
             return virtualNetwork(Output.of(virtualNetwork));
         }

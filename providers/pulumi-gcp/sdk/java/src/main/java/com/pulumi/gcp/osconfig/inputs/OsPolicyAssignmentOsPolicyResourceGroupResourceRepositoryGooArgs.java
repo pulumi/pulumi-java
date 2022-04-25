@@ -20,6 +20,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGooA
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Required. The name of the repository.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -31,6 +35,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGooA
     @Import(name="url", required=true)
     private Output<String> url;
 
+    /**
+     * @return Required. The url of the repository.
+     * 
+     */
     public Output<String> url() {
         return this.url;
     }
@@ -60,20 +68,44 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGooA
             $ = new OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGooArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Required. The name of the repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Required. The name of the repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param url Required. The url of the repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(Output<String> url) {
             $.url = url;
             return this;
         }
 
+        /**
+         * @param url Required. The url of the repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(String url) {
             return url(Output.of(url));
         }

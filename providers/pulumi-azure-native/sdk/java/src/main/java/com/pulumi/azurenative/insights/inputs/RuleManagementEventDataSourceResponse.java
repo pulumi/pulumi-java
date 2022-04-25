@@ -27,6 +27,10 @@ public final class RuleManagementEventDataSourceResponse extends com.pulumi.reso
     @Import(name="claims")
     private @Nullable RuleManagementEventClaimsDataSourceResponse claims;
 
+    /**
+     * @return the claims.
+     * 
+     */
     public Optional<RuleManagementEventClaimsDataSourceResponse> claims() {
         return Optional.ofNullable(this.claims);
     }
@@ -38,6 +42,10 @@ public final class RuleManagementEventDataSourceResponse extends com.pulumi.reso
     @Import(name="eventName")
     private @Nullable String eventName;
 
+    /**
+     * @return the event name.
+     * 
+     */
     public Optional<String> eventName() {
         return Optional.ofNullable(this.eventName);
     }
@@ -49,6 +57,10 @@ public final class RuleManagementEventDataSourceResponse extends com.pulumi.reso
     @Import(name="eventSource")
     private @Nullable String eventSource;
 
+    /**
+     * @return the event source.
+     * 
+     */
     public Optional<String> eventSource() {
         return Optional.ofNullable(this.eventSource);
     }
@@ -60,6 +72,10 @@ public final class RuleManagementEventDataSourceResponse extends com.pulumi.reso
     @Import(name="legacyResourceId")
     private @Nullable String legacyResourceId;
 
+    /**
+     * @return the legacy resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.
+     * 
+     */
     public Optional<String> legacyResourceId() {
         return Optional.ofNullable(this.legacyResourceId);
     }
@@ -71,6 +87,10 @@ public final class RuleManagementEventDataSourceResponse extends com.pulumi.reso
     @Import(name="level")
     private @Nullable String level;
 
+    /**
+     * @return the level.
+     * 
+     */
     public Optional<String> level() {
         return Optional.ofNullable(this.level);
     }
@@ -82,6 +102,10 @@ public final class RuleManagementEventDataSourceResponse extends com.pulumi.reso
     @Import(name="metricNamespace")
     private @Nullable String metricNamespace;
 
+    /**
+     * @return the namespace of the metric.
+     * 
+     */
     public Optional<String> metricNamespace() {
         return Optional.ofNullable(this.metricNamespace);
     }
@@ -94,6 +118,11 @@ public final class RuleManagementEventDataSourceResponse extends com.pulumi.reso
     @Import(name="odataType", required=true)
     private String odataType;
 
+    /**
+     * @return specifies the type of data source. There are two types of rule data sources: RuleMetricDataSource and RuleManagementEventDataSource
+     * Expected value is &#39;Microsoft.Azure.Management.Insights.Models.RuleManagementEventDataSource&#39;.
+     * 
+     */
     public String odataType() {
         return this.odataType;
     }
@@ -105,6 +134,10 @@ public final class RuleManagementEventDataSourceResponse extends com.pulumi.reso
     @Import(name="operationName")
     private @Nullable String operationName;
 
+    /**
+     * @return The name of the operation that should be checked for. If no name is provided, any operation will match.
+     * 
+     */
     public Optional<String> operationName() {
         return Optional.ofNullable(this.operationName);
     }
@@ -116,6 +149,10 @@ public final class RuleManagementEventDataSourceResponse extends com.pulumi.reso
     @Import(name="resourceGroupName")
     private @Nullable String resourceGroupName;
 
+    /**
+     * @return the resource group name.
+     * 
+     */
     public Optional<String> resourceGroupName() {
         return Optional.ofNullable(this.resourceGroupName);
     }
@@ -127,6 +164,10 @@ public final class RuleManagementEventDataSourceResponse extends com.pulumi.reso
     @Import(name="resourceLocation")
     private @Nullable String resourceLocation;
 
+    /**
+     * @return the location of the resource.
+     * 
+     */
     public Optional<String> resourceLocation() {
         return Optional.ofNullable(this.resourceLocation);
     }
@@ -138,6 +179,10 @@ public final class RuleManagementEventDataSourceResponse extends com.pulumi.reso
     @Import(name="resourceProviderName")
     private @Nullable String resourceProviderName;
 
+    /**
+     * @return the resource provider name.
+     * 
+     */
     public Optional<String> resourceProviderName() {
         return Optional.ofNullable(this.resourceProviderName);
     }
@@ -149,6 +194,10 @@ public final class RuleManagementEventDataSourceResponse extends com.pulumi.reso
     @Import(name="resourceUri")
     private @Nullable String resourceUri;
 
+    /**
+     * @return the resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.
+     * 
+     */
     public Optional<String> resourceUri() {
         return Optional.ofNullable(this.resourceUri);
     }
@@ -160,6 +209,10 @@ public final class RuleManagementEventDataSourceResponse extends com.pulumi.reso
     @Import(name="status")
     private @Nullable String status;
 
+    /**
+     * @return The status of the operation that should be checked for. If no status is provided, any status will match.
+     * 
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
@@ -171,6 +224,10 @@ public final class RuleManagementEventDataSourceResponse extends com.pulumi.reso
     @Import(name="subStatus")
     private @Nullable String subStatus;
 
+    /**
+     * @return the substatus.
+     * 
+     */
     public Optional<String> subStatus() {
         return Optional.ofNullable(this.subStatus);
     }
@@ -212,71 +269,156 @@ public final class RuleManagementEventDataSourceResponse extends com.pulumi.reso
             $ = new RuleManagementEventDataSourceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param claims the claims.
+         * 
+         * @return builder
+         * 
+         */
         public Builder claims(@Nullable RuleManagementEventClaimsDataSourceResponse claims) {
             $.claims = claims;
             return this;
         }
 
+        /**
+         * @param eventName the event name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventName(@Nullable String eventName) {
             $.eventName = eventName;
             return this;
         }
 
+        /**
+         * @param eventSource the event source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventSource(@Nullable String eventSource) {
             $.eventSource = eventSource;
             return this;
         }
 
+        /**
+         * @param legacyResourceId the legacy resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder legacyResourceId(@Nullable String legacyResourceId) {
             $.legacyResourceId = legacyResourceId;
             return this;
         }
 
+        /**
+         * @param level the level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder level(@Nullable String level) {
             $.level = level;
             return this;
         }
 
+        /**
+         * @param metricNamespace the namespace of the metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricNamespace(@Nullable String metricNamespace) {
             $.metricNamespace = metricNamespace;
             return this;
         }
 
+        /**
+         * @param odataType specifies the type of data source. There are two types of rule data sources: RuleMetricDataSource and RuleManagementEventDataSource
+         * Expected value is &#39;Microsoft.Azure.Management.Insights.Models.RuleManagementEventDataSource&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(String odataType) {
             $.odataType = odataType;
             return this;
         }
 
+        /**
+         * @param operationName The name of the operation that should be checked for. If no name is provided, any operation will match.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operationName(@Nullable String operationName) {
             $.operationName = operationName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName the resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(@Nullable String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceLocation the location of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceLocation(@Nullable String resourceLocation) {
             $.resourceLocation = resourceLocation;
             return this;
         }
 
+        /**
+         * @param resourceProviderName the resource provider name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceProviderName(@Nullable String resourceProviderName) {
             $.resourceProviderName = resourceProviderName;
             return this;
         }
 
+        /**
+         * @param resourceUri the resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceUri(@Nullable String resourceUri) {
             $.resourceUri = resourceUri;
             return this;
         }
 
+        /**
+         * @param status The status of the operation that should be checked for. If no status is provided, any status will match.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable String status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param subStatus the substatus.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subStatus(@Nullable String subStatus) {
             $.subStatus = subStatus;
             return this;

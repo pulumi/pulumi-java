@@ -19,6 +19,10 @@ public final class GetQuickConnectArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="quickConnectArn", required=true)
     private String quickConnectArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) for the quick connect.
+     * 
+     */
     public String quickConnectArn() {
         return this.quickConnectArn;
     }
@@ -47,6 +51,12 @@ public final class GetQuickConnectArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetQuickConnectArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param quickConnectArn The Amazon Resource Name (ARN) for the quick connect.
+         * 
+         * @return builder
+         * 
+         */
         public Builder quickConnectArn(String quickConnectArn) {
             $.quickConnectArn = quickConnectArn;
             return this;

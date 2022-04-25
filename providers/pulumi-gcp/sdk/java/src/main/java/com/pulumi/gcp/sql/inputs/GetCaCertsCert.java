@@ -19,6 +19,10 @@ public final class GetCaCertsCert extends com.pulumi.resources.InvokeArgs {
     @Import(name="cert", required=true)
     private String cert;
 
+    /**
+     * @return The CA certificate used to connect to the SQL instance via SSL.
+     * 
+     */
     public String cert() {
         return this.cert;
     }
@@ -30,6 +34,10 @@ public final class GetCaCertsCert extends com.pulumi.resources.InvokeArgs {
     @Import(name="commonName", required=true)
     private String commonName;
 
+    /**
+     * @return The CN valid for the CA cert.
+     * 
+     */
     public String commonName() {
         return this.commonName;
     }
@@ -41,6 +49,10 @@ public final class GetCaCertsCert extends com.pulumi.resources.InvokeArgs {
     @Import(name="createTime", required=true)
     private String createTime;
 
+    /**
+     * @return Creation time of the CA cert.
+     * 
+     */
     public String createTime() {
         return this.createTime;
     }
@@ -52,6 +64,10 @@ public final class GetCaCertsCert extends com.pulumi.resources.InvokeArgs {
     @Import(name="expirationTime", required=true)
     private String expirationTime;
 
+    /**
+     * @return Expiration time of the CA cert.
+     * 
+     */
     public String expirationTime() {
         return this.expirationTime;
     }
@@ -63,6 +79,10 @@ public final class GetCaCertsCert extends com.pulumi.resources.InvokeArgs {
     @Import(name="sha1Fingerprint", required=true)
     private String sha1Fingerprint;
 
+    /**
+     * @return SHA1 fingerprint of the CA cert.
+     * 
+     */
     public String sha1Fingerprint() {
         return this.sha1Fingerprint;
     }
@@ -95,26 +115,56 @@ public final class GetCaCertsCert extends com.pulumi.resources.InvokeArgs {
             $ = new GetCaCertsCert(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cert The CA certificate used to connect to the SQL instance via SSL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cert(String cert) {
             $.cert = cert;
             return this;
         }
 
+        /**
+         * @param commonName The CN valid for the CA cert.
+         * 
+         * @return builder
+         * 
+         */
         public Builder commonName(String commonName) {
             $.commonName = commonName;
             return this;
         }
 
+        /**
+         * @param createTime Creation time of the CA cert.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTime(String createTime) {
             $.createTime = createTime;
             return this;
         }
 
+        /**
+         * @param expirationTime Expiration time of the CA cert.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expirationTime(String expirationTime) {
             $.expirationTime = expirationTime;
             return this;
         }
 
+        /**
+         * @param sha1Fingerprint SHA1 fingerprint of the CA cert.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sha1Fingerprint(String sha1Fingerprint) {
             $.sha1Fingerprint = sha1Fingerprint;
             return this;

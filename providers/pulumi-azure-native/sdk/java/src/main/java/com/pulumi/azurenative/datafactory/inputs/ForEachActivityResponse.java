@@ -70,6 +70,10 @@ public final class ForEachActivityResponse extends com.pulumi.resources.InvokeAr
     @Import(name="activities", required=true)
     private List<Object> activities;
 
+    /**
+     * @return List of activities to execute .
+     * 
+     */
     public List<Object> activities() {
         return this.activities;
     }
@@ -81,6 +85,10 @@ public final class ForEachActivityResponse extends com.pulumi.resources.InvokeAr
     @Import(name="batchCount")
     private @Nullable Integer batchCount;
 
+    /**
+     * @return Batch count to be used for controlling the number of parallel execution (when isSequential is set to false).
+     * 
+     */
     public Optional<Integer> batchCount() {
         return Optional.ofNullable(this.batchCount);
     }
@@ -92,6 +100,10 @@ public final class ForEachActivityResponse extends com.pulumi.resources.InvokeAr
     @Import(name="dependsOn")
     private @Nullable List<ActivityDependencyResponse> dependsOn;
 
+    /**
+     * @return Activity depends on condition.
+     * 
+     */
     public Optional<List<ActivityDependencyResponse>> dependsOn() {
         return Optional.ofNullable(this.dependsOn);
     }
@@ -103,6 +115,10 @@ public final class ForEachActivityResponse extends com.pulumi.resources.InvokeAr
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Activity description.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -114,6 +130,10 @@ public final class ForEachActivityResponse extends com.pulumi.resources.InvokeAr
     @Import(name="isSequential")
     private @Nullable Boolean isSequential;
 
+    /**
+     * @return Should the loop be executed in sequence or in parallel (max 50)
+     * 
+     */
     public Optional<Boolean> isSequential() {
         return Optional.ofNullable(this.isSequential);
     }
@@ -125,6 +145,10 @@ public final class ForEachActivityResponse extends com.pulumi.resources.InvokeAr
     @Import(name="items", required=true)
     private ExpressionResponse items;
 
+    /**
+     * @return Collection to iterate.
+     * 
+     */
     public ExpressionResponse items() {
         return this.items;
     }
@@ -136,6 +160,10 @@ public final class ForEachActivityResponse extends com.pulumi.resources.InvokeAr
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Activity name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -148,6 +176,11 @@ public final class ForEachActivityResponse extends com.pulumi.resources.InvokeAr
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of activity.
+     * Expected value is &#39;ForEach&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -159,6 +192,10 @@ public final class ForEachActivityResponse extends com.pulumi.resources.InvokeAr
     @Import(name="userProperties")
     private @Nullable List<UserPropertyResponse> userProperties;
 
+    /**
+     * @return Activity user properties.
+     * 
+     */
     public Optional<List<UserPropertyResponse>> userProperties() {
         return Optional.ofNullable(this.userProperties);
     }
@@ -195,59 +232,132 @@ public final class ForEachActivityResponse extends com.pulumi.resources.InvokeAr
             $ = new ForEachActivityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param activities List of activities to execute .
+         * 
+         * @return builder
+         * 
+         */
         public Builder activities(List<Object> activities) {
             $.activities = activities;
             return this;
         }
 
+        /**
+         * @param activities List of activities to execute .
+         * 
+         * @return builder
+         * 
+         */
         public Builder activities(Object... activities) {
             return activities(List.of(activities));
         }
 
+        /**
+         * @param batchCount Batch count to be used for controlling the number of parallel execution (when isSequential is set to false).
+         * 
+         * @return builder
+         * 
+         */
         public Builder batchCount(@Nullable Integer batchCount) {
             $.batchCount = batchCount;
             return this;
         }
 
+        /**
+         * @param dependsOn Activity depends on condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
             $.dependsOn = dependsOn;
             return this;
         }
 
+        /**
+         * @param dependsOn Activity depends on condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(ActivityDependencyResponse... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
 
+        /**
+         * @param description Activity description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param isSequential Should the loop be executed in sequence or in parallel (max 50)
+         * 
+         * @return builder
+         * 
+         */
         public Builder isSequential(@Nullable Boolean isSequential) {
             $.isSequential = isSequential;
             return this;
         }
 
+        /**
+         * @param items Collection to iterate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder items(ExpressionResponse items) {
             $.items = items;
             return this;
         }
 
+        /**
+         * @param name Activity name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param type Type of activity.
+         * Expected value is &#39;ForEach&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param userProperties Activity user properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
             $.userProperties = userProperties;
             return this;
         }
 
+        /**
+         * @param userProperties Activity user properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProperties(UserPropertyResponse... userProperties) {
             return userProperties(List.of(userProperties));
         }

@@ -19,6 +19,10 @@ public final class GetIntegrationServiceEnvironmentArgs extends com.pulumi.resou
     @Import(name="integrationServiceEnvironmentName", required=true)
     private String integrationServiceEnvironmentName;
 
+    /**
+     * @return The integration service environment name.
+     * 
+     */
     public String integrationServiceEnvironmentName() {
         return this.integrationServiceEnvironmentName;
     }
@@ -30,6 +34,10 @@ public final class GetIntegrationServiceEnvironmentArgs extends com.pulumi.resou
     @Import(name="resourceGroup", required=true)
     private String resourceGroup;
 
+    /**
+     * @return The resource group.
+     * 
+     */
     public String resourceGroup() {
         return this.resourceGroup;
     }
@@ -59,11 +67,23 @@ public final class GetIntegrationServiceEnvironmentArgs extends com.pulumi.resou
             $ = new GetIntegrationServiceEnvironmentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param integrationServiceEnvironmentName The integration service environment name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder integrationServiceEnvironmentName(String integrationServiceEnvironmentName) {
             $.integrationServiceEnvironmentName = integrationServiceEnvironmentName;
             return this;
         }
 
+        /**
+         * @param resourceGroup The resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroup(String resourceGroup) {
             $.resourceGroup = resourceGroup;
             return this;

@@ -11,22 +11,22 @@ import java.util.Objects;
 @CustomType
 public final class AlexaChannelPropertiesResponse {
     /**
-     * The Alexa skill Id
+     * @return The Alexa skill Id
      * 
      */
     private final String alexaSkillId;
     /**
-     * Whether this channel is enabled for the bot
+     * @return Whether this channel is enabled for the bot
      * 
      */
     private final Boolean isEnabled;
     /**
-     * Full Uri used to configured the skill in Alexa
+     * @return Full Uri used to configured the skill in Alexa
      * 
      */
     private final String serviceEndpointUri;
     /**
-     * Url fragment used in part of the Uri configured in Alexa
+     * @return Url fragment used in part of the Uri configured in Alexa
      * 
      */
     private final String urlFragment;
@@ -44,30 +44,30 @@ public final class AlexaChannelPropertiesResponse {
     }
 
     /**
-     * The Alexa skill Id
+     * @return The Alexa skill Id
      * 
-    */
+     */
     public String alexaSkillId() {
         return this.alexaSkillId;
     }
     /**
-     * Whether this channel is enabled for the bot
+     * @return Whether this channel is enabled for the bot
      * 
-    */
+     */
     public Boolean isEnabled() {
         return this.isEnabled;
     }
     /**
-     * Full Uri used to configured the skill in Alexa
+     * @return Full Uri used to configured the skill in Alexa
      * 
-    */
+     */
     public String serviceEndpointUri() {
         return this.serviceEndpointUri;
     }
     /**
-     * Url fragment used in part of the Uri configured in Alexa
+     * @return Url fragment used in part of the Uri configured in Alexa
      * 
-    */
+     */
     public String urlFragment() {
         return this.urlFragment;
     }

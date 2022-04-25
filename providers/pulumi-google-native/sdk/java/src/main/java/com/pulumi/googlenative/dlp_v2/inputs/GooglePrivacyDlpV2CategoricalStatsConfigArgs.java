@@ -26,6 +26,10 @@ public final class GooglePrivacyDlpV2CategoricalStatsConfigArgs extends com.pulu
     @Import(name="field")
     private @Nullable Output<GooglePrivacyDlpV2FieldIdArgs> field;
 
+    /**
+     * @return Field to compute categorical stats on. All column types are supported except for arrays and structs. However, it may be more informative to use NumericalStats when the field type is supported, depending on the data.
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2FieldIdArgs>> field() {
         return Optional.ofNullable(this.field);
     }
@@ -54,11 +58,23 @@ public final class GooglePrivacyDlpV2CategoricalStatsConfigArgs extends com.pulu
             $ = new GooglePrivacyDlpV2CategoricalStatsConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param field Field to compute categorical stats on. All column types are supported except for arrays and structs. However, it may be more informative to use NumericalStats when the field type is supported, depending on the data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder field(@Nullable Output<GooglePrivacyDlpV2FieldIdArgs> field) {
             $.field = field;
             return this;
         }
 
+        /**
+         * @param field Field to compute categorical stats on. All column types are supported except for arrays and structs. However, it may be more informative to use NumericalStats when the field type is supported, depending on the data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder field(GooglePrivacyDlpV2FieldIdArgs field) {
             return field(Output.of(field));
         }

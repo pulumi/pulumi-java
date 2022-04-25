@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class EndpointNetworkInterface {
     /**
-     * Identifier of the Elastic Network Interface (ENI).
+     * @return Identifier of the Elastic Network Interface (ENI).
      * 
      */
     private final @Nullable String networkInterfaceId;
@@ -23,9 +23,9 @@ public final class EndpointNetworkInterface {
     }
 
     /**
-     * Identifier of the Elastic Network Interface (ENI).
+     * @return Identifier of the Elastic Network Interface (ENI).
      * 
-    */
+     */
     public Optional<String> networkInterfaceId() {
         return Optional.ofNullable(this.networkInterfaceId);
     }

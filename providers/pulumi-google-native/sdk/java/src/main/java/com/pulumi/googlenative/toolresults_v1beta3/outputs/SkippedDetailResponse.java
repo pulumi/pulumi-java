@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class SkippedDetailResponse {
     /**
-     * If the App doesn&#39;t support the specific API level.
+     * @return If the App doesn&#39;t support the specific API level.
      * 
      */
     private final Boolean incompatibleAppVersion;
     /**
-     * If the App doesn&#39;t run on the specific architecture, for example, x86.
+     * @return If the App doesn&#39;t run on the specific architecture, for example, x86.
      * 
      */
     private final Boolean incompatibleArchitecture;
     /**
-     * If the requested OS version doesn&#39;t run on the specific device model.
+     * @return If the requested OS version doesn&#39;t run on the specific device model.
      * 
      */
     private final Boolean incompatibleDevice;
@@ -36,23 +36,23 @@ public final class SkippedDetailResponse {
     }
 
     /**
-     * If the App doesn&#39;t support the specific API level.
+     * @return If the App doesn&#39;t support the specific API level.
      * 
-    */
+     */
     public Boolean incompatibleAppVersion() {
         return this.incompatibleAppVersion;
     }
     /**
-     * If the App doesn&#39;t run on the specific architecture, for example, x86.
+     * @return If the App doesn&#39;t run on the specific architecture, for example, x86.
      * 
-    */
+     */
     public Boolean incompatibleArchitecture() {
         return this.incompatibleArchitecture;
     }
     /**
-     * If the requested OS version doesn&#39;t run on the specific device model.
+     * @return If the requested OS version doesn&#39;t run on the specific device model.
      * 
-    */
+     */
     public Boolean incompatibleDevice() {
         return this.incompatibleDevice;
     }

@@ -23,6 +23,10 @@ public final class IssueModelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return The representative name for the issue model.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -34,6 +38,10 @@ public final class IssueModelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="inputDataConfig")
     private @Nullable Output<GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigArgs> inputDataConfig;
 
+    /**
+     * @return Configs for the input data that used to create the issue model.
+     * 
+     */
     public Optional<Output<GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigArgs>> inputDataConfig() {
         return Optional.ofNullable(this.inputDataConfig);
     }
@@ -52,6 +60,10 @@ public final class IssueModelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Immutable. The resource name of the issue model. Format: projects/{project}/locations/{location}/issueModels/{issue_model}
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -91,20 +103,44 @@ public final class IssueModelArgs extends com.pulumi.resources.ResourceArgs {
             $ = new IssueModelArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayName The representative name for the issue model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName The representative name for the issue model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param inputDataConfig Configs for the input data that used to create the issue model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputDataConfig(@Nullable Output<GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigArgs> inputDataConfig) {
             $.inputDataConfig = inputDataConfig;
             return this;
         }
 
+        /**
+         * @param inputDataConfig Configs for the input data that used to create the issue model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputDataConfig(GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigArgs inputDataConfig) {
             return inputDataConfig(Output.of(inputDataConfig));
         }
@@ -118,11 +154,23 @@ public final class IssueModelArgs extends com.pulumi.resources.ResourceArgs {
             return location(Output.of(location));
         }
 
+        /**
+         * @param name Immutable. The resource name of the issue model. Format: projects/{project}/locations/{location}/issueModels/{issue_model}
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Immutable. The resource name of the issue model. Format: projects/{project}/locations/{location}/issueModels/{issue_model}
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

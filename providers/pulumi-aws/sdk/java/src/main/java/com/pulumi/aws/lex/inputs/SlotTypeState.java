@@ -26,6 +26,11 @@ public final class SlotTypeState extends com.pulumi.resources.ResourceArgs {
     @Import(name="checksum")
     private @Nullable Output<String> checksum;
 
+    /**
+     * @return Checksum identifying the version of the slot type that was created. The checksum is
+     * not included as an argument because the resource will add it automatically when updating the slot type.
+     * 
+     */
     public Optional<Output<String>> checksum() {
         return Optional.ofNullable(this.checksum);
     }
@@ -38,6 +43,11 @@ public final class SlotTypeState extends com.pulumi.resources.ResourceArgs {
     @Import(name="createVersion")
     private @Nullable Output<Boolean> createVersion;
 
+    /**
+     * @return Determines if a new slot type version is created when the initial resource is created and on each
+     * update. Defaults to `false`.
+     * 
+     */
     public Optional<Output<Boolean>> createVersion() {
         return Optional.ofNullable(this.createVersion);
     }
@@ -49,6 +59,10 @@ public final class SlotTypeState extends com.pulumi.resources.ResourceArgs {
     @Import(name="createdDate")
     private @Nullable Output<String> createdDate;
 
+    /**
+     * @return The date when the slot type version was created.
+     * 
+     */
     public Optional<Output<String>> createdDate() {
         return Optional.ofNullable(this.createdDate);
     }
@@ -60,6 +74,10 @@ public final class SlotTypeState extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A description of the slot type. Must be less than or equal to 200 characters in length.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -74,6 +92,13 @@ public final class SlotTypeState extends com.pulumi.resources.ResourceArgs {
     @Import(name="enumerationValues")
     private @Nullable Output<List<SlotTypeEnumerationValueGetArgs>> enumerationValues;
 
+    /**
+     * @return A list of EnumerationValue objects that defines the values that
+     * the slot type can take. Each value can have a list of synonyms, which are additional values that help
+     * train the machine learning model about the values that it resolves for a slot. Attributes are
+     * documented under enumeration_value.
+     * 
+     */
     public Optional<Output<List<SlotTypeEnumerationValueGetArgs>>> enumerationValues() {
         return Optional.ofNullable(this.enumerationValues);
     }
@@ -85,6 +110,10 @@ public final class SlotTypeState extends com.pulumi.resources.ResourceArgs {
     @Import(name="lastUpdatedDate")
     private @Nullable Output<String> lastUpdatedDate;
 
+    /**
+     * @return The date when the `$LATEST` version of this slot type was updated.
+     * 
+     */
     public Optional<Output<String>> lastUpdatedDate() {
         return Optional.ofNullable(this.lastUpdatedDate);
     }
@@ -96,6 +125,10 @@ public final class SlotTypeState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the slot type. The name is not case sensitive. Must be less than or equal to 100 characters in length.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -110,6 +143,13 @@ public final class SlotTypeState extends com.pulumi.resources.ResourceArgs {
     @Import(name="valueSelectionStrategy")
     private @Nullable Output<String> valueSelectionStrategy;
 
+    /**
+     * @return Determines the slot resolution strategy that Amazon Lex
+     * uses to return slot type values. `ORIGINAL_VALUE` returns the value entered by the user if the user
+     * value is similar to the slot value. `TOP_RESOLUTION` returns the first value in the resolution list
+     * if there is a resolution list for the slot, otherwise null is returned. Defaults to `ORIGINAL_VALUE`.
+     * 
+     */
     public Optional<Output<String>> valueSelectionStrategy() {
         return Optional.ofNullable(this.valueSelectionStrategy);
     }
@@ -121,6 +161,10 @@ public final class SlotTypeState extends com.pulumi.resources.ResourceArgs {
     @Import(name="version")
     private @Nullable Output<String> version;
 
+    /**
+     * @return The version of the slot type.
+     * 
+     */
     public Optional<Output<String>> version() {
         return Optional.ofNullable(this.version);
     }
@@ -157,87 +201,220 @@ public final class SlotTypeState extends com.pulumi.resources.ResourceArgs {
             $ = new SlotTypeState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param checksum Checksum identifying the version of the slot type that was created. The checksum is
+         * not included as an argument because the resource will add it automatically when updating the slot type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder checksum(@Nullable Output<String> checksum) {
             $.checksum = checksum;
             return this;
         }
 
+        /**
+         * @param checksum Checksum identifying the version of the slot type that was created. The checksum is
+         * not included as an argument because the resource will add it automatically when updating the slot type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder checksum(String checksum) {
             return checksum(Output.of(checksum));
         }
 
+        /**
+         * @param createVersion Determines if a new slot type version is created when the initial resource is created and on each
+         * update. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createVersion(@Nullable Output<Boolean> createVersion) {
             $.createVersion = createVersion;
             return this;
         }
 
+        /**
+         * @param createVersion Determines if a new slot type version is created when the initial resource is created and on each
+         * update. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createVersion(Boolean createVersion) {
             return createVersion(Output.of(createVersion));
         }
 
+        /**
+         * @param createdDate The date when the slot type version was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdDate(@Nullable Output<String> createdDate) {
             $.createdDate = createdDate;
             return this;
         }
 
+        /**
+         * @param createdDate The date when the slot type version was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdDate(String createdDate) {
             return createdDate(Output.of(createdDate));
         }
 
+        /**
+         * @param description A description of the slot type. Must be less than or equal to 200 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A description of the slot type. Must be less than or equal to 200 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param enumerationValues A list of EnumerationValue objects that defines the values that
+         * the slot type can take. Each value can have a list of synonyms, which are additional values that help
+         * train the machine learning model about the values that it resolves for a slot. Attributes are
+         * documented under enumeration_value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enumerationValues(@Nullable Output<List<SlotTypeEnumerationValueGetArgs>> enumerationValues) {
             $.enumerationValues = enumerationValues;
             return this;
         }
 
+        /**
+         * @param enumerationValues A list of EnumerationValue objects that defines the values that
+         * the slot type can take. Each value can have a list of synonyms, which are additional values that help
+         * train the machine learning model about the values that it resolves for a slot. Attributes are
+         * documented under enumeration_value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enumerationValues(List<SlotTypeEnumerationValueGetArgs> enumerationValues) {
             return enumerationValues(Output.of(enumerationValues));
         }
 
+        /**
+         * @param enumerationValues A list of EnumerationValue objects that defines the values that
+         * the slot type can take. Each value can have a list of synonyms, which are additional values that help
+         * train the machine learning model about the values that it resolves for a slot. Attributes are
+         * documented under enumeration_value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enumerationValues(SlotTypeEnumerationValueGetArgs... enumerationValues) {
             return enumerationValues(List.of(enumerationValues));
         }
 
+        /**
+         * @param lastUpdatedDate The date when the `$LATEST` version of this slot type was updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastUpdatedDate(@Nullable Output<String> lastUpdatedDate) {
             $.lastUpdatedDate = lastUpdatedDate;
             return this;
         }
 
+        /**
+         * @param lastUpdatedDate The date when the `$LATEST` version of this slot type was updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastUpdatedDate(String lastUpdatedDate) {
             return lastUpdatedDate(Output.of(lastUpdatedDate));
         }
 
+        /**
+         * @param name The name of the slot type. The name is not case sensitive. Must be less than or equal to 100 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the slot type. The name is not case sensitive. Must be less than or equal to 100 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param valueSelectionStrategy Determines the slot resolution strategy that Amazon Lex
+         * uses to return slot type values. `ORIGINAL_VALUE` returns the value entered by the user if the user
+         * value is similar to the slot value. `TOP_RESOLUTION` returns the first value in the resolution list
+         * if there is a resolution list for the slot, otherwise null is returned. Defaults to `ORIGINAL_VALUE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder valueSelectionStrategy(@Nullable Output<String> valueSelectionStrategy) {
             $.valueSelectionStrategy = valueSelectionStrategy;
             return this;
         }
 
+        /**
+         * @param valueSelectionStrategy Determines the slot resolution strategy that Amazon Lex
+         * uses to return slot type values. `ORIGINAL_VALUE` returns the value entered by the user if the user
+         * value is similar to the slot value. `TOP_RESOLUTION` returns the first value in the resolution list
+         * if there is a resolution list for the slot, otherwise null is returned. Defaults to `ORIGINAL_VALUE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder valueSelectionStrategy(String valueSelectionStrategy) {
             return valueSelectionStrategy(Output.of(valueSelectionStrategy));
         }
 
+        /**
+         * @param version The version of the slot type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable Output<String> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version The version of the slot type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             return version(Output.of(version));
         }

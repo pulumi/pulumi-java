@@ -27,6 +27,10 @@ public final class MaintenancePolicyArgs extends com.pulumi.resources.ResourceAr
     @Import(name="resourceVersion")
     private @Nullable Output<String> resourceVersion;
 
+    /**
+     * @return A hash identifying the version of this policy, so that updates to fields of the policy won&#39;t accidentally undo intermediate changes (and so that users of the API unaware of some fields won&#39;t accidentally remove other fields). Make a `get()` request to the cluster to get the current resource version and include it with requests to set the policy.
+     * 
+     */
     public Optional<Output<String>> resourceVersion() {
         return Optional.ofNullable(this.resourceVersion);
     }
@@ -38,6 +42,10 @@ public final class MaintenancePolicyArgs extends com.pulumi.resources.ResourceAr
     @Import(name="window")
     private @Nullable Output<MaintenanceWindowArgs> window;
 
+    /**
+     * @return Specifies the maintenance window in which maintenance may be performed.
+     * 
+     */
     public Optional<Output<MaintenanceWindowArgs>> window() {
         return Optional.ofNullable(this.window);
     }
@@ -67,20 +75,44 @@ public final class MaintenancePolicyArgs extends com.pulumi.resources.ResourceAr
             $ = new MaintenancePolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceVersion A hash identifying the version of this policy, so that updates to fields of the policy won&#39;t accidentally undo intermediate changes (and so that users of the API unaware of some fields won&#39;t accidentally remove other fields). Make a `get()` request to the cluster to get the current resource version and include it with requests to set the policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceVersion(@Nullable Output<String> resourceVersion) {
             $.resourceVersion = resourceVersion;
             return this;
         }
 
+        /**
+         * @param resourceVersion A hash identifying the version of this policy, so that updates to fields of the policy won&#39;t accidentally undo intermediate changes (and so that users of the API unaware of some fields won&#39;t accidentally remove other fields). Make a `get()` request to the cluster to get the current resource version and include it with requests to set the policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceVersion(String resourceVersion) {
             return resourceVersion(Output.of(resourceVersion));
         }
 
+        /**
+         * @param window Specifies the maintenance window in which maintenance may be performed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder window(@Nullable Output<MaintenanceWindowArgs> window) {
             $.window = window;
             return this;
         }
 
+        /**
+         * @param window Specifies the maintenance window in which maintenance may be performed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder window(MaintenanceWindowArgs window) {
             return window(Output.of(window));
         }

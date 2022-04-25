@@ -24,6 +24,10 @@ public final class CardinalityResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="number", required=true)
     private Integer number;
 
+    /**
+     * @return The number variables under the `path` that must exist to meet this condition. Defaults to 1 if not specified.
+     * 
+     */
     public Integer number() {
         return this.number;
     }
@@ -35,6 +39,10 @@ public final class CardinalityResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="path", required=true)
     private String path;
 
+    /**
+     * @return The root of the variable subtree to monitor. For example, `/foo`.
+     * 
+     */
     public String path() {
         return this.path;
     }
@@ -64,11 +72,23 @@ public final class CardinalityResponse extends com.pulumi.resources.InvokeArgs {
             $ = new CardinalityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param number The number variables under the `path` that must exist to meet this condition. Defaults to 1 if not specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder number(Integer number) {
             $.number = number;
             return this;
         }
 
+        /**
+         * @param path The root of the variable subtree to monitor. For example, `/foo`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             $.path = path;
             return this;

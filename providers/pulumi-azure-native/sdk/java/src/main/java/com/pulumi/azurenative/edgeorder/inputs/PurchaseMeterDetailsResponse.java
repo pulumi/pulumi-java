@@ -26,6 +26,11 @@ public final class PurchaseMeterDetailsResponse extends com.pulumi.resources.Inv
     @Import(name="billingType", required=true)
     private String billingType;
 
+    /**
+     * @return Represents billing type.
+     * Expected value is &#39;Purchase&#39;.
+     * 
+     */
     public String billingType() {
         return this.billingType;
     }
@@ -37,6 +42,10 @@ public final class PurchaseMeterDetailsResponse extends com.pulumi.resources.Inv
     @Import(name="chargingType", required=true)
     private String chargingType;
 
+    /**
+     * @return Charging type.
+     * 
+     */
     public String chargingType() {
         return this.chargingType;
     }
@@ -48,6 +57,10 @@ public final class PurchaseMeterDetailsResponse extends com.pulumi.resources.Inv
     @Import(name="multiplier", required=true)
     private Double multiplier;
 
+    /**
+     * @return Billing unit applicable for Pav2 billing
+     * 
+     */
     public Double multiplier() {
         return this.multiplier;
     }
@@ -59,6 +72,10 @@ public final class PurchaseMeterDetailsResponse extends com.pulumi.resources.Inv
     @Import(name="productId", required=true)
     private String productId;
 
+    /**
+     * @return Product Id
+     * 
+     */
     public String productId() {
         return this.productId;
     }
@@ -70,6 +87,10 @@ public final class PurchaseMeterDetailsResponse extends com.pulumi.resources.Inv
     @Import(name="skuId", required=true)
     private String skuId;
 
+    /**
+     * @return Sku Id
+     * 
+     */
     public String skuId() {
         return this.skuId;
     }
@@ -81,6 +102,10 @@ public final class PurchaseMeterDetailsResponse extends com.pulumi.resources.Inv
     @Import(name="termId", required=true)
     private String termId;
 
+    /**
+     * @return Term Id
+     * 
+     */
     public String termId() {
         return this.termId;
     }
@@ -114,31 +139,68 @@ public final class PurchaseMeterDetailsResponse extends com.pulumi.resources.Inv
             $ = new PurchaseMeterDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param billingType Represents billing type.
+         * Expected value is &#39;Purchase&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder billingType(String billingType) {
             $.billingType = billingType;
             return this;
         }
 
+        /**
+         * @param chargingType Charging type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder chargingType(String chargingType) {
             $.chargingType = chargingType;
             return this;
         }
 
+        /**
+         * @param multiplier Billing unit applicable for Pav2 billing
+         * 
+         * @return builder
+         * 
+         */
         public Builder multiplier(Double multiplier) {
             $.multiplier = multiplier;
             return this;
         }
 
+        /**
+         * @param productId Product Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder productId(String productId) {
             $.productId = productId;
             return this;
         }
 
+        /**
+         * @param skuId Sku Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder skuId(String skuId) {
             $.skuId = skuId;
             return this;
         }
 
+        /**
+         * @param termId Term Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder termId(String termId) {
             $.termId = termId;
             return this;

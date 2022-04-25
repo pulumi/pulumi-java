@@ -28,6 +28,10 @@ public final class PoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accountName", required=true)
     private Output<String> accountName;
 
+    /**
+     * @return The name of the NetApp account
+     * 
+     */
     public Output<String> accountName() {
         return this.accountName;
     }
@@ -39,6 +43,10 @@ public final class PoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -50,6 +58,10 @@ public final class PoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="poolName")
     private @Nullable Output<String> poolName;
 
+    /**
+     * @return The name of the capacity pool
+     * 
+     */
     public Optional<Output<String>> poolName() {
         return Optional.ofNullable(this.poolName);
     }
@@ -61,6 +73,10 @@ public final class PoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="qosType")
     private @Nullable Output<Either<String,QosType>> qosType;
 
+    /**
+     * @return The qos type of the pool
+     * 
+     */
     public Optional<Output<Either<String,QosType>>> qosType() {
         return Optional.ofNullable(this.qosType);
     }
@@ -72,6 +88,10 @@ public final class PoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -83,6 +103,10 @@ public final class PoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceLevel", required=true)
     private Output<Either<String,ServiceLevel>> serviceLevel;
 
+    /**
+     * @return The service level of the file system
+     * 
+     */
     public Output<Either<String,ServiceLevel>> serviceLevel() {
         return this.serviceLevel;
     }
@@ -94,6 +118,10 @@ public final class PoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="size", required=true)
     private Output<Double> size;
 
+    /**
+     * @return Provisioned size of the pool (in bytes). Allowed values are in 4TiB chunks (value must be multiply of 4398046511104).
+     * 
+     */
     public Output<Double> size() {
         return this.size;
     }
@@ -105,6 +133,10 @@ public final class PoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -140,90 +172,210 @@ public final class PoolArgs extends com.pulumi.resources.ResourceArgs {
             $ = new PoolArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The name of the NetApp account
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param accountName The name of the NetApp account
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             return accountName(Output.of(accountName));
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param poolName The name of the capacity pool
+         * 
+         * @return builder
+         * 
+         */
         public Builder poolName(@Nullable Output<String> poolName) {
             $.poolName = poolName;
             return this;
         }
 
+        /**
+         * @param poolName The name of the capacity pool
+         * 
+         * @return builder
+         * 
+         */
         public Builder poolName(String poolName) {
             return poolName(Output.of(poolName));
         }
 
+        /**
+         * @param qosType The qos type of the pool
+         * 
+         * @return builder
+         * 
+         */
         public Builder qosType(@Nullable Output<Either<String,QosType>> qosType) {
             $.qosType = qosType;
             return this;
         }
 
+        /**
+         * @param qosType The qos type of the pool
+         * 
+         * @return builder
+         * 
+         */
         public Builder qosType(Either<String,QosType> qosType) {
             return qosType(Output.of(qosType));
         }
 
+        /**
+         * @param qosType The qos type of the pool
+         * 
+         * @return builder
+         * 
+         */
         public Builder qosType(String qosType) {
             return qosType(Either.ofLeft(qosType));
         }
 
+        /**
+         * @param qosType The qos type of the pool
+         * 
+         * @return builder
+         * 
+         */
         public Builder qosType(QosType qosType) {
             return qosType(Either.ofRight(qosType));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param serviceLevel The service level of the file system
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceLevel(Output<Either<String,ServiceLevel>> serviceLevel) {
             $.serviceLevel = serviceLevel;
             return this;
         }
 
+        /**
+         * @param serviceLevel The service level of the file system
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceLevel(Either<String,ServiceLevel> serviceLevel) {
             return serviceLevel(Output.of(serviceLevel));
         }
 
+        /**
+         * @param serviceLevel The service level of the file system
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceLevel(String serviceLevel) {
             return serviceLevel(Either.ofLeft(serviceLevel));
         }
 
+        /**
+         * @param serviceLevel The service level of the file system
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceLevel(ServiceLevel serviceLevel) {
             return serviceLevel(Either.ofRight(serviceLevel));
         }
 
+        /**
+         * @param size Provisioned size of the pool (in bytes). Allowed values are in 4TiB chunks (value must be multiply of 4398046511104).
+         * 
+         * @return builder
+         * 
+         */
         public Builder size(Output<Double> size) {
             $.size = size;
             return this;
         }
 
+        /**
+         * @param size Provisioned size of the pool (in bytes). Allowed values are in 4TiB chunks (value must be multiply of 4398046511104).
+         * 
+         * @return builder
+         * 
+         */
         public Builder size(Double size) {
             return size(Output.of(size));
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

@@ -24,6 +24,10 @@ public final class SqlServerInstanceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The geo-location where the resource lives
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -35,6 +39,10 @@ public final class SqlServerInstanceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="properties")
     private @Nullable Output<SqlServerInstancePropertiesArgs> properties;
 
+    /**
+     * @return null
+     * 
+     */
     public Optional<Output<SqlServerInstancePropertiesArgs>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -46,6 +54,10 @@ public final class SqlServerInstanceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the Azure resource group
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -57,6 +69,10 @@ public final class SqlServerInstanceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="sqlServerInstanceName")
     private @Nullable Output<String> sqlServerInstanceName;
 
+    /**
+     * @return The name of SQL Server Instance
+     * 
+     */
     public Optional<Output<String>> sqlServerInstanceName() {
         return Optional.ofNullable(this.sqlServerInstanceName);
     }
@@ -68,6 +84,10 @@ public final class SqlServerInstanceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -100,47 +120,107 @@ public final class SqlServerInstanceArgs extends com.pulumi.resources.ResourceAr
             $ = new SqlServerInstanceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param properties null
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<SqlServerInstancePropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties null
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(SqlServerInstancePropertiesArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroupName The name of the Azure resource group
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the Azure resource group
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param sqlServerInstanceName The name of SQL Server Instance
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlServerInstanceName(@Nullable Output<String> sqlServerInstanceName) {
             $.sqlServerInstanceName = sqlServerInstanceName;
             return this;
         }
 
+        /**
+         * @param sqlServerInstanceName The name of SQL Server Instance
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlServerInstanceName(String sqlServerInstanceName) {
             return sqlServerInstanceName(Output.of(sqlServerInstanceName));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

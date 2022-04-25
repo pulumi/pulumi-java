@@ -21,12 +21,12 @@ import javax.annotation.Nullable;
 public final class GetAssociationResult {
     private final @Nullable Boolean applyOnlyAtCronInterval;
     /**
-     * Unique identifier of the association.
+     * @return Unique identifier of the association.
      * 
      */
     private final @Nullable String associationId;
     /**
-     * The name of the association.
+     * @return The name of the association.
      * 
      */
     private final @Nullable String associationName;
@@ -34,36 +34,36 @@ public final class GetAssociationResult {
     private final @Nullable List<String> calendarNames;
     private final @Nullable AssociationComplianceSeverity complianceSeverity;
     /**
-     * The version of the SSM document to associate with the target.
+     * @return The version of the SSM document to associate with the target.
      * 
      */
     private final @Nullable String documentVersion;
     /**
-     * The ID of the instance that the SSM document is associated with.
+     * @return The ID of the instance that the SSM document is associated with.
      * 
      */
     private final @Nullable String instanceId;
     private final @Nullable String maxConcurrency;
     private final @Nullable String maxErrors;
     /**
-     * The name of the SSM document.
+     * @return The name of the SSM document.
      * 
      */
     private final @Nullable String name;
     private final @Nullable AssociationInstanceAssociationOutputLocation outputLocation;
     /**
-     * Parameter values that the SSM document uses at runtime.
+     * @return Parameter values that the SSM document uses at runtime.
      * 
      */
     private final @Nullable Object parameters;
     /**
-     * A Cron or Rate expression that specifies when the association is applied to the target.
+     * @return A Cron or Rate expression that specifies when the association is applied to the target.
      * 
      */
     private final @Nullable String scheduleExpression;
     private final @Nullable AssociationSyncCompliance syncCompliance;
     /**
-     * The targets that the SSM document sends commands to.
+     * @return The targets that the SSM document sends commands to.
      * 
      */
     private final @Nullable List<AssociationTarget> targets;
@@ -111,16 +111,16 @@ public final class GetAssociationResult {
         return Optional.ofNullable(this.applyOnlyAtCronInterval);
     }
     /**
-     * Unique identifier of the association.
+     * @return Unique identifier of the association.
      * 
-    */
+     */
     public Optional<String> associationId() {
         return Optional.ofNullable(this.associationId);
     }
     /**
-     * The name of the association.
+     * @return The name of the association.
      * 
-    */
+     */
     public Optional<String> associationName() {
         return Optional.ofNullable(this.associationName);
     }
@@ -134,16 +134,16 @@ public final class GetAssociationResult {
         return Optional.ofNullable(this.complianceSeverity);
     }
     /**
-     * The version of the SSM document to associate with the target.
+     * @return The version of the SSM document to associate with the target.
      * 
-    */
+     */
     public Optional<String> documentVersion() {
         return Optional.ofNullable(this.documentVersion);
     }
     /**
-     * The ID of the instance that the SSM document is associated with.
+     * @return The ID of the instance that the SSM document is associated with.
      * 
-    */
+     */
     public Optional<String> instanceId() {
         return Optional.ofNullable(this.instanceId);
     }
@@ -154,9 +154,9 @@ public final class GetAssociationResult {
         return Optional.ofNullable(this.maxErrors);
     }
     /**
-     * The name of the SSM document.
+     * @return The name of the SSM document.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -164,16 +164,16 @@ public final class GetAssociationResult {
         return Optional.ofNullable(this.outputLocation);
     }
     /**
-     * Parameter values that the SSM document uses at runtime.
+     * @return Parameter values that the SSM document uses at runtime.
      * 
-    */
+     */
     public Optional<Object> parameters() {
         return Optional.ofNullable(this.parameters);
     }
     /**
-     * A Cron or Rate expression that specifies when the association is applied to the target.
+     * @return A Cron or Rate expression that specifies when the association is applied to the target.
      * 
-    */
+     */
     public Optional<String> scheduleExpression() {
         return Optional.ofNullable(this.scheduleExpression);
     }
@@ -181,9 +181,9 @@ public final class GetAssociationResult {
         return Optional.ofNullable(this.syncCompliance);
     }
     /**
-     * The targets that the SSM document sends commands to.
+     * @return The targets that the SSM document sends commands to.
      * 
-    */
+     */
     public List<AssociationTarget> targets() {
         return this.targets == null ? List.of() : this.targets;
     }

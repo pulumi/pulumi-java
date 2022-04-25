@@ -28,6 +28,10 @@ public final class NetworkConfigurationArgs extends com.pulumi.resources.Resourc
     @Import(name="endpointConfiguration")
     private @Nullable Output<PoolEndpointConfigurationArgs> endpointConfiguration;
 
+    /**
+     * @return Pool endpoint configuration is only supported on pools with the virtualMachineConfiguration property.
+     * 
+     */
     public Optional<Output<PoolEndpointConfigurationArgs>> endpointConfiguration() {
         return Optional.ofNullable(this.endpointConfiguration);
     }
@@ -39,6 +43,10 @@ public final class NetworkConfigurationArgs extends com.pulumi.resources.Resourc
     @Import(name="publicIPAddressConfiguration")
     private @Nullable Output<PublicIPAddressConfigurationArgs> publicIPAddressConfiguration;
 
+    /**
+     * @return This property is only supported on Pools with the virtualMachineConfiguration property.
+     * 
+     */
     public Optional<Output<PublicIPAddressConfigurationArgs>> publicIPAddressConfiguration() {
         return Optional.ofNullable(this.publicIPAddressConfiguration);
     }
@@ -50,6 +58,10 @@ public final class NetworkConfigurationArgs extends com.pulumi.resources.Resourc
     @Import(name="subnetId")
     private @Nullable Output<String> subnetId;
 
+    /**
+     * @return The virtual network must be in the same region and subscription as the Azure Batch account. The specified subnet should have enough free IP addresses to accommodate the number of nodes in the pool. If the subnet doesn&#39;t have enough free IP addresses, the pool will partially allocate compute nodes and a resize error will occur. The &#39;MicrosoftAzureBatch&#39; service principal must have the &#39;Classic Virtual Machine Contributor&#39; Role-Based Access Control (RBAC) role for the specified VNet. The specified subnet must allow communication from the Azure Batch service to be able to schedule tasks on the compute nodes. This can be verified by checking if the specified VNet has any associated Network Security Groups (NSG). If communication to the compute nodes in the specified subnet is denied by an NSG, then the Batch service will set the state of the compute nodes to unusable. If the specified VNet has any associated Network Security Groups (NSG), then a few reserved system ports must be enabled for inbound communication. For pools created with a virtual machine configuration, enable ports 29876 and 29877, as well as port 22 for Linux and port 3389 for Windows. For pools created with a cloud service configuration, enable ports 10100, 20100, and 30100. Also enable outbound connections to Azure Storage on port 443. For cloudServiceConfiguration pools, only &#39;classic&#39; VNETs are supported. For more details see: https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration
+     * 
+     */
     public Optional<Output<String>> subnetId() {
         return Optional.ofNullable(this.subnetId);
     }
@@ -80,29 +92,65 @@ public final class NetworkConfigurationArgs extends com.pulumi.resources.Resourc
             $ = new NetworkConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endpointConfiguration Pool endpoint configuration is only supported on pools with the virtualMachineConfiguration property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointConfiguration(@Nullable Output<PoolEndpointConfigurationArgs> endpointConfiguration) {
             $.endpointConfiguration = endpointConfiguration;
             return this;
         }
 
+        /**
+         * @param endpointConfiguration Pool endpoint configuration is only supported on pools with the virtualMachineConfiguration property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointConfiguration(PoolEndpointConfigurationArgs endpointConfiguration) {
             return endpointConfiguration(Output.of(endpointConfiguration));
         }
 
+        /**
+         * @param publicIPAddressConfiguration This property is only supported on Pools with the virtualMachineConfiguration property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIPAddressConfiguration(@Nullable Output<PublicIPAddressConfigurationArgs> publicIPAddressConfiguration) {
             $.publicIPAddressConfiguration = publicIPAddressConfiguration;
             return this;
         }
 
+        /**
+         * @param publicIPAddressConfiguration This property is only supported on Pools with the virtualMachineConfiguration property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIPAddressConfiguration(PublicIPAddressConfigurationArgs publicIPAddressConfiguration) {
             return publicIPAddressConfiguration(Output.of(publicIPAddressConfiguration));
         }
 
+        /**
+         * @param subnetId The virtual network must be in the same region and subscription as the Azure Batch account. The specified subnet should have enough free IP addresses to accommodate the number of nodes in the pool. If the subnet doesn&#39;t have enough free IP addresses, the pool will partially allocate compute nodes and a resize error will occur. The &#39;MicrosoftAzureBatch&#39; service principal must have the &#39;Classic Virtual Machine Contributor&#39; Role-Based Access Control (RBAC) role for the specified VNet. The specified subnet must allow communication from the Azure Batch service to be able to schedule tasks on the compute nodes. This can be verified by checking if the specified VNet has any associated Network Security Groups (NSG). If communication to the compute nodes in the specified subnet is denied by an NSG, then the Batch service will set the state of the compute nodes to unusable. If the specified VNet has any associated Network Security Groups (NSG), then a few reserved system ports must be enabled for inbound communication. For pools created with a virtual machine configuration, enable ports 29876 and 29877, as well as port 22 for Linux and port 3389 for Windows. For pools created with a cloud service configuration, enable ports 10100, 20100, and 30100. Also enable outbound connections to Azure Storage on port 443. For cloudServiceConfiguration pools, only &#39;classic&#39; VNETs are supported. For more details see: https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetId(@Nullable Output<String> subnetId) {
             $.subnetId = subnetId;
             return this;
         }
 
+        /**
+         * @param subnetId The virtual network must be in the same region and subscription as the Azure Batch account. The specified subnet should have enough free IP addresses to accommodate the number of nodes in the pool. If the subnet doesn&#39;t have enough free IP addresses, the pool will partially allocate compute nodes and a resize error will occur. The &#39;MicrosoftAzureBatch&#39; service principal must have the &#39;Classic Virtual Machine Contributor&#39; Role-Based Access Control (RBAC) role for the specified VNet. The specified subnet must allow communication from the Azure Batch service to be able to schedule tasks on the compute nodes. This can be verified by checking if the specified VNet has any associated Network Security Groups (NSG). If communication to the compute nodes in the specified subnet is denied by an NSG, then the Batch service will set the state of the compute nodes to unusable. If the specified VNet has any associated Network Security Groups (NSG), then a few reserved system ports must be enabled for inbound communication. For pools created with a virtual machine configuration, enable ports 29876 and 29877, as well as port 22 for Linux and port 3389 for Windows. For pools created with a cloud service configuration, enable ports 10100, 20100, and 30100. Also enable outbound connections to Azure Storage on port 443. For cloudServiceConfiguration pools, only &#39;classic&#39; VNETs are supported. For more details see: https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetId(String subnetId) {
             return subnetId(Output.of(subnetId));
         }

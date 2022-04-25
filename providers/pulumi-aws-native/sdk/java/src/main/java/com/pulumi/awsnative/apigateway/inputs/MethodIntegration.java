@@ -29,6 +29,10 @@ public final class MethodIntegration extends com.pulumi.resources.InvokeArgs {
     @Import(name="cacheKeyParameters")
     private @Nullable List<String> cacheKeyParameters;
 
+    /**
+     * @return A list of request parameters whose values API Gateway caches.
+     * 
+     */
     public Optional<List<String>> cacheKeyParameters() {
         return Optional.ofNullable(this.cacheKeyParameters);
     }
@@ -40,6 +44,10 @@ public final class MethodIntegration extends com.pulumi.resources.InvokeArgs {
     @Import(name="cacheNamespace")
     private @Nullable String cacheNamespace;
 
+    /**
+     * @return An API-specific tag group of related cached parameters.
+     * 
+     */
     public Optional<String> cacheNamespace() {
         return Optional.ofNullable(this.cacheNamespace);
     }
@@ -51,6 +59,10 @@ public final class MethodIntegration extends com.pulumi.resources.InvokeArgs {
     @Import(name="connectionId")
     private @Nullable String connectionId;
 
+    /**
+     * @return The ID of the VpcLink used for the integration when connectionType=VPC_LINK, otherwise undefined.
+     * 
+     */
     public Optional<String> connectionId() {
         return Optional.ofNullable(this.connectionId);
     }
@@ -62,6 +74,10 @@ public final class MethodIntegration extends com.pulumi.resources.InvokeArgs {
     @Import(name="connectionType")
     private @Nullable MethodIntegrationConnectionType connectionType;
 
+    /**
+     * @return The type of the network connection to the integration endpoint.
+     * 
+     */
     public Optional<MethodIntegrationConnectionType> connectionType() {
         return Optional.ofNullable(this.connectionType);
     }
@@ -73,6 +89,10 @@ public final class MethodIntegration extends com.pulumi.resources.InvokeArgs {
     @Import(name="contentHandling")
     private @Nullable MethodIntegrationContentHandling contentHandling;
 
+    /**
+     * @return Specifies how to handle request payload content type conversions.
+     * 
+     */
     public Optional<MethodIntegrationContentHandling> contentHandling() {
         return Optional.ofNullable(this.contentHandling);
     }
@@ -84,6 +104,10 @@ public final class MethodIntegration extends com.pulumi.resources.InvokeArgs {
     @Import(name="credentials")
     private @Nullable String credentials;
 
+    /**
+     * @return The credentials that are required for the integration.
+     * 
+     */
     public Optional<String> credentials() {
         return Optional.ofNullable(this.credentials);
     }
@@ -95,6 +119,10 @@ public final class MethodIntegration extends com.pulumi.resources.InvokeArgs {
     @Import(name="integrationHttpMethod")
     private @Nullable String integrationHttpMethod;
 
+    /**
+     * @return The integration&#39;s HTTP method type.
+     * 
+     */
     public Optional<String> integrationHttpMethod() {
         return Optional.ofNullable(this.integrationHttpMethod);
     }
@@ -106,6 +134,10 @@ public final class MethodIntegration extends com.pulumi.resources.InvokeArgs {
     @Import(name="integrationResponses")
     private @Nullable List<MethodIntegrationResponse> integrationResponses;
 
+    /**
+     * @return The response that API Gateway provides after a method&#39;s backend completes processing a request.
+     * 
+     */
     public Optional<List<MethodIntegrationResponse>> integrationResponses() {
         return Optional.ofNullable(this.integrationResponses);
     }
@@ -117,6 +149,10 @@ public final class MethodIntegration extends com.pulumi.resources.InvokeArgs {
     @Import(name="passthroughBehavior")
     private @Nullable MethodIntegrationPassthroughBehavior passthroughBehavior;
 
+    /**
+     * @return Indicates when API Gateway passes requests to the targeted backend.
+     * 
+     */
     public Optional<MethodIntegrationPassthroughBehavior> passthroughBehavior() {
         return Optional.ofNullable(this.passthroughBehavior);
     }
@@ -128,6 +164,10 @@ public final class MethodIntegration extends com.pulumi.resources.InvokeArgs {
     @Import(name="requestParameters")
     private @Nullable Object requestParameters;
 
+    /**
+     * @return The request parameters that API Gateway sends with the backend request.
+     * 
+     */
     public Optional<Object> requestParameters() {
         return Optional.ofNullable(this.requestParameters);
     }
@@ -139,6 +179,10 @@ public final class MethodIntegration extends com.pulumi.resources.InvokeArgs {
     @Import(name="requestTemplates")
     private @Nullable Object requestTemplates;
 
+    /**
+     * @return A map of Apache Velocity templates that are applied on the request payload.
+     * 
+     */
     public Optional<Object> requestTemplates() {
         return Optional.ofNullable(this.requestTemplates);
     }
@@ -150,6 +194,10 @@ public final class MethodIntegration extends com.pulumi.resources.InvokeArgs {
     @Import(name="timeoutInMillis")
     private @Nullable Integer timeoutInMillis;
 
+    /**
+     * @return Custom timeout between 50 and 29,000 milliseconds.
+     * 
+     */
     public Optional<Integer> timeoutInMillis() {
         return Optional.ofNullable(this.timeoutInMillis);
     }
@@ -161,6 +209,10 @@ public final class MethodIntegration extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
     private MethodIntegrationType type;
 
+    /**
+     * @return The type of backend that your method is running.
+     * 
+     */
     public MethodIntegrationType type() {
         return this.type;
     }
@@ -172,6 +224,10 @@ public final class MethodIntegration extends com.pulumi.resources.InvokeArgs {
     @Import(name="uri")
     private @Nullable String uri;
 
+    /**
+     * @return The Uniform Resource Identifier (URI) for the integration.
+     * 
+     */
     public Optional<String> uri() {
         return Optional.ofNullable(this.uri);
     }
@@ -213,79 +269,175 @@ public final class MethodIntegration extends com.pulumi.resources.InvokeArgs {
             $ = new MethodIntegration(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cacheKeyParameters A list of request parameters whose values API Gateway caches.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cacheKeyParameters(@Nullable List<String> cacheKeyParameters) {
             $.cacheKeyParameters = cacheKeyParameters;
             return this;
         }
 
+        /**
+         * @param cacheKeyParameters A list of request parameters whose values API Gateway caches.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cacheKeyParameters(String... cacheKeyParameters) {
             return cacheKeyParameters(List.of(cacheKeyParameters));
         }
 
+        /**
+         * @param cacheNamespace An API-specific tag group of related cached parameters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cacheNamespace(@Nullable String cacheNamespace) {
             $.cacheNamespace = cacheNamespace;
             return this;
         }
 
+        /**
+         * @param connectionId The ID of the VpcLink used for the integration when connectionType=VPC_LINK, otherwise undefined.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionId(@Nullable String connectionId) {
             $.connectionId = connectionId;
             return this;
         }
 
+        /**
+         * @param connectionType The type of the network connection to the integration endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionType(@Nullable MethodIntegrationConnectionType connectionType) {
             $.connectionType = connectionType;
             return this;
         }
 
+        /**
+         * @param contentHandling Specifies how to handle request payload content type conversions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentHandling(@Nullable MethodIntegrationContentHandling contentHandling) {
             $.contentHandling = contentHandling;
             return this;
         }
 
+        /**
+         * @param credentials The credentials that are required for the integration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder credentials(@Nullable String credentials) {
             $.credentials = credentials;
             return this;
         }
 
+        /**
+         * @param integrationHttpMethod The integration&#39;s HTTP method type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder integrationHttpMethod(@Nullable String integrationHttpMethod) {
             $.integrationHttpMethod = integrationHttpMethod;
             return this;
         }
 
+        /**
+         * @param integrationResponses The response that API Gateway provides after a method&#39;s backend completes processing a request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder integrationResponses(@Nullable List<MethodIntegrationResponse> integrationResponses) {
             $.integrationResponses = integrationResponses;
             return this;
         }
 
+        /**
+         * @param integrationResponses The response that API Gateway provides after a method&#39;s backend completes processing a request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder integrationResponses(MethodIntegrationResponse... integrationResponses) {
             return integrationResponses(List.of(integrationResponses));
         }
 
+        /**
+         * @param passthroughBehavior Indicates when API Gateway passes requests to the targeted backend.
+         * 
+         * @return builder
+         * 
+         */
         public Builder passthroughBehavior(@Nullable MethodIntegrationPassthroughBehavior passthroughBehavior) {
             $.passthroughBehavior = passthroughBehavior;
             return this;
         }
 
+        /**
+         * @param requestParameters The request parameters that API Gateway sends with the backend request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestParameters(@Nullable Object requestParameters) {
             $.requestParameters = requestParameters;
             return this;
         }
 
+        /**
+         * @param requestTemplates A map of Apache Velocity templates that are applied on the request payload.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestTemplates(@Nullable Object requestTemplates) {
             $.requestTemplates = requestTemplates;
             return this;
         }
 
+        /**
+         * @param timeoutInMillis Custom timeout between 50 and 29,000 milliseconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeoutInMillis(@Nullable Integer timeoutInMillis) {
             $.timeoutInMillis = timeoutInMillis;
             return this;
         }
 
+        /**
+         * @param type The type of backend that your method is running.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(MethodIntegrationType type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param uri The Uniform Resource Identifier (URI) for the integration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(@Nullable String uri) {
             $.uri = uri;
             return this;

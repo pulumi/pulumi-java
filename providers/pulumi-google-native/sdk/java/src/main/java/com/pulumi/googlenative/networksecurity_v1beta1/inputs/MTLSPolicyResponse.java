@@ -24,6 +24,10 @@ public final class MTLSPolicyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="clientValidationCa", required=true)
     private List<ValidationCAResponse> clientValidationCa;
 
+    /**
+     * @return  Defines the mechanism to obtain the Certificate Authority certificate to validate the client certificate.
+     * 
+     */
     public List<ValidationCAResponse> clientValidationCa() {
         return this.clientValidationCa;
     }
@@ -52,11 +56,23 @@ public final class MTLSPolicyResponse extends com.pulumi.resources.InvokeArgs {
             $ = new MTLSPolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientValidationCa  Defines the mechanism to obtain the Certificate Authority certificate to validate the client certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientValidationCa(List<ValidationCAResponse> clientValidationCa) {
             $.clientValidationCa = clientValidationCa;
             return this;
         }
 
+        /**
+         * @param clientValidationCa  Defines the mechanism to obtain the Certificate Authority certificate to validate the client certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientValidationCa(ValidationCAResponse... clientValidationCa) {
             return clientValidationCa(List.of(clientValidationCa));
         }

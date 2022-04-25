@@ -28,6 +28,10 @@ public final class DatasetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="format")
     private @Nullable Output<DatasetFormat> format;
 
+    /**
+     * @return Dataset format
+     * 
+     */
     public Optional<Output<DatasetFormat>> format() {
         return Optional.ofNullable(this.format);
     }
@@ -39,6 +43,10 @@ public final class DatasetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="formatOptions")
     private @Nullable Output<DatasetFormatOptionsArgs> formatOptions;
 
+    /**
+     * @return Format options for dataset
+     * 
+     */
     public Optional<Output<DatasetFormatOptionsArgs>> formatOptions() {
         return Optional.ofNullable(this.formatOptions);
     }
@@ -50,6 +58,10 @@ public final class DatasetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="input", required=true)
     private Output<DatasetInputArgs> input;
 
+    /**
+     * @return Input
+     * 
+     */
     public Output<DatasetInputArgs> input() {
         return this.input;
     }
@@ -61,6 +73,10 @@ public final class DatasetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Dataset name
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -72,6 +88,10 @@ public final class DatasetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="pathOptions")
     private @Nullable Output<DatasetPathOptionsArgs> pathOptions;
 
+    /**
+     * @return PathOptions
+     * 
+     */
     public Optional<Output<DatasetPathOptionsArgs>> pathOptions() {
         return Optional.ofNullable(this.pathOptions);
     }
@@ -112,47 +132,107 @@ public final class DatasetArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DatasetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param format Dataset format
+         * 
+         * @return builder
+         * 
+         */
         public Builder format(@Nullable Output<DatasetFormat> format) {
             $.format = format;
             return this;
         }
 
+        /**
+         * @param format Dataset format
+         * 
+         * @return builder
+         * 
+         */
         public Builder format(DatasetFormat format) {
             return format(Output.of(format));
         }
 
+        /**
+         * @param formatOptions Format options for dataset
+         * 
+         * @return builder
+         * 
+         */
         public Builder formatOptions(@Nullable Output<DatasetFormatOptionsArgs> formatOptions) {
             $.formatOptions = formatOptions;
             return this;
         }
 
+        /**
+         * @param formatOptions Format options for dataset
+         * 
+         * @return builder
+         * 
+         */
         public Builder formatOptions(DatasetFormatOptionsArgs formatOptions) {
             return formatOptions(Output.of(formatOptions));
         }
 
+        /**
+         * @param input Input
+         * 
+         * @return builder
+         * 
+         */
         public Builder input(Output<DatasetInputArgs> input) {
             $.input = input;
             return this;
         }
 
+        /**
+         * @param input Input
+         * 
+         * @return builder
+         * 
+         */
         public Builder input(DatasetInputArgs input) {
             return input(Output.of(input));
         }
 
+        /**
+         * @param name Dataset name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Dataset name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param pathOptions PathOptions
+         * 
+         * @return builder
+         * 
+         */
         public Builder pathOptions(@Nullable Output<DatasetPathOptionsArgs> pathOptions) {
             $.pathOptions = pathOptions;
             return this;
         }
 
+        /**
+         * @param pathOptions PathOptions
+         * 
+         * @return builder
+         * 
+         */
         public Builder pathOptions(DatasetPathOptionsArgs pathOptions) {
             return pathOptions(Output.of(pathOptions));
         }

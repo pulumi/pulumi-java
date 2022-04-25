@@ -28,6 +28,10 @@ public final class PackageNoteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="distribution")
     private @Nullable Output<List<DistributionArgs>> distribution;
 
+    /**
+     * @return The various channels by which a package is distributed.
+     * 
+     */
     public Optional<Output<List<DistributionArgs>>> distribution() {
         return Optional.ofNullable(this.distribution);
     }
@@ -39,6 +43,10 @@ public final class PackageNoteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Immutable. The name of the package.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -68,24 +76,54 @@ public final class PackageNoteArgs extends com.pulumi.resources.ResourceArgs {
             $ = new PackageNoteArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param distribution The various channels by which a package is distributed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder distribution(@Nullable Output<List<DistributionArgs>> distribution) {
             $.distribution = distribution;
             return this;
         }
 
+        /**
+         * @param distribution The various channels by which a package is distributed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder distribution(List<DistributionArgs> distribution) {
             return distribution(Output.of(distribution));
         }
 
+        /**
+         * @param distribution The various channels by which a package is distributed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder distribution(DistributionArgs... distribution) {
             return distribution(List.of(distribution));
         }
 
+        /**
+         * @param name Immutable. The name of the package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Immutable. The name of the package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

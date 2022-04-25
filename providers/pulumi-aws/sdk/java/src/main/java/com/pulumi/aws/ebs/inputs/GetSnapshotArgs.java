@@ -27,6 +27,12 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="filters")
     private @Nullable List<GetSnapshotFilter> filters;
 
+    /**
+     * @return One or more name/value pairs to filter off of. There are
+     * several valid keys, for a full reference, check out
+     * [describe-snapshots in the AWS CLI reference][1].
+     * 
+     */
     public Optional<List<GetSnapshotFilter>> filters() {
         return Optional.ofNullable(this.filters);
     }
@@ -38,6 +44,10 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="mostRecent")
     private @Nullable Boolean mostRecent;
 
+    /**
+     * @return If more than one result is returned, use the most recent snapshot.
+     * 
+     */
     public Optional<Boolean> mostRecent() {
         return Optional.ofNullable(this.mostRecent);
     }
@@ -49,6 +59,10 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="owners")
     private @Nullable List<String> owners;
 
+    /**
+     * @return Returns the snapshots owned by the specified owner id. Multiple owners can be specified.
+     * 
+     */
     public Optional<List<String>> owners() {
         return Optional.ofNullable(this.owners);
     }
@@ -60,6 +74,10 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="restorableByUserIds")
     private @Nullable List<String> restorableByUserIds;
 
+    /**
+     * @return One or more AWS accounts IDs that can create volumes from the snapshot.
+     * 
+     */
     public Optional<List<String>> restorableByUserIds() {
         return Optional.ofNullable(this.restorableByUserIds);
     }
@@ -71,6 +89,10 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="snapshotIds")
     private @Nullable List<String> snapshotIds;
 
+    /**
+     * @return Returns information on a specific snapshot_id.
+     * 
+     */
     public Optional<List<String>> snapshotIds() {
         return Optional.ofNullable(this.snapshotIds);
     }
@@ -82,6 +104,10 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="tags")
     private @Nullable Map<String,String> tags;
 
+    /**
+     * @return A map of tags for the resource.
+     * 
+     */
     public Optional<Map<String,String>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -115,47 +141,111 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetSnapshotArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param filters One or more name/value pairs to filter off of. There are
+         * several valid keys, for a full reference, check out
+         * [describe-snapshots in the AWS CLI reference][1].
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(@Nullable List<GetSnapshotFilter> filters) {
             $.filters = filters;
             return this;
         }
 
+        /**
+         * @param filters One or more name/value pairs to filter off of. There are
+         * several valid keys, for a full reference, check out
+         * [describe-snapshots in the AWS CLI reference][1].
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(GetSnapshotFilter... filters) {
             return filters(List.of(filters));
         }
 
+        /**
+         * @param mostRecent If more than one result is returned, use the most recent snapshot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mostRecent(@Nullable Boolean mostRecent) {
             $.mostRecent = mostRecent;
             return this;
         }
 
+        /**
+         * @param owners Returns the snapshots owned by the specified owner id. Multiple owners can be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder owners(@Nullable List<String> owners) {
             $.owners = owners;
             return this;
         }
 
+        /**
+         * @param owners Returns the snapshots owned by the specified owner id. Multiple owners can be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder owners(String... owners) {
             return owners(List.of(owners));
         }
 
+        /**
+         * @param restorableByUserIds One or more AWS accounts IDs that can create volumes from the snapshot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restorableByUserIds(@Nullable List<String> restorableByUserIds) {
             $.restorableByUserIds = restorableByUserIds;
             return this;
         }
 
+        /**
+         * @param restorableByUserIds One or more AWS accounts IDs that can create volumes from the snapshot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restorableByUserIds(String... restorableByUserIds) {
             return restorableByUserIds(List.of(restorableByUserIds));
         }
 
+        /**
+         * @param snapshotIds Returns information on a specific snapshot_id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotIds(@Nullable List<String> snapshotIds) {
             $.snapshotIds = snapshotIds;
             return this;
         }
 
+        /**
+         * @param snapshotIds Returns information on a specific snapshot_id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotIds(String... snapshotIds) {
             return snapshotIds(List.of(snapshotIds));
         }
 
+        /**
+         * @param tags A map of tags for the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Map<String,String> tags) {
             $.tags = tags;
             return this;

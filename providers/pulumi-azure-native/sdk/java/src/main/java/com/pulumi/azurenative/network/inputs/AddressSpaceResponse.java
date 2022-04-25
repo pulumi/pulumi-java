@@ -26,6 +26,10 @@ public final class AddressSpaceResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="addressPrefixes")
     private @Nullable List<String> addressPrefixes;
 
+    /**
+     * @return A list of address blocks reserved for this virtual network in CIDR notation.
+     * 
+     */
     public Optional<List<String>> addressPrefixes() {
         return Optional.ofNullable(this.addressPrefixes);
     }
@@ -54,11 +58,23 @@ public final class AddressSpaceResponse extends com.pulumi.resources.InvokeArgs 
             $ = new AddressSpaceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param addressPrefixes A list of address blocks reserved for this virtual network in CIDR notation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addressPrefixes(@Nullable List<String> addressPrefixes) {
             $.addressPrefixes = addressPrefixes;
             return this;
         }
 
+        /**
+         * @param addressPrefixes A list of address blocks reserved for this virtual network in CIDR notation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addressPrefixes(String... addressPrefixes) {
             return addressPrefixes(List.of(addressPrefixes));
         }

@@ -19,6 +19,10 @@ public final class GetLedgerArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="ledgerName", required=true)
     private String ledgerName;
 
+    /**
+     * @return Name of the Confidential Ledger
+     * 
+     */
     public String ledgerName() {
         return this.ledgerName;
     }
@@ -30,6 +34,10 @@ public final class GetLedgerArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetLedgerArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetLedgerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ledgerName Name of the Confidential Ledger
+         * 
+         * @return builder
+         * 
+         */
         public Builder ledgerName(String ledgerName) {
             $.ledgerName = ledgerName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

@@ -23,62 +23,62 @@ import javax.annotation.Nullable;
 @CustomType
 public final class WorkflowTemplateJob {
     /**
-     * Optional. Job is a Hadoop job.
+     * @return Optional. Job is a Hadoop job.
      * 
      */
     private final @Nullable WorkflowTemplateJobHadoopJob hadoopJob;
     /**
-     * Optional. Job is a Hive job.
+     * @return Optional. Job is a Hive job.
      * 
      */
     private final @Nullable WorkflowTemplateJobHiveJob hiveJob;
     /**
-     * Optional. The labels to associate with this cluster. Label keys must be between 1 and 63 characters long, and must conform to the following PCRE regular expression: {0,63} No more than 32 labels can be associated with a given cluster.
+     * @return Optional. The labels to associate with this cluster. Label keys must be between 1 and 63 characters long, and must conform to the following PCRE regular expression: {0,63} No more than 32 labels can be associated with a given cluster.
      * 
      */
     private final @Nullable Map<String,String> labels;
     /**
-     * Optional. Job is a Pig job.
+     * @return Optional. Job is a Pig job.
      * 
      */
     private final @Nullable WorkflowTemplateJobPigJob pigJob;
     /**
-     * Optional. The optional list of prerequisite job step_ids. If not specified, the job will start at the beginning of workflow.
+     * @return Optional. The optional list of prerequisite job step_ids. If not specified, the job will start at the beginning of workflow.
      * 
      */
     private final @Nullable List<String> prerequisiteStepIds;
     /**
-     * Optional. Job is a Presto job.
+     * @return Optional. Job is a Presto job.
      * 
      */
     private final @Nullable WorkflowTemplateJobPrestoJob prestoJob;
     /**
-     * Optional. Job is a PySpark job.
+     * @return Optional. Job is a PySpark job.
      * 
      */
     private final @Nullable WorkflowTemplateJobPysparkJob pysparkJob;
     /**
-     * Optional. Job scheduling configuration.
+     * @return Optional. Job scheduling configuration.
      * 
      */
     private final @Nullable WorkflowTemplateJobScheduling scheduling;
     /**
-     * Optional. Job is a Spark job.
+     * @return Optional. Job is a Spark job.
      * 
      */
     private final @Nullable WorkflowTemplateJobSparkJob sparkJob;
     /**
-     * Optional. Job is a SparkR job.
+     * @return Optional. Job is a SparkR job.
      * 
      */
     private final @Nullable WorkflowTemplateJobSparkRJob sparkRJob;
     /**
-     * Optional. Job is a SparkSql job.
+     * @return Optional. Job is a SparkSql job.
      * 
      */
     private final @Nullable WorkflowTemplateJobSparkSqlJob sparkSqlJob;
     /**
-     * Required. The step id. The id must be unique among all jobs within the template. The step id is used as prefix for job id, as job `goog-dataproc-workflow-step-id` label, and in field from other steps. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of between 3 and 50 characters.
+     * @return Required. The step id. The id must be unique among all jobs within the template. The step id is used as prefix for job id, as job `goog-dataproc-workflow-step-id` label, and in field from other steps. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of between 3 and 50 characters.
      * 
      */
     private final String stepId;
@@ -112,86 +112,86 @@ public final class WorkflowTemplateJob {
     }
 
     /**
-     * Optional. Job is a Hadoop job.
+     * @return Optional. Job is a Hadoop job.
      * 
-    */
+     */
     public Optional<WorkflowTemplateJobHadoopJob> hadoopJob() {
         return Optional.ofNullable(this.hadoopJob);
     }
     /**
-     * Optional. Job is a Hive job.
+     * @return Optional. Job is a Hive job.
      * 
-    */
+     */
     public Optional<WorkflowTemplateJobHiveJob> hiveJob() {
         return Optional.ofNullable(this.hiveJob);
     }
     /**
-     * Optional. The labels to associate with this cluster. Label keys must be between 1 and 63 characters long, and must conform to the following PCRE regular expression: {0,63} No more than 32 labels can be associated with a given cluster.
+     * @return Optional. The labels to associate with this cluster. Label keys must be between 1 and 63 characters long, and must conform to the following PCRE regular expression: {0,63} No more than 32 labels can be associated with a given cluster.
      * 
-    */
+     */
     public Map<String,String> labels() {
         return this.labels == null ? Map.of() : this.labels;
     }
     /**
-     * Optional. Job is a Pig job.
+     * @return Optional. Job is a Pig job.
      * 
-    */
+     */
     public Optional<WorkflowTemplateJobPigJob> pigJob() {
         return Optional.ofNullable(this.pigJob);
     }
     /**
-     * Optional. The optional list of prerequisite job step_ids. If not specified, the job will start at the beginning of workflow.
+     * @return Optional. The optional list of prerequisite job step_ids. If not specified, the job will start at the beginning of workflow.
      * 
-    */
+     */
     public List<String> prerequisiteStepIds() {
         return this.prerequisiteStepIds == null ? List.of() : this.prerequisiteStepIds;
     }
     /**
-     * Optional. Job is a Presto job.
+     * @return Optional. Job is a Presto job.
      * 
-    */
+     */
     public Optional<WorkflowTemplateJobPrestoJob> prestoJob() {
         return Optional.ofNullable(this.prestoJob);
     }
     /**
-     * Optional. Job is a PySpark job.
+     * @return Optional. Job is a PySpark job.
      * 
-    */
+     */
     public Optional<WorkflowTemplateJobPysparkJob> pysparkJob() {
         return Optional.ofNullable(this.pysparkJob);
     }
     /**
-     * Optional. Job scheduling configuration.
+     * @return Optional. Job scheduling configuration.
      * 
-    */
+     */
     public Optional<WorkflowTemplateJobScheduling> scheduling() {
         return Optional.ofNullable(this.scheduling);
     }
     /**
-     * Optional. Job is a Spark job.
+     * @return Optional. Job is a Spark job.
      * 
-    */
+     */
     public Optional<WorkflowTemplateJobSparkJob> sparkJob() {
         return Optional.ofNullable(this.sparkJob);
     }
     /**
-     * Optional. Job is a SparkR job.
+     * @return Optional. Job is a SparkR job.
      * 
-    */
+     */
     public Optional<WorkflowTemplateJobSparkRJob> sparkRJob() {
         return Optional.ofNullable(this.sparkRJob);
     }
     /**
-     * Optional. Job is a SparkSql job.
+     * @return Optional. Job is a SparkSql job.
      * 
-    */
+     */
     public Optional<WorkflowTemplateJobSparkSqlJob> sparkSqlJob() {
         return Optional.ofNullable(this.sparkSqlJob);
     }
     /**
-     * Required. The step id. The id must be unique among all jobs within the template. The step id is used as prefix for job id, as job `goog-dataproc-workflow-step-id` label, and in field from other steps. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of between 3 and 50 characters.
+     * @return Required. The step id. The id must be unique among all jobs within the template. The step id is used as prefix for job id, as job `goog-dataproc-workflow-step-id` label, and in field from other steps. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of between 3 and 50 characters.
      * 
-    */
+     */
     public String stepId() {
         return this.stepId;
     }

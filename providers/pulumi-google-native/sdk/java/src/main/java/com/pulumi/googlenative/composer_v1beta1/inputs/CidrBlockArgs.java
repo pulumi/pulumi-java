@@ -26,6 +26,10 @@ public final class CidrBlockArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cidrBlock")
     private @Nullable Output<String> cidrBlock;
 
+    /**
+     * @return cidr_block must be specified in CIDR notation.
+     * 
+     */
     public Optional<Output<String>> cidrBlock() {
         return Optional.ofNullable(this.cidrBlock);
     }
@@ -37,6 +41,10 @@ public final class CidrBlockArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return display_name is a field for users to identify CIDR blocks.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -66,20 +74,44 @@ public final class CidrBlockArgs extends com.pulumi.resources.ResourceArgs {
             $ = new CidrBlockArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cidrBlock cidr_block must be specified in CIDR notation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cidrBlock(@Nullable Output<String> cidrBlock) {
             $.cidrBlock = cidrBlock;
             return this;
         }
 
+        /**
+         * @param cidrBlock cidr_block must be specified in CIDR notation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cidrBlock(String cidrBlock) {
             return cidrBlock(Output.of(cidrBlock));
         }
 
+        /**
+         * @param displayName display_name is a field for users to identify CIDR blocks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName display_name is a field for users to identify CIDR blocks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }

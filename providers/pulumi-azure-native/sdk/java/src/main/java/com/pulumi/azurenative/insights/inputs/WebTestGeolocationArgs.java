@@ -26,6 +26,10 @@ public final class WebTestGeolocationArgs extends com.pulumi.resources.ResourceA
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Location ID for the webtest to run from.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -54,11 +58,23 @@ public final class WebTestGeolocationArgs extends com.pulumi.resources.ResourceA
             $ = new WebTestGeolocationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param location Location ID for the webtest to run from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Location ID for the webtest to run from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }

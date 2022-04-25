@@ -25,6 +25,10 @@ public final class AppInsightsCredentialsResponse extends com.pulumi.resources.I
     @Import(name="appId")
     private @Nullable String appId;
 
+    /**
+     * @return The AppInsights application ID.
+     * 
+     */
     public Optional<String> appId() {
         return Optional.ofNullable(this.appId);
     }
@@ -36,6 +40,10 @@ public final class AppInsightsCredentialsResponse extends com.pulumi.resources.I
     @Import(name="instrumentationKey")
     private @Nullable String instrumentationKey;
 
+    /**
+     * @return The AppInsights instrumentation key. This is not returned in response of GET/PUT on the resource. To see this please call listKeys API.
+     * 
+     */
     public Optional<String> instrumentationKey() {
         return Optional.ofNullable(this.instrumentationKey);
     }
@@ -65,11 +73,23 @@ public final class AppInsightsCredentialsResponse extends com.pulumi.resources.I
             $ = new AppInsightsCredentialsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param appId The AppInsights application ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appId(@Nullable String appId) {
             $.appId = appId;
             return this;
         }
 
+        /**
+         * @param instrumentationKey The AppInsights instrumentation key. This is not returned in response of GET/PUT on the resource. To see this please call listKeys API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instrumentationKey(@Nullable String instrumentationKey) {
             $.instrumentationKey = instrumentationKey;
             return this;

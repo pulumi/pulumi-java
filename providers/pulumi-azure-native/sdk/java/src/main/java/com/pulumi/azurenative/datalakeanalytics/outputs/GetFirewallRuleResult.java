@@ -10,27 +10,27 @@ import java.util.Objects;
 @CustomType
 public final class GetFirewallRuleResult {
     /**
-     * The end IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.
+     * @return The end IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.
      * 
      */
     private final String endIpAddress;
     /**
-     * The resource identifier.
+     * @return The resource identifier.
      * 
      */
     private final String id;
     /**
-     * The resource name.
+     * @return The resource name.
      * 
      */
     private final String name;
     /**
-     * The start IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.
+     * @return The start IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.
      * 
      */
     private final String startIpAddress;
     /**
-     * The resource type.
+     * @return The resource type.
      * 
      */
     private final String type;
@@ -50,37 +50,37 @@ public final class GetFirewallRuleResult {
     }
 
     /**
-     * The end IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.
+     * @return The end IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.
      * 
-    */
+     */
     public String endIpAddress() {
         return this.endIpAddress;
     }
     /**
-     * The resource identifier.
+     * @return The resource identifier.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The resource name.
+     * @return The resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The start IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.
+     * @return The start IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.
      * 
-    */
+     */
     public String startIpAddress() {
         return this.startIpAddress;
     }
     /**
-     * The resource type.
+     * @return The resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

@@ -27,6 +27,10 @@ public final class MultiClusterRoutingUseAnyArgs extends com.pulumi.resources.Re
     @Import(name="clusterIds")
     private @Nullable Output<List<String>> clusterIds;
 
+    /**
+     * @return The set of clusters to route to. The order is ignored; clusters will be tried in order of distance. If left empty, all clusters are eligible.
+     * 
+     */
     public Optional<Output<List<String>>> clusterIds() {
         return Optional.ofNullable(this.clusterIds);
     }
@@ -55,15 +59,33 @@ public final class MultiClusterRoutingUseAnyArgs extends com.pulumi.resources.Re
             $ = new MultiClusterRoutingUseAnyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clusterIds The set of clusters to route to. The order is ignored; clusters will be tried in order of distance. If left empty, all clusters are eligible.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterIds(@Nullable Output<List<String>> clusterIds) {
             $.clusterIds = clusterIds;
             return this;
         }
 
+        /**
+         * @param clusterIds The set of clusters to route to. The order is ignored; clusters will be tried in order of distance. If left empty, all clusters are eligible.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterIds(List<String> clusterIds) {
             return clusterIds(Output.of(clusterIds));
         }
 
+        /**
+         * @param clusterIds The set of clusters to route to. The order is ignored; clusters will be tried in order of distance. If left empty, all clusters are eligible.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterIds(String... clusterIds) {
             return clusterIds(List.of(clusterIds));
         }

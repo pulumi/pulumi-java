@@ -23,6 +23,10 @@ public final class EncryptionPropertyResponse extends com.pulumi.resources.Invok
     @Import(name="identity")
     private @Nullable IdentityForCmkResponse identity;
 
+    /**
+     * @return The identity that will be used to access the key vault for encryption at rest.
+     * 
+     */
     public Optional<IdentityForCmkResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
@@ -34,6 +38,10 @@ public final class EncryptionPropertyResponse extends com.pulumi.resources.Invok
     @Import(name="keyVaultProperties", required=true)
     private KeyVaultPropertiesResponse keyVaultProperties;
 
+    /**
+     * @return Customer Key vault properties.
+     * 
+     */
     public KeyVaultPropertiesResponse keyVaultProperties() {
         return this.keyVaultProperties;
     }
@@ -45,6 +53,10 @@ public final class EncryptionPropertyResponse extends com.pulumi.resources.Invok
     @Import(name="status", required=true)
     private String status;
 
+    /**
+     * @return Indicates whether or not the encryption is enabled for the workspace.
+     * 
+     */
     public String status() {
         return this.status;
     }
@@ -75,16 +87,34 @@ public final class EncryptionPropertyResponse extends com.pulumi.resources.Invok
             $ = new EncryptionPropertyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param identity The identity that will be used to access the key vault for encryption at rest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(@Nullable IdentityForCmkResponse identity) {
             $.identity = identity;
             return this;
         }
 
+        /**
+         * @param keyVaultProperties Customer Key vault properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultProperties(KeyVaultPropertiesResponse keyVaultProperties) {
             $.keyVaultProperties = keyVaultProperties;
             return this;
         }
 
+        /**
+         * @param status Indicates whether or not the encryption is enabled for the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             $.status = status;
             return this;

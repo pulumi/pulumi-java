@@ -28,6 +28,10 @@ public final class QueueScaleRuleResponse extends com.pulumi.resources.InvokeArg
     @Import(name="auth")
     private @Nullable List<ScaleRuleAuthResponse> auth;
 
+    /**
+     * @return Authentication secrets for the queue scale rule.
+     * 
+     */
     public Optional<List<ScaleRuleAuthResponse>> auth() {
         return Optional.ofNullable(this.auth);
     }
@@ -39,6 +43,10 @@ public final class QueueScaleRuleResponse extends com.pulumi.resources.InvokeArg
     @Import(name="queueLength")
     private @Nullable Integer queueLength;
 
+    /**
+     * @return Queue length.
+     * 
+     */
     public Optional<Integer> queueLength() {
         return Optional.ofNullable(this.queueLength);
     }
@@ -50,6 +58,10 @@ public final class QueueScaleRuleResponse extends com.pulumi.resources.InvokeArg
     @Import(name="queueName")
     private @Nullable String queueName;
 
+    /**
+     * @return Queue name.
+     * 
+     */
     public Optional<String> queueName() {
         return Optional.ofNullable(this.queueName);
     }
@@ -80,20 +92,44 @@ public final class QueueScaleRuleResponse extends com.pulumi.resources.InvokeArg
             $ = new QueueScaleRuleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param auth Authentication secrets for the queue scale rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder auth(@Nullable List<ScaleRuleAuthResponse> auth) {
             $.auth = auth;
             return this;
         }
 
+        /**
+         * @param auth Authentication secrets for the queue scale rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder auth(ScaleRuleAuthResponse... auth) {
             return auth(List.of(auth));
         }
 
+        /**
+         * @param queueLength Queue length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queueLength(@Nullable Integer queueLength) {
             $.queueLength = queueLength;
             return this;
         }
 
+        /**
+         * @param queueName Queue name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queueName(@Nullable String queueName) {
             $.queueName = queueName;
             return this;

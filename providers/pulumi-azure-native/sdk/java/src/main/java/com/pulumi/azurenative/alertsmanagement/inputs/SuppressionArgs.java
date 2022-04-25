@@ -32,6 +32,10 @@ public final class SuppressionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="conditions")
     private @Nullable Output<ConditionsArgs> conditions;
 
+    /**
+     * @return conditions on which alerts will be filtered
+     * 
+     */
     public Optional<Output<ConditionsArgs>> conditions() {
         return Optional.ofNullable(this.conditions);
     }
@@ -43,6 +47,10 @@ public final class SuppressionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description of action rule
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -54,6 +62,10 @@ public final class SuppressionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scope")
     private @Nullable Output<ScopeArgs> scope;
 
+    /**
+     * @return scope on which action rule will apply
+     * 
+     */
     public Optional<Output<ScopeArgs>> scope() {
         return Optional.ofNullable(this.scope);
     }
@@ -65,6 +77,10 @@ public final class SuppressionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="status")
     private @Nullable Output<Either<String,ActionRuleStatus>> status;
 
+    /**
+     * @return Indicates if the given action rule is enabled or disabled
+     * 
+     */
     public Optional<Output<Either<String,ActionRuleStatus>>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -76,6 +92,10 @@ public final class SuppressionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="suppressionConfig", required=true)
     private Output<SuppressionConfigArgs> suppressionConfig;
 
+    /**
+     * @return suppression configuration for the action rule
+     * 
+     */
     public Output<SuppressionConfigArgs> suppressionConfig() {
         return this.suppressionConfig;
     }
@@ -88,6 +108,11 @@ public final class SuppressionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Indicates type of action rule
+     * Expected value is &#39;Suppression&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -121,64 +146,150 @@ public final class SuppressionArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SuppressionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param conditions conditions on which alerts will be filtered
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(@Nullable Output<ConditionsArgs> conditions) {
             $.conditions = conditions;
             return this;
         }
 
+        /**
+         * @param conditions conditions on which alerts will be filtered
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(ConditionsArgs conditions) {
             return conditions(Output.of(conditions));
         }
 
+        /**
+         * @param description Description of action rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description of action rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param scope scope on which action rule will apply
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(@Nullable Output<ScopeArgs> scope) {
             $.scope = scope;
             return this;
         }
 
+        /**
+         * @param scope scope on which action rule will apply
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(ScopeArgs scope) {
             return scope(Output.of(scope));
         }
 
+        /**
+         * @param status Indicates if the given action rule is enabled or disabled
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<Either<String,ActionRuleStatus>> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status Indicates if the given action rule is enabled or disabled
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(Either<String,ActionRuleStatus> status) {
             return status(Output.of(status));
         }
 
+        /**
+         * @param status Indicates if the given action rule is enabled or disabled
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             return status(Either.ofLeft(status));
         }
 
+        /**
+         * @param status Indicates if the given action rule is enabled or disabled
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(ActionRuleStatus status) {
             return status(Either.ofRight(status));
         }
 
+        /**
+         * @param suppressionConfig suppression configuration for the action rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder suppressionConfig(Output<SuppressionConfigArgs> suppressionConfig) {
             $.suppressionConfig = suppressionConfig;
             return this;
         }
 
+        /**
+         * @param suppressionConfig suppression configuration for the action rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder suppressionConfig(SuppressionConfigArgs suppressionConfig) {
             return suppressionConfig(Output.of(suppressionConfig));
         }
 
+        /**
+         * @param type Indicates type of action rule
+         * Expected value is &#39;Suppression&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Indicates type of action rule
+         * Expected value is &#39;Suppression&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

@@ -24,6 +24,10 @@ public final class ApplicationGatewayConnectionDrainingResponse extends com.pulu
     @Import(name="drainTimeoutInSec", required=true)
     private Integer drainTimeoutInSec;
 
+    /**
+     * @return The number of seconds connection draining is active. Acceptable values are from 1 second to 3600 seconds.
+     * 
+     */
     public Integer drainTimeoutInSec() {
         return this.drainTimeoutInSec;
     }
@@ -35,6 +39,10 @@ public final class ApplicationGatewayConnectionDrainingResponse extends com.pulu
     @Import(name="enabled", required=true)
     private Boolean enabled;
 
+    /**
+     * @return Whether connection draining is enabled or not.
+     * 
+     */
     public Boolean enabled() {
         return this.enabled;
     }
@@ -64,11 +72,23 @@ public final class ApplicationGatewayConnectionDrainingResponse extends com.pulu
             $ = new ApplicationGatewayConnectionDrainingResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param drainTimeoutInSec The number of seconds connection draining is active. Acceptable values are from 1 second to 3600 seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder drainTimeoutInSec(Integer drainTimeoutInSec) {
             $.drainTimeoutInSec = drainTimeoutInSec;
             return this;
         }
 
+        /**
+         * @param enabled Whether connection draining is enabled or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             $.enabled = enabled;
             return this;

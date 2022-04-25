@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class ServiceAccountResponse {
     /**
-     * The IAM service account email address like test@myproject.iam.gserviceaccount.com
+     * @return The IAM service account email address like test@myproject.iam.gserviceaccount.com
      * 
      */
     private final String email;
@@ -21,9 +21,9 @@ public final class ServiceAccountResponse {
     }
 
     /**
-     * The IAM service account email address like test@myproject.iam.gserviceaccount.com
+     * @return The IAM service account email address like test@myproject.iam.gserviceaccount.com
      * 
-    */
+     */
     public String email() {
         return this.email;
     }

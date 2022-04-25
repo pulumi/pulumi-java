@@ -19,6 +19,10 @@ public final class GetRuleArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="profileName", required=true)
     private String profileName;
 
+    /**
+     * @return Name of the CDN profile which is unique within the resource group.
+     * 
+     */
     public String profileName() {
         return this.profileName;
     }
@@ -30,6 +34,10 @@ public final class GetRuleArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Name of the Resource group within the Azure subscription.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetRuleArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="ruleName", required=true)
     private String ruleName;
 
+    /**
+     * @return Name of the delivery rule which is unique within the endpoint.
+     * 
+     */
     public String ruleName() {
         return this.ruleName;
     }
@@ -52,6 +64,10 @@ public final class GetRuleArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="ruleSetName", required=true)
     private String ruleSetName;
 
+    /**
+     * @return Name of the rule set under the profile.
+     * 
+     */
     public String ruleSetName() {
         return this.ruleSetName;
     }
@@ -83,21 +99,45 @@ public final class GetRuleArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param profileName Name of the CDN profile which is unique within the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder profileName(String profileName) {
             $.profileName = profileName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the Resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param ruleName Name of the delivery rule which is unique within the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleName(String ruleName) {
             $.ruleName = ruleName;
             return this;
         }
 
+        /**
+         * @param ruleSetName Name of the rule set under the profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleSetName(String ruleSetName) {
             $.ruleSetName = ruleSetName;
             return this;

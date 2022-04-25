@@ -24,6 +24,10 @@ public final class DateAfterCreationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="daysAfterCreationGreaterThan", required=true)
     private Output<Double> daysAfterCreationGreaterThan;
 
+    /**
+     * @return Value indicating the age in days after creation
+     * 
+     */
     public Output<Double> daysAfterCreationGreaterThan() {
         return this.daysAfterCreationGreaterThan;
     }
@@ -52,11 +56,23 @@ public final class DateAfterCreationArgs extends com.pulumi.resources.ResourceAr
             $ = new DateAfterCreationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param daysAfterCreationGreaterThan Value indicating the age in days after creation
+         * 
+         * @return builder
+         * 
+         */
         public Builder daysAfterCreationGreaterThan(Output<Double> daysAfterCreationGreaterThan) {
             $.daysAfterCreationGreaterThan = daysAfterCreationGreaterThan;
             return this;
         }
 
+        /**
+         * @param daysAfterCreationGreaterThan Value indicating the age in days after creation
+         * 
+         * @return builder
+         * 
+         */
         public Builder daysAfterCreationGreaterThan(Double daysAfterCreationGreaterThan) {
             return daysAfterCreationGreaterThan(Output.of(daysAfterCreationGreaterThan));
         }

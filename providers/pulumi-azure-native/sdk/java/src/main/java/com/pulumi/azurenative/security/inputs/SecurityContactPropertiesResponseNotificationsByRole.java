@@ -26,6 +26,10 @@ public final class SecurityContactPropertiesResponseNotificationsByRole extends 
     @Import(name="roles")
     private @Nullable List<String> roles;
 
+    /**
+     * @return Defines which RBAC roles will get email notifications from Azure Security Center. List of allowed RBAC roles:
+     * 
+     */
     public Optional<List<String>> roles() {
         return Optional.ofNullable(this.roles);
     }
@@ -37,6 +41,10 @@ public final class SecurityContactPropertiesResponseNotificationsByRole extends 
     @Import(name="state")
     private @Nullable String state;
 
+    /**
+     * @return Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.
+     * 
+     */
     public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
@@ -66,15 +74,33 @@ public final class SecurityContactPropertiesResponseNotificationsByRole extends 
             $ = new SecurityContactPropertiesResponseNotificationsByRole(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param roles Defines which RBAC roles will get email notifications from Azure Security Center. List of allowed RBAC roles:
+         * 
+         * @return builder
+         * 
+         */
         public Builder roles(@Nullable List<String> roles) {
             $.roles = roles;
             return this;
         }
 
+        /**
+         * @param roles Defines which RBAC roles will get email notifications from Azure Security Center. List of allowed RBAC roles:
+         * 
+         * @return builder
+         * 
+         */
         public Builder roles(String... roles) {
             return roles(List.of(roles));
         }
 
+        /**
+         * @param state Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable String state) {
             $.state = state;
             return this;

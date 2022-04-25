@@ -25,6 +25,10 @@ public final class RedirectIncompatibleRowSettingsResponse extends com.pulumi.re
     @Import(name="linkedServiceName", required=true)
     private Object linkedServiceName;
 
+    /**
+     * @return Name of the Azure Storage, Storage SAS, or Azure Data Lake Store linked service used for redirecting incompatible row. Must be specified if redirectIncompatibleRowSettings is specified. Type: string (or Expression with resultType string).
+     * 
+     */
     public Object linkedServiceName() {
         return this.linkedServiceName;
     }
@@ -36,6 +40,10 @@ public final class RedirectIncompatibleRowSettingsResponse extends com.pulumi.re
     @Import(name="path")
     private @Nullable Object path;
 
+    /**
+     * @return The path for storing the redirect incompatible row data. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> path() {
         return Optional.ofNullable(this.path);
     }
@@ -65,11 +73,23 @@ public final class RedirectIncompatibleRowSettingsResponse extends com.pulumi.re
             $ = new RedirectIncompatibleRowSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param linkedServiceName Name of the Azure Storage, Storage SAS, or Azure Data Lake Store linked service used for redirecting incompatible row. Must be specified if redirectIncompatibleRowSettings is specified. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedServiceName(Object linkedServiceName) {
             $.linkedServiceName = linkedServiceName;
             return this;
         }
 
+        /**
+         * @param path The path for storing the redirect incompatible row data. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(@Nullable Object path) {
             $.path = path;
             return this;

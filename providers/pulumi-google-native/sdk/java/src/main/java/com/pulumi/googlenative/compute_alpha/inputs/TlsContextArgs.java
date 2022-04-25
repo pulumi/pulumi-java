@@ -27,6 +27,10 @@ public final class TlsContextArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="certificateContext")
     private @Nullable Output<TlsCertificateContextArgs> certificateContext;
 
+    /**
+     * @return Defines the mechanism to obtain the client or server certificate.
+     * 
+     */
     public Optional<Output<TlsCertificateContextArgs>> certificateContext() {
         return Optional.ofNullable(this.certificateContext);
     }
@@ -38,6 +42,10 @@ public final class TlsContextArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="validationContext")
     private @Nullable Output<TlsValidationContextArgs> validationContext;
 
+    /**
+     * @return Defines the mechanism to obtain the Certificate Authority certificate to validate the client/server certificate. If omitted, the proxy will not validate the server or client certificate.
+     * 
+     */
     public Optional<Output<TlsValidationContextArgs>> validationContext() {
         return Optional.ofNullable(this.validationContext);
     }
@@ -67,20 +75,44 @@ public final class TlsContextArgs extends com.pulumi.resources.ResourceArgs {
             $ = new TlsContextArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificateContext Defines the mechanism to obtain the client or server certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateContext(@Nullable Output<TlsCertificateContextArgs> certificateContext) {
             $.certificateContext = certificateContext;
             return this;
         }
 
+        /**
+         * @param certificateContext Defines the mechanism to obtain the client or server certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateContext(TlsCertificateContextArgs certificateContext) {
             return certificateContext(Output.of(certificateContext));
         }
 
+        /**
+         * @param validationContext Defines the mechanism to obtain the Certificate Authority certificate to validate the client/server certificate. If omitted, the proxy will not validate the server or client certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validationContext(@Nullable Output<TlsValidationContextArgs> validationContext) {
             $.validationContext = validationContext;
             return this;
         }
 
+        /**
+         * @param validationContext Defines the mechanism to obtain the Certificate Authority certificate to validate the client/server certificate. If omitted, the proxy will not validate the server or client certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validationContext(TlsValidationContextArgs validationContext) {
             return validationContext(Output.of(validationContext));
         }

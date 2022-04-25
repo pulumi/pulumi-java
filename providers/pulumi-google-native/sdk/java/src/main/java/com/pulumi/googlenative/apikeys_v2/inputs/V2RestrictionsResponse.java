@@ -28,6 +28,10 @@ public final class V2RestrictionsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="androidKeyRestrictions", required=true)
     private V2AndroidKeyRestrictionsResponse androidKeyRestrictions;
 
+    /**
+     * @return The Android apps that are allowed to use the key.
+     * 
+     */
     public V2AndroidKeyRestrictionsResponse androidKeyRestrictions() {
         return this.androidKeyRestrictions;
     }
@@ -39,6 +43,10 @@ public final class V2RestrictionsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="apiTargets", required=true)
     private List<V2ApiTargetResponse> apiTargets;
 
+    /**
+     * @return A restriction for a specific service and optionally one or more specific methods. Requests are allowed if they match any of these restrictions. If no restrictions are specified, all targets are allowed.
+     * 
+     */
     public List<V2ApiTargetResponse> apiTargets() {
         return this.apiTargets;
     }
@@ -50,6 +58,10 @@ public final class V2RestrictionsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="browserKeyRestrictions", required=true)
     private V2BrowserKeyRestrictionsResponse browserKeyRestrictions;
 
+    /**
+     * @return The HTTP referrers (websites) that are allowed to use the key.
+     * 
+     */
     public V2BrowserKeyRestrictionsResponse browserKeyRestrictions() {
         return this.browserKeyRestrictions;
     }
@@ -61,6 +73,10 @@ public final class V2RestrictionsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="iosKeyRestrictions", required=true)
     private V2IosKeyRestrictionsResponse iosKeyRestrictions;
 
+    /**
+     * @return The iOS apps that are allowed to use the key.
+     * 
+     */
     public V2IosKeyRestrictionsResponse iosKeyRestrictions() {
         return this.iosKeyRestrictions;
     }
@@ -72,6 +88,10 @@ public final class V2RestrictionsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="serverKeyRestrictions", required=true)
     private V2ServerKeyRestrictionsResponse serverKeyRestrictions;
 
+    /**
+     * @return The IP addresses of callers that are allowed to use the key.
+     * 
+     */
     public V2ServerKeyRestrictionsResponse serverKeyRestrictions() {
         return this.serverKeyRestrictions;
     }
@@ -104,30 +124,66 @@ public final class V2RestrictionsResponse extends com.pulumi.resources.InvokeArg
             $ = new V2RestrictionsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param androidKeyRestrictions The Android apps that are allowed to use the key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder androidKeyRestrictions(V2AndroidKeyRestrictionsResponse androidKeyRestrictions) {
             $.androidKeyRestrictions = androidKeyRestrictions;
             return this;
         }
 
+        /**
+         * @param apiTargets A restriction for a specific service and optionally one or more specific methods. Requests are allowed if they match any of these restrictions. If no restrictions are specified, all targets are allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiTargets(List<V2ApiTargetResponse> apiTargets) {
             $.apiTargets = apiTargets;
             return this;
         }
 
+        /**
+         * @param apiTargets A restriction for a specific service and optionally one or more specific methods. Requests are allowed if they match any of these restrictions. If no restrictions are specified, all targets are allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiTargets(V2ApiTargetResponse... apiTargets) {
             return apiTargets(List.of(apiTargets));
         }
 
+        /**
+         * @param browserKeyRestrictions The HTTP referrers (websites) that are allowed to use the key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder browserKeyRestrictions(V2BrowserKeyRestrictionsResponse browserKeyRestrictions) {
             $.browserKeyRestrictions = browserKeyRestrictions;
             return this;
         }
 
+        /**
+         * @param iosKeyRestrictions The iOS apps that are allowed to use the key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iosKeyRestrictions(V2IosKeyRestrictionsResponse iosKeyRestrictions) {
             $.iosKeyRestrictions = iosKeyRestrictions;
             return this;
         }
 
+        /**
+         * @param serverKeyRestrictions The IP addresses of callers that are allowed to use the key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverKeyRestrictions(V2ServerKeyRestrictionsResponse serverKeyRestrictions) {
             $.serverKeyRestrictions = serverKeyRestrictions;
             return this;

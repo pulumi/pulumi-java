@@ -26,6 +26,10 @@ public final class DiskEncryptionStatusArgs extends com.pulumi.resources.Resourc
     @Import(name="kind")
     private @Nullable Output<String> kind;
 
+    /**
+     * @return This is always `sql#diskEncryptionStatus`.
+     * 
+     */
     public Optional<Output<String>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -37,6 +41,10 @@ public final class DiskEncryptionStatusArgs extends com.pulumi.resources.Resourc
     @Import(name="kmsKeyVersionName")
     private @Nullable Output<String> kmsKeyVersionName;
 
+    /**
+     * @return KMS key version used to encrypt the Cloud SQL instance resource
+     * 
+     */
     public Optional<Output<String>> kmsKeyVersionName() {
         return Optional.ofNullable(this.kmsKeyVersionName);
     }
@@ -66,20 +74,44 @@ public final class DiskEncryptionStatusArgs extends com.pulumi.resources.Resourc
             $ = new DiskEncryptionStatusArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kind This is always `sql#diskEncryptionStatus`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind This is always `sql#diskEncryptionStatus`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param kmsKeyVersionName KMS key version used to encrypt the Cloud SQL instance resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyVersionName(@Nullable Output<String> kmsKeyVersionName) {
             $.kmsKeyVersionName = kmsKeyVersionName;
             return this;
         }
 
+        /**
+         * @param kmsKeyVersionName KMS key version used to encrypt the Cloud SQL instance resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyVersionName(String kmsKeyVersionName) {
             return kmsKeyVersionName(Output.of(kmsKeyVersionName));
         }

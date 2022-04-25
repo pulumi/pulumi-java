@@ -22,6 +22,10 @@ public final class AnomalyDetectorTimestampColumnArgs extends com.pulumi.resourc
     @Import(name="columnFormat")
     private @Nullable Output<String> columnFormat;
 
+    /**
+     * @return A timestamp format for the timestamps in the dataset
+     * 
+     */
     public Optional<Output<String>> columnFormat() {
         return Optional.ofNullable(this.columnFormat);
     }
@@ -58,11 +62,23 @@ public final class AnomalyDetectorTimestampColumnArgs extends com.pulumi.resourc
             $ = new AnomalyDetectorTimestampColumnArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param columnFormat A timestamp format for the timestamps in the dataset
+         * 
+         * @return builder
+         * 
+         */
         public Builder columnFormat(@Nullable Output<String> columnFormat) {
             $.columnFormat = columnFormat;
             return this;
         }
 
+        /**
+         * @param columnFormat A timestamp format for the timestamps in the dataset
+         * 
+         * @return builder
+         * 
+         */
         public Builder columnFormat(String columnFormat) {
             return columnFormat(Output.of(columnFormat));
         }

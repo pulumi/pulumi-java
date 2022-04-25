@@ -23,6 +23,10 @@ public final class KeyVaultMetaInfoResponse extends com.pulumi.resources.InvokeA
     @Import(name="encryptionKeyName", required=true)
     private String encryptionKeyName;
 
+    /**
+     * @return The name of the user managed encryption key.
+     * 
+     */
     public String encryptionKeyName() {
         return this.encryptionKeyName;
     }
@@ -34,6 +38,10 @@ public final class KeyVaultMetaInfoResponse extends com.pulumi.resources.InvokeA
     @Import(name="encryptionKeyVersion", required=true)
     private String encryptionKeyVersion;
 
+    /**
+     * @return The version of the user managed encryption key.
+     * 
+     */
     public String encryptionKeyVersion() {
         return this.encryptionKeyVersion;
     }
@@ -45,6 +53,10 @@ public final class KeyVaultMetaInfoResponse extends com.pulumi.resources.InvokeA
     @Import(name="keyVaultResourceId", required=true)
     private String keyVaultResourceId;
 
+    /**
+     * @return The resource identifier for the user managed Key Vault being used to encrypt.
+     * 
+     */
     public String keyVaultResourceId() {
         return this.keyVaultResourceId;
     }
@@ -75,16 +87,34 @@ public final class KeyVaultMetaInfoResponse extends com.pulumi.resources.InvokeA
             $ = new KeyVaultMetaInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param encryptionKeyName The name of the user managed encryption key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionKeyName(String encryptionKeyName) {
             $.encryptionKeyName = encryptionKeyName;
             return this;
         }
 
+        /**
+         * @param encryptionKeyVersion The version of the user managed encryption key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionKeyVersion(String encryptionKeyVersion) {
             $.encryptionKeyVersion = encryptionKeyVersion;
             return this;
         }
 
+        /**
+         * @param keyVaultResourceId The resource identifier for the user managed Key Vault being used to encrypt.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultResourceId(String keyVaultResourceId) {
             $.keyVaultResourceId = keyVaultResourceId;
             return this;

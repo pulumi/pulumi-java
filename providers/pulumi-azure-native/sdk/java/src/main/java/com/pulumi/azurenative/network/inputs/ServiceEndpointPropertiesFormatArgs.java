@@ -27,6 +27,10 @@ public final class ServiceEndpointPropertiesFormatArgs extends com.pulumi.resour
     @Import(name="locations")
     private @Nullable Output<List<String>> locations;
 
+    /**
+     * @return A list of locations.
+     * 
+     */
     public Optional<Output<List<String>>> locations() {
         return Optional.ofNullable(this.locations);
     }
@@ -38,6 +42,10 @@ public final class ServiceEndpointPropertiesFormatArgs extends com.pulumi.resour
     @Import(name="service")
     private @Nullable Output<String> service;
 
+    /**
+     * @return The type of the endpoint service.
+     * 
+     */
     public Optional<Output<String>> service() {
         return Optional.ofNullable(this.service);
     }
@@ -67,24 +75,54 @@ public final class ServiceEndpointPropertiesFormatArgs extends com.pulumi.resour
             $ = new ServiceEndpointPropertiesFormatArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param locations A list of locations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locations(@Nullable Output<List<String>> locations) {
             $.locations = locations;
             return this;
         }
 
+        /**
+         * @param locations A list of locations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locations(List<String> locations) {
             return locations(Output.of(locations));
         }
 
+        /**
+         * @param locations A list of locations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locations(String... locations) {
             return locations(List.of(locations));
         }
 
+        /**
+         * @param service The type of the endpoint service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(@Nullable Output<String> service) {
             $.service = service;
             return this;
         }
 
+        /**
+         * @param service The type of the endpoint service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(String service) {
             return service(Output.of(service));
         }

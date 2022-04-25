@@ -26,6 +26,10 @@ public final class ContentKeyPolicyTokenClaimArgs extends com.pulumi.resources.R
     @Import(name="claimType")
     private @Nullable Output<String> claimType;
 
+    /**
+     * @return Token claim type.
+     * 
+     */
     public Optional<Output<String>> claimType() {
         return Optional.ofNullable(this.claimType);
     }
@@ -37,6 +41,10 @@ public final class ContentKeyPolicyTokenClaimArgs extends com.pulumi.resources.R
     @Import(name="claimValue")
     private @Nullable Output<String> claimValue;
 
+    /**
+     * @return Token claim value.
+     * 
+     */
     public Optional<Output<String>> claimValue() {
         return Optional.ofNullable(this.claimValue);
     }
@@ -66,20 +74,44 @@ public final class ContentKeyPolicyTokenClaimArgs extends com.pulumi.resources.R
             $ = new ContentKeyPolicyTokenClaimArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param claimType Token claim type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder claimType(@Nullable Output<String> claimType) {
             $.claimType = claimType;
             return this;
         }
 
+        /**
+         * @param claimType Token claim type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder claimType(String claimType) {
             return claimType(Output.of(claimType));
         }
 
+        /**
+         * @param claimValue Token claim value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder claimValue(@Nullable Output<String> claimValue) {
             $.claimValue = claimValue;
             return this;
         }
 
+        /**
+         * @param claimValue Token claim value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder claimValue(String claimValue) {
             return claimValue(Output.of(claimValue));
         }

@@ -19,6 +19,10 @@ public final class GetHybridRunbookWorkerArgs extends com.pulumi.resources.Invok
     @Import(name="automationAccountName", required=true)
     private String automationAccountName;
 
+    /**
+     * @return The name of the automation account.
+     * 
+     */
     public String automationAccountName() {
         return this.automationAccountName;
     }
@@ -30,6 +34,10 @@ public final class GetHybridRunbookWorkerArgs extends com.pulumi.resources.Invok
     @Import(name="hybridRunbookWorkerGroupName", required=true)
     private String hybridRunbookWorkerGroupName;
 
+    /**
+     * @return The hybrid runbook worker group name
+     * 
+     */
     public String hybridRunbookWorkerGroupName() {
         return this.hybridRunbookWorkerGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetHybridRunbookWorkerArgs extends com.pulumi.resources.Invok
     @Import(name="hybridRunbookWorkerId", required=true)
     private String hybridRunbookWorkerId;
 
+    /**
+     * @return The hybrid runbook worker id
+     * 
+     */
     public String hybridRunbookWorkerId() {
         return this.hybridRunbookWorkerId;
     }
@@ -52,6 +64,10 @@ public final class GetHybridRunbookWorkerArgs extends com.pulumi.resources.Invok
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Name of an Azure Resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -83,21 +99,45 @@ public final class GetHybridRunbookWorkerArgs extends com.pulumi.resources.Invok
             $ = new GetHybridRunbookWorkerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param automationAccountName The name of the automation account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automationAccountName(String automationAccountName) {
             $.automationAccountName = automationAccountName;
             return this;
         }
 
+        /**
+         * @param hybridRunbookWorkerGroupName The hybrid runbook worker group name
+         * 
+         * @return builder
+         * 
+         */
         public Builder hybridRunbookWorkerGroupName(String hybridRunbookWorkerGroupName) {
             $.hybridRunbookWorkerGroupName = hybridRunbookWorkerGroupName;
             return this;
         }
 
+        /**
+         * @param hybridRunbookWorkerId The hybrid runbook worker id
+         * 
+         * @return builder
+         * 
+         */
         public Builder hybridRunbookWorkerId(String hybridRunbookWorkerId) {
             $.hybridRunbookWorkerId = hybridRunbookWorkerId;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of an Azure Resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

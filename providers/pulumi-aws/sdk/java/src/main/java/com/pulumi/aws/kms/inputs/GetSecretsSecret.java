@@ -23,6 +23,10 @@ public final class GetSecretsSecret extends com.pulumi.resources.InvokeArgs {
     @Import(name="context")
     private @Nullable Map<String,String> context;
 
+    /**
+     * @return An optional mapping that makes up the Encryption Context for the secret.
+     * 
+     */
     public Optional<Map<String,String>> context() {
         return Optional.ofNullable(this.context);
     }
@@ -34,6 +38,10 @@ public final class GetSecretsSecret extends com.pulumi.resources.InvokeArgs {
     @Import(name="grantTokens")
     private @Nullable List<String> grantTokens;
 
+    /**
+     * @return An optional list of Grant Tokens for the secret.
+     * 
+     */
     public Optional<List<String>> grantTokens() {
         return Optional.ofNullable(this.grantTokens);
     }
@@ -45,6 +53,10 @@ public final class GetSecretsSecret extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name to export this secret under in the attributes.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -56,6 +68,10 @@ public final class GetSecretsSecret extends com.pulumi.resources.InvokeArgs {
     @Import(name="payload", required=true)
     private String payload;
 
+    /**
+     * @return Base64 encoded payload, as returned from a KMS encrypt operation.
+     * 
+     */
     public String payload() {
         return this.payload;
     }
@@ -87,25 +103,55 @@ public final class GetSecretsSecret extends com.pulumi.resources.InvokeArgs {
             $ = new GetSecretsSecret(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param context An optional mapping that makes up the Encryption Context for the secret.
+         * 
+         * @return builder
+         * 
+         */
         public Builder context(@Nullable Map<String,String> context) {
             $.context = context;
             return this;
         }
 
+        /**
+         * @param grantTokens An optional list of Grant Tokens for the secret.
+         * 
+         * @return builder
+         * 
+         */
         public Builder grantTokens(@Nullable List<String> grantTokens) {
             $.grantTokens = grantTokens;
             return this;
         }
 
+        /**
+         * @param grantTokens An optional list of Grant Tokens for the secret.
+         * 
+         * @return builder
+         * 
+         */
         public Builder grantTokens(String... grantTokens) {
             return grantTokens(List.of(grantTokens));
         }
 
+        /**
+         * @param name The name to export this secret under in the attributes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param payload Base64 encoded payload, as returned from a KMS encrypt operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder payload(String payload) {
             $.payload = payload;
             return this;

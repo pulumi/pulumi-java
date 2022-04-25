@@ -12,17 +12,17 @@ import java.util.Objects;
 @CustomType
 public final class GetStoredInfoTypeResult {
     /**
-     * Current version of the stored info type.
+     * @return Current version of the stored info type.
      * 
      */
     private final GooglePrivacyDlpV2StoredInfoTypeVersionResponse currentVersion;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * Pending versions of the stored info type. Empty if no versions are pending.
+     * @return Pending versions of the stored info type. Empty if no versions are pending.
      * 
      */
     private final List<GooglePrivacyDlpV2StoredInfoTypeVersionResponse> pendingVersions;
@@ -38,23 +38,23 @@ public final class GetStoredInfoTypeResult {
     }
 
     /**
-     * Current version of the stored info type.
+     * @return Current version of the stored info type.
      * 
-    */
+     */
     public GooglePrivacyDlpV2StoredInfoTypeVersionResponse currentVersion() {
         return this.currentVersion;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Pending versions of the stored info type. Empty if no versions are pending.
+     * @return Pending versions of the stored info type. Empty if no versions are pending.
      * 
-    */
+     */
     public List<GooglePrivacyDlpV2StoredInfoTypeVersionResponse> pendingVersions() {
         return this.pendingVersions;
     }

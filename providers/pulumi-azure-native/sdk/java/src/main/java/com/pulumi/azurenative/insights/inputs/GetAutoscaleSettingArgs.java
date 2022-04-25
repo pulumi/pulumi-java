@@ -19,6 +19,10 @@ public final class GetAutoscaleSettingArgs extends com.pulumi.resources.InvokeAr
     @Import(name="autoscaleSettingName", required=true)
     private String autoscaleSettingName;
 
+    /**
+     * @return The autoscale setting name.
+     * 
+     */
     public String autoscaleSettingName() {
         return this.autoscaleSettingName;
     }
@@ -30,6 +34,10 @@ public final class GetAutoscaleSettingArgs extends com.pulumi.resources.InvokeAr
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetAutoscaleSettingArgs extends com.pulumi.resources.InvokeAr
             $ = new GetAutoscaleSettingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoscaleSettingName The autoscale setting name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoscaleSettingName(String autoscaleSettingName) {
             $.autoscaleSettingName = autoscaleSettingName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

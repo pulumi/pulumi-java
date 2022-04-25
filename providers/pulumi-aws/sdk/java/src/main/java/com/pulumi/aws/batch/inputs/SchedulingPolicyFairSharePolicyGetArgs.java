@@ -24,6 +24,10 @@ public final class SchedulingPolicyFairSharePolicyGetArgs extends com.pulumi.res
     @Import(name="computeReservation")
     private @Nullable Output<Integer> computeReservation;
 
+    /**
+     * @return A value used to reserve some of the available maximum vCPU for fair share identifiers that have not yet been used. For more information, see [FairsharePolicy](https://docs.aws.amazon.com/batch/latest/APIReference/API_FairsharePolicy.html).
+     * 
+     */
     public Optional<Output<Integer>> computeReservation() {
         return Optional.ofNullable(this.computeReservation);
     }
@@ -42,6 +46,10 @@ public final class SchedulingPolicyFairSharePolicyGetArgs extends com.pulumi.res
     @Import(name="shareDistributions")
     private @Nullable Output<List<SchedulingPolicyFairSharePolicyShareDistributionGetArgs>> shareDistributions;
 
+    /**
+     * @return One or more share distribution blocks which define the weights for the fair share identifiers for the fair share policy. For more information, see [FairsharePolicy](https://docs.aws.amazon.com/batch/latest/APIReference/API_FairsharePolicy.html). The `share_distribution` block is documented below.
+     * 
+     */
     public Optional<Output<List<SchedulingPolicyFairSharePolicyShareDistributionGetArgs>>> shareDistributions() {
         return Optional.ofNullable(this.shareDistributions);
     }
@@ -72,11 +80,23 @@ public final class SchedulingPolicyFairSharePolicyGetArgs extends com.pulumi.res
             $ = new SchedulingPolicyFairSharePolicyGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param computeReservation A value used to reserve some of the available maximum vCPU for fair share identifiers that have not yet been used. For more information, see [FairsharePolicy](https://docs.aws.amazon.com/batch/latest/APIReference/API_FairsharePolicy.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder computeReservation(@Nullable Output<Integer> computeReservation) {
             $.computeReservation = computeReservation;
             return this;
         }
 
+        /**
+         * @param computeReservation A value used to reserve some of the available maximum vCPU for fair share identifiers that have not yet been used. For more information, see [FairsharePolicy](https://docs.aws.amazon.com/batch/latest/APIReference/API_FairsharePolicy.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder computeReservation(Integer computeReservation) {
             return computeReservation(Output.of(computeReservation));
         }
@@ -90,15 +110,33 @@ public final class SchedulingPolicyFairSharePolicyGetArgs extends com.pulumi.res
             return shareDecaySeconds(Output.of(shareDecaySeconds));
         }
 
+        /**
+         * @param shareDistributions One or more share distribution blocks which define the weights for the fair share identifiers for the fair share policy. For more information, see [FairsharePolicy](https://docs.aws.amazon.com/batch/latest/APIReference/API_FairsharePolicy.html). The `share_distribution` block is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareDistributions(@Nullable Output<List<SchedulingPolicyFairSharePolicyShareDistributionGetArgs>> shareDistributions) {
             $.shareDistributions = shareDistributions;
             return this;
         }
 
+        /**
+         * @param shareDistributions One or more share distribution blocks which define the weights for the fair share identifiers for the fair share policy. For more information, see [FairsharePolicy](https://docs.aws.amazon.com/batch/latest/APIReference/API_FairsharePolicy.html). The `share_distribution` block is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareDistributions(List<SchedulingPolicyFairSharePolicyShareDistributionGetArgs> shareDistributions) {
             return shareDistributions(Output.of(shareDistributions));
         }
 
+        /**
+         * @param shareDistributions One or more share distribution blocks which define the weights for the fair share identifiers for the fair share policy. For more information, see [FairsharePolicy](https://docs.aws.amazon.com/batch/latest/APIReference/API_FairsharePolicy.html). The `share_distribution` block is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareDistributions(SchedulingPolicyFairSharePolicyShareDistributionGetArgs... shareDistributions) {
             return shareDistributions(List.of(shareDistributions));
         }

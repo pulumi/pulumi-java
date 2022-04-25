@@ -24,6 +24,10 @@ public final class SourceControlSecurityTokenPropertiesArgs extends com.pulumi.r
     @Import(name="accessToken")
     private @Nullable Output<String> accessToken;
 
+    /**
+     * @return The access token.
+     * 
+     */
     public Optional<Output<String>> accessToken() {
         return Optional.ofNullable(this.accessToken);
     }
@@ -35,6 +39,10 @@ public final class SourceControlSecurityTokenPropertiesArgs extends com.pulumi.r
     @Import(name="refreshToken")
     private @Nullable Output<String> refreshToken;
 
+    /**
+     * @return The refresh token.
+     * 
+     */
     public Optional<Output<String>> refreshToken() {
         return Optional.ofNullable(this.refreshToken);
     }
@@ -46,6 +54,10 @@ public final class SourceControlSecurityTokenPropertiesArgs extends com.pulumi.r
     @Import(name="tokenType")
     private @Nullable Output<Either<String,TokenType>> tokenType;
 
+    /**
+     * @return The token type. Must be either PersonalAccessToken or Oauth.
+     * 
+     */
     public Optional<Output<Either<String,TokenType>>> tokenType() {
         return Optional.ofNullable(this.tokenType);
     }
@@ -76,37 +88,85 @@ public final class SourceControlSecurityTokenPropertiesArgs extends com.pulumi.r
             $ = new SourceControlSecurityTokenPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessToken The access token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessToken(@Nullable Output<String> accessToken) {
             $.accessToken = accessToken;
             return this;
         }
 
+        /**
+         * @param accessToken The access token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessToken(String accessToken) {
             return accessToken(Output.of(accessToken));
         }
 
+        /**
+         * @param refreshToken The refresh token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder refreshToken(@Nullable Output<String> refreshToken) {
             $.refreshToken = refreshToken;
             return this;
         }
 
+        /**
+         * @param refreshToken The refresh token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder refreshToken(String refreshToken) {
             return refreshToken(Output.of(refreshToken));
         }
 
+        /**
+         * @param tokenType The token type. Must be either PersonalAccessToken or Oauth.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tokenType(@Nullable Output<Either<String,TokenType>> tokenType) {
             $.tokenType = tokenType;
             return this;
         }
 
+        /**
+         * @param tokenType The token type. Must be either PersonalAccessToken or Oauth.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tokenType(Either<String,TokenType> tokenType) {
             return tokenType(Output.of(tokenType));
         }
 
+        /**
+         * @param tokenType The token type. Must be either PersonalAccessToken or Oauth.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tokenType(String tokenType) {
             return tokenType(Either.ofLeft(tokenType));
         }
 
+        /**
+         * @param tokenType The token type. Must be either PersonalAccessToken or Oauth.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tokenType(TokenType tokenType) {
             return tokenType(Either.ofRight(tokenType));
         }

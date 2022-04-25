@@ -23,6 +23,10 @@ public final class RequestMirrorPolicyResponse extends com.pulumi.resources.Invo
     @Import(name="backendService", required=true)
     private String backendService;
 
+    /**
+     * @return The full or partial URL to the BackendService resource being mirrored to.
+     * 
+     */
     public String backendService() {
         return this.backendService;
     }
@@ -51,6 +55,12 @@ public final class RequestMirrorPolicyResponse extends com.pulumi.resources.Invo
             $ = new RequestMirrorPolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backendService The full or partial URL to the BackendService resource being mirrored to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backendService(String backendService) {
             $.backendService = backendService;
             return this;

@@ -34,6 +34,10 @@ public final class SalesforceServiceCloudLinkedServiceResponse extends com.pulum
     @Import(name="annotations")
     private @Nullable List<Object> annotations;
 
+    /**
+     * @return List of tags that can be used for describing the linked service.
+     * 
+     */
     public Optional<List<Object>> annotations() {
         return Optional.ofNullable(this.annotations);
     }
@@ -45,6 +49,10 @@ public final class SalesforceServiceCloudLinkedServiceResponse extends com.pulum
     @Import(name="apiVersion")
     private @Nullable Object apiVersion;
 
+    /**
+     * @return The Salesforce API version used in ADF. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> apiVersion() {
         return Optional.ofNullable(this.apiVersion);
     }
@@ -56,6 +64,10 @@ public final class SalesforceServiceCloudLinkedServiceResponse extends com.pulum
     @Import(name="connectVia")
     private @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
+    /**
+     * @return The integration runtime reference.
+     * 
+     */
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
@@ -67,6 +79,10 @@ public final class SalesforceServiceCloudLinkedServiceResponse extends com.pulum
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Linked service description.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -78,6 +94,10 @@ public final class SalesforceServiceCloudLinkedServiceResponse extends com.pulum
     @Import(name="encryptedCredential")
     private @Nullable Object encryptedCredential;
 
+    /**
+     * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> encryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
@@ -89,6 +109,10 @@ public final class SalesforceServiceCloudLinkedServiceResponse extends com.pulum
     @Import(name="environmentUrl")
     private @Nullable Object environmentUrl;
 
+    /**
+     * @return The URL of Salesforce Service Cloud instance. Default is &#39;https://login.salesforce.com&#39;. To copy data from sandbox, specify &#39;https://test.salesforce.com&#39;. To copy data from custom domain, specify, for example, &#39;https://[domain].my.salesforce.com&#39;. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> environmentUrl() {
         return Optional.ofNullable(this.environmentUrl);
     }
@@ -100,6 +124,10 @@ public final class SalesforceServiceCloudLinkedServiceResponse extends com.pulum
     @Import(name="extendedProperties")
     private @Nullable Object extendedProperties;
 
+    /**
+     * @return Extended properties appended to the connection string. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> extendedProperties() {
         return Optional.ofNullable(this.extendedProperties);
     }
@@ -111,6 +139,10 @@ public final class SalesforceServiceCloudLinkedServiceResponse extends com.pulum
     @Import(name="parameters")
     private @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
+    /**
+     * @return Parameters for linked service.
+     * 
+     */
     public Optional<Map<String,ParameterSpecificationResponse>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -122,6 +154,10 @@ public final class SalesforceServiceCloudLinkedServiceResponse extends com.pulum
     @Import(name="password")
     private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
+    /**
+     * @return The password for Basic authentication of the Salesforce instance.
+     * 
+     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> password() {
         return Optional.ofNullable(this.password);
     }
@@ -133,6 +169,10 @@ public final class SalesforceServiceCloudLinkedServiceResponse extends com.pulum
     @Import(name="securityToken")
     private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> securityToken;
 
+    /**
+     * @return The security token is optional to remotely access Salesforce instance.
+     * 
+     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> securityToken() {
         return Optional.ofNullable(this.securityToken);
     }
@@ -145,6 +185,11 @@ public final class SalesforceServiceCloudLinkedServiceResponse extends com.pulum
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of linked service.
+     * Expected value is &#39;SalesforceServiceCloud&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -156,6 +201,10 @@ public final class SalesforceServiceCloudLinkedServiceResponse extends com.pulum
     @Import(name="username")
     private @Nullable Object username;
 
+    /**
+     * @return The username for Basic authentication of the Salesforce instance. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> username() {
         return Optional.ofNullable(this.username);
     }
@@ -195,81 +244,184 @@ public final class SalesforceServiceCloudLinkedServiceResponse extends com.pulum
             $ = new SalesforceServiceCloudLinkedServiceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(@Nullable List<Object> annotations) {
             $.annotations = annotations;
             return this;
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
 
+        /**
+         * @param apiVersion The Salesforce API version used in ADF. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiVersion(@Nullable Object apiVersion) {
             $.apiVersion = apiVersion;
             return this;
         }
 
+        /**
+         * @param connectVia The integration runtime reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
             $.connectVia = connectVia;
             return this;
         }
 
+        /**
+         * @param description Linked service description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param encryptedCredential The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             $.encryptedCredential = encryptedCredential;
             return this;
         }
 
+        /**
+         * @param environmentUrl The URL of Salesforce Service Cloud instance. Default is &#39;https://login.salesforce.com&#39;. To copy data from sandbox, specify &#39;https://test.salesforce.com&#39;. To copy data from custom domain, specify, for example, &#39;https://[domain].my.salesforce.com&#39;. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentUrl(@Nullable Object environmentUrl) {
             $.environmentUrl = environmentUrl;
             return this;
         }
 
+        /**
+         * @param extendedProperties Extended properties appended to the connection string. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder extendedProperties(@Nullable Object extendedProperties) {
             $.extendedProperties = extendedProperties;
             return this;
         }
 
+        /**
+         * @param parameters Parameters for linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param password The password for Basic authentication of the Salesforce instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param password The password for Basic authentication of the Salesforce instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(AzureKeyVaultSecretReferenceResponse password) {
             return password(Either.ofLeft(password));
         }
 
+        /**
+         * @param password The password for Basic authentication of the Salesforce instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(SecureStringResponse password) {
             return password(Either.ofRight(password));
         }
 
+        /**
+         * @param securityToken The security token is optional to remotely access Salesforce instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityToken(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> securityToken) {
             $.securityToken = securityToken;
             return this;
         }
 
+        /**
+         * @param securityToken The security token is optional to remotely access Salesforce instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityToken(AzureKeyVaultSecretReferenceResponse securityToken) {
             return securityToken(Either.ofLeft(securityToken));
         }
 
+        /**
+         * @param securityToken The security token is optional to remotely access Salesforce instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityToken(SecureStringResponse securityToken) {
             return securityToken(Either.ofRight(securityToken));
         }
 
+        /**
+         * @param type Type of linked service.
+         * Expected value is &#39;SalesforceServiceCloud&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param username The username for Basic authentication of the Salesforce instance. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(@Nullable Object username) {
             $.username = username;
             return this;

@@ -25,6 +25,10 @@ public final class MapsAccountPropertiesResponse extends com.pulumi.resources.In
     @Import(name="xMsClientId")
     private @Nullable String xMsClientId;
 
+    /**
+     * @return A unique identifier for the maps account
+     * 
+     */
     public Optional<String> xMsClientId() {
         return Optional.ofNullable(this.xMsClientId);
     }
@@ -53,6 +57,12 @@ public final class MapsAccountPropertiesResponse extends com.pulumi.resources.In
             $ = new MapsAccountPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param xMsClientId A unique identifier for the maps account
+         * 
+         * @return builder
+         * 
+         */
         public Builder xMsClientId(@Nullable String xMsClientId) {
             $.xMsClientId = xMsClientId;
             return this;

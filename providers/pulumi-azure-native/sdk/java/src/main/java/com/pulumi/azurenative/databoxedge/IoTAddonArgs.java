@@ -24,6 +24,10 @@ public final class IoTAddonArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="addonName")
     private @Nullable Output<String> addonName;
 
+    /**
+     * @return The addon name.
+     * 
+     */
     public Optional<Output<String>> addonName() {
         return Optional.ofNullable(this.addonName);
     }
@@ -35,6 +39,10 @@ public final class IoTAddonArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deviceName", required=true)
     private Output<String> deviceName;
 
+    /**
+     * @return The device name.
+     * 
+     */
     public Output<String> deviceName() {
         return this.deviceName;
     }
@@ -46,6 +54,10 @@ public final class IoTAddonArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ioTDeviceDetails", required=true)
     private Output<IoTDeviceInfoArgs> ioTDeviceDetails;
 
+    /**
+     * @return IoT device metadata to which appliance needs to be connected.
+     * 
+     */
     public Output<IoTDeviceInfoArgs> ioTDeviceDetails() {
         return this.ioTDeviceDetails;
     }
@@ -57,6 +69,10 @@ public final class IoTAddonArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ioTEdgeDeviceDetails", required=true)
     private Output<IoTDeviceInfoArgs> ioTEdgeDeviceDetails;
 
+    /**
+     * @return IoT edge device to which the IoT Addon needs to be configured.
+     * 
+     */
     public Output<IoTDeviceInfoArgs> ioTEdgeDeviceDetails() {
         return this.ioTEdgeDeviceDetails;
     }
@@ -69,6 +85,11 @@ public final class IoTAddonArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kind", required=true)
     private Output<String> kind;
 
+    /**
+     * @return Addon type.
+     * Expected value is &#39;IotEdge&#39;.
+     * 
+     */
     public Output<String> kind() {
         return this.kind;
     }
@@ -80,6 +101,10 @@ public final class IoTAddonArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -91,6 +116,10 @@ public final class IoTAddonArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="roleName", required=true)
     private Output<String> roleName;
 
+    /**
+     * @return The role name.
+     * 
+     */
     public Output<String> roleName() {
         return this.roleName;
     }
@@ -125,65 +154,151 @@ public final class IoTAddonArgs extends com.pulumi.resources.ResourceArgs {
             $ = new IoTAddonArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param addonName The addon name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addonName(@Nullable Output<String> addonName) {
             $.addonName = addonName;
             return this;
         }
 
+        /**
+         * @param addonName The addon name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addonName(String addonName) {
             return addonName(Output.of(addonName));
         }
 
+        /**
+         * @param deviceName The device name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(Output<String> deviceName) {
             $.deviceName = deviceName;
             return this;
         }
 
+        /**
+         * @param deviceName The device name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(String deviceName) {
             return deviceName(Output.of(deviceName));
         }
 
+        /**
+         * @param ioTDeviceDetails IoT device metadata to which appliance needs to be connected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ioTDeviceDetails(Output<IoTDeviceInfoArgs> ioTDeviceDetails) {
             $.ioTDeviceDetails = ioTDeviceDetails;
             return this;
         }
 
+        /**
+         * @param ioTDeviceDetails IoT device metadata to which appliance needs to be connected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ioTDeviceDetails(IoTDeviceInfoArgs ioTDeviceDetails) {
             return ioTDeviceDetails(Output.of(ioTDeviceDetails));
         }
 
+        /**
+         * @param ioTEdgeDeviceDetails IoT edge device to which the IoT Addon needs to be configured.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ioTEdgeDeviceDetails(Output<IoTDeviceInfoArgs> ioTEdgeDeviceDetails) {
             $.ioTEdgeDeviceDetails = ioTEdgeDeviceDetails;
             return this;
         }
 
+        /**
+         * @param ioTEdgeDeviceDetails IoT edge device to which the IoT Addon needs to be configured.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ioTEdgeDeviceDetails(IoTDeviceInfoArgs ioTEdgeDeviceDetails) {
             return ioTEdgeDeviceDetails(Output.of(ioTEdgeDeviceDetails));
         }
 
+        /**
+         * @param kind Addon type.
+         * Expected value is &#39;IotEdge&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Addon type.
+         * Expected value is &#39;IotEdge&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param roleName The role name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleName(Output<String> roleName) {
             $.roleName = roleName;
             return this;
         }
 
+        /**
+         * @param roleName The role name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleName(String roleName) {
             return roleName(Output.of(roleName));
         }

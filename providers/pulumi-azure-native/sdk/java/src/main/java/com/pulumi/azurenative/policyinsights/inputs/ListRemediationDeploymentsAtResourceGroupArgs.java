@@ -22,6 +22,10 @@ public final class ListRemediationDeploymentsAtResourceGroupArgs extends com.pul
     @Import(name="remediationName", required=true)
     private String remediationName;
 
+    /**
+     * @return The name of the remediation.
+     * 
+     */
     public String remediationName() {
         return this.remediationName;
     }
@@ -33,6 +37,10 @@ public final class ListRemediationDeploymentsAtResourceGroupArgs extends com.pul
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Resource group name.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -44,6 +52,10 @@ public final class ListRemediationDeploymentsAtResourceGroupArgs extends com.pul
     @Import(name="top")
     private @Nullable Integer top;
 
+    /**
+     * @return Maximum number of records to return.
+     * 
+     */
     public Optional<Integer> top() {
         return Optional.ofNullable(this.top);
     }
@@ -74,16 +86,34 @@ public final class ListRemediationDeploymentsAtResourceGroupArgs extends com.pul
             $ = new ListRemediationDeploymentsAtResourceGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param remediationName The name of the remediation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder remediationName(String remediationName) {
             $.remediationName = remediationName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param top Maximum number of records to return.
+         * 
+         * @return builder
+         * 
+         */
         public Builder top(@Nullable Integer top) {
             $.top = top;
             return this;

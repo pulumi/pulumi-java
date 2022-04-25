@@ -28,6 +28,10 @@ public final class AzureFirewallNatRCActionArgs extends com.pulumi.resources.Res
     @Import(name="type")
     private @Nullable Output<Either<String,AzureFirewallNatRCActionType>> type;
 
+    /**
+     * @return The type of action.
+     * 
+     */
     public Optional<Output<Either<String,AzureFirewallNatRCActionType>>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -56,19 +60,43 @@ public final class AzureFirewallNatRCActionArgs extends com.pulumi.resources.Res
             $ = new AzureFirewallNatRCActionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type The type of action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<Either<String,AzureFirewallNatRCActionType>> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Either<String,AzureFirewallNatRCActionType> type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param type The type of action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Either.ofLeft(type));
         }
 
+        /**
+         * @param type The type of action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(AzureFirewallNatRCActionType type) {
             return type(Either.ofRight(type));
         }

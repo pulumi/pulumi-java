@@ -13,57 +13,57 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetGalleryApplicationResult {
     /**
-     * The description of this gallery Application Definition resource. This property is updatable.
+     * @return The description of this gallery Application Definition resource. This property is updatable.
      * 
      */
     private final @Nullable String description;
     /**
-     * The end of life date of the gallery Application Definition. This property can be used for decommissioning purposes. This property is updatable.
+     * @return The end of life date of the gallery Application Definition. This property can be used for decommissioning purposes. This property is updatable.
      * 
      */
     private final @Nullable String endOfLifeDate;
     /**
-     * The Eula agreement for the gallery Application Definition.
+     * @return The Eula agreement for the gallery Application Definition.
      * 
      */
     private final @Nullable String eula;
     /**
-     * Resource Id
+     * @return Resource Id
      * 
      */
     private final String id;
     /**
-     * Resource location
+     * @return Resource location
      * 
      */
     private final String location;
     /**
-     * Resource name
+     * @return Resource name
      * 
      */
     private final String name;
     /**
-     * The privacy statement uri.
+     * @return The privacy statement uri.
      * 
      */
     private final @Nullable String privacyStatementUri;
     /**
-     * The release note uri.
+     * @return The release note uri.
      * 
      */
     private final @Nullable String releaseNoteUri;
     /**
-     * This property allows you to specify the supported type of the OS that application is built for. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **Windows** &lt;br&gt;&lt;br&gt; **Linux**
+     * @return This property allows you to specify the supported type of the OS that application is built for. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **Windows** &lt;br&gt;&lt;br&gt; **Linux**
      * 
      */
     private final String supportedOSType;
     /**
-     * Resource tags
+     * @return Resource tags
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Resource type
+     * @return Resource type
      * 
      */
     private final String type;
@@ -95,79 +95,79 @@ public final class GetGalleryApplicationResult {
     }
 
     /**
-     * The description of this gallery Application Definition resource. This property is updatable.
+     * @return The description of this gallery Application Definition resource. This property is updatable.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The end of life date of the gallery Application Definition. This property can be used for decommissioning purposes. This property is updatable.
+     * @return The end of life date of the gallery Application Definition. This property can be used for decommissioning purposes. This property is updatable.
      * 
-    */
+     */
     public Optional<String> endOfLifeDate() {
         return Optional.ofNullable(this.endOfLifeDate);
     }
     /**
-     * The Eula agreement for the gallery Application Definition.
+     * @return The Eula agreement for the gallery Application Definition.
      * 
-    */
+     */
     public Optional<String> eula() {
         return Optional.ofNullable(this.eula);
     }
     /**
-     * Resource Id
+     * @return Resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource location
+     * @return Resource location
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Resource name
+     * @return Resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The privacy statement uri.
+     * @return The privacy statement uri.
      * 
-    */
+     */
     public Optional<String> privacyStatementUri() {
         return Optional.ofNullable(this.privacyStatementUri);
     }
     /**
-     * The release note uri.
+     * @return The release note uri.
      * 
-    */
+     */
     public Optional<String> releaseNoteUri() {
         return Optional.ofNullable(this.releaseNoteUri);
     }
     /**
-     * This property allows you to specify the supported type of the OS that application is built for. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **Windows** &lt;br&gt;&lt;br&gt; **Linux**
+     * @return This property allows you to specify the supported type of the OS that application is built for. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **Windows** &lt;br&gt;&lt;br&gt; **Linux**
      * 
-    */
+     */
     public String supportedOSType() {
         return this.supportedOSType;
     }
     /**
-     * Resource tags
+     * @return Resource tags
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type
+     * @return Resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

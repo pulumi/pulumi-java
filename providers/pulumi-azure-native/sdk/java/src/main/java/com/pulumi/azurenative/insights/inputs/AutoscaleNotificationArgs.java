@@ -29,6 +29,10 @@ public final class AutoscaleNotificationArgs extends com.pulumi.resources.Resour
     @Import(name="email")
     private @Nullable Output<EmailNotificationArgs> email;
 
+    /**
+     * @return the email notification.
+     * 
+     */
     public Optional<Output<EmailNotificationArgs>> email() {
         return Optional.ofNullable(this.email);
     }
@@ -40,6 +44,10 @@ public final class AutoscaleNotificationArgs extends com.pulumi.resources.Resour
     @Import(name="operation", required=true)
     private Output<OperationType> operation;
 
+    /**
+     * @return the operation associated with the notification and its value must be &#34;scale&#34;
+     * 
+     */
     public Output<OperationType> operation() {
         return this.operation;
     }
@@ -51,6 +59,10 @@ public final class AutoscaleNotificationArgs extends com.pulumi.resources.Resour
     @Import(name="webhooks")
     private @Nullable Output<List<WebhookNotificationArgs>> webhooks;
 
+    /**
+     * @return the collection of webhook notifications.
+     * 
+     */
     public Optional<Output<List<WebhookNotificationArgs>>> webhooks() {
         return Optional.ofNullable(this.webhooks);
     }
@@ -81,33 +93,75 @@ public final class AutoscaleNotificationArgs extends com.pulumi.resources.Resour
             $ = new AutoscaleNotificationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param email the email notification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder email(@Nullable Output<EmailNotificationArgs> email) {
             $.email = email;
             return this;
         }
 
+        /**
+         * @param email the email notification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder email(EmailNotificationArgs email) {
             return email(Output.of(email));
         }
 
+        /**
+         * @param operation the operation associated with the notification and its value must be &#34;scale&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder operation(Output<OperationType> operation) {
             $.operation = operation;
             return this;
         }
 
+        /**
+         * @param operation the operation associated with the notification and its value must be &#34;scale&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder operation(OperationType operation) {
             return operation(Output.of(operation));
         }
 
+        /**
+         * @param webhooks the collection of webhook notifications.
+         * 
+         * @return builder
+         * 
+         */
         public Builder webhooks(@Nullable Output<List<WebhookNotificationArgs>> webhooks) {
             $.webhooks = webhooks;
             return this;
         }
 
+        /**
+         * @param webhooks the collection of webhook notifications.
+         * 
+         * @return builder
+         * 
+         */
         public Builder webhooks(List<WebhookNotificationArgs> webhooks) {
             return webhooks(Output.of(webhooks));
         }
 
+        /**
+         * @param webhooks the collection of webhook notifications.
+         * 
+         * @return builder
+         * 
+         */
         public Builder webhooks(WebhookNotificationArgs... webhooks) {
             return webhooks(List.of(webhooks));
         }

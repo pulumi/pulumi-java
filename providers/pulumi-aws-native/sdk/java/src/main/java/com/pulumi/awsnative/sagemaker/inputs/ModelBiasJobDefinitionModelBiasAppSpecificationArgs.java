@@ -27,6 +27,10 @@ public final class ModelBiasJobDefinitionModelBiasAppSpecificationArgs extends c
     @Import(name="configUri", required=true)
     private Output<String> configUri;
 
+    /**
+     * @return The S3 URI to an analysis configuration file
+     * 
+     */
     public Output<String> configUri() {
         return this.configUri;
     }
@@ -38,6 +42,10 @@ public final class ModelBiasJobDefinitionModelBiasAppSpecificationArgs extends c
     @Import(name="environment")
     private @Nullable Output<Object> environment;
 
+    /**
+     * @return Sets the environment variables in the Docker container
+     * 
+     */
     public Optional<Output<Object>> environment() {
         return Optional.ofNullable(this.environment);
     }
@@ -49,6 +57,10 @@ public final class ModelBiasJobDefinitionModelBiasAppSpecificationArgs extends c
     @Import(name="imageUri", required=true)
     private Output<String> imageUri;
 
+    /**
+     * @return The container image to be run by the monitoring job.
+     * 
+     */
     public Output<String> imageUri() {
         return this.imageUri;
     }
@@ -79,29 +91,65 @@ public final class ModelBiasJobDefinitionModelBiasAppSpecificationArgs extends c
             $ = new ModelBiasJobDefinitionModelBiasAppSpecificationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param configUri The S3 URI to an analysis configuration file
+         * 
+         * @return builder
+         * 
+         */
         public Builder configUri(Output<String> configUri) {
             $.configUri = configUri;
             return this;
         }
 
+        /**
+         * @param configUri The S3 URI to an analysis configuration file
+         * 
+         * @return builder
+         * 
+         */
         public Builder configUri(String configUri) {
             return configUri(Output.of(configUri));
         }
 
+        /**
+         * @param environment Sets the environment variables in the Docker container
+         * 
+         * @return builder
+         * 
+         */
         public Builder environment(@Nullable Output<Object> environment) {
             $.environment = environment;
             return this;
         }
 
+        /**
+         * @param environment Sets the environment variables in the Docker container
+         * 
+         * @return builder
+         * 
+         */
         public Builder environment(Object environment) {
             return environment(Output.of(environment));
         }
 
+        /**
+         * @param imageUri The container image to be run by the monitoring job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageUri(Output<String> imageUri) {
             $.imageUri = imageUri;
             return this;
         }
 
+        /**
+         * @param imageUri The container image to be run by the monitoring job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageUri(String imageUri) {
             return imageUri(Output.of(imageUri));
         }

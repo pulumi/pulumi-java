@@ -22,6 +22,10 @@ public final class BasicAuthenticationResponse extends com.pulumi.resources.Invo
     @Import(name="password")
     private @Nullable String password;
 
+    /**
+     * @return Gets or sets the password, return value will always be empty.
+     * 
+     */
     public Optional<String> password() {
         return Optional.ofNullable(this.password);
     }
@@ -34,6 +38,11 @@ public final class BasicAuthenticationResponse extends com.pulumi.resources.Invo
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Gets or sets the HTTP authentication type.
+     * Expected value is &#39;Basic&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -45,6 +54,10 @@ public final class BasicAuthenticationResponse extends com.pulumi.resources.Invo
     @Import(name="username")
     private @Nullable String username;
 
+    /**
+     * @return Gets or sets the username.
+     * 
+     */
     public Optional<String> username() {
         return Optional.ofNullable(this.username);
     }
@@ -75,16 +88,35 @@ public final class BasicAuthenticationResponse extends com.pulumi.resources.Invo
             $ = new BasicAuthenticationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param password Gets or sets the password, return value will always be empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(@Nullable String password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param type Gets or sets the HTTP authentication type.
+         * Expected value is &#39;Basic&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param username Gets or sets the username.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(@Nullable String username) {
             $.username = username;
             return this;

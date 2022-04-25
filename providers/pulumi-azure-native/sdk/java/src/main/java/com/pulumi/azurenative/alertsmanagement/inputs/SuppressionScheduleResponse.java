@@ -27,6 +27,10 @@ public final class SuppressionScheduleResponse extends com.pulumi.resources.Invo
     @Import(name="endDate")
     private @Nullable String endDate;
 
+    /**
+     * @return End date for suppression
+     * 
+     */
     public Optional<String> endDate() {
         return Optional.ofNullable(this.endDate);
     }
@@ -38,6 +42,10 @@ public final class SuppressionScheduleResponse extends com.pulumi.resources.Invo
     @Import(name="endTime")
     private @Nullable String endTime;
 
+    /**
+     * @return End date for suppression
+     * 
+     */
     public Optional<String> endTime() {
         return Optional.ofNullable(this.endTime);
     }
@@ -49,6 +57,10 @@ public final class SuppressionScheduleResponse extends com.pulumi.resources.Invo
     @Import(name="recurrenceValues")
     private @Nullable List<Integer> recurrenceValues;
 
+    /**
+     * @return Specifies the values for recurrence pattern
+     * 
+     */
     public Optional<List<Integer>> recurrenceValues() {
         return Optional.ofNullable(this.recurrenceValues);
     }
@@ -60,6 +72,10 @@ public final class SuppressionScheduleResponse extends com.pulumi.resources.Invo
     @Import(name="startDate")
     private @Nullable String startDate;
 
+    /**
+     * @return Start date for suppression
+     * 
+     */
     public Optional<String> startDate() {
         return Optional.ofNullable(this.startDate);
     }
@@ -71,6 +87,10 @@ public final class SuppressionScheduleResponse extends com.pulumi.resources.Invo
     @Import(name="startTime")
     private @Nullable String startTime;
 
+    /**
+     * @return Start time for suppression
+     * 
+     */
     public Optional<String> startTime() {
         return Optional.ofNullable(this.startTime);
     }
@@ -103,30 +123,66 @@ public final class SuppressionScheduleResponse extends com.pulumi.resources.Invo
             $ = new SuppressionScheduleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endDate End date for suppression
+         * 
+         * @return builder
+         * 
+         */
         public Builder endDate(@Nullable String endDate) {
             $.endDate = endDate;
             return this;
         }
 
+        /**
+         * @param endTime End date for suppression
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTime(@Nullable String endTime) {
             $.endTime = endTime;
             return this;
         }
 
+        /**
+         * @param recurrenceValues Specifies the values for recurrence pattern
+         * 
+         * @return builder
+         * 
+         */
         public Builder recurrenceValues(@Nullable List<Integer> recurrenceValues) {
             $.recurrenceValues = recurrenceValues;
             return this;
         }
 
+        /**
+         * @param recurrenceValues Specifies the values for recurrence pattern
+         * 
+         * @return builder
+         * 
+         */
         public Builder recurrenceValues(Integer... recurrenceValues) {
             return recurrenceValues(List.of(recurrenceValues));
         }
 
+        /**
+         * @param startDate Start date for suppression
+         * 
+         * @return builder
+         * 
+         */
         public Builder startDate(@Nullable String startDate) {
             $.startDate = startDate;
             return this;
         }
 
+        /**
+         * @param startTime Start time for suppression
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(@Nullable String startTime) {
             $.startTime = startTime;
             return this;

@@ -26,6 +26,10 @@ public final class ProtocolSettingsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="smb")
     private @Nullable Output<SmbSettingArgs> smb;
 
+    /**
+     * @return Setting for SMB protocol
+     * 
+     */
     public Optional<Output<SmbSettingArgs>> smb() {
         return Optional.ofNullable(this.smb);
     }
@@ -54,11 +58,23 @@ public final class ProtocolSettingsArgs extends com.pulumi.resources.ResourceArg
             $ = new ProtocolSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param smb Setting for SMB protocol
+         * 
+         * @return builder
+         * 
+         */
         public Builder smb(@Nullable Output<SmbSettingArgs> smb) {
             $.smb = smb;
             return this;
         }
 
+        /**
+         * @param smb Setting for SMB protocol
+         * 
+         * @return builder
+         * 
+         */
         public Builder smb(SmbSettingArgs smb) {
             return smb(Output.of(smb));
         }

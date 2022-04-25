@@ -22,6 +22,10 @@ public final class OuContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accountName")
     private @Nullable Output<String> accountName;
 
+    /**
+     * @return The account name
+     * 
+     */
     public Optional<Output<String>> accountName() {
         return Optional.ofNullable(this.accountName);
     }
@@ -33,6 +37,10 @@ public final class OuContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="domainServiceName", required=true)
     private Output<String> domainServiceName;
 
+    /**
+     * @return The name of the domain service.
+     * 
+     */
     public Output<String> domainServiceName() {
         return this.domainServiceName;
     }
@@ -44,6 +52,10 @@ public final class OuContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ouContainerName")
     private @Nullable Output<String> ouContainerName;
 
+    /**
+     * @return The name of the OuContainer.
+     * 
+     */
     public Optional<Output<String>> ouContainerName() {
         return Optional.ofNullable(this.ouContainerName);
     }
@@ -55,6 +67,10 @@ public final class OuContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="password")
     private @Nullable Output<String> password;
 
+    /**
+     * @return The account password
+     * 
+     */
     public Optional<Output<String>> password() {
         return Optional.ofNullable(this.password);
     }
@@ -66,6 +82,10 @@ public final class OuContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -77,6 +97,10 @@ public final class OuContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="spn")
     private @Nullable Output<String> spn;
 
+    /**
+     * @return The account spn
+     * 
+     */
     public Optional<Output<String>> spn() {
         return Optional.ofNullable(this.spn);
     }
@@ -110,56 +134,128 @@ public final class OuContainerArgs extends com.pulumi.resources.ResourceArgs {
             $ = new OuContainerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The account name
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(@Nullable Output<String> accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param accountName The account name
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             return accountName(Output.of(accountName));
         }
 
+        /**
+         * @param domainServiceName The name of the domain service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainServiceName(Output<String> domainServiceName) {
             $.domainServiceName = domainServiceName;
             return this;
         }
 
+        /**
+         * @param domainServiceName The name of the domain service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainServiceName(String domainServiceName) {
             return domainServiceName(Output.of(domainServiceName));
         }
 
+        /**
+         * @param ouContainerName The name of the OuContainer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ouContainerName(@Nullable Output<String> ouContainerName) {
             $.ouContainerName = ouContainerName;
             return this;
         }
 
+        /**
+         * @param ouContainerName The name of the OuContainer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ouContainerName(String ouContainerName) {
             return ouContainerName(Output.of(ouContainerName));
         }
 
+        /**
+         * @param password The account password
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(@Nullable Output<String> password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param password The account password
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(String password) {
             return password(Output.of(password));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param spn The account spn
+         * 
+         * @return builder
+         * 
+         */
         public Builder spn(@Nullable Output<String> spn) {
             $.spn = spn;
             return this;
         }
 
+        /**
+         * @param spn The account spn
+         * 
+         * @return builder
+         * 
+         */
         public Builder spn(String spn) {
             return spn(Output.of(spn));
         }

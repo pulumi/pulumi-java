@@ -27,6 +27,10 @@ public final class IntegrationAccountPartnerArgs extends com.pulumi.resources.Re
     @Import(name="content", required=true)
     private Output<PartnerContentArgs> content;
 
+    /**
+     * @return The partner content.
+     * 
+     */
     public Output<PartnerContentArgs> content() {
         return this.content;
     }
@@ -38,6 +42,10 @@ public final class IntegrationAccountPartnerArgs extends com.pulumi.resources.Re
     @Import(name="integrationAccountName", required=true)
     private Output<String> integrationAccountName;
 
+    /**
+     * @return The integration account name.
+     * 
+     */
     public Output<String> integrationAccountName() {
         return this.integrationAccountName;
     }
@@ -49,6 +57,10 @@ public final class IntegrationAccountPartnerArgs extends com.pulumi.resources.Re
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The resource location.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -60,6 +72,10 @@ public final class IntegrationAccountPartnerArgs extends com.pulumi.resources.Re
     @Import(name="metadata")
     private @Nullable Output<Object> metadata;
 
+    /**
+     * @return The metadata.
+     * 
+     */
     public Optional<Output<Object>> metadata() {
         return Optional.ofNullable(this.metadata);
     }
@@ -71,6 +87,10 @@ public final class IntegrationAccountPartnerArgs extends com.pulumi.resources.Re
     @Import(name="partnerName")
     private @Nullable Output<String> partnerName;
 
+    /**
+     * @return The integration account partner name.
+     * 
+     */
     public Optional<Output<String>> partnerName() {
         return Optional.ofNullable(this.partnerName);
     }
@@ -82,6 +102,10 @@ public final class IntegrationAccountPartnerArgs extends com.pulumi.resources.Re
     @Import(name="partnerType", required=true)
     private Output<Either<String,PartnerType>> partnerType;
 
+    /**
+     * @return The partner type.
+     * 
+     */
     public Output<Either<String,PartnerType>> partnerType() {
         return this.partnerType;
     }
@@ -93,6 +117,10 @@ public final class IntegrationAccountPartnerArgs extends com.pulumi.resources.Re
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -104,6 +132,10 @@ public final class IntegrationAccountPartnerArgs extends com.pulumi.resources.Re
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return The resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -139,82 +171,190 @@ public final class IntegrationAccountPartnerArgs extends com.pulumi.resources.Re
             $ = new IntegrationAccountPartnerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param content The partner content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(Output<PartnerContentArgs> content) {
             $.content = content;
             return this;
         }
 
+        /**
+         * @param content The partner content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(PartnerContentArgs content) {
             return content(Output.of(content));
         }
 
+        /**
+         * @param integrationAccountName The integration account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder integrationAccountName(Output<String> integrationAccountName) {
             $.integrationAccountName = integrationAccountName;
             return this;
         }
 
+        /**
+         * @param integrationAccountName The integration account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder integrationAccountName(String integrationAccountName) {
             return integrationAccountName(Output.of(integrationAccountName));
         }
 
+        /**
+         * @param location The resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param metadata The metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(@Nullable Output<Object> metadata) {
             $.metadata = metadata;
             return this;
         }
 
+        /**
+         * @param metadata The metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(Object metadata) {
             return metadata(Output.of(metadata));
         }
 
+        /**
+         * @param partnerName The integration account partner name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partnerName(@Nullable Output<String> partnerName) {
             $.partnerName = partnerName;
             return this;
         }
 
+        /**
+         * @param partnerName The integration account partner name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partnerName(String partnerName) {
             return partnerName(Output.of(partnerName));
         }
 
+        /**
+         * @param partnerType The partner type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partnerType(Output<Either<String,PartnerType>> partnerType) {
             $.partnerType = partnerType;
             return this;
         }
 
+        /**
+         * @param partnerType The partner type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partnerType(Either<String,PartnerType> partnerType) {
             return partnerType(Output.of(partnerType));
         }
 
+        /**
+         * @param partnerType The partner type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partnerType(String partnerType) {
             return partnerType(Either.ofLeft(partnerType));
         }
 
+        /**
+         * @param partnerType The partner type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partnerType(PartnerType partnerType) {
             return partnerType(Either.ofRight(partnerType));
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags The resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

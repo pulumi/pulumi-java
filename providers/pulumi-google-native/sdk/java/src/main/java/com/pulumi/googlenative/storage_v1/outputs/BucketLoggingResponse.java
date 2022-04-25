@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class BucketLoggingResponse {
     /**
-     * The destination bucket where the current bucket&#39;s logs should be placed.
+     * @return The destination bucket where the current bucket&#39;s logs should be placed.
      * 
      */
     private final String logBucket;
     /**
-     * A prefix for log object names.
+     * @return A prefix for log object names.
      * 
      */
     private final String logObjectPrefix;
@@ -29,16 +29,16 @@ public final class BucketLoggingResponse {
     }
 
     /**
-     * The destination bucket where the current bucket&#39;s logs should be placed.
+     * @return The destination bucket where the current bucket&#39;s logs should be placed.
      * 
-    */
+     */
     public String logBucket() {
         return this.logBucket;
     }
     /**
-     * A prefix for log object names.
+     * @return A prefix for log object names.
      * 
-    */
+     */
     public String logObjectPrefix() {
         return this.logObjectPrefix;
     }

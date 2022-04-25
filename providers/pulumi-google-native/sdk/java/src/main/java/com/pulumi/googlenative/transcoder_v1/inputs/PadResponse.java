@@ -23,6 +23,10 @@ public final class PadResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="bottomPixels", required=true)
     private Integer bottomPixels;
 
+    /**
+     * @return The number of pixels to add to the bottom. The default is 0.
+     * 
+     */
     public Integer bottomPixels() {
         return this.bottomPixels;
     }
@@ -34,6 +38,10 @@ public final class PadResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="leftPixels", required=true)
     private Integer leftPixels;
 
+    /**
+     * @return The number of pixels to add to the left. The default is 0.
+     * 
+     */
     public Integer leftPixels() {
         return this.leftPixels;
     }
@@ -45,6 +53,10 @@ public final class PadResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="rightPixels", required=true)
     private Integer rightPixels;
 
+    /**
+     * @return The number of pixels to add to the right. The default is 0.
+     * 
+     */
     public Integer rightPixels() {
         return this.rightPixels;
     }
@@ -56,6 +68,10 @@ public final class PadResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="topPixels", required=true)
     private Integer topPixels;
 
+    /**
+     * @return The number of pixels to add to the top. The default is 0.
+     * 
+     */
     public Integer topPixels() {
         return this.topPixels;
     }
@@ -87,21 +103,45 @@ public final class PadResponse extends com.pulumi.resources.InvokeArgs {
             $ = new PadResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bottomPixels The number of pixels to add to the bottom. The default is 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bottomPixels(Integer bottomPixels) {
             $.bottomPixels = bottomPixels;
             return this;
         }
 
+        /**
+         * @param leftPixels The number of pixels to add to the left. The default is 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder leftPixels(Integer leftPixels) {
             $.leftPixels = leftPixels;
             return this;
         }
 
+        /**
+         * @param rightPixels The number of pixels to add to the right. The default is 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rightPixels(Integer rightPixels) {
             $.rightPixels = rightPixels;
             return this;
         }
 
+        /**
+         * @param topPixels The number of pixels to add to the top. The default is 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topPixels(Integer topPixels) {
             $.topPixels = topPixels;
             return this;

@@ -27,6 +27,16 @@ public final class SloWindowsBasedSliMetricMeanInRangeGetArgs extends com.pulumi
     @Import(name="range", required=true)
     private Output<SloWindowsBasedSliMetricMeanInRangeRangeGetArgs> range;
 
+    /**
+     * @return Range of numerical values. The computed good_service
+     * will be the count of values x in the Distribution such
+     * that range.min &lt;= x &lt;= range.max. inclusive of min and
+     * max. Open ranges can be defined by setting
+     * just one of min or max. Summed value `X` should satisfy
+     * `range.min &lt;= X &lt;= range.max` for a good window.
+     * Structure is documented below.
+     * 
+     */
     public Output<SloWindowsBasedSliMetricMeanInRangeRangeGetArgs> range() {
         return this.range;
     }
@@ -44,6 +54,16 @@ public final class SloWindowsBasedSliMetricMeanInRangeGetArgs extends com.pulumi
     @Import(name="timeSeries", required=true)
     private Output<String> timeSeries;
 
+    /**
+     * @return A [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+     * specifying the TimeSeries to use for evaluating window
+     * quality. The provided TimeSeries must have
+     * ValueType = INT64 or ValueType = DOUBLE and
+     * MetricKind = GAUGE.
+     * Summed value `X` should satisfy
+     * `range.min &lt;= X &lt;= range.max` for a good window.
+     * 
+     */
     public Output<String> timeSeries() {
         return this.timeSeries;
     }
@@ -73,20 +93,68 @@ public final class SloWindowsBasedSliMetricMeanInRangeGetArgs extends com.pulumi
             $ = new SloWindowsBasedSliMetricMeanInRangeGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param range Range of numerical values. The computed good_service
+         * will be the count of values x in the Distribution such
+         * that range.min &lt;= x &lt;= range.max. inclusive of min and
+         * max. Open ranges can be defined by setting
+         * just one of min or max. Summed value `X` should satisfy
+         * `range.min &lt;= X &lt;= range.max` for a good window.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder range(Output<SloWindowsBasedSliMetricMeanInRangeRangeGetArgs> range) {
             $.range = range;
             return this;
         }
 
+        /**
+         * @param range Range of numerical values. The computed good_service
+         * will be the count of values x in the Distribution such
+         * that range.min &lt;= x &lt;= range.max. inclusive of min and
+         * max. Open ranges can be defined by setting
+         * just one of min or max. Summed value `X` should satisfy
+         * `range.min &lt;= X &lt;= range.max` for a good window.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder range(SloWindowsBasedSliMetricMeanInRangeRangeGetArgs range) {
             return range(Output.of(range));
         }
 
+        /**
+         * @param timeSeries A [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+         * specifying the TimeSeries to use for evaluating window
+         * quality. The provided TimeSeries must have
+         * ValueType = INT64 or ValueType = DOUBLE and
+         * MetricKind = GAUGE.
+         * Summed value `X` should satisfy
+         * `range.min &lt;= X &lt;= range.max` for a good window.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeSeries(Output<String> timeSeries) {
             $.timeSeries = timeSeries;
             return this;
         }
 
+        /**
+         * @param timeSeries A [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+         * specifying the TimeSeries to use for evaluating window
+         * quality. The provided TimeSeries must have
+         * ValueType = INT64 or ValueType = DOUBLE and
+         * MetricKind = GAUGE.
+         * Summed value `X` should satisfy
+         * `range.min &lt;= X &lt;= range.max` for a good window.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeSeries(String timeSeries) {
             return timeSeries(Output.of(timeSeries));
         }

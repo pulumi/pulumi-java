@@ -25,6 +25,11 @@ public final class TableTimePartitioningArgs extends com.pulumi.resources.Resour
     @Import(name="expirationMs")
     private @Nullable Output<Integer> expirationMs;
 
+    /**
+     * @return Number of milliseconds for which to keep the
+     * storage for a partition.
+     * 
+     */
     public Optional<Output<Integer>> expirationMs() {
         return Optional.ofNullable(this.expirationMs);
     }
@@ -37,6 +42,11 @@ public final class TableTimePartitioningArgs extends com.pulumi.resources.Resour
     @Import(name="field")
     private @Nullable Output<String> field;
 
+    /**
+     * @return The field used to determine how to create a range-based
+     * partition.
+     * 
+     */
     public Optional<Output<String>> field() {
         return Optional.ofNullable(this.field);
     }
@@ -50,6 +60,12 @@ public final class TableTimePartitioningArgs extends com.pulumi.resources.Resour
     @Import(name="requirePartitionFilter")
     private @Nullable Output<Boolean> requirePartitionFilter;
 
+    /**
+     * @return If set to true, queries over this table
+     * require a partition filter that can be used for partition elimination to be
+     * specified.
+     * 
+     */
     public Optional<Output<Boolean>> requirePartitionFilter() {
         return Optional.ofNullable(this.requirePartitionFilter);
     }
@@ -62,6 +78,11 @@ public final class TableTimePartitioningArgs extends com.pulumi.resources.Resour
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return The supported types are DAY, HOUR, MONTH, and YEAR,
+     * which will generate one partition per day, hour, month, and year, respectively.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -93,38 +114,96 @@ public final class TableTimePartitioningArgs extends com.pulumi.resources.Resour
             $ = new TableTimePartitioningArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expirationMs Number of milliseconds for which to keep the
+         * storage for a partition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expirationMs(@Nullable Output<Integer> expirationMs) {
             $.expirationMs = expirationMs;
             return this;
         }
 
+        /**
+         * @param expirationMs Number of milliseconds for which to keep the
+         * storage for a partition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expirationMs(Integer expirationMs) {
             return expirationMs(Output.of(expirationMs));
         }
 
+        /**
+         * @param field The field used to determine how to create a range-based
+         * partition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder field(@Nullable Output<String> field) {
             $.field = field;
             return this;
         }
 
+        /**
+         * @param field The field used to determine how to create a range-based
+         * partition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder field(String field) {
             return field(Output.of(field));
         }
 
+        /**
+         * @param requirePartitionFilter If set to true, queries over this table
+         * require a partition filter that can be used for partition elimination to be
+         * specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requirePartitionFilter(@Nullable Output<Boolean> requirePartitionFilter) {
             $.requirePartitionFilter = requirePartitionFilter;
             return this;
         }
 
+        /**
+         * @param requirePartitionFilter If set to true, queries over this table
+         * require a partition filter that can be used for partition elimination to be
+         * specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requirePartitionFilter(Boolean requirePartitionFilter) {
             return requirePartitionFilter(Output.of(requirePartitionFilter));
         }
 
+        /**
+         * @param type The supported types are DAY, HOUR, MONTH, and YEAR,
+         * which will generate one partition per day, hour, month, and year, respectively.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The supported types are DAY, HOUR, MONTH, and YEAR,
+         * which will generate one partition per day, hour, month, and year, respectively.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

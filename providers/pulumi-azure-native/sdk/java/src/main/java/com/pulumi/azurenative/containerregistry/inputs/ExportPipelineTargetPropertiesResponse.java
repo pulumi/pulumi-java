@@ -25,6 +25,10 @@ public final class ExportPipelineTargetPropertiesResponse extends com.pulumi.res
     @Import(name="keyVaultUri", required=true)
     private String keyVaultUri;
 
+    /**
+     * @return They key vault secret uri to obtain the target storage SAS token.
+     * 
+     */
     public String keyVaultUri() {
         return this.keyVaultUri;
     }
@@ -36,6 +40,10 @@ public final class ExportPipelineTargetPropertiesResponse extends com.pulumi.res
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return The type of target for the export pipeline.
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -49,6 +57,12 @@ public final class ExportPipelineTargetPropertiesResponse extends com.pulumi.res
     @Import(name="uri")
     private @Nullable String uri;
 
+    /**
+     * @return The target uri of the export pipeline.
+     * When &#39;AzureStorageBlob&#39;: &#34;https://accountName.blob.core.windows.net/containerName/blobName&#34;
+     * When &#39;AzureStorageBlobContainer&#39;:  &#34;https://accountName.blob.core.windows.net/containerName&#34;
+     * 
+     */
     public Optional<String> uri() {
         return Optional.ofNullable(this.uri);
     }
@@ -79,16 +93,36 @@ public final class ExportPipelineTargetPropertiesResponse extends com.pulumi.res
             $ = new ExportPipelineTargetPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyVaultUri They key vault secret uri to obtain the target storage SAS token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultUri(String keyVaultUri) {
             $.keyVaultUri = keyVaultUri;
             return this;
         }
 
+        /**
+         * @param type The type of target for the export pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param uri The target uri of the export pipeline.
+         * When &#39;AzureStorageBlob&#39;: &#34;https://accountName.blob.core.windows.net/containerName/blobName&#34;
+         * When &#39;AzureStorageBlobContainer&#39;:  &#34;https://accountName.blob.core.windows.net/containerName&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(@Nullable String uri) {
             $.uri = uri;
             return this;

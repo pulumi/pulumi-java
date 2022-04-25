@@ -27,6 +27,10 @@ public final class ConnectionProfileArgs extends com.pulumi.resources.ResourceAr
     @Import(name="cloudsql")
     private @Nullable Output<CloudSqlConnectionProfileArgs> cloudsql;
 
+    /**
+     * @return A CloudSQL database connection profile.
+     * 
+     */
     public Optional<Output<CloudSqlConnectionProfileArgs>> cloudsql() {
         return Optional.ofNullable(this.cloudsql);
     }
@@ -45,6 +49,10 @@ public final class ConnectionProfileArgs extends com.pulumi.resources.ResourceAr
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return The connection profile display name.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -56,6 +64,10 @@ public final class ConnectionProfileArgs extends com.pulumi.resources.ResourceAr
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return The resource labels for connection profile to use to annotate any related underlying resources such as Compute Engine VMs. An object containing a list of &#34;key&#34;: &#34;value&#34; pairs. Example: `{ &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }`.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -74,6 +86,10 @@ public final class ConnectionProfileArgs extends com.pulumi.resources.ResourceAr
     @Import(name="mysql")
     private @Nullable Output<MySqlConnectionProfileArgs> mysql;
 
+    /**
+     * @return A MySQL database connection profile.
+     * 
+     */
     public Optional<Output<MySqlConnectionProfileArgs>> mysql() {
         return Optional.ofNullable(this.mysql);
     }
@@ -85,6 +101,10 @@ public final class ConnectionProfileArgs extends com.pulumi.resources.ResourceAr
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of this connection profile resource in the form of projects/{project}/locations/{location}/connectionProfiles/{connectionProfile}.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -103,6 +123,10 @@ public final class ConnectionProfileArgs extends com.pulumi.resources.ResourceAr
     @Import(name="provider")
     private @Nullable Output<ConnectionProfileProvider> provider;
 
+    /**
+     * @return The database provider.
+     * 
+     */
     public Optional<Output<ConnectionProfileProvider>> provider() {
         return Optional.ofNullable(this.provider);
     }
@@ -121,6 +145,10 @@ public final class ConnectionProfileArgs extends com.pulumi.resources.ResourceAr
     @Import(name="state")
     private @Nullable Output<ConnectionProfileState> state;
 
+    /**
+     * @return The current connection profile state (e.g. DRAFT, READY, or FAILED).
+     * 
+     */
     public Optional<Output<ConnectionProfileState>> state() {
         return Optional.ofNullable(this.state);
     }
@@ -159,11 +187,23 @@ public final class ConnectionProfileArgs extends com.pulumi.resources.ResourceAr
             $ = new ConnectionProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cloudsql A CloudSQL database connection profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudsql(@Nullable Output<CloudSqlConnectionProfileArgs> cloudsql) {
             $.cloudsql = cloudsql;
             return this;
         }
 
+        /**
+         * @param cloudsql A CloudSQL database connection profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudsql(CloudSqlConnectionProfileArgs cloudsql) {
             return cloudsql(Output.of(cloudsql));
         }
@@ -177,20 +217,44 @@ public final class ConnectionProfileArgs extends com.pulumi.resources.ResourceAr
             return connectionProfileId(Output.of(connectionProfileId));
         }
 
+        /**
+         * @param displayName The connection profile display name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName The connection profile display name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param labels The resource labels for connection profile to use to annotate any related underlying resources such as Compute Engine VMs. An object containing a list of &#34;key&#34;: &#34;value&#34; pairs. Example: `{ &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels The resource labels for connection profile to use to annotate any related underlying resources such as Compute Engine VMs. An object containing a list of &#34;key&#34;: &#34;value&#34; pairs. Example: `{ &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
@@ -204,20 +268,44 @@ public final class ConnectionProfileArgs extends com.pulumi.resources.ResourceAr
             return location(Output.of(location));
         }
 
+        /**
+         * @param mysql A MySQL database connection profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mysql(@Nullable Output<MySqlConnectionProfileArgs> mysql) {
             $.mysql = mysql;
             return this;
         }
 
+        /**
+         * @param mysql A MySQL database connection profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mysql(MySqlConnectionProfileArgs mysql) {
             return mysql(Output.of(mysql));
         }
 
+        /**
+         * @param name The name of this connection profile resource in the form of projects/{project}/locations/{location}/connectionProfiles/{connectionProfile}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of this connection profile resource in the form of projects/{project}/locations/{location}/connectionProfiles/{connectionProfile}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -231,11 +319,23 @@ public final class ConnectionProfileArgs extends com.pulumi.resources.ResourceAr
             return project(Output.of(project));
         }
 
+        /**
+         * @param provider The database provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provider(@Nullable Output<ConnectionProfileProvider> provider) {
             $.provider = provider;
             return this;
         }
 
+        /**
+         * @param provider The database provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provider(ConnectionProfileProvider provider) {
             return provider(Output.of(provider));
         }
@@ -249,11 +349,23 @@ public final class ConnectionProfileArgs extends com.pulumi.resources.ResourceAr
             return requestId(Output.of(requestId));
         }
 
+        /**
+         * @param state The current connection profile state (e.g. DRAFT, READY, or FAILED).
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable Output<ConnectionProfileState> state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param state The current connection profile state (e.g. DRAFT, READY, or FAILED).
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(ConnectionProfileState state) {
             return state(Output.of(state));
         }

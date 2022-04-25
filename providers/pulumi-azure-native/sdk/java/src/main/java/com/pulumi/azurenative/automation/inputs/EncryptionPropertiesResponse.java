@@ -27,6 +27,10 @@ public final class EncryptionPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="identity")
     private @Nullable EncryptionPropertiesResponseIdentity identity;
 
+    /**
+     * @return User identity used for CMK.
+     * 
+     */
     public Optional<EncryptionPropertiesResponseIdentity> identity() {
         return Optional.ofNullable(this.identity);
     }
@@ -38,6 +42,10 @@ public final class EncryptionPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="keySource")
     private @Nullable String keySource;
 
+    /**
+     * @return Encryption Key Source
+     * 
+     */
     public Optional<String> keySource() {
         return Optional.ofNullable(this.keySource);
     }
@@ -49,6 +57,10 @@ public final class EncryptionPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="keyVaultProperties")
     private @Nullable KeyVaultPropertiesResponse keyVaultProperties;
 
+    /**
+     * @return Key vault properties.
+     * 
+     */
     public Optional<KeyVaultPropertiesResponse> keyVaultProperties() {
         return Optional.ofNullable(this.keyVaultProperties);
     }
@@ -79,16 +91,34 @@ public final class EncryptionPropertiesResponse extends com.pulumi.resources.Inv
             $ = new EncryptionPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param identity User identity used for CMK.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(@Nullable EncryptionPropertiesResponseIdentity identity) {
             $.identity = identity;
             return this;
         }
 
+        /**
+         * @param keySource Encryption Key Source
+         * 
+         * @return builder
+         * 
+         */
         public Builder keySource(@Nullable String keySource) {
             $.keySource = keySource;
             return this;
         }
 
+        /**
+         * @param keyVaultProperties Key vault properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultProperties(@Nullable KeyVaultPropertiesResponse keyVaultProperties) {
             $.keyVaultProperties = keyVaultProperties;
             return this;

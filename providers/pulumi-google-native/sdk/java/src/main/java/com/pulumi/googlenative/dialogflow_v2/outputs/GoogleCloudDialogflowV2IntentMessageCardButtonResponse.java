@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudDialogflowV2IntentMessageCardButtonResponse {
     /**
-     * Optional. The text to send back to the Dialogflow API or a URI to open.
+     * @return Optional. The text to send back to the Dialogflow API or a URI to open.
      * 
      */
     private final String postback;
     /**
-     * Optional. The text to show on the button.
+     * @return Optional. The text to show on the button.
      * 
      */
     private final String text;
@@ -29,16 +29,16 @@ public final class GoogleCloudDialogflowV2IntentMessageCardButtonResponse {
     }
 
     /**
-     * Optional. The text to send back to the Dialogflow API or a URI to open.
+     * @return Optional. The text to send back to the Dialogflow API or a URI to open.
      * 
-    */
+     */
     public String postback() {
         return this.postback;
     }
     /**
-     * Optional. The text to show on the button.
+     * @return Optional. The text to show on the button.
      * 
-    */
+     */
     public String text() {
         return this.text;
     }

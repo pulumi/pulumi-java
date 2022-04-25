@@ -29,6 +29,10 @@ public final class RemotePrivateEndpointArgs extends com.pulumi.resources.Resour
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Remote endpoint resource ID.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -40,6 +44,10 @@ public final class RemotePrivateEndpointArgs extends com.pulumi.resources.Resour
     @Import(name="manualPrivateLinkServiceConnections")
     private @Nullable Output<List<PrivateLinkServiceConnectionArgs>> manualPrivateLinkServiceConnections;
 
+    /**
+     * @return List of private link service connections that need manual approval.
+     * 
+     */
     public Optional<Output<List<PrivateLinkServiceConnectionArgs>>> manualPrivateLinkServiceConnections() {
         return Optional.ofNullable(this.manualPrivateLinkServiceConnections);
     }
@@ -51,6 +59,10 @@ public final class RemotePrivateEndpointArgs extends com.pulumi.resources.Resour
     @Import(name="privateLinkServiceConnections")
     private @Nullable Output<List<PrivateLinkServiceConnectionArgs>> privateLinkServiceConnections;
 
+    /**
+     * @return List of automatically approved private link service connections.
+     * 
+     */
     public Optional<Output<List<PrivateLinkServiceConnectionArgs>>> privateLinkServiceConnections() {
         return Optional.ofNullable(this.privateLinkServiceConnections);
     }
@@ -62,6 +74,10 @@ public final class RemotePrivateEndpointArgs extends com.pulumi.resources.Resour
     @Import(name="privateLinkServiceProxies")
     private @Nullable Output<List<PrivateLinkServiceProxyArgs>> privateLinkServiceProxies;
 
+    /**
+     * @return List of private link service proxies.
+     * 
+     */
     public Optional<Output<List<PrivateLinkServiceProxyArgs>>> privateLinkServiceProxies() {
         return Optional.ofNullable(this.privateLinkServiceProxies);
     }
@@ -93,50 +109,116 @@ public final class RemotePrivateEndpointArgs extends com.pulumi.resources.Resour
             $ = new RemotePrivateEndpointArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Remote endpoint resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Remote endpoint resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param manualPrivateLinkServiceConnections List of private link service connections that need manual approval.
+         * 
+         * @return builder
+         * 
+         */
         public Builder manualPrivateLinkServiceConnections(@Nullable Output<List<PrivateLinkServiceConnectionArgs>> manualPrivateLinkServiceConnections) {
             $.manualPrivateLinkServiceConnections = manualPrivateLinkServiceConnections;
             return this;
         }
 
+        /**
+         * @param manualPrivateLinkServiceConnections List of private link service connections that need manual approval.
+         * 
+         * @return builder
+         * 
+         */
         public Builder manualPrivateLinkServiceConnections(List<PrivateLinkServiceConnectionArgs> manualPrivateLinkServiceConnections) {
             return manualPrivateLinkServiceConnections(Output.of(manualPrivateLinkServiceConnections));
         }
 
+        /**
+         * @param manualPrivateLinkServiceConnections List of private link service connections that need manual approval.
+         * 
+         * @return builder
+         * 
+         */
         public Builder manualPrivateLinkServiceConnections(PrivateLinkServiceConnectionArgs... manualPrivateLinkServiceConnections) {
             return manualPrivateLinkServiceConnections(List.of(manualPrivateLinkServiceConnections));
         }
 
+        /**
+         * @param privateLinkServiceConnections List of automatically approved private link service connections.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkServiceConnections(@Nullable Output<List<PrivateLinkServiceConnectionArgs>> privateLinkServiceConnections) {
             $.privateLinkServiceConnections = privateLinkServiceConnections;
             return this;
         }
 
+        /**
+         * @param privateLinkServiceConnections List of automatically approved private link service connections.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkServiceConnections(List<PrivateLinkServiceConnectionArgs> privateLinkServiceConnections) {
             return privateLinkServiceConnections(Output.of(privateLinkServiceConnections));
         }
 
+        /**
+         * @param privateLinkServiceConnections List of automatically approved private link service connections.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkServiceConnections(PrivateLinkServiceConnectionArgs... privateLinkServiceConnections) {
             return privateLinkServiceConnections(List.of(privateLinkServiceConnections));
         }
 
+        /**
+         * @param privateLinkServiceProxies List of private link service proxies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkServiceProxies(@Nullable Output<List<PrivateLinkServiceProxyArgs>> privateLinkServiceProxies) {
             $.privateLinkServiceProxies = privateLinkServiceProxies;
             return this;
         }
 
+        /**
+         * @param privateLinkServiceProxies List of private link service proxies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkServiceProxies(List<PrivateLinkServiceProxyArgs> privateLinkServiceProxies) {
             return privateLinkServiceProxies(Output.of(privateLinkServiceProxies));
         }
 
+        /**
+         * @param privateLinkServiceProxies List of private link service proxies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkServiceProxies(PrivateLinkServiceProxyArgs... privateLinkServiceProxies) {
             return privateLinkServiceProxies(List.of(privateLinkServiceProxies));
         }

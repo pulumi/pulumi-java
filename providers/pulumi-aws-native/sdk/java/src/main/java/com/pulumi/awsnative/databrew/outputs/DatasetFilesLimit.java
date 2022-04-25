@@ -14,17 +14,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DatasetFilesLimit {
     /**
-     * Maximum number of files
+     * @return Maximum number of files
      * 
      */
     private final Integer maxFiles;
     /**
-     * Order
+     * @return Order
      * 
      */
     private final @Nullable DatasetFilesLimitOrder order;
     /**
-     * Ordered by
+     * @return Ordered by
      * 
      */
     private final @Nullable DatasetFilesLimitOrderedBy orderedBy;
@@ -40,23 +40,23 @@ public final class DatasetFilesLimit {
     }
 
     /**
-     * Maximum number of files
+     * @return Maximum number of files
      * 
-    */
+     */
     public Integer maxFiles() {
         return this.maxFiles;
     }
     /**
-     * Order
+     * @return Order
      * 
-    */
+     */
     public Optional<DatasetFilesLimitOrder> order() {
         return Optional.ofNullable(this.order);
     }
     /**
-     * Ordered by
+     * @return Ordered by
      * 
-    */
+     */
     public Optional<DatasetFilesLimitOrderedBy> orderedBy() {
         return Optional.ofNullable(this.orderedBy);
     }

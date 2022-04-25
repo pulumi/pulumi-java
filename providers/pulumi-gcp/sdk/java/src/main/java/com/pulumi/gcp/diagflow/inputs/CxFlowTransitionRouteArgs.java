@@ -24,6 +24,11 @@ public final class CxFlowTransitionRouteArgs extends com.pulumi.resources.Resour
     @Import(name="condition")
     private @Nullable Output<String> condition;
 
+    /**
+     * @return The condition to evaluate against form parameters or session parameters.
+     * At least one of intent or condition must be specified. When both intent and condition are specified, the transition can only happen when both are fulfilled.
+     * 
+     */
     public Optional<Output<String>> condition() {
         return Optional.ofNullable(this.condition);
     }
@@ -36,6 +41,11 @@ public final class CxFlowTransitionRouteArgs extends com.pulumi.resources.Resour
     @Import(name="intent")
     private @Nullable Output<String> intent;
 
+    /**
+     * @return The unique identifier of an Intent.
+     * Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/intents/&lt;Intent ID&gt;. Indicates that the transition can only happen when the given intent is matched. At least one of intent or condition must be specified. When both intent and condition are specified, the transition can only happen when both are fulfilled.
+     * 
+     */
     public Optional<Output<String>> intent() {
         return Optional.ofNullable(this.intent);
     }
@@ -48,6 +58,11 @@ public final class CxFlowTransitionRouteArgs extends com.pulumi.resources.Resour
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return -
+     * The unique identifier of this event handler.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -60,6 +75,11 @@ public final class CxFlowTransitionRouteArgs extends com.pulumi.resources.Resour
     @Import(name="targetFlow")
     private @Nullable Output<String> targetFlow;
 
+    /**
+     * @return The target flow to transition to.
+     * Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/flows/&lt;Flow ID&gt;.
+     * 
+     */
     public Optional<Output<String>> targetFlow() {
         return Optional.ofNullable(this.targetFlow);
     }
@@ -72,6 +92,11 @@ public final class CxFlowTransitionRouteArgs extends com.pulumi.resources.Resour
     @Import(name="targetPage")
     private @Nullable Output<String> targetPage;
 
+    /**
+     * @return The target page to transition to.
+     * Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/flows/&lt;Flow ID&gt;/pages/&lt;Page ID&gt;.
+     * 
+     */
     public Optional<Output<String>> targetPage() {
         return Optional.ofNullable(this.targetPage);
     }
@@ -84,6 +109,11 @@ public final class CxFlowTransitionRouteArgs extends com.pulumi.resources.Resour
     @Import(name="triggerFulfillment")
     private @Nullable Output<CxFlowTransitionRouteTriggerFulfillmentArgs> triggerFulfillment;
 
+    /**
+     * @return The fulfillment to call when the event occurs. Handling webhook errors with a fulfillment enabled with webhook could cause infinite loop. It is invalid to specify such fulfillment for a handler handling webhooks.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<CxFlowTransitionRouteTriggerFulfillmentArgs>> triggerFulfillment() {
         return Optional.ofNullable(this.triggerFulfillment);
     }
@@ -117,56 +147,140 @@ public final class CxFlowTransitionRouteArgs extends com.pulumi.resources.Resour
             $ = new CxFlowTransitionRouteArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param condition The condition to evaluate against form parameters or session parameters.
+         * At least one of intent or condition must be specified. When both intent and condition are specified, the transition can only happen when both are fulfilled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder condition(@Nullable Output<String> condition) {
             $.condition = condition;
             return this;
         }
 
+        /**
+         * @param condition The condition to evaluate against form parameters or session parameters.
+         * At least one of intent or condition must be specified. When both intent and condition are specified, the transition can only happen when both are fulfilled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder condition(String condition) {
             return condition(Output.of(condition));
         }
 
+        /**
+         * @param intent The unique identifier of an Intent.
+         * Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/intents/&lt;Intent ID&gt;. Indicates that the transition can only happen when the given intent is matched. At least one of intent or condition must be specified. When both intent and condition are specified, the transition can only happen when both are fulfilled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder intent(@Nullable Output<String> intent) {
             $.intent = intent;
             return this;
         }
 
+        /**
+         * @param intent The unique identifier of an Intent.
+         * Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/intents/&lt;Intent ID&gt;. Indicates that the transition can only happen when the given intent is matched. At least one of intent or condition must be specified. When both intent and condition are specified, the transition can only happen when both are fulfilled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder intent(String intent) {
             return intent(Output.of(intent));
         }
 
+        /**
+         * @param name -
+         * The unique identifier of this event handler.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name -
+         * The unique identifier of this event handler.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param targetFlow The target flow to transition to.
+         * Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/flows/&lt;Flow ID&gt;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetFlow(@Nullable Output<String> targetFlow) {
             $.targetFlow = targetFlow;
             return this;
         }
 
+        /**
+         * @param targetFlow The target flow to transition to.
+         * Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/flows/&lt;Flow ID&gt;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetFlow(String targetFlow) {
             return targetFlow(Output.of(targetFlow));
         }
 
+        /**
+         * @param targetPage The target page to transition to.
+         * Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/flows/&lt;Flow ID&gt;/pages/&lt;Page ID&gt;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetPage(@Nullable Output<String> targetPage) {
             $.targetPage = targetPage;
             return this;
         }
 
+        /**
+         * @param targetPage The target page to transition to.
+         * Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/flows/&lt;Flow ID&gt;/pages/&lt;Page ID&gt;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetPage(String targetPage) {
             return targetPage(Output.of(targetPage));
         }
 
+        /**
+         * @param triggerFulfillment The fulfillment to call when the event occurs. Handling webhook errors with a fulfillment enabled with webhook could cause infinite loop. It is invalid to specify such fulfillment for a handler handling webhooks.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder triggerFulfillment(@Nullable Output<CxFlowTransitionRouteTriggerFulfillmentArgs> triggerFulfillment) {
             $.triggerFulfillment = triggerFulfillment;
             return this;
         }
 
+        /**
+         * @param triggerFulfillment The fulfillment to call when the event occurs. Handling webhook errors with a fulfillment enabled with webhook could cause infinite loop. It is invalid to specify such fulfillment for a handler handling webhooks.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder triggerFulfillment(CxFlowTransitionRouteTriggerFulfillmentArgs triggerFulfillment) {
             return triggerFulfillment(Output.of(triggerFulfillment));
         }

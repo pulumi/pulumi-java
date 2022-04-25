@@ -29,6 +29,10 @@ public final class EncodedTaskStepArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="contextAccessToken")
     private @Nullable Output<String> contextAccessToken;
 
+    /**
+     * @return The token (git PAT or SAS token of storage account blob) associated with the context for a step.
+     * 
+     */
     public Optional<Output<String>> contextAccessToken() {
         return Optional.ofNullable(this.contextAccessToken);
     }
@@ -40,6 +44,10 @@ public final class EncodedTaskStepArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="contextPath")
     private @Nullable Output<String> contextPath;
 
+    /**
+     * @return The URL(absolute or relative) of the source context for the task step.
+     * 
+     */
     public Optional<Output<String>> contextPath() {
         return Optional.ofNullable(this.contextPath);
     }
@@ -51,6 +59,10 @@ public final class EncodedTaskStepArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="encodedTaskContent", required=true)
     private Output<String> encodedTaskContent;
 
+    /**
+     * @return Base64 encoded value of the template/definition file content.
+     * 
+     */
     public Output<String> encodedTaskContent() {
         return this.encodedTaskContent;
     }
@@ -62,6 +74,10 @@ public final class EncodedTaskStepArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="encodedValuesContent")
     private @Nullable Output<String> encodedValuesContent;
 
+    /**
+     * @return Base64 encoded value of the parameters/values file content.
+     * 
+     */
     public Optional<Output<String>> encodedValuesContent() {
         return Optional.ofNullable(this.encodedValuesContent);
     }
@@ -74,6 +90,11 @@ public final class EncodedTaskStepArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return The type of the step.
+     * Expected value is &#39;EncodedTask&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -85,6 +106,10 @@ public final class EncodedTaskStepArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="values")
     private @Nullable Output<List<SetValueArgs>> values;
 
+    /**
+     * @return The collection of overridable values that can be passed when running a task.
+     * 
+     */
     public Optional<Output<List<SetValueArgs>>> values() {
         return Optional.ofNullable(this.values);
     }
@@ -118,60 +143,140 @@ public final class EncodedTaskStepArgs extends com.pulumi.resources.ResourceArgs
             $ = new EncodedTaskStepArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param contextAccessToken The token (git PAT or SAS token of storage account blob) associated with the context for a step.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contextAccessToken(@Nullable Output<String> contextAccessToken) {
             $.contextAccessToken = contextAccessToken;
             return this;
         }
 
+        /**
+         * @param contextAccessToken The token (git PAT or SAS token of storage account blob) associated with the context for a step.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contextAccessToken(String contextAccessToken) {
             return contextAccessToken(Output.of(contextAccessToken));
         }
 
+        /**
+         * @param contextPath The URL(absolute or relative) of the source context for the task step.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contextPath(@Nullable Output<String> contextPath) {
             $.contextPath = contextPath;
             return this;
         }
 
+        /**
+         * @param contextPath The URL(absolute or relative) of the source context for the task step.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contextPath(String contextPath) {
             return contextPath(Output.of(contextPath));
         }
 
+        /**
+         * @param encodedTaskContent Base64 encoded value of the template/definition file content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encodedTaskContent(Output<String> encodedTaskContent) {
             $.encodedTaskContent = encodedTaskContent;
             return this;
         }
 
+        /**
+         * @param encodedTaskContent Base64 encoded value of the template/definition file content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encodedTaskContent(String encodedTaskContent) {
             return encodedTaskContent(Output.of(encodedTaskContent));
         }
 
+        /**
+         * @param encodedValuesContent Base64 encoded value of the parameters/values file content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encodedValuesContent(@Nullable Output<String> encodedValuesContent) {
             $.encodedValuesContent = encodedValuesContent;
             return this;
         }
 
+        /**
+         * @param encodedValuesContent Base64 encoded value of the parameters/values file content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encodedValuesContent(String encodedValuesContent) {
             return encodedValuesContent(Output.of(encodedValuesContent));
         }
 
+        /**
+         * @param type The type of the step.
+         * Expected value is &#39;EncodedTask&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of the step.
+         * Expected value is &#39;EncodedTask&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param values The collection of overridable values that can be passed when running a task.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(@Nullable Output<List<SetValueArgs>> values) {
             $.values = values;
             return this;
         }
 
+        /**
+         * @param values The collection of overridable values that can be passed when running a task.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(List<SetValueArgs> values) {
             return values(Output.of(values));
         }
 
+        /**
+         * @param values The collection of overridable values that can be passed when running a task.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(SetValueArgs... values) {
             return values(List.of(values));
         }

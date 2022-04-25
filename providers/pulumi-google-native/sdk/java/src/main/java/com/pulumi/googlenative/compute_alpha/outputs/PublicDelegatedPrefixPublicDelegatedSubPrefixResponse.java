@@ -11,37 +11,37 @@ import java.util.Objects;
 @CustomType
 public final class PublicDelegatedPrefixPublicDelegatedSubPrefixResponse {
     /**
-     * Name of the project scoping this PublicDelegatedSubPrefix.
+     * @return Name of the project scoping this PublicDelegatedSubPrefix.
      * 
      */
     private final String delegateeProject;
     /**
-     * An optional description of this resource. Provide this property when you create the resource.
+     * @return An optional description of this resource. Provide this property when you create the resource.
      * 
      */
     private final String description;
     /**
-     * The IPv4 address range, in CIDR format, represented by this sub public delegated prefix.
+     * @return The IPv4 address range, in CIDR format, represented by this sub public delegated prefix.
      * 
      */
     private final String ipCidrRange;
     /**
-     * Whether the sub prefix is delegated to create Address resources in the delegatee project.
+     * @return Whether the sub prefix is delegated to create Address resources in the delegatee project.
      * 
      */
     private final Boolean isAddress;
     /**
-     * The name of the sub public delegated prefix.
+     * @return The name of the sub public delegated prefix.
      * 
      */
     private final String name;
     /**
-     * The region of the sub public delegated prefix if it is regional. If absent, the sub prefix is global.
+     * @return The region of the sub public delegated prefix if it is regional. If absent, the sub prefix is global.
      * 
      */
     private final String region;
     /**
-     * The status of the sub public delegated prefix.
+     * @return The status of the sub public delegated prefix.
      * 
      */
     private final String status;
@@ -65,51 +65,51 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixResponse {
     }
 
     /**
-     * Name of the project scoping this PublicDelegatedSubPrefix.
+     * @return Name of the project scoping this PublicDelegatedSubPrefix.
      * 
-    */
+     */
     public String delegateeProject() {
         return this.delegateeProject;
     }
     /**
-     * An optional description of this resource. Provide this property when you create the resource.
+     * @return An optional description of this resource. Provide this property when you create the resource.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * The IPv4 address range, in CIDR format, represented by this sub public delegated prefix.
+     * @return The IPv4 address range, in CIDR format, represented by this sub public delegated prefix.
      * 
-    */
+     */
     public String ipCidrRange() {
         return this.ipCidrRange;
     }
     /**
-     * Whether the sub prefix is delegated to create Address resources in the delegatee project.
+     * @return Whether the sub prefix is delegated to create Address resources in the delegatee project.
      * 
-    */
+     */
     public Boolean isAddress() {
         return this.isAddress;
     }
     /**
-     * The name of the sub public delegated prefix.
+     * @return The name of the sub public delegated prefix.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The region of the sub public delegated prefix if it is regional. If absent, the sub prefix is global.
+     * @return The region of the sub public delegated prefix if it is regional. If absent, the sub prefix is global.
      * 
-    */
+     */
     public String region() {
         return this.region;
     }
     /**
-     * The status of the sub public delegated prefix.
+     * @return The status of the sub public delegated prefix.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }

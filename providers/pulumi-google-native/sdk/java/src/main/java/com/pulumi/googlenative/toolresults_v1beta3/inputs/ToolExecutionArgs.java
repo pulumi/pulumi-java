@@ -30,6 +30,10 @@ public final class ToolExecutionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="commandLineArguments")
     private @Nullable Output<List<String>> commandLineArguments;
 
+    /**
+     * @return The full tokenized command line including the program name (equivalent to argv in a C program). - In response: present if set by create request - In create request: optional - In update request: never set
+     * 
+     */
     public Optional<Output<List<String>>> commandLineArguments() {
         return Optional.ofNullable(this.commandLineArguments);
     }
@@ -41,6 +45,10 @@ public final class ToolExecutionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="exitCode")
     private @Nullable Output<ToolExitCodeArgs> exitCode;
 
+    /**
+     * @return Tool execution exit code. This field will be set once the tool has exited. - In response: present if set by create/update request - In create request: optional - In update request: optional, a FAILED_PRECONDITION error will be returned if an exit_code is already set.
+     * 
+     */
     public Optional<Output<ToolExitCodeArgs>> exitCode() {
         return Optional.ofNullable(this.exitCode);
     }
@@ -52,6 +60,10 @@ public final class ToolExecutionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="toolLogs")
     private @Nullable Output<List<FileReferenceArgs>> toolLogs;
 
+    /**
+     * @return References to any plain text logs output the tool execution. This field can be set before the tool has exited in order to be able to have access to a live view of the logs while the tool is running. The maximum allowed number of tool logs per step is 1000. - In response: present if set by create/update request - In create request: optional - In update request: optional, any value provided will be appended to the existing list
+     * 
+     */
     public Optional<Output<List<FileReferenceArgs>>> toolLogs() {
         return Optional.ofNullable(this.toolLogs);
     }
@@ -63,6 +75,10 @@ public final class ToolExecutionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="toolOutputs")
     private @Nullable Output<List<ToolOutputReferenceArgs>> toolOutputs;
 
+    /**
+     * @return References to opaque files of any format output by the tool execution. The maximum allowed number of tool outputs per step is 1000. - In response: present if set by create/update request - In create request: optional - In update request: optional, any value provided will be appended to the existing list
+     * 
+     */
     public Optional<Output<List<ToolOutputReferenceArgs>>> toolOutputs() {
         return Optional.ofNullable(this.toolOutputs);
     }
@@ -94,50 +110,116 @@ public final class ToolExecutionArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ToolExecutionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param commandLineArguments The full tokenized command line including the program name (equivalent to argv in a C program). - In response: present if set by create request - In create request: optional - In update request: never set
+         * 
+         * @return builder
+         * 
+         */
         public Builder commandLineArguments(@Nullable Output<List<String>> commandLineArguments) {
             $.commandLineArguments = commandLineArguments;
             return this;
         }
 
+        /**
+         * @param commandLineArguments The full tokenized command line including the program name (equivalent to argv in a C program). - In response: present if set by create request - In create request: optional - In update request: never set
+         * 
+         * @return builder
+         * 
+         */
         public Builder commandLineArguments(List<String> commandLineArguments) {
             return commandLineArguments(Output.of(commandLineArguments));
         }
 
+        /**
+         * @param commandLineArguments The full tokenized command line including the program name (equivalent to argv in a C program). - In response: present if set by create request - In create request: optional - In update request: never set
+         * 
+         * @return builder
+         * 
+         */
         public Builder commandLineArguments(String... commandLineArguments) {
             return commandLineArguments(List.of(commandLineArguments));
         }
 
+        /**
+         * @param exitCode Tool execution exit code. This field will be set once the tool has exited. - In response: present if set by create/update request - In create request: optional - In update request: optional, a FAILED_PRECONDITION error will be returned if an exit_code is already set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exitCode(@Nullable Output<ToolExitCodeArgs> exitCode) {
             $.exitCode = exitCode;
             return this;
         }
 
+        /**
+         * @param exitCode Tool execution exit code. This field will be set once the tool has exited. - In response: present if set by create/update request - In create request: optional - In update request: optional, a FAILED_PRECONDITION error will be returned if an exit_code is already set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exitCode(ToolExitCodeArgs exitCode) {
             return exitCode(Output.of(exitCode));
         }
 
+        /**
+         * @param toolLogs References to any plain text logs output the tool execution. This field can be set before the tool has exited in order to be able to have access to a live view of the logs while the tool is running. The maximum allowed number of tool logs per step is 1000. - In response: present if set by create/update request - In create request: optional - In update request: optional, any value provided will be appended to the existing list
+         * 
+         * @return builder
+         * 
+         */
         public Builder toolLogs(@Nullable Output<List<FileReferenceArgs>> toolLogs) {
             $.toolLogs = toolLogs;
             return this;
         }
 
+        /**
+         * @param toolLogs References to any plain text logs output the tool execution. This field can be set before the tool has exited in order to be able to have access to a live view of the logs while the tool is running. The maximum allowed number of tool logs per step is 1000. - In response: present if set by create/update request - In create request: optional - In update request: optional, any value provided will be appended to the existing list
+         * 
+         * @return builder
+         * 
+         */
         public Builder toolLogs(List<FileReferenceArgs> toolLogs) {
             return toolLogs(Output.of(toolLogs));
         }
 
+        /**
+         * @param toolLogs References to any plain text logs output the tool execution. This field can be set before the tool has exited in order to be able to have access to a live view of the logs while the tool is running. The maximum allowed number of tool logs per step is 1000. - In response: present if set by create/update request - In create request: optional - In update request: optional, any value provided will be appended to the existing list
+         * 
+         * @return builder
+         * 
+         */
         public Builder toolLogs(FileReferenceArgs... toolLogs) {
             return toolLogs(List.of(toolLogs));
         }
 
+        /**
+         * @param toolOutputs References to opaque files of any format output by the tool execution. The maximum allowed number of tool outputs per step is 1000. - In response: present if set by create/update request - In create request: optional - In update request: optional, any value provided will be appended to the existing list
+         * 
+         * @return builder
+         * 
+         */
         public Builder toolOutputs(@Nullable Output<List<ToolOutputReferenceArgs>> toolOutputs) {
             $.toolOutputs = toolOutputs;
             return this;
         }
 
+        /**
+         * @param toolOutputs References to opaque files of any format output by the tool execution. The maximum allowed number of tool outputs per step is 1000. - In response: present if set by create/update request - In create request: optional - In update request: optional, any value provided will be appended to the existing list
+         * 
+         * @return builder
+         * 
+         */
         public Builder toolOutputs(List<ToolOutputReferenceArgs> toolOutputs) {
             return toolOutputs(Output.of(toolOutputs));
         }
 
+        /**
+         * @param toolOutputs References to opaque files of any format output by the tool execution. The maximum allowed number of tool outputs per step is 1000. - In response: present if set by create/update request - In create request: optional - In update request: optional, any value provided will be appended to the existing list
+         * 
+         * @return builder
+         * 
+         */
         public Builder toolOutputs(ToolOutputReferenceArgs... toolOutputs) {
             return toolOutputs(List.of(toolOutputs));
         }

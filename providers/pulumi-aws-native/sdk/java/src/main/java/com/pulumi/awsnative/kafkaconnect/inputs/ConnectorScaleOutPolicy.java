@@ -23,6 +23,10 @@ public final class ConnectorScaleOutPolicy extends com.pulumi.resources.InvokeAr
     @Import(name="cpuUtilizationPercentage", required=true)
     private Integer cpuUtilizationPercentage;
 
+    /**
+     * @return Specifies the CPU utilization percentage threshold at which connector scale out should trigger.
+     * 
+     */
     public Integer cpuUtilizationPercentage() {
         return this.cpuUtilizationPercentage;
     }
@@ -51,6 +55,12 @@ public final class ConnectorScaleOutPolicy extends com.pulumi.resources.InvokeAr
             $ = new ConnectorScaleOutPolicy(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cpuUtilizationPercentage Specifies the CPU utilization percentage threshold at which connector scale out should trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpuUtilizationPercentage(Integer cpuUtilizationPercentage) {
             $.cpuUtilizationPercentage = cpuUtilizationPercentage;
             return this;

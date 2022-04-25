@@ -27,6 +27,10 @@ public final class SchedulingResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="automaticRestart", required=true)
     private Boolean automaticRestart;
 
+    /**
+     * @return Specifies whether the instance should be automatically restarted if it is terminated by Compute Engine (not terminated by a user). You can only set the automatic restart option for standard instances. Preemptible instances cannot be automatically restarted. By default, this is set to true so an instance is automatically restarted if it is terminated by Compute Engine.
+     * 
+     */
     public Boolean automaticRestart() {
         return this.automaticRestart;
     }
@@ -38,6 +42,10 @@ public final class SchedulingResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="hostErrorTimeoutSeconds", required=true)
     private Integer hostErrorTimeoutSeconds;
 
+    /**
+     * @return Specify the time in seconds for host error detection, the value must be within the range of [90, 330] with the increment of 30, if unset, the default behavior of host error recovery will be used.
+     * 
+     */
     public Integer hostErrorTimeoutSeconds() {
         return this.hostErrorTimeoutSeconds;
     }
@@ -49,6 +57,10 @@ public final class SchedulingResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="instanceTerminationAction", required=true)
     private String instanceTerminationAction;
 
+    /**
+     * @return Specifies the termination action for the instance.
+     * 
+     */
     public String instanceTerminationAction() {
         return this.instanceTerminationAction;
     }
@@ -60,6 +72,10 @@ public final class SchedulingResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="locationHint", required=true)
     private String locationHint;
 
+    /**
+     * @return An opaque location hint used to place the instance close to other resources. This field is for use by internal tools that use the public API.
+     * 
+     */
     public String locationHint() {
         return this.locationHint;
     }
@@ -71,6 +87,10 @@ public final class SchedulingResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="maintenanceFreezeDurationHours", required=true)
     private Integer maintenanceFreezeDurationHours;
 
+    /**
+     * @return Specifies the number of hours after VM instance creation where the VM won&#39;t be scheduled for maintenance.
+     * 
+     */
     public Integer maintenanceFreezeDurationHours() {
         return this.maintenanceFreezeDurationHours;
     }
@@ -82,6 +102,10 @@ public final class SchedulingResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="maintenanceInterval", required=true)
     private String maintenanceInterval;
 
+    /**
+     * @return For more information about maintenance intervals, see Setting maintenance intervals.
+     * 
+     */
     public String maintenanceInterval() {
         return this.maintenanceInterval;
     }
@@ -93,6 +117,10 @@ public final class SchedulingResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="minNodeCpus", required=true)
     private Integer minNodeCpus;
 
+    /**
+     * @return The minimum number of virtual CPUs this instance will consume when running on a sole-tenant node.
+     * 
+     */
     public Integer minNodeCpus() {
         return this.minNodeCpus;
     }
@@ -104,6 +132,10 @@ public final class SchedulingResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="nodeAffinities", required=true)
     private List<SchedulingNodeAffinityResponse> nodeAffinities;
 
+    /**
+     * @return A set of node affinity and anti-affinity configurations. Refer to Configuring node affinity for more information. Overrides reservationAffinity.
+     * 
+     */
     public List<SchedulingNodeAffinityResponse> nodeAffinities() {
         return this.nodeAffinities;
     }
@@ -115,6 +147,10 @@ public final class SchedulingResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="onHostMaintenance", required=true)
     private String onHostMaintenance;
 
+    /**
+     * @return Defines the maintenance behavior for this instance. For standard instances, the default behavior is MIGRATE. For preemptible instances, the default and only possible behavior is TERMINATE. For more information, see Set VM availability policies.
+     * 
+     */
     public String onHostMaintenance() {
         return this.onHostMaintenance;
     }
@@ -126,6 +162,10 @@ public final class SchedulingResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="preemptible", required=true)
     private Boolean preemptible;
 
+    /**
+     * @return Defines whether the instance is preemptible. This can only be set during instance creation or while the instance is stopped and therefore, in a `TERMINATED` state. See Instance Life Cycle for more information on the possible instance states.
+     * 
+     */
     public Boolean preemptible() {
         return this.preemptible;
     }
@@ -137,6 +177,10 @@ public final class SchedulingResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="provisioningModel", required=true)
     private String provisioningModel;
 
+    /**
+     * @return Specifies the provisioning model of the instance.
+     * 
+     */
     public String provisioningModel() {
         return this.provisioningModel;
     }
@@ -175,60 +219,132 @@ public final class SchedulingResponse extends com.pulumi.resources.InvokeArgs {
             $ = new SchedulingResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param automaticRestart Specifies whether the instance should be automatically restarted if it is terminated by Compute Engine (not terminated by a user). You can only set the automatic restart option for standard instances. Preemptible instances cannot be automatically restarted. By default, this is set to true so an instance is automatically restarted if it is terminated by Compute Engine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automaticRestart(Boolean automaticRestart) {
             $.automaticRestart = automaticRestart;
             return this;
         }
 
+        /**
+         * @param hostErrorTimeoutSeconds Specify the time in seconds for host error detection, the value must be within the range of [90, 330] with the increment of 30, if unset, the default behavior of host error recovery will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostErrorTimeoutSeconds(Integer hostErrorTimeoutSeconds) {
             $.hostErrorTimeoutSeconds = hostErrorTimeoutSeconds;
             return this;
         }
 
+        /**
+         * @param instanceTerminationAction Specifies the termination action for the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceTerminationAction(String instanceTerminationAction) {
             $.instanceTerminationAction = instanceTerminationAction;
             return this;
         }
 
+        /**
+         * @param locationHint An opaque location hint used to place the instance close to other resources. This field is for use by internal tools that use the public API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locationHint(String locationHint) {
             $.locationHint = locationHint;
             return this;
         }
 
+        /**
+         * @param maintenanceFreezeDurationHours Specifies the number of hours after VM instance creation where the VM won&#39;t be scheduled for maintenance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maintenanceFreezeDurationHours(Integer maintenanceFreezeDurationHours) {
             $.maintenanceFreezeDurationHours = maintenanceFreezeDurationHours;
             return this;
         }
 
+        /**
+         * @param maintenanceInterval For more information about maintenance intervals, see Setting maintenance intervals.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maintenanceInterval(String maintenanceInterval) {
             $.maintenanceInterval = maintenanceInterval;
             return this;
         }
 
+        /**
+         * @param minNodeCpus The minimum number of virtual CPUs this instance will consume when running on a sole-tenant node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minNodeCpus(Integer minNodeCpus) {
             $.minNodeCpus = minNodeCpus;
             return this;
         }
 
+        /**
+         * @param nodeAffinities A set of node affinity and anti-affinity configurations. Refer to Configuring node affinity for more information. Overrides reservationAffinity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeAffinities(List<SchedulingNodeAffinityResponse> nodeAffinities) {
             $.nodeAffinities = nodeAffinities;
             return this;
         }
 
+        /**
+         * @param nodeAffinities A set of node affinity and anti-affinity configurations. Refer to Configuring node affinity for more information. Overrides reservationAffinity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeAffinities(SchedulingNodeAffinityResponse... nodeAffinities) {
             return nodeAffinities(List.of(nodeAffinities));
         }
 
+        /**
+         * @param onHostMaintenance Defines the maintenance behavior for this instance. For standard instances, the default behavior is MIGRATE. For preemptible instances, the default and only possible behavior is TERMINATE. For more information, see Set VM availability policies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder onHostMaintenance(String onHostMaintenance) {
             $.onHostMaintenance = onHostMaintenance;
             return this;
         }
 
+        /**
+         * @param preemptible Defines whether the instance is preemptible. This can only be set during instance creation or while the instance is stopped and therefore, in a `TERMINATED` state. See Instance Life Cycle for more information on the possible instance states.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preemptible(Boolean preemptible) {
             $.preemptible = preemptible;
             return this;
         }
 
+        /**
+         * @param provisioningModel Specifies the provisioning model of the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningModel(String provisioningModel) {
             $.provisioningModel = provisioningModel;
             return this;

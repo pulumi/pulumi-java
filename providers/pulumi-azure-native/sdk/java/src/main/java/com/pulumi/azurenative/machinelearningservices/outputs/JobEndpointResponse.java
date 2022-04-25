@@ -14,22 +14,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class JobEndpointResponse {
     /**
-     * Url for endpoint.
+     * @return Url for endpoint.
      * 
      */
     private final @Nullable String endpoint;
     /**
-     * Endpoint type.
+     * @return Endpoint type.
      * 
      */
     private final @Nullable String jobEndpointType;
     /**
-     * Port for endpoint.
+     * @return Port for endpoint.
      * 
      */
     private final @Nullable Integer port;
     /**
-     * Additional properties to set on the endpoint.
+     * @return Additional properties to set on the endpoint.
      * 
      */
     private final @Nullable Map<String,String> properties;
@@ -47,30 +47,30 @@ public final class JobEndpointResponse {
     }
 
     /**
-     * Url for endpoint.
+     * @return Url for endpoint.
      * 
-    */
+     */
     public Optional<String> endpoint() {
         return Optional.ofNullable(this.endpoint);
     }
     /**
-     * Endpoint type.
+     * @return Endpoint type.
      * 
-    */
+     */
     public Optional<String> jobEndpointType() {
         return Optional.ofNullable(this.jobEndpointType);
     }
     /**
-     * Port for endpoint.
+     * @return Port for endpoint.
      * 
-    */
+     */
     public Optional<Integer> port() {
         return Optional.ofNullable(this.port);
     }
     /**
-     * Additional properties to set on the endpoint.
+     * @return Additional properties to set on the endpoint.
      * 
-    */
+     */
     public Map<String,String> properties() {
         return this.properties == null ? Map.of() : this.properties;
     }

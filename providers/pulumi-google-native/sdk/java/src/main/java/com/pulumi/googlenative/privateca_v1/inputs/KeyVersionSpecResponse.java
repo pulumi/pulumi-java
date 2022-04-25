@@ -23,6 +23,10 @@ public final class KeyVersionSpecResponse extends com.pulumi.resources.InvokeArg
     @Import(name="algorithm", required=true)
     private String algorithm;
 
+    /**
+     * @return The algorithm to use for creating a managed Cloud KMS key for a for a simplified experience. All managed keys will be have their ProtectionLevel as `HSM`.
+     * 
+     */
     public String algorithm() {
         return this.algorithm;
     }
@@ -34,6 +38,10 @@ public final class KeyVersionSpecResponse extends com.pulumi.resources.InvokeArg
     @Import(name="cloudKmsKeyVersion", required=true)
     private String cloudKmsKeyVersion;
 
+    /**
+     * @return The resource name for an existing Cloud KMS CryptoKeyVersion in the format `projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*{@literal /}cryptoKeyVersions/*`. This option enables full flexibility in the key&#39;s capabilities and properties.
+     * 
+     */
     public String cloudKmsKeyVersion() {
         return this.cloudKmsKeyVersion;
     }
@@ -63,11 +71,23 @@ public final class KeyVersionSpecResponse extends com.pulumi.resources.InvokeArg
             $ = new KeyVersionSpecResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param algorithm The algorithm to use for creating a managed Cloud KMS key for a for a simplified experience. All managed keys will be have their ProtectionLevel as `HSM`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder algorithm(String algorithm) {
             $.algorithm = algorithm;
             return this;
         }
 
+        /**
+         * @param cloudKmsKeyVersion The resource name for an existing Cloud KMS CryptoKeyVersion in the format `projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*{@literal /}cryptoKeyVersions/*`. This option enables full flexibility in the key&#39;s capabilities and properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudKmsKeyVersion(String cloudKmsKeyVersion) {
             $.cloudKmsKeyVersion = cloudKmsKeyVersion;
             return this;

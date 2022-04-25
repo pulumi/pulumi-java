@@ -19,6 +19,10 @@ public final class GetP2sVpnServerConfigurationArgs extends com.pulumi.resources
     @Import(name="p2SVpnServerConfigurationName", required=true)
     private String p2SVpnServerConfigurationName;
 
+    /**
+     * @return The name of the P2SVpnServerConfiguration.
+     * 
+     */
     public String p2SVpnServerConfigurationName() {
         return this.p2SVpnServerConfigurationName;
     }
@@ -30,6 +34,10 @@ public final class GetP2sVpnServerConfigurationArgs extends com.pulumi.resources
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The resource group name of the P2SVpnServerConfiguration.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetP2sVpnServerConfigurationArgs extends com.pulumi.resources
     @Import(name="virtualWanName", required=true)
     private String virtualWanName;
 
+    /**
+     * @return The name of the VirtualWan.
+     * 
+     */
     public String virtualWanName() {
         return this.virtualWanName;
     }
@@ -71,16 +83,34 @@ public final class GetP2sVpnServerConfigurationArgs extends com.pulumi.resources
             $ = new GetP2sVpnServerConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param p2SVpnServerConfigurationName The name of the P2SVpnServerConfiguration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder p2SVpnServerConfigurationName(String p2SVpnServerConfigurationName) {
             $.p2SVpnServerConfigurationName = p2SVpnServerConfigurationName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name of the P2SVpnServerConfiguration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param virtualWanName The name of the VirtualWan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualWanName(String virtualWanName) {
             $.virtualWanName = virtualWanName;
             return this;

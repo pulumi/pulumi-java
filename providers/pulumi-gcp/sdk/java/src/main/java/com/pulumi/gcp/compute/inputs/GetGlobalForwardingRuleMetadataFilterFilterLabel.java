@@ -19,6 +19,10 @@ public final class GetGlobalForwardingRuleMetadataFilterFilterLabel extends com.
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the global forwarding rule.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -55,6 +59,12 @@ public final class GetGlobalForwardingRuleMetadataFilterFilterLabel extends com.
             $ = new GetGlobalForwardingRuleMetadataFilterFilterLabel(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the global forwarding rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

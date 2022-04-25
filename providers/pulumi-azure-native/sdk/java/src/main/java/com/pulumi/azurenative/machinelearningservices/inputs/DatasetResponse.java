@@ -29,6 +29,10 @@ public final class DatasetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="createdTime", required=true)
     private String createdTime;
 
+    /**
+     * @return The dataset creation time (UTC).
+     * 
+     */
     public String createdTime() {
         return this.createdTime;
     }
@@ -40,6 +44,10 @@ public final class DatasetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="datasetId", required=true)
     private String datasetId;
 
+    /**
+     * @return Unique Dataset identifier.
+     * 
+     */
     public String datasetId() {
         return this.datasetId;
     }
@@ -51,6 +59,10 @@ public final class DatasetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="datasetState")
     private @Nullable DatasetStateResponse datasetState;
 
+    /**
+     * @return Dataset state
+     * 
+     */
     public Optional<DatasetStateResponse> datasetState() {
         return Optional.ofNullable(this.datasetState);
     }
@@ -62,6 +74,10 @@ public final class DatasetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="datasetType", required=true)
     private String datasetType;
 
+    /**
+     * @return Dataset Type.
+     * 
+     */
     public String datasetType() {
         return this.datasetType;
     }
@@ -73,6 +89,10 @@ public final class DatasetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="defaultCompute", required=true)
     private String defaultCompute;
 
+    /**
+     * @return Name of the default compute to be used for any Dataset actions (such as Profile, Write).
+     * 
+     */
     public String defaultCompute() {
         return this.defaultCompute;
     }
@@ -84,6 +104,10 @@ public final class DatasetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="description", required=true)
     private String description;
 
+    /**
+     * @return Description about this dataset version.
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -95,6 +119,10 @@ public final class DatasetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="etag", required=true)
     private String etag;
 
+    /**
+     * @return eTag description
+     * 
+     */
     public String etag() {
         return this.etag;
     }
@@ -106,6 +134,10 @@ public final class DatasetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="isVisible", required=true)
     private Boolean isVisible;
 
+    /**
+     * @return Flag to hide Dataset in UI
+     * 
+     */
     public Boolean isVisible() {
         return this.isVisible;
     }
@@ -117,6 +149,10 @@ public final class DatasetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="latest")
     private @Nullable DatasetResponseLatest latest;
 
+    /**
+     * @return Last created Dataset definition.
+     * 
+     */
     public Optional<DatasetResponseLatest> latest() {
         return Optional.ofNullable(this.latest);
     }
@@ -128,6 +164,10 @@ public final class DatasetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="modifiedTime", required=true)
     private String modifiedTime;
 
+    /**
+     * @return The dataset last modified time (UTC).
+     * 
+     */
     public String modifiedTime() {
         return this.modifiedTime;
     }
@@ -139,6 +179,10 @@ public final class DatasetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Unique dataset name
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -150,6 +194,10 @@ public final class DatasetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="tags", required=true)
     private Map<String,String> tags;
 
+    /**
+     * @return Tags for this dataset version.
+     * 
+     */
     public Map<String,String> tags() {
         return this.tags;
     }
@@ -189,61 +237,133 @@ public final class DatasetResponse extends com.pulumi.resources.InvokeArgs {
             $ = new DatasetResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param createdTime The dataset creation time (UTC).
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdTime(String createdTime) {
             $.createdTime = createdTime;
             return this;
         }
 
+        /**
+         * @param datasetId Unique Dataset identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasetId(String datasetId) {
             $.datasetId = datasetId;
             return this;
         }
 
+        /**
+         * @param datasetState Dataset state
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasetState(@Nullable DatasetStateResponse datasetState) {
             $.datasetState = datasetState;
             return this;
         }
 
+        /**
+         * @param datasetType Dataset Type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasetType(String datasetType) {
             $.datasetType = datasetType;
             return this;
         }
 
+        /**
+         * @param defaultCompute Name of the default compute to be used for any Dataset actions (such as Profile, Write).
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultCompute(String defaultCompute) {
             $.defaultCompute = defaultCompute;
             return this;
         }
 
+        /**
+         * @param description Description about this dataset version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param etag eTag description
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param isVisible Flag to hide Dataset in UI
+         * 
+         * @return builder
+         * 
+         */
         public Builder isVisible(Boolean isVisible) {
             $.isVisible = isVisible;
             return this;
         }
 
+        /**
+         * @param latest Last created Dataset definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder latest(@Nullable DatasetResponseLatest latest) {
             $.latest = latest;
             return this;
         }
 
+        /**
+         * @param modifiedTime The dataset last modified time (UTC).
+         * 
+         * @return builder
+         * 
+         */
         public Builder modifiedTime(String modifiedTime) {
             $.modifiedTime = modifiedTime;
             return this;
         }
 
+        /**
+         * @param name Unique dataset name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param tags Tags for this dataset version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             $.tags = tags;
             return this;

@@ -27,6 +27,10 @@ public final class PrivateLinkResourceArgs extends com.pulumi.resources.Resource
     @Import(name="groupId")
     private @Nullable Output<String> groupId;
 
+    /**
+     * @return The group ID of the resource.
+     * 
+     */
     public Optional<Output<String>> groupId() {
         return Optional.ofNullable(this.groupId);
     }
@@ -38,6 +42,10 @@ public final class PrivateLinkResourceArgs extends com.pulumi.resources.Resource
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return The ID of the private link resource.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -49,6 +57,10 @@ public final class PrivateLinkResourceArgs extends com.pulumi.resources.Resource
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the private link resource.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -60,6 +72,10 @@ public final class PrivateLinkResourceArgs extends com.pulumi.resources.Resource
     @Import(name="requiredMembers")
     private @Nullable Output<List<String>> requiredMembers;
 
+    /**
+     * @return RequiredMembers of the resource
+     * 
+     */
     public Optional<Output<List<String>>> requiredMembers() {
         return Optional.ofNullable(this.requiredMembers);
     }
@@ -71,6 +87,10 @@ public final class PrivateLinkResourceArgs extends com.pulumi.resources.Resource
     @Import(name="type")
     private @Nullable Output<String> type;
 
+    /**
+     * @return The resource type.
+     * 
+     */
     public Optional<Output<String>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -103,51 +123,117 @@ public final class PrivateLinkResourceArgs extends com.pulumi.resources.Resource
             $ = new PrivateLinkResourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param groupId The group ID of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupId(@Nullable Output<String> groupId) {
             $.groupId = groupId;
             return this;
         }
 
+        /**
+         * @param groupId The group ID of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupId(String groupId) {
             return groupId(Output.of(groupId));
         }
 
+        /**
+         * @param id The ID of the private link resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id The ID of the private link resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param name The name of the private link resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the private link resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param requiredMembers RequiredMembers of the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder requiredMembers(@Nullable Output<List<String>> requiredMembers) {
             $.requiredMembers = requiredMembers;
             return this;
         }
 
+        /**
+         * @param requiredMembers RequiredMembers of the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder requiredMembers(List<String> requiredMembers) {
             return requiredMembers(Output.of(requiredMembers));
         }
 
+        /**
+         * @param requiredMembers RequiredMembers of the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder requiredMembers(String... requiredMembers) {
             return requiredMembers(List.of(requiredMembers));
         }
 
+        /**
+         * @param type The resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

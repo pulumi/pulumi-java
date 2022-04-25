@@ -69,6 +69,10 @@ public final class SwitchActivityResponse extends com.pulumi.resources.InvokeArg
     @Import(name="cases")
     private @Nullable List<SwitchCaseResponse> cases;
 
+    /**
+     * @return List of cases that correspond to expected values of the &#39;on&#39; property. This is an optional property and if not provided, the activity will execute activities provided in defaultActivities.
+     * 
+     */
     public Optional<List<SwitchCaseResponse>> cases() {
         return Optional.ofNullable(this.cases);
     }
@@ -80,6 +84,10 @@ public final class SwitchActivityResponse extends com.pulumi.resources.InvokeArg
     @Import(name="defaultActivities")
     private @Nullable List<Object> defaultActivities;
 
+    /**
+     * @return List of activities to execute if no case condition is satisfied. This is an optional property and if not provided, the activity will exit without any action.
+     * 
+     */
     public Optional<List<Object>> defaultActivities() {
         return Optional.ofNullable(this.defaultActivities);
     }
@@ -91,6 +99,10 @@ public final class SwitchActivityResponse extends com.pulumi.resources.InvokeArg
     @Import(name="dependsOn")
     private @Nullable List<ActivityDependencyResponse> dependsOn;
 
+    /**
+     * @return Activity depends on condition.
+     * 
+     */
     public Optional<List<ActivityDependencyResponse>> dependsOn() {
         return Optional.ofNullable(this.dependsOn);
     }
@@ -102,6 +114,10 @@ public final class SwitchActivityResponse extends com.pulumi.resources.InvokeArg
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Activity description.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -113,6 +129,10 @@ public final class SwitchActivityResponse extends com.pulumi.resources.InvokeArg
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Activity name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -124,6 +144,10 @@ public final class SwitchActivityResponse extends com.pulumi.resources.InvokeArg
     @Import(name="on", required=true)
     private ExpressionResponse on;
 
+    /**
+     * @return An expression that would evaluate to a string or integer. This is used to determine the block of activities in cases that will be executed.
+     * 
+     */
     public ExpressionResponse on() {
         return this.on;
     }
@@ -136,6 +160,11 @@ public final class SwitchActivityResponse extends com.pulumi.resources.InvokeArg
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of activity.
+     * Expected value is &#39;Switch&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -147,6 +176,10 @@ public final class SwitchActivityResponse extends com.pulumi.resources.InvokeArg
     @Import(name="userProperties")
     private @Nullable List<UserPropertyResponse> userProperties;
 
+    /**
+     * @return Activity user properties.
+     * 
+     */
     public Optional<List<UserPropertyResponse>> userProperties() {
         return Optional.ofNullable(this.userProperties);
     }
@@ -182,58 +215,131 @@ public final class SwitchActivityResponse extends com.pulumi.resources.InvokeArg
             $ = new SwitchActivityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cases List of cases that correspond to expected values of the &#39;on&#39; property. This is an optional property and if not provided, the activity will execute activities provided in defaultActivities.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cases(@Nullable List<SwitchCaseResponse> cases) {
             $.cases = cases;
             return this;
         }
 
+        /**
+         * @param cases List of cases that correspond to expected values of the &#39;on&#39; property. This is an optional property and if not provided, the activity will execute activities provided in defaultActivities.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cases(SwitchCaseResponse... cases) {
             return cases(List.of(cases));
         }
 
+        /**
+         * @param defaultActivities List of activities to execute if no case condition is satisfied. This is an optional property and if not provided, the activity will exit without any action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultActivities(@Nullable List<Object> defaultActivities) {
             $.defaultActivities = defaultActivities;
             return this;
         }
 
+        /**
+         * @param defaultActivities List of activities to execute if no case condition is satisfied. This is an optional property and if not provided, the activity will exit without any action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultActivities(Object... defaultActivities) {
             return defaultActivities(List.of(defaultActivities));
         }
 
+        /**
+         * @param dependsOn Activity depends on condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
             $.dependsOn = dependsOn;
             return this;
         }
 
+        /**
+         * @param dependsOn Activity depends on condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(ActivityDependencyResponse... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
 
+        /**
+         * @param description Activity description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param name Activity name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param on An expression that would evaluate to a string or integer. This is used to determine the block of activities in cases that will be executed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder on(ExpressionResponse on) {
             $.on = on;
             return this;
         }
 
+        /**
+         * @param type Type of activity.
+         * Expected value is &#39;Switch&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param userProperties Activity user properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
             $.userProperties = userProperties;
             return this;
         }
 
+        /**
+         * @param userProperties Activity user properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProperties(UserPropertyResponse... userProperties) {
             return userProperties(List.of(userProperties));
         }

@@ -30,6 +30,10 @@ public final class RerunTumblingWindowTriggerArgs extends com.pulumi.resources.R
     @Import(name="annotations")
     private @Nullable Output<List<Object>> annotations;
 
+    /**
+     * @return List of tags that can be used for describing the trigger.
+     * 
+     */
     public Optional<Output<List<Object>>> annotations() {
         return Optional.ofNullable(this.annotations);
     }
@@ -41,6 +45,10 @@ public final class RerunTumblingWindowTriggerArgs extends com.pulumi.resources.R
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Trigger description.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -52,6 +60,10 @@ public final class RerunTumblingWindowTriggerArgs extends com.pulumi.resources.R
     @Import(name="parentTrigger", required=true)
     private Output<Object> parentTrigger;
 
+    /**
+     * @return The parent trigger reference.
+     * 
+     */
     public Output<Object> parentTrigger() {
         return this.parentTrigger;
     }
@@ -63,6 +75,10 @@ public final class RerunTumblingWindowTriggerArgs extends com.pulumi.resources.R
     @Import(name="requestedEndTime", required=true)
     private Output<String> requestedEndTime;
 
+    /**
+     * @return The end time for the time period for which restatement is initiated. Only UTC time is currently supported.
+     * 
+     */
     public Output<String> requestedEndTime() {
         return this.requestedEndTime;
     }
@@ -74,6 +90,10 @@ public final class RerunTumblingWindowTriggerArgs extends com.pulumi.resources.R
     @Import(name="requestedStartTime", required=true)
     private Output<String> requestedStartTime;
 
+    /**
+     * @return The start time for the time period for which restatement is initiated. Only UTC time is currently supported.
+     * 
+     */
     public Output<String> requestedStartTime() {
         return this.requestedStartTime;
     }
@@ -85,6 +105,10 @@ public final class RerunTumblingWindowTriggerArgs extends com.pulumi.resources.R
     @Import(name="rerunConcurrency", required=true)
     private Output<Integer> rerunConcurrency;
 
+    /**
+     * @return The max number of parallel time windows (ready for execution) for which a rerun is triggered.
+     * 
+     */
     public Output<Integer> rerunConcurrency() {
         return this.rerunConcurrency;
     }
@@ -97,6 +121,11 @@ public final class RerunTumblingWindowTriggerArgs extends com.pulumi.resources.R
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Trigger type.
+     * Expected value is &#39;RerunTumblingWindowTrigger&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -131,69 +160,161 @@ public final class RerunTumblingWindowTriggerArgs extends com.pulumi.resources.R
             $ = new RerunTumblingWindowTriggerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(@Nullable Output<List<Object>> annotations) {
             $.annotations = annotations;
             return this;
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(List<Object> annotations) {
             return annotations(Output.of(annotations));
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
 
+        /**
+         * @param description Trigger description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Trigger description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param parentTrigger The parent trigger reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parentTrigger(Output<Object> parentTrigger) {
             $.parentTrigger = parentTrigger;
             return this;
         }
 
+        /**
+         * @param parentTrigger The parent trigger reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parentTrigger(Object parentTrigger) {
             return parentTrigger(Output.of(parentTrigger));
         }
 
+        /**
+         * @param requestedEndTime The end time for the time period for which restatement is initiated. Only UTC time is currently supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestedEndTime(Output<String> requestedEndTime) {
             $.requestedEndTime = requestedEndTime;
             return this;
         }
 
+        /**
+         * @param requestedEndTime The end time for the time period for which restatement is initiated. Only UTC time is currently supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestedEndTime(String requestedEndTime) {
             return requestedEndTime(Output.of(requestedEndTime));
         }
 
+        /**
+         * @param requestedStartTime The start time for the time period for which restatement is initiated. Only UTC time is currently supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestedStartTime(Output<String> requestedStartTime) {
             $.requestedStartTime = requestedStartTime;
             return this;
         }
 
+        /**
+         * @param requestedStartTime The start time for the time period for which restatement is initiated. Only UTC time is currently supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestedStartTime(String requestedStartTime) {
             return requestedStartTime(Output.of(requestedStartTime));
         }
 
+        /**
+         * @param rerunConcurrency The max number of parallel time windows (ready for execution) for which a rerun is triggered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rerunConcurrency(Output<Integer> rerunConcurrency) {
             $.rerunConcurrency = rerunConcurrency;
             return this;
         }
 
+        /**
+         * @param rerunConcurrency The max number of parallel time windows (ready for execution) for which a rerun is triggered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rerunConcurrency(Integer rerunConcurrency) {
             return rerunConcurrency(Output.of(rerunConcurrency));
         }
 
+        /**
+         * @param type Trigger type.
+         * Expected value is &#39;RerunTumblingWindowTrigger&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Trigger type.
+         * Expected value is &#39;RerunTumblingWindowTrigger&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

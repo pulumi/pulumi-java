@@ -19,6 +19,10 @@ public final class GetGroupUser extends com.pulumi.resources.InvokeArgs {
     @Import(name="arn", required=true)
     private String arn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) specifying the iam user.
+     * 
+     */
     public String arn() {
         return this.arn;
     }
@@ -30,6 +34,10 @@ public final class GetGroupUser extends com.pulumi.resources.InvokeArgs {
     @Import(name="path", required=true)
     private String path;
 
+    /**
+     * @return The path to the iam user.
+     * 
+     */
     public String path() {
         return this.path;
     }
@@ -41,6 +49,10 @@ public final class GetGroupUser extends com.pulumi.resources.InvokeArgs {
     @Import(name="userId", required=true)
     private String userId;
 
+    /**
+     * @return The stable and unique string identifying the iam user.
+     * 
+     */
     public String userId() {
         return this.userId;
     }
@@ -52,6 +64,10 @@ public final class GetGroupUser extends com.pulumi.resources.InvokeArgs {
     @Import(name="userName", required=true)
     private String userName;
 
+    /**
+     * @return The name of the iam user.
+     * 
+     */
     public String userName() {
         return this.userName;
     }
@@ -83,21 +99,45 @@ public final class GetGroupUser extends com.pulumi.resources.InvokeArgs {
             $ = new GetGroupUser(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn The Amazon Resource Name (ARN) specifying the iam user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param path The path to the iam user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param userId The stable and unique string identifying the iam user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userId(String userId) {
             $.userId = userId;
             return this;
         }
 
+        /**
+         * @param userName The name of the iam user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(String userName) {
             $.userName = userName;
             return this;

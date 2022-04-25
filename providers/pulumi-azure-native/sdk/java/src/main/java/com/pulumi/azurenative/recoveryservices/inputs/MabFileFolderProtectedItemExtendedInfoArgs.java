@@ -27,6 +27,10 @@ public final class MabFileFolderProtectedItemExtendedInfoArgs extends com.pulumi
     @Import(name="lastRefreshedAt")
     private @Nullable Output<String> lastRefreshedAt;
 
+    /**
+     * @return Last time when the agent data synced to service.
+     * 
+     */
     public Optional<Output<String>> lastRefreshedAt() {
         return Optional.ofNullable(this.lastRefreshedAt);
     }
@@ -38,6 +42,10 @@ public final class MabFileFolderProtectedItemExtendedInfoArgs extends com.pulumi
     @Import(name="oldestRecoveryPoint")
     private @Nullable Output<String> oldestRecoveryPoint;
 
+    /**
+     * @return The oldest backup copy available.
+     * 
+     */
     public Optional<Output<String>> oldestRecoveryPoint() {
         return Optional.ofNullable(this.oldestRecoveryPoint);
     }
@@ -49,6 +57,10 @@ public final class MabFileFolderProtectedItemExtendedInfoArgs extends com.pulumi
     @Import(name="recoveryPointCount")
     private @Nullable Output<Integer> recoveryPointCount;
 
+    /**
+     * @return Number of backup copies associated with the backup item.
+     * 
+     */
     public Optional<Output<Integer>> recoveryPointCount() {
         return Optional.ofNullable(this.recoveryPointCount);
     }
@@ -79,29 +91,65 @@ public final class MabFileFolderProtectedItemExtendedInfoArgs extends com.pulumi
             $ = new MabFileFolderProtectedItemExtendedInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param lastRefreshedAt Last time when the agent data synced to service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastRefreshedAt(@Nullable Output<String> lastRefreshedAt) {
             $.lastRefreshedAt = lastRefreshedAt;
             return this;
         }
 
+        /**
+         * @param lastRefreshedAt Last time when the agent data synced to service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastRefreshedAt(String lastRefreshedAt) {
             return lastRefreshedAt(Output.of(lastRefreshedAt));
         }
 
+        /**
+         * @param oldestRecoveryPoint The oldest backup copy available.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oldestRecoveryPoint(@Nullable Output<String> oldestRecoveryPoint) {
             $.oldestRecoveryPoint = oldestRecoveryPoint;
             return this;
         }
 
+        /**
+         * @param oldestRecoveryPoint The oldest backup copy available.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oldestRecoveryPoint(String oldestRecoveryPoint) {
             return oldestRecoveryPoint(Output.of(oldestRecoveryPoint));
         }
 
+        /**
+         * @param recoveryPointCount Number of backup copies associated with the backup item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryPointCount(@Nullable Output<Integer> recoveryPointCount) {
             $.recoveryPointCount = recoveryPointCount;
             return this;
         }
 
+        /**
+         * @param recoveryPointCount Number of backup copies associated with the backup item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryPointCount(Integer recoveryPointCount) {
             return recoveryPointCount(Output.of(recoveryPointCount));
         }

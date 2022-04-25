@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class Overhead {
     /**
-     * PodFixed represents the fixed resource overhead associated with running a pod.
+     * @return PodFixed represents the fixed resource overhead associated with running a pod.
      * 
      */
     private final @Nullable Map<String,String> podFixed;
@@ -23,9 +23,9 @@ public final class Overhead {
     }
 
     /**
-     * PodFixed represents the fixed resource overhead associated with running a pod.
+     * @return PodFixed represents the fixed resource overhead associated with running a pod.
      * 
-    */
+     */
     public Map<String,String> podFixed() {
         return this.podFixed == null ? Map.of() : this.podFixed;
     }

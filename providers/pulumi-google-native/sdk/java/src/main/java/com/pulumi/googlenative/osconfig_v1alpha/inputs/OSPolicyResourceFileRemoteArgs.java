@@ -26,6 +26,10 @@ public final class OSPolicyResourceFileRemoteArgs extends com.pulumi.resources.R
     @Import(name="sha256Checksum")
     private @Nullable Output<String> sha256Checksum;
 
+    /**
+     * @return SHA256 checksum of the remote file.
+     * 
+     */
     public Optional<Output<String>> sha256Checksum() {
         return Optional.ofNullable(this.sha256Checksum);
     }
@@ -37,6 +41,10 @@ public final class OSPolicyResourceFileRemoteArgs extends com.pulumi.resources.R
     @Import(name="uri", required=true)
     private Output<String> uri;
 
+    /**
+     * @return URI from which to fetch the object. It should contain both the protocol and path following the format `{protocol}://{location}`.
+     * 
+     */
     public Output<String> uri() {
         return this.uri;
     }
@@ -66,20 +74,44 @@ public final class OSPolicyResourceFileRemoteArgs extends com.pulumi.resources.R
             $ = new OSPolicyResourceFileRemoteArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param sha256Checksum SHA256 checksum of the remote file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sha256Checksum(@Nullable Output<String> sha256Checksum) {
             $.sha256Checksum = sha256Checksum;
             return this;
         }
 
+        /**
+         * @param sha256Checksum SHA256 checksum of the remote file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sha256Checksum(String sha256Checksum) {
             return sha256Checksum(Output.of(sha256Checksum));
         }
 
+        /**
+         * @param uri URI from which to fetch the object. It should contain both the protocol and path following the format `{protocol}://{location}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(Output<String> uri) {
             $.uri = uri;
             return this;
         }
 
+        /**
+         * @param uri URI from which to fetch the object. It should contain both the protocol and path following the format `{protocol}://{location}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(String uri) {
             return uri(Output.of(uri));
         }

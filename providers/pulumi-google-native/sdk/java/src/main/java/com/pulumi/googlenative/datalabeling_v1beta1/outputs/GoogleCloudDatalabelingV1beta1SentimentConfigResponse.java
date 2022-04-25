@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudDatalabelingV1beta1SentimentConfigResponse {
     /**
-     * If set to true, contributors will have the option to select sentiment of the label they selected, to mark it as negative or positive label. Default is false.
+     * @return If set to true, contributors will have the option to select sentiment of the label they selected, to mark it as negative or positive label. Default is false.
      * 
      */
     private final Boolean enableLabelSentimentSelection;
@@ -21,9 +21,9 @@ public final class GoogleCloudDatalabelingV1beta1SentimentConfigResponse {
     }
 
     /**
-     * If set to true, contributors will have the option to select sentiment of the label they selected, to mark it as negative or positive label. Default is false.
+     * @return If set to true, contributors will have the option to select sentiment of the label they selected, to mark it as negative or positive label. Default is false.
      * 
-    */
+     */
     public Boolean enableLabelSentimentSelection() {
         return this.enableLabelSentimentSelection;
     }

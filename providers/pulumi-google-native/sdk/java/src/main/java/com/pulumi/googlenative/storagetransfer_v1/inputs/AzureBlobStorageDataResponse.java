@@ -24,6 +24,10 @@ public final class AzureBlobStorageDataResponse extends com.pulumi.resources.Inv
     @Import(name="azureCredentials", required=true)
     private AzureCredentialsResponse azureCredentials;
 
+    /**
+     * @return Input only. Credentials used to authenticate API requests to Azure. For information on our data retention policy for user credentials, see [User credentials](/storage-transfer/docs/data-retention#user-credentials).
+     * 
+     */
     public AzureCredentialsResponse azureCredentials() {
         return this.azureCredentials;
     }
@@ -35,6 +39,10 @@ public final class AzureBlobStorageDataResponse extends com.pulumi.resources.Inv
     @Import(name="container", required=true)
     private String container;
 
+    /**
+     * @return The container to transfer from the Azure Storage account.
+     * 
+     */
     public String container() {
         return this.container;
     }
@@ -46,6 +54,10 @@ public final class AzureBlobStorageDataResponse extends com.pulumi.resources.Inv
     @Import(name="path", required=true)
     private String path;
 
+    /**
+     * @return Root path to transfer objects. Must be an empty string or full path name that ends with a &#39;/&#39;. This field is treated as an object prefix. As such, it should generally not begin with a &#39;/&#39;.
+     * 
+     */
     public String path() {
         return this.path;
     }
@@ -57,6 +69,10 @@ public final class AzureBlobStorageDataResponse extends com.pulumi.resources.Inv
     @Import(name="storageAccount", required=true)
     private String storageAccount;
 
+    /**
+     * @return The name of the Azure Storage account.
+     * 
+     */
     public String storageAccount() {
         return this.storageAccount;
     }
@@ -88,21 +104,45 @@ public final class AzureBlobStorageDataResponse extends com.pulumi.resources.Inv
             $ = new AzureBlobStorageDataResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param azureCredentials Input only. Credentials used to authenticate API requests to Azure. For information on our data retention policy for user credentials, see [User credentials](/storage-transfer/docs/data-retention#user-credentials).
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureCredentials(AzureCredentialsResponse azureCredentials) {
             $.azureCredentials = azureCredentials;
             return this;
         }
 
+        /**
+         * @param container The container to transfer from the Azure Storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder container(String container) {
             $.container = container;
             return this;
         }
 
+        /**
+         * @param path Root path to transfer objects. Must be an empty string or full path name that ends with a &#39;/&#39;. This field is treated as an object prefix. As such, it should generally not begin with a &#39;/&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param storageAccount The name of the Azure Storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccount(String storageAccount) {
             $.storageAccount = storageAccount;
             return this;

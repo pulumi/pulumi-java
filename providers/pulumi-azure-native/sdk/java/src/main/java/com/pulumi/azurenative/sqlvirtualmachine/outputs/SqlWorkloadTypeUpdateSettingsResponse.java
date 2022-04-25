@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SqlWorkloadTypeUpdateSettingsResponse {
     /**
-     * SQL Server workload type.
+     * @return SQL Server workload type.
      * 
      */
     private final @Nullable String sqlWorkloadType;
@@ -23,9 +23,9 @@ public final class SqlWorkloadTypeUpdateSettingsResponse {
     }
 
     /**
-     * SQL Server workload type.
+     * @return SQL Server workload type.
      * 
-    */
+     */
     public Optional<String> sqlWorkloadType() {
         return Optional.ofNullable(this.sqlWorkloadType);
     }

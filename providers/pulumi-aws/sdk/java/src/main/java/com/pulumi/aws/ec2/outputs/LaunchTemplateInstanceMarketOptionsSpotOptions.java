@@ -13,28 +13,28 @@ import javax.annotation.Nullable;
 @CustomType
 public final class LaunchTemplateInstanceMarketOptionsSpotOptions {
     /**
-     * The required duration in minutes. This value must be a multiple of 60.
+     * @return The required duration in minutes. This value must be a multiple of 60.
      * 
      */
     private final @Nullable Integer blockDurationMinutes;
     /**
-     * The behavior when a Spot Instance is interrupted. Can be `hibernate`,
+     * @return The behavior when a Spot Instance is interrupted. Can be `hibernate`,
      * `stop`, or `terminate`. (Default: `terminate`).
      * 
      */
     private final @Nullable String instanceInterruptionBehavior;
     /**
-     * The maximum hourly price you&#39;re willing to pay for the Spot Instances.
+     * @return The maximum hourly price you&#39;re willing to pay for the Spot Instances.
      * 
      */
     private final @Nullable String maxPrice;
     /**
-     * The Spot Instance request type. Can be `one-time`, or `persistent`.
+     * @return The Spot Instance request type. Can be `one-time`, or `persistent`.
      * 
      */
     private final @Nullable String spotInstanceType;
     /**
-     * The end date of the request.
+     * @return The end date of the request.
      * 
      */
     private final @Nullable String validUntil;
@@ -54,38 +54,38 @@ public final class LaunchTemplateInstanceMarketOptionsSpotOptions {
     }
 
     /**
-     * The required duration in minutes. This value must be a multiple of 60.
+     * @return The required duration in minutes. This value must be a multiple of 60.
      * 
-    */
+     */
     public Optional<Integer> blockDurationMinutes() {
         return Optional.ofNullable(this.blockDurationMinutes);
     }
     /**
-     * The behavior when a Spot Instance is interrupted. Can be `hibernate`,
+     * @return The behavior when a Spot Instance is interrupted. Can be `hibernate`,
      * `stop`, or `terminate`. (Default: `terminate`).
      * 
-    */
+     */
     public Optional<String> instanceInterruptionBehavior() {
         return Optional.ofNullable(this.instanceInterruptionBehavior);
     }
     /**
-     * The maximum hourly price you&#39;re willing to pay for the Spot Instances.
+     * @return The maximum hourly price you&#39;re willing to pay for the Spot Instances.
      * 
-    */
+     */
     public Optional<String> maxPrice() {
         return Optional.ofNullable(this.maxPrice);
     }
     /**
-     * The Spot Instance request type. Can be `one-time`, or `persistent`.
+     * @return The Spot Instance request type. Can be `one-time`, or `persistent`.
      * 
-    */
+     */
     public Optional<String> spotInstanceType() {
         return Optional.ofNullable(this.spotInstanceType);
     }
     /**
-     * The end date of the request.
+     * @return The end date of the request.
      * 
-    */
+     */
     public Optional<String> validUntil() {
         return Optional.ofNullable(this.validUntil);
     }

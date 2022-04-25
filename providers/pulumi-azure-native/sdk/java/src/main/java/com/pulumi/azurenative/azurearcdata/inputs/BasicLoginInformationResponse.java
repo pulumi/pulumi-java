@@ -25,6 +25,10 @@ public final class BasicLoginInformationResponse extends com.pulumi.resources.In
     @Import(name="username")
     private @Nullable String username;
 
+    /**
+     * @return Login username.
+     * 
+     */
     public Optional<String> username() {
         return Optional.ofNullable(this.username);
     }
@@ -53,6 +57,12 @@ public final class BasicLoginInformationResponse extends com.pulumi.resources.In
             $ = new BasicLoginInformationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param username Login username.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(@Nullable String username) {
             $.username = username;
             return this;

@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class VirtualDirectoryResponse {
     /**
-     * Physical path.
+     * @return Physical path.
      * 
      */
     private final @Nullable String physicalPath;
     /**
-     * Path to virtual application.
+     * @return Path to virtual application.
      * 
      */
     private final @Nullable String virtualPath;
@@ -31,16 +31,16 @@ public final class VirtualDirectoryResponse {
     }
 
     /**
-     * Physical path.
+     * @return Physical path.
      * 
-    */
+     */
     public Optional<String> physicalPath() {
         return Optional.ofNullable(this.physicalPath);
     }
     /**
-     * Path to virtual application.
+     * @return Path to virtual application.
      * 
-    */
+     */
     public Optional<String> virtualPath() {
         return Optional.ofNullable(this.virtualPath);
     }

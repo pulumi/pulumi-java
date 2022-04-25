@@ -24,6 +24,10 @@ public final class DistributionResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="architecture", required=true)
     private String architecture;
 
+    /**
+     * @return The CPU architecture for which packages in this distribution channel were built
+     * 
+     */
     public String architecture() {
         return this.architecture;
     }
@@ -35,6 +39,10 @@ public final class DistributionResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="cpeUri", required=true)
     private String cpeUri;
 
+    /**
+     * @return The cpe_uri in [cpe format](https://cpe.mitre.org/specification/) denoting the package manager version distributing a package.
+     * 
+     */
     public String cpeUri() {
         return this.cpeUri;
     }
@@ -46,6 +54,10 @@ public final class DistributionResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="description", required=true)
     private String description;
 
+    /**
+     * @return The distribution channel-specific description of this package.
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -57,6 +69,10 @@ public final class DistributionResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="latestVersion", required=true)
     private VersionResponse latestVersion;
 
+    /**
+     * @return The latest available version of this package in this distribution channel.
+     * 
+     */
     public VersionResponse latestVersion() {
         return this.latestVersion;
     }
@@ -68,6 +84,10 @@ public final class DistributionResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="maintainer", required=true)
     private String maintainer;
 
+    /**
+     * @return A freeform string denoting the maintainer of this package.
+     * 
+     */
     public String maintainer() {
         return this.maintainer;
     }
@@ -79,6 +99,10 @@ public final class DistributionResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="url", required=true)
     private String url;
 
+    /**
+     * @return The distribution channel-specific homepage for this package.
+     * 
+     */
     public String url() {
         return this.url;
     }
@@ -112,31 +136,67 @@ public final class DistributionResponse extends com.pulumi.resources.InvokeArgs 
             $ = new DistributionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param architecture The CPU architecture for which packages in this distribution channel were built
+         * 
+         * @return builder
+         * 
+         */
         public Builder architecture(String architecture) {
             $.architecture = architecture;
             return this;
         }
 
+        /**
+         * @param cpeUri The cpe_uri in [cpe format](https://cpe.mitre.org/specification/) denoting the package manager version distributing a package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpeUri(String cpeUri) {
             $.cpeUri = cpeUri;
             return this;
         }
 
+        /**
+         * @param description The distribution channel-specific description of this package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param latestVersion The latest available version of this package in this distribution channel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder latestVersion(VersionResponse latestVersion) {
             $.latestVersion = latestVersion;
             return this;
         }
 
+        /**
+         * @param maintainer A freeform string denoting the maintainer of this package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maintainer(String maintainer) {
             $.maintainer = maintainer;
             return this;
         }
 
+        /**
+         * @param url The distribution channel-specific homepage for this package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(String url) {
             $.url = url;
             return this;

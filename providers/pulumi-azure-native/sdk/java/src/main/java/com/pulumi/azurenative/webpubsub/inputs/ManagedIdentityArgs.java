@@ -30,6 +30,10 @@ public final class ManagedIdentityArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="type")
     private @Nullable Output<Either<String,ManagedIdentityType>> type;
 
+    /**
+     * @return Represent the identity type: systemAssigned, userAssigned, None
+     * 
+     */
     public Optional<Output<Either<String,ManagedIdentityType>>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -41,6 +45,10 @@ public final class ManagedIdentityArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="userAssignedIdentities")
     private @Nullable Output<Map<String,Object>> userAssignedIdentities;
 
+    /**
+     * @return Get or set the user assigned identities
+     * 
+     */
     public Optional<Output<Map<String,Object>>> userAssignedIdentities() {
         return Optional.ofNullable(this.userAssignedIdentities);
     }
@@ -70,28 +78,64 @@ public final class ManagedIdentityArgs extends com.pulumi.resources.ResourceArgs
             $ = new ManagedIdentityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type Represent the identity type: systemAssigned, userAssigned, None
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<Either<String,ManagedIdentityType>> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Represent the identity type: systemAssigned, userAssigned, None
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Either<String,ManagedIdentityType> type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param type Represent the identity type: systemAssigned, userAssigned, None
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Either.ofLeft(type));
         }
 
+        /**
+         * @param type Represent the identity type: systemAssigned, userAssigned, None
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(ManagedIdentityType type) {
             return type(Either.ofRight(type));
         }
 
+        /**
+         * @param userAssignedIdentities Get or set the user assigned identities
+         * 
+         * @return builder
+         * 
+         */
         public Builder userAssignedIdentities(@Nullable Output<Map<String,Object>> userAssignedIdentities) {
             $.userAssignedIdentities = userAssignedIdentities;
             return this;
         }
 
+        /**
+         * @param userAssignedIdentities Get or set the user assigned identities
+         * 
+         * @return builder
+         * 
+         */
         public Builder userAssignedIdentities(Map<String,Object> userAssignedIdentities) {
             return userAssignedIdentities(Output.of(userAssignedIdentities));
         }

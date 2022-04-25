@@ -32,6 +32,10 @@ public final class PackagingConfigurationDashPackageArgs extends com.pulumi.reso
     @Import(name="dashManifests", required=true)
     private Output<List<PackagingConfigurationDashManifestArgs>> dashManifests;
 
+    /**
+     * @return A list of DASH manifest configurations.
+     * 
+     */
     public Output<List<PackagingConfigurationDashManifestArgs>> dashManifests() {
         return this.dashManifests;
     }
@@ -50,6 +54,10 @@ public final class PackagingConfigurationDashPackageArgs extends com.pulumi.reso
     @Import(name="includeEncoderConfigurationInSegments")
     private @Nullable Output<Boolean> includeEncoderConfigurationInSegments;
 
+    /**
+     * @return When includeEncoderConfigurationInSegments is set to true, MediaPackage places your encoder&#39;s Sequence Parameter Set (SPS), Picture Parameter Set (PPS), and Video Parameter Set (VPS) metadata in every video segment instead of in the init fragment. This lets you use different SPS/PPS/VPS settings for your assets during content playback.
+     * 
+     */
     public Optional<Output<Boolean>> includeEncoderConfigurationInSegments() {
         return Optional.ofNullable(this.includeEncoderConfigurationInSegments);
     }
@@ -61,6 +69,10 @@ public final class PackagingConfigurationDashPackageArgs extends com.pulumi.reso
     @Import(name="periodTriggers")
     private @Nullable Output<List<PackagingConfigurationDashPackagePeriodTriggersItem>> periodTriggers;
 
+    /**
+     * @return A list of triggers that controls when the outgoing Dynamic Adaptive Streaming over HTTP (DASH) Media Presentation Description (MPD) will be partitioned into multiple periods. If empty, the content will not be partitioned into more than one period. If the list contains &#34;ADS&#34;, new periods will be created where the Asset contains SCTE-35 ad markers.
+     * 
+     */
     public Optional<Output<List<PackagingConfigurationDashPackagePeriodTriggersItem>>> periodTriggers() {
         return Optional.ofNullable(this.periodTriggers);
     }
@@ -79,6 +91,10 @@ public final class PackagingConfigurationDashPackageArgs extends com.pulumi.reso
     @Import(name="segmentTemplateFormat")
     private @Nullable Output<PackagingConfigurationDashPackageSegmentTemplateFormat> segmentTemplateFormat;
 
+    /**
+     * @return Determines the type of SegmentTemplate included in the Media Presentation Description (MPD). When set to NUMBER_WITH_TIMELINE, a full timeline is presented in each SegmentTemplate, with $Number$ media URLs. When set to TIME_WITH_TIMELINE, a full timeline is presented in each SegmentTemplate, with $Time$ media URLs. When set to NUMBER_WITH_DURATION, only a duration is included in each SegmentTemplate, with $Number$ media URLs.
+     * 
+     */
     public Optional<Output<PackagingConfigurationDashPackageSegmentTemplateFormat>> segmentTemplateFormat() {
         return Optional.ofNullable(this.segmentTemplateFormat);
     }
@@ -112,15 +128,33 @@ public final class PackagingConfigurationDashPackageArgs extends com.pulumi.reso
             $ = new PackagingConfigurationDashPackageArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dashManifests A list of DASH manifest configurations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dashManifests(Output<List<PackagingConfigurationDashManifestArgs>> dashManifests) {
             $.dashManifests = dashManifests;
             return this;
         }
 
+        /**
+         * @param dashManifests A list of DASH manifest configurations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dashManifests(List<PackagingConfigurationDashManifestArgs> dashManifests) {
             return dashManifests(Output.of(dashManifests));
         }
 
+        /**
+         * @param dashManifests A list of DASH manifest configurations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dashManifests(PackagingConfigurationDashManifestArgs... dashManifests) {
             return dashManifests(List.of(dashManifests));
         }
@@ -134,24 +168,54 @@ public final class PackagingConfigurationDashPackageArgs extends com.pulumi.reso
             return encryption(Output.of(encryption));
         }
 
+        /**
+         * @param includeEncoderConfigurationInSegments When includeEncoderConfigurationInSegments is set to true, MediaPackage places your encoder&#39;s Sequence Parameter Set (SPS), Picture Parameter Set (PPS), and Video Parameter Set (VPS) metadata in every video segment instead of in the init fragment. This lets you use different SPS/PPS/VPS settings for your assets during content playback.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeEncoderConfigurationInSegments(@Nullable Output<Boolean> includeEncoderConfigurationInSegments) {
             $.includeEncoderConfigurationInSegments = includeEncoderConfigurationInSegments;
             return this;
         }
 
+        /**
+         * @param includeEncoderConfigurationInSegments When includeEncoderConfigurationInSegments is set to true, MediaPackage places your encoder&#39;s Sequence Parameter Set (SPS), Picture Parameter Set (PPS), and Video Parameter Set (VPS) metadata in every video segment instead of in the init fragment. This lets you use different SPS/PPS/VPS settings for your assets during content playback.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeEncoderConfigurationInSegments(Boolean includeEncoderConfigurationInSegments) {
             return includeEncoderConfigurationInSegments(Output.of(includeEncoderConfigurationInSegments));
         }
 
+        /**
+         * @param periodTriggers A list of triggers that controls when the outgoing Dynamic Adaptive Streaming over HTTP (DASH) Media Presentation Description (MPD) will be partitioned into multiple periods. If empty, the content will not be partitioned into more than one period. If the list contains &#34;ADS&#34;, new periods will be created where the Asset contains SCTE-35 ad markers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder periodTriggers(@Nullable Output<List<PackagingConfigurationDashPackagePeriodTriggersItem>> periodTriggers) {
             $.periodTriggers = periodTriggers;
             return this;
         }
 
+        /**
+         * @param periodTriggers A list of triggers that controls when the outgoing Dynamic Adaptive Streaming over HTTP (DASH) Media Presentation Description (MPD) will be partitioned into multiple periods. If empty, the content will not be partitioned into more than one period. If the list contains &#34;ADS&#34;, new periods will be created where the Asset contains SCTE-35 ad markers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder periodTriggers(List<PackagingConfigurationDashPackagePeriodTriggersItem> periodTriggers) {
             return periodTriggers(Output.of(periodTriggers));
         }
 
+        /**
+         * @param periodTriggers A list of triggers that controls when the outgoing Dynamic Adaptive Streaming over HTTP (DASH) Media Presentation Description (MPD) will be partitioned into multiple periods. If empty, the content will not be partitioned into more than one period. If the list contains &#34;ADS&#34;, new periods will be created where the Asset contains SCTE-35 ad markers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder periodTriggers(PackagingConfigurationDashPackagePeriodTriggersItem... periodTriggers) {
             return periodTriggers(List.of(periodTriggers));
         }
@@ -165,11 +229,23 @@ public final class PackagingConfigurationDashPackageArgs extends com.pulumi.reso
             return segmentDurationSeconds(Output.of(segmentDurationSeconds));
         }
 
+        /**
+         * @param segmentTemplateFormat Determines the type of SegmentTemplate included in the Media Presentation Description (MPD). When set to NUMBER_WITH_TIMELINE, a full timeline is presented in each SegmentTemplate, with $Number$ media URLs. When set to TIME_WITH_TIMELINE, a full timeline is presented in each SegmentTemplate, with $Time$ media URLs. When set to NUMBER_WITH_DURATION, only a duration is included in each SegmentTemplate, with $Number$ media URLs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder segmentTemplateFormat(@Nullable Output<PackagingConfigurationDashPackageSegmentTemplateFormat> segmentTemplateFormat) {
             $.segmentTemplateFormat = segmentTemplateFormat;
             return this;
         }
 
+        /**
+         * @param segmentTemplateFormat Determines the type of SegmentTemplate included in the Media Presentation Description (MPD). When set to NUMBER_WITH_TIMELINE, a full timeline is presented in each SegmentTemplate, with $Number$ media URLs. When set to TIME_WITH_TIMELINE, a full timeline is presented in each SegmentTemplate, with $Time$ media URLs. When set to NUMBER_WITH_DURATION, only a duration is included in each SegmentTemplate, with $Number$ media URLs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder segmentTemplateFormat(PackagingConfigurationDashPackageSegmentTemplateFormat segmentTemplateFormat) {
             return segmentTemplateFormat(Output.of(segmentTemplateFormat));
         }

@@ -10,23 +10,23 @@ import java.util.Objects;
 @CustomType
 public final class GetAliasResult {
     /**
-     * The Amazon Resource Name(ARN) of the key alias.
+     * @return The Amazon Resource Name(ARN) of the key alias.
      * 
      */
     private final String arn;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     private final String name;
     /**
-     * ARN pointed to by the alias.
+     * @return ARN pointed to by the alias.
      * 
      */
     private final String targetKeyArn;
     /**
-     * Key identifier pointed to by the alias.
+     * @return Key identifier pointed to by the alias.
      * 
      */
     private final String targetKeyId;
@@ -46,16 +46,16 @@ public final class GetAliasResult {
     }
 
     /**
-     * The Amazon Resource Name(ARN) of the key alias.
+     * @return The Amazon Resource Name(ARN) of the key alias.
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
@@ -63,16 +63,16 @@ public final class GetAliasResult {
         return this.name;
     }
     /**
-     * ARN pointed to by the alias.
+     * @return ARN pointed to by the alias.
      * 
-    */
+     */
     public String targetKeyArn() {
         return this.targetKeyArn;
     }
     /**
-     * Key identifier pointed to by the alias.
+     * @return Key identifier pointed to by the alias.
      * 
-    */
+     */
     public String targetKeyId() {
         return this.targetKeyId;
     }

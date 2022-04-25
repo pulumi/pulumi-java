@@ -24,6 +24,10 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentCatego
     @Import(name="values", required=true)
     private List<String> values;
 
+    /**
+     * @return Matches values of the parent parameter with type &#39;CATEGORICAL&#39;. All values must exist in `categorical_value_spec` of parent parameter.
+     * 
+     */
     public List<String> values() {
         return this.values;
     }
@@ -52,11 +56,23 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentCatego
             $ = new GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentCategoricalValueSpecResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param values Matches values of the parent parameter with type &#39;CATEGORICAL&#39;. All values must exist in `categorical_value_spec` of parent parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(List<String> values) {
             $.values = values;
             return this;
         }
 
+        /**
+         * @param values Matches values of the parent parameter with type &#39;CATEGORICAL&#39;. All values must exist in `categorical_value_spec` of parent parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(String... values) {
             return values(List.of(values));
         }

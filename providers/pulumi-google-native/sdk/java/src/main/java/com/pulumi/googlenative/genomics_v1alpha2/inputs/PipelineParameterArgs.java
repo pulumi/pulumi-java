@@ -27,6 +27,10 @@ public final class PipelineParameterArgs extends com.pulumi.resources.ResourceAr
     @Import(name="defaultValue")
     private @Nullable Output<String> defaultValue;
 
+    /**
+     * @return The default value for this parameter. Can be overridden at runtime. If `localCopy` is present, then this must be a Google Cloud Storage path beginning with `gs://`.
+     * 
+     */
     public Optional<Output<String>> defaultValue() {
         return Optional.ofNullable(this.defaultValue);
     }
@@ -38,6 +42,10 @@ public final class PipelineParameterArgs extends com.pulumi.resources.ResourceAr
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Human-readable description.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -49,6 +57,10 @@ public final class PipelineParameterArgs extends com.pulumi.resources.ResourceAr
     @Import(name="localCopy")
     private @Nullable Output<LocalCopyArgs> localCopy;
 
+    /**
+     * @return If present, this parameter is marked for copying to and from the VM. `LocalCopy` indicates where on the VM the file should be. The value given to this parameter (either at runtime or using `defaultValue`) must be the remote path where the file should be.
+     * 
+     */
     public Optional<Output<LocalCopyArgs>> localCopy() {
         return Optional.ofNullable(this.localCopy);
     }
@@ -60,6 +72,10 @@ public final class PipelineParameterArgs extends com.pulumi.resources.ResourceAr
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Name of the parameter - the pipeline runner uses this string as the key to the input and output maps in RunPipeline.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -91,38 +107,86 @@ public final class PipelineParameterArgs extends com.pulumi.resources.ResourceAr
             $ = new PipelineParameterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param defaultValue The default value for this parameter. Can be overridden at runtime. If `localCopy` is present, then this must be a Google Cloud Storage path beginning with `gs://`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultValue(@Nullable Output<String> defaultValue) {
             $.defaultValue = defaultValue;
             return this;
         }
 
+        /**
+         * @param defaultValue The default value for this parameter. Can be overridden at runtime. If `localCopy` is present, then this must be a Google Cloud Storage path beginning with `gs://`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultValue(String defaultValue) {
             return defaultValue(Output.of(defaultValue));
         }
 
+        /**
+         * @param description Human-readable description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Human-readable description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param localCopy If present, this parameter is marked for copying to and from the VM. `LocalCopy` indicates where on the VM the file should be. The value given to this parameter (either at runtime or using `defaultValue`) must be the remote path where the file should be.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localCopy(@Nullable Output<LocalCopyArgs> localCopy) {
             $.localCopy = localCopy;
             return this;
         }
 
+        /**
+         * @param localCopy If present, this parameter is marked for copying to and from the VM. `LocalCopy` indicates where on the VM the file should be. The value given to this parameter (either at runtime or using `defaultValue`) must be the remote path where the file should be.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localCopy(LocalCopyArgs localCopy) {
             return localCopy(Output.of(localCopy));
         }
 
+        /**
+         * @param name Name of the parameter - the pipeline runner uses this string as the key to the input and output maps in RunPipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the parameter - the pipeline runner uses this string as the key to the input and output maps in RunPipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

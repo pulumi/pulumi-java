@@ -26,6 +26,10 @@ public final class ConnectorMappingArgs extends com.pulumi.resources.ResourceArg
     @Import(name="connectorName", required=true)
     private Output<String> connectorName;
 
+    /**
+     * @return The name of the connector.
+     * 
+     */
     public Output<String> connectorName() {
         return this.connectorName;
     }
@@ -37,6 +41,10 @@ public final class ConnectorMappingArgs extends com.pulumi.resources.ResourceArg
     @Import(name="connectorType")
     private @Nullable Output<Either<String,ConnectorTypes>> connectorType;
 
+    /**
+     * @return Type of connector.
+     * 
+     */
     public Optional<Output<Either<String,ConnectorTypes>>> connectorType() {
         return Optional.ofNullable(this.connectorType);
     }
@@ -48,6 +56,10 @@ public final class ConnectorMappingArgs extends com.pulumi.resources.ResourceArg
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description of the connector mapping.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -59,6 +71,10 @@ public final class ConnectorMappingArgs extends com.pulumi.resources.ResourceArg
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return Display name for the connector mapping.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -70,6 +86,10 @@ public final class ConnectorMappingArgs extends com.pulumi.resources.ResourceArg
     @Import(name="entityType", required=true)
     private Output<EntityTypes> entityType;
 
+    /**
+     * @return Defines which entity type the file should map to.
+     * 
+     */
     public Output<EntityTypes> entityType() {
         return this.entityType;
     }
@@ -81,6 +101,10 @@ public final class ConnectorMappingArgs extends com.pulumi.resources.ResourceArg
     @Import(name="entityTypeName", required=true)
     private Output<String> entityTypeName;
 
+    /**
+     * @return The mapping entity name.
+     * 
+     */
     public Output<String> entityTypeName() {
         return this.entityTypeName;
     }
@@ -92,6 +116,10 @@ public final class ConnectorMappingArgs extends com.pulumi.resources.ResourceArg
     @Import(name="hubName", required=true)
     private Output<String> hubName;
 
+    /**
+     * @return The name of the hub.
+     * 
+     */
     public Output<String> hubName() {
         return this.hubName;
     }
@@ -103,6 +131,10 @@ public final class ConnectorMappingArgs extends com.pulumi.resources.ResourceArg
     @Import(name="mappingName")
     private @Nullable Output<String> mappingName;
 
+    /**
+     * @return The name of the connector mapping.
+     * 
+     */
     public Optional<Output<String>> mappingName() {
         return Optional.ofNullable(this.mappingName);
     }
@@ -114,6 +146,10 @@ public final class ConnectorMappingArgs extends com.pulumi.resources.ResourceArg
     @Import(name="mappingProperties", required=true)
     private Output<ConnectorMappingPropertiesArgs> mappingProperties;
 
+    /**
+     * @return The properties of the mapping.
+     * 
+     */
     public Output<ConnectorMappingPropertiesArgs> mappingProperties() {
         return this.mappingProperties;
     }
@@ -125,6 +161,10 @@ public final class ConnectorMappingArgs extends com.pulumi.resources.ResourceArg
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -162,100 +202,232 @@ public final class ConnectorMappingArgs extends com.pulumi.resources.ResourceArg
             $ = new ConnectorMappingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param connectorName The name of the connector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectorName(Output<String> connectorName) {
             $.connectorName = connectorName;
             return this;
         }
 
+        /**
+         * @param connectorName The name of the connector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectorName(String connectorName) {
             return connectorName(Output.of(connectorName));
         }
 
+        /**
+         * @param connectorType Type of connector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectorType(@Nullable Output<Either<String,ConnectorTypes>> connectorType) {
             $.connectorType = connectorType;
             return this;
         }
 
+        /**
+         * @param connectorType Type of connector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectorType(Either<String,ConnectorTypes> connectorType) {
             return connectorType(Output.of(connectorType));
         }
 
+        /**
+         * @param connectorType Type of connector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectorType(String connectorType) {
             return connectorType(Either.ofLeft(connectorType));
         }
 
+        /**
+         * @param connectorType Type of connector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectorType(ConnectorTypes connectorType) {
             return connectorType(Either.ofRight(connectorType));
         }
 
+        /**
+         * @param description The description of the connector mapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description of the connector mapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param displayName Display name for the connector mapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName Display name for the connector mapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param entityType Defines which entity type the file should map to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entityType(Output<EntityTypes> entityType) {
             $.entityType = entityType;
             return this;
         }
 
+        /**
+         * @param entityType Defines which entity type the file should map to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entityType(EntityTypes entityType) {
             return entityType(Output.of(entityType));
         }
 
+        /**
+         * @param entityTypeName The mapping entity name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entityTypeName(Output<String> entityTypeName) {
             $.entityTypeName = entityTypeName;
             return this;
         }
 
+        /**
+         * @param entityTypeName The mapping entity name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entityTypeName(String entityTypeName) {
             return entityTypeName(Output.of(entityTypeName));
         }
 
+        /**
+         * @param hubName The name of the hub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hubName(Output<String> hubName) {
             $.hubName = hubName;
             return this;
         }
 
+        /**
+         * @param hubName The name of the hub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hubName(String hubName) {
             return hubName(Output.of(hubName));
         }
 
+        /**
+         * @param mappingName The name of the connector mapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mappingName(@Nullable Output<String> mappingName) {
             $.mappingName = mappingName;
             return this;
         }
 
+        /**
+         * @param mappingName The name of the connector mapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mappingName(String mappingName) {
             return mappingName(Output.of(mappingName));
         }
 
+        /**
+         * @param mappingProperties The properties of the mapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mappingProperties(Output<ConnectorMappingPropertiesArgs> mappingProperties) {
             $.mappingProperties = mappingProperties;
             return this;
         }
 
+        /**
+         * @param mappingProperties The properties of the mapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mappingProperties(ConnectorMappingPropertiesArgs mappingProperties) {
             return mappingProperties(Output.of(mappingProperties));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }

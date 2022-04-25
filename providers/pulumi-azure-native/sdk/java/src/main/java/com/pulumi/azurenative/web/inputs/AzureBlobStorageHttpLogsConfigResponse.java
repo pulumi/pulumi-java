@@ -27,6 +27,10 @@ public final class AzureBlobStorageHttpLogsConfigResponse extends com.pulumi.res
     @Import(name="enabled")
     private @Nullable Boolean enabled;
 
+    /**
+     * @return True if configuration is enabled, false if it is disabled and null if configuration is not set.
+     * 
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -40,6 +44,12 @@ public final class AzureBlobStorageHttpLogsConfigResponse extends com.pulumi.res
     @Import(name="retentionInDays")
     private @Nullable Integer retentionInDays;
 
+    /**
+     * @return Retention in days.
+     * Remove blobs older than X days.
+     * 0 or lower means no retention.
+     * 
+     */
     public Optional<Integer> retentionInDays() {
         return Optional.ofNullable(this.retentionInDays);
     }
@@ -51,6 +61,10 @@ public final class AzureBlobStorageHttpLogsConfigResponse extends com.pulumi.res
     @Import(name="sasUrl")
     private @Nullable String sasUrl;
 
+    /**
+     * @return SAS url to a azure blob container with read/write/list/delete permissions.
+     * 
+     */
     public Optional<String> sasUrl() {
         return Optional.ofNullable(this.sasUrl);
     }
@@ -81,16 +95,36 @@ public final class AzureBlobStorageHttpLogsConfigResponse extends com.pulumi.res
             $ = new AzureBlobStorageHttpLogsConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled True if configuration is enabled, false if it is disabled and null if configuration is not set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Boolean enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param retentionInDays Retention in days.
+         * Remove blobs older than X days.
+         * 0 or lower means no retention.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionInDays(@Nullable Integer retentionInDays) {
             $.retentionInDays = retentionInDays;
             return this;
         }
 
+        /**
+         * @param sasUrl SAS url to a azure blob container with read/write/list/delete permissions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sasUrl(@Nullable String sasUrl) {
             $.sasUrl = sasUrl;
             return this;

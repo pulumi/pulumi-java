@@ -25,6 +25,10 @@ public final class DayDetailsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="time")
     private @Nullable String time;
 
+    /**
+     * @return The time of day the schedule will occur.
+     * 
+     */
     public Optional<String> time() {
         return Optional.ofNullable(this.time);
     }
@@ -53,6 +57,12 @@ public final class DayDetailsResponse extends com.pulumi.resources.InvokeArgs {
             $ = new DayDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param time The time of day the schedule will occur.
+         * 
+         * @return builder
+         * 
+         */
         public Builder time(@Nullable String time) {
             $.time = time;
             return this;

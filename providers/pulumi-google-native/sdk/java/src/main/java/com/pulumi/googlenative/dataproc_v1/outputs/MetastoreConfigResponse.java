@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class MetastoreConfigResponse {
     /**
-     * Resource name of an existing Dataproc Metastore service.Example: projects/[project_id]/locations/[dataproc_region]/services/[service-name]
+     * @return Resource name of an existing Dataproc Metastore service.Example: projects/[project_id]/locations/[dataproc_region]/services/[service-name]
      * 
      */
     private final String dataprocMetastoreService;
@@ -21,9 +21,9 @@ public final class MetastoreConfigResponse {
     }
 
     /**
-     * Resource name of an existing Dataproc Metastore service.Example: projects/[project_id]/locations/[dataproc_region]/services/[service-name]
+     * @return Resource name of an existing Dataproc Metastore service.Example: projects/[project_id]/locations/[dataproc_region]/services/[service-name]
      * 
-    */
+     */
     public String dataprocMetastoreService() {
         return this.dataprocMetastoreService;
     }

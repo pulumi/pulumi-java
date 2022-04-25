@@ -28,6 +28,10 @@ public final class AnomalyDetectorMetricSetArgs extends com.pulumi.resources.Res
     @Import(name="dimensionList")
     private @Nullable Output<List<String>> dimensionList;
 
+    /**
+     * @return Dimensions for this MetricSet.
+     * 
+     */
     public Optional<Output<List<String>>> dimensionList() {
         return Optional.ofNullable(this.dimensionList);
     }
@@ -39,6 +43,10 @@ public final class AnomalyDetectorMetricSetArgs extends com.pulumi.resources.Res
     @Import(name="metricList", required=true)
     private Output<List<AnomalyDetectorMetricArgs>> metricList;
 
+    /**
+     * @return Metrics captured by this MetricSet.
+     * 
+     */
     public Output<List<AnomalyDetectorMetricArgs>> metricList() {
         return this.metricList;
     }
@@ -50,6 +58,10 @@ public final class AnomalyDetectorMetricSetArgs extends com.pulumi.resources.Res
     @Import(name="metricSetDescription")
     private @Nullable Output<String> metricSetDescription;
 
+    /**
+     * @return A description for the MetricSet.
+     * 
+     */
     public Optional<Output<String>> metricSetDescription() {
         return Optional.ofNullable(this.metricSetDescription);
     }
@@ -61,6 +73,10 @@ public final class AnomalyDetectorMetricSetArgs extends com.pulumi.resources.Res
     @Import(name="metricSetFrequency")
     private @Nullable Output<AnomalyDetectorMetricSetMetricSetFrequency> metricSetFrequency;
 
+    /**
+     * @return A frequency period to aggregate the data
+     * 
+     */
     public Optional<Output<AnomalyDetectorMetricSetMetricSetFrequency>> metricSetFrequency() {
         return Optional.ofNullable(this.metricSetFrequency);
     }
@@ -72,6 +88,10 @@ public final class AnomalyDetectorMetricSetArgs extends com.pulumi.resources.Res
     @Import(name="metricSetName", required=true)
     private Output<String> metricSetName;
 
+    /**
+     * @return The name of the MetricSet.
+     * 
+     */
     public Output<String> metricSetName() {
         return this.metricSetName;
     }
@@ -90,6 +110,10 @@ public final class AnomalyDetectorMetricSetArgs extends com.pulumi.resources.Res
     @Import(name="offset")
     private @Nullable Output<Integer> offset;
 
+    /**
+     * @return Offset, in seconds, between the frequency interval and the time at which the metrics are available.
+     * 
+     */
     public Optional<Output<Integer>> offset() {
         return Optional.ofNullable(this.offset);
     }
@@ -140,55 +164,127 @@ public final class AnomalyDetectorMetricSetArgs extends com.pulumi.resources.Res
             $ = new AnomalyDetectorMetricSetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dimensionList Dimensions for this MetricSet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dimensionList(@Nullable Output<List<String>> dimensionList) {
             $.dimensionList = dimensionList;
             return this;
         }
 
+        /**
+         * @param dimensionList Dimensions for this MetricSet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dimensionList(List<String> dimensionList) {
             return dimensionList(Output.of(dimensionList));
         }
 
+        /**
+         * @param dimensionList Dimensions for this MetricSet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dimensionList(String... dimensionList) {
             return dimensionList(List.of(dimensionList));
         }
 
+        /**
+         * @param metricList Metrics captured by this MetricSet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricList(Output<List<AnomalyDetectorMetricArgs>> metricList) {
             $.metricList = metricList;
             return this;
         }
 
+        /**
+         * @param metricList Metrics captured by this MetricSet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricList(List<AnomalyDetectorMetricArgs> metricList) {
             return metricList(Output.of(metricList));
         }
 
+        /**
+         * @param metricList Metrics captured by this MetricSet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricList(AnomalyDetectorMetricArgs... metricList) {
             return metricList(List.of(metricList));
         }
 
+        /**
+         * @param metricSetDescription A description for the MetricSet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricSetDescription(@Nullable Output<String> metricSetDescription) {
             $.metricSetDescription = metricSetDescription;
             return this;
         }
 
+        /**
+         * @param metricSetDescription A description for the MetricSet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricSetDescription(String metricSetDescription) {
             return metricSetDescription(Output.of(metricSetDescription));
         }
 
+        /**
+         * @param metricSetFrequency A frequency period to aggregate the data
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricSetFrequency(@Nullable Output<AnomalyDetectorMetricSetMetricSetFrequency> metricSetFrequency) {
             $.metricSetFrequency = metricSetFrequency;
             return this;
         }
 
+        /**
+         * @param metricSetFrequency A frequency period to aggregate the data
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricSetFrequency(AnomalyDetectorMetricSetMetricSetFrequency metricSetFrequency) {
             return metricSetFrequency(Output.of(metricSetFrequency));
         }
 
+        /**
+         * @param metricSetName The name of the MetricSet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricSetName(Output<String> metricSetName) {
             $.metricSetName = metricSetName;
             return this;
         }
 
+        /**
+         * @param metricSetName The name of the MetricSet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricSetName(String metricSetName) {
             return metricSetName(Output.of(metricSetName));
         }
@@ -202,11 +298,23 @@ public final class AnomalyDetectorMetricSetArgs extends com.pulumi.resources.Res
             return metricSource(Output.of(metricSource));
         }
 
+        /**
+         * @param offset Offset, in seconds, between the frequency interval and the time at which the metrics are available.
+         * 
+         * @return builder
+         * 
+         */
         public Builder offset(@Nullable Output<Integer> offset) {
             $.offset = offset;
             return this;
         }
 
+        /**
+         * @param offset Offset, in seconds, between the frequency interval and the time at which the metrics are available.
+         * 
+         * @return builder
+         * 
+         */
         public Builder offset(Integer offset) {
             return offset(Output.of(offset));
         }

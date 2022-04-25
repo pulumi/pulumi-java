@@ -29,6 +29,10 @@ public final class WebPubSubHubPropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="anonymousConnectPolicy")
     private @Nullable Output<String> anonymousConnectPolicy;
 
+    /**
+     * @return The settings for configuring if anonymous connections are allowed for this hub: &#34;allow&#34; or &#34;deny&#34;. Default to &#34;deny&#34;.
+     * 
+     */
     public Optional<Output<String>> anonymousConnectPolicy() {
         return Optional.ofNullable(this.anonymousConnectPolicy);
     }
@@ -40,6 +44,10 @@ public final class WebPubSubHubPropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="eventHandlers")
     private @Nullable Output<List<EventHandlerArgs>> eventHandlers;
 
+    /**
+     * @return Event handler of a hub.
+     * 
+     */
     public Optional<Output<List<EventHandlerArgs>>> eventHandlers() {
         return Optional.ofNullable(this.eventHandlers);
     }
@@ -69,24 +77,54 @@ public final class WebPubSubHubPropertiesArgs extends com.pulumi.resources.Resou
             $ = new WebPubSubHubPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param anonymousConnectPolicy The settings for configuring if anonymous connections are allowed for this hub: &#34;allow&#34; or &#34;deny&#34;. Default to &#34;deny&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder anonymousConnectPolicy(@Nullable Output<String> anonymousConnectPolicy) {
             $.anonymousConnectPolicy = anonymousConnectPolicy;
             return this;
         }
 
+        /**
+         * @param anonymousConnectPolicy The settings for configuring if anonymous connections are allowed for this hub: &#34;allow&#34; or &#34;deny&#34;. Default to &#34;deny&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder anonymousConnectPolicy(String anonymousConnectPolicy) {
             return anonymousConnectPolicy(Output.of(anonymousConnectPolicy));
         }
 
+        /**
+         * @param eventHandlers Event handler of a hub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventHandlers(@Nullable Output<List<EventHandlerArgs>> eventHandlers) {
             $.eventHandlers = eventHandlers;
             return this;
         }
 
+        /**
+         * @param eventHandlers Event handler of a hub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventHandlers(List<EventHandlerArgs> eventHandlers) {
             return eventHandlers(Output.of(eventHandlers));
         }
 
+        /**
+         * @param eventHandlers Event handler of a hub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventHandlers(EventHandlerArgs... eventHandlers) {
             return eventHandlers(List.of(eventHandlers));
         }

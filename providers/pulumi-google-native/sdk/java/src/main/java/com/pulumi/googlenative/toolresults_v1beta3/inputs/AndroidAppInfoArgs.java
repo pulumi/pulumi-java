@@ -26,6 +26,10 @@ public final class AndroidAppInfoArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the app. Optional
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -37,6 +41,10 @@ public final class AndroidAppInfoArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="packageName")
     private @Nullable Output<String> packageName;
 
+    /**
+     * @return The package name of the app. Required.
+     * 
+     */
     public Optional<Output<String>> packageName() {
         return Optional.ofNullable(this.packageName);
     }
@@ -48,6 +56,10 @@ public final class AndroidAppInfoArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="versionCode")
     private @Nullable Output<String> versionCode;
 
+    /**
+     * @return The internal version code of the app. Optional.
+     * 
+     */
     public Optional<Output<String>> versionCode() {
         return Optional.ofNullable(this.versionCode);
     }
@@ -59,6 +71,10 @@ public final class AndroidAppInfoArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="versionName")
     private @Nullable Output<String> versionName;
 
+    /**
+     * @return The version name of the app. Optional.
+     * 
+     */
     public Optional<Output<String>> versionName() {
         return Optional.ofNullable(this.versionName);
     }
@@ -90,38 +106,86 @@ public final class AndroidAppInfoArgs extends com.pulumi.resources.ResourceArgs 
             $ = new AndroidAppInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the app. Optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the app. Optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param packageName The package name of the app. Required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packageName(@Nullable Output<String> packageName) {
             $.packageName = packageName;
             return this;
         }
 
+        /**
+         * @param packageName The package name of the app. Required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packageName(String packageName) {
             return packageName(Output.of(packageName));
         }
 
+        /**
+         * @param versionCode The internal version code of the app. Optional.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionCode(@Nullable Output<String> versionCode) {
             $.versionCode = versionCode;
             return this;
         }
 
+        /**
+         * @param versionCode The internal version code of the app. Optional.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionCode(String versionCode) {
             return versionCode(Output.of(versionCode));
         }
 
+        /**
+         * @param versionName The version name of the app. Optional.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionName(@Nullable Output<String> versionName) {
             $.versionName = versionName;
             return this;
         }
 
+        /**
+         * @param versionName The version name of the app. Optional.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionName(String versionName) {
             return versionName(Output.of(versionName));
         }

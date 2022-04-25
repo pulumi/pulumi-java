@@ -11,13 +11,13 @@ import java.util.Objects;
 @CustomType
 public final class RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort {
     /**
-     * The HTTP status code used to abort the request. The value must be between 200
+     * @return The HTTP status code used to abort the request. The value must be between 200
      * and 599 inclusive.
      * 
      */
     private final Integer httpStatus;
     /**
-     * The percentage of traffic (connections/operations/requests) on which delay will
+     * @return The percentage of traffic (connections/operations/requests) on which delay will
      * be introduced as part of fault injection. The value must be between 0.0 and
      * 100.0 inclusive.
      * 
@@ -33,19 +33,19 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolic
     }
 
     /**
-     * The HTTP status code used to abort the request. The value must be between 200
+     * @return The HTTP status code used to abort the request. The value must be between 200
      * and 599 inclusive.
      * 
-    */
+     */
     public Integer httpStatus() {
         return this.httpStatus;
     }
     /**
-     * The percentage of traffic (connections/operations/requests) on which delay will
+     * @return The percentage of traffic (connections/operations/requests) on which delay will
      * be introduced as part of fault injection. The value must be between 0.0 and
      * 100.0 inclusive.
      * 
-    */
+     */
     public Double percentage() {
         return this.percentage;
     }

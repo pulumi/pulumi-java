@@ -19,6 +19,10 @@ public final class GetExpressRouteCircuitAuthorizationArgs extends com.pulumi.re
     @Import(name="authorizationName", required=true)
     private String authorizationName;
 
+    /**
+     * @return The name of the authorization.
+     * 
+     */
     public String authorizationName() {
         return this.authorizationName;
     }
@@ -30,6 +34,10 @@ public final class GetExpressRouteCircuitAuthorizationArgs extends com.pulumi.re
     @Import(name="circuitName", required=true)
     private String circuitName;
 
+    /**
+     * @return The name of the express route circuit.
+     * 
+     */
     public String circuitName() {
         return this.circuitName;
     }
@@ -41,6 +49,10 @@ public final class GetExpressRouteCircuitAuthorizationArgs extends com.pulumi.re
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetExpressRouteCircuitAuthorizationArgs extends com.pulumi.re
             $ = new GetExpressRouteCircuitAuthorizationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authorizationName The name of the authorization.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationName(String authorizationName) {
             $.authorizationName = authorizationName;
             return this;
         }
 
+        /**
+         * @param circuitName The name of the express route circuit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder circuitName(String circuitName) {
             $.circuitName = circuitName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

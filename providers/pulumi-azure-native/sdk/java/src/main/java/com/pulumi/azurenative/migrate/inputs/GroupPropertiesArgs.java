@@ -26,6 +26,10 @@ public final class GroupPropertiesArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="groupType")
     private @Nullable Output<String> groupType;
 
+    /**
+     * @return The type of group.
+     * 
+     */
     public Optional<Output<String>> groupType() {
         return Optional.ofNullable(this.groupType);
     }
@@ -54,11 +58,23 @@ public final class GroupPropertiesArgs extends com.pulumi.resources.ResourceArgs
             $ = new GroupPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param groupType The type of group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupType(@Nullable Output<String> groupType) {
             $.groupType = groupType;
             return this;
         }
 
+        /**
+         * @param groupType The type of group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupType(String groupType) {
             return groupType(Output.of(groupType));
         }

@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class VirtualNetworkRuleResponse {
     /**
-     * Full resource id of a vnet subnet, such as &#39;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1&#39;.
+     * @return Full resource id of a vnet subnet, such as &#39;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1&#39;.
      * 
      */
     private final String id;
     /**
-     * Ignore missing vnet service endpoint or not.
+     * @return Ignore missing vnet service endpoint or not.
      * 
      */
     private final @Nullable Boolean ignoreMissingVnetServiceEndpoint;
     /**
-     * Gets the state of virtual network rule.
+     * @return Gets the state of virtual network rule.
      * 
      */
     private final @Nullable String state;
@@ -39,23 +39,23 @@ public final class VirtualNetworkRuleResponse {
     }
 
     /**
-     * Full resource id of a vnet subnet, such as &#39;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1&#39;.
+     * @return Full resource id of a vnet subnet, such as &#39;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1&#39;.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Ignore missing vnet service endpoint or not.
+     * @return Ignore missing vnet service endpoint or not.
      * 
-    */
+     */
     public Optional<Boolean> ignoreMissingVnetServiceEndpoint() {
         return Optional.ofNullable(this.ignoreMissingVnetServiceEndpoint);
     }
     /**
-     * Gets the state of virtual network rule.
+     * @return Gets the state of virtual network rule.
      * 
-    */
+     */
     public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }

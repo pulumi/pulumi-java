@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class VpnLinkBgpSettingsResponse {
     /**
-     * The BGP speaker&#39;s ASN.
+     * @return The BGP speaker&#39;s ASN.
      * 
      */
     private final @Nullable Double asn;
     /**
-     * The BGP peering address and BGP identifier of this BGP speaker.
+     * @return The BGP peering address and BGP identifier of this BGP speaker.
      * 
      */
     private final @Nullable String bgpPeeringAddress;
@@ -32,16 +32,16 @@ public final class VpnLinkBgpSettingsResponse {
     }
 
     /**
-     * The BGP speaker&#39;s ASN.
+     * @return The BGP speaker&#39;s ASN.
      * 
-    */
+     */
     public Optional<Double> asn() {
         return Optional.ofNullable(this.asn);
     }
     /**
-     * The BGP peering address and BGP identifier of this BGP speaker.
+     * @return The BGP peering address and BGP identifier of this BGP speaker.
      * 
-    */
+     */
     public Optional<String> bgpPeeringAddress() {
         return Optional.ofNullable(this.bgpPeeringAddress);
     }

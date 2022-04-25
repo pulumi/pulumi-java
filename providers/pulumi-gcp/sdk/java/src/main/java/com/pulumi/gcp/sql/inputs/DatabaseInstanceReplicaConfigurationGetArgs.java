@@ -25,6 +25,11 @@ public final class DatabaseInstanceReplicaConfigurationGetArgs extends com.pulum
     @Import(name="caCertificate")
     private @Nullable Output<String> caCertificate;
 
+    /**
+     * @return PEM representation of the trusted CA&#39;s x509
+     * certificate.
+     * 
+     */
     public Optional<Output<String>> caCertificate() {
         return Optional.ofNullable(this.caCertificate);
     }
@@ -37,6 +42,11 @@ public final class DatabaseInstanceReplicaConfigurationGetArgs extends com.pulum
     @Import(name="clientCertificate")
     private @Nullable Output<String> clientCertificate;
 
+    /**
+     * @return PEM representation of the replica&#39;s x509
+     * certificate.
+     * 
+     */
     public Optional<Output<String>> clientCertificate() {
         return Optional.ofNullable(this.clientCertificate);
     }
@@ -49,6 +59,11 @@ public final class DatabaseInstanceReplicaConfigurationGetArgs extends com.pulum
     @Import(name="clientKey")
     private @Nullable Output<String> clientKey;
 
+    /**
+     * @return PEM representation of the replica&#39;s private key. The
+     * corresponding public key in encoded in the `client_certificate`.
+     * 
+     */
     public Optional<Output<String>> clientKey() {
         return Optional.ofNullable(this.clientKey);
     }
@@ -61,6 +76,11 @@ public final class DatabaseInstanceReplicaConfigurationGetArgs extends com.pulum
     @Import(name="connectRetryInterval")
     private @Nullable Output<Integer> connectRetryInterval;
 
+    /**
+     * @return The number of seconds
+     * between connect retries.
+     * 
+     */
     public Optional<Output<Integer>> connectRetryInterval() {
         return Optional.ofNullable(this.connectRetryInterval);
     }
@@ -73,6 +93,11 @@ public final class DatabaseInstanceReplicaConfigurationGetArgs extends com.pulum
     @Import(name="dumpFilePath")
     private @Nullable Output<String> dumpFilePath;
 
+    /**
+     * @return Path to a SQL file in GCS from which replica
+     * instances are created. Format is `gs://bucket/filename`.
+     * 
+     */
     public Optional<Output<String>> dumpFilePath() {
         return Optional.ofNullable(this.dumpFilePath);
     }
@@ -87,6 +112,13 @@ public final class DatabaseInstanceReplicaConfigurationGetArgs extends com.pulum
     @Import(name="failoverTarget")
     private @Nullable Output<Boolean> failoverTarget;
 
+    /**
+     * @return Specifies if the replica is the failover target.
+     * If the field is set to true the replica will be designated as a failover replica.
+     * If the master instance fails, the replica instance will be promoted as
+     * the new master instance.
+     * 
+     */
     public Optional<Output<Boolean>> failoverTarget() {
         return Optional.ofNullable(this.failoverTarget);
     }
@@ -99,6 +131,11 @@ public final class DatabaseInstanceReplicaConfigurationGetArgs extends com.pulum
     @Import(name="masterHeartbeatPeriod")
     private @Nullable Output<Integer> masterHeartbeatPeriod;
 
+    /**
+     * @return Time in ms between replication
+     * heartbeats.
+     * 
+     */
     public Optional<Output<Integer>> masterHeartbeatPeriod() {
         return Optional.ofNullable(this.masterHeartbeatPeriod);
     }
@@ -110,6 +147,10 @@ public final class DatabaseInstanceReplicaConfigurationGetArgs extends com.pulum
     @Import(name="password")
     private @Nullable Output<String> password;
 
+    /**
+     * @return Password for the replication connection.
+     * 
+     */
     public Optional<Output<String>> password() {
         return Optional.ofNullable(this.password);
     }
@@ -128,6 +169,10 @@ public final class DatabaseInstanceReplicaConfigurationGetArgs extends com.pulum
     @Import(name="username")
     private @Nullable Output<String> username;
 
+    /**
+     * @return Username for replication connection.
+     * 
+     */
     public Optional<Output<String>> username() {
         return Optional.ofNullable(this.username);
     }
@@ -140,6 +185,11 @@ public final class DatabaseInstanceReplicaConfigurationGetArgs extends com.pulum
     @Import(name="verifyServerCertificate")
     private @Nullable Output<Boolean> verifyServerCertificate;
 
+    /**
+     * @return True if the master&#39;s common name
+     * value is checked during the SSL handshake.
+     * 
+     */
     public Optional<Output<Boolean>> verifyServerCertificate() {
         return Optional.ofNullable(this.verifyServerCertificate);
     }
@@ -178,74 +228,188 @@ public final class DatabaseInstanceReplicaConfigurationGetArgs extends com.pulum
             $ = new DatabaseInstanceReplicaConfigurationGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param caCertificate PEM representation of the trusted CA&#39;s x509
+         * certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder caCertificate(@Nullable Output<String> caCertificate) {
             $.caCertificate = caCertificate;
             return this;
         }
 
+        /**
+         * @param caCertificate PEM representation of the trusted CA&#39;s x509
+         * certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder caCertificate(String caCertificate) {
             return caCertificate(Output.of(caCertificate));
         }
 
+        /**
+         * @param clientCertificate PEM representation of the replica&#39;s x509
+         * certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientCertificate(@Nullable Output<String> clientCertificate) {
             $.clientCertificate = clientCertificate;
             return this;
         }
 
+        /**
+         * @param clientCertificate PEM representation of the replica&#39;s x509
+         * certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientCertificate(String clientCertificate) {
             return clientCertificate(Output.of(clientCertificate));
         }
 
+        /**
+         * @param clientKey PEM representation of the replica&#39;s private key. The
+         * corresponding public key in encoded in the `client_certificate`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientKey(@Nullable Output<String> clientKey) {
             $.clientKey = clientKey;
             return this;
         }
 
+        /**
+         * @param clientKey PEM representation of the replica&#39;s private key. The
+         * corresponding public key in encoded in the `client_certificate`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientKey(String clientKey) {
             return clientKey(Output.of(clientKey));
         }
 
+        /**
+         * @param connectRetryInterval The number of seconds
+         * between connect retries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectRetryInterval(@Nullable Output<Integer> connectRetryInterval) {
             $.connectRetryInterval = connectRetryInterval;
             return this;
         }
 
+        /**
+         * @param connectRetryInterval The number of seconds
+         * between connect retries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectRetryInterval(Integer connectRetryInterval) {
             return connectRetryInterval(Output.of(connectRetryInterval));
         }
 
+        /**
+         * @param dumpFilePath Path to a SQL file in GCS from which replica
+         * instances are created. Format is `gs://bucket/filename`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dumpFilePath(@Nullable Output<String> dumpFilePath) {
             $.dumpFilePath = dumpFilePath;
             return this;
         }
 
+        /**
+         * @param dumpFilePath Path to a SQL file in GCS from which replica
+         * instances are created. Format is `gs://bucket/filename`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dumpFilePath(String dumpFilePath) {
             return dumpFilePath(Output.of(dumpFilePath));
         }
 
+        /**
+         * @param failoverTarget Specifies if the replica is the failover target.
+         * If the field is set to true the replica will be designated as a failover replica.
+         * If the master instance fails, the replica instance will be promoted as
+         * the new master instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failoverTarget(@Nullable Output<Boolean> failoverTarget) {
             $.failoverTarget = failoverTarget;
             return this;
         }
 
+        /**
+         * @param failoverTarget Specifies if the replica is the failover target.
+         * If the field is set to true the replica will be designated as a failover replica.
+         * If the master instance fails, the replica instance will be promoted as
+         * the new master instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failoverTarget(Boolean failoverTarget) {
             return failoverTarget(Output.of(failoverTarget));
         }
 
+        /**
+         * @param masterHeartbeatPeriod Time in ms between replication
+         * heartbeats.
+         * 
+         * @return builder
+         * 
+         */
         public Builder masterHeartbeatPeriod(@Nullable Output<Integer> masterHeartbeatPeriod) {
             $.masterHeartbeatPeriod = masterHeartbeatPeriod;
             return this;
         }
 
+        /**
+         * @param masterHeartbeatPeriod Time in ms between replication
+         * heartbeats.
+         * 
+         * @return builder
+         * 
+         */
         public Builder masterHeartbeatPeriod(Integer masterHeartbeatPeriod) {
             return masterHeartbeatPeriod(Output.of(masterHeartbeatPeriod));
         }
 
+        /**
+         * @param password Password for the replication connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(@Nullable Output<String> password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param password Password for the replication connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(String password) {
             return password(Output.of(password));
         }
@@ -259,20 +423,46 @@ public final class DatabaseInstanceReplicaConfigurationGetArgs extends com.pulum
             return sslCipher(Output.of(sslCipher));
         }
 
+        /**
+         * @param username Username for replication connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(@Nullable Output<String> username) {
             $.username = username;
             return this;
         }
 
+        /**
+         * @param username Username for replication connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(String username) {
             return username(Output.of(username));
         }
 
+        /**
+         * @param verifyServerCertificate True if the master&#39;s common name
+         * value is checked during the SSL handshake.
+         * 
+         * @return builder
+         * 
+         */
         public Builder verifyServerCertificate(@Nullable Output<Boolean> verifyServerCertificate) {
             $.verifyServerCertificate = verifyServerCertificate;
             return this;
         }
 
+        /**
+         * @param verifyServerCertificate True if the master&#39;s common name
+         * value is checked during the SSL handshake.
+         * 
+         * @return builder
+         * 
+         */
         public Builder verifyServerCertificate(Boolean verifyServerCertificate) {
             return verifyServerCertificate(Output.of(verifyServerCertificate));
         }

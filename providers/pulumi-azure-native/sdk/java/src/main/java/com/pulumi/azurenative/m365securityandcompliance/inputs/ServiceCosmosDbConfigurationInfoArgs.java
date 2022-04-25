@@ -27,6 +27,10 @@ public final class ServiceCosmosDbConfigurationInfoArgs extends com.pulumi.resou
     @Import(name="keyVaultKeyUri")
     private @Nullable Output<String> keyVaultKeyUri;
 
+    /**
+     * @return The URI of the customer-managed key for the backing database.
+     * 
+     */
     public Optional<Output<String>> keyVaultKeyUri() {
         return Optional.ofNullable(this.keyVaultKeyUri);
     }
@@ -38,6 +42,10 @@ public final class ServiceCosmosDbConfigurationInfoArgs extends com.pulumi.resou
     @Import(name="offerThroughput")
     private @Nullable Output<Double> offerThroughput;
 
+    /**
+     * @return The provisioned throughput for the backing database.
+     * 
+     */
     public Optional<Output<Double>> offerThroughput() {
         return Optional.ofNullable(this.offerThroughput);
     }
@@ -67,20 +75,44 @@ public final class ServiceCosmosDbConfigurationInfoArgs extends com.pulumi.resou
             $ = new ServiceCosmosDbConfigurationInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyVaultKeyUri The URI of the customer-managed key for the backing database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultKeyUri(@Nullable Output<String> keyVaultKeyUri) {
             $.keyVaultKeyUri = keyVaultKeyUri;
             return this;
         }
 
+        /**
+         * @param keyVaultKeyUri The URI of the customer-managed key for the backing database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultKeyUri(String keyVaultKeyUri) {
             return keyVaultKeyUri(Output.of(keyVaultKeyUri));
         }
 
+        /**
+         * @param offerThroughput The provisioned throughput for the backing database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder offerThroughput(@Nullable Output<Double> offerThroughput) {
             $.offerThroughput = offerThroughput;
             return this;
         }
 
+        /**
+         * @param offerThroughput The provisioned throughput for the backing database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder offerThroughput(Double offerThroughput) {
             return offerThroughput(Output.of(offerThroughput));
         }

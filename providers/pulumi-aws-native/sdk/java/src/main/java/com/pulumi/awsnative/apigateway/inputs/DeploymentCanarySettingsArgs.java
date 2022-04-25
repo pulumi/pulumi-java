@@ -24,6 +24,10 @@ public final class DeploymentCanarySettingsArgs extends com.pulumi.resources.Res
     @Import(name="percentTraffic")
     private @Nullable Output<Double> percentTraffic;
 
+    /**
+     * @return The percentage (0-100) of traffic diverted to a canary deployment.
+     * 
+     */
     public Optional<Output<Double>> percentTraffic() {
         return Optional.ofNullable(this.percentTraffic);
     }
@@ -35,6 +39,10 @@ public final class DeploymentCanarySettingsArgs extends com.pulumi.resources.Res
     @Import(name="stageVariableOverrides")
     private @Nullable Output<Object> stageVariableOverrides;
 
+    /**
+     * @return Stage variables overridden for a canary release deployment, including new stage variables introduced in the canary. These stage variables are represented as a string-to-string map between stage variable names and their values. Duplicates are not allowed.
+     * 
+     */
     public Optional<Output<Object>> stageVariableOverrides() {
         return Optional.ofNullable(this.stageVariableOverrides);
     }
@@ -46,6 +54,10 @@ public final class DeploymentCanarySettingsArgs extends com.pulumi.resources.Res
     @Import(name="useStageCache")
     private @Nullable Output<Boolean> useStageCache;
 
+    /**
+     * @return Whether the canary deployment uses the stage cache.
+     * 
+     */
     public Optional<Output<Boolean>> useStageCache() {
         return Optional.ofNullable(this.useStageCache);
     }
@@ -76,29 +88,65 @@ public final class DeploymentCanarySettingsArgs extends com.pulumi.resources.Res
             $ = new DeploymentCanarySettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param percentTraffic The percentage (0-100) of traffic diverted to a canary deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder percentTraffic(@Nullable Output<Double> percentTraffic) {
             $.percentTraffic = percentTraffic;
             return this;
         }
 
+        /**
+         * @param percentTraffic The percentage (0-100) of traffic diverted to a canary deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder percentTraffic(Double percentTraffic) {
             return percentTraffic(Output.of(percentTraffic));
         }
 
+        /**
+         * @param stageVariableOverrides Stage variables overridden for a canary release deployment, including new stage variables introduced in the canary. These stage variables are represented as a string-to-string map between stage variable names and their values. Duplicates are not allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stageVariableOverrides(@Nullable Output<Object> stageVariableOverrides) {
             $.stageVariableOverrides = stageVariableOverrides;
             return this;
         }
 
+        /**
+         * @param stageVariableOverrides Stage variables overridden for a canary release deployment, including new stage variables introduced in the canary. These stage variables are represented as a string-to-string map between stage variable names and their values. Duplicates are not allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stageVariableOverrides(Object stageVariableOverrides) {
             return stageVariableOverrides(Output.of(stageVariableOverrides));
         }
 
+        /**
+         * @param useStageCache Whether the canary deployment uses the stage cache.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useStageCache(@Nullable Output<Boolean> useStageCache) {
             $.useStageCache = useStageCache;
             return this;
         }
 
+        /**
+         * @param useStageCache Whether the canary deployment uses the stage cache.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useStageCache(Boolean useStageCache) {
             return useStageCache(Output.of(useStageCache));
         }

@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class RoboDirectiveResponse {
     /**
-     * The type of action that Robo should perform on the specified element.
+     * @return The type of action that Robo should perform on the specified element.
      * 
      */
     private final String actionType;
     /**
-     * The text that Robo is directed to set. If left empty, the directive will be treated as a CLICK on the element matching the resource_name.
+     * @return The text that Robo is directed to set. If left empty, the directive will be treated as a CLICK on the element matching the resource_name.
      * 
      */
     private final String inputText;
     /**
-     * The android resource name of the target UI element. For example, in Java: R.string.foo in xml: @string/foo Only the &#34;foo&#34; part is needed. Reference doc: https://developer.android.com/guide/topics/resources/accessing-resources.html
+     * @return The android resource name of the target UI element. For example, in Java: R.string.foo in xml: @string/foo Only the &#34;foo&#34; part is needed. Reference doc: https://developer.android.com/guide/topics/resources/accessing-resources.html
      * 
      */
     private final String resourceName;
@@ -36,23 +36,23 @@ public final class RoboDirectiveResponse {
     }
 
     /**
-     * The type of action that Robo should perform on the specified element.
+     * @return The type of action that Robo should perform on the specified element.
      * 
-    */
+     */
     public String actionType() {
         return this.actionType;
     }
     /**
-     * The text that Robo is directed to set. If left empty, the directive will be treated as a CLICK on the element matching the resource_name.
+     * @return The text that Robo is directed to set. If left empty, the directive will be treated as a CLICK on the element matching the resource_name.
      * 
-    */
+     */
     public String inputText() {
         return this.inputText;
     }
     /**
-     * The android resource name of the target UI element. For example, in Java: R.string.foo in xml: @string/foo Only the &#34;foo&#34; part is needed. Reference doc: https://developer.android.com/guide/topics/resources/accessing-resources.html
+     * @return The android resource name of the target UI element. For example, in Java: R.string.foo in xml: @string/foo Only the &#34;foo&#34; part is needed. Reference doc: https://developer.android.com/guide/topics/resources/accessing-resources.html
      * 
-    */
+     */
     public String resourceName() {
         return this.resourceName;
     }

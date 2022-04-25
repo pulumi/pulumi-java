@@ -19,6 +19,10 @@ public final class GetSystemTopicArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group within the user&#39;s subscription.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -30,6 +34,10 @@ public final class GetSystemTopicArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="systemTopicName", required=true)
     private String systemTopicName;
 
+    /**
+     * @return Name of the system topic.
+     * 
+     */
     public String systemTopicName() {
         return this.systemTopicName;
     }
@@ -59,11 +67,23 @@ public final class GetSystemTopicArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetSystemTopicArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param systemTopicName Name of the system topic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder systemTopicName(String systemTopicName) {
             $.systemTopicName = systemTopicName;
             return this;

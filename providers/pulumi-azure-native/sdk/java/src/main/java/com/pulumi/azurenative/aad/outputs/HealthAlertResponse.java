@@ -10,37 +10,37 @@ import java.util.Objects;
 @CustomType
 public final class HealthAlertResponse {
     /**
-     * Health Alert Id
+     * @return Health Alert Id
      * 
      */
     private final String id;
     /**
-     * Health Alert Issue
+     * @return Health Alert Issue
      * 
      */
     private final String issue;
     /**
-     * Health Alert Last Detected DateTime
+     * @return Health Alert Last Detected DateTime
      * 
      */
     private final String lastDetected;
     /**
-     * Health Alert Name
+     * @return Health Alert Name
      * 
      */
     private final String name;
     /**
-     * Health Alert Raised DateTime
+     * @return Health Alert Raised DateTime
      * 
      */
     private final String raised;
     /**
-     * Health Alert TSG Link
+     * @return Health Alert TSG Link
      * 
      */
     private final String resolutionUri;
     /**
-     * Health Alert Severity
+     * @return Health Alert Severity
      * 
      */
     private final String severity;
@@ -64,51 +64,51 @@ public final class HealthAlertResponse {
     }
 
     /**
-     * Health Alert Id
+     * @return Health Alert Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Health Alert Issue
+     * @return Health Alert Issue
      * 
-    */
+     */
     public String issue() {
         return this.issue;
     }
     /**
-     * Health Alert Last Detected DateTime
+     * @return Health Alert Last Detected DateTime
      * 
-    */
+     */
     public String lastDetected() {
         return this.lastDetected;
     }
     /**
-     * Health Alert Name
+     * @return Health Alert Name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Health Alert Raised DateTime
+     * @return Health Alert Raised DateTime
      * 
-    */
+     */
     public String raised() {
         return this.raised;
     }
     /**
-     * Health Alert TSG Link
+     * @return Health Alert TSG Link
      * 
-    */
+     */
     public String resolutionUri() {
         return this.resolutionUri;
     }
     /**
-     * Health Alert Severity
+     * @return Health Alert Severity
      * 
-    */
+     */
     public String severity() {
         return this.severity;
     }

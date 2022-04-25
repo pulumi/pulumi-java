@@ -27,6 +27,10 @@ public final class CacheActiveDirectorySettingsArgs extends com.pulumi.resources
     @Import(name="cacheNetBiosName", required=true)
     private Output<String> cacheNetBiosName;
 
+    /**
+     * @return The NetBIOS name to assign to the HPC Cache when it joins the Active Directory domain as a server. Length must 1-15 characters from the class [-0-9a-zA-Z].
+     * 
+     */
     public Output<String> cacheNetBiosName() {
         return this.cacheNetBiosName;
     }
@@ -38,6 +42,10 @@ public final class CacheActiveDirectorySettingsArgs extends com.pulumi.resources
     @Import(name="credentials")
     private @Nullable Output<CacheActiveDirectorySettingsCredentialsArgs> credentials;
 
+    /**
+     * @return Active Directory admin credentials used to join the HPC Cache to a domain.
+     * 
+     */
     public Optional<Output<CacheActiveDirectorySettingsCredentialsArgs>> credentials() {
         return Optional.ofNullable(this.credentials);
     }
@@ -49,6 +57,10 @@ public final class CacheActiveDirectorySettingsArgs extends com.pulumi.resources
     @Import(name="domainName", required=true)
     private Output<String> domainName;
 
+    /**
+     * @return The fully qualified domain name of the Active Directory domain controller.
+     * 
+     */
     public Output<String> domainName() {
         return this.domainName;
     }
@@ -60,6 +72,10 @@ public final class CacheActiveDirectorySettingsArgs extends com.pulumi.resources
     @Import(name="domainNetBiosName", required=true)
     private Output<String> domainNetBiosName;
 
+    /**
+     * @return The Active Directory domain&#39;s NetBIOS name.
+     * 
+     */
     public Output<String> domainNetBiosName() {
         return this.domainNetBiosName;
     }
@@ -71,6 +87,10 @@ public final class CacheActiveDirectorySettingsArgs extends com.pulumi.resources
     @Import(name="primaryDnsIpAddress", required=true)
     private Output<String> primaryDnsIpAddress;
 
+    /**
+     * @return Primary DNS IP address used to resolve the Active Directory domain controller&#39;s fully qualified domain name.
+     * 
+     */
     public Output<String> primaryDnsIpAddress() {
         return this.primaryDnsIpAddress;
     }
@@ -82,6 +102,10 @@ public final class CacheActiveDirectorySettingsArgs extends com.pulumi.resources
     @Import(name="secondaryDnsIpAddress")
     private @Nullable Output<String> secondaryDnsIpAddress;
 
+    /**
+     * @return Secondary DNS IP address used to resolve the Active Directory domain controller&#39;s fully qualified domain name.
+     * 
+     */
     public Optional<Output<String>> secondaryDnsIpAddress() {
         return Optional.ofNullable(this.secondaryDnsIpAddress);
     }
@@ -115,56 +139,128 @@ public final class CacheActiveDirectorySettingsArgs extends com.pulumi.resources
             $ = new CacheActiveDirectorySettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cacheNetBiosName The NetBIOS name to assign to the HPC Cache when it joins the Active Directory domain as a server. Length must 1-15 characters from the class [-0-9a-zA-Z].
+         * 
+         * @return builder
+         * 
+         */
         public Builder cacheNetBiosName(Output<String> cacheNetBiosName) {
             $.cacheNetBiosName = cacheNetBiosName;
             return this;
         }
 
+        /**
+         * @param cacheNetBiosName The NetBIOS name to assign to the HPC Cache when it joins the Active Directory domain as a server. Length must 1-15 characters from the class [-0-9a-zA-Z].
+         * 
+         * @return builder
+         * 
+         */
         public Builder cacheNetBiosName(String cacheNetBiosName) {
             return cacheNetBiosName(Output.of(cacheNetBiosName));
         }
 
+        /**
+         * @param credentials Active Directory admin credentials used to join the HPC Cache to a domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder credentials(@Nullable Output<CacheActiveDirectorySettingsCredentialsArgs> credentials) {
             $.credentials = credentials;
             return this;
         }
 
+        /**
+         * @param credentials Active Directory admin credentials used to join the HPC Cache to a domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder credentials(CacheActiveDirectorySettingsCredentialsArgs credentials) {
             return credentials(Output.of(credentials));
         }
 
+        /**
+         * @param domainName The fully qualified domain name of the Active Directory domain controller.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(Output<String> domainName) {
             $.domainName = domainName;
             return this;
         }
 
+        /**
+         * @param domainName The fully qualified domain name of the Active Directory domain controller.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(String domainName) {
             return domainName(Output.of(domainName));
         }
 
+        /**
+         * @param domainNetBiosName The Active Directory domain&#39;s NetBIOS name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainNetBiosName(Output<String> domainNetBiosName) {
             $.domainNetBiosName = domainNetBiosName;
             return this;
         }
 
+        /**
+         * @param domainNetBiosName The Active Directory domain&#39;s NetBIOS name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainNetBiosName(String domainNetBiosName) {
             return domainNetBiosName(Output.of(domainNetBiosName));
         }
 
+        /**
+         * @param primaryDnsIpAddress Primary DNS IP address used to resolve the Active Directory domain controller&#39;s fully qualified domain name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryDnsIpAddress(Output<String> primaryDnsIpAddress) {
             $.primaryDnsIpAddress = primaryDnsIpAddress;
             return this;
         }
 
+        /**
+         * @param primaryDnsIpAddress Primary DNS IP address used to resolve the Active Directory domain controller&#39;s fully qualified domain name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryDnsIpAddress(String primaryDnsIpAddress) {
             return primaryDnsIpAddress(Output.of(primaryDnsIpAddress));
         }
 
+        /**
+         * @param secondaryDnsIpAddress Secondary DNS IP address used to resolve the Active Directory domain controller&#39;s fully qualified domain name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondaryDnsIpAddress(@Nullable Output<String> secondaryDnsIpAddress) {
             $.secondaryDnsIpAddress = secondaryDnsIpAddress;
             return this;
         }
 
+        /**
+         * @param secondaryDnsIpAddress Secondary DNS IP address used to resolve the Active Directory domain controller&#39;s fully qualified domain name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondaryDnsIpAddress(String secondaryDnsIpAddress) {
             return secondaryDnsIpAddress(Output.of(secondaryDnsIpAddress));
         }

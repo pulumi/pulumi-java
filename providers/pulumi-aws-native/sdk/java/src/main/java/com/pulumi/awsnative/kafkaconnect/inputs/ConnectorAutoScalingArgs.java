@@ -26,6 +26,10 @@ public final class ConnectorAutoScalingArgs extends com.pulumi.resources.Resourc
     @Import(name="maxWorkerCount", required=true)
     private Output<Integer> maxWorkerCount;
 
+    /**
+     * @return The maximum number of workers for a connector.
+     * 
+     */
     public Output<Integer> maxWorkerCount() {
         return this.maxWorkerCount;
     }
@@ -37,6 +41,10 @@ public final class ConnectorAutoScalingArgs extends com.pulumi.resources.Resourc
     @Import(name="mcuCount", required=true)
     private Output<Integer> mcuCount;
 
+    /**
+     * @return Specifies how many MSK Connect Units (MCU) as the minimum scaling unit.
+     * 
+     */
     public Output<Integer> mcuCount() {
         return this.mcuCount;
     }
@@ -48,6 +56,10 @@ public final class ConnectorAutoScalingArgs extends com.pulumi.resources.Resourc
     @Import(name="minWorkerCount", required=true)
     private Output<Integer> minWorkerCount;
 
+    /**
+     * @return The minimum number of workers for a connector.
+     * 
+     */
     public Output<Integer> minWorkerCount() {
         return this.minWorkerCount;
     }
@@ -94,29 +106,65 @@ public final class ConnectorAutoScalingArgs extends com.pulumi.resources.Resourc
             $ = new ConnectorAutoScalingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxWorkerCount The maximum number of workers for a connector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxWorkerCount(Output<Integer> maxWorkerCount) {
             $.maxWorkerCount = maxWorkerCount;
             return this;
         }
 
+        /**
+         * @param maxWorkerCount The maximum number of workers for a connector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxWorkerCount(Integer maxWorkerCount) {
             return maxWorkerCount(Output.of(maxWorkerCount));
         }
 
+        /**
+         * @param mcuCount Specifies how many MSK Connect Units (MCU) as the minimum scaling unit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mcuCount(Output<Integer> mcuCount) {
             $.mcuCount = mcuCount;
             return this;
         }
 
+        /**
+         * @param mcuCount Specifies how many MSK Connect Units (MCU) as the minimum scaling unit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mcuCount(Integer mcuCount) {
             return mcuCount(Output.of(mcuCount));
         }
 
+        /**
+         * @param minWorkerCount The minimum number of workers for a connector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minWorkerCount(Output<Integer> minWorkerCount) {
             $.minWorkerCount = minWorkerCount;
             return this;
         }
 
+        /**
+         * @param minWorkerCount The minimum number of workers for a connector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minWorkerCount(Integer minWorkerCount) {
             return minWorkerCount(Output.of(minWorkerCount));
         }

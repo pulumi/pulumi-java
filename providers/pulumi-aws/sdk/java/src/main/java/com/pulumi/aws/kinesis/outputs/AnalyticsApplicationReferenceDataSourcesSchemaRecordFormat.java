@@ -13,13 +13,13 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AnalyticsApplicationReferenceDataSourcesSchemaRecordFormat {
     /**
-     * The Mapping Information for the record format.
+     * @return The Mapping Information for the record format.
      * See Mapping Parameters below for more details.
      * 
      */
     private final @Nullable AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParameters mappingParameters;
     /**
-     * The type of Record Format. Can be `CSV` or `JSON`.
+     * @return The type of Record Format. Can be `CSV` or `JSON`.
      * 
      */
     private final @Nullable String recordFormatType;
@@ -33,17 +33,17 @@ public final class AnalyticsApplicationReferenceDataSourcesSchemaRecordFormat {
     }
 
     /**
-     * The Mapping Information for the record format.
+     * @return The Mapping Information for the record format.
      * See Mapping Parameters below for more details.
      * 
-    */
+     */
     public Optional<AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParameters> mappingParameters() {
         return Optional.ofNullable(this.mappingParameters);
     }
     /**
-     * The type of Record Format. Can be `CSV` or `JSON`.
+     * @return The type of Record Format. Can be `CSV` or `JSON`.
      * 
-    */
+     */
     public Optional<String> recordFormatType() {
         return Optional.ofNullable(this.recordFormatType);
     }

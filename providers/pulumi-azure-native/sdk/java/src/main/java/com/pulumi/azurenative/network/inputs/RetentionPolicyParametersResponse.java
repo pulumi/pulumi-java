@@ -27,6 +27,10 @@ public final class RetentionPolicyParametersResponse extends com.pulumi.resource
     @Import(name="days")
     private @Nullable Integer days;
 
+    /**
+     * @return Number of days to retain flow log records.
+     * 
+     */
     public Optional<Integer> days() {
         return Optional.ofNullable(this.days);
     }
@@ -38,6 +42,10 @@ public final class RetentionPolicyParametersResponse extends com.pulumi.resource
     @Import(name="enabled")
     private @Nullable Boolean enabled;
 
+    /**
+     * @return Flag to enable/disable retention.
+     * 
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -67,11 +75,23 @@ public final class RetentionPolicyParametersResponse extends com.pulumi.resource
             $ = new RetentionPolicyParametersResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param days Number of days to retain flow log records.
+         * 
+         * @return builder
+         * 
+         */
         public Builder days(@Nullable Integer days) {
             $.days = days;
             return this;
         }
 
+        /**
+         * @param enabled Flag to enable/disable retention.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Boolean enabled) {
             $.enabled = enabled;
             return this;

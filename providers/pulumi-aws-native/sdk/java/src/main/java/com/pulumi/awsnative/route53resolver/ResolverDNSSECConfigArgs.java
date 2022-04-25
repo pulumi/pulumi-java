@@ -22,6 +22,10 @@ public final class ResolverDNSSECConfigArgs extends com.pulumi.resources.Resourc
     @Import(name="resourceId")
     private @Nullable Output<String> resourceId;
 
+    /**
+     * @return ResourceId
+     * 
+     */
     public Optional<Output<String>> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
@@ -50,11 +54,23 @@ public final class ResolverDNSSECConfigArgs extends com.pulumi.resources.Resourc
             $ = new ResolverDNSSECConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceId ResourceId
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(@Nullable Output<String> resourceId) {
             $.resourceId = resourceId;
             return this;
         }
 
+        /**
+         * @param resourceId ResourceId
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(String resourceId) {
             return resourceId(Output.of(resourceId));
         }

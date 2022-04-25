@@ -36,6 +36,10 @@ public final class ResourceRecordSetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return For example, www.example.com.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -47,6 +51,10 @@ public final class ResourceRecordSetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="routingPolicy")
     private @Nullable Output<RRSetRoutingPolicyArgs> routingPolicy;
 
+    /**
+     * @return Configures dynamic query responses based on geo location of querying user or a weighted round robin based routing policy. A ResourceRecordSet should only have either rrdata (static) or routing_policy (dynamic). An error is returned otherwise.
+     * 
+     */
     public Optional<Output<RRSetRoutingPolicyArgs>> routingPolicy() {
         return Optional.ofNullable(this.routingPolicy);
     }
@@ -58,6 +66,10 @@ public final class ResourceRecordSetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="rrdatas")
     private @Nullable Output<List<String>> rrdatas;
 
+    /**
+     * @return As defined in RFC 1035 (section 5) and RFC 1034 (section 3.6.1) -- see examples.
+     * 
+     */
     public Optional<Output<List<String>>> rrdatas() {
         return Optional.ofNullable(this.rrdatas);
     }
@@ -69,6 +81,10 @@ public final class ResourceRecordSetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="signatureRrdatas")
     private @Nullable Output<List<String>> signatureRrdatas;
 
+    /**
+     * @return As defined in RFC 4034 (section 3.2).
+     * 
+     */
     public Optional<Output<List<String>>> signatureRrdatas() {
         return Optional.ofNullable(this.signatureRrdatas);
     }
@@ -80,6 +96,10 @@ public final class ResourceRecordSetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="ttl")
     private @Nullable Output<Integer> ttl;
 
+    /**
+     * @return Number of seconds that this ResourceRecordSet can be cached by resolvers.
+     * 
+     */
     public Optional<Output<Integer>> ttl() {
         return Optional.ofNullable(this.ttl);
     }
@@ -91,6 +111,10 @@ public final class ResourceRecordSetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="type")
     private @Nullable Output<String> type;
 
+    /**
+     * @return The identifier of a supported record type. See the list of Supported DNS record types.
+     * 
+     */
     public Optional<Output<String>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -134,64 +158,148 @@ public final class ResourceRecordSetArgs extends com.pulumi.resources.ResourceAr
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param name For example, www.example.com.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name For example, www.example.com.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param routingPolicy Configures dynamic query responses based on geo location of querying user or a weighted round robin based routing policy. A ResourceRecordSet should only have either rrdata (static) or routing_policy (dynamic). An error is returned otherwise.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routingPolicy(@Nullable Output<RRSetRoutingPolicyArgs> routingPolicy) {
             $.routingPolicy = routingPolicy;
             return this;
         }
 
+        /**
+         * @param routingPolicy Configures dynamic query responses based on geo location of querying user or a weighted round robin based routing policy. A ResourceRecordSet should only have either rrdata (static) or routing_policy (dynamic). An error is returned otherwise.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routingPolicy(RRSetRoutingPolicyArgs routingPolicy) {
             return routingPolicy(Output.of(routingPolicy));
         }
 
+        /**
+         * @param rrdatas As defined in RFC 1035 (section 5) and RFC 1034 (section 3.6.1) -- see examples.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rrdatas(@Nullable Output<List<String>> rrdatas) {
             $.rrdatas = rrdatas;
             return this;
         }
 
+        /**
+         * @param rrdatas As defined in RFC 1035 (section 5) and RFC 1034 (section 3.6.1) -- see examples.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rrdatas(List<String> rrdatas) {
             return rrdatas(Output.of(rrdatas));
         }
 
+        /**
+         * @param rrdatas As defined in RFC 1035 (section 5) and RFC 1034 (section 3.6.1) -- see examples.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rrdatas(String... rrdatas) {
             return rrdatas(List.of(rrdatas));
         }
 
+        /**
+         * @param signatureRrdatas As defined in RFC 4034 (section 3.2).
+         * 
+         * @return builder
+         * 
+         */
         public Builder signatureRrdatas(@Nullable Output<List<String>> signatureRrdatas) {
             $.signatureRrdatas = signatureRrdatas;
             return this;
         }
 
+        /**
+         * @param signatureRrdatas As defined in RFC 4034 (section 3.2).
+         * 
+         * @return builder
+         * 
+         */
         public Builder signatureRrdatas(List<String> signatureRrdatas) {
             return signatureRrdatas(Output.of(signatureRrdatas));
         }
 
+        /**
+         * @param signatureRrdatas As defined in RFC 4034 (section 3.2).
+         * 
+         * @return builder
+         * 
+         */
         public Builder signatureRrdatas(String... signatureRrdatas) {
             return signatureRrdatas(List.of(signatureRrdatas));
         }
 
+        /**
+         * @param ttl Number of seconds that this ResourceRecordSet can be cached by resolvers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ttl(@Nullable Output<Integer> ttl) {
             $.ttl = ttl;
             return this;
         }
 
+        /**
+         * @param ttl Number of seconds that this ResourceRecordSet can be cached by resolvers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ttl(Integer ttl) {
             return ttl(Output.of(ttl));
         }
 
+        /**
+         * @param type The identifier of a supported record type. See the list of Supported DNS record types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The identifier of a supported record type. See the list of Supported DNS record types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

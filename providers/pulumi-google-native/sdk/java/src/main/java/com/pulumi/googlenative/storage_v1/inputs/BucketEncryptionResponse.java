@@ -23,6 +23,10 @@ public final class BucketEncryptionResponse extends com.pulumi.resources.InvokeA
     @Import(name="defaultKmsKeyName", required=true)
     private String defaultKmsKeyName;
 
+    /**
+     * @return A Cloud KMS key that will be used to encrypt objects inserted into this bucket, if no encryption method is specified.
+     * 
+     */
     public String defaultKmsKeyName() {
         return this.defaultKmsKeyName;
     }
@@ -51,6 +55,12 @@ public final class BucketEncryptionResponse extends com.pulumi.resources.InvokeA
             $ = new BucketEncryptionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param defaultKmsKeyName A Cloud KMS key that will be used to encrypt objects inserted into this bucket, if no encryption method is specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultKmsKeyName(String defaultKmsKeyName) {
             $.defaultKmsKeyName = defaultKmsKeyName;
             return this;

@@ -22,6 +22,11 @@ public final class RouteSpecHttpRouteActionGetArgs extends com.pulumi.resources.
     @Import(name="weightedTargets", required=true)
     private Output<List<RouteSpecHttpRouteActionWeightedTargetGetArgs>> weightedTargets;
 
+    /**
+     * @return The targets that traffic is routed to when a request matches the route.
+     * You can specify one or more targets and their relative weights with which to distribute traffic.
+     * 
+     */
     public Output<List<RouteSpecHttpRouteActionWeightedTargetGetArgs>> weightedTargets() {
         return this.weightedTargets;
     }
@@ -50,15 +55,36 @@ public final class RouteSpecHttpRouteActionGetArgs extends com.pulumi.resources.
             $ = new RouteSpecHttpRouteActionGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param weightedTargets The targets that traffic is routed to when a request matches the route.
+         * You can specify one or more targets and their relative weights with which to distribute traffic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weightedTargets(Output<List<RouteSpecHttpRouteActionWeightedTargetGetArgs>> weightedTargets) {
             $.weightedTargets = weightedTargets;
             return this;
         }
 
+        /**
+         * @param weightedTargets The targets that traffic is routed to when a request matches the route.
+         * You can specify one or more targets and their relative weights with which to distribute traffic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weightedTargets(List<RouteSpecHttpRouteActionWeightedTargetGetArgs> weightedTargets) {
             return weightedTargets(Output.of(weightedTargets));
         }
 
+        /**
+         * @param weightedTargets The targets that traffic is routed to when a request matches the route.
+         * You can specify one or more targets and their relative weights with which to distribute traffic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weightedTargets(RouteSpecHttpRouteActionWeightedTargetGetArgs... weightedTargets) {
             return weightedTargets(List.of(weightedTargets));
         }

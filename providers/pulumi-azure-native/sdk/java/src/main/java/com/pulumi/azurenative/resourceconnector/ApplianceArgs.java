@@ -28,6 +28,10 @@ public final class ApplianceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="distro")
     private @Nullable Output<Either<String,Distro>> distro;
 
+    /**
+     * @return Represents a supported Fabric/Infra. (AKSEdge etc...).
+     * 
+     */
     public Optional<Output<Either<String,Distro>>> distro() {
         return Optional.ofNullable(this.distro);
     }
@@ -39,6 +43,10 @@ public final class ApplianceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="identity")
     private @Nullable Output<IdentityArgs> identity;
 
+    /**
+     * @return Identity for the resource.
+     * 
+     */
     public Optional<Output<IdentityArgs>> identity() {
         return Optional.ofNullable(this.identity);
     }
@@ -50,6 +58,10 @@ public final class ApplianceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="infrastructureConfig")
     private @Nullable Output<AppliancePropertiesInfrastructureConfigArgs> infrastructureConfig;
 
+    /**
+     * @return Contains infrastructure information about the Appliance
+     * 
+     */
     public Optional<Output<AppliancePropertiesInfrastructureConfigArgs>> infrastructureConfig() {
         return Optional.ofNullable(this.infrastructureConfig);
     }
@@ -61,6 +73,10 @@ public final class ApplianceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The geo-location where the resource lives
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -72,6 +88,10 @@ public final class ApplianceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="publicKey")
     private @Nullable Output<String> publicKey;
 
+    /**
+     * @return Certificates pair used to download MSI certificate from HIS
+     * 
+     */
     public Optional<Output<String>> publicKey() {
         return Optional.ofNullable(this.publicKey);
     }
@@ -83,6 +103,10 @@ public final class ApplianceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -94,6 +118,10 @@ public final class ApplianceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceName")
     private @Nullable Output<String> resourceName;
 
+    /**
+     * @return Appliances name.
+     * 
+     */
     public Optional<Output<String>> resourceName() {
         return Optional.ofNullable(this.resourceName);
     }
@@ -105,6 +133,10 @@ public final class ApplianceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -140,82 +172,190 @@ public final class ApplianceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ApplianceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param distro Represents a supported Fabric/Infra. (AKSEdge etc...).
+         * 
+         * @return builder
+         * 
+         */
         public Builder distro(@Nullable Output<Either<String,Distro>> distro) {
             $.distro = distro;
             return this;
         }
 
+        /**
+         * @param distro Represents a supported Fabric/Infra. (AKSEdge etc...).
+         * 
+         * @return builder
+         * 
+         */
         public Builder distro(Either<String,Distro> distro) {
             return distro(Output.of(distro));
         }
 
+        /**
+         * @param distro Represents a supported Fabric/Infra. (AKSEdge etc...).
+         * 
+         * @return builder
+         * 
+         */
         public Builder distro(String distro) {
             return distro(Either.ofLeft(distro));
         }
 
+        /**
+         * @param distro Represents a supported Fabric/Infra. (AKSEdge etc...).
+         * 
+         * @return builder
+         * 
+         */
         public Builder distro(Distro distro) {
             return distro(Either.ofRight(distro));
         }
 
+        /**
+         * @param identity Identity for the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(@Nullable Output<IdentityArgs> identity) {
             $.identity = identity;
             return this;
         }
 
+        /**
+         * @param identity Identity for the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(IdentityArgs identity) {
             return identity(Output.of(identity));
         }
 
+        /**
+         * @param infrastructureConfig Contains infrastructure information about the Appliance
+         * 
+         * @return builder
+         * 
+         */
         public Builder infrastructureConfig(@Nullable Output<AppliancePropertiesInfrastructureConfigArgs> infrastructureConfig) {
             $.infrastructureConfig = infrastructureConfig;
             return this;
         }
 
+        /**
+         * @param infrastructureConfig Contains infrastructure information about the Appliance
+         * 
+         * @return builder
+         * 
+         */
         public Builder infrastructureConfig(AppliancePropertiesInfrastructureConfigArgs infrastructureConfig) {
             return infrastructureConfig(Output.of(infrastructureConfig));
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param publicKey Certificates pair used to download MSI certificate from HIS
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicKey(@Nullable Output<String> publicKey) {
             $.publicKey = publicKey;
             return this;
         }
 
+        /**
+         * @param publicKey Certificates pair used to download MSI certificate from HIS
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicKey(String publicKey) {
             return publicKey(Output.of(publicKey));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param resourceName Appliances name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(@Nullable Output<String> resourceName) {
             $.resourceName = resourceName;
             return this;
         }
 
+        /**
+         * @param resourceName Appliances name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(String resourceName) {
             return resourceName(Output.of(resourceName));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

@@ -31,6 +31,10 @@ public final class IPAMScopeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ipamId", required=true)
     private Output<String> ipamId;
 
+    /**
+     * @return The Id of the IPAM this scope is a part of.
+     * 
+     */
     public Output<String> ipamId() {
         return this.ipamId;
     }
@@ -42,6 +46,10 @@ public final class IPAMScopeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<IPAMScopeTagArgs>> tags;
 
+    /**
+     * @return An array of key-value pairs to apply to this resource.
+     * 
+     */
     public Optional<Output<List<IPAMScopeTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -81,24 +89,54 @@ public final class IPAMScopeArgs extends com.pulumi.resources.ResourceArgs {
             return description(Output.of(description));
         }
 
+        /**
+         * @param ipamId The Id of the IPAM this scope is a part of.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipamId(Output<String> ipamId) {
             $.ipamId = ipamId;
             return this;
         }
 
+        /**
+         * @param ipamId The Id of the IPAM this scope is a part of.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipamId(String ipamId) {
             return ipamId(Output.of(ipamId));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<IPAMScopeTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<IPAMScopeTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(IPAMScopeTagArgs... tags) {
             return tags(List.of(tags));
         }

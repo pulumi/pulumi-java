@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class ApiProfileResponse {
     /**
-     * The API version.
+     * @return The API version.
      * 
      */
     private final String apiVersion;
     /**
-     * The profile version.
+     * @return The profile version.
      * 
      */
     private final String profileVersion;
@@ -29,16 +29,16 @@ public final class ApiProfileResponse {
     }
 
     /**
-     * The API version.
+     * @return The API version.
      * 
-    */
+     */
     public String apiVersion() {
         return this.apiVersion;
     }
     /**
-     * The profile version.
+     * @return The profile version.
      * 
-    */
+     */
     public String profileVersion() {
         return this.profileVersion;
     }

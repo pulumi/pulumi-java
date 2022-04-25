@@ -23,6 +23,10 @@ public final class PosixFilesystemResponse extends com.pulumi.resources.InvokeAr
     @Import(name="rootDirectory", required=true)
     private String rootDirectory;
 
+    /**
+     * @return Root directory path to the filesystem.
+     * 
+     */
     public String rootDirectory() {
         return this.rootDirectory;
     }
@@ -51,6 +55,12 @@ public final class PosixFilesystemResponse extends com.pulumi.resources.InvokeAr
             $ = new PosixFilesystemResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param rootDirectory Root directory path to the filesystem.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rootDirectory(String rootDirectory) {
             $.rootDirectory = rootDirectory;
             return this;

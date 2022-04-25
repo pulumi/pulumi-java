@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class EndpointMatcherResponse {
     /**
-     * The matcher is based on node metadata presented by xDS clients.
+     * @return The matcher is based on node metadata presented by xDS clients.
      * 
      */
     private final EndpointMatcherMetadataLabelMatcherResponse metadataLabelMatcher;
@@ -21,9 +21,9 @@ public final class EndpointMatcherResponse {
     }
 
     /**
-     * The matcher is based on node metadata presented by xDS clients.
+     * @return The matcher is based on node metadata presented by xDS clients.
      * 
-    */
+     */
     public EndpointMatcherMetadataLabelMatcherResponse metadataLabelMatcher() {
         return this.metadataLabelMatcher;
     }

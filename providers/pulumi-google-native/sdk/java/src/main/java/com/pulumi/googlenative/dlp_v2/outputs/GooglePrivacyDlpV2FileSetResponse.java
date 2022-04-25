@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class GooglePrivacyDlpV2FileSetResponse {
     /**
-     * The regex-filtered set of files to scan. Exactly one of `url` or `regex_file_set` must be set.
+     * @return The regex-filtered set of files to scan. Exactly one of `url` or `regex_file_set` must be set.
      * 
      */
     private final GooglePrivacyDlpV2CloudStorageRegexFileSetResponse regexFileSet;
     /**
-     * The Cloud Storage url of the file(s) to scan, in the format `gs:///`. Trailing wildcard in the path is allowed. If the url ends in a trailing slash, the bucket or directory represented by the url will be scanned non-recursively (content in sub-directories will not be scanned). This means that `gs://mybucket/` is equivalent to `gs://mybucket/*`, and `gs://mybucket/directory/` is equivalent to `gs://mybucket/directory/*`. Exactly one of `url` or `regex_file_set` must be set.
+     * @return The Cloud Storage url of the file(s) to scan, in the format `gs:///`. Trailing wildcard in the path is allowed. If the url ends in a trailing slash, the bucket or directory represented by the url will be scanned non-recursively (content in sub-directories will not be scanned). This means that `gs://mybucket/` is equivalent to `gs://mybucket/*`, and `gs://mybucket/directory/` is equivalent to `gs://mybucket/directory/*`. Exactly one of `url` or `regex_file_set` must be set.
      * 
      */
     private final String url;
@@ -30,16 +30,16 @@ public final class GooglePrivacyDlpV2FileSetResponse {
     }
 
     /**
-     * The regex-filtered set of files to scan. Exactly one of `url` or `regex_file_set` must be set.
+     * @return The regex-filtered set of files to scan. Exactly one of `url` or `regex_file_set` must be set.
      * 
-    */
+     */
     public GooglePrivacyDlpV2CloudStorageRegexFileSetResponse regexFileSet() {
         return this.regexFileSet;
     }
     /**
-     * The Cloud Storage url of the file(s) to scan, in the format `gs:///`. Trailing wildcard in the path is allowed. If the url ends in a trailing slash, the bucket or directory represented by the url will be scanned non-recursively (content in sub-directories will not be scanned). This means that `gs://mybucket/` is equivalent to `gs://mybucket/*`, and `gs://mybucket/directory/` is equivalent to `gs://mybucket/directory/*`. Exactly one of `url` or `regex_file_set` must be set.
+     * @return The Cloud Storage url of the file(s) to scan, in the format `gs:///`. Trailing wildcard in the path is allowed. If the url ends in a trailing slash, the bucket or directory represented by the url will be scanned non-recursively (content in sub-directories will not be scanned). This means that `gs://mybucket/` is equivalent to `gs://mybucket/*`, and `gs://mybucket/directory/` is equivalent to `gs://mybucket/directory/*`. Exactly one of `url` or `regex_file_set` must be set.
      * 
-    */
+     */
     public String url() {
         return this.url;
     }

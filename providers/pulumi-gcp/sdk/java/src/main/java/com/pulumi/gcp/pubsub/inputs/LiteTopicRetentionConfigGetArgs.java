@@ -24,6 +24,12 @@ public final class LiteTopicRetentionConfigGetArgs extends com.pulumi.resources.
     @Import(name="perPartitionBytes", required=true)
     private Output<String> perPartitionBytes;
 
+    /**
+     * @return The provisioned storage, in bytes, per partition. If the number of bytes stored
+     * in any of the topic&#39;s partitions grows beyond this value, older messages will be
+     * dropped to make room for newer ones, regardless of the value of period.
+     * 
+     */
     public Output<String> perPartitionBytes() {
         return this.perPartitionBytes;
     }
@@ -38,6 +44,13 @@ public final class LiteTopicRetentionConfigGetArgs extends com.pulumi.resources.
     @Import(name="period")
     private @Nullable Output<String> period;
 
+    /**
+     * @return How long a published message is retained. If unset, messages will be retained as
+     * long as the bytes retained for each partition is below perPartitionBytes. A
+     * duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;.
+     * Example: &#34;3.5s&#34;.
+     * 
+     */
     public Optional<Output<String>> period() {
         return Optional.ofNullable(this.period);
     }
@@ -67,20 +80,54 @@ public final class LiteTopicRetentionConfigGetArgs extends com.pulumi.resources.
             $ = new LiteTopicRetentionConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param perPartitionBytes The provisioned storage, in bytes, per partition. If the number of bytes stored
+         * in any of the topic&#39;s partitions grows beyond this value, older messages will be
+         * dropped to make room for newer ones, regardless of the value of period.
+         * 
+         * @return builder
+         * 
+         */
         public Builder perPartitionBytes(Output<String> perPartitionBytes) {
             $.perPartitionBytes = perPartitionBytes;
             return this;
         }
 
+        /**
+         * @param perPartitionBytes The provisioned storage, in bytes, per partition. If the number of bytes stored
+         * in any of the topic&#39;s partitions grows beyond this value, older messages will be
+         * dropped to make room for newer ones, regardless of the value of period.
+         * 
+         * @return builder
+         * 
+         */
         public Builder perPartitionBytes(String perPartitionBytes) {
             return perPartitionBytes(Output.of(perPartitionBytes));
         }
 
+        /**
+         * @param period How long a published message is retained. If unset, messages will be retained as
+         * long as the bytes retained for each partition is below perPartitionBytes. A
+         * duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;.
+         * Example: &#34;3.5s&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder period(@Nullable Output<String> period) {
             $.period = period;
             return this;
         }
 
+        /**
+         * @param period How long a published message is retained. If unset, messages will be retained as
+         * long as the bytes retained for each partition is below perPartitionBytes. A
+         * duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;.
+         * Example: &#34;3.5s&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder period(String period) {
             return period(Output.of(period));
         }

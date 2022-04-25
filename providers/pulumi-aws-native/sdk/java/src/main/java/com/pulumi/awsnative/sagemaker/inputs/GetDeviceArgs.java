@@ -19,6 +19,10 @@ public final class GetDeviceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="deviceFleetName", required=true)
     private String deviceFleetName;
 
+    /**
+     * @return The name of the edge device fleet
+     * 
+     */
     public String deviceFleetName() {
         return this.deviceFleetName;
     }
@@ -47,6 +51,12 @@ public final class GetDeviceArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetDeviceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deviceFleetName The name of the edge device fleet
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceFleetName(String deviceFleetName) {
             $.deviceFleetName = deviceFleetName;
             return this;

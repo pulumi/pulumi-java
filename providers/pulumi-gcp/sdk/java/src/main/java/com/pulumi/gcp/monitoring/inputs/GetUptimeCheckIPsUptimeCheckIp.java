@@ -22,6 +22,13 @@ public final class GetUptimeCheckIPsUptimeCheckIp extends com.pulumi.resources.I
     @Import(name="ipAddress", required=true)
     private String ipAddress;
 
+    /**
+     * @return The IP address from which the Uptime check originates. This is a fully specified IP address
+     * (not an IP address range). Most IP addresses, as of this publication, are in IPv4 format; however, one should not
+     * rely on the IP addresses being in IPv4 format indefinitely, and should support interpreting this field in either
+     * IPv4 or IPv6 format.
+     * 
+     */
     public String ipAddress() {
         return this.ipAddress;
     }
@@ -34,6 +41,11 @@ public final class GetUptimeCheckIPsUptimeCheckIp extends com.pulumi.resources.I
     @Import(name="location", required=true)
     private String location;
 
+    /**
+     * @return A more specific location within the region that typically encodes a particular city/town/metro
+     * (and its containing state/province or country) within the broader umbrella region category.
+     * 
+     */
     public String location() {
         return this.location;
     }
@@ -45,6 +57,10 @@ public final class GetUptimeCheckIPsUptimeCheckIp extends com.pulumi.resources.I
     @Import(name="region", required=true)
     private String region;
 
+    /**
+     * @return A broad region category in which the IP address is located.
+     * 
+     */
     public String region() {
         return this.region;
     }
@@ -75,16 +91,38 @@ public final class GetUptimeCheckIPsUptimeCheckIp extends com.pulumi.resources.I
             $ = new GetUptimeCheckIPsUptimeCheckIp(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ipAddress The IP address from which the Uptime check originates. This is a fully specified IP address
+         * (not an IP address range). Most IP addresses, as of this publication, are in IPv4 format; however, one should not
+         * rely on the IP addresses being in IPv4 format indefinitely, and should support interpreting this field in either
+         * IPv4 or IPv6 format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddress(String ipAddress) {
             $.ipAddress = ipAddress;
             return this;
         }
 
+        /**
+         * @param location A more specific location within the region that typically encodes a particular city/town/metro
+         * (and its containing state/province or country) within the broader umbrella region category.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param region A broad region category in which the IP address is located.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(String region) {
             $.region = region;
             return this;

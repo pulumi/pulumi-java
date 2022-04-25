@@ -26,6 +26,10 @@ public final class BasicLoginInformationArgs extends com.pulumi.resources.Resour
     @Import(name="password")
     private @Nullable Output<String> password;
 
+    /**
+     * @return Login password.
+     * 
+     */
     public Optional<Output<String>> password() {
         return Optional.ofNullable(this.password);
     }
@@ -37,6 +41,10 @@ public final class BasicLoginInformationArgs extends com.pulumi.resources.Resour
     @Import(name="username")
     private @Nullable Output<String> username;
 
+    /**
+     * @return Login username.
+     * 
+     */
     public Optional<Output<String>> username() {
         return Optional.ofNullable(this.username);
     }
@@ -66,20 +74,44 @@ public final class BasicLoginInformationArgs extends com.pulumi.resources.Resour
             $ = new BasicLoginInformationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param password Login password.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(@Nullable Output<String> password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param password Login password.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(String password) {
             return password(Output.of(password));
         }
 
+        /**
+         * @param username Login username.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(@Nullable Output<String> username) {
             $.username = username;
             return this;
         }
 
+        /**
+         * @param username Login username.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(String username) {
             return username(Output.of(username));
         }

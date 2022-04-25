@@ -24,6 +24,10 @@ public final class TriggerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="configurationId")
     private @Nullable Output<String> configurationId;
 
+    /**
+     * @return System-generated unique identifier.
+     * 
+     */
     public Optional<Output<String>> configurationId() {
         return Optional.ofNullable(this.configurationId);
     }
@@ -35,6 +39,10 @@ public final class TriggerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="repositoryName")
     private @Nullable Output<String> repositoryName;
 
+    /**
+     * @return The name for the repository. This needs to be less than 100 characters.
+     * 
+     */
     public Optional<Output<String>> repositoryName() {
         return Optional.ofNullable(this.repositoryName);
     }
@@ -72,20 +80,44 @@ public final class TriggerState extends com.pulumi.resources.ResourceArgs {
             $ = new TriggerState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param configurationId System-generated unique identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationId(@Nullable Output<String> configurationId) {
             $.configurationId = configurationId;
             return this;
         }
 
+        /**
+         * @param configurationId System-generated unique identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationId(String configurationId) {
             return configurationId(Output.of(configurationId));
         }
 
+        /**
+         * @param repositoryName The name for the repository. This needs to be less than 100 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repositoryName(@Nullable Output<String> repositoryName) {
             $.repositoryName = repositoryName;
             return this;
         }
 
+        /**
+         * @param repositoryName The name for the repository. This needs to be less than 100 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repositoryName(String repositoryName) {
             return repositoryName(Output.of(repositoryName));
         }

@@ -26,6 +26,10 @@ public final class ApiConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="api", required=true)
     private Output<String> api;
 
+    /**
+     * @return The API to attach the config to.
+     * 
+     */
     public Output<String> api() {
         return this.api;
     }
@@ -37,6 +41,10 @@ public final class ApiConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="apiConfigId")
     private @Nullable Output<String> apiConfigId;
 
+    /**
+     * @return Identifier to assign to the API Config. Must be unique within scope of the parent resource(api).
+     * 
+     */
     public Optional<Output<String>> apiConfigId() {
         return Optional.ofNullable(this.apiConfigId);
     }
@@ -49,6 +57,11 @@ public final class ApiConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="apiConfigIdPrefix")
     private @Nullable Output<String> apiConfigIdPrefix;
 
+    /**
+     * @return Creates a unique name beginning with the
+     * specified prefix. If this and api_config_id are unspecified, a random value is chosen for the name.
+     * 
+     */
     public Optional<Output<String>> apiConfigIdPrefix() {
         return Optional.ofNullable(this.apiConfigIdPrefix);
     }
@@ -60,6 +73,10 @@ public final class ApiConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return A user-visible name for the API.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -73,6 +90,12 @@ public final class ApiConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="gatewayConfig")
     private @Nullable Output<ApiConfigGatewayConfigArgs> gatewayConfig;
 
+    /**
+     * @return Immutable. Gateway specific configuration.
+     * If not specified, backend authentication will be set to use OIDC authentication using the default compute service account
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<ApiConfigGatewayConfigArgs>> gatewayConfig() {
         return Optional.ofNullable(this.gatewayConfig);
     }
@@ -84,6 +107,10 @@ public final class ApiConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return Resource labels to represent user-provided metadata.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -96,6 +123,11 @@ public final class ApiConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="openapiDocuments", required=true)
     private Output<List<ApiConfigOpenapiDocumentArgs>> openapiDocuments;
 
+    /**
+     * @return An OpenAPI Specification Document describing an API.
+     * Structure is documented below.
+     * 
+     */
     public Output<List<ApiConfigOpenapiDocumentArgs>> openapiDocuments() {
         return this.openapiDocuments;
     }
@@ -108,6 +140,11 @@ public final class ApiConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -143,78 +180,191 @@ public final class ApiConfigArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ApiConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param api The API to attach the config to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder api(Output<String> api) {
             $.api = api;
             return this;
         }
 
+        /**
+         * @param api The API to attach the config to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder api(String api) {
             return api(Output.of(api));
         }
 
+        /**
+         * @param apiConfigId Identifier to assign to the API Config. Must be unique within scope of the parent resource(api).
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiConfigId(@Nullable Output<String> apiConfigId) {
             $.apiConfigId = apiConfigId;
             return this;
         }
 
+        /**
+         * @param apiConfigId Identifier to assign to the API Config. Must be unique within scope of the parent resource(api).
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiConfigId(String apiConfigId) {
             return apiConfigId(Output.of(apiConfigId));
         }
 
+        /**
+         * @param apiConfigIdPrefix Creates a unique name beginning with the
+         * specified prefix. If this and api_config_id are unspecified, a random value is chosen for the name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiConfigIdPrefix(@Nullable Output<String> apiConfigIdPrefix) {
             $.apiConfigIdPrefix = apiConfigIdPrefix;
             return this;
         }
 
+        /**
+         * @param apiConfigIdPrefix Creates a unique name beginning with the
+         * specified prefix. If this and api_config_id are unspecified, a random value is chosen for the name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiConfigIdPrefix(String apiConfigIdPrefix) {
             return apiConfigIdPrefix(Output.of(apiConfigIdPrefix));
         }
 
+        /**
+         * @param displayName A user-visible name for the API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName A user-visible name for the API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param gatewayConfig Immutable. Gateway specific configuration.
+         * If not specified, backend authentication will be set to use OIDC authentication using the default compute service account
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayConfig(@Nullable Output<ApiConfigGatewayConfigArgs> gatewayConfig) {
             $.gatewayConfig = gatewayConfig;
             return this;
         }
 
+        /**
+         * @param gatewayConfig Immutable. Gateway specific configuration.
+         * If not specified, backend authentication will be set to use OIDC authentication using the default compute service account
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayConfig(ApiConfigGatewayConfigArgs gatewayConfig) {
             return gatewayConfig(Output.of(gatewayConfig));
         }
 
+        /**
+         * @param labels Resource labels to represent user-provided metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Resource labels to represent user-provided metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param openapiDocuments An OpenAPI Specification Document describing an API.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder openapiDocuments(Output<List<ApiConfigOpenapiDocumentArgs>> openapiDocuments) {
             $.openapiDocuments = openapiDocuments;
             return this;
         }
 
+        /**
+         * @param openapiDocuments An OpenAPI Specification Document describing an API.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder openapiDocuments(List<ApiConfigOpenapiDocumentArgs> openapiDocuments) {
             return openapiDocuments(Output.of(openapiDocuments));
         }
 
+        /**
+         * @param openapiDocuments An OpenAPI Specification Document describing an API.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder openapiDocuments(ApiConfigOpenapiDocumentArgs... openapiDocuments) {
             return openapiDocuments(List.of(openapiDocuments));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }

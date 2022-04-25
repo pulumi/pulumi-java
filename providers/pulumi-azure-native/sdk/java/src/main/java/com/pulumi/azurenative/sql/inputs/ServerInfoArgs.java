@@ -24,6 +24,10 @@ public final class ServerInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serverId", required=true)
     private Output<String> serverId;
 
+    /**
+     * @return Server Id.
+     * 
+     */
     public Output<String> serverId() {
         return this.serverId;
     }
@@ -52,11 +56,23 @@ public final class ServerInfoArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ServerInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param serverId Server Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverId(Output<String> serverId) {
             $.serverId = serverId;
             return this;
         }
 
+        /**
+         * @param serverId Server Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverId(String serverId) {
             return serverId(Output.of(serverId));
         }

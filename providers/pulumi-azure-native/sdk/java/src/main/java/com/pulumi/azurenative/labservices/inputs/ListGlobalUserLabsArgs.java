@@ -19,6 +19,10 @@ public final class ListGlobalUserLabsArgs extends com.pulumi.resources.InvokeArg
     @Import(name="userName", required=true)
     private String userName;
 
+    /**
+     * @return The name of the user.
+     * 
+     */
     public String userName() {
         return this.userName;
     }
@@ -47,6 +51,12 @@ public final class ListGlobalUserLabsArgs extends com.pulumi.resources.InvokeArg
             $ = new ListGlobalUserLabsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param userName The name of the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(String userName) {
             $.userName = userName;
             return this;

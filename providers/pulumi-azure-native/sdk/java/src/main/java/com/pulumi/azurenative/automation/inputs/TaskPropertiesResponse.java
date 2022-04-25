@@ -26,6 +26,10 @@ public final class TaskPropertiesResponse extends com.pulumi.resources.InvokeArg
     @Import(name="parameters")
     private @Nullable Map<String,String> parameters;
 
+    /**
+     * @return Gets or sets the parameters of the task.
+     * 
+     */
     public Optional<Map<String,String>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -37,6 +41,10 @@ public final class TaskPropertiesResponse extends com.pulumi.resources.InvokeArg
     @Import(name="source")
     private @Nullable String source;
 
+    /**
+     * @return Gets or sets the name of the runbook.
+     * 
+     */
     public Optional<String> source() {
         return Optional.ofNullable(this.source);
     }
@@ -66,11 +74,23 @@ public final class TaskPropertiesResponse extends com.pulumi.resources.InvokeArg
             $ = new TaskPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param parameters Gets or sets the parameters of the task.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Map<String,String> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param source Gets or sets the name of the runbook.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(@Nullable String source) {
             $.source = source;
             return this;

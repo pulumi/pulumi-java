@@ -29,6 +29,10 @@ public final class GlobalServiceConfigurationArgs extends com.pulumi.resources.R
     @Import(name="autoScale")
     private @Nullable Output<AutoScaleConfigurationArgs> autoScale;
 
+    /**
+     * @return The auto-scale configuration
+     * 
+     */
     public Optional<Output<AutoScaleConfigurationArgs>> autoScale() {
         return Optional.ofNullable(this.autoScale);
     }
@@ -40,6 +44,10 @@ public final class GlobalServiceConfigurationArgs extends com.pulumi.resources.R
     @Import(name="etag")
     private @Nullable Output<String> etag;
 
+    /**
+     * @return The configuration ETag for updates.
+     * 
+     */
     public Optional<Output<String>> etag() {
         return Optional.ofNullable(this.etag);
     }
@@ -51,6 +59,10 @@ public final class GlobalServiceConfigurationArgs extends com.pulumi.resources.R
     @Import(name="serviceAuth")
     private @Nullable Output<ServiceAuthConfigurationArgs> serviceAuth;
 
+    /**
+     * @return Optional global authorization keys for all user services deployed in cluster. These are used if the service does not have auth keys.
+     * 
+     */
     public Optional<Output<ServiceAuthConfigurationArgs>> serviceAuth() {
         return Optional.ofNullable(this.serviceAuth);
     }
@@ -62,6 +74,10 @@ public final class GlobalServiceConfigurationArgs extends com.pulumi.resources.R
     @Import(name="ssl")
     private @Nullable Output<SslConfigurationArgs> ssl;
 
+    /**
+     * @return The SSL configuration properties
+     * 
+     */
     public Optional<Output<SslConfigurationArgs>> ssl() {
         return Optional.ofNullable(this.ssl);
     }
@@ -93,38 +109,86 @@ public final class GlobalServiceConfigurationArgs extends com.pulumi.resources.R
             $ = new GlobalServiceConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoScale The auto-scale configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoScale(@Nullable Output<AutoScaleConfigurationArgs> autoScale) {
             $.autoScale = autoScale;
             return this;
         }
 
+        /**
+         * @param autoScale The auto-scale configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoScale(AutoScaleConfigurationArgs autoScale) {
             return autoScale(Output.of(autoScale));
         }
 
+        /**
+         * @param etag The configuration ETag for updates.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(@Nullable Output<String> etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param etag The configuration ETag for updates.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             return etag(Output.of(etag));
         }
 
+        /**
+         * @param serviceAuth Optional global authorization keys for all user services deployed in cluster. These are used if the service does not have auth keys.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAuth(@Nullable Output<ServiceAuthConfigurationArgs> serviceAuth) {
             $.serviceAuth = serviceAuth;
             return this;
         }
 
+        /**
+         * @param serviceAuth Optional global authorization keys for all user services deployed in cluster. These are used if the service does not have auth keys.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAuth(ServiceAuthConfigurationArgs serviceAuth) {
             return serviceAuth(Output.of(serviceAuth));
         }
 
+        /**
+         * @param ssl The SSL configuration properties
+         * 
+         * @return builder
+         * 
+         */
         public Builder ssl(@Nullable Output<SslConfigurationArgs> ssl) {
             $.ssl = ssl;
             return this;
         }
 
+        /**
+         * @param ssl The SSL configuration properties
+         * 
+         * @return builder
+         * 
+         */
         public Builder ssl(SslConfigurationArgs ssl) {
             return ssl(Output.of(ssl));
         }

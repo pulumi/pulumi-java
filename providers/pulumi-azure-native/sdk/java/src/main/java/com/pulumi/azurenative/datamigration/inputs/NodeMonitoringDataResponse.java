@@ -23,6 +23,10 @@ public final class NodeMonitoringDataResponse extends com.pulumi.resources.Invok
     @Import(name="additionalProperties", required=true)
     private Map<String,Object> additionalProperties;
 
+    /**
+     * @return  Unmatched properties from the message are deserialized in this collection.
+     * 
+     */
     public Map<String,Object> additionalProperties() {
         return this.additionalProperties;
     }
@@ -34,6 +38,10 @@ public final class NodeMonitoringDataResponse extends com.pulumi.resources.Invok
     @Import(name="availableMemoryInMB", required=true)
     private Integer availableMemoryInMB;
 
+    /**
+     * @return Available memory (MB) on the integration runtime node.
+     * 
+     */
     public Integer availableMemoryInMB() {
         return this.availableMemoryInMB;
     }
@@ -45,6 +53,10 @@ public final class NodeMonitoringDataResponse extends com.pulumi.resources.Invok
     @Import(name="concurrentJobsLimit", required=true)
     private Integer concurrentJobsLimit;
 
+    /**
+     * @return Maximum concurrent jobs on the integration runtime node.
+     * 
+     */
     public Integer concurrentJobsLimit() {
         return this.concurrentJobsLimit;
     }
@@ -56,6 +68,10 @@ public final class NodeMonitoringDataResponse extends com.pulumi.resources.Invok
     @Import(name="concurrentJobsRunning", required=true)
     private Integer concurrentJobsRunning;
 
+    /**
+     * @return The number of jobs currently running on the integration runtime node.
+     * 
+     */
     public Integer concurrentJobsRunning() {
         return this.concurrentJobsRunning;
     }
@@ -67,6 +83,10 @@ public final class NodeMonitoringDataResponse extends com.pulumi.resources.Invok
     @Import(name="cpuUtilization", required=true)
     private Integer cpuUtilization;
 
+    /**
+     * @return CPU percentage on the integration runtime node.
+     * 
+     */
     public Integer cpuUtilization() {
         return this.cpuUtilization;
     }
@@ -78,6 +98,10 @@ public final class NodeMonitoringDataResponse extends com.pulumi.resources.Invok
     @Import(name="maxConcurrentJobs", required=true)
     private Integer maxConcurrentJobs;
 
+    /**
+     * @return The maximum concurrent jobs in this integration runtime.
+     * 
+     */
     public Integer maxConcurrentJobs() {
         return this.maxConcurrentJobs;
     }
@@ -89,6 +113,10 @@ public final class NodeMonitoringDataResponse extends com.pulumi.resources.Invok
     @Import(name="nodeName", required=true)
     private String nodeName;
 
+    /**
+     * @return Name of the integration runtime node.
+     * 
+     */
     public String nodeName() {
         return this.nodeName;
     }
@@ -100,6 +128,10 @@ public final class NodeMonitoringDataResponse extends com.pulumi.resources.Invok
     @Import(name="receivedBytes", required=true)
     private Double receivedBytes;
 
+    /**
+     * @return Received bytes on the integration runtime node.
+     * 
+     */
     public Double receivedBytes() {
         return this.receivedBytes;
     }
@@ -111,6 +143,10 @@ public final class NodeMonitoringDataResponse extends com.pulumi.resources.Invok
     @Import(name="sentBytes", required=true)
     private Double sentBytes;
 
+    /**
+     * @return Sent bytes on the integration runtime node.
+     * 
+     */
     public Double sentBytes() {
         return this.sentBytes;
     }
@@ -147,46 +183,100 @@ public final class NodeMonitoringDataResponse extends com.pulumi.resources.Invok
             $ = new NodeMonitoringDataResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param additionalProperties  Unmatched properties from the message are deserialized in this collection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalProperties(Map<String,Object> additionalProperties) {
             $.additionalProperties = additionalProperties;
             return this;
         }
 
+        /**
+         * @param availableMemoryInMB Available memory (MB) on the integration runtime node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availableMemoryInMB(Integer availableMemoryInMB) {
             $.availableMemoryInMB = availableMemoryInMB;
             return this;
         }
 
+        /**
+         * @param concurrentJobsLimit Maximum concurrent jobs on the integration runtime node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder concurrentJobsLimit(Integer concurrentJobsLimit) {
             $.concurrentJobsLimit = concurrentJobsLimit;
             return this;
         }
 
+        /**
+         * @param concurrentJobsRunning The number of jobs currently running on the integration runtime node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder concurrentJobsRunning(Integer concurrentJobsRunning) {
             $.concurrentJobsRunning = concurrentJobsRunning;
             return this;
         }
 
+        /**
+         * @param cpuUtilization CPU percentage on the integration runtime node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpuUtilization(Integer cpuUtilization) {
             $.cpuUtilization = cpuUtilization;
             return this;
         }
 
+        /**
+         * @param maxConcurrentJobs The maximum concurrent jobs in this integration runtime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxConcurrentJobs(Integer maxConcurrentJobs) {
             $.maxConcurrentJobs = maxConcurrentJobs;
             return this;
         }
 
+        /**
+         * @param nodeName Name of the integration runtime node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeName(String nodeName) {
             $.nodeName = nodeName;
             return this;
         }
 
+        /**
+         * @param receivedBytes Received bytes on the integration runtime node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder receivedBytes(Double receivedBytes) {
             $.receivedBytes = receivedBytes;
             return this;
         }
 
+        /**
+         * @param sentBytes Sent bytes on the integration runtime node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sentBytes(Double sentBytes) {
             $.sentBytes = sentBytes;
             return this;

@@ -31,6 +31,10 @@ public final class DomainServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="domainConfigurationType")
     private @Nullable Output<String> domainConfigurationType;
 
+    /**
+     * @return Domain Configuration Type
+     * 
+     */
     public Optional<Output<String>> domainConfigurationType() {
         return Optional.ofNullable(this.domainConfigurationType);
     }
@@ -42,6 +46,10 @@ public final class DomainServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="domainName")
     private @Nullable Output<String> domainName;
 
+    /**
+     * @return The name of the Azure domain that the user would like to deploy Domain Services to.
+     * 
+     */
     public Optional<Output<String>> domainName() {
         return Optional.ofNullable(this.domainName);
     }
@@ -53,6 +61,10 @@ public final class DomainServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="domainSecuritySettings")
     private @Nullable Output<DomainSecuritySettingsArgs> domainSecuritySettings;
 
+    /**
+     * @return DomainSecurity Settings
+     * 
+     */
     public Optional<Output<DomainSecuritySettingsArgs>> domainSecuritySettings() {
         return Optional.ofNullable(this.domainSecuritySettings);
     }
@@ -64,6 +76,10 @@ public final class DomainServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="domainServiceName")
     private @Nullable Output<String> domainServiceName;
 
+    /**
+     * @return The name of the domain service.
+     * 
+     */
     public Optional<Output<String>> domainServiceName() {
         return Optional.ofNullable(this.domainServiceName);
     }
@@ -75,6 +91,10 @@ public final class DomainServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="filteredSync")
     private @Nullable Output<Either<String,FilteredSync>> filteredSync;
 
+    /**
+     * @return Enabled or Disabled flag to turn on Group-based filtered sync
+     * 
+     */
     public Optional<Output<Either<String,FilteredSync>>> filteredSync() {
         return Optional.ofNullable(this.filteredSync);
     }
@@ -86,6 +106,10 @@ public final class DomainServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ldapsSettings")
     private @Nullable Output<LdapsSettingsArgs> ldapsSettings;
 
+    /**
+     * @return Secure LDAP Settings
+     * 
+     */
     public Optional<Output<LdapsSettingsArgs>> ldapsSettings() {
         return Optional.ofNullable(this.ldapsSettings);
     }
@@ -97,6 +121,10 @@ public final class DomainServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -108,6 +136,10 @@ public final class DomainServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="notificationSettings")
     private @Nullable Output<NotificationSettingsArgs> notificationSettings;
 
+    /**
+     * @return Notification Settings
+     * 
+     */
     public Optional<Output<NotificationSettingsArgs>> notificationSettings() {
         return Optional.ofNullable(this.notificationSettings);
     }
@@ -119,6 +151,10 @@ public final class DomainServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="replicaSets")
     private @Nullable Output<List<ReplicaSetArgs>> replicaSets;
 
+    /**
+     * @return List of ReplicaSets
+     * 
+     */
     public Optional<Output<List<ReplicaSetArgs>>> replicaSets() {
         return Optional.ofNullable(this.replicaSets);
     }
@@ -130,6 +166,10 @@ public final class DomainServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceForestSettings")
     private @Nullable Output<ResourceForestSettingsArgs> resourceForestSettings;
 
+    /**
+     * @return Resource Forest Settings
+     * 
+     */
     public Optional<Output<ResourceForestSettingsArgs>> resourceForestSettings() {
         return Optional.ofNullable(this.resourceForestSettings);
     }
@@ -141,6 +181,10 @@ public final class DomainServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -152,6 +196,10 @@ public final class DomainServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sku")
     private @Nullable Output<String> sku;
 
+    /**
+     * @return Sku Type
+     * 
+     */
     public Optional<Output<String>> sku() {
         return Optional.ofNullable(this.sku);
     }
@@ -163,6 +211,10 @@ public final class DomainServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -203,131 +255,305 @@ public final class DomainServiceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DomainServiceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param domainConfigurationType Domain Configuration Type
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainConfigurationType(@Nullable Output<String> domainConfigurationType) {
             $.domainConfigurationType = domainConfigurationType;
             return this;
         }
 
+        /**
+         * @param domainConfigurationType Domain Configuration Type
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainConfigurationType(String domainConfigurationType) {
             return domainConfigurationType(Output.of(domainConfigurationType));
         }
 
+        /**
+         * @param domainName The name of the Azure domain that the user would like to deploy Domain Services to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(@Nullable Output<String> domainName) {
             $.domainName = domainName;
             return this;
         }
 
+        /**
+         * @param domainName The name of the Azure domain that the user would like to deploy Domain Services to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(String domainName) {
             return domainName(Output.of(domainName));
         }
 
+        /**
+         * @param domainSecuritySettings DomainSecurity Settings
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainSecuritySettings(@Nullable Output<DomainSecuritySettingsArgs> domainSecuritySettings) {
             $.domainSecuritySettings = domainSecuritySettings;
             return this;
         }
 
+        /**
+         * @param domainSecuritySettings DomainSecurity Settings
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainSecuritySettings(DomainSecuritySettingsArgs domainSecuritySettings) {
             return domainSecuritySettings(Output.of(domainSecuritySettings));
         }
 
+        /**
+         * @param domainServiceName The name of the domain service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainServiceName(@Nullable Output<String> domainServiceName) {
             $.domainServiceName = domainServiceName;
             return this;
         }
 
+        /**
+         * @param domainServiceName The name of the domain service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainServiceName(String domainServiceName) {
             return domainServiceName(Output.of(domainServiceName));
         }
 
+        /**
+         * @param filteredSync Enabled or Disabled flag to turn on Group-based filtered sync
+         * 
+         * @return builder
+         * 
+         */
         public Builder filteredSync(@Nullable Output<Either<String,FilteredSync>> filteredSync) {
             $.filteredSync = filteredSync;
             return this;
         }
 
+        /**
+         * @param filteredSync Enabled or Disabled flag to turn on Group-based filtered sync
+         * 
+         * @return builder
+         * 
+         */
         public Builder filteredSync(Either<String,FilteredSync> filteredSync) {
             return filteredSync(Output.of(filteredSync));
         }
 
+        /**
+         * @param filteredSync Enabled or Disabled flag to turn on Group-based filtered sync
+         * 
+         * @return builder
+         * 
+         */
         public Builder filteredSync(String filteredSync) {
             return filteredSync(Either.ofLeft(filteredSync));
         }
 
+        /**
+         * @param filteredSync Enabled or Disabled flag to turn on Group-based filtered sync
+         * 
+         * @return builder
+         * 
+         */
         public Builder filteredSync(FilteredSync filteredSync) {
             return filteredSync(Either.ofRight(filteredSync));
         }
 
+        /**
+         * @param ldapsSettings Secure LDAP Settings
+         * 
+         * @return builder
+         * 
+         */
         public Builder ldapsSettings(@Nullable Output<LdapsSettingsArgs> ldapsSettings) {
             $.ldapsSettings = ldapsSettings;
             return this;
         }
 
+        /**
+         * @param ldapsSettings Secure LDAP Settings
+         * 
+         * @return builder
+         * 
+         */
         public Builder ldapsSettings(LdapsSettingsArgs ldapsSettings) {
             return ldapsSettings(Output.of(ldapsSettings));
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param notificationSettings Notification Settings
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationSettings(@Nullable Output<NotificationSettingsArgs> notificationSettings) {
             $.notificationSettings = notificationSettings;
             return this;
         }
 
+        /**
+         * @param notificationSettings Notification Settings
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationSettings(NotificationSettingsArgs notificationSettings) {
             return notificationSettings(Output.of(notificationSettings));
         }
 
+        /**
+         * @param replicaSets List of ReplicaSets
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicaSets(@Nullable Output<List<ReplicaSetArgs>> replicaSets) {
             $.replicaSets = replicaSets;
             return this;
         }
 
+        /**
+         * @param replicaSets List of ReplicaSets
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicaSets(List<ReplicaSetArgs> replicaSets) {
             return replicaSets(Output.of(replicaSets));
         }
 
+        /**
+         * @param replicaSets List of ReplicaSets
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicaSets(ReplicaSetArgs... replicaSets) {
             return replicaSets(List.of(replicaSets));
         }
 
+        /**
+         * @param resourceForestSettings Resource Forest Settings
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceForestSettings(@Nullable Output<ResourceForestSettingsArgs> resourceForestSettings) {
             $.resourceForestSettings = resourceForestSettings;
             return this;
         }
 
+        /**
+         * @param resourceForestSettings Resource Forest Settings
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceForestSettings(ResourceForestSettingsArgs resourceForestSettings) {
             return resourceForestSettings(Output.of(resourceForestSettings));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param sku Sku Type
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(@Nullable Output<String> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku Sku Type
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(String sku) {
             return sku(Output.of(sku));
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

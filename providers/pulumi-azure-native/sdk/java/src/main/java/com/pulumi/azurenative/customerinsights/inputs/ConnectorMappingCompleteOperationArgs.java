@@ -27,6 +27,10 @@ public final class ConnectorMappingCompleteOperationArgs extends com.pulumi.reso
     @Import(name="completionOperationType")
     private @Nullable Output<CompletionOperationTypes> completionOperationType;
 
+    /**
+     * @return The type of completion operation.
+     * 
+     */
     public Optional<Output<CompletionOperationTypes>> completionOperationType() {
         return Optional.ofNullable(this.completionOperationType);
     }
@@ -38,6 +42,10 @@ public final class ConnectorMappingCompleteOperationArgs extends com.pulumi.reso
     @Import(name="destinationFolder")
     private @Nullable Output<String> destinationFolder;
 
+    /**
+     * @return The destination folder where files will be moved to once the import is done.
+     * 
+     */
     public Optional<Output<String>> destinationFolder() {
         return Optional.ofNullable(this.destinationFolder);
     }
@@ -67,20 +75,44 @@ public final class ConnectorMappingCompleteOperationArgs extends com.pulumi.reso
             $ = new ConnectorMappingCompleteOperationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param completionOperationType The type of completion operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder completionOperationType(@Nullable Output<CompletionOperationTypes> completionOperationType) {
             $.completionOperationType = completionOperationType;
             return this;
         }
 
+        /**
+         * @param completionOperationType The type of completion operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder completionOperationType(CompletionOperationTypes completionOperationType) {
             return completionOperationType(Output.of(completionOperationType));
         }
 
+        /**
+         * @param destinationFolder The destination folder where files will be moved to once the import is done.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationFolder(@Nullable Output<String> destinationFolder) {
             $.destinationFolder = destinationFolder;
             return this;
         }
 
+        /**
+         * @param destinationFolder The destination folder where files will be moved to once the import is done.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationFolder(String destinationFolder) {
             return destinationFolder(Output.of(destinationFolder));
         }

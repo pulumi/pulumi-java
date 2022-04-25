@@ -16,47 +16,47 @@ import java.util.Objects;
 @CustomType
 public final class GetKeyResult {
     /**
-     * Settings for keys that can be used by Android apps.
+     * @return Settings for keys that can be used by Android apps.
      * 
      */
     private final GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsResponse androidSettings;
     /**
-     * The timestamp corresponding to the creation of this Key.
+     * @return The timestamp corresponding to the creation of this Key.
      * 
      */
     private final String createTime;
     /**
-     * Human-readable display name of this key. Modifiable by user.
+     * @return Human-readable display name of this key. Modifiable by user.
      * 
      */
     private final String displayName;
     /**
-     * Settings for keys that can be used by iOS apps.
+     * @return Settings for keys that can be used by iOS apps.
      * 
      */
     private final GoogleCloudRecaptchaenterpriseV1IOSKeySettingsResponse iosSettings;
     /**
-     * See Creating and managing labels.
+     * @return See Creating and managing labels.
      * 
      */
     private final Map<String,String> labels;
     /**
-     * The resource name for the Key in the format &#34;projects/{project}/keys/{key}&#34;.
+     * @return The resource name for the Key in the format &#34;projects/{project}/keys/{key}&#34;.
      * 
      */
     private final String name;
     /**
-     * Options for user acceptance testing.
+     * @return Options for user acceptance testing.
      * 
      */
     private final GoogleCloudRecaptchaenterpriseV1TestingOptionsResponse testingOptions;
     /**
-     * Settings for WAF
+     * @return Settings for WAF
      * 
      */
     private final GoogleCloudRecaptchaenterpriseV1WafSettingsResponse wafSettings;
     /**
-     * Settings for keys that can be used by websites.
+     * @return Settings for keys that can be used by websites.
      * 
      */
     private final GoogleCloudRecaptchaenterpriseV1WebKeySettingsResponse webSettings;
@@ -84,65 +84,65 @@ public final class GetKeyResult {
     }
 
     /**
-     * Settings for keys that can be used by Android apps.
+     * @return Settings for keys that can be used by Android apps.
      * 
-    */
+     */
     public GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsResponse androidSettings() {
         return this.androidSettings;
     }
     /**
-     * The timestamp corresponding to the creation of this Key.
+     * @return The timestamp corresponding to the creation of this Key.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * Human-readable display name of this key. Modifiable by user.
+     * @return Human-readable display name of this key. Modifiable by user.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * Settings for keys that can be used by iOS apps.
+     * @return Settings for keys that can be used by iOS apps.
      * 
-    */
+     */
     public GoogleCloudRecaptchaenterpriseV1IOSKeySettingsResponse iosSettings() {
         return this.iosSettings;
     }
     /**
-     * See Creating and managing labels.
+     * @return See Creating and managing labels.
      * 
-    */
+     */
     public Map<String,String> labels() {
         return this.labels;
     }
     /**
-     * The resource name for the Key in the format &#34;projects/{project}/keys/{key}&#34;.
+     * @return The resource name for the Key in the format &#34;projects/{project}/keys/{key}&#34;.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Options for user acceptance testing.
+     * @return Options for user acceptance testing.
      * 
-    */
+     */
     public GoogleCloudRecaptchaenterpriseV1TestingOptionsResponse testingOptions() {
         return this.testingOptions;
     }
     /**
-     * Settings for WAF
+     * @return Settings for WAF
      * 
-    */
+     */
     public GoogleCloudRecaptchaenterpriseV1WafSettingsResponse wafSettings() {
         return this.wafSettings;
     }
     /**
-     * Settings for keys that can be used by websites.
+     * @return Settings for keys that can be used by websites.
      * 
-    */
+     */
     public GoogleCloudRecaptchaenterpriseV1WebKeySettingsResponse webSettings() {
         return this.webSettings;
     }

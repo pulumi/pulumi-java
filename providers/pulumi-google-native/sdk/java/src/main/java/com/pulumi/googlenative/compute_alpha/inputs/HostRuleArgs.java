@@ -27,6 +27,10 @@ public final class HostRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return An optional description of this resource. Provide this property when you create the resource.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -38,6 +42,10 @@ public final class HostRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hosts")
     private @Nullable Output<List<String>> hosts;
 
+    /**
+     * @return The list of host patterns to match. They must be valid hostnames with optional port numbers in the format host:port. * matches any string of ([a-z0-9-.]*). In that case, * must be the first character and must be followed in the pattern by either - or .. * based matching is not supported when the URL map is bound to a target gRPC proxy that has the validateForProxyless field set to true.
+     * 
+     */
     public Optional<Output<List<String>>> hosts() {
         return Optional.ofNullable(this.hosts);
     }
@@ -49,6 +57,10 @@ public final class HostRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="pathMatcher")
     private @Nullable Output<String> pathMatcher;
 
+    /**
+     * @return The name of the PathMatcher to use to match the path portion of the URL if the hostRule matches the URL&#39;s host portion.
+     * 
+     */
     public Optional<Output<String>> pathMatcher() {
         return Optional.ofNullable(this.pathMatcher);
     }
@@ -79,33 +91,75 @@ public final class HostRuleArgs extends com.pulumi.resources.ResourceArgs {
             $ = new HostRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description An optional description of this resource. Provide this property when you create the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description An optional description of this resource. Provide this property when you create the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param hosts The list of host patterns to match. They must be valid hostnames with optional port numbers in the format host:port. * matches any string of ([a-z0-9-.]*). In that case, * must be the first character and must be followed in the pattern by either - or .. * based matching is not supported when the URL map is bound to a target gRPC proxy that has the validateForProxyless field set to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hosts(@Nullable Output<List<String>> hosts) {
             $.hosts = hosts;
             return this;
         }
 
+        /**
+         * @param hosts The list of host patterns to match. They must be valid hostnames with optional port numbers in the format host:port. * matches any string of ([a-z0-9-.]*). In that case, * must be the first character and must be followed in the pattern by either - or .. * based matching is not supported when the URL map is bound to a target gRPC proxy that has the validateForProxyless field set to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hosts(List<String> hosts) {
             return hosts(Output.of(hosts));
         }
 
+        /**
+         * @param hosts The list of host patterns to match. They must be valid hostnames with optional port numbers in the format host:port. * matches any string of ([a-z0-9-.]*). In that case, * must be the first character and must be followed in the pattern by either - or .. * based matching is not supported when the URL map is bound to a target gRPC proxy that has the validateForProxyless field set to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hosts(String... hosts) {
             return hosts(List.of(hosts));
         }
 
+        /**
+         * @param pathMatcher The name of the PathMatcher to use to match the path portion of the URL if the hostRule matches the URL&#39;s host portion.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pathMatcher(@Nullable Output<String> pathMatcher) {
             $.pathMatcher = pathMatcher;
             return this;
         }
 
+        /**
+         * @param pathMatcher The name of the PathMatcher to use to match the path portion of the URL if the hostRule matches the URL&#39;s host portion.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pathMatcher(String pathMatcher) {
             return pathMatcher(Output.of(pathMatcher));
         }

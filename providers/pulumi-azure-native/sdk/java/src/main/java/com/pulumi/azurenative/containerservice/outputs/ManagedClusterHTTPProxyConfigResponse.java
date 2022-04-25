@@ -13,22 +13,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ManagedClusterHTTPProxyConfigResponse {
     /**
-     * HTTP proxy server endpoint to use.
+     * @return HTTP proxy server endpoint to use.
      * 
      */
     private final @Nullable String httpProxy;
     /**
-     * HTTPS proxy server endpoint to use.
+     * @return HTTPS proxy server endpoint to use.
      * 
      */
     private final @Nullable String httpsProxy;
     /**
-     * Endpoints that should not go through proxy.
+     * @return Endpoints that should not go through proxy.
      * 
      */
     private final @Nullable List<String> noProxy;
     /**
-     * Alternative CA cert to use for connecting to proxy servers.
+     * @return Alternative CA cert to use for connecting to proxy servers.
      * 
      */
     private final @Nullable String trustedCa;
@@ -46,30 +46,30 @@ public final class ManagedClusterHTTPProxyConfigResponse {
     }
 
     /**
-     * HTTP proxy server endpoint to use.
+     * @return HTTP proxy server endpoint to use.
      * 
-    */
+     */
     public Optional<String> httpProxy() {
         return Optional.ofNullable(this.httpProxy);
     }
     /**
-     * HTTPS proxy server endpoint to use.
+     * @return HTTPS proxy server endpoint to use.
      * 
-    */
+     */
     public Optional<String> httpsProxy() {
         return Optional.ofNullable(this.httpsProxy);
     }
     /**
-     * Endpoints that should not go through proxy.
+     * @return Endpoints that should not go through proxy.
      * 
-    */
+     */
     public List<String> noProxy() {
         return this.noProxy == null ? List.of() : this.noProxy;
     }
     /**
-     * Alternative CA cert to use for connecting to proxy servers.
+     * @return Alternative CA cert to use for connecting to proxy servers.
      * 
-    */
+     */
     public Optional<String> trustedCa() {
         return Optional.ofNullable(this.trustedCa);
     }

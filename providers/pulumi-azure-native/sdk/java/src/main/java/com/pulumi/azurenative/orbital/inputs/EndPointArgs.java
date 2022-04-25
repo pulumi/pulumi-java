@@ -26,6 +26,10 @@ public final class EndPointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="endPointName", required=true)
     private Output<String> endPointName;
 
+    /**
+     * @return Name of an end point.
+     * 
+     */
     public Output<String> endPointName() {
         return this.endPointName;
     }
@@ -37,6 +41,10 @@ public final class EndPointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ipAddress", required=true)
     private Output<String> ipAddress;
 
+    /**
+     * @return IP Address.
+     * 
+     */
     public Output<String> ipAddress() {
         return this.ipAddress;
     }
@@ -48,6 +56,10 @@ public final class EndPointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="port", required=true)
     private Output<String> port;
 
+    /**
+     * @return TCP port to listen on to receive data.
+     * 
+     */
     public Output<String> port() {
         return this.port;
     }
@@ -59,6 +71,10 @@ public final class EndPointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="protocol", required=true)
     private Output<Either<String,Protocol>> protocol;
 
+    /**
+     * @return Protocol either UDP or TCP.
+     * 
+     */
     public Output<Either<String,Protocol>> protocol() {
         return this.protocol;
     }
@@ -90,46 +106,106 @@ public final class EndPointArgs extends com.pulumi.resources.ResourceArgs {
             $ = new EndPointArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endPointName Name of an end point.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endPointName(Output<String> endPointName) {
             $.endPointName = endPointName;
             return this;
         }
 
+        /**
+         * @param endPointName Name of an end point.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endPointName(String endPointName) {
             return endPointName(Output.of(endPointName));
         }
 
+        /**
+         * @param ipAddress IP Address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddress(Output<String> ipAddress) {
             $.ipAddress = ipAddress;
             return this;
         }
 
+        /**
+         * @param ipAddress IP Address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddress(String ipAddress) {
             return ipAddress(Output.of(ipAddress));
         }
 
+        /**
+         * @param port TCP port to listen on to receive data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Output<String> port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param port TCP port to listen on to receive data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(String port) {
             return port(Output.of(port));
         }
 
+        /**
+         * @param protocol Protocol either UDP or TCP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(Output<Either<String,Protocol>> protocol) {
             $.protocol = protocol;
             return this;
         }
 
+        /**
+         * @param protocol Protocol either UDP or TCP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(Either<String,Protocol> protocol) {
             return protocol(Output.of(protocol));
         }
 
+        /**
+         * @param protocol Protocol either UDP or TCP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(String protocol) {
             return protocol(Either.ofLeft(protocol));
         }
 
+        /**
+         * @param protocol Protocol either UDP or TCP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(Protocol protocol) {
             return protocol(Either.ofRight(protocol));
         }

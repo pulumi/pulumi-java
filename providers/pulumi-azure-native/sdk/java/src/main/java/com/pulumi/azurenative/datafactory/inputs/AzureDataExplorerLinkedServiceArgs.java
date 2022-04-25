@@ -36,6 +36,10 @@ public final class AzureDataExplorerLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="annotations")
     private @Nullable Output<List<Object>> annotations;
 
+    /**
+     * @return List of tags that can be used for describing the linked service.
+     * 
+     */
     public Optional<Output<List<Object>>> annotations() {
         return Optional.ofNullable(this.annotations);
     }
@@ -47,6 +51,10 @@ public final class AzureDataExplorerLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="connectVia")
     private @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
+    /**
+     * @return The integration runtime reference.
+     * 
+     */
     public Optional<Output<IntegrationRuntimeReferenceArgs>> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
@@ -58,6 +66,10 @@ public final class AzureDataExplorerLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="credential")
     private @Nullable Output<CredentialReferenceArgs> credential;
 
+    /**
+     * @return The credential reference containing authentication information.
+     * 
+     */
     public Optional<Output<CredentialReferenceArgs>> credential() {
         return Optional.ofNullable(this.credential);
     }
@@ -69,6 +81,10 @@ public final class AzureDataExplorerLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="database", required=true)
     private Output<Object> database;
 
+    /**
+     * @return Database name for connection. Type: string (or Expression with resultType string).
+     * 
+     */
     public Output<Object> database() {
         return this.database;
     }
@@ -80,6 +96,10 @@ public final class AzureDataExplorerLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Linked service description.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -91,6 +111,10 @@ public final class AzureDataExplorerLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="endpoint", required=true)
     private Output<Object> endpoint;
 
+    /**
+     * @return The endpoint of Azure Data Explorer (the engine&#39;s endpoint). URL will be in the format https://&lt;clusterName&gt;.&lt;regionName&gt;.kusto.windows.net. Type: string (or Expression with resultType string)
+     * 
+     */
     public Output<Object> endpoint() {
         return this.endpoint;
     }
@@ -102,6 +126,10 @@ public final class AzureDataExplorerLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="parameters")
     private @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
+    /**
+     * @return Parameters for linked service.
+     * 
+     */
     public Optional<Output<Map<String,ParameterSpecificationArgs>>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -113,6 +141,10 @@ public final class AzureDataExplorerLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="servicePrincipalId")
     private @Nullable Output<Object> servicePrincipalId;
 
+    /**
+     * @return The ID of the service principal used to authenticate against Azure Data Explorer. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> servicePrincipalId() {
         return Optional.ofNullable(this.servicePrincipalId);
     }
@@ -124,6 +156,10 @@ public final class AzureDataExplorerLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="servicePrincipalKey")
     private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey;
 
+    /**
+     * @return The key of the service principal used to authenticate against Kusto.
+     * 
+     */
     public Optional<Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>>> servicePrincipalKey() {
         return Optional.ofNullable(this.servicePrincipalKey);
     }
@@ -135,6 +171,10 @@ public final class AzureDataExplorerLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="tenant")
     private @Nullable Output<Object> tenant;
 
+    /**
+     * @return The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> tenant() {
         return Optional.ofNullable(this.tenant);
     }
@@ -147,6 +187,11 @@ public final class AzureDataExplorerLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Type of linked service.
+     * Expected value is &#39;AzureDataExplorer&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -185,113 +230,265 @@ public final class AzureDataExplorerLinkedServiceArgs extends com.pulumi.resourc
             $ = new AzureDataExplorerLinkedServiceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(@Nullable Output<List<Object>> annotations) {
             $.annotations = annotations;
             return this;
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(List<Object> annotations) {
             return annotations(Output.of(annotations));
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
 
+        /**
+         * @param connectVia The integration runtime reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
             $.connectVia = connectVia;
             return this;
         }
 
+        /**
+         * @param connectVia The integration runtime reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectVia(IntegrationRuntimeReferenceArgs connectVia) {
             return connectVia(Output.of(connectVia));
         }
 
+        /**
+         * @param credential The credential reference containing authentication information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder credential(@Nullable Output<CredentialReferenceArgs> credential) {
             $.credential = credential;
             return this;
         }
 
+        /**
+         * @param credential The credential reference containing authentication information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder credential(CredentialReferenceArgs credential) {
             return credential(Output.of(credential));
         }
 
+        /**
+         * @param database Database name for connection. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder database(Output<Object> database) {
             $.database = database;
             return this;
         }
 
+        /**
+         * @param database Database name for connection. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder database(Object database) {
             return database(Output.of(database));
         }
 
+        /**
+         * @param description Linked service description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Linked service description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param endpoint The endpoint of Azure Data Explorer (the engine&#39;s endpoint). URL will be in the format https://&lt;clusterName&gt;.&lt;regionName&gt;.kusto.windows.net. Type: string (or Expression with resultType string)
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoint(Output<Object> endpoint) {
             $.endpoint = endpoint;
             return this;
         }
 
+        /**
+         * @param endpoint The endpoint of Azure Data Explorer (the engine&#39;s endpoint). URL will be in the format https://&lt;clusterName&gt;.&lt;regionName&gt;.kusto.windows.net. Type: string (or Expression with resultType string)
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoint(Object endpoint) {
             return endpoint(Output.of(endpoint));
         }
 
+        /**
+         * @param parameters Parameters for linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters Parameters for linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(Map<String,ParameterSpecificationArgs> parameters) {
             return parameters(Output.of(parameters));
         }
 
+        /**
+         * @param servicePrincipalId The ID of the service principal used to authenticate against Azure Data Explorer. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipalId(@Nullable Output<Object> servicePrincipalId) {
             $.servicePrincipalId = servicePrincipalId;
             return this;
         }
 
+        /**
+         * @param servicePrincipalId The ID of the service principal used to authenticate against Azure Data Explorer. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipalId(Object servicePrincipalId) {
             return servicePrincipalId(Output.of(servicePrincipalId));
         }
 
+        /**
+         * @param servicePrincipalKey The key of the service principal used to authenticate against Kusto.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipalKey(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey) {
             $.servicePrincipalKey = servicePrincipalKey;
             return this;
         }
 
+        /**
+         * @param servicePrincipalKey The key of the service principal used to authenticate against Kusto.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipalKey(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> servicePrincipalKey) {
             return servicePrincipalKey(Output.of(servicePrincipalKey));
         }
 
+        /**
+         * @param servicePrincipalKey The key of the service principal used to authenticate against Kusto.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipalKey(AzureKeyVaultSecretReferenceArgs servicePrincipalKey) {
             return servicePrincipalKey(Either.ofLeft(servicePrincipalKey));
         }
 
+        /**
+         * @param servicePrincipalKey The key of the service principal used to authenticate against Kusto.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipalKey(SecureStringArgs servicePrincipalKey) {
             return servicePrincipalKey(Either.ofRight(servicePrincipalKey));
         }
 
+        /**
+         * @param tenant The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenant(@Nullable Output<Object> tenant) {
             $.tenant = tenant;
             return this;
         }
 
+        /**
+         * @param tenant The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenant(Object tenant) {
             return tenant(Output.of(tenant));
         }
 
+        /**
+         * @param type Type of linked service.
+         * Expected value is &#39;AzureDataExplorer&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of linked service.
+         * Expected value is &#39;AzureDataExplorer&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

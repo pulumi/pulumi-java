@@ -23,6 +23,10 @@ public final class AutoscalingConfigResponse extends com.pulumi.resources.Invoke
     @Import(name="policyUri", required=true)
     private String policyUri;
 
+    /**
+     * @return Optional. The autoscaling policy used by the cluster.Only resource names including projectid and location (region) are valid. Examples: https://www.googleapis.com/compute/v1/projects/[project_id]/locations/[dataproc_region]/autoscalingPolicies/[policy_id] projects/[project_id]/locations/[dataproc_region]/autoscalingPolicies/[policy_id]Note that the policy must be in the same project and Dataproc region.
+     * 
+     */
     public String policyUri() {
         return this.policyUri;
     }
@@ -51,6 +55,12 @@ public final class AutoscalingConfigResponse extends com.pulumi.resources.Invoke
             $ = new AutoscalingConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param policyUri Optional. The autoscaling policy used by the cluster.Only resource names including projectid and location (region) are valid. Examples: https://www.googleapis.com/compute/v1/projects/[project_id]/locations/[dataproc_region]/autoscalingPolicies/[policy_id] projects/[project_id]/locations/[dataproc_region]/autoscalingPolicies/[policy_id]Note that the policy must be in the same project and Dataproc region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyUri(String policyUri) {
             $.policyUri = policyUri;
             return this;

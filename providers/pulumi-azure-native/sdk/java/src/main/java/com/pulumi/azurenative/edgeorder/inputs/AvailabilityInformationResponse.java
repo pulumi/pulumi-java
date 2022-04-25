@@ -23,6 +23,10 @@ public final class AvailabilityInformationResponse extends com.pulumi.resources.
     @Import(name="availabilityStage", required=true)
     private String availabilityStage;
 
+    /**
+     * @return Current availability stage of the product. Availability stage
+     * 
+     */
     public String availabilityStage() {
         return this.availabilityStage;
     }
@@ -34,6 +38,10 @@ public final class AvailabilityInformationResponse extends com.pulumi.resources.
     @Import(name="disabledReason", required=true)
     private String disabledReason;
 
+    /**
+     * @return Reason why the product is disabled.
+     * 
+     */
     public String disabledReason() {
         return this.disabledReason;
     }
@@ -45,6 +53,10 @@ public final class AvailabilityInformationResponse extends com.pulumi.resources.
     @Import(name="disabledReasonMessage", required=true)
     private String disabledReasonMessage;
 
+    /**
+     * @return Message for why the product is disabled.
+     * 
+     */
     public String disabledReasonMessage() {
         return this.disabledReasonMessage;
     }
@@ -75,16 +87,34 @@ public final class AvailabilityInformationResponse extends com.pulumi.resources.
             $ = new AvailabilityInformationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param availabilityStage Current availability stage of the product. Availability stage
+         * 
+         * @return builder
+         * 
+         */
         public Builder availabilityStage(String availabilityStage) {
             $.availabilityStage = availabilityStage;
             return this;
         }
 
+        /**
+         * @param disabledReason Reason why the product is disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disabledReason(String disabledReason) {
             $.disabledReason = disabledReason;
             return this;
         }
 
+        /**
+         * @param disabledReasonMessage Message for why the product is disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disabledReasonMessage(String disabledReasonMessage) {
             $.disabledReasonMessage = disabledReasonMessage;
             return this;

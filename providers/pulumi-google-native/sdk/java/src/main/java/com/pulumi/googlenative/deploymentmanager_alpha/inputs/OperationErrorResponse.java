@@ -24,6 +24,10 @@ public final class OperationErrorResponse extends com.pulumi.resources.InvokeArg
     @Import(name="errors", required=true)
     private List<OperationErrorErrorsItemResponse> errors;
 
+    /**
+     * @return The array of errors encountered while processing this operation.
+     * 
+     */
     public List<OperationErrorErrorsItemResponse> errors() {
         return this.errors;
     }
@@ -52,11 +56,23 @@ public final class OperationErrorResponse extends com.pulumi.resources.InvokeArg
             $ = new OperationErrorResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param errors The array of errors encountered while processing this operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errors(List<OperationErrorErrorsItemResponse> errors) {
             $.errors = errors;
             return this;
         }
 
+        /**
+         * @param errors The array of errors encountered while processing this operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errors(OperationErrorErrorsItemResponse... errors) {
             return errors(List.of(errors));
         }

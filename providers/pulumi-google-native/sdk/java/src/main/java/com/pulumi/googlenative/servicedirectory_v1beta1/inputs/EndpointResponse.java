@@ -25,6 +25,10 @@ public final class EndpointResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="address", required=true)
     private String address;
 
+    /**
+     * @return Optional. An IPv4 or IPv6 address. Service Directory rejects bad addresses like: * `8.8.8` * `8.8.8.8:53` * `test:bad:address` * `[::1]` * `[::1]:8080` Limited to 45 characters.
+     * 
+     */
     public String address() {
         return this.address;
     }
@@ -36,6 +40,10 @@ public final class EndpointResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="createTime", required=true)
     private String createTime;
 
+    /**
+     * @return The timestamp when the endpoint was created.
+     * 
+     */
     public String createTime() {
         return this.createTime;
     }
@@ -47,6 +55,10 @@ public final class EndpointResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="metadata", required=true)
     private Map<String,String> metadata;
 
+    /**
+     * @return Optional. Metadata for the endpoint. This data can be consumed by service clients. Restrictions: * The entire metadata dictionary may contain up to 512 characters, spread accoss all key-value pairs. Metadata that goes beyond this limit are rejected * Valid metadata keys have two segments: an optional prefix and name, separated by a slash (/). The name segment is required and must be 63 characters or less, beginning and ending with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between. The prefix is optional. If specified, the prefix must be a DNS subdomain: a series of DNS labels separated by dots (.), not longer than 253 characters in total, followed by a slash (/). Metadata that fails to meet these requirements are rejected Note: This field is equivalent to the `annotations` field in the v1 API. They have the same syntax and read/write to the same location in Service Directory.
+     * 
+     */
     public Map<String,String> metadata() {
         return this.metadata;
     }
@@ -58,6 +70,10 @@ public final class EndpointResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Immutable. The resource name for the endpoint in the format `projects/*{@literal /}locations/*{@literal /}namespaces/*{@literal /}services/*{@literal /}endpoints/*`.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -69,6 +85,10 @@ public final class EndpointResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="network", required=true)
     private String network;
 
+    /**
+     * @return Immutable. The Google Compute Engine network (VPC) of the endpoint in the format `projects//locations/global/networks/*`. The project must be specified by project number (project id is rejected). Incorrectly formatted networks are rejected, but no other validation is performed on this field (ex. network or project existence, reachability, or permissions).
+     * 
+     */
     public String network() {
         return this.network;
     }
@@ -80,6 +100,10 @@ public final class EndpointResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="port", required=true)
     private Integer port;
 
+    /**
+     * @return Optional. Service Directory rejects values outside of `[0, 65535]`.
+     * 
+     */
     public Integer port() {
         return this.port;
     }
@@ -91,6 +115,10 @@ public final class EndpointResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="updateTime", required=true)
     private String updateTime;
 
+    /**
+     * @return The timestamp when the endpoint was last updated.
+     * 
+     */
     public String updateTime() {
         return this.updateTime;
     }
@@ -125,36 +153,78 @@ public final class EndpointResponse extends com.pulumi.resources.InvokeArgs {
             $ = new EndpointResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param address Optional. An IPv4 or IPv6 address. Service Directory rejects bad addresses like: * `8.8.8` * `8.8.8.8:53` * `test:bad:address` * `[::1]` * `[::1]:8080` Limited to 45 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder address(String address) {
             $.address = address;
             return this;
         }
 
+        /**
+         * @param createTime The timestamp when the endpoint was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTime(String createTime) {
             $.createTime = createTime;
             return this;
         }
 
+        /**
+         * @param metadata Optional. Metadata for the endpoint. This data can be consumed by service clients. Restrictions: * The entire metadata dictionary may contain up to 512 characters, spread accoss all key-value pairs. Metadata that goes beyond this limit are rejected * Valid metadata keys have two segments: an optional prefix and name, separated by a slash (/). The name segment is required and must be 63 characters or less, beginning and ending with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between. The prefix is optional. If specified, the prefix must be a DNS subdomain: a series of DNS labels separated by dots (.), not longer than 253 characters in total, followed by a slash (/). Metadata that fails to meet these requirements are rejected Note: This field is equivalent to the `annotations` field in the v1 API. They have the same syntax and read/write to the same location in Service Directory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(Map<String,String> metadata) {
             $.metadata = metadata;
             return this;
         }
 
+        /**
+         * @param name Immutable. The resource name for the endpoint in the format `projects/*{@literal /}locations/*{@literal /}namespaces/*{@literal /}services/*{@literal /}endpoints/*`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param network Immutable. The Google Compute Engine network (VPC) of the endpoint in the format `projects//locations/global/networks/*`. The project must be specified by project number (project id is rejected). Incorrectly formatted networks are rejected, but no other validation is performed on this field (ex. network or project existence, reachability, or permissions).
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(String network) {
             $.network = network;
             return this;
         }
 
+        /**
+         * @param port Optional. Service Directory rejects values outside of `[0, 65535]`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param updateTime The timestamp when the endpoint was last updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateTime(String updateTime) {
             $.updateTime = updateTime;
             return this;

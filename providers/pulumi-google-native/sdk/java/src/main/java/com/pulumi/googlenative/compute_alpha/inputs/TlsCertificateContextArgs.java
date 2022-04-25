@@ -28,6 +28,10 @@ public final class TlsCertificateContextArgs extends com.pulumi.resources.Resour
     @Import(name="certificatePaths")
     private @Nullable Output<TlsCertificatePathsArgs> certificatePaths;
 
+    /**
+     * @return Specifies the certificate and private key paths. This field is applicable only if tlsCertificateSource is set to USE_PATH.
+     * 
+     */
     public Optional<Output<TlsCertificatePathsArgs>> certificatePaths() {
         return Optional.ofNullable(this.certificatePaths);
     }
@@ -39,6 +43,10 @@ public final class TlsCertificateContextArgs extends com.pulumi.resources.Resour
     @Import(name="certificateSource")
     private @Nullable Output<TlsCertificateContextCertificateSource> certificateSource;
 
+    /**
+     * @return Defines how TLS certificates are obtained.
+     * 
+     */
     public Optional<Output<TlsCertificateContextCertificateSource>> certificateSource() {
         return Optional.ofNullable(this.certificateSource);
     }
@@ -50,6 +58,10 @@ public final class TlsCertificateContextArgs extends com.pulumi.resources.Resour
     @Import(name="sdsConfig")
     private @Nullable Output<SdsConfigArgs> sdsConfig;
 
+    /**
+     * @return Specifies the config to retrieve certificates through SDS. This field is applicable only if tlsCertificateSource is set to USE_SDS.
+     * 
+     */
     public Optional<Output<SdsConfigArgs>> sdsConfig() {
         return Optional.ofNullable(this.sdsConfig);
     }
@@ -80,29 +92,65 @@ public final class TlsCertificateContextArgs extends com.pulumi.resources.Resour
             $ = new TlsCertificateContextArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificatePaths Specifies the certificate and private key paths. This field is applicable only if tlsCertificateSource is set to USE_PATH.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificatePaths(@Nullable Output<TlsCertificatePathsArgs> certificatePaths) {
             $.certificatePaths = certificatePaths;
             return this;
         }
 
+        /**
+         * @param certificatePaths Specifies the certificate and private key paths. This field is applicable only if tlsCertificateSource is set to USE_PATH.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificatePaths(TlsCertificatePathsArgs certificatePaths) {
             return certificatePaths(Output.of(certificatePaths));
         }
 
+        /**
+         * @param certificateSource Defines how TLS certificates are obtained.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateSource(@Nullable Output<TlsCertificateContextCertificateSource> certificateSource) {
             $.certificateSource = certificateSource;
             return this;
         }
 
+        /**
+         * @param certificateSource Defines how TLS certificates are obtained.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateSource(TlsCertificateContextCertificateSource certificateSource) {
             return certificateSource(Output.of(certificateSource));
         }
 
+        /**
+         * @param sdsConfig Specifies the config to retrieve certificates through SDS. This field is applicable only if tlsCertificateSource is set to USE_SDS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sdsConfig(@Nullable Output<SdsConfigArgs> sdsConfig) {
             $.sdsConfig = sdsConfig;
             return this;
         }
 
+        /**
+         * @param sdsConfig Specifies the config to retrieve certificates through SDS. This field is applicable only if tlsCertificateSource is set to USE_SDS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sdsConfig(SdsConfigArgs sdsConfig) {
             return sdsConfig(Output.of(sdsConfig));
         }

@@ -10,27 +10,27 @@ import java.util.Objects;
 @CustomType
 public final class GetAndroidAppResult {
     /**
-     * Immutable. The globally unique, Firebase-assigned identifier for the `AndroidApp`. This identifier should be treated as an opaque token, as the data format is not specified.
+     * @return Immutable. The globally unique, Firebase-assigned identifier for the `AndroidApp`. This identifier should be treated as an opaque token, as the data format is not specified.
      * 
      */
     private final String appId;
     /**
-     * The user-assigned display name for the `AndroidApp`.
+     * @return The user-assigned display name for the `AndroidApp`.
      * 
      */
     private final String displayName;
     /**
-     * The resource name of the AndroidApp, in the format: projects/ PROJECT_IDENTIFIER/androidApps/APP_ID * PROJECT_IDENTIFIER: the parent Project&#39;s [`ProjectNumber`](../projects#FirebaseProject.FIELDS.project_number) ***(recommended)*** or its [`ProjectId`](../projects#FirebaseProject.FIELDS.project_id). Learn more about using project identifiers in Google&#39;s [AIP 2510 standard](https://google.aip.dev/cloud/2510). Note that the value for PROJECT_IDENTIFIER in any response body will be the `ProjectId`. * APP_ID: the globally unique, Firebase-assigned identifier for the App (see [`appId`](../projects.androidApps#AndroidApp.FIELDS.app_id)).
+     * @return The resource name of the AndroidApp, in the format: projects/ PROJECT_IDENTIFIER/androidApps/APP_ID * PROJECT_IDENTIFIER: the parent Project&#39;s [`ProjectNumber`](../projects#FirebaseProject.FIELDS.project_number) ***(recommended)*** or its [`ProjectId`](../projects#FirebaseProject.FIELDS.project_id). Learn more about using project identifiers in Google&#39;s [AIP 2510 standard](https://google.aip.dev/cloud/2510). Note that the value for PROJECT_IDENTIFIER in any response body will be the `ProjectId`. * APP_ID: the globally unique, Firebase-assigned identifier for the App (see [`appId`](../projects.androidApps#AndroidApp.FIELDS.app_id)).
      * 
      */
     private final String name;
     /**
-     * Immutable. The canonical package name of the Android app as would appear in the Google Play Developer Console.
+     * @return Immutable. The canonical package name of the Android app as would appear in the Google Play Developer Console.
      * 
      */
     private final String packageName;
     /**
-     * Immutable. A user-assigned unique identifier of the parent FirebaseProject for the `AndroidApp`.
+     * @return Immutable. A user-assigned unique identifier of the parent FirebaseProject for the `AndroidApp`.
      * 
      */
     private final String project;
@@ -50,37 +50,37 @@ public final class GetAndroidAppResult {
     }
 
     /**
-     * Immutable. The globally unique, Firebase-assigned identifier for the `AndroidApp`. This identifier should be treated as an opaque token, as the data format is not specified.
+     * @return Immutable. The globally unique, Firebase-assigned identifier for the `AndroidApp`. This identifier should be treated as an opaque token, as the data format is not specified.
      * 
-    */
+     */
     public String appId() {
         return this.appId;
     }
     /**
-     * The user-assigned display name for the `AndroidApp`.
+     * @return The user-assigned display name for the `AndroidApp`.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * The resource name of the AndroidApp, in the format: projects/ PROJECT_IDENTIFIER/androidApps/APP_ID * PROJECT_IDENTIFIER: the parent Project&#39;s [`ProjectNumber`](../projects#FirebaseProject.FIELDS.project_number) ***(recommended)*** or its [`ProjectId`](../projects#FirebaseProject.FIELDS.project_id). Learn more about using project identifiers in Google&#39;s [AIP 2510 standard](https://google.aip.dev/cloud/2510). Note that the value for PROJECT_IDENTIFIER in any response body will be the `ProjectId`. * APP_ID: the globally unique, Firebase-assigned identifier for the App (see [`appId`](../projects.androidApps#AndroidApp.FIELDS.app_id)).
+     * @return The resource name of the AndroidApp, in the format: projects/ PROJECT_IDENTIFIER/androidApps/APP_ID * PROJECT_IDENTIFIER: the parent Project&#39;s [`ProjectNumber`](../projects#FirebaseProject.FIELDS.project_number) ***(recommended)*** or its [`ProjectId`](../projects#FirebaseProject.FIELDS.project_id). Learn more about using project identifiers in Google&#39;s [AIP 2510 standard](https://google.aip.dev/cloud/2510). Note that the value for PROJECT_IDENTIFIER in any response body will be the `ProjectId`. * APP_ID: the globally unique, Firebase-assigned identifier for the App (see [`appId`](../projects.androidApps#AndroidApp.FIELDS.app_id)).
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Immutable. The canonical package name of the Android app as would appear in the Google Play Developer Console.
+     * @return Immutable. The canonical package name of the Android app as would appear in the Google Play Developer Console.
      * 
-    */
+     */
     public String packageName() {
         return this.packageName;
     }
     /**
-     * Immutable. A user-assigned unique identifier of the parent FirebaseProject for the `AndroidApp`.
+     * @return Immutable. A user-assigned unique identifier of the parent FirebaseProject for the `AndroidApp`.
      * 
-    */
+     */
     public String project() {
         return this.project;
     }

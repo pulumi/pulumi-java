@@ -24,6 +24,10 @@ public final class SSISExecutionCredentialResponse extends com.pulumi.resources.
     @Import(name="domain", required=true)
     private Object domain;
 
+    /**
+     * @return Domain for windows authentication.
+     * 
+     */
     public Object domain() {
         return this.domain;
     }
@@ -35,6 +39,10 @@ public final class SSISExecutionCredentialResponse extends com.pulumi.resources.
     @Import(name="password", required=true)
     private SecureStringResponse password;
 
+    /**
+     * @return Password for windows authentication.
+     * 
+     */
     public SecureStringResponse password() {
         return this.password;
     }
@@ -46,6 +54,10 @@ public final class SSISExecutionCredentialResponse extends com.pulumi.resources.
     @Import(name="userName", required=true)
     private Object userName;
 
+    /**
+     * @return UseName for windows authentication.
+     * 
+     */
     public Object userName() {
         return this.userName;
     }
@@ -76,16 +88,34 @@ public final class SSISExecutionCredentialResponse extends com.pulumi.resources.
             $ = new SSISExecutionCredentialResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param domain Domain for windows authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domain(Object domain) {
             $.domain = domain;
             return this;
         }
 
+        /**
+         * @param password Password for windows authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(SecureStringResponse password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param userName UseName for windows authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(Object userName) {
             $.userName = userName;
             return this;

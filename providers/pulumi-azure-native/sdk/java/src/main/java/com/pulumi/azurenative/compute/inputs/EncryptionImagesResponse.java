@@ -27,6 +27,10 @@ public final class EncryptionImagesResponse extends com.pulumi.resources.InvokeA
     @Import(name="dataDiskImages")
     private @Nullable List<DataDiskImageEncryptionResponse> dataDiskImages;
 
+    /**
+     * @return A list of encryption specifications for data disk images.
+     * 
+     */
     public Optional<List<DataDiskImageEncryptionResponse>> dataDiskImages() {
         return Optional.ofNullable(this.dataDiskImages);
     }
@@ -38,6 +42,10 @@ public final class EncryptionImagesResponse extends com.pulumi.resources.InvokeA
     @Import(name="osDiskImage")
     private @Nullable OSDiskImageEncryptionResponse osDiskImage;
 
+    /**
+     * @return Contains encryption settings for an OS disk image.
+     * 
+     */
     public Optional<OSDiskImageEncryptionResponse> osDiskImage() {
         return Optional.ofNullable(this.osDiskImage);
     }
@@ -67,15 +75,33 @@ public final class EncryptionImagesResponse extends com.pulumi.resources.InvokeA
             $ = new EncryptionImagesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataDiskImages A list of encryption specifications for data disk images.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataDiskImages(@Nullable List<DataDiskImageEncryptionResponse> dataDiskImages) {
             $.dataDiskImages = dataDiskImages;
             return this;
         }
 
+        /**
+         * @param dataDiskImages A list of encryption specifications for data disk images.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataDiskImages(DataDiskImageEncryptionResponse... dataDiskImages) {
             return dataDiskImages(List.of(dataDiskImages));
         }
 
+        /**
+         * @param osDiskImage Contains encryption settings for an OS disk image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osDiskImage(@Nullable OSDiskImageEncryptionResponse osDiskImage) {
             $.osDiskImage = osDiskImage;
             return this;

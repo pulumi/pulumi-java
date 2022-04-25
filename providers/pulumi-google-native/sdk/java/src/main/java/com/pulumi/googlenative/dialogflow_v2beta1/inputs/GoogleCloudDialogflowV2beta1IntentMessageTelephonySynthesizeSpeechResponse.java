@@ -23,6 +23,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeS
     @Import(name="ssml", required=true)
     private String ssml;
 
+    /**
+     * @return The SSML to be synthesized. For more information, see [SSML](https://developers.google.com/actions/reference/ssml).
+     * 
+     */
     public String ssml() {
         return this.ssml;
     }
@@ -34,6 +38,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeS
     @Import(name="text", required=true)
     private String text;
 
+    /**
+     * @return The raw text to be synthesized.
+     * 
+     */
     public String text() {
         return this.text;
     }
@@ -63,11 +71,23 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeS
             $ = new GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ssml The SSML to be synthesized. For more information, see [SSML](https://developers.google.com/actions/reference/ssml).
+         * 
+         * @return builder
+         * 
+         */
         public Builder ssml(String ssml) {
             $.ssml = ssml;
             return this;
         }
 
+        /**
+         * @param text The raw text to be synthesized.
+         * 
+         * @return builder
+         * 
+         */
         public Builder text(String text) {
             $.text = text;
             return this;

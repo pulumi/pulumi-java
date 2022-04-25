@@ -22,6 +22,10 @@ public final class AccessLevelsAccessLevelCustomExprGetArgs extends com.pulumi.r
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description of the expression
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -33,6 +37,10 @@ public final class AccessLevelsAccessLevelCustomExprGetArgs extends com.pulumi.r
     @Import(name="expression", required=true)
     private Output<String> expression;
 
+    /**
+     * @return Textual representation of an expression in Common Expression Language syntax.
+     * 
+     */
     public Output<String> expression() {
         return this.expression;
     }
@@ -44,6 +52,10 @@ public final class AccessLevelsAccessLevelCustomExprGetArgs extends com.pulumi.r
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return String indicating the location of the expression for error reporting, e.g. a file name and a position in the file
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -55,6 +67,10 @@ public final class AccessLevelsAccessLevelCustomExprGetArgs extends com.pulumi.r
     @Import(name="title")
     private @Nullable Output<String> title;
 
+    /**
+     * @return Title for the expression, i.e. a short string describing its purpose.
+     * 
+     */
     public Optional<Output<String>> title() {
         return Optional.ofNullable(this.title);
     }
@@ -86,38 +102,86 @@ public final class AccessLevelsAccessLevelCustomExprGetArgs extends com.pulumi.r
             $ = new AccessLevelsAccessLevelCustomExprGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Description of the expression
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description of the expression
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param expression Textual representation of an expression in Common Expression Language syntax.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expression(Output<String> expression) {
             $.expression = expression;
             return this;
         }
 
+        /**
+         * @param expression Textual representation of an expression in Common Expression Language syntax.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expression(String expression) {
             return expression(Output.of(expression));
         }
 
+        /**
+         * @param location String indicating the location of the expression for error reporting, e.g. a file name and a position in the file
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location String indicating the location of the expression for error reporting, e.g. a file name and a position in the file
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param title Title for the expression, i.e. a short string describing its purpose.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(@Nullable Output<String> title) {
             $.title = title;
             return this;
         }
 
+        /**
+         * @param title Title for the expression, i.e. a short string describing its purpose.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(String title) {
             return title(Output.of(title));
         }

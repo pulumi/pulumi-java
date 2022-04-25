@@ -28,6 +28,10 @@ public final class AutoScaleConfigurationResponse extends com.pulumi.resources.I
     @Import(name="maxReplicas")
     private @Nullable Integer maxReplicas;
 
+    /**
+     * @return The maximum number of replicas for each service.
+     * 
+     */
     public Optional<Integer> maxReplicas() {
         return Optional.ofNullable(this.maxReplicas);
     }
@@ -39,6 +43,10 @@ public final class AutoScaleConfigurationResponse extends com.pulumi.resources.I
     @Import(name="minReplicas")
     private @Nullable Integer minReplicas;
 
+    /**
+     * @return The minimum number of replicas for each service.
+     * 
+     */
     public Optional<Integer> minReplicas() {
         return Optional.ofNullable(this.minReplicas);
     }
@@ -50,6 +58,10 @@ public final class AutoScaleConfigurationResponse extends com.pulumi.resources.I
     @Import(name="refreshPeriodInSeconds")
     private @Nullable Integer refreshPeriodInSeconds;
 
+    /**
+     * @return Refresh period in seconds.
+     * 
+     */
     public Optional<Integer> refreshPeriodInSeconds() {
         return Optional.ofNullable(this.refreshPeriodInSeconds);
     }
@@ -61,6 +73,10 @@ public final class AutoScaleConfigurationResponse extends com.pulumi.resources.I
     @Import(name="status")
     private @Nullable String status;
 
+    /**
+     * @return If auto-scale is enabled for all services. Each service can turn it off individually.
+     * 
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
@@ -72,6 +88,10 @@ public final class AutoScaleConfigurationResponse extends com.pulumi.resources.I
     @Import(name="targetUtilization")
     private @Nullable Double targetUtilization;
 
+    /**
+     * @return The target utilization.
+     * 
+     */
     public Optional<Double> targetUtilization() {
         return Optional.ofNullable(this.targetUtilization);
     }
@@ -104,26 +124,56 @@ public final class AutoScaleConfigurationResponse extends com.pulumi.resources.I
             $ = new AutoScaleConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxReplicas The maximum number of replicas for each service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxReplicas(@Nullable Integer maxReplicas) {
             $.maxReplicas = maxReplicas;
             return this;
         }
 
+        /**
+         * @param minReplicas The minimum number of replicas for each service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minReplicas(@Nullable Integer minReplicas) {
             $.minReplicas = minReplicas;
             return this;
         }
 
+        /**
+         * @param refreshPeriodInSeconds Refresh period in seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder refreshPeriodInSeconds(@Nullable Integer refreshPeriodInSeconds) {
             $.refreshPeriodInSeconds = refreshPeriodInSeconds;
             return this;
         }
 
+        /**
+         * @param status If auto-scale is enabled for all services. Each service can turn it off individually.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable String status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param targetUtilization The target utilization.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetUtilization(@Nullable Double targetUtilization) {
             $.targetUtilization = targetUtilization;
             return this;

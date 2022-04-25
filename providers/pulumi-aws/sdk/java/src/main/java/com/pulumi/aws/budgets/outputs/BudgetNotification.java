@@ -13,32 +13,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class BudgetNotification {
     /**
-     * (Required) Comparison operator to use to evaluate the condition. Can be `LESS_THAN`, `EQUAL_TO` or `GREATER_THAN`.
+     * @return (Required) Comparison operator to use to evaluate the condition. Can be `LESS_THAN`, `EQUAL_TO` or `GREATER_THAN`.
      * 
      */
     private final String comparisonOperator;
     /**
-     * (Required) What kind of budget value to notify on. Can be `ACTUAL` or `FORECASTED`
+     * @return (Required) What kind of budget value to notify on. Can be `ACTUAL` or `FORECASTED`
      * 
      */
     private final String notificationType;
     /**
-     * (Optional) E-Mail addresses to notify. Either this or `subscriber_sns_topic_arns` is required.
+     * @return (Optional) E-Mail addresses to notify. Either this or `subscriber_sns_topic_arns` is required.
      * 
      */
     private final @Nullable List<String> subscriberEmailAddresses;
     /**
-     * (Optional) SNS topics to notify. Either this or `subscriber_email_addresses` is required.
+     * @return (Optional) SNS topics to notify. Either this or `subscriber_email_addresses` is required.
      * 
      */
     private final @Nullable List<String> subscriberSnsTopicArns;
     /**
-     * (Required) Threshold when the notification should be sent.
+     * @return (Required) Threshold when the notification should be sent.
      * 
      */
     private final Double threshold;
     /**
-     * (Required) What kind of threshold is defined. Can be `PERCENTAGE` OR `ABSOLUTE_VALUE`.
+     * @return (Required) What kind of threshold is defined. Can be `PERCENTAGE` OR `ABSOLUTE_VALUE`.
      * 
      */
     private final String thresholdType;
@@ -60,44 +60,44 @@ public final class BudgetNotification {
     }
 
     /**
-     * (Required) Comparison operator to use to evaluate the condition. Can be `LESS_THAN`, `EQUAL_TO` or `GREATER_THAN`.
+     * @return (Required) Comparison operator to use to evaluate the condition. Can be `LESS_THAN`, `EQUAL_TO` or `GREATER_THAN`.
      * 
-    */
+     */
     public String comparisonOperator() {
         return this.comparisonOperator;
     }
     /**
-     * (Required) What kind of budget value to notify on. Can be `ACTUAL` or `FORECASTED`
+     * @return (Required) What kind of budget value to notify on. Can be `ACTUAL` or `FORECASTED`
      * 
-    */
+     */
     public String notificationType() {
         return this.notificationType;
     }
     /**
-     * (Optional) E-Mail addresses to notify. Either this or `subscriber_sns_topic_arns` is required.
+     * @return (Optional) E-Mail addresses to notify. Either this or `subscriber_sns_topic_arns` is required.
      * 
-    */
+     */
     public List<String> subscriberEmailAddresses() {
         return this.subscriberEmailAddresses == null ? List.of() : this.subscriberEmailAddresses;
     }
     /**
-     * (Optional) SNS topics to notify. Either this or `subscriber_email_addresses` is required.
+     * @return (Optional) SNS topics to notify. Either this or `subscriber_email_addresses` is required.
      * 
-    */
+     */
     public List<String> subscriberSnsTopicArns() {
         return this.subscriberSnsTopicArns == null ? List.of() : this.subscriberSnsTopicArns;
     }
     /**
-     * (Required) Threshold when the notification should be sent.
+     * @return (Required) Threshold when the notification should be sent.
      * 
-    */
+     */
     public Double threshold() {
         return this.threshold;
     }
     /**
-     * (Required) What kind of threshold is defined. Can be `PERCENTAGE` OR `ABSOLUTE_VALUE`.
+     * @return (Required) What kind of threshold is defined. Can be `PERCENTAGE` OR `ABSOLUTE_VALUE`.
      * 
-    */
+     */
     public String thresholdType() {
         return this.thresholdType;
     }

@@ -23,6 +23,10 @@ public final class AbortInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="cause", required=true)
     private String cause;
 
+    /**
+     * @return Causes that the analysis is aborted.
+     * 
+     */
     public String cause() {
         return this.cause;
     }
@@ -34,6 +38,10 @@ public final class AbortInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceUri", required=true)
     private String resourceUri;
 
+    /**
+     * @return URI of the resource that caused the abort.
+     * 
+     */
     public String resourceUri() {
         return this.resourceUri;
     }
@@ -63,11 +71,23 @@ public final class AbortInfoResponse extends com.pulumi.resources.InvokeArgs {
             $ = new AbortInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cause Causes that the analysis is aborted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cause(String cause) {
             $.cause = cause;
             return this;
         }
 
+        /**
+         * @param resourceUri URI of the resource that caused the abort.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceUri(String resourceUri) {
             $.resourceUri = resourceUri;
             return this;

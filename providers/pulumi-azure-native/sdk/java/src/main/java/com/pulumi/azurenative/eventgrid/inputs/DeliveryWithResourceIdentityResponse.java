@@ -34,6 +34,11 @@ public final class DeliveryWithResourceIdentityResponse extends com.pulumi.resou
     @Import(name="destination")
     private @Nullable Object destination;
 
+    /**
+     * @return Information about the destination where events have to be delivered for the event subscription.
+     * Uses Azure Event Grid&#39;s identity to acquire the authentication tokens being used during delivery / dead-lettering.
+     * 
+     */
     public Optional<Object> destination() {
         return Optional.ofNullable(this.destination);
     }
@@ -45,6 +50,10 @@ public final class DeliveryWithResourceIdentityResponse extends com.pulumi.resou
     @Import(name="identity")
     private @Nullable EventSubscriptionIdentityResponse identity;
 
+    /**
+     * @return The identity to use when delivering events.
+     * 
+     */
     public Optional<EventSubscriptionIdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
@@ -74,11 +83,24 @@ public final class DeliveryWithResourceIdentityResponse extends com.pulumi.resou
             $ = new DeliveryWithResourceIdentityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param destination Information about the destination where events have to be delivered for the event subscription.
+         * Uses Azure Event Grid&#39;s identity to acquire the authentication tokens being used during delivery / dead-lettering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destination(@Nullable Object destination) {
             $.destination = destination;
             return this;
         }
 
+        /**
+         * @param identity The identity to use when delivering events.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(@Nullable EventSubscriptionIdentityResponse identity) {
             $.identity = identity;
             return this;

@@ -36,6 +36,10 @@ public final class CertificateSigningRequestArgs extends com.pulumi.resources.Re
     @Import(name="apiVersion")
     private @Nullable Output<String> apiVersion;
 
+    /**
+     * @return APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+     * 
+     */
     public Optional<Output<String>> apiVersion() {
         return Optional.ofNullable(this.apiVersion);
     }
@@ -47,6 +51,10 @@ public final class CertificateSigningRequestArgs extends com.pulumi.resources.Re
     @Import(name="kind")
     private @Nullable Output<String> kind;
 
+    /**
+     * @return Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+     * 
+     */
     public Optional<Output<String>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -65,6 +73,10 @@ public final class CertificateSigningRequestArgs extends com.pulumi.resources.Re
     @Import(name="spec", required=true)
     private Output<CertificateSigningRequestSpecArgs> spec;
 
+    /**
+     * @return spec contains the certificate request, and is immutable after creation. Only the request, signerName, expirationSeconds, and usages fields can be set on creation. Other fields are derived by Kubernetes and cannot be modified by users.
+     * 
+     */
     public Output<CertificateSigningRequestSpecArgs> spec() {
         return this.spec;
     }
@@ -76,6 +88,10 @@ public final class CertificateSigningRequestArgs extends com.pulumi.resources.Re
     @Import(name="status")
     private @Nullable Output<CertificateSigningRequestStatusArgs> status;
 
+    /**
+     * @return status contains information about whether the request is approved or denied, and the certificate issued by the signer, or the failure condition indicating signer failure.
+     * 
+     */
     public Optional<Output<CertificateSigningRequestStatusArgs>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -108,20 +124,44 @@ public final class CertificateSigningRequestArgs extends com.pulumi.resources.Re
             $ = new CertificateSigningRequestArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiVersion APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiVersion(@Nullable Output<String> apiVersion) {
             $.apiVersion = apiVersion;
             return this;
         }
 
+        /**
+         * @param apiVersion APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiVersion(String apiVersion) {
             return apiVersion(Output.of(apiVersion));
         }
 
+        /**
+         * @param kind Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
@@ -135,20 +175,44 @@ public final class CertificateSigningRequestArgs extends com.pulumi.resources.Re
             return metadata(Output.of(metadata));
         }
 
+        /**
+         * @param spec spec contains the certificate request, and is immutable after creation. Only the request, signerName, expirationSeconds, and usages fields can be set on creation. Other fields are derived by Kubernetes and cannot be modified by users.
+         * 
+         * @return builder
+         * 
+         */
         public Builder spec(Output<CertificateSigningRequestSpecArgs> spec) {
             $.spec = spec;
             return this;
         }
 
+        /**
+         * @param spec spec contains the certificate request, and is immutable after creation. Only the request, signerName, expirationSeconds, and usages fields can be set on creation. Other fields are derived by Kubernetes and cannot be modified by users.
+         * 
+         * @return builder
+         * 
+         */
         public Builder spec(CertificateSigningRequestSpecArgs spec) {
             return spec(Output.of(spec));
         }
 
+        /**
+         * @param status status contains information about whether the request is approved or denied, and the certificate issued by the signer, or the failure condition indicating signer failure.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<CertificateSigningRequestStatusArgs> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status status contains information about whether the request is approved or denied, and the certificate issued by the signer, or the failure condition indicating signer failure.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(CertificateSigningRequestStatusArgs status) {
             return status(Output.of(status));
         }

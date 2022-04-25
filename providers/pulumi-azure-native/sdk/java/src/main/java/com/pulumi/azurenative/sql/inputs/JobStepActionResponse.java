@@ -26,6 +26,10 @@ public final class JobStepActionResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="source")
     private @Nullable String source;
 
+    /**
+     * @return The source of the action to execute.
+     * 
+     */
     public Optional<String> source() {
         return Optional.ofNullable(this.source);
     }
@@ -37,6 +41,10 @@ public final class JobStepActionResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return Type of action being executed by the job step.
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -48,6 +56,10 @@ public final class JobStepActionResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="value", required=true)
     private String value;
 
+    /**
+     * @return The action value, for example the text of the T-SQL script to execute.
+     * 
+     */
     public String value() {
         return this.value;
     }
@@ -78,16 +90,34 @@ public final class JobStepActionResponse extends com.pulumi.resources.InvokeArgs
             $ = new JobStepActionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param source The source of the action to execute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(@Nullable String source) {
             $.source = source;
             return this;
         }
 
+        /**
+         * @param type Type of action being executed by the job step.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param value The action value, for example the text of the T-SQL script to execute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             $.value = value;
             return this;

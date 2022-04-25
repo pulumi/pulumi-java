@@ -27,6 +27,10 @@ public final class StorageProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="disks")
     private @Nullable Output<List<VirtualDiskArgs>> disks;
 
+    /**
+     * @return Gets or sets the list of virtual disks associated with the virtual machine.
+     * 
+     */
     public Optional<Output<List<VirtualDiskArgs>>> disks() {
         return Optional.ofNullable(this.disks);
     }
@@ -55,15 +59,33 @@ public final class StorageProfileArgs extends com.pulumi.resources.ResourceArgs 
             $ = new StorageProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param disks Gets or sets the list of virtual disks associated with the virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disks(@Nullable Output<List<VirtualDiskArgs>> disks) {
             $.disks = disks;
             return this;
         }
 
+        /**
+         * @param disks Gets or sets the list of virtual disks associated with the virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disks(List<VirtualDiskArgs> disks) {
             return disks(Output.of(disks));
         }
 
+        /**
+         * @param disks Gets or sets the list of virtual disks associated with the virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disks(VirtualDiskArgs... disks) {
             return disks(List.of(disks));
         }

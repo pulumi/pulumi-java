@@ -20,6 +20,11 @@ public final class GetInstanceTemplateNetworkInterfaceAccessConfig extends com.p
     @Import(name="natIp", required=true)
     private String natIp;
 
+    /**
+     * @return The IP address that will be 1:1 mapped to the instance&#39;s
+     * network ip. If not given, one will be generated.
+     * 
+     */
     public String natIp() {
         return this.natIp;
     }
@@ -33,6 +38,12 @@ public final class GetInstanceTemplateNetworkInterfaceAccessConfig extends com.p
     @Import(name="networkTier", required=true)
     private String networkTier;
 
+    /**
+     * @return The [networking tier][network-tier] used for configuring
+     * this instance template. This field can take the following values: PREMIUM or
+     * STANDARD. If this field is not specified, it is assumed to be PREMIUM.
+     * 
+     */
     public String networkTier() {
         return this.networkTier;
     }
@@ -70,11 +81,26 @@ public final class GetInstanceTemplateNetworkInterfaceAccessConfig extends com.p
             $ = new GetInstanceTemplateNetworkInterfaceAccessConfig(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param natIp The IP address that will be 1:1 mapped to the instance&#39;s
+         * network ip. If not given, one will be generated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder natIp(String natIp) {
             $.natIp = natIp;
             return this;
         }
 
+        /**
+         * @param networkTier The [networking tier][network-tier] used for configuring
+         * this instance template. This field can take the following values: PREMIUM or
+         * STANDARD. If this field is not specified, it is assumed to be PREMIUM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkTier(String networkTier) {
             $.networkTier = networkTier;
             return this;

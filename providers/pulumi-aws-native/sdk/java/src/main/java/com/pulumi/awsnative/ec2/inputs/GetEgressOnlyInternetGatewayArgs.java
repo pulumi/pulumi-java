@@ -19,6 +19,10 @@ public final class GetEgressOnlyInternetGatewayArgs extends com.pulumi.resources
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Service Generated ID of the EgressOnlyInternetGateway
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -47,6 +51,12 @@ public final class GetEgressOnlyInternetGatewayArgs extends com.pulumi.resources
             $ = new GetEgressOnlyInternetGatewayArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Service Generated ID of the EgressOnlyInternetGateway
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;

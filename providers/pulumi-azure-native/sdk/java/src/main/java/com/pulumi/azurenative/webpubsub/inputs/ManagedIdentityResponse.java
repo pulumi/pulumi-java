@@ -28,6 +28,11 @@ public final class ManagedIdentityResponse extends com.pulumi.resources.InvokeAr
     @Import(name="principalId", required=true)
     private String principalId;
 
+    /**
+     * @return Get the principal id for the system assigned identity.
+     * Only be used in response.
+     * 
+     */
     public String principalId() {
         return this.principalId;
     }
@@ -40,6 +45,11 @@ public final class ManagedIdentityResponse extends com.pulumi.resources.InvokeAr
     @Import(name="tenantId", required=true)
     private String tenantId;
 
+    /**
+     * @return Get the tenant id for the system assigned identity.
+     * Only be used in response
+     * 
+     */
     public String tenantId() {
         return this.tenantId;
     }
@@ -51,6 +61,10 @@ public final class ManagedIdentityResponse extends com.pulumi.resources.InvokeAr
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return Represent the identity type: systemAssigned, userAssigned, None
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -62,6 +76,10 @@ public final class ManagedIdentityResponse extends com.pulumi.resources.InvokeAr
     @Import(name="userAssignedIdentities")
     private @Nullable Map<String,UserAssignedIdentityPropertyResponse> userAssignedIdentities;
 
+    /**
+     * @return Get or set the user assigned identities
+     * 
+     */
     public Optional<Map<String,UserAssignedIdentityPropertyResponse>> userAssignedIdentities() {
         return Optional.ofNullable(this.userAssignedIdentities);
     }
@@ -93,21 +111,47 @@ public final class ManagedIdentityResponse extends com.pulumi.resources.InvokeAr
             $ = new ManagedIdentityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param principalId Get the principal id for the system assigned identity.
+         * Only be used in response.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalId(String principalId) {
             $.principalId = principalId;
             return this;
         }
 
+        /**
+         * @param tenantId Get the tenant id for the system assigned identity.
+         * Only be used in response
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(String tenantId) {
             $.tenantId = tenantId;
             return this;
         }
 
+        /**
+         * @param type Represent the identity type: systemAssigned, userAssigned, None
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param userAssignedIdentities Get or set the user assigned identities
+         * 
+         * @return builder
+         * 
+         */
         public Builder userAssignedIdentities(@Nullable Map<String,UserAssignedIdentityPropertyResponse> userAssignedIdentities) {
             $.userAssignedIdentities = userAssignedIdentities;
             return this;

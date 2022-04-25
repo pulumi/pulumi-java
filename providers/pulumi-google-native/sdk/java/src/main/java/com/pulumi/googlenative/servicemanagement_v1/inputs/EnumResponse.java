@@ -27,6 +27,10 @@ public final class EnumResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="enumvalue", required=true)
     private List<EnumValueResponse> enumvalue;
 
+    /**
+     * @return Enum value definitions.
+     * 
+     */
     public List<EnumValueResponse> enumvalue() {
         return this.enumvalue;
     }
@@ -38,6 +42,10 @@ public final class EnumResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Enum type name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -49,6 +57,10 @@ public final class EnumResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="options", required=true)
     private List<OptionResponse> options;
 
+    /**
+     * @return Protocol buffer options.
+     * 
+     */
     public List<OptionResponse> options() {
         return this.options;
     }
@@ -60,6 +72,10 @@ public final class EnumResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="sourceContext", required=true)
     private SourceContextResponse sourceContext;
 
+    /**
+     * @return The source context.
+     * 
+     */
     public SourceContextResponse sourceContext() {
         return this.sourceContext;
     }
@@ -71,6 +87,10 @@ public final class EnumResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="syntax", required=true)
     private String syntax;
 
+    /**
+     * @return The source syntax.
+     * 
+     */
     public String syntax() {
         return this.syntax;
     }
@@ -103,34 +123,76 @@ public final class EnumResponse extends com.pulumi.resources.InvokeArgs {
             $ = new EnumResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enumvalue Enum value definitions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enumvalue(List<EnumValueResponse> enumvalue) {
             $.enumvalue = enumvalue;
             return this;
         }
 
+        /**
+         * @param enumvalue Enum value definitions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enumvalue(EnumValueResponse... enumvalue) {
             return enumvalue(List.of(enumvalue));
         }
 
+        /**
+         * @param name Enum type name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param options Protocol buffer options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder options(List<OptionResponse> options) {
             $.options = options;
             return this;
         }
 
+        /**
+         * @param options Protocol buffer options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder options(OptionResponse... options) {
             return options(List.of(options));
         }
 
+        /**
+         * @param sourceContext The source context.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceContext(SourceContextResponse sourceContext) {
             $.sourceContext = sourceContext;
             return this;
         }
 
+        /**
+         * @param syntax The source syntax.
+         * 
+         * @return builder
+         * 
+         */
         public Builder syntax(String syntax) {
             $.syntax = syntax;
             return this;

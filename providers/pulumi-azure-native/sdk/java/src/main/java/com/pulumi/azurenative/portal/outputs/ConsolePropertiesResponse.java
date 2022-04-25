@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class ConsolePropertiesResponse {
     /**
-     * The operating system type of the cloud shell.
+     * @return The operating system type of the cloud shell.
      * 
      */
     private final String osType;
     /**
-     * Provisioning state of the console.
+     * @return Provisioning state of the console.
      * 
      */
     private final String provisioningState;
     /**
-     * Uri of the console.
+     * @return Uri of the console.
      * 
      */
     private final String uri;
@@ -36,23 +36,23 @@ public final class ConsolePropertiesResponse {
     }
 
     /**
-     * The operating system type of the cloud shell.
+     * @return The operating system type of the cloud shell.
      * 
-    */
+     */
     public String osType() {
         return this.osType;
     }
     /**
-     * Provisioning state of the console.
+     * @return Provisioning state of the console.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Uri of the console.
+     * @return Uri of the console.
      * 
-    */
+     */
     public String uri() {
         return this.uri;
     }

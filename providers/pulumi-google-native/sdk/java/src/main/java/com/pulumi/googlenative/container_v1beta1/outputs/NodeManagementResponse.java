@@ -11,17 +11,17 @@ import java.util.Objects;
 @CustomType
 public final class NodeManagementResponse {
     /**
-     * Whether the nodes will be automatically repaired.
+     * @return Whether the nodes will be automatically repaired.
      * 
      */
     private final Boolean autoRepair;
     /**
-     * Whether the nodes will be automatically upgraded.
+     * @return Whether the nodes will be automatically upgraded.
      * 
      */
     private final Boolean autoUpgrade;
     /**
-     * Specifies the Auto Upgrade knobs for the node pool.
+     * @return Specifies the Auto Upgrade knobs for the node pool.
      * 
      */
     private final AutoUpgradeOptionsResponse upgradeOptions;
@@ -37,23 +37,23 @@ public final class NodeManagementResponse {
     }
 
     /**
-     * Whether the nodes will be automatically repaired.
+     * @return Whether the nodes will be automatically repaired.
      * 
-    */
+     */
     public Boolean autoRepair() {
         return this.autoRepair;
     }
     /**
-     * Whether the nodes will be automatically upgraded.
+     * @return Whether the nodes will be automatically upgraded.
      * 
-    */
+     */
     public Boolean autoUpgrade() {
         return this.autoUpgrade;
     }
     /**
-     * Specifies the Auto Upgrade knobs for the node pool.
+     * @return Specifies the Auto Upgrade knobs for the node pool.
      * 
-    */
+     */
     public AutoUpgradeOptionsResponse upgradeOptions() {
         return this.upgradeOptions;
     }

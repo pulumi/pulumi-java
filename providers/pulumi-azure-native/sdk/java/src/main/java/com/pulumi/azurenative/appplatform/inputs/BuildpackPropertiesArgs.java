@@ -26,6 +26,10 @@ public final class BuildpackPropertiesArgs extends com.pulumi.resources.Resource
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Id of the buildpack
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -54,11 +58,23 @@ public final class BuildpackPropertiesArgs extends com.pulumi.resources.Resource
             $ = new BuildpackPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Id of the buildpack
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Id of the buildpack
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }

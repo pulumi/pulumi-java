@@ -23,6 +23,10 @@ public final class SqlDWTableDataSetMappingArgs extends com.pulumi.resources.Res
     @Import(name="accountName", required=true)
     private Output<String> accountName;
 
+    /**
+     * @return The name of the share account.
+     * 
+     */
     public Output<String> accountName() {
         return this.accountName;
     }
@@ -34,6 +38,10 @@ public final class SqlDWTableDataSetMappingArgs extends com.pulumi.resources.Res
     @Import(name="dataSetId", required=true)
     private Output<String> dataSetId;
 
+    /**
+     * @return The id of the source data set.
+     * 
+     */
     public Output<String> dataSetId() {
         return this.dataSetId;
     }
@@ -45,6 +53,10 @@ public final class SqlDWTableDataSetMappingArgs extends com.pulumi.resources.Res
     @Import(name="dataSetMappingName")
     private @Nullable Output<String> dataSetMappingName;
 
+    /**
+     * @return The name of the data set mapping to be created.
+     * 
+     */
     public Optional<Output<String>> dataSetMappingName() {
         return Optional.ofNullable(this.dataSetMappingName);
     }
@@ -56,6 +68,10 @@ public final class SqlDWTableDataSetMappingArgs extends com.pulumi.resources.Res
     @Import(name="dataWarehouseName", required=true)
     private Output<String> dataWarehouseName;
 
+    /**
+     * @return DataWarehouse name of the source data set
+     * 
+     */
     public Output<String> dataWarehouseName() {
         return this.dataWarehouseName;
     }
@@ -68,6 +84,11 @@ public final class SqlDWTableDataSetMappingArgs extends com.pulumi.resources.Res
     @Import(name="kind", required=true)
     private Output<String> kind;
 
+    /**
+     * @return Kind of data set mapping.
+     * Expected value is &#39;SqlDWTable&#39;.
+     * 
+     */
     public Output<String> kind() {
         return this.kind;
     }
@@ -79,6 +100,10 @@ public final class SqlDWTableDataSetMappingArgs extends com.pulumi.resources.Res
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -90,6 +115,10 @@ public final class SqlDWTableDataSetMappingArgs extends com.pulumi.resources.Res
     @Import(name="schemaName", required=true)
     private Output<String> schemaName;
 
+    /**
+     * @return Schema of the table. Default value is dbo.
+     * 
+     */
     public Output<String> schemaName() {
         return this.schemaName;
     }
@@ -101,6 +130,10 @@ public final class SqlDWTableDataSetMappingArgs extends com.pulumi.resources.Res
     @Import(name="shareSubscriptionName", required=true)
     private Output<String> shareSubscriptionName;
 
+    /**
+     * @return The name of the share subscription which will hold the data set sink.
+     * 
+     */
     public Output<String> shareSubscriptionName() {
         return this.shareSubscriptionName;
     }
@@ -112,6 +145,10 @@ public final class SqlDWTableDataSetMappingArgs extends com.pulumi.resources.Res
     @Import(name="sqlServerResourceId", required=true)
     private Output<String> sqlServerResourceId;
 
+    /**
+     * @return Resource id of SQL server
+     * 
+     */
     public Output<String> sqlServerResourceId() {
         return this.sqlServerResourceId;
     }
@@ -123,6 +160,10 @@ public final class SqlDWTableDataSetMappingArgs extends com.pulumi.resources.Res
     @Import(name="tableName", required=true)
     private Output<String> tableName;
 
+    /**
+     * @return SQL DW table name.
+     * 
+     */
     public Output<String> tableName() {
         return this.tableName;
     }
@@ -160,92 +201,214 @@ public final class SqlDWTableDataSetMappingArgs extends com.pulumi.resources.Res
             $ = new SqlDWTableDataSetMappingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The name of the share account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param accountName The name of the share account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             return accountName(Output.of(accountName));
         }
 
+        /**
+         * @param dataSetId The id of the source data set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSetId(Output<String> dataSetId) {
             $.dataSetId = dataSetId;
             return this;
         }
 
+        /**
+         * @param dataSetId The id of the source data set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSetId(String dataSetId) {
             return dataSetId(Output.of(dataSetId));
         }
 
+        /**
+         * @param dataSetMappingName The name of the data set mapping to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSetMappingName(@Nullable Output<String> dataSetMappingName) {
             $.dataSetMappingName = dataSetMappingName;
             return this;
         }
 
+        /**
+         * @param dataSetMappingName The name of the data set mapping to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSetMappingName(String dataSetMappingName) {
             return dataSetMappingName(Output.of(dataSetMappingName));
         }
 
+        /**
+         * @param dataWarehouseName DataWarehouse name of the source data set
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataWarehouseName(Output<String> dataWarehouseName) {
             $.dataWarehouseName = dataWarehouseName;
             return this;
         }
 
+        /**
+         * @param dataWarehouseName DataWarehouse name of the source data set
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataWarehouseName(String dataWarehouseName) {
             return dataWarehouseName(Output.of(dataWarehouseName));
         }
 
+        /**
+         * @param kind Kind of data set mapping.
+         * Expected value is &#39;SqlDWTable&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Kind of data set mapping.
+         * Expected value is &#39;SqlDWTable&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param schemaName Schema of the table. Default value is dbo.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaName(Output<String> schemaName) {
             $.schemaName = schemaName;
             return this;
         }
 
+        /**
+         * @param schemaName Schema of the table. Default value is dbo.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaName(String schemaName) {
             return schemaName(Output.of(schemaName));
         }
 
+        /**
+         * @param shareSubscriptionName The name of the share subscription which will hold the data set sink.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareSubscriptionName(Output<String> shareSubscriptionName) {
             $.shareSubscriptionName = shareSubscriptionName;
             return this;
         }
 
+        /**
+         * @param shareSubscriptionName The name of the share subscription which will hold the data set sink.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareSubscriptionName(String shareSubscriptionName) {
             return shareSubscriptionName(Output.of(shareSubscriptionName));
         }
 
+        /**
+         * @param sqlServerResourceId Resource id of SQL server
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlServerResourceId(Output<String> sqlServerResourceId) {
             $.sqlServerResourceId = sqlServerResourceId;
             return this;
         }
 
+        /**
+         * @param sqlServerResourceId Resource id of SQL server
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlServerResourceId(String sqlServerResourceId) {
             return sqlServerResourceId(Output.of(sqlServerResourceId));
         }
 
+        /**
+         * @param tableName SQL DW table name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableName(Output<String> tableName) {
             $.tableName = tableName;
             return this;
         }
 
+        /**
+         * @param tableName SQL DW table name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableName(String tableName) {
             return tableName(Output.of(tableName));
         }

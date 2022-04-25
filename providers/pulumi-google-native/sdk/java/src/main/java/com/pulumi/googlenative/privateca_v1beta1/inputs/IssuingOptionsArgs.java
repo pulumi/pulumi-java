@@ -24,6 +24,10 @@ public final class IssuingOptionsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="includeCaCertUrl", required=true)
     private Output<Boolean> includeCaCertUrl;
 
+    /**
+     * @return When true, includes a URL to the issuing CA certificate in the &#34;authority information access&#34; X.509 extension.
+     * 
+     */
     public Output<Boolean> includeCaCertUrl() {
         return this.includeCaCertUrl;
     }
@@ -35,6 +39,10 @@ public final class IssuingOptionsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="includeCrlAccessUrl", required=true)
     private Output<Boolean> includeCrlAccessUrl;
 
+    /**
+     * @return When true, includes a URL to the CRL corresponding to certificates issued from a CertificateAuthority. CRLs will expire 7 days from their creation. However, we will rebuild daily. CRLs are also rebuilt shortly after a certificate is revoked.
+     * 
+     */
     public Output<Boolean> includeCrlAccessUrl() {
         return this.includeCrlAccessUrl;
     }
@@ -64,20 +72,44 @@ public final class IssuingOptionsArgs extends com.pulumi.resources.ResourceArgs 
             $ = new IssuingOptionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param includeCaCertUrl When true, includes a URL to the issuing CA certificate in the &#34;authority information access&#34; X.509 extension.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeCaCertUrl(Output<Boolean> includeCaCertUrl) {
             $.includeCaCertUrl = includeCaCertUrl;
             return this;
         }
 
+        /**
+         * @param includeCaCertUrl When true, includes a URL to the issuing CA certificate in the &#34;authority information access&#34; X.509 extension.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeCaCertUrl(Boolean includeCaCertUrl) {
             return includeCaCertUrl(Output.of(includeCaCertUrl));
         }
 
+        /**
+         * @param includeCrlAccessUrl When true, includes a URL to the CRL corresponding to certificates issued from a CertificateAuthority. CRLs will expire 7 days from their creation. However, we will rebuild daily. CRLs are also rebuilt shortly after a certificate is revoked.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeCrlAccessUrl(Output<Boolean> includeCrlAccessUrl) {
             $.includeCrlAccessUrl = includeCrlAccessUrl;
             return this;
         }
 
+        /**
+         * @param includeCrlAccessUrl When true, includes a URL to the CRL corresponding to certificates issued from a CertificateAuthority. CRLs will expire 7 days from their creation. However, we will rebuild daily. CRLs are also rebuilt shortly after a certificate is revoked.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeCrlAccessUrl(Boolean includeCrlAccessUrl) {
             return includeCrlAccessUrl(Output.of(includeCrlAccessUrl));
         }

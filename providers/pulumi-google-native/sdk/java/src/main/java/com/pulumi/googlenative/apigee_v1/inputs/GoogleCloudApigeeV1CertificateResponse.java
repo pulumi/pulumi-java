@@ -20,6 +20,10 @@ public final class GoogleCloudApigeeV1CertificateResponse extends com.pulumi.res
     @Import(name="certInfo", required=true)
     private List<GoogleCloudApigeeV1CertInfoResponse> certInfo;
 
+    /**
+     * @return Chain of certificates under this name.
+     * 
+     */
     public List<GoogleCloudApigeeV1CertInfoResponse> certInfo() {
         return this.certInfo;
     }
@@ -48,11 +52,23 @@ public final class GoogleCloudApigeeV1CertificateResponse extends com.pulumi.res
             $ = new GoogleCloudApigeeV1CertificateResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certInfo Chain of certificates under this name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certInfo(List<GoogleCloudApigeeV1CertInfoResponse> certInfo) {
             $.certInfo = certInfo;
             return this;
         }
 
+        /**
+         * @param certInfo Chain of certificates under this name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certInfo(GoogleCloudApigeeV1CertInfoResponse... certInfo) {
             return certInfo(List.of(certInfo));
         }

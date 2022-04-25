@@ -26,6 +26,10 @@ public final class ThrottlingInformationArgs extends com.pulumi.resources.Resour
     @Import(name="duration")
     private @Nullable Output<String> duration;
 
+    /**
+     * @return The required duration (in ISO8601 format) to wait before notifying on the alert rule again. The time granularity must be in minutes and minimum value is 0 minutes
+     * 
+     */
     public Optional<Output<String>> duration() {
         return Optional.ofNullable(this.duration);
     }
@@ -54,11 +58,23 @@ public final class ThrottlingInformationArgs extends com.pulumi.resources.Resour
             $ = new ThrottlingInformationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param duration The required duration (in ISO8601 format) to wait before notifying on the alert rule again. The time granularity must be in minutes and minimum value is 0 minutes
+         * 
+         * @return builder
+         * 
+         */
         public Builder duration(@Nullable Output<String> duration) {
             $.duration = duration;
             return this;
         }
 
+        /**
+         * @param duration The required duration (in ISO8601 format) to wait before notifying on the alert rule again. The time granularity must be in minutes and minimum value is 0 minutes
+         * 
+         * @return builder
+         * 
+         */
         public Builder duration(String duration) {
             return duration(Output.of(duration));
         }

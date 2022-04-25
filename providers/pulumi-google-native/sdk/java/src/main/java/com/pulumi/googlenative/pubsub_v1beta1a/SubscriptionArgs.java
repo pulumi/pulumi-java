@@ -24,6 +24,10 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ackDeadlineSeconds")
     private @Nullable Output<Integer> ackDeadlineSeconds;
 
+    /**
+     * @return For either push or pull delivery, the value is the maximum time after a subscriber receives a message before the subscriber should acknowledge or Nack the message. If the Ack deadline for a message passes without an Ack or a Nack, the Pub/Sub system will eventually redeliver the message. If a subscriber acknowledges after the deadline, the Pub/Sub system may accept the Ack, but it is possible that the message has been already delivered again. Multiple Acks to the message are allowed and will succeed. For push delivery, this value is used to set the request timeout for the call to the push endpoint. For pull delivery, this value is used as the initial value for the Ack deadline. It may be overridden for each message using its corresponding ack_id with ModifyAckDeadline. While a message is outstanding (i.e. it has been delivered to a pull subscriber and the subscriber has not yet Acked or Nacked), the Pub/Sub system will not deliver that message to another pull subscriber (on a best-effort basis).
+     * 
+     */
     public Optional<Output<Integer>> ackDeadlineSeconds() {
         return Optional.ofNullable(this.ackDeadlineSeconds);
     }
@@ -35,6 +39,10 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the subscription.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -46,6 +54,10 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="pushConfig")
     private @Nullable Output<PushConfigArgs> pushConfig;
 
+    /**
+     * @return If push delivery is used with this subscription, this field is used to configure it.
+     * 
+     */
     public Optional<Output<PushConfigArgs>> pushConfig() {
         return Optional.ofNullable(this.pushConfig);
     }
@@ -57,6 +69,10 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="topic")
     private @Nullable Output<String> topic;
 
+    /**
+     * @return The name of the topic from which this subscription is receiving messages.
+     * 
+     */
     public Optional<Output<String>> topic() {
         return Optional.ofNullable(this.topic);
     }
@@ -88,38 +104,86 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SubscriptionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ackDeadlineSeconds For either push or pull delivery, the value is the maximum time after a subscriber receives a message before the subscriber should acknowledge or Nack the message. If the Ack deadline for a message passes without an Ack or a Nack, the Pub/Sub system will eventually redeliver the message. If a subscriber acknowledges after the deadline, the Pub/Sub system may accept the Ack, but it is possible that the message has been already delivered again. Multiple Acks to the message are allowed and will succeed. For push delivery, this value is used to set the request timeout for the call to the push endpoint. For pull delivery, this value is used as the initial value for the Ack deadline. It may be overridden for each message using its corresponding ack_id with ModifyAckDeadline. While a message is outstanding (i.e. it has been delivered to a pull subscriber and the subscriber has not yet Acked or Nacked), the Pub/Sub system will not deliver that message to another pull subscriber (on a best-effort basis).
+         * 
+         * @return builder
+         * 
+         */
         public Builder ackDeadlineSeconds(@Nullable Output<Integer> ackDeadlineSeconds) {
             $.ackDeadlineSeconds = ackDeadlineSeconds;
             return this;
         }
 
+        /**
+         * @param ackDeadlineSeconds For either push or pull delivery, the value is the maximum time after a subscriber receives a message before the subscriber should acknowledge or Nack the message. If the Ack deadline for a message passes without an Ack or a Nack, the Pub/Sub system will eventually redeliver the message. If a subscriber acknowledges after the deadline, the Pub/Sub system may accept the Ack, but it is possible that the message has been already delivered again. Multiple Acks to the message are allowed and will succeed. For push delivery, this value is used to set the request timeout for the call to the push endpoint. For pull delivery, this value is used as the initial value for the Ack deadline. It may be overridden for each message using its corresponding ack_id with ModifyAckDeadline. While a message is outstanding (i.e. it has been delivered to a pull subscriber and the subscriber has not yet Acked or Nacked), the Pub/Sub system will not deliver that message to another pull subscriber (on a best-effort basis).
+         * 
+         * @return builder
+         * 
+         */
         public Builder ackDeadlineSeconds(Integer ackDeadlineSeconds) {
             return ackDeadlineSeconds(Output.of(ackDeadlineSeconds));
         }
 
+        /**
+         * @param name Name of the subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param pushConfig If push delivery is used with this subscription, this field is used to configure it.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pushConfig(@Nullable Output<PushConfigArgs> pushConfig) {
             $.pushConfig = pushConfig;
             return this;
         }
 
+        /**
+         * @param pushConfig If push delivery is used with this subscription, this field is used to configure it.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pushConfig(PushConfigArgs pushConfig) {
             return pushConfig(Output.of(pushConfig));
         }
 
+        /**
+         * @param topic The name of the topic from which this subscription is receiving messages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topic(@Nullable Output<String> topic) {
             $.topic = topic;
             return this;
         }
 
+        /**
+         * @param topic The name of the topic from which this subscription is receiving messages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topic(String topic) {
             return topic(Output.of(topic));
         }

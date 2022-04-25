@@ -26,6 +26,10 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesRespons
     @Import(name="chainName", required=true)
     private String chainName;
 
+    /**
+     * @return Chain name that the snapshot is created in.
+     * 
+     */
     public String chainName() {
         return this.chainName;
     }
@@ -37,6 +41,10 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesRespons
     @Import(name="guestFlush", required=true)
     private Boolean guestFlush;
 
+    /**
+     * @return Indication to perform a &#39;guest aware&#39; snapshot.
+     * 
+     */
     public Boolean guestFlush() {
         return this.guestFlush;
     }
@@ -48,6 +56,10 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesRespons
     @Import(name="labels", required=true)
     private Map<String,String> labels;
 
+    /**
+     * @return Labels to apply to scheduled snapshots. These can be later modified by the setLabels method. Label values may be empty.
+     * 
+     */
     public Map<String,String> labels() {
         return this.labels;
     }
@@ -59,6 +71,10 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesRespons
     @Import(name="storageLocations", required=true)
     private List<String> storageLocations;
 
+    /**
+     * @return Cloud Storage bucket storage location of the auto snapshot (regional or multi-regional).
+     * 
+     */
     public List<String> storageLocations() {
         return this.storageLocations;
     }
@@ -90,26 +106,56 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesRespons
             $ = new ResourcePolicySnapshotSchedulePolicySnapshotPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param chainName Chain name that the snapshot is created in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder chainName(String chainName) {
             $.chainName = chainName;
             return this;
         }
 
+        /**
+         * @param guestFlush Indication to perform a &#39;guest aware&#39; snapshot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder guestFlush(Boolean guestFlush) {
             $.guestFlush = guestFlush;
             return this;
         }
 
+        /**
+         * @param labels Labels to apply to scheduled snapshots. These can be later modified by the setLabels method. Label values may be empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param storageLocations Cloud Storage bucket storage location of the auto snapshot (regional or multi-regional).
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageLocations(List<String> storageLocations) {
             $.storageLocations = storageLocations;
             return this;
         }
 
+        /**
+         * @param storageLocations Cloud Storage bucket storage location of the auto snapshot (regional or multi-regional).
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageLocations(String... storageLocations) {
             return storageLocations(List.of(storageLocations));
         }

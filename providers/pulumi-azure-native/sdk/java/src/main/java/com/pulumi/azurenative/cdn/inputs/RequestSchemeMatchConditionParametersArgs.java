@@ -28,6 +28,10 @@ public final class RequestSchemeMatchConditionParametersArgs extends com.pulumi.
     @Import(name="matchValues")
     private @Nullable Output<List<String>> matchValues;
 
+    /**
+     * @return The match value for the condition of the delivery rule
+     * 
+     */
     public Optional<Output<List<String>>> matchValues() {
         return Optional.ofNullable(this.matchValues);
     }
@@ -39,6 +43,10 @@ public final class RequestSchemeMatchConditionParametersArgs extends com.pulumi.
     @Import(name="negateCondition")
     private @Nullable Output<Boolean> negateCondition;
 
+    /**
+     * @return Describes if this is negate condition or not
+     * 
+     */
     public Optional<Output<Boolean>> negateCondition() {
         return Optional.ofNullable(this.negateCondition);
     }
@@ -57,6 +65,10 @@ public final class RequestSchemeMatchConditionParametersArgs extends com.pulumi.
     @Import(name="operator", required=true)
     private Output<String> operator;
 
+    /**
+     * @return Describes operator to be matched
+     * 
+     */
     public Output<String> operator() {
         return this.operator;
     }
@@ -88,24 +100,54 @@ public final class RequestSchemeMatchConditionParametersArgs extends com.pulumi.
             $ = new RequestSchemeMatchConditionParametersArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param matchValues The match value for the condition of the delivery rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchValues(@Nullable Output<List<String>> matchValues) {
             $.matchValues = matchValues;
             return this;
         }
 
+        /**
+         * @param matchValues The match value for the condition of the delivery rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchValues(List<String> matchValues) {
             return matchValues(Output.of(matchValues));
         }
 
+        /**
+         * @param matchValues The match value for the condition of the delivery rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchValues(String... matchValues) {
             return matchValues(List.of(matchValues));
         }
 
+        /**
+         * @param negateCondition Describes if this is negate condition or not
+         * 
+         * @return builder
+         * 
+         */
         public Builder negateCondition(@Nullable Output<Boolean> negateCondition) {
             $.negateCondition = negateCondition;
             return this;
         }
 
+        /**
+         * @param negateCondition Describes if this is negate condition or not
+         * 
+         * @return builder
+         * 
+         */
         public Builder negateCondition(Boolean negateCondition) {
             return negateCondition(Output.of(negateCondition));
         }
@@ -119,11 +161,23 @@ public final class RequestSchemeMatchConditionParametersArgs extends com.pulumi.
             return odataType(Output.of(odataType));
         }
 
+        /**
+         * @param operator Describes operator to be matched
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(Output<String> operator) {
             $.operator = operator;
             return this;
         }
 
+        /**
+         * @param operator Describes operator to be matched
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(String operator) {
             return operator(Output.of(operator));
         }

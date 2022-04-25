@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class EncryptionConfigResponse {
     /**
-     * Optional. The Cloud KMS key name to use for PD disk encryption for all instances in the cluster.
+     * @return Optional. The Cloud KMS key name to use for PD disk encryption for all instances in the cluster.
      * 
      */
     private final String gcePdKmsKeyName;
@@ -21,9 +21,9 @@ public final class EncryptionConfigResponse {
     }
 
     /**
-     * Optional. The Cloud KMS key name to use for PD disk encryption for all instances in the cluster.
+     * @return Optional. The Cloud KMS key name to use for PD disk encryption for all instances in the cluster.
      * 
-    */
+     */
     public String gcePdKmsKeyName() {
         return this.gcePdKmsKeyName;
     }

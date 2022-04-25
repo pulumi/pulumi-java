@@ -14,63 +14,63 @@ import javax.annotation.Nullable;
 @CustomType
 public final class FtpReadSettingsResponse {
     /**
-     * Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).
+     * @return Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
      */
     private final @Nullable Object deleteFilesAfterCompletion;
     /**
-     * If true, disable parallel reading within each file. Default is false. Type: boolean (or Expression with resultType boolean).
+     * @return If true, disable parallel reading within each file. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
      */
     private final @Nullable Object disableChunking;
     /**
-     * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+     * @return If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
      */
     private final @Nullable Object disableMetricsCollection;
     /**
-     * Indicates whether to enable partition discovery.
+     * @return Indicates whether to enable partition discovery.
      * 
      */
     private final @Nullable Boolean enablePartitionDiscovery;
     /**
-     * Point to a text file that lists each file (relative path to the path configured in the dataset) that you want to copy. Type: string (or Expression with resultType string).
+     * @return Point to a text file that lists each file (relative path to the path configured in the dataset) that you want to copy. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object fileListPath;
     /**
-     * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+     * @return The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
      * 
      */
     private final @Nullable Object maxConcurrentConnections;
     /**
-     * Specify the root path where partition discovery starts from. Type: string (or Expression with resultType string).
+     * @return Specify the root path where partition discovery starts from. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object partitionRootPath;
     /**
-     * If true, files under the folder path will be read recursively. Default is true. Type: boolean (or Expression with resultType boolean).
+     * @return If true, files under the folder path will be read recursively. Default is true. Type: boolean (or Expression with resultType boolean).
      * 
      */
     private final @Nullable Object recursive;
     /**
-     * The read setting type.
+     * @return The read setting type.
      * Expected value is &#39;FtpReadSettings&#39;.
      * 
      */
     private final String type;
     /**
-     * Specify whether to use binary transfer mode for FTP stores.
+     * @return Specify whether to use binary transfer mode for FTP stores.
      * 
      */
     private final @Nullable Boolean useBinaryTransfer;
     /**
-     * Ftp wildcardFileName. Type: string (or Expression with resultType string).
+     * @return Ftp wildcardFileName. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object wildcardFileName;
     /**
-     * Ftp wildcardFolderPath. Type: string (or Expression with resultType string).
+     * @return Ftp wildcardFolderPath. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object wildcardFolderPath;
@@ -104,87 +104,87 @@ public final class FtpReadSettingsResponse {
     }
 
     /**
-     * Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).
+     * @return Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
-    */
+     */
     public Optional<Object> deleteFilesAfterCompletion() {
         return Optional.ofNullable(this.deleteFilesAfterCompletion);
     }
     /**
-     * If true, disable parallel reading within each file. Default is false. Type: boolean (or Expression with resultType boolean).
+     * @return If true, disable parallel reading within each file. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
-    */
+     */
     public Optional<Object> disableChunking() {
         return Optional.ofNullable(this.disableChunking);
     }
     /**
-     * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+     * @return If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
-    */
+     */
     public Optional<Object> disableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
     /**
-     * Indicates whether to enable partition discovery.
+     * @return Indicates whether to enable partition discovery.
      * 
-    */
+     */
     public Optional<Boolean> enablePartitionDiscovery() {
         return Optional.ofNullable(this.enablePartitionDiscovery);
     }
     /**
-     * Point to a text file that lists each file (relative path to the path configured in the dataset) that you want to copy. Type: string (or Expression with resultType string).
+     * @return Point to a text file that lists each file (relative path to the path configured in the dataset) that you want to copy. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> fileListPath() {
         return Optional.ofNullable(this.fileListPath);
     }
     /**
-     * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+     * @return The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
      * 
-    */
+     */
     public Optional<Object> maxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
     /**
-     * Specify the root path where partition discovery starts from. Type: string (or Expression with resultType string).
+     * @return Specify the root path where partition discovery starts from. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> partitionRootPath() {
         return Optional.ofNullable(this.partitionRootPath);
     }
     /**
-     * If true, files under the folder path will be read recursively. Default is true. Type: boolean (or Expression with resultType boolean).
+     * @return If true, files under the folder path will be read recursively. Default is true. Type: boolean (or Expression with resultType boolean).
      * 
-    */
+     */
     public Optional<Object> recursive() {
         return Optional.ofNullable(this.recursive);
     }
     /**
-     * The read setting type.
+     * @return The read setting type.
      * Expected value is &#39;FtpReadSettings&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Specify whether to use binary transfer mode for FTP stores.
+     * @return Specify whether to use binary transfer mode for FTP stores.
      * 
-    */
+     */
     public Optional<Boolean> useBinaryTransfer() {
         return Optional.ofNullable(this.useBinaryTransfer);
     }
     /**
-     * Ftp wildcardFileName. Type: string (or Expression with resultType string).
+     * @return Ftp wildcardFileName. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> wildcardFileName() {
         return Optional.ofNullable(this.wildcardFileName);
     }
     /**
-     * Ftp wildcardFolderPath. Type: string (or Expression with resultType string).
+     * @return Ftp wildcardFolderPath. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> wildcardFolderPath() {
         return Optional.ofNullable(this.wildcardFolderPath);
     }

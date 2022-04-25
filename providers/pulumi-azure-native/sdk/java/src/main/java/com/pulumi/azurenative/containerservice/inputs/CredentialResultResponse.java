@@ -23,6 +23,10 @@ public final class CredentialResultResponse extends com.pulumi.resources.InvokeA
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the credential.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -34,6 +38,10 @@ public final class CredentialResultResponse extends com.pulumi.resources.InvokeA
     @Import(name="value", required=true)
     private String value;
 
+    /**
+     * @return Base64-encoded Kubernetes configuration file.
+     * 
+     */
     public String value() {
         return this.value;
     }
@@ -63,11 +71,23 @@ public final class CredentialResultResponse extends com.pulumi.resources.InvokeA
             $ = new CredentialResultResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the credential.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param value Base64-encoded Kubernetes configuration file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             $.value = value;
             return this;

@@ -26,6 +26,10 @@ public final class PolicySettingsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="defaultCustomBlockResponseBody")
     private @Nullable String defaultCustomBlockResponseBody;
 
+    /**
+     * @return If the action type is block, customer can override the response body. The body must be specified in base64 encoding.
+     * 
+     */
     public Optional<String> defaultCustomBlockResponseBody() {
         return Optional.ofNullable(this.defaultCustomBlockResponseBody);
     }
@@ -37,6 +41,10 @@ public final class PolicySettingsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="defaultCustomBlockResponseStatusCode")
     private @Nullable Integer defaultCustomBlockResponseStatusCode;
 
+    /**
+     * @return If the action type is block, this field defines the default customer overridable http response status code.
+     * 
+     */
     public Optional<Integer> defaultCustomBlockResponseStatusCode() {
         return Optional.ofNullable(this.defaultCustomBlockResponseStatusCode);
     }
@@ -48,6 +56,10 @@ public final class PolicySettingsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="defaultRedirectUrl")
     private @Nullable String defaultRedirectUrl;
 
+    /**
+     * @return If action type is redirect, this field represents the default redirect URL for the client.
+     * 
+     */
     public Optional<String> defaultRedirectUrl() {
         return Optional.ofNullable(this.defaultRedirectUrl);
     }
@@ -59,6 +71,10 @@ public final class PolicySettingsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="enabledState")
     private @Nullable String enabledState;
 
+    /**
+     * @return describes if the policy is in enabled state or disabled state
+     * 
+     */
     public Optional<String> enabledState() {
         return Optional.ofNullable(this.enabledState);
     }
@@ -70,6 +86,10 @@ public final class PolicySettingsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="mode")
     private @Nullable String mode;
 
+    /**
+     * @return Describes if it is in detection mode or prevention mode at policy level.
+     * 
+     */
     public Optional<String> mode() {
         return Optional.ofNullable(this.mode);
     }
@@ -102,26 +122,56 @@ public final class PolicySettingsResponse extends com.pulumi.resources.InvokeArg
             $ = new PolicySettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param defaultCustomBlockResponseBody If the action type is block, customer can override the response body. The body must be specified in base64 encoding.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultCustomBlockResponseBody(@Nullable String defaultCustomBlockResponseBody) {
             $.defaultCustomBlockResponseBody = defaultCustomBlockResponseBody;
             return this;
         }
 
+        /**
+         * @param defaultCustomBlockResponseStatusCode If the action type is block, this field defines the default customer overridable http response status code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultCustomBlockResponseStatusCode(@Nullable Integer defaultCustomBlockResponseStatusCode) {
             $.defaultCustomBlockResponseStatusCode = defaultCustomBlockResponseStatusCode;
             return this;
         }
 
+        /**
+         * @param defaultRedirectUrl If action type is redirect, this field represents the default redirect URL for the client.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultRedirectUrl(@Nullable String defaultRedirectUrl) {
             $.defaultRedirectUrl = defaultRedirectUrl;
             return this;
         }
 
+        /**
+         * @param enabledState describes if the policy is in enabled state or disabled state
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabledState(@Nullable String enabledState) {
             $.enabledState = enabledState;
             return this;
         }
 
+        /**
+         * @param mode Describes if it is in detection mode or prevention mode at policy level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(@Nullable String mode) {
             $.mode = mode;
             return this;

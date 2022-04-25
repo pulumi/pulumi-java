@@ -23,6 +23,10 @@ public final class GoogleCloudRunOpV2VpcAccessResponse extends com.pulumi.resour
     @Import(name="connector", required=true)
     private String connector;
 
+    /**
+     * @return VPC Access connector name. Format: projects/{project}/locations/{location}/connectors/{connector}
+     * 
+     */
     public String connector() {
         return this.connector;
     }
@@ -34,6 +38,10 @@ public final class GoogleCloudRunOpV2VpcAccessResponse extends com.pulumi.resour
     @Import(name="egress", required=true)
     private String egress;
 
+    /**
+     * @return Traffic VPC egress settings.
+     * 
+     */
     public String egress() {
         return this.egress;
     }
@@ -63,11 +71,23 @@ public final class GoogleCloudRunOpV2VpcAccessResponse extends com.pulumi.resour
             $ = new GoogleCloudRunOpV2VpcAccessResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param connector VPC Access connector name. Format: projects/{project}/locations/{location}/connectors/{connector}
+         * 
+         * @return builder
+         * 
+         */
         public Builder connector(String connector) {
             $.connector = connector;
             return this;
         }
 
+        /**
+         * @param egress Traffic VPC egress settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder egress(String egress) {
             $.egress = egress;
             return this;

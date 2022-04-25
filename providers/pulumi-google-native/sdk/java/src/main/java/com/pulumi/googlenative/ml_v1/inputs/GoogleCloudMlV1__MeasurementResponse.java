@@ -25,6 +25,10 @@ public final class GoogleCloudMlV1__MeasurementResponse extends com.pulumi.resou
     @Import(name="elapsedTime", required=true)
     private String elapsedTime;
 
+    /**
+     * @return Time that the trial has been running at the point of this measurement.
+     * 
+     */
     public String elapsedTime() {
         return this.elapsedTime;
     }
@@ -36,6 +40,10 @@ public final class GoogleCloudMlV1__MeasurementResponse extends com.pulumi.resou
     @Import(name="metrics", required=true)
     private List<GoogleCloudMlV1_Measurement_MetricResponse> metrics;
 
+    /**
+     * @return Provides a list of metrics that act as inputs into the objective function.
+     * 
+     */
     public List<GoogleCloudMlV1_Measurement_MetricResponse> metrics() {
         return this.metrics;
     }
@@ -47,6 +55,10 @@ public final class GoogleCloudMlV1__MeasurementResponse extends com.pulumi.resou
     @Import(name="stepCount", required=true)
     private String stepCount;
 
+    /**
+     * @return The number of steps a machine learning model has been trained for. Must be non-negative.
+     * 
+     */
     public String stepCount() {
         return this.stepCount;
     }
@@ -77,20 +89,44 @@ public final class GoogleCloudMlV1__MeasurementResponse extends com.pulumi.resou
             $ = new GoogleCloudMlV1__MeasurementResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param elapsedTime Time that the trial has been running at the point of this measurement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder elapsedTime(String elapsedTime) {
             $.elapsedTime = elapsedTime;
             return this;
         }
 
+        /**
+         * @param metrics Provides a list of metrics that act as inputs into the objective function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metrics(List<GoogleCloudMlV1_Measurement_MetricResponse> metrics) {
             $.metrics = metrics;
             return this;
         }
 
+        /**
+         * @param metrics Provides a list of metrics that act as inputs into the objective function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metrics(GoogleCloudMlV1_Measurement_MetricResponse... metrics) {
             return metrics(List.of(metrics));
         }
 
+        /**
+         * @param stepCount The number of steps a machine learning model has been trained for. Must be non-negative.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stepCount(String stepCount) {
             $.stepCount = stepCount;
             return this;

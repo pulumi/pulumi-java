@@ -26,6 +26,10 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
     @Import(name="dropHandoffMessages")
     private @Nullable Output<Boolean> dropHandoffMessages;
 
+    /**
+     * @return If set to true, the last message from virtual agent (hand off message) and the message before it (trigger message of hand off) are dropped.
+     * 
+     */
     public Optional<Output<Boolean>> dropHandoffMessages() {
         return Optional.ofNullable(this.dropHandoffMessages);
     }
@@ -37,6 +41,10 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
     @Import(name="dropIvrMessages")
     private @Nullable Output<Boolean> dropIvrMessages;
 
+    /**
+     * @return If set to true, all messages from ivr stage are dropped.
+     * 
+     */
     public Optional<Output<Boolean>> dropIvrMessages() {
         return Optional.ofNullable(this.dropIvrMessages);
     }
@@ -48,6 +56,10 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
     @Import(name="dropVirtualAgentMessages")
     private @Nullable Output<Boolean> dropVirtualAgentMessages;
 
+    /**
+     * @return If set to true, all messages from virtual agent are dropped.
+     * 
+     */
     public Optional<Output<Boolean>> dropVirtualAgentMessages() {
         return Optional.ofNullable(this.dropVirtualAgentMessages);
     }
@@ -78,29 +90,65 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
             $ = new GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dropHandoffMessages If set to true, the last message from virtual agent (hand off message) and the message before it (trigger message of hand off) are dropped.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dropHandoffMessages(@Nullable Output<Boolean> dropHandoffMessages) {
             $.dropHandoffMessages = dropHandoffMessages;
             return this;
         }
 
+        /**
+         * @param dropHandoffMessages If set to true, the last message from virtual agent (hand off message) and the message before it (trigger message of hand off) are dropped.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dropHandoffMessages(Boolean dropHandoffMessages) {
             return dropHandoffMessages(Output.of(dropHandoffMessages));
         }
 
+        /**
+         * @param dropIvrMessages If set to true, all messages from ivr stage are dropped.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dropIvrMessages(@Nullable Output<Boolean> dropIvrMessages) {
             $.dropIvrMessages = dropIvrMessages;
             return this;
         }
 
+        /**
+         * @param dropIvrMessages If set to true, all messages from ivr stage are dropped.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dropIvrMessages(Boolean dropIvrMessages) {
             return dropIvrMessages(Output.of(dropIvrMessages));
         }
 
+        /**
+         * @param dropVirtualAgentMessages If set to true, all messages from virtual agent are dropped.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dropVirtualAgentMessages(@Nullable Output<Boolean> dropVirtualAgentMessages) {
             $.dropVirtualAgentMessages = dropVirtualAgentMessages;
             return this;
         }
 
+        /**
+         * @param dropVirtualAgentMessages If set to true, all messages from virtual agent are dropped.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dropVirtualAgentMessages(Boolean dropVirtualAgentMessages) {
             return dropVirtualAgentMessages(Output.of(dropVirtualAgentMessages));
         }

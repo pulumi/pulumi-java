@@ -11,13 +11,13 @@ import java.util.Objects;
 @CustomType
 public final class MetastoreServiceMaintenanceWindow {
     /**
-     * The day of week, when the window starts.
+     * @return The day of week, when the window starts.
      * Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
      * 
      */
     private final String dayOfWeek;
     /**
-     * The hour of day (0-23) when the window starts.
+     * @return The hour of day (0-23) when the window starts.
      * 
      */
     private final Integer hourOfDay;
@@ -31,17 +31,17 @@ public final class MetastoreServiceMaintenanceWindow {
     }
 
     /**
-     * The day of week, when the window starts.
+     * @return The day of week, when the window starts.
      * Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
      * 
-    */
+     */
     public String dayOfWeek() {
         return this.dayOfWeek;
     }
     /**
-     * The hour of day (0-23) when the window starts.
+     * @return The hour of day (0-23) when the window starts.
      * 
-    */
+     */
     public Integer hourOfDay() {
         return this.hourOfDay;
     }

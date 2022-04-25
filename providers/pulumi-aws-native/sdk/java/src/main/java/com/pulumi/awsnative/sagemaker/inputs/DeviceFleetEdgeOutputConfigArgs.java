@@ -22,6 +22,10 @@ public final class DeviceFleetEdgeOutputConfigArgs extends com.pulumi.resources.
     @Import(name="kmsKeyId")
     private @Nullable Output<String> kmsKeyId;
 
+    /**
+     * @return The KMS key id used for encryption on the S3 bucket
+     * 
+     */
     public Optional<Output<String>> kmsKeyId() {
         return Optional.ofNullable(this.kmsKeyId);
     }
@@ -33,6 +37,10 @@ public final class DeviceFleetEdgeOutputConfigArgs extends com.pulumi.resources.
     @Import(name="s3OutputLocation", required=true)
     private Output<String> s3OutputLocation;
 
+    /**
+     * @return The Amazon Simple Storage (S3) bucket URI
+     * 
+     */
     public Output<String> s3OutputLocation() {
         return this.s3OutputLocation;
     }
@@ -62,20 +70,44 @@ public final class DeviceFleetEdgeOutputConfigArgs extends com.pulumi.resources.
             $ = new DeviceFleetEdgeOutputConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kmsKeyId The KMS key id used for encryption on the S3 bucket
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             $.kmsKeyId = kmsKeyId;
             return this;
         }
 
+        /**
+         * @param kmsKeyId The KMS key id used for encryption on the S3 bucket
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyId(String kmsKeyId) {
             return kmsKeyId(Output.of(kmsKeyId));
         }
 
+        /**
+         * @param s3OutputLocation The Amazon Simple Storage (S3) bucket URI
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3OutputLocation(Output<String> s3OutputLocation) {
             $.s3OutputLocation = s3OutputLocation;
             return this;
         }
 
+        /**
+         * @param s3OutputLocation The Amazon Simple Storage (S3) bucket URI
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3OutputLocation(String s3OutputLocation) {
             return s3OutputLocation(Output.of(s3OutputLocation));
         }

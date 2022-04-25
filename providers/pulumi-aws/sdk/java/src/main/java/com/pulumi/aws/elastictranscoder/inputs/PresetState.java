@@ -29,6 +29,10 @@ public final class PresetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return Amazon Resource Name (ARN) of the Elastic Transcoder Preset.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -40,6 +44,10 @@ public final class PresetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="audio")
     private @Nullable Output<PresetAudioGetArgs> audio;
 
+    /**
+     * @return Audio parameters object (documented below).
+     * 
+     */
     public Optional<Output<PresetAudioGetArgs>> audio() {
         return Optional.ofNullable(this.audio);
     }
@@ -51,6 +59,10 @@ public final class PresetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="audioCodecOptions")
     private @Nullable Output<PresetAudioCodecOptionsGetArgs> audioCodecOptions;
 
+    /**
+     * @return Codec options for the audio parameters (documented below)
+     * 
+     */
     public Optional<Output<PresetAudioCodecOptionsGetArgs>> audioCodecOptions() {
         return Optional.ofNullable(this.audioCodecOptions);
     }
@@ -62,6 +74,10 @@ public final class PresetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="container")
     private @Nullable Output<String> container;
 
+    /**
+     * @return The container type for the output file. Valid values are `flac`, `flv`, `fmp4`, `gif`, `mp3`, `mp4`, `mpg`, `mxf`, `oga`, `ogg`, `ts`, and `webm`.
+     * 
+     */
     public Optional<Output<String>> container() {
         return Optional.ofNullable(this.container);
     }
@@ -73,6 +89,10 @@ public final class PresetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A description of the preset (maximum 255 characters)
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -84,6 +104,10 @@ public final class PresetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the preset. (maximum 40 characters)
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -95,6 +119,10 @@ public final class PresetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="thumbnails")
     private @Nullable Output<PresetThumbnailsGetArgs> thumbnails;
 
+    /**
+     * @return Thumbnail parameters object (documented below)
+     * 
+     */
     public Optional<Output<PresetThumbnailsGetArgs>> thumbnails() {
         return Optional.ofNullable(this.thumbnails);
     }
@@ -113,6 +141,10 @@ public final class PresetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="video")
     private @Nullable Output<PresetVideoGetArgs> video;
 
+    /**
+     * @return Video parameters object (documented below)
+     * 
+     */
     public Optional<Output<PresetVideoGetArgs>> video() {
         return Optional.ofNullable(this.video);
     }
@@ -124,6 +156,10 @@ public final class PresetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="videoCodecOptions")
     private @Nullable Output<Map<String,String>> videoCodecOptions;
 
+    /**
+     * @return Codec options for the video parameters
+     * 
+     */
     public Optional<Output<Map<String,String>>> videoCodecOptions() {
         return Optional.ofNullable(this.videoCodecOptions);
     }
@@ -135,6 +171,10 @@ public final class PresetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="videoWatermarks")
     private @Nullable Output<List<PresetVideoWatermarkGetArgs>> videoWatermarks;
 
+    /**
+     * @return Watermark parameters for the video parameters (documented below)
+     * 
+     */
     public Optional<Output<List<PresetVideoWatermarkGetArgs>>> videoWatermarks() {
         return Optional.ofNullable(this.videoWatermarks);
     }
@@ -173,65 +213,149 @@ public final class PresetState extends com.pulumi.resources.ResourceArgs {
             $ = new PresetState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn Amazon Resource Name (ARN) of the Elastic Transcoder Preset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn Amazon Resource Name (ARN) of the Elastic Transcoder Preset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param audio Audio parameters object (documented below).
+         * 
+         * @return builder
+         * 
+         */
         public Builder audio(@Nullable Output<PresetAudioGetArgs> audio) {
             $.audio = audio;
             return this;
         }
 
+        /**
+         * @param audio Audio parameters object (documented below).
+         * 
+         * @return builder
+         * 
+         */
         public Builder audio(PresetAudioGetArgs audio) {
             return audio(Output.of(audio));
         }
 
+        /**
+         * @param audioCodecOptions Codec options for the audio parameters (documented below)
+         * 
+         * @return builder
+         * 
+         */
         public Builder audioCodecOptions(@Nullable Output<PresetAudioCodecOptionsGetArgs> audioCodecOptions) {
             $.audioCodecOptions = audioCodecOptions;
             return this;
         }
 
+        /**
+         * @param audioCodecOptions Codec options for the audio parameters (documented below)
+         * 
+         * @return builder
+         * 
+         */
         public Builder audioCodecOptions(PresetAudioCodecOptionsGetArgs audioCodecOptions) {
             return audioCodecOptions(Output.of(audioCodecOptions));
         }
 
+        /**
+         * @param container The container type for the output file. Valid values are `flac`, `flv`, `fmp4`, `gif`, `mp3`, `mp4`, `mpg`, `mxf`, `oga`, `ogg`, `ts`, and `webm`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder container(@Nullable Output<String> container) {
             $.container = container;
             return this;
         }
 
+        /**
+         * @param container The container type for the output file. Valid values are `flac`, `flv`, `fmp4`, `gif`, `mp3`, `mp4`, `mpg`, `mxf`, `oga`, `ogg`, `ts`, and `webm`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder container(String container) {
             return container(Output.of(container));
         }
 
+        /**
+         * @param description A description of the preset (maximum 255 characters)
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A description of the preset (maximum 255 characters)
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param name The name of the preset. (maximum 40 characters)
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the preset. (maximum 40 characters)
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param thumbnails Thumbnail parameters object (documented below)
+         * 
+         * @return builder
+         * 
+         */
         public Builder thumbnails(@Nullable Output<PresetThumbnailsGetArgs> thumbnails) {
             $.thumbnails = thumbnails;
             return this;
         }
 
+        /**
+         * @param thumbnails Thumbnail parameters object (documented below)
+         * 
+         * @return builder
+         * 
+         */
         public Builder thumbnails(PresetThumbnailsGetArgs thumbnails) {
             return thumbnails(Output.of(thumbnails));
         }
@@ -245,33 +369,75 @@ public final class PresetState extends com.pulumi.resources.ResourceArgs {
             return type(Output.of(type));
         }
 
+        /**
+         * @param video Video parameters object (documented below)
+         * 
+         * @return builder
+         * 
+         */
         public Builder video(@Nullable Output<PresetVideoGetArgs> video) {
             $.video = video;
             return this;
         }
 
+        /**
+         * @param video Video parameters object (documented below)
+         * 
+         * @return builder
+         * 
+         */
         public Builder video(PresetVideoGetArgs video) {
             return video(Output.of(video));
         }
 
+        /**
+         * @param videoCodecOptions Codec options for the video parameters
+         * 
+         * @return builder
+         * 
+         */
         public Builder videoCodecOptions(@Nullable Output<Map<String,String>> videoCodecOptions) {
             $.videoCodecOptions = videoCodecOptions;
             return this;
         }
 
+        /**
+         * @param videoCodecOptions Codec options for the video parameters
+         * 
+         * @return builder
+         * 
+         */
         public Builder videoCodecOptions(Map<String,String> videoCodecOptions) {
             return videoCodecOptions(Output.of(videoCodecOptions));
         }
 
+        /**
+         * @param videoWatermarks Watermark parameters for the video parameters (documented below)
+         * 
+         * @return builder
+         * 
+         */
         public Builder videoWatermarks(@Nullable Output<List<PresetVideoWatermarkGetArgs>> videoWatermarks) {
             $.videoWatermarks = videoWatermarks;
             return this;
         }
 
+        /**
+         * @param videoWatermarks Watermark parameters for the video parameters (documented below)
+         * 
+         * @return builder
+         * 
+         */
         public Builder videoWatermarks(List<PresetVideoWatermarkGetArgs> videoWatermarks) {
             return videoWatermarks(Output.of(videoWatermarks));
         }
 
+        /**
+         * @param videoWatermarks Watermark parameters for the video parameters (documented below)
+         * 
+         * @return builder
+         * 
+         */
         public Builder videoWatermarks(PresetVideoWatermarkGetArgs... videoWatermarks) {
             return videoWatermarks(List.of(videoWatermarks));
         }

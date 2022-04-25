@@ -28,6 +28,10 @@ public final class ConsistencyPolicyArgs extends com.pulumi.resources.ResourceAr
     @Import(name="defaultConsistencyLevel", required=true)
     private Output<DefaultConsistencyLevel> defaultConsistencyLevel;
 
+    /**
+     * @return The default consistency level and configuration settings of the Cosmos DB account.
+     * 
+     */
     public Output<DefaultConsistencyLevel> defaultConsistencyLevel() {
         return this.defaultConsistencyLevel;
     }
@@ -39,6 +43,10 @@ public final class ConsistencyPolicyArgs extends com.pulumi.resources.ResourceAr
     @Import(name="maxIntervalInSeconds")
     private @Nullable Output<Integer> maxIntervalInSeconds;
 
+    /**
+     * @return When used with the Bounded Staleness consistency level, this value represents the time amount of staleness (in seconds) tolerated. Accepted range for this value is 5 - 86400. Required when defaultConsistencyPolicy is set to &#39;BoundedStaleness&#39;.
+     * 
+     */
     public Optional<Output<Integer>> maxIntervalInSeconds() {
         return Optional.ofNullable(this.maxIntervalInSeconds);
     }
@@ -50,6 +58,10 @@ public final class ConsistencyPolicyArgs extends com.pulumi.resources.ResourceAr
     @Import(name="maxStalenessPrefix")
     private @Nullable Output<Double> maxStalenessPrefix;
 
+    /**
+     * @return When used with the Bounded Staleness consistency level, this value represents the number of stale requests tolerated. Accepted range for this value is 1 – 2,147,483,647. Required when defaultConsistencyPolicy is set to &#39;BoundedStaleness&#39;.
+     * 
+     */
     public Optional<Output<Double>> maxStalenessPrefix() {
         return Optional.ofNullable(this.maxStalenessPrefix);
     }
@@ -80,29 +92,65 @@ public final class ConsistencyPolicyArgs extends com.pulumi.resources.ResourceAr
             $ = new ConsistencyPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param defaultConsistencyLevel The default consistency level and configuration settings of the Cosmos DB account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultConsistencyLevel(Output<DefaultConsistencyLevel> defaultConsistencyLevel) {
             $.defaultConsistencyLevel = defaultConsistencyLevel;
             return this;
         }
 
+        /**
+         * @param defaultConsistencyLevel The default consistency level and configuration settings of the Cosmos DB account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultConsistencyLevel(DefaultConsistencyLevel defaultConsistencyLevel) {
             return defaultConsistencyLevel(Output.of(defaultConsistencyLevel));
         }
 
+        /**
+         * @param maxIntervalInSeconds When used with the Bounded Staleness consistency level, this value represents the time amount of staleness (in seconds) tolerated. Accepted range for this value is 5 - 86400. Required when defaultConsistencyPolicy is set to &#39;BoundedStaleness&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxIntervalInSeconds(@Nullable Output<Integer> maxIntervalInSeconds) {
             $.maxIntervalInSeconds = maxIntervalInSeconds;
             return this;
         }
 
+        /**
+         * @param maxIntervalInSeconds When used with the Bounded Staleness consistency level, this value represents the time amount of staleness (in seconds) tolerated. Accepted range for this value is 5 - 86400. Required when defaultConsistencyPolicy is set to &#39;BoundedStaleness&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxIntervalInSeconds(Integer maxIntervalInSeconds) {
             return maxIntervalInSeconds(Output.of(maxIntervalInSeconds));
         }
 
+        /**
+         * @param maxStalenessPrefix When used with the Bounded Staleness consistency level, this value represents the number of stale requests tolerated. Accepted range for this value is 1 – 2,147,483,647. Required when defaultConsistencyPolicy is set to &#39;BoundedStaleness&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxStalenessPrefix(@Nullable Output<Double> maxStalenessPrefix) {
             $.maxStalenessPrefix = maxStalenessPrefix;
             return this;
         }
 
+        /**
+         * @param maxStalenessPrefix When used with the Bounded Staleness consistency level, this value represents the number of stale requests tolerated. Accepted range for this value is 1 – 2,147,483,647. Required when defaultConsistencyPolicy is set to &#39;BoundedStaleness&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxStalenessPrefix(Double maxStalenessPrefix) {
             return maxStalenessPrefix(Output.of(maxStalenessPrefix));
         }

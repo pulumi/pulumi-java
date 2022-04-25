@@ -19,112 +19,112 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetKpiResult {
     /**
-     * The aliases.
+     * @return The aliases.
      * 
      */
     private final @Nullable List<KpiAliasResponse> aliases;
     /**
-     * The calculation window.
+     * @return The calculation window.
      * 
      */
     private final String calculationWindow;
     /**
-     * Name of calculation window field.
+     * @return Name of calculation window field.
      * 
      */
     private final @Nullable String calculationWindowFieldName;
     /**
-     * Localized description for the KPI.
+     * @return Localized description for the KPI.
      * 
      */
     private final @Nullable Map<String,String> description;
     /**
-     * Localized display name for the KPI.
+     * @return Localized display name for the KPI.
      * 
      */
     private final @Nullable Map<String,String> displayName;
     /**
-     * The mapping entity type.
+     * @return The mapping entity type.
      * 
      */
     private final String entityType;
     /**
-     * The mapping entity name.
+     * @return The mapping entity name.
      * 
      */
     private final String entityTypeName;
     /**
-     * The computation expression for the KPI.
+     * @return The computation expression for the KPI.
      * 
      */
     private final String expression;
     /**
-     * The KPI extracts.
+     * @return The KPI extracts.
      * 
      */
     private final @Nullable List<KpiExtractResponse> extracts;
     /**
-     * The filter expression for the KPI.
+     * @return The filter expression for the KPI.
      * 
      */
     private final @Nullable String filter;
     /**
-     * The computation function for the KPI.
+     * @return The computation function for the KPI.
      * 
      */
     private final String function;
     /**
-     * the group by properties for the KPI.
+     * @return the group by properties for the KPI.
      * 
      */
     private final @Nullable List<String> groupBy;
     /**
-     * The KPI GroupByMetadata.
+     * @return The KPI GroupByMetadata.
      * 
      */
     private final List<KpiGroupByMetadataResponse> groupByMetadata;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final String id;
     /**
-     * The KPI name.
+     * @return The KPI name.
      * 
      */
     private final String kpiName;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * The participant profiles.
+     * @return The participant profiles.
      * 
      */
     private final List<KpiParticipantProfilesMetadataResponse> participantProfilesMetadata;
     /**
-     * Provisioning state.
+     * @return Provisioning state.
      * 
      */
     private final String provisioningState;
     /**
-     * The hub name.
+     * @return The hub name.
      * 
      */
     private final String tenantId;
     /**
-     * The KPI thresholds.
+     * @return The KPI thresholds.
      * 
      */
     private final @Nullable KpiThresholdsResponse thresHolds;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
     /**
-     * The unit of measurement for the KPI.
+     * @return The unit of measurement for the KPI.
      * 
      */
     private final @Nullable String unit;
@@ -178,156 +178,156 @@ public final class GetKpiResult {
     }
 
     /**
-     * The aliases.
+     * @return The aliases.
      * 
-    */
+     */
     public List<KpiAliasResponse> aliases() {
         return this.aliases == null ? List.of() : this.aliases;
     }
     /**
-     * The calculation window.
+     * @return The calculation window.
      * 
-    */
+     */
     public String calculationWindow() {
         return this.calculationWindow;
     }
     /**
-     * Name of calculation window field.
+     * @return Name of calculation window field.
      * 
-    */
+     */
     public Optional<String> calculationWindowFieldName() {
         return Optional.ofNullable(this.calculationWindowFieldName);
     }
     /**
-     * Localized description for the KPI.
+     * @return Localized description for the KPI.
      * 
-    */
+     */
     public Map<String,String> description() {
         return this.description == null ? Map.of() : this.description;
     }
     /**
-     * Localized display name for the KPI.
+     * @return Localized display name for the KPI.
      * 
-    */
+     */
     public Map<String,String> displayName() {
         return this.displayName == null ? Map.of() : this.displayName;
     }
     /**
-     * The mapping entity type.
+     * @return The mapping entity type.
      * 
-    */
+     */
     public String entityType() {
         return this.entityType;
     }
     /**
-     * The mapping entity name.
+     * @return The mapping entity name.
      * 
-    */
+     */
     public String entityTypeName() {
         return this.entityTypeName;
     }
     /**
-     * The computation expression for the KPI.
+     * @return The computation expression for the KPI.
      * 
-    */
+     */
     public String expression() {
         return this.expression;
     }
     /**
-     * The KPI extracts.
+     * @return The KPI extracts.
      * 
-    */
+     */
     public List<KpiExtractResponse> extracts() {
         return this.extracts == null ? List.of() : this.extracts;
     }
     /**
-     * The filter expression for the KPI.
+     * @return The filter expression for the KPI.
      * 
-    */
+     */
     public Optional<String> filter() {
         return Optional.ofNullable(this.filter);
     }
     /**
-     * The computation function for the KPI.
+     * @return The computation function for the KPI.
      * 
-    */
+     */
     public String function() {
         return this.function;
     }
     /**
-     * the group by properties for the KPI.
+     * @return the group by properties for the KPI.
      * 
-    */
+     */
     public List<String> groupBy() {
         return this.groupBy == null ? List.of() : this.groupBy;
     }
     /**
-     * The KPI GroupByMetadata.
+     * @return The KPI GroupByMetadata.
      * 
-    */
+     */
     public List<KpiGroupByMetadataResponse> groupByMetadata() {
         return this.groupByMetadata;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The KPI name.
+     * @return The KPI name.
      * 
-    */
+     */
     public String kpiName() {
         return this.kpiName;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The participant profiles.
+     * @return The participant profiles.
      * 
-    */
+     */
     public List<KpiParticipantProfilesMetadataResponse> participantProfilesMetadata() {
         return this.participantProfilesMetadata;
     }
     /**
-     * Provisioning state.
+     * @return Provisioning state.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The hub name.
+     * @return The hub name.
      * 
-    */
+     */
     public String tenantId() {
         return this.tenantId;
     }
     /**
-     * The KPI thresholds.
+     * @return The KPI thresholds.
      * 
-    */
+     */
     public Optional<KpiThresholdsResponse> thresHolds() {
         return Optional.ofNullable(this.thresHolds);
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The unit of measurement for the KPI.
+     * @return The unit of measurement for the KPI.
      * 
-    */
+     */
     public Optional<String> unit() {
         return Optional.ofNullable(this.unit);
     }

@@ -19,6 +19,10 @@ public final class GetAFDCustomDomainArgs extends com.pulumi.resources.InvokeArg
     @Import(name="customDomainName", required=true)
     private String customDomainName;
 
+    /**
+     * @return Name of the domain under the profile which is unique globally.
+     * 
+     */
     public String customDomainName() {
         return this.customDomainName;
     }
@@ -30,6 +34,10 @@ public final class GetAFDCustomDomainArgs extends com.pulumi.resources.InvokeArg
     @Import(name="profileName", required=true)
     private String profileName;
 
+    /**
+     * @return Name of the CDN profile which is unique within the resource group.
+     * 
+     */
     public String profileName() {
         return this.profileName;
     }
@@ -41,6 +49,10 @@ public final class GetAFDCustomDomainArgs extends com.pulumi.resources.InvokeArg
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Name of the Resource group within the Azure subscription.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetAFDCustomDomainArgs extends com.pulumi.resources.InvokeArg
             $ = new GetAFDCustomDomainArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customDomainName Name of the domain under the profile which is unique globally.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customDomainName(String customDomainName) {
             $.customDomainName = customDomainName;
             return this;
         }
 
+        /**
+         * @param profileName Name of the CDN profile which is unique within the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder profileName(String profileName) {
             $.profileName = profileName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the Resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

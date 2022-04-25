@@ -26,6 +26,10 @@ public final class BucketRedirectAllRequestsTo extends com.pulumi.resources.Invo
     @Import(name="hostName", required=true)
     private String hostName;
 
+    /**
+     * @return Name of the host where requests are redirected.
+     * 
+     */
     public String hostName() {
         return this.hostName;
     }
@@ -37,6 +41,10 @@ public final class BucketRedirectAllRequestsTo extends com.pulumi.resources.Invo
     @Import(name="protocol")
     private @Nullable BucketRedirectAllRequestsToProtocol protocol;
 
+    /**
+     * @return Protocol to use when redirecting requests. The default is the protocol that is used in the original request.
+     * 
+     */
     public Optional<BucketRedirectAllRequestsToProtocol> protocol() {
         return Optional.ofNullable(this.protocol);
     }
@@ -66,11 +74,23 @@ public final class BucketRedirectAllRequestsTo extends com.pulumi.resources.Invo
             $ = new BucketRedirectAllRequestsTo(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hostName Name of the host where requests are redirected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostName(String hostName) {
             $.hostName = hostName;
             return this;
         }
 
+        /**
+         * @param protocol Protocol to use when redirecting requests. The default is the protocol that is used in the original request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(@Nullable BucketRedirectAllRequestsToProtocol protocol) {
             $.protocol = protocol;
             return this;

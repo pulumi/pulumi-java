@@ -30,6 +30,13 @@ public final class RouterPeerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="advertiseMode")
     private @Nullable Output<String> advertiseMode;
 
+    /**
+     * @return User-specified flag to indicate which mode to use for advertisement.
+     * Valid values of this enum field are: `DEFAULT`, `CUSTOM`
+     * Default value is `DEFAULT`.
+     * Possible values are `DEFAULT` and `CUSTOM`.
+     * 
+     */
     public Optional<Output<String>> advertiseMode() {
         return Optional.ofNullable(this.advertiseMode);
     }
@@ -45,6 +52,14 @@ public final class RouterPeerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="advertisedGroups")
     private @Nullable Output<List<String>> advertisedGroups;
 
+    /**
+     * @return User-specified list of prefix groups to advertise in custom
+     * mode, which can take one of the following options:
+     * * `ALL_SUBNETS`: Advertises all available subnets, including peer VPC subnets.
+     * * `ALL_VPC_SUBNETS`: Advertises the router&#39;s own VPC subnets.
+     * * `ALL_PEER_VPC_SUBNETS`: Advertises peer subnets of the router&#39;s VPC network.
+     * 
+     */
     public Optional<Output<List<String>>> advertisedGroups() {
         return Optional.ofNullable(this.advertisedGroups);
     }
@@ -61,6 +76,15 @@ public final class RouterPeerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="advertisedIpRanges")
     private @Nullable Output<List<RouterPeerAdvertisedIpRangeArgs>> advertisedIpRanges;
 
+    /**
+     * @return User-specified list of individual IP ranges to advertise in
+     * custom mode. This field can only be populated if advertiseMode
+     * is `CUSTOM` and is advertised to all peers of the router. These IP
+     * ranges will be advertised in addition to any specified groups.
+     * Leave this field blank to advertise no custom IP ranges.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<RouterPeerAdvertisedIpRangeArgs>>> advertisedIpRanges() {
         return Optional.ofNullable(this.advertisedIpRanges);
     }
@@ -74,6 +98,12 @@ public final class RouterPeerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="advertisedRoutePriority")
     private @Nullable Output<Integer> advertisedRoutePriority;
 
+    /**
+     * @return The priority of routes advertised to this BGP peer.
+     * Where there is more than one matching route of maximum
+     * length, the routes with the lowest priority value win.
+     * 
+     */
     public Optional<Output<Integer>> advertisedRoutePriority() {
         return Optional.ofNullable(this.advertisedRoutePriority);
     }
@@ -86,6 +116,11 @@ public final class RouterPeerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="bfd")
     private @Nullable Output<RouterPeerBfdArgs> bfd;
 
+    /**
+     * @return BFD configuration for the BGP peering.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<RouterPeerBfdArgs>> bfd() {
         return Optional.ofNullable(this.bfd);
     }
@@ -100,6 +135,13 @@ public final class RouterPeerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enable")
     private @Nullable Output<Boolean> enable;
 
+    /**
+     * @return The status of the BGP peer connection. If set to false, any active session
+     * with the peer is terminated and all associated routing information is removed.
+     * If set to true, the peer connection can be established with routing information.
+     * The default is true.
+     * 
+     */
     public Optional<Output<Boolean>> enable() {
         return Optional.ofNullable(this.enable);
     }
@@ -111,6 +153,10 @@ public final class RouterPeerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="interface", required=true)
     private Output<String> interface_;
 
+    /**
+     * @return Name of the interface the BGP peer is associated with.
+     * 
+     */
     public Output<String> interface_() {
         return this.interface_;
     }
@@ -123,6 +169,11 @@ public final class RouterPeerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ipAddress")
     private @Nullable Output<String> ipAddress;
 
+    /**
+     * @return IP address of the interface inside Google Cloud Platform.
+     * Only IPv4 is supported.
+     * 
+     */
     public Optional<Output<String>> ipAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
@@ -139,6 +190,15 @@ public final class RouterPeerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of this BGP peer. The name must be 1-63 characters long,
+     * and comply with RFC1035. Specifically, the name must be 1-63 characters
+     * long and match the regular expression `a-z?` which
+     * means the first character must be a lowercase letter, and all
+     * following characters must be a dash, lowercase letter, or digit,
+     * except the last character, which cannot be a dash.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -151,6 +211,11 @@ public final class RouterPeerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="peerAsn", required=true)
     private Output<Integer> peerAsn;
 
+    /**
+     * @return Peer BGP Autonomous System Number (ASN).
+     * Each BGP interface may use a different value.
+     * 
+     */
     public Output<Integer> peerAsn() {
         return this.peerAsn;
     }
@@ -163,6 +228,11 @@ public final class RouterPeerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="peerIpAddress", required=true)
     private Output<String> peerIpAddress;
 
+    /**
+     * @return IP address of the BGP interface outside Google Cloud Platform.
+     * Only IPv4 is supported.
+     * 
+     */
     public Output<String> peerIpAddress() {
         return this.peerIpAddress;
     }
@@ -175,6 +245,11 @@ public final class RouterPeerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -187,6 +262,11 @@ public final class RouterPeerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="region")
     private @Nullable Output<String> region;
 
+    /**
+     * @return Region where the router and BgpPeer reside.
+     * If it is not provided, the provider region is used.
+     * 
+     */
     public Optional<Output<String>> region() {
         return Optional.ofNullable(this.region);
     }
@@ -198,6 +278,10 @@ public final class RouterPeerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="router", required=true)
     private Output<String> router;
 
+    /**
+     * @return The name of the Cloud Router in which this BgpPeer will be configured.
+     * 
+     */
     public Output<String> router() {
         return this.router;
     }
@@ -239,136 +323,381 @@ public final class RouterPeerArgs extends com.pulumi.resources.ResourceArgs {
             $ = new RouterPeerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param advertiseMode User-specified flag to indicate which mode to use for advertisement.
+         * Valid values of this enum field are: `DEFAULT`, `CUSTOM`
+         * Default value is `DEFAULT`.
+         * Possible values are `DEFAULT` and `CUSTOM`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder advertiseMode(@Nullable Output<String> advertiseMode) {
             $.advertiseMode = advertiseMode;
             return this;
         }
 
+        /**
+         * @param advertiseMode User-specified flag to indicate which mode to use for advertisement.
+         * Valid values of this enum field are: `DEFAULT`, `CUSTOM`
+         * Default value is `DEFAULT`.
+         * Possible values are `DEFAULT` and `CUSTOM`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder advertiseMode(String advertiseMode) {
             return advertiseMode(Output.of(advertiseMode));
         }
 
+        /**
+         * @param advertisedGroups User-specified list of prefix groups to advertise in custom
+         * mode, which can take one of the following options:
+         * * `ALL_SUBNETS`: Advertises all available subnets, including peer VPC subnets.
+         * * `ALL_VPC_SUBNETS`: Advertises the router&#39;s own VPC subnets.
+         * * `ALL_PEER_VPC_SUBNETS`: Advertises peer subnets of the router&#39;s VPC network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder advertisedGroups(@Nullable Output<List<String>> advertisedGroups) {
             $.advertisedGroups = advertisedGroups;
             return this;
         }
 
+        /**
+         * @param advertisedGroups User-specified list of prefix groups to advertise in custom
+         * mode, which can take one of the following options:
+         * * `ALL_SUBNETS`: Advertises all available subnets, including peer VPC subnets.
+         * * `ALL_VPC_SUBNETS`: Advertises the router&#39;s own VPC subnets.
+         * * `ALL_PEER_VPC_SUBNETS`: Advertises peer subnets of the router&#39;s VPC network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder advertisedGroups(List<String> advertisedGroups) {
             return advertisedGroups(Output.of(advertisedGroups));
         }
 
+        /**
+         * @param advertisedGroups User-specified list of prefix groups to advertise in custom
+         * mode, which can take one of the following options:
+         * * `ALL_SUBNETS`: Advertises all available subnets, including peer VPC subnets.
+         * * `ALL_VPC_SUBNETS`: Advertises the router&#39;s own VPC subnets.
+         * * `ALL_PEER_VPC_SUBNETS`: Advertises peer subnets of the router&#39;s VPC network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder advertisedGroups(String... advertisedGroups) {
             return advertisedGroups(List.of(advertisedGroups));
         }
 
+        /**
+         * @param advertisedIpRanges User-specified list of individual IP ranges to advertise in
+         * custom mode. This field can only be populated if advertiseMode
+         * is `CUSTOM` and is advertised to all peers of the router. These IP
+         * ranges will be advertised in addition to any specified groups.
+         * Leave this field blank to advertise no custom IP ranges.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder advertisedIpRanges(@Nullable Output<List<RouterPeerAdvertisedIpRangeArgs>> advertisedIpRanges) {
             $.advertisedIpRanges = advertisedIpRanges;
             return this;
         }
 
+        /**
+         * @param advertisedIpRanges User-specified list of individual IP ranges to advertise in
+         * custom mode. This field can only be populated if advertiseMode
+         * is `CUSTOM` and is advertised to all peers of the router. These IP
+         * ranges will be advertised in addition to any specified groups.
+         * Leave this field blank to advertise no custom IP ranges.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder advertisedIpRanges(List<RouterPeerAdvertisedIpRangeArgs> advertisedIpRanges) {
             return advertisedIpRanges(Output.of(advertisedIpRanges));
         }
 
+        /**
+         * @param advertisedIpRanges User-specified list of individual IP ranges to advertise in
+         * custom mode. This field can only be populated if advertiseMode
+         * is `CUSTOM` and is advertised to all peers of the router. These IP
+         * ranges will be advertised in addition to any specified groups.
+         * Leave this field blank to advertise no custom IP ranges.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder advertisedIpRanges(RouterPeerAdvertisedIpRangeArgs... advertisedIpRanges) {
             return advertisedIpRanges(List.of(advertisedIpRanges));
         }
 
+        /**
+         * @param advertisedRoutePriority The priority of routes advertised to this BGP peer.
+         * Where there is more than one matching route of maximum
+         * length, the routes with the lowest priority value win.
+         * 
+         * @return builder
+         * 
+         */
         public Builder advertisedRoutePriority(@Nullable Output<Integer> advertisedRoutePriority) {
             $.advertisedRoutePriority = advertisedRoutePriority;
             return this;
         }
 
+        /**
+         * @param advertisedRoutePriority The priority of routes advertised to this BGP peer.
+         * Where there is more than one matching route of maximum
+         * length, the routes with the lowest priority value win.
+         * 
+         * @return builder
+         * 
+         */
         public Builder advertisedRoutePriority(Integer advertisedRoutePriority) {
             return advertisedRoutePriority(Output.of(advertisedRoutePriority));
         }
 
+        /**
+         * @param bfd BFD configuration for the BGP peering.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bfd(@Nullable Output<RouterPeerBfdArgs> bfd) {
             $.bfd = bfd;
             return this;
         }
 
+        /**
+         * @param bfd BFD configuration for the BGP peering.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bfd(RouterPeerBfdArgs bfd) {
             return bfd(Output.of(bfd));
         }
 
+        /**
+         * @param enable The status of the BGP peer connection. If set to false, any active session
+         * with the peer is terminated and all associated routing information is removed.
+         * If set to true, the peer connection can be established with routing information.
+         * The default is true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enable(@Nullable Output<Boolean> enable) {
             $.enable = enable;
             return this;
         }
 
+        /**
+         * @param enable The status of the BGP peer connection. If set to false, any active session
+         * with the peer is terminated and all associated routing information is removed.
+         * If set to true, the peer connection can be established with routing information.
+         * The default is true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enable(Boolean enable) {
             return enable(Output.of(enable));
         }
 
+        /**
+         * @param interface_ Name of the interface the BGP peer is associated with.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interface_(Output<String> interface_) {
             $.interface_ = interface_;
             return this;
         }
 
+        /**
+         * @param interface_ Name of the interface the BGP peer is associated with.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interface_(String interface_) {
             return interface_(Output.of(interface_));
         }
 
+        /**
+         * @param ipAddress IP address of the interface inside Google Cloud Platform.
+         * Only IPv4 is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
             $.ipAddress = ipAddress;
             return this;
         }
 
+        /**
+         * @param ipAddress IP address of the interface inside Google Cloud Platform.
+         * Only IPv4 is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddress(String ipAddress) {
             return ipAddress(Output.of(ipAddress));
         }
 
+        /**
+         * @param name Name of this BGP peer. The name must be 1-63 characters long,
+         * and comply with RFC1035. Specifically, the name must be 1-63 characters
+         * long and match the regular expression `a-z?` which
+         * means the first character must be a lowercase letter, and all
+         * following characters must be a dash, lowercase letter, or digit,
+         * except the last character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of this BGP peer. The name must be 1-63 characters long,
+         * and comply with RFC1035. Specifically, the name must be 1-63 characters
+         * long and match the regular expression `a-z?` which
+         * means the first character must be a lowercase letter, and all
+         * following characters must be a dash, lowercase letter, or digit,
+         * except the last character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param peerAsn Peer BGP Autonomous System Number (ASN).
+         * Each BGP interface may use a different value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peerAsn(Output<Integer> peerAsn) {
             $.peerAsn = peerAsn;
             return this;
         }
 
+        /**
+         * @param peerAsn Peer BGP Autonomous System Number (ASN).
+         * Each BGP interface may use a different value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peerAsn(Integer peerAsn) {
             return peerAsn(Output.of(peerAsn));
         }
 
+        /**
+         * @param peerIpAddress IP address of the BGP interface outside Google Cloud Platform.
+         * Only IPv4 is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peerIpAddress(Output<String> peerIpAddress) {
             $.peerIpAddress = peerIpAddress;
             return this;
         }
 
+        /**
+         * @param peerIpAddress IP address of the BGP interface outside Google Cloud Platform.
+         * Only IPv4 is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peerIpAddress(String peerIpAddress) {
             return peerIpAddress(Output.of(peerIpAddress));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param region Region where the router and BgpPeer reside.
+         * If it is not provided, the provider region is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(@Nullable Output<String> region) {
             $.region = region;
             return this;
         }
 
+        /**
+         * @param region Region where the router and BgpPeer reside.
+         * If it is not provided, the provider region is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(String region) {
             return region(Output.of(region));
         }
 
+        /**
+         * @param router The name of the Cloud Router in which this BgpPeer will be configured.
+         * 
+         * @return builder
+         * 
+         */
         public Builder router(Output<String> router) {
             $.router = router;
             return this;
         }
 
+        /**
+         * @param router The name of the Cloud Router in which this BgpPeer will be configured.
+         * 
+         * @return builder
+         * 
+         */
         public Builder router(String router) {
             return router(Output.of(router));
         }

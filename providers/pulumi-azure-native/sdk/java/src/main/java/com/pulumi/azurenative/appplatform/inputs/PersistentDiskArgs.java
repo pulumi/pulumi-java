@@ -27,6 +27,10 @@ public final class PersistentDiskArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="mountPath")
     private @Nullable Output<String> mountPath;
 
+    /**
+     * @return Mount path of the persistent disk
+     * 
+     */
     public Optional<Output<String>> mountPath() {
         return Optional.ofNullable(this.mountPath);
     }
@@ -38,6 +42,10 @@ public final class PersistentDiskArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="sizeInGB")
     private @Nullable Output<Integer> sizeInGB;
 
+    /**
+     * @return Size of the persistent disk in GB
+     * 
+     */
     public Optional<Output<Integer>> sizeInGB() {
         return Optional.ofNullable(this.sizeInGB);
     }
@@ -67,20 +75,44 @@ public final class PersistentDiskArgs extends com.pulumi.resources.ResourceArgs 
             $ = new PersistentDiskArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param mountPath Mount path of the persistent disk
+         * 
+         * @return builder
+         * 
+         */
         public Builder mountPath(@Nullable Output<String> mountPath) {
             $.mountPath = mountPath;
             return this;
         }
 
+        /**
+         * @param mountPath Mount path of the persistent disk
+         * 
+         * @return builder
+         * 
+         */
         public Builder mountPath(String mountPath) {
             return mountPath(Output.of(mountPath));
         }
 
+        /**
+         * @param sizeInGB Size of the persistent disk in GB
+         * 
+         * @return builder
+         * 
+         */
         public Builder sizeInGB(@Nullable Output<Integer> sizeInGB) {
             $.sizeInGB = sizeInGB;
             return this;
         }
 
+        /**
+         * @param sizeInGB Size of the persistent disk in GB
+         * 
+         * @return builder
+         * 
+         */
         public Builder sizeInGB(Integer sizeInGB) {
             return sizeInGB(Output.of(sizeInGB));
         }

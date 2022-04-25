@@ -22,6 +22,10 @@ public final class MonitoringConfigArgs extends com.pulumi.resources.ResourceArg
     @Import(name="deviceName", required=true)
     private Output<String> deviceName;
 
+    /**
+     * @return The device name.
+     * 
+     */
     public Output<String> deviceName() {
         return this.deviceName;
     }
@@ -33,6 +37,10 @@ public final class MonitoringConfigArgs extends com.pulumi.resources.ResourceArg
     @Import(name="metricConfigurations", required=true)
     private Output<List<MetricConfigurationArgs>> metricConfigurations;
 
+    /**
+     * @return The metrics configuration details
+     * 
+     */
     public Output<List<MetricConfigurationArgs>> metricConfigurations() {
         return this.metricConfigurations;
     }
@@ -44,6 +52,10 @@ public final class MonitoringConfigArgs extends com.pulumi.resources.ResourceArg
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -55,6 +67,10 @@ public final class MonitoringConfigArgs extends com.pulumi.resources.ResourceArg
     @Import(name="roleName", required=true)
     private Output<String> roleName;
 
+    /**
+     * @return The role name.
+     * 
+     */
     public Output<String> roleName() {
         return this.roleName;
     }
@@ -86,42 +102,96 @@ public final class MonitoringConfigArgs extends com.pulumi.resources.ResourceArg
             $ = new MonitoringConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deviceName The device name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(Output<String> deviceName) {
             $.deviceName = deviceName;
             return this;
         }
 
+        /**
+         * @param deviceName The device name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(String deviceName) {
             return deviceName(Output.of(deviceName));
         }
 
+        /**
+         * @param metricConfigurations The metrics configuration details
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricConfigurations(Output<List<MetricConfigurationArgs>> metricConfigurations) {
             $.metricConfigurations = metricConfigurations;
             return this;
         }
 
+        /**
+         * @param metricConfigurations The metrics configuration details
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricConfigurations(List<MetricConfigurationArgs> metricConfigurations) {
             return metricConfigurations(Output.of(metricConfigurations));
         }
 
+        /**
+         * @param metricConfigurations The metrics configuration details
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricConfigurations(MetricConfigurationArgs... metricConfigurations) {
             return metricConfigurations(List.of(metricConfigurations));
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param roleName The role name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleName(Output<String> roleName) {
             $.roleName = roleName;
             return this;
         }
 
+        /**
+         * @param roleName The role name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleName(String roleName) {
             return roleName(Output.of(roleName));
         }

@@ -12,12 +12,12 @@ import java.util.Objects;
 public final class GetNodeGroupsResult {
     private final String clusterName;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     /**
-     * A set of all node group names in an EKS Cluster.
+     * @return A set of all node group names in an EKS Cluster.
      * 
      */
     private final List<String> names;
@@ -36,16 +36,16 @@ public final class GetNodeGroupsResult {
         return this.clusterName;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * A set of all node group names in an EKS Cluster.
+     * @return A set of all node group names in an EKS Cluster.
      * 
-    */
+     */
     public List<String> names() {
         return this.names;
     }

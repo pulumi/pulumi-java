@@ -27,6 +27,10 @@ public final class V2AndroidKeyRestrictionsArgs extends com.pulumi.resources.Res
     @Import(name="allowedApplications")
     private @Nullable Output<List<V2AndroidApplicationArgs>> allowedApplications;
 
+    /**
+     * @return A list of Android applications that are allowed to make API calls with this key.
+     * 
+     */
     public Optional<Output<List<V2AndroidApplicationArgs>>> allowedApplications() {
         return Optional.ofNullable(this.allowedApplications);
     }
@@ -55,15 +59,33 @@ public final class V2AndroidKeyRestrictionsArgs extends com.pulumi.resources.Res
             $ = new V2AndroidKeyRestrictionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowedApplications A list of Android applications that are allowed to make API calls with this key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedApplications(@Nullable Output<List<V2AndroidApplicationArgs>> allowedApplications) {
             $.allowedApplications = allowedApplications;
             return this;
         }
 
+        /**
+         * @param allowedApplications A list of Android applications that are allowed to make API calls with this key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedApplications(List<V2AndroidApplicationArgs> allowedApplications) {
             return allowedApplications(Output.of(allowedApplications));
         }
 
+        /**
+         * @param allowedApplications A list of Android applications that are allowed to make API calls with this key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedApplications(V2AndroidApplicationArgs... allowedApplications) {
             return allowedApplications(List.of(allowedApplications));
         }

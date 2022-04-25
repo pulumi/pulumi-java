@@ -27,6 +27,10 @@ public final class AcceleratorState extends com.pulumi.resources.ResourceArgs {
     @Import(name="attributes")
     private @Nullable Output<AcceleratorAttributesGetArgs> attributes;
 
+    /**
+     * @return The attributes of the accelerator. Fields documented below.
+     * 
+     */
     public Optional<Output<AcceleratorAttributesGetArgs>> attributes() {
         return Optional.ofNullable(this.attributes);
     }
@@ -41,6 +45,13 @@ public final class AcceleratorState extends com.pulumi.resources.ResourceArgs {
     @Import(name="dnsName")
     private @Nullable Output<String> dnsName;
 
+    /**
+     * @return The DNS name of the accelerator. For example, `a5d53ff5ee6bca4ce.awsglobalaccelerator.com`.
+     * * `hosted_zone_id` --  The Global Accelerator Route 53 zone ID that can be used to
+     *   route an [Alias Resource Record Set](https://docs.aws.amazon.com/Route53/latest/APIReference/API_AliasTarget.html) to the Global Accelerator. This attribute
+     *   is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
+     * 
+     */
     public Optional<Output<String>> dnsName() {
         return Optional.ofNullable(this.dnsName);
     }
@@ -52,6 +63,10 @@ public final class AcceleratorState extends com.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return Indicates whether the accelerator is enabled. Defaults to `true`. Valid values: `true`, `false`.
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -70,6 +85,10 @@ public final class AcceleratorState extends com.pulumi.resources.ResourceArgs {
     @Import(name="ipAddressType")
     private @Nullable Output<String> ipAddressType;
 
+    /**
+     * @return The value for the address type. Defaults to `IPV4`. Valid values: `IPV4`.
+     * 
+     */
     public Optional<Output<String>> ipAddressType() {
         return Optional.ofNullable(this.ipAddressType);
     }
@@ -81,6 +100,10 @@ public final class AcceleratorState extends com.pulumi.resources.ResourceArgs {
     @Import(name="ipSets")
     private @Nullable Output<List<AcceleratorIpSetGetArgs>> ipSets;
 
+    /**
+     * @return IP address set associated with the accelerator.
+     * 
+     */
     public Optional<Output<List<AcceleratorIpSetGetArgs>>> ipSets() {
         return Optional.ofNullable(this.ipSets);
     }
@@ -92,6 +115,10 @@ public final class AcceleratorState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the accelerator.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -103,6 +130,10 @@ public final class AcceleratorState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -114,6 +145,10 @@ public final class AcceleratorState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider .
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -150,29 +185,71 @@ public final class AcceleratorState extends com.pulumi.resources.ResourceArgs {
             $ = new AcceleratorState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param attributes The attributes of the accelerator. Fields documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attributes(@Nullable Output<AcceleratorAttributesGetArgs> attributes) {
             $.attributes = attributes;
             return this;
         }
 
+        /**
+         * @param attributes The attributes of the accelerator. Fields documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attributes(AcceleratorAttributesGetArgs attributes) {
             return attributes(Output.of(attributes));
         }
 
+        /**
+         * @param dnsName The DNS name of the accelerator. For example, `a5d53ff5ee6bca4ce.awsglobalaccelerator.com`.
+         * * `hosted_zone_id` --  The Global Accelerator Route 53 zone ID that can be used to
+         *   route an [Alias Resource Record Set](https://docs.aws.amazon.com/Route53/latest/APIReference/API_AliasTarget.html) to the Global Accelerator. This attribute
+         *   is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsName(@Nullable Output<String> dnsName) {
             $.dnsName = dnsName;
             return this;
         }
 
+        /**
+         * @param dnsName The DNS name of the accelerator. For example, `a5d53ff5ee6bca4ce.awsglobalaccelerator.com`.
+         * * `hosted_zone_id` --  The Global Accelerator Route 53 zone ID that can be used to
+         *   route an [Alias Resource Record Set](https://docs.aws.amazon.com/Route53/latest/APIReference/API_AliasTarget.html) to the Global Accelerator. This attribute
+         *   is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsName(String dnsName) {
             return dnsName(Output.of(dnsName));
         }
 
+        /**
+         * @param enabled Indicates whether the accelerator is enabled. Defaults to `true`. Valid values: `true`, `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Indicates whether the accelerator is enabled. Defaults to `true`. Valid values: `true`, `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
@@ -186,51 +263,117 @@ public final class AcceleratorState extends com.pulumi.resources.ResourceArgs {
             return hostedZoneId(Output.of(hostedZoneId));
         }
 
+        /**
+         * @param ipAddressType The value for the address type. Defaults to `IPV4`. Valid values: `IPV4`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddressType(@Nullable Output<String> ipAddressType) {
             $.ipAddressType = ipAddressType;
             return this;
         }
 
+        /**
+         * @param ipAddressType The value for the address type. Defaults to `IPV4`. Valid values: `IPV4`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddressType(String ipAddressType) {
             return ipAddressType(Output.of(ipAddressType));
         }
 
+        /**
+         * @param ipSets IP address set associated with the accelerator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipSets(@Nullable Output<List<AcceleratorIpSetGetArgs>> ipSets) {
             $.ipSets = ipSets;
             return this;
         }
 
+        /**
+         * @param ipSets IP address set associated with the accelerator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipSets(List<AcceleratorIpSetGetArgs> ipSets) {
             return ipSets(Output.of(ipSets));
         }
 
+        /**
+         * @param ipSets IP address set associated with the accelerator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipSets(AcceleratorIpSetGetArgs... ipSets) {
             return ipSets(List.of(ipSets));
         }
 
+        /**
+         * @param name The name of the accelerator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the accelerator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }

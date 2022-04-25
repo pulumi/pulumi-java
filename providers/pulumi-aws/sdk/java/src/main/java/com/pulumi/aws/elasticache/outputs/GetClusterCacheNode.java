@@ -12,13 +12,13 @@ import java.util.Objects;
 public final class GetClusterCacheNode {
     private final String address;
     /**
-     * The Availability Zone for the cache cluster.
+     * @return The Availability Zone for the cache cluster.
      * 
      */
     private final String availabilityZone;
     private final String id;
     /**
-     * The port number on which each of the cache nodes will
+     * @return The port number on which each of the cache nodes will
      * accept connections.
      * 
      */
@@ -40,9 +40,9 @@ public final class GetClusterCacheNode {
         return this.address;
     }
     /**
-     * The Availability Zone for the cache cluster.
+     * @return The Availability Zone for the cache cluster.
      * 
-    */
+     */
     public String availabilityZone() {
         return this.availabilityZone;
     }
@@ -50,10 +50,10 @@ public final class GetClusterCacheNode {
         return this.id;
     }
     /**
-     * The port number on which each of the cache nodes will
+     * @return The port number on which each of the cache nodes will
      * accept connections.
      * 
-    */
+     */
     public Integer port() {
         return this.port;
     }

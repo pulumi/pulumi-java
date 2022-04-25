@@ -23,6 +23,10 @@ public final class SubnetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Resource ID of Virtual Network Subnet
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -51,6 +55,12 @@ public final class SubnetResponse extends com.pulumi.resources.InvokeArgs {
             $ = new SubnetResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Resource ID of Virtual Network Subnet
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;

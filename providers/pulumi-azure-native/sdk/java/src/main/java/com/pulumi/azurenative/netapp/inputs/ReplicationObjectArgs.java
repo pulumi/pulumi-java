@@ -29,6 +29,10 @@ public final class ReplicationObjectArgs extends com.pulumi.resources.ResourceAr
     @Import(name="endpointType")
     private @Nullable Output<Either<String,EndpointType>> endpointType;
 
+    /**
+     * @return Indicates whether the local volume is the source or destination for the Volume Replication
+     * 
+     */
     public Optional<Output<Either<String,EndpointType>>> endpointType() {
         return Optional.ofNullable(this.endpointType);
     }
@@ -40,6 +44,10 @@ public final class ReplicationObjectArgs extends com.pulumi.resources.ResourceAr
     @Import(name="remoteVolumeRegion")
     private @Nullable Output<String> remoteVolumeRegion;
 
+    /**
+     * @return The remote region for the other end of the Volume Replication.
+     * 
+     */
     public Optional<Output<String>> remoteVolumeRegion() {
         return Optional.ofNullable(this.remoteVolumeRegion);
     }
@@ -51,6 +59,10 @@ public final class ReplicationObjectArgs extends com.pulumi.resources.ResourceAr
     @Import(name="remoteVolumeResourceId", required=true)
     private Output<String> remoteVolumeResourceId;
 
+    /**
+     * @return The resource ID of the remote volume.
+     * 
+     */
     public Output<String> remoteVolumeResourceId() {
         return this.remoteVolumeResourceId;
     }
@@ -62,6 +74,10 @@ public final class ReplicationObjectArgs extends com.pulumi.resources.ResourceAr
     @Import(name="replicationId")
     private @Nullable Output<String> replicationId;
 
+    /**
+     * @return Id
+     * 
+     */
     public Optional<Output<String>> replicationId() {
         return Optional.ofNullable(this.replicationId);
     }
@@ -73,6 +89,10 @@ public final class ReplicationObjectArgs extends com.pulumi.resources.ResourceAr
     @Import(name="replicationSchedule", required=true)
     private Output<Either<String,ReplicationSchedule>> replicationSchedule;
 
+    /**
+     * @return Schedule
+     * 
+     */
     public Output<Either<String,ReplicationSchedule>> replicationSchedule() {
         return this.replicationSchedule;
     }
@@ -105,63 +125,147 @@ public final class ReplicationObjectArgs extends com.pulumi.resources.ResourceAr
             $ = new ReplicationObjectArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endpointType Indicates whether the local volume is the source or destination for the Volume Replication
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointType(@Nullable Output<Either<String,EndpointType>> endpointType) {
             $.endpointType = endpointType;
             return this;
         }
 
+        /**
+         * @param endpointType Indicates whether the local volume is the source or destination for the Volume Replication
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointType(Either<String,EndpointType> endpointType) {
             return endpointType(Output.of(endpointType));
         }
 
+        /**
+         * @param endpointType Indicates whether the local volume is the source or destination for the Volume Replication
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointType(String endpointType) {
             return endpointType(Either.ofLeft(endpointType));
         }
 
+        /**
+         * @param endpointType Indicates whether the local volume is the source or destination for the Volume Replication
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointType(EndpointType endpointType) {
             return endpointType(Either.ofRight(endpointType));
         }
 
+        /**
+         * @param remoteVolumeRegion The remote region for the other end of the Volume Replication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder remoteVolumeRegion(@Nullable Output<String> remoteVolumeRegion) {
             $.remoteVolumeRegion = remoteVolumeRegion;
             return this;
         }
 
+        /**
+         * @param remoteVolumeRegion The remote region for the other end of the Volume Replication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder remoteVolumeRegion(String remoteVolumeRegion) {
             return remoteVolumeRegion(Output.of(remoteVolumeRegion));
         }
 
+        /**
+         * @param remoteVolumeResourceId The resource ID of the remote volume.
+         * 
+         * @return builder
+         * 
+         */
         public Builder remoteVolumeResourceId(Output<String> remoteVolumeResourceId) {
             $.remoteVolumeResourceId = remoteVolumeResourceId;
             return this;
         }
 
+        /**
+         * @param remoteVolumeResourceId The resource ID of the remote volume.
+         * 
+         * @return builder
+         * 
+         */
         public Builder remoteVolumeResourceId(String remoteVolumeResourceId) {
             return remoteVolumeResourceId(Output.of(remoteVolumeResourceId));
         }
 
+        /**
+         * @param replicationId Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicationId(@Nullable Output<String> replicationId) {
             $.replicationId = replicationId;
             return this;
         }
 
+        /**
+         * @param replicationId Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicationId(String replicationId) {
             return replicationId(Output.of(replicationId));
         }
 
+        /**
+         * @param replicationSchedule Schedule
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicationSchedule(Output<Either<String,ReplicationSchedule>> replicationSchedule) {
             $.replicationSchedule = replicationSchedule;
             return this;
         }
 
+        /**
+         * @param replicationSchedule Schedule
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicationSchedule(Either<String,ReplicationSchedule> replicationSchedule) {
             return replicationSchedule(Output.of(replicationSchedule));
         }
 
+        /**
+         * @param replicationSchedule Schedule
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicationSchedule(String replicationSchedule) {
             return replicationSchedule(Either.ofLeft(replicationSchedule));
         }
 
+        /**
+         * @param replicationSchedule Schedule
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicationSchedule(ReplicationSchedule replicationSchedule) {
             return replicationSchedule(Either.ofRight(replicationSchedule));
         }

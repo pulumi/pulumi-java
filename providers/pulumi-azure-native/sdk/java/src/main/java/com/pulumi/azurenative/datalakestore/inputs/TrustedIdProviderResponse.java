@@ -23,6 +23,10 @@ public final class TrustedIdProviderResponse extends com.pulumi.resources.Invoke
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return The resource identifier.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -34,6 +38,10 @@ public final class TrustedIdProviderResponse extends com.pulumi.resources.Invoke
     @Import(name="idProvider", required=true)
     private String idProvider;
 
+    /**
+     * @return The URL of this trusted identity provider.
+     * 
+     */
     public String idProvider() {
         return this.idProvider;
     }
@@ -45,6 +53,10 @@ public final class TrustedIdProviderResponse extends com.pulumi.resources.Invoke
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The resource name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -56,6 +68,10 @@ public final class TrustedIdProviderResponse extends com.pulumi.resources.Invoke
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The resource type.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -87,21 +103,45 @@ public final class TrustedIdProviderResponse extends com.pulumi.resources.Invoke
             $ = new TrustedIdProviderResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id The resource identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param idProvider The URL of this trusted identity provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder idProvider(String idProvider) {
             $.idProvider = idProvider;
             return this;
         }
 
+        /**
+         * @param name The resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param type The resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

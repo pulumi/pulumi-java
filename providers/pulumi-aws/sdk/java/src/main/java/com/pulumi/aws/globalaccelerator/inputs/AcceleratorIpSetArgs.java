@@ -23,6 +23,10 @@ public final class AcceleratorIpSetArgs extends com.pulumi.resources.ResourceArg
     @Import(name="ipAddresses")
     private @Nullable Output<List<String>> ipAddresses;
 
+    /**
+     * @return A list of IP addresses in the IP address set.
+     * 
+     */
     public Optional<Output<List<String>>> ipAddresses() {
         return Optional.ofNullable(this.ipAddresses);
     }
@@ -34,6 +38,10 @@ public final class AcceleratorIpSetArgs extends com.pulumi.resources.ResourceArg
     @Import(name="ipFamily")
     private @Nullable Output<String> ipFamily;
 
+    /**
+     * @return The type of IP addresses included in this IP set.
+     * 
+     */
     public Optional<Output<String>> ipFamily() {
         return Optional.ofNullable(this.ipFamily);
     }
@@ -63,24 +71,54 @@ public final class AcceleratorIpSetArgs extends com.pulumi.resources.ResourceArg
             $ = new AcceleratorIpSetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ipAddresses A list of IP addresses in the IP address set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddresses(@Nullable Output<List<String>> ipAddresses) {
             $.ipAddresses = ipAddresses;
             return this;
         }
 
+        /**
+         * @param ipAddresses A list of IP addresses in the IP address set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddresses(List<String> ipAddresses) {
             return ipAddresses(Output.of(ipAddresses));
         }
 
+        /**
+         * @param ipAddresses A list of IP addresses in the IP address set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddresses(String... ipAddresses) {
             return ipAddresses(List.of(ipAddresses));
         }
 
+        /**
+         * @param ipFamily The type of IP addresses included in this IP set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipFamily(@Nullable Output<String> ipFamily) {
             $.ipFamily = ipFamily;
             return this;
         }
 
+        /**
+         * @param ipFamily The type of IP addresses included in this IP set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipFamily(String ipFamily) {
             return ipFamily(Output.of(ipFamily));
         }

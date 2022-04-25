@@ -25,6 +25,10 @@ public final class EncryptionIdentityResponse extends com.pulumi.resources.Invok
     @Import(name="encryptionUserAssignedIdentity")
     private @Nullable String encryptionUserAssignedIdentity;
 
+    /**
+     * @return Resource identifier of the UserAssigned identity to be associated with server-side encryption on the storage account.
+     * 
+     */
     public Optional<String> encryptionUserAssignedIdentity() {
         return Optional.ofNullable(this.encryptionUserAssignedIdentity);
     }
@@ -53,6 +57,12 @@ public final class EncryptionIdentityResponse extends com.pulumi.resources.Invok
             $ = new EncryptionIdentityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param encryptionUserAssignedIdentity Resource identifier of the UserAssigned identity to be associated with server-side encryption on the storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionUserAssignedIdentity(@Nullable String encryptionUserAssignedIdentity) {
             $.encryptionUserAssignedIdentity = encryptionUserAssignedIdentity;
             return this;

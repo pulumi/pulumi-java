@@ -21,6 +21,10 @@ public final class LoggingConfigurationLogDestinationConfig extends com.pulumi.r
     @Import(name="logDestination", required=true)
     private Object logDestination;
 
+    /**
+     * @return A key-value pair to configure the logDestinations.
+     * 
+     */
     public Object logDestination() {
         return this.logDestination;
     }
@@ -65,6 +69,12 @@ public final class LoggingConfigurationLogDestinationConfig extends com.pulumi.r
             $ = new LoggingConfigurationLogDestinationConfig(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param logDestination A key-value pair to configure the logDestinations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logDestination(Object logDestination) {
             $.logDestination = logDestination;
             return this;

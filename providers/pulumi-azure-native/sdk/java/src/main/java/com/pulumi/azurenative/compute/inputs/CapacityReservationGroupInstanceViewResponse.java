@@ -20,6 +20,10 @@ public final class CapacityReservationGroupInstanceViewResponse extends com.pulu
     @Import(name="capacityReservations", required=true)
     private List<CapacityReservationInstanceViewWithNameResponse> capacityReservations;
 
+    /**
+     * @return List of instance view of the capacity reservations under the capacity reservation group.
+     * 
+     */
     public List<CapacityReservationInstanceViewWithNameResponse> capacityReservations() {
         return this.capacityReservations;
     }
@@ -48,11 +52,23 @@ public final class CapacityReservationGroupInstanceViewResponse extends com.pulu
             $ = new CapacityReservationGroupInstanceViewResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param capacityReservations List of instance view of the capacity reservations under the capacity reservation group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacityReservations(List<CapacityReservationInstanceViewWithNameResponse> capacityReservations) {
             $.capacityReservations = capacityReservations;
             return this;
         }
 
+        /**
+         * @param capacityReservations List of instance view of the capacity reservations under the capacity reservation group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacityReservations(CapacityReservationInstanceViewWithNameResponse... capacityReservations) {
             return capacityReservations(List.of(capacityReservations));
         }

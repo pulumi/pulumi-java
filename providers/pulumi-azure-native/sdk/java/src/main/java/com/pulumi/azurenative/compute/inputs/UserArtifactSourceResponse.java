@@ -25,6 +25,10 @@ public final class UserArtifactSourceResponse extends com.pulumi.resources.Invok
     @Import(name="defaultConfigurationLink")
     private @Nullable String defaultConfigurationLink;
 
+    /**
+     * @return Optional. The defaultConfigurationLink of the artifact, must be a readable storage page blob.
+     * 
+     */
     public Optional<String> defaultConfigurationLink() {
         return Optional.ofNullable(this.defaultConfigurationLink);
     }
@@ -36,6 +40,10 @@ public final class UserArtifactSourceResponse extends com.pulumi.resources.Invok
     @Import(name="mediaLink", required=true)
     private String mediaLink;
 
+    /**
+     * @return Required. The mediaLink of the artifact, must be a readable storage page blob.
+     * 
+     */
     public String mediaLink() {
         return this.mediaLink;
     }
@@ -65,11 +73,23 @@ public final class UserArtifactSourceResponse extends com.pulumi.resources.Invok
             $ = new UserArtifactSourceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param defaultConfigurationLink Optional. The defaultConfigurationLink of the artifact, must be a readable storage page blob.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultConfigurationLink(@Nullable String defaultConfigurationLink) {
             $.defaultConfigurationLink = defaultConfigurationLink;
             return this;
         }
 
+        /**
+         * @param mediaLink Required. The mediaLink of the artifact, must be a readable storage page blob.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mediaLink(String mediaLink) {
             $.mediaLink = mediaLink;
             return this;

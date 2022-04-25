@@ -26,6 +26,10 @@ public final class UserArtifactSourceArgs extends com.pulumi.resources.ResourceA
     @Import(name="defaultConfigurationLink")
     private @Nullable Output<String> defaultConfigurationLink;
 
+    /**
+     * @return Optional. The defaultConfigurationLink of the artifact, must be a readable storage page blob.
+     * 
+     */
     public Optional<Output<String>> defaultConfigurationLink() {
         return Optional.ofNullable(this.defaultConfigurationLink);
     }
@@ -37,6 +41,10 @@ public final class UserArtifactSourceArgs extends com.pulumi.resources.ResourceA
     @Import(name="mediaLink", required=true)
     private Output<String> mediaLink;
 
+    /**
+     * @return Required. The mediaLink of the artifact, must be a readable storage page blob.
+     * 
+     */
     public Output<String> mediaLink() {
         return this.mediaLink;
     }
@@ -66,20 +74,44 @@ public final class UserArtifactSourceArgs extends com.pulumi.resources.ResourceA
             $ = new UserArtifactSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param defaultConfigurationLink Optional. The defaultConfigurationLink of the artifact, must be a readable storage page blob.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultConfigurationLink(@Nullable Output<String> defaultConfigurationLink) {
             $.defaultConfigurationLink = defaultConfigurationLink;
             return this;
         }
 
+        /**
+         * @param defaultConfigurationLink Optional. The defaultConfigurationLink of the artifact, must be a readable storage page blob.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultConfigurationLink(String defaultConfigurationLink) {
             return defaultConfigurationLink(Output.of(defaultConfigurationLink));
         }
 
+        /**
+         * @param mediaLink Required. The mediaLink of the artifact, must be a readable storage page blob.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mediaLink(Output<String> mediaLink) {
             $.mediaLink = mediaLink;
             return this;
         }
 
+        /**
+         * @param mediaLink Required. The mediaLink of the artifact, must be a readable storage page blob.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mediaLink(String mediaLink) {
             return mediaLink(Output.of(mediaLink));
         }

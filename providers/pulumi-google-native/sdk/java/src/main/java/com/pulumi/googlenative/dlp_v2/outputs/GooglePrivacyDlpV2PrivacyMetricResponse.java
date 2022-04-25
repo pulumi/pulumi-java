@@ -15,32 +15,32 @@ import java.util.Objects;
 @CustomType
 public final class GooglePrivacyDlpV2PrivacyMetricResponse {
     /**
-     * Categorical stats
+     * @return Categorical stats
      * 
      */
     private final GooglePrivacyDlpV2CategoricalStatsConfigResponse categoricalStatsConfig;
     /**
-     * delta-presence
+     * @return delta-presence
      * 
      */
     private final GooglePrivacyDlpV2DeltaPresenceEstimationConfigResponse deltaPresenceEstimationConfig;
     /**
-     * K-anonymity
+     * @return K-anonymity
      * 
      */
     private final GooglePrivacyDlpV2KAnonymityConfigResponse kAnonymityConfig;
     /**
-     * k-map
+     * @return k-map
      * 
      */
     private final GooglePrivacyDlpV2KMapEstimationConfigResponse kMapEstimationConfig;
     /**
-     * l-diversity
+     * @return l-diversity
      * 
      */
     private final GooglePrivacyDlpV2LDiversityConfigResponse lDiversityConfig;
     /**
-     * Numerical stats
+     * @return Numerical stats
      * 
      */
     private final GooglePrivacyDlpV2NumericalStatsConfigResponse numericalStatsConfig;
@@ -62,44 +62,44 @@ public final class GooglePrivacyDlpV2PrivacyMetricResponse {
     }
 
     /**
-     * Categorical stats
+     * @return Categorical stats
      * 
-    */
+     */
     public GooglePrivacyDlpV2CategoricalStatsConfigResponse categoricalStatsConfig() {
         return this.categoricalStatsConfig;
     }
     /**
-     * delta-presence
+     * @return delta-presence
      * 
-    */
+     */
     public GooglePrivacyDlpV2DeltaPresenceEstimationConfigResponse deltaPresenceEstimationConfig() {
         return this.deltaPresenceEstimationConfig;
     }
     /**
-     * K-anonymity
+     * @return K-anonymity
      * 
-    */
+     */
     public GooglePrivacyDlpV2KAnonymityConfigResponse kAnonymityConfig() {
         return this.kAnonymityConfig;
     }
     /**
-     * k-map
+     * @return k-map
      * 
-    */
+     */
     public GooglePrivacyDlpV2KMapEstimationConfigResponse kMapEstimationConfig() {
         return this.kMapEstimationConfig;
     }
     /**
-     * l-diversity
+     * @return l-diversity
      * 
-    */
+     */
     public GooglePrivacyDlpV2LDiversityConfigResponse lDiversityConfig() {
         return this.lDiversityConfig;
     }
     /**
-     * Numerical stats
+     * @return Numerical stats
      * 
-    */
+     */
     public GooglePrivacyDlpV2NumericalStatsConfigResponse numericalStatsConfig() {
         return this.numericalStatsConfig;
     }

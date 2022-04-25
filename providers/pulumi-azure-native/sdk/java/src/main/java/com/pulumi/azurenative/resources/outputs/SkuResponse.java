@@ -13,32 +13,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SkuResponse {
     /**
-     * The SKU capacity.
+     * @return The SKU capacity.
      * 
      */
     private final @Nullable Integer capacity;
     /**
-     * The SKU family.
+     * @return The SKU family.
      * 
      */
     private final @Nullable String family;
     /**
-     * The SKU model.
+     * @return The SKU model.
      * 
      */
     private final @Nullable String model;
     /**
-     * The SKU name.
+     * @return The SKU name.
      * 
      */
     private final @Nullable String name;
     /**
-     * The SKU size.
+     * @return The SKU size.
      * 
      */
     private final @Nullable String size;
     /**
-     * The SKU tier.
+     * @return The SKU tier.
      * 
      */
     private final @Nullable String tier;
@@ -60,44 +60,44 @@ public final class SkuResponse {
     }
 
     /**
-     * The SKU capacity.
+     * @return The SKU capacity.
      * 
-    */
+     */
     public Optional<Integer> capacity() {
         return Optional.ofNullable(this.capacity);
     }
     /**
-     * The SKU family.
+     * @return The SKU family.
      * 
-    */
+     */
     public Optional<String> family() {
         return Optional.ofNullable(this.family);
     }
     /**
-     * The SKU model.
+     * @return The SKU model.
      * 
-    */
+     */
     public Optional<String> model() {
         return Optional.ofNullable(this.model);
     }
     /**
-     * The SKU name.
+     * @return The SKU name.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The SKU size.
+     * @return The SKU size.
      * 
-    */
+     */
     public Optional<String> size() {
         return Optional.ofNullable(this.size);
     }
     /**
-     * The SKU tier.
+     * @return The SKU tier.
      * 
-    */
+     */
     public Optional<String> tier() {
         return Optional.ofNullable(this.tier);
     }

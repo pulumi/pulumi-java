@@ -29,6 +29,10 @@ public final class ApiOAuthSettingsResponse extends com.pulumi.resources.InvokeA
     @Import(name="clientId")
     private @Nullable String clientId;
 
+    /**
+     * @return Resource provider client id
+     * 
+     */
     public Optional<String> clientId() {
         return Optional.ofNullable(this.clientId);
     }
@@ -40,6 +44,10 @@ public final class ApiOAuthSettingsResponse extends com.pulumi.resources.InvokeA
     @Import(name="clientSecret")
     private @Nullable String clientSecret;
 
+    /**
+     * @return Client Secret needed for OAuth
+     * 
+     */
     public Optional<String> clientSecret() {
         return Optional.ofNullable(this.clientSecret);
     }
@@ -51,6 +59,10 @@ public final class ApiOAuthSettingsResponse extends com.pulumi.resources.InvokeA
     @Import(name="customParameters")
     private @Nullable Map<String,ApiOAuthSettingsParameterResponse> customParameters;
 
+    /**
+     * @return OAuth parameters key is the name of parameter
+     * 
+     */
     public Optional<Map<String,ApiOAuthSettingsParameterResponse>> customParameters() {
         return Optional.ofNullable(this.customParameters);
     }
@@ -62,6 +74,10 @@ public final class ApiOAuthSettingsResponse extends com.pulumi.resources.InvokeA
     @Import(name="identityProvider")
     private @Nullable String identityProvider;
 
+    /**
+     * @return Identity provider
+     * 
+     */
     public Optional<String> identityProvider() {
         return Optional.ofNullable(this.identityProvider);
     }
@@ -73,6 +89,10 @@ public final class ApiOAuthSettingsResponse extends com.pulumi.resources.InvokeA
     @Import(name="properties")
     private @Nullable Object properties;
 
+    /**
+     * @return Read only properties for this oauth setting.
+     * 
+     */
     public Optional<Object> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -84,6 +104,10 @@ public final class ApiOAuthSettingsResponse extends com.pulumi.resources.InvokeA
     @Import(name="redirectUrl")
     private @Nullable String redirectUrl;
 
+    /**
+     * @return Url
+     * 
+     */
     public Optional<String> redirectUrl() {
         return Optional.ofNullable(this.redirectUrl);
     }
@@ -95,6 +119,10 @@ public final class ApiOAuthSettingsResponse extends com.pulumi.resources.InvokeA
     @Import(name="scopes")
     private @Nullable List<String> scopes;
 
+    /**
+     * @return OAuth scopes
+     * 
+     */
     public Optional<List<String>> scopes() {
         return Optional.ofNullable(this.scopes);
     }
@@ -129,41 +157,89 @@ public final class ApiOAuthSettingsResponse extends com.pulumi.resources.InvokeA
             $ = new ApiOAuthSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientId Resource provider client id
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(@Nullable String clientId) {
             $.clientId = clientId;
             return this;
         }
 
+        /**
+         * @param clientSecret Client Secret needed for OAuth
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientSecret(@Nullable String clientSecret) {
             $.clientSecret = clientSecret;
             return this;
         }
 
+        /**
+         * @param customParameters OAuth parameters key is the name of parameter
+         * 
+         * @return builder
+         * 
+         */
         public Builder customParameters(@Nullable Map<String,ApiOAuthSettingsParameterResponse> customParameters) {
             $.customParameters = customParameters;
             return this;
         }
 
+        /**
+         * @param identityProvider Identity provider
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityProvider(@Nullable String identityProvider) {
             $.identityProvider = identityProvider;
             return this;
         }
 
+        /**
+         * @param properties Read only properties for this oauth setting.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Object properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param redirectUrl Url
+         * 
+         * @return builder
+         * 
+         */
         public Builder redirectUrl(@Nullable String redirectUrl) {
             $.redirectUrl = redirectUrl;
             return this;
         }
 
+        /**
+         * @param scopes OAuth scopes
+         * 
+         * @return builder
+         * 
+         */
         public Builder scopes(@Nullable List<String> scopes) {
             $.scopes = scopes;
             return this;
         }
 
+        /**
+         * @param scopes OAuth scopes
+         * 
+         * @return builder
+         * 
+         */
         public Builder scopes(String... scopes) {
             return scopes(List.of(scopes));
         }

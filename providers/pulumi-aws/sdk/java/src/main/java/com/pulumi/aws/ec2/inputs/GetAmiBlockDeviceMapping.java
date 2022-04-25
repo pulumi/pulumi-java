@@ -20,6 +20,10 @@ public final class GetAmiBlockDeviceMapping extends com.pulumi.resources.InvokeA
     @Import(name="deviceName", required=true)
     private String deviceName;
 
+    /**
+     * @return The physical name of the device.
+     * 
+     */
     public String deviceName() {
         return this.deviceName;
     }
@@ -31,6 +35,10 @@ public final class GetAmiBlockDeviceMapping extends com.pulumi.resources.InvokeA
     @Import(name="ebs", required=true)
     private Map<String,String> ebs;
 
+    /**
+     * @return Map containing EBS information, if the device is EBS based. Unlike most object attributes, these are accessed directly (e.g., `ebs.volume_size` or `ebs[&#34;volume_size&#34;]`) rather than accessed through the first element of a list (e.g., `ebs[0].volume_size`).
+     * 
+     */
     public Map<String,String> ebs() {
         return this.ebs;
     }
@@ -42,6 +50,10 @@ public final class GetAmiBlockDeviceMapping extends com.pulumi.resources.InvokeA
     @Import(name="noDevice", required=true)
     private String noDevice;
 
+    /**
+     * @return Suppresses the specified device included in the block device mapping of the AMI.
+     * 
+     */
     public String noDevice() {
         return this.noDevice;
     }
@@ -53,6 +65,10 @@ public final class GetAmiBlockDeviceMapping extends com.pulumi.resources.InvokeA
     @Import(name="virtualName", required=true)
     private String virtualName;
 
+    /**
+     * @return The virtual device name (for instance stores).
+     * 
+     */
     public String virtualName() {
         return this.virtualName;
     }
@@ -84,21 +100,45 @@ public final class GetAmiBlockDeviceMapping extends com.pulumi.resources.InvokeA
             $ = new GetAmiBlockDeviceMapping(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deviceName The physical name of the device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(String deviceName) {
             $.deviceName = deviceName;
             return this;
         }
 
+        /**
+         * @param ebs Map containing EBS information, if the device is EBS based. Unlike most object attributes, these are accessed directly (e.g., `ebs.volume_size` or `ebs[&#34;volume_size&#34;]`) rather than accessed through the first element of a list (e.g., `ebs[0].volume_size`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder ebs(Map<String,String> ebs) {
             $.ebs = ebs;
             return this;
         }
 
+        /**
+         * @param noDevice Suppresses the specified device included in the block device mapping of the AMI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder noDevice(String noDevice) {
             $.noDevice = noDevice;
             return this;
         }
 
+        /**
+         * @param virtualName The virtual device name (for instance stores).
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualName(String virtualName) {
             $.virtualName = virtualName;
             return this;

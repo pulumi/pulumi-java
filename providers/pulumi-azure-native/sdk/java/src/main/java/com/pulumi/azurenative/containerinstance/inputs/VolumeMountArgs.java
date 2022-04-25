@@ -27,6 +27,10 @@ public final class VolumeMountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="mountPath", required=true)
     private Output<String> mountPath;
 
+    /**
+     * @return The path within the container where the volume should be mounted. Must not contain colon (:).
+     * 
+     */
     public Output<String> mountPath() {
         return this.mountPath;
     }
@@ -38,6 +42,10 @@ public final class VolumeMountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The name of the volume mount.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -49,6 +57,10 @@ public final class VolumeMountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="readOnly")
     private @Nullable Output<Boolean> readOnly;
 
+    /**
+     * @return The flag indicating whether the volume mount is read-only.
+     * 
+     */
     public Optional<Output<Boolean>> readOnly() {
         return Optional.ofNullable(this.readOnly);
     }
@@ -79,29 +91,65 @@ public final class VolumeMountArgs extends com.pulumi.resources.ResourceArgs {
             $ = new VolumeMountArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param mountPath The path within the container where the volume should be mounted. Must not contain colon (:).
+         * 
+         * @return builder
+         * 
+         */
         public Builder mountPath(Output<String> mountPath) {
             $.mountPath = mountPath;
             return this;
         }
 
+        /**
+         * @param mountPath The path within the container where the volume should be mounted. Must not contain colon (:).
+         * 
+         * @return builder
+         * 
+         */
         public Builder mountPath(String mountPath) {
             return mountPath(Output.of(mountPath));
         }
 
+        /**
+         * @param name The name of the volume mount.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the volume mount.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param readOnly The flag indicating whether the volume mount is read-only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
             $.readOnly = readOnly;
             return this;
         }
 
+        /**
+         * @param readOnly The flag indicating whether the volume mount is read-only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readOnly(Boolean readOnly) {
             return readOnly(Output.of(readOnly));
         }

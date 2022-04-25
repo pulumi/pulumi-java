@@ -26,6 +26,10 @@ public final class ValidateSyncMigrationInputSqlServerTaskInputArgs extends com.
     @Import(name="selectedDatabases", required=true)
     private Output<List<MigrateSqlServerSqlDbSyncDatabaseInputArgs>> selectedDatabases;
 
+    /**
+     * @return Databases to migrate
+     * 
+     */
     public Output<List<MigrateSqlServerSqlDbSyncDatabaseInputArgs>> selectedDatabases() {
         return this.selectedDatabases;
     }
@@ -37,6 +41,10 @@ public final class ValidateSyncMigrationInputSqlServerTaskInputArgs extends com.
     @Import(name="sourceConnectionInfo", required=true)
     private Output<SqlConnectionInfoArgs> sourceConnectionInfo;
 
+    /**
+     * @return Information for connecting to source SQL server
+     * 
+     */
     public Output<SqlConnectionInfoArgs> sourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
@@ -48,6 +56,10 @@ public final class ValidateSyncMigrationInputSqlServerTaskInputArgs extends com.
     @Import(name="targetConnectionInfo", required=true)
     private Output<SqlConnectionInfoArgs> targetConnectionInfo;
 
+    /**
+     * @return Information for connecting to target
+     * 
+     */
     public Output<SqlConnectionInfoArgs> targetConnectionInfo() {
         return this.targetConnectionInfo;
     }
@@ -78,33 +90,75 @@ public final class ValidateSyncMigrationInputSqlServerTaskInputArgs extends com.
             $ = new ValidateSyncMigrationInputSqlServerTaskInputArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param selectedDatabases Databases to migrate
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectedDatabases(Output<List<MigrateSqlServerSqlDbSyncDatabaseInputArgs>> selectedDatabases) {
             $.selectedDatabases = selectedDatabases;
             return this;
         }
 
+        /**
+         * @param selectedDatabases Databases to migrate
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectedDatabases(List<MigrateSqlServerSqlDbSyncDatabaseInputArgs> selectedDatabases) {
             return selectedDatabases(Output.of(selectedDatabases));
         }
 
+        /**
+         * @param selectedDatabases Databases to migrate
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectedDatabases(MigrateSqlServerSqlDbSyncDatabaseInputArgs... selectedDatabases) {
             return selectedDatabases(List.of(selectedDatabases));
         }
 
+        /**
+         * @param sourceConnectionInfo Information for connecting to source SQL server
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceConnectionInfo(Output<SqlConnectionInfoArgs> sourceConnectionInfo) {
             $.sourceConnectionInfo = sourceConnectionInfo;
             return this;
         }
 
+        /**
+         * @param sourceConnectionInfo Information for connecting to source SQL server
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceConnectionInfo(SqlConnectionInfoArgs sourceConnectionInfo) {
             return sourceConnectionInfo(Output.of(sourceConnectionInfo));
         }
 
+        /**
+         * @param targetConnectionInfo Information for connecting to target
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetConnectionInfo(Output<SqlConnectionInfoArgs> targetConnectionInfo) {
             $.targetConnectionInfo = targetConnectionInfo;
             return this;
         }
 
+        /**
+         * @param targetConnectionInfo Information for connecting to target
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetConnectionInfo(SqlConnectionInfoArgs targetConnectionInfo) {
             return targetConnectionInfo(Output.of(targetConnectionInfo));
         }

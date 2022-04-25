@@ -26,6 +26,10 @@ public final class DiskEncryptionKeyInfoArgs extends com.pulumi.resources.Resour
     @Import(name="keyVaultResourceArmId")
     private @Nullable Output<String> keyVaultResourceArmId;
 
+    /**
+     * @return The KeyVault resource ARM Id for secret.
+     * 
+     */
     public Optional<Output<String>> keyVaultResourceArmId() {
         return Optional.ofNullable(this.keyVaultResourceArmId);
     }
@@ -37,6 +41,10 @@ public final class DiskEncryptionKeyInfoArgs extends com.pulumi.resources.Resour
     @Import(name="secretIdentifier")
     private @Nullable Output<String> secretIdentifier;
 
+    /**
+     * @return The secret URL / identifier.
+     * 
+     */
     public Optional<Output<String>> secretIdentifier() {
         return Optional.ofNullable(this.secretIdentifier);
     }
@@ -66,20 +74,44 @@ public final class DiskEncryptionKeyInfoArgs extends com.pulumi.resources.Resour
             $ = new DiskEncryptionKeyInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyVaultResourceArmId The KeyVault resource ARM Id for secret.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultResourceArmId(@Nullable Output<String> keyVaultResourceArmId) {
             $.keyVaultResourceArmId = keyVaultResourceArmId;
             return this;
         }
 
+        /**
+         * @param keyVaultResourceArmId The KeyVault resource ARM Id for secret.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultResourceArmId(String keyVaultResourceArmId) {
             return keyVaultResourceArmId(Output.of(keyVaultResourceArmId));
         }
 
+        /**
+         * @param secretIdentifier The secret URL / identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretIdentifier(@Nullable Output<String> secretIdentifier) {
             $.secretIdentifier = secretIdentifier;
             return this;
         }
 
+        /**
+         * @param secretIdentifier The secret URL / identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretIdentifier(String secretIdentifier) {
             return secretIdentifier(Output.of(secretIdentifier));
         }

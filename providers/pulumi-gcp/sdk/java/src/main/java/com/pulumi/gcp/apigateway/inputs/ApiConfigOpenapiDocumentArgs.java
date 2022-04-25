@@ -21,6 +21,11 @@ public final class ApiConfigOpenapiDocumentArgs extends com.pulumi.resources.Res
     @Import(name="document", required=true)
     private Output<ApiConfigOpenapiDocumentDocumentArgs> document;
 
+    /**
+     * @return The OpenAPI Specification document file.
+     * Structure is documented below.
+     * 
+     */
     public Output<ApiConfigOpenapiDocumentDocumentArgs> document() {
         return this.document;
     }
@@ -49,11 +54,25 @@ public final class ApiConfigOpenapiDocumentArgs extends com.pulumi.resources.Res
             $ = new ApiConfigOpenapiDocumentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param document The OpenAPI Specification document file.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder document(Output<ApiConfigOpenapiDocumentDocumentArgs> document) {
             $.document = document;
             return this;
         }
 
+        /**
+         * @param document The OpenAPI Specification document file.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder document(ApiConfigOpenapiDocumentDocumentArgs document) {
             return document(Output.of(document));
         }

@@ -23,6 +23,10 @@ public final class GoogleCloudMlV1__ManualScalingResponse extends com.pulumi.res
     @Import(name="nodes", required=true)
     private Integer nodes;
 
+    /**
+     * @return The number of nodes to allocate for this model. These nodes are always up, starting from the time the model is deployed, so the cost of operating this model will be proportional to `nodes` * number of hours since last billing cycle plus the cost for each prediction performed.
+     * 
+     */
     public Integer nodes() {
         return this.nodes;
     }
@@ -51,6 +55,12 @@ public final class GoogleCloudMlV1__ManualScalingResponse extends com.pulumi.res
             $ = new GoogleCloudMlV1__ManualScalingResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param nodes The number of nodes to allocate for this model. These nodes are always up, starting from the time the model is deployed, so the cost of operating this model will be proportional to `nodes` * number of hours since last billing cycle plus the cost for each prediction performed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodes(Integer nodes) {
             $.nodes = nodes;
             return this;

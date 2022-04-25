@@ -20,6 +20,10 @@ public final class PolicyRestorePolicyArgs extends com.pulumi.resources.Resource
     @Import(name="default", required=true)
     private Output<Boolean> default_;
 
+    /**
+     * @return May only be set to true. If set, then the default Policy is restored.
+     * 
+     */
     public Output<Boolean> default_() {
         return this.default_;
     }
@@ -48,11 +52,23 @@ public final class PolicyRestorePolicyArgs extends com.pulumi.resources.Resource
             $ = new PolicyRestorePolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param default_ May only be set to true. If set, then the default Policy is restored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder default_(Output<Boolean> default_) {
             $.default_ = default_;
             return this;
         }
 
+        /**
+         * @param default_ May only be set to true. If set, then the default Policy is restored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder default_(Boolean default_) {
             return default_(Output.of(default_));
         }

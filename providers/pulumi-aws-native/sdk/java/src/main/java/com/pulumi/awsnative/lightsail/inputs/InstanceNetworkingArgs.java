@@ -35,6 +35,10 @@ public final class InstanceNetworkingArgs extends com.pulumi.resources.ResourceA
     @Import(name="ports", required=true)
     private Output<List<InstancePortArgs>> ports;
 
+    /**
+     * @return Ports to the Instance.
+     * 
+     */
     public Output<List<InstancePortArgs>> ports() {
         return this.ports;
     }
@@ -73,15 +77,33 @@ public final class InstanceNetworkingArgs extends com.pulumi.resources.ResourceA
             return monthlyTransfer(Output.of(monthlyTransfer));
         }
 
+        /**
+         * @param ports Ports to the Instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ports(Output<List<InstancePortArgs>> ports) {
             $.ports = ports;
             return this;
         }
 
+        /**
+         * @param ports Ports to the Instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ports(List<InstancePortArgs> ports) {
             return ports(Output.of(ports));
         }
 
+        /**
+         * @param ports Ports to the Instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ports(InstancePortArgs... ports) {
             return ports(List.of(ports));
         }

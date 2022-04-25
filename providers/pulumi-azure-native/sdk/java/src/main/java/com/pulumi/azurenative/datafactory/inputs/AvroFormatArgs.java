@@ -28,6 +28,10 @@ public final class AvroFormatArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deserializer")
     private @Nullable Output<Object> deserializer;
 
+    /**
+     * @return Deserializer. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> deserializer() {
         return Optional.ofNullable(this.deserializer);
     }
@@ -39,6 +43,10 @@ public final class AvroFormatArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serializer")
     private @Nullable Output<Object> serializer;
 
+    /**
+     * @return Serializer. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> serializer() {
         return Optional.ofNullable(this.serializer);
     }
@@ -51,6 +59,11 @@ public final class AvroFormatArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Type of dataset storage format.
+     * Expected value is &#39;AvroFormat&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -81,29 +94,67 @@ public final class AvroFormatArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AvroFormatArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deserializer Deserializer. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder deserializer(@Nullable Output<Object> deserializer) {
             $.deserializer = deserializer;
             return this;
         }
 
+        /**
+         * @param deserializer Deserializer. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder deserializer(Object deserializer) {
             return deserializer(Output.of(deserializer));
         }
 
+        /**
+         * @param serializer Serializer. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder serializer(@Nullable Output<Object> serializer) {
             $.serializer = serializer;
             return this;
         }
 
+        /**
+         * @param serializer Serializer. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder serializer(Object serializer) {
             return serializer(Output.of(serializer));
         }
 
+        /**
+         * @param type Type of dataset storage format.
+         * Expected value is &#39;AvroFormat&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of dataset storage format.
+         * Expected value is &#39;AvroFormat&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

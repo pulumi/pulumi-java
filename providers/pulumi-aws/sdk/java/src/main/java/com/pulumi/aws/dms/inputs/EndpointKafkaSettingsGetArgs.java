@@ -24,6 +24,10 @@ public final class EndpointKafkaSettingsGetArgs extends com.pulumi.resources.Res
     @Import(name="broker", required=true)
     private Output<String> broker;
 
+    /**
+     * @return Kafka broker location. Specify in the form broker-hostname-or-ip:port.
+     * 
+     */
     public Output<String> broker() {
         return this.broker;
     }
@@ -35,6 +39,10 @@ public final class EndpointKafkaSettingsGetArgs extends com.pulumi.resources.Res
     @Import(name="includeControlDetails")
     private @Nullable Output<Boolean> includeControlDetails;
 
+    /**
+     * @return Shows detailed control information for table definition, column definition, and table and column changes in the Kafka message output. The default is `false`.
+     * 
+     */
     public Optional<Output<Boolean>> includeControlDetails() {
         return Optional.ofNullable(this.includeControlDetails);
     }
@@ -46,6 +54,10 @@ public final class EndpointKafkaSettingsGetArgs extends com.pulumi.resources.Res
     @Import(name="includeNullAndEmpty")
     private @Nullable Output<Boolean> includeNullAndEmpty;
 
+    /**
+     * @return Include NULL and empty columns for records migrated to the endpoint. The default is `false`.
+     * 
+     */
     public Optional<Output<Boolean>> includeNullAndEmpty() {
         return Optional.ofNullable(this.includeNullAndEmpty);
     }
@@ -57,6 +69,10 @@ public final class EndpointKafkaSettingsGetArgs extends com.pulumi.resources.Res
     @Import(name="includePartitionValue")
     private @Nullable Output<Boolean> includePartitionValue;
 
+    /**
+     * @return Shows the partition value within the Kafka message output unless the partition type is `schema-table-type`. The default is `false`.
+     * 
+     */
     public Optional<Output<Boolean>> includePartitionValue() {
         return Optional.ofNullable(this.includePartitionValue);
     }
@@ -68,6 +84,10 @@ public final class EndpointKafkaSettingsGetArgs extends com.pulumi.resources.Res
     @Import(name="includeTableAlterOperations")
     private @Nullable Output<Boolean> includeTableAlterOperations;
 
+    /**
+     * @return Includes any data definition language (DDL) operations that change the table in the control data, such as `rename-table`, `drop-table`, `add-column`, `drop-column`, and `rename-column`. The default is `false`.
+     * 
+     */
     public Optional<Output<Boolean>> includeTableAlterOperations() {
         return Optional.ofNullable(this.includeTableAlterOperations);
     }
@@ -79,6 +99,10 @@ public final class EndpointKafkaSettingsGetArgs extends com.pulumi.resources.Res
     @Import(name="includeTransactionDetails")
     private @Nullable Output<Boolean> includeTransactionDetails;
 
+    /**
+     * @return Provides detailed transaction information from the source database. This information includes a commit timestamp, a log position, and values for `transaction_id`, previous `transaction_id`, and `transaction_record_id` (the record offset within a transaction). The default is `false`.
+     * 
+     */
     public Optional<Output<Boolean>> includeTransactionDetails() {
         return Optional.ofNullable(this.includeTransactionDetails);
     }
@@ -90,6 +114,10 @@ public final class EndpointKafkaSettingsGetArgs extends com.pulumi.resources.Res
     @Import(name="messageFormat")
     private @Nullable Output<String> messageFormat;
 
+    /**
+     * @return The output format for the records created on the endpoint. The message format is `JSON` (default) or `JSON_UNFORMATTED` (a single line with no tab).
+     * 
+     */
     public Optional<Output<String>> messageFormat() {
         return Optional.ofNullable(this.messageFormat);
     }
@@ -101,6 +129,10 @@ public final class EndpointKafkaSettingsGetArgs extends com.pulumi.resources.Res
     @Import(name="messageMaxBytes")
     private @Nullable Output<Integer> messageMaxBytes;
 
+    /**
+     * @return The maximum size in bytes for records created on the endpoint The default is `1,000,000`.
+     * 
+     */
     public Optional<Output<Integer>> messageMaxBytes() {
         return Optional.ofNullable(this.messageMaxBytes);
     }
@@ -112,6 +144,10 @@ public final class EndpointKafkaSettingsGetArgs extends com.pulumi.resources.Res
     @Import(name="noHexPrefix")
     private @Nullable Output<Boolean> noHexPrefix;
 
+    /**
+     * @return Set this optional parameter to true to avoid adding a &#39;0x&#39; prefix to raw data in hexadecimal format. For example, by default, AWS DMS adds a &#39;0x&#39; prefix to the LOB column type in hexadecimal format moving from an Oracle source to a Kafka target. Use the `no_hex_prefix` endpoint setting to enable migration of RAW data type columns without adding the `&#39;0x&#39;` prefix.
+     * 
+     */
     public Optional<Output<Boolean>> noHexPrefix() {
         return Optional.ofNullable(this.noHexPrefix);
     }
@@ -123,6 +159,10 @@ public final class EndpointKafkaSettingsGetArgs extends com.pulumi.resources.Res
     @Import(name="partitionIncludeSchemaTable")
     private @Nullable Output<Boolean> partitionIncludeSchemaTable;
 
+    /**
+     * @return Prefixes schema and table names to partition values, when the partition type is `primary-key-type`. Doing this increases data distribution among Kafka partitions. For example, suppose that a SysBench schema has thousands of tables and each table has only limited range for a primary key. In this case, the same primary key is sent from thousands of tables to the same partition, which causes throttling. The default is `false`.
+     * 
+     */
     public Optional<Output<Boolean>> partitionIncludeSchemaTable() {
         return Optional.ofNullable(this.partitionIncludeSchemaTable);
     }
@@ -134,6 +174,10 @@ public final class EndpointKafkaSettingsGetArgs extends com.pulumi.resources.Res
     @Import(name="saslPassword")
     private @Nullable Output<String> saslPassword;
 
+    /**
+     * @return The secure password you created when you first set up your MSK cluster to validate a client identity and make an encrypted connection between server and client using SASL-SSL authentication.
+     * 
+     */
     public Optional<Output<String>> saslPassword() {
         return Optional.ofNullable(this.saslPassword);
     }
@@ -145,6 +189,10 @@ public final class EndpointKafkaSettingsGetArgs extends com.pulumi.resources.Res
     @Import(name="saslUsername")
     private @Nullable Output<String> saslUsername;
 
+    /**
+     * @return The secure user name you created when you first set up your MSK cluster to validate a client identity and make an encrypted connection between server and client using SASL-SSL authentication.
+     * 
+     */
     public Optional<Output<String>> saslUsername() {
         return Optional.ofNullable(this.saslUsername);
     }
@@ -156,6 +204,10 @@ public final class EndpointKafkaSettingsGetArgs extends com.pulumi.resources.Res
     @Import(name="securityProtocol")
     private @Nullable Output<String> securityProtocol;
 
+    /**
+     * @return Set secure connection to a Kafka target endpoint using Transport Layer Security (TLS). Options include `ssl-encryption`, `ssl-authentication`, and `sasl-ssl`. `sasl-ssl` requires `sasl_username` and `sasl_password`.
+     * 
+     */
     public Optional<Output<String>> securityProtocol() {
         return Optional.ofNullable(this.securityProtocol);
     }
@@ -167,6 +219,10 @@ public final class EndpointKafkaSettingsGetArgs extends com.pulumi.resources.Res
     @Import(name="sslCaCertificateArn")
     private @Nullable Output<String> sslCaCertificateArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) for the private certificate authority (CA) cert that AWS DMS uses to securely connect to your Kafka target endpoint.
+     * 
+     */
     public Optional<Output<String>> sslCaCertificateArn() {
         return Optional.ofNullable(this.sslCaCertificateArn);
     }
@@ -178,6 +234,10 @@ public final class EndpointKafkaSettingsGetArgs extends com.pulumi.resources.Res
     @Import(name="sslClientCertificateArn")
     private @Nullable Output<String> sslClientCertificateArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the client certificate used to securely connect to a Kafka target endpoint.
+     * 
+     */
     public Optional<Output<String>> sslClientCertificateArn() {
         return Optional.ofNullable(this.sslClientCertificateArn);
     }
@@ -189,6 +249,10 @@ public final class EndpointKafkaSettingsGetArgs extends com.pulumi.resources.Res
     @Import(name="sslClientKeyArn")
     private @Nullable Output<String> sslClientKeyArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) for the client private key used to securely connect to a Kafka target endpoint.
+     * 
+     */
     public Optional<Output<String>> sslClientKeyArn() {
         return Optional.ofNullable(this.sslClientKeyArn);
     }
@@ -200,6 +264,10 @@ public final class EndpointKafkaSettingsGetArgs extends com.pulumi.resources.Res
     @Import(name="sslClientKeyPassword")
     private @Nullable Output<String> sslClientKeyPassword;
 
+    /**
+     * @return The password for the client private key used to securely connect to a Kafka target endpoint.
+     * 
+     */
     public Optional<Output<String>> sslClientKeyPassword() {
         return Optional.ofNullable(this.sslClientKeyPassword);
     }
@@ -211,6 +279,10 @@ public final class EndpointKafkaSettingsGetArgs extends com.pulumi.resources.Res
     @Import(name="topic")
     private @Nullable Output<String> topic;
 
+    /**
+     * @return Kafka topic for migration. Defaults to `kafka-default-topic`.
+     * 
+     */
     public Optional<Output<String>> topic() {
         return Optional.ofNullable(this.topic);
     }
@@ -256,164 +328,380 @@ public final class EndpointKafkaSettingsGetArgs extends com.pulumi.resources.Res
             $ = new EndpointKafkaSettingsGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param broker Kafka broker location. Specify in the form broker-hostname-or-ip:port.
+         * 
+         * @return builder
+         * 
+         */
         public Builder broker(Output<String> broker) {
             $.broker = broker;
             return this;
         }
 
+        /**
+         * @param broker Kafka broker location. Specify in the form broker-hostname-or-ip:port.
+         * 
+         * @return builder
+         * 
+         */
         public Builder broker(String broker) {
             return broker(Output.of(broker));
         }
 
+        /**
+         * @param includeControlDetails Shows detailed control information for table definition, column definition, and table and column changes in the Kafka message output. The default is `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeControlDetails(@Nullable Output<Boolean> includeControlDetails) {
             $.includeControlDetails = includeControlDetails;
             return this;
         }
 
+        /**
+         * @param includeControlDetails Shows detailed control information for table definition, column definition, and table and column changes in the Kafka message output. The default is `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeControlDetails(Boolean includeControlDetails) {
             return includeControlDetails(Output.of(includeControlDetails));
         }
 
+        /**
+         * @param includeNullAndEmpty Include NULL and empty columns for records migrated to the endpoint. The default is `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeNullAndEmpty(@Nullable Output<Boolean> includeNullAndEmpty) {
             $.includeNullAndEmpty = includeNullAndEmpty;
             return this;
         }
 
+        /**
+         * @param includeNullAndEmpty Include NULL and empty columns for records migrated to the endpoint. The default is `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeNullAndEmpty(Boolean includeNullAndEmpty) {
             return includeNullAndEmpty(Output.of(includeNullAndEmpty));
         }
 
+        /**
+         * @param includePartitionValue Shows the partition value within the Kafka message output unless the partition type is `schema-table-type`. The default is `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includePartitionValue(@Nullable Output<Boolean> includePartitionValue) {
             $.includePartitionValue = includePartitionValue;
             return this;
         }
 
+        /**
+         * @param includePartitionValue Shows the partition value within the Kafka message output unless the partition type is `schema-table-type`. The default is `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includePartitionValue(Boolean includePartitionValue) {
             return includePartitionValue(Output.of(includePartitionValue));
         }
 
+        /**
+         * @param includeTableAlterOperations Includes any data definition language (DDL) operations that change the table in the control data, such as `rename-table`, `drop-table`, `add-column`, `drop-column`, and `rename-column`. The default is `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeTableAlterOperations(@Nullable Output<Boolean> includeTableAlterOperations) {
             $.includeTableAlterOperations = includeTableAlterOperations;
             return this;
         }
 
+        /**
+         * @param includeTableAlterOperations Includes any data definition language (DDL) operations that change the table in the control data, such as `rename-table`, `drop-table`, `add-column`, `drop-column`, and `rename-column`. The default is `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeTableAlterOperations(Boolean includeTableAlterOperations) {
             return includeTableAlterOperations(Output.of(includeTableAlterOperations));
         }
 
+        /**
+         * @param includeTransactionDetails Provides detailed transaction information from the source database. This information includes a commit timestamp, a log position, and values for `transaction_id`, previous `transaction_id`, and `transaction_record_id` (the record offset within a transaction). The default is `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeTransactionDetails(@Nullable Output<Boolean> includeTransactionDetails) {
             $.includeTransactionDetails = includeTransactionDetails;
             return this;
         }
 
+        /**
+         * @param includeTransactionDetails Provides detailed transaction information from the source database. This information includes a commit timestamp, a log position, and values for `transaction_id`, previous `transaction_id`, and `transaction_record_id` (the record offset within a transaction). The default is `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeTransactionDetails(Boolean includeTransactionDetails) {
             return includeTransactionDetails(Output.of(includeTransactionDetails));
         }
 
+        /**
+         * @param messageFormat The output format for the records created on the endpoint. The message format is `JSON` (default) or `JSON_UNFORMATTED` (a single line with no tab).
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageFormat(@Nullable Output<String> messageFormat) {
             $.messageFormat = messageFormat;
             return this;
         }
 
+        /**
+         * @param messageFormat The output format for the records created on the endpoint. The message format is `JSON` (default) or `JSON_UNFORMATTED` (a single line with no tab).
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageFormat(String messageFormat) {
             return messageFormat(Output.of(messageFormat));
         }
 
+        /**
+         * @param messageMaxBytes The maximum size in bytes for records created on the endpoint The default is `1,000,000`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageMaxBytes(@Nullable Output<Integer> messageMaxBytes) {
             $.messageMaxBytes = messageMaxBytes;
             return this;
         }
 
+        /**
+         * @param messageMaxBytes The maximum size in bytes for records created on the endpoint The default is `1,000,000`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageMaxBytes(Integer messageMaxBytes) {
             return messageMaxBytes(Output.of(messageMaxBytes));
         }
 
+        /**
+         * @param noHexPrefix Set this optional parameter to true to avoid adding a &#39;0x&#39; prefix to raw data in hexadecimal format. For example, by default, AWS DMS adds a &#39;0x&#39; prefix to the LOB column type in hexadecimal format moving from an Oracle source to a Kafka target. Use the `no_hex_prefix` endpoint setting to enable migration of RAW data type columns without adding the `&#39;0x&#39;` prefix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder noHexPrefix(@Nullable Output<Boolean> noHexPrefix) {
             $.noHexPrefix = noHexPrefix;
             return this;
         }
 
+        /**
+         * @param noHexPrefix Set this optional parameter to true to avoid adding a &#39;0x&#39; prefix to raw data in hexadecimal format. For example, by default, AWS DMS adds a &#39;0x&#39; prefix to the LOB column type in hexadecimal format moving from an Oracle source to a Kafka target. Use the `no_hex_prefix` endpoint setting to enable migration of RAW data type columns without adding the `&#39;0x&#39;` prefix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder noHexPrefix(Boolean noHexPrefix) {
             return noHexPrefix(Output.of(noHexPrefix));
         }
 
+        /**
+         * @param partitionIncludeSchemaTable Prefixes schema and table names to partition values, when the partition type is `primary-key-type`. Doing this increases data distribution among Kafka partitions. For example, suppose that a SysBench schema has thousands of tables and each table has only limited range for a primary key. In this case, the same primary key is sent from thousands of tables to the same partition, which causes throttling. The default is `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionIncludeSchemaTable(@Nullable Output<Boolean> partitionIncludeSchemaTable) {
             $.partitionIncludeSchemaTable = partitionIncludeSchemaTable;
             return this;
         }
 
+        /**
+         * @param partitionIncludeSchemaTable Prefixes schema and table names to partition values, when the partition type is `primary-key-type`. Doing this increases data distribution among Kafka partitions. For example, suppose that a SysBench schema has thousands of tables and each table has only limited range for a primary key. In this case, the same primary key is sent from thousands of tables to the same partition, which causes throttling. The default is `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionIncludeSchemaTable(Boolean partitionIncludeSchemaTable) {
             return partitionIncludeSchemaTable(Output.of(partitionIncludeSchemaTable));
         }
 
+        /**
+         * @param saslPassword The secure password you created when you first set up your MSK cluster to validate a client identity and make an encrypted connection between server and client using SASL-SSL authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder saslPassword(@Nullable Output<String> saslPassword) {
             $.saslPassword = saslPassword;
             return this;
         }
 
+        /**
+         * @param saslPassword The secure password you created when you first set up your MSK cluster to validate a client identity and make an encrypted connection between server and client using SASL-SSL authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder saslPassword(String saslPassword) {
             return saslPassword(Output.of(saslPassword));
         }
 
+        /**
+         * @param saslUsername The secure user name you created when you first set up your MSK cluster to validate a client identity and make an encrypted connection between server and client using SASL-SSL authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder saslUsername(@Nullable Output<String> saslUsername) {
             $.saslUsername = saslUsername;
             return this;
         }
 
+        /**
+         * @param saslUsername The secure user name you created when you first set up your MSK cluster to validate a client identity and make an encrypted connection between server and client using SASL-SSL authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder saslUsername(String saslUsername) {
             return saslUsername(Output.of(saslUsername));
         }
 
+        /**
+         * @param securityProtocol Set secure connection to a Kafka target endpoint using Transport Layer Security (TLS). Options include `ssl-encryption`, `ssl-authentication`, and `sasl-ssl`. `sasl-ssl` requires `sasl_username` and `sasl_password`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityProtocol(@Nullable Output<String> securityProtocol) {
             $.securityProtocol = securityProtocol;
             return this;
         }
 
+        /**
+         * @param securityProtocol Set secure connection to a Kafka target endpoint using Transport Layer Security (TLS). Options include `ssl-encryption`, `ssl-authentication`, and `sasl-ssl`. `sasl-ssl` requires `sasl_username` and `sasl_password`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityProtocol(String securityProtocol) {
             return securityProtocol(Output.of(securityProtocol));
         }
 
+        /**
+         * @param sslCaCertificateArn The Amazon Resource Name (ARN) for the private certificate authority (CA) cert that AWS DMS uses to securely connect to your Kafka target endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sslCaCertificateArn(@Nullable Output<String> sslCaCertificateArn) {
             $.sslCaCertificateArn = sslCaCertificateArn;
             return this;
         }
 
+        /**
+         * @param sslCaCertificateArn The Amazon Resource Name (ARN) for the private certificate authority (CA) cert that AWS DMS uses to securely connect to your Kafka target endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sslCaCertificateArn(String sslCaCertificateArn) {
             return sslCaCertificateArn(Output.of(sslCaCertificateArn));
         }
 
+        /**
+         * @param sslClientCertificateArn The Amazon Resource Name (ARN) of the client certificate used to securely connect to a Kafka target endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sslClientCertificateArn(@Nullable Output<String> sslClientCertificateArn) {
             $.sslClientCertificateArn = sslClientCertificateArn;
             return this;
         }
 
+        /**
+         * @param sslClientCertificateArn The Amazon Resource Name (ARN) of the client certificate used to securely connect to a Kafka target endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sslClientCertificateArn(String sslClientCertificateArn) {
             return sslClientCertificateArn(Output.of(sslClientCertificateArn));
         }
 
+        /**
+         * @param sslClientKeyArn The Amazon Resource Name (ARN) for the client private key used to securely connect to a Kafka target endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sslClientKeyArn(@Nullable Output<String> sslClientKeyArn) {
             $.sslClientKeyArn = sslClientKeyArn;
             return this;
         }
 
+        /**
+         * @param sslClientKeyArn The Amazon Resource Name (ARN) for the client private key used to securely connect to a Kafka target endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sslClientKeyArn(String sslClientKeyArn) {
             return sslClientKeyArn(Output.of(sslClientKeyArn));
         }
 
+        /**
+         * @param sslClientKeyPassword The password for the client private key used to securely connect to a Kafka target endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sslClientKeyPassword(@Nullable Output<String> sslClientKeyPassword) {
             $.sslClientKeyPassword = sslClientKeyPassword;
             return this;
         }
 
+        /**
+         * @param sslClientKeyPassword The password for the client private key used to securely connect to a Kafka target endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sslClientKeyPassword(String sslClientKeyPassword) {
             return sslClientKeyPassword(Output.of(sslClientKeyPassword));
         }
 
+        /**
+         * @param topic Kafka topic for migration. Defaults to `kafka-default-topic`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topic(@Nullable Output<String> topic) {
             $.topic = topic;
             return this;
         }
 
+        /**
+         * @param topic Kafka topic for migration. Defaults to `kafka-default-topic`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topic(String topic) {
             return topic(Output.of(topic));
         }

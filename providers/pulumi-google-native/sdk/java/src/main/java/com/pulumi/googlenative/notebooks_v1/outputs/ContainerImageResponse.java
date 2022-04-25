@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class ContainerImageResponse {
     /**
-     * The path to the container image repository. For example: `gcr.io/{project_id}/{image_name}`
+     * @return The path to the container image repository. For example: `gcr.io/{project_id}/{image_name}`
      * 
      */
     private final String repository;
     /**
-     * The tag of the container image. If not specified, this defaults to the latest tag.
+     * @return The tag of the container image. If not specified, this defaults to the latest tag.
      * 
      */
     private final String tag;
@@ -29,16 +29,16 @@ public final class ContainerImageResponse {
     }
 
     /**
-     * The path to the container image repository. For example: `gcr.io/{project_id}/{image_name}`
+     * @return The path to the container image repository. For example: `gcr.io/{project_id}/{image_name}`
      * 
-    */
+     */
     public String repository() {
         return this.repository;
     }
     /**
-     * The tag of the container image. If not specified, this defaults to the latest tag.
+     * @return The tag of the container image. If not specified, this defaults to the latest tag.
      * 
-    */
+     */
     public String tag() {
         return this.tag;
     }

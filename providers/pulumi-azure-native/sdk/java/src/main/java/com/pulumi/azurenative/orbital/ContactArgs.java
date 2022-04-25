@@ -23,6 +23,10 @@ public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="contactName")
     private @Nullable Output<String> contactName;
 
+    /**
+     * @return Contact Name
+     * 
+     */
     public Optional<Output<String>> contactName() {
         return Optional.ofNullable(this.contactName);
     }
@@ -34,6 +38,10 @@ public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="contactProfile", required=true)
     private Output<ResourceReferenceArgs> contactProfile;
 
+    /**
+     * @return The reference to the contact profile resource.
+     * 
+     */
     public Output<ResourceReferenceArgs> contactProfile() {
         return this.contactProfile;
     }
@@ -45,6 +53,10 @@ public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="groundStationName", required=true)
     private Output<String> groundStationName;
 
+    /**
+     * @return Azure Ground Station name.
+     * 
+     */
     public Output<String> groundStationName() {
         return this.groundStationName;
     }
@@ -56,6 +68,10 @@ public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="reservationEndTime", required=true)
     private Output<String> reservationEndTime;
 
+    /**
+     * @return Reservation end time of a contact.
+     * 
+     */
     public Output<String> reservationEndTime() {
         return this.reservationEndTime;
     }
@@ -67,6 +83,10 @@ public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="reservationStartTime", required=true)
     private Output<String> reservationStartTime;
 
+    /**
+     * @return Reservation start time of a contact.
+     * 
+     */
     public Output<String> reservationStartTime() {
         return this.reservationStartTime;
     }
@@ -78,6 +98,10 @@ public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -89,6 +113,10 @@ public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="spacecraftName", required=true)
     private Output<String> spacecraftName;
 
+    /**
+     * @return Spacecraft ID
+     * 
+     */
     public Output<String> spacecraftName() {
         return this.spacecraftName;
     }
@@ -123,65 +151,149 @@ public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ContactArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param contactName Contact Name
+         * 
+         * @return builder
+         * 
+         */
         public Builder contactName(@Nullable Output<String> contactName) {
             $.contactName = contactName;
             return this;
         }
 
+        /**
+         * @param contactName Contact Name
+         * 
+         * @return builder
+         * 
+         */
         public Builder contactName(String contactName) {
             return contactName(Output.of(contactName));
         }
 
+        /**
+         * @param contactProfile The reference to the contact profile resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contactProfile(Output<ResourceReferenceArgs> contactProfile) {
             $.contactProfile = contactProfile;
             return this;
         }
 
+        /**
+         * @param contactProfile The reference to the contact profile resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contactProfile(ResourceReferenceArgs contactProfile) {
             return contactProfile(Output.of(contactProfile));
         }
 
+        /**
+         * @param groundStationName Azure Ground Station name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groundStationName(Output<String> groundStationName) {
             $.groundStationName = groundStationName;
             return this;
         }
 
+        /**
+         * @param groundStationName Azure Ground Station name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groundStationName(String groundStationName) {
             return groundStationName(Output.of(groundStationName));
         }
 
+        /**
+         * @param reservationEndTime Reservation end time of a contact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reservationEndTime(Output<String> reservationEndTime) {
             $.reservationEndTime = reservationEndTime;
             return this;
         }
 
+        /**
+         * @param reservationEndTime Reservation end time of a contact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reservationEndTime(String reservationEndTime) {
             return reservationEndTime(Output.of(reservationEndTime));
         }
 
+        /**
+         * @param reservationStartTime Reservation start time of a contact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reservationStartTime(Output<String> reservationStartTime) {
             $.reservationStartTime = reservationStartTime;
             return this;
         }
 
+        /**
+         * @param reservationStartTime Reservation start time of a contact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reservationStartTime(String reservationStartTime) {
             return reservationStartTime(Output.of(reservationStartTime));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param spacecraftName Spacecraft ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder spacecraftName(Output<String> spacecraftName) {
             $.spacecraftName = spacecraftName;
             return this;
         }
 
+        /**
+         * @param spacecraftName Spacecraft ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder spacecraftName(String spacecraftName) {
             return spacecraftName(Output.of(spacecraftName));
         }

@@ -22,6 +22,10 @@ public final class StandardAppVersionLibraryGetArgs extends com.pulumi.resources
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -33,6 +37,10 @@ public final class StandardAppVersionLibraryGetArgs extends com.pulumi.resources
     @Import(name="version")
     private @Nullable Output<String> version;
 
+    /**
+     * @return Version of the library to select, or &#34;latest&#34;.
+     * 
+     */
     public Optional<Output<String>> version() {
         return Optional.ofNullable(this.version);
     }
@@ -62,20 +70,44 @@ public final class StandardAppVersionLibraryGetArgs extends com.pulumi.resources
             $ = new StandardAppVersionLibraryGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param version Version of the library to select, or &#34;latest&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable Output<String> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version Version of the library to select, or &#34;latest&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             return version(Output.of(version));
         }

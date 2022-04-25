@@ -26,6 +26,10 @@ public final class AppInsightsPropertiesArgs extends com.pulumi.resources.Resour
     @Import(name="resourceId")
     private @Nullable Output<String> resourceId;
 
+    /**
+     * @return ARM resource ID of the App Insights.
+     * 
+     */
     public Optional<Output<String>> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
@@ -54,11 +58,23 @@ public final class AppInsightsPropertiesArgs extends com.pulumi.resources.Resour
             $ = new AppInsightsPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceId ARM resource ID of the App Insights.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(@Nullable Output<String> resourceId) {
             $.resourceId = resourceId;
             return this;
         }
 
+        /**
+         * @param resourceId ARM resource ID of the App Insights.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(String resourceId) {
             return resourceId(Output.of(resourceId));
         }

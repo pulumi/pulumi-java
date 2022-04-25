@@ -12,12 +12,12 @@ import java.util.Objects;
 @CustomType
 public final class SpokeLinkedVpnTunnels {
     /**
-     * A value that controls whether site-to-site data transfer is enabled for these resources. Note that data transfer is available only in supported locations.
+     * @return A value that controls whether site-to-site data transfer is enabled for these resources. Note that data transfer is available only in supported locations.
      * 
      */
     private final Boolean siteToSiteDataTransfer;
     /**
-     * The URIs of linked VPN tunnel resources.
+     * @return The URIs of linked VPN tunnel resources.
      * 
      */
     private final List<String> uris;
@@ -31,16 +31,16 @@ public final class SpokeLinkedVpnTunnels {
     }
 
     /**
-     * A value that controls whether site-to-site data transfer is enabled for these resources. Note that data transfer is available only in supported locations.
+     * @return A value that controls whether site-to-site data transfer is enabled for these resources. Note that data transfer is available only in supported locations.
      * 
-    */
+     */
     public Boolean siteToSiteDataTransfer() {
         return this.siteToSiteDataTransfer;
     }
     /**
-     * The URIs of linked VPN tunnel resources.
+     * @return The URIs of linked VPN tunnel resources.
      * 
-    */
+     */
     public List<String> uris() {
         return this.uris;
     }

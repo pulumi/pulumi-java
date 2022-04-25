@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class ClientAccessRightResponse {
     /**
-     * Type of access to be allowed for the client.
+     * @return Type of access to be allowed for the client.
      * 
      */
     private final String accessPermission;
     /**
-     * IP of the client.
+     * @return IP of the client.
      * 
      */
     private final String client;
@@ -29,16 +29,16 @@ public final class ClientAccessRightResponse {
     }
 
     /**
-     * Type of access to be allowed for the client.
+     * @return Type of access to be allowed for the client.
      * 
-    */
+     */
     public String accessPermission() {
         return this.accessPermission;
     }
     /**
-     * IP of the client.
+     * @return IP of the client.
      * 
-    */
+     */
     public String client() {
         return this.client;
     }

@@ -23,6 +23,10 @@ public final class PrivateLinkServiceConnectionStatePropertyResponse extends com
     @Import(name="actionsRequired", required=true)
     private String actionsRequired;
 
+    /**
+     * @return The actions required for private link service connection.
+     * 
+     */
     public String actionsRequired() {
         return this.actionsRequired;
     }
@@ -34,6 +38,10 @@ public final class PrivateLinkServiceConnectionStatePropertyResponse extends com
     @Import(name="description", required=true)
     private String description;
 
+    /**
+     * @return The private link service connection description.
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -45,6 +53,10 @@ public final class PrivateLinkServiceConnectionStatePropertyResponse extends com
     @Import(name="status", required=true)
     private String status;
 
+    /**
+     * @return The private link service connection status.
+     * 
+     */
     public String status() {
         return this.status;
     }
@@ -75,16 +87,34 @@ public final class PrivateLinkServiceConnectionStatePropertyResponse extends com
             $ = new PrivateLinkServiceConnectionStatePropertyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actionsRequired The actions required for private link service connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionsRequired(String actionsRequired) {
             $.actionsRequired = actionsRequired;
             return this;
         }
 
+        /**
+         * @param description The private link service connection description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param status The private link service connection status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             $.status = status;
             return this;

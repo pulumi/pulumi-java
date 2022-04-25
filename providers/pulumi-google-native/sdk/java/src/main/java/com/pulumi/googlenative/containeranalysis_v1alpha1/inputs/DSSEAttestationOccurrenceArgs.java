@@ -27,6 +27,10 @@ public final class DSSEAttestationOccurrenceArgs extends com.pulumi.resources.Re
     @Import(name="envelope")
     private @Nullable Output<EnvelopeArgs> envelope;
 
+    /**
+     * @return If doing something security critical, make sure to verify the signatures in this metadata.
+     * 
+     */
     public Optional<Output<EnvelopeArgs>> envelope() {
         return Optional.ofNullable(this.envelope);
     }
@@ -63,11 +67,23 @@ public final class DSSEAttestationOccurrenceArgs extends com.pulumi.resources.Re
             $ = new DSSEAttestationOccurrenceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param envelope If doing something security critical, make sure to verify the signatures in this metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder envelope(@Nullable Output<EnvelopeArgs> envelope) {
             $.envelope = envelope;
             return this;
         }
 
+        /**
+         * @param envelope If doing something security critical, make sure to verify the signatures in this metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder envelope(EnvelopeArgs envelope) {
             return envelope(Output.of(envelope));
         }

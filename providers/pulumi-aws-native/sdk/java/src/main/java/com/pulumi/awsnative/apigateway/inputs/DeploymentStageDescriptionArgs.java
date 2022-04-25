@@ -31,6 +31,10 @@ public final class DeploymentStageDescriptionArgs extends com.pulumi.resources.R
     @Import(name="accessLogSetting")
     private @Nullable Output<DeploymentAccessLogSettingArgs> accessLogSetting;
 
+    /**
+     * @return Specifies settings for logging access in this stage.
+     * 
+     */
     public Optional<Output<DeploymentAccessLogSettingArgs>> accessLogSetting() {
         return Optional.ofNullable(this.accessLogSetting);
     }
@@ -42,6 +46,10 @@ public final class DeploymentStageDescriptionArgs extends com.pulumi.resources.R
     @Import(name="cacheClusterEnabled")
     private @Nullable Output<Boolean> cacheClusterEnabled;
 
+    /**
+     * @return Indicates whether cache clustering is enabled for the stage.
+     * 
+     */
     public Optional<Output<Boolean>> cacheClusterEnabled() {
         return Optional.ofNullable(this.cacheClusterEnabled);
     }
@@ -53,6 +61,10 @@ public final class DeploymentStageDescriptionArgs extends com.pulumi.resources.R
     @Import(name="cacheClusterSize")
     private @Nullable Output<String> cacheClusterSize;
 
+    /**
+     * @return The size of the stage&#39;s cache cluster.
+     * 
+     */
     public Optional<Output<String>> cacheClusterSize() {
         return Optional.ofNullable(this.cacheClusterSize);
     }
@@ -64,6 +76,10 @@ public final class DeploymentStageDescriptionArgs extends com.pulumi.resources.R
     @Import(name="cacheDataEncrypted")
     private @Nullable Output<Boolean> cacheDataEncrypted;
 
+    /**
+     * @return The time-to-live (TTL) period, in seconds, that specifies how long API Gateway caches responses.
+     * 
+     */
     public Optional<Output<Boolean>> cacheDataEncrypted() {
         return Optional.ofNullable(this.cacheDataEncrypted);
     }
@@ -75,6 +91,10 @@ public final class DeploymentStageDescriptionArgs extends com.pulumi.resources.R
     @Import(name="cacheTtlInSeconds")
     private @Nullable Output<Integer> cacheTtlInSeconds;
 
+    /**
+     * @return The time-to-live (TTL) period, in seconds, that specifies how long API Gateway caches responses.
+     * 
+     */
     public Optional<Output<Integer>> cacheTtlInSeconds() {
         return Optional.ofNullable(this.cacheTtlInSeconds);
     }
@@ -86,6 +106,10 @@ public final class DeploymentStageDescriptionArgs extends com.pulumi.resources.R
     @Import(name="cachingEnabled")
     private @Nullable Output<Boolean> cachingEnabled;
 
+    /**
+     * @return Indicates whether responses are cached and returned for requests. You must enable a cache cluster on the stage to cache responses.
+     * 
+     */
     public Optional<Output<Boolean>> cachingEnabled() {
         return Optional.ofNullable(this.cachingEnabled);
     }
@@ -97,6 +121,10 @@ public final class DeploymentStageDescriptionArgs extends com.pulumi.resources.R
     @Import(name="canarySetting")
     private @Nullable Output<DeploymentCanarySettingArgs> canarySetting;
 
+    /**
+     * @return Specifies settings for the canary deployment in this stage.
+     * 
+     */
     public Optional<Output<DeploymentCanarySettingArgs>> canarySetting() {
         return Optional.ofNullable(this.canarySetting);
     }
@@ -108,6 +136,10 @@ public final class DeploymentStageDescriptionArgs extends com.pulumi.resources.R
     @Import(name="clientCertificateId")
     private @Nullable Output<String> clientCertificateId;
 
+    /**
+     * @return The identifier of the client certificate that API Gateway uses to call your integration endpoints in the stage.
+     * 
+     */
     public Optional<Output<String>> clientCertificateId() {
         return Optional.ofNullable(this.clientCertificateId);
     }
@@ -119,6 +151,10 @@ public final class DeploymentStageDescriptionArgs extends com.pulumi.resources.R
     @Import(name="dataTraceEnabled")
     private @Nullable Output<Boolean> dataTraceEnabled;
 
+    /**
+     * @return Indicates whether data trace logging is enabled for methods in the stage. API Gateway pushes these logs to Amazon CloudWatch Logs.
+     * 
+     */
     public Optional<Output<Boolean>> dataTraceEnabled() {
         return Optional.ofNullable(this.dataTraceEnabled);
     }
@@ -130,6 +166,10 @@ public final class DeploymentStageDescriptionArgs extends com.pulumi.resources.R
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A description of the purpose of the stage.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -141,6 +181,10 @@ public final class DeploymentStageDescriptionArgs extends com.pulumi.resources.R
     @Import(name="documentationVersion")
     private @Nullable Output<String> documentationVersion;
 
+    /**
+     * @return The version identifier of the API documentation snapshot.
+     * 
+     */
     public Optional<Output<String>> documentationVersion() {
         return Optional.ofNullable(this.documentationVersion);
     }
@@ -152,6 +196,10 @@ public final class DeploymentStageDescriptionArgs extends com.pulumi.resources.R
     @Import(name="loggingLevel")
     private @Nullable Output<String> loggingLevel;
 
+    /**
+     * @return The logging level for this method. For valid values, see the loggingLevel property of the Stage resource in the Amazon API Gateway API Reference.
+     * 
+     */
     public Optional<Output<String>> loggingLevel() {
         return Optional.ofNullable(this.loggingLevel);
     }
@@ -163,6 +211,10 @@ public final class DeploymentStageDescriptionArgs extends com.pulumi.resources.R
     @Import(name="methodSettings")
     private @Nullable Output<List<DeploymentMethodSettingArgs>> methodSettings;
 
+    /**
+     * @return Configures settings for all of the stage&#39;s methods.
+     * 
+     */
     public Optional<Output<List<DeploymentMethodSettingArgs>>> methodSettings() {
         return Optional.ofNullable(this.methodSettings);
     }
@@ -174,6 +226,10 @@ public final class DeploymentStageDescriptionArgs extends com.pulumi.resources.R
     @Import(name="metricsEnabled")
     private @Nullable Output<Boolean> metricsEnabled;
 
+    /**
+     * @return Indicates whether Amazon CloudWatch metrics are enabled for methods in the stage.
+     * 
+     */
     public Optional<Output<Boolean>> metricsEnabled() {
         return Optional.ofNullable(this.metricsEnabled);
     }
@@ -185,6 +241,10 @@ public final class DeploymentStageDescriptionArgs extends com.pulumi.resources.R
     @Import(name="tags")
     private @Nullable Output<List<DeploymentTagArgs>> tags;
 
+    /**
+     * @return An array of arbitrary tags (key-value pairs) to associate with the stage.
+     * 
+     */
     public Optional<Output<List<DeploymentTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -196,6 +256,10 @@ public final class DeploymentStageDescriptionArgs extends com.pulumi.resources.R
     @Import(name="throttlingBurstLimit")
     private @Nullable Output<Integer> throttlingBurstLimit;
 
+    /**
+     * @return The number of burst requests per second that API Gateway permits across all APIs, stages, and methods in your AWS account.
+     * 
+     */
     public Optional<Output<Integer>> throttlingBurstLimit() {
         return Optional.ofNullable(this.throttlingBurstLimit);
     }
@@ -207,6 +271,10 @@ public final class DeploymentStageDescriptionArgs extends com.pulumi.resources.R
     @Import(name="throttlingRateLimit")
     private @Nullable Output<Double> throttlingRateLimit;
 
+    /**
+     * @return The number of steady-state requests per second that API Gateway permits across all APIs, stages, and methods in your AWS account.
+     * 
+     */
     public Optional<Output<Double>> throttlingRateLimit() {
         return Optional.ofNullable(this.throttlingRateLimit);
     }
@@ -218,6 +286,10 @@ public final class DeploymentStageDescriptionArgs extends com.pulumi.resources.R
     @Import(name="tracingEnabled")
     private @Nullable Output<Boolean> tracingEnabled;
 
+    /**
+     * @return Specifies whether active tracing with X-ray is enabled for this stage.
+     * 
+     */
     public Optional<Output<Boolean>> tracingEnabled() {
         return Optional.ofNullable(this.tracingEnabled);
     }
@@ -229,6 +301,10 @@ public final class DeploymentStageDescriptionArgs extends com.pulumi.resources.R
     @Import(name="variables")
     private @Nullable Output<Object> variables;
 
+    /**
+     * @return A map that defines the stage variables. Variable names must consist of alphanumeric characters, and the values must match the following regular expression: [A-Za-z0-9-._~:/?#&amp;=,]+.
+     * 
+     */
     public Optional<Output<Object>> variables() {
         return Optional.ofNullable(this.variables);
     }
@@ -275,181 +351,421 @@ public final class DeploymentStageDescriptionArgs extends com.pulumi.resources.R
             $ = new DeploymentStageDescriptionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessLogSetting Specifies settings for logging access in this stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessLogSetting(@Nullable Output<DeploymentAccessLogSettingArgs> accessLogSetting) {
             $.accessLogSetting = accessLogSetting;
             return this;
         }
 
+        /**
+         * @param accessLogSetting Specifies settings for logging access in this stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessLogSetting(DeploymentAccessLogSettingArgs accessLogSetting) {
             return accessLogSetting(Output.of(accessLogSetting));
         }
 
+        /**
+         * @param cacheClusterEnabled Indicates whether cache clustering is enabled for the stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cacheClusterEnabled(@Nullable Output<Boolean> cacheClusterEnabled) {
             $.cacheClusterEnabled = cacheClusterEnabled;
             return this;
         }
 
+        /**
+         * @param cacheClusterEnabled Indicates whether cache clustering is enabled for the stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cacheClusterEnabled(Boolean cacheClusterEnabled) {
             return cacheClusterEnabled(Output.of(cacheClusterEnabled));
         }
 
+        /**
+         * @param cacheClusterSize The size of the stage&#39;s cache cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cacheClusterSize(@Nullable Output<String> cacheClusterSize) {
             $.cacheClusterSize = cacheClusterSize;
             return this;
         }
 
+        /**
+         * @param cacheClusterSize The size of the stage&#39;s cache cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cacheClusterSize(String cacheClusterSize) {
             return cacheClusterSize(Output.of(cacheClusterSize));
         }
 
+        /**
+         * @param cacheDataEncrypted The time-to-live (TTL) period, in seconds, that specifies how long API Gateway caches responses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cacheDataEncrypted(@Nullable Output<Boolean> cacheDataEncrypted) {
             $.cacheDataEncrypted = cacheDataEncrypted;
             return this;
         }
 
+        /**
+         * @param cacheDataEncrypted The time-to-live (TTL) period, in seconds, that specifies how long API Gateway caches responses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cacheDataEncrypted(Boolean cacheDataEncrypted) {
             return cacheDataEncrypted(Output.of(cacheDataEncrypted));
         }
 
+        /**
+         * @param cacheTtlInSeconds The time-to-live (TTL) period, in seconds, that specifies how long API Gateway caches responses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cacheTtlInSeconds(@Nullable Output<Integer> cacheTtlInSeconds) {
             $.cacheTtlInSeconds = cacheTtlInSeconds;
             return this;
         }
 
+        /**
+         * @param cacheTtlInSeconds The time-to-live (TTL) period, in seconds, that specifies how long API Gateway caches responses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cacheTtlInSeconds(Integer cacheTtlInSeconds) {
             return cacheTtlInSeconds(Output.of(cacheTtlInSeconds));
         }
 
+        /**
+         * @param cachingEnabled Indicates whether responses are cached and returned for requests. You must enable a cache cluster on the stage to cache responses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cachingEnabled(@Nullable Output<Boolean> cachingEnabled) {
             $.cachingEnabled = cachingEnabled;
             return this;
         }
 
+        /**
+         * @param cachingEnabled Indicates whether responses are cached and returned for requests. You must enable a cache cluster on the stage to cache responses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cachingEnabled(Boolean cachingEnabled) {
             return cachingEnabled(Output.of(cachingEnabled));
         }
 
+        /**
+         * @param canarySetting Specifies settings for the canary deployment in this stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder canarySetting(@Nullable Output<DeploymentCanarySettingArgs> canarySetting) {
             $.canarySetting = canarySetting;
             return this;
         }
 
+        /**
+         * @param canarySetting Specifies settings for the canary deployment in this stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder canarySetting(DeploymentCanarySettingArgs canarySetting) {
             return canarySetting(Output.of(canarySetting));
         }
 
+        /**
+         * @param clientCertificateId The identifier of the client certificate that API Gateway uses to call your integration endpoints in the stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientCertificateId(@Nullable Output<String> clientCertificateId) {
             $.clientCertificateId = clientCertificateId;
             return this;
         }
 
+        /**
+         * @param clientCertificateId The identifier of the client certificate that API Gateway uses to call your integration endpoints in the stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientCertificateId(String clientCertificateId) {
             return clientCertificateId(Output.of(clientCertificateId));
         }
 
+        /**
+         * @param dataTraceEnabled Indicates whether data trace logging is enabled for methods in the stage. API Gateway pushes these logs to Amazon CloudWatch Logs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataTraceEnabled(@Nullable Output<Boolean> dataTraceEnabled) {
             $.dataTraceEnabled = dataTraceEnabled;
             return this;
         }
 
+        /**
+         * @param dataTraceEnabled Indicates whether data trace logging is enabled for methods in the stage. API Gateway pushes these logs to Amazon CloudWatch Logs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataTraceEnabled(Boolean dataTraceEnabled) {
             return dataTraceEnabled(Output.of(dataTraceEnabled));
         }
 
+        /**
+         * @param description A description of the purpose of the stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A description of the purpose of the stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param documentationVersion The version identifier of the API documentation snapshot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder documentationVersion(@Nullable Output<String> documentationVersion) {
             $.documentationVersion = documentationVersion;
             return this;
         }
 
+        /**
+         * @param documentationVersion The version identifier of the API documentation snapshot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder documentationVersion(String documentationVersion) {
             return documentationVersion(Output.of(documentationVersion));
         }
 
+        /**
+         * @param loggingLevel The logging level for this method. For valid values, see the loggingLevel property of the Stage resource in the Amazon API Gateway API Reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loggingLevel(@Nullable Output<String> loggingLevel) {
             $.loggingLevel = loggingLevel;
             return this;
         }
 
+        /**
+         * @param loggingLevel The logging level for this method. For valid values, see the loggingLevel property of the Stage resource in the Amazon API Gateway API Reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loggingLevel(String loggingLevel) {
             return loggingLevel(Output.of(loggingLevel));
         }
 
+        /**
+         * @param methodSettings Configures settings for all of the stage&#39;s methods.
+         * 
+         * @return builder
+         * 
+         */
         public Builder methodSettings(@Nullable Output<List<DeploymentMethodSettingArgs>> methodSettings) {
             $.methodSettings = methodSettings;
             return this;
         }
 
+        /**
+         * @param methodSettings Configures settings for all of the stage&#39;s methods.
+         * 
+         * @return builder
+         * 
+         */
         public Builder methodSettings(List<DeploymentMethodSettingArgs> methodSettings) {
             return methodSettings(Output.of(methodSettings));
         }
 
+        /**
+         * @param methodSettings Configures settings for all of the stage&#39;s methods.
+         * 
+         * @return builder
+         * 
+         */
         public Builder methodSettings(DeploymentMethodSettingArgs... methodSettings) {
             return methodSettings(List.of(methodSettings));
         }
 
+        /**
+         * @param metricsEnabled Indicates whether Amazon CloudWatch metrics are enabled for methods in the stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricsEnabled(@Nullable Output<Boolean> metricsEnabled) {
             $.metricsEnabled = metricsEnabled;
             return this;
         }
 
+        /**
+         * @param metricsEnabled Indicates whether Amazon CloudWatch metrics are enabled for methods in the stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricsEnabled(Boolean metricsEnabled) {
             return metricsEnabled(Output.of(metricsEnabled));
         }
 
+        /**
+         * @param tags An array of arbitrary tags (key-value pairs) to associate with the stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<DeploymentTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags An array of arbitrary tags (key-value pairs) to associate with the stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<DeploymentTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags An array of arbitrary tags (key-value pairs) to associate with the stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(DeploymentTagArgs... tags) {
             return tags(List.of(tags));
         }
 
+        /**
+         * @param throttlingBurstLimit The number of burst requests per second that API Gateway permits across all APIs, stages, and methods in your AWS account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder throttlingBurstLimit(@Nullable Output<Integer> throttlingBurstLimit) {
             $.throttlingBurstLimit = throttlingBurstLimit;
             return this;
         }
 
+        /**
+         * @param throttlingBurstLimit The number of burst requests per second that API Gateway permits across all APIs, stages, and methods in your AWS account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder throttlingBurstLimit(Integer throttlingBurstLimit) {
             return throttlingBurstLimit(Output.of(throttlingBurstLimit));
         }
 
+        /**
+         * @param throttlingRateLimit The number of steady-state requests per second that API Gateway permits across all APIs, stages, and methods in your AWS account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder throttlingRateLimit(@Nullable Output<Double> throttlingRateLimit) {
             $.throttlingRateLimit = throttlingRateLimit;
             return this;
         }
 
+        /**
+         * @param throttlingRateLimit The number of steady-state requests per second that API Gateway permits across all APIs, stages, and methods in your AWS account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder throttlingRateLimit(Double throttlingRateLimit) {
             return throttlingRateLimit(Output.of(throttlingRateLimit));
         }
 
+        /**
+         * @param tracingEnabled Specifies whether active tracing with X-ray is enabled for this stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tracingEnabled(@Nullable Output<Boolean> tracingEnabled) {
             $.tracingEnabled = tracingEnabled;
             return this;
         }
 
+        /**
+         * @param tracingEnabled Specifies whether active tracing with X-ray is enabled for this stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tracingEnabled(Boolean tracingEnabled) {
             return tracingEnabled(Output.of(tracingEnabled));
         }
 
+        /**
+         * @param variables A map that defines the stage variables. Variable names must consist of alphanumeric characters, and the values must match the following regular expression: [A-Za-z0-9-._~:/?#&amp;=,]+.
+         * 
+         * @return builder
+         * 
+         */
         public Builder variables(@Nullable Output<Object> variables) {
             $.variables = variables;
             return this;
         }
 
+        /**
+         * @param variables A map that defines the stage variables. Variable names must consist of alphanumeric characters, and the values must match the following regular expression: [A-Za-z0-9-._~:/?#&amp;=,]+.
+         * 
+         * @return builder
+         * 
+         */
         public Builder variables(Object variables) {
             return variables(Output.of(variables));
         }

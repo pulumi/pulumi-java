@@ -14,35 +14,35 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CxPageFormParameter {
     /**
-     * The human-readable name of the parameter, unique within the form.
+     * @return The human-readable name of the parameter, unique within the form.
      * 
      */
     private final @Nullable String displayName;
     /**
-     * The entity type of the parameter.
+     * @return The entity type of the parameter.
      * Format: projects/-/locations/-/agents/-/entityTypes/&lt;System Entity Type ID&gt; for system entity types (for example, projects/-/locations/-/agents/-/entityTypes/sys.date), or projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/entityTypes/&lt;Entity Type ID&gt; for developer entity types.
      * 
      */
     private final @Nullable String entityType;
     /**
-     * Defines fill behavior for the parameter.
+     * @return Defines fill behavior for the parameter.
      * Structure is documented below.
      * 
      */
     private final @Nullable CxPageFormParameterFillBehavior fillBehavior;
     /**
-     * Indicates whether the parameter represents a list of values.
+     * @return Indicates whether the parameter represents a list of values.
      * 
      */
     private final @Nullable Boolean isList;
     /**
-     * Indicates whether the parameter content should be redacted in log.
+     * @return Indicates whether the parameter content should be redacted in log.
      * If redaction is enabled, the parameter content will be replaced by parameter name during logging. Note: the parameter content is subject to redaction if either parameter level redaction or entity type level redaction is enabled.
      * 
      */
     private final @Nullable Boolean redact;
     /**
-     * Indicates whether the parameter is required. Optional parameters will not trigger prompts; however, they are filled if the user specifies them.
+     * @return Indicates whether the parameter is required. Optional parameters will not trigger prompts; however, they are filled if the user specifies them.
      * Required parameters must be filled before form filling concludes.
      * 
      */
@@ -65,48 +65,48 @@ public final class CxPageFormParameter {
     }
 
     /**
-     * The human-readable name of the parameter, unique within the form.
+     * @return The human-readable name of the parameter, unique within the form.
      * 
-    */
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
-     * The entity type of the parameter.
+     * @return The entity type of the parameter.
      * Format: projects/-/locations/-/agents/-/entityTypes/&lt;System Entity Type ID&gt; for system entity types (for example, projects/-/locations/-/agents/-/entityTypes/sys.date), or projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/entityTypes/&lt;Entity Type ID&gt; for developer entity types.
      * 
-    */
+     */
     public Optional<String> entityType() {
         return Optional.ofNullable(this.entityType);
     }
     /**
-     * Defines fill behavior for the parameter.
+     * @return Defines fill behavior for the parameter.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<CxPageFormParameterFillBehavior> fillBehavior() {
         return Optional.ofNullable(this.fillBehavior);
     }
     /**
-     * Indicates whether the parameter represents a list of values.
+     * @return Indicates whether the parameter represents a list of values.
      * 
-    */
+     */
     public Optional<Boolean> isList() {
         return Optional.ofNullable(this.isList);
     }
     /**
-     * Indicates whether the parameter content should be redacted in log.
+     * @return Indicates whether the parameter content should be redacted in log.
      * If redaction is enabled, the parameter content will be replaced by parameter name during logging. Note: the parameter content is subject to redaction if either parameter level redaction or entity type level redaction is enabled.
      * 
-    */
+     */
     public Optional<Boolean> redact() {
         return Optional.ofNullable(this.redact);
     }
     /**
-     * Indicates whether the parameter is required. Optional parameters will not trigger prompts; however, they are filled if the user specifies them.
+     * @return Indicates whether the parameter is required. Optional parameters will not trigger prompts; however, they are filled if the user specifies them.
      * Required parameters must be filled before form filling concludes.
      * 
-    */
+     */
     public Optional<Boolean> required() {
         return Optional.ofNullable(this.required);
     }

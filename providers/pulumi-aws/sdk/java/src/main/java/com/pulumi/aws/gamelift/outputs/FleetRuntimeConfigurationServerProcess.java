@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class FleetRuntimeConfigurationServerProcess {
     /**
-     * Number of server processes using this configuration to run concurrently on an instance.
+     * @return Number of server processes using this configuration to run concurrently on an instance.
      * 
      */
     private final Integer concurrentExecutions;
     /**
-     * Location of the server executable in a game build. All game builds are installed on instances at the root : for Windows instances `C:\game`, and for Linux instances `/local/game`.
+     * @return Location of the server executable in a game build. All game builds are installed on instances at the root : for Windows instances `C:\game`, and for Linux instances `/local/game`.
      * 
      */
     private final String launchPath;
     /**
-     * Optional list of parameters to pass to the server executable on launch.
+     * @return Optional list of parameters to pass to the server executable on launch.
      * 
      */
     private final @Nullable String parameters;
@@ -39,23 +39,23 @@ public final class FleetRuntimeConfigurationServerProcess {
     }
 
     /**
-     * Number of server processes using this configuration to run concurrently on an instance.
+     * @return Number of server processes using this configuration to run concurrently on an instance.
      * 
-    */
+     */
     public Integer concurrentExecutions() {
         return this.concurrentExecutions;
     }
     /**
-     * Location of the server executable in a game build. All game builds are installed on instances at the root : for Windows instances `C:\game`, and for Linux instances `/local/game`.
+     * @return Location of the server executable in a game build. All game builds are installed on instances at the root : for Windows instances `C:\game`, and for Linux instances `/local/game`.
      * 
-    */
+     */
     public String launchPath() {
         return this.launchPath;
     }
     /**
-     * Optional list of parameters to pass to the server executable on launch.
+     * @return Optional list of parameters to pass to the server executable on launch.
      * 
-    */
+     */
     public Optional<String> parameters() {
         return Optional.ofNullable(this.parameters);
     }

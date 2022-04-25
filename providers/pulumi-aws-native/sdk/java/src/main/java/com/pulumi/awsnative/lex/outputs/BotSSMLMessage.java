@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class BotSSMLMessage {
     /**
-     * The SSML text that defines the prompt.
+     * @return The SSML text that defines the prompt.
      * 
      */
     private final String value;
@@ -21,9 +21,9 @@ public final class BotSSMLMessage {
     }
 
     /**
-     * The SSML text that defines the prompt.
+     * @return The SSML text that defines the prompt.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

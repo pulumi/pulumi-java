@@ -25,6 +25,10 @@ public final class AppImageConfigArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="appImageConfigName")
     private @Nullable Output<String> appImageConfigName;
 
+    /**
+     * @return The Name of the AppImageConfig.
+     * 
+     */
     public Optional<Output<String>> appImageConfigName() {
         return Optional.ofNullable(this.appImageConfigName);
     }
@@ -36,6 +40,10 @@ public final class AppImageConfigArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="kernelGatewayImageConfig")
     private @Nullable Output<AppImageConfigKernelGatewayImageConfigArgs> kernelGatewayImageConfig;
 
+    /**
+     * @return The KernelGatewayImageConfig.
+     * 
+     */
     public Optional<Output<AppImageConfigKernelGatewayImageConfigArgs>> kernelGatewayImageConfig() {
         return Optional.ofNullable(this.kernelGatewayImageConfig);
     }
@@ -47,6 +55,10 @@ public final class AppImageConfigArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="tags")
     private @Nullable Output<List<AppImageConfigTagArgs>> tags;
 
+    /**
+     * @return A list of tags to apply to the AppImageConfig.
+     * 
+     */
     public Optional<Output<List<AppImageConfigTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -77,33 +89,75 @@ public final class AppImageConfigArgs extends com.pulumi.resources.ResourceArgs 
             $ = new AppImageConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param appImageConfigName The Name of the AppImageConfig.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appImageConfigName(@Nullable Output<String> appImageConfigName) {
             $.appImageConfigName = appImageConfigName;
             return this;
         }
 
+        /**
+         * @param appImageConfigName The Name of the AppImageConfig.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appImageConfigName(String appImageConfigName) {
             return appImageConfigName(Output.of(appImageConfigName));
         }
 
+        /**
+         * @param kernelGatewayImageConfig The KernelGatewayImageConfig.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kernelGatewayImageConfig(@Nullable Output<AppImageConfigKernelGatewayImageConfigArgs> kernelGatewayImageConfig) {
             $.kernelGatewayImageConfig = kernelGatewayImageConfig;
             return this;
         }
 
+        /**
+         * @param kernelGatewayImageConfig The KernelGatewayImageConfig.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kernelGatewayImageConfig(AppImageConfigKernelGatewayImageConfigArgs kernelGatewayImageConfig) {
             return kernelGatewayImageConfig(Output.of(kernelGatewayImageConfig));
         }
 
+        /**
+         * @param tags A list of tags to apply to the AppImageConfig.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<AppImageConfigTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A list of tags to apply to the AppImageConfig.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<AppImageConfigTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags A list of tags to apply to the AppImageConfig.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(AppImageConfigTagArgs... tags) {
             return tags(List.of(tags));
         }

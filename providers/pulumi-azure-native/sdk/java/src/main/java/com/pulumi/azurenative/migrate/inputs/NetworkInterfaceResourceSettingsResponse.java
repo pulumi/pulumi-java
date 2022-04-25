@@ -29,6 +29,10 @@ public final class NetworkInterfaceResourceSettingsResponse extends com.pulumi.r
     @Import(name="enableAcceleratedNetworking")
     private @Nullable Boolean enableAcceleratedNetworking;
 
+    /**
+     * @return Gets or sets a value indicating whether accelerated networking is enabled.
+     * 
+     */
     public Optional<Boolean> enableAcceleratedNetworking() {
         return Optional.ofNullable(this.enableAcceleratedNetworking);
     }
@@ -40,6 +44,10 @@ public final class NetworkInterfaceResourceSettingsResponse extends com.pulumi.r
     @Import(name="ipConfigurations")
     private @Nullable List<NicIpConfigurationResourceSettingsResponse> ipConfigurations;
 
+    /**
+     * @return Gets or sets the IP configurations of the NIC.
+     * 
+     */
     public Optional<List<NicIpConfigurationResourceSettingsResponse>> ipConfigurations() {
         return Optional.ofNullable(this.ipConfigurations);
     }
@@ -52,6 +60,11 @@ public final class NetworkInterfaceResourceSettingsResponse extends com.pulumi.r
     @Import(name="resourceType", required=true)
     private String resourceType;
 
+    /**
+     * @return The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
+     * Expected value is &#39;Microsoft.Network/networkInterfaces&#39;.
+     * 
+     */
     public String resourceType() {
         return this.resourceType;
     }
@@ -63,6 +76,10 @@ public final class NetworkInterfaceResourceSettingsResponse extends com.pulumi.r
     @Import(name="targetResourceName", required=true)
     private String targetResourceName;
 
+    /**
+     * @return Gets or sets the target Resource name.
+     * 
+     */
     public String targetResourceName() {
         return this.targetResourceName;
     }
@@ -94,25 +111,56 @@ public final class NetworkInterfaceResourceSettingsResponse extends com.pulumi.r
             $ = new NetworkInterfaceResourceSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enableAcceleratedNetworking Gets or sets a value indicating whether accelerated networking is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableAcceleratedNetworking(@Nullable Boolean enableAcceleratedNetworking) {
             $.enableAcceleratedNetworking = enableAcceleratedNetworking;
             return this;
         }
 
+        /**
+         * @param ipConfigurations Gets or sets the IP configurations of the NIC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipConfigurations(@Nullable List<NicIpConfigurationResourceSettingsResponse> ipConfigurations) {
             $.ipConfigurations = ipConfigurations;
             return this;
         }
 
+        /**
+         * @param ipConfigurations Gets or sets the IP configurations of the NIC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipConfigurations(NicIpConfigurationResourceSettingsResponse... ipConfigurations) {
             return ipConfigurations(List.of(ipConfigurations));
         }
 
+        /**
+         * @param resourceType The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
+         * Expected value is &#39;Microsoft.Network/networkInterfaces&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(String resourceType) {
             $.resourceType = resourceType;
             return this;
         }
 
+        /**
+         * @param targetResourceName Gets or sets the target Resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetResourceName(String targetResourceName) {
             $.targetResourceName = targetResourceName;
             return this;

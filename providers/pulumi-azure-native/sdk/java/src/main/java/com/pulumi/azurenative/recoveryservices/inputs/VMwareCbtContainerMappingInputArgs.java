@@ -28,6 +28,11 @@ public final class VMwareCbtContainerMappingInputArgs extends com.pulumi.resourc
     @Import(name="instanceType")
     private @Nullable Output<String> instanceType;
 
+    /**
+     * @return The class type.
+     * Expected value is &#39;VMwareCbt&#39;.
+     * 
+     */
     public Optional<Output<String>> instanceType() {
         return Optional.ofNullable(this.instanceType);
     }
@@ -39,6 +44,10 @@ public final class VMwareCbtContainerMappingInputArgs extends com.pulumi.resourc
     @Import(name="keyVaultId", required=true)
     private Output<String> keyVaultId;
 
+    /**
+     * @return The target key vault ARM Id.
+     * 
+     */
     public Output<String> keyVaultId() {
         return this.keyVaultId;
     }
@@ -50,6 +59,10 @@ public final class VMwareCbtContainerMappingInputArgs extends com.pulumi.resourc
     @Import(name="keyVaultUri", required=true)
     private Output<String> keyVaultUri;
 
+    /**
+     * @return The target key vault URL.
+     * 
+     */
     public Output<String> keyVaultUri() {
         return this.keyVaultUri;
     }
@@ -61,6 +74,10 @@ public final class VMwareCbtContainerMappingInputArgs extends com.pulumi.resourc
     @Import(name="serviceBusConnectionStringSecretName", required=true)
     private Output<String> serviceBusConnectionStringSecretName;
 
+    /**
+     * @return The secret name of the service bus connection string.
+     * 
+     */
     public Output<String> serviceBusConnectionStringSecretName() {
         return this.serviceBusConnectionStringSecretName;
     }
@@ -72,6 +89,10 @@ public final class VMwareCbtContainerMappingInputArgs extends com.pulumi.resourc
     @Import(name="storageAccountId", required=true)
     private Output<String> storageAccountId;
 
+    /**
+     * @return The storage account ARM Id.
+     * 
+     */
     public Output<String> storageAccountId() {
         return this.storageAccountId;
     }
@@ -83,6 +104,10 @@ public final class VMwareCbtContainerMappingInputArgs extends com.pulumi.resourc
     @Import(name="storageAccountSasSecretName", required=true)
     private Output<String> storageAccountSasSecretName;
 
+    /**
+     * @return The secret name of the storage account.
+     * 
+     */
     public Output<String> storageAccountSasSecretName() {
         return this.storageAccountSasSecretName;
     }
@@ -94,6 +119,10 @@ public final class VMwareCbtContainerMappingInputArgs extends com.pulumi.resourc
     @Import(name="targetLocation", required=true)
     private Output<String> targetLocation;
 
+    /**
+     * @return The target location.
+     * 
+     */
     public Output<String> targetLocation() {
         return this.targetLocation;
     }
@@ -128,65 +157,151 @@ public final class VMwareCbtContainerMappingInputArgs extends com.pulumi.resourc
             $ = new VMwareCbtContainerMappingInputArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param instanceType The class type.
+         * Expected value is &#39;VMwareCbt&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(@Nullable Output<String> instanceType) {
             $.instanceType = instanceType;
             return this;
         }
 
+        /**
+         * @param instanceType The class type.
+         * Expected value is &#39;VMwareCbt&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(String instanceType) {
             return instanceType(Output.of(instanceType));
         }
 
+        /**
+         * @param keyVaultId The target key vault ARM Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultId(Output<String> keyVaultId) {
             $.keyVaultId = keyVaultId;
             return this;
         }
 
+        /**
+         * @param keyVaultId The target key vault ARM Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultId(String keyVaultId) {
             return keyVaultId(Output.of(keyVaultId));
         }
 
+        /**
+         * @param keyVaultUri The target key vault URL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultUri(Output<String> keyVaultUri) {
             $.keyVaultUri = keyVaultUri;
             return this;
         }
 
+        /**
+         * @param keyVaultUri The target key vault URL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultUri(String keyVaultUri) {
             return keyVaultUri(Output.of(keyVaultUri));
         }
 
+        /**
+         * @param serviceBusConnectionStringSecretName The secret name of the service bus connection string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceBusConnectionStringSecretName(Output<String> serviceBusConnectionStringSecretName) {
             $.serviceBusConnectionStringSecretName = serviceBusConnectionStringSecretName;
             return this;
         }
 
+        /**
+         * @param serviceBusConnectionStringSecretName The secret name of the service bus connection string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceBusConnectionStringSecretName(String serviceBusConnectionStringSecretName) {
             return serviceBusConnectionStringSecretName(Output.of(serviceBusConnectionStringSecretName));
         }
 
+        /**
+         * @param storageAccountId The storage account ARM Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountId(Output<String> storageAccountId) {
             $.storageAccountId = storageAccountId;
             return this;
         }
 
+        /**
+         * @param storageAccountId The storage account ARM Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountId(String storageAccountId) {
             return storageAccountId(Output.of(storageAccountId));
         }
 
+        /**
+         * @param storageAccountSasSecretName The secret name of the storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountSasSecretName(Output<String> storageAccountSasSecretName) {
             $.storageAccountSasSecretName = storageAccountSasSecretName;
             return this;
         }
 
+        /**
+         * @param storageAccountSasSecretName The secret name of the storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountSasSecretName(String storageAccountSasSecretName) {
             return storageAccountSasSecretName(Output.of(storageAccountSasSecretName));
         }
 
+        /**
+         * @param targetLocation The target location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetLocation(Output<String> targetLocation) {
             $.targetLocation = targetLocation;
             return this;
         }
 
+        /**
+         * @param targetLocation The target location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetLocation(String targetLocation) {
             return targetLocation(Output.of(targetLocation));
         }

@@ -27,6 +27,10 @@ public final class ExportArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="definition", required=true)
     private Output<ExportDefinitionArgs> definition;
 
+    /**
+     * @return Has the definition for the export.
+     * 
+     */
     public Output<ExportDefinitionArgs> definition() {
         return this.definition;
     }
@@ -38,6 +42,10 @@ public final class ExportArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deliveryInfo", required=true)
     private Output<ExportDeliveryInfoArgs> deliveryInfo;
 
+    /**
+     * @return Has delivery information for the export.
+     * 
+     */
     public Output<ExportDeliveryInfoArgs> deliveryInfo() {
         return this.deliveryInfo;
     }
@@ -49,6 +57,10 @@ public final class ExportArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="eTag")
     private @Nullable Output<String> eTag;
 
+    /**
+     * @return eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.
+     * 
+     */
     public Optional<Output<String>> eTag() {
         return Optional.ofNullable(this.eTag);
     }
@@ -60,6 +72,10 @@ public final class ExportArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="exportName")
     private @Nullable Output<String> exportName;
 
+    /**
+     * @return Export Name.
+     * 
+     */
     public Optional<Output<String>> exportName() {
         return Optional.ofNullable(this.exportName);
     }
@@ -71,6 +87,10 @@ public final class ExportArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="format")
     private @Nullable Output<Either<String,FormatType>> format;
 
+    /**
+     * @return The format of the export being delivered. Currently only &#39;Csv&#39; is supported.
+     * 
+     */
     public Optional<Output<Either<String,FormatType>>> format() {
         return Optional.ofNullable(this.format);
     }
@@ -82,6 +102,10 @@ public final class ExportArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="schedule")
     private @Nullable Output<ExportScheduleArgs> schedule;
 
+    /**
+     * @return Has schedule information for the export.
+     * 
+     */
     public Optional<Output<ExportScheduleArgs>> schedule() {
         return Optional.ofNullable(this.schedule);
     }
@@ -93,6 +117,10 @@ public final class ExportArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scope", required=true)
     private Output<String> scope;
 
+    /**
+     * @return The scope associated with export operations. This includes &#39;/subscriptions/{subscriptionId}/&#39; for subscription scope, &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}&#39; for resourceGroup scope, &#39;/providers/Microsoft.Billing/billingAccounts/{billingAccountId}&#39; for Billing Account scope and &#39;/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}&#39; for Department scope, &#39;/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}&#39; for EnrollmentAccount scope, &#39;/providers/Microsoft.Management/managementGroups/{managementGroupId} for Management Group scope, &#39;/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}&#39; for billingProfile scope, &#39;/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}/invoiceSections/{invoiceSectionId}&#39; for invoiceSection scope, and &#39;/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/customers/{customerId}&#39; specific for partners.
+     * 
+     */
     public Output<String> scope() {
         return this.scope;
     }
@@ -127,73 +155,169 @@ public final class ExportArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ExportArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param definition Has the definition for the export.
+         * 
+         * @return builder
+         * 
+         */
         public Builder definition(Output<ExportDefinitionArgs> definition) {
             $.definition = definition;
             return this;
         }
 
+        /**
+         * @param definition Has the definition for the export.
+         * 
+         * @return builder
+         * 
+         */
         public Builder definition(ExportDefinitionArgs definition) {
             return definition(Output.of(definition));
         }
 
+        /**
+         * @param deliveryInfo Has delivery information for the export.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deliveryInfo(Output<ExportDeliveryInfoArgs> deliveryInfo) {
             $.deliveryInfo = deliveryInfo;
             return this;
         }
 
+        /**
+         * @param deliveryInfo Has delivery information for the export.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deliveryInfo(ExportDeliveryInfoArgs deliveryInfo) {
             return deliveryInfo(Output.of(deliveryInfo));
         }
 
+        /**
+         * @param eTag eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eTag(@Nullable Output<String> eTag) {
             $.eTag = eTag;
             return this;
         }
 
+        /**
+         * @param eTag eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eTag(String eTag) {
             return eTag(Output.of(eTag));
         }
 
+        /**
+         * @param exportName Export Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exportName(@Nullable Output<String> exportName) {
             $.exportName = exportName;
             return this;
         }
 
+        /**
+         * @param exportName Export Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exportName(String exportName) {
             return exportName(Output.of(exportName));
         }
 
+        /**
+         * @param format The format of the export being delivered. Currently only &#39;Csv&#39; is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder format(@Nullable Output<Either<String,FormatType>> format) {
             $.format = format;
             return this;
         }
 
+        /**
+         * @param format The format of the export being delivered. Currently only &#39;Csv&#39; is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder format(Either<String,FormatType> format) {
             return format(Output.of(format));
         }
 
+        /**
+         * @param format The format of the export being delivered. Currently only &#39;Csv&#39; is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder format(String format) {
             return format(Either.ofLeft(format));
         }
 
+        /**
+         * @param format The format of the export being delivered. Currently only &#39;Csv&#39; is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder format(FormatType format) {
             return format(Either.ofRight(format));
         }
 
+        /**
+         * @param schedule Has schedule information for the export.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedule(@Nullable Output<ExportScheduleArgs> schedule) {
             $.schedule = schedule;
             return this;
         }
 
+        /**
+         * @param schedule Has schedule information for the export.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedule(ExportScheduleArgs schedule) {
             return schedule(Output.of(schedule));
         }
 
+        /**
+         * @param scope The scope associated with export operations. This includes &#39;/subscriptions/{subscriptionId}/&#39; for subscription scope, &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}&#39; for resourceGroup scope, &#39;/providers/Microsoft.Billing/billingAccounts/{billingAccountId}&#39; for Billing Account scope and &#39;/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}&#39; for Department scope, &#39;/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}&#39; for EnrollmentAccount scope, &#39;/providers/Microsoft.Management/managementGroups/{managementGroupId} for Management Group scope, &#39;/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}&#39; for billingProfile scope, &#39;/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}/invoiceSections/{invoiceSectionId}&#39; for invoiceSection scope, and &#39;/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/customers/{customerId}&#39; specific for partners.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(Output<String> scope) {
             $.scope = scope;
             return this;
         }
 
+        /**
+         * @param scope The scope associated with export operations. This includes &#39;/subscriptions/{subscriptionId}/&#39; for subscription scope, &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}&#39; for resourceGroup scope, &#39;/providers/Microsoft.Billing/billingAccounts/{billingAccountId}&#39; for Billing Account scope and &#39;/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}&#39; for Department scope, &#39;/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}&#39; for EnrollmentAccount scope, &#39;/providers/Microsoft.Management/managementGroups/{managementGroupId} for Management Group scope, &#39;/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}&#39; for billingProfile scope, &#39;/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}/invoiceSections/{invoiceSectionId}&#39; for invoiceSection scope, and &#39;/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/customers/{customerId}&#39; specific for partners.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(String scope) {
             return scope(Output.of(scope));
         }

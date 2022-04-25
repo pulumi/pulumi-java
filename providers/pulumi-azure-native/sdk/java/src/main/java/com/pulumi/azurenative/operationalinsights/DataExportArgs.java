@@ -24,6 +24,10 @@ public final class DataExportArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="createdDate")
     private @Nullable Output<String> createdDate;
 
+    /**
+     * @return The latest data export rule modification time.
+     * 
+     */
     public Optional<Output<String>> createdDate() {
         return Optional.ofNullable(this.createdDate);
     }
@@ -35,6 +39,10 @@ public final class DataExportArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dataExportId")
     private @Nullable Output<String> dataExportId;
 
+    /**
+     * @return The data export rule ID.
+     * 
+     */
     public Optional<Output<String>> dataExportId() {
         return Optional.ofNullable(this.dataExportId);
     }
@@ -46,6 +54,10 @@ public final class DataExportArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dataExportName")
     private @Nullable Output<String> dataExportName;
 
+    /**
+     * @return The data export rule name.
+     * 
+     */
     public Optional<Output<String>> dataExportName() {
         return Optional.ofNullable(this.dataExportName);
     }
@@ -57,6 +69,10 @@ public final class DataExportArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enable")
     private @Nullable Output<Boolean> enable;
 
+    /**
+     * @return Active when enabled.
+     * 
+     */
     public Optional<Output<Boolean>> enable() {
         return Optional.ofNullable(this.enable);
     }
@@ -68,6 +84,10 @@ public final class DataExportArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="eventHubName")
     private @Nullable Output<String> eventHubName;
 
+    /**
+     * @return Optional. Allows to define an Event Hub name. Not applicable when destination is Storage Account.
+     * 
+     */
     public Optional<Output<String>> eventHubName() {
         return Optional.ofNullable(this.eventHubName);
     }
@@ -79,6 +99,10 @@ public final class DataExportArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="lastModifiedDate")
     private @Nullable Output<String> lastModifiedDate;
 
+    /**
+     * @return Date and time when the export was last modified.
+     * 
+     */
     public Optional<Output<String>> lastModifiedDate() {
         return Optional.ofNullable(this.lastModifiedDate);
     }
@@ -90,6 +114,10 @@ public final class DataExportArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -101,6 +129,10 @@ public final class DataExportArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceId", required=true)
     private Output<String> resourceId;
 
+    /**
+     * @return The destination resource ID. This can be copied from the Properties entry of the destination resource in Azure.
+     * 
+     */
     public Output<String> resourceId() {
         return this.resourceId;
     }
@@ -112,6 +144,10 @@ public final class DataExportArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tableNames", required=true)
     private Output<List<String>> tableNames;
 
+    /**
+     * @return An array of tables to export, for example: [“Heartbeat, SecurityEvent”].
+     * 
+     */
     public Output<List<String>> tableNames() {
         return this.tableNames;
     }
@@ -123,6 +159,10 @@ public final class DataExportArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="workspaceName", required=true)
     private Output<String> workspaceName;
 
+    /**
+     * @return The name of the workspace.
+     * 
+     */
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
@@ -160,96 +200,222 @@ public final class DataExportArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DataExportArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param createdDate The latest data export rule modification time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdDate(@Nullable Output<String> createdDate) {
             $.createdDate = createdDate;
             return this;
         }
 
+        /**
+         * @param createdDate The latest data export rule modification time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdDate(String createdDate) {
             return createdDate(Output.of(createdDate));
         }
 
+        /**
+         * @param dataExportId The data export rule ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataExportId(@Nullable Output<String> dataExportId) {
             $.dataExportId = dataExportId;
             return this;
         }
 
+        /**
+         * @param dataExportId The data export rule ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataExportId(String dataExportId) {
             return dataExportId(Output.of(dataExportId));
         }
 
+        /**
+         * @param dataExportName The data export rule name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataExportName(@Nullable Output<String> dataExportName) {
             $.dataExportName = dataExportName;
             return this;
         }
 
+        /**
+         * @param dataExportName The data export rule name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataExportName(String dataExportName) {
             return dataExportName(Output.of(dataExportName));
         }
 
+        /**
+         * @param enable Active when enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enable(@Nullable Output<Boolean> enable) {
             $.enable = enable;
             return this;
         }
 
+        /**
+         * @param enable Active when enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enable(Boolean enable) {
             return enable(Output.of(enable));
         }
 
+        /**
+         * @param eventHubName Optional. Allows to define an Event Hub name. Not applicable when destination is Storage Account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventHubName(@Nullable Output<String> eventHubName) {
             $.eventHubName = eventHubName;
             return this;
         }
 
+        /**
+         * @param eventHubName Optional. Allows to define an Event Hub name. Not applicable when destination is Storage Account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventHubName(String eventHubName) {
             return eventHubName(Output.of(eventHubName));
         }
 
+        /**
+         * @param lastModifiedDate Date and time when the export was last modified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastModifiedDate(@Nullable Output<String> lastModifiedDate) {
             $.lastModifiedDate = lastModifiedDate;
             return this;
         }
 
+        /**
+         * @param lastModifiedDate Date and time when the export was last modified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastModifiedDate(String lastModifiedDate) {
             return lastModifiedDate(Output.of(lastModifiedDate));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param resourceId The destination resource ID. This can be copied from the Properties entry of the destination resource in Azure.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(Output<String> resourceId) {
             $.resourceId = resourceId;
             return this;
         }
 
+        /**
+         * @param resourceId The destination resource ID. This can be copied from the Properties entry of the destination resource in Azure.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(String resourceId) {
             return resourceId(Output.of(resourceId));
         }
 
+        /**
+         * @param tableNames An array of tables to export, for example: [“Heartbeat, SecurityEvent”].
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableNames(Output<List<String>> tableNames) {
             $.tableNames = tableNames;
             return this;
         }
 
+        /**
+         * @param tableNames An array of tables to export, for example: [“Heartbeat, SecurityEvent”].
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableNames(List<String> tableNames) {
             return tableNames(Output.of(tableNames));
         }
 
+        /**
+         * @param tableNames An array of tables to export, for example: [“Heartbeat, SecurityEvent”].
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableNames(String... tableNames) {
             return tableNames(List.of(tableNames));
         }
 
+        /**
+         * @param workspaceName The name of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(Output<String> workspaceName) {
             $.workspaceName = workspaceName;
             return this;
         }
 
+        /**
+         * @param workspaceName The name of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             return workspaceName(Output.of(workspaceName));
         }

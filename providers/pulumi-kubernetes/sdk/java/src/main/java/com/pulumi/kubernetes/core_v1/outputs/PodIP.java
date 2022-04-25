@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PodIP {
     /**
-     * ip is an IP address (IPv4 or IPv6) assigned to the pod
+     * @return ip is an IP address (IPv4 or IPv6) assigned to the pod
      * 
      */
     private final @Nullable String ip;
@@ -23,9 +23,9 @@ public final class PodIP {
     }
 
     /**
-     * ip is an IP address (IPv4 or IPv6) assigned to the pod
+     * @return ip is an IP address (IPv4 or IPv6) assigned to the pod
      * 
-    */
+     */
     public Optional<String> ip() {
         return Optional.ofNullable(this.ip);
     }

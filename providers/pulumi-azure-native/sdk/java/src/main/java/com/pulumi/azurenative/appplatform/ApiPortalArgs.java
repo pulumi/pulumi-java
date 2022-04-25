@@ -24,6 +24,10 @@ public final class ApiPortalArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="apiPortalName")
     private @Nullable Output<String> apiPortalName;
 
+    /**
+     * @return The name of API portal.
+     * 
+     */
     public Optional<Output<String>> apiPortalName() {
         return Optional.ofNullable(this.apiPortalName);
     }
@@ -35,6 +39,10 @@ public final class ApiPortalArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties")
     private @Nullable Output<ApiPortalPropertiesArgs> properties;
 
+    /**
+     * @return API portal properties payload
+     * 
+     */
     public Optional<Output<ApiPortalPropertiesArgs>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -46,6 +54,10 @@ public final class ApiPortalArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -57,6 +69,10 @@ public final class ApiPortalArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceName", required=true)
     private Output<String> serviceName;
 
+    /**
+     * @return The name of the Service resource.
+     * 
+     */
     public Output<String> serviceName() {
         return this.serviceName;
     }
@@ -68,6 +84,10 @@ public final class ApiPortalArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sku")
     private @Nullable Output<SkuArgs> sku;
 
+    /**
+     * @return Sku of the API portal resource
+     * 
+     */
     public Optional<Output<SkuArgs>> sku() {
         return Optional.ofNullable(this.sku);
     }
@@ -100,47 +120,107 @@ public final class ApiPortalArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ApiPortalArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiPortalName The name of API portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiPortalName(@Nullable Output<String> apiPortalName) {
             $.apiPortalName = apiPortalName;
             return this;
         }
 
+        /**
+         * @param apiPortalName The name of API portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiPortalName(String apiPortalName) {
             return apiPortalName(Output.of(apiPortalName));
         }
 
+        /**
+         * @param properties API portal properties payload
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<ApiPortalPropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties API portal properties payload
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(ApiPortalPropertiesArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param serviceName The name of the Service resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(Output<String> serviceName) {
             $.serviceName = serviceName;
             return this;
         }
 
+        /**
+         * @param serviceName The name of the Service resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             return serviceName(Output.of(serviceName));
         }
 
+        /**
+         * @param sku Sku of the API portal resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(@Nullable Output<SkuArgs> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku Sku of the API portal resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(SkuArgs sku) {
             return sku(Output.of(sku));
         }

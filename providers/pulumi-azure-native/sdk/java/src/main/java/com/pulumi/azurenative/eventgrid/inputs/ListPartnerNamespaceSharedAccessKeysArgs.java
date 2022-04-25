@@ -19,6 +19,10 @@ public final class ListPartnerNamespaceSharedAccessKeysArgs extends com.pulumi.r
     @Import(name="partnerNamespaceName", required=true)
     private String partnerNamespaceName;
 
+    /**
+     * @return Name of the partner namespace.
+     * 
+     */
     public String partnerNamespaceName() {
         return this.partnerNamespaceName;
     }
@@ -30,6 +34,10 @@ public final class ListPartnerNamespaceSharedAccessKeysArgs extends com.pulumi.r
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group within the user&#39;s subscription.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class ListPartnerNamespaceSharedAccessKeysArgs extends com.pulumi.r
             $ = new ListPartnerNamespaceSharedAccessKeysArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param partnerNamespaceName Name of the partner namespace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partnerNamespaceName(String partnerNamespaceName) {
             $.partnerNamespaceName = partnerNamespaceName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

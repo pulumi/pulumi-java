@@ -25,6 +25,10 @@ public final class CodeConfigurationResponse extends com.pulumi.resources.Invoke
     @Import(name="codeId")
     private @Nullable String codeId;
 
+    /**
+     * @return ARM resource ID of the code asset.
+     * 
+     */
     public Optional<String> codeId() {
         return Optional.ofNullable(this.codeId);
     }
@@ -36,6 +40,10 @@ public final class CodeConfigurationResponse extends com.pulumi.resources.Invoke
     @Import(name="scoringScript", required=true)
     private String scoringScript;
 
+    /**
+     * @return The script to execute on startup. eg. &#34;score.py&#34;
+     * 
+     */
     public String scoringScript() {
         return this.scoringScript;
     }
@@ -65,11 +73,23 @@ public final class CodeConfigurationResponse extends com.pulumi.resources.Invoke
             $ = new CodeConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param codeId ARM resource ID of the code asset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder codeId(@Nullable String codeId) {
             $.codeId = codeId;
             return this;
         }
 
+        /**
+         * @param scoringScript The script to execute on startup. eg. &#34;score.py&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder scoringScript(String scoringScript) {
             $.scoringScript = scoringScript;
             return this;

@@ -22,6 +22,10 @@ public final class ManagedZonePeeringConfigTargetNetworkArgs extends com.pulumi.
     @Import(name="deactivateTime")
     private @Nullable Output<String> deactivateTime;
 
+    /**
+     * @return The time at which the zone was deactivated, in RFC 3339 date-time format. An empty string indicates that the peering connection is active. The producer network can deactivate a zone. The zone is automatically deactivated if the producer network that the zone targeted is deleted. Output only.
+     * 
+     */
     public Optional<Output<String>> deactivateTime() {
         return Optional.ofNullable(this.deactivateTime);
     }
@@ -40,6 +44,10 @@ public final class ManagedZonePeeringConfigTargetNetworkArgs extends com.pulumi.
     @Import(name="networkUrl")
     private @Nullable Output<String> networkUrl;
 
+    /**
+     * @return The fully qualified URL of the VPC network to forward queries to. This should be formatted like https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}
+     * 
+     */
     public Optional<Output<String>> networkUrl() {
         return Optional.ofNullable(this.networkUrl);
     }
@@ -70,11 +78,23 @@ public final class ManagedZonePeeringConfigTargetNetworkArgs extends com.pulumi.
             $ = new ManagedZonePeeringConfigTargetNetworkArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deactivateTime The time at which the zone was deactivated, in RFC 3339 date-time format. An empty string indicates that the peering connection is active. The producer network can deactivate a zone. The zone is automatically deactivated if the producer network that the zone targeted is deleted. Output only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deactivateTime(@Nullable Output<String> deactivateTime) {
             $.deactivateTime = deactivateTime;
             return this;
         }
 
+        /**
+         * @param deactivateTime The time at which the zone was deactivated, in RFC 3339 date-time format. An empty string indicates that the peering connection is active. The producer network can deactivate a zone. The zone is automatically deactivated if the producer network that the zone targeted is deleted. Output only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deactivateTime(String deactivateTime) {
             return deactivateTime(Output.of(deactivateTime));
         }
@@ -88,11 +108,23 @@ public final class ManagedZonePeeringConfigTargetNetworkArgs extends com.pulumi.
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param networkUrl The fully qualified URL of the VPC network to forward queries to. This should be formatted like https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkUrl(@Nullable Output<String> networkUrl) {
             $.networkUrl = networkUrl;
             return this;
         }
 
+        /**
+         * @param networkUrl The fully qualified URL of the VPC network to forward queries to. This should be formatted like https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkUrl(String networkUrl) {
             return networkUrl(Output.of(networkUrl));
         }

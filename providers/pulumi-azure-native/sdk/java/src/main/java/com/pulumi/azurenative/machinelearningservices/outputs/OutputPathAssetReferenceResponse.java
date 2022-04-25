@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class OutputPathAssetReferenceResponse {
     /**
-     * ARM resource ID of the job.
+     * @return ARM resource ID of the job.
      * 
      */
     private final @Nullable String jobId;
     /**
-     * The path of the file/directory in the job output.
+     * @return The path of the file/directory in the job output.
      * 
      */
     private final @Nullable String path;
     /**
-     * Enum to determine which reference method to use for an asset.
+     * @return Enum to determine which reference method to use for an asset.
      * Expected value is &#39;OutputPath&#39;.
      * 
      */
@@ -39,24 +39,24 @@ public final class OutputPathAssetReferenceResponse {
     }
 
     /**
-     * ARM resource ID of the job.
+     * @return ARM resource ID of the job.
      * 
-    */
+     */
     public Optional<String> jobId() {
         return Optional.ofNullable(this.jobId);
     }
     /**
-     * The path of the file/directory in the job output.
+     * @return The path of the file/directory in the job output.
      * 
-    */
+     */
     public Optional<String> path() {
         return Optional.ofNullable(this.path);
     }
     /**
-     * Enum to determine which reference method to use for an asset.
+     * @return Enum to determine which reference method to use for an asset.
      * Expected value is &#39;OutputPath&#39;.
      * 
-    */
+     */
     public String referenceType() {
         return this.referenceType;
     }

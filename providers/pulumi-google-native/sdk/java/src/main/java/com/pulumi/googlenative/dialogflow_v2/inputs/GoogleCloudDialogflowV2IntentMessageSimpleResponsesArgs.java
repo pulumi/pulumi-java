@@ -25,6 +25,10 @@ public final class GoogleCloudDialogflowV2IntentMessageSimpleResponsesArgs exten
     @Import(name="simpleResponses", required=true)
     private Output<List<GoogleCloudDialogflowV2IntentMessageSimpleResponseArgs>> simpleResponses;
 
+    /**
+     * @return The list of simple responses.
+     * 
+     */
     public Output<List<GoogleCloudDialogflowV2IntentMessageSimpleResponseArgs>> simpleResponses() {
         return this.simpleResponses;
     }
@@ -53,15 +57,33 @@ public final class GoogleCloudDialogflowV2IntentMessageSimpleResponsesArgs exten
             $ = new GoogleCloudDialogflowV2IntentMessageSimpleResponsesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param simpleResponses The list of simple responses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder simpleResponses(Output<List<GoogleCloudDialogflowV2IntentMessageSimpleResponseArgs>> simpleResponses) {
             $.simpleResponses = simpleResponses;
             return this;
         }
 
+        /**
+         * @param simpleResponses The list of simple responses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder simpleResponses(List<GoogleCloudDialogflowV2IntentMessageSimpleResponseArgs> simpleResponses) {
             return simpleResponses(Output.of(simpleResponses));
         }
 
+        /**
+         * @param simpleResponses The list of simple responses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder simpleResponses(GoogleCloudDialogflowV2IntentMessageSimpleResponseArgs... simpleResponses) {
             return simpleResponses(List.of(simpleResponses));
         }

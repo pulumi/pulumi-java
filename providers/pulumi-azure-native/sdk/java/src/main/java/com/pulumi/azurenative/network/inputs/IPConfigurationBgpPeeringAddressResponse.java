@@ -26,6 +26,10 @@ public final class IPConfigurationBgpPeeringAddressResponse extends com.pulumi.r
     @Import(name="customBgpIpAddresses")
     private @Nullable List<String> customBgpIpAddresses;
 
+    /**
+     * @return The list of custom BGP peering addresses which belong to IP configuration.
+     * 
+     */
     public Optional<List<String>> customBgpIpAddresses() {
         return Optional.ofNullable(this.customBgpIpAddresses);
     }
@@ -37,6 +41,10 @@ public final class IPConfigurationBgpPeeringAddressResponse extends com.pulumi.r
     @Import(name="defaultBgpIpAddresses", required=true)
     private List<String> defaultBgpIpAddresses;
 
+    /**
+     * @return The list of default BGP peering addresses which belong to IP configuration.
+     * 
+     */
     public List<String> defaultBgpIpAddresses() {
         return this.defaultBgpIpAddresses;
     }
@@ -48,6 +56,10 @@ public final class IPConfigurationBgpPeeringAddressResponse extends com.pulumi.r
     @Import(name="ipconfigurationId")
     private @Nullable String ipconfigurationId;
 
+    /**
+     * @return The ID of IP configuration which belongs to gateway.
+     * 
+     */
     public Optional<String> ipconfigurationId() {
         return Optional.ofNullable(this.ipconfigurationId);
     }
@@ -59,6 +71,10 @@ public final class IPConfigurationBgpPeeringAddressResponse extends com.pulumi.r
     @Import(name="tunnelIpAddresses", required=true)
     private List<String> tunnelIpAddresses;
 
+    /**
+     * @return The list of tunnel public IP addresses which belong to IP configuration.
+     * 
+     */
     public List<String> tunnelIpAddresses() {
         return this.tunnelIpAddresses;
     }
@@ -90,34 +106,76 @@ public final class IPConfigurationBgpPeeringAddressResponse extends com.pulumi.r
             $ = new IPConfigurationBgpPeeringAddressResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customBgpIpAddresses The list of custom BGP peering addresses which belong to IP configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customBgpIpAddresses(@Nullable List<String> customBgpIpAddresses) {
             $.customBgpIpAddresses = customBgpIpAddresses;
             return this;
         }
 
+        /**
+         * @param customBgpIpAddresses The list of custom BGP peering addresses which belong to IP configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customBgpIpAddresses(String... customBgpIpAddresses) {
             return customBgpIpAddresses(List.of(customBgpIpAddresses));
         }
 
+        /**
+         * @param defaultBgpIpAddresses The list of default BGP peering addresses which belong to IP configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultBgpIpAddresses(List<String> defaultBgpIpAddresses) {
             $.defaultBgpIpAddresses = defaultBgpIpAddresses;
             return this;
         }
 
+        /**
+         * @param defaultBgpIpAddresses The list of default BGP peering addresses which belong to IP configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultBgpIpAddresses(String... defaultBgpIpAddresses) {
             return defaultBgpIpAddresses(List.of(defaultBgpIpAddresses));
         }
 
+        /**
+         * @param ipconfigurationId The ID of IP configuration which belongs to gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipconfigurationId(@Nullable String ipconfigurationId) {
             $.ipconfigurationId = ipconfigurationId;
             return this;
         }
 
+        /**
+         * @param tunnelIpAddresses The list of tunnel public IP addresses which belong to IP configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tunnelIpAddresses(List<String> tunnelIpAddresses) {
             $.tunnelIpAddresses = tunnelIpAddresses;
             return this;
         }
 
+        /**
+         * @param tunnelIpAddresses The list of tunnel public IP addresses which belong to IP configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tunnelIpAddresses(String... tunnelIpAddresses) {
             return tunnelIpAddresses(List.of(tunnelIpAddresses));
         }

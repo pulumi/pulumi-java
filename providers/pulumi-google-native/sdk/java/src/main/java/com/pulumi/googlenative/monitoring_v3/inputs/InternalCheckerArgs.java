@@ -27,6 +27,10 @@ public final class InternalCheckerArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return The checker&#39;s human-readable name. The display name should be unique within a Stackdriver Workspace in order to make it easier to identify; however, uniqueness is not enforced.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -38,6 +42,10 @@ public final class InternalCheckerArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="gcpZone")
     private @Nullable Output<String> gcpZone;
 
+    /**
+     * @return The GCP zone the Uptime check should egress from. Only respected for internal Uptime checks, where internal_network is specified.
+     * 
+     */
     public Optional<Output<String>> gcpZone() {
         return Optional.ofNullable(this.gcpZone);
     }
@@ -49,6 +57,10 @@ public final class InternalCheckerArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return A unique resource name for this InternalChecker. The format is: projects/[PROJECT_ID_OR_NUMBER]/internalCheckers/[INTERNAL_CHECKER_ID] [PROJECT_ID_OR_NUMBER] is the Stackdriver Workspace project for the Uptime check config associated with the internal checker.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -60,6 +72,10 @@ public final class InternalCheckerArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="network")
     private @Nullable Output<String> network;
 
+    /**
+     * @return The GCP VPC network (https://cloud.google.com/vpc/docs/vpc) where the internal resource lives (ex: &#34;default&#34;).
+     * 
+     */
     public Optional<Output<String>> network() {
         return Optional.ofNullable(this.network);
     }
@@ -71,6 +87,10 @@ public final class InternalCheckerArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="peerProjectId")
     private @Nullable Output<String> peerProjectId;
 
+    /**
+     * @return The GCP project ID where the internal checker lives. Not necessary the same as the Workspace project.
+     * 
+     */
     public Optional<Output<String>> peerProjectId() {
         return Optional.ofNullable(this.peerProjectId);
     }
@@ -82,6 +102,10 @@ public final class InternalCheckerArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="state")
     private @Nullable Output<InternalCheckerState> state;
 
+    /**
+     * @return The current operational state of the internal checker.
+     * 
+     */
     public Optional<Output<InternalCheckerState>> state() {
         return Optional.ofNullable(this.state);
     }
@@ -115,56 +139,128 @@ public final class InternalCheckerArgs extends com.pulumi.resources.ResourceArgs
             $ = new InternalCheckerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayName The checker&#39;s human-readable name. The display name should be unique within a Stackdriver Workspace in order to make it easier to identify; however, uniqueness is not enforced.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName The checker&#39;s human-readable name. The display name should be unique within a Stackdriver Workspace in order to make it easier to identify; however, uniqueness is not enforced.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param gcpZone The GCP zone the Uptime check should egress from. Only respected for internal Uptime checks, where internal_network is specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gcpZone(@Nullable Output<String> gcpZone) {
             $.gcpZone = gcpZone;
             return this;
         }
 
+        /**
+         * @param gcpZone The GCP zone the Uptime check should egress from. Only respected for internal Uptime checks, where internal_network is specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gcpZone(String gcpZone) {
             return gcpZone(Output.of(gcpZone));
         }
 
+        /**
+         * @param name A unique resource name for this InternalChecker. The format is: projects/[PROJECT_ID_OR_NUMBER]/internalCheckers/[INTERNAL_CHECKER_ID] [PROJECT_ID_OR_NUMBER] is the Stackdriver Workspace project for the Uptime check config associated with the internal checker.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name A unique resource name for this InternalChecker. The format is: projects/[PROJECT_ID_OR_NUMBER]/internalCheckers/[INTERNAL_CHECKER_ID] [PROJECT_ID_OR_NUMBER] is the Stackdriver Workspace project for the Uptime check config associated with the internal checker.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param network The GCP VPC network (https://cloud.google.com/vpc/docs/vpc) where the internal resource lives (ex: &#34;default&#34;).
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(@Nullable Output<String> network) {
             $.network = network;
             return this;
         }
 
+        /**
+         * @param network The GCP VPC network (https://cloud.google.com/vpc/docs/vpc) where the internal resource lives (ex: &#34;default&#34;).
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(String network) {
             return network(Output.of(network));
         }
 
+        /**
+         * @param peerProjectId The GCP project ID where the internal checker lives. Not necessary the same as the Workspace project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peerProjectId(@Nullable Output<String> peerProjectId) {
             $.peerProjectId = peerProjectId;
             return this;
         }
 
+        /**
+         * @param peerProjectId The GCP project ID where the internal checker lives. Not necessary the same as the Workspace project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peerProjectId(String peerProjectId) {
             return peerProjectId(Output.of(peerProjectId));
         }
 
+        /**
+         * @param state The current operational state of the internal checker.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable Output<InternalCheckerState> state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param state The current operational state of the internal checker.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(InternalCheckerState state) {
             return state(Output.of(state));
         }

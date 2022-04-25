@@ -25,6 +25,10 @@ public final class MembershipRoleResponse extends com.pulumi.resources.InvokeArg
     @Import(name="expiryDetail", required=true)
     private ExpiryDetailResponse expiryDetail;
 
+    /**
+     * @return The expiry details of the `MembershipRole`. Expiry details are only supported for `MEMBER` `MembershipRoles`. May be set if `name` is `MEMBER`. Must not be set if `name` is any other value.
+     * 
+     */
     public ExpiryDetailResponse expiryDetail() {
         return this.expiryDetail;
     }
@@ -36,6 +40,10 @@ public final class MembershipRoleResponse extends com.pulumi.resources.InvokeArg
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the `MembershipRole`. Must be one of `OWNER`, `MANAGER`, `MEMBER`.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -47,6 +55,10 @@ public final class MembershipRoleResponse extends com.pulumi.resources.InvokeArg
     @Import(name="restrictionEvaluations", required=true)
     private RestrictionEvaluationsResponse restrictionEvaluations;
 
+    /**
+     * @return Evaluations of restrictions applied to parent group on this membership.
+     * 
+     */
     public RestrictionEvaluationsResponse restrictionEvaluations() {
         return this.restrictionEvaluations;
     }
@@ -77,16 +89,34 @@ public final class MembershipRoleResponse extends com.pulumi.resources.InvokeArg
             $ = new MembershipRoleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expiryDetail The expiry details of the `MembershipRole`. Expiry details are only supported for `MEMBER` `MembershipRoles`. May be set if `name` is `MEMBER`. Must not be set if `name` is any other value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expiryDetail(ExpiryDetailResponse expiryDetail) {
             $.expiryDetail = expiryDetail;
             return this;
         }
 
+        /**
+         * @param name The name of the `MembershipRole`. Must be one of `OWNER`, `MANAGER`, `MEMBER`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param restrictionEvaluations Evaluations of restrictions applied to parent group on this membership.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restrictionEvaluations(RestrictionEvaluationsResponse restrictionEvaluations) {
             $.restrictionEvaluations = restrictionEvaluations;
             return this;

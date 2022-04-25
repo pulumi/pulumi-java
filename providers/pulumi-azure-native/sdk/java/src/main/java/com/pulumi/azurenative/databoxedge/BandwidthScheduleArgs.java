@@ -26,6 +26,10 @@ public final class BandwidthScheduleArgs extends com.pulumi.resources.ResourceAr
     @Import(name="days", required=true)
     private Output<List<Either<String,DayOfWeek>>> days;
 
+    /**
+     * @return The days of the week when this schedule is applicable.
+     * 
+     */
     public Output<List<Either<String,DayOfWeek>>> days() {
         return this.days;
     }
@@ -37,6 +41,10 @@ public final class BandwidthScheduleArgs extends com.pulumi.resources.ResourceAr
     @Import(name="deviceName", required=true)
     private Output<String> deviceName;
 
+    /**
+     * @return The device name.
+     * 
+     */
     public Output<String> deviceName() {
         return this.deviceName;
     }
@@ -48,6 +56,10 @@ public final class BandwidthScheduleArgs extends com.pulumi.resources.ResourceAr
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The bandwidth schedule name which needs to be added/updated.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -59,6 +71,10 @@ public final class BandwidthScheduleArgs extends com.pulumi.resources.ResourceAr
     @Import(name="rateInMbps", required=true)
     private Output<Integer> rateInMbps;
 
+    /**
+     * @return The bandwidth rate in Mbps.
+     * 
+     */
     public Output<Integer> rateInMbps() {
         return this.rateInMbps;
     }
@@ -70,6 +86,10 @@ public final class BandwidthScheduleArgs extends com.pulumi.resources.ResourceAr
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -81,6 +101,10 @@ public final class BandwidthScheduleArgs extends com.pulumi.resources.ResourceAr
     @Import(name="start", required=true)
     private Output<String> start;
 
+    /**
+     * @return The start time of the schedule in UTC.
+     * 
+     */
     public Output<String> start() {
         return this.start;
     }
@@ -92,6 +116,10 @@ public final class BandwidthScheduleArgs extends com.pulumi.resources.ResourceAr
     @Import(name="stop", required=true)
     private Output<String> stop;
 
+    /**
+     * @return The stop time of the schedule in UTC.
+     * 
+     */
     public Output<String> stop() {
         return this.stop;
     }
@@ -126,69 +154,159 @@ public final class BandwidthScheduleArgs extends com.pulumi.resources.ResourceAr
             $ = new BandwidthScheduleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param days The days of the week when this schedule is applicable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder days(Output<List<Either<String,DayOfWeek>>> days) {
             $.days = days;
             return this;
         }
 
+        /**
+         * @param days The days of the week when this schedule is applicable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder days(List<Either<String,DayOfWeek>> days) {
             return days(Output.of(days));
         }
 
+        /**
+         * @param days The days of the week when this schedule is applicable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder days(Either<String,DayOfWeek>... days) {
             return days(List.of(days));
         }
 
+        /**
+         * @param deviceName The device name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(Output<String> deviceName) {
             $.deviceName = deviceName;
             return this;
         }
 
+        /**
+         * @param deviceName The device name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(String deviceName) {
             return deviceName(Output.of(deviceName));
         }
 
+        /**
+         * @param name The bandwidth schedule name which needs to be added/updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The bandwidth schedule name which needs to be added/updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param rateInMbps The bandwidth rate in Mbps.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rateInMbps(Output<Integer> rateInMbps) {
             $.rateInMbps = rateInMbps;
             return this;
         }
 
+        /**
+         * @param rateInMbps The bandwidth rate in Mbps.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rateInMbps(Integer rateInMbps) {
             return rateInMbps(Output.of(rateInMbps));
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param start The start time of the schedule in UTC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder start(Output<String> start) {
             $.start = start;
             return this;
         }
 
+        /**
+         * @param start The start time of the schedule in UTC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder start(String start) {
             return start(Output.of(start));
         }
 
+        /**
+         * @param stop The stop time of the schedule in UTC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stop(Output<String> stop) {
             $.stop = stop;
             return this;
         }
 
+        /**
+         * @param stop The stop time of the schedule in UTC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stop(String stop) {
             return stop(Output.of(stop));
         }

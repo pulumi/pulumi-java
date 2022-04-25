@@ -22,6 +22,10 @@ public final class SupportPlanTypeArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="planTypeName")
     private @Nullable Output<String> planTypeName;
 
+    /**
+     * @return The Canonical support plan type.
+     * 
+     */
     public Optional<Output<String>> planTypeName() {
         return Optional.ofNullable(this.planTypeName);
     }
@@ -33,6 +37,10 @@ public final class SupportPlanTypeArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="providerName", required=true)
     private Output<String> providerName;
 
+    /**
+     * @return The support plan type. For now the only valid type is &#34;canonical&#34;.
+     * 
+     */
     public Output<String> providerName() {
         return this.providerName;
     }
@@ -62,20 +70,44 @@ public final class SupportPlanTypeArgs extends com.pulumi.resources.ResourceArgs
             $ = new SupportPlanTypeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param planTypeName The Canonical support plan type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder planTypeName(@Nullable Output<String> planTypeName) {
             $.planTypeName = planTypeName;
             return this;
         }
 
+        /**
+         * @param planTypeName The Canonical support plan type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder planTypeName(String planTypeName) {
             return planTypeName(Output.of(planTypeName));
         }
 
+        /**
+         * @param providerName The support plan type. For now the only valid type is &#34;canonical&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerName(Output<String> providerName) {
             $.providerName = providerName;
             return this;
         }
 
+        /**
+         * @param providerName The support plan type. For now the only valid type is &#34;canonical&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerName(String providerName) {
             return providerName(Output.of(providerName));
         }

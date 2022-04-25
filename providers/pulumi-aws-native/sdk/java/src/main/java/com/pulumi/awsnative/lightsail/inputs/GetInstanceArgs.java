@@ -19,6 +19,10 @@ public final class GetInstanceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="instanceName", required=true)
     private String instanceName;
 
+    /**
+     * @return The names to use for your new Lightsail instance.
+     * 
+     */
     public String instanceName() {
         return this.instanceName;
     }
@@ -47,6 +51,12 @@ public final class GetInstanceArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetInstanceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param instanceName The names to use for your new Lightsail instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceName(String instanceName) {
             $.instanceName = instanceName;
             return this;

@@ -27,6 +27,10 @@ public final class CommitmentPlanPropertiesResponse extends com.pulumi.resources
     @Import(name="autoRenew")
     private @Nullable Boolean autoRenew;
 
+    /**
+     * @return AutoRenew commitment plan.
+     * 
+     */
     public Optional<Boolean> autoRenew() {
         return Optional.ofNullable(this.autoRenew);
     }
@@ -38,6 +42,10 @@ public final class CommitmentPlanPropertiesResponse extends com.pulumi.resources
     @Import(name="current")
     private @Nullable CommitmentPeriodResponse current;
 
+    /**
+     * @return Cognitive Services account commitment period.
+     * 
+     */
     public Optional<CommitmentPeriodResponse> current() {
         return Optional.ofNullable(this.current);
     }
@@ -49,6 +57,10 @@ public final class CommitmentPlanPropertiesResponse extends com.pulumi.resources
     @Import(name="hostingModel")
     private @Nullable String hostingModel;
 
+    /**
+     * @return Account hosting model.
+     * 
+     */
     public Optional<String> hostingModel() {
         return Optional.ofNullable(this.hostingModel);
     }
@@ -60,6 +72,10 @@ public final class CommitmentPlanPropertiesResponse extends com.pulumi.resources
     @Import(name="last", required=true)
     private CommitmentPeriodResponse last;
 
+    /**
+     * @return Cognitive Services account commitment period.
+     * 
+     */
     public CommitmentPeriodResponse last() {
         return this.last;
     }
@@ -71,6 +87,10 @@ public final class CommitmentPlanPropertiesResponse extends com.pulumi.resources
     @Import(name="next")
     private @Nullable CommitmentPeriodResponse next;
 
+    /**
+     * @return Cognitive Services account commitment period.
+     * 
+     */
     public Optional<CommitmentPeriodResponse> next() {
         return Optional.ofNullable(this.next);
     }
@@ -82,6 +102,10 @@ public final class CommitmentPlanPropertiesResponse extends com.pulumi.resources
     @Import(name="planType")
     private @Nullable String planType;
 
+    /**
+     * @return Commitment plan type.
+     * 
+     */
     public Optional<String> planType() {
         return Optional.ofNullable(this.planType);
     }
@@ -115,31 +139,67 @@ public final class CommitmentPlanPropertiesResponse extends com.pulumi.resources
             $ = new CommitmentPlanPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoRenew AutoRenew commitment plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoRenew(@Nullable Boolean autoRenew) {
             $.autoRenew = autoRenew;
             return this;
         }
 
+        /**
+         * @param current Cognitive Services account commitment period.
+         * 
+         * @return builder
+         * 
+         */
         public Builder current(@Nullable CommitmentPeriodResponse current) {
             $.current = current;
             return this;
         }
 
+        /**
+         * @param hostingModel Account hosting model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostingModel(@Nullable String hostingModel) {
             $.hostingModel = hostingModel;
             return this;
         }
 
+        /**
+         * @param last Cognitive Services account commitment period.
+         * 
+         * @return builder
+         * 
+         */
         public Builder last(CommitmentPeriodResponse last) {
             $.last = last;
             return this;
         }
 
+        /**
+         * @param next Cognitive Services account commitment period.
+         * 
+         * @return builder
+         * 
+         */
         public Builder next(@Nullable CommitmentPeriodResponse next) {
             $.next = next;
             return this;
         }
 
+        /**
+         * @param planType Commitment plan type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder planType(@Nullable String planType) {
             $.planType = planType;
             return this;

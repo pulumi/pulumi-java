@@ -31,6 +31,10 @@ public final class FirewallPolicyRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="action")
     private @Nullable Output<String> action;
 
+    /**
+     * @return The Action to perform when the client connection triggers the rule. Can currently be either &#34;allow&#34; or &#34;deny()&#34; where valid values for status are 403, 404, and 502.
+     * 
+     */
     public Optional<Output<String>> action() {
         return Optional.ofNullable(this.action);
     }
@@ -42,6 +46,10 @@ public final class FirewallPolicyRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return An optional description for this resource.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -53,6 +61,10 @@ public final class FirewallPolicyRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="direction")
     private @Nullable Output<FirewallPolicyRuleDirection> direction;
 
+    /**
+     * @return The direction in which this rule applies.
+     * 
+     */
     public Optional<Output<FirewallPolicyRuleDirection>> direction() {
         return Optional.ofNullable(this.direction);
     }
@@ -64,6 +76,10 @@ public final class FirewallPolicyRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="disabled")
     private @Nullable Output<Boolean> disabled;
 
+    /**
+     * @return Denotes whether the firewall policy rule is disabled. When set to true, the firewall policy rule is not enforced and traffic behaves as if it did not exist. If this is unspecified, the firewall policy rule will be enabled.
+     * 
+     */
     public Optional<Output<Boolean>> disabled() {
         return Optional.ofNullable(this.disabled);
     }
@@ -75,6 +91,10 @@ public final class FirewallPolicyRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="enableLogging")
     private @Nullable Output<Boolean> enableLogging;
 
+    /**
+     * @return Denotes whether to enable logging for a particular rule. If logging is enabled, logs will be exported to the configured export destination in Stackdriver. Logs may be exported to BigQuery or Pub/Sub. Note: you cannot enable logging on &#34;goto_next&#34; rules.
+     * 
+     */
     public Optional<Output<Boolean>> enableLogging() {
         return Optional.ofNullable(this.enableLogging);
     }
@@ -86,6 +106,10 @@ public final class FirewallPolicyRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="match")
     private @Nullable Output<FirewallPolicyRuleMatcherArgs> match;
 
+    /**
+     * @return A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding &#39;action&#39; is enforced.
+     * 
+     */
     public Optional<Output<FirewallPolicyRuleMatcherArgs>> match() {
         return Optional.ofNullable(this.match);
     }
@@ -97,6 +121,10 @@ public final class FirewallPolicyRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="priority")
     private @Nullable Output<Integer> priority;
 
+    /**
+     * @return An integer indicating the priority of a rule in the list. The priority must be a positive value between 0 and 2147483647. Rules are evaluated from highest to lowest priority where 0 is the highest priority and 2147483647 is the lowest prority.
+     * 
+     */
     public Optional<Output<Integer>> priority() {
         return Optional.ofNullable(this.priority);
     }
@@ -108,6 +136,10 @@ public final class FirewallPolicyRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="targetResources")
     private @Nullable Output<List<String>> targetResources;
 
+    /**
+     * @return A list of network resource URLs to which this rule applies. This field allows you to control which network&#39;s VMs get this rule. If this field is left blank, all VMs within the organization will receive the rule.
+     * 
+     */
     public Optional<Output<List<String>>> targetResources() {
         return Optional.ofNullable(this.targetResources);
     }
@@ -119,6 +151,10 @@ public final class FirewallPolicyRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="targetServiceAccounts")
     private @Nullable Output<List<String>> targetServiceAccounts;
 
+    /**
+     * @return A list of service accounts indicating the sets of instances that are applied with this rule.
+     * 
+     */
     public Optional<Output<List<String>>> targetServiceAccounts() {
         return Optional.ofNullable(this.targetServiceAccounts);
     }
@@ -155,91 +191,211 @@ public final class FirewallPolicyRuleArgs extends com.pulumi.resources.ResourceA
             $ = new FirewallPolicyRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action The Action to perform when the client connection triggers the rule. Can currently be either &#34;allow&#34; or &#34;deny()&#34; where valid values for status are 403, 404, and 502.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(@Nullable Output<String> action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param action The Action to perform when the client connection triggers the rule. Can currently be either &#34;allow&#34; or &#34;deny()&#34; where valid values for status are 403, 404, and 502.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(String action) {
             return action(Output.of(action));
         }
 
+        /**
+         * @param description An optional description for this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description An optional description for this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param direction The direction in which this rule applies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder direction(@Nullable Output<FirewallPolicyRuleDirection> direction) {
             $.direction = direction;
             return this;
         }
 
+        /**
+         * @param direction The direction in which this rule applies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder direction(FirewallPolicyRuleDirection direction) {
             return direction(Output.of(direction));
         }
 
+        /**
+         * @param disabled Denotes whether the firewall policy rule is disabled. When set to true, the firewall policy rule is not enforced and traffic behaves as if it did not exist. If this is unspecified, the firewall policy rule will be enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disabled(@Nullable Output<Boolean> disabled) {
             $.disabled = disabled;
             return this;
         }
 
+        /**
+         * @param disabled Denotes whether the firewall policy rule is disabled. When set to true, the firewall policy rule is not enforced and traffic behaves as if it did not exist. If this is unspecified, the firewall policy rule will be enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disabled(Boolean disabled) {
             return disabled(Output.of(disabled));
         }
 
+        /**
+         * @param enableLogging Denotes whether to enable logging for a particular rule. If logging is enabled, logs will be exported to the configured export destination in Stackdriver. Logs may be exported to BigQuery or Pub/Sub. Note: you cannot enable logging on &#34;goto_next&#34; rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableLogging(@Nullable Output<Boolean> enableLogging) {
             $.enableLogging = enableLogging;
             return this;
         }
 
+        /**
+         * @param enableLogging Denotes whether to enable logging for a particular rule. If logging is enabled, logs will be exported to the configured export destination in Stackdriver. Logs may be exported to BigQuery or Pub/Sub. Note: you cannot enable logging on &#34;goto_next&#34; rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableLogging(Boolean enableLogging) {
             return enableLogging(Output.of(enableLogging));
         }
 
+        /**
+         * @param match A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding &#39;action&#39; is enforced.
+         * 
+         * @return builder
+         * 
+         */
         public Builder match(@Nullable Output<FirewallPolicyRuleMatcherArgs> match) {
             $.match = match;
             return this;
         }
 
+        /**
+         * @param match A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding &#39;action&#39; is enforced.
+         * 
+         * @return builder
+         * 
+         */
         public Builder match(FirewallPolicyRuleMatcherArgs match) {
             return match(Output.of(match));
         }
 
+        /**
+         * @param priority An integer indicating the priority of a rule in the list. The priority must be a positive value between 0 and 2147483647. Rules are evaluated from highest to lowest priority where 0 is the highest priority and 2147483647 is the lowest prority.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(@Nullable Output<Integer> priority) {
             $.priority = priority;
             return this;
         }
 
+        /**
+         * @param priority An integer indicating the priority of a rule in the list. The priority must be a positive value between 0 and 2147483647. Rules are evaluated from highest to lowest priority where 0 is the highest priority and 2147483647 is the lowest prority.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(Integer priority) {
             return priority(Output.of(priority));
         }
 
+        /**
+         * @param targetResources A list of network resource URLs to which this rule applies. This field allows you to control which network&#39;s VMs get this rule. If this field is left blank, all VMs within the organization will receive the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetResources(@Nullable Output<List<String>> targetResources) {
             $.targetResources = targetResources;
             return this;
         }
 
+        /**
+         * @param targetResources A list of network resource URLs to which this rule applies. This field allows you to control which network&#39;s VMs get this rule. If this field is left blank, all VMs within the organization will receive the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetResources(List<String> targetResources) {
             return targetResources(Output.of(targetResources));
         }
 
+        /**
+         * @param targetResources A list of network resource URLs to which this rule applies. This field allows you to control which network&#39;s VMs get this rule. If this field is left blank, all VMs within the organization will receive the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetResources(String... targetResources) {
             return targetResources(List.of(targetResources));
         }
 
+        /**
+         * @param targetServiceAccounts A list of service accounts indicating the sets of instances that are applied with this rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetServiceAccounts(@Nullable Output<List<String>> targetServiceAccounts) {
             $.targetServiceAccounts = targetServiceAccounts;
             return this;
         }
 
+        /**
+         * @param targetServiceAccounts A list of service accounts indicating the sets of instances that are applied with this rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetServiceAccounts(List<String> targetServiceAccounts) {
             return targetServiceAccounts(Output.of(targetServiceAccounts));
         }
 
+        /**
+         * @param targetServiceAccounts A list of service accounts indicating the sets of instances that are applied with this rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetServiceAccounts(String... targetServiceAccounts) {
             return targetServiceAccounts(List.of(targetServiceAccounts));
         }

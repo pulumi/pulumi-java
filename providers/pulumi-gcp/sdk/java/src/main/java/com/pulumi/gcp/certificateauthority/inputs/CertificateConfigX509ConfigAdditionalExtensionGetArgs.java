@@ -23,6 +23,11 @@ public final class CertificateConfigX509ConfigAdditionalExtensionGetArgs extends
     @Import(name="critical", required=true)
     private Output<Boolean> critical;
 
+    /**
+     * @return Indicates whether or not this extension is critical (i.e., if the client does not know how to
+     * handle this extension, the client should consider this to be an error).
+     * 
+     */
     public Output<Boolean> critical() {
         return this.critical;
     }
@@ -35,6 +40,11 @@ public final class CertificateConfigX509ConfigAdditionalExtensionGetArgs extends
     @Import(name="objectId", required=true)
     private Output<CertificateConfigX509ConfigAdditionalExtensionObjectIdGetArgs> objectId;
 
+    /**
+     * @return Describes values that are relevant in a CA certificate.
+     * Structure is documented below.
+     * 
+     */
     public Output<CertificateConfigX509ConfigAdditionalExtensionObjectIdGetArgs> objectId() {
         return this.objectId;
     }
@@ -46,6 +56,10 @@ public final class CertificateConfigX509ConfigAdditionalExtensionGetArgs extends
     @Import(name="value", required=true)
     private Output<String> value;
 
+    /**
+     * @return The value of this X.509 extension. A base64-encoded string.
+     * 
+     */
     public Output<String> value() {
         return this.value;
     }
@@ -76,29 +90,69 @@ public final class CertificateConfigX509ConfigAdditionalExtensionGetArgs extends
             $ = new CertificateConfigX509ConfigAdditionalExtensionGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param critical Indicates whether or not this extension is critical (i.e., if the client does not know how to
+         * handle this extension, the client should consider this to be an error).
+         * 
+         * @return builder
+         * 
+         */
         public Builder critical(Output<Boolean> critical) {
             $.critical = critical;
             return this;
         }
 
+        /**
+         * @param critical Indicates whether or not this extension is critical (i.e., if the client does not know how to
+         * handle this extension, the client should consider this to be an error).
+         * 
+         * @return builder
+         * 
+         */
         public Builder critical(Boolean critical) {
             return critical(Output.of(critical));
         }
 
+        /**
+         * @param objectId Describes values that are relevant in a CA certificate.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectId(Output<CertificateConfigX509ConfigAdditionalExtensionObjectIdGetArgs> objectId) {
             $.objectId = objectId;
             return this;
         }
 
+        /**
+         * @param objectId Describes values that are relevant in a CA certificate.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectId(CertificateConfigX509ConfigAdditionalExtensionObjectIdGetArgs objectId) {
             return objectId(Output.of(objectId));
         }
 
+        /**
+         * @param value The value of this X.509 extension. A base64-encoded string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value The value of this X.509 extension. A base64-encoded string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

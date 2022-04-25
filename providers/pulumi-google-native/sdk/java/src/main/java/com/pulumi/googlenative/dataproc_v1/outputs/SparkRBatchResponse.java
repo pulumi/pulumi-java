@@ -11,22 +11,22 @@ import java.util.Objects;
 @CustomType
 public final class SparkRBatchResponse {
     /**
-     * Optional. HCFS URIs of archives to be extracted into the working directory of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.
+     * @return Optional. HCFS URIs of archives to be extracted into the working directory of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.
      * 
      */
     private final List<String> archiveUris;
     /**
-     * Optional. The arguments to pass to the Spark driver. Do not include arguments that can be set as batch properties, such as --conf, since a collision can occur that causes an incorrect batch submission.
+     * @return Optional. The arguments to pass to the Spark driver. Do not include arguments that can be set as batch properties, such as --conf, since a collision can occur that causes an incorrect batch submission.
      * 
      */
     private final List<String> args;
     /**
-     * Optional. HCFS URIs of files to be placed in the working directory of each executor.
+     * @return Optional. HCFS URIs of files to be placed in the working directory of each executor.
      * 
      */
     private final List<String> fileUris;
     /**
-     * The HCFS URI of the main R file to use as the driver. Must be a .R or .r file.
+     * @return The HCFS URI of the main R file to use as the driver. Must be a .R or .r file.
      * 
      */
     private final String mainRFileUri;
@@ -44,30 +44,30 @@ public final class SparkRBatchResponse {
     }
 
     /**
-     * Optional. HCFS URIs of archives to be extracted into the working directory of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.
+     * @return Optional. HCFS URIs of archives to be extracted into the working directory of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.
      * 
-    */
+     */
     public List<String> archiveUris() {
         return this.archiveUris;
     }
     /**
-     * Optional. The arguments to pass to the Spark driver. Do not include arguments that can be set as batch properties, such as --conf, since a collision can occur that causes an incorrect batch submission.
+     * @return Optional. The arguments to pass to the Spark driver. Do not include arguments that can be set as batch properties, such as --conf, since a collision can occur that causes an incorrect batch submission.
      * 
-    */
+     */
     public List<String> args() {
         return this.args;
     }
     /**
-     * Optional. HCFS URIs of files to be placed in the working directory of each executor.
+     * @return Optional. HCFS URIs of files to be placed in the working directory of each executor.
      * 
-    */
+     */
     public List<String> fileUris() {
         return this.fileUris;
     }
     /**
-     * The HCFS URI of the main R file to use as the driver. Must be a .R or .r file.
+     * @return The HCFS URI of the main R file to use as the driver. Must be a .R or .r file.
      * 
-    */
+     */
     public String mainRFileUri() {
         return this.mainRFileUri;
     }

@@ -28,6 +28,10 @@ public final class ContactListTopic extends com.pulumi.resources.InvokeArgs {
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return The description of the topic.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -39,6 +43,10 @@ public final class ContactListTopic extends com.pulumi.resources.InvokeArgs {
     @Import(name="displayName", required=true)
     private String displayName;
 
+    /**
+     * @return The display name of the topic.
+     * 
+     */
     public String displayName() {
         return this.displayName;
     }
@@ -50,6 +58,10 @@ public final class ContactListTopic extends com.pulumi.resources.InvokeArgs {
     @Import(name="topicName", required=true)
     private String topicName;
 
+    /**
+     * @return The name of the topic.
+     * 
+     */
     public String topicName() {
         return this.topicName;
     }
@@ -86,16 +98,34 @@ public final class ContactListTopic extends com.pulumi.resources.InvokeArgs {
             return this;
         }
 
+        /**
+         * @param description The description of the topic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param displayName The display name of the topic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param topicName The name of the topic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topicName(String topicName) {
             $.topicName = topicName;
             return this;

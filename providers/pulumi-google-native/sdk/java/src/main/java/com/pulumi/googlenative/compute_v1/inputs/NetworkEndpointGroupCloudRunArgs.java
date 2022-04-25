@@ -26,6 +26,10 @@ public final class NetworkEndpointGroupCloudRunArgs extends com.pulumi.resources
     @Import(name="service")
     private @Nullable Output<String> service;
 
+    /**
+     * @return Cloud Run service is the main resource of Cloud Run. The service must be 1-63 characters long, and comply with RFC1035. Example value: &#34;run-service&#34;.
+     * 
+     */
     public Optional<Output<String>> service() {
         return Optional.ofNullable(this.service);
     }
@@ -37,6 +41,10 @@ public final class NetworkEndpointGroupCloudRunArgs extends com.pulumi.resources
     @Import(name="tag")
     private @Nullable Output<String> tag;
 
+    /**
+     * @return Optional Cloud Run tag represents the &#34;named-revision&#34; to provide additional fine-grained traffic routing information. The tag must be 1-63 characters long, and comply with RFC1035. Example value: &#34;revision-0010&#34;.
+     * 
+     */
     public Optional<Output<String>> tag() {
         return Optional.ofNullable(this.tag);
     }
@@ -48,6 +56,10 @@ public final class NetworkEndpointGroupCloudRunArgs extends com.pulumi.resources
     @Import(name="urlMask")
     private @Nullable Output<String> urlMask;
 
+    /**
+     * @return A template to parse service and tag fields from a request URL. URL mask allows for routing to multiple Run services without having to create multiple network endpoint groups and backend services. For example, request URLs &#34;foo1.domain.com/bar1&#34; and &#34;foo1.domain.com/bar2&#34; can be backed by the same Serverless Network Endpoint Group (NEG) with URL mask &#34;.domain.com/&#34;. The URL mask will parse them to { service=&#34;bar1&#34;, tag=&#34;foo1&#34; } and { service=&#34;bar2&#34;, tag=&#34;foo2&#34; } respectively.
+     * 
+     */
     public Optional<Output<String>> urlMask() {
         return Optional.ofNullable(this.urlMask);
     }
@@ -78,29 +90,65 @@ public final class NetworkEndpointGroupCloudRunArgs extends com.pulumi.resources
             $ = new NetworkEndpointGroupCloudRunArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param service Cloud Run service is the main resource of Cloud Run. The service must be 1-63 characters long, and comply with RFC1035. Example value: &#34;run-service&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(@Nullable Output<String> service) {
             $.service = service;
             return this;
         }
 
+        /**
+         * @param service Cloud Run service is the main resource of Cloud Run. The service must be 1-63 characters long, and comply with RFC1035. Example value: &#34;run-service&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(String service) {
             return service(Output.of(service));
         }
 
+        /**
+         * @param tag Optional Cloud Run tag represents the &#34;named-revision&#34; to provide additional fine-grained traffic routing information. The tag must be 1-63 characters long, and comply with RFC1035. Example value: &#34;revision-0010&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tag(@Nullable Output<String> tag) {
             $.tag = tag;
             return this;
         }
 
+        /**
+         * @param tag Optional Cloud Run tag represents the &#34;named-revision&#34; to provide additional fine-grained traffic routing information. The tag must be 1-63 characters long, and comply with RFC1035. Example value: &#34;revision-0010&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tag(String tag) {
             return tag(Output.of(tag));
         }
 
+        /**
+         * @param urlMask A template to parse service and tag fields from a request URL. URL mask allows for routing to multiple Run services without having to create multiple network endpoint groups and backend services. For example, request URLs &#34;foo1.domain.com/bar1&#34; and &#34;foo1.domain.com/bar2&#34; can be backed by the same Serverless Network Endpoint Group (NEG) with URL mask &#34;.domain.com/&#34;. The URL mask will parse them to { service=&#34;bar1&#34;, tag=&#34;foo1&#34; } and { service=&#34;bar2&#34;, tag=&#34;foo2&#34; } respectively.
+         * 
+         * @return builder
+         * 
+         */
         public Builder urlMask(@Nullable Output<String> urlMask) {
             $.urlMask = urlMask;
             return this;
         }
 
+        /**
+         * @param urlMask A template to parse service and tag fields from a request URL. URL mask allows for routing to multiple Run services without having to create multiple network endpoint groups and backend services. For example, request URLs &#34;foo1.domain.com/bar1&#34; and &#34;foo1.domain.com/bar2&#34; can be backed by the same Serverless Network Endpoint Group (NEG) with URL mask &#34;.domain.com/&#34;. The URL mask will parse them to { service=&#34;bar1&#34;, tag=&#34;foo1&#34; } and { service=&#34;bar2&#34;, tag=&#34;foo2&#34; } respectively.
+         * 
+         * @return builder
+         * 
+         */
         public Builder urlMask(String urlMask) {
             return urlMask(Output.of(urlMask));
         }

@@ -24,6 +24,10 @@ public final class ZypperRepositoryResponse extends com.pulumi.resources.InvokeA
     @Import(name="baseUrl", required=true)
     private String baseUrl;
 
+    /**
+     * @return The location of the repository directory.
+     * 
+     */
     public String baseUrl() {
         return this.baseUrl;
     }
@@ -35,6 +39,10 @@ public final class ZypperRepositoryResponse extends com.pulumi.resources.InvokeA
     @Import(name="displayName", required=true)
     private String displayName;
 
+    /**
+     * @return The display name of the repository.
+     * 
+     */
     public String displayName() {
         return this.displayName;
     }
@@ -46,6 +54,10 @@ public final class ZypperRepositoryResponse extends com.pulumi.resources.InvokeA
     @Import(name="gpgKeys", required=true)
     private List<String> gpgKeys;
 
+    /**
+     * @return URIs of GPG keys.
+     * 
+     */
     public List<String> gpgKeys() {
         return this.gpgKeys;
     }
@@ -76,21 +88,45 @@ public final class ZypperRepositoryResponse extends com.pulumi.resources.InvokeA
             $ = new ZypperRepositoryResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param baseUrl The location of the repository directory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder baseUrl(String baseUrl) {
             $.baseUrl = baseUrl;
             return this;
         }
 
+        /**
+         * @param displayName The display name of the repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param gpgKeys URIs of GPG keys.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gpgKeys(List<String> gpgKeys) {
             $.gpgKeys = gpgKeys;
             return this;
         }
 
+        /**
+         * @param gpgKeys URIs of GPG keys.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gpgKeys(String... gpgKeys) {
             return gpgKeys(List.of(gpgKeys));
         }

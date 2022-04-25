@@ -32,6 +32,10 @@ public final class ImageDataDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="blobUri")
     private @Nullable Output<String> blobUri;
 
+    /**
+     * @return The Virtual Hard Disk.
+     * 
+     */
     public Optional<Output<String>> blobUri() {
         return Optional.ofNullable(this.blobUri);
     }
@@ -43,6 +47,10 @@ public final class ImageDataDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="caching")
     private @Nullable Output<CachingTypes> caching;
 
+    /**
+     * @return Specifies the caching requirements. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **None** &lt;br&gt;&lt;br&gt; **ReadOnly** &lt;br&gt;&lt;br&gt; **ReadWrite** &lt;br&gt;&lt;br&gt; Default: **None for Standard storage. ReadOnly for Premium storage**
+     * 
+     */
     public Optional<Output<CachingTypes>> caching() {
         return Optional.ofNullable(this.caching);
     }
@@ -54,6 +62,10 @@ public final class ImageDataDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="diskEncryptionSet")
     private @Nullable Output<DiskEncryptionSetParametersArgs> diskEncryptionSet;
 
+    /**
+     * @return Specifies the customer managed disk encryption set resource id for the managed image disk.
+     * 
+     */
     public Optional<Output<DiskEncryptionSetParametersArgs>> diskEncryptionSet() {
         return Optional.ofNullable(this.diskEncryptionSet);
     }
@@ -65,6 +77,10 @@ public final class ImageDataDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="diskSizeGB")
     private @Nullable Output<Integer> diskSizeGB;
 
+    /**
+     * @return Specifies the size of empty data disks in gigabytes. This element can be used to overwrite the name of the disk in a virtual machine image. &lt;br&gt;&lt;br&gt; This value cannot be larger than 1023 GB
+     * 
+     */
     public Optional<Output<Integer>> diskSizeGB() {
         return Optional.ofNullable(this.diskSizeGB);
     }
@@ -76,6 +92,10 @@ public final class ImageDataDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="lun", required=true)
     private Output<Integer> lun;
 
+    /**
+     * @return Specifies the logical unit number of the data disk. This value is used to identify data disks within the VM and therefore must be unique for each data disk attached to a VM.
+     * 
+     */
     public Output<Integer> lun() {
         return this.lun;
     }
@@ -87,6 +107,10 @@ public final class ImageDataDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="managedDisk")
     private @Nullable Output<SubResourceArgs> managedDisk;
 
+    /**
+     * @return The managedDisk.
+     * 
+     */
     public Optional<Output<SubResourceArgs>> managedDisk() {
         return Optional.ofNullable(this.managedDisk);
     }
@@ -98,6 +122,10 @@ public final class ImageDataDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="snapshot")
     private @Nullable Output<SubResourceArgs> snapshot;
 
+    /**
+     * @return The snapshot.
+     * 
+     */
     public Optional<Output<SubResourceArgs>> snapshot() {
         return Optional.ofNullable(this.snapshot);
     }
@@ -109,6 +137,10 @@ public final class ImageDataDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="storageAccountType")
     private @Nullable Output<Either<String,StorageAccountTypes>> storageAccountType;
 
+    /**
+     * @return Specifies the storage account type for the managed disk. NOTE: UltraSSD_LRS can only be used with data disks, it cannot be used with OS Disk.
+     * 
+     */
     public Optional<Output<Either<String,StorageAccountTypes>>> storageAccountType() {
         return Optional.ofNullable(this.storageAccountType);
     }
@@ -144,82 +176,190 @@ public final class ImageDataDiskArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ImageDataDiskArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param blobUri The Virtual Hard Disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blobUri(@Nullable Output<String> blobUri) {
             $.blobUri = blobUri;
             return this;
         }
 
+        /**
+         * @param blobUri The Virtual Hard Disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blobUri(String blobUri) {
             return blobUri(Output.of(blobUri));
         }
 
+        /**
+         * @param caching Specifies the caching requirements. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **None** &lt;br&gt;&lt;br&gt; **ReadOnly** &lt;br&gt;&lt;br&gt; **ReadWrite** &lt;br&gt;&lt;br&gt; Default: **None for Standard storage. ReadOnly for Premium storage**
+         * 
+         * @return builder
+         * 
+         */
         public Builder caching(@Nullable Output<CachingTypes> caching) {
             $.caching = caching;
             return this;
         }
 
+        /**
+         * @param caching Specifies the caching requirements. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **None** &lt;br&gt;&lt;br&gt; **ReadOnly** &lt;br&gt;&lt;br&gt; **ReadWrite** &lt;br&gt;&lt;br&gt; Default: **None for Standard storage. ReadOnly for Premium storage**
+         * 
+         * @return builder
+         * 
+         */
         public Builder caching(CachingTypes caching) {
             return caching(Output.of(caching));
         }
 
+        /**
+         * @param diskEncryptionSet Specifies the customer managed disk encryption set resource id for the managed image disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskEncryptionSet(@Nullable Output<DiskEncryptionSetParametersArgs> diskEncryptionSet) {
             $.diskEncryptionSet = diskEncryptionSet;
             return this;
         }
 
+        /**
+         * @param diskEncryptionSet Specifies the customer managed disk encryption set resource id for the managed image disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskEncryptionSet(DiskEncryptionSetParametersArgs diskEncryptionSet) {
             return diskEncryptionSet(Output.of(diskEncryptionSet));
         }
 
+        /**
+         * @param diskSizeGB Specifies the size of empty data disks in gigabytes. This element can be used to overwrite the name of the disk in a virtual machine image. &lt;br&gt;&lt;br&gt; This value cannot be larger than 1023 GB
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskSizeGB(@Nullable Output<Integer> diskSizeGB) {
             $.diskSizeGB = diskSizeGB;
             return this;
         }
 
+        /**
+         * @param diskSizeGB Specifies the size of empty data disks in gigabytes. This element can be used to overwrite the name of the disk in a virtual machine image. &lt;br&gt;&lt;br&gt; This value cannot be larger than 1023 GB
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskSizeGB(Integer diskSizeGB) {
             return diskSizeGB(Output.of(diskSizeGB));
         }
 
+        /**
+         * @param lun Specifies the logical unit number of the data disk. This value is used to identify data disks within the VM and therefore must be unique for each data disk attached to a VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lun(Output<Integer> lun) {
             $.lun = lun;
             return this;
         }
 
+        /**
+         * @param lun Specifies the logical unit number of the data disk. This value is used to identify data disks within the VM and therefore must be unique for each data disk attached to a VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lun(Integer lun) {
             return lun(Output.of(lun));
         }
 
+        /**
+         * @param managedDisk The managedDisk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedDisk(@Nullable Output<SubResourceArgs> managedDisk) {
             $.managedDisk = managedDisk;
             return this;
         }
 
+        /**
+         * @param managedDisk The managedDisk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedDisk(SubResourceArgs managedDisk) {
             return managedDisk(Output.of(managedDisk));
         }
 
+        /**
+         * @param snapshot The snapshot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshot(@Nullable Output<SubResourceArgs> snapshot) {
             $.snapshot = snapshot;
             return this;
         }
 
+        /**
+         * @param snapshot The snapshot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshot(SubResourceArgs snapshot) {
             return snapshot(Output.of(snapshot));
         }
 
+        /**
+         * @param storageAccountType Specifies the storage account type for the managed disk. NOTE: UltraSSD_LRS can only be used with data disks, it cannot be used with OS Disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountType(@Nullable Output<Either<String,StorageAccountTypes>> storageAccountType) {
             $.storageAccountType = storageAccountType;
             return this;
         }
 
+        /**
+         * @param storageAccountType Specifies the storage account type for the managed disk. NOTE: UltraSSD_LRS can only be used with data disks, it cannot be used with OS Disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountType(Either<String,StorageAccountTypes> storageAccountType) {
             return storageAccountType(Output.of(storageAccountType));
         }
 
+        /**
+         * @param storageAccountType Specifies the storage account type for the managed disk. NOTE: UltraSSD_LRS can only be used with data disks, it cannot be used with OS Disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountType(String storageAccountType) {
             return storageAccountType(Either.ofLeft(storageAccountType));
         }
 
+        /**
+         * @param storageAccountType Specifies the storage account type for the managed disk. NOTE: UltraSSD_LRS can only be used with data disks, it cannot be used with OS Disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountType(StorageAccountTypes storageAccountType) {
             return storageAccountType(Either.ofRight(storageAccountType));
         }

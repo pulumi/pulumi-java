@@ -19,6 +19,10 @@ public final class GetAgentArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="agentArn", required=true)
     private String agentArn;
 
+    /**
+     * @return The DataSync Agent ARN.
+     * 
+     */
     public String agentArn() {
         return this.agentArn;
     }
@@ -47,6 +51,12 @@ public final class GetAgentArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetAgentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param agentArn The DataSync Agent ARN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentArn(String agentArn) {
             $.agentArn = agentArn;
             return this;

@@ -24,6 +24,10 @@ public final class GoogleCloudBillingBudgetsV1ThresholdRuleResponse extends com.
     @Import(name="spendBasis", required=true)
     private String spendBasis;
 
+    /**
+     * @return Optional. The type of basis used to determine if spend has passed the threshold. Behavior defaults to CURRENT_SPEND if not set.
+     * 
+     */
     public String spendBasis() {
         return this.spendBasis;
     }
@@ -35,6 +39,10 @@ public final class GoogleCloudBillingBudgetsV1ThresholdRuleResponse extends com.
     @Import(name="thresholdPercent", required=true)
     private Double thresholdPercent;
 
+    /**
+     * @return Send an alert when this threshold is exceeded. This is a 1.0-based percentage, so 0.5 = 50%. Validation: non-negative number.
+     * 
+     */
     public Double thresholdPercent() {
         return this.thresholdPercent;
     }
@@ -64,11 +72,23 @@ public final class GoogleCloudBillingBudgetsV1ThresholdRuleResponse extends com.
             $ = new GoogleCloudBillingBudgetsV1ThresholdRuleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param spendBasis Optional. The type of basis used to determine if spend has passed the threshold. Behavior defaults to CURRENT_SPEND if not set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder spendBasis(String spendBasis) {
             $.spendBasis = spendBasis;
             return this;
         }
 
+        /**
+         * @param thresholdPercent Send an alert when this threshold is exceeded. This is a 1.0-based percentage, so 0.5 = 50%. Validation: non-negative number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thresholdPercent(Double thresholdPercent) {
             $.thresholdPercent = thresholdPercent;
             return this;

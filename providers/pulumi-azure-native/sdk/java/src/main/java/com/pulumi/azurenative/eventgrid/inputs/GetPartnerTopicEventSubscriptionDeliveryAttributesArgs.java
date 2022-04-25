@@ -19,6 +19,10 @@ public final class GetPartnerTopicEventSubscriptionDeliveryAttributesArgs extend
     @Import(name="eventSubscriptionName", required=true)
     private String eventSubscriptionName;
 
+    /**
+     * @return Name of the event subscription to be created. Event subscription names must be between 3 and 100 characters in length and use alphanumeric letters only.
+     * 
+     */
     public String eventSubscriptionName() {
         return this.eventSubscriptionName;
     }
@@ -30,6 +34,10 @@ public final class GetPartnerTopicEventSubscriptionDeliveryAttributesArgs extend
     @Import(name="partnerTopicName", required=true)
     private String partnerTopicName;
 
+    /**
+     * @return Name of the partner topic.
+     * 
+     */
     public String partnerTopicName() {
         return this.partnerTopicName;
     }
@@ -41,6 +49,10 @@ public final class GetPartnerTopicEventSubscriptionDeliveryAttributesArgs extend
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group within the user&#39;s subscription.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetPartnerTopicEventSubscriptionDeliveryAttributesArgs extend
             $ = new GetPartnerTopicEventSubscriptionDeliveryAttributesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param eventSubscriptionName Name of the event subscription to be created. Event subscription names must be between 3 and 100 characters in length and use alphanumeric letters only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventSubscriptionName(String eventSubscriptionName) {
             $.eventSubscriptionName = eventSubscriptionName;
             return this;
         }
 
+        /**
+         * @param partnerTopicName Name of the partner topic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partnerTopicName(String partnerTopicName) {
             $.partnerTopicName = partnerTopicName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

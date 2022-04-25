@@ -22,6 +22,10 @@ public final class DocumentRequiresArgs extends com.pulumi.resources.ResourceArg
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the required SSM document. The name can be an Amazon Resource Name (ARN).
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -33,6 +37,10 @@ public final class DocumentRequiresArgs extends com.pulumi.resources.ResourceArg
     @Import(name="version")
     private @Nullable Output<String> version;
 
+    /**
+     * @return The document version required by the current document.
+     * 
+     */
     public Optional<Output<String>> version() {
         return Optional.ofNullable(this.version);
     }
@@ -62,20 +70,44 @@ public final class DocumentRequiresArgs extends com.pulumi.resources.ResourceArg
             $ = new DocumentRequiresArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the required SSM document. The name can be an Amazon Resource Name (ARN).
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the required SSM document. The name can be an Amazon Resource Name (ARN).
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param version The document version required by the current document.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable Output<String> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version The document version required by the current document.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             return version(Output.of(version));
         }

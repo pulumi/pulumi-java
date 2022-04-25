@@ -25,6 +25,10 @@ public final class ApiResourceDefinitionsResponse extends com.pulumi.resources.I
     @Import(name="modifiedSwaggerUrl")
     private @Nullable String modifiedSwaggerUrl;
 
+    /**
+     * @return The modified swagger url.
+     * 
+     */
     public Optional<String> modifiedSwaggerUrl() {
         return Optional.ofNullable(this.modifiedSwaggerUrl);
     }
@@ -36,6 +40,10 @@ public final class ApiResourceDefinitionsResponse extends com.pulumi.resources.I
     @Import(name="originalSwaggerUrl")
     private @Nullable String originalSwaggerUrl;
 
+    /**
+     * @return The original swagger url.
+     * 
+     */
     public Optional<String> originalSwaggerUrl() {
         return Optional.ofNullable(this.originalSwaggerUrl);
     }
@@ -65,11 +73,23 @@ public final class ApiResourceDefinitionsResponse extends com.pulumi.resources.I
             $ = new ApiResourceDefinitionsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param modifiedSwaggerUrl The modified swagger url.
+         * 
+         * @return builder
+         * 
+         */
         public Builder modifiedSwaggerUrl(@Nullable String modifiedSwaggerUrl) {
             $.modifiedSwaggerUrl = modifiedSwaggerUrl;
             return this;
         }
 
+        /**
+         * @param originalSwaggerUrl The original swagger url.
+         * 
+         * @return builder
+         * 
+         */
         public Builder originalSwaggerUrl(@Nullable String originalSwaggerUrl) {
             $.originalSwaggerUrl = originalSwaggerUrl;
             return this;

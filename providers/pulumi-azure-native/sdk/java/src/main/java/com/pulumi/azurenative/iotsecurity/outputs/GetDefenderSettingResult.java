@@ -13,42 +13,42 @@ import java.util.Objects;
 @CustomType
 public final class GetDefenderSettingResult {
     /**
-     * Size of the device quota. Value is required to be in multiples of 100.
+     * @return Size of the device quota. Value is required to be in multiples of 100.
      * 
      */
     private final Integer deviceQuota;
     /**
-     * End time of the evaluation period, if such exist
+     * @return End time of the evaluation period, if such exist
      * 
      */
     private final String evaluationEndTime;
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
      */
     private final String id;
     /**
-     * MDE integration configuration
+     * @return MDE integration configuration
      * 
      */
     private final DefenderSettingsPropertiesResponseMdeIntegration mdeIntegration;
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
      */
     private final String name;
     /**
-     * The kind of onboarding for the subscription
+     * @return The kind of onboarding for the subscription
      * 
      */
     private final String onboardingKind;
     /**
-     * Sentinel Workspace Resource Ids
+     * @return Sentinel Workspace Resource Ids
      * 
      */
     private final List<String> sentinelWorkspaceResourceIds;
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     private final String type;
@@ -74,58 +74,58 @@ public final class GetDefenderSettingResult {
     }
 
     /**
-     * Size of the device quota. Value is required to be in multiples of 100.
+     * @return Size of the device quota. Value is required to be in multiples of 100.
      * 
-    */
+     */
     public Integer deviceQuota() {
         return this.deviceQuota;
     }
     /**
-     * End time of the evaluation period, if such exist
+     * @return End time of the evaluation period, if such exist
      * 
-    */
+     */
     public String evaluationEndTime() {
         return this.evaluationEndTime;
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * MDE integration configuration
+     * @return MDE integration configuration
      * 
-    */
+     */
     public DefenderSettingsPropertiesResponseMdeIntegration mdeIntegration() {
         return this.mdeIntegration;
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The kind of onboarding for the subscription
+     * @return The kind of onboarding for the subscription
      * 
-    */
+     */
     public String onboardingKind() {
         return this.onboardingKind;
     }
     /**
-     * Sentinel Workspace Resource Ids
+     * @return Sentinel Workspace Resource Ids
      * 
-    */
+     */
     public List<String> sentinelWorkspaceResourceIds() {
         return this.sentinelWorkspaceResourceIds;
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

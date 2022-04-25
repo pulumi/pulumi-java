@@ -26,6 +26,10 @@ public final class ResultsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="artifactManifest", required=true)
     private String artifactManifest;
 
+    /**
+     * @return Path to the artifact manifest. Only populated when artifacts are uploaded.
+     * 
+     */
     public String artifactManifest() {
         return this.artifactManifest;
     }
@@ -37,6 +41,10 @@ public final class ResultsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="artifactTiming", required=true)
     private TimeSpanResponse artifactTiming;
 
+    /**
+     * @return Time to push all non-container artifacts.
+     * 
+     */
     public TimeSpanResponse artifactTiming() {
         return this.artifactTiming;
     }
@@ -48,6 +56,10 @@ public final class ResultsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="buildStepImages", required=true)
     private List<String> buildStepImages;
 
+    /**
+     * @return List of build step digests, in the order corresponding to build step indices.
+     * 
+     */
     public List<String> buildStepImages() {
         return this.buildStepImages;
     }
@@ -59,6 +71,10 @@ public final class ResultsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="buildStepOutputs", required=true)
     private List<String> buildStepOutputs;
 
+    /**
+     * @return List of build step outputs, produced by builder images, in the order corresponding to build step indices. [Cloud Builders](https://cloud.google.com/cloud-build/docs/cloud-builders) can produce this output by writing to `$BUILDER_OUTPUT/output`. Only the first 4KB of data is stored.
+     * 
+     */
     public List<String> buildStepOutputs() {
         return this.buildStepOutputs;
     }
@@ -70,6 +86,10 @@ public final class ResultsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="images", required=true)
     private List<BuiltImageResponse> images;
 
+    /**
+     * @return Container images that were built as a part of the build.
+     * 
+     */
     public List<BuiltImageResponse> images() {
         return this.images;
     }
@@ -81,6 +101,10 @@ public final class ResultsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="numArtifacts", required=true)
     private String numArtifacts;
 
+    /**
+     * @return Number of artifacts uploaded. Only populated when artifacts are uploaded.
+     * 
+     */
     public String numArtifacts() {
         return this.numArtifacts;
     }
@@ -114,43 +138,97 @@ public final class ResultsResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ResultsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param artifactManifest Path to the artifact manifest. Only populated when artifacts are uploaded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder artifactManifest(String artifactManifest) {
             $.artifactManifest = artifactManifest;
             return this;
         }
 
+        /**
+         * @param artifactTiming Time to push all non-container artifacts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder artifactTiming(TimeSpanResponse artifactTiming) {
             $.artifactTiming = artifactTiming;
             return this;
         }
 
+        /**
+         * @param buildStepImages List of build step digests, in the order corresponding to build step indices.
+         * 
+         * @return builder
+         * 
+         */
         public Builder buildStepImages(List<String> buildStepImages) {
             $.buildStepImages = buildStepImages;
             return this;
         }
 
+        /**
+         * @param buildStepImages List of build step digests, in the order corresponding to build step indices.
+         * 
+         * @return builder
+         * 
+         */
         public Builder buildStepImages(String... buildStepImages) {
             return buildStepImages(List.of(buildStepImages));
         }
 
+        /**
+         * @param buildStepOutputs List of build step outputs, produced by builder images, in the order corresponding to build step indices. [Cloud Builders](https://cloud.google.com/cloud-build/docs/cloud-builders) can produce this output by writing to `$BUILDER_OUTPUT/output`. Only the first 4KB of data is stored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder buildStepOutputs(List<String> buildStepOutputs) {
             $.buildStepOutputs = buildStepOutputs;
             return this;
         }
 
+        /**
+         * @param buildStepOutputs List of build step outputs, produced by builder images, in the order corresponding to build step indices. [Cloud Builders](https://cloud.google.com/cloud-build/docs/cloud-builders) can produce this output by writing to `$BUILDER_OUTPUT/output`. Only the first 4KB of data is stored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder buildStepOutputs(String... buildStepOutputs) {
             return buildStepOutputs(List.of(buildStepOutputs));
         }
 
+        /**
+         * @param images Container images that were built as a part of the build.
+         * 
+         * @return builder
+         * 
+         */
         public Builder images(List<BuiltImageResponse> images) {
             $.images = images;
             return this;
         }
 
+        /**
+         * @param images Container images that were built as a part of the build.
+         * 
+         * @return builder
+         * 
+         */
         public Builder images(BuiltImageResponse... images) {
             return images(List.of(images));
         }
 
+        /**
+         * @param numArtifacts Number of artifacts uploaded. Only populated when artifacts are uploaded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numArtifacts(String numArtifacts) {
             $.numArtifacts = numArtifacts;
             return this;

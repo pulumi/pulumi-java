@@ -29,6 +29,12 @@ public final class RegionUrlMapArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultService")
     private @Nullable Output<String> defaultService;
 
+    /**
+     * @return A reference to a RegionBackendService resource. This will be used if
+     * none of the pathRules defined by this PathMatcher is matched by
+     * the URL&#39;s path portion.
+     * 
+     */
     public Optional<Output<String>> defaultService() {
         return Optional.ofNullable(this.defaultService);
     }
@@ -43,6 +49,13 @@ public final class RegionUrlMapArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultUrlRedirect")
     private @Nullable Output<RegionUrlMapDefaultUrlRedirectArgs> defaultUrlRedirect;
 
+    /**
+     * @return When none of the specified hostRules match, the request is redirected to a URL specified
+     * by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
+     * defaultRouteAction must not be set.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<RegionUrlMapDefaultUrlRedirectArgs>> defaultUrlRedirect() {
         return Optional.ofNullable(this.defaultUrlRedirect);
     }
@@ -54,6 +67,10 @@ public final class RegionUrlMapArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description of this test case.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -66,6 +83,11 @@ public final class RegionUrlMapArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hostRules")
     private @Nullable Output<List<RegionUrlMapHostRuleArgs>> hostRules;
 
+    /**
+     * @return The list of HostRules to use against the URL.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<RegionUrlMapHostRuleArgs>>> hostRules() {
         return Optional.ofNullable(this.hostRules);
     }
@@ -78,6 +100,11 @@ public final class RegionUrlMapArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the query parameter to match. The query parameter must exist in the
+     * request, in the absence of which the request match fails.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -90,6 +117,11 @@ public final class RegionUrlMapArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="pathMatchers")
     private @Nullable Output<List<RegionUrlMapPathMatcherArgs>> pathMatchers;
 
+    /**
+     * @return The name of the PathMatcher to use to match the path portion of
+     * the URL if the hostRule matches the URL&#39;s host portion.
+     * 
+     */
     public Optional<Output<List<RegionUrlMapPathMatcherArgs>>> pathMatchers() {
         return Optional.ofNullable(this.pathMatchers);
     }
@@ -102,6 +134,11 @@ public final class RegionUrlMapArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -114,6 +151,11 @@ public final class RegionUrlMapArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="region")
     private @Nullable Output<String> region;
 
+    /**
+     * @return The Region in which the url map should reside.
+     * If it is not provided, the provider region is used.
+     * 
+     */
     public Optional<Output<String>> region() {
         return Optional.ofNullable(this.region);
     }
@@ -127,6 +169,12 @@ public final class RegionUrlMapArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tests")
     private @Nullable Output<List<RegionUrlMapTestArgs>> tests;
 
+    /**
+     * @return The list of expected URL mappings. Requests to update this UrlMap will
+     * succeed only if all of the test cases pass.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<RegionUrlMapTestArgs>>> tests() {
         return Optional.ofNullable(this.tests);
     }
@@ -163,95 +211,249 @@ public final class RegionUrlMapArgs extends com.pulumi.resources.ResourceArgs {
             $ = new RegionUrlMapArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param defaultService A reference to a RegionBackendService resource. This will be used if
+         * none of the pathRules defined by this PathMatcher is matched by
+         * the URL&#39;s path portion.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultService(@Nullable Output<String> defaultService) {
             $.defaultService = defaultService;
             return this;
         }
 
+        /**
+         * @param defaultService A reference to a RegionBackendService resource. This will be used if
+         * none of the pathRules defined by this PathMatcher is matched by
+         * the URL&#39;s path portion.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultService(String defaultService) {
             return defaultService(Output.of(defaultService));
         }
 
+        /**
+         * @param defaultUrlRedirect When none of the specified hostRules match, the request is redirected to a URL specified
+         * by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
+         * defaultRouteAction must not be set.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultUrlRedirect(@Nullable Output<RegionUrlMapDefaultUrlRedirectArgs> defaultUrlRedirect) {
             $.defaultUrlRedirect = defaultUrlRedirect;
             return this;
         }
 
+        /**
+         * @param defaultUrlRedirect When none of the specified hostRules match, the request is redirected to a URL specified
+         * by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
+         * defaultRouteAction must not be set.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultUrlRedirect(RegionUrlMapDefaultUrlRedirectArgs defaultUrlRedirect) {
             return defaultUrlRedirect(Output.of(defaultUrlRedirect));
         }
 
+        /**
+         * @param description Description of this test case.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description of this test case.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param hostRules The list of HostRules to use against the URL.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostRules(@Nullable Output<List<RegionUrlMapHostRuleArgs>> hostRules) {
             $.hostRules = hostRules;
             return this;
         }
 
+        /**
+         * @param hostRules The list of HostRules to use against the URL.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostRules(List<RegionUrlMapHostRuleArgs> hostRules) {
             return hostRules(Output.of(hostRules));
         }
 
+        /**
+         * @param hostRules The list of HostRules to use against the URL.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostRules(RegionUrlMapHostRuleArgs... hostRules) {
             return hostRules(List.of(hostRules));
         }
 
+        /**
+         * @param name The name of the query parameter to match. The query parameter must exist in the
+         * request, in the absence of which the request match fails.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the query parameter to match. The query parameter must exist in the
+         * request, in the absence of which the request match fails.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param pathMatchers The name of the PathMatcher to use to match the path portion of
+         * the URL if the hostRule matches the URL&#39;s host portion.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pathMatchers(@Nullable Output<List<RegionUrlMapPathMatcherArgs>> pathMatchers) {
             $.pathMatchers = pathMatchers;
             return this;
         }
 
+        /**
+         * @param pathMatchers The name of the PathMatcher to use to match the path portion of
+         * the URL if the hostRule matches the URL&#39;s host portion.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pathMatchers(List<RegionUrlMapPathMatcherArgs> pathMatchers) {
             return pathMatchers(Output.of(pathMatchers));
         }
 
+        /**
+         * @param pathMatchers The name of the PathMatcher to use to match the path portion of
+         * the URL if the hostRule matches the URL&#39;s host portion.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pathMatchers(RegionUrlMapPathMatcherArgs... pathMatchers) {
             return pathMatchers(List.of(pathMatchers));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param region The Region in which the url map should reside.
+         * If it is not provided, the provider region is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(@Nullable Output<String> region) {
             $.region = region;
             return this;
         }
 
+        /**
+         * @param region The Region in which the url map should reside.
+         * If it is not provided, the provider region is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(String region) {
             return region(Output.of(region));
         }
 
+        /**
+         * @param tests The list of expected URL mappings. Requests to update this UrlMap will
+         * succeed only if all of the test cases pass.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tests(@Nullable Output<List<RegionUrlMapTestArgs>> tests) {
             $.tests = tests;
             return this;
         }
 
+        /**
+         * @param tests The list of expected URL mappings. Requests to update this UrlMap will
+         * succeed only if all of the test cases pass.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tests(List<RegionUrlMapTestArgs> tests) {
             return tests(Output.of(tests));
         }
 
+        /**
+         * @param tests The list of expected URL mappings. Requests to update this UrlMap will
+         * succeed only if all of the test cases pass.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tests(RegionUrlMapTestArgs... tests) {
             return tests(List.of(tests));
         }

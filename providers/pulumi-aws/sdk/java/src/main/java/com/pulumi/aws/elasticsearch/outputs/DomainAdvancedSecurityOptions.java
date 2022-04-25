@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DomainAdvancedSecurityOptions {
     /**
-     * Whether to enable node-to-node encryption. If the `node_to_node_encryption` block is not provided then this defaults to `false`.
+     * @return Whether to enable node-to-node encryption. If the `node_to_node_encryption` block is not provided then this defaults to `false`.
      * 
      */
     private final Boolean enabled;
     /**
-     * Whether the internal user database is enabled. If not set, defaults to `false` by the AWS API.
+     * @return Whether the internal user database is enabled. If not set, defaults to `false` by the AWS API.
      * 
      */
     private final @Nullable Boolean internalUserDatabaseEnabled;
     /**
-     * Configuration block for the main user. Detailed below.
+     * @return Configuration block for the main user. Detailed below.
      * 
      */
     private final @Nullable DomainAdvancedSecurityOptionsMasterUserOptions masterUserOptions;
@@ -39,23 +39,23 @@ public final class DomainAdvancedSecurityOptions {
     }
 
     /**
-     * Whether to enable node-to-node encryption. If the `node_to_node_encryption` block is not provided then this defaults to `false`.
+     * @return Whether to enable node-to-node encryption. If the `node_to_node_encryption` block is not provided then this defaults to `false`.
      * 
-    */
+     */
     public Boolean enabled() {
         return this.enabled;
     }
     /**
-     * Whether the internal user database is enabled. If not set, defaults to `false` by the AWS API.
+     * @return Whether the internal user database is enabled. If not set, defaults to `false` by the AWS API.
      * 
-    */
+     */
     public Optional<Boolean> internalUserDatabaseEnabled() {
         return Optional.ofNullable(this.internalUserDatabaseEnabled);
     }
     /**
-     * Configuration block for the main user. Detailed below.
+     * @return Configuration block for the main user. Detailed below.
      * 
-    */
+     */
     public Optional<DomainAdvancedSecurityOptionsMasterUserOptions> masterUserOptions() {
         return Optional.ofNullable(this.masterUserOptions);
     }

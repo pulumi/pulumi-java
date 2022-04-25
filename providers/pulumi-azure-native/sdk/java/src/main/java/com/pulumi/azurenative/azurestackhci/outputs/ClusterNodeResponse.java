@@ -11,47 +11,47 @@ import java.util.Objects;
 @CustomType
 public final class ClusterNodeResponse {
     /**
-     * Number of physical cores on the cluster node.
+     * @return Number of physical cores on the cluster node.
      * 
      */
     private final Double coreCount;
     /**
-     * Id of the node in the cluster.
+     * @return Id of the node in the cluster.
      * 
      */
     private final Double id;
     /**
-     * Manufacturer of the cluster node hardware.
+     * @return Manufacturer of the cluster node hardware.
      * 
      */
     private final String manufacturer;
     /**
-     * Total available memory on the cluster node (in GiB).
+     * @return Total available memory on the cluster node (in GiB).
      * 
      */
     private final Double memoryInGiB;
     /**
-     * Model name of the cluster node hardware.
+     * @return Model name of the cluster node hardware.
      * 
      */
     private final String model;
     /**
-     * Name of the cluster node.
+     * @return Name of the cluster node.
      * 
      */
     private final String name;
     /**
-     * Operating system running on the cluster node.
+     * @return Operating system running on the cluster node.
      * 
      */
     private final String osName;
     /**
-     * Version of the operating system running on the cluster node.
+     * @return Version of the operating system running on the cluster node.
      * 
      */
     private final String osVersion;
     /**
-     * Immutable id of the cluster node.
+     * @return Immutable id of the cluster node.
      * 
      */
     private final String serialNumber;
@@ -79,65 +79,65 @@ public final class ClusterNodeResponse {
     }
 
     /**
-     * Number of physical cores on the cluster node.
+     * @return Number of physical cores on the cluster node.
      * 
-    */
+     */
     public Double coreCount() {
         return this.coreCount;
     }
     /**
-     * Id of the node in the cluster.
+     * @return Id of the node in the cluster.
      * 
-    */
+     */
     public Double id() {
         return this.id;
     }
     /**
-     * Manufacturer of the cluster node hardware.
+     * @return Manufacturer of the cluster node hardware.
      * 
-    */
+     */
     public String manufacturer() {
         return this.manufacturer;
     }
     /**
-     * Total available memory on the cluster node (in GiB).
+     * @return Total available memory on the cluster node (in GiB).
      * 
-    */
+     */
     public Double memoryInGiB() {
         return this.memoryInGiB;
     }
     /**
-     * Model name of the cluster node hardware.
+     * @return Model name of the cluster node hardware.
      * 
-    */
+     */
     public String model() {
         return this.model;
     }
     /**
-     * Name of the cluster node.
+     * @return Name of the cluster node.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Operating system running on the cluster node.
+     * @return Operating system running on the cluster node.
      * 
-    */
+     */
     public String osName() {
         return this.osName;
     }
     /**
-     * Version of the operating system running on the cluster node.
+     * @return Version of the operating system running on the cluster node.
      * 
-    */
+     */
     public String osVersion() {
         return this.osVersion;
     }
     /**
-     * Immutable id of the cluster node.
+     * @return Immutable id of the cluster node.
      * 
-    */
+     */
     public String serialNumber() {
         return this.serialNumber;
     }

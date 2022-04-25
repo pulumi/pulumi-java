@@ -25,6 +25,10 @@ public final class MysqlDatabaseResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="databaseName", required=true)
     private String databaseName;
 
+    /**
+     * @return Database name.
+     * 
+     */
     public String databaseName() {
         return this.databaseName;
     }
@@ -36,6 +40,10 @@ public final class MysqlDatabaseResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="mysqlTables", required=true)
     private List<MysqlTableResponse> mysqlTables;
 
+    /**
+     * @return Tables in the database.
+     * 
+     */
     public List<MysqlTableResponse> mysqlTables() {
         return this.mysqlTables;
     }
@@ -65,16 +73,34 @@ public final class MysqlDatabaseResponse extends com.pulumi.resources.InvokeArgs
             $ = new MysqlDatabaseResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param databaseName Database name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(String databaseName) {
             $.databaseName = databaseName;
             return this;
         }
 
+        /**
+         * @param mysqlTables Tables in the database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mysqlTables(List<MysqlTableResponse> mysqlTables) {
             $.mysqlTables = mysqlTables;
             return this;
         }
 
+        /**
+         * @param mysqlTables Tables in the database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mysqlTables(MysqlTableResponse... mysqlTables) {
             return mysqlTables(List.of(mysqlTables));
         }

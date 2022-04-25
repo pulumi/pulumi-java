@@ -26,6 +26,10 @@ public final class SolutionPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="containedResources")
     private @Nullable List<String> containedResources;
 
+    /**
+     * @return The azure resources that will be contained within the solutions. They will be locked and gets deleted automatically when the solution is deleted.
+     * 
+     */
     public Optional<List<String>> containedResources() {
         return Optional.ofNullable(this.containedResources);
     }
@@ -37,6 +41,10 @@ public final class SolutionPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The provisioning state for the solution.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -48,6 +56,10 @@ public final class SolutionPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="referencedResources")
     private @Nullable List<String> referencedResources;
 
+    /**
+     * @return The resources that will be referenced from this solution. Deleting any of those solution out of band will break the solution.
+     * 
+     */
     public Optional<List<String>> referencedResources() {
         return Optional.ofNullable(this.referencedResources);
     }
@@ -59,6 +71,10 @@ public final class SolutionPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="workspaceResourceId", required=true)
     private String workspaceResourceId;
 
+    /**
+     * @return The azure resourceId for the workspace where the solution will be deployed/enabled.
+     * 
+     */
     public String workspaceResourceId() {
         return this.workspaceResourceId;
     }
@@ -90,29 +106,65 @@ public final class SolutionPropertiesResponse extends com.pulumi.resources.Invok
             $ = new SolutionPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param containedResources The azure resources that will be contained within the solutions. They will be locked and gets deleted automatically when the solution is deleted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containedResources(@Nullable List<String> containedResources) {
             $.containedResources = containedResources;
             return this;
         }
 
+        /**
+         * @param containedResources The azure resources that will be contained within the solutions. They will be locked and gets deleted automatically when the solution is deleted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containedResources(String... containedResources) {
             return containedResources(List.of(containedResources));
         }
 
+        /**
+         * @param provisioningState The provisioning state for the solution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param referencedResources The resources that will be referenced from this solution. Deleting any of those solution out of band will break the solution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder referencedResources(@Nullable List<String> referencedResources) {
             $.referencedResources = referencedResources;
             return this;
         }
 
+        /**
+         * @param referencedResources The resources that will be referenced from this solution. Deleting any of those solution out of band will break the solution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder referencedResources(String... referencedResources) {
             return referencedResources(List.of(referencedResources));
         }
 
+        /**
+         * @param workspaceResourceId The azure resourceId for the workspace where the solution will be deployed/enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceResourceId(String workspaceResourceId) {
             $.workspaceResourceId = workspaceResourceId;
             return this;

@@ -25,6 +25,10 @@ public final class LineRegistrationResponse extends com.pulumi.resources.InvokeA
     @Import(name="channelAccessToken")
     private @Nullable String channelAccessToken;
 
+    /**
+     * @return Access token for the line channel registration
+     * 
+     */
     public Optional<String> channelAccessToken() {
         return Optional.ofNullable(this.channelAccessToken);
     }
@@ -36,6 +40,10 @@ public final class LineRegistrationResponse extends com.pulumi.resources.InvokeA
     @Import(name="channelSecret")
     private @Nullable String channelSecret;
 
+    /**
+     * @return Secret for the line channel registration
+     * 
+     */
     public Optional<String> channelSecret() {
         return Optional.ofNullable(this.channelSecret);
     }
@@ -47,6 +55,10 @@ public final class LineRegistrationResponse extends com.pulumi.resources.InvokeA
     @Import(name="generatedId", required=true)
     private String generatedId;
 
+    /**
+     * @return Id generated for the line channel registration
+     * 
+     */
     public String generatedId() {
         return this.generatedId;
     }
@@ -77,16 +89,34 @@ public final class LineRegistrationResponse extends com.pulumi.resources.InvokeA
             $ = new LineRegistrationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param channelAccessToken Access token for the line channel registration
+         * 
+         * @return builder
+         * 
+         */
         public Builder channelAccessToken(@Nullable String channelAccessToken) {
             $.channelAccessToken = channelAccessToken;
             return this;
         }
 
+        /**
+         * @param channelSecret Secret for the line channel registration
+         * 
+         * @return builder
+         * 
+         */
         public Builder channelSecret(@Nullable String channelSecret) {
             $.channelSecret = channelSecret;
             return this;
         }
 
+        /**
+         * @param generatedId Id generated for the line channel registration
+         * 
+         * @return builder
+         * 
+         */
         public Builder generatedId(String generatedId) {
             $.generatedId = generatedId;
             return this;

@@ -27,6 +27,10 @@ public final class NetworkFunctionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="device")
     private @Nullable Output<SubResourceArgs> device;
 
+    /**
+     * @return The reference to the device resource.
+     * 
+     */
     public Optional<Output<SubResourceArgs>> device() {
         return Optional.ofNullable(this.device);
     }
@@ -38,6 +42,10 @@ public final class NetworkFunctionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The geo-location where the resource lives
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -49,6 +57,10 @@ public final class NetworkFunctionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="managedApplicationParameters")
     private @Nullable Output<Object> managedApplicationParameters;
 
+    /**
+     * @return The parameters for the managed application.
+     * 
+     */
     public Optional<Output<Object>> managedApplicationParameters() {
         return Optional.ofNullable(this.managedApplicationParameters);
     }
@@ -60,6 +72,10 @@ public final class NetworkFunctionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="networkFunctionName")
     private @Nullable Output<String> networkFunctionName;
 
+    /**
+     * @return Resource name for the network function resource.
+     * 
+     */
     public Optional<Output<String>> networkFunctionName() {
         return Optional.ofNullable(this.networkFunctionName);
     }
@@ -71,6 +87,10 @@ public final class NetworkFunctionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="networkFunctionUserConfigurations")
     private @Nullable Output<List<NetworkFunctionUserConfigurationArgs>> networkFunctionUserConfigurations;
 
+    /**
+     * @return The network function configurations from the user.
+     * 
+     */
     public Optional<Output<List<NetworkFunctionUserConfigurationArgs>>> networkFunctionUserConfigurations() {
         return Optional.ofNullable(this.networkFunctionUserConfigurations);
     }
@@ -82,6 +102,10 @@ public final class NetworkFunctionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -93,6 +117,10 @@ public final class NetworkFunctionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="skuName")
     private @Nullable Output<String> skuName;
 
+    /**
+     * @return The sku name for the network function.
+     * 
+     */
     public Optional<Output<String>> skuName() {
         return Optional.ofNullable(this.skuName);
     }
@@ -104,6 +132,10 @@ public final class NetworkFunctionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -115,6 +147,10 @@ public final class NetworkFunctionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="vendorName")
     private @Nullable Output<String> vendorName;
 
+    /**
+     * @return The vendor name for the network function.
+     * 
+     */
     public Optional<Output<String>> vendorName() {
         return Optional.ofNullable(this.vendorName);
     }
@@ -151,87 +187,201 @@ public final class NetworkFunctionArgs extends com.pulumi.resources.ResourceArgs
             $ = new NetworkFunctionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param device The reference to the device resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder device(@Nullable Output<SubResourceArgs> device) {
             $.device = device;
             return this;
         }
 
+        /**
+         * @param device The reference to the device resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder device(SubResourceArgs device) {
             return device(Output.of(device));
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param managedApplicationParameters The parameters for the managed application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedApplicationParameters(@Nullable Output<Object> managedApplicationParameters) {
             $.managedApplicationParameters = managedApplicationParameters;
             return this;
         }
 
+        /**
+         * @param managedApplicationParameters The parameters for the managed application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedApplicationParameters(Object managedApplicationParameters) {
             return managedApplicationParameters(Output.of(managedApplicationParameters));
         }
 
+        /**
+         * @param networkFunctionName Resource name for the network function resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkFunctionName(@Nullable Output<String> networkFunctionName) {
             $.networkFunctionName = networkFunctionName;
             return this;
         }
 
+        /**
+         * @param networkFunctionName Resource name for the network function resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkFunctionName(String networkFunctionName) {
             return networkFunctionName(Output.of(networkFunctionName));
         }
 
+        /**
+         * @param networkFunctionUserConfigurations The network function configurations from the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkFunctionUserConfigurations(@Nullable Output<List<NetworkFunctionUserConfigurationArgs>> networkFunctionUserConfigurations) {
             $.networkFunctionUserConfigurations = networkFunctionUserConfigurations;
             return this;
         }
 
+        /**
+         * @param networkFunctionUserConfigurations The network function configurations from the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkFunctionUserConfigurations(List<NetworkFunctionUserConfigurationArgs> networkFunctionUserConfigurations) {
             return networkFunctionUserConfigurations(Output.of(networkFunctionUserConfigurations));
         }
 
+        /**
+         * @param networkFunctionUserConfigurations The network function configurations from the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkFunctionUserConfigurations(NetworkFunctionUserConfigurationArgs... networkFunctionUserConfigurations) {
             return networkFunctionUserConfigurations(List.of(networkFunctionUserConfigurations));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param skuName The sku name for the network function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skuName(@Nullable Output<String> skuName) {
             $.skuName = skuName;
             return this;
         }
 
+        /**
+         * @param skuName The sku name for the network function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skuName(String skuName) {
             return skuName(Output.of(skuName));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param vendorName The vendor name for the network function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vendorName(@Nullable Output<String> vendorName) {
             $.vendorName = vendorName;
             return this;
         }
 
+        /**
+         * @param vendorName The vendor name for the network function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vendorName(String vendorName) {
             return vendorName(Output.of(vendorName));
         }

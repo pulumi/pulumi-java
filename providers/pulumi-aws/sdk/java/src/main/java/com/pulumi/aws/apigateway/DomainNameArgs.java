@@ -25,6 +25,10 @@ public final class DomainNameArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="certificateArn")
     private @Nullable Output<String> certificateArn;
 
+    /**
+     * @return The ARN for an AWS-managed certificate. AWS Certificate Manager is the only supported source. Used when an edge-optimized domain name is desired. Conflicts with `certificate_name`, `certificate_body`, `certificate_chain`, `certificate_private_key`, `regional_certificate_arn`, and `regional_certificate_name`.
+     * 
+     */
     public Optional<Output<String>> certificateArn() {
         return Optional.ofNullable(this.certificateArn);
     }
@@ -38,6 +42,12 @@ public final class DomainNameArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="certificateBody")
     private @Nullable Output<String> certificateBody;
 
+    /**
+     * @return The certificate issued for the domain name
+     * being registered, in PEM format. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`, `regional_certificate_arn`, and
+     * `regional_certificate_name`.
+     * 
+     */
     public Optional<Output<String>> certificateBody() {
         return Optional.ofNullable(this.certificateBody);
     }
@@ -52,6 +62,13 @@ public final class DomainNameArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="certificateChain")
     private @Nullable Output<String> certificateChain;
 
+    /**
+     * @return The certificate for the CA that issued the
+     * certificate, along with any intermediate CA certificates required to
+     * create an unbroken chain to a certificate trusted by the intended API clients. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`,
+     * `regional_certificate_arn`, and `regional_certificate_name`.
+     * 
+     */
     public Optional<Output<String>> certificateChain() {
         return Optional.ofNullable(this.certificateChain);
     }
@@ -65,6 +82,12 @@ public final class DomainNameArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="certificateName")
     private @Nullable Output<String> certificateName;
 
+    /**
+     * @return The unique name to use when registering this
+     * certificate as an IAM server certificate. Conflicts with `certificate_arn`, `regional_certificate_arn`, and
+     * `regional_certificate_name`. Required if `certificate_arn` is not set.
+     * 
+     */
     public Optional<Output<String>> certificateName() {
         return Optional.ofNullable(this.certificateName);
     }
@@ -77,6 +100,11 @@ public final class DomainNameArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="certificatePrivateKey")
     private @Nullable Output<String> certificatePrivateKey;
 
+    /**
+     * @return The private key associated with the
+     * domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`, `regional_certificate_arn`, and `regional_certificate_name`.
+     * 
+     */
     public Optional<Output<String>> certificatePrivateKey() {
         return Optional.ofNullable(this.certificatePrivateKey);
     }
@@ -88,6 +116,10 @@ public final class DomainNameArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="domainName", required=true)
     private Output<String> domainName;
 
+    /**
+     * @return The fully-qualified domain name to register
+     * 
+     */
     public Output<String> domainName() {
         return this.domainName;
     }
@@ -99,6 +131,10 @@ public final class DomainNameArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="endpointConfiguration")
     private @Nullable Output<DomainNameEndpointConfigurationArgs> endpointConfiguration;
 
+    /**
+     * @return Configuration block defining API endpoint information including type. Defined below.
+     * 
+     */
     public Optional<Output<DomainNameEndpointConfigurationArgs>> endpointConfiguration() {
         return Optional.ofNullable(this.endpointConfiguration);
     }
@@ -110,6 +146,10 @@ public final class DomainNameArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="mutualTlsAuthentication")
     private @Nullable Output<DomainNameMutualTlsAuthenticationArgs> mutualTlsAuthentication;
 
+    /**
+     * @return The mutual TLS authentication configuration for the domain name. Defined below.
+     * 
+     */
     public Optional<Output<DomainNameMutualTlsAuthenticationArgs>> mutualTlsAuthentication() {
         return Optional.ofNullable(this.mutualTlsAuthentication);
     }
@@ -121,6 +161,10 @@ public final class DomainNameArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="regionalCertificateArn")
     private @Nullable Output<String> regionalCertificateArn;
 
+    /**
+     * @return The ARN for an AWS-managed certificate. AWS Certificate Manager is the only supported source. Used when a regional domain name is desired. Conflicts with `certificate_arn`, `certificate_name`, `certificate_body`, `certificate_chain`, and `certificate_private_key`.
+     * 
+     */
     public Optional<Output<String>> regionalCertificateArn() {
         return Optional.ofNullable(this.regionalCertificateArn);
     }
@@ -133,6 +177,11 @@ public final class DomainNameArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="regionalCertificateName")
     private @Nullable Output<String> regionalCertificateName;
 
+    /**
+     * @return The user-friendly name of the certificate that will be used by regional endpoint for this domain name. Conflicts with `certificate_arn`, `certificate_name`, `certificate_body`, `certificate_chain`, and
+     * `certificate_private_key`.
+     * 
+     */
     public Optional<Output<String>> regionalCertificateName() {
         return Optional.ofNullable(this.regionalCertificateName);
     }
@@ -144,6 +193,10 @@ public final class DomainNameArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="securityPolicy")
     private @Nullable Output<String> securityPolicy;
 
+    /**
+     * @return The Transport Layer Security (TLS) version + cipher suite for this DomainName. The valid values are `TLS_1_0` and `TLS_1_2`. Must be configured to perform drift detection.
+     * 
+     */
     public Optional<Output<String>> securityPolicy() {
         return Optional.ofNullable(this.securityPolicy);
     }
@@ -155,6 +208,10 @@ public final class DomainNameArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -194,110 +251,272 @@ public final class DomainNameArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DomainNameArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificateArn The ARN for an AWS-managed certificate. AWS Certificate Manager is the only supported source. Used when an edge-optimized domain name is desired. Conflicts with `certificate_name`, `certificate_body`, `certificate_chain`, `certificate_private_key`, `regional_certificate_arn`, and `regional_certificate_name`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateArn(@Nullable Output<String> certificateArn) {
             $.certificateArn = certificateArn;
             return this;
         }
 
+        /**
+         * @param certificateArn The ARN for an AWS-managed certificate. AWS Certificate Manager is the only supported source. Used when an edge-optimized domain name is desired. Conflicts with `certificate_name`, `certificate_body`, `certificate_chain`, `certificate_private_key`, `regional_certificate_arn`, and `regional_certificate_name`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateArn(String certificateArn) {
             return certificateArn(Output.of(certificateArn));
         }
 
+        /**
+         * @param certificateBody The certificate issued for the domain name
+         * being registered, in PEM format. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`, `regional_certificate_arn`, and
+         * `regional_certificate_name`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateBody(@Nullable Output<String> certificateBody) {
             $.certificateBody = certificateBody;
             return this;
         }
 
+        /**
+         * @param certificateBody The certificate issued for the domain name
+         * being registered, in PEM format. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`, `regional_certificate_arn`, and
+         * `regional_certificate_name`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateBody(String certificateBody) {
             return certificateBody(Output.of(certificateBody));
         }
 
+        /**
+         * @param certificateChain The certificate for the CA that issued the
+         * certificate, along with any intermediate CA certificates required to
+         * create an unbroken chain to a certificate trusted by the intended API clients. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`,
+         * `regional_certificate_arn`, and `regional_certificate_name`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateChain(@Nullable Output<String> certificateChain) {
             $.certificateChain = certificateChain;
             return this;
         }
 
+        /**
+         * @param certificateChain The certificate for the CA that issued the
+         * certificate, along with any intermediate CA certificates required to
+         * create an unbroken chain to a certificate trusted by the intended API clients. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`,
+         * `regional_certificate_arn`, and `regional_certificate_name`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateChain(String certificateChain) {
             return certificateChain(Output.of(certificateChain));
         }
 
+        /**
+         * @param certificateName The unique name to use when registering this
+         * certificate as an IAM server certificate. Conflicts with `certificate_arn`, `regional_certificate_arn`, and
+         * `regional_certificate_name`. Required if `certificate_arn` is not set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateName(@Nullable Output<String> certificateName) {
             $.certificateName = certificateName;
             return this;
         }
 
+        /**
+         * @param certificateName The unique name to use when registering this
+         * certificate as an IAM server certificate. Conflicts with `certificate_arn`, `regional_certificate_arn`, and
+         * `regional_certificate_name`. Required if `certificate_arn` is not set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateName(String certificateName) {
             return certificateName(Output.of(certificateName));
         }
 
+        /**
+         * @param certificatePrivateKey The private key associated with the
+         * domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`, `regional_certificate_arn`, and `regional_certificate_name`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificatePrivateKey(@Nullable Output<String> certificatePrivateKey) {
             $.certificatePrivateKey = certificatePrivateKey;
             return this;
         }
 
+        /**
+         * @param certificatePrivateKey The private key associated with the
+         * domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`, `regional_certificate_arn`, and `regional_certificate_name`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificatePrivateKey(String certificatePrivateKey) {
             return certificatePrivateKey(Output.of(certificatePrivateKey));
         }
 
+        /**
+         * @param domainName The fully-qualified domain name to register
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(Output<String> domainName) {
             $.domainName = domainName;
             return this;
         }
 
+        /**
+         * @param domainName The fully-qualified domain name to register
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(String domainName) {
             return domainName(Output.of(domainName));
         }
 
+        /**
+         * @param endpointConfiguration Configuration block defining API endpoint information including type. Defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointConfiguration(@Nullable Output<DomainNameEndpointConfigurationArgs> endpointConfiguration) {
             $.endpointConfiguration = endpointConfiguration;
             return this;
         }
 
+        /**
+         * @param endpointConfiguration Configuration block defining API endpoint information including type. Defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointConfiguration(DomainNameEndpointConfigurationArgs endpointConfiguration) {
             return endpointConfiguration(Output.of(endpointConfiguration));
         }
 
+        /**
+         * @param mutualTlsAuthentication The mutual TLS authentication configuration for the domain name. Defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mutualTlsAuthentication(@Nullable Output<DomainNameMutualTlsAuthenticationArgs> mutualTlsAuthentication) {
             $.mutualTlsAuthentication = mutualTlsAuthentication;
             return this;
         }
 
+        /**
+         * @param mutualTlsAuthentication The mutual TLS authentication configuration for the domain name. Defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mutualTlsAuthentication(DomainNameMutualTlsAuthenticationArgs mutualTlsAuthentication) {
             return mutualTlsAuthentication(Output.of(mutualTlsAuthentication));
         }
 
+        /**
+         * @param regionalCertificateArn The ARN for an AWS-managed certificate. AWS Certificate Manager is the only supported source. Used when a regional domain name is desired. Conflicts with `certificate_arn`, `certificate_name`, `certificate_body`, `certificate_chain`, and `certificate_private_key`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regionalCertificateArn(@Nullable Output<String> regionalCertificateArn) {
             $.regionalCertificateArn = regionalCertificateArn;
             return this;
         }
 
+        /**
+         * @param regionalCertificateArn The ARN for an AWS-managed certificate. AWS Certificate Manager is the only supported source. Used when a regional domain name is desired. Conflicts with `certificate_arn`, `certificate_name`, `certificate_body`, `certificate_chain`, and `certificate_private_key`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regionalCertificateArn(String regionalCertificateArn) {
             return regionalCertificateArn(Output.of(regionalCertificateArn));
         }
 
+        /**
+         * @param regionalCertificateName The user-friendly name of the certificate that will be used by regional endpoint for this domain name. Conflicts with `certificate_arn`, `certificate_name`, `certificate_body`, `certificate_chain`, and
+         * `certificate_private_key`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regionalCertificateName(@Nullable Output<String> regionalCertificateName) {
             $.regionalCertificateName = regionalCertificateName;
             return this;
         }
 
+        /**
+         * @param regionalCertificateName The user-friendly name of the certificate that will be used by regional endpoint for this domain name. Conflicts with `certificate_arn`, `certificate_name`, `certificate_body`, `certificate_chain`, and
+         * `certificate_private_key`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regionalCertificateName(String regionalCertificateName) {
             return regionalCertificateName(Output.of(regionalCertificateName));
         }
 
+        /**
+         * @param securityPolicy The Transport Layer Security (TLS) version + cipher suite for this DomainName. The valid values are `TLS_1_0` and `TLS_1_2`. Must be configured to perform drift detection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityPolicy(@Nullable Output<String> securityPolicy) {
             $.securityPolicy = securityPolicy;
             return this;
         }
 
+        /**
+         * @param securityPolicy The Transport Layer Security (TLS) version + cipher suite for this DomainName. The valid values are `TLS_1_0` and `TLS_1_2`. Must be configured to perform drift detection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityPolicy(String securityPolicy) {
             return securityPolicy(Output.of(securityPolicy));
         }
 
+        /**
+         * @param tags Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

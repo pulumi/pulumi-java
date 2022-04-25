@@ -19,6 +19,10 @@ public final class ImportFileResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="content", required=true)
     private String content;
 
+    /**
+     * @return The contents of the file.
+     * 
+     */
     public String content() {
         return this.content;
     }
@@ -30,6 +34,10 @@ public final class ImportFileResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the file.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -59,11 +67,23 @@ public final class ImportFileResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ImportFileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param content The contents of the file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(String content) {
             $.content = content;
             return this;
         }
 
+        /**
+         * @param name The name of the file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

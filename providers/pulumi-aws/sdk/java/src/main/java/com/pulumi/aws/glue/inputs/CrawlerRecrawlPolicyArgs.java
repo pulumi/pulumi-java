@@ -22,6 +22,10 @@ public final class CrawlerRecrawlPolicyArgs extends com.pulumi.resources.Resourc
     @Import(name="recrawlBehavior")
     private @Nullable Output<String> recrawlBehavior;
 
+    /**
+     * @return Specifies whether to crawl the entire dataset again or to crawl only folders that were added since the last crawler run. Valid Values are: `CRAWL_EVERYTHING` and `CRAWL_NEW_FOLDERS_ONLY`. Default value is `CRAWL_EVERYTHING`.
+     * 
+     */
     public Optional<Output<String>> recrawlBehavior() {
         return Optional.ofNullable(this.recrawlBehavior);
     }
@@ -50,11 +54,23 @@ public final class CrawlerRecrawlPolicyArgs extends com.pulumi.resources.Resourc
             $ = new CrawlerRecrawlPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param recrawlBehavior Specifies whether to crawl the entire dataset again or to crawl only folders that were added since the last crawler run. Valid Values are: `CRAWL_EVERYTHING` and `CRAWL_NEW_FOLDERS_ONLY`. Default value is `CRAWL_EVERYTHING`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recrawlBehavior(@Nullable Output<String> recrawlBehavior) {
             $.recrawlBehavior = recrawlBehavior;
             return this;
         }
 
+        /**
+         * @param recrawlBehavior Specifies whether to crawl the entire dataset again or to crawl only folders that were added since the last crawler run. Valid Values are: `CRAWL_EVERYTHING` and `CRAWL_NEW_FOLDERS_ONLY`. Default value is `CRAWL_EVERYTHING`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recrawlBehavior(String recrawlBehavior) {
             return recrawlBehavior(Output.of(recrawlBehavior));
         }

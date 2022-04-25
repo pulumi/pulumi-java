@@ -24,6 +24,10 @@ public final class GoogleCloudChannelV1CommitmentSettingsResponse extends com.pu
     @Import(name="endTime", required=true)
     private String endTime;
 
+    /**
+     * @return Commitment end timestamp.
+     * 
+     */
     public String endTime() {
         return this.endTime;
     }
@@ -35,6 +39,10 @@ public final class GoogleCloudChannelV1CommitmentSettingsResponse extends com.pu
     @Import(name="renewalSettings", required=true)
     private GoogleCloudChannelV1RenewalSettingsResponse renewalSettings;
 
+    /**
+     * @return Optional. Renewal settings applicable for a commitment-based Offer.
+     * 
+     */
     public GoogleCloudChannelV1RenewalSettingsResponse renewalSettings() {
         return this.renewalSettings;
     }
@@ -46,6 +54,10 @@ public final class GoogleCloudChannelV1CommitmentSettingsResponse extends com.pu
     @Import(name="startTime", required=true)
     private String startTime;
 
+    /**
+     * @return Commitment start timestamp.
+     * 
+     */
     public String startTime() {
         return this.startTime;
     }
@@ -76,16 +88,34 @@ public final class GoogleCloudChannelV1CommitmentSettingsResponse extends com.pu
             $ = new GoogleCloudChannelV1CommitmentSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endTime Commitment end timestamp.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTime(String endTime) {
             $.endTime = endTime;
             return this;
         }
 
+        /**
+         * @param renewalSettings Optional. Renewal settings applicable for a commitment-based Offer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder renewalSettings(GoogleCloudChannelV1RenewalSettingsResponse renewalSettings) {
             $.renewalSettings = renewalSettings;
             return this;
         }
 
+        /**
+         * @param startTime Commitment start timestamp.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             $.startTime = startTime;
             return this;

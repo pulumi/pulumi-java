@@ -27,6 +27,10 @@ public final class CloudServiceOsProfileArgs extends com.pulumi.resources.Resour
     @Import(name="secrets")
     private @Nullable Output<List<CloudServiceVaultSecretGroupArgs>> secrets;
 
+    /**
+     * @return Specifies set of certificates that should be installed onto the role instances.
+     * 
+     */
     public Optional<Output<List<CloudServiceVaultSecretGroupArgs>>> secrets() {
         return Optional.ofNullable(this.secrets);
     }
@@ -55,15 +59,33 @@ public final class CloudServiceOsProfileArgs extends com.pulumi.resources.Resour
             $ = new CloudServiceOsProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param secrets Specifies set of certificates that should be installed onto the role instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secrets(@Nullable Output<List<CloudServiceVaultSecretGroupArgs>> secrets) {
             $.secrets = secrets;
             return this;
         }
 
+        /**
+         * @param secrets Specifies set of certificates that should be installed onto the role instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secrets(List<CloudServiceVaultSecretGroupArgs> secrets) {
             return secrets(Output.of(secrets));
         }
 
+        /**
+         * @param secrets Specifies set of certificates that should be installed onto the role instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secrets(CloudServiceVaultSecretGroupArgs... secrets) {
             return secrets(List.of(secrets));
         }

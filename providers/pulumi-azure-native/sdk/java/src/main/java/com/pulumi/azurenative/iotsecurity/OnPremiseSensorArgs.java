@@ -22,6 +22,10 @@ public final class OnPremiseSensorArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="onPremiseSensorName")
     private @Nullable Output<String> onPremiseSensorName;
 
+    /**
+     * @return Name of the on-premise IoT sensor
+     * 
+     */
     public Optional<Output<String>> onPremiseSensorName() {
         return Optional.ofNullable(this.onPremiseSensorName);
     }
@@ -50,11 +54,23 @@ public final class OnPremiseSensorArgs extends com.pulumi.resources.ResourceArgs
             $ = new OnPremiseSensorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param onPremiseSensorName Name of the on-premise IoT sensor
+         * 
+         * @return builder
+         * 
+         */
         public Builder onPremiseSensorName(@Nullable Output<String> onPremiseSensorName) {
             $.onPremiseSensorName = onPremiseSensorName;
             return this;
         }
 
+        /**
+         * @param onPremiseSensorName Name of the on-premise IoT sensor
+         * 
+         * @return builder
+         * 
+         */
         public Builder onPremiseSensorName(String onPremiseSensorName) {
             return onPremiseSensorName(Output.of(onPremiseSensorName));
         }

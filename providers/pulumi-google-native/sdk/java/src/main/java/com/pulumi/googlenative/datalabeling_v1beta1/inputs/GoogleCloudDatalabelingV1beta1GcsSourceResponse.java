@@ -23,6 +23,10 @@ public final class GoogleCloudDatalabelingV1beta1GcsSourceResponse extends com.p
     @Import(name="inputUri", required=true)
     private String inputUri;
 
+    /**
+     * @return The input URI of source file. This must be a Cloud Storage path (`gs://...`).
+     * 
+     */
     public String inputUri() {
         return this.inputUri;
     }
@@ -34,6 +38,10 @@ public final class GoogleCloudDatalabelingV1beta1GcsSourceResponse extends com.p
     @Import(name="mimeType", required=true)
     private String mimeType;
 
+    /**
+     * @return The format of the source file. Only &#34;text/csv&#34; is supported.
+     * 
+     */
     public String mimeType() {
         return this.mimeType;
     }
@@ -63,11 +71,23 @@ public final class GoogleCloudDatalabelingV1beta1GcsSourceResponse extends com.p
             $ = new GoogleCloudDatalabelingV1beta1GcsSourceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param inputUri The input URI of source file. This must be a Cloud Storage path (`gs://...`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputUri(String inputUri) {
             $.inputUri = inputUri;
             return this;
         }
 
+        /**
+         * @param mimeType The format of the source file. Only &#34;text/csv&#34; is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mimeType(String mimeType) {
             $.mimeType = mimeType;
             return this;

@@ -20,6 +20,10 @@ public final class VpcIpamOperatingRegionGetArgs extends com.pulumi.resources.Re
     @Import(name="regionName", required=true)
     private Output<String> regionName;
 
+    /**
+     * @return The name of the Region you want to add to the IPAM.
+     * 
+     */
     public Output<String> regionName() {
         return this.regionName;
     }
@@ -48,11 +52,23 @@ public final class VpcIpamOperatingRegionGetArgs extends com.pulumi.resources.Re
             $ = new VpcIpamOperatingRegionGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param regionName The name of the Region you want to add to the IPAM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regionName(Output<String> regionName) {
             $.regionName = regionName;
             return this;
         }
 
+        /**
+         * @param regionName The name of the Region you want to add to the IPAM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regionName(String regionName) {
             return regionName(Output.of(regionName));
         }

@@ -12,42 +12,42 @@ import javax.annotation.Nullable;
 @CustomType
 public final class StaticSiteUserARMResourceResponse {
     /**
-     * The display name for the static site user.
+     * @return The display name for the static site user.
      * 
      */
     private final String displayName;
     /**
-     * Resource Id.
+     * @return Resource Id.
      * 
      */
     private final String id;
     /**
-     * Kind of resource.
+     * @return Kind of resource.
      * 
      */
     private final @Nullable String kind;
     /**
-     * Resource Name.
+     * @return Resource Name.
      * 
      */
     private final String name;
     /**
-     * The identity provider for the static site user.
+     * @return The identity provider for the static site user.
      * 
      */
     private final String provider;
     /**
-     * The roles for the static site user, in free-form string format
+     * @return The roles for the static site user, in free-form string format
      * 
      */
     private final @Nullable String roles;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
     /**
-     * The user id for the static site user.
+     * @return The user id for the static site user.
      * 
      */
     private final String userId;
@@ -73,58 +73,58 @@ public final class StaticSiteUserARMResourceResponse {
     }
 
     /**
-     * The display name for the static site user.
+     * @return The display name for the static site user.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * Resource Id.
+     * @return Resource Id.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Kind of resource.
+     * @return Kind of resource.
      * 
-    */
+     */
     public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
-     * Resource Name.
+     * @return Resource Name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The identity provider for the static site user.
+     * @return The identity provider for the static site user.
      * 
-    */
+     */
     public String provider() {
         return this.provider;
     }
     /**
-     * The roles for the static site user, in free-form string format
+     * @return The roles for the static site user, in free-form string format
      * 
-    */
+     */
     public Optional<String> roles() {
         return Optional.ofNullable(this.roles);
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The user id for the static site user.
+     * @return The user id for the static site user.
      * 
-    */
+     */
     public String userId() {
         return this.userId;
     }

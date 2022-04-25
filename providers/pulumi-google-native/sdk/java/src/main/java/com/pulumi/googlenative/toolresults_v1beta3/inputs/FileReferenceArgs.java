@@ -26,6 +26,10 @@ public final class FileReferenceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="fileUri")
     private @Nullable Output<String> fileUri;
 
+    /**
+     * @return The URI of a file stored in Google Cloud Storage. For example: http://storage.googleapis.com/mybucket/path/to/test.xml or in gsutil format: gs://mybucket/path/to/test.xml with version-specific info, gs://mybucket/path/to/test.xml#1360383693690000 An INVALID_ARGUMENT error will be returned if the URI format is not supported. - In response: always set - In create/update request: always set
+     * 
+     */
     public Optional<Output<String>> fileUri() {
         return Optional.ofNullable(this.fileUri);
     }
@@ -54,11 +58,23 @@ public final class FileReferenceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new FileReferenceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fileUri The URI of a file stored in Google Cloud Storage. For example: http://storage.googleapis.com/mybucket/path/to/test.xml or in gsutil format: gs://mybucket/path/to/test.xml with version-specific info, gs://mybucket/path/to/test.xml#1360383693690000 An INVALID_ARGUMENT error will be returned if the URI format is not supported. - In response: always set - In create/update request: always set
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileUri(@Nullable Output<String> fileUri) {
             $.fileUri = fileUri;
             return this;
         }
 
+        /**
+         * @param fileUri The URI of a file stored in Google Cloud Storage. For example: http://storage.googleapis.com/mybucket/path/to/test.xml or in gsutil format: gs://mybucket/path/to/test.xml with version-specific info, gs://mybucket/path/to/test.xml#1360383693690000 An INVALID_ARGUMENT error will be returned if the URI format is not supported. - In response: always set - In create/update request: always set
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileUri(String fileUri) {
             return fileUri(Output.of(fileUri));
         }

@@ -20,6 +20,10 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
     @Import(name="addressDefinition", required=true)
     private Output<String> addressDefinition;
 
+    /**
+     * @return An IP address or a block of IP addresses in CIDR notation. AWS Network Firewall supports all address ranges for IPv4.
+     * 
+     */
     public Output<String> addressDefinition() {
         return this.addressDefinition;
     }
@@ -48,11 +52,23 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
             $ = new RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param addressDefinition An IP address or a block of IP addresses in CIDR notation. AWS Network Firewall supports all address ranges for IPv4.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addressDefinition(Output<String> addressDefinition) {
             $.addressDefinition = addressDefinition;
             return this;
         }
 
+        /**
+         * @param addressDefinition An IP address or a block of IP addresses in CIDR notation. AWS Network Firewall supports all address ranges for IPv4.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addressDefinition(String addressDefinition) {
             return addressDefinition(Output.of(addressDefinition));
         }

@@ -24,6 +24,10 @@ public final class LatencyDistributionResponse extends com.pulumi.resources.Invo
     @Import(name="latencyPercentiles", required=true)
     private List<LatencyPercentileResponse> latencyPercentiles;
 
+    /**
+     * @return Representative latency percentiles.
+     * 
+     */
     public List<LatencyPercentileResponse> latencyPercentiles() {
         return this.latencyPercentiles;
     }
@@ -52,11 +56,23 @@ public final class LatencyDistributionResponse extends com.pulumi.resources.Invo
             $ = new LatencyDistributionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param latencyPercentiles Representative latency percentiles.
+         * 
+         * @return builder
+         * 
+         */
         public Builder latencyPercentiles(List<LatencyPercentileResponse> latencyPercentiles) {
             $.latencyPercentiles = latencyPercentiles;
             return this;
         }
 
+        /**
+         * @param latencyPercentiles Representative latency percentiles.
+         * 
+         * @return builder
+         * 
+         */
         public Builder latencyPercentiles(LatencyPercentileResponse... latencyPercentiles) {
             return latencyPercentiles(List.of(latencyPercentiles));
         }

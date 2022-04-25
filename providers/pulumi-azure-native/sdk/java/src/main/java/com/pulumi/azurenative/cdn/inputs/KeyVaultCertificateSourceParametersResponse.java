@@ -25,6 +25,10 @@ public final class KeyVaultCertificateSourceParametersResponse extends com.pulum
     @Import(name="deleteRule", required=true)
     private String deleteRule;
 
+    /**
+     * @return Describes the action that shall be taken when the certificate is removed from Key Vault.
+     * 
+     */
     public String deleteRule() {
         return this.deleteRule;
     }
@@ -43,6 +47,10 @@ public final class KeyVaultCertificateSourceParametersResponse extends com.pulum
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Resource group of the user&#39;s Key Vault containing the SSL certificate
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -54,6 +62,10 @@ public final class KeyVaultCertificateSourceParametersResponse extends com.pulum
     @Import(name="secretName", required=true)
     private String secretName;
 
+    /**
+     * @return The name of Key Vault Secret (representing the full certificate PFX) in Key Vault.
+     * 
+     */
     public String secretName() {
         return this.secretName;
     }
@@ -65,6 +77,10 @@ public final class KeyVaultCertificateSourceParametersResponse extends com.pulum
     @Import(name="secretVersion")
     private @Nullable String secretVersion;
 
+    /**
+     * @return The version(GUID) of Key Vault Secret in Key Vault.
+     * 
+     */
     public Optional<String> secretVersion() {
         return Optional.ofNullable(this.secretVersion);
     }
@@ -76,6 +92,10 @@ public final class KeyVaultCertificateSourceParametersResponse extends com.pulum
     @Import(name="subscriptionId", required=true)
     private String subscriptionId;
 
+    /**
+     * @return Subscription Id of the user&#39;s Key Vault containing the SSL certificate
+     * 
+     */
     public String subscriptionId() {
         return this.subscriptionId;
     }
@@ -87,6 +107,10 @@ public final class KeyVaultCertificateSourceParametersResponse extends com.pulum
     @Import(name="updateRule", required=true)
     private String updateRule;
 
+    /**
+     * @return Describes the action that shall be taken when the certificate is updated in Key Vault.
+     * 
+     */
     public String updateRule() {
         return this.updateRule;
     }
@@ -98,6 +122,10 @@ public final class KeyVaultCertificateSourceParametersResponse extends com.pulum
     @Import(name="vaultName", required=true)
     private String vaultName;
 
+    /**
+     * @return The name of the user&#39;s Key Vault containing the SSL certificate
+     * 
+     */
     public String vaultName() {
         return this.vaultName;
     }
@@ -133,6 +161,12 @@ public final class KeyVaultCertificateSourceParametersResponse extends com.pulum
             $ = new KeyVaultCertificateSourceParametersResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deleteRule Describes the action that shall be taken when the certificate is removed from Key Vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deleteRule(String deleteRule) {
             $.deleteRule = deleteRule;
             return this;
@@ -143,31 +177,67 @@ public final class KeyVaultCertificateSourceParametersResponse extends com.pulum
             return this;
         }
 
+        /**
+         * @param resourceGroupName Resource group of the user&#39;s Key Vault containing the SSL certificate
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param secretName The name of Key Vault Secret (representing the full certificate PFX) in Key Vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretName(String secretName) {
             $.secretName = secretName;
             return this;
         }
 
+        /**
+         * @param secretVersion The version(GUID) of Key Vault Secret in Key Vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretVersion(@Nullable String secretVersion) {
             $.secretVersion = secretVersion;
             return this;
         }
 
+        /**
+         * @param subscriptionId Subscription Id of the user&#39;s Key Vault containing the SSL certificate
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptionId(String subscriptionId) {
             $.subscriptionId = subscriptionId;
             return this;
         }
 
+        /**
+         * @param updateRule Describes the action that shall be taken when the certificate is updated in Key Vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateRule(String updateRule) {
             $.updateRule = updateRule;
             return this;
         }
 
+        /**
+         * @param vaultName The name of the user&#39;s Key Vault containing the SSL certificate
+         * 
+         * @return builder
+         * 
+         */
         public Builder vaultName(String vaultName) {
             $.vaultName = vaultName;
             return this;

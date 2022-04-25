@@ -27,6 +27,10 @@ public final class AutomationSourceResponse extends com.pulumi.resources.InvokeA
     @Import(name="eventSource")
     private @Nullable String eventSource;
 
+    /**
+     * @return A valid event source type.
+     * 
+     */
     public Optional<String> eventSource() {
         return Optional.ofNullable(this.eventSource);
     }
@@ -38,6 +42,10 @@ public final class AutomationSourceResponse extends com.pulumi.resources.InvokeA
     @Import(name="ruleSets")
     private @Nullable List<AutomationRuleSetResponse> ruleSets;
 
+    /**
+     * @return A set of rules which evaluate upon event interception. A logical disjunction is applied between defined rule sets (logical &#39;or&#39;).
+     * 
+     */
     public Optional<List<AutomationRuleSetResponse>> ruleSets() {
         return Optional.ofNullable(this.ruleSets);
     }
@@ -67,16 +75,34 @@ public final class AutomationSourceResponse extends com.pulumi.resources.InvokeA
             $ = new AutomationSourceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param eventSource A valid event source type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventSource(@Nullable String eventSource) {
             $.eventSource = eventSource;
             return this;
         }
 
+        /**
+         * @param ruleSets A set of rules which evaluate upon event interception. A logical disjunction is applied between defined rule sets (logical &#39;or&#39;).
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleSets(@Nullable List<AutomationRuleSetResponse> ruleSets) {
             $.ruleSets = ruleSets;
             return this;
         }
 
+        /**
+         * @param ruleSets A set of rules which evaluate upon event interception. A logical disjunction is applied between defined rule sets (logical &#39;or&#39;).
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleSets(AutomationRuleSetResponse... ruleSets) {
             return ruleSets(List.of(ruleSets));
         }

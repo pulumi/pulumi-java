@@ -25,6 +25,10 @@ public final class CdnEndpointResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return ARM Resource ID string.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -53,6 +57,12 @@ public final class CdnEndpointResponse extends com.pulumi.resources.InvokeArgs {
             $ = new CdnEndpointResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id ARM Resource ID string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;

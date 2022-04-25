@@ -22,6 +22,11 @@ public final class GetLocationsArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="project")
     private @Nullable String project;
 
+    /**
+     * @return The project to list versions for. If it
+     * is not provided, the provider project is used.
+     * 
+     */
     public Optional<String> project() {
         return Optional.ofNullable(this.project);
     }
@@ -50,6 +55,13 @@ public final class GetLocationsArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetLocationsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param project The project to list versions for. If it
+         * is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable String project) {
             $.project = project;
             return this;

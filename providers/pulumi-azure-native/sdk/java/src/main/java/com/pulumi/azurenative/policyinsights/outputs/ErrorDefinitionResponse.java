@@ -12,27 +12,27 @@ import java.util.Objects;
 @CustomType
 public final class ErrorDefinitionResponse {
     /**
-     * Additional scenario specific error details.
+     * @return Additional scenario specific error details.
      * 
      */
     private final List<TypedErrorInfoResponse> additionalInfo;
     /**
-     * Service specific error code which serves as the substatus for the HTTP error code.
+     * @return Service specific error code which serves as the substatus for the HTTP error code.
      * 
      */
     private final String code;
     /**
-     * Internal error details.
+     * @return Internal error details.
      * 
      */
     private final List<ErrorDefinitionResponse> details;
     /**
-     * Description of the error.
+     * @return Description of the error.
      * 
      */
     private final String message;
     /**
-     * The target of the error.
+     * @return The target of the error.
      * 
      */
     private final String target;
@@ -52,37 +52,37 @@ public final class ErrorDefinitionResponse {
     }
 
     /**
-     * Additional scenario specific error details.
+     * @return Additional scenario specific error details.
      * 
-    */
+     */
     public List<TypedErrorInfoResponse> additionalInfo() {
         return this.additionalInfo;
     }
     /**
-     * Service specific error code which serves as the substatus for the HTTP error code.
+     * @return Service specific error code which serves as the substatus for the HTTP error code.
      * 
-    */
+     */
     public String code() {
         return this.code;
     }
     /**
-     * Internal error details.
+     * @return Internal error details.
      * 
-    */
+     */
     public List<ErrorDefinitionResponse> details() {
         return this.details;
     }
     /**
-     * Description of the error.
+     * @return Description of the error.
      * 
-    */
+     */
     public String message() {
         return this.message;
     }
     /**
-     * The target of the error.
+     * @return The target of the error.
      * 
-    */
+     */
     public String target() {
         return this.target;
     }

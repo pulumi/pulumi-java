@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PlatformPropertiesResponse {
     /**
-     * The OS architecture.
+     * @return The OS architecture.
      * 
      */
     private final @Nullable String architecture;
     /**
-     * The operating system type required for the run.
+     * @return The operating system type required for the run.
      * 
      */
     private final String os;
     /**
-     * Variant of the CPU.
+     * @return Variant of the CPU.
      * 
      */
     private final @Nullable String variant;
@@ -38,23 +38,23 @@ public final class PlatformPropertiesResponse {
     }
 
     /**
-     * The OS architecture.
+     * @return The OS architecture.
      * 
-    */
+     */
     public Optional<String> architecture() {
         return Optional.ofNullable(this.architecture);
     }
     /**
-     * The operating system type required for the run.
+     * @return The operating system type required for the run.
      * 
-    */
+     */
     public String os() {
         return this.os;
     }
     /**
-     * Variant of the CPU.
+     * @return Variant of the CPU.
      * 
-    */
+     */
     public Optional<String> variant() {
         return Optional.ofNullable(this.variant);
     }

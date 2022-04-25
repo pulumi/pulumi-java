@@ -24,6 +24,10 @@ public final class HyperVSiteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="eTag")
     private @Nullable Output<String> eTag;
 
+    /**
+     * @return eTag for concurrency control.
+     * 
+     */
     public Optional<Output<String>> eTag() {
         return Optional.ofNullable(this.eTag);
     }
@@ -35,6 +39,10 @@ public final class HyperVSiteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Azure location in which Sites is created.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -46,6 +54,10 @@ public final class HyperVSiteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the Hyper-V site.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -57,6 +69,10 @@ public final class HyperVSiteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties")
     private @Nullable Output<SitePropertiesArgs> properties;
 
+    /**
+     * @return Nested properties of Hyper-V site.
+     * 
+     */
     public Optional<Output<SitePropertiesArgs>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -68,6 +84,10 @@ public final class HyperVSiteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -79,6 +99,10 @@ public final class HyperVSiteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="siteName")
     private @Nullable Output<String> siteName;
 
+    /**
+     * @return Site name.
+     * 
+     */
     public Optional<Output<String>> siteName() {
         return Optional.ofNullable(this.siteName);
     }
@@ -120,56 +144,128 @@ public final class HyperVSiteArgs extends com.pulumi.resources.ResourceArgs {
             $ = new HyperVSiteArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param eTag eTag for concurrency control.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eTag(@Nullable Output<String> eTag) {
             $.eTag = eTag;
             return this;
         }
 
+        /**
+         * @param eTag eTag for concurrency control.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eTag(String eTag) {
             return eTag(Output.of(eTag));
         }
 
+        /**
+         * @param location Azure location in which Sites is created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Azure location in which Sites is created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param name Name of the Hyper-V site.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the Hyper-V site.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param properties Nested properties of Hyper-V site.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<SitePropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Nested properties of Hyper-V site.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(SitePropertiesArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param siteName Site name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder siteName(@Nullable Output<String> siteName) {
             $.siteName = siteName;
             return this;
         }
 
+        /**
+         * @param siteName Site name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder siteName(String siteName) {
             return siteName(Output.of(siteName));
         }

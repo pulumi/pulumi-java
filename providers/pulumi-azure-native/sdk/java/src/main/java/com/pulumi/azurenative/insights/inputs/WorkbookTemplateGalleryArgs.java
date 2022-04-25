@@ -27,6 +27,10 @@ public final class WorkbookTemplateGalleryArgs extends com.pulumi.resources.Reso
     @Import(name="category")
     private @Nullable Output<String> category;
 
+    /**
+     * @return Category for the gallery.
+     * 
+     */
     public Optional<Output<String>> category() {
         return Optional.ofNullable(this.category);
     }
@@ -38,6 +42,10 @@ public final class WorkbookTemplateGalleryArgs extends com.pulumi.resources.Reso
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the workbook template in the gallery.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -49,6 +57,10 @@ public final class WorkbookTemplateGalleryArgs extends com.pulumi.resources.Reso
     @Import(name="order")
     private @Nullable Output<Integer> order;
 
+    /**
+     * @return Order of the template within the gallery.
+     * 
+     */
     public Optional<Output<Integer>> order() {
         return Optional.ofNullable(this.order);
     }
@@ -60,6 +72,10 @@ public final class WorkbookTemplateGalleryArgs extends com.pulumi.resources.Reso
     @Import(name="resourceType")
     private @Nullable Output<String> resourceType;
 
+    /**
+     * @return Azure resource type supported by the gallery.
+     * 
+     */
     public Optional<Output<String>> resourceType() {
         return Optional.ofNullable(this.resourceType);
     }
@@ -71,6 +87,10 @@ public final class WorkbookTemplateGalleryArgs extends com.pulumi.resources.Reso
     @Import(name="type")
     private @Nullable Output<String> type;
 
+    /**
+     * @return Type of workbook supported by the workbook template.
+     * 
+     */
     public Optional<Output<String>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -103,47 +123,107 @@ public final class WorkbookTemplateGalleryArgs extends com.pulumi.resources.Reso
             $ = new WorkbookTemplateGalleryArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param category Category for the gallery.
+         * 
+         * @return builder
+         * 
+         */
         public Builder category(@Nullable Output<String> category) {
             $.category = category;
             return this;
         }
 
+        /**
+         * @param category Category for the gallery.
+         * 
+         * @return builder
+         * 
+         */
         public Builder category(String category) {
             return category(Output.of(category));
         }
 
+        /**
+         * @param name Name of the workbook template in the gallery.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the workbook template in the gallery.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param order Order of the template within the gallery.
+         * 
+         * @return builder
+         * 
+         */
         public Builder order(@Nullable Output<Integer> order) {
             $.order = order;
             return this;
         }
 
+        /**
+         * @param order Order of the template within the gallery.
+         * 
+         * @return builder
+         * 
+         */
         public Builder order(Integer order) {
             return order(Output.of(order));
         }
 
+        /**
+         * @param resourceType Azure resource type supported by the gallery.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(@Nullable Output<String> resourceType) {
             $.resourceType = resourceType;
             return this;
         }
 
+        /**
+         * @param resourceType Azure resource type supported by the gallery.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(String resourceType) {
             return resourceType(Output.of(resourceType));
         }
 
+        /**
+         * @param type Type of workbook supported by the workbook template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of workbook supported by the workbook template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

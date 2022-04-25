@@ -12,39 +12,39 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetPublicKeyResult {
     /**
-     * Key ARN of the asymmetric CMK from which the public key was downloaded.
+     * @return Key ARN of the asymmetric CMK from which the public key was downloaded.
      * 
      */
     private final String arn;
     /**
-     * Type of the public key that was downloaded.
+     * @return Type of the public key that was downloaded.
      * 
      */
     private final String customerMasterKeySpec;
     /**
-     * Encryption algorithms that AWS KMS supports for this key. Only set when the `key_usage` of the public key is `ENCRYPT_DECRYPT`.
+     * @return Encryption algorithms that AWS KMS supports for this key. Only set when the `key_usage` of the public key is `ENCRYPT_DECRYPT`.
      * 
      */
     private final List<String> encryptionAlgorithms;
     private final @Nullable List<String> grantTokens;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     private final String keyId;
     /**
-     * Permitted use of the public key. Valid values are `ENCRYPT_DECRYPT` or `SIGN_VERIFY`
+     * @return Permitted use of the public key. Valid values are `ENCRYPT_DECRYPT` or `SIGN_VERIFY`
      * 
      */
     private final String keyUsage;
     /**
-     * Exported public key. The value is a DER-encoded X.509 public key, also known as SubjectPublicKeyInfo (SPKI), as defined in [RFC 5280](https://tools.ietf.org/html/rfc5280). The value is Base64-encoded.
+     * @return Exported public key. The value is a DER-encoded X.509 public key, also known as SubjectPublicKeyInfo (SPKI), as defined in [RFC 5280](https://tools.ietf.org/html/rfc5280). The value is Base64-encoded.
      * 
      */
     private final String publicKey;
     /**
-     * Signing algorithms that AWS KMS supports for this key. Only set when the `key_usage` of the public key is `SIGN_VERIFY`.
+     * @return Signing algorithms that AWS KMS supports for this key. Only set when the `key_usage` of the public key is `SIGN_VERIFY`.
      * 
      */
     private final List<String> signingAlgorithms;
@@ -72,23 +72,23 @@ public final class GetPublicKeyResult {
     }
 
     /**
-     * Key ARN of the asymmetric CMK from which the public key was downloaded.
+     * @return Key ARN of the asymmetric CMK from which the public key was downloaded.
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
     /**
-     * Type of the public key that was downloaded.
+     * @return Type of the public key that was downloaded.
      * 
-    */
+     */
     public String customerMasterKeySpec() {
         return this.customerMasterKeySpec;
     }
     /**
-     * Encryption algorithms that AWS KMS supports for this key. Only set when the `key_usage` of the public key is `ENCRYPT_DECRYPT`.
+     * @return Encryption algorithms that AWS KMS supports for this key. Only set when the `key_usage` of the public key is `ENCRYPT_DECRYPT`.
      * 
-    */
+     */
     public List<String> encryptionAlgorithms() {
         return this.encryptionAlgorithms;
     }
@@ -96,9 +96,9 @@ public final class GetPublicKeyResult {
         return this.grantTokens == null ? List.of() : this.grantTokens;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
@@ -106,23 +106,23 @@ public final class GetPublicKeyResult {
         return this.keyId;
     }
     /**
-     * Permitted use of the public key. Valid values are `ENCRYPT_DECRYPT` or `SIGN_VERIFY`
+     * @return Permitted use of the public key. Valid values are `ENCRYPT_DECRYPT` or `SIGN_VERIFY`
      * 
-    */
+     */
     public String keyUsage() {
         return this.keyUsage;
     }
     /**
-     * Exported public key. The value is a DER-encoded X.509 public key, also known as SubjectPublicKeyInfo (SPKI), as defined in [RFC 5280](https://tools.ietf.org/html/rfc5280). The value is Base64-encoded.
+     * @return Exported public key. The value is a DER-encoded X.509 public key, also known as SubjectPublicKeyInfo (SPKI), as defined in [RFC 5280](https://tools.ietf.org/html/rfc5280). The value is Base64-encoded.
      * 
-    */
+     */
     public String publicKey() {
         return this.publicKey;
     }
     /**
-     * Signing algorithms that AWS KMS supports for this key. Only set when the `key_usage` of the public key is `SIGN_VERIFY`.
+     * @return Signing algorithms that AWS KMS supports for this key. Only set when the `key_usage` of the public key is `SIGN_VERIFY`.
      * 
-    */
+     */
     public List<String> signingAlgorithms() {
         return this.signingAlgorithms;
     }

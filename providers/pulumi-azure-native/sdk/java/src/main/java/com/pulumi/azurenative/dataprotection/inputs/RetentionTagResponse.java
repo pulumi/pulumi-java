@@ -23,6 +23,10 @@ public final class RetentionTagResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="eTag", required=true)
     private String eTag;
 
+    /**
+     * @return Retention Tag version.
+     * 
+     */
     public String eTag() {
         return this.eTag;
     }
@@ -34,6 +38,10 @@ public final class RetentionTagResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Retention Tag version.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -45,6 +53,10 @@ public final class RetentionTagResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="tagName", required=true)
     private String tagName;
 
+    /**
+     * @return Retention Tag Name to relate it to retention rule.
+     * 
+     */
     public String tagName() {
         return this.tagName;
     }
@@ -75,16 +87,34 @@ public final class RetentionTagResponse extends com.pulumi.resources.InvokeArgs 
             $ = new RetentionTagResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param eTag Retention Tag version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eTag(String eTag) {
             $.eTag = eTag;
             return this;
         }
 
+        /**
+         * @param id Retention Tag version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param tagName Retention Tag Name to relate it to retention rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagName(String tagName) {
             $.tagName = tagName;
             return this;

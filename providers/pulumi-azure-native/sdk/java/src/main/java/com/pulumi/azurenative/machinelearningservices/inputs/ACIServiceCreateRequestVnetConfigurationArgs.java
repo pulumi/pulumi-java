@@ -26,6 +26,10 @@ public final class ACIServiceCreateRequestVnetConfigurationArgs extends com.pulu
     @Import(name="subnetName")
     private @Nullable Output<String> subnetName;
 
+    /**
+     * @return The name of the virtual network subnet.
+     * 
+     */
     public Optional<Output<String>> subnetName() {
         return Optional.ofNullable(this.subnetName);
     }
@@ -37,6 +41,10 @@ public final class ACIServiceCreateRequestVnetConfigurationArgs extends com.pulu
     @Import(name="vnetName")
     private @Nullable Output<String> vnetName;
 
+    /**
+     * @return The name of the virtual network.
+     * 
+     */
     public Optional<Output<String>> vnetName() {
         return Optional.ofNullable(this.vnetName);
     }
@@ -66,20 +74,44 @@ public final class ACIServiceCreateRequestVnetConfigurationArgs extends com.pulu
             $ = new ACIServiceCreateRequestVnetConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param subnetName The name of the virtual network subnet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetName(@Nullable Output<String> subnetName) {
             $.subnetName = subnetName;
             return this;
         }
 
+        /**
+         * @param subnetName The name of the virtual network subnet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetName(String subnetName) {
             return subnetName(Output.of(subnetName));
         }
 
+        /**
+         * @param vnetName The name of the virtual network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vnetName(@Nullable Output<String> vnetName) {
             $.vnetName = vnetName;
             return this;
         }
 
+        /**
+         * @param vnetName The name of the virtual network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vnetName(String vnetName) {
             return vnetName(Output.of(vnetName));
         }

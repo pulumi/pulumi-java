@@ -27,6 +27,10 @@ public final class IngressServiceBackendArgs extends com.pulumi.resources.Resour
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Name is the referenced service. The service must exist in the same namespace as the Ingress object.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -38,6 +42,10 @@ public final class IngressServiceBackendArgs extends com.pulumi.resources.Resour
     @Import(name="port")
     private @Nullable Output<ServiceBackendPortArgs> port;
 
+    /**
+     * @return Port of the referenced service. A port name or port number is required for a IngressServiceBackend.
+     * 
+     */
     public Optional<Output<ServiceBackendPortArgs>> port() {
         return Optional.ofNullable(this.port);
     }
@@ -67,20 +75,44 @@ public final class IngressServiceBackendArgs extends com.pulumi.resources.Resour
             $ = new IngressServiceBackendArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name is the referenced service. The service must exist in the same namespace as the Ingress object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name is the referenced service. The service must exist in the same namespace as the Ingress object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param port Port of the referenced service. A port name or port number is required for a IngressServiceBackend.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(@Nullable Output<ServiceBackendPortArgs> port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param port Port of the referenced service. A port name or port number is required for a IngressServiceBackend.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(ServiceBackendPortArgs port) {
             return port(Output.of(port));
         }

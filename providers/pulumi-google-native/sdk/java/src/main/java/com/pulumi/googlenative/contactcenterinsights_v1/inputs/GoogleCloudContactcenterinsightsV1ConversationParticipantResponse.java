@@ -23,6 +23,10 @@ public final class GoogleCloudContactcenterinsightsV1ConversationParticipantResp
     @Import(name="dialogflowParticipantName", required=true)
     private String dialogflowParticipantName;
 
+    /**
+     * @return The name of the participant provided by Dialogflow. Format: projects/{project}/locations/{location}/conversations/{conversation}/participants/{participant}
+     * 
+     */
     public String dialogflowParticipantName() {
         return this.dialogflowParticipantName;
     }
@@ -34,6 +38,10 @@ public final class GoogleCloudContactcenterinsightsV1ConversationParticipantResp
     @Import(name="obfuscatedExternalUserId", required=true)
     private String obfuscatedExternalUserId;
 
+    /**
+     * @return Obfuscated user ID from Dialogflow.
+     * 
+     */
     public String obfuscatedExternalUserId() {
         return this.obfuscatedExternalUserId;
     }
@@ -45,6 +53,10 @@ public final class GoogleCloudContactcenterinsightsV1ConversationParticipantResp
     @Import(name="role", required=true)
     private String role;
 
+    /**
+     * @return The role of the participant.
+     * 
+     */
     public String role() {
         return this.role;
     }
@@ -56,6 +68,10 @@ public final class GoogleCloudContactcenterinsightsV1ConversationParticipantResp
     @Import(name="userId", required=true)
     private String userId;
 
+    /**
+     * @return A user-specified ID representing the participant.
+     * 
+     */
     public String userId() {
         return this.userId;
     }
@@ -87,21 +103,45 @@ public final class GoogleCloudContactcenterinsightsV1ConversationParticipantResp
             $ = new GoogleCloudContactcenterinsightsV1ConversationParticipantResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dialogflowParticipantName The name of the participant provided by Dialogflow. Format: projects/{project}/locations/{location}/conversations/{conversation}/participants/{participant}
+         * 
+         * @return builder
+         * 
+         */
         public Builder dialogflowParticipantName(String dialogflowParticipantName) {
             $.dialogflowParticipantName = dialogflowParticipantName;
             return this;
         }
 
+        /**
+         * @param obfuscatedExternalUserId Obfuscated user ID from Dialogflow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder obfuscatedExternalUserId(String obfuscatedExternalUserId) {
             $.obfuscatedExternalUserId = obfuscatedExternalUserId;
             return this;
         }
 
+        /**
+         * @param role The role of the participant.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(String role) {
             $.role = role;
             return this;
         }
 
+        /**
+         * @param userId A user-specified ID representing the participant.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userId(String userId) {
             $.userId = userId;
             return this;

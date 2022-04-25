@@ -19,6 +19,10 @@ public final class GetConfigurationServiceArgs extends com.pulumi.resources.Invo
     @Import(name="configurationServiceName", required=true)
     private String configurationServiceName;
 
+    /**
+     * @return The name of Application Configuration Service.
+     * 
+     */
     public String configurationServiceName() {
         return this.configurationServiceName;
     }
@@ -30,6 +34,10 @@ public final class GetConfigurationServiceArgs extends com.pulumi.resources.Invo
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetConfigurationServiceArgs extends com.pulumi.resources.Invo
     @Import(name="serviceName", required=true)
     private String serviceName;
 
+    /**
+     * @return The name of the Service resource.
+     * 
+     */
     public String serviceName() {
         return this.serviceName;
     }
@@ -71,16 +83,34 @@ public final class GetConfigurationServiceArgs extends com.pulumi.resources.Invo
             $ = new GetConfigurationServiceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param configurationServiceName The name of Application Configuration Service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationServiceName(String configurationServiceName) {
             $.configurationServiceName = configurationServiceName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param serviceName The name of the Service resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             $.serviceName = serviceName;
             return this;

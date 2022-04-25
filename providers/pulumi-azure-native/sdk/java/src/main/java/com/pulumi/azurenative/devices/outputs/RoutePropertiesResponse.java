@@ -14,27 +14,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class RoutePropertiesResponse {
     /**
-     * The condition that is evaluated to apply the routing rule. If no condition is provided, it evaluates to true by default. For grammar, see: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language
+     * @return The condition that is evaluated to apply the routing rule. If no condition is provided, it evaluates to true by default. For grammar, see: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language
      * 
      */
     private final @Nullable String condition;
     /**
-     * The list of endpoints to which messages that satisfy the condition are routed. Currently only one endpoint is allowed.
+     * @return The list of endpoints to which messages that satisfy the condition are routed. Currently only one endpoint is allowed.
      * 
      */
     private final List<String> endpointNames;
     /**
-     * Used to specify whether a route is enabled.
+     * @return Used to specify whether a route is enabled.
      * 
      */
     private final Boolean isEnabled;
     /**
-     * The name of the route. The name can only include alphanumeric characters, periods, underscores, hyphens, has a maximum length of 64 characters, and must be unique.
+     * @return The name of the route. The name can only include alphanumeric characters, periods, underscores, hyphens, has a maximum length of 64 characters, and must be unique.
      * 
      */
     private final String name;
     /**
-     * The source that the routing rule is to be applied to, such as DeviceMessages.
+     * @return The source that the routing rule is to be applied to, such as DeviceMessages.
      * 
      */
     private final String source;
@@ -54,37 +54,37 @@ public final class RoutePropertiesResponse {
     }
 
     /**
-     * The condition that is evaluated to apply the routing rule. If no condition is provided, it evaluates to true by default. For grammar, see: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language
+     * @return The condition that is evaluated to apply the routing rule. If no condition is provided, it evaluates to true by default. For grammar, see: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language
      * 
-    */
+     */
     public Optional<String> condition() {
         return Optional.ofNullable(this.condition);
     }
     /**
-     * The list of endpoints to which messages that satisfy the condition are routed. Currently only one endpoint is allowed.
+     * @return The list of endpoints to which messages that satisfy the condition are routed. Currently only one endpoint is allowed.
      * 
-    */
+     */
     public List<String> endpointNames() {
         return this.endpointNames;
     }
     /**
-     * Used to specify whether a route is enabled.
+     * @return Used to specify whether a route is enabled.
      * 
-    */
+     */
     public Boolean isEnabled() {
         return this.isEnabled;
     }
     /**
-     * The name of the route. The name can only include alphanumeric characters, periods, underscores, hyphens, has a maximum length of 64 characters, and must be unique.
+     * @return The name of the route. The name can only include alphanumeric characters, periods, underscores, hyphens, has a maximum length of 64 characters, and must be unique.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The source that the routing rule is to be applied to, such as DeviceMessages.
+     * @return The source that the routing rule is to be applied to, such as DeviceMessages.
      * 
-    */
+     */
     public String source() {
         return this.source;
     }

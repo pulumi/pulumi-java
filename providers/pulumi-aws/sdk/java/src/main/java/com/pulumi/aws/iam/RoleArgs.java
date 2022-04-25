@@ -27,6 +27,10 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="assumeRolePolicy", required=true)
     private Output<String> assumeRolePolicy;
 
+    /**
+     * @return Policy that grants an entity permission to assume the role.
+     * 
+     */
     public Output<String> assumeRolePolicy() {
         return this.assumeRolePolicy;
     }
@@ -38,6 +42,10 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description of the role.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -49,6 +57,10 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="forceDetachPolicies")
     private @Nullable Output<Boolean> forceDetachPolicies;
 
+    /**
+     * @return Whether to force detaching any policies the role has before destroying it. Defaults to `false`.
+     * 
+     */
     public Optional<Output<Boolean>> forceDetachPolicies() {
         return Optional.ofNullable(this.forceDetachPolicies);
     }
@@ -60,6 +72,10 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="inlinePolicies")
     private @Nullable Output<List<RoleInlinePolicyArgs>> inlinePolicies;
 
+    /**
+     * @return Configuration block defining an exclusive set of IAM inline policies associated with the IAM role. See below. If no blocks are configured, this provider will not manage any inline policies in this resource. Configuring one empty block (i.e., `inline_policy {}`) will cause the provider to remove _all_ inline policies added out of band on `apply`.
+     * 
+     */
     public Optional<Output<List<RoleInlinePolicyArgs>>> inlinePolicies() {
         return Optional.ofNullable(this.inlinePolicies);
     }
@@ -71,6 +87,10 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="managedPolicyArns")
     private @Nullable Output<List<String>> managedPolicyArns;
 
+    /**
+     * @return Set of exclusive IAM managed policy ARNs to attach to the IAM role. If this attribute is not configured, this provider will ignore policy attachments to this resource. When configured, the provider will align the role&#39;s managed policy attachments with this set by attaching or detaching managed policies. Configuring an empty set (i.e., `managed_policy_arns = []`) will cause the provider to remove _all_ managed policy attachments.
+     * 
+     */
     public Optional<Output<List<String>>> managedPolicyArns() {
         return Optional.ofNullable(this.managedPolicyArns);
     }
@@ -82,6 +102,10 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxSessionDuration")
     private @Nullable Output<Integer> maxSessionDuration;
 
+    /**
+     * @return Maximum session duration (in seconds) that you want to set for the specified role. If you do not specify a value for this setting, the default maximum of one hour is applied. This setting can have a value from 1 hour to 12 hours.
+     * 
+     */
     public Optional<Output<Integer>> maxSessionDuration() {
         return Optional.ofNullable(this.maxSessionDuration);
     }
@@ -93,6 +117,10 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the role policy.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -104,6 +132,10 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="namePrefix")
     private @Nullable Output<String> namePrefix;
 
+    /**
+     * @return Creates a unique friendly name beginning with the specified prefix. Conflicts with `name`.
+     * 
+     */
     public Optional<Output<String>> namePrefix() {
         return Optional.ofNullable(this.namePrefix);
     }
@@ -115,6 +147,10 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="path")
     private @Nullable Output<String> path;
 
+    /**
+     * @return Path to the role. See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html) for more information.
+     * 
+     */
     public Optional<Output<String>> path() {
         return Optional.ofNullable(this.path);
     }
@@ -126,6 +162,10 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="permissionsBoundary")
     private @Nullable Output<String> permissionsBoundary;
 
+    /**
+     * @return ARN of the policy that is used to set the permissions boundary for the role.
+     * 
+     */
     public Optional<Output<String>> permissionsBoundary() {
         return Optional.ofNullable(this.permissionsBoundary);
     }
@@ -137,6 +177,10 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Key-value mapping of tags for the IAM role. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -175,109 +219,253 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
             $ = new RoleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param assumeRolePolicy Policy that grants an entity permission to assume the role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assumeRolePolicy(Output<String> assumeRolePolicy) {
             $.assumeRolePolicy = assumeRolePolicy;
             return this;
         }
 
+        /**
+         * @param assumeRolePolicy Policy that grants an entity permission to assume the role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assumeRolePolicy(String assumeRolePolicy) {
             return assumeRolePolicy(Output.of(assumeRolePolicy));
         }
 
+        /**
+         * @param description Description of the role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description of the role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param forceDetachPolicies Whether to force detaching any policies the role has before destroying it. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forceDetachPolicies(@Nullable Output<Boolean> forceDetachPolicies) {
             $.forceDetachPolicies = forceDetachPolicies;
             return this;
         }
 
+        /**
+         * @param forceDetachPolicies Whether to force detaching any policies the role has before destroying it. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forceDetachPolicies(Boolean forceDetachPolicies) {
             return forceDetachPolicies(Output.of(forceDetachPolicies));
         }
 
+        /**
+         * @param inlinePolicies Configuration block defining an exclusive set of IAM inline policies associated with the IAM role. See below. If no blocks are configured, this provider will not manage any inline policies in this resource. Configuring one empty block (i.e., `inline_policy {}`) will cause the provider to remove _all_ inline policies added out of band on `apply`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inlinePolicies(@Nullable Output<List<RoleInlinePolicyArgs>> inlinePolicies) {
             $.inlinePolicies = inlinePolicies;
             return this;
         }
 
+        /**
+         * @param inlinePolicies Configuration block defining an exclusive set of IAM inline policies associated with the IAM role. See below. If no blocks are configured, this provider will not manage any inline policies in this resource. Configuring one empty block (i.e., `inline_policy {}`) will cause the provider to remove _all_ inline policies added out of band on `apply`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inlinePolicies(List<RoleInlinePolicyArgs> inlinePolicies) {
             return inlinePolicies(Output.of(inlinePolicies));
         }
 
+        /**
+         * @param inlinePolicies Configuration block defining an exclusive set of IAM inline policies associated with the IAM role. See below. If no blocks are configured, this provider will not manage any inline policies in this resource. Configuring one empty block (i.e., `inline_policy {}`) will cause the provider to remove _all_ inline policies added out of band on `apply`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inlinePolicies(RoleInlinePolicyArgs... inlinePolicies) {
             return inlinePolicies(List.of(inlinePolicies));
         }
 
+        /**
+         * @param managedPolicyArns Set of exclusive IAM managed policy ARNs to attach to the IAM role. If this attribute is not configured, this provider will ignore policy attachments to this resource. When configured, the provider will align the role&#39;s managed policy attachments with this set by attaching or detaching managed policies. Configuring an empty set (i.e., `managed_policy_arns = []`) will cause the provider to remove _all_ managed policy attachments.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedPolicyArns(@Nullable Output<List<String>> managedPolicyArns) {
             $.managedPolicyArns = managedPolicyArns;
             return this;
         }
 
+        /**
+         * @param managedPolicyArns Set of exclusive IAM managed policy ARNs to attach to the IAM role. If this attribute is not configured, this provider will ignore policy attachments to this resource. When configured, the provider will align the role&#39;s managed policy attachments with this set by attaching or detaching managed policies. Configuring an empty set (i.e., `managed_policy_arns = []`) will cause the provider to remove _all_ managed policy attachments.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedPolicyArns(List<String> managedPolicyArns) {
             return managedPolicyArns(Output.of(managedPolicyArns));
         }
 
+        /**
+         * @param managedPolicyArns Set of exclusive IAM managed policy ARNs to attach to the IAM role. If this attribute is not configured, this provider will ignore policy attachments to this resource. When configured, the provider will align the role&#39;s managed policy attachments with this set by attaching or detaching managed policies. Configuring an empty set (i.e., `managed_policy_arns = []`) will cause the provider to remove _all_ managed policy attachments.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedPolicyArns(String... managedPolicyArns) {
             return managedPolicyArns(List.of(managedPolicyArns));
         }
 
+        /**
+         * @param maxSessionDuration Maximum session duration (in seconds) that you want to set for the specified role. If you do not specify a value for this setting, the default maximum of one hour is applied. This setting can have a value from 1 hour to 12 hours.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxSessionDuration(@Nullable Output<Integer> maxSessionDuration) {
             $.maxSessionDuration = maxSessionDuration;
             return this;
         }
 
+        /**
+         * @param maxSessionDuration Maximum session duration (in seconds) that you want to set for the specified role. If you do not specify a value for this setting, the default maximum of one hour is applied. This setting can have a value from 1 hour to 12 hours.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxSessionDuration(Integer maxSessionDuration) {
             return maxSessionDuration(Output.of(maxSessionDuration));
         }
 
+        /**
+         * @param name Name of the role policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the role policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param namePrefix Creates a unique friendly name beginning with the specified prefix. Conflicts with `name`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
             $.namePrefix = namePrefix;
             return this;
         }
 
+        /**
+         * @param namePrefix Creates a unique friendly name beginning with the specified prefix. Conflicts with `name`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namePrefix(String namePrefix) {
             return namePrefix(Output.of(namePrefix));
         }
 
+        /**
+         * @param path Path to the role. See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html) for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(@Nullable Output<String> path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param path Path to the role. See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html) for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             return path(Output.of(path));
         }
 
+        /**
+         * @param permissionsBoundary ARN of the policy that is used to set the permissions boundary for the role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissionsBoundary(@Nullable Output<String> permissionsBoundary) {
             $.permissionsBoundary = permissionsBoundary;
             return this;
         }
 
+        /**
+         * @param permissionsBoundary ARN of the policy that is used to set the permissions boundary for the role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissionsBoundary(String permissionsBoundary) {
             return permissionsBoundary(Output.of(permissionsBoundary));
         }
 
+        /**
+         * @param tags Key-value mapping of tags for the IAM role. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Key-value mapping of tags for the IAM role. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

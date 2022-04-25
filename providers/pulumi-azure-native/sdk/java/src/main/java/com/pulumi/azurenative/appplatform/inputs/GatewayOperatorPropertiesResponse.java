@@ -25,6 +25,10 @@ public final class GatewayOperatorPropertiesResponse extends com.pulumi.resource
     @Import(name="instances", required=true)
     private List<GatewayInstanceResponse> instances;
 
+    /**
+     * @return Collection of instances belong to Spring Cloud Gateway operator.
+     * 
+     */
     public List<GatewayInstanceResponse> instances() {
         return this.instances;
     }
@@ -36,6 +40,10 @@ public final class GatewayOperatorPropertiesResponse extends com.pulumi.resource
     @Import(name="resourceRequests", required=true)
     private GatewayOperatorResourceRequestsResponse resourceRequests;
 
+    /**
+     * @return The requested resource quantity for required CPU and Memory.
+     * 
+     */
     public GatewayOperatorResourceRequestsResponse resourceRequests() {
         return this.resourceRequests;
     }
@@ -65,15 +73,33 @@ public final class GatewayOperatorPropertiesResponse extends com.pulumi.resource
             $ = new GatewayOperatorPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param instances Collection of instances belong to Spring Cloud Gateway operator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instances(List<GatewayInstanceResponse> instances) {
             $.instances = instances;
             return this;
         }
 
+        /**
+         * @param instances Collection of instances belong to Spring Cloud Gateway operator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instances(GatewayInstanceResponse... instances) {
             return instances(List.of(instances));
         }
 
+        /**
+         * @param resourceRequests The requested resource quantity for required CPU and Memory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceRequests(GatewayOperatorResourceRequestsResponse resourceRequests) {
             $.resourceRequests = resourceRequests;
             return this;

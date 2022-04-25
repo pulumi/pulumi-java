@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ConnectorCloudWatchLogsLogDelivery {
     /**
-     * Specifies whether the logs get sent to the specified CloudWatch Logs destination.
+     * @return Specifies whether the logs get sent to the specified CloudWatch Logs destination.
      * 
      */
     private final Boolean enabled;
     /**
-     * The CloudWatch log group that is the destination for log delivery.
+     * @return The CloudWatch log group that is the destination for log delivery.
      * 
      */
     private final @Nullable String logGroup;
@@ -32,16 +32,16 @@ public final class ConnectorCloudWatchLogsLogDelivery {
     }
 
     /**
-     * Specifies whether the logs get sent to the specified CloudWatch Logs destination.
+     * @return Specifies whether the logs get sent to the specified CloudWatch Logs destination.
      * 
-    */
+     */
     public Boolean enabled() {
         return this.enabled;
     }
     /**
-     * The CloudWatch log group that is the destination for log delivery.
+     * @return The CloudWatch log group that is the destination for log delivery.
      * 
-    */
+     */
     public Optional<String> logGroup() {
         return Optional.ofNullable(this.logGroup);
     }

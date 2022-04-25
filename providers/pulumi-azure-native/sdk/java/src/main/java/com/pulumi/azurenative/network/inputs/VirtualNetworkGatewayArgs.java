@@ -40,6 +40,10 @@ public final class VirtualNetworkGatewayArgs extends com.pulumi.resources.Resour
     @Import(name="activeActive")
     private @Nullable Output<Boolean> activeActive;
 
+    /**
+     * @return ActiveActive flag.
+     * 
+     */
     public Optional<Output<Boolean>> activeActive() {
         return Optional.ofNullable(this.activeActive);
     }
@@ -51,6 +55,10 @@ public final class VirtualNetworkGatewayArgs extends com.pulumi.resources.Resour
     @Import(name="bgpSettings")
     private @Nullable Output<BgpSettingsArgs> bgpSettings;
 
+    /**
+     * @return Virtual network gateway&#39;s BGP speaker settings.
+     * 
+     */
     public Optional<Output<BgpSettingsArgs>> bgpSettings() {
         return Optional.ofNullable(this.bgpSettings);
     }
@@ -62,6 +70,10 @@ public final class VirtualNetworkGatewayArgs extends com.pulumi.resources.Resour
     @Import(name="customRoutes")
     private @Nullable Output<AddressSpaceArgs> customRoutes;
 
+    /**
+     * @return The reference to the address space resource which represents the custom routes address space specified by the customer for virtual network gateway and VpnClient.
+     * 
+     */
     public Optional<Output<AddressSpaceArgs>> customRoutes() {
         return Optional.ofNullable(this.customRoutes);
     }
@@ -73,6 +85,10 @@ public final class VirtualNetworkGatewayArgs extends com.pulumi.resources.Resour
     @Import(name="enableBgp")
     private @Nullable Output<Boolean> enableBgp;
 
+    /**
+     * @return Whether BGP is enabled for this virtual network gateway or not.
+     * 
+     */
     public Optional<Output<Boolean>> enableBgp() {
         return Optional.ofNullable(this.enableBgp);
     }
@@ -84,6 +100,10 @@ public final class VirtualNetworkGatewayArgs extends com.pulumi.resources.Resour
     @Import(name="enableDnsForwarding")
     private @Nullable Output<Boolean> enableDnsForwarding;
 
+    /**
+     * @return Whether dns forwarding is enabled or not.
+     * 
+     */
     public Optional<Output<Boolean>> enableDnsForwarding() {
         return Optional.ofNullable(this.enableDnsForwarding);
     }
@@ -95,6 +115,10 @@ public final class VirtualNetworkGatewayArgs extends com.pulumi.resources.Resour
     @Import(name="enablePrivateIpAddress")
     private @Nullable Output<Boolean> enablePrivateIpAddress;
 
+    /**
+     * @return Whether private IP needs to be enabled on this gateway for connections or not.
+     * 
+     */
     public Optional<Output<Boolean>> enablePrivateIpAddress() {
         return Optional.ofNullable(this.enablePrivateIpAddress);
     }
@@ -106,6 +130,10 @@ public final class VirtualNetworkGatewayArgs extends com.pulumi.resources.Resour
     @Import(name="extendedLocation")
     private @Nullable Output<ExtendedLocationArgs> extendedLocation;
 
+    /**
+     * @return The extended location of type local virtual network gateway.
+     * 
+     */
     public Optional<Output<ExtendedLocationArgs>> extendedLocation() {
         return Optional.ofNullable(this.extendedLocation);
     }
@@ -117,6 +145,10 @@ public final class VirtualNetworkGatewayArgs extends com.pulumi.resources.Resour
     @Import(name="gatewayDefaultSite")
     private @Nullable Output<SubResourceArgs> gatewayDefaultSite;
 
+    /**
+     * @return The reference to the LocalNetworkGateway resource which represents local network site having default routes. Assign Null value in case of removing existing default site setting.
+     * 
+     */
     public Optional<Output<SubResourceArgs>> gatewayDefaultSite() {
         return Optional.ofNullable(this.gatewayDefaultSite);
     }
@@ -128,6 +160,10 @@ public final class VirtualNetworkGatewayArgs extends com.pulumi.resources.Resour
     @Import(name="gatewayType")
     private @Nullable Output<Either<String,VirtualNetworkGatewayType>> gatewayType;
 
+    /**
+     * @return The type of this virtual network gateway.
+     * 
+     */
     public Optional<Output<Either<String,VirtualNetworkGatewayType>>> gatewayType() {
         return Optional.ofNullable(this.gatewayType);
     }
@@ -139,6 +175,10 @@ public final class VirtualNetworkGatewayArgs extends com.pulumi.resources.Resour
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -150,6 +190,10 @@ public final class VirtualNetworkGatewayArgs extends com.pulumi.resources.Resour
     @Import(name="ipConfigurations")
     private @Nullable Output<List<VirtualNetworkGatewayIPConfigurationArgs>> ipConfigurations;
 
+    /**
+     * @return IP configurations for virtual network gateway.
+     * 
+     */
     public Optional<Output<List<VirtualNetworkGatewayIPConfigurationArgs>>> ipConfigurations() {
         return Optional.ofNullable(this.ipConfigurations);
     }
@@ -161,6 +205,10 @@ public final class VirtualNetworkGatewayArgs extends com.pulumi.resources.Resour
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -172,6 +220,10 @@ public final class VirtualNetworkGatewayArgs extends com.pulumi.resources.Resour
     @Import(name="sku")
     private @Nullable Output<VirtualNetworkGatewaySkuArgs> sku;
 
+    /**
+     * @return The reference to the VirtualNetworkGatewaySku resource which represents the SKU selected for Virtual network gateway.
+     * 
+     */
     public Optional<Output<VirtualNetworkGatewaySkuArgs>> sku() {
         return Optional.ofNullable(this.sku);
     }
@@ -183,6 +235,10 @@ public final class VirtualNetworkGatewayArgs extends com.pulumi.resources.Resour
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -194,6 +250,10 @@ public final class VirtualNetworkGatewayArgs extends com.pulumi.resources.Resour
     @Import(name="vNetExtendedLocationResourceId")
     private @Nullable Output<String> vNetExtendedLocationResourceId;
 
+    /**
+     * @return Customer vnet resource id. VirtualNetworkGateway of type local gateway is associated with the customer vnet.
+     * 
+     */
     public Optional<Output<String>> vNetExtendedLocationResourceId() {
         return Optional.ofNullable(this.vNetExtendedLocationResourceId);
     }
@@ -205,6 +265,10 @@ public final class VirtualNetworkGatewayArgs extends com.pulumi.resources.Resour
     @Import(name="vpnClientConfiguration")
     private @Nullable Output<VpnClientConfigurationArgs> vpnClientConfiguration;
 
+    /**
+     * @return The reference to the VpnClientConfiguration resource which represents the P2S VpnClient configurations.
+     * 
+     */
     public Optional<Output<VpnClientConfigurationArgs>> vpnClientConfiguration() {
         return Optional.ofNullable(this.vpnClientConfiguration);
     }
@@ -216,6 +280,10 @@ public final class VirtualNetworkGatewayArgs extends com.pulumi.resources.Resour
     @Import(name="vpnGatewayGeneration")
     private @Nullable Output<Either<String,VpnGatewayGeneration>> vpnGatewayGeneration;
 
+    /**
+     * @return The generation for this VirtualNetworkGateway. Must be None if gatewayType is not VPN.
+     * 
+     */
     public Optional<Output<Either<String,VpnGatewayGeneration>>> vpnGatewayGeneration() {
         return Optional.ofNullable(this.vpnGatewayGeneration);
     }
@@ -227,6 +295,10 @@ public final class VirtualNetworkGatewayArgs extends com.pulumi.resources.Resour
     @Import(name="vpnType")
     private @Nullable Output<Either<String,VpnType>> vpnType;
 
+    /**
+     * @return The type of this virtual network gateway.
+     * 
+     */
     public Optional<Output<Either<String,VpnType>>> vpnType() {
         return Optional.ofNullable(this.vpnType);
     }
@@ -272,192 +344,450 @@ public final class VirtualNetworkGatewayArgs extends com.pulumi.resources.Resour
             $ = new VirtualNetworkGatewayArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param activeActive ActiveActive flag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder activeActive(@Nullable Output<Boolean> activeActive) {
             $.activeActive = activeActive;
             return this;
         }
 
+        /**
+         * @param activeActive ActiveActive flag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder activeActive(Boolean activeActive) {
             return activeActive(Output.of(activeActive));
         }
 
+        /**
+         * @param bgpSettings Virtual network gateway&#39;s BGP speaker settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bgpSettings(@Nullable Output<BgpSettingsArgs> bgpSettings) {
             $.bgpSettings = bgpSettings;
             return this;
         }
 
+        /**
+         * @param bgpSettings Virtual network gateway&#39;s BGP speaker settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bgpSettings(BgpSettingsArgs bgpSettings) {
             return bgpSettings(Output.of(bgpSettings));
         }
 
+        /**
+         * @param customRoutes The reference to the address space resource which represents the custom routes address space specified by the customer for virtual network gateway and VpnClient.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customRoutes(@Nullable Output<AddressSpaceArgs> customRoutes) {
             $.customRoutes = customRoutes;
             return this;
         }
 
+        /**
+         * @param customRoutes The reference to the address space resource which represents the custom routes address space specified by the customer for virtual network gateway and VpnClient.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customRoutes(AddressSpaceArgs customRoutes) {
             return customRoutes(Output.of(customRoutes));
         }
 
+        /**
+         * @param enableBgp Whether BGP is enabled for this virtual network gateway or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableBgp(@Nullable Output<Boolean> enableBgp) {
             $.enableBgp = enableBgp;
             return this;
         }
 
+        /**
+         * @param enableBgp Whether BGP is enabled for this virtual network gateway or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableBgp(Boolean enableBgp) {
             return enableBgp(Output.of(enableBgp));
         }
 
+        /**
+         * @param enableDnsForwarding Whether dns forwarding is enabled or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableDnsForwarding(@Nullable Output<Boolean> enableDnsForwarding) {
             $.enableDnsForwarding = enableDnsForwarding;
             return this;
         }
 
+        /**
+         * @param enableDnsForwarding Whether dns forwarding is enabled or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableDnsForwarding(Boolean enableDnsForwarding) {
             return enableDnsForwarding(Output.of(enableDnsForwarding));
         }
 
+        /**
+         * @param enablePrivateIpAddress Whether private IP needs to be enabled on this gateway for connections or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enablePrivateIpAddress(@Nullable Output<Boolean> enablePrivateIpAddress) {
             $.enablePrivateIpAddress = enablePrivateIpAddress;
             return this;
         }
 
+        /**
+         * @param enablePrivateIpAddress Whether private IP needs to be enabled on this gateway for connections or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enablePrivateIpAddress(Boolean enablePrivateIpAddress) {
             return enablePrivateIpAddress(Output.of(enablePrivateIpAddress));
         }
 
+        /**
+         * @param extendedLocation The extended location of type local virtual network gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extendedLocation(@Nullable Output<ExtendedLocationArgs> extendedLocation) {
             $.extendedLocation = extendedLocation;
             return this;
         }
 
+        /**
+         * @param extendedLocation The extended location of type local virtual network gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extendedLocation(ExtendedLocationArgs extendedLocation) {
             return extendedLocation(Output.of(extendedLocation));
         }
 
+        /**
+         * @param gatewayDefaultSite The reference to the LocalNetworkGateway resource which represents local network site having default routes. Assign Null value in case of removing existing default site setting.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayDefaultSite(@Nullable Output<SubResourceArgs> gatewayDefaultSite) {
             $.gatewayDefaultSite = gatewayDefaultSite;
             return this;
         }
 
+        /**
+         * @param gatewayDefaultSite The reference to the LocalNetworkGateway resource which represents local network site having default routes. Assign Null value in case of removing existing default site setting.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayDefaultSite(SubResourceArgs gatewayDefaultSite) {
             return gatewayDefaultSite(Output.of(gatewayDefaultSite));
         }
 
+        /**
+         * @param gatewayType The type of this virtual network gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayType(@Nullable Output<Either<String,VirtualNetworkGatewayType>> gatewayType) {
             $.gatewayType = gatewayType;
             return this;
         }
 
+        /**
+         * @param gatewayType The type of this virtual network gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayType(Either<String,VirtualNetworkGatewayType> gatewayType) {
             return gatewayType(Output.of(gatewayType));
         }
 
+        /**
+         * @param gatewayType The type of this virtual network gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayType(String gatewayType) {
             return gatewayType(Either.ofLeft(gatewayType));
         }
 
+        /**
+         * @param gatewayType The type of this virtual network gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayType(VirtualNetworkGatewayType gatewayType) {
             return gatewayType(Either.ofRight(gatewayType));
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param ipConfigurations IP configurations for virtual network gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipConfigurations(@Nullable Output<List<VirtualNetworkGatewayIPConfigurationArgs>> ipConfigurations) {
             $.ipConfigurations = ipConfigurations;
             return this;
         }
 
+        /**
+         * @param ipConfigurations IP configurations for virtual network gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipConfigurations(List<VirtualNetworkGatewayIPConfigurationArgs> ipConfigurations) {
             return ipConfigurations(Output.of(ipConfigurations));
         }
 
+        /**
+         * @param ipConfigurations IP configurations for virtual network gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipConfigurations(VirtualNetworkGatewayIPConfigurationArgs... ipConfigurations) {
             return ipConfigurations(List.of(ipConfigurations));
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param sku The reference to the VirtualNetworkGatewaySku resource which represents the SKU selected for Virtual network gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(@Nullable Output<VirtualNetworkGatewaySkuArgs> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku The reference to the VirtualNetworkGatewaySku resource which represents the SKU selected for Virtual network gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(VirtualNetworkGatewaySkuArgs sku) {
             return sku(Output.of(sku));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param vNetExtendedLocationResourceId Customer vnet resource id. VirtualNetworkGateway of type local gateway is associated with the customer vnet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vNetExtendedLocationResourceId(@Nullable Output<String> vNetExtendedLocationResourceId) {
             $.vNetExtendedLocationResourceId = vNetExtendedLocationResourceId;
             return this;
         }
 
+        /**
+         * @param vNetExtendedLocationResourceId Customer vnet resource id. VirtualNetworkGateway of type local gateway is associated with the customer vnet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vNetExtendedLocationResourceId(String vNetExtendedLocationResourceId) {
             return vNetExtendedLocationResourceId(Output.of(vNetExtendedLocationResourceId));
         }
 
+        /**
+         * @param vpnClientConfiguration The reference to the VpnClientConfiguration resource which represents the P2S VpnClient configurations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpnClientConfiguration(@Nullable Output<VpnClientConfigurationArgs> vpnClientConfiguration) {
             $.vpnClientConfiguration = vpnClientConfiguration;
             return this;
         }
 
+        /**
+         * @param vpnClientConfiguration The reference to the VpnClientConfiguration resource which represents the P2S VpnClient configurations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpnClientConfiguration(VpnClientConfigurationArgs vpnClientConfiguration) {
             return vpnClientConfiguration(Output.of(vpnClientConfiguration));
         }
 
+        /**
+         * @param vpnGatewayGeneration The generation for this VirtualNetworkGateway. Must be None if gatewayType is not VPN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpnGatewayGeneration(@Nullable Output<Either<String,VpnGatewayGeneration>> vpnGatewayGeneration) {
             $.vpnGatewayGeneration = vpnGatewayGeneration;
             return this;
         }
 
+        /**
+         * @param vpnGatewayGeneration The generation for this VirtualNetworkGateway. Must be None if gatewayType is not VPN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpnGatewayGeneration(Either<String,VpnGatewayGeneration> vpnGatewayGeneration) {
             return vpnGatewayGeneration(Output.of(vpnGatewayGeneration));
         }
 
+        /**
+         * @param vpnGatewayGeneration The generation for this VirtualNetworkGateway. Must be None if gatewayType is not VPN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpnGatewayGeneration(String vpnGatewayGeneration) {
             return vpnGatewayGeneration(Either.ofLeft(vpnGatewayGeneration));
         }
 
+        /**
+         * @param vpnGatewayGeneration The generation for this VirtualNetworkGateway. Must be None if gatewayType is not VPN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpnGatewayGeneration(VpnGatewayGeneration vpnGatewayGeneration) {
             return vpnGatewayGeneration(Either.ofRight(vpnGatewayGeneration));
         }
 
+        /**
+         * @param vpnType The type of this virtual network gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpnType(@Nullable Output<Either<String,VpnType>> vpnType) {
             $.vpnType = vpnType;
             return this;
         }
 
+        /**
+         * @param vpnType The type of this virtual network gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpnType(Either<String,VpnType> vpnType) {
             return vpnType(Output.of(vpnType));
         }
 
+        /**
+         * @param vpnType The type of this virtual network gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpnType(String vpnType) {
             return vpnType(Either.ofLeft(vpnType));
         }
 
+        /**
+         * @param vpnType The type of this virtual network gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpnType(VpnType vpnType) {
             return vpnType(Either.ofRight(vpnType));
         }

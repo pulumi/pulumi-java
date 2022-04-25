@@ -30,6 +30,10 @@ public final class ManagedInstanceExternalAdministratorArgs extends com.pulumi.r
     @Import(name="administratorType")
     private @Nullable Output<Either<String,AdministratorType>> administratorType;
 
+    /**
+     * @return Type of the sever administrator.
+     * 
+     */
     public Optional<Output<Either<String,AdministratorType>>> administratorType() {
         return Optional.ofNullable(this.administratorType);
     }
@@ -41,6 +45,10 @@ public final class ManagedInstanceExternalAdministratorArgs extends com.pulumi.r
     @Import(name="azureADOnlyAuthentication")
     private @Nullable Output<Boolean> azureADOnlyAuthentication;
 
+    /**
+     * @return Azure Active Directory only Authentication enabled.
+     * 
+     */
     public Optional<Output<Boolean>> azureADOnlyAuthentication() {
         return Optional.ofNullable(this.azureADOnlyAuthentication);
     }
@@ -52,6 +60,10 @@ public final class ManagedInstanceExternalAdministratorArgs extends com.pulumi.r
     @Import(name="login")
     private @Nullable Output<String> login;
 
+    /**
+     * @return Login name of the server administrator.
+     * 
+     */
     public Optional<Output<String>> login() {
         return Optional.ofNullable(this.login);
     }
@@ -63,6 +75,10 @@ public final class ManagedInstanceExternalAdministratorArgs extends com.pulumi.r
     @Import(name="principalType")
     private @Nullable Output<Either<String,PrincipalType>> principalType;
 
+    /**
+     * @return Principal Type of the sever administrator.
+     * 
+     */
     public Optional<Output<Either<String,PrincipalType>>> principalType() {
         return Optional.ofNullable(this.principalType);
     }
@@ -74,6 +90,10 @@ public final class ManagedInstanceExternalAdministratorArgs extends com.pulumi.r
     @Import(name="sid")
     private @Nullable Output<String> sid;
 
+    /**
+     * @return SID (object ID) of the server administrator.
+     * 
+     */
     public Optional<Output<String>> sid() {
         return Optional.ofNullable(this.sid);
     }
@@ -85,6 +105,10 @@ public final class ManagedInstanceExternalAdministratorArgs extends com.pulumi.r
     @Import(name="tenantId")
     private @Nullable Output<String> tenantId;
 
+    /**
+     * @return Tenant ID of the administrator.
+     * 
+     */
     public Optional<Output<String>> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
@@ -118,72 +142,168 @@ public final class ManagedInstanceExternalAdministratorArgs extends com.pulumi.r
             $ = new ManagedInstanceExternalAdministratorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param administratorType Type of the sever administrator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder administratorType(@Nullable Output<Either<String,AdministratorType>> administratorType) {
             $.administratorType = administratorType;
             return this;
         }
 
+        /**
+         * @param administratorType Type of the sever administrator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder administratorType(Either<String,AdministratorType> administratorType) {
             return administratorType(Output.of(administratorType));
         }
 
+        /**
+         * @param administratorType Type of the sever administrator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder administratorType(String administratorType) {
             return administratorType(Either.ofLeft(administratorType));
         }
 
+        /**
+         * @param administratorType Type of the sever administrator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder administratorType(AdministratorType administratorType) {
             return administratorType(Either.ofRight(administratorType));
         }
 
+        /**
+         * @param azureADOnlyAuthentication Azure Active Directory only Authentication enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureADOnlyAuthentication(@Nullable Output<Boolean> azureADOnlyAuthentication) {
             $.azureADOnlyAuthentication = azureADOnlyAuthentication;
             return this;
         }
 
+        /**
+         * @param azureADOnlyAuthentication Azure Active Directory only Authentication enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureADOnlyAuthentication(Boolean azureADOnlyAuthentication) {
             return azureADOnlyAuthentication(Output.of(azureADOnlyAuthentication));
         }
 
+        /**
+         * @param login Login name of the server administrator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder login(@Nullable Output<String> login) {
             $.login = login;
             return this;
         }
 
+        /**
+         * @param login Login name of the server administrator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder login(String login) {
             return login(Output.of(login));
         }
 
+        /**
+         * @param principalType Principal Type of the sever administrator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalType(@Nullable Output<Either<String,PrincipalType>> principalType) {
             $.principalType = principalType;
             return this;
         }
 
+        /**
+         * @param principalType Principal Type of the sever administrator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalType(Either<String,PrincipalType> principalType) {
             return principalType(Output.of(principalType));
         }
 
+        /**
+         * @param principalType Principal Type of the sever administrator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalType(String principalType) {
             return principalType(Either.ofLeft(principalType));
         }
 
+        /**
+         * @param principalType Principal Type of the sever administrator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalType(PrincipalType principalType) {
             return principalType(Either.ofRight(principalType));
         }
 
+        /**
+         * @param sid SID (object ID) of the server administrator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sid(@Nullable Output<String> sid) {
             $.sid = sid;
             return this;
         }
 
+        /**
+         * @param sid SID (object ID) of the server administrator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sid(String sid) {
             return sid(Output.of(sid));
         }
 
+        /**
+         * @param tenantId Tenant ID of the administrator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(@Nullable Output<String> tenantId) {
             $.tenantId = tenantId;
             return this;
         }
 
+        /**
+         * @param tenantId Tenant ID of the administrator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(String tenantId) {
             return tenantId(Output.of(tenantId));
         }

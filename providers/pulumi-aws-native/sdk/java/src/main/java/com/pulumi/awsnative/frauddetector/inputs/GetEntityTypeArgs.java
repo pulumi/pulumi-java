@@ -19,6 +19,10 @@ public final class GetEntityTypeArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="arn", required=true)
     private String arn;
 
+    /**
+     * @return The entity type ARN.
+     * 
+     */
     public String arn() {
         return this.arn;
     }
@@ -47,6 +51,12 @@ public final class GetEntityTypeArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetEntityTypeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn The entity type ARN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             $.arn = arn;
             return this;

@@ -12,22 +12,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AksNetworkingConfigurationResponse {
     /**
-     * An IP address assigned to the Kubernetes DNS service. It must be within the Kubernetes service address range specified in serviceCidr.
+     * @return An IP address assigned to the Kubernetes DNS service. It must be within the Kubernetes service address range specified in serviceCidr.
      * 
      */
     private final @Nullable String dnsServiceIP;
     /**
-     * A CIDR notation IP range assigned to the Docker bridge network. It must not overlap with any Subnet IP ranges or the Kubernetes service address range.
+     * @return A CIDR notation IP range assigned to the Docker bridge network. It must not overlap with any Subnet IP ranges or the Kubernetes service address range.
      * 
      */
     private final @Nullable String dockerBridgeCidr;
     /**
-     * A CIDR notation IP range from which to assign service cluster IPs. It must not overlap with any Subnet IP ranges.
+     * @return A CIDR notation IP range from which to assign service cluster IPs. It must not overlap with any Subnet IP ranges.
      * 
      */
     private final @Nullable String serviceCidr;
     /**
-     * Virtual network subnet resource ID the compute nodes belong to
+     * @return Virtual network subnet resource ID the compute nodes belong to
      * 
      */
     private final @Nullable String subnetId;
@@ -45,30 +45,30 @@ public final class AksNetworkingConfigurationResponse {
     }
 
     /**
-     * An IP address assigned to the Kubernetes DNS service. It must be within the Kubernetes service address range specified in serviceCidr.
+     * @return An IP address assigned to the Kubernetes DNS service. It must be within the Kubernetes service address range specified in serviceCidr.
      * 
-    */
+     */
     public Optional<String> dnsServiceIP() {
         return Optional.ofNullable(this.dnsServiceIP);
     }
     /**
-     * A CIDR notation IP range assigned to the Docker bridge network. It must not overlap with any Subnet IP ranges or the Kubernetes service address range.
+     * @return A CIDR notation IP range assigned to the Docker bridge network. It must not overlap with any Subnet IP ranges or the Kubernetes service address range.
      * 
-    */
+     */
     public Optional<String> dockerBridgeCidr() {
         return Optional.ofNullable(this.dockerBridgeCidr);
     }
     /**
-     * A CIDR notation IP range from which to assign service cluster IPs. It must not overlap with any Subnet IP ranges.
+     * @return A CIDR notation IP range from which to assign service cluster IPs. It must not overlap with any Subnet IP ranges.
      * 
-    */
+     */
     public Optional<String> serviceCidr() {
         return Optional.ofNullable(this.serviceCidr);
     }
     /**
-     * Virtual network subnet resource ID the compute nodes belong to
+     * @return Virtual network subnet resource ID the compute nodes belong to
      * 
-    */
+     */
     public Optional<String> subnetId() {
         return Optional.ofNullable(this.subnetId);
     }

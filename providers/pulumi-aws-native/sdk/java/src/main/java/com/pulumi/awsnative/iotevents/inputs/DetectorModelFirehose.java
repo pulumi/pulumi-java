@@ -26,6 +26,10 @@ public final class DetectorModelFirehose extends com.pulumi.resources.InvokeArgs
     @Import(name="deliveryStreamName", required=true)
     private String deliveryStreamName;
 
+    /**
+     * @return The name of the Kinesis Data Firehose delivery stream where the data is written.
+     * 
+     */
     public String deliveryStreamName() {
         return this.deliveryStreamName;
     }
@@ -44,6 +48,10 @@ public final class DetectorModelFirehose extends com.pulumi.resources.InvokeArgs
     @Import(name="separator")
     private @Nullable String separator;
 
+    /**
+     * @return A character separator that is used to separate records written to the Kinesis Data Firehose delivery stream. Valid values are: &#39;\n&#39; (newline), &#39;\t&#39; (tab), &#39;\r\n&#39; (Windows newline), &#39;,&#39; (comma).
+     * 
+     */
     public Optional<String> separator() {
         return Optional.ofNullable(this.separator);
     }
@@ -74,6 +82,12 @@ public final class DetectorModelFirehose extends com.pulumi.resources.InvokeArgs
             $ = new DetectorModelFirehose(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deliveryStreamName The name of the Kinesis Data Firehose delivery stream where the data is written.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deliveryStreamName(String deliveryStreamName) {
             $.deliveryStreamName = deliveryStreamName;
             return this;
@@ -84,6 +98,12 @@ public final class DetectorModelFirehose extends com.pulumi.resources.InvokeArgs
             return this;
         }
 
+        /**
+         * @param separator A character separator that is used to separate records written to the Kinesis Data Firehose delivery stream. Valid values are: &#39;\n&#39; (newline), &#39;\t&#39; (tab), &#39;\r\n&#39; (Windows newline), &#39;,&#39; (comma).
+         * 
+         * @return builder
+         * 
+         */
         public Builder separator(@Nullable String separator) {
             $.separator = separator;
             return this;

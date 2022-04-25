@@ -11,17 +11,17 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudContactcenterinsightsV1IssueModelLabelStatsResponse {
     /**
-     * Number of conversations the issue model has analyzed at this point in time.
+     * @return Number of conversations the issue model has analyzed at this point in time.
      * 
      */
     private final String analyzedConversationsCount;
     /**
-     * Statistics on each issue. Key is the issue&#39;s resource name.
+     * @return Statistics on each issue. Key is the issue&#39;s resource name.
      * 
      */
     private final Map<String,String> issueStats;
     /**
-     * Number of analyzed conversations for which no issue was applicable at this point in time.
+     * @return Number of analyzed conversations for which no issue was applicable at this point in time.
      * 
      */
     private final String unclassifiedConversationsCount;
@@ -37,23 +37,23 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelLabelStatsRespons
     }
 
     /**
-     * Number of conversations the issue model has analyzed at this point in time.
+     * @return Number of conversations the issue model has analyzed at this point in time.
      * 
-    */
+     */
     public String analyzedConversationsCount() {
         return this.analyzedConversationsCount;
     }
     /**
-     * Statistics on each issue. Key is the issue&#39;s resource name.
+     * @return Statistics on each issue. Key is the issue&#39;s resource name.
      * 
-    */
+     */
     public Map<String,String> issueStats() {
         return this.issueStats;
     }
     /**
-     * Number of analyzed conversations for which no issue was applicable at this point in time.
+     * @return Number of analyzed conversations for which no issue was applicable at this point in time.
      * 
-    */
+     */
     public String unclassifiedConversationsCount() {
         return this.unclassifiedConversationsCount;
     }

@@ -28,6 +28,11 @@ public final class RecoveryPlanA2AInputArgs extends com.pulumi.resources.Resourc
     @Import(name="instanceType")
     private @Nullable Output<String> instanceType;
 
+    /**
+     * @return Gets the Instance type.
+     * Expected value is &#39;A2A&#39;.
+     * 
+     */
     public Optional<Output<String>> instanceType() {
         return Optional.ofNullable(this.instanceType);
     }
@@ -39,6 +44,10 @@ public final class RecoveryPlanA2AInputArgs extends com.pulumi.resources.Resourc
     @Import(name="primaryZone")
     private @Nullable Output<String> primaryZone;
 
+    /**
+     * @return The primary zone.
+     * 
+     */
     public Optional<Output<String>> primaryZone() {
         return Optional.ofNullable(this.primaryZone);
     }
@@ -50,6 +59,10 @@ public final class RecoveryPlanA2AInputArgs extends com.pulumi.resources.Resourc
     @Import(name="recoveryZone")
     private @Nullable Output<String> recoveryZone;
 
+    /**
+     * @return The recovery zone.
+     * 
+     */
     public Optional<Output<String>> recoveryZone() {
         return Optional.ofNullable(this.recoveryZone);
     }
@@ -80,29 +93,67 @@ public final class RecoveryPlanA2AInputArgs extends com.pulumi.resources.Resourc
             $ = new RecoveryPlanA2AInputArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param instanceType Gets the Instance type.
+         * Expected value is &#39;A2A&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(@Nullable Output<String> instanceType) {
             $.instanceType = instanceType;
             return this;
         }
 
+        /**
+         * @param instanceType Gets the Instance type.
+         * Expected value is &#39;A2A&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(String instanceType) {
             return instanceType(Output.of(instanceType));
         }
 
+        /**
+         * @param primaryZone The primary zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryZone(@Nullable Output<String> primaryZone) {
             $.primaryZone = primaryZone;
             return this;
         }
 
+        /**
+         * @param primaryZone The primary zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryZone(String primaryZone) {
             return primaryZone(Output.of(primaryZone));
         }
 
+        /**
+         * @param recoveryZone The recovery zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryZone(@Nullable Output<String> recoveryZone) {
             $.recoveryZone = recoveryZone;
             return this;
         }
 
+        /**
+         * @param recoveryZone The recovery zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryZone(String recoveryZone) {
             return recoveryZone(Output.of(recoveryZone));
         }

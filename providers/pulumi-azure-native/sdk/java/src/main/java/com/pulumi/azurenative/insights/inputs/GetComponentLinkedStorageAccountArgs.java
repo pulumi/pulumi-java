@@ -19,6 +19,10 @@ public final class GetComponentLinkedStorageAccountArgs extends com.pulumi.resou
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -30,6 +34,10 @@ public final class GetComponentLinkedStorageAccountArgs extends com.pulumi.resou
     @Import(name="resourceName", required=true)
     private String resourceName;
 
+    /**
+     * @return The name of the Application Insights component resource.
+     * 
+     */
     public String resourceName() {
         return this.resourceName;
     }
@@ -41,6 +49,10 @@ public final class GetComponentLinkedStorageAccountArgs extends com.pulumi.resou
     @Import(name="storageType", required=true)
     private String storageType;
 
+    /**
+     * @return The type of the Application Insights component data source for the linked storage account.
+     * 
+     */
     public String storageType() {
         return this.storageType;
     }
@@ -71,16 +83,34 @@ public final class GetComponentLinkedStorageAccountArgs extends com.pulumi.resou
             $ = new GetComponentLinkedStorageAccountArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceName The name of the Application Insights component resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(String resourceName) {
             $.resourceName = resourceName;
             return this;
         }
 
+        /**
+         * @param storageType The type of the Application Insights component data source for the linked storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageType(String storageType) {
             $.storageType = storageType;
             return this;

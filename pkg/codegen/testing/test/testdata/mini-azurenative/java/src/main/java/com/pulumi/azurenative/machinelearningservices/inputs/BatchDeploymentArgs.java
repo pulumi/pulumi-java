@@ -30,6 +30,10 @@ public final class BatchDeploymentArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description of the endpoint deployment.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -41,6 +45,10 @@ public final class BatchDeploymentArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="environmentId")
     private @Nullable Output<String> environmentId;
 
+    /**
+     * @return ARM resource ID of the environment specification for the endpoint deployment.
+     * 
+     */
     public Optional<Output<String>> environmentId() {
         return Optional.ofNullable(this.environmentId);
     }
@@ -52,6 +60,10 @@ public final class BatchDeploymentArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="environmentVariables")
     private @Nullable Output<Map<String,String>> environmentVariables;
 
+    /**
+     * @return Environment variables configuration for the deployment.
+     * 
+     */
     public Optional<Output<Map<String,String>>> environmentVariables() {
         return Optional.ofNullable(this.environmentVariables);
     }
@@ -67,6 +79,14 @@ public final class BatchDeploymentArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="errorThreshold")
     private @Nullable Output<Integer> errorThreshold;
 
+    /**
+     * @return Error threshold, if the error count for the entire input goes above this value,
+     * the batch inference will be aborted. Range is [-1, int.MaxValue].
+     * For FileDataset, this value is the count of file failures.
+     * For TabularDataset, this value is the count of record failures.
+     * If set to -1 (the lower bound), all failures during batch inference will be ignored.
+     * 
+     */
     public Optional<Output<Integer>> errorThreshold() {
         return Optional.ofNullable(this.errorThreshold);
     }
@@ -80,6 +100,12 @@ public final class BatchDeploymentArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="miniBatchSize")
     private @Nullable Output<Double> miniBatchSize;
 
+    /**
+     * @return Size of the mini-batch passed to each batch invocation.
+     * For FileDataset, this is the number of files per mini-batch.
+     * For TabularDataset, this is the size of the records in bytes, per mini-batch.
+     * 
+     */
     public Optional<Output<Double>> miniBatchSize() {
         return Optional.ofNullable(this.miniBatchSize);
     }
@@ -91,6 +117,10 @@ public final class BatchDeploymentArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="partitionKeys")
     private @Nullable Output<List<String>> partitionKeys;
 
+    /**
+     * @return Partition keys list used for Named partitioning.
+     * 
+     */
     public Optional<Output<List<String>>> partitionKeys() {
         return Optional.ofNullable(this.partitionKeys);
     }
@@ -102,6 +132,10 @@ public final class BatchDeploymentArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="properties")
     private @Nullable Output<Map<String,String>> properties;
 
+    /**
+     * @return Property dictionary. Properties can be added, but not removed or altered.
+     * 
+     */
     public Optional<Output<Map<String,String>>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -136,69 +170,171 @@ public final class BatchDeploymentArgs extends com.pulumi.resources.ResourceArgs
             $ = new BatchDeploymentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Description of the endpoint deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description of the endpoint deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param environmentId ARM resource ID of the environment specification for the endpoint deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentId(@Nullable Output<String> environmentId) {
             $.environmentId = environmentId;
             return this;
         }
 
+        /**
+         * @param environmentId ARM resource ID of the environment specification for the endpoint deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentId(String environmentId) {
             return environmentId(Output.of(environmentId));
         }
 
+        /**
+         * @param environmentVariables Environment variables configuration for the deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentVariables(@Nullable Output<Map<String,String>> environmentVariables) {
             $.environmentVariables = environmentVariables;
             return this;
         }
 
+        /**
+         * @param environmentVariables Environment variables configuration for the deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentVariables(Map<String,String> environmentVariables) {
             return environmentVariables(Output.of(environmentVariables));
         }
 
+        /**
+         * @param errorThreshold Error threshold, if the error count for the entire input goes above this value,
+         * the batch inference will be aborted. Range is [-1, int.MaxValue].
+         * For FileDataset, this value is the count of file failures.
+         * For TabularDataset, this value is the count of record failures.
+         * If set to -1 (the lower bound), all failures during batch inference will be ignored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorThreshold(@Nullable Output<Integer> errorThreshold) {
             $.errorThreshold = errorThreshold;
             return this;
         }
 
+        /**
+         * @param errorThreshold Error threshold, if the error count for the entire input goes above this value,
+         * the batch inference will be aborted. Range is [-1, int.MaxValue].
+         * For FileDataset, this value is the count of file failures.
+         * For TabularDataset, this value is the count of record failures.
+         * If set to -1 (the lower bound), all failures during batch inference will be ignored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorThreshold(Integer errorThreshold) {
             return errorThreshold(Output.of(errorThreshold));
         }
 
+        /**
+         * @param miniBatchSize Size of the mini-batch passed to each batch invocation.
+         * For FileDataset, this is the number of files per mini-batch.
+         * For TabularDataset, this is the size of the records in bytes, per mini-batch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder miniBatchSize(@Nullable Output<Double> miniBatchSize) {
             $.miniBatchSize = miniBatchSize;
             return this;
         }
 
+        /**
+         * @param miniBatchSize Size of the mini-batch passed to each batch invocation.
+         * For FileDataset, this is the number of files per mini-batch.
+         * For TabularDataset, this is the size of the records in bytes, per mini-batch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder miniBatchSize(Double miniBatchSize) {
             return miniBatchSize(Output.of(miniBatchSize));
         }
 
+        /**
+         * @param partitionKeys Partition keys list used for Named partitioning.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionKeys(@Nullable Output<List<String>> partitionKeys) {
             $.partitionKeys = partitionKeys;
             return this;
         }
 
+        /**
+         * @param partitionKeys Partition keys list used for Named partitioning.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionKeys(List<String> partitionKeys) {
             return partitionKeys(Output.of(partitionKeys));
         }
 
+        /**
+         * @param partitionKeys Partition keys list used for Named partitioning.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionKeys(String... partitionKeys) {
             return partitionKeys(List.of(partitionKeys));
         }
 
+        /**
+         * @param properties Property dictionary. Properties can be added, but not removed or altered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Property dictionary. Properties can be added, but not removed or altered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Map<String,String> properties) {
             return properties(Output.of(properties));
         }

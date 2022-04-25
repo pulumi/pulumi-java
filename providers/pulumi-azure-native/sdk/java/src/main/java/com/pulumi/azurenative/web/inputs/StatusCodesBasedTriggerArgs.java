@@ -27,6 +27,10 @@ public final class StatusCodesBasedTriggerArgs extends com.pulumi.resources.Reso
     @Import(name="count")
     private @Nullable Output<Integer> count;
 
+    /**
+     * @return Request Count.
+     * 
+     */
     public Optional<Output<Integer>> count() {
         return Optional.ofNullable(this.count);
     }
@@ -38,6 +42,10 @@ public final class StatusCodesBasedTriggerArgs extends com.pulumi.resources.Reso
     @Import(name="path")
     private @Nullable Output<String> path;
 
+    /**
+     * @return Request Path
+     * 
+     */
     public Optional<Output<String>> path() {
         return Optional.ofNullable(this.path);
     }
@@ -49,6 +57,10 @@ public final class StatusCodesBasedTriggerArgs extends com.pulumi.resources.Reso
     @Import(name="status")
     private @Nullable Output<Integer> status;
 
+    /**
+     * @return HTTP status code.
+     * 
+     */
     public Optional<Output<Integer>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -60,6 +72,10 @@ public final class StatusCodesBasedTriggerArgs extends com.pulumi.resources.Reso
     @Import(name="subStatus")
     private @Nullable Output<Integer> subStatus;
 
+    /**
+     * @return Request Sub Status.
+     * 
+     */
     public Optional<Output<Integer>> subStatus() {
         return Optional.ofNullable(this.subStatus);
     }
@@ -71,6 +87,10 @@ public final class StatusCodesBasedTriggerArgs extends com.pulumi.resources.Reso
     @Import(name="timeInterval")
     private @Nullable Output<String> timeInterval;
 
+    /**
+     * @return Time interval.
+     * 
+     */
     public Optional<Output<String>> timeInterval() {
         return Optional.ofNullable(this.timeInterval);
     }
@@ -82,6 +102,10 @@ public final class StatusCodesBasedTriggerArgs extends com.pulumi.resources.Reso
     @Import(name="win32Status")
     private @Nullable Output<Integer> win32Status;
 
+    /**
+     * @return Win32 error code.
+     * 
+     */
     public Optional<Output<Integer>> win32Status() {
         return Optional.ofNullable(this.win32Status);
     }
@@ -115,56 +139,128 @@ public final class StatusCodesBasedTriggerArgs extends com.pulumi.resources.Reso
             $ = new StatusCodesBasedTriggerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param count Request Count.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(@Nullable Output<Integer> count) {
             $.count = count;
             return this;
         }
 
+        /**
+         * @param count Request Count.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(Integer count) {
             return count(Output.of(count));
         }
 
+        /**
+         * @param path Request Path
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(@Nullable Output<String> path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param path Request Path
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             return path(Output.of(path));
         }
 
+        /**
+         * @param status HTTP status code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<Integer> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status HTTP status code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(Integer status) {
             return status(Output.of(status));
         }
 
+        /**
+         * @param subStatus Request Sub Status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subStatus(@Nullable Output<Integer> subStatus) {
             $.subStatus = subStatus;
             return this;
         }
 
+        /**
+         * @param subStatus Request Sub Status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subStatus(Integer subStatus) {
             return subStatus(Output.of(subStatus));
         }
 
+        /**
+         * @param timeInterval Time interval.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeInterval(@Nullable Output<String> timeInterval) {
             $.timeInterval = timeInterval;
             return this;
         }
 
+        /**
+         * @param timeInterval Time interval.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeInterval(String timeInterval) {
             return timeInterval(Output.of(timeInterval));
         }
 
+        /**
+         * @param win32Status Win32 error code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder win32Status(@Nullable Output<Integer> win32Status) {
             $.win32Status = win32Status;
             return this;
         }
 
+        /**
+         * @param win32Status Win32 error code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder win32Status(Integer win32Status) {
             return win32Status(Output.of(win32Status));
         }

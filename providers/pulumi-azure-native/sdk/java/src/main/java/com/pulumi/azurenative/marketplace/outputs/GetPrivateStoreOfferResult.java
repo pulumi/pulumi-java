@@ -16,72 +16,72 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetPrivateStoreOfferResult {
     /**
-     * Private store offer creation date
+     * @return Private store offer creation date
      * 
      */
     private final String createdAt;
     /**
-     * Identifier for purposes of race condition
+     * @return Identifier for purposes of race condition
      * 
      */
     private final @Nullable String eTag;
     /**
-     * Icon File Uris
+     * @return Icon File Uris
      * 
      */
     private final @Nullable Map<String,String> iconFileUris;
     /**
-     * The resource ID.
+     * @return The resource ID.
      * 
      */
     private final String id;
     /**
-     * Private store offer modification date
+     * @return Private store offer modification date
      * 
      */
     private final String modifiedAt;
     /**
-     * The name of the resource.
+     * @return The name of the resource.
      * 
      */
     private final String name;
     /**
-     * It will be displayed prominently in the marketplace
+     * @return It will be displayed prominently in the marketplace
      * 
      */
     private final String offerDisplayName;
     /**
-     * Offer plans
+     * @return Offer plans
      * 
      */
     private final @Nullable List<PlanResponse> plans;
     /**
-     * Private store unique id
+     * @return Private store unique id
      * 
      */
     private final String privateStoreId;
     /**
-     * Publisher name that will be displayed prominently in the marketplace
+     * @return Publisher name that will be displayed prominently in the marketplace
      * 
      */
     private final String publisherDisplayName;
     /**
-     * Plan ids limitation for this offer
+     * @return Plan ids limitation for this offer
      * 
      */
     private final @Nullable List<String> specificPlanIdsLimitation;
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
      */
     private final String type;
     /**
-     * Offers unique id
+     * @return Offers unique id
      * 
      */
     private final String uniqueOfferId;
     /**
-     * Indicating whether the offer was not updated to db (true = not updated). If the allow list is identical to the existed one in db, the offer would not be updated.
+     * @return Indicating whether the offer was not updated to db (true = not updated). If the allow list is identical to the existed one in db, the offer would not be updated.
      * 
      */
     private final @Nullable Boolean updateSuppressedDueIdempotence;
@@ -119,100 +119,100 @@ public final class GetPrivateStoreOfferResult {
     }
 
     /**
-     * Private store offer creation date
+     * @return Private store offer creation date
      * 
-    */
+     */
     public String createdAt() {
         return this.createdAt;
     }
     /**
-     * Identifier for purposes of race condition
+     * @return Identifier for purposes of race condition
      * 
-    */
+     */
     public Optional<String> eTag() {
         return Optional.ofNullable(this.eTag);
     }
     /**
-     * Icon File Uris
+     * @return Icon File Uris
      * 
-    */
+     */
     public Map<String,String> iconFileUris() {
         return this.iconFileUris == null ? Map.of() : this.iconFileUris;
     }
     /**
-     * The resource ID.
+     * @return The resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Private store offer modification date
+     * @return Private store offer modification date
      * 
-    */
+     */
     public String modifiedAt() {
         return this.modifiedAt;
     }
     /**
-     * The name of the resource.
+     * @return The name of the resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * It will be displayed prominently in the marketplace
+     * @return It will be displayed prominently in the marketplace
      * 
-    */
+     */
     public String offerDisplayName() {
         return this.offerDisplayName;
     }
     /**
-     * Offer plans
+     * @return Offer plans
      * 
-    */
+     */
     public List<PlanResponse> plans() {
         return this.plans == null ? List.of() : this.plans;
     }
     /**
-     * Private store unique id
+     * @return Private store unique id
      * 
-    */
+     */
     public String privateStoreId() {
         return this.privateStoreId;
     }
     /**
-     * Publisher name that will be displayed prominently in the marketplace
+     * @return Publisher name that will be displayed prominently in the marketplace
      * 
-    */
+     */
     public String publisherDisplayName() {
         return this.publisherDisplayName;
     }
     /**
-     * Plan ids limitation for this offer
+     * @return Plan ids limitation for this offer
      * 
-    */
+     */
     public List<String> specificPlanIdsLimitation() {
         return this.specificPlanIdsLimitation == null ? List.of() : this.specificPlanIdsLimitation;
     }
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Offers unique id
+     * @return Offers unique id
      * 
-    */
+     */
     public String uniqueOfferId() {
         return this.uniqueOfferId;
     }
     /**
-     * Indicating whether the offer was not updated to db (true = not updated). If the allow list is identical to the existed one in db, the offer would not be updated.
+     * @return Indicating whether the offer was not updated to db (true = not updated). If the allow list is identical to the existed one in db, the offer would not be updated.
      * 
-    */
+     */
     public Optional<Boolean> updateSuppressedDueIdempotence() {
         return Optional.ofNullable(this.updateSuppressedDueIdempotence);
     }

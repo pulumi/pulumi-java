@@ -31,6 +31,10 @@ public final class ScheduleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="createdDate", required=true)
     private String createdDate;
 
+    /**
+     * @return The creation date of the schedule.
+     * 
+     */
     public String createdDate() {
         return this.createdDate;
     }
@@ -42,6 +46,10 @@ public final class ScheduleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="dailyRecurrence")
     private @Nullable DayDetailsResponse dailyRecurrence;
 
+    /**
+     * @return If the schedule will occur once each day of the week, specify the daily recurrence.
+     * 
+     */
     public Optional<DayDetailsResponse> dailyRecurrence() {
         return Optional.ofNullable(this.dailyRecurrence);
     }
@@ -53,6 +61,10 @@ public final class ScheduleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="hourlyRecurrence")
     private @Nullable HourDetailsResponse hourlyRecurrence;
 
+    /**
+     * @return If the schedule will occur multiple times a day, specify the hourly recurrence.
+     * 
+     */
     public Optional<HourDetailsResponse> hourlyRecurrence() {
         return Optional.ofNullable(this.hourlyRecurrence);
     }
@@ -64,6 +76,10 @@ public final class ScheduleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return The identifier of the resource.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -75,6 +91,10 @@ public final class ScheduleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="location")
     private @Nullable String location;
 
+    /**
+     * @return The location of the resource.
+     * 
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
@@ -86,6 +106,10 @@ public final class ScheduleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the resource.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -97,6 +121,10 @@ public final class ScheduleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="notificationSettings")
     private @Nullable NotificationSettingsResponse notificationSettings;
 
+    /**
+     * @return Notification settings.
+     * 
+     */
     public Optional<NotificationSettingsResponse> notificationSettings() {
         return Optional.ofNullable(this.notificationSettings);
     }
@@ -108,6 +136,10 @@ public final class ScheduleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The provisioning status of the resource.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -119,6 +151,10 @@ public final class ScheduleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="status")
     private @Nullable String status;
 
+    /**
+     * @return The status of the schedule (i.e. Enabled, Disabled)
+     * 
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
@@ -130,6 +166,10 @@ public final class ScheduleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="tags")
     private @Nullable Map<String,String> tags;
 
+    /**
+     * @return The tags of the resource.
+     * 
+     */
     public Optional<Map<String,String>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -141,6 +181,10 @@ public final class ScheduleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="targetResourceId")
     private @Nullable String targetResourceId;
 
+    /**
+     * @return The resource ID to which the schedule belongs
+     * 
+     */
     public Optional<String> targetResourceId() {
         return Optional.ofNullable(this.targetResourceId);
     }
@@ -152,6 +196,10 @@ public final class ScheduleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="taskType")
     private @Nullable String taskType;
 
+    /**
+     * @return The task type of the schedule (e.g. LabVmsShutdownTask, LabVmAutoStart).
+     * 
+     */
     public Optional<String> taskType() {
         return Optional.ofNullable(this.taskType);
     }
@@ -163,6 +211,10 @@ public final class ScheduleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="timeZoneId")
     private @Nullable String timeZoneId;
 
+    /**
+     * @return The time zone ID (e.g. Pacific Standard time).
+     * 
+     */
     public Optional<String> timeZoneId() {
         return Optional.ofNullable(this.timeZoneId);
     }
@@ -174,6 +226,10 @@ public final class ScheduleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The type of the resource.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -185,6 +241,10 @@ public final class ScheduleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="uniqueIdentifier", required=true)
     private String uniqueIdentifier;
 
+    /**
+     * @return The unique immutable identifier of a resource (Guid).
+     * 
+     */
     public String uniqueIdentifier() {
         return this.uniqueIdentifier;
     }
@@ -196,6 +256,10 @@ public final class ScheduleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="weeklyRecurrence")
     private @Nullable WeekDetailsResponse weeklyRecurrence;
 
+    /**
+     * @return If the schedule will occur only some days of the week, specify the weekly recurrence.
+     * 
+     */
     public Optional<WeekDetailsResponse> weeklyRecurrence() {
         return Optional.ofNullable(this.weeklyRecurrence);
     }
@@ -239,81 +303,177 @@ public final class ScheduleResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ScheduleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param createdDate The creation date of the schedule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdDate(String createdDate) {
             $.createdDate = createdDate;
             return this;
         }
 
+        /**
+         * @param dailyRecurrence If the schedule will occur once each day of the week, specify the daily recurrence.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dailyRecurrence(@Nullable DayDetailsResponse dailyRecurrence) {
             $.dailyRecurrence = dailyRecurrence;
             return this;
         }
 
+        /**
+         * @param hourlyRecurrence If the schedule will occur multiple times a day, specify the hourly recurrence.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hourlyRecurrence(@Nullable HourDetailsResponse hourlyRecurrence) {
             $.hourlyRecurrence = hourlyRecurrence;
             return this;
         }
 
+        /**
+         * @param id The identifier of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param location The location of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable String location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param name The name of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param notificationSettings Notification settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationSettings(@Nullable NotificationSettingsResponse notificationSettings) {
             $.notificationSettings = notificationSettings;
             return this;
         }
 
+        /**
+         * @param provisioningState The provisioning status of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param status The status of the schedule (i.e. Enabled, Disabled)
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable String status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param tags The tags of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Map<String,String> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param targetResourceId The resource ID to which the schedule belongs
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetResourceId(@Nullable String targetResourceId) {
             $.targetResourceId = targetResourceId;
             return this;
         }
 
+        /**
+         * @param taskType The task type of the schedule (e.g. LabVmsShutdownTask, LabVmAutoStart).
+         * 
+         * @return builder
+         * 
+         */
         public Builder taskType(@Nullable String taskType) {
             $.taskType = taskType;
             return this;
         }
 
+        /**
+         * @param timeZoneId The time zone ID (e.g. Pacific Standard time).
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeZoneId(@Nullable String timeZoneId) {
             $.timeZoneId = timeZoneId;
             return this;
         }
 
+        /**
+         * @param type The type of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param uniqueIdentifier The unique immutable identifier of a resource (Guid).
+         * 
+         * @return builder
+         * 
+         */
         public Builder uniqueIdentifier(String uniqueIdentifier) {
             $.uniqueIdentifier = uniqueIdentifier;
             return this;
         }
 
+        /**
+         * @param weeklyRecurrence If the schedule will occur only some days of the week, specify the weekly recurrence.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weeklyRecurrence(@Nullable WeekDetailsResponse weeklyRecurrence) {
             $.weeklyRecurrence = weeklyRecurrence;
             return this;

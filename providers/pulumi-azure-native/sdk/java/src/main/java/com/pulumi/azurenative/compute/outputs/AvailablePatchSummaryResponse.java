@@ -13,42 +13,42 @@ import java.util.Objects;
 @CustomType
 public final class AvailablePatchSummaryResponse {
     /**
-     * The activity ID of the operation that produced this result. It is used to correlate across CRP and extension logs.
+     * @return The activity ID of the operation that produced this result. It is used to correlate across CRP and extension logs.
      * 
      */
     private final String assessmentActivityId;
     /**
-     * The number of critical or security patches that have been detected as available and not yet installed.
+     * @return The number of critical or security patches that have been detected as available and not yet installed.
      * 
      */
     private final Integer criticalAndSecurityPatchCount;
     /**
-     * The errors that were encountered during execution of the operation. The details array contains the list of them.
+     * @return The errors that were encountered during execution of the operation. The details array contains the list of them.
      * 
      */
     private final ApiErrorResponse error;
     /**
-     * The UTC timestamp when the operation began.
+     * @return The UTC timestamp when the operation began.
      * 
      */
     private final String lastModifiedTime;
     /**
-     * The number of all available patches excluding critical and security.
+     * @return The number of all available patches excluding critical and security.
      * 
      */
     private final Integer otherPatchCount;
     /**
-     * The overall reboot status of the VM. It will be true when partially installed patches require a reboot to complete installation but the reboot has not yet occurred.
+     * @return The overall reboot status of the VM. It will be true when partially installed patches require a reboot to complete installation but the reboot has not yet occurred.
      * 
      */
     private final Boolean rebootPending;
     /**
-     * The UTC timestamp when the operation began.
+     * @return The UTC timestamp when the operation began.
      * 
      */
     private final String startTime;
     /**
-     * The overall success or failure status of the operation. It remains &#34;InProgress&#34; until the operation completes. At that point it will become &#34;Unknown&#34;, &#34;Failed&#34;, &#34;Succeeded&#34;, or &#34;CompletedWithWarnings.&#34;
+     * @return The overall success or failure status of the operation. It remains &#34;InProgress&#34; until the operation completes. At that point it will become &#34;Unknown&#34;, &#34;Failed&#34;, &#34;Succeeded&#34;, or &#34;CompletedWithWarnings.&#34;
      * 
      */
     private final String status;
@@ -74,58 +74,58 @@ public final class AvailablePatchSummaryResponse {
     }
 
     /**
-     * The activity ID of the operation that produced this result. It is used to correlate across CRP and extension logs.
+     * @return The activity ID of the operation that produced this result. It is used to correlate across CRP and extension logs.
      * 
-    */
+     */
     public String assessmentActivityId() {
         return this.assessmentActivityId;
     }
     /**
-     * The number of critical or security patches that have been detected as available and not yet installed.
+     * @return The number of critical or security patches that have been detected as available and not yet installed.
      * 
-    */
+     */
     public Integer criticalAndSecurityPatchCount() {
         return this.criticalAndSecurityPatchCount;
     }
     /**
-     * The errors that were encountered during execution of the operation. The details array contains the list of them.
+     * @return The errors that were encountered during execution of the operation. The details array contains the list of them.
      * 
-    */
+     */
     public ApiErrorResponse error() {
         return this.error;
     }
     /**
-     * The UTC timestamp when the operation began.
+     * @return The UTC timestamp when the operation began.
      * 
-    */
+     */
     public String lastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
-     * The number of all available patches excluding critical and security.
+     * @return The number of all available patches excluding critical and security.
      * 
-    */
+     */
     public Integer otherPatchCount() {
         return this.otherPatchCount;
     }
     /**
-     * The overall reboot status of the VM. It will be true when partially installed patches require a reboot to complete installation but the reboot has not yet occurred.
+     * @return The overall reboot status of the VM. It will be true when partially installed patches require a reboot to complete installation but the reboot has not yet occurred.
      * 
-    */
+     */
     public Boolean rebootPending() {
         return this.rebootPending;
     }
     /**
-     * The UTC timestamp when the operation began.
+     * @return The UTC timestamp when the operation began.
      * 
-    */
+     */
     public String startTime() {
         return this.startTime;
     }
     /**
-     * The overall success or failure status of the operation. It remains &#34;InProgress&#34; until the operation completes. At that point it will become &#34;Unknown&#34;, &#34;Failed&#34;, &#34;Succeeded&#34;, or &#34;CompletedWithWarnings.&#34;
+     * @return The overall success or failure status of the operation. It remains &#34;InProgress&#34; until the operation completes. At that point it will become &#34;Unknown&#34;, &#34;Failed&#34;, &#34;Succeeded&#34;, or &#34;CompletedWithWarnings.&#34;
      * 
-    */
+     */
     public String status() {
         return this.status;
     }

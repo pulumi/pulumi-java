@@ -19,6 +19,10 @@ public final class GetServiceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="applicationName", required=true)
     private String applicationName;
 
+    /**
+     * @return The name of the application resource.
+     * 
+     */
     public String applicationName() {
         return this.applicationName;
     }
@@ -30,6 +34,10 @@ public final class GetServiceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="clusterName", required=true)
     private String clusterName;
 
+    /**
+     * @return The name of the cluster resource.
+     * 
+     */
     public String clusterName() {
         return this.clusterName;
     }
@@ -41,6 +49,10 @@ public final class GetServiceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -52,6 +64,10 @@ public final class GetServiceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="serviceName", required=true)
     private String serviceName;
 
+    /**
+     * @return The name of the service resource in the format of {applicationName}~{serviceName}.
+     * 
+     */
     public String serviceName() {
         return this.serviceName;
     }
@@ -83,21 +99,45 @@ public final class GetServiceArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetServiceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param applicationName The name of the application resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationName(String applicationName) {
             $.applicationName = applicationName;
             return this;
         }
 
+        /**
+         * @param clusterName The name of the cluster resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterName(String clusterName) {
             $.clusterName = clusterName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param serviceName The name of the service resource in the format of {applicationName}~{serviceName}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             $.serviceName = serviceName;
             return this;

@@ -26,6 +26,10 @@ public final class BastionHostIPConfigurationResponse extends com.pulumi.resourc
     @Import(name="etag", required=true)
     private String etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public String etag() {
         return this.etag;
     }
@@ -37,6 +41,10 @@ public final class BastionHostIPConfigurationResponse extends com.pulumi.resourc
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -48,6 +56,10 @@ public final class BastionHostIPConfigurationResponse extends com.pulumi.resourc
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -59,6 +71,10 @@ public final class BastionHostIPConfigurationResponse extends com.pulumi.resourc
     @Import(name="privateIPAllocationMethod")
     private @Nullable String privateIPAllocationMethod;
 
+    /**
+     * @return Private IP allocation method.
+     * 
+     */
     public Optional<String> privateIPAllocationMethod() {
         return Optional.ofNullable(this.privateIPAllocationMethod);
     }
@@ -70,6 +86,10 @@ public final class BastionHostIPConfigurationResponse extends com.pulumi.resourc
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The provisioning state of the bastion host IP configuration resource.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -81,6 +101,10 @@ public final class BastionHostIPConfigurationResponse extends com.pulumi.resourc
     @Import(name="publicIPAddress", required=true)
     private SubResourceResponse publicIPAddress;
 
+    /**
+     * @return Reference of the PublicIP resource.
+     * 
+     */
     public SubResourceResponse publicIPAddress() {
         return this.publicIPAddress;
     }
@@ -92,6 +116,10 @@ public final class BastionHostIPConfigurationResponse extends com.pulumi.resourc
     @Import(name="subnet", required=true)
     private SubResourceResponse subnet;
 
+    /**
+     * @return Reference of the subnet resource.
+     * 
+     */
     public SubResourceResponse subnet() {
         return this.subnet;
     }
@@ -103,6 +131,10 @@ public final class BastionHostIPConfigurationResponse extends com.pulumi.resourc
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Ip configuration type.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -138,41 +170,89 @@ public final class BastionHostIPConfigurationResponse extends com.pulumi.resourc
             $ = new BastionHostIPConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param etag A unique read-only string that changes whenever the resource is updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param name Name of the resource that is unique within a resource group. This name can be used to access the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param privateIPAllocationMethod Private IP allocation method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIPAllocationMethod(@Nullable String privateIPAllocationMethod) {
             $.privateIPAllocationMethod = privateIPAllocationMethod;
             return this;
         }
 
+        /**
+         * @param provisioningState The provisioning state of the bastion host IP configuration resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param publicIPAddress Reference of the PublicIP resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIPAddress(SubResourceResponse publicIPAddress) {
             $.publicIPAddress = publicIPAddress;
             return this;
         }
 
+        /**
+         * @param subnet Reference of the subnet resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnet(SubResourceResponse subnet) {
             $.subnet = subnet;
             return this;
         }
 
+        /**
+         * @param type Ip configuration type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

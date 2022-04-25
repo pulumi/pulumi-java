@@ -27,6 +27,10 @@ public final class ContainerServiceDeployment extends com.pulumi.resources.Invok
     @Import(name="containers")
     private @Nullable List<Container> containers;
 
+    /**
+     * @return An object that describes the configuration for the containers of the deployment.
+     * 
+     */
     public Optional<List<Container>> containers() {
         return Optional.ofNullable(this.containers);
     }
@@ -38,6 +42,10 @@ public final class ContainerServiceDeployment extends com.pulumi.resources.Invok
     @Import(name="publicEndpoint")
     private @Nullable ContainerPublicEndpoint publicEndpoint;
 
+    /**
+     * @return An object that describes the endpoint of the deployment.
+     * 
+     */
     public Optional<ContainerPublicEndpoint> publicEndpoint() {
         return Optional.ofNullable(this.publicEndpoint);
     }
@@ -67,15 +75,33 @@ public final class ContainerServiceDeployment extends com.pulumi.resources.Invok
             $ = new ContainerServiceDeployment(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param containers An object that describes the configuration for the containers of the deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containers(@Nullable List<Container> containers) {
             $.containers = containers;
             return this;
         }
 
+        /**
+         * @param containers An object that describes the configuration for the containers of the deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containers(Container... containers) {
             return containers(List.of(containers));
         }
 
+        /**
+         * @param publicEndpoint An object that describes the endpoint of the deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicEndpoint(@Nullable ContainerPublicEndpoint publicEndpoint) {
             $.publicEndpoint = publicEndpoint;
             return this;

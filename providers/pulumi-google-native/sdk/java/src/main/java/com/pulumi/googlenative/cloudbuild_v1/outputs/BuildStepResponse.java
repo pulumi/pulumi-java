@@ -13,67 +13,67 @@ import java.util.Objects;
 @CustomType
 public final class BuildStepResponse {
     /**
-     * A list of arguments that will be presented to the step when it is started. If the image used to run the step&#39;s container has an entrypoint, the `args` are used as arguments to that entrypoint. If the image does not define an entrypoint, the first element in args is used as the entrypoint, and the remainder will be used as arguments.
+     * @return A list of arguments that will be presented to the step when it is started. If the image used to run the step&#39;s container has an entrypoint, the `args` are used as arguments to that entrypoint. If the image does not define an entrypoint, the first element in args is used as the entrypoint, and the remainder will be used as arguments.
      * 
      */
     private final List<String> args;
     /**
-     * Working directory to use when running this step&#39;s container. If this value is a relative path, it is relative to the build&#39;s working directory. If this value is absolute, it may be outside the build&#39;s working directory, in which case the contents of the path may not be persisted across build step executions, unless a `volume` for that path is specified. If the build specifies a `RepoSource` with `dir` and a step with a `dir`, which specifies an absolute path, the `RepoSource` `dir` is ignored for the step&#39;s execution.
+     * @return Working directory to use when running this step&#39;s container. If this value is a relative path, it is relative to the build&#39;s working directory. If this value is absolute, it may be outside the build&#39;s working directory, in which case the contents of the path may not be persisted across build step executions, unless a `volume` for that path is specified. If the build specifies a `RepoSource` with `dir` and a step with a `dir`, which specifies an absolute path, the `RepoSource` `dir` is ignored for the step&#39;s execution.
      * 
      */
     private final String dir;
     /**
-     * Entrypoint to be used instead of the build step image&#39;s default entrypoint. If unset, the image&#39;s default entrypoint is used.
+     * @return Entrypoint to be used instead of the build step image&#39;s default entrypoint. If unset, the image&#39;s default entrypoint is used.
      * 
      */
     private final String entrypoint;
     /**
-     * A list of environment variable definitions to be used when running a step. The elements are of the form &#34;KEY=VALUE&#34; for the environment variable &#34;KEY&#34; being given the value &#34;VALUE&#34;.
+     * @return A list of environment variable definitions to be used when running a step. The elements are of the form &#34;KEY=VALUE&#34; for the environment variable &#34;KEY&#34; being given the value &#34;VALUE&#34;.
      * 
      */
     private final List<String> env;
     /**
-     * The name of the container image that will run this particular build step. If the image is available in the host&#39;s Docker daemon&#39;s cache, it will be run directly. If not, the host will attempt to pull the image first, using the builder service account&#39;s credentials if necessary. The Docker daemon&#39;s cache will already have the latest versions of all of the officially supported build steps ([https://github.com/GoogleCloudPlatform/cloud-builders](https://github.com/GoogleCloudPlatform/cloud-builders)). The Docker daemon will also have cached many of the layers for some popular images, like &#34;ubuntu&#34;, &#34;debian&#34;, but they will be refreshed at the time you attempt to use them. If you built an image in a previous build step, it will be stored in the host&#39;s Docker daemon&#39;s cache and is available to use as the name for a later build step.
+     * @return The name of the container image that will run this particular build step. If the image is available in the host&#39;s Docker daemon&#39;s cache, it will be run directly. If not, the host will attempt to pull the image first, using the builder service account&#39;s credentials if necessary. The Docker daemon&#39;s cache will already have the latest versions of all of the officially supported build steps ([https://github.com/GoogleCloudPlatform/cloud-builders](https://github.com/GoogleCloudPlatform/cloud-builders)). The Docker daemon will also have cached many of the layers for some popular images, like &#34;ubuntu&#34;, &#34;debian&#34;, but they will be refreshed at the time you attempt to use them. If you built an image in a previous build step, it will be stored in the host&#39;s Docker daemon&#39;s cache and is available to use as the name for a later build step.
      * 
      */
     private final String name;
     /**
-     * Stores timing information for pulling this build step&#39;s builder image only.
+     * @return Stores timing information for pulling this build step&#39;s builder image only.
      * 
      */
     private final TimeSpanResponse pullTiming;
     /**
-     * A shell script to be executed in the step. When script is provided, the user cannot specify the entrypoint or args.
+     * @return A shell script to be executed in the step. When script is provided, the user cannot specify the entrypoint or args.
      * 
      */
     private final String script;
     /**
-     * A list of environment variables which are encrypted using a Cloud Key Management Service crypto key. These values must be specified in the build&#39;s `Secret`.
+     * @return A list of environment variables which are encrypted using a Cloud Key Management Service crypto key. These values must be specified in the build&#39;s `Secret`.
      * 
      */
     private final List<String> secretEnv;
     /**
-     * Status of the build step. At this time, build step status is only updated on build completion; step status is not updated in real-time as the build progresses.
+     * @return Status of the build step. At this time, build step status is only updated on build completion; step status is not updated in real-time as the build progresses.
      * 
      */
     private final String status;
     /**
-     * Time limit for executing this build step. If not defined, the step has no time limit and will be allowed to continue to run until either it completes or the build itself times out.
+     * @return Time limit for executing this build step. If not defined, the step has no time limit and will be allowed to continue to run until either it completes or the build itself times out.
      * 
      */
     private final String timeout;
     /**
-     * Stores timing information for executing this build step.
+     * @return Stores timing information for executing this build step.
      * 
      */
     private final TimeSpanResponse timing;
     /**
-     * List of volumes to mount into the build step. Each volume is created as an empty volume prior to execution of the build step. Upon completion of the build, volumes and their contents are discarded. Using a named volume in only one step is not valid as it is indicative of a build request with an incorrect configuration.
+     * @return List of volumes to mount into the build step. Each volume is created as an empty volume prior to execution of the build step. Upon completion of the build, volumes and their contents are discarded. Using a named volume in only one step is not valid as it is indicative of a build request with an incorrect configuration.
      * 
      */
     private final List<VolumeResponse> volumes;
     /**
-     * The ID(s) of the step(s) that this build step depends on. This build step will not start until all the build steps in `wait_for` have completed successfully. If `wait_for` is empty, this build step will start when all previous build steps in the `Build.Steps` list have completed successfully.
+     * @return The ID(s) of the step(s) that this build step depends on. This build step will not start until all the build steps in `wait_for` have completed successfully. If `wait_for` is empty, this build step will start when all previous build steps in the `Build.Steps` list have completed successfully.
      * 
      */
     private final List<String> waitFor;
@@ -109,93 +109,93 @@ public final class BuildStepResponse {
     }
 
     /**
-     * A list of arguments that will be presented to the step when it is started. If the image used to run the step&#39;s container has an entrypoint, the `args` are used as arguments to that entrypoint. If the image does not define an entrypoint, the first element in args is used as the entrypoint, and the remainder will be used as arguments.
+     * @return A list of arguments that will be presented to the step when it is started. If the image used to run the step&#39;s container has an entrypoint, the `args` are used as arguments to that entrypoint. If the image does not define an entrypoint, the first element in args is used as the entrypoint, and the remainder will be used as arguments.
      * 
-    */
+     */
     public List<String> args() {
         return this.args;
     }
     /**
-     * Working directory to use when running this step&#39;s container. If this value is a relative path, it is relative to the build&#39;s working directory. If this value is absolute, it may be outside the build&#39;s working directory, in which case the contents of the path may not be persisted across build step executions, unless a `volume` for that path is specified. If the build specifies a `RepoSource` with `dir` and a step with a `dir`, which specifies an absolute path, the `RepoSource` `dir` is ignored for the step&#39;s execution.
+     * @return Working directory to use when running this step&#39;s container. If this value is a relative path, it is relative to the build&#39;s working directory. If this value is absolute, it may be outside the build&#39;s working directory, in which case the contents of the path may not be persisted across build step executions, unless a `volume` for that path is specified. If the build specifies a `RepoSource` with `dir` and a step with a `dir`, which specifies an absolute path, the `RepoSource` `dir` is ignored for the step&#39;s execution.
      * 
-    */
+     */
     public String dir() {
         return this.dir;
     }
     /**
-     * Entrypoint to be used instead of the build step image&#39;s default entrypoint. If unset, the image&#39;s default entrypoint is used.
+     * @return Entrypoint to be used instead of the build step image&#39;s default entrypoint. If unset, the image&#39;s default entrypoint is used.
      * 
-    */
+     */
     public String entrypoint() {
         return this.entrypoint;
     }
     /**
-     * A list of environment variable definitions to be used when running a step. The elements are of the form &#34;KEY=VALUE&#34; for the environment variable &#34;KEY&#34; being given the value &#34;VALUE&#34;.
+     * @return A list of environment variable definitions to be used when running a step. The elements are of the form &#34;KEY=VALUE&#34; for the environment variable &#34;KEY&#34; being given the value &#34;VALUE&#34;.
      * 
-    */
+     */
     public List<String> env() {
         return this.env;
     }
     /**
-     * The name of the container image that will run this particular build step. If the image is available in the host&#39;s Docker daemon&#39;s cache, it will be run directly. If not, the host will attempt to pull the image first, using the builder service account&#39;s credentials if necessary. The Docker daemon&#39;s cache will already have the latest versions of all of the officially supported build steps ([https://github.com/GoogleCloudPlatform/cloud-builders](https://github.com/GoogleCloudPlatform/cloud-builders)). The Docker daemon will also have cached many of the layers for some popular images, like &#34;ubuntu&#34;, &#34;debian&#34;, but they will be refreshed at the time you attempt to use them. If you built an image in a previous build step, it will be stored in the host&#39;s Docker daemon&#39;s cache and is available to use as the name for a later build step.
+     * @return The name of the container image that will run this particular build step. If the image is available in the host&#39;s Docker daemon&#39;s cache, it will be run directly. If not, the host will attempt to pull the image first, using the builder service account&#39;s credentials if necessary. The Docker daemon&#39;s cache will already have the latest versions of all of the officially supported build steps ([https://github.com/GoogleCloudPlatform/cloud-builders](https://github.com/GoogleCloudPlatform/cloud-builders)). The Docker daemon will also have cached many of the layers for some popular images, like &#34;ubuntu&#34;, &#34;debian&#34;, but they will be refreshed at the time you attempt to use them. If you built an image in a previous build step, it will be stored in the host&#39;s Docker daemon&#39;s cache and is available to use as the name for a later build step.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Stores timing information for pulling this build step&#39;s builder image only.
+     * @return Stores timing information for pulling this build step&#39;s builder image only.
      * 
-    */
+     */
     public TimeSpanResponse pullTiming() {
         return this.pullTiming;
     }
     /**
-     * A shell script to be executed in the step. When script is provided, the user cannot specify the entrypoint or args.
+     * @return A shell script to be executed in the step. When script is provided, the user cannot specify the entrypoint or args.
      * 
-    */
+     */
     public String script() {
         return this.script;
     }
     /**
-     * A list of environment variables which are encrypted using a Cloud Key Management Service crypto key. These values must be specified in the build&#39;s `Secret`.
+     * @return A list of environment variables which are encrypted using a Cloud Key Management Service crypto key. These values must be specified in the build&#39;s `Secret`.
      * 
-    */
+     */
     public List<String> secretEnv() {
         return this.secretEnv;
     }
     /**
-     * Status of the build step. At this time, build step status is only updated on build completion; step status is not updated in real-time as the build progresses.
+     * @return Status of the build step. At this time, build step status is only updated on build completion; step status is not updated in real-time as the build progresses.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * Time limit for executing this build step. If not defined, the step has no time limit and will be allowed to continue to run until either it completes or the build itself times out.
+     * @return Time limit for executing this build step. If not defined, the step has no time limit and will be allowed to continue to run until either it completes or the build itself times out.
      * 
-    */
+     */
     public String timeout() {
         return this.timeout;
     }
     /**
-     * Stores timing information for executing this build step.
+     * @return Stores timing information for executing this build step.
      * 
-    */
+     */
     public TimeSpanResponse timing() {
         return this.timing;
     }
     /**
-     * List of volumes to mount into the build step. Each volume is created as an empty volume prior to execution of the build step. Upon completion of the build, volumes and their contents are discarded. Using a named volume in only one step is not valid as it is indicative of a build request with an incorrect configuration.
+     * @return List of volumes to mount into the build step. Each volume is created as an empty volume prior to execution of the build step. Upon completion of the build, volumes and their contents are discarded. Using a named volume in only one step is not valid as it is indicative of a build request with an incorrect configuration.
      * 
-    */
+     */
     public List<VolumeResponse> volumes() {
         return this.volumes;
     }
     /**
-     * The ID(s) of the step(s) that this build step depends on. This build step will not start until all the build steps in `wait_for` have completed successfully. If `wait_for` is empty, this build step will start when all previous build steps in the `Build.Steps` list have completed successfully.
+     * @return The ID(s) of the step(s) that this build step depends on. This build step will not start until all the build steps in `wait_for` have completed successfully. If `wait_for` is empty, this build step will start when all previous build steps in the `Build.Steps` list have completed successfully.
      * 
-    */
+     */
     public List<String> waitFor() {
         return this.waitFor;
     }

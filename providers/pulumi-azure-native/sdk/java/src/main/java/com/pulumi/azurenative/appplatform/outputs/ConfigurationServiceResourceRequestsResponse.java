@@ -11,17 +11,17 @@ import java.util.Objects;
 @CustomType
 public final class ConfigurationServiceResourceRequestsResponse {
     /**
-     * Cpu allocated to each Application Configuration Service instance
+     * @return Cpu allocated to each Application Configuration Service instance
      * 
      */
     private final String cpu;
     /**
-     * Instance count of the Application Configuration Service
+     * @return Instance count of the Application Configuration Service
      * 
      */
     private final Integer instanceCount;
     /**
-     * Memory allocated to each Application Configuration Service instance
+     * @return Memory allocated to each Application Configuration Service instance
      * 
      */
     private final String memory;
@@ -37,23 +37,23 @@ public final class ConfigurationServiceResourceRequestsResponse {
     }
 
     /**
-     * Cpu allocated to each Application Configuration Service instance
+     * @return Cpu allocated to each Application Configuration Service instance
      * 
-    */
+     */
     public String cpu() {
         return this.cpu;
     }
     /**
-     * Instance count of the Application Configuration Service
+     * @return Instance count of the Application Configuration Service
      * 
-    */
+     */
     public Integer instanceCount() {
         return this.instanceCount;
     }
     /**
-     * Memory allocated to each Application Configuration Service instance
+     * @return Memory allocated to each Application Configuration Service instance
      * 
-    */
+     */
     public String memory() {
         return this.memory;
     }

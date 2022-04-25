@@ -12,22 +12,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class X12SecuritySettingsResponse {
     /**
-     * The authorization qualifier.
+     * @return The authorization qualifier.
      * 
      */
     private final String authorizationQualifier;
     /**
-     * The authorization value.
+     * @return The authorization value.
      * 
      */
     private final @Nullable String authorizationValue;
     /**
-     * The password value.
+     * @return The password value.
      * 
      */
     private final @Nullable String passwordValue;
     /**
-     * The security qualifier.
+     * @return The security qualifier.
      * 
      */
     private final String securityQualifier;
@@ -45,30 +45,30 @@ public final class X12SecuritySettingsResponse {
     }
 
     /**
-     * The authorization qualifier.
+     * @return The authorization qualifier.
      * 
-    */
+     */
     public String authorizationQualifier() {
         return this.authorizationQualifier;
     }
     /**
-     * The authorization value.
+     * @return The authorization value.
      * 
-    */
+     */
     public Optional<String> authorizationValue() {
         return Optional.ofNullable(this.authorizationValue);
     }
     /**
-     * The password value.
+     * @return The password value.
      * 
-    */
+     */
     public Optional<String> passwordValue() {
         return Optional.ofNullable(this.passwordValue);
     }
     /**
-     * The security qualifier.
+     * @return The security qualifier.
      * 
-    */
+     */
     public String securityQualifier() {
         return this.securityQualifier;
     }

@@ -24,6 +24,10 @@ public final class RulesetSubstitutionValueArgs extends com.pulumi.resources.Res
     @Import(name="value", required=true)
     private Output<String> value;
 
+    /**
+     * @return Value or column name
+     * 
+     */
     public Output<String> value() {
         return this.value;
     }
@@ -35,6 +39,10 @@ public final class RulesetSubstitutionValueArgs extends com.pulumi.resources.Res
     @Import(name="valueReference", required=true)
     private Output<String> valueReference;
 
+    /**
+     * @return Variable name
+     * 
+     */
     public Output<String> valueReference() {
         return this.valueReference;
     }
@@ -64,20 +72,44 @@ public final class RulesetSubstitutionValueArgs extends com.pulumi.resources.Res
             $ = new RulesetSubstitutionValueArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param value Value or column name
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value Value or column name
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }
 
+        /**
+         * @param valueReference Variable name
+         * 
+         * @return builder
+         * 
+         */
         public Builder valueReference(Output<String> valueReference) {
             $.valueReference = valueReference;
             return this;
         }
 
+        /**
+         * @param valueReference Variable name
+         * 
+         * @return builder
+         * 
+         */
         public Builder valueReference(String valueReference) {
             return valueReference(Output.of(valueReference));
         }

@@ -28,6 +28,14 @@ public final class AccessApprovalSettingsArgs extends com.pulumi.resources.Resou
     @Import(name="enrolledServices", required=true)
     private Output<List<AccessApprovalSettingsEnrolledServiceArgs>> enrolledServices;
 
+    /**
+     * @return A list of Google Cloud Services for which the given resource has Access Approval enrolled.
+     * Access requests for the resource given by name against any of these services contained here will be required
+     * to have explicit approval. Enrollment can be done for individual services.
+     * A maximum of 10 enrolled services will be enforced, to be expanded as the set of supported services is expanded.
+     * Structure is documented below.
+     * 
+     */
     public Output<List<AccessApprovalSettingsEnrolledServiceArgs>> enrolledServices() {
         return this.enrolledServices;
     }
@@ -41,6 +49,12 @@ public final class AccessApprovalSettingsArgs extends com.pulumi.resources.Resou
     @Import(name="notificationEmails")
     private @Nullable Output<List<String>> notificationEmails;
 
+    /**
+     * @return A list of email addresses to which notifications relating to approval requests should be sent.
+     * Notifications relating to a resource will be sent to all emails in the settings of ancestor
+     * resources of that resource. A maximum of 50 email addresses are allowed.
+     * 
+     */
     public Optional<Output<List<String>>> notificationEmails() {
         return Optional.ofNullable(this.notificationEmails);
     }
@@ -52,6 +66,10 @@ public final class AccessApprovalSettingsArgs extends com.pulumi.resources.Resou
     @Import(name="organizationId", required=true)
     private Output<String> organizationId;
 
+    /**
+     * @return ID of the organization of the access approval settings.
+     * 
+     */
     public Output<String> organizationId() {
         return this.organizationId;
     }
@@ -82,37 +100,103 @@ public final class AccessApprovalSettingsArgs extends com.pulumi.resources.Resou
             $ = new AccessApprovalSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enrolledServices A list of Google Cloud Services for which the given resource has Access Approval enrolled.
+         * Access requests for the resource given by name against any of these services contained here will be required
+         * to have explicit approval. Enrollment can be done for individual services.
+         * A maximum of 10 enrolled services will be enforced, to be expanded as the set of supported services is expanded.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enrolledServices(Output<List<AccessApprovalSettingsEnrolledServiceArgs>> enrolledServices) {
             $.enrolledServices = enrolledServices;
             return this;
         }
 
+        /**
+         * @param enrolledServices A list of Google Cloud Services for which the given resource has Access Approval enrolled.
+         * Access requests for the resource given by name against any of these services contained here will be required
+         * to have explicit approval. Enrollment can be done for individual services.
+         * A maximum of 10 enrolled services will be enforced, to be expanded as the set of supported services is expanded.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enrolledServices(List<AccessApprovalSettingsEnrolledServiceArgs> enrolledServices) {
             return enrolledServices(Output.of(enrolledServices));
         }
 
+        /**
+         * @param enrolledServices A list of Google Cloud Services for which the given resource has Access Approval enrolled.
+         * Access requests for the resource given by name against any of these services contained here will be required
+         * to have explicit approval. Enrollment can be done for individual services.
+         * A maximum of 10 enrolled services will be enforced, to be expanded as the set of supported services is expanded.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enrolledServices(AccessApprovalSettingsEnrolledServiceArgs... enrolledServices) {
             return enrolledServices(List.of(enrolledServices));
         }
 
+        /**
+         * @param notificationEmails A list of email addresses to which notifications relating to approval requests should be sent.
+         * Notifications relating to a resource will be sent to all emails in the settings of ancestor
+         * resources of that resource. A maximum of 50 email addresses are allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationEmails(@Nullable Output<List<String>> notificationEmails) {
             $.notificationEmails = notificationEmails;
             return this;
         }
 
+        /**
+         * @param notificationEmails A list of email addresses to which notifications relating to approval requests should be sent.
+         * Notifications relating to a resource will be sent to all emails in the settings of ancestor
+         * resources of that resource. A maximum of 50 email addresses are allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationEmails(List<String> notificationEmails) {
             return notificationEmails(Output.of(notificationEmails));
         }
 
+        /**
+         * @param notificationEmails A list of email addresses to which notifications relating to approval requests should be sent.
+         * Notifications relating to a resource will be sent to all emails in the settings of ancestor
+         * resources of that resource. A maximum of 50 email addresses are allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationEmails(String... notificationEmails) {
             return notificationEmails(List.of(notificationEmails));
         }
 
+        /**
+         * @param organizationId ID of the organization of the access approval settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder organizationId(Output<String> organizationId) {
             $.organizationId = organizationId;
             return this;
         }
 
+        /**
+         * @param organizationId ID of the organization of the access approval settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder organizationId(String organizationId) {
             return organizationId(Output.of(organizationId));
         }

@@ -13,32 +13,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class HardwareProfileResponse {
     /**
-     * Gets or sets a value indicating whether virtual processors can be added while this virtual machine is running.
+     * @return Gets or sets a value indicating whether virtual processors can be added while this virtual machine is running.
      * 
      */
     private final Boolean cpuHotAddEnabled;
     /**
-     * Gets or sets a value indicating whether virtual processors can be removed while this virtual machine is running.
+     * @return Gets or sets a value indicating whether virtual processors can be removed while this virtual machine is running.
      * 
      */
     private final Boolean cpuHotRemoveEnabled;
     /**
-     * Gets or sets a value indicating whether memory can be added while this virtual machine is running.
+     * @return Gets or sets a value indicating whether memory can be added while this virtual machine is running.
      * 
      */
     private final Boolean memoryHotAddEnabled;
     /**
-     * Gets or sets memory size in MBs for the vm.
+     * @return Gets or sets memory size in MBs for the vm.
      * 
      */
     private final @Nullable Integer memorySizeMB;
     /**
-     * Gets or sets the number of vCPUs for the vm.
+     * @return Gets or sets the number of vCPUs for the vm.
      * 
      */
     private final @Nullable Integer numCPUs;
     /**
-     * Gets or sets the number of cores per socket for the vm. Defaults to 1 if unspecified.
+     * @return Gets or sets the number of cores per socket for the vm. Defaults to 1 if unspecified.
      * 
      */
     private final @Nullable Integer numCoresPerSocket;
@@ -60,44 +60,44 @@ public final class HardwareProfileResponse {
     }
 
     /**
-     * Gets or sets a value indicating whether virtual processors can be added while this virtual machine is running.
+     * @return Gets or sets a value indicating whether virtual processors can be added while this virtual machine is running.
      * 
-    */
+     */
     public Boolean cpuHotAddEnabled() {
         return this.cpuHotAddEnabled;
     }
     /**
-     * Gets or sets a value indicating whether virtual processors can be removed while this virtual machine is running.
+     * @return Gets or sets a value indicating whether virtual processors can be removed while this virtual machine is running.
      * 
-    */
+     */
     public Boolean cpuHotRemoveEnabled() {
         return this.cpuHotRemoveEnabled;
     }
     /**
-     * Gets or sets a value indicating whether memory can be added while this virtual machine is running.
+     * @return Gets or sets a value indicating whether memory can be added while this virtual machine is running.
      * 
-    */
+     */
     public Boolean memoryHotAddEnabled() {
         return this.memoryHotAddEnabled;
     }
     /**
-     * Gets or sets memory size in MBs for the vm.
+     * @return Gets or sets memory size in MBs for the vm.
      * 
-    */
+     */
     public Optional<Integer> memorySizeMB() {
         return Optional.ofNullable(this.memorySizeMB);
     }
     /**
-     * Gets or sets the number of vCPUs for the vm.
+     * @return Gets or sets the number of vCPUs for the vm.
      * 
-    */
+     */
     public Optional<Integer> numCPUs() {
         return Optional.ofNullable(this.numCPUs);
     }
     /**
-     * Gets or sets the number of cores per socket for the vm. Defaults to 1 if unspecified.
+     * @return Gets or sets the number of cores per socket for the vm. Defaults to 1 if unspecified.
      * 
-    */
+     */
     public Optional<Integer> numCoresPerSocket() {
         return Optional.ofNullable(this.numCoresPerSocket);
     }

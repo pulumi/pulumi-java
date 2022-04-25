@@ -25,6 +25,10 @@ public final class DatabaseInstanceSettingsIpConfigurationArgs extends com.pulum
     @Import(name="allocatedIpRange")
     private @Nullable Output<String> allocatedIpRange;
 
+    /**
+     * @return The name of the allocated ip range for the private ip CloudSQL instance. For example: &#34;google-managed-services-default&#34;. If set, the instance ip will be created in the allocated range. The range name must comply with [RFC 1035](https://datatracker.ietf.org/doc/html/rfc1035). Specifically, the name must be 1-63 characters long and match the regular expression a-z?.
+     * 
+     */
     public Optional<Output<String>> allocatedIpRange() {
         return Optional.ofNullable(this.allocatedIpRange);
     }
@@ -45,6 +49,12 @@ public final class DatabaseInstanceSettingsIpConfigurationArgs extends com.pulum
     @Import(name="ipv4Enabled")
     private @Nullable Output<Boolean> ipv4Enabled;
 
+    /**
+     * @return Whether this Cloud SQL instance should be assigned
+     * a public IPV4 address. At least `ipv4_enabled` must be enabled or a
+     * `private_network` must be configured.
+     * 
+     */
     public Optional<Output<Boolean>> ipv4Enabled() {
         return Optional.ofNullable(this.ipv4Enabled);
     }
@@ -60,6 +70,14 @@ public final class DatabaseInstanceSettingsIpConfigurationArgs extends com.pulum
     @Import(name="privateNetwork")
     private @Nullable Output<String> privateNetwork;
 
+    /**
+     * @return The VPC network from which the Cloud SQL
+     * instance is accessible for private IP. For example, projects/myProject/global/networks/default.
+     * Specifying a network enables private IP.
+     * At least `ipv4_enabled` must be enabled or a `private_network` must be configured.
+     * This setting can be updated, but it cannot be removed after it is set.
+     * 
+     */
     public Optional<Output<String>> privateNetwork() {
         return Optional.ofNullable(this.privateNetwork);
     }
@@ -71,6 +89,10 @@ public final class DatabaseInstanceSettingsIpConfigurationArgs extends com.pulum
     @Import(name="requireSsl")
     private @Nullable Output<Boolean> requireSsl;
 
+    /**
+     * @return Whether SSL connections over IP are enforced or not.
+     * 
+     */
     public Optional<Output<Boolean>> requireSsl() {
         return Optional.ofNullable(this.requireSsl);
     }
@@ -103,11 +125,23 @@ public final class DatabaseInstanceSettingsIpConfigurationArgs extends com.pulum
             $ = new DatabaseInstanceSettingsIpConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allocatedIpRange The name of the allocated ip range for the private ip CloudSQL instance. For example: &#34;google-managed-services-default&#34;. If set, the instance ip will be created in the allocated range. The range name must comply with [RFC 1035](https://datatracker.ietf.org/doc/html/rfc1035). Specifically, the name must be 1-63 characters long and match the regular expression a-z?.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allocatedIpRange(@Nullable Output<String> allocatedIpRange) {
             $.allocatedIpRange = allocatedIpRange;
             return this;
         }
 
+        /**
+         * @param allocatedIpRange The name of the allocated ip range for the private ip CloudSQL instance. For example: &#34;google-managed-services-default&#34;. If set, the instance ip will be created in the allocated range. The range name must comply with [RFC 1035](https://datatracker.ietf.org/doc/html/rfc1035). Specifically, the name must be 1-63 characters long and match the regular expression a-z?.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allocatedIpRange(String allocatedIpRange) {
             return allocatedIpRange(Output.of(allocatedIpRange));
         }
@@ -125,29 +159,77 @@ public final class DatabaseInstanceSettingsIpConfigurationArgs extends com.pulum
             return authorizedNetworks(List.of(authorizedNetworks));
         }
 
+        /**
+         * @param ipv4Enabled Whether this Cloud SQL instance should be assigned
+         * a public IPV4 address. At least `ipv4_enabled` must be enabled or a
+         * `private_network` must be configured.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipv4Enabled(@Nullable Output<Boolean> ipv4Enabled) {
             $.ipv4Enabled = ipv4Enabled;
             return this;
         }
 
+        /**
+         * @param ipv4Enabled Whether this Cloud SQL instance should be assigned
+         * a public IPV4 address. At least `ipv4_enabled` must be enabled or a
+         * `private_network` must be configured.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipv4Enabled(Boolean ipv4Enabled) {
             return ipv4Enabled(Output.of(ipv4Enabled));
         }
 
+        /**
+         * @param privateNetwork The VPC network from which the Cloud SQL
+         * instance is accessible for private IP. For example, projects/myProject/global/networks/default.
+         * Specifying a network enables private IP.
+         * At least `ipv4_enabled` must be enabled or a `private_network` must be configured.
+         * This setting can be updated, but it cannot be removed after it is set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateNetwork(@Nullable Output<String> privateNetwork) {
             $.privateNetwork = privateNetwork;
             return this;
         }
 
+        /**
+         * @param privateNetwork The VPC network from which the Cloud SQL
+         * instance is accessible for private IP. For example, projects/myProject/global/networks/default.
+         * Specifying a network enables private IP.
+         * At least `ipv4_enabled` must be enabled or a `private_network` must be configured.
+         * This setting can be updated, but it cannot be removed after it is set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateNetwork(String privateNetwork) {
             return privateNetwork(Output.of(privateNetwork));
         }
 
+        /**
+         * @param requireSsl Whether SSL connections over IP are enforced or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requireSsl(@Nullable Output<Boolean> requireSsl) {
             $.requireSsl = requireSsl;
             return this;
         }
 
+        /**
+         * @param requireSsl Whether SSL connections over IP are enforced or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requireSsl(Boolean requireSsl) {
             return requireSsl(Output.of(requireSsl));
         }

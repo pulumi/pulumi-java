@@ -18,67 +18,67 @@ import java.util.Objects;
 @CustomType
 public final class TransferSpecResponse {
     /**
-     * An AWS S3 data source.
+     * @return An AWS S3 data source.
      * 
      */
     private final AwsS3DataResponse awsS3DataSource;
     /**
-     * An Azure Blob Storage data source.
+     * @return An Azure Blob Storage data source.
      * 
      */
     private final AzureBlobStorageDataResponse azureBlobStorageDataSource;
     /**
-     * A Cloud Storage data sink.
+     * @return A Cloud Storage data sink.
      * 
      */
     private final GcsDataResponse gcsDataSink;
     /**
-     * A Cloud Storage data source.
+     * @return A Cloud Storage data source.
      * 
      */
     private final GcsDataResponse gcsDataSource;
     /**
-     * Cloud Storage intermediate data location.
+     * @return Cloud Storage intermediate data location.
      * 
      */
     private final GcsDataResponse gcsIntermediateDataLocation;
     /**
-     * An HTTP URL data source.
+     * @return An HTTP URL data source.
      * 
      */
     private final HttpDataResponse httpDataSource;
     /**
-     * Only objects that satisfy these object conditions are included in the set of data source and data sink objects. Object conditions based on objects&#39; &#34;last modification time&#34; do not exclude objects in a data sink.
+     * @return Only objects that satisfy these object conditions are included in the set of data source and data sink objects. Object conditions based on objects&#39; &#34;last modification time&#34; do not exclude objects in a data sink.
      * 
      */
     private final ObjectConditionsResponse objectConditions;
     /**
-     * A POSIX Filesystem data sink.
+     * @return A POSIX Filesystem data sink.
      * 
      */
     private final PosixFilesystemResponse posixDataSink;
     /**
-     * A POSIX Filesystem data source.
+     * @return A POSIX Filesystem data source.
      * 
      */
     private final PosixFilesystemResponse posixDataSource;
     /**
-     * Specifies the agent pool name associated with the posix data sink. When unspecified, the default name is used.
+     * @return Specifies the agent pool name associated with the posix data sink. When unspecified, the default name is used.
      * 
      */
     private final String sinkAgentPoolName;
     /**
-     * Specifies the agent pool name associated with the posix data source. When unspecified, the default name is used.
+     * @return Specifies the agent pool name associated with the posix data source. When unspecified, the default name is used.
      * 
      */
     private final String sourceAgentPoolName;
     /**
-     * A manifest file provides a list of objects to be transferred from the data source. This field points to the location of the manifest file. Otherwise, the entire source bucket is used. ObjectConditions still apply.
+     * @return A manifest file provides a list of objects to be transferred from the data source. This field points to the location of the manifest file. Otherwise, the entire source bucket is used. ObjectConditions still apply.
      * 
      */
     private final TransferManifestResponse transferManifest;
     /**
-     * If the option delete_objects_unique_in_sink is `true` and time-based object conditions such as &#39;last modification time&#39; are specified, the request fails with an INVALID_ARGUMENT error.
+     * @return If the option delete_objects_unique_in_sink is `true` and time-based object conditions such as &#39;last modification time&#39; are specified, the request fails with an INVALID_ARGUMENT error.
      * 
      */
     private final TransferOptionsResponse transferOptions;
@@ -114,93 +114,93 @@ public final class TransferSpecResponse {
     }
 
     /**
-     * An AWS S3 data source.
+     * @return An AWS S3 data source.
      * 
-    */
+     */
     public AwsS3DataResponse awsS3DataSource() {
         return this.awsS3DataSource;
     }
     /**
-     * An Azure Blob Storage data source.
+     * @return An Azure Blob Storage data source.
      * 
-    */
+     */
     public AzureBlobStorageDataResponse azureBlobStorageDataSource() {
         return this.azureBlobStorageDataSource;
     }
     /**
-     * A Cloud Storage data sink.
+     * @return A Cloud Storage data sink.
      * 
-    */
+     */
     public GcsDataResponse gcsDataSink() {
         return this.gcsDataSink;
     }
     /**
-     * A Cloud Storage data source.
+     * @return A Cloud Storage data source.
      * 
-    */
+     */
     public GcsDataResponse gcsDataSource() {
         return this.gcsDataSource;
     }
     /**
-     * Cloud Storage intermediate data location.
+     * @return Cloud Storage intermediate data location.
      * 
-    */
+     */
     public GcsDataResponse gcsIntermediateDataLocation() {
         return this.gcsIntermediateDataLocation;
     }
     /**
-     * An HTTP URL data source.
+     * @return An HTTP URL data source.
      * 
-    */
+     */
     public HttpDataResponse httpDataSource() {
         return this.httpDataSource;
     }
     /**
-     * Only objects that satisfy these object conditions are included in the set of data source and data sink objects. Object conditions based on objects&#39; &#34;last modification time&#34; do not exclude objects in a data sink.
+     * @return Only objects that satisfy these object conditions are included in the set of data source and data sink objects. Object conditions based on objects&#39; &#34;last modification time&#34; do not exclude objects in a data sink.
      * 
-    */
+     */
     public ObjectConditionsResponse objectConditions() {
         return this.objectConditions;
     }
     /**
-     * A POSIX Filesystem data sink.
+     * @return A POSIX Filesystem data sink.
      * 
-    */
+     */
     public PosixFilesystemResponse posixDataSink() {
         return this.posixDataSink;
     }
     /**
-     * A POSIX Filesystem data source.
+     * @return A POSIX Filesystem data source.
      * 
-    */
+     */
     public PosixFilesystemResponse posixDataSource() {
         return this.posixDataSource;
     }
     /**
-     * Specifies the agent pool name associated with the posix data sink. When unspecified, the default name is used.
+     * @return Specifies the agent pool name associated with the posix data sink. When unspecified, the default name is used.
      * 
-    */
+     */
     public String sinkAgentPoolName() {
         return this.sinkAgentPoolName;
     }
     /**
-     * Specifies the agent pool name associated with the posix data source. When unspecified, the default name is used.
+     * @return Specifies the agent pool name associated with the posix data source. When unspecified, the default name is used.
      * 
-    */
+     */
     public String sourceAgentPoolName() {
         return this.sourceAgentPoolName;
     }
     /**
-     * A manifest file provides a list of objects to be transferred from the data source. This field points to the location of the manifest file. Otherwise, the entire source bucket is used. ObjectConditions still apply.
+     * @return A manifest file provides a list of objects to be transferred from the data source. This field points to the location of the manifest file. Otherwise, the entire source bucket is used. ObjectConditions still apply.
      * 
-    */
+     */
     public TransferManifestResponse transferManifest() {
         return this.transferManifest;
     }
     /**
-     * If the option delete_objects_unique_in_sink is `true` and time-based object conditions such as &#39;last modification time&#39; are specified, the request fails with an INVALID_ARGUMENT error.
+     * @return If the option delete_objects_unique_in_sink is `true` and time-based object conditions such as &#39;last modification time&#39; are specified, the request fails with an INVALID_ARGUMENT error.
      * 
-    */
+     */
     public TransferOptionsResponse transferOptions() {
         return this.transferOptions;
     }

@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetPipelineDefinitionPipelineObject {
     /**
-     * Key-value pairs that define the properties of the object. See below
+     * @return Key-value pairs that define the properties of the object. See below
      * 
      */
     private final @Nullable List<GetPipelineDefinitionPipelineObjectField> fields;
     /**
-     * ID of the object.
+     * @return ID of the object.
      * 
      */
     private final String id;
     /**
-     * ARN of the storage connector.
+     * @return ARN of the storage connector.
      * 
      */
     private final String name;
@@ -39,23 +39,23 @@ public final class GetPipelineDefinitionPipelineObject {
     }
 
     /**
-     * Key-value pairs that define the properties of the object. See below
+     * @return Key-value pairs that define the properties of the object. See below
      * 
-    */
+     */
     public List<GetPipelineDefinitionPipelineObjectField> fields() {
         return this.fields == null ? List.of() : this.fields;
     }
     /**
-     * ID of the object.
+     * @return ID of the object.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * ARN of the storage connector.
+     * @return ARN of the storage connector.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

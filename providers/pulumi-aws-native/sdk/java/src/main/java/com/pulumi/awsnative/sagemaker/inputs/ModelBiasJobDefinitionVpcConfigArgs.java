@@ -25,6 +25,10 @@ public final class ModelBiasJobDefinitionVpcConfigArgs extends com.pulumi.resour
     @Import(name="securityGroupIds", required=true)
     private Output<List<String>> securityGroupIds;
 
+    /**
+     * @return The VPC security group IDs, in the form sg-xxxxxxxx. Specify the security groups for the VPC that is specified in the Subnets field.
+     * 
+     */
     public Output<List<String>> securityGroupIds() {
         return this.securityGroupIds;
     }
@@ -36,6 +40,10 @@ public final class ModelBiasJobDefinitionVpcConfigArgs extends com.pulumi.resour
     @Import(name="subnets", required=true)
     private Output<List<String>> subnets;
 
+    /**
+     * @return The ID of the subnets in the VPC to which you want to connect to your monitoring jobs.
+     * 
+     */
     public Output<List<String>> subnets() {
         return this.subnets;
     }
@@ -65,28 +73,64 @@ public final class ModelBiasJobDefinitionVpcConfigArgs extends com.pulumi.resour
             $ = new ModelBiasJobDefinitionVpcConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param securityGroupIds The VPC security group IDs, in the form sg-xxxxxxxx. Specify the security groups for the VPC that is specified in the Subnets field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroupIds(Output<List<String>> securityGroupIds) {
             $.securityGroupIds = securityGroupIds;
             return this;
         }
 
+        /**
+         * @param securityGroupIds The VPC security group IDs, in the form sg-xxxxxxxx. Specify the security groups for the VPC that is specified in the Subnets field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroupIds(List<String> securityGroupIds) {
             return securityGroupIds(Output.of(securityGroupIds));
         }
 
+        /**
+         * @param securityGroupIds The VPC security group IDs, in the form sg-xxxxxxxx. Specify the security groups for the VPC that is specified in the Subnets field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroupIds(String... securityGroupIds) {
             return securityGroupIds(List.of(securityGroupIds));
         }
 
+        /**
+         * @param subnets The ID of the subnets in the VPC to which you want to connect to your monitoring jobs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnets(Output<List<String>> subnets) {
             $.subnets = subnets;
             return this;
         }
 
+        /**
+         * @param subnets The ID of the subnets in the VPC to which you want to connect to your monitoring jobs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnets(List<String> subnets) {
             return subnets(Output.of(subnets));
         }
 
+        /**
+         * @param subnets The ID of the subnets in the VPC to which you want to connect to your monitoring jobs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnets(String... subnets) {
             return subnets(List.of(subnets));
         }

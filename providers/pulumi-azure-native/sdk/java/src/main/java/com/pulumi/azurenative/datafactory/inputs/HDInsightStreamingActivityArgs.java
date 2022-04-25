@@ -36,6 +36,10 @@ public final class HDInsightStreamingActivityArgs extends com.pulumi.resources.R
     @Import(name="arguments")
     private @Nullable Output<List<Object>> arguments;
 
+    /**
+     * @return User specified arguments to HDInsightActivity.
+     * 
+     */
     public Optional<Output<List<Object>>> arguments() {
         return Optional.ofNullable(this.arguments);
     }
@@ -47,6 +51,10 @@ public final class HDInsightStreamingActivityArgs extends com.pulumi.resources.R
     @Import(name="combiner")
     private @Nullable Output<Object> combiner;
 
+    /**
+     * @return Combiner executable name. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> combiner() {
         return Optional.ofNullable(this.combiner);
     }
@@ -58,6 +66,10 @@ public final class HDInsightStreamingActivityArgs extends com.pulumi.resources.R
     @Import(name="commandEnvironment")
     private @Nullable Output<List<Object>> commandEnvironment;
 
+    /**
+     * @return Command line environment values.
+     * 
+     */
     public Optional<Output<List<Object>>> commandEnvironment() {
         return Optional.ofNullable(this.commandEnvironment);
     }
@@ -69,6 +81,10 @@ public final class HDInsightStreamingActivityArgs extends com.pulumi.resources.R
     @Import(name="defines")
     private @Nullable Output<Map<String,Object>> defines;
 
+    /**
+     * @return Allows user to specify defines for streaming job request.
+     * 
+     */
     public Optional<Output<Map<String,Object>>> defines() {
         return Optional.ofNullable(this.defines);
     }
@@ -80,6 +96,10 @@ public final class HDInsightStreamingActivityArgs extends com.pulumi.resources.R
     @Import(name="dependsOn")
     private @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
+    /**
+     * @return Activity depends on condition.
+     * 
+     */
     public Optional<Output<List<ActivityDependencyArgs>>> dependsOn() {
         return Optional.ofNullable(this.dependsOn);
     }
@@ -91,6 +111,10 @@ public final class HDInsightStreamingActivityArgs extends com.pulumi.resources.R
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Activity description.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -102,6 +126,10 @@ public final class HDInsightStreamingActivityArgs extends com.pulumi.resources.R
     @Import(name="fileLinkedService")
     private @Nullable Output<LinkedServiceReferenceArgs> fileLinkedService;
 
+    /**
+     * @return Linked service reference where the files are located.
+     * 
+     */
     public Optional<Output<LinkedServiceReferenceArgs>> fileLinkedService() {
         return Optional.ofNullable(this.fileLinkedService);
     }
@@ -113,6 +141,10 @@ public final class HDInsightStreamingActivityArgs extends com.pulumi.resources.R
     @Import(name="filePaths", required=true)
     private Output<List<Object>> filePaths;
 
+    /**
+     * @return Paths to streaming job files. Can be directories.
+     * 
+     */
     public Output<List<Object>> filePaths() {
         return this.filePaths;
     }
@@ -124,6 +156,10 @@ public final class HDInsightStreamingActivityArgs extends com.pulumi.resources.R
     @Import(name="getDebugInfo")
     private @Nullable Output<Either<String,HDInsightActivityDebugInfoOption>> getDebugInfo;
 
+    /**
+     * @return Debug info option.
+     * 
+     */
     public Optional<Output<Either<String,HDInsightActivityDebugInfoOption>>> getDebugInfo() {
         return Optional.ofNullable(this.getDebugInfo);
     }
@@ -135,6 +171,10 @@ public final class HDInsightStreamingActivityArgs extends com.pulumi.resources.R
     @Import(name="input", required=true)
     private Output<Object> input;
 
+    /**
+     * @return Input blob path. Type: string (or Expression with resultType string).
+     * 
+     */
     public Output<Object> input() {
         return this.input;
     }
@@ -146,6 +186,10 @@ public final class HDInsightStreamingActivityArgs extends com.pulumi.resources.R
     @Import(name="linkedServiceName")
     private @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
 
+    /**
+     * @return Linked service reference.
+     * 
+     */
     public Optional<Output<LinkedServiceReferenceArgs>> linkedServiceName() {
         return Optional.ofNullable(this.linkedServiceName);
     }
@@ -157,6 +201,10 @@ public final class HDInsightStreamingActivityArgs extends com.pulumi.resources.R
     @Import(name="mapper", required=true)
     private Output<Object> mapper;
 
+    /**
+     * @return Mapper executable name. Type: string (or Expression with resultType string).
+     * 
+     */
     public Output<Object> mapper() {
         return this.mapper;
     }
@@ -168,6 +216,10 @@ public final class HDInsightStreamingActivityArgs extends com.pulumi.resources.R
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Activity name.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -179,6 +231,10 @@ public final class HDInsightStreamingActivityArgs extends com.pulumi.resources.R
     @Import(name="output", required=true)
     private Output<Object> output;
 
+    /**
+     * @return Output blob path. Type: string (or Expression with resultType string).
+     * 
+     */
     public Output<Object> output() {
         return this.output;
     }
@@ -190,6 +246,10 @@ public final class HDInsightStreamingActivityArgs extends com.pulumi.resources.R
     @Import(name="policy")
     private @Nullable Output<ActivityPolicyArgs> policy;
 
+    /**
+     * @return Activity policy.
+     * 
+     */
     public Optional<Output<ActivityPolicyArgs>> policy() {
         return Optional.ofNullable(this.policy);
     }
@@ -201,6 +261,10 @@ public final class HDInsightStreamingActivityArgs extends com.pulumi.resources.R
     @Import(name="reducer", required=true)
     private Output<Object> reducer;
 
+    /**
+     * @return Reducer executable name. Type: string (or Expression with resultType string).
+     * 
+     */
     public Output<Object> reducer() {
         return this.reducer;
     }
@@ -212,6 +276,10 @@ public final class HDInsightStreamingActivityArgs extends com.pulumi.resources.R
     @Import(name="storageLinkedServices")
     private @Nullable Output<List<LinkedServiceReferenceArgs>> storageLinkedServices;
 
+    /**
+     * @return Storage linked service references.
+     * 
+     */
     public Optional<Output<List<LinkedServiceReferenceArgs>>> storageLinkedServices() {
         return Optional.ofNullable(this.storageLinkedServices);
     }
@@ -224,6 +292,11 @@ public final class HDInsightStreamingActivityArgs extends com.pulumi.resources.R
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Type of activity.
+     * Expected value is &#39;HDInsightStreaming&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -235,6 +308,10 @@ public final class HDInsightStreamingActivityArgs extends com.pulumi.resources.R
     @Import(name="userProperties")
     private @Nullable Output<List<UserPropertyArgs>> userProperties;
 
+    /**
+     * @return Activity user properties.
+     * 
+     */
     public Optional<Output<List<UserPropertyArgs>>> userProperties() {
         return Optional.ofNullable(this.userProperties);
     }
@@ -281,205 +358,483 @@ public final class HDInsightStreamingActivityArgs extends com.pulumi.resources.R
             $ = new HDInsightStreamingActivityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arguments User specified arguments to HDInsightActivity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arguments(@Nullable Output<List<Object>> arguments) {
             $.arguments = arguments;
             return this;
         }
 
+        /**
+         * @param arguments User specified arguments to HDInsightActivity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arguments(List<Object> arguments) {
             return arguments(Output.of(arguments));
         }
 
+        /**
+         * @param arguments User specified arguments to HDInsightActivity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arguments(Object... arguments) {
             return arguments(List.of(arguments));
         }
 
+        /**
+         * @param combiner Combiner executable name. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder combiner(@Nullable Output<Object> combiner) {
             $.combiner = combiner;
             return this;
         }
 
+        /**
+         * @param combiner Combiner executable name. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder combiner(Object combiner) {
             return combiner(Output.of(combiner));
         }
 
+        /**
+         * @param commandEnvironment Command line environment values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder commandEnvironment(@Nullable Output<List<Object>> commandEnvironment) {
             $.commandEnvironment = commandEnvironment;
             return this;
         }
 
+        /**
+         * @param commandEnvironment Command line environment values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder commandEnvironment(List<Object> commandEnvironment) {
             return commandEnvironment(Output.of(commandEnvironment));
         }
 
+        /**
+         * @param commandEnvironment Command line environment values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder commandEnvironment(Object... commandEnvironment) {
             return commandEnvironment(List.of(commandEnvironment));
         }
 
+        /**
+         * @param defines Allows user to specify defines for streaming job request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defines(@Nullable Output<Map<String,Object>> defines) {
             $.defines = defines;
             return this;
         }
 
+        /**
+         * @param defines Allows user to specify defines for streaming job request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defines(Map<String,Object> defines) {
             return defines(Output.of(defines));
         }
 
+        /**
+         * @param dependsOn Activity depends on condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(@Nullable Output<List<ActivityDependencyArgs>> dependsOn) {
             $.dependsOn = dependsOn;
             return this;
         }
 
+        /**
+         * @param dependsOn Activity depends on condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(List<ActivityDependencyArgs> dependsOn) {
             return dependsOn(Output.of(dependsOn));
         }
 
+        /**
+         * @param dependsOn Activity depends on condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(ActivityDependencyArgs... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
 
+        /**
+         * @param description Activity description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Activity description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param fileLinkedService Linked service reference where the files are located.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileLinkedService(@Nullable Output<LinkedServiceReferenceArgs> fileLinkedService) {
             $.fileLinkedService = fileLinkedService;
             return this;
         }
 
+        /**
+         * @param fileLinkedService Linked service reference where the files are located.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileLinkedService(LinkedServiceReferenceArgs fileLinkedService) {
             return fileLinkedService(Output.of(fileLinkedService));
         }
 
+        /**
+         * @param filePaths Paths to streaming job files. Can be directories.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filePaths(Output<List<Object>> filePaths) {
             $.filePaths = filePaths;
             return this;
         }
 
+        /**
+         * @param filePaths Paths to streaming job files. Can be directories.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filePaths(List<Object> filePaths) {
             return filePaths(Output.of(filePaths));
         }
 
+        /**
+         * @param filePaths Paths to streaming job files. Can be directories.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filePaths(Object... filePaths) {
             return filePaths(List.of(filePaths));
         }
 
+        /**
+         * @param getDebugInfo Debug info option.
+         * 
+         * @return builder
+         * 
+         */
         public Builder getDebugInfo(@Nullable Output<Either<String,HDInsightActivityDebugInfoOption>> getDebugInfo) {
             $.getDebugInfo = getDebugInfo;
             return this;
         }
 
+        /**
+         * @param getDebugInfo Debug info option.
+         * 
+         * @return builder
+         * 
+         */
         public Builder getDebugInfo(Either<String,HDInsightActivityDebugInfoOption> getDebugInfo) {
             return getDebugInfo(Output.of(getDebugInfo));
         }
 
+        /**
+         * @param getDebugInfo Debug info option.
+         * 
+         * @return builder
+         * 
+         */
         public Builder getDebugInfo(String getDebugInfo) {
             return getDebugInfo(Either.ofLeft(getDebugInfo));
         }
 
+        /**
+         * @param getDebugInfo Debug info option.
+         * 
+         * @return builder
+         * 
+         */
         public Builder getDebugInfo(HDInsightActivityDebugInfoOption getDebugInfo) {
             return getDebugInfo(Either.ofRight(getDebugInfo));
         }
 
+        /**
+         * @param input Input blob path. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder input(Output<Object> input) {
             $.input = input;
             return this;
         }
 
+        /**
+         * @param input Input blob path. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder input(Object input) {
             return input(Output.of(input));
         }
 
+        /**
+         * @param linkedServiceName Linked service reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedServiceName(@Nullable Output<LinkedServiceReferenceArgs> linkedServiceName) {
             $.linkedServiceName = linkedServiceName;
             return this;
         }
 
+        /**
+         * @param linkedServiceName Linked service reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedServiceName(LinkedServiceReferenceArgs linkedServiceName) {
             return linkedServiceName(Output.of(linkedServiceName));
         }
 
+        /**
+         * @param mapper Mapper executable name. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder mapper(Output<Object> mapper) {
             $.mapper = mapper;
             return this;
         }
 
+        /**
+         * @param mapper Mapper executable name. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder mapper(Object mapper) {
             return mapper(Output.of(mapper));
         }
 
+        /**
+         * @param name Activity name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Activity name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param output Output blob path. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder output(Output<Object> output) {
             $.output = output;
             return this;
         }
 
+        /**
+         * @param output Output blob path. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder output(Object output) {
             return output(Output.of(output));
         }
 
+        /**
+         * @param policy Activity policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policy(@Nullable Output<ActivityPolicyArgs> policy) {
             $.policy = policy;
             return this;
         }
 
+        /**
+         * @param policy Activity policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policy(ActivityPolicyArgs policy) {
             return policy(Output.of(policy));
         }
 
+        /**
+         * @param reducer Reducer executable name. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder reducer(Output<Object> reducer) {
             $.reducer = reducer;
             return this;
         }
 
+        /**
+         * @param reducer Reducer executable name. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder reducer(Object reducer) {
             return reducer(Output.of(reducer));
         }
 
+        /**
+         * @param storageLinkedServices Storage linked service references.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageLinkedServices(@Nullable Output<List<LinkedServiceReferenceArgs>> storageLinkedServices) {
             $.storageLinkedServices = storageLinkedServices;
             return this;
         }
 
+        /**
+         * @param storageLinkedServices Storage linked service references.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageLinkedServices(List<LinkedServiceReferenceArgs> storageLinkedServices) {
             return storageLinkedServices(Output.of(storageLinkedServices));
         }
 
+        /**
+         * @param storageLinkedServices Storage linked service references.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageLinkedServices(LinkedServiceReferenceArgs... storageLinkedServices) {
             return storageLinkedServices(List.of(storageLinkedServices));
         }
 
+        /**
+         * @param type Type of activity.
+         * Expected value is &#39;HDInsightStreaming&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of activity.
+         * Expected value is &#39;HDInsightStreaming&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param userProperties Activity user properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProperties(@Nullable Output<List<UserPropertyArgs>> userProperties) {
             $.userProperties = userProperties;
             return this;
         }
 
+        /**
+         * @param userProperties Activity user properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProperties(List<UserPropertyArgs> userProperties) {
             return userProperties(Output.of(userProperties));
         }
 
+        /**
+         * @param userProperties Activity user properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProperties(UserPropertyArgs... userProperties) {
             return userProperties(List.of(userProperties));
         }

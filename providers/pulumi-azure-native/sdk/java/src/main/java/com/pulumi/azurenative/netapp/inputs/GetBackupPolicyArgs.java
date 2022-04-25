@@ -19,6 +19,10 @@ public final class GetBackupPolicyArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="accountName", required=true)
     private String accountName;
 
+    /**
+     * @return The name of the NetApp account
+     * 
+     */
     public String accountName() {
         return this.accountName;
     }
@@ -30,6 +34,10 @@ public final class GetBackupPolicyArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="backupPolicyName", required=true)
     private String backupPolicyName;
 
+    /**
+     * @return Backup policy Name which uniquely identify backup policy.
+     * 
+     */
     public String backupPolicyName() {
         return this.backupPolicyName;
     }
@@ -41,6 +49,10 @@ public final class GetBackupPolicyArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetBackupPolicyArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetBackupPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The name of the NetApp account
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param backupPolicyName Backup policy Name which uniquely identify backup policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupPolicyName(String backupPolicyName) {
             $.backupPolicyName = backupPolicyName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

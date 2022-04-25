@@ -26,6 +26,10 @@ public final class BuildArtifactArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="image")
     private @Nullable Output<String> image;
 
+    /**
+     * @return Image name in Skaffold configuration.
+     * 
+     */
     public Optional<Output<String>> image() {
         return Optional.ofNullable(this.image);
     }
@@ -37,6 +41,10 @@ public final class BuildArtifactArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tag")
     private @Nullable Output<String> tag;
 
+    /**
+     * @return Image tag to use. This will generally be the full path to an image, such as &#34;gcr.io/my-project/busybox:1.2.3&#34; or &#34;gcr.io/my-project/busybox@sha256:abc123&#34;.
+     * 
+     */
     public Optional<Output<String>> tag() {
         return Optional.ofNullable(this.tag);
     }
@@ -66,20 +74,44 @@ public final class BuildArtifactArgs extends com.pulumi.resources.ResourceArgs {
             $ = new BuildArtifactArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param image Image name in Skaffold configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder image(@Nullable Output<String> image) {
             $.image = image;
             return this;
         }
 
+        /**
+         * @param image Image name in Skaffold configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder image(String image) {
             return image(Output.of(image));
         }
 
+        /**
+         * @param tag Image tag to use. This will generally be the full path to an image, such as &#34;gcr.io/my-project/busybox:1.2.3&#34; or &#34;gcr.io/my-project/busybox@sha256:abc123&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tag(@Nullable Output<String> tag) {
             $.tag = tag;
             return this;
         }
 
+        /**
+         * @param tag Image tag to use. This will generally be the full path to an image, such as &#34;gcr.io/my-project/busybox:1.2.3&#34; or &#34;gcr.io/my-project/busybox@sha256:abc123&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tag(String tag) {
             return tag(Output.of(tag));
         }

@@ -26,6 +26,10 @@ public final class DeliveryPipelineResponse extends com.pulumi.resources.InvokeA
     @Import(name="annotations", required=true)
     private Map<String,String> annotations;
 
+    /**
+     * @return User annotations. These attributes can only be set and used by the user, and not by Google Cloud Deploy. See https://google.aip.dev/128#annotations for more details such as format and size limitations.
+     * 
+     */
     public Map<String,String> annotations() {
         return this.annotations;
     }
@@ -37,6 +41,10 @@ public final class DeliveryPipelineResponse extends com.pulumi.resources.InvokeA
     @Import(name="condition", required=true)
     private PipelineConditionResponse condition;
 
+    /**
+     * @return Information around the state of the Delivery Pipeline.
+     * 
+     */
     public PipelineConditionResponse condition() {
         return this.condition;
     }
@@ -48,6 +56,10 @@ public final class DeliveryPipelineResponse extends com.pulumi.resources.InvokeA
     @Import(name="createTime", required=true)
     private String createTime;
 
+    /**
+     * @return Time at which the pipeline was created.
+     * 
+     */
     public String createTime() {
         return this.createTime;
     }
@@ -59,6 +71,10 @@ public final class DeliveryPipelineResponse extends com.pulumi.resources.InvokeA
     @Import(name="description", required=true)
     private String description;
 
+    /**
+     * @return Description of the `DeliveryPipeline`. Max length is 255 characters.
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -70,6 +86,10 @@ public final class DeliveryPipelineResponse extends com.pulumi.resources.InvokeA
     @Import(name="etag", required=true)
     private String etag;
 
+    /**
+     * @return This checksum is computed by the server based on the value of other fields, and may be sent on update and delete requests to ensure the client has an up-to-date value before proceeding.
+     * 
+     */
     public String etag() {
         return this.etag;
     }
@@ -81,6 +101,10 @@ public final class DeliveryPipelineResponse extends com.pulumi.resources.InvokeA
     @Import(name="labels", required=true)
     private Map<String,String> labels;
 
+    /**
+     * @return Labels are attributes that can be set and used by both the user and by Google Cloud Deploy. Labels must meet the following constraints: * Keys and values can contain only lowercase letters, numeric characters, underscores, and dashes. * All characters must use UTF-8 encoding, and international characters are allowed. * Keys must start with a lowercase letter or international character. * Each resource is limited to a maximum of 64 labels. Both keys and values are additionally constrained to be &lt;= 128 bytes.
+     * 
+     */
     public Map<String,String> labels() {
         return this.labels;
     }
@@ -92,6 +116,10 @@ public final class DeliveryPipelineResponse extends com.pulumi.resources.InvokeA
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Optional. Name of the `DeliveryPipeline`. Format is projects/{project}/ locations/{location}/deliveryPipelines/a-z{0,62}.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -103,6 +131,10 @@ public final class DeliveryPipelineResponse extends com.pulumi.resources.InvokeA
     @Import(name="serialPipeline", required=true)
     private SerialPipelineResponse serialPipeline;
 
+    /**
+     * @return SerialPipeline defines a sequential set of stages for a `DeliveryPipeline`.
+     * 
+     */
     public SerialPipelineResponse serialPipeline() {
         return this.serialPipeline;
     }
@@ -114,6 +146,10 @@ public final class DeliveryPipelineResponse extends com.pulumi.resources.InvokeA
     @Import(name="uid", required=true)
     private String uid;
 
+    /**
+     * @return Unique identifier of the `DeliveryPipeline`.
+     * 
+     */
     public String uid() {
         return this.uid;
     }
@@ -125,6 +161,10 @@ public final class DeliveryPipelineResponse extends com.pulumi.resources.InvokeA
     @Import(name="updateTime", required=true)
     private String updateTime;
 
+    /**
+     * @return Most recent time at which the pipeline was updated.
+     * 
+     */
     public String updateTime() {
         return this.updateTime;
     }
@@ -162,51 +202,111 @@ public final class DeliveryPipelineResponse extends com.pulumi.resources.InvokeA
             $ = new DeliveryPipelineResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param annotations User annotations. These attributes can only be set and used by the user, and not by Google Cloud Deploy. See https://google.aip.dev/128#annotations for more details such as format and size limitations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(Map<String,String> annotations) {
             $.annotations = annotations;
             return this;
         }
 
+        /**
+         * @param condition Information around the state of the Delivery Pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder condition(PipelineConditionResponse condition) {
             $.condition = condition;
             return this;
         }
 
+        /**
+         * @param createTime Time at which the pipeline was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTime(String createTime) {
             $.createTime = createTime;
             return this;
         }
 
+        /**
+         * @param description Description of the `DeliveryPipeline`. Max length is 255 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param etag This checksum is computed by the server based on the value of other fields, and may be sent on update and delete requests to ensure the client has an up-to-date value before proceeding.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param labels Labels are attributes that can be set and used by both the user and by Google Cloud Deploy. Labels must meet the following constraints: * Keys and values can contain only lowercase letters, numeric characters, underscores, and dashes. * All characters must use UTF-8 encoding, and international characters are allowed. * Keys must start with a lowercase letter or international character. * Each resource is limited to a maximum of 64 labels. Both keys and values are additionally constrained to be &lt;= 128 bytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param name Optional. Name of the `DeliveryPipeline`. Format is projects/{project}/ locations/{location}/deliveryPipelines/a-z{0,62}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param serialPipeline SerialPipeline defines a sequential set of stages for a `DeliveryPipeline`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serialPipeline(SerialPipelineResponse serialPipeline) {
             $.serialPipeline = serialPipeline;
             return this;
         }
 
+        /**
+         * @param uid Unique identifier of the `DeliveryPipeline`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uid(String uid) {
             $.uid = uid;
             return this;
         }
 
+        /**
+         * @param updateTime Most recent time at which the pipeline was updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateTime(String updateTime) {
             $.updateTime = updateTime;
             return this;

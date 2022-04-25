@@ -27,6 +27,10 @@ public final class RulesEngineMatchConditionResponse extends com.pulumi.resource
     @Import(name="negateCondition")
     private @Nullable Boolean negateCondition;
 
+    /**
+     * @return Describes if this is negate condition or not
+     * 
+     */
     public Optional<Boolean> negateCondition() {
         return Optional.ofNullable(this.negateCondition);
     }
@@ -38,6 +42,10 @@ public final class RulesEngineMatchConditionResponse extends com.pulumi.resource
     @Import(name="rulesEngineMatchValue", required=true)
     private List<String> rulesEngineMatchValue;
 
+    /**
+     * @return Match values to match against. The operator will apply to each value in here with OR semantics. If any of them match the variable with the given operator this match condition is considered a match.
+     * 
+     */
     public List<String> rulesEngineMatchValue() {
         return this.rulesEngineMatchValue;
     }
@@ -49,6 +57,10 @@ public final class RulesEngineMatchConditionResponse extends com.pulumi.resource
     @Import(name="rulesEngineMatchVariable", required=true)
     private String rulesEngineMatchVariable;
 
+    /**
+     * @return Match Variable
+     * 
+     */
     public String rulesEngineMatchVariable() {
         return this.rulesEngineMatchVariable;
     }
@@ -60,6 +72,10 @@ public final class RulesEngineMatchConditionResponse extends com.pulumi.resource
     @Import(name="rulesEngineOperator", required=true)
     private String rulesEngineOperator;
 
+    /**
+     * @return Describes operator to apply to the match condition.
+     * 
+     */
     public String rulesEngineOperator() {
         return this.rulesEngineOperator;
     }
@@ -71,6 +87,10 @@ public final class RulesEngineMatchConditionResponse extends com.pulumi.resource
     @Import(name="selector")
     private @Nullable String selector;
 
+    /**
+     * @return Name of selector in RequestHeader or RequestBody to be matched
+     * 
+     */
     public Optional<String> selector() {
         return Optional.ofNullable(this.selector);
     }
@@ -82,6 +102,10 @@ public final class RulesEngineMatchConditionResponse extends com.pulumi.resource
     @Import(name="transforms")
     private @Nullable List<String> transforms;
 
+    /**
+     * @return List of transforms
+     * 
+     */
     public Optional<List<String>> transforms() {
         return Optional.ofNullable(this.transforms);
     }
@@ -115,40 +139,88 @@ public final class RulesEngineMatchConditionResponse extends com.pulumi.resource
             $ = new RulesEngineMatchConditionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param negateCondition Describes if this is negate condition or not
+         * 
+         * @return builder
+         * 
+         */
         public Builder negateCondition(@Nullable Boolean negateCondition) {
             $.negateCondition = negateCondition;
             return this;
         }
 
+        /**
+         * @param rulesEngineMatchValue Match values to match against. The operator will apply to each value in here with OR semantics. If any of them match the variable with the given operator this match condition is considered a match.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rulesEngineMatchValue(List<String> rulesEngineMatchValue) {
             $.rulesEngineMatchValue = rulesEngineMatchValue;
             return this;
         }
 
+        /**
+         * @param rulesEngineMatchValue Match values to match against. The operator will apply to each value in here with OR semantics. If any of them match the variable with the given operator this match condition is considered a match.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rulesEngineMatchValue(String... rulesEngineMatchValue) {
             return rulesEngineMatchValue(List.of(rulesEngineMatchValue));
         }
 
+        /**
+         * @param rulesEngineMatchVariable Match Variable
+         * 
+         * @return builder
+         * 
+         */
         public Builder rulesEngineMatchVariable(String rulesEngineMatchVariable) {
             $.rulesEngineMatchVariable = rulesEngineMatchVariable;
             return this;
         }
 
+        /**
+         * @param rulesEngineOperator Describes operator to apply to the match condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rulesEngineOperator(String rulesEngineOperator) {
             $.rulesEngineOperator = rulesEngineOperator;
             return this;
         }
 
+        /**
+         * @param selector Name of selector in RequestHeader or RequestBody to be matched
+         * 
+         * @return builder
+         * 
+         */
         public Builder selector(@Nullable String selector) {
             $.selector = selector;
             return this;
         }
 
+        /**
+         * @param transforms List of transforms
+         * 
+         * @return builder
+         * 
+         */
         public Builder transforms(@Nullable List<String> transforms) {
             $.transforms = transforms;
             return this;
         }
 
+        /**
+         * @param transforms List of transforms
+         * 
+         * @return builder
+         * 
+         */
         public Builder transforms(String... transforms) {
             return transforms(List.of(transforms));
         }

@@ -22,6 +22,10 @@ public final class CosmosDbSettingsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="collectionsThroughput")
     private @Nullable Output<Integer> collectionsThroughput;
 
+    /**
+     * @return The throughput of the collections in cosmosdb database
+     * 
+     */
     public Optional<Output<Integer>> collectionsThroughput() {
         return Optional.ofNullable(this.collectionsThroughput);
     }
@@ -50,11 +54,23 @@ public final class CosmosDbSettingsArgs extends com.pulumi.resources.ResourceArg
             $ = new CosmosDbSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param collectionsThroughput The throughput of the collections in cosmosdb database
+         * 
+         * @return builder
+         * 
+         */
         public Builder collectionsThroughput(@Nullable Output<Integer> collectionsThroughput) {
             $.collectionsThroughput = collectionsThroughput;
             return this;
         }
 
+        /**
+         * @param collectionsThroughput The throughput of the collections in cosmosdb database
+         * 
+         * @return builder
+         * 
+         */
         public Builder collectionsThroughput(Integer collectionsThroughput) {
             return collectionsThroughput(Output.of(collectionsThroughput));
         }

@@ -23,6 +23,10 @@ public final class FlexibleAppVersionAutomaticScalingCpuUtilizationArgs extends 
     @Import(name="aggregationWindowLength")
     private @Nullable Output<String> aggregationWindowLength;
 
+    /**
+     * @return Period of time over which CPU utilization is calculated.
+     * 
+     */
     public Optional<Output<String>> aggregationWindowLength() {
         return Optional.ofNullable(this.aggregationWindowLength);
     }
@@ -34,6 +38,10 @@ public final class FlexibleAppVersionAutomaticScalingCpuUtilizationArgs extends 
     @Import(name="targetUtilization", required=true)
     private Output<Double> targetUtilization;
 
+    /**
+     * @return Target CPU utilization ratio to maintain when scaling. Must be between 0 and 1.
+     * 
+     */
     public Output<Double> targetUtilization() {
         return this.targetUtilization;
     }
@@ -63,20 +71,44 @@ public final class FlexibleAppVersionAutomaticScalingCpuUtilizationArgs extends 
             $ = new FlexibleAppVersionAutomaticScalingCpuUtilizationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param aggregationWindowLength Period of time over which CPU utilization is calculated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aggregationWindowLength(@Nullable Output<String> aggregationWindowLength) {
             $.aggregationWindowLength = aggregationWindowLength;
             return this;
         }
 
+        /**
+         * @param aggregationWindowLength Period of time over which CPU utilization is calculated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aggregationWindowLength(String aggregationWindowLength) {
             return aggregationWindowLength(Output.of(aggregationWindowLength));
         }
 
+        /**
+         * @param targetUtilization Target CPU utilization ratio to maintain when scaling. Must be between 0 and 1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetUtilization(Output<Double> targetUtilization) {
             $.targetUtilization = targetUtilization;
             return this;
         }
 
+        /**
+         * @param targetUtilization Target CPU utilization ratio to maintain when scaling. Must be between 0 and 1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetUtilization(Double targetUtilization) {
             return targetUtilization(Output.of(targetUtilization));
         }

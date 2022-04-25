@@ -14,67 +14,67 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetUserResult {
     /**
-     * The user email address, as it was specified during registration.
+     * @return The user email address, as it was specified during registration.
      * 
      */
     private final String email;
     /**
-     * The user family name, as it was specified during registration.
+     * @return The user family name, as it was specified during registration.
      * 
      */
     private final String familyName;
     /**
-     * The user given name, as it was specified during registration.
+     * @return The user given name, as it was specified during registration.
      * 
      */
     private final String givenName;
     /**
-     * The identifier of the resource.
+     * @return The identifier of the resource.
      * 
      */
     private final String id;
     /**
-     * The details of the latest operation. ex: status, error
+     * @return The details of the latest operation. ex: status, error
      * 
      */
     private final LatestOperationResultResponse latestOperationResult;
     /**
-     * The location of the resource.
+     * @return The location of the resource.
      * 
      */
     private final @Nullable String location;
     /**
-     * The name of the resource.
+     * @return The name of the resource.
      * 
      */
     private final String name;
     /**
-     * The provisioning status of the resource.
+     * @return The provisioning status of the resource.
      * 
      */
     private final @Nullable String provisioningState;
     /**
-     * The tags of the resource.
+     * @return The tags of the resource.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * The user tenant ID, as it was specified during registration.
+     * @return The user tenant ID, as it was specified during registration.
      * 
      */
     private final String tenantId;
     /**
-     * How long the user has used his VMs in this lab
+     * @return How long the user has used his VMs in this lab
      * 
      */
     private final String totalUsage;
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
      */
     private final String type;
     /**
-     * The unique immutable identifier of a resource (Guid).
+     * @return The unique immutable identifier of a resource (Guid).
      * 
      */
     private final @Nullable String uniqueIdentifier;
@@ -110,93 +110,93 @@ public final class GetUserResult {
     }
 
     /**
-     * The user email address, as it was specified during registration.
+     * @return The user email address, as it was specified during registration.
      * 
-    */
+     */
     public String email() {
         return this.email;
     }
     /**
-     * The user family name, as it was specified during registration.
+     * @return The user family name, as it was specified during registration.
      * 
-    */
+     */
     public String familyName() {
         return this.familyName;
     }
     /**
-     * The user given name, as it was specified during registration.
+     * @return The user given name, as it was specified during registration.
      * 
-    */
+     */
     public String givenName() {
         return this.givenName;
     }
     /**
-     * The identifier of the resource.
+     * @return The identifier of the resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The details of the latest operation. ex: status, error
+     * @return The details of the latest operation. ex: status, error
      * 
-    */
+     */
     public LatestOperationResultResponse latestOperationResult() {
         return this.latestOperationResult;
     }
     /**
-     * The location of the resource.
+     * @return The location of the resource.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * The name of the resource.
+     * @return The name of the resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The provisioning status of the resource.
+     * @return The provisioning status of the resource.
      * 
-    */
+     */
     public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
-     * The tags of the resource.
+     * @return The tags of the resource.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The user tenant ID, as it was specified during registration.
+     * @return The user tenant ID, as it was specified during registration.
      * 
-    */
+     */
     public String tenantId() {
         return this.tenantId;
     }
     /**
-     * How long the user has used his VMs in this lab
+     * @return How long the user has used his VMs in this lab
      * 
-    */
+     */
     public String totalUsage() {
         return this.totalUsage;
     }
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The unique immutable identifier of a resource (Guid).
+     * @return The unique immutable identifier of a resource (Guid).
      * 
-    */
+     */
     public Optional<String> uniqueIdentifier() {
         return Optional.ofNullable(this.uniqueIdentifier);
     }

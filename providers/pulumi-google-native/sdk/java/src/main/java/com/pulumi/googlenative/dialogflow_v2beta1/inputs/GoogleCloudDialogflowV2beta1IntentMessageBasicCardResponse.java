@@ -26,6 +26,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBasicCardResponse ex
     @Import(name="buttons", required=true)
     private List<GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonResponse> buttons;
 
+    /**
+     * @return Optional. The collection of card buttons.
+     * 
+     */
     public List<GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonResponse> buttons() {
         return this.buttons;
     }
@@ -37,6 +41,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBasicCardResponse ex
     @Import(name="formattedText", required=true)
     private String formattedText;
 
+    /**
+     * @return Required, unless image is present. The body text of the card.
+     * 
+     */
     public String formattedText() {
         return this.formattedText;
     }
@@ -48,6 +56,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBasicCardResponse ex
     @Import(name="image", required=true)
     private GoogleCloudDialogflowV2beta1IntentMessageImageResponse image;
 
+    /**
+     * @return Optional. The image for the card.
+     * 
+     */
     public GoogleCloudDialogflowV2beta1IntentMessageImageResponse image() {
         return this.image;
     }
@@ -59,6 +71,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBasicCardResponse ex
     @Import(name="subtitle", required=true)
     private String subtitle;
 
+    /**
+     * @return Optional. The subtitle of the card.
+     * 
+     */
     public String subtitle() {
         return this.subtitle;
     }
@@ -70,6 +86,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBasicCardResponse ex
     @Import(name="title", required=true)
     private String title;
 
+    /**
+     * @return Optional. The title of the card.
+     * 
+     */
     public String title() {
         return this.title;
     }
@@ -102,30 +122,66 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBasicCardResponse ex
             $ = new GoogleCloudDialogflowV2beta1IntentMessageBasicCardResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param buttons Optional. The collection of card buttons.
+         * 
+         * @return builder
+         * 
+         */
         public Builder buttons(List<GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonResponse> buttons) {
             $.buttons = buttons;
             return this;
         }
 
+        /**
+         * @param buttons Optional. The collection of card buttons.
+         * 
+         * @return builder
+         * 
+         */
         public Builder buttons(GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonResponse... buttons) {
             return buttons(List.of(buttons));
         }
 
+        /**
+         * @param formattedText Required, unless image is present. The body text of the card.
+         * 
+         * @return builder
+         * 
+         */
         public Builder formattedText(String formattedText) {
             $.formattedText = formattedText;
             return this;
         }
 
+        /**
+         * @param image Optional. The image for the card.
+         * 
+         * @return builder
+         * 
+         */
         public Builder image(GoogleCloudDialogflowV2beta1IntentMessageImageResponse image) {
             $.image = image;
             return this;
         }
 
+        /**
+         * @param subtitle Optional. The subtitle of the card.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subtitle(String subtitle) {
             $.subtitle = subtitle;
             return this;
         }
 
+        /**
+         * @param title Optional. The title of the card.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(String title) {
             $.title = title;
             return this;

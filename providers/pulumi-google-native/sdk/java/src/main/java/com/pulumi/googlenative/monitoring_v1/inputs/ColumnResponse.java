@@ -25,6 +25,10 @@ public final class ColumnResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="weight", required=true)
     private String weight;
 
+    /**
+     * @return The relative weight of this column. The column weight is used to adjust the width of columns on the screen (relative to peers). Greater the weight, greater the width of the column on the screen. If omitted, a value of 1 is used while rendering.
+     * 
+     */
     public String weight() {
         return this.weight;
     }
@@ -36,6 +40,10 @@ public final class ColumnResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="widgets", required=true)
     private List<WidgetResponse> widgets;
 
+    /**
+     * @return The display widgets arranged vertically in this column.
+     * 
+     */
     public List<WidgetResponse> widgets() {
         return this.widgets;
     }
@@ -65,16 +73,34 @@ public final class ColumnResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ColumnResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param weight The relative weight of this column. The column weight is used to adjust the width of columns on the screen (relative to peers). Greater the weight, greater the width of the column on the screen. If omitted, a value of 1 is used while rendering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weight(String weight) {
             $.weight = weight;
             return this;
         }
 
+        /**
+         * @param widgets The display widgets arranged vertically in this column.
+         * 
+         * @return builder
+         * 
+         */
         public Builder widgets(List<WidgetResponse> widgets) {
             $.widgets = widgets;
             return this;
         }
 
+        /**
+         * @param widgets The display widgets arranged vertically in this column.
+         * 
+         * @return builder
+         * 
+         */
         public Builder widgets(WidgetResponse... widgets) {
             return widgets(List.of(widgets));
         }

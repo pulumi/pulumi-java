@@ -24,6 +24,10 @@ public final class DataSetResourcePermission extends com.pulumi.resources.Invoke
     @Import(name="actions", required=true)
     private List<String> actions;
 
+    /**
+     * @return &lt;p&gt;The IAM action to grant or revoke permissions on.&lt;/p&gt;
+     * 
+     */
     public List<String> actions() {
         return this.actions;
     }
@@ -49,6 +53,24 @@ public final class DataSetResourcePermission extends com.pulumi.resources.Invoke
     @Import(name="principal", required=true)
     private String principal;
 
+    /**
+     * @return &lt;p&gt;The Amazon Resource Name (ARN) of the principal. This can be one of the
+     *             following:&lt;/p&gt;
+     *         &lt;ul&gt;
+     *             &lt;li&gt;
+     *                 &lt;p&gt;The ARN of an Amazon QuickSight user or group associated with a data source or dataset. (This is common.)&lt;/p&gt;
+     *             &lt;/li&gt;
+     *             &lt;li&gt;
+     *                 &lt;p&gt;The ARN of an Amazon QuickSight user, group, or namespace associated with an analysis, dashboard, template, or theme. (This is common.)&lt;/p&gt;
+     *             &lt;/li&gt;
+     *             &lt;li&gt;
+     *                 &lt;p&gt;The ARN of an AWS account root: This is an IAM ARN rather than a QuickSight
+     *                     ARN. Use this option only to share resources (templates) across AWS accounts.
+     *                     (This is less common.) &lt;/p&gt;
+     *             &lt;/li&gt;
+     *          &lt;/ul&gt;
+     * 
+     */
     public String principal() {
         return this.principal;
     }
@@ -78,15 +100,47 @@ public final class DataSetResourcePermission extends com.pulumi.resources.Invoke
             $ = new DataSetResourcePermission(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actions &lt;p&gt;The IAM action to grant or revoke permissions on.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(List<String> actions) {
             $.actions = actions;
             return this;
         }
 
+        /**
+         * @param actions &lt;p&gt;The IAM action to grant or revoke permissions on.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(String... actions) {
             return actions(List.of(actions));
         }
 
+        /**
+         * @param principal &lt;p&gt;The Amazon Resource Name (ARN) of the principal. This can be one of the
+         *             following:&lt;/p&gt;
+         *         &lt;ul&gt;
+         *             &lt;li&gt;
+         *                 &lt;p&gt;The ARN of an Amazon QuickSight user or group associated with a data source or dataset. (This is common.)&lt;/p&gt;
+         *             &lt;/li&gt;
+         *             &lt;li&gt;
+         *                 &lt;p&gt;The ARN of an Amazon QuickSight user, group, or namespace associated with an analysis, dashboard, template, or theme. (This is common.)&lt;/p&gt;
+         *             &lt;/li&gt;
+         *             &lt;li&gt;
+         *                 &lt;p&gt;The ARN of an AWS account root: This is an IAM ARN rather than a QuickSight
+         *                     ARN. Use this option only to share resources (templates) across AWS accounts.
+         *                     (This is less common.) &lt;/p&gt;
+         *             &lt;/li&gt;
+         *          &lt;/ul&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder principal(String principal) {
             $.principal = principal;
             return this;

@@ -20,6 +20,10 @@ public final class LogResourcePolicyArgs extends com.pulumi.resources.ResourceAr
     @Import(name="policyDocument", required=true)
     private Output<String> policyDocument;
 
+    /**
+     * @return Details of the resource policy, including the identity of the principal that is enabled to put logs to this account. This is formatted as a JSON string. Maximum length of 5120 characters.
+     * 
+     */
     public Output<String> policyDocument() {
         return this.policyDocument;
     }
@@ -31,6 +35,10 @@ public final class LogResourcePolicyArgs extends com.pulumi.resources.ResourceAr
     @Import(name="policyName", required=true)
     private Output<String> policyName;
 
+    /**
+     * @return Name of the resource policy.
+     * 
+     */
     public Output<String> policyName() {
         return this.policyName;
     }
@@ -60,20 +68,44 @@ public final class LogResourcePolicyArgs extends com.pulumi.resources.ResourceAr
             $ = new LogResourcePolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param policyDocument Details of the resource policy, including the identity of the principal that is enabled to put logs to this account. This is formatted as a JSON string. Maximum length of 5120 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyDocument(Output<String> policyDocument) {
             $.policyDocument = policyDocument;
             return this;
         }
 
+        /**
+         * @param policyDocument Details of the resource policy, including the identity of the principal that is enabled to put logs to this account. This is formatted as a JSON string. Maximum length of 5120 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyDocument(String policyDocument) {
             return policyDocument(Output.of(policyDocument));
         }
 
+        /**
+         * @param policyName Name of the resource policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyName(Output<String> policyName) {
             $.policyName = policyName;
             return this;
         }
 
+        /**
+         * @param policyName Name of the resource policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyName(String policyName) {
             return policyName(Output.of(policyName));
         }

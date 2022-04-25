@@ -28,6 +28,10 @@ public final class LaunchConfigurationBlockDeviceArgs extends com.pulumi.resourc
     @Import(name="deleteOnTermination")
     private @Nullable Output<Boolean> deleteOnTermination;
 
+    /**
+     * @return Indicates whether the volume is deleted on instance termination.
+     * 
+     */
     public Optional<Output<Boolean>> deleteOnTermination() {
         return Optional.ofNullable(this.deleteOnTermination);
     }
@@ -39,6 +43,10 @@ public final class LaunchConfigurationBlockDeviceArgs extends com.pulumi.resourc
     @Import(name="encrypted")
     private @Nullable Output<Boolean> encrypted;
 
+    /**
+     * @return Specifies whether the volume should be encrypted.
+     * 
+     */
     public Optional<Output<Boolean>> encrypted() {
         return Optional.ofNullable(this.encrypted);
     }
@@ -50,6 +58,10 @@ public final class LaunchConfigurationBlockDeviceArgs extends com.pulumi.resourc
     @Import(name="iops")
     private @Nullable Output<Integer> iops;
 
+    /**
+     * @return The number of input/output (I/O) operations per second (IOPS) to provision for the volume.
+     * 
+     */
     public Optional<Output<Integer>> iops() {
         return Optional.ofNullable(this.iops);
     }
@@ -61,6 +73,10 @@ public final class LaunchConfigurationBlockDeviceArgs extends com.pulumi.resourc
     @Import(name="snapshotId")
     private @Nullable Output<String> snapshotId;
 
+    /**
+     * @return The snapshot ID of the volume to use.
+     * 
+     */
     public Optional<Output<String>> snapshotId() {
         return Optional.ofNullable(this.snapshotId);
     }
@@ -72,6 +88,10 @@ public final class LaunchConfigurationBlockDeviceArgs extends com.pulumi.resourc
     @Import(name="throughput")
     private @Nullable Output<Integer> throughput;
 
+    /**
+     * @return The throughput (MiBps) to provision for a gp3 volume.
+     * 
+     */
     public Optional<Output<Integer>> throughput() {
         return Optional.ofNullable(this.throughput);
     }
@@ -83,6 +103,10 @@ public final class LaunchConfigurationBlockDeviceArgs extends com.pulumi.resourc
     @Import(name="volumeSize")
     private @Nullable Output<Integer> volumeSize;
 
+    /**
+     * @return The volume size, in GiBs.
+     * 
+     */
     public Optional<Output<Integer>> volumeSize() {
         return Optional.ofNullable(this.volumeSize);
     }
@@ -94,6 +118,10 @@ public final class LaunchConfigurationBlockDeviceArgs extends com.pulumi.resourc
     @Import(name="volumeType")
     private @Nullable Output<String> volumeType;
 
+    /**
+     * @return The volume type.
+     * 
+     */
     public Optional<Output<String>> volumeType() {
         return Optional.ofNullable(this.volumeType);
     }
@@ -128,65 +156,149 @@ public final class LaunchConfigurationBlockDeviceArgs extends com.pulumi.resourc
             $ = new LaunchConfigurationBlockDeviceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deleteOnTermination Indicates whether the volume is deleted on instance termination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deleteOnTermination(@Nullable Output<Boolean> deleteOnTermination) {
             $.deleteOnTermination = deleteOnTermination;
             return this;
         }
 
+        /**
+         * @param deleteOnTermination Indicates whether the volume is deleted on instance termination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deleteOnTermination(Boolean deleteOnTermination) {
             return deleteOnTermination(Output.of(deleteOnTermination));
         }
 
+        /**
+         * @param encrypted Specifies whether the volume should be encrypted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encrypted(@Nullable Output<Boolean> encrypted) {
             $.encrypted = encrypted;
             return this;
         }
 
+        /**
+         * @param encrypted Specifies whether the volume should be encrypted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encrypted(Boolean encrypted) {
             return encrypted(Output.of(encrypted));
         }
 
+        /**
+         * @param iops The number of input/output (I/O) operations per second (IOPS) to provision for the volume.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iops(@Nullable Output<Integer> iops) {
             $.iops = iops;
             return this;
         }
 
+        /**
+         * @param iops The number of input/output (I/O) operations per second (IOPS) to provision for the volume.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iops(Integer iops) {
             return iops(Output.of(iops));
         }
 
+        /**
+         * @param snapshotId The snapshot ID of the volume to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotId(@Nullable Output<String> snapshotId) {
             $.snapshotId = snapshotId;
             return this;
         }
 
+        /**
+         * @param snapshotId The snapshot ID of the volume to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotId(String snapshotId) {
             return snapshotId(Output.of(snapshotId));
         }
 
+        /**
+         * @param throughput The throughput (MiBps) to provision for a gp3 volume.
+         * 
+         * @return builder
+         * 
+         */
         public Builder throughput(@Nullable Output<Integer> throughput) {
             $.throughput = throughput;
             return this;
         }
 
+        /**
+         * @param throughput The throughput (MiBps) to provision for a gp3 volume.
+         * 
+         * @return builder
+         * 
+         */
         public Builder throughput(Integer throughput) {
             return throughput(Output.of(throughput));
         }
 
+        /**
+         * @param volumeSize The volume size, in GiBs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeSize(@Nullable Output<Integer> volumeSize) {
             $.volumeSize = volumeSize;
             return this;
         }
 
+        /**
+         * @param volumeSize The volume size, in GiBs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeSize(Integer volumeSize) {
             return volumeSize(Output.of(volumeSize));
         }
 
+        /**
+         * @param volumeType The volume type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeType(@Nullable Output<String> volumeType) {
             $.volumeType = volumeType;
             return this;
         }
 
+        /**
+         * @param volumeType The volume type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeType(String volumeType) {
             return volumeType(Output.of(volumeType));
         }

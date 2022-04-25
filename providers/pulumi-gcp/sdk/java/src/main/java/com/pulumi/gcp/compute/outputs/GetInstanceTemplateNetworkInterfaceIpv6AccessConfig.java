@@ -12,7 +12,7 @@ public final class GetInstanceTemplateNetworkInterfaceIpv6AccessConfig {
     private final String externalIpv6;
     private final String externalIpv6PrefixLength;
     /**
-     * The [networking tier][network-tier] used for configuring
+     * @return The [networking tier][network-tier] used for configuring
      * this instance template. This field can take the following values: PREMIUM or
      * STANDARD. If this field is not specified, it is assumed to be PREMIUM.
      * 
@@ -39,11 +39,11 @@ public final class GetInstanceTemplateNetworkInterfaceIpv6AccessConfig {
         return this.externalIpv6PrefixLength;
     }
     /**
-     * The [networking tier][network-tier] used for configuring
+     * @return The [networking tier][network-tier] used for configuring
      * this instance template. This field can take the following values: PREMIUM or
      * STANDARD. If this field is not specified, it is assumed to be PREMIUM.
      * 
-    */
+     */
     public String networkTier() {
         return this.networkTier;
     }

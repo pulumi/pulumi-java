@@ -24,6 +24,10 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptRespo
     @Import(name="transcriptSegments", required=true)
     private List<GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentResponse> transcriptSegments;
 
+    /**
+     * @return A list of sequential transcript segments that comprise the conversation.
+     * 
+     */
     public List<GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentResponse> transcriptSegments() {
         return this.transcriptSegments;
     }
@@ -52,11 +56,23 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptRespo
             $ = new GoogleCloudContactcenterinsightsV1ConversationTranscriptResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param transcriptSegments A list of sequential transcript segments that comprise the conversation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transcriptSegments(List<GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentResponse> transcriptSegments) {
             $.transcriptSegments = transcriptSegments;
             return this;
         }
 
+        /**
+         * @param transcriptSegments A list of sequential transcript segments that comprise the conversation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transcriptSegments(GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentResponse... transcriptSegments) {
             return transcriptSegments(List.of(transcriptSegments));
         }

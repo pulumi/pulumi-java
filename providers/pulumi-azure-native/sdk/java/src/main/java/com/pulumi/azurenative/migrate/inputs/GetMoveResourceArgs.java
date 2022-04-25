@@ -19,6 +19,10 @@ public final class GetMoveResourceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="moveCollectionName", required=true)
     private String moveCollectionName;
 
+    /**
+     * @return The Move Collection Name.
+     * 
+     */
     public String moveCollectionName() {
         return this.moveCollectionName;
     }
@@ -30,6 +34,10 @@ public final class GetMoveResourceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="moveResourceName", required=true)
     private String moveResourceName;
 
+    /**
+     * @return The Move Resource Name.
+     * 
+     */
     public String moveResourceName() {
         return this.moveResourceName;
     }
@@ -41,6 +49,10 @@ public final class GetMoveResourceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The Resource Group Name.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetMoveResourceArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetMoveResourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param moveCollectionName The Move Collection Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder moveCollectionName(String moveCollectionName) {
             $.moveCollectionName = moveCollectionName;
             return this;
         }
 
+        /**
+         * @param moveResourceName The Move Resource Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder moveResourceName(String moveResourceName) {
             $.moveResourceName = moveResourceName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The Resource Group Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

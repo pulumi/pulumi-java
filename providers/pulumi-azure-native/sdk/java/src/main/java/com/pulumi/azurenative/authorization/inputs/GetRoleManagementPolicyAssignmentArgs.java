@@ -19,6 +19,10 @@ public final class GetRoleManagementPolicyAssignmentArgs extends com.pulumi.reso
     @Import(name="roleManagementPolicyAssignmentName", required=true)
     private String roleManagementPolicyAssignmentName;
 
+    /**
+     * @return The name of format {guid_guid} the role management policy assignment to get.
+     * 
+     */
     public String roleManagementPolicyAssignmentName() {
         return this.roleManagementPolicyAssignmentName;
     }
@@ -30,6 +34,10 @@ public final class GetRoleManagementPolicyAssignmentArgs extends com.pulumi.reso
     @Import(name="scope", required=true)
     private String scope;
 
+    /**
+     * @return The scope of the role management policy.
+     * 
+     */
     public String scope() {
         return this.scope;
     }
@@ -59,11 +67,23 @@ public final class GetRoleManagementPolicyAssignmentArgs extends com.pulumi.reso
             $ = new GetRoleManagementPolicyAssignmentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param roleManagementPolicyAssignmentName The name of format {guid_guid} the role management policy assignment to get.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleManagementPolicyAssignmentName(String roleManagementPolicyAssignmentName) {
             $.roleManagementPolicyAssignmentName = roleManagementPolicyAssignmentName;
             return this;
         }
 
+        /**
+         * @param scope The scope of the role management policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(String scope) {
             $.scope = scope;
             return this;

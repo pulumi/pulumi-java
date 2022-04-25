@@ -19,6 +19,10 @@ public final class GetConnectorArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="connectorName", required=true)
     private String connectorName;
 
+    /**
+     * @return Name of the cloud account connector
+     * 
+     */
     public String connectorName() {
         return this.connectorName;
     }
@@ -47,6 +51,12 @@ public final class GetConnectorArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetConnectorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param connectorName Name of the cloud account connector
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectorName(String connectorName) {
             $.connectorName = connectorName;
             return this;

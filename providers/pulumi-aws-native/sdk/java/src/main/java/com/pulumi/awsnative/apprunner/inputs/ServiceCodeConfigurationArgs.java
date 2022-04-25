@@ -34,6 +34,10 @@ public final class ServiceCodeConfigurationArgs extends com.pulumi.resources.Res
     @Import(name="configurationSource", required=true)
     private Output<ServiceCodeConfigurationConfigurationSource> configurationSource;
 
+    /**
+     * @return Configuration Source
+     * 
+     */
     public Output<ServiceCodeConfigurationConfigurationSource> configurationSource() {
         return this.configurationSource;
     }
@@ -72,11 +76,23 @@ public final class ServiceCodeConfigurationArgs extends com.pulumi.resources.Res
             return codeConfigurationValues(Output.of(codeConfigurationValues));
         }
 
+        /**
+         * @param configurationSource Configuration Source
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationSource(Output<ServiceCodeConfigurationConfigurationSource> configurationSource) {
             $.configurationSource = configurationSource;
             return this;
         }
 
+        /**
+         * @param configurationSource Configuration Source
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationSource(ServiceCodeConfigurationConfigurationSource configurationSource) {
             return configurationSource(Output.of(configurationSource));
         }

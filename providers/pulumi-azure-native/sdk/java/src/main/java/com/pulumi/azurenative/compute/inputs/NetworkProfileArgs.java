@@ -31,6 +31,10 @@ public final class NetworkProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="networkApiVersion")
     private @Nullable Output<Either<String,NetworkApiVersion>> networkApiVersion;
 
+    /**
+     * @return specifies the Microsoft.Network API version used when creating networking resources in the Network Interface Configurations
+     * 
+     */
     public Optional<Output<Either<String,NetworkApiVersion>>> networkApiVersion() {
         return Optional.ofNullable(this.networkApiVersion);
     }
@@ -42,6 +46,10 @@ public final class NetworkProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="networkInterfaceConfigurations")
     private @Nullable Output<List<VirtualMachineNetworkInterfaceConfigurationArgs>> networkInterfaceConfigurations;
 
+    /**
+     * @return Specifies the networking configurations that will be used to create the virtual machine networking resources.
+     * 
+     */
     public Optional<Output<List<VirtualMachineNetworkInterfaceConfigurationArgs>>> networkInterfaceConfigurations() {
         return Optional.ofNullable(this.networkInterfaceConfigurations);
     }
@@ -53,6 +61,10 @@ public final class NetworkProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="networkInterfaces")
     private @Nullable Output<List<NetworkInterfaceReferenceArgs>> networkInterfaces;
 
+    /**
+     * @return Specifies the list of resource Ids for the network interfaces associated with the virtual machine.
+     * 
+     */
     public Optional<Output<List<NetworkInterfaceReferenceArgs>>> networkInterfaces() {
         return Optional.ofNullable(this.networkInterfaces);
     }
@@ -83,45 +95,105 @@ public final class NetworkProfileArgs extends com.pulumi.resources.ResourceArgs 
             $ = new NetworkProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param networkApiVersion specifies the Microsoft.Network API version used when creating networking resources in the Network Interface Configurations
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkApiVersion(@Nullable Output<Either<String,NetworkApiVersion>> networkApiVersion) {
             $.networkApiVersion = networkApiVersion;
             return this;
         }
 
+        /**
+         * @param networkApiVersion specifies the Microsoft.Network API version used when creating networking resources in the Network Interface Configurations
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkApiVersion(Either<String,NetworkApiVersion> networkApiVersion) {
             return networkApiVersion(Output.of(networkApiVersion));
         }
 
+        /**
+         * @param networkApiVersion specifies the Microsoft.Network API version used when creating networking resources in the Network Interface Configurations
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkApiVersion(String networkApiVersion) {
             return networkApiVersion(Either.ofLeft(networkApiVersion));
         }
 
+        /**
+         * @param networkApiVersion specifies the Microsoft.Network API version used when creating networking resources in the Network Interface Configurations
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkApiVersion(NetworkApiVersion networkApiVersion) {
             return networkApiVersion(Either.ofRight(networkApiVersion));
         }
 
+        /**
+         * @param networkInterfaceConfigurations Specifies the networking configurations that will be used to create the virtual machine networking resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaceConfigurations(@Nullable Output<List<VirtualMachineNetworkInterfaceConfigurationArgs>> networkInterfaceConfigurations) {
             $.networkInterfaceConfigurations = networkInterfaceConfigurations;
             return this;
         }
 
+        /**
+         * @param networkInterfaceConfigurations Specifies the networking configurations that will be used to create the virtual machine networking resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaceConfigurations(List<VirtualMachineNetworkInterfaceConfigurationArgs> networkInterfaceConfigurations) {
             return networkInterfaceConfigurations(Output.of(networkInterfaceConfigurations));
         }
 
+        /**
+         * @param networkInterfaceConfigurations Specifies the networking configurations that will be used to create the virtual machine networking resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaceConfigurations(VirtualMachineNetworkInterfaceConfigurationArgs... networkInterfaceConfigurations) {
             return networkInterfaceConfigurations(List.of(networkInterfaceConfigurations));
         }
 
+        /**
+         * @param networkInterfaces Specifies the list of resource Ids for the network interfaces associated with the virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaces(@Nullable Output<List<NetworkInterfaceReferenceArgs>> networkInterfaces) {
             $.networkInterfaces = networkInterfaces;
             return this;
         }
 
+        /**
+         * @param networkInterfaces Specifies the list of resource Ids for the network interfaces associated with the virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaces(List<NetworkInterfaceReferenceArgs> networkInterfaces) {
             return networkInterfaces(Output.of(networkInterfaces));
         }
 
+        /**
+         * @param networkInterfaces Specifies the list of resource Ids for the network interfaces associated with the virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaces(NetworkInterfaceReferenceArgs... networkInterfaces) {
             return networkInterfaces(List.of(networkInterfaces));
         }

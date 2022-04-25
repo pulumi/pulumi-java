@@ -23,6 +23,10 @@ public final class StatusDetailPropertiesResponse extends com.pulumi.resources.I
     @Import(name="code", required=true)
     private String code;
 
+    /**
+     * @return The code of the status.
+     * 
+     */
     public String code() {
         return this.code;
     }
@@ -34,6 +38,10 @@ public final class StatusDetailPropertiesResponse extends com.pulumi.resources.I
     @Import(name="correlationId", required=true)
     private String correlationId;
 
+    /**
+     * @return The correlation ID of the status.
+     * 
+     */
     public String correlationId() {
         return this.correlationId;
     }
@@ -45,6 +53,10 @@ public final class StatusDetailPropertiesResponse extends com.pulumi.resources.I
     @Import(name="description", required=true)
     private String description;
 
+    /**
+     * @return The description of the status.
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -56,6 +68,10 @@ public final class StatusDetailPropertiesResponse extends com.pulumi.resources.I
     @Import(name="timestamp", required=true)
     private String timestamp;
 
+    /**
+     * @return The timestamp of the status.
+     * 
+     */
     public String timestamp() {
         return this.timestamp;
     }
@@ -67,6 +83,10 @@ public final class StatusDetailPropertiesResponse extends com.pulumi.resources.I
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The component of the connected registry corresponding to the status.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -99,26 +119,56 @@ public final class StatusDetailPropertiesResponse extends com.pulumi.resources.I
             $ = new StatusDetailPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param code The code of the status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(String code) {
             $.code = code;
             return this;
         }
 
+        /**
+         * @param correlationId The correlation ID of the status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder correlationId(String correlationId) {
             $.correlationId = correlationId;
             return this;
         }
 
+        /**
+         * @param description The description of the status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param timestamp The timestamp of the status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timestamp(String timestamp) {
             $.timestamp = timestamp;
             return this;
         }
 
+        /**
+         * @param type The component of the connected registry corresponding to the status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

@@ -25,6 +25,10 @@ public final class RuntimeMetadataResponse extends com.pulumi.resources.InvokeAr
     @Import(name="parameters", required=true)
     private List<ParameterMetadataResponse> parameters;
 
+    /**
+     * @return The parameters for the template.
+     * 
+     */
     public List<ParameterMetadataResponse> parameters() {
         return this.parameters;
     }
@@ -36,6 +40,10 @@ public final class RuntimeMetadataResponse extends com.pulumi.resources.InvokeAr
     @Import(name="sdkInfo", required=true)
     private SDKInfoResponse sdkInfo;
 
+    /**
+     * @return SDK Info for the template.
+     * 
+     */
     public SDKInfoResponse sdkInfo() {
         return this.sdkInfo;
     }
@@ -65,15 +73,33 @@ public final class RuntimeMetadataResponse extends com.pulumi.resources.InvokeAr
             $ = new RuntimeMetadataResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param parameters The parameters for the template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(List<ParameterMetadataResponse> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters The parameters for the template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(ParameterMetadataResponse... parameters) {
             return parameters(List.of(parameters));
         }
 
+        /**
+         * @param sdkInfo SDK Info for the template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sdkInfo(SDKInfoResponse sdkInfo) {
             $.sdkInfo = sdkInfo;
             return this;

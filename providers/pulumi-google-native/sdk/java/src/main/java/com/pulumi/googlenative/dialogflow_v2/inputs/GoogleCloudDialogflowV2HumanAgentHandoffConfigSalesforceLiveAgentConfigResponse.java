@@ -23,6 +23,10 @@ public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveA
     @Import(name="buttonId", required=true)
     private String buttonId;
 
+    /**
+     * @return Live Agent chat button ID.
+     * 
+     */
     public String buttonId() {
         return this.buttonId;
     }
@@ -34,6 +38,10 @@ public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveA
     @Import(name="deploymentId", required=true)
     private String deploymentId;
 
+    /**
+     * @return Live Agent deployment ID.
+     * 
+     */
     public String deploymentId() {
         return this.deploymentId;
     }
@@ -45,6 +53,10 @@ public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveA
     @Import(name="endpointDomain", required=true)
     private String endpointDomain;
 
+    /**
+     * @return Domain of the Live Agent endpoint for this agent. You can find the endpoint URL in the `Live Agent settings` page. For example if URL has the form https://d.la4-c2-phx.salesforceliveagent.com/..., you should fill in d.la4-c2-phx.salesforceliveagent.com.
+     * 
+     */
     public String endpointDomain() {
         return this.endpointDomain;
     }
@@ -56,6 +68,10 @@ public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveA
     @Import(name="organizationId", required=true)
     private String organizationId;
 
+    /**
+     * @return The organization ID of the Salesforce account.
+     * 
+     */
     public String organizationId() {
         return this.organizationId;
     }
@@ -87,21 +103,45 @@ public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveA
             $ = new GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveAgentConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param buttonId Live Agent chat button ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder buttonId(String buttonId) {
             $.buttonId = buttonId;
             return this;
         }
 
+        /**
+         * @param deploymentId Live Agent deployment ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentId(String deploymentId) {
             $.deploymentId = deploymentId;
             return this;
         }
 
+        /**
+         * @param endpointDomain Domain of the Live Agent endpoint for this agent. You can find the endpoint URL in the `Live Agent settings` page. For example if URL has the form https://d.la4-c2-phx.salesforceliveagent.com/..., you should fill in d.la4-c2-phx.salesforceliveagent.com.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointDomain(String endpointDomain) {
             $.endpointDomain = endpointDomain;
             return this;
         }
 
+        /**
+         * @param organizationId The organization ID of the Salesforce account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder organizationId(String organizationId) {
             $.organizationId = organizationId;
             return this;

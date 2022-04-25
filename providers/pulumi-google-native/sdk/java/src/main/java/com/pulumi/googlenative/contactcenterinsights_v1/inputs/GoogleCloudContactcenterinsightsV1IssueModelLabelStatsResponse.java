@@ -24,6 +24,10 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelLabelStatsRespons
     @Import(name="analyzedConversationsCount", required=true)
     private String analyzedConversationsCount;
 
+    /**
+     * @return Number of conversations the issue model has analyzed at this point in time.
+     * 
+     */
     public String analyzedConversationsCount() {
         return this.analyzedConversationsCount;
     }
@@ -35,6 +39,10 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelLabelStatsRespons
     @Import(name="issueStats", required=true)
     private Map<String,String> issueStats;
 
+    /**
+     * @return Statistics on each issue. Key is the issue&#39;s resource name.
+     * 
+     */
     public Map<String,String> issueStats() {
         return this.issueStats;
     }
@@ -46,6 +54,10 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelLabelStatsRespons
     @Import(name="unclassifiedConversationsCount", required=true)
     private String unclassifiedConversationsCount;
 
+    /**
+     * @return Number of analyzed conversations for which no issue was applicable at this point in time.
+     * 
+     */
     public String unclassifiedConversationsCount() {
         return this.unclassifiedConversationsCount;
     }
@@ -76,16 +88,34 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelLabelStatsRespons
             $ = new GoogleCloudContactcenterinsightsV1IssueModelLabelStatsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param analyzedConversationsCount Number of conversations the issue model has analyzed at this point in time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder analyzedConversationsCount(String analyzedConversationsCount) {
             $.analyzedConversationsCount = analyzedConversationsCount;
             return this;
         }
 
+        /**
+         * @param issueStats Statistics on each issue. Key is the issue&#39;s resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder issueStats(Map<String,String> issueStats) {
             $.issueStats = issueStats;
             return this;
         }
 
+        /**
+         * @param unclassifiedConversationsCount Number of analyzed conversations for which no issue was applicable at this point in time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder unclassifiedConversationsCount(String unclassifiedConversationsCount) {
             $.unclassifiedConversationsCount = unclassifiedConversationsCount;
             return this;

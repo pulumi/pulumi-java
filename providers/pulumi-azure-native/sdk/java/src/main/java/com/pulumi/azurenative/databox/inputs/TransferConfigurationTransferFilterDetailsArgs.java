@@ -26,6 +26,10 @@ public final class TransferConfigurationTransferFilterDetailsArgs extends com.pu
     @Import(name="include")
     private @Nullable Output<TransferFilterDetailsArgs> include;
 
+    /**
+     * @return Details of the filtering the transfer of data.
+     * 
+     */
     public Optional<Output<TransferFilterDetailsArgs>> include() {
         return Optional.ofNullable(this.include);
     }
@@ -54,11 +58,23 @@ public final class TransferConfigurationTransferFilterDetailsArgs extends com.pu
             $ = new TransferConfigurationTransferFilterDetailsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param include Details of the filtering the transfer of data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder include(@Nullable Output<TransferFilterDetailsArgs> include) {
             $.include = include;
             return this;
         }
 
+        /**
+         * @param include Details of the filtering the transfer of data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder include(TransferFilterDetailsArgs include) {
             return include(Output.of(include));
         }

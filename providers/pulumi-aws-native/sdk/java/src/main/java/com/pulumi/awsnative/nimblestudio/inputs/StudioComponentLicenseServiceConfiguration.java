@@ -25,6 +25,10 @@ public final class StudioComponentLicenseServiceConfiguration extends com.pulumi
     @Import(name="endpoint")
     private @Nullable String endpoint;
 
+    /**
+     * @return &lt;p&gt;The endpoint of the license service that is accessed by the studio component resource.&lt;/p&gt;
+     * 
+     */
     public Optional<String> endpoint() {
         return Optional.ofNullable(this.endpoint);
     }
@@ -53,6 +57,12 @@ public final class StudioComponentLicenseServiceConfiguration extends com.pulumi
             $ = new StudioComponentLicenseServiceConfiguration(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endpoint &lt;p&gt;The endpoint of the license service that is accessed by the studio component resource.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoint(@Nullable String endpoint) {
             $.endpoint = endpoint;
             return this;

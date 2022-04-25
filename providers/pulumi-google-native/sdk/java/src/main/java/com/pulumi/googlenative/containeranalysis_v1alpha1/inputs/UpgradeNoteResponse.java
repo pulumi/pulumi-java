@@ -26,6 +26,10 @@ public final class UpgradeNoteResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="distributions", required=true)
     private List<UpgradeDistributionResponse> distributions;
 
+    /**
+     * @return Metadata about the upgrade for each specific operating system.
+     * 
+     */
     public List<UpgradeDistributionResponse> distributions() {
         return this.distributions;
     }
@@ -37,6 +41,10 @@ public final class UpgradeNoteResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="package", required=true)
     private String package_;
 
+    /**
+     * @return Required - The package this Upgrade is for.
+     * 
+     */
     public String package_() {
         return this.package_;
     }
@@ -48,6 +56,10 @@ public final class UpgradeNoteResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="version", required=true)
     private VersionResponse version;
 
+    /**
+     * @return Required - The version of the package in machine + human readable form.
+     * 
+     */
     public VersionResponse version() {
         return this.version;
     }
@@ -78,20 +90,44 @@ public final class UpgradeNoteResponse extends com.pulumi.resources.InvokeArgs {
             $ = new UpgradeNoteResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param distributions Metadata about the upgrade for each specific operating system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder distributions(List<UpgradeDistributionResponse> distributions) {
             $.distributions = distributions;
             return this;
         }
 
+        /**
+         * @param distributions Metadata about the upgrade for each specific operating system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder distributions(UpgradeDistributionResponse... distributions) {
             return distributions(List.of(distributions));
         }
 
+        /**
+         * @param package_ Required - The package this Upgrade is for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder package_(String package_) {
             $.package_ = package_;
             return this;
         }
 
+        /**
+         * @param version Required - The version of the package in machine + human readable form.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(VersionResponse version) {
             $.version = version;
             return this;

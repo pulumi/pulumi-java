@@ -19,87 +19,87 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetWorkspaceResult {
     /**
-     * The workspace provider authorizations.
+     * @return The workspace provider authorizations.
      * 
      */
     private final @Nullable List<WorkspaceProviderAuthorizationResponse> authorizations;
     /**
-     * Indicates the Object ID, PUID and Application ID of entity that created the workspace.
+     * @return Indicates the Object ID, PUID and Application ID of entity that created the workspace.
      * 
      */
     private final @Nullable CreatedByResponse createdBy;
     /**
-     * Specifies the date and time when the workspace is created.
+     * @return Specifies the date and time when the workspace is created.
      * 
      */
     private final String createdDateTime;
     /**
-     * Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
      */
     private final String id;
     /**
-     * The geo-location where the resource lives
+     * @return The geo-location where the resource lives
      * 
      */
     private final String location;
     /**
-     * The managed resource group Id.
+     * @return The managed resource group Id.
      * 
      */
     private final String managedResourceGroupId;
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
      */
     private final String name;
     /**
-     * The workspace&#39;s custom parameters.
+     * @return The workspace&#39;s custom parameters.
      * 
      */
     private final @Nullable WorkspaceCustomParametersResponse parameters;
     /**
-     * The workspace provisioning state.
+     * @return The workspace provisioning state.
      * 
      */
     private final String provisioningState;
     /**
-     * The SKU of the resource.
+     * @return The SKU of the resource.
      * 
      */
     private final @Nullable SkuResponse sku;
     /**
-     * The details of Managed Identity of Storage Account
+     * @return The details of Managed Identity of Storage Account
      * 
      */
     private final @Nullable ManagedIdentityConfigurationResponse storageAccountIdentity;
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
+     * @return The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
      * 
      */
     private final String type;
     /**
-     * The blob URI where the UI definition file is located.
+     * @return The blob URI where the UI definition file is located.
      * 
      */
     private final @Nullable String uiDefinitionUri;
     /**
-     * Indicates the Object ID, PUID and Application ID of entity that last updated the workspace.
+     * @return Indicates the Object ID, PUID and Application ID of entity that last updated the workspace.
      * 
      */
     private final @Nullable CreatedByResponse updatedBy;
     /**
-     * The unique identifier of the databricks workspace in databricks control plane.
+     * @return The unique identifier of the databricks workspace in databricks control plane.
      * 
      */
     private final String workspaceId;
     /**
-     * The workspace URL which is of the format &#39;adb-{workspaceId}.{random}.azuredatabricks.net&#39;
+     * @return The workspace URL which is of the format &#39;adb-{workspaceId}.{random}.azuredatabricks.net&#39;
      * 
      */
     private final String workspaceUrl;
@@ -143,121 +143,121 @@ public final class GetWorkspaceResult {
     }
 
     /**
-     * The workspace provider authorizations.
+     * @return The workspace provider authorizations.
      * 
-    */
+     */
     public List<WorkspaceProviderAuthorizationResponse> authorizations() {
         return this.authorizations == null ? List.of() : this.authorizations;
     }
     /**
-     * Indicates the Object ID, PUID and Application ID of entity that created the workspace.
+     * @return Indicates the Object ID, PUID and Application ID of entity that created the workspace.
      * 
-    */
+     */
     public Optional<CreatedByResponse> createdBy() {
         return Optional.ofNullable(this.createdBy);
     }
     /**
-     * Specifies the date and time when the workspace is created.
+     * @return Specifies the date and time when the workspace is created.
      * 
-    */
+     */
     public String createdDateTime() {
         return this.createdDateTime;
     }
     /**
-     * Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The geo-location where the resource lives
+     * @return The geo-location where the resource lives
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * The managed resource group Id.
+     * @return The managed resource group Id.
      * 
-    */
+     */
     public String managedResourceGroupId() {
         return this.managedResourceGroupId;
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The workspace&#39;s custom parameters.
+     * @return The workspace&#39;s custom parameters.
      * 
-    */
+     */
     public Optional<WorkspaceCustomParametersResponse> parameters() {
         return Optional.ofNullable(this.parameters);
     }
     /**
-     * The workspace provisioning state.
+     * @return The workspace provisioning state.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The SKU of the resource.
+     * @return The SKU of the resource.
      * 
-    */
+     */
     public Optional<SkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
-     * The details of Managed Identity of Storage Account
+     * @return The details of Managed Identity of Storage Account
      * 
-    */
+     */
     public Optional<ManagedIdentityConfigurationResponse> storageAccountIdentity() {
         return Optional.ofNullable(this.storageAccountIdentity);
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
+     * @return The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The blob URI where the UI definition file is located.
+     * @return The blob URI where the UI definition file is located.
      * 
-    */
+     */
     public Optional<String> uiDefinitionUri() {
         return Optional.ofNullable(this.uiDefinitionUri);
     }
     /**
-     * Indicates the Object ID, PUID and Application ID of entity that last updated the workspace.
+     * @return Indicates the Object ID, PUID and Application ID of entity that last updated the workspace.
      * 
-    */
+     */
     public Optional<CreatedByResponse> updatedBy() {
         return Optional.ofNullable(this.updatedBy);
     }
     /**
-     * The unique identifier of the databricks workspace in databricks control plane.
+     * @return The unique identifier of the databricks workspace in databricks control plane.
      * 
-    */
+     */
     public String workspaceId() {
         return this.workspaceId;
     }
     /**
-     * The workspace URL which is of the format &#39;adb-{workspaceId}.{random}.azuredatabricks.net&#39;
+     * @return The workspace URL which is of the format &#39;adb-{workspaceId}.{random}.azuredatabricks.net&#39;
      * 
-    */
+     */
     public String workspaceUrl() {
         return this.workspaceUrl;
     }

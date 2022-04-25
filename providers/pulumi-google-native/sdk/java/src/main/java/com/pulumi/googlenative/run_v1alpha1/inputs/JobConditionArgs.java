@@ -26,6 +26,10 @@ public final class JobConditionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="lastTransitionTime")
     private @Nullable Output<String> lastTransitionTime;
 
+    /**
+     * @return Optional. Last time the condition transitioned from one status to another.
+     * 
+     */
     public Optional<Output<String>> lastTransitionTime() {
         return Optional.ofNullable(this.lastTransitionTime);
     }
@@ -37,6 +41,10 @@ public final class JobConditionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="message")
     private @Nullable Output<String> message;
 
+    /**
+     * @return Optional. Human readable message indicating details about the current status.
+     * 
+     */
     public Optional<Output<String>> message() {
         return Optional.ofNullable(this.message);
     }
@@ -48,6 +56,10 @@ public final class JobConditionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="reason")
     private @Nullable Output<String> reason;
 
+    /**
+     * @return Optional. One-word CamelCase reason for the condition&#39;s last transition.
+     * 
+     */
     public Optional<Output<String>> reason() {
         return Optional.ofNullable(this.reason);
     }
@@ -59,6 +71,10 @@ public final class JobConditionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="severity")
     private @Nullable Output<String> severity;
 
+    /**
+     * @return Optional. How to interpret failures of this condition, one of Error, Warning, Info
+     * 
+     */
     public Optional<Output<String>> severity() {
         return Optional.ofNullable(this.severity);
     }
@@ -70,6 +86,10 @@ public final class JobConditionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="status", required=true)
     private Output<String> status;
 
+    /**
+     * @return Status of the condition, one of True, False, Unknown.
+     * 
+     */
     public Output<String> status() {
         return this.status;
     }
@@ -81,6 +101,10 @@ public final class JobConditionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Type is used to communicate the status of the reconciliation process. See also: https://github.com/knative/serving/blob/main/docs/spec/errors.md#error-conditions-and-reporting Types include: * &#34;Completed&#34;: True when the Job has successfully completed. * &#34;Started&#34;: True when the Job has successfully started running. * &#34;ResourcesAvailable&#34;: True when underlying resources have been provisioned.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -114,56 +138,128 @@ public final class JobConditionArgs extends com.pulumi.resources.ResourceArgs {
             $ = new JobConditionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param lastTransitionTime Optional. Last time the condition transitioned from one status to another.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastTransitionTime(@Nullable Output<String> lastTransitionTime) {
             $.lastTransitionTime = lastTransitionTime;
             return this;
         }
 
+        /**
+         * @param lastTransitionTime Optional. Last time the condition transitioned from one status to another.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastTransitionTime(String lastTransitionTime) {
             return lastTransitionTime(Output.of(lastTransitionTime));
         }
 
+        /**
+         * @param message Optional. Human readable message indicating details about the current status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(@Nullable Output<String> message) {
             $.message = message;
             return this;
         }
 
+        /**
+         * @param message Optional. Human readable message indicating details about the current status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(String message) {
             return message(Output.of(message));
         }
 
+        /**
+         * @param reason Optional. One-word CamelCase reason for the condition&#39;s last transition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reason(@Nullable Output<String> reason) {
             $.reason = reason;
             return this;
         }
 
+        /**
+         * @param reason Optional. One-word CamelCase reason for the condition&#39;s last transition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reason(String reason) {
             return reason(Output.of(reason));
         }
 
+        /**
+         * @param severity Optional. How to interpret failures of this condition, one of Error, Warning, Info
+         * 
+         * @return builder
+         * 
+         */
         public Builder severity(@Nullable Output<String> severity) {
             $.severity = severity;
             return this;
         }
 
+        /**
+         * @param severity Optional. How to interpret failures of this condition, one of Error, Warning, Info
+         * 
+         * @return builder
+         * 
+         */
         public Builder severity(String severity) {
             return severity(Output.of(severity));
         }
 
+        /**
+         * @param status Status of the condition, one of True, False, Unknown.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(Output<String> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status Status of the condition, one of True, False, Unknown.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             return status(Output.of(status));
         }
 
+        /**
+         * @param type Type is used to communicate the status of the reconciliation process. See also: https://github.com/knative/serving/blob/main/docs/spec/errors.md#error-conditions-and-reporting Types include: * &#34;Completed&#34;: True when the Job has successfully completed. * &#34;Started&#34;: True when the Job has successfully started running. * &#34;ResourcesAvailable&#34;: True when underlying resources have been provisioned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type is used to communicate the status of the reconciliation process. See also: https://github.com/knative/serving/blob/main/docs/spec/errors.md#error-conditions-and-reporting Types include: * &#34;Completed&#34;: True when the Job has successfully completed. * &#34;Started&#34;: True when the Job has successfully started running. * &#34;ResourcesAvailable&#34;: True when underlying resources have been provisioned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

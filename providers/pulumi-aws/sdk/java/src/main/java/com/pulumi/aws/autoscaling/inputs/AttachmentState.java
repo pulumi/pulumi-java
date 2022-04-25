@@ -22,6 +22,10 @@ public final class AttachmentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="albTargetGroupArn")
     private @Nullable Output<String> albTargetGroupArn;
 
+    /**
+     * @return The ARN of an ALB Target Group.
+     * 
+     */
     public Optional<Output<String>> albTargetGroupArn() {
         return Optional.ofNullable(this.albTargetGroupArn);
     }
@@ -33,6 +37,10 @@ public final class AttachmentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="autoscalingGroupName")
     private @Nullable Output<String> autoscalingGroupName;
 
+    /**
+     * @return Name of ASG to associate with the ELB.
+     * 
+     */
     public Optional<Output<String>> autoscalingGroupName() {
         return Optional.ofNullable(this.autoscalingGroupName);
     }
@@ -44,6 +52,10 @@ public final class AttachmentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="elb")
     private @Nullable Output<String> elb;
 
+    /**
+     * @return The name of the ELB.
+     * 
+     */
     public Optional<Output<String>> elb() {
         return Optional.ofNullable(this.elb);
     }
@@ -74,29 +86,65 @@ public final class AttachmentState extends com.pulumi.resources.ResourceArgs {
             $ = new AttachmentState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param albTargetGroupArn The ARN of an ALB Target Group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder albTargetGroupArn(@Nullable Output<String> albTargetGroupArn) {
             $.albTargetGroupArn = albTargetGroupArn;
             return this;
         }
 
+        /**
+         * @param albTargetGroupArn The ARN of an ALB Target Group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder albTargetGroupArn(String albTargetGroupArn) {
             return albTargetGroupArn(Output.of(albTargetGroupArn));
         }
 
+        /**
+         * @param autoscalingGroupName Name of ASG to associate with the ELB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoscalingGroupName(@Nullable Output<String> autoscalingGroupName) {
             $.autoscalingGroupName = autoscalingGroupName;
             return this;
         }
 
+        /**
+         * @param autoscalingGroupName Name of ASG to associate with the ELB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoscalingGroupName(String autoscalingGroupName) {
             return autoscalingGroupName(Output.of(autoscalingGroupName));
         }
 
+        /**
+         * @param elb The name of the ELB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder elb(@Nullable Output<String> elb) {
             $.elb = elb;
             return this;
         }
 
+        /**
+         * @param elb The name of the ELB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder elb(String elb) {
             return elb(Output.of(elb));
         }

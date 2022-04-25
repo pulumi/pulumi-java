@@ -28,6 +28,10 @@ public final class CustomScaleRuleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="auth")
     private @Nullable List<ScaleRuleAuthResponse> auth;
 
+    /**
+     * @return Authentication secrets for the custom scale rule.
+     * 
+     */
     public Optional<List<ScaleRuleAuthResponse>> auth() {
         return Optional.ofNullable(this.auth);
     }
@@ -39,6 +43,10 @@ public final class CustomScaleRuleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="metadata")
     private @Nullable Map<String,String> metadata;
 
+    /**
+     * @return Metadata properties to describe custom scale rule.
+     * 
+     */
     public Optional<Map<String,String>> metadata() {
         return Optional.ofNullable(this.metadata);
     }
@@ -51,6 +59,11 @@ public final class CustomScaleRuleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return Type of the custom scale rule
+     * eg: azure-servicebus, redis etc.
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -81,20 +94,45 @@ public final class CustomScaleRuleResponse extends com.pulumi.resources.InvokeAr
             $ = new CustomScaleRuleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param auth Authentication secrets for the custom scale rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder auth(@Nullable List<ScaleRuleAuthResponse> auth) {
             $.auth = auth;
             return this;
         }
 
+        /**
+         * @param auth Authentication secrets for the custom scale rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder auth(ScaleRuleAuthResponse... auth) {
             return auth(List.of(auth));
         }
 
+        /**
+         * @param metadata Metadata properties to describe custom scale rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(@Nullable Map<String,String> metadata) {
             $.metadata = metadata;
             return this;
         }
 
+        /**
+         * @param type Type of the custom scale rule
+         * eg: azure-servicebus, redis etc.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;

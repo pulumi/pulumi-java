@@ -33,6 +33,10 @@ public final class VMwareDetailsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="agentCount")
     private @Nullable String agentCount;
 
+    /**
+     * @return The number of source and target servers configured to talk to this CS.
+     * 
+     */
     public Optional<String> agentCount() {
         return Optional.ofNullable(this.agentCount);
     }
@@ -44,6 +48,10 @@ public final class VMwareDetailsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="agentExpiryDate")
     private @Nullable String agentExpiryDate;
 
+    /**
+     * @return Agent expiry date.
+     * 
+     */
     public Optional<String> agentExpiryDate() {
         return Optional.ofNullable(this.agentExpiryDate);
     }
@@ -55,6 +63,10 @@ public final class VMwareDetailsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="agentVersion")
     private @Nullable String agentVersion;
 
+    /**
+     * @return The agent Version.
+     * 
+     */
     public Optional<String> agentVersion() {
         return Optional.ofNullable(this.agentVersion);
     }
@@ -66,6 +78,10 @@ public final class VMwareDetailsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="agentVersionDetails")
     private @Nullable VersionDetailsResponse agentVersionDetails;
 
+    /**
+     * @return The agent version details.
+     * 
+     */
     public Optional<VersionDetailsResponse> agentVersionDetails() {
         return Optional.ofNullable(this.agentVersionDetails);
     }
@@ -77,6 +93,10 @@ public final class VMwareDetailsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="availableMemoryInBytes")
     private @Nullable Double availableMemoryInBytes;
 
+    /**
+     * @return The available memory.
+     * 
+     */
     public Optional<Double> availableMemoryInBytes() {
         return Optional.ofNullable(this.availableMemoryInBytes);
     }
@@ -88,6 +108,10 @@ public final class VMwareDetailsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="availableSpaceInBytes")
     private @Nullable Double availableSpaceInBytes;
 
+    /**
+     * @return The available space.
+     * 
+     */
     public Optional<Double> availableSpaceInBytes() {
         return Optional.ofNullable(this.availableSpaceInBytes);
     }
@@ -99,6 +123,10 @@ public final class VMwareDetailsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="cpuLoad")
     private @Nullable String cpuLoad;
 
+    /**
+     * @return The percentage of the CPU load.
+     * 
+     */
     public Optional<String> cpuLoad() {
         return Optional.ofNullable(this.cpuLoad);
     }
@@ -110,6 +138,10 @@ public final class VMwareDetailsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="cpuLoadStatus")
     private @Nullable String cpuLoadStatus;
 
+    /**
+     * @return The CPU load status.
+     * 
+     */
     public Optional<String> cpuLoadStatus() {
         return Optional.ofNullable(this.cpuLoadStatus);
     }
@@ -121,6 +153,10 @@ public final class VMwareDetailsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="csServiceStatus")
     private @Nullable String csServiceStatus;
 
+    /**
+     * @return The CS service status.
+     * 
+     */
     public Optional<String> csServiceStatus() {
         return Optional.ofNullable(this.csServiceStatus);
     }
@@ -132,6 +168,10 @@ public final class VMwareDetailsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="databaseServerLoad")
     private @Nullable String databaseServerLoad;
 
+    /**
+     * @return The database server load.
+     * 
+     */
     public Optional<String> databaseServerLoad() {
         return Optional.ofNullable(this.databaseServerLoad);
     }
@@ -143,6 +183,10 @@ public final class VMwareDetailsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="databaseServerLoadStatus")
     private @Nullable String databaseServerLoadStatus;
 
+    /**
+     * @return The database server load status.
+     * 
+     */
     public Optional<String> databaseServerLoadStatus() {
         return Optional.ofNullable(this.databaseServerLoadStatus);
     }
@@ -154,6 +198,10 @@ public final class VMwareDetailsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="hostName")
     private @Nullable String hostName;
 
+    /**
+     * @return The host name.
+     * 
+     */
     public Optional<String> hostName() {
         return Optional.ofNullable(this.hostName);
     }
@@ -166,6 +214,11 @@ public final class VMwareDetailsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="instanceType", required=true)
     private String instanceType;
 
+    /**
+     * @return Gets the class type. Overridden in derived classes.
+     * Expected value is &#39;VMware&#39;.
+     * 
+     */
     public String instanceType() {
         return this.instanceType;
     }
@@ -177,6 +230,10 @@ public final class VMwareDetailsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="ipAddress")
     private @Nullable String ipAddress;
 
+    /**
+     * @return The IP address.
+     * 
+     */
     public Optional<String> ipAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
@@ -188,6 +245,10 @@ public final class VMwareDetailsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="lastHeartbeat")
     private @Nullable String lastHeartbeat;
 
+    /**
+     * @return The last heartbeat received from CS server.
+     * 
+     */
     public Optional<String> lastHeartbeat() {
         return Optional.ofNullable(this.lastHeartbeat);
     }
@@ -199,6 +260,10 @@ public final class VMwareDetailsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="masterTargetServers")
     private @Nullable List<MasterTargetServerResponse> masterTargetServers;
 
+    /**
+     * @return The list of Master Target servers associated with the fabric.
+     * 
+     */
     public Optional<List<MasterTargetServerResponse>> masterTargetServers() {
         return Optional.ofNullable(this.masterTargetServers);
     }
@@ -210,6 +275,10 @@ public final class VMwareDetailsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="memoryUsageStatus")
     private @Nullable String memoryUsageStatus;
 
+    /**
+     * @return The memory usage status.
+     * 
+     */
     public Optional<String> memoryUsageStatus() {
         return Optional.ofNullable(this.memoryUsageStatus);
     }
@@ -221,6 +290,10 @@ public final class VMwareDetailsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="processServerCount")
     private @Nullable String processServerCount;
 
+    /**
+     * @return The number of process servers.
+     * 
+     */
     public Optional<String> processServerCount() {
         return Optional.ofNullable(this.processServerCount);
     }
@@ -232,6 +305,10 @@ public final class VMwareDetailsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="processServers")
     private @Nullable List<ProcessServerResponse> processServers;
 
+    /**
+     * @return The list of Process Servers associated with the fabric.
+     * 
+     */
     public Optional<List<ProcessServerResponse>> processServers() {
         return Optional.ofNullable(this.processServers);
     }
@@ -243,6 +320,10 @@ public final class VMwareDetailsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="protectedServers")
     private @Nullable String protectedServers;
 
+    /**
+     * @return The number of protected servers.
+     * 
+     */
     public Optional<String> protectedServers() {
         return Optional.ofNullable(this.protectedServers);
     }
@@ -254,6 +335,10 @@ public final class VMwareDetailsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="psTemplateVersion")
     private @Nullable String psTemplateVersion;
 
+    /**
+     * @return PS template version.
+     * 
+     */
     public Optional<String> psTemplateVersion() {
         return Optional.ofNullable(this.psTemplateVersion);
     }
@@ -265,6 +350,10 @@ public final class VMwareDetailsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="replicationPairCount")
     private @Nullable String replicationPairCount;
 
+    /**
+     * @return The number of replication pairs configured in this CS.
+     * 
+     */
     public Optional<String> replicationPairCount() {
         return Optional.ofNullable(this.replicationPairCount);
     }
@@ -276,6 +365,10 @@ public final class VMwareDetailsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="runAsAccounts")
     private @Nullable List<RunAsAccountResponse> runAsAccounts;
 
+    /**
+     * @return The list of run as accounts created on the server.
+     * 
+     */
     public Optional<List<RunAsAccountResponse>> runAsAccounts() {
         return Optional.ofNullable(this.runAsAccounts);
     }
@@ -287,6 +380,10 @@ public final class VMwareDetailsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="spaceUsageStatus")
     private @Nullable String spaceUsageStatus;
 
+    /**
+     * @return The space usage status.
+     * 
+     */
     public Optional<String> spaceUsageStatus() {
         return Optional.ofNullable(this.spaceUsageStatus);
     }
@@ -298,6 +395,10 @@ public final class VMwareDetailsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="sslCertExpiryDate")
     private @Nullable String sslCertExpiryDate;
 
+    /**
+     * @return CS SSL cert expiry date.
+     * 
+     */
     public Optional<String> sslCertExpiryDate() {
         return Optional.ofNullable(this.sslCertExpiryDate);
     }
@@ -309,6 +410,10 @@ public final class VMwareDetailsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="sslCertExpiryRemainingDays")
     private @Nullable Integer sslCertExpiryRemainingDays;
 
+    /**
+     * @return CS SSL cert expiry date.
+     * 
+     */
     public Optional<Integer> sslCertExpiryRemainingDays() {
         return Optional.ofNullable(this.sslCertExpiryRemainingDays);
     }
@@ -320,6 +425,10 @@ public final class VMwareDetailsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="systemLoad")
     private @Nullable String systemLoad;
 
+    /**
+     * @return The percentage of the system load.
+     * 
+     */
     public Optional<String> systemLoad() {
         return Optional.ofNullable(this.systemLoad);
     }
@@ -331,6 +440,10 @@ public final class VMwareDetailsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="systemLoadStatus")
     private @Nullable String systemLoadStatus;
 
+    /**
+     * @return The system load status.
+     * 
+     */
     public Optional<String> systemLoadStatus() {
         return Optional.ofNullable(this.systemLoadStatus);
     }
@@ -342,6 +455,10 @@ public final class VMwareDetailsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="totalMemoryInBytes")
     private @Nullable Double totalMemoryInBytes;
 
+    /**
+     * @return The total memory.
+     * 
+     */
     public Optional<Double> totalMemoryInBytes() {
         return Optional.ofNullable(this.totalMemoryInBytes);
     }
@@ -353,6 +470,10 @@ public final class VMwareDetailsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="totalSpaceInBytes")
     private @Nullable Double totalSpaceInBytes;
 
+    /**
+     * @return The total space.
+     * 
+     */
     public Optional<Double> totalSpaceInBytes() {
         return Optional.ofNullable(this.totalSpaceInBytes);
     }
@@ -364,6 +485,10 @@ public final class VMwareDetailsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="versionStatus")
     private @Nullable String versionStatus;
 
+    /**
+     * @return Version status
+     * 
+     */
     public Optional<String> versionStatus() {
         return Optional.ofNullable(this.versionStatus);
     }
@@ -375,6 +500,10 @@ public final class VMwareDetailsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="webLoad")
     private @Nullable String webLoad;
 
+    /**
+     * @return The web load.
+     * 
+     */
     public Optional<String> webLoad() {
         return Optional.ofNullable(this.webLoad);
     }
@@ -386,6 +515,10 @@ public final class VMwareDetailsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="webLoadStatus")
     private @Nullable String webLoadStatus;
 
+    /**
+     * @return The web load status.
+     * 
+     */
     public Optional<String> webLoadStatus() {
         return Optional.ofNullable(this.webLoadStatus);
     }
@@ -446,178 +579,395 @@ public final class VMwareDetailsResponse extends com.pulumi.resources.InvokeArgs
             $ = new VMwareDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param agentCount The number of source and target servers configured to talk to this CS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentCount(@Nullable String agentCount) {
             $.agentCount = agentCount;
             return this;
         }
 
+        /**
+         * @param agentExpiryDate Agent expiry date.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentExpiryDate(@Nullable String agentExpiryDate) {
             $.agentExpiryDate = agentExpiryDate;
             return this;
         }
 
+        /**
+         * @param agentVersion The agent Version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentVersion(@Nullable String agentVersion) {
             $.agentVersion = agentVersion;
             return this;
         }
 
+        /**
+         * @param agentVersionDetails The agent version details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentVersionDetails(@Nullable VersionDetailsResponse agentVersionDetails) {
             $.agentVersionDetails = agentVersionDetails;
             return this;
         }
 
+        /**
+         * @param availableMemoryInBytes The available memory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availableMemoryInBytes(@Nullable Double availableMemoryInBytes) {
             $.availableMemoryInBytes = availableMemoryInBytes;
             return this;
         }
 
+        /**
+         * @param availableSpaceInBytes The available space.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availableSpaceInBytes(@Nullable Double availableSpaceInBytes) {
             $.availableSpaceInBytes = availableSpaceInBytes;
             return this;
         }
 
+        /**
+         * @param cpuLoad The percentage of the CPU load.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpuLoad(@Nullable String cpuLoad) {
             $.cpuLoad = cpuLoad;
             return this;
         }
 
+        /**
+         * @param cpuLoadStatus The CPU load status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpuLoadStatus(@Nullable String cpuLoadStatus) {
             $.cpuLoadStatus = cpuLoadStatus;
             return this;
         }
 
+        /**
+         * @param csServiceStatus The CS service status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder csServiceStatus(@Nullable String csServiceStatus) {
             $.csServiceStatus = csServiceStatus;
             return this;
         }
 
+        /**
+         * @param databaseServerLoad The database server load.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseServerLoad(@Nullable String databaseServerLoad) {
             $.databaseServerLoad = databaseServerLoad;
             return this;
         }
 
+        /**
+         * @param databaseServerLoadStatus The database server load status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseServerLoadStatus(@Nullable String databaseServerLoadStatus) {
             $.databaseServerLoadStatus = databaseServerLoadStatus;
             return this;
         }
 
+        /**
+         * @param hostName The host name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostName(@Nullable String hostName) {
             $.hostName = hostName;
             return this;
         }
 
+        /**
+         * @param instanceType Gets the class type. Overridden in derived classes.
+         * Expected value is &#39;VMware&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(String instanceType) {
             $.instanceType = instanceType;
             return this;
         }
 
+        /**
+         * @param ipAddress The IP address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddress(@Nullable String ipAddress) {
             $.ipAddress = ipAddress;
             return this;
         }
 
+        /**
+         * @param lastHeartbeat The last heartbeat received from CS server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastHeartbeat(@Nullable String lastHeartbeat) {
             $.lastHeartbeat = lastHeartbeat;
             return this;
         }
 
+        /**
+         * @param masterTargetServers The list of Master Target servers associated with the fabric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder masterTargetServers(@Nullable List<MasterTargetServerResponse> masterTargetServers) {
             $.masterTargetServers = masterTargetServers;
             return this;
         }
 
+        /**
+         * @param masterTargetServers The list of Master Target servers associated with the fabric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder masterTargetServers(MasterTargetServerResponse... masterTargetServers) {
             return masterTargetServers(List.of(masterTargetServers));
         }
 
+        /**
+         * @param memoryUsageStatus The memory usage status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memoryUsageStatus(@Nullable String memoryUsageStatus) {
             $.memoryUsageStatus = memoryUsageStatus;
             return this;
         }
 
+        /**
+         * @param processServerCount The number of process servers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder processServerCount(@Nullable String processServerCount) {
             $.processServerCount = processServerCount;
             return this;
         }
 
+        /**
+         * @param processServers The list of Process Servers associated with the fabric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder processServers(@Nullable List<ProcessServerResponse> processServers) {
             $.processServers = processServers;
             return this;
         }
 
+        /**
+         * @param processServers The list of Process Servers associated with the fabric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder processServers(ProcessServerResponse... processServers) {
             return processServers(List.of(processServers));
         }
 
+        /**
+         * @param protectedServers The number of protected servers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectedServers(@Nullable String protectedServers) {
             $.protectedServers = protectedServers;
             return this;
         }
 
+        /**
+         * @param psTemplateVersion PS template version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder psTemplateVersion(@Nullable String psTemplateVersion) {
             $.psTemplateVersion = psTemplateVersion;
             return this;
         }
 
+        /**
+         * @param replicationPairCount The number of replication pairs configured in this CS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicationPairCount(@Nullable String replicationPairCount) {
             $.replicationPairCount = replicationPairCount;
             return this;
         }
 
+        /**
+         * @param runAsAccounts The list of run as accounts created on the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runAsAccounts(@Nullable List<RunAsAccountResponse> runAsAccounts) {
             $.runAsAccounts = runAsAccounts;
             return this;
         }
 
+        /**
+         * @param runAsAccounts The list of run as accounts created on the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runAsAccounts(RunAsAccountResponse... runAsAccounts) {
             return runAsAccounts(List.of(runAsAccounts));
         }
 
+        /**
+         * @param spaceUsageStatus The space usage status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder spaceUsageStatus(@Nullable String spaceUsageStatus) {
             $.spaceUsageStatus = spaceUsageStatus;
             return this;
         }
 
+        /**
+         * @param sslCertExpiryDate CS SSL cert expiry date.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sslCertExpiryDate(@Nullable String sslCertExpiryDate) {
             $.sslCertExpiryDate = sslCertExpiryDate;
             return this;
         }
 
+        /**
+         * @param sslCertExpiryRemainingDays CS SSL cert expiry date.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sslCertExpiryRemainingDays(@Nullable Integer sslCertExpiryRemainingDays) {
             $.sslCertExpiryRemainingDays = sslCertExpiryRemainingDays;
             return this;
         }
 
+        /**
+         * @param systemLoad The percentage of the system load.
+         * 
+         * @return builder
+         * 
+         */
         public Builder systemLoad(@Nullable String systemLoad) {
             $.systemLoad = systemLoad;
             return this;
         }
 
+        /**
+         * @param systemLoadStatus The system load status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder systemLoadStatus(@Nullable String systemLoadStatus) {
             $.systemLoadStatus = systemLoadStatus;
             return this;
         }
 
+        /**
+         * @param totalMemoryInBytes The total memory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder totalMemoryInBytes(@Nullable Double totalMemoryInBytes) {
             $.totalMemoryInBytes = totalMemoryInBytes;
             return this;
         }
 
+        /**
+         * @param totalSpaceInBytes The total space.
+         * 
+         * @return builder
+         * 
+         */
         public Builder totalSpaceInBytes(@Nullable Double totalSpaceInBytes) {
             $.totalSpaceInBytes = totalSpaceInBytes;
             return this;
         }
 
+        /**
+         * @param versionStatus Version status
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionStatus(@Nullable String versionStatus) {
             $.versionStatus = versionStatus;
             return this;
         }
 
+        /**
+         * @param webLoad The web load.
+         * 
+         * @return builder
+         * 
+         */
         public Builder webLoad(@Nullable String webLoad) {
             $.webLoad = webLoad;
             return this;
         }
 
+        /**
+         * @param webLoadStatus The web load status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder webLoadStatus(@Nullable String webLoadStatus) {
             $.webLoadStatus = webLoadStatus;
             return this;

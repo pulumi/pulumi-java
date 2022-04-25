@@ -26,6 +26,10 @@ public final class RobotApplicationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="currentRevisionId")
     private @Nullable Output<String> currentRevisionId;
 
+    /**
+     * @return The revision ID of robot application.
+     * 
+     */
     public Optional<Output<String>> currentRevisionId() {
         return Optional.ofNullable(this.currentRevisionId);
     }
@@ -37,6 +41,10 @@ public final class RobotApplicationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="environment")
     private @Nullable Output<String> environment;
 
+    /**
+     * @return The URI of the Docker image for the robot application.
+     * 
+     */
     public Optional<Output<String>> environment() {
         return Optional.ofNullable(this.environment);
     }
@@ -48,6 +56,10 @@ public final class RobotApplicationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the robot application.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -66,6 +78,10 @@ public final class RobotApplicationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="sources")
     private @Nullable Output<List<RobotApplicationSourceConfigArgs>> sources;
 
+    /**
+     * @return The sources of the robot application.
+     * 
+     */
     public Optional<Output<List<RobotApplicationSourceConfigArgs>>> sources() {
         return Optional.ofNullable(this.sources);
     }
@@ -106,29 +122,65 @@ public final class RobotApplicationArgs extends com.pulumi.resources.ResourceArg
             $ = new RobotApplicationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param currentRevisionId The revision ID of robot application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder currentRevisionId(@Nullable Output<String> currentRevisionId) {
             $.currentRevisionId = currentRevisionId;
             return this;
         }
 
+        /**
+         * @param currentRevisionId The revision ID of robot application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder currentRevisionId(String currentRevisionId) {
             return currentRevisionId(Output.of(currentRevisionId));
         }
 
+        /**
+         * @param environment The URI of the Docker image for the robot application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environment(@Nullable Output<String> environment) {
             $.environment = environment;
             return this;
         }
 
+        /**
+         * @param environment The URI of the Docker image for the robot application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environment(String environment) {
             return environment(Output.of(environment));
         }
 
+        /**
+         * @param name The name of the robot application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the robot application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -142,15 +194,33 @@ public final class RobotApplicationArgs extends com.pulumi.resources.ResourceArg
             return robotSoftwareSuite(Output.of(robotSoftwareSuite));
         }
 
+        /**
+         * @param sources The sources of the robot application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sources(@Nullable Output<List<RobotApplicationSourceConfigArgs>> sources) {
             $.sources = sources;
             return this;
         }
 
+        /**
+         * @param sources The sources of the robot application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sources(List<RobotApplicationSourceConfigArgs> sources) {
             return sources(Output.of(sources));
         }
 
+        /**
+         * @param sources The sources of the robot application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sources(RobotApplicationSourceConfigArgs... sources) {
             return sources(List.of(sources));
         }

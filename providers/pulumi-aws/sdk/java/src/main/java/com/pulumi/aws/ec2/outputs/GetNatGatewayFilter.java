@@ -11,13 +11,13 @@ import java.util.Objects;
 @CustomType
 public final class GetNatGatewayFilter {
     /**
-     * The name of the field to filter by, as defined by
+     * @return The name of the field to filter by, as defined by
      * [the underlying AWS API](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeNatGateways.html).
      * 
      */
     private final String name;
     /**
-     * Set of values that are accepted for the given field.
+     * @return Set of values that are accepted for the given field.
      * An Nat Gateway will be selected if any one of the given values matches.
      * 
      */
@@ -32,18 +32,18 @@ public final class GetNatGatewayFilter {
     }
 
     /**
-     * The name of the field to filter by, as defined by
+     * @return The name of the field to filter by, as defined by
      * [the underlying AWS API](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeNatGateways.html).
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Set of values that are accepted for the given field.
+     * @return Set of values that are accepted for the given field.
      * An Nat Gateway will be selected if any one of the given values matches.
      * 
-    */
+     */
     public List<String> values() {
         return this.values;
     }

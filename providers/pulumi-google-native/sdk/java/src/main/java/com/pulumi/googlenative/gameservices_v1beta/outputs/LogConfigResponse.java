@@ -12,17 +12,17 @@ import java.util.Objects;
 @CustomType
 public final class LogConfigResponse {
     /**
-     * Cloud audit options.
+     * @return Cloud audit options.
      * 
      */
     private final CloudAuditOptionsResponse cloudAudit;
     /**
-     * Counter options.
+     * @return Counter options.
      * 
      */
     private final CounterOptionsResponse counter;
     /**
-     * Data access options.
+     * @return Data access options.
      * 
      */
     private final DataAccessOptionsResponse dataAccess;
@@ -38,23 +38,23 @@ public final class LogConfigResponse {
     }
 
     /**
-     * Cloud audit options.
+     * @return Cloud audit options.
      * 
-    */
+     */
     public CloudAuditOptionsResponse cloudAudit() {
         return this.cloudAudit;
     }
     /**
-     * Counter options.
+     * @return Counter options.
      * 
-    */
+     */
     public CounterOptionsResponse counter() {
         return this.counter;
     }
     /**
-     * Data access options.
+     * @return Data access options.
      * 
-    */
+     */
     public DataAccessOptionsResponse dataAccess() {
         return this.dataAccess;
     }

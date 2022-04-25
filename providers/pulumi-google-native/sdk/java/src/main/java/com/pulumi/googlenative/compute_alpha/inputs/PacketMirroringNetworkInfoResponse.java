@@ -19,6 +19,10 @@ public final class PacketMirroringNetworkInfoResponse extends com.pulumi.resourc
     @Import(name="canonicalUrl", required=true)
     private String canonicalUrl;
 
+    /**
+     * @return Unique identifier for the network; defined by the server.
+     * 
+     */
     public String canonicalUrl() {
         return this.canonicalUrl;
     }
@@ -30,6 +34,10 @@ public final class PacketMirroringNetworkInfoResponse extends com.pulumi.resourc
     @Import(name="url", required=true)
     private String url;
 
+    /**
+     * @return URL of the network resource.
+     * 
+     */
     public String url() {
         return this.url;
     }
@@ -59,11 +67,23 @@ public final class PacketMirroringNetworkInfoResponse extends com.pulumi.resourc
             $ = new PacketMirroringNetworkInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param canonicalUrl Unique identifier for the network; defined by the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder canonicalUrl(String canonicalUrl) {
             $.canonicalUrl = canonicalUrl;
             return this;
         }
 
+        /**
+         * @param url URL of the network resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(String url) {
             $.url = url;
             return this;

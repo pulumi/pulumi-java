@@ -27,6 +27,10 @@ public final class OptionsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="asyncOptions", required=true)
     private List<AsyncOptionsResponse> asyncOptions;
 
+    /**
+     * @return Options regarding how to thread async requests.
+     * 
+     */
     public List<AsyncOptionsResponse> asyncOptions() {
         return this.asyncOptions;
     }
@@ -38,6 +42,10 @@ public final class OptionsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="inputMappings", required=true)
     private List<InputMappingResponse> inputMappings;
 
+    /**
+     * @return The mappings that apply for requests.
+     * 
+     */
     public List<InputMappingResponse> inputMappings() {
         return this.inputMappings;
     }
@@ -49,6 +57,10 @@ public final class OptionsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="nameProperty", required=true)
     private String nameProperty;
 
+    /**
+     * @return The json path to the field in the resource JSON body into which the resource name should be mapped. Leaving this empty indicates that there should be no mapping performed.
+     * 
+     */
     public String nameProperty() {
         return this.nameProperty;
     }
@@ -60,6 +72,10 @@ public final class OptionsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="validationOptions", required=true)
     private ValidationOptionsResponse validationOptions;
 
+    /**
+     * @return Options for how to validate and process properties on a resource.
+     * 
+     */
     public ValidationOptionsResponse validationOptions() {
         return this.validationOptions;
     }
@@ -91,29 +107,65 @@ public final class OptionsResponse extends com.pulumi.resources.InvokeArgs {
             $ = new OptionsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param asyncOptions Options regarding how to thread async requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder asyncOptions(List<AsyncOptionsResponse> asyncOptions) {
             $.asyncOptions = asyncOptions;
             return this;
         }
 
+        /**
+         * @param asyncOptions Options regarding how to thread async requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder asyncOptions(AsyncOptionsResponse... asyncOptions) {
             return asyncOptions(List.of(asyncOptions));
         }
 
+        /**
+         * @param inputMappings The mappings that apply for requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputMappings(List<InputMappingResponse> inputMappings) {
             $.inputMappings = inputMappings;
             return this;
         }
 
+        /**
+         * @param inputMappings The mappings that apply for requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputMappings(InputMappingResponse... inputMappings) {
             return inputMappings(List.of(inputMappings));
         }
 
+        /**
+         * @param nameProperty The json path to the field in the resource JSON body into which the resource name should be mapped. Leaving this empty indicates that there should be no mapping performed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nameProperty(String nameProperty) {
             $.nameProperty = nameProperty;
             return this;
         }
 
+        /**
+         * @param validationOptions Options for how to validate and process properties on a resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validationOptions(ValidationOptionsResponse validationOptions) {
             $.validationOptions = validationOptions;
             return this;

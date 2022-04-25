@@ -51,6 +51,11 @@ public final class AzureRetentionRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="objectType", required=true)
     private Output<String> objectType;
 
+    /**
+     * @return
+     * Expected value is &#39;AzureRetentionRule&#39;.
+     * 
+     */
     public Output<String> objectType() {
         return this.objectType;
     }
@@ -113,11 +118,25 @@ public final class AzureRetentionRuleArgs extends com.pulumi.resources.ResourceA
             return name(Output.of(name));
         }
 
+        /**
+         * @param objectType
+         * Expected value is &#39;AzureRetentionRule&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectType(Output<String> objectType) {
             $.objectType = objectType;
             return this;
         }
 
+        /**
+         * @param objectType
+         * Expected value is &#39;AzureRetentionRule&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectType(String objectType) {
             return objectType(Output.of(objectType));
         }

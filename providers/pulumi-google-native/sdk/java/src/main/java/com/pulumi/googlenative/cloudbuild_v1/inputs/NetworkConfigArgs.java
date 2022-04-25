@@ -27,6 +27,10 @@ public final class NetworkConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="egressOption")
     private @Nullable Output<NetworkConfigEgressOption> egressOption;
 
+    /**
+     * @return Option to configure network egress for the workers.
+     * 
+     */
     public Optional<Output<NetworkConfigEgressOption>> egressOption() {
         return Optional.ofNullable(this.egressOption);
     }
@@ -38,6 +42,10 @@ public final class NetworkConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="peeredNetwork", required=true)
     private Output<String> peeredNetwork;
 
+    /**
+     * @return Immutable. The network definition that the workers are peered to. If this section is left empty, the workers will be peered to `WorkerPool.project_id` on the service producer network. Must be in the format `projects/{project}/global/networks/{network}`, where `{project}` is a project number, such as `12345`, and `{network}` is the name of a VPC network in the project. See [Understanding network configuration options](https://cloud.google.com/build/docs/private-pools/set-up-private-pool-environment)
+     * 
+     */
     public Output<String> peeredNetwork() {
         return this.peeredNetwork;
     }
@@ -67,20 +75,44 @@ public final class NetworkConfigArgs extends com.pulumi.resources.ResourceArgs {
             $ = new NetworkConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param egressOption Option to configure network egress for the workers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder egressOption(@Nullable Output<NetworkConfigEgressOption> egressOption) {
             $.egressOption = egressOption;
             return this;
         }
 
+        /**
+         * @param egressOption Option to configure network egress for the workers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder egressOption(NetworkConfigEgressOption egressOption) {
             return egressOption(Output.of(egressOption));
         }
 
+        /**
+         * @param peeredNetwork Immutable. The network definition that the workers are peered to. If this section is left empty, the workers will be peered to `WorkerPool.project_id` on the service producer network. Must be in the format `projects/{project}/global/networks/{network}`, where `{project}` is a project number, such as `12345`, and `{network}` is the name of a VPC network in the project. See [Understanding network configuration options](https://cloud.google.com/build/docs/private-pools/set-up-private-pool-environment)
+         * 
+         * @return builder
+         * 
+         */
         public Builder peeredNetwork(Output<String> peeredNetwork) {
             $.peeredNetwork = peeredNetwork;
             return this;
         }
 
+        /**
+         * @param peeredNetwork Immutable. The network definition that the workers are peered to. If this section is left empty, the workers will be peered to `WorkerPool.project_id` on the service producer network. Must be in the format `projects/{project}/global/networks/{network}`, where `{project}` is a project number, such as `12345`, and `{network}` is the name of a VPC network in the project. See [Understanding network configuration options](https://cloud.google.com/build/docs/private-pools/set-up-private-pool-environment)
+         * 
+         * @return builder
+         * 
+         */
         public Builder peeredNetwork(String peeredNetwork) {
             return peeredNetwork(Output.of(peeredNetwork));
         }

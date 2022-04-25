@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class MetadataFilterLabelMatchResponse {
     /**
-     * Name of metadata label. The name can have a maximum length of 1024 characters and must be at least 1 character long.
+     * @return Name of metadata label. The name can have a maximum length of 1024 characters and must be at least 1 character long.
      * 
      */
     private final String name;
     /**
-     * The value of the label must match the specified value. value can have a maximum length of 1024 characters.
+     * @return The value of the label must match the specified value. value can have a maximum length of 1024 characters.
      * 
      */
     private final String value;
@@ -29,16 +29,16 @@ public final class MetadataFilterLabelMatchResponse {
     }
 
     /**
-     * Name of metadata label. The name can have a maximum length of 1024 characters and must be at least 1 character long.
+     * @return Name of metadata label. The name can have a maximum length of 1024 characters and must be at least 1 character long.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The value of the label must match the specified value. value can have a maximum length of 1024 characters.
+     * @return The value of the label must match the specified value. value can have a maximum length of 1024 characters.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

@@ -31,6 +31,10 @@ public final class BaseImageTriggerArgs extends com.pulumi.resources.ResourceArg
     @Import(name="baseImageTriggerType", required=true)
     private Output<Either<String,BaseImageTriggerType>> baseImageTriggerType;
 
+    /**
+     * @return The type of the auto trigger for base image dependency updates.
+     * 
+     */
     public Output<Either<String,BaseImageTriggerType>> baseImageTriggerType() {
         return this.baseImageTriggerType;
     }
@@ -42,6 +46,10 @@ public final class BaseImageTriggerArgs extends com.pulumi.resources.ResourceArg
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The name of the trigger.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -53,6 +61,10 @@ public final class BaseImageTriggerArgs extends com.pulumi.resources.ResourceArg
     @Import(name="status")
     private @Nullable Output<Either<String,TriggerStatus>> status;
 
+    /**
+     * @return The current status of trigger.
+     * 
+     */
     public Optional<Output<Either<String,TriggerStatus>>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -64,6 +76,10 @@ public final class BaseImageTriggerArgs extends com.pulumi.resources.ResourceArg
     @Import(name="updateTriggerEndpoint")
     private @Nullable Output<String> updateTriggerEndpoint;
 
+    /**
+     * @return The endpoint URL for receiving update triggers.
+     * 
+     */
     public Optional<Output<String>> updateTriggerEndpoint() {
         return Optional.ofNullable(this.updateTriggerEndpoint);
     }
@@ -75,6 +91,10 @@ public final class BaseImageTriggerArgs extends com.pulumi.resources.ResourceArg
     @Import(name="updateTriggerPayloadType")
     private @Nullable Output<Either<String,UpdateTriggerPayloadType>> updateTriggerPayloadType;
 
+    /**
+     * @return Type of Payload body for Base image update triggers.
+     * 
+     */
     public Optional<Output<Either<String,UpdateTriggerPayloadType>>> updateTriggerPayloadType() {
         return Optional.ofNullable(this.updateTriggerPayloadType);
     }
@@ -107,71 +127,167 @@ public final class BaseImageTriggerArgs extends com.pulumi.resources.ResourceArg
             $ = new BaseImageTriggerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param baseImageTriggerType The type of the auto trigger for base image dependency updates.
+         * 
+         * @return builder
+         * 
+         */
         public Builder baseImageTriggerType(Output<Either<String,BaseImageTriggerType>> baseImageTriggerType) {
             $.baseImageTriggerType = baseImageTriggerType;
             return this;
         }
 
+        /**
+         * @param baseImageTriggerType The type of the auto trigger for base image dependency updates.
+         * 
+         * @return builder
+         * 
+         */
         public Builder baseImageTriggerType(Either<String,BaseImageTriggerType> baseImageTriggerType) {
             return baseImageTriggerType(Output.of(baseImageTriggerType));
         }
 
+        /**
+         * @param baseImageTriggerType The type of the auto trigger for base image dependency updates.
+         * 
+         * @return builder
+         * 
+         */
         public Builder baseImageTriggerType(String baseImageTriggerType) {
             return baseImageTriggerType(Either.ofLeft(baseImageTriggerType));
         }
 
+        /**
+         * @param baseImageTriggerType The type of the auto trigger for base image dependency updates.
+         * 
+         * @return builder
+         * 
+         */
         public Builder baseImageTriggerType(BaseImageTriggerType baseImageTriggerType) {
             return baseImageTriggerType(Either.ofRight(baseImageTriggerType));
         }
 
+        /**
+         * @param name The name of the trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param status The current status of trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<Either<String,TriggerStatus>> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status The current status of trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(Either<String,TriggerStatus> status) {
             return status(Output.of(status));
         }
 
+        /**
+         * @param status The current status of trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             return status(Either.ofLeft(status));
         }
 
+        /**
+         * @param status The current status of trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(TriggerStatus status) {
             return status(Either.ofRight(status));
         }
 
+        /**
+         * @param updateTriggerEndpoint The endpoint URL for receiving update triggers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateTriggerEndpoint(@Nullable Output<String> updateTriggerEndpoint) {
             $.updateTriggerEndpoint = updateTriggerEndpoint;
             return this;
         }
 
+        /**
+         * @param updateTriggerEndpoint The endpoint URL for receiving update triggers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateTriggerEndpoint(String updateTriggerEndpoint) {
             return updateTriggerEndpoint(Output.of(updateTriggerEndpoint));
         }
 
+        /**
+         * @param updateTriggerPayloadType Type of Payload body for Base image update triggers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateTriggerPayloadType(@Nullable Output<Either<String,UpdateTriggerPayloadType>> updateTriggerPayloadType) {
             $.updateTriggerPayloadType = updateTriggerPayloadType;
             return this;
         }
 
+        /**
+         * @param updateTriggerPayloadType Type of Payload body for Base image update triggers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateTriggerPayloadType(Either<String,UpdateTriggerPayloadType> updateTriggerPayloadType) {
             return updateTriggerPayloadType(Output.of(updateTriggerPayloadType));
         }
 
+        /**
+         * @param updateTriggerPayloadType Type of Payload body for Base image update triggers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateTriggerPayloadType(String updateTriggerPayloadType) {
             return updateTriggerPayloadType(Either.ofLeft(updateTriggerPayloadType));
         }
 
+        /**
+         * @param updateTriggerPayloadType Type of Payload body for Base image update triggers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateTriggerPayloadType(UpdateTriggerPayloadType updateTriggerPayloadType) {
             return updateTriggerPayloadType(Either.ofRight(updateTriggerPayloadType));
         }

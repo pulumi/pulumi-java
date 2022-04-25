@@ -21,6 +21,10 @@ public final class BucketTieringArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accessTier", required=true)
     private Output<BucketTieringAccessTier> accessTier;
 
+    /**
+     * @return S3 Intelligent-Tiering access tier. See Storage class for automatically optimizing frequently and infrequently accessed objects for a list of access tiers in the S3 Intelligent-Tiering storage class.
+     * 
+     */
     public Output<BucketTieringAccessTier> accessTier() {
         return this.accessTier;
     }
@@ -32,6 +36,10 @@ public final class BucketTieringArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="days", required=true)
     private Output<Integer> days;
 
+    /**
+     * @return The number of consecutive days of no access after which an object will be eligible to be transitioned to the corresponding tier. The minimum number of days specified for Archive Access tier must be at least 90 days and Deep Archive Access tier must be at least 180 days. The maximum can be up to 2 years (730 days).
+     * 
+     */
     public Output<Integer> days() {
         return this.days;
     }
@@ -61,20 +69,44 @@ public final class BucketTieringArgs extends com.pulumi.resources.ResourceArgs {
             $ = new BucketTieringArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessTier S3 Intelligent-Tiering access tier. See Storage class for automatically optimizing frequently and infrequently accessed objects for a list of access tiers in the S3 Intelligent-Tiering storage class.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessTier(Output<BucketTieringAccessTier> accessTier) {
             $.accessTier = accessTier;
             return this;
         }
 
+        /**
+         * @param accessTier S3 Intelligent-Tiering access tier. See Storage class for automatically optimizing frequently and infrequently accessed objects for a list of access tiers in the S3 Intelligent-Tiering storage class.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessTier(BucketTieringAccessTier accessTier) {
             return accessTier(Output.of(accessTier));
         }
 
+        /**
+         * @param days The number of consecutive days of no access after which an object will be eligible to be transitioned to the corresponding tier. The minimum number of days specified for Archive Access tier must be at least 90 days and Deep Archive Access tier must be at least 180 days. The maximum can be up to 2 years (730 days).
+         * 
+         * @return builder
+         * 
+         */
         public Builder days(Output<Integer> days) {
             $.days = days;
             return this;
         }
 
+        /**
+         * @param days The number of consecutive days of no access after which an object will be eligible to be transitioned to the corresponding tier. The minimum number of days specified for Archive Access tier must be at least 90 days and Deep Archive Access tier must be at least 180 days. The maximum can be up to 2 years (730 days).
+         * 
+         * @return builder
+         * 
+         */
         public Builder days(Integer days) {
             return days(Output.of(days));
         }

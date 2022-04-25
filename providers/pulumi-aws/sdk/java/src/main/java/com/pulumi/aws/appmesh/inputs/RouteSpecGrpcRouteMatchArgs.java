@@ -24,6 +24,10 @@ public final class RouteSpecGrpcRouteMatchArgs extends com.pulumi.resources.Reso
     @Import(name="metadatas")
     private @Nullable Output<List<RouteSpecGrpcRouteMatchMetadataArgs>> metadatas;
 
+    /**
+     * @return The data to match from the gRPC request.
+     * 
+     */
     public Optional<Output<List<RouteSpecGrpcRouteMatchMetadataArgs>>> metadatas() {
         return Optional.ofNullable(this.metadatas);
     }
@@ -35,6 +39,10 @@ public final class RouteSpecGrpcRouteMatchArgs extends com.pulumi.resources.Reso
     @Import(name="methodName")
     private @Nullable Output<String> methodName;
 
+    /**
+     * @return The method name to match from the request. If you specify a name, you must also specify a `service_name`.
+     * 
+     */
     public Optional<Output<String>> methodName() {
         return Optional.ofNullable(this.methodName);
     }
@@ -47,6 +55,11 @@ public final class RouteSpecGrpcRouteMatchArgs extends com.pulumi.resources.Reso
     @Import(name="prefix")
     private @Nullable Output<String> prefix;
 
+    /**
+     * @return The value sent by the client must begin with the specified characters. Must be between 1 and 255 characters in length.
+     * This parameter must always start with /, which by itself matches all requests to the virtual router service name.
+     * 
+     */
     public Optional<Output<String>> prefix() {
         return Optional.ofNullable(this.prefix);
     }
@@ -58,6 +71,10 @@ public final class RouteSpecGrpcRouteMatchArgs extends com.pulumi.resources.Reso
     @Import(name="serviceName")
     private @Nullable Output<String> serviceName;
 
+    /**
+     * @return The fully qualified domain name for the service to match from the request.
+     * 
+     */
     public Optional<Output<String>> serviceName() {
         return Optional.ofNullable(this.serviceName);
     }
@@ -89,42 +106,98 @@ public final class RouteSpecGrpcRouteMatchArgs extends com.pulumi.resources.Reso
             $ = new RouteSpecGrpcRouteMatchArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param metadatas The data to match from the gRPC request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadatas(@Nullable Output<List<RouteSpecGrpcRouteMatchMetadataArgs>> metadatas) {
             $.metadatas = metadatas;
             return this;
         }
 
+        /**
+         * @param metadatas The data to match from the gRPC request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadatas(List<RouteSpecGrpcRouteMatchMetadataArgs> metadatas) {
             return metadatas(Output.of(metadatas));
         }
 
+        /**
+         * @param metadatas The data to match from the gRPC request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadatas(RouteSpecGrpcRouteMatchMetadataArgs... metadatas) {
             return metadatas(List.of(metadatas));
         }
 
+        /**
+         * @param methodName The method name to match from the request. If you specify a name, you must also specify a `service_name`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder methodName(@Nullable Output<String> methodName) {
             $.methodName = methodName;
             return this;
         }
 
+        /**
+         * @param methodName The method name to match from the request. If you specify a name, you must also specify a `service_name`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder methodName(String methodName) {
             return methodName(Output.of(methodName));
         }
 
+        /**
+         * @param prefix The value sent by the client must begin with the specified characters. Must be between 1 and 255 characters in length.
+         * This parameter must always start with /, which by itself matches all requests to the virtual router service name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefix(@Nullable Output<String> prefix) {
             $.prefix = prefix;
             return this;
         }
 
+        /**
+         * @param prefix The value sent by the client must begin with the specified characters. Must be between 1 and 255 characters in length.
+         * This parameter must always start with /, which by itself matches all requests to the virtual router service name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefix(String prefix) {
             return prefix(Output.of(prefix));
         }
 
+        /**
+         * @param serviceName The fully qualified domain name for the service to match from the request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(@Nullable Output<String> serviceName) {
             $.serviceName = serviceName;
             return this;
         }
 
+        /**
+         * @param serviceName The fully qualified domain name for the service to match from the request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             return serviceName(Output.of(serviceName));
         }

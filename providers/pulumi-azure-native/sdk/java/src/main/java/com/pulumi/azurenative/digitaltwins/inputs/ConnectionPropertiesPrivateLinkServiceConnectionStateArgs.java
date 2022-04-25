@@ -24,6 +24,10 @@ public final class ConnectionPropertiesPrivateLinkServiceConnectionStateArgs ext
     @Import(name="actionsRequired")
     private @Nullable Output<String> actionsRequired;
 
+    /**
+     * @return Actions required for a private endpoint connection.
+     * 
+     */
     public Optional<Output<String>> actionsRequired() {
         return Optional.ofNullable(this.actionsRequired);
     }
@@ -35,6 +39,10 @@ public final class ConnectionPropertiesPrivateLinkServiceConnectionStateArgs ext
     @Import(name="description", required=true)
     private Output<String> description;
 
+    /**
+     * @return The description for the current state of a private endpoint connection.
+     * 
+     */
     public Output<String> description() {
         return this.description;
     }
@@ -46,6 +54,10 @@ public final class ConnectionPropertiesPrivateLinkServiceConnectionStateArgs ext
     @Import(name="status", required=true)
     private Output<Either<String,PrivateLinkServiceConnectionStatus>> status;
 
+    /**
+     * @return The status of a private endpoint connection.
+     * 
+     */
     public Output<Either<String,PrivateLinkServiceConnectionStatus>> status() {
         return this.status;
     }
@@ -76,37 +88,85 @@ public final class ConnectionPropertiesPrivateLinkServiceConnectionStateArgs ext
             $ = new ConnectionPropertiesPrivateLinkServiceConnectionStateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actionsRequired Actions required for a private endpoint connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionsRequired(@Nullable Output<String> actionsRequired) {
             $.actionsRequired = actionsRequired;
             return this;
         }
 
+        /**
+         * @param actionsRequired Actions required for a private endpoint connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionsRequired(String actionsRequired) {
             return actionsRequired(Output.of(actionsRequired));
         }
 
+        /**
+         * @param description The description for the current state of a private endpoint connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description for the current state of a private endpoint connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param status The status of a private endpoint connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(Output<Either<String,PrivateLinkServiceConnectionStatus>> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status The status of a private endpoint connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(Either<String,PrivateLinkServiceConnectionStatus> status) {
             return status(Output.of(status));
         }
 
+        /**
+         * @param status The status of a private endpoint connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             return status(Either.ofLeft(status));
         }
 
+        /**
+         * @param status The status of a private endpoint connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(PrivateLinkServiceConnectionStatus status) {
             return status(Either.ofRight(status));
         }

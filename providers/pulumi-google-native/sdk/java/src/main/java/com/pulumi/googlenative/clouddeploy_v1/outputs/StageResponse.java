@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class StageResponse {
     /**
-     * Skaffold profiles to use when rendering the manifest for this stage&#39;s `Target`.
+     * @return Skaffold profiles to use when rendering the manifest for this stage&#39;s `Target`.
      * 
      */
     private final List<String> profiles;
     /**
-     * The target_id to which this stage points. This field refers exclusively to the last segment of a target name. For example, this field would just be `my-target` (rather than `projects/project/locations/location/targets/my-target`). The location of the `Target` is inferred to be the same as the location of the `DeliveryPipeline` that contains this `Stage`.
+     * @return The target_id to which this stage points. This field refers exclusively to the last segment of a target name. For example, this field would just be `my-target` (rather than `projects/project/locations/location/targets/my-target`). The location of the `Target` is inferred to be the same as the location of the `DeliveryPipeline` that contains this `Stage`.
      * 
      */
     private final String targetId;
@@ -30,16 +30,16 @@ public final class StageResponse {
     }
 
     /**
-     * Skaffold profiles to use when rendering the manifest for this stage&#39;s `Target`.
+     * @return Skaffold profiles to use when rendering the manifest for this stage&#39;s `Target`.
      * 
-    */
+     */
     public List<String> profiles() {
         return this.profiles;
     }
     /**
-     * The target_id to which this stage points. This field refers exclusively to the last segment of a target name. For example, this field would just be `my-target` (rather than `projects/project/locations/location/targets/my-target`). The location of the `Target` is inferred to be the same as the location of the `DeliveryPipeline` that contains this `Stage`.
+     * @return The target_id to which this stage points. This field refers exclusively to the last segment of a target name. For example, this field would just be `my-target` (rather than `projects/project/locations/location/targets/my-target`). The location of the `Target` is inferred to be the same as the location of the `DeliveryPipeline` that contains this `Stage`.
      * 
-    */
+     */
     public String targetId() {
         return this.targetId;
     }

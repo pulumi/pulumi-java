@@ -24,6 +24,10 @@ public final class TaskDefinitionVolumeEfsVolumeConfigurationArgs extends com.pu
     @Import(name="authorizationConfig")
     private @Nullable Output<TaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfigArgs> authorizationConfig;
 
+    /**
+     * @return Configuration block for authorization for the Amazon FSx for Windows File Server file system detailed below.
+     * 
+     */
     public Optional<Output<TaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfigArgs>> authorizationConfig() {
         return Optional.ofNullable(this.authorizationConfig);
     }
@@ -35,6 +39,10 @@ public final class TaskDefinitionVolumeEfsVolumeConfigurationArgs extends com.pu
     @Import(name="fileSystemId", required=true)
     private Output<String> fileSystemId;
 
+    /**
+     * @return The Amazon FSx for Windows File Server file system ID to use.
+     * 
+     */
     public Output<String> fileSystemId() {
         return this.fileSystemId;
     }
@@ -46,6 +54,10 @@ public final class TaskDefinitionVolumeEfsVolumeConfigurationArgs extends com.pu
     @Import(name="rootDirectory")
     private @Nullable Output<String> rootDirectory;
 
+    /**
+     * @return The directory within the Amazon FSx for Windows File Server file system to mount as the root directory inside the host.
+     * 
+     */
     public Optional<Output<String>> rootDirectory() {
         return Optional.ofNullable(this.rootDirectory);
     }
@@ -57,6 +69,10 @@ public final class TaskDefinitionVolumeEfsVolumeConfigurationArgs extends com.pu
     @Import(name="transitEncryption")
     private @Nullable Output<String> transitEncryption;
 
+    /**
+     * @return Whether or not to enable encryption for Amazon EFS data in transit between the Amazon ECS host and the Amazon EFS server. Transit encryption must be enabled if Amazon EFS IAM authorization is used. Valid values: `ENABLED`, `DISABLED`. If this parameter is omitted, the default value of `DISABLED` is used.
+     * 
+     */
     public Optional<Output<String>> transitEncryption() {
         return Optional.ofNullable(this.transitEncryption);
     }
@@ -68,6 +84,10 @@ public final class TaskDefinitionVolumeEfsVolumeConfigurationArgs extends com.pu
     @Import(name="transitEncryptionPort")
     private @Nullable Output<Integer> transitEncryptionPort;
 
+    /**
+     * @return Port to use for transit encryption. If you do not specify a transit encryption port, it will use the port selection strategy that the Amazon EFS mount helper uses.
+     * 
+     */
     public Optional<Output<Integer>> transitEncryptionPort() {
         return Optional.ofNullable(this.transitEncryptionPort);
     }
@@ -100,47 +120,107 @@ public final class TaskDefinitionVolumeEfsVolumeConfigurationArgs extends com.pu
             $ = new TaskDefinitionVolumeEfsVolumeConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authorizationConfig Configuration block for authorization for the Amazon FSx for Windows File Server file system detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationConfig(@Nullable Output<TaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfigArgs> authorizationConfig) {
             $.authorizationConfig = authorizationConfig;
             return this;
         }
 
+        /**
+         * @param authorizationConfig Configuration block for authorization for the Amazon FSx for Windows File Server file system detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationConfig(TaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfigArgs authorizationConfig) {
             return authorizationConfig(Output.of(authorizationConfig));
         }
 
+        /**
+         * @param fileSystemId The Amazon FSx for Windows File Server file system ID to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileSystemId(Output<String> fileSystemId) {
             $.fileSystemId = fileSystemId;
             return this;
         }
 
+        /**
+         * @param fileSystemId The Amazon FSx for Windows File Server file system ID to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileSystemId(String fileSystemId) {
             return fileSystemId(Output.of(fileSystemId));
         }
 
+        /**
+         * @param rootDirectory The directory within the Amazon FSx for Windows File Server file system to mount as the root directory inside the host.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rootDirectory(@Nullable Output<String> rootDirectory) {
             $.rootDirectory = rootDirectory;
             return this;
         }
 
+        /**
+         * @param rootDirectory The directory within the Amazon FSx for Windows File Server file system to mount as the root directory inside the host.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rootDirectory(String rootDirectory) {
             return rootDirectory(Output.of(rootDirectory));
         }
 
+        /**
+         * @param transitEncryption Whether or not to enable encryption for Amazon EFS data in transit between the Amazon ECS host and the Amazon EFS server. Transit encryption must be enabled if Amazon EFS IAM authorization is used. Valid values: `ENABLED`, `DISABLED`. If this parameter is omitted, the default value of `DISABLED` is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transitEncryption(@Nullable Output<String> transitEncryption) {
             $.transitEncryption = transitEncryption;
             return this;
         }
 
+        /**
+         * @param transitEncryption Whether or not to enable encryption for Amazon EFS data in transit between the Amazon ECS host and the Amazon EFS server. Transit encryption must be enabled if Amazon EFS IAM authorization is used. Valid values: `ENABLED`, `DISABLED`. If this parameter is omitted, the default value of `DISABLED` is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transitEncryption(String transitEncryption) {
             return transitEncryption(Output.of(transitEncryption));
         }
 
+        /**
+         * @param transitEncryptionPort Port to use for transit encryption. If you do not specify a transit encryption port, it will use the port selection strategy that the Amazon EFS mount helper uses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transitEncryptionPort(@Nullable Output<Integer> transitEncryptionPort) {
             $.transitEncryptionPort = transitEncryptionPort;
             return this;
         }
 
+        /**
+         * @param transitEncryptionPort Port to use for transit encryption. If you do not specify a transit encryption port, it will use the port selection strategy that the Amazon EFS mount helper uses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transitEncryptionPort(Integer transitEncryptionPort) {
             return transitEncryptionPort(Output.of(transitEncryptionPort));
         }

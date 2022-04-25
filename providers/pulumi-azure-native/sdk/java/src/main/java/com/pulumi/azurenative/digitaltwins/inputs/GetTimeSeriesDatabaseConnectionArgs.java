@@ -19,6 +19,10 @@ public final class GetTimeSeriesDatabaseConnectionArgs extends com.pulumi.resour
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the DigitalTwinsInstance.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -30,6 +34,10 @@ public final class GetTimeSeriesDatabaseConnectionArgs extends com.pulumi.resour
     @Import(name="resourceName", required=true)
     private String resourceName;
 
+    /**
+     * @return The name of the DigitalTwinsInstance.
+     * 
+     */
     public String resourceName() {
         return this.resourceName;
     }
@@ -41,6 +49,10 @@ public final class GetTimeSeriesDatabaseConnectionArgs extends com.pulumi.resour
     @Import(name="timeSeriesDatabaseConnectionName", required=true)
     private String timeSeriesDatabaseConnectionName;
 
+    /**
+     * @return Name of time series database connection.
+     * 
+     */
     public String timeSeriesDatabaseConnectionName() {
         return this.timeSeriesDatabaseConnectionName;
     }
@@ -71,16 +83,34 @@ public final class GetTimeSeriesDatabaseConnectionArgs extends com.pulumi.resour
             $ = new GetTimeSeriesDatabaseConnectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the DigitalTwinsInstance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceName The name of the DigitalTwinsInstance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(String resourceName) {
             $.resourceName = resourceName;
             return this;
         }
 
+        /**
+         * @param timeSeriesDatabaseConnectionName Name of time series database connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeSeriesDatabaseConnectionName(String timeSeriesDatabaseConnectionName) {
             $.timeSeriesDatabaseConnectionName = timeSeriesDatabaseConnectionName;
             return this;

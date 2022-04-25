@@ -35,6 +35,10 @@ public final class SchemaArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="compatibility", required=true)
     private Output<SchemaCompatibility> compatibility;
 
+    /**
+     * @return Compatibility setting for the schema.
+     * 
+     */
     public Output<SchemaCompatibility> compatibility() {
         return this.compatibility;
     }
@@ -46,6 +50,10 @@ public final class SchemaArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dataFormat", required=true)
     private Output<SchemaDataFormat> dataFormat;
 
+    /**
+     * @return Data format name to use for the schema. Accepted values: &#39;AVRO&#39;, &#39;JSON&#39;, &#39;PROTOBUF&#39;
+     * 
+     */
     public Output<SchemaDataFormat> dataFormat() {
         return this.dataFormat;
     }
@@ -57,6 +65,10 @@ public final class SchemaArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A description of the schema. If description is not provided, there will not be any default value for this.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -68,6 +80,10 @@ public final class SchemaArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the schema.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -86,6 +102,10 @@ public final class SchemaArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="schemaDefinition", required=true)
     private Output<String> schemaDefinition;
 
+    /**
+     * @return Definition for the initial schema version in plain-text.
+     * 
+     */
     public Output<String> schemaDefinition() {
         return this.schemaDefinition;
     }
@@ -97,6 +117,10 @@ public final class SchemaArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<SchemaTagArgs>> tags;
 
+    /**
+     * @return List of tags to tag the schema
+     * 
+     */
     public Optional<Output<List<SchemaTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -141,38 +165,86 @@ public final class SchemaArgs extends com.pulumi.resources.ResourceArgs {
             return checkpointVersion(Output.of(checkpointVersion));
         }
 
+        /**
+         * @param compatibility Compatibility setting for the schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder compatibility(Output<SchemaCompatibility> compatibility) {
             $.compatibility = compatibility;
             return this;
         }
 
+        /**
+         * @param compatibility Compatibility setting for the schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder compatibility(SchemaCompatibility compatibility) {
             return compatibility(Output.of(compatibility));
         }
 
+        /**
+         * @param dataFormat Data format name to use for the schema. Accepted values: &#39;AVRO&#39;, &#39;JSON&#39;, &#39;PROTOBUF&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataFormat(Output<SchemaDataFormat> dataFormat) {
             $.dataFormat = dataFormat;
             return this;
         }
 
+        /**
+         * @param dataFormat Data format name to use for the schema. Accepted values: &#39;AVRO&#39;, &#39;JSON&#39;, &#39;PROTOBUF&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataFormat(SchemaDataFormat dataFormat) {
             return dataFormat(Output.of(dataFormat));
         }
 
+        /**
+         * @param description A description of the schema. If description is not provided, there will not be any default value for this.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A description of the schema. If description is not provided, there will not be any default value for this.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param name Name of the schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -186,24 +258,54 @@ public final class SchemaArgs extends com.pulumi.resources.ResourceArgs {
             return registry(Output.of(registry));
         }
 
+        /**
+         * @param schemaDefinition Definition for the initial schema version in plain-text.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaDefinition(Output<String> schemaDefinition) {
             $.schemaDefinition = schemaDefinition;
             return this;
         }
 
+        /**
+         * @param schemaDefinition Definition for the initial schema version in plain-text.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaDefinition(String schemaDefinition) {
             return schemaDefinition(Output.of(schemaDefinition));
         }
 
+        /**
+         * @param tags List of tags to tag the schema
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<SchemaTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags List of tags to tag the schema
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<SchemaTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags List of tags to tag the schema
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(SchemaTagArgs... tags) {
             return tags(List.of(tags));
         }

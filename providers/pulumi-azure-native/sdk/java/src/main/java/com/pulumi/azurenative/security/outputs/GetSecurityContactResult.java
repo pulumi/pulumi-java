@@ -14,37 +14,37 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetSecurityContactResult {
     /**
-     * Defines whether to send email notifications about new security alerts
+     * @return Defines whether to send email notifications about new security alerts
      * 
      */
     private final @Nullable SecurityContactPropertiesResponseAlertNotifications alertNotifications;
     /**
-     * List of email addresses which will get notifications from Azure Security Center by the configurations defined in this security contact.
+     * @return List of email addresses which will get notifications from Azure Security Center by the configurations defined in this security contact.
      * 
      */
     private final @Nullable String emails;
     /**
-     * Resource Id
+     * @return Resource Id
      * 
      */
     private final String id;
     /**
-     * Resource name
+     * @return Resource name
      * 
      */
     private final String name;
     /**
-     * Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.
+     * @return Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.
      * 
      */
     private final @Nullable SecurityContactPropertiesResponseNotificationsByRole notificationsByRole;
     /**
-     * The security contact&#39;s phone number
+     * @return The security contact&#39;s phone number
      * 
      */
     private final @Nullable String phone;
     /**
-     * Resource type
+     * @return Resource type
      * 
      */
     private final String type;
@@ -68,51 +68,51 @@ public final class GetSecurityContactResult {
     }
 
     /**
-     * Defines whether to send email notifications about new security alerts
+     * @return Defines whether to send email notifications about new security alerts
      * 
-    */
+     */
     public Optional<SecurityContactPropertiesResponseAlertNotifications> alertNotifications() {
         return Optional.ofNullable(this.alertNotifications);
     }
     /**
-     * List of email addresses which will get notifications from Azure Security Center by the configurations defined in this security contact.
+     * @return List of email addresses which will get notifications from Azure Security Center by the configurations defined in this security contact.
      * 
-    */
+     */
     public Optional<String> emails() {
         return Optional.ofNullable(this.emails);
     }
     /**
-     * Resource Id
+     * @return Resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource name
+     * @return Resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.
+     * @return Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.
      * 
-    */
+     */
     public Optional<SecurityContactPropertiesResponseNotificationsByRole> notificationsByRole() {
         return Optional.ofNullable(this.notificationsByRole);
     }
     /**
-     * The security contact&#39;s phone number
+     * @return The security contact&#39;s phone number
      * 
-    */
+     */
     public Optional<String> phone() {
         return Optional.ofNullable(this.phone);
     }
     /**
-     * Resource type
+     * @return Resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

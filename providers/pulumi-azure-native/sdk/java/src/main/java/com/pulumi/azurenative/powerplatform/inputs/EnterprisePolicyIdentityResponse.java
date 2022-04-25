@@ -25,6 +25,10 @@ public final class EnterprisePolicyIdentityResponse extends com.pulumi.resources
     @Import(name="systemAssignedIdentityPrincipalId", required=true)
     private String systemAssignedIdentityPrincipalId;
 
+    /**
+     * @return The principal id of EnterprisePolicy identity.
+     * 
+     */
     public String systemAssignedIdentityPrincipalId() {
         return this.systemAssignedIdentityPrincipalId;
     }
@@ -36,6 +40,10 @@ public final class EnterprisePolicyIdentityResponse extends com.pulumi.resources
     @Import(name="tenantId", required=true)
     private String tenantId;
 
+    /**
+     * @return The tenant id associated with the EnterprisePolicy.
+     * 
+     */
     public String tenantId() {
         return this.tenantId;
     }
@@ -47,6 +55,10 @@ public final class EnterprisePolicyIdentityResponse extends com.pulumi.resources
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return The type of identity used for the EnterprisePolicy. Currently, the only supported type is &#39;SystemAssigned&#39;, which implicitly creates an identity.
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -77,16 +89,34 @@ public final class EnterprisePolicyIdentityResponse extends com.pulumi.resources
             $ = new EnterprisePolicyIdentityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param systemAssignedIdentityPrincipalId The principal id of EnterprisePolicy identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder systemAssignedIdentityPrincipalId(String systemAssignedIdentityPrincipalId) {
             $.systemAssignedIdentityPrincipalId = systemAssignedIdentityPrincipalId;
             return this;
         }
 
+        /**
+         * @param tenantId The tenant id associated with the EnterprisePolicy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(String tenantId) {
             $.tenantId = tenantId;
             return this;
         }
 
+        /**
+         * @param type The type of identity used for the EnterprisePolicy. Currently, the only supported type is &#39;SystemAssigned&#39;, which implicitly creates an identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;

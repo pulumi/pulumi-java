@@ -27,6 +27,10 @@ public final class PolicySettingsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="fileUploadLimitInMb")
     private @Nullable Integer fileUploadLimitInMb;
 
+    /**
+     * @return Maximum file upload size in Mb for WAF.
+     * 
+     */
     public Optional<Integer> fileUploadLimitInMb() {
         return Optional.ofNullable(this.fileUploadLimitInMb);
     }
@@ -38,6 +42,10 @@ public final class PolicySettingsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="maxRequestBodySizeInKb")
     private @Nullable Integer maxRequestBodySizeInKb;
 
+    /**
+     * @return Maximum request body size in Kb for WAF.
+     * 
+     */
     public Optional<Integer> maxRequestBodySizeInKb() {
         return Optional.ofNullable(this.maxRequestBodySizeInKb);
     }
@@ -49,6 +57,10 @@ public final class PolicySettingsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="mode")
     private @Nullable String mode;
 
+    /**
+     * @return The mode of the policy.
+     * 
+     */
     public Optional<String> mode() {
         return Optional.ofNullable(this.mode);
     }
@@ -60,6 +72,10 @@ public final class PolicySettingsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="requestBodyCheck")
     private @Nullable Boolean requestBodyCheck;
 
+    /**
+     * @return Whether to allow WAF to check request Body.
+     * 
+     */
     public Optional<Boolean> requestBodyCheck() {
         return Optional.ofNullable(this.requestBodyCheck);
     }
@@ -71,6 +87,10 @@ public final class PolicySettingsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="state")
     private @Nullable String state;
 
+    /**
+     * @return The state of the policy.
+     * 
+     */
     public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
@@ -103,26 +123,56 @@ public final class PolicySettingsResponse extends com.pulumi.resources.InvokeArg
             $ = new PolicySettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fileUploadLimitInMb Maximum file upload size in Mb for WAF.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileUploadLimitInMb(@Nullable Integer fileUploadLimitInMb) {
             $.fileUploadLimitInMb = fileUploadLimitInMb;
             return this;
         }
 
+        /**
+         * @param maxRequestBodySizeInKb Maximum request body size in Kb for WAF.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxRequestBodySizeInKb(@Nullable Integer maxRequestBodySizeInKb) {
             $.maxRequestBodySizeInKb = maxRequestBodySizeInKb;
             return this;
         }
 
+        /**
+         * @param mode The mode of the policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(@Nullable String mode) {
             $.mode = mode;
             return this;
         }
 
+        /**
+         * @param requestBodyCheck Whether to allow WAF to check request Body.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestBodyCheck(@Nullable Boolean requestBodyCheck) {
             $.requestBodyCheck = requestBodyCheck;
             return this;
         }
 
+        /**
+         * @param state The state of the policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable String state) {
             $.state = state;
             return this;

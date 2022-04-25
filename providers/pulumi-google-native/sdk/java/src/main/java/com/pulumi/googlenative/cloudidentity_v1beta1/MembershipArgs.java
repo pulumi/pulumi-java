@@ -32,6 +32,10 @@ public final class MembershipArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="memberKey")
     private @Nullable Output<EntityKeyArgs> memberKey;
 
+    /**
+     * @return Immutable. The `EntityKey` of the member. Either `member_key` or `preferred_member_key` must be set when calling MembershipsService.CreateMembership but not both; both shall be set when returned.
+     * 
+     */
     public Optional<Output<EntityKeyArgs>> memberKey() {
         return Optional.ofNullable(this.memberKey);
     }
@@ -43,6 +47,10 @@ public final class MembershipArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="preferredMemberKey", required=true)
     private Output<EntityKeyArgs> preferredMemberKey;
 
+    /**
+     * @return Immutable. The `EntityKey` of the member. Either `member_key` or `preferred_member_key` must be set when calling MembershipsService.CreateMembership but not both; both shall be set when returned.
+     * 
+     */
     public Output<EntityKeyArgs> preferredMemberKey() {
         return this.preferredMemberKey;
     }
@@ -54,6 +62,10 @@ public final class MembershipArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="roles")
     private @Nullable Output<List<MembershipRoleArgs>> roles;
 
+    /**
+     * @return The `MembershipRole`s that apply to the `Membership`. If unspecified, defaults to a single `MembershipRole` with `name` `MEMBER`. Must not contain duplicate `MembershipRole`s with the same `name`.
+     * 
+     */
     public Optional<Output<List<MembershipRoleArgs>>> roles() {
         return Optional.ofNullable(this.roles);
     }
@@ -94,33 +106,75 @@ public final class MembershipArgs extends com.pulumi.resources.ResourceArgs {
             return groupId(Output.of(groupId));
         }
 
+        /**
+         * @param memberKey Immutable. The `EntityKey` of the member. Either `member_key` or `preferred_member_key` must be set when calling MembershipsService.CreateMembership but not both; both shall be set when returned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memberKey(@Nullable Output<EntityKeyArgs> memberKey) {
             $.memberKey = memberKey;
             return this;
         }
 
+        /**
+         * @param memberKey Immutable. The `EntityKey` of the member. Either `member_key` or `preferred_member_key` must be set when calling MembershipsService.CreateMembership but not both; both shall be set when returned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memberKey(EntityKeyArgs memberKey) {
             return memberKey(Output.of(memberKey));
         }
 
+        /**
+         * @param preferredMemberKey Immutable. The `EntityKey` of the member. Either `member_key` or `preferred_member_key` must be set when calling MembershipsService.CreateMembership but not both; both shall be set when returned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preferredMemberKey(Output<EntityKeyArgs> preferredMemberKey) {
             $.preferredMemberKey = preferredMemberKey;
             return this;
         }
 
+        /**
+         * @param preferredMemberKey Immutable. The `EntityKey` of the member. Either `member_key` or `preferred_member_key` must be set when calling MembershipsService.CreateMembership but not both; both shall be set when returned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preferredMemberKey(EntityKeyArgs preferredMemberKey) {
             return preferredMemberKey(Output.of(preferredMemberKey));
         }
 
+        /**
+         * @param roles The `MembershipRole`s that apply to the `Membership`. If unspecified, defaults to a single `MembershipRole` with `name` `MEMBER`. Must not contain duplicate `MembershipRole`s with the same `name`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roles(@Nullable Output<List<MembershipRoleArgs>> roles) {
             $.roles = roles;
             return this;
         }
 
+        /**
+         * @param roles The `MembershipRole`s that apply to the `Membership`. If unspecified, defaults to a single `MembershipRole` with `name` `MEMBER`. Must not contain duplicate `MembershipRole`s with the same `name`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roles(List<MembershipRoleArgs> roles) {
             return roles(Output.of(roles));
         }
 
+        /**
+         * @param roles The `MembershipRole`s that apply to the `Membership`. If unspecified, defaults to a single `MembershipRole` with `name` `MEMBER`. Must not contain duplicate `MembershipRole`s with the same `name`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roles(MembershipRoleArgs... roles) {
             return roles(List.of(roles));
         }

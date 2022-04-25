@@ -24,6 +24,10 @@ public final class GoogleCloudDatapipelinesV1WorkloadResponse extends com.pulumi
     @Import(name="dataflowFlexTemplateRequest", required=true)
     private GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse dataflowFlexTemplateRequest;
 
+    /**
+     * @return Template information and additional parameters needed to launch a Dataflow job using the flex launch API.
+     * 
+     */
     public GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse dataflowFlexTemplateRequest() {
         return this.dataflowFlexTemplateRequest;
     }
@@ -35,6 +39,10 @@ public final class GoogleCloudDatapipelinesV1WorkloadResponse extends com.pulumi
     @Import(name="dataflowLaunchTemplateRequest", required=true)
     private GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse dataflowLaunchTemplateRequest;
 
+    /**
+     * @return Template information and additional parameters needed to launch a Dataflow job using the standard launch API.
+     * 
+     */
     public GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse dataflowLaunchTemplateRequest() {
         return this.dataflowLaunchTemplateRequest;
     }
@@ -64,11 +72,23 @@ public final class GoogleCloudDatapipelinesV1WorkloadResponse extends com.pulumi
             $ = new GoogleCloudDatapipelinesV1WorkloadResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataflowFlexTemplateRequest Template information and additional parameters needed to launch a Dataflow job using the flex launch API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataflowFlexTemplateRequest(GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse dataflowFlexTemplateRequest) {
             $.dataflowFlexTemplateRequest = dataflowFlexTemplateRequest;
             return this;
         }
 
+        /**
+         * @param dataflowLaunchTemplateRequest Template information and additional parameters needed to launch a Dataflow job using the standard launch API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataflowLaunchTemplateRequest(GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse dataflowLaunchTemplateRequest) {
             $.dataflowLaunchTemplateRequest = dataflowLaunchTemplateRequest;
             return this;

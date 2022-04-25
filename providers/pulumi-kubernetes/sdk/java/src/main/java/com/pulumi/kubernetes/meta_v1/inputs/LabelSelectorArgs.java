@@ -29,6 +29,10 @@ public final class LabelSelectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="matchExpressions")
     private @Nullable Output<List<LabelSelectorRequirementArgs>> matchExpressions;
 
+    /**
+     * @return matchExpressions is a list of label selector requirements. The requirements are ANDed.
+     * 
+     */
     public Optional<Output<List<LabelSelectorRequirementArgs>>> matchExpressions() {
         return Optional.ofNullable(this.matchExpressions);
     }
@@ -40,6 +44,10 @@ public final class LabelSelectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="matchLabels")
     private @Nullable Output<Map<String,String>> matchLabels;
 
+    /**
+     * @return matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is &#34;key&#34;, the operator is &#34;In&#34;, and the values array contains only &#34;value&#34;. The requirements are ANDed.
+     * 
+     */
     public Optional<Output<Map<String,String>>> matchLabels() {
         return Optional.ofNullable(this.matchLabels);
     }
@@ -69,24 +77,54 @@ public final class LabelSelectorArgs extends com.pulumi.resources.ResourceArgs {
             $ = new LabelSelectorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param matchExpressions matchExpressions is a list of label selector requirements. The requirements are ANDed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchExpressions(@Nullable Output<List<LabelSelectorRequirementArgs>> matchExpressions) {
             $.matchExpressions = matchExpressions;
             return this;
         }
 
+        /**
+         * @param matchExpressions matchExpressions is a list of label selector requirements. The requirements are ANDed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchExpressions(List<LabelSelectorRequirementArgs> matchExpressions) {
             return matchExpressions(Output.of(matchExpressions));
         }
 
+        /**
+         * @param matchExpressions matchExpressions is a list of label selector requirements. The requirements are ANDed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchExpressions(LabelSelectorRequirementArgs... matchExpressions) {
             return matchExpressions(List.of(matchExpressions));
         }
 
+        /**
+         * @param matchLabels matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is &#34;key&#34;, the operator is &#34;In&#34;, and the values array contains only &#34;value&#34;. The requirements are ANDed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchLabels(@Nullable Output<Map<String,String>> matchLabels) {
             $.matchLabels = matchLabels;
             return this;
         }
 
+        /**
+         * @param matchLabels matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is &#34;key&#34;, the operator is &#34;In&#34;, and the values array contains only &#34;value&#34;. The requirements are ANDed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchLabels(Map<String,String> matchLabels) {
             return matchLabels(Output.of(matchLabels));
         }

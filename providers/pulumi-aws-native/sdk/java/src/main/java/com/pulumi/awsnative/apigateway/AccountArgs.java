@@ -22,6 +22,10 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cloudWatchRoleArn")
     private @Nullable Output<String> cloudWatchRoleArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of an IAM role that has write access to CloudWatch Logs in your account.
+     * 
+     */
     public Optional<Output<String>> cloudWatchRoleArn() {
         return Optional.ofNullable(this.cloudWatchRoleArn);
     }
@@ -50,11 +54,23 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AccountArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cloudWatchRoleArn The Amazon Resource Name (ARN) of an IAM role that has write access to CloudWatch Logs in your account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudWatchRoleArn(@Nullable Output<String> cloudWatchRoleArn) {
             $.cloudWatchRoleArn = cloudWatchRoleArn;
             return this;
         }
 
+        /**
+         * @param cloudWatchRoleArn The Amazon Resource Name (ARN) of an IAM role that has write access to CloudWatch Logs in your account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudWatchRoleArn(String cloudWatchRoleArn) {
             return cloudWatchRoleArn(Output.of(cloudWatchRoleArn));
         }

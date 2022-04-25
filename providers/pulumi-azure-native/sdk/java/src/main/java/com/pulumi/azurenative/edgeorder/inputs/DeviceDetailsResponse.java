@@ -23,6 +23,10 @@ public final class DeviceDetailsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="managementResourceId", required=true)
     private String managementResourceId;
 
+    /**
+     * @return Management Resource Id
+     * 
+     */
     public String managementResourceId() {
         return this.managementResourceId;
     }
@@ -34,6 +38,10 @@ public final class DeviceDetailsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="managementResourceTenantId", required=true)
     private String managementResourceTenantId;
 
+    /**
+     * @return Management Resource Tenant ID
+     * 
+     */
     public String managementResourceTenantId() {
         return this.managementResourceTenantId;
     }
@@ -45,6 +53,10 @@ public final class DeviceDetailsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="serialNumber", required=true)
     private String serialNumber;
 
+    /**
+     * @return device serial number
+     * 
+     */
     public String serialNumber() {
         return this.serialNumber;
     }
@@ -75,16 +87,34 @@ public final class DeviceDetailsResponse extends com.pulumi.resources.InvokeArgs
             $ = new DeviceDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param managementResourceId Management Resource Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder managementResourceId(String managementResourceId) {
             $.managementResourceId = managementResourceId;
             return this;
         }
 
+        /**
+         * @param managementResourceTenantId Management Resource Tenant ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder managementResourceTenantId(String managementResourceTenantId) {
             $.managementResourceTenantId = managementResourceTenantId;
             return this;
         }
 
+        /**
+         * @param serialNumber device serial number
+         * 
+         * @return builder
+         * 
+         */
         public Builder serialNumber(String serialNumber) {
             $.serialNumber = serialNumber;
             return this;

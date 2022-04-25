@@ -29,6 +29,10 @@ public final class AuthorizationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="authorizationType", required=true)
     private Output<Either<String,AuthorizationType>> authorizationType;
 
+    /**
+     * @return Type of authorization.
+     * 
+     */
     public Output<Either<String,AuthorizationType>> authorizationType() {
         return this.authorizationType;
     }
@@ -40,6 +44,10 @@ public final class AuthorizationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="parameters")
     private @Nullable Output<Map<String,String>> parameters;
 
+    /**
+     * @return Authorization parameters corresponding to the authorization type.
+     * 
+     */
     public Optional<Output<Map<String,String>>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -69,28 +77,64 @@ public final class AuthorizationArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AuthorizationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authorizationType Type of authorization.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationType(Output<Either<String,AuthorizationType>> authorizationType) {
             $.authorizationType = authorizationType;
             return this;
         }
 
+        /**
+         * @param authorizationType Type of authorization.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationType(Either<String,AuthorizationType> authorizationType) {
             return authorizationType(Output.of(authorizationType));
         }
 
+        /**
+         * @param authorizationType Type of authorization.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationType(String authorizationType) {
             return authorizationType(Either.ofLeft(authorizationType));
         }
 
+        /**
+         * @param authorizationType Type of authorization.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationType(AuthorizationType authorizationType) {
             return authorizationType(Either.ofRight(authorizationType));
         }
 
+        /**
+         * @param parameters Authorization parameters corresponding to the authorization type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters Authorization parameters corresponding to the authorization type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(Map<String,String> parameters) {
             return parameters(Output.of(parameters));
         }

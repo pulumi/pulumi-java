@@ -20,6 +20,10 @@ public final class UserPoolUsernameConfigurationGetArgs extends com.pulumi.resou
     @Import(name="caseSensitive", required=true)
     private Output<Boolean> caseSensitive;
 
+    /**
+     * @return Whether username case sensitivity will be applied for all users in the user pool through Cognito APIs.
+     * 
+     */
     public Output<Boolean> caseSensitive() {
         return this.caseSensitive;
     }
@@ -48,11 +52,23 @@ public final class UserPoolUsernameConfigurationGetArgs extends com.pulumi.resou
             $ = new UserPoolUsernameConfigurationGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param caseSensitive Whether username case sensitivity will be applied for all users in the user pool through Cognito APIs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder caseSensitive(Output<Boolean> caseSensitive) {
             $.caseSensitive = caseSensitive;
             return this;
         }
 
+        /**
+         * @param caseSensitive Whether username case sensitivity will be applied for all users in the user pool through Cognito APIs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder caseSensitive(Boolean caseSensitive) {
             return caseSensitive(Output.of(caseSensitive));
         }

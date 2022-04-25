@@ -11,17 +11,17 @@ import java.util.Objects;
 @CustomType
 public final class RegistrationAssignmentPropertiesResponse {
     /**
-     * Current state of the registration assignment.
+     * @return Current state of the registration assignment.
      * 
      */
     private final String provisioningState;
     /**
-     * Registration definition inside registration assignment.
+     * @return Registration definition inside registration assignment.
      * 
      */
     private final RegistrationAssignmentPropertiesResponseRegistrationDefinition registrationDefinition;
     /**
-     * Fully qualified path of the registration definition.
+     * @return Fully qualified path of the registration definition.
      * 
      */
     private final String registrationDefinitionId;
@@ -37,23 +37,23 @@ public final class RegistrationAssignmentPropertiesResponse {
     }
 
     /**
-     * Current state of the registration assignment.
+     * @return Current state of the registration assignment.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Registration definition inside registration assignment.
+     * @return Registration definition inside registration assignment.
      * 
-    */
+     */
     public RegistrationAssignmentPropertiesResponseRegistrationDefinition registrationDefinition() {
         return this.registrationDefinition;
     }
     /**
-     * Fully qualified path of the registration definition.
+     * @return Fully qualified path of the registration definition.
      * 
-    */
+     */
     public String registrationDefinitionId() {
         return this.registrationDefinitionId;
     }

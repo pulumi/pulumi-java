@@ -14,17 +14,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ResourcePolicySnapshotSchedulePolicySnapshotProperties {
     /**
-     * Whether to perform a &#39;guest aware&#39; snapshot.
+     * @return Whether to perform a &#39;guest aware&#39; snapshot.
      * 
      */
     private final @Nullable Boolean guestFlush;
     /**
-     * A set of key-value pairs.
+     * @return A set of key-value pairs.
      * 
      */
     private final @Nullable Map<String,String> labels;
     /**
-     * Cloud Storage bucket location to store the auto snapshot
+     * @return Cloud Storage bucket location to store the auto snapshot
      * (regional or multi-regional)
      * 
      */
@@ -41,24 +41,24 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotProperties {
     }
 
     /**
-     * Whether to perform a &#39;guest aware&#39; snapshot.
+     * @return Whether to perform a &#39;guest aware&#39; snapshot.
      * 
-    */
+     */
     public Optional<Boolean> guestFlush() {
         return Optional.ofNullable(this.guestFlush);
     }
     /**
-     * A set of key-value pairs.
+     * @return A set of key-value pairs.
      * 
-    */
+     */
     public Map<String,String> labels() {
         return this.labels == null ? Map.of() : this.labels;
     }
     /**
-     * Cloud Storage bucket location to store the auto snapshot
+     * @return Cloud Storage bucket location to store the auto snapshot
      * (regional or multi-regional)
      * 
-    */
+     */
     public Optional<String> storageLocations() {
         return Optional.ofNullable(this.storageLocations);
     }

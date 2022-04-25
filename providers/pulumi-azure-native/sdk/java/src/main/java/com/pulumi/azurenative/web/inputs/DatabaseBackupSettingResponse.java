@@ -25,6 +25,10 @@ public final class DatabaseBackupSettingResponse extends com.pulumi.resources.In
     @Import(name="connectionString")
     private @Nullable String connectionString;
 
+    /**
+     * @return Contains a connection string to a database which is being backed up or restored. If the restore should happen to a new database, the database name inside is the new one.
+     * 
+     */
     public Optional<String> connectionString() {
         return Optional.ofNullable(this.connectionString);
     }
@@ -37,6 +41,11 @@ public final class DatabaseBackupSettingResponse extends com.pulumi.resources.In
     @Import(name="connectionStringName")
     private @Nullable String connectionStringName;
 
+    /**
+     * @return Contains a connection string name that is linked to the SiteConfig.ConnectionStrings.
+     * This is used during restore with overwrite connection strings options.
+     * 
+     */
     public Optional<String> connectionStringName() {
         return Optional.ofNullable(this.connectionStringName);
     }
@@ -48,6 +57,10 @@ public final class DatabaseBackupSettingResponse extends com.pulumi.resources.In
     @Import(name="databaseType", required=true)
     private String databaseType;
 
+    /**
+     * @return Database type (e.g. SqlAzure / MySql).
+     * 
+     */
     public String databaseType() {
         return this.databaseType;
     }
@@ -86,16 +99,35 @@ public final class DatabaseBackupSettingResponse extends com.pulumi.resources.In
             $ = new DatabaseBackupSettingResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param connectionString Contains a connection string to a database which is being backed up or restored. If the restore should happen to a new database, the database name inside is the new one.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionString(@Nullable String connectionString) {
             $.connectionString = connectionString;
             return this;
         }
 
+        /**
+         * @param connectionStringName Contains a connection string name that is linked to the SiteConfig.ConnectionStrings.
+         * This is used during restore with overwrite connection strings options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionStringName(@Nullable String connectionStringName) {
             $.connectionStringName = connectionStringName;
             return this;
         }
 
+        /**
+         * @param databaseType Database type (e.g. SqlAzure / MySql).
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseType(String databaseType) {
             $.databaseType = databaseType;
             return this;

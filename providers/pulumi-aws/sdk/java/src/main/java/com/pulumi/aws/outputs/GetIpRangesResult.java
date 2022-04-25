@@ -14,29 +14,29 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetIpRangesResult {
     /**
-     * The lexically ordered list of CIDR blocks.
+     * @return The lexically ordered list of CIDR blocks.
      * 
      */
     private final List<String> cidrBlocks;
     /**
-     * The publication time of the IP ranges (e.g., `2016-08-03-23-46-05`).
+     * @return The publication time of the IP ranges (e.g., `2016-08-03-23-46-05`).
      * 
      */
     private final String createDate;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     /**
-     * The lexically ordered list of IPv6 CIDR blocks.
+     * @return The lexically ordered list of IPv6 CIDR blocks.
      * 
      */
     private final List<String> ipv6CidrBlocks;
     private final @Nullable List<String> regions;
     private final List<String> services;
     /**
-     * The publication time of the IP ranges, in Unix epoch time format
+     * @return The publication time of the IP ranges, in Unix epoch time format
      * (e.g., `1470267965`).
      * 
      */
@@ -64,30 +64,30 @@ public final class GetIpRangesResult {
     }
 
     /**
-     * The lexically ordered list of CIDR blocks.
+     * @return The lexically ordered list of CIDR blocks.
      * 
-    */
+     */
     public List<String> cidrBlocks() {
         return this.cidrBlocks;
     }
     /**
-     * The publication time of the IP ranges (e.g., `2016-08-03-23-46-05`).
+     * @return The publication time of the IP ranges (e.g., `2016-08-03-23-46-05`).
      * 
-    */
+     */
     public String createDate() {
         return this.createDate;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The lexically ordered list of IPv6 CIDR blocks.
+     * @return The lexically ordered list of IPv6 CIDR blocks.
      * 
-    */
+     */
     public List<String> ipv6CidrBlocks() {
         return this.ipv6CidrBlocks;
     }
@@ -98,10 +98,10 @@ public final class GetIpRangesResult {
         return this.services;
     }
     /**
-     * The publication time of the IP ranges, in Unix epoch time format
+     * @return The publication time of the IP ranges, in Unix epoch time format
      * (e.g., `1470267965`).
      * 
-    */
+     */
     public Integer syncToken() {
         return this.syncToken;
     }

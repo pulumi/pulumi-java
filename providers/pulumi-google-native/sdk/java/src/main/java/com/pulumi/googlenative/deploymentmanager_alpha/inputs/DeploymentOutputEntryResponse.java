@@ -23,6 +23,10 @@ public final class DeploymentOutputEntryResponse extends com.pulumi.resources.In
     @Import(name="key", required=true)
     private String key;
 
+    /**
+     * @return Key of the output
+     * 
+     */
     public String key() {
         return this.key;
     }
@@ -34,6 +38,10 @@ public final class DeploymentOutputEntryResponse extends com.pulumi.resources.In
     @Import(name="value", required=true)
     private String value;
 
+    /**
+     * @return Value of the label
+     * 
+     */
     public String value() {
         return this.value;
     }
@@ -63,11 +71,23 @@ public final class DeploymentOutputEntryResponse extends com.pulumi.resources.In
             $ = new DeploymentOutputEntryResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param key Key of the output
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param value Value of the label
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             $.value = value;
             return this;

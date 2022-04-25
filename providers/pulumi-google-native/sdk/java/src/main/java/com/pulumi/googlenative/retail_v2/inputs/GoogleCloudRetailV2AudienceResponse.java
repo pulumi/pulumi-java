@@ -24,6 +24,10 @@ public final class GoogleCloudRetailV2AudienceResponse extends com.pulumi.resour
     @Import(name="ageGroups", required=true)
     private List<String> ageGroups;
 
+    /**
+     * @return The age groups of the audience. Strongly encouraged to use the standard values: &#34;newborn&#34; (up to 3 months old), &#34;infant&#34; (3–12 months old), &#34;toddler&#34; (1–5 years old), &#34;kids&#34; (5–13 years old), &#34;adult&#34; (typically teens or older). At most 5 values are allowed. Each value must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [age_group](https://support.google.com/merchants/answer/6324463). Schema.org property [Product.audience.suggestedMinAge](https://schema.org/suggestedMinAge) and [Product.audience.suggestedMaxAge](https://schema.org/suggestedMaxAge).
+     * 
+     */
     public List<String> ageGroups() {
         return this.ageGroups;
     }
@@ -35,6 +39,10 @@ public final class GoogleCloudRetailV2AudienceResponse extends com.pulumi.resour
     @Import(name="genders", required=true)
     private List<String> genders;
 
+    /**
+     * @return The genders of the audience. Strongly encouraged to use the standard values: &#34;male&#34;, &#34;female&#34;, &#34;unisex&#34;. At most 5 values are allowed. Each value must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [gender](https://support.google.com/merchants/answer/6324479). Schema.org property [Product.audience.suggestedGender](https://schema.org/suggestedGender).
+     * 
+     */
     public List<String> genders() {
         return this.genders;
     }
@@ -64,20 +72,44 @@ public final class GoogleCloudRetailV2AudienceResponse extends com.pulumi.resour
             $ = new GoogleCloudRetailV2AudienceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ageGroups The age groups of the audience. Strongly encouraged to use the standard values: &#34;newborn&#34; (up to 3 months old), &#34;infant&#34; (3–12 months old), &#34;toddler&#34; (1–5 years old), &#34;kids&#34; (5–13 years old), &#34;adult&#34; (typically teens or older). At most 5 values are allowed. Each value must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [age_group](https://support.google.com/merchants/answer/6324463). Schema.org property [Product.audience.suggestedMinAge](https://schema.org/suggestedMinAge) and [Product.audience.suggestedMaxAge](https://schema.org/suggestedMaxAge).
+         * 
+         * @return builder
+         * 
+         */
         public Builder ageGroups(List<String> ageGroups) {
             $.ageGroups = ageGroups;
             return this;
         }
 
+        /**
+         * @param ageGroups The age groups of the audience. Strongly encouraged to use the standard values: &#34;newborn&#34; (up to 3 months old), &#34;infant&#34; (3–12 months old), &#34;toddler&#34; (1–5 years old), &#34;kids&#34; (5–13 years old), &#34;adult&#34; (typically teens or older). At most 5 values are allowed. Each value must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [age_group](https://support.google.com/merchants/answer/6324463). Schema.org property [Product.audience.suggestedMinAge](https://schema.org/suggestedMinAge) and [Product.audience.suggestedMaxAge](https://schema.org/suggestedMaxAge).
+         * 
+         * @return builder
+         * 
+         */
         public Builder ageGroups(String... ageGroups) {
             return ageGroups(List.of(ageGroups));
         }
 
+        /**
+         * @param genders The genders of the audience. Strongly encouraged to use the standard values: &#34;male&#34;, &#34;female&#34;, &#34;unisex&#34;. At most 5 values are allowed. Each value must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [gender](https://support.google.com/merchants/answer/6324479). Schema.org property [Product.audience.suggestedGender](https://schema.org/suggestedGender).
+         * 
+         * @return builder
+         * 
+         */
         public Builder genders(List<String> genders) {
             $.genders = genders;
             return this;
         }
 
+        /**
+         * @param genders The genders of the audience. Strongly encouraged to use the standard values: &#34;male&#34;, &#34;female&#34;, &#34;unisex&#34;. At most 5 values are allowed. Each value must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [gender](https://support.google.com/merchants/answer/6324479). Schema.org property [Product.audience.suggestedGender](https://schema.org/suggestedGender).
+         * 
+         * @return builder
+         * 
+         */
         public Builder genders(String... genders) {
             return genders(List.of(genders));
         }

@@ -23,6 +23,10 @@ public final class SubnetGroupTag extends com.pulumi.resources.InvokeArgs {
     @Import(name="key", required=true)
     private String key;
 
+    /**
+     * @return The key for the tag. May not be null.
+     * 
+     */
     public String key() {
         return this.key;
     }
@@ -34,6 +38,10 @@ public final class SubnetGroupTag extends com.pulumi.resources.InvokeArgs {
     @Import(name="value", required=true)
     private String value;
 
+    /**
+     * @return The tag&#39;s value. May be null.
+     * 
+     */
     public String value() {
         return this.value;
     }
@@ -63,11 +71,23 @@ public final class SubnetGroupTag extends com.pulumi.resources.InvokeArgs {
             $ = new SubnetGroupTag(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param key The key for the tag. May not be null.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param value The tag&#39;s value. May be null.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             $.value = value;
             return this;

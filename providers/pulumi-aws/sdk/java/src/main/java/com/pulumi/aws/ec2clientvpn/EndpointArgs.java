@@ -27,6 +27,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="authenticationOptions", required=true)
     private Output<List<EndpointAuthenticationOptionArgs>> authenticationOptions;
 
+    /**
+     * @return Information about the authentication method to be used to authenticate clients.
+     * 
+     */
     public Output<List<EndpointAuthenticationOptionArgs>> authenticationOptions() {
         return this.authenticationOptions;
     }
@@ -38,6 +42,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clientCidrBlock", required=true)
     private Output<String> clientCidrBlock;
 
+    /**
+     * @return The IPv4 address range, in CIDR notation, from which to assign client IP addresses. The address range cannot overlap with the local CIDR of the VPC in which the associated subnet is located, or the routes that you add manually. The address range cannot be changed after the Client VPN endpoint has been created. The CIDR block should be /22 or greater.
+     * 
+     */
     public Output<String> clientCidrBlock() {
         return this.clientCidrBlock;
     }
@@ -49,6 +57,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="connectionLogOptions", required=true)
     private Output<EndpointConnectionLogOptionsArgs> connectionLogOptions;
 
+    /**
+     * @return Information about the client connection logging options.
+     * 
+     */
     public Output<EndpointConnectionLogOptionsArgs> connectionLogOptions() {
         return this.connectionLogOptions;
     }
@@ -60,6 +72,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A brief description of the Client VPN endpoint.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -71,6 +87,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dnsServers")
     private @Nullable Output<List<String>> dnsServers;
 
+    /**
+     * @return Information about the DNS servers to be used for DNS resolution. A Client VPN endpoint can have up to two DNS servers. If no DNS server is specified, the DNS address of the connecting device is used.
+     * 
+     */
     public Optional<Output<List<String>>> dnsServers() {
         return Optional.ofNullable(this.dnsServers);
     }
@@ -82,6 +102,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="selfServicePortal")
     private @Nullable Output<String> selfServicePortal;
 
+    /**
+     * @return Specify whether to enable the self-service portal for the Client VPN endpoint. Values can be `enabled` or `disabled`. Default value is `disabled`.
+     * 
+     */
     public Optional<Output<String>> selfServicePortal() {
         return Optional.ofNullable(this.selfServicePortal);
     }
@@ -93,6 +117,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serverCertificateArn", required=true)
     private Output<String> serverCertificateArn;
 
+    /**
+     * @return The ARN of the ACM server certificate.
+     * 
+     */
     public Output<String> serverCertificateArn() {
         return this.serverCertificateArn;
     }
@@ -104,6 +132,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="splitTunnel")
     private @Nullable Output<Boolean> splitTunnel;
 
+    /**
+     * @return Indicates whether split-tunnel is enabled on VPN endpoint. Default value is `false`.
+     * 
+     */
     public Optional<Output<Boolean>> splitTunnel() {
         return Optional.ofNullable(this.splitTunnel);
     }
@@ -115,6 +147,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A mapping of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -126,6 +162,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="transportProtocol")
     private @Nullable Output<String> transportProtocol;
 
+    /**
+     * @return The transport protocol to be used by the VPN session. Default value is `udp`.
+     * 
+     */
     public Optional<Output<String>> transportProtocol() {
         return Optional.ofNullable(this.transportProtocol);
     }
@@ -163,100 +203,232 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
             $ = new EndpointArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authenticationOptions Information about the authentication method to be used to authenticate clients.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationOptions(Output<List<EndpointAuthenticationOptionArgs>> authenticationOptions) {
             $.authenticationOptions = authenticationOptions;
             return this;
         }
 
+        /**
+         * @param authenticationOptions Information about the authentication method to be used to authenticate clients.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationOptions(List<EndpointAuthenticationOptionArgs> authenticationOptions) {
             return authenticationOptions(Output.of(authenticationOptions));
         }
 
+        /**
+         * @param authenticationOptions Information about the authentication method to be used to authenticate clients.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationOptions(EndpointAuthenticationOptionArgs... authenticationOptions) {
             return authenticationOptions(List.of(authenticationOptions));
         }
 
+        /**
+         * @param clientCidrBlock The IPv4 address range, in CIDR notation, from which to assign client IP addresses. The address range cannot overlap with the local CIDR of the VPC in which the associated subnet is located, or the routes that you add manually. The address range cannot be changed after the Client VPN endpoint has been created. The CIDR block should be /22 or greater.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientCidrBlock(Output<String> clientCidrBlock) {
             $.clientCidrBlock = clientCidrBlock;
             return this;
         }
 
+        /**
+         * @param clientCidrBlock The IPv4 address range, in CIDR notation, from which to assign client IP addresses. The address range cannot overlap with the local CIDR of the VPC in which the associated subnet is located, or the routes that you add manually. The address range cannot be changed after the Client VPN endpoint has been created. The CIDR block should be /22 or greater.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientCidrBlock(String clientCidrBlock) {
             return clientCidrBlock(Output.of(clientCidrBlock));
         }
 
+        /**
+         * @param connectionLogOptions Information about the client connection logging options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionLogOptions(Output<EndpointConnectionLogOptionsArgs> connectionLogOptions) {
             $.connectionLogOptions = connectionLogOptions;
             return this;
         }
 
+        /**
+         * @param connectionLogOptions Information about the client connection logging options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionLogOptions(EndpointConnectionLogOptionsArgs connectionLogOptions) {
             return connectionLogOptions(Output.of(connectionLogOptions));
         }
 
+        /**
+         * @param description A brief description of the Client VPN endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A brief description of the Client VPN endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param dnsServers Information about the DNS servers to be used for DNS resolution. A Client VPN endpoint can have up to two DNS servers. If no DNS server is specified, the DNS address of the connecting device is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsServers(@Nullable Output<List<String>> dnsServers) {
             $.dnsServers = dnsServers;
             return this;
         }
 
+        /**
+         * @param dnsServers Information about the DNS servers to be used for DNS resolution. A Client VPN endpoint can have up to two DNS servers. If no DNS server is specified, the DNS address of the connecting device is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsServers(List<String> dnsServers) {
             return dnsServers(Output.of(dnsServers));
         }
 
+        /**
+         * @param dnsServers Information about the DNS servers to be used for DNS resolution. A Client VPN endpoint can have up to two DNS servers. If no DNS server is specified, the DNS address of the connecting device is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsServers(String... dnsServers) {
             return dnsServers(List.of(dnsServers));
         }
 
+        /**
+         * @param selfServicePortal Specify whether to enable the self-service portal for the Client VPN endpoint. Values can be `enabled` or `disabled`. Default value is `disabled`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selfServicePortal(@Nullable Output<String> selfServicePortal) {
             $.selfServicePortal = selfServicePortal;
             return this;
         }
 
+        /**
+         * @param selfServicePortal Specify whether to enable the self-service portal for the Client VPN endpoint. Values can be `enabled` or `disabled`. Default value is `disabled`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selfServicePortal(String selfServicePortal) {
             return selfServicePortal(Output.of(selfServicePortal));
         }
 
+        /**
+         * @param serverCertificateArn The ARN of the ACM server certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverCertificateArn(Output<String> serverCertificateArn) {
             $.serverCertificateArn = serverCertificateArn;
             return this;
         }
 
+        /**
+         * @param serverCertificateArn The ARN of the ACM server certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverCertificateArn(String serverCertificateArn) {
             return serverCertificateArn(Output.of(serverCertificateArn));
         }
 
+        /**
+         * @param splitTunnel Indicates whether split-tunnel is enabled on VPN endpoint. Default value is `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder splitTunnel(@Nullable Output<Boolean> splitTunnel) {
             $.splitTunnel = splitTunnel;
             return this;
         }
 
+        /**
+         * @param splitTunnel Indicates whether split-tunnel is enabled on VPN endpoint. Default value is `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder splitTunnel(Boolean splitTunnel) {
             return splitTunnel(Output.of(splitTunnel));
         }
 
+        /**
+         * @param tags A mapping of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A mapping of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param transportProtocol The transport protocol to be used by the VPN session. Default value is `udp`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transportProtocol(@Nullable Output<String> transportProtocol) {
             $.transportProtocol = transportProtocol;
             return this;
         }
 
+        /**
+         * @param transportProtocol The transport protocol to be used by the VPN session. Default value is `udp`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transportProtocol(String transportProtocol) {
             return transportProtocol(Output.of(transportProtocol));
         }

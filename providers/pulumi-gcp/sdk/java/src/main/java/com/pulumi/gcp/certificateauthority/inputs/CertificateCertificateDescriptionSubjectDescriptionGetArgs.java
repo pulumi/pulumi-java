@@ -34,6 +34,12 @@ public final class CertificateCertificateDescriptionSubjectDescriptionGetArgs ex
     @Import(name="lifetime")
     private @Nullable Output<String> lifetime;
 
+    /**
+     * @return The desired lifetime of the CA certificate. Used to create the &#34;notBeforeTime&#34; and
+     * &#34;notAfterTime&#34; fields inside an X.509 certificate. A duration in seconds with up to nine
+     * fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
+     * 
+     */
     public Optional<Output<String>> lifetime() {
         return Optional.ofNullable(this.lifetime);
     }
@@ -60,6 +66,11 @@ public final class CertificateCertificateDescriptionSubjectDescriptionGetArgs ex
     @Import(name="subjectAltNames")
     private @Nullable Output<List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameGetArgs>> subjectAltNames;
 
+    /**
+     * @return The subject alternative name fields.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameGetArgs>>> subjectAltNames() {
         return Optional.ofNullable(this.subjectAltNames);
     }
@@ -72,6 +83,11 @@ public final class CertificateCertificateDescriptionSubjectDescriptionGetArgs ex
     @Import(name="subjects")
     private @Nullable Output<List<CertificateCertificateDescriptionSubjectDescriptionSubjectGetArgs>> subjects;
 
+    /**
+     * @return Contains distinguished name fields such as the location and organization.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<CertificateCertificateDescriptionSubjectDescriptionSubjectGetArgs>>> subjects() {
         return Optional.ofNullable(this.subjects);
     }
@@ -114,11 +130,27 @@ public final class CertificateCertificateDescriptionSubjectDescriptionGetArgs ex
             return hexSerialNumber(Output.of(hexSerialNumber));
         }
 
+        /**
+         * @param lifetime The desired lifetime of the CA certificate. Used to create the &#34;notBeforeTime&#34; and
+         * &#34;notAfterTime&#34; fields inside an X.509 certificate. A duration in seconds with up to nine
+         * fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lifetime(@Nullable Output<String> lifetime) {
             $.lifetime = lifetime;
             return this;
         }
 
+        /**
+         * @param lifetime The desired lifetime of the CA certificate. Used to create the &#34;notBeforeTime&#34; and
+         * &#34;notAfterTime&#34; fields inside an X.509 certificate. A duration in seconds with up to nine
+         * fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lifetime(String lifetime) {
             return lifetime(Output.of(lifetime));
         }
@@ -141,28 +173,70 @@ public final class CertificateCertificateDescriptionSubjectDescriptionGetArgs ex
             return notBeforeTime(Output.of(notBeforeTime));
         }
 
+        /**
+         * @param subjectAltNames The subject alternative name fields.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subjectAltNames(@Nullable Output<List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameGetArgs>> subjectAltNames) {
             $.subjectAltNames = subjectAltNames;
             return this;
         }
 
+        /**
+         * @param subjectAltNames The subject alternative name fields.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subjectAltNames(List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameGetArgs> subjectAltNames) {
             return subjectAltNames(Output.of(subjectAltNames));
         }
 
+        /**
+         * @param subjectAltNames The subject alternative name fields.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subjectAltNames(CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameGetArgs... subjectAltNames) {
             return subjectAltNames(List.of(subjectAltNames));
         }
 
+        /**
+         * @param subjects Contains distinguished name fields such as the location and organization.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subjects(@Nullable Output<List<CertificateCertificateDescriptionSubjectDescriptionSubjectGetArgs>> subjects) {
             $.subjects = subjects;
             return this;
         }
 
+        /**
+         * @param subjects Contains distinguished name fields such as the location and organization.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subjects(List<CertificateCertificateDescriptionSubjectDescriptionSubjectGetArgs> subjects) {
             return subjects(Output.of(subjects));
         }
 
+        /**
+         * @param subjects Contains distinguished name fields such as the location and organization.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subjects(CertificateCertificateDescriptionSubjectDescriptionSubjectGetArgs... subjects) {
             return subjects(List.of(subjects));
         }

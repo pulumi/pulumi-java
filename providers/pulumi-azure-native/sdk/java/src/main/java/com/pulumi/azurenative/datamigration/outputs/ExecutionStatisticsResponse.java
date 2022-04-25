@@ -16,32 +16,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ExecutionStatisticsResponse {
     /**
-     * CPU Time in millisecond(s) for the query execution
+     * @return CPU Time in millisecond(s) for the query execution
      * 
      */
     private final Double cpuTimeMs;
     /**
-     * Time taken in millisecond(s) for executing the query
+     * @return Time taken in millisecond(s) for executing the query
      * 
      */
     private final Double elapsedTimeMs;
     /**
-     * No. of query executions
+     * @return No. of query executions
      * 
      */
     private final Double executionCount;
     /**
-     * Indicates whether the query resulted in an error
+     * @return Indicates whether the query resulted in an error
      * 
      */
     private final Boolean hasErrors;
     /**
-     * List of sql Errors
+     * @return List of sql Errors
      * 
      */
     private final List<String> sqlErrors;
     /**
-     * Dictionary of sql query execution wait types and the respective statistics
+     * @return Dictionary of sql query execution wait types and the respective statistics
      * 
      */
     private final @Nullable Map<String,WaitStatisticsResponse> waitStats;
@@ -63,44 +63,44 @@ public final class ExecutionStatisticsResponse {
     }
 
     /**
-     * CPU Time in millisecond(s) for the query execution
+     * @return CPU Time in millisecond(s) for the query execution
      * 
-    */
+     */
     public Double cpuTimeMs() {
         return this.cpuTimeMs;
     }
     /**
-     * Time taken in millisecond(s) for executing the query
+     * @return Time taken in millisecond(s) for executing the query
      * 
-    */
+     */
     public Double elapsedTimeMs() {
         return this.elapsedTimeMs;
     }
     /**
-     * No. of query executions
+     * @return No. of query executions
      * 
-    */
+     */
     public Double executionCount() {
         return this.executionCount;
     }
     /**
-     * Indicates whether the query resulted in an error
+     * @return Indicates whether the query resulted in an error
      * 
-    */
+     */
     public Boolean hasErrors() {
         return this.hasErrors;
     }
     /**
-     * List of sql Errors
+     * @return List of sql Errors
      * 
-    */
+     */
     public List<String> sqlErrors() {
         return this.sqlErrors;
     }
     /**
-     * Dictionary of sql query execution wait types and the respective statistics
+     * @return Dictionary of sql query execution wait types and the respective statistics
      * 
-    */
+     */
     public Map<String,WaitStatisticsResponse> waitStats() {
         return this.waitStats == null ? Map.of() : this.waitStats;
     }

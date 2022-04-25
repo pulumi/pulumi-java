@@ -25,6 +25,10 @@ public final class SystemParameterRuleResponse extends com.pulumi.resources.Invo
     @Import(name="parameters", required=true)
     private List<SystemParameterResponse> parameters;
 
+    /**
+     * @return Define parameters. Multiple names may be defined for a parameter. For a given method call, only one of them should be used. If multiple names are used the behavior is implementation-dependent. If none of the specified names are present the behavior is parameter-dependent.
+     * 
+     */
     public List<SystemParameterResponse> parameters() {
         return this.parameters;
     }
@@ -36,6 +40,10 @@ public final class SystemParameterRuleResponse extends com.pulumi.resources.Invo
     @Import(name="selector", required=true)
     private String selector;
 
+    /**
+     * @return Selects the methods to which this rule applies. Use &#39;*&#39; to indicate all methods in all APIs. Refer to selector for syntax details.
+     * 
+     */
     public String selector() {
         return this.selector;
     }
@@ -65,15 +73,33 @@ public final class SystemParameterRuleResponse extends com.pulumi.resources.Invo
             $ = new SystemParameterRuleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param parameters Define parameters. Multiple names may be defined for a parameter. For a given method call, only one of them should be used. If multiple names are used the behavior is implementation-dependent. If none of the specified names are present the behavior is parameter-dependent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(List<SystemParameterResponse> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters Define parameters. Multiple names may be defined for a parameter. For a given method call, only one of them should be used. If multiple names are used the behavior is implementation-dependent. If none of the specified names are present the behavior is parameter-dependent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(SystemParameterResponse... parameters) {
             return parameters(List.of(parameters));
         }
 
+        /**
+         * @param selector Selects the methods to which this rule applies. Use &#39;*&#39; to indicate all methods in all APIs. Refer to selector for syntax details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selector(String selector) {
             $.selector = selector;
             return this;

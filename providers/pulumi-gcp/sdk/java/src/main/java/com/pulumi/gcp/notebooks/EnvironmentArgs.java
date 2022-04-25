@@ -25,6 +25,11 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="containerImage")
     private @Nullable Output<EnvironmentContainerImageArgs> containerImage;
 
+    /**
+     * @return Use a container image to start the notebook instance.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<EnvironmentContainerImageArgs>> containerImage() {
         return Optional.ofNullable(this.containerImage);
     }
@@ -36,6 +41,10 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A brief description of this environment.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -47,6 +56,10 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return Display name of this environment for the UI.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -58,6 +71,10 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location", required=true)
     private Output<String> location;
 
+    /**
+     * @return A reference to the zone where the machine resides.
+     * 
+     */
     public Output<String> location() {
         return this.location;
     }
@@ -70,6 +87,11 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name specified for the Environment instance.
+     * Format: projects/{project_id}/locations/{location}/environments/{environmentId}
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -82,6 +104,11 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="postStartupScript")
     private @Nullable Output<String> postStartupScript;
 
+    /**
+     * @return Path to a Bash script that automatically runs after a notebook instance fully boots up.
+     * The path must be a URL or Cloud Storage path. Example: &#34;gs://path-to-file/file-name&#34;
+     * 
+     */
     public Optional<Output<String>> postStartupScript() {
         return Optional.ofNullable(this.postStartupScript);
     }
@@ -94,6 +121,11 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The name of the Google Cloud project that this VM image belongs to.
+     * Format: projects/{project_id}
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -106,6 +138,11 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vmImage")
     private @Nullable Output<EnvironmentVmImageArgs> vmImage;
 
+    /**
+     * @return Use a Compute Engine VM image to start the notebook instance.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<EnvironmentVmImageArgs>> vmImage() {
         return Optional.ofNullable(this.vmImage);
     }
@@ -141,74 +178,180 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
             $ = new EnvironmentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param containerImage Use a container image to start the notebook instance.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerImage(@Nullable Output<EnvironmentContainerImageArgs> containerImage) {
             $.containerImage = containerImage;
             return this;
         }
 
+        /**
+         * @param containerImage Use a container image to start the notebook instance.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerImage(EnvironmentContainerImageArgs containerImage) {
             return containerImage(Output.of(containerImage));
         }
 
+        /**
+         * @param description A brief description of this environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A brief description of this environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param displayName Display name of this environment for the UI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName Display name of this environment for the UI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param location A reference to the zone where the machine resides.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location A reference to the zone where the machine resides.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param name The name specified for the Environment instance.
+         * Format: projects/{project_id}/locations/{location}/environments/{environmentId}
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name specified for the Environment instance.
+         * Format: projects/{project_id}/locations/{location}/environments/{environmentId}
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param postStartupScript Path to a Bash script that automatically runs after a notebook instance fully boots up.
+         * The path must be a URL or Cloud Storage path. Example: &#34;gs://path-to-file/file-name&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder postStartupScript(@Nullable Output<String> postStartupScript) {
             $.postStartupScript = postStartupScript;
             return this;
         }
 
+        /**
+         * @param postStartupScript Path to a Bash script that automatically runs after a notebook instance fully boots up.
+         * The path must be a URL or Cloud Storage path. Example: &#34;gs://path-to-file/file-name&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder postStartupScript(String postStartupScript) {
             return postStartupScript(Output.of(postStartupScript));
         }
 
+        /**
+         * @param project The name of the Google Cloud project that this VM image belongs to.
+         * Format: projects/{project_id}
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The name of the Google Cloud project that this VM image belongs to.
+         * Format: projects/{project_id}
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param vmImage Use a Compute Engine VM image to start the notebook instance.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmImage(@Nullable Output<EnvironmentVmImageArgs> vmImage) {
             $.vmImage = vmImage;
             return this;
         }
 
+        /**
+         * @param vmImage Use a Compute Engine VM image to start the notebook instance.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmImage(EnvironmentVmImageArgs vmImage) {
             return vmImage(Output.of(vmImage));
         }

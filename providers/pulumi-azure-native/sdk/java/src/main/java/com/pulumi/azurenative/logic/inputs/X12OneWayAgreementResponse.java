@@ -24,6 +24,10 @@ public final class X12OneWayAgreementResponse extends com.pulumi.resources.Invok
     @Import(name="protocolSettings", required=true)
     private X12ProtocolSettingsResponse protocolSettings;
 
+    /**
+     * @return The X12 protocol settings.
+     * 
+     */
     public X12ProtocolSettingsResponse protocolSettings() {
         return this.protocolSettings;
     }
@@ -35,6 +39,10 @@ public final class X12OneWayAgreementResponse extends com.pulumi.resources.Invok
     @Import(name="receiverBusinessIdentity", required=true)
     private BusinessIdentityResponse receiverBusinessIdentity;
 
+    /**
+     * @return The receiver business identity
+     * 
+     */
     public BusinessIdentityResponse receiverBusinessIdentity() {
         return this.receiverBusinessIdentity;
     }
@@ -46,6 +54,10 @@ public final class X12OneWayAgreementResponse extends com.pulumi.resources.Invok
     @Import(name="senderBusinessIdentity", required=true)
     private BusinessIdentityResponse senderBusinessIdentity;
 
+    /**
+     * @return The sender business identity
+     * 
+     */
     public BusinessIdentityResponse senderBusinessIdentity() {
         return this.senderBusinessIdentity;
     }
@@ -76,16 +88,34 @@ public final class X12OneWayAgreementResponse extends com.pulumi.resources.Invok
             $ = new X12OneWayAgreementResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param protocolSettings The X12 protocol settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocolSettings(X12ProtocolSettingsResponse protocolSettings) {
             $.protocolSettings = protocolSettings;
             return this;
         }
 
+        /**
+         * @param receiverBusinessIdentity The receiver business identity
+         * 
+         * @return builder
+         * 
+         */
         public Builder receiverBusinessIdentity(BusinessIdentityResponse receiverBusinessIdentity) {
             $.receiverBusinessIdentity = receiverBusinessIdentity;
             return this;
         }
 
+        /**
+         * @param senderBusinessIdentity The sender business identity
+         * 
+         * @return builder
+         * 
+         */
         public Builder senderBusinessIdentity(BusinessIdentityResponse senderBusinessIdentity) {
             $.senderBusinessIdentity = senderBusinessIdentity;
             return this;

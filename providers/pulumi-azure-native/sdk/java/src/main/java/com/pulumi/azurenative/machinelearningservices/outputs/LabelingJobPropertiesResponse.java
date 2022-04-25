@@ -21,62 +21,62 @@ import javax.annotation.Nullable;
 @CustomType
 public final class LabelingJobPropertiesResponse {
     /**
-     * Created time of the job in UTC timezone.
+     * @return Created time of the job in UTC timezone.
      * 
      */
     private final String createdTimeUtc;
     /**
-     * Dataset configuration for the job.
+     * @return Dataset configuration for the job.
      * 
      */
     private final LabelingDatasetConfigurationResponse datasetConfiguration;
     /**
-     * Instructions for the job.
+     * @return Instructions for the job.
      * 
      */
     private final LabelingJobInstructionsResponse jobInstructions;
     /**
-     * Label categories of the job.
+     * @return Label categories of the job.
      * 
      */
     private final Map<String,LabelCategoryResponse> labelCategories;
     /**
-     * Media specific properties in a labeling job.
+     * @return Media specific properties in a labeling job.
      * 
      */
     private final LabelingJobImagePropertiesResponse labelingJobMediaProperties;
     /**
-     * Machine learning assisted configuration for the job.
+     * @return Machine learning assisted configuration for the job.
      * 
      */
     private final @Nullable MLAssistConfigurationResponse mlAssistConfiguration;
     /**
-     * Progress metrics of the job.
+     * @return Progress metrics of the job.
      * 
      */
     private final ProgressMetricsResponse progressMetrics;
     /**
-     * Internal id of the job(Previously called project).
+     * @return Internal id of the job(Previously called project).
      * 
      */
     private final String projectId;
     /**
-     * The job property dictionary. Properties can be added, but not removed or altered.
+     * @return The job property dictionary. Properties can be added, but not removed or altered.
      * 
      */
     private final @Nullable Map<String,String> properties;
     /**
-     * Status of the job.
+     * @return Status of the job.
      * 
      */
     private final String status;
     /**
-     * Status messages of the job.
+     * @return Status messages of the job.
      * 
      */
     private final List<StatusMessageResponse> statusMessages;
     /**
-     * The job tag dictionary. Tags can be added, removed, and updated.
+     * @return The job tag dictionary. Tags can be added, removed, and updated.
      * 
      */
     private final @Nullable Map<String,String> tags;
@@ -110,86 +110,86 @@ public final class LabelingJobPropertiesResponse {
     }
 
     /**
-     * Created time of the job in UTC timezone.
+     * @return Created time of the job in UTC timezone.
      * 
-    */
+     */
     public String createdTimeUtc() {
         return this.createdTimeUtc;
     }
     /**
-     * Dataset configuration for the job.
+     * @return Dataset configuration for the job.
      * 
-    */
+     */
     public LabelingDatasetConfigurationResponse datasetConfiguration() {
         return this.datasetConfiguration;
     }
     /**
-     * Instructions for the job.
+     * @return Instructions for the job.
      * 
-    */
+     */
     public LabelingJobInstructionsResponse jobInstructions() {
         return this.jobInstructions;
     }
     /**
-     * Label categories of the job.
+     * @return Label categories of the job.
      * 
-    */
+     */
     public Map<String,LabelCategoryResponse> labelCategories() {
         return this.labelCategories;
     }
     /**
-     * Media specific properties in a labeling job.
+     * @return Media specific properties in a labeling job.
      * 
-    */
+     */
     public LabelingJobImagePropertiesResponse labelingJobMediaProperties() {
         return this.labelingJobMediaProperties;
     }
     /**
-     * Machine learning assisted configuration for the job.
+     * @return Machine learning assisted configuration for the job.
      * 
-    */
+     */
     public Optional<MLAssistConfigurationResponse> mlAssistConfiguration() {
         return Optional.ofNullable(this.mlAssistConfiguration);
     }
     /**
-     * Progress metrics of the job.
+     * @return Progress metrics of the job.
      * 
-    */
+     */
     public ProgressMetricsResponse progressMetrics() {
         return this.progressMetrics;
     }
     /**
-     * Internal id of the job(Previously called project).
+     * @return Internal id of the job(Previously called project).
      * 
-    */
+     */
     public String projectId() {
         return this.projectId;
     }
     /**
-     * The job property dictionary. Properties can be added, but not removed or altered.
+     * @return The job property dictionary. Properties can be added, but not removed or altered.
      * 
-    */
+     */
     public Map<String,String> properties() {
         return this.properties == null ? Map.of() : this.properties;
     }
     /**
-     * Status of the job.
+     * @return Status of the job.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * Status messages of the job.
+     * @return Status messages of the job.
      * 
-    */
+     */
     public List<StatusMessageResponse> statusMessages() {
         return this.statusMessages;
     }
     /**
-     * The job tag dictionary. Tags can be added, removed, and updated.
+     * @return The job tag dictionary. Tags can be added, removed, and updated.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }

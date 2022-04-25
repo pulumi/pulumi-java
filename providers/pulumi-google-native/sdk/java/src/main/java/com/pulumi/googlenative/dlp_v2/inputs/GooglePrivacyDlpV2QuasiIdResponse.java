@@ -26,6 +26,10 @@ public final class GooglePrivacyDlpV2QuasiIdResponse extends com.pulumi.resource
     @Import(name="customTag", required=true)
     private String customTag;
 
+    /**
+     * @return A column can be tagged with a custom tag. In this case, the user must indicate an auxiliary table that contains statistical information on the possible values of this column (below).
+     * 
+     */
     public String customTag() {
         return this.customTag;
     }
@@ -37,6 +41,10 @@ public final class GooglePrivacyDlpV2QuasiIdResponse extends com.pulumi.resource
     @Import(name="field", required=true)
     private GooglePrivacyDlpV2FieldIdResponse field;
 
+    /**
+     * @return Identifies the column.
+     * 
+     */
     public GooglePrivacyDlpV2FieldIdResponse field() {
         return this.field;
     }
@@ -48,6 +56,10 @@ public final class GooglePrivacyDlpV2QuasiIdResponse extends com.pulumi.resource
     @Import(name="inferred", required=true)
     private GoogleProtobufEmptyResponse inferred;
 
+    /**
+     * @return If no semantic tag is indicated, we infer the statistical model from the distribution of values in the input data
+     * 
+     */
     public GoogleProtobufEmptyResponse inferred() {
         return this.inferred;
     }
@@ -59,6 +71,10 @@ public final class GooglePrivacyDlpV2QuasiIdResponse extends com.pulumi.resource
     @Import(name="infoType", required=true)
     private GooglePrivacyDlpV2InfoTypeResponse infoType;
 
+    /**
+     * @return A column can be tagged with a InfoType to use the relevant public dataset as a statistical model of population, if available. We currently support US ZIP codes, region codes, ages and genders. To programmatically obtain the list of supported InfoTypes, use ListInfoTypes with the supported_by=RISK_ANALYSIS filter.
+     * 
+     */
     public GooglePrivacyDlpV2InfoTypeResponse infoType() {
         return this.infoType;
     }
@@ -90,21 +106,45 @@ public final class GooglePrivacyDlpV2QuasiIdResponse extends com.pulumi.resource
             $ = new GooglePrivacyDlpV2QuasiIdResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customTag A column can be tagged with a custom tag. In this case, the user must indicate an auxiliary table that contains statistical information on the possible values of this column (below).
+         * 
+         * @return builder
+         * 
+         */
         public Builder customTag(String customTag) {
             $.customTag = customTag;
             return this;
         }
 
+        /**
+         * @param field Identifies the column.
+         * 
+         * @return builder
+         * 
+         */
         public Builder field(GooglePrivacyDlpV2FieldIdResponse field) {
             $.field = field;
             return this;
         }
 
+        /**
+         * @param inferred If no semantic tag is indicated, we infer the statistical model from the distribution of values in the input data
+         * 
+         * @return builder
+         * 
+         */
         public Builder inferred(GoogleProtobufEmptyResponse inferred) {
             $.inferred = inferred;
             return this;
         }
 
+        /**
+         * @param infoType A column can be tagged with a InfoType to use the relevant public dataset as a statistical model of population, if available. We currently support US ZIP codes, region codes, ages and genders. To programmatically obtain the list of supported InfoTypes, use ListInfoTypes with the supported_by=RISK_ANALYSIS filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder infoType(GooglePrivacyDlpV2InfoTypeResponse infoType) {
             $.infoType = infoType;
             return this;

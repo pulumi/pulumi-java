@@ -26,6 +26,10 @@ public final class SBSkuResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="capacity")
     private @Nullable Integer capacity;
 
+    /**
+     * @return The specified messaging units for the tier. For Premium tier, capacity are 1,2 and 4.
+     * 
+     */
     public Optional<Integer> capacity() {
         return Optional.ofNullable(this.capacity);
     }
@@ -37,6 +41,10 @@ public final class SBSkuResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of this SKU.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -48,6 +56,10 @@ public final class SBSkuResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="tier")
     private @Nullable String tier;
 
+    /**
+     * @return The billing tier of this particular SKU.
+     * 
+     */
     public Optional<String> tier() {
         return Optional.ofNullable(this.tier);
     }
@@ -78,16 +90,34 @@ public final class SBSkuResponse extends com.pulumi.resources.InvokeArgs {
             $ = new SBSkuResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param capacity The specified messaging units for the tier. For Premium tier, capacity are 1,2 and 4.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(@Nullable Integer capacity) {
             $.capacity = capacity;
             return this;
         }
 
+        /**
+         * @param name Name of this SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param tier The billing tier of this particular SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(@Nullable String tier) {
             $.tier = tier;
             return this;

@@ -11,52 +11,52 @@ import java.util.Objects;
 @CustomType
 public final class GetExtensionResult {
     /**
-     * The ETag value to implement optimistic concurrency.
+     * @return The ETag value to implement optimistic concurrency.
      * 
      */
     private final String eTag;
     /**
-     * Extension api docs link.
+     * @return Extension api docs link.
      * 
      */
     private final String extensionApiDocsLink;
     /**
-     * Extension auth link.
+     * @return Extension auth link.
      * 
      */
     private final String extensionAuthLink;
     /**
-     * Extension category. e.g. weather/sensor/satellite.
+     * @return Extension category. e.g. weather/sensor/satellite.
      * 
      */
     private final String extensionCategory;
     /**
-     * Extension Id.
+     * @return Extension Id.
      * 
      */
     private final String extensionId;
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
      */
     private final String id;
     /**
-     * Installed extension version.
+     * @return Installed extension version.
      * 
      */
     private final String installedExtensionVersion;
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
      */
     private final String name;
     /**
-     * Metadata pertaining to creation and last modification of the resource.
+     * @return Metadata pertaining to creation and last modification of the resource.
      * 
      */
     private final SystemDataResponse systemData;
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     private final String type;
@@ -86,72 +86,72 @@ public final class GetExtensionResult {
     }
 
     /**
-     * The ETag value to implement optimistic concurrency.
+     * @return The ETag value to implement optimistic concurrency.
      * 
-    */
+     */
     public String eTag() {
         return this.eTag;
     }
     /**
-     * Extension api docs link.
+     * @return Extension api docs link.
      * 
-    */
+     */
     public String extensionApiDocsLink() {
         return this.extensionApiDocsLink;
     }
     /**
-     * Extension auth link.
+     * @return Extension auth link.
      * 
-    */
+     */
     public String extensionAuthLink() {
         return this.extensionAuthLink;
     }
     /**
-     * Extension category. e.g. weather/sensor/satellite.
+     * @return Extension category. e.g. weather/sensor/satellite.
      * 
-    */
+     */
     public String extensionCategory() {
         return this.extensionCategory;
     }
     /**
-     * Extension Id.
+     * @return Extension Id.
      * 
-    */
+     */
     public String extensionId() {
         return this.extensionId;
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Installed extension version.
+     * @return Installed extension version.
      * 
-    */
+     */
     public String installedExtensionVersion() {
         return this.installedExtensionVersion;
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Metadata pertaining to creation and last modification of the resource.
+     * @return Metadata pertaining to creation and last modification of the resource.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

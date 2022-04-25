@@ -20,6 +20,10 @@ public final class SecurityScanConfigAuthenticationCustomAccountArgs extends com
     @Import(name="loginUrl", required=true)
     private Output<String> loginUrl;
 
+    /**
+     * @return The login form URL of the website.
+     * 
+     */
     public Output<String> loginUrl() {
         return this.loginUrl;
     }
@@ -33,6 +37,12 @@ public final class SecurityScanConfigAuthenticationCustomAccountArgs extends com
     @Import(name="password", required=true)
     private Output<String> password;
 
+    /**
+     * @return The password of the custom account. The credential is stored encrypted
+     * in GCP.
+     * **Note**: This property is sensitive and will not be displayed in the plan.
+     * 
+     */
     public Output<String> password() {
         return this.password;
     }
@@ -44,6 +54,10 @@ public final class SecurityScanConfigAuthenticationCustomAccountArgs extends com
     @Import(name="username", required=true)
     private Output<String> username;
 
+    /**
+     * @return The user name of the custom account.
+     * 
+     */
     public Output<String> username() {
         return this.username;
     }
@@ -74,29 +88,69 @@ public final class SecurityScanConfigAuthenticationCustomAccountArgs extends com
             $ = new SecurityScanConfigAuthenticationCustomAccountArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param loginUrl The login form URL of the website.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loginUrl(Output<String> loginUrl) {
             $.loginUrl = loginUrl;
             return this;
         }
 
+        /**
+         * @param loginUrl The login form URL of the website.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loginUrl(String loginUrl) {
             return loginUrl(Output.of(loginUrl));
         }
 
+        /**
+         * @param password The password of the custom account. The credential is stored encrypted
+         * in GCP.
+         * **Note**: This property is sensitive and will not be displayed in the plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(Output<String> password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param password The password of the custom account. The credential is stored encrypted
+         * in GCP.
+         * **Note**: This property is sensitive and will not be displayed in the plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(String password) {
             return password(Output.of(password));
         }
 
+        /**
+         * @param username The user name of the custom account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(Output<String> username) {
             $.username = username;
             return this;
         }
 
+        /**
+         * @param username The user name of the custom account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(String username) {
             return username(Output.of(username));
         }

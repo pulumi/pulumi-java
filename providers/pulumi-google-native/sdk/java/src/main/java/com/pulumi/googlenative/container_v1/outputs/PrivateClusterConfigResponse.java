@@ -12,37 +12,37 @@ import java.util.Objects;
 @CustomType
 public final class PrivateClusterConfigResponse {
     /**
-     * Whether the master&#39;s internal IP address is used as the cluster endpoint.
+     * @return Whether the master&#39;s internal IP address is used as the cluster endpoint.
      * 
      */
     private final Boolean enablePrivateEndpoint;
     /**
-     * Whether nodes have internal IP addresses only. If enabled, all nodes are given only RFC 1918 private addresses and communicate with the master via private networking.
+     * @return Whether nodes have internal IP addresses only. If enabled, all nodes are given only RFC 1918 private addresses and communicate with the master via private networking.
      * 
      */
     private final Boolean enablePrivateNodes;
     /**
-     * Controls master global access settings.
+     * @return Controls master global access settings.
      * 
      */
     private final PrivateClusterMasterGlobalAccessConfigResponse masterGlobalAccessConfig;
     /**
-     * The IP range in CIDR notation to use for the hosted master network. This range will be used for assigning internal IP addresses to the master or set of masters, as well as the ILB VIP. This range must not overlap with any other ranges in use within the cluster&#39;s network.
+     * @return The IP range in CIDR notation to use for the hosted master network. This range will be used for assigning internal IP addresses to the master or set of masters, as well as the ILB VIP. This range must not overlap with any other ranges in use within the cluster&#39;s network.
      * 
      */
     private final String masterIpv4CidrBlock;
     /**
-     * The peering name in the customer VPC used by this cluster.
+     * @return The peering name in the customer VPC used by this cluster.
      * 
      */
     private final String peeringName;
     /**
-     * The internal IP address of this cluster&#39;s master endpoint.
+     * @return The internal IP address of this cluster&#39;s master endpoint.
      * 
      */
     private final String privateEndpoint;
     /**
-     * The external IP address of this cluster&#39;s master endpoint.
+     * @return The external IP address of this cluster&#39;s master endpoint.
      * 
      */
     private final String publicEndpoint;
@@ -66,51 +66,51 @@ public final class PrivateClusterConfigResponse {
     }
 
     /**
-     * Whether the master&#39;s internal IP address is used as the cluster endpoint.
+     * @return Whether the master&#39;s internal IP address is used as the cluster endpoint.
      * 
-    */
+     */
     public Boolean enablePrivateEndpoint() {
         return this.enablePrivateEndpoint;
     }
     /**
-     * Whether nodes have internal IP addresses only. If enabled, all nodes are given only RFC 1918 private addresses and communicate with the master via private networking.
+     * @return Whether nodes have internal IP addresses only. If enabled, all nodes are given only RFC 1918 private addresses and communicate with the master via private networking.
      * 
-    */
+     */
     public Boolean enablePrivateNodes() {
         return this.enablePrivateNodes;
     }
     /**
-     * Controls master global access settings.
+     * @return Controls master global access settings.
      * 
-    */
+     */
     public PrivateClusterMasterGlobalAccessConfigResponse masterGlobalAccessConfig() {
         return this.masterGlobalAccessConfig;
     }
     /**
-     * The IP range in CIDR notation to use for the hosted master network. This range will be used for assigning internal IP addresses to the master or set of masters, as well as the ILB VIP. This range must not overlap with any other ranges in use within the cluster&#39;s network.
+     * @return The IP range in CIDR notation to use for the hosted master network. This range will be used for assigning internal IP addresses to the master or set of masters, as well as the ILB VIP. This range must not overlap with any other ranges in use within the cluster&#39;s network.
      * 
-    */
+     */
     public String masterIpv4CidrBlock() {
         return this.masterIpv4CidrBlock;
     }
     /**
-     * The peering name in the customer VPC used by this cluster.
+     * @return The peering name in the customer VPC used by this cluster.
      * 
-    */
+     */
     public String peeringName() {
         return this.peeringName;
     }
     /**
-     * The internal IP address of this cluster&#39;s master endpoint.
+     * @return The internal IP address of this cluster&#39;s master endpoint.
      * 
-    */
+     */
     public String privateEndpoint() {
         return this.privateEndpoint;
     }
     /**
-     * The external IP address of this cluster&#39;s master endpoint.
+     * @return The external IP address of this cluster&#39;s master endpoint.
      * 
-    */
+     */
     public String publicEndpoint() {
         return this.publicEndpoint;
     }

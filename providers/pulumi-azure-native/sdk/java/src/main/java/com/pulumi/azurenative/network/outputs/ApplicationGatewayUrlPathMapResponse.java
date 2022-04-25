@@ -15,52 +15,52 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ApplicationGatewayUrlPathMapResponse {
     /**
-     * Default backend address pool resource of URL path map.
+     * @return Default backend address pool resource of URL path map.
      * 
      */
     private final @Nullable SubResourceResponse defaultBackendAddressPool;
     /**
-     * Default backend http settings resource of URL path map.
+     * @return Default backend http settings resource of URL path map.
      * 
      */
     private final @Nullable SubResourceResponse defaultBackendHttpSettings;
     /**
-     * Default redirect configuration resource of URL path map.
+     * @return Default redirect configuration resource of URL path map.
      * 
      */
     private final @Nullable SubResourceResponse defaultRedirectConfiguration;
     /**
-     * Default Rewrite rule set resource of URL path map.
+     * @return Default Rewrite rule set resource of URL path map.
      * 
      */
     private final @Nullable SubResourceResponse defaultRewriteRuleSet;
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
     private final String etag;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final @Nullable String id;
     /**
-     * Name of the URL path map that is unique within an Application Gateway.
+     * @return Name of the URL path map that is unique within an Application Gateway.
      * 
      */
     private final @Nullable String name;
     /**
-     * Path rule of URL path map resource.
+     * @return Path rule of URL path map resource.
      * 
      */
     private final @Nullable List<ApplicationGatewayPathRuleResponse> pathRules;
     /**
-     * The provisioning state of the URL path map resource.
+     * @return The provisioning state of the URL path map resource.
      * 
      */
     private final String provisioningState;
     /**
-     * Type of the resource.
+     * @return Type of the resource.
      * 
      */
     private final String type;
@@ -90,72 +90,72 @@ public final class ApplicationGatewayUrlPathMapResponse {
     }
 
     /**
-     * Default backend address pool resource of URL path map.
+     * @return Default backend address pool resource of URL path map.
      * 
-    */
+     */
     public Optional<SubResourceResponse> defaultBackendAddressPool() {
         return Optional.ofNullable(this.defaultBackendAddressPool);
     }
     /**
-     * Default backend http settings resource of URL path map.
+     * @return Default backend http settings resource of URL path map.
      * 
-    */
+     */
     public Optional<SubResourceResponse> defaultBackendHttpSettings() {
         return Optional.ofNullable(this.defaultBackendHttpSettings);
     }
     /**
-     * Default redirect configuration resource of URL path map.
+     * @return Default redirect configuration resource of URL path map.
      * 
-    */
+     */
     public Optional<SubResourceResponse> defaultRedirectConfiguration() {
         return Optional.ofNullable(this.defaultRedirectConfiguration);
     }
     /**
-     * Default Rewrite rule set resource of URL path map.
+     * @return Default Rewrite rule set resource of URL path map.
      * 
-    */
+     */
     public Optional<SubResourceResponse> defaultRewriteRuleSet() {
         return Optional.ofNullable(this.defaultRewriteRuleSet);
     }
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * Name of the URL path map that is unique within an Application Gateway.
+     * @return Name of the URL path map that is unique within an Application Gateway.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Path rule of URL path map resource.
+     * @return Path rule of URL path map resource.
      * 
-    */
+     */
     public List<ApplicationGatewayPathRuleResponse> pathRules() {
         return this.pathRules == null ? List.of() : this.pathRules;
     }
     /**
-     * The provisioning state of the URL path map resource.
+     * @return The provisioning state of the URL path map resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Type of the resource.
+     * @return Type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

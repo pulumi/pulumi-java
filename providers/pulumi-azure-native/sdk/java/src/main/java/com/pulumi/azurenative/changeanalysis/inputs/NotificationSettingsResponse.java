@@ -26,6 +26,10 @@ public final class NotificationSettingsResponse extends com.pulumi.resources.Inv
     @Import(name="activationState")
     private @Nullable String activationState;
 
+    /**
+     * @return The state of notifications feature.
+     * 
+     */
     public Optional<String> activationState() {
         return Optional.ofNullable(this.activationState);
     }
@@ -37,6 +41,10 @@ public final class NotificationSettingsResponse extends com.pulumi.resources.Inv
     @Import(name="azureMonitorWorkspaceProperties")
     private @Nullable AzureMonitorWorkspacePropertiesResponse azureMonitorWorkspaceProperties;
 
+    /**
+     * @return Configuration properties of an Azure Monitor workspace that receives change notifications.
+     * 
+     */
     public Optional<AzureMonitorWorkspacePropertiesResponse> azureMonitorWorkspaceProperties() {
         return Optional.ofNullable(this.azureMonitorWorkspaceProperties);
     }
@@ -66,11 +74,23 @@ public final class NotificationSettingsResponse extends com.pulumi.resources.Inv
             $ = new NotificationSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param activationState The state of notifications feature.
+         * 
+         * @return builder
+         * 
+         */
         public Builder activationState(@Nullable String activationState) {
             $.activationState = activationState;
             return this;
         }
 
+        /**
+         * @param azureMonitorWorkspaceProperties Configuration properties of an Azure Monitor workspace that receives change notifications.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureMonitorWorkspaceProperties(@Nullable AzureMonitorWorkspacePropertiesResponse azureMonitorWorkspaceProperties) {
             $.azureMonitorWorkspaceProperties = azureMonitorWorkspaceProperties;
             return this;

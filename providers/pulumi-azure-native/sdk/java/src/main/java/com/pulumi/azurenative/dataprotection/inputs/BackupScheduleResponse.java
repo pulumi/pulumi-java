@@ -24,6 +24,10 @@ public final class BackupScheduleResponse extends com.pulumi.resources.InvokeArg
     @Import(name="repeatingTimeIntervals", required=true)
     private List<String> repeatingTimeIntervals;
 
+    /**
+     * @return ISO 8601 repeating time interval format
+     * 
+     */
     public List<String> repeatingTimeIntervals() {
         return this.repeatingTimeIntervals;
     }
@@ -52,11 +56,23 @@ public final class BackupScheduleResponse extends com.pulumi.resources.InvokeArg
             $ = new BackupScheduleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param repeatingTimeIntervals ISO 8601 repeating time interval format
+         * 
+         * @return builder
+         * 
+         */
         public Builder repeatingTimeIntervals(List<String> repeatingTimeIntervals) {
             $.repeatingTimeIntervals = repeatingTimeIntervals;
             return this;
         }
 
+        /**
+         * @param repeatingTimeIntervals ISO 8601 repeating time interval format
+         * 
+         * @return builder
+         * 
+         */
         public Builder repeatingTimeIntervals(String... repeatingTimeIntervals) {
             return repeatingTimeIntervals(List.of(repeatingTimeIntervals));
         }

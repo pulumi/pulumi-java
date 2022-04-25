@@ -30,6 +30,10 @@ public final class DatasetFilterValue extends com.pulumi.resources.InvokeArgs {
     @Import(name="valueReference", required=true)
     private String valueReference;
 
+    /**
+     * @return Variable name
+     * 
+     */
     public String valueReference() {
         return this.valueReference;
     }
@@ -64,6 +68,12 @@ public final class DatasetFilterValue extends com.pulumi.resources.InvokeArgs {
             return this;
         }
 
+        /**
+         * @param valueReference Variable name
+         * 
+         * @return builder
+         * 
+         */
         public Builder valueReference(String valueReference) {
             $.valueReference = valueReference;
             return this;

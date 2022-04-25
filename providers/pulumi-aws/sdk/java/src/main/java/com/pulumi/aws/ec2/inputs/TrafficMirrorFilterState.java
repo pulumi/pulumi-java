@@ -24,6 +24,10 @@ public final class TrafficMirrorFilterState extends com.pulumi.resources.Resourc
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return The ARN of the traffic mirror filter.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -35,6 +39,10 @@ public final class TrafficMirrorFilterState extends com.pulumi.resources.Resourc
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A description of the filter.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -46,6 +54,10 @@ public final class TrafficMirrorFilterState extends com.pulumi.resources.Resourc
     @Import(name="networkServices")
     private @Nullable Output<List<String>> networkServices;
 
+    /**
+     * @return List of amazon network services that should be mirrored. Valid values: `amazon-dns`.
+     * 
+     */
     public Optional<Output<List<String>>> networkServices() {
         return Optional.ofNullable(this.networkServices);
     }
@@ -57,6 +69,10 @@ public final class TrafficMirrorFilterState extends com.pulumi.resources.Resourc
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -68,6 +84,10 @@ public final class TrafficMirrorFilterState extends com.pulumi.resources.Resourc
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -100,51 +120,117 @@ public final class TrafficMirrorFilterState extends com.pulumi.resources.Resourc
             $ = new TrafficMirrorFilterState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn The ARN of the traffic mirror filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn The ARN of the traffic mirror filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param description A description of the filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A description of the filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param networkServices List of amazon network services that should be mirrored. Valid values: `amazon-dns`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkServices(@Nullable Output<List<String>> networkServices) {
             $.networkServices = networkServices;
             return this;
         }
 
+        /**
+         * @param networkServices List of amazon network services that should be mirrored. Valid values: `amazon-dns`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkServices(List<String> networkServices) {
             return networkServices(Output.of(networkServices));
         }
 
+        /**
+         * @param networkServices List of amazon network services that should be mirrored. Valid values: `amazon-dns`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkServices(String... networkServices) {
             return networkServices(List.of(networkServices));
         }
 
+        /**
+         * @param tags Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }

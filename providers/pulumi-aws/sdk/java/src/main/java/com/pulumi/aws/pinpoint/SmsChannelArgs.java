@@ -23,6 +23,10 @@ public final class SmsChannelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="applicationId", required=true)
     private Output<String> applicationId;
 
+    /**
+     * @return The application ID.
+     * 
+     */
     public Output<String> applicationId() {
         return this.applicationId;
     }
@@ -34,6 +38,10 @@ public final class SmsChannelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return Whether the channel is enabled or disabled. Defaults to `true`.
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -45,6 +53,10 @@ public final class SmsChannelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="senderId")
     private @Nullable Output<String> senderId;
 
+    /**
+     * @return Sender identifier of your messages.
+     * 
+     */
     public Optional<Output<String>> senderId() {
         return Optional.ofNullable(this.senderId);
     }
@@ -56,6 +68,10 @@ public final class SmsChannelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="shortCode")
     private @Nullable Output<String> shortCode;
 
+    /**
+     * @return The Short Code registered with the phone provider.
+     * 
+     */
     public Optional<Output<String>> shortCode() {
         return Optional.ofNullable(this.shortCode);
     }
@@ -87,38 +103,86 @@ public final class SmsChannelArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SmsChannelArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param applicationId The application ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationId(Output<String> applicationId) {
             $.applicationId = applicationId;
             return this;
         }
 
+        /**
+         * @param applicationId The application ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationId(String applicationId) {
             return applicationId(Output.of(applicationId));
         }
 
+        /**
+         * @param enabled Whether the channel is enabled or disabled. Defaults to `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Whether the channel is enabled or disabled. Defaults to `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param senderId Sender identifier of your messages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder senderId(@Nullable Output<String> senderId) {
             $.senderId = senderId;
             return this;
         }
 
+        /**
+         * @param senderId Sender identifier of your messages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder senderId(String senderId) {
             return senderId(Output.of(senderId));
         }
 
+        /**
+         * @param shortCode The Short Code registered with the phone provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shortCode(@Nullable Output<String> shortCode) {
             $.shortCode = shortCode;
             return this;
         }
 
+        /**
+         * @param shortCode The Short Code registered with the phone provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shortCode(String shortCode) {
             return shortCode(Output.of(shortCode));
         }

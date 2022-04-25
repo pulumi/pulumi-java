@@ -23,6 +23,10 @@ public final class GoogleCloudMlV1__BuiltInAlgorithmOutputResponse extends com.p
     @Import(name="framework", required=true)
     private String framework;
 
+    /**
+     * @return Framework on which the built-in algorithm was trained.
+     * 
+     */
     public String framework() {
         return this.framework;
     }
@@ -34,6 +38,10 @@ public final class GoogleCloudMlV1__BuiltInAlgorithmOutputResponse extends com.p
     @Import(name="modelPath", required=true)
     private String modelPath;
 
+    /**
+     * @return The Cloud Storage path to the `model/` directory where the training job saves the trained model. Only set for successful jobs that don&#39;t use hyperparameter tuning.
+     * 
+     */
     public String modelPath() {
         return this.modelPath;
     }
@@ -45,6 +53,10 @@ public final class GoogleCloudMlV1__BuiltInAlgorithmOutputResponse extends com.p
     @Import(name="pythonVersion", required=true)
     private String pythonVersion;
 
+    /**
+     * @return Python version on which the built-in algorithm was trained.
+     * 
+     */
     public String pythonVersion() {
         return this.pythonVersion;
     }
@@ -56,6 +68,10 @@ public final class GoogleCloudMlV1__BuiltInAlgorithmOutputResponse extends com.p
     @Import(name="runtimeVersion", required=true)
     private String runtimeVersion;
 
+    /**
+     * @return AI Platform runtime version on which the built-in algorithm was trained.
+     * 
+     */
     public String runtimeVersion() {
         return this.runtimeVersion;
     }
@@ -87,21 +103,45 @@ public final class GoogleCloudMlV1__BuiltInAlgorithmOutputResponse extends com.p
             $ = new GoogleCloudMlV1__BuiltInAlgorithmOutputResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param framework Framework on which the built-in algorithm was trained.
+         * 
+         * @return builder
+         * 
+         */
         public Builder framework(String framework) {
             $.framework = framework;
             return this;
         }
 
+        /**
+         * @param modelPath The Cloud Storage path to the `model/` directory where the training job saves the trained model. Only set for successful jobs that don&#39;t use hyperparameter tuning.
+         * 
+         * @return builder
+         * 
+         */
         public Builder modelPath(String modelPath) {
             $.modelPath = modelPath;
             return this;
         }
 
+        /**
+         * @param pythonVersion Python version on which the built-in algorithm was trained.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pythonVersion(String pythonVersion) {
             $.pythonVersion = pythonVersion;
             return this;
         }
 
+        /**
+         * @param runtimeVersion AI Platform runtime version on which the built-in algorithm was trained.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runtimeVersion(String runtimeVersion) {
             $.runtimeVersion = runtimeVersion;
             return this;

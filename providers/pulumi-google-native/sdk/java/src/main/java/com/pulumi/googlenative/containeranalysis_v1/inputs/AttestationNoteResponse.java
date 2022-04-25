@@ -23,6 +23,10 @@ public final class AttestationNoteResponse extends com.pulumi.resources.InvokeAr
     @Import(name="hint", required=true)
     private HintResponse hint;
 
+    /**
+     * @return Hint hints at the purpose of the attestation authority.
+     * 
+     */
     public HintResponse hint() {
         return this.hint;
     }
@@ -51,6 +55,12 @@ public final class AttestationNoteResponse extends com.pulumi.resources.InvokeAr
             $ = new AttestationNoteResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hint Hint hints at the purpose of the attestation authority.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hint(HintResponse hint) {
             $.hint = hint;
             return this;

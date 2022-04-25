@@ -16,29 +16,29 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetAssetResult {
     /**
-     * The ARN of the asset
+     * @return The ARN of the asset
      * 
      */
     private final @Nullable String assetArn;
     private final @Nullable List<AssetHierarchy> assetHierarchies;
     /**
-     * The ID of the asset
+     * @return The ID of the asset
      * 
      */
     private final @Nullable String assetId;
     /**
-     * The ID of the asset model from which to create the asset.
+     * @return The ID of the asset model from which to create the asset.
      * 
      */
     private final @Nullable String assetModelId;
     /**
-     * A unique, friendly name for the asset.
+     * @return A unique, friendly name for the asset.
      * 
      */
     private final @Nullable String assetName;
     private final @Nullable List<AssetProperty> assetProperties;
     /**
-     * A list of key-value pairs that contain metadata for the asset.
+     * @return A list of key-value pairs that contain metadata for the asset.
      * 
      */
     private final @Nullable List<AssetTag> tags;
@@ -62,9 +62,9 @@ public final class GetAssetResult {
     }
 
     /**
-     * The ARN of the asset
+     * @return The ARN of the asset
      * 
-    */
+     */
     public Optional<String> assetArn() {
         return Optional.ofNullable(this.assetArn);
     }
@@ -72,23 +72,23 @@ public final class GetAssetResult {
         return this.assetHierarchies == null ? List.of() : this.assetHierarchies;
     }
     /**
-     * The ID of the asset
+     * @return The ID of the asset
      * 
-    */
+     */
     public Optional<String> assetId() {
         return Optional.ofNullable(this.assetId);
     }
     /**
-     * The ID of the asset model from which to create the asset.
+     * @return The ID of the asset model from which to create the asset.
      * 
-    */
+     */
     public Optional<String> assetModelId() {
         return Optional.ofNullable(this.assetModelId);
     }
     /**
-     * A unique, friendly name for the asset.
+     * @return A unique, friendly name for the asset.
      * 
-    */
+     */
     public Optional<String> assetName() {
         return Optional.ofNullable(this.assetName);
     }
@@ -96,9 +96,9 @@ public final class GetAssetResult {
         return this.assetProperties == null ? List.of() : this.assetProperties;
     }
     /**
-     * A list of key-value pairs that contain metadata for the asset.
+     * @return A list of key-value pairs that contain metadata for the asset.
      * 
-    */
+     */
     public List<AssetTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

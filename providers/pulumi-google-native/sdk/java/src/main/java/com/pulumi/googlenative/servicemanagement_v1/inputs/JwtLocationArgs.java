@@ -26,6 +26,10 @@ public final class JwtLocationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="header")
     private @Nullable Output<String> header;
 
+    /**
+     * @return Specifies HTTP header name to extract JWT token.
+     * 
+     */
     public Optional<Output<String>> header() {
         return Optional.ofNullable(this.header);
     }
@@ -37,6 +41,10 @@ public final class JwtLocationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="query")
     private @Nullable Output<String> query;
 
+    /**
+     * @return Specifies URL query parameter name to extract JWT token.
+     * 
+     */
     public Optional<Output<String>> query() {
         return Optional.ofNullable(this.query);
     }
@@ -48,6 +56,10 @@ public final class JwtLocationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="valuePrefix")
     private @Nullable Output<String> valuePrefix;
 
+    /**
+     * @return The value prefix. The value format is &#34;value_prefix{token}&#34; Only applies to &#34;in&#34; header type. Must be empty for &#34;in&#34; query type. If not empty, the header value has to match (case sensitive) this prefix. If not matched, JWT will not be extracted. If matched, JWT will be extracted after the prefix is removed. For example, for &#34;Authorization: Bearer {JWT}&#34;, value_prefix=&#34;Bearer &#34; with a space at the end.
+     * 
+     */
     public Optional<Output<String>> valuePrefix() {
         return Optional.ofNullable(this.valuePrefix);
     }
@@ -78,29 +90,65 @@ public final class JwtLocationArgs extends com.pulumi.resources.ResourceArgs {
             $ = new JwtLocationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param header Specifies HTTP header name to extract JWT token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder header(@Nullable Output<String> header) {
             $.header = header;
             return this;
         }
 
+        /**
+         * @param header Specifies HTTP header name to extract JWT token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder header(String header) {
             return header(Output.of(header));
         }
 
+        /**
+         * @param query Specifies URL query parameter name to extract JWT token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder query(@Nullable Output<String> query) {
             $.query = query;
             return this;
         }
 
+        /**
+         * @param query Specifies URL query parameter name to extract JWT token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder query(String query) {
             return query(Output.of(query));
         }
 
+        /**
+         * @param valuePrefix The value prefix. The value format is &#34;value_prefix{token}&#34; Only applies to &#34;in&#34; header type. Must be empty for &#34;in&#34; query type. If not empty, the header value has to match (case sensitive) this prefix. If not matched, JWT will not be extracted. If matched, JWT will be extracted after the prefix is removed. For example, for &#34;Authorization: Bearer {JWT}&#34;, value_prefix=&#34;Bearer &#34; with a space at the end.
+         * 
+         * @return builder
+         * 
+         */
         public Builder valuePrefix(@Nullable Output<String> valuePrefix) {
             $.valuePrefix = valuePrefix;
             return this;
         }
 
+        /**
+         * @param valuePrefix The value prefix. The value format is &#34;value_prefix{token}&#34; Only applies to &#34;in&#34; header type. Must be empty for &#34;in&#34; query type. If not empty, the header value has to match (case sensitive) this prefix. If not matched, JWT will not be extracted. If matched, JWT will be extracted after the prefix is removed. For example, for &#34;Authorization: Bearer {JWT}&#34;, value_prefix=&#34;Bearer &#34; with a space at the end.
+         * 
+         * @return builder
+         * 
+         */
         public Builder valuePrefix(String valuePrefix) {
             return valuePrefix(Output.of(valuePrefix));
         }

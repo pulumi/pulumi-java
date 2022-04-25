@@ -30,6 +30,12 @@ public final class PerfCounterDataSourceResponse extends com.pulumi.resources.In
     @Import(name="counterSpecifiers")
     private @Nullable List<String> counterSpecifiers;
 
+    /**
+     * @return A list of specifier names of the performance counters you want to collect.
+     * Use a wildcard (*) to collect a counter for all instances.
+     * To get a list of performance counters on Windows, run the command &#39;typeperf&#39;.
+     * 
+     */
     public Optional<List<String>> counterSpecifiers() {
         return Optional.ofNullable(this.counterSpecifiers);
     }
@@ -42,6 +48,11 @@ public final class PerfCounterDataSourceResponse extends com.pulumi.resources.In
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return A friendly name for the data source.
+     * This name should be unique across all data sources (regardless of type) within the data collection rule.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -53,6 +64,10 @@ public final class PerfCounterDataSourceResponse extends com.pulumi.resources.In
     @Import(name="samplingFrequencyInSeconds")
     private @Nullable Integer samplingFrequencyInSeconds;
 
+    /**
+     * @return The number of seconds between consecutive counter measurements (samples).
+     * 
+     */
     public Optional<Integer> samplingFrequencyInSeconds() {
         return Optional.ofNullable(this.samplingFrequencyInSeconds);
     }
@@ -65,6 +80,11 @@ public final class PerfCounterDataSourceResponse extends com.pulumi.resources.In
     @Import(name="streams")
     private @Nullable List<String> streams;
 
+    /**
+     * @return List of streams that this data source will be sent to.
+     * A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.
+     * 
+     */
     public Optional<List<String>> streams() {
         return Optional.ofNullable(this.streams);
     }
@@ -96,30 +116,73 @@ public final class PerfCounterDataSourceResponse extends com.pulumi.resources.In
             $ = new PerfCounterDataSourceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param counterSpecifiers A list of specifier names of the performance counters you want to collect.
+         * Use a wildcard (*) to collect a counter for all instances.
+         * To get a list of performance counters on Windows, run the command &#39;typeperf&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder counterSpecifiers(@Nullable List<String> counterSpecifiers) {
             $.counterSpecifiers = counterSpecifiers;
             return this;
         }
 
+        /**
+         * @param counterSpecifiers A list of specifier names of the performance counters you want to collect.
+         * Use a wildcard (*) to collect a counter for all instances.
+         * To get a list of performance counters on Windows, run the command &#39;typeperf&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder counterSpecifiers(String... counterSpecifiers) {
             return counterSpecifiers(List.of(counterSpecifiers));
         }
 
+        /**
+         * @param name A friendly name for the data source.
+         * This name should be unique across all data sources (regardless of type) within the data collection rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param samplingFrequencyInSeconds The number of seconds between consecutive counter measurements (samples).
+         * 
+         * @return builder
+         * 
+         */
         public Builder samplingFrequencyInSeconds(@Nullable Integer samplingFrequencyInSeconds) {
             $.samplingFrequencyInSeconds = samplingFrequencyInSeconds;
             return this;
         }
 
+        /**
+         * @param streams List of streams that this data source will be sent to.
+         * A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streams(@Nullable List<String> streams) {
             $.streams = streams;
             return this;
         }
 
+        /**
+         * @param streams List of streams that this data source will be sent to.
+         * A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streams(String... streams) {
             return streams(List.of(streams));
         }

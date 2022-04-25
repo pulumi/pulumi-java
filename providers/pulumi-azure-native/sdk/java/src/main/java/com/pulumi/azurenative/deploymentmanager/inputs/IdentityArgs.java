@@ -25,6 +25,10 @@ public final class IdentityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="identityIds", required=true)
     private Output<List<String>> identityIds;
 
+    /**
+     * @return The list of identities.
+     * 
+     */
     public Output<List<String>> identityIds() {
         return this.identityIds;
     }
@@ -36,6 +40,10 @@ public final class IdentityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return The identity type.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -65,24 +73,54 @@ public final class IdentityArgs extends com.pulumi.resources.ResourceArgs {
             $ = new IdentityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param identityIds The list of identities.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityIds(Output<List<String>> identityIds) {
             $.identityIds = identityIds;
             return this;
         }
 
+        /**
+         * @param identityIds The list of identities.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityIds(List<String> identityIds) {
             return identityIds(Output.of(identityIds));
         }
 
+        /**
+         * @param identityIds The list of identities.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityIds(String... identityIds) {
             return identityIds(List.of(identityIds));
         }
 
+        /**
+         * @param type The identity type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The identity type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

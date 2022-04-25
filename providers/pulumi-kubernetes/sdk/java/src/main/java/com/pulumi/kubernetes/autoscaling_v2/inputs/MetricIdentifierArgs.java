@@ -27,6 +27,10 @@ public final class MetricIdentifierArgs extends com.pulumi.resources.ResourceArg
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return name is the name of the given metric
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -38,6 +42,10 @@ public final class MetricIdentifierArgs extends com.pulumi.resources.ResourceArg
     @Import(name="selector")
     private @Nullable Output<LabelSelectorArgs> selector;
 
+    /**
+     * @return selector is the string-encoded form of a standard kubernetes label selector for the given metric When set, it is passed as an additional parameter to the metrics server for more specific metrics scoping. When unset, just the metricName will be used to gather metrics.
+     * 
+     */
     public Optional<Output<LabelSelectorArgs>> selector() {
         return Optional.ofNullable(this.selector);
     }
@@ -67,20 +75,44 @@ public final class MetricIdentifierArgs extends com.pulumi.resources.ResourceArg
             $ = new MetricIdentifierArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name name is the name of the given metric
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name name is the name of the given metric
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param selector selector is the string-encoded form of a standard kubernetes label selector for the given metric When set, it is passed as an additional parameter to the metrics server for more specific metrics scoping. When unset, just the metricName will be used to gather metrics.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selector(@Nullable Output<LabelSelectorArgs> selector) {
             $.selector = selector;
             return this;
         }
 
+        /**
+         * @param selector selector is the string-encoded form of a standard kubernetes label selector for the given metric When set, it is passed as an additional parameter to the metrics server for more specific metrics scoping. When unset, just the metricName will be used to gather metrics.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selector(LabelSelectorArgs selector) {
             return selector(Output.of(selector));
         }

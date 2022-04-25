@@ -19,62 +19,62 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetAutomationRuleResult {
     /**
-     * The actions to execute when the automation rule is triggered
+     * @return The actions to execute when the automation rule is triggered
      * 
      */
     private final List<Either<AutomationRuleModifyPropertiesActionResponse,AutomationRuleRunPlaybookActionResponse>> actions;
     /**
-     * Describes the client that created the automation rule
+     * @return Describes the client that created the automation rule
      * 
      */
     private final ClientInfoResponse createdBy;
     /**
-     * The time the automation rule was created
+     * @return The time the automation rule was created
      * 
      */
     private final String createdTimeUtc;
     /**
-     * The display name of the automation  rule
+     * @return The display name of the automation  rule
      * 
      */
     private final String displayName;
     /**
-     * Etag of the azure resource
+     * @return Etag of the azure resource
      * 
      */
     private final @Nullable String etag;
     /**
-     * Azure resource Id
+     * @return Azure resource Id
      * 
      */
     private final String id;
     /**
-     * Describes the client that last updated the automation rule
+     * @return Describes the client that last updated the automation rule
      * 
      */
     private final ClientInfoResponse lastModifiedBy;
     /**
-     * The last time the automation rule was updated
+     * @return The last time the automation rule was updated
      * 
      */
     private final String lastModifiedTimeUtc;
     /**
-     * Azure resource name
+     * @return Azure resource name
      * 
      */
     private final String name;
     /**
-     * The order of execution of the automation rule
+     * @return The order of execution of the automation rule
      * 
      */
     private final Integer order;
     /**
-     * The triggering logic of the automation rule
+     * @return The triggering logic of the automation rule
      * 
      */
     private final AutomationRuleTriggeringLogicResponse triggeringLogic;
     /**
-     * Azure resource type
+     * @return Azure resource type
      * 
      */
     private final String type;
@@ -108,86 +108,86 @@ public final class GetAutomationRuleResult {
     }
 
     /**
-     * The actions to execute when the automation rule is triggered
+     * @return The actions to execute when the automation rule is triggered
      * 
-    */
+     */
     public List<Either<AutomationRuleModifyPropertiesActionResponse,AutomationRuleRunPlaybookActionResponse>> actions() {
         return this.actions;
     }
     /**
-     * Describes the client that created the automation rule
+     * @return Describes the client that created the automation rule
      * 
-    */
+     */
     public ClientInfoResponse createdBy() {
         return this.createdBy;
     }
     /**
-     * The time the automation rule was created
+     * @return The time the automation rule was created
      * 
-    */
+     */
     public String createdTimeUtc() {
         return this.createdTimeUtc;
     }
     /**
-     * The display name of the automation  rule
+     * @return The display name of the automation  rule
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * Etag of the azure resource
+     * @return Etag of the azure resource
      * 
-    */
+     */
     public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
-     * Azure resource Id
+     * @return Azure resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Describes the client that last updated the automation rule
+     * @return Describes the client that last updated the automation rule
      * 
-    */
+     */
     public ClientInfoResponse lastModifiedBy() {
         return this.lastModifiedBy;
     }
     /**
-     * The last time the automation rule was updated
+     * @return The last time the automation rule was updated
      * 
-    */
+     */
     public String lastModifiedTimeUtc() {
         return this.lastModifiedTimeUtc;
     }
     /**
-     * Azure resource name
+     * @return Azure resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The order of execution of the automation rule
+     * @return The order of execution of the automation rule
      * 
-    */
+     */
     public Integer order() {
         return this.order;
     }
     /**
-     * The triggering logic of the automation rule
+     * @return The triggering logic of the automation rule
      * 
-    */
+     */
     public AutomationRuleTriggeringLogicResponse triggeringLogic() {
         return this.triggeringLogic;
     }
     /**
-     * Azure resource type
+     * @return Azure resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

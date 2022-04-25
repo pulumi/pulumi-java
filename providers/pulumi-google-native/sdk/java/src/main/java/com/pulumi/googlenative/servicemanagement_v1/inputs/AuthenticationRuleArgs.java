@@ -30,6 +30,10 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="allowWithoutCredential")
     private @Nullable Output<Boolean> allowWithoutCredential;
 
+    /**
+     * @return If true, the service accepts API keys without any other credential. This flag only applies to HTTP and gRPC requests.
+     * 
+     */
     public Optional<Output<Boolean>> allowWithoutCredential() {
         return Optional.ofNullable(this.allowWithoutCredential);
     }
@@ -41,6 +45,10 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="oauth")
     private @Nullable Output<OAuthRequirementsArgs> oauth;
 
+    /**
+     * @return The requirements for OAuth credentials.
+     * 
+     */
     public Optional<Output<OAuthRequirementsArgs>> oauth() {
         return Optional.ofNullable(this.oauth);
     }
@@ -52,6 +60,10 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="requirements")
     private @Nullable Output<List<AuthRequirementArgs>> requirements;
 
+    /**
+     * @return Requirements for additional authentication providers.
+     * 
+     */
     public Optional<Output<List<AuthRequirementArgs>>> requirements() {
         return Optional.ofNullable(this.requirements);
     }
@@ -63,6 +75,10 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="selector")
     private @Nullable Output<String> selector;
 
+    /**
+     * @return Selects the methods to which this rule applies. Refer to selector for syntax details.
+     * 
+     */
     public Optional<Output<String>> selector() {
         return Optional.ofNullable(this.selector);
     }
@@ -94,42 +110,96 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
             $ = new AuthenticationRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowWithoutCredential If true, the service accepts API keys without any other credential. This flag only applies to HTTP and gRPC requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowWithoutCredential(@Nullable Output<Boolean> allowWithoutCredential) {
             $.allowWithoutCredential = allowWithoutCredential;
             return this;
         }
 
+        /**
+         * @param allowWithoutCredential If true, the service accepts API keys without any other credential. This flag only applies to HTTP and gRPC requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowWithoutCredential(Boolean allowWithoutCredential) {
             return allowWithoutCredential(Output.of(allowWithoutCredential));
         }
 
+        /**
+         * @param oauth The requirements for OAuth credentials.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oauth(@Nullable Output<OAuthRequirementsArgs> oauth) {
             $.oauth = oauth;
             return this;
         }
 
+        /**
+         * @param oauth The requirements for OAuth credentials.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oauth(OAuthRequirementsArgs oauth) {
             return oauth(Output.of(oauth));
         }
 
+        /**
+         * @param requirements Requirements for additional authentication providers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requirements(@Nullable Output<List<AuthRequirementArgs>> requirements) {
             $.requirements = requirements;
             return this;
         }
 
+        /**
+         * @param requirements Requirements for additional authentication providers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requirements(List<AuthRequirementArgs> requirements) {
             return requirements(Output.of(requirements));
         }
 
+        /**
+         * @param requirements Requirements for additional authentication providers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requirements(AuthRequirementArgs... requirements) {
             return requirements(List.of(requirements));
         }
 
+        /**
+         * @param selector Selects the methods to which this rule applies. Refer to selector for syntax details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selector(@Nullable Output<String> selector) {
             $.selector = selector;
             return this;
         }
 
+        /**
+         * @param selector Selects the methods to which this rule applies. Refer to selector for syntax details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selector(String selector) {
             return selector(Output.of(selector));
         }

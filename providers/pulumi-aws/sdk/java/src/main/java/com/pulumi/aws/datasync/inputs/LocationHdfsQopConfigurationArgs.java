@@ -22,6 +22,10 @@ public final class LocationHdfsQopConfigurationArgs extends com.pulumi.resources
     @Import(name="dataTransferProtection")
     private @Nullable Output<String> dataTransferProtection;
 
+    /**
+     * @return The data transfer protection setting configured on the HDFS cluster. This setting corresponds to your dfs.data.transfer.protection setting in the hdfs-site.xml file on your Hadoop cluster. Valid values are `DISABLED`, `AUTHENTICATION`, `INTEGRITY` and `PRIVACY`.
+     * 
+     */
     public Optional<Output<String>> dataTransferProtection() {
         return Optional.ofNullable(this.dataTransferProtection);
     }
@@ -33,6 +37,10 @@ public final class LocationHdfsQopConfigurationArgs extends com.pulumi.resources
     @Import(name="rpcProtection")
     private @Nullable Output<String> rpcProtection;
 
+    /**
+     * @return The RPC protection setting configured on the HDFS cluster. This setting corresponds to your hadoop.rpc.protection setting in your core-site.xml file on your Hadoop cluster. Valid values are `DISABLED`, `AUTHENTICATION`, `INTEGRITY` and `PRIVACY`.
+     * 
+     */
     public Optional<Output<String>> rpcProtection() {
         return Optional.ofNullable(this.rpcProtection);
     }
@@ -62,20 +70,44 @@ public final class LocationHdfsQopConfigurationArgs extends com.pulumi.resources
             $ = new LocationHdfsQopConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataTransferProtection The data transfer protection setting configured on the HDFS cluster. This setting corresponds to your dfs.data.transfer.protection setting in the hdfs-site.xml file on your Hadoop cluster. Valid values are `DISABLED`, `AUTHENTICATION`, `INTEGRITY` and `PRIVACY`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataTransferProtection(@Nullable Output<String> dataTransferProtection) {
             $.dataTransferProtection = dataTransferProtection;
             return this;
         }
 
+        /**
+         * @param dataTransferProtection The data transfer protection setting configured on the HDFS cluster. This setting corresponds to your dfs.data.transfer.protection setting in the hdfs-site.xml file on your Hadoop cluster. Valid values are `DISABLED`, `AUTHENTICATION`, `INTEGRITY` and `PRIVACY`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataTransferProtection(String dataTransferProtection) {
             return dataTransferProtection(Output.of(dataTransferProtection));
         }
 
+        /**
+         * @param rpcProtection The RPC protection setting configured on the HDFS cluster. This setting corresponds to your hadoop.rpc.protection setting in your core-site.xml file on your Hadoop cluster. Valid values are `DISABLED`, `AUTHENTICATION`, `INTEGRITY` and `PRIVACY`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rpcProtection(@Nullable Output<String> rpcProtection) {
             $.rpcProtection = rpcProtection;
             return this;
         }
 
+        /**
+         * @param rpcProtection The RPC protection setting configured on the HDFS cluster. This setting corresponds to your hadoop.rpc.protection setting in your core-site.xml file on your Hadoop cluster. Valid values are `DISABLED`, `AUTHENTICATION`, `INTEGRITY` and `PRIVACY`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rpcProtection(String rpcProtection) {
             return rpcProtection(Output.of(rpcProtection));
         }

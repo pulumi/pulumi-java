@@ -24,6 +24,10 @@ public final class InstancePublicPortsState extends com.pulumi.resources.Resourc
     @Import(name="instanceName")
     private @Nullable Output<String> instanceName;
 
+    /**
+     * @return Name of the Lightsail Instance.
+     * 
+     */
     public Optional<Output<String>> instanceName() {
         return Optional.ofNullable(this.instanceName);
     }
@@ -35,6 +39,10 @@ public final class InstancePublicPortsState extends com.pulumi.resources.Resourc
     @Import(name="portInfos")
     private @Nullable Output<List<InstancePublicPortsPortInfoGetArgs>> portInfos;
 
+    /**
+     * @return Configuration block with port information. AWS closes all currently open ports that are not included in the `port_info`. Detailed below.
+     * 
+     */
     public Optional<Output<List<InstancePublicPortsPortInfoGetArgs>>> portInfos() {
         return Optional.ofNullable(this.portInfos);
     }
@@ -64,24 +72,54 @@ public final class InstancePublicPortsState extends com.pulumi.resources.Resourc
             $ = new InstancePublicPortsState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param instanceName Name of the Lightsail Instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceName(@Nullable Output<String> instanceName) {
             $.instanceName = instanceName;
             return this;
         }
 
+        /**
+         * @param instanceName Name of the Lightsail Instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceName(String instanceName) {
             return instanceName(Output.of(instanceName));
         }
 
+        /**
+         * @param portInfos Configuration block with port information. AWS closes all currently open ports that are not included in the `port_info`. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder portInfos(@Nullable Output<List<InstancePublicPortsPortInfoGetArgs>> portInfos) {
             $.portInfos = portInfos;
             return this;
         }
 
+        /**
+         * @param portInfos Configuration block with port information. AWS closes all currently open ports that are not included in the `port_info`. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder portInfos(List<InstancePublicPortsPortInfoGetArgs> portInfos) {
             return portInfos(Output.of(portInfos));
         }
 
+        /**
+         * @param portInfos Configuration block with port information. AWS closes all currently open ports that are not included in the `port_info`. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder portInfos(InstancePublicPortsPortInfoGetArgs... portInfos) {
             return portInfos(List.of(portInfos));
         }

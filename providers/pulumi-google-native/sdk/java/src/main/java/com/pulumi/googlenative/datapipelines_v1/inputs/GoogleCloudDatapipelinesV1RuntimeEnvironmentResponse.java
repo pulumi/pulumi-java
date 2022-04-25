@@ -27,6 +27,10 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
     @Import(name="additionalExperiments", required=true)
     private List<String> additionalExperiments;
 
+    /**
+     * @return Additional experiment flags for the job.
+     * 
+     */
     public List<String> additionalExperiments() {
         return this.additionalExperiments;
     }
@@ -38,6 +42,10 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
     @Import(name="additionalUserLabels", required=true)
     private Map<String,String> additionalUserLabels;
 
+    /**
+     * @return Additional user labels to be specified for the job. Keys and values should follow the restrictions specified in the [labeling restrictions](https://cloud.google.com/compute/docs/labeling-resources#restrictions) page. An object containing a list of key/value pairs. Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1kg&#34;, &#34;count&#34;: &#34;3&#34; }.
+     * 
+     */
     public Map<String,String> additionalUserLabels() {
         return this.additionalUserLabels;
     }
@@ -49,6 +57,10 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
     @Import(name="bypassTempDirValidation", required=true)
     private Boolean bypassTempDirValidation;
 
+    /**
+     * @return Whether to bypass the safety checks for the job&#39;s temporary directory. Use with caution.
+     * 
+     */
     public Boolean bypassTempDirValidation() {
         return this.bypassTempDirValidation;
     }
@@ -60,6 +72,10 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
     @Import(name="enableStreamingEngine", required=true)
     private Boolean enableStreamingEngine;
 
+    /**
+     * @return Whether to enable Streaming Engine for the job.
+     * 
+     */
     public Boolean enableStreamingEngine() {
         return this.enableStreamingEngine;
     }
@@ -71,6 +87,10 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
     @Import(name="ipConfiguration", required=true)
     private String ipConfiguration;
 
+    /**
+     * @return Configuration for VM IPs.
+     * 
+     */
     public String ipConfiguration() {
         return this.ipConfiguration;
     }
@@ -82,6 +102,10 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
     @Import(name="kmsKeyName", required=true)
     private String kmsKeyName;
 
+    /**
+     * @return Name for the Cloud KMS key for the job. The key format is: projects//locations//keyRings//cryptoKeys/
+     * 
+     */
     public String kmsKeyName() {
         return this.kmsKeyName;
     }
@@ -93,6 +117,10 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
     @Import(name="machineType", required=true)
     private String machineType;
 
+    /**
+     * @return The machine type to use for the job. Defaults to the value from the template if not specified.
+     * 
+     */
     public String machineType() {
         return this.machineType;
     }
@@ -104,6 +132,10 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
     @Import(name="maxWorkers", required=true)
     private Integer maxWorkers;
 
+    /**
+     * @return The maximum number of Compute Engine instances to be made available to your pipeline during execution, from 1 to 1000.
+     * 
+     */
     public Integer maxWorkers() {
         return this.maxWorkers;
     }
@@ -115,6 +147,10 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
     @Import(name="network", required=true)
     private String network;
 
+    /**
+     * @return Network to which VMs will be assigned. If empty or unspecified, the service will use the network &#34;default&#34;.
+     * 
+     */
     public String network() {
         return this.network;
     }
@@ -126,6 +162,10 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
     @Import(name="numWorkers", required=true)
     private Integer numWorkers;
 
+    /**
+     * @return The initial number of Compute Engine instances for the job.
+     * 
+     */
     public Integer numWorkers() {
         return this.numWorkers;
     }
@@ -137,6 +177,10 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
     @Import(name="serviceAccountEmail", required=true)
     private String serviceAccountEmail;
 
+    /**
+     * @return The email address of the service account to run the job as.
+     * 
+     */
     public String serviceAccountEmail() {
         return this.serviceAccountEmail;
     }
@@ -148,6 +192,10 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
     @Import(name="subnetwork", required=true)
     private String subnetwork;
 
+    /**
+     * @return Subnetwork to which VMs will be assigned, if desired. You can specify a subnetwork using either a complete URL or an abbreviated path. Expected to be of the form &#34;https://www.googleapis.com/compute/v1/projects/HOST_PROJECT_ID/regions/REGION/subnetworks/SUBNETWORK&#34; or &#34;regions/REGION/subnetworks/SUBNETWORK&#34;. If the subnetwork is located in a Shared VPC network, you must use the complete URL.
+     * 
+     */
     public String subnetwork() {
         return this.subnetwork;
     }
@@ -159,6 +207,10 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
     @Import(name="tempLocation", required=true)
     private String tempLocation;
 
+    /**
+     * @return The Cloud Storage path to use for temporary files. Must be a valid Cloud Storage URL, beginning with `gs://`.
+     * 
+     */
     public String tempLocation() {
         return this.tempLocation;
     }
@@ -170,6 +222,10 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
     @Import(name="workerRegion", required=true)
     private String workerRegion;
 
+    /**
+     * @return The Compute Engine region (https://cloud.google.com/compute/docs/regions-zones/regions-zones) in which worker processing should occur, e.g. &#34;us-west1&#34;. Mutually exclusive with worker_zone. If neither worker_region nor worker_zone is specified, default to the control plane&#39;s region.
+     * 
+     */
     public String workerRegion() {
         return this.workerRegion;
     }
@@ -181,6 +237,10 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
     @Import(name="workerZone", required=true)
     private String workerZone;
 
+    /**
+     * @return The Compute Engine zone (https://cloud.google.com/compute/docs/regions-zones/regions-zones) in which worker processing should occur, e.g. &#34;us-west1-a&#34;. Mutually exclusive with worker_region. If neither worker_region nor worker_zone is specified, a zone in the control plane&#39;s region is chosen based on available capacity. If both `worker_zone` and `zone` are set, `worker_zone` takes precedence.
+     * 
+     */
     public String workerZone() {
         return this.workerZone;
     }
@@ -192,6 +252,10 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
     @Import(name="zone", required=true)
     private String zone;
 
+    /**
+     * @return The Compute Engine [availability zone](https://cloud.google.com/compute/docs/regions-zones/regions-zones) for launching worker instances to run your pipeline. In the future, worker_zone will take precedence.
+     * 
+     */
     public String zone() {
         return this.zone;
     }
@@ -235,85 +299,187 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
             $ = new GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param additionalExperiments Additional experiment flags for the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalExperiments(List<String> additionalExperiments) {
             $.additionalExperiments = additionalExperiments;
             return this;
         }
 
+        /**
+         * @param additionalExperiments Additional experiment flags for the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalExperiments(String... additionalExperiments) {
             return additionalExperiments(List.of(additionalExperiments));
         }
 
+        /**
+         * @param additionalUserLabels Additional user labels to be specified for the job. Keys and values should follow the restrictions specified in the [labeling restrictions](https://cloud.google.com/compute/docs/labeling-resources#restrictions) page. An object containing a list of key/value pairs. Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1kg&#34;, &#34;count&#34;: &#34;3&#34; }.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalUserLabels(Map<String,String> additionalUserLabels) {
             $.additionalUserLabels = additionalUserLabels;
             return this;
         }
 
+        /**
+         * @param bypassTempDirValidation Whether to bypass the safety checks for the job&#39;s temporary directory. Use with caution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bypassTempDirValidation(Boolean bypassTempDirValidation) {
             $.bypassTempDirValidation = bypassTempDirValidation;
             return this;
         }
 
+        /**
+         * @param enableStreamingEngine Whether to enable Streaming Engine for the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableStreamingEngine(Boolean enableStreamingEngine) {
             $.enableStreamingEngine = enableStreamingEngine;
             return this;
         }
 
+        /**
+         * @param ipConfiguration Configuration for VM IPs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipConfiguration(String ipConfiguration) {
             $.ipConfiguration = ipConfiguration;
             return this;
         }
 
+        /**
+         * @param kmsKeyName Name for the Cloud KMS key for the job. The key format is: projects//locations//keyRings//cryptoKeys/
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyName(String kmsKeyName) {
             $.kmsKeyName = kmsKeyName;
             return this;
         }
 
+        /**
+         * @param machineType The machine type to use for the job. Defaults to the value from the template if not specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder machineType(String machineType) {
             $.machineType = machineType;
             return this;
         }
 
+        /**
+         * @param maxWorkers The maximum number of Compute Engine instances to be made available to your pipeline during execution, from 1 to 1000.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxWorkers(Integer maxWorkers) {
             $.maxWorkers = maxWorkers;
             return this;
         }
 
+        /**
+         * @param network Network to which VMs will be assigned. If empty or unspecified, the service will use the network &#34;default&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(String network) {
             $.network = network;
             return this;
         }
 
+        /**
+         * @param numWorkers The initial number of Compute Engine instances for the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numWorkers(Integer numWorkers) {
             $.numWorkers = numWorkers;
             return this;
         }
 
+        /**
+         * @param serviceAccountEmail The email address of the service account to run the job as.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccountEmail(String serviceAccountEmail) {
             $.serviceAccountEmail = serviceAccountEmail;
             return this;
         }
 
+        /**
+         * @param subnetwork Subnetwork to which VMs will be assigned, if desired. You can specify a subnetwork using either a complete URL or an abbreviated path. Expected to be of the form &#34;https://www.googleapis.com/compute/v1/projects/HOST_PROJECT_ID/regions/REGION/subnetworks/SUBNETWORK&#34; or &#34;regions/REGION/subnetworks/SUBNETWORK&#34;. If the subnetwork is located in a Shared VPC network, you must use the complete URL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetwork(String subnetwork) {
             $.subnetwork = subnetwork;
             return this;
         }
 
+        /**
+         * @param tempLocation The Cloud Storage path to use for temporary files. Must be a valid Cloud Storage URL, beginning with `gs://`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tempLocation(String tempLocation) {
             $.tempLocation = tempLocation;
             return this;
         }
 
+        /**
+         * @param workerRegion The Compute Engine region (https://cloud.google.com/compute/docs/regions-zones/regions-zones) in which worker processing should occur, e.g. &#34;us-west1&#34;. Mutually exclusive with worker_zone. If neither worker_region nor worker_zone is specified, default to the control plane&#39;s region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workerRegion(String workerRegion) {
             $.workerRegion = workerRegion;
             return this;
         }
 
+        /**
+         * @param workerZone The Compute Engine zone (https://cloud.google.com/compute/docs/regions-zones/regions-zones) in which worker processing should occur, e.g. &#34;us-west1-a&#34;. Mutually exclusive with worker_region. If neither worker_region nor worker_zone is specified, a zone in the control plane&#39;s region is chosen based on available capacity. If both `worker_zone` and `zone` are set, `worker_zone` takes precedence.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workerZone(String workerZone) {
             $.workerZone = workerZone;
             return this;
         }
 
+        /**
+         * @param zone The Compute Engine [availability zone](https://cloud.google.com/compute/docs/regions-zones/regions-zones) for launching worker instances to run your pipeline. In the future, worker_zone will take precedence.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zone(String zone) {
             $.zone = zone;
             return this;

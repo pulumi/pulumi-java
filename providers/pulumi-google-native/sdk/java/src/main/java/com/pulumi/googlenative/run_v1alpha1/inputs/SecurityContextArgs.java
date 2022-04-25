@@ -26,6 +26,10 @@ public final class SecurityContextArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="runAsUser")
     private @Nullable Output<Integer> runAsUser;
 
+    /**
+     * @return (Optional) The UID to run the entrypoint of the container process. Defaults to user specified in image metadata if unspecified. May also be set in PodSecurityContext. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence.
+     * 
+     */
     public Optional<Output<Integer>> runAsUser() {
         return Optional.ofNullable(this.runAsUser);
     }
@@ -54,11 +58,23 @@ public final class SecurityContextArgs extends com.pulumi.resources.ResourceArgs
             $ = new SecurityContextArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param runAsUser (Optional) The UID to run the entrypoint of the container process. Defaults to user specified in image metadata if unspecified. May also be set in PodSecurityContext. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runAsUser(@Nullable Output<Integer> runAsUser) {
             $.runAsUser = runAsUser;
             return this;
         }
 
+        /**
+         * @param runAsUser (Optional) The UID to run the entrypoint of the container process. Defaults to user specified in image metadata if unspecified. May also be set in PodSecurityContext. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runAsUser(Integer runAsUser) {
             return runAsUser(Output.of(runAsUser));
         }

@@ -27,6 +27,10 @@ public final class AzureFileFilterDetailsArgs extends com.pulumi.resources.Resou
     @Import(name="filePathList")
     private @Nullable Output<List<String>> filePathList;
 
+    /**
+     * @return List of full path of the files to be transferred.
+     * 
+     */
     public Optional<Output<List<String>>> filePathList() {
         return Optional.ofNullable(this.filePathList);
     }
@@ -38,6 +42,10 @@ public final class AzureFileFilterDetailsArgs extends com.pulumi.resources.Resou
     @Import(name="filePrefixList")
     private @Nullable Output<List<String>> filePrefixList;
 
+    /**
+     * @return Prefix list of the Azure files to be transferred.
+     * 
+     */
     public Optional<Output<List<String>>> filePrefixList() {
         return Optional.ofNullable(this.filePrefixList);
     }
@@ -49,6 +57,10 @@ public final class AzureFileFilterDetailsArgs extends com.pulumi.resources.Resou
     @Import(name="fileShareList")
     private @Nullable Output<List<String>> fileShareList;
 
+    /**
+     * @return List of file shares to be transferred.
+     * 
+     */
     public Optional<Output<List<String>>> fileShareList() {
         return Optional.ofNullable(this.fileShareList);
     }
@@ -79,41 +91,95 @@ public final class AzureFileFilterDetailsArgs extends com.pulumi.resources.Resou
             $ = new AzureFileFilterDetailsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param filePathList List of full path of the files to be transferred.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filePathList(@Nullable Output<List<String>> filePathList) {
             $.filePathList = filePathList;
             return this;
         }
 
+        /**
+         * @param filePathList List of full path of the files to be transferred.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filePathList(List<String> filePathList) {
             return filePathList(Output.of(filePathList));
         }
 
+        /**
+         * @param filePathList List of full path of the files to be transferred.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filePathList(String... filePathList) {
             return filePathList(List.of(filePathList));
         }
 
+        /**
+         * @param filePrefixList Prefix list of the Azure files to be transferred.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filePrefixList(@Nullable Output<List<String>> filePrefixList) {
             $.filePrefixList = filePrefixList;
             return this;
         }
 
+        /**
+         * @param filePrefixList Prefix list of the Azure files to be transferred.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filePrefixList(List<String> filePrefixList) {
             return filePrefixList(Output.of(filePrefixList));
         }
 
+        /**
+         * @param filePrefixList Prefix list of the Azure files to be transferred.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filePrefixList(String... filePrefixList) {
             return filePrefixList(List.of(filePrefixList));
         }
 
+        /**
+         * @param fileShareList List of file shares to be transferred.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileShareList(@Nullable Output<List<String>> fileShareList) {
             $.fileShareList = fileShareList;
             return this;
         }
 
+        /**
+         * @param fileShareList List of file shares to be transferred.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileShareList(List<String> fileShareList) {
             return fileShareList(Output.of(fileShareList));
         }
 
+        /**
+         * @param fileShareList List of file shares to be transferred.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileShareList(String... fileShareList) {
             return fileShareList(List.of(fileShareList));
         }

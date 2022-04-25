@@ -23,6 +23,10 @@ public final class ManagedInstanceAzureADOnlyAuthenticationArgs extends com.pulu
     @Import(name="authenticationName")
     private @Nullable Output<String> authenticationName;
 
+    /**
+     * @return The name of server azure active directory only authentication.
+     * 
+     */
     public Optional<Output<String>> authenticationName() {
         return Optional.ofNullable(this.authenticationName);
     }
@@ -34,6 +38,10 @@ public final class ManagedInstanceAzureADOnlyAuthenticationArgs extends com.pulu
     @Import(name="azureADOnlyAuthentication", required=true)
     private Output<Boolean> azureADOnlyAuthentication;
 
+    /**
+     * @return Azure Active Directory only Authentication enabled.
+     * 
+     */
     public Output<Boolean> azureADOnlyAuthentication() {
         return this.azureADOnlyAuthentication;
     }
@@ -45,6 +53,10 @@ public final class ManagedInstanceAzureADOnlyAuthenticationArgs extends com.pulu
     @Import(name="managedInstanceName", required=true)
     private Output<String> managedInstanceName;
 
+    /**
+     * @return The name of the managed instance.
+     * 
+     */
     public Output<String> managedInstanceName() {
         return this.managedInstanceName;
     }
@@ -56,6 +68,10 @@ public final class ManagedInstanceAzureADOnlyAuthenticationArgs extends com.pulu
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -87,38 +103,86 @@ public final class ManagedInstanceAzureADOnlyAuthenticationArgs extends com.pulu
             $ = new ManagedInstanceAzureADOnlyAuthenticationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authenticationName The name of server azure active directory only authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationName(@Nullable Output<String> authenticationName) {
             $.authenticationName = authenticationName;
             return this;
         }
 
+        /**
+         * @param authenticationName The name of server azure active directory only authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationName(String authenticationName) {
             return authenticationName(Output.of(authenticationName));
         }
 
+        /**
+         * @param azureADOnlyAuthentication Azure Active Directory only Authentication enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureADOnlyAuthentication(Output<Boolean> azureADOnlyAuthentication) {
             $.azureADOnlyAuthentication = azureADOnlyAuthentication;
             return this;
         }
 
+        /**
+         * @param azureADOnlyAuthentication Azure Active Directory only Authentication enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureADOnlyAuthentication(Boolean azureADOnlyAuthentication) {
             return azureADOnlyAuthentication(Output.of(azureADOnlyAuthentication));
         }
 
+        /**
+         * @param managedInstanceName The name of the managed instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedInstanceName(Output<String> managedInstanceName) {
             $.managedInstanceName = managedInstanceName;
             return this;
         }
 
+        /**
+         * @param managedInstanceName The name of the managed instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedInstanceName(String managedInstanceName) {
             return managedInstanceName(Output.of(managedInstanceName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }

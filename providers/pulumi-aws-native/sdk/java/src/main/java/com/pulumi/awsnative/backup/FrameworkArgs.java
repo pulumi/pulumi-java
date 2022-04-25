@@ -25,6 +25,10 @@ public final class FrameworkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="frameworkControls", required=true)
     private Output<List<FrameworkControlArgs>> frameworkControls;
 
+    /**
+     * @return Contains detailed information about all of the controls of a framework. Each framework must contain at least one control.
+     * 
+     */
     public Output<List<FrameworkControlArgs>> frameworkControls() {
         return this.frameworkControls;
     }
@@ -36,6 +40,10 @@ public final class FrameworkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="frameworkDescription")
     private @Nullable Output<String> frameworkDescription;
 
+    /**
+     * @return An optional description of the framework with a maximum 1,024 characters.
+     * 
+     */
     public Optional<Output<String>> frameworkDescription() {
         return Optional.ofNullable(this.frameworkDescription);
     }
@@ -47,6 +55,10 @@ public final class FrameworkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="frameworkName")
     private @Nullable Output<String> frameworkName;
 
+    /**
+     * @return The unique name of a framework. This name is between 1 and 256 characters, starting with a letter, and consisting of letters (a-z, A-Z), numbers (0-9), and underscores (_).
+     * 
+     */
     public Optional<Output<String>> frameworkName() {
         return Optional.ofNullable(this.frameworkName);
     }
@@ -58,6 +70,10 @@ public final class FrameworkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="frameworkTags")
     private @Nullable Output<List<FrameworkTagArgs>> frameworkTags;
 
+    /**
+     * @return Metadata that you can assign to help organize the frameworks that you create. Each tag is a key-value pair.
+     * 
+     */
     public Optional<Output<List<FrameworkTagArgs>>> frameworkTags() {
         return Optional.ofNullable(this.frameworkTags);
     }
@@ -89,46 +105,106 @@ public final class FrameworkArgs extends com.pulumi.resources.ResourceArgs {
             $ = new FrameworkArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param frameworkControls Contains detailed information about all of the controls of a framework. Each framework must contain at least one control.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frameworkControls(Output<List<FrameworkControlArgs>> frameworkControls) {
             $.frameworkControls = frameworkControls;
             return this;
         }
 
+        /**
+         * @param frameworkControls Contains detailed information about all of the controls of a framework. Each framework must contain at least one control.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frameworkControls(List<FrameworkControlArgs> frameworkControls) {
             return frameworkControls(Output.of(frameworkControls));
         }
 
+        /**
+         * @param frameworkControls Contains detailed information about all of the controls of a framework. Each framework must contain at least one control.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frameworkControls(FrameworkControlArgs... frameworkControls) {
             return frameworkControls(List.of(frameworkControls));
         }
 
+        /**
+         * @param frameworkDescription An optional description of the framework with a maximum 1,024 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frameworkDescription(@Nullable Output<String> frameworkDescription) {
             $.frameworkDescription = frameworkDescription;
             return this;
         }
 
+        /**
+         * @param frameworkDescription An optional description of the framework with a maximum 1,024 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frameworkDescription(String frameworkDescription) {
             return frameworkDescription(Output.of(frameworkDescription));
         }
 
+        /**
+         * @param frameworkName The unique name of a framework. This name is between 1 and 256 characters, starting with a letter, and consisting of letters (a-z, A-Z), numbers (0-9), and underscores (_).
+         * 
+         * @return builder
+         * 
+         */
         public Builder frameworkName(@Nullable Output<String> frameworkName) {
             $.frameworkName = frameworkName;
             return this;
         }
 
+        /**
+         * @param frameworkName The unique name of a framework. This name is between 1 and 256 characters, starting with a letter, and consisting of letters (a-z, A-Z), numbers (0-9), and underscores (_).
+         * 
+         * @return builder
+         * 
+         */
         public Builder frameworkName(String frameworkName) {
             return frameworkName(Output.of(frameworkName));
         }
 
+        /**
+         * @param frameworkTags Metadata that you can assign to help organize the frameworks that you create. Each tag is a key-value pair.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frameworkTags(@Nullable Output<List<FrameworkTagArgs>> frameworkTags) {
             $.frameworkTags = frameworkTags;
             return this;
         }
 
+        /**
+         * @param frameworkTags Metadata that you can assign to help organize the frameworks that you create. Each tag is a key-value pair.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frameworkTags(List<FrameworkTagArgs> frameworkTags) {
             return frameworkTags(Output.of(frameworkTags));
         }
 
+        /**
+         * @param frameworkTags Metadata that you can assign to help organize the frameworks that you create. Each tag is a key-value pair.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frameworkTags(FrameworkTagArgs... frameworkTags) {
             return frameworkTags(List.of(frameworkTags));
         }

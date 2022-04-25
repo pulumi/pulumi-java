@@ -25,6 +25,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return The name and identifier for the Job.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -36,6 +40,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties", required=true)
     private Output<Either<CommandJobArgs,SweepJobArgs>> properties;
 
+    /**
+     * @return Additional attributes of the entity.
+     * 
+     */
     public Output<Either<CommandJobArgs,SweepJobArgs>> properties() {
         return this.properties;
     }
@@ -47,6 +55,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -58,6 +70,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="workspaceName", required=true)
     private Output<String> workspaceName;
 
+    /**
+     * @return Name of Azure Machine Learning workspace.
+     * 
+     */
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
@@ -89,46 +105,106 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
             $ = new JobArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id The name and identifier for the Job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id The name and identifier for the Job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param properties Additional attributes of the entity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Output<Either<CommandJobArgs,SweepJobArgs>> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Additional attributes of the entity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Either<CommandJobArgs,SweepJobArgs> properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param properties Additional attributes of the entity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(CommandJobArgs properties) {
             return properties(Either.ofLeft(properties));
         }
 
+        /**
+         * @param properties Additional attributes of the entity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(SweepJobArgs properties) {
             return properties(Either.ofRight(properties));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param workspaceName Name of Azure Machine Learning workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(Output<String> workspaceName) {
             $.workspaceName = workspaceName;
             return this;
         }
 
+        /**
+         * @param workspaceName Name of Azure Machine Learning workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             return workspaceName(Output.of(workspaceName));
         }

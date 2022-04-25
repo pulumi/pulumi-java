@@ -12,97 +12,97 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetExportConfigurationResult {
     /**
-     * The name of the Application Insights component.
+     * @return The name of the Application Insights component.
      * 
      */
     private final String applicationName;
     /**
-     * The name of the destination storage container.
+     * @return The name of the destination storage container.
      * 
      */
     private final String containerName;
     /**
-     * The name of destination account.
+     * @return The name of destination account.
      * 
      */
     private final String destinationAccountId;
     /**
-     * The destination account location ID.
+     * @return The destination account location ID.
      * 
      */
     private final String destinationStorageLocationId;
     /**
-     * The destination storage account subscription ID.
+     * @return The destination storage account subscription ID.
      * 
      */
     private final String destinationStorageSubscriptionId;
     /**
-     * The destination type.
+     * @return The destination type.
      * 
      */
     private final String destinationType;
     /**
-     * The unique ID of the export configuration inside an Application Insights component. It is auto generated when the Continuous Export configuration is created.
+     * @return The unique ID of the export configuration inside an Application Insights component. It is auto generated when the Continuous Export configuration is created.
      * 
      */
     private final String exportId;
     /**
-     * This indicates current Continuous Export configuration status. The possible values are &#39;Preparing&#39;, &#39;Success&#39;, &#39;Failure&#39;.
+     * @return This indicates current Continuous Export configuration status. The possible values are &#39;Preparing&#39;, &#39;Success&#39;, &#39;Failure&#39;.
      * 
      */
     private final String exportStatus;
     /**
-     * The instrumentation key of the Application Insights component.
+     * @return The instrumentation key of the Application Insights component.
      * 
      */
     private final String instrumentationKey;
     /**
-     * This will be &#39;true&#39; if the Continuous Export configuration is enabled, otherwise it will be &#39;false&#39;.
+     * @return This will be &#39;true&#39; if the Continuous Export configuration is enabled, otherwise it will be &#39;false&#39;.
      * 
      */
     private final String isUserEnabled;
     /**
-     * The last time the Continuous Export configuration started failing.
+     * @return The last time the Continuous Export configuration started failing.
      * 
      */
     private final String lastGapTime;
     /**
-     * The last time data was successfully delivered to the destination storage container for this Continuous Export configuration.
+     * @return The last time data was successfully delivered to the destination storage container for this Continuous Export configuration.
      * 
      */
     private final String lastSuccessTime;
     /**
-     * Last time the Continuous Export configuration was updated.
+     * @return Last time the Continuous Export configuration was updated.
      * 
      */
     private final String lastUserUpdate;
     /**
-     * Deprecated
+     * @return Deprecated
      * 
      */
     private final @Nullable String notificationQueueEnabled;
     /**
-     * This is the reason the Continuous Export configuration started failing. It can be &#39;AzureStorageNotFound&#39; or &#39;AzureStorageAccessDenied&#39;.
+     * @return This is the reason the Continuous Export configuration started failing. It can be &#39;AzureStorageNotFound&#39; or &#39;AzureStorageAccessDenied&#39;.
      * 
      */
     private final String permanentErrorReason;
     /**
-     * This comma separated list of document types that will be exported. The possible values include &#39;Requests&#39;, &#39;Event&#39;, &#39;Exceptions&#39;, &#39;Metrics&#39;, &#39;PageViews&#39;, &#39;PageViewPerformance&#39;, &#39;Rdd&#39;, &#39;PerformanceCounters&#39;, &#39;Availability&#39;, &#39;Messages&#39;.
+     * @return This comma separated list of document types that will be exported. The possible values include &#39;Requests&#39;, &#39;Event&#39;, &#39;Exceptions&#39;, &#39;Metrics&#39;, &#39;PageViews&#39;, &#39;PageViewPerformance&#39;, &#39;Rdd&#39;, &#39;PerformanceCounters&#39;, &#39;Availability&#39;, &#39;Messages&#39;.
      * 
      */
     private final @Nullable String recordTypes;
     /**
-     * The resource group of the Application Insights component.
+     * @return The resource group of the Application Insights component.
      * 
      */
     private final String resourceGroup;
     /**
-     * The name of the destination storage account.
+     * @return The name of the destination storage account.
      * 
      */
     private final String storageName;
     /**
-     * The subscription of the Application Insights component.
+     * @return The subscription of the Application Insights component.
      * 
      */
     private final String subscriptionId;
@@ -150,135 +150,135 @@ public final class GetExportConfigurationResult {
     }
 
     /**
-     * The name of the Application Insights component.
+     * @return The name of the Application Insights component.
      * 
-    */
+     */
     public String applicationName() {
         return this.applicationName;
     }
     /**
-     * The name of the destination storage container.
+     * @return The name of the destination storage container.
      * 
-    */
+     */
     public String containerName() {
         return this.containerName;
     }
     /**
-     * The name of destination account.
+     * @return The name of destination account.
      * 
-    */
+     */
     public String destinationAccountId() {
         return this.destinationAccountId;
     }
     /**
-     * The destination account location ID.
+     * @return The destination account location ID.
      * 
-    */
+     */
     public String destinationStorageLocationId() {
         return this.destinationStorageLocationId;
     }
     /**
-     * The destination storage account subscription ID.
+     * @return The destination storage account subscription ID.
      * 
-    */
+     */
     public String destinationStorageSubscriptionId() {
         return this.destinationStorageSubscriptionId;
     }
     /**
-     * The destination type.
+     * @return The destination type.
      * 
-    */
+     */
     public String destinationType() {
         return this.destinationType;
     }
     /**
-     * The unique ID of the export configuration inside an Application Insights component. It is auto generated when the Continuous Export configuration is created.
+     * @return The unique ID of the export configuration inside an Application Insights component. It is auto generated when the Continuous Export configuration is created.
      * 
-    */
+     */
     public String exportId() {
         return this.exportId;
     }
     /**
-     * This indicates current Continuous Export configuration status. The possible values are &#39;Preparing&#39;, &#39;Success&#39;, &#39;Failure&#39;.
+     * @return This indicates current Continuous Export configuration status. The possible values are &#39;Preparing&#39;, &#39;Success&#39;, &#39;Failure&#39;.
      * 
-    */
+     */
     public String exportStatus() {
         return this.exportStatus;
     }
     /**
-     * The instrumentation key of the Application Insights component.
+     * @return The instrumentation key of the Application Insights component.
      * 
-    */
+     */
     public String instrumentationKey() {
         return this.instrumentationKey;
     }
     /**
-     * This will be &#39;true&#39; if the Continuous Export configuration is enabled, otherwise it will be &#39;false&#39;.
+     * @return This will be &#39;true&#39; if the Continuous Export configuration is enabled, otherwise it will be &#39;false&#39;.
      * 
-    */
+     */
     public String isUserEnabled() {
         return this.isUserEnabled;
     }
     /**
-     * The last time the Continuous Export configuration started failing.
+     * @return The last time the Continuous Export configuration started failing.
      * 
-    */
+     */
     public String lastGapTime() {
         return this.lastGapTime;
     }
     /**
-     * The last time data was successfully delivered to the destination storage container for this Continuous Export configuration.
+     * @return The last time data was successfully delivered to the destination storage container for this Continuous Export configuration.
      * 
-    */
+     */
     public String lastSuccessTime() {
         return this.lastSuccessTime;
     }
     /**
-     * Last time the Continuous Export configuration was updated.
+     * @return Last time the Continuous Export configuration was updated.
      * 
-    */
+     */
     public String lastUserUpdate() {
         return this.lastUserUpdate;
     }
     /**
-     * Deprecated
+     * @return Deprecated
      * 
-    */
+     */
     public Optional<String> notificationQueueEnabled() {
         return Optional.ofNullable(this.notificationQueueEnabled);
     }
     /**
-     * This is the reason the Continuous Export configuration started failing. It can be &#39;AzureStorageNotFound&#39; or &#39;AzureStorageAccessDenied&#39;.
+     * @return This is the reason the Continuous Export configuration started failing. It can be &#39;AzureStorageNotFound&#39; or &#39;AzureStorageAccessDenied&#39;.
      * 
-    */
+     */
     public String permanentErrorReason() {
         return this.permanentErrorReason;
     }
     /**
-     * This comma separated list of document types that will be exported. The possible values include &#39;Requests&#39;, &#39;Event&#39;, &#39;Exceptions&#39;, &#39;Metrics&#39;, &#39;PageViews&#39;, &#39;PageViewPerformance&#39;, &#39;Rdd&#39;, &#39;PerformanceCounters&#39;, &#39;Availability&#39;, &#39;Messages&#39;.
+     * @return This comma separated list of document types that will be exported. The possible values include &#39;Requests&#39;, &#39;Event&#39;, &#39;Exceptions&#39;, &#39;Metrics&#39;, &#39;PageViews&#39;, &#39;PageViewPerformance&#39;, &#39;Rdd&#39;, &#39;PerformanceCounters&#39;, &#39;Availability&#39;, &#39;Messages&#39;.
      * 
-    */
+     */
     public Optional<String> recordTypes() {
         return Optional.ofNullable(this.recordTypes);
     }
     /**
-     * The resource group of the Application Insights component.
+     * @return The resource group of the Application Insights component.
      * 
-    */
+     */
     public String resourceGroup() {
         return this.resourceGroup;
     }
     /**
-     * The name of the destination storage account.
+     * @return The name of the destination storage account.
      * 
-    */
+     */
     public String storageName() {
         return this.storageName;
     }
     /**
-     * The subscription of the Application Insights component.
+     * @return The subscription of the Application Insights component.
      * 
-    */
+     */
     public String subscriptionId() {
         return this.subscriptionId;
     }

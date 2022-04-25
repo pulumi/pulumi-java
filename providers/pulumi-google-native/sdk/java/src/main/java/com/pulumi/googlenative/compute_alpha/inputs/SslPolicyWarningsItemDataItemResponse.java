@@ -19,6 +19,10 @@ public final class SslPolicyWarningsItemDataItemResponse extends com.pulumi.reso
     @Import(name="key", required=true)
     private String key;
 
+    /**
+     * @return A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).
+     * 
+     */
     public String key() {
         return this.key;
     }
@@ -30,6 +34,10 @@ public final class SslPolicyWarningsItemDataItemResponse extends com.pulumi.reso
     @Import(name="value", required=true)
     private String value;
 
+    /**
+     * @return A warning data value corresponding to the key.
+     * 
+     */
     public String value() {
         return this.value;
     }
@@ -59,11 +67,23 @@ public final class SslPolicyWarningsItemDataItemResponse extends com.pulumi.reso
             $ = new SslPolicyWarningsItemDataItemResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param key A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param value A warning data value corresponding to the key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             $.value = value;
             return this;

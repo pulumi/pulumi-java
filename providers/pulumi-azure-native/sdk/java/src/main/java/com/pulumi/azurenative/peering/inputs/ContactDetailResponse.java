@@ -25,6 +25,10 @@ public final class ContactDetailResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="email")
     private @Nullable String email;
 
+    /**
+     * @return The e-mail address of the contact.
+     * 
+     */
     public Optional<String> email() {
         return Optional.ofNullable(this.email);
     }
@@ -36,6 +40,10 @@ public final class ContactDetailResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="phone")
     private @Nullable String phone;
 
+    /**
+     * @return The phone number of the contact.
+     * 
+     */
     public Optional<String> phone() {
         return Optional.ofNullable(this.phone);
     }
@@ -47,6 +55,10 @@ public final class ContactDetailResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="role")
     private @Nullable String role;
 
+    /**
+     * @return The role of the contact.
+     * 
+     */
     public Optional<String> role() {
         return Optional.ofNullable(this.role);
     }
@@ -77,16 +89,34 @@ public final class ContactDetailResponse extends com.pulumi.resources.InvokeArgs
             $ = new ContactDetailResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param email The e-mail address of the contact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder email(@Nullable String email) {
             $.email = email;
             return this;
         }
 
+        /**
+         * @param phone The phone number of the contact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder phone(@Nullable String phone) {
             $.phone = phone;
             return this;
         }
 
+        /**
+         * @param role The role of the contact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(@Nullable String role) {
             $.role = role;
             return this;

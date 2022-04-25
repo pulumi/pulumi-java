@@ -23,6 +23,10 @@ public final class LogConfigCounterOptionsCustomFieldResponse extends com.pulumi
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return This is deprecated and has no effect. Do not use.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -34,6 +38,10 @@ public final class LogConfigCounterOptionsCustomFieldResponse extends com.pulumi
     @Import(name="value", required=true)
     private String value;
 
+    /**
+     * @return This is deprecated and has no effect. Do not use.
+     * 
+     */
     public String value() {
         return this.value;
     }
@@ -63,11 +71,23 @@ public final class LogConfigCounterOptionsCustomFieldResponse extends com.pulumi
             $ = new LogConfigCounterOptionsCustomFieldResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name This is deprecated and has no effect. Do not use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param value This is deprecated and has no effect. Do not use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             $.value = value;
             return this;

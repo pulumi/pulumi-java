@@ -24,6 +24,10 @@ public final class ModelQualityJobDefinitionMonitoringGroundTruthS3InputArgs ext
     @Import(name="s3Uri", required=true)
     private Output<String> s3Uri;
 
+    /**
+     * @return A URI that identifies the Amazon S3 storage location where Amazon SageMaker saves the results of a monitoring job.
+     * 
+     */
     public Output<String> s3Uri() {
         return this.s3Uri;
     }
@@ -52,11 +56,23 @@ public final class ModelQualityJobDefinitionMonitoringGroundTruthS3InputArgs ext
             $ = new ModelQualityJobDefinitionMonitoringGroundTruthS3InputArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param s3Uri A URI that identifies the Amazon S3 storage location where Amazon SageMaker saves the results of a monitoring job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3Uri(Output<String> s3Uri) {
             $.s3Uri = s3Uri;
             return this;
         }
 
+        /**
+         * @param s3Uri A URI that identifies the Amazon S3 storage location where Amazon SageMaker saves the results of a monitoring job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3Uri(String s3Uri) {
             return s3Uri(Output.of(s3Uri));
         }

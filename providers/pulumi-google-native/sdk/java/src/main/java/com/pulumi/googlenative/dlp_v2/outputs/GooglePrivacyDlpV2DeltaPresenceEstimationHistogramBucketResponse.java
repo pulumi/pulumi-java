@@ -13,27 +13,27 @@ import java.util.Objects;
 @CustomType
 public final class GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketResponse {
     /**
-     * Number of records within these probability bounds.
+     * @return Number of records within these probability bounds.
      * 
      */
     private final String bucketSize;
     /**
-     * Total number of distinct quasi-identifier tuple values in this bucket.
+     * @return Total number of distinct quasi-identifier tuple values in this bucket.
      * 
      */
     private final String bucketValueCount;
     /**
-     * Sample of quasi-identifier tuple values in this bucket. The total number of classes returned per bucket is capped at 20.
+     * @return Sample of quasi-identifier tuple values in this bucket. The total number of classes returned per bucket is capped at 20.
      * 
      */
     private final List<GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValuesResponse> bucketValues;
     /**
-     * Always greater than or equal to min_probability.
+     * @return Always greater than or equal to min_probability.
      * 
      */
     private final Double maxProbability;
     /**
-     * Between 0 and 1.
+     * @return Between 0 and 1.
      * 
      */
     private final Double minProbability;
@@ -53,37 +53,37 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketRespo
     }
 
     /**
-     * Number of records within these probability bounds.
+     * @return Number of records within these probability bounds.
      * 
-    */
+     */
     public String bucketSize() {
         return this.bucketSize;
     }
     /**
-     * Total number of distinct quasi-identifier tuple values in this bucket.
+     * @return Total number of distinct quasi-identifier tuple values in this bucket.
      * 
-    */
+     */
     public String bucketValueCount() {
         return this.bucketValueCount;
     }
     /**
-     * Sample of quasi-identifier tuple values in this bucket. The total number of classes returned per bucket is capped at 20.
+     * @return Sample of quasi-identifier tuple values in this bucket. The total number of classes returned per bucket is capped at 20.
      * 
-    */
+     */
     public List<GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValuesResponse> bucketValues() {
         return this.bucketValues;
     }
     /**
-     * Always greater than or equal to min_probability.
+     * @return Always greater than or equal to min_probability.
      * 
-    */
+     */
     public Double maxProbability() {
         return this.maxProbability;
     }
     /**
-     * Between 0 and 1.
+     * @return Between 0 and 1.
      * 
-    */
+     */
     public Double minProbability() {
         return this.minProbability;
     }

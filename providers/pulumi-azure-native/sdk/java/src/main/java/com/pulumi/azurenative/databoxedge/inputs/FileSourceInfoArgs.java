@@ -24,6 +24,10 @@ public final class FileSourceInfoArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="shareId", required=true)
     private Output<String> shareId;
 
+    /**
+     * @return File share ID.
+     * 
+     */
     public Output<String> shareId() {
         return this.shareId;
     }
@@ -52,11 +56,23 @@ public final class FileSourceInfoArgs extends com.pulumi.resources.ResourceArgs 
             $ = new FileSourceInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param shareId File share ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareId(Output<String> shareId) {
             $.shareId = shareId;
             return this;
         }
 
+        /**
+         * @param shareId File share ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareId(String shareId) {
             return shareId(Output.of(shareId));
         }

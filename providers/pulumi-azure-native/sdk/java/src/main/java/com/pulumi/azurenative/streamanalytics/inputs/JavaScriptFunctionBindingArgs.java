@@ -27,6 +27,10 @@ public final class JavaScriptFunctionBindingArgs extends com.pulumi.resources.Re
     @Import(name="script")
     private @Nullable Output<String> script;
 
+    /**
+     * @return The JavaScript code containing a single function definition. For example: &#39;function (x, y) { return x + y; }&#39;
+     * 
+     */
     public Optional<Output<String>> script() {
         return Optional.ofNullable(this.script);
     }
@@ -39,6 +43,11 @@ public final class JavaScriptFunctionBindingArgs extends com.pulumi.resources.Re
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Indicates the function binding type.
+     * Expected value is &#39;Microsoft.StreamAnalytics/JavascriptUdf&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -68,20 +77,46 @@ public final class JavaScriptFunctionBindingArgs extends com.pulumi.resources.Re
             $ = new JavaScriptFunctionBindingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param script The JavaScript code containing a single function definition. For example: &#39;function (x, y) { return x + y; }&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder script(@Nullable Output<String> script) {
             $.script = script;
             return this;
         }
 
+        /**
+         * @param script The JavaScript code containing a single function definition. For example: &#39;function (x, y) { return x + y; }&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder script(String script) {
             return script(Output.of(script));
         }
 
+        /**
+         * @param type Indicates the function binding type.
+         * Expected value is &#39;Microsoft.StreamAnalytics/JavascriptUdf&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Indicates the function binding type.
+         * Expected value is &#39;Microsoft.StreamAnalytics/JavascriptUdf&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

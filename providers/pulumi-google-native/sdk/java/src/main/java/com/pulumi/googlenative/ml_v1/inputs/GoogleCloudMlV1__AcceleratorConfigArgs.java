@@ -27,6 +27,10 @@ public final class GoogleCloudMlV1__AcceleratorConfigArgs extends com.pulumi.res
     @Import(name="count")
     private @Nullable Output<String> count;
 
+    /**
+     * @return The number of accelerators to attach to each machine running the job.
+     * 
+     */
     public Optional<Output<String>> count() {
         return Optional.ofNullable(this.count);
     }
@@ -38,6 +42,10 @@ public final class GoogleCloudMlV1__AcceleratorConfigArgs extends com.pulumi.res
     @Import(name="type")
     private @Nullable Output<GoogleCloudMlV1__AcceleratorConfigType> type;
 
+    /**
+     * @return The type of accelerator to use.
+     * 
+     */
     public Optional<Output<GoogleCloudMlV1__AcceleratorConfigType>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -67,20 +75,44 @@ public final class GoogleCloudMlV1__AcceleratorConfigArgs extends com.pulumi.res
             $ = new GoogleCloudMlV1__AcceleratorConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param count The number of accelerators to attach to each machine running the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(@Nullable Output<String> count) {
             $.count = count;
             return this;
         }
 
+        /**
+         * @param count The number of accelerators to attach to each machine running the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(String count) {
             return count(Output.of(count));
         }
 
+        /**
+         * @param type The type of accelerator to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<GoogleCloudMlV1__AcceleratorConfigType> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of accelerator to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(GoogleCloudMlV1__AcceleratorConfigType type) {
             return type(Output.of(type));
         }

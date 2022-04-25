@@ -29,6 +29,10 @@ public final class AutoShutdownProfileArgs extends com.pulumi.resources.Resource
     @Import(name="disconnectDelay")
     private @Nullable Output<String> disconnectDelay;
 
+    /**
+     * @return The amount of time a VM will stay running after a user disconnects if this behavior is enabled.
+     * 
+     */
     public Optional<Output<String>> disconnectDelay() {
         return Optional.ofNullable(this.disconnectDelay);
     }
@@ -40,6 +44,10 @@ public final class AutoShutdownProfileArgs extends com.pulumi.resources.Resource
     @Import(name="idleDelay")
     private @Nullable Output<String> idleDelay;
 
+    /**
+     * @return The amount of time a VM will idle before it is shutdown if this behavior is enabled.
+     * 
+     */
     public Optional<Output<String>> idleDelay() {
         return Optional.ofNullable(this.idleDelay);
     }
@@ -51,6 +59,10 @@ public final class AutoShutdownProfileArgs extends com.pulumi.resources.Resource
     @Import(name="noConnectDelay")
     private @Nullable Output<String> noConnectDelay;
 
+    /**
+     * @return The amount of time a VM will stay running before it is shutdown if no connection is made and this behavior is enabled.
+     * 
+     */
     public Optional<Output<String>> noConnectDelay() {
         return Optional.ofNullable(this.noConnectDelay);
     }
@@ -62,6 +74,10 @@ public final class AutoShutdownProfileArgs extends com.pulumi.resources.Resource
     @Import(name="shutdownOnDisconnect")
     private @Nullable Output<EnableState> shutdownOnDisconnect;
 
+    /**
+     * @return Whether shutdown on disconnect is enabled
+     * 
+     */
     public Optional<Output<EnableState>> shutdownOnDisconnect() {
         return Optional.ofNullable(this.shutdownOnDisconnect);
     }
@@ -73,6 +89,10 @@ public final class AutoShutdownProfileArgs extends com.pulumi.resources.Resource
     @Import(name="shutdownOnIdle")
     private @Nullable Output<ShutdownOnIdleMode> shutdownOnIdle;
 
+    /**
+     * @return Whether a VM will get shutdown when it has idled for a period of time.
+     * 
+     */
     public Optional<Output<ShutdownOnIdleMode>> shutdownOnIdle() {
         return Optional.ofNullable(this.shutdownOnIdle);
     }
@@ -84,6 +104,10 @@ public final class AutoShutdownProfileArgs extends com.pulumi.resources.Resource
     @Import(name="shutdownWhenNotConnected")
     private @Nullable Output<EnableState> shutdownWhenNotConnected;
 
+    /**
+     * @return Whether a VM will get shutdown when it hasn&#39;t been connected to after a period of time.
+     * 
+     */
     public Optional<Output<EnableState>> shutdownWhenNotConnected() {
         return Optional.ofNullable(this.shutdownWhenNotConnected);
     }
@@ -117,56 +141,128 @@ public final class AutoShutdownProfileArgs extends com.pulumi.resources.Resource
             $ = new AutoShutdownProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param disconnectDelay The amount of time a VM will stay running after a user disconnects if this behavior is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disconnectDelay(@Nullable Output<String> disconnectDelay) {
             $.disconnectDelay = disconnectDelay;
             return this;
         }
 
+        /**
+         * @param disconnectDelay The amount of time a VM will stay running after a user disconnects if this behavior is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disconnectDelay(String disconnectDelay) {
             return disconnectDelay(Output.of(disconnectDelay));
         }
 
+        /**
+         * @param idleDelay The amount of time a VM will idle before it is shutdown if this behavior is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder idleDelay(@Nullable Output<String> idleDelay) {
             $.idleDelay = idleDelay;
             return this;
         }
 
+        /**
+         * @param idleDelay The amount of time a VM will idle before it is shutdown if this behavior is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder idleDelay(String idleDelay) {
             return idleDelay(Output.of(idleDelay));
         }
 
+        /**
+         * @param noConnectDelay The amount of time a VM will stay running before it is shutdown if no connection is made and this behavior is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder noConnectDelay(@Nullable Output<String> noConnectDelay) {
             $.noConnectDelay = noConnectDelay;
             return this;
         }
 
+        /**
+         * @param noConnectDelay The amount of time a VM will stay running before it is shutdown if no connection is made and this behavior is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder noConnectDelay(String noConnectDelay) {
             return noConnectDelay(Output.of(noConnectDelay));
         }
 
+        /**
+         * @param shutdownOnDisconnect Whether shutdown on disconnect is enabled
+         * 
+         * @return builder
+         * 
+         */
         public Builder shutdownOnDisconnect(@Nullable Output<EnableState> shutdownOnDisconnect) {
             $.shutdownOnDisconnect = shutdownOnDisconnect;
             return this;
         }
 
+        /**
+         * @param shutdownOnDisconnect Whether shutdown on disconnect is enabled
+         * 
+         * @return builder
+         * 
+         */
         public Builder shutdownOnDisconnect(EnableState shutdownOnDisconnect) {
             return shutdownOnDisconnect(Output.of(shutdownOnDisconnect));
         }
 
+        /**
+         * @param shutdownOnIdle Whether a VM will get shutdown when it has idled for a period of time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shutdownOnIdle(@Nullable Output<ShutdownOnIdleMode> shutdownOnIdle) {
             $.shutdownOnIdle = shutdownOnIdle;
             return this;
         }
 
+        /**
+         * @param shutdownOnIdle Whether a VM will get shutdown when it has idled for a period of time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shutdownOnIdle(ShutdownOnIdleMode shutdownOnIdle) {
             return shutdownOnIdle(Output.of(shutdownOnIdle));
         }
 
+        /**
+         * @param shutdownWhenNotConnected Whether a VM will get shutdown when it hasn&#39;t been connected to after a period of time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shutdownWhenNotConnected(@Nullable Output<EnableState> shutdownWhenNotConnected) {
             $.shutdownWhenNotConnected = shutdownWhenNotConnected;
             return this;
         }
 
+        /**
+         * @param shutdownWhenNotConnected Whether a VM will get shutdown when it hasn&#39;t been connected to after a period of time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shutdownWhenNotConnected(EnableState shutdownWhenNotConnected) {
             return shutdownWhenNotConnected(Output.of(shutdownWhenNotConnected));
         }

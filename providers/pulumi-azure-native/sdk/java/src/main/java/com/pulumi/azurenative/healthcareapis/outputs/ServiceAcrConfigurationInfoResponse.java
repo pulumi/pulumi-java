@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ServiceAcrConfigurationInfoResponse {
     /**
-     * The list of the ACR login servers.
+     * @return The list of the ACR login servers.
      * 
      */
     private final @Nullable List<String> loginServers;
@@ -23,9 +23,9 @@ public final class ServiceAcrConfigurationInfoResponse {
     }
 
     /**
-     * The list of the ACR login servers.
+     * @return The list of the ACR login servers.
      * 
-    */
+     */
     public List<String> loginServers() {
         return this.loginServers == null ? List.of() : this.loginServers;
     }

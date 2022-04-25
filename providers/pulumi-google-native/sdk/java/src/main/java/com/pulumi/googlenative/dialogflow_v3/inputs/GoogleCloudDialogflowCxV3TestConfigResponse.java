@@ -24,6 +24,10 @@ public final class GoogleCloudDialogflowCxV3TestConfigResponse extends com.pulum
     @Import(name="flow", required=true)
     private String flow;
 
+    /**
+     * @return Flow name. If not set, default start flow is assumed. Format: `projects//locations//agents//flows/`.
+     * 
+     */
     public String flow() {
         return this.flow;
     }
@@ -35,6 +39,10 @@ public final class GoogleCloudDialogflowCxV3TestConfigResponse extends com.pulum
     @Import(name="trackingParameters", required=true)
     private List<String> trackingParameters;
 
+    /**
+     * @return Session parameters to be compared when calculating differences.
+     * 
+     */
     public List<String> trackingParameters() {
         return this.trackingParameters;
     }
@@ -64,16 +72,34 @@ public final class GoogleCloudDialogflowCxV3TestConfigResponse extends com.pulum
             $ = new GoogleCloudDialogflowCxV3TestConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param flow Flow name. If not set, default start flow is assumed. Format: `projects//locations//agents//flows/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder flow(String flow) {
             $.flow = flow;
             return this;
         }
 
+        /**
+         * @param trackingParameters Session parameters to be compared when calculating differences.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trackingParameters(List<String> trackingParameters) {
             $.trackingParameters = trackingParameters;
             return this;
         }
 
+        /**
+         * @param trackingParameters Session parameters to be compared when calculating differences.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trackingParameters(String... trackingParameters) {
             return trackingParameters(List.of(trackingParameters));
         }

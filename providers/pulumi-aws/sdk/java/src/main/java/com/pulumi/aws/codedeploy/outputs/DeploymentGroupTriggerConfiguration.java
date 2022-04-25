@@ -11,17 +11,17 @@ import java.util.Objects;
 @CustomType
 public final class DeploymentGroupTriggerConfiguration {
     /**
-     * The event type or types for which notifications are triggered. Some values that are supported: `DeploymentStart`, `DeploymentSuccess`, `DeploymentFailure`, `DeploymentStop`, `DeploymentRollback`, `InstanceStart`, `InstanceSuccess`, `InstanceFailure`.  See [the CodeDeploy documentation](http://docs.aws.amazon.com/codedeploy/latest/userguide/monitoring-sns-event-notifications-create-trigger.html) for all possible values.
+     * @return The event type or types for which notifications are triggered. Some values that are supported: `DeploymentStart`, `DeploymentSuccess`, `DeploymentFailure`, `DeploymentStop`, `DeploymentRollback`, `InstanceStart`, `InstanceSuccess`, `InstanceFailure`.  See [the CodeDeploy documentation](http://docs.aws.amazon.com/codedeploy/latest/userguide/monitoring-sns-event-notifications-create-trigger.html) for all possible values.
      * 
      */
     private final List<String> triggerEvents;
     /**
-     * The name of the notification trigger.
+     * @return The name of the notification trigger.
      * 
      */
     private final String triggerName;
     /**
-     * The ARN of the SNS topic through which notifications are sent.
+     * @return The ARN of the SNS topic through which notifications are sent.
      * 
      */
     private final String triggerTargetArn;
@@ -37,23 +37,23 @@ public final class DeploymentGroupTriggerConfiguration {
     }
 
     /**
-     * The event type or types for which notifications are triggered. Some values that are supported: `DeploymentStart`, `DeploymentSuccess`, `DeploymentFailure`, `DeploymentStop`, `DeploymentRollback`, `InstanceStart`, `InstanceSuccess`, `InstanceFailure`.  See [the CodeDeploy documentation](http://docs.aws.amazon.com/codedeploy/latest/userguide/monitoring-sns-event-notifications-create-trigger.html) for all possible values.
+     * @return The event type or types for which notifications are triggered. Some values that are supported: `DeploymentStart`, `DeploymentSuccess`, `DeploymentFailure`, `DeploymentStop`, `DeploymentRollback`, `InstanceStart`, `InstanceSuccess`, `InstanceFailure`.  See [the CodeDeploy documentation](http://docs.aws.amazon.com/codedeploy/latest/userguide/monitoring-sns-event-notifications-create-trigger.html) for all possible values.
      * 
-    */
+     */
     public List<String> triggerEvents() {
         return this.triggerEvents;
     }
     /**
-     * The name of the notification trigger.
+     * @return The name of the notification trigger.
      * 
-    */
+     */
     public String triggerName() {
         return this.triggerName;
     }
     /**
-     * The ARN of the SNS topic through which notifications are sent.
+     * @return The ARN of the SNS topic through which notifications are sent.
      * 
-    */
+     */
     public String triggerTargetArn() {
         return this.triggerTargetArn;
     }

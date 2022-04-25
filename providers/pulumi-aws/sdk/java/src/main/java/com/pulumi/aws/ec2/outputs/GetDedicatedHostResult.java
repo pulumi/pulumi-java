@@ -15,60 +15,60 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetDedicatedHostResult {
     /**
-     * The ARN of the Dedicated Host.
+     * @return The ARN of the Dedicated Host.
      * 
      */
     private final String arn;
     /**
-     * Whether auto-placement is on or off.
+     * @return Whether auto-placement is on or off.
      * 
      */
     private final String autoPlacement;
     /**
-     * The Availability Zone of the Dedicated Host.
+     * @return The Availability Zone of the Dedicated Host.
      * 
      */
     private final String availabilityZone;
     /**
-     * The number of cores on the Dedicated Host.
+     * @return The number of cores on the Dedicated Host.
      * 
      */
     private final Integer cores;
     private final @Nullable List<GetDedicatedHostFilter> filters;
     private final String hostId;
     /**
-     * Indicates whether host recovery is enabled or disabled for the Dedicated Host.
+     * @return Indicates whether host recovery is enabled or disabled for the Dedicated Host.
      * 
      */
     private final String hostRecovery;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     /**
-     * The instance family supported by the Dedicated Host. For example, &#34;m5&#34;.
+     * @return The instance family supported by the Dedicated Host. For example, &#34;m5&#34;.
      * 
      */
     private final String instanceFamily;
     /**
-     * The instance type supported by the Dedicated Host. For example, &#34;m5.large&#34;. If the host supports multiple instance types, no instanceType is returned.
+     * @return The instance type supported by the Dedicated Host. For example, &#34;m5.large&#34;. If the host supports multiple instance types, no instanceType is returned.
      * 
      */
     private final String instanceType;
     /**
-     * The ID of the AWS account that owns the Dedicated Host.
+     * @return The ID of the AWS account that owns the Dedicated Host.
      * 
      */
     private final String ownerId;
     /**
-     * The number of sockets on the Dedicated Host.
+     * @return The number of sockets on the Dedicated Host.
      * 
      */
     private final Integer sockets;
     private final Map<String,String> tags;
     /**
-     * The total number of vCPUs on the Dedicated Host.
+     * @return The total number of vCPUs on the Dedicated Host.
      * 
      */
     private final Integer totalVcpus;
@@ -106,30 +106,30 @@ public final class GetDedicatedHostResult {
     }
 
     /**
-     * The ARN of the Dedicated Host.
+     * @return The ARN of the Dedicated Host.
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
     /**
-     * Whether auto-placement is on or off.
+     * @return Whether auto-placement is on or off.
      * 
-    */
+     */
     public String autoPlacement() {
         return this.autoPlacement;
     }
     /**
-     * The Availability Zone of the Dedicated Host.
+     * @return The Availability Zone of the Dedicated Host.
      * 
-    */
+     */
     public String availabilityZone() {
         return this.availabilityZone;
     }
     /**
-     * The number of cores on the Dedicated Host.
+     * @return The number of cores on the Dedicated Host.
      * 
-    */
+     */
     public Integer cores() {
         return this.cores;
     }
@@ -140,44 +140,44 @@ public final class GetDedicatedHostResult {
         return this.hostId;
     }
     /**
-     * Indicates whether host recovery is enabled or disabled for the Dedicated Host.
+     * @return Indicates whether host recovery is enabled or disabled for the Dedicated Host.
      * 
-    */
+     */
     public String hostRecovery() {
         return this.hostRecovery;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The instance family supported by the Dedicated Host. For example, &#34;m5&#34;.
+     * @return The instance family supported by the Dedicated Host. For example, &#34;m5&#34;.
      * 
-    */
+     */
     public String instanceFamily() {
         return this.instanceFamily;
     }
     /**
-     * The instance type supported by the Dedicated Host. For example, &#34;m5.large&#34;. If the host supports multiple instance types, no instanceType is returned.
+     * @return The instance type supported by the Dedicated Host. For example, &#34;m5.large&#34;. If the host supports multiple instance types, no instanceType is returned.
      * 
-    */
+     */
     public String instanceType() {
         return this.instanceType;
     }
     /**
-     * The ID of the AWS account that owns the Dedicated Host.
+     * @return The ID of the AWS account that owns the Dedicated Host.
      * 
-    */
+     */
     public String ownerId() {
         return this.ownerId;
     }
     /**
-     * The number of sockets on the Dedicated Host.
+     * @return The number of sockets on the Dedicated Host.
      * 
-    */
+     */
     public Integer sockets() {
         return this.sockets;
     }
@@ -185,9 +185,9 @@ public final class GetDedicatedHostResult {
         return this.tags;
     }
     /**
-     * The total number of vCPUs on the Dedicated Host.
+     * @return The total number of vCPUs on the Dedicated Host.
      * 
-    */
+     */
     public Integer totalVcpus() {
         return this.totalVcpus;
     }

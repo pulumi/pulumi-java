@@ -23,6 +23,13 @@ public final class GuestPoliciesPackageRepositoryGooArgs extends com.pulumi.reso
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Unique identifier for the recipe. Only one recipe with a given name is installed on an instance.
+     * Names are also used to identify resources which helps to determine whether guest policies have conflicts.
+     * This means that requests to create multiple recipes with the same name and version are rejected since they
+     * could potentially have conflicting assignments.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -34,6 +41,10 @@ public final class GuestPoliciesPackageRepositoryGooArgs extends com.pulumi.reso
     @Import(name="url", required=true)
     private Output<String> url;
 
+    /**
+     * @return The url of the repository.
+     * 
+     */
     public Output<String> url() {
         return this.url;
     }
@@ -63,20 +74,50 @@ public final class GuestPoliciesPackageRepositoryGooArgs extends com.pulumi.reso
             $ = new GuestPoliciesPackageRepositoryGooArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Unique identifier for the recipe. Only one recipe with a given name is installed on an instance.
+         * Names are also used to identify resources which helps to determine whether guest policies have conflicts.
+         * This means that requests to create multiple recipes with the same name and version are rejected since they
+         * could potentially have conflicting assignments.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Unique identifier for the recipe. Only one recipe with a given name is installed on an instance.
+         * Names are also used to identify resources which helps to determine whether guest policies have conflicts.
+         * This means that requests to create multiple recipes with the same name and version are rejected since they
+         * could potentially have conflicting assignments.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param url The url of the repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(Output<String> url) {
             $.url = url;
             return this;
         }
 
+        /**
+         * @param url The url of the repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(String url) {
             return url(Output.of(url));
         }

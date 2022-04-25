@@ -25,6 +25,10 @@ public final class PackageOccurrenceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="location", required=true)
     private Output<List<LocationArgs>> location;
 
+    /**
+     * @return All of the places within the filesystem versions of this package have been found.
+     * 
+     */
     public Output<List<LocationArgs>> location() {
         return this.location;
     }
@@ -53,15 +57,33 @@ public final class PackageOccurrenceArgs extends com.pulumi.resources.ResourceAr
             $ = new PackageOccurrenceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param location All of the places within the filesystem versions of this package have been found.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(Output<List<LocationArgs>> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location All of the places within the filesystem versions of this package have been found.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(List<LocationArgs> location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param location All of the places within the filesystem versions of this package have been found.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(LocationArgs... location) {
             return location(List.of(location));
         }

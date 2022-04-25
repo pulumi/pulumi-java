@@ -24,6 +24,10 @@ public final class YarnApplicationResponse extends com.pulumi.resources.InvokeAr
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The application name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -35,6 +39,10 @@ public final class YarnApplicationResponse extends com.pulumi.resources.InvokeAr
     @Import(name="progress", required=true)
     private Double progress;
 
+    /**
+     * @return The numerical progress of the application, from 1 to 100.
+     * 
+     */
     public Double progress() {
         return this.progress;
     }
@@ -46,6 +54,10 @@ public final class YarnApplicationResponse extends com.pulumi.resources.InvokeAr
     @Import(name="state", required=true)
     private String state;
 
+    /**
+     * @return The application state.
+     * 
+     */
     public String state() {
         return this.state;
     }
@@ -57,6 +69,10 @@ public final class YarnApplicationResponse extends com.pulumi.resources.InvokeAr
     @Import(name="trackingUrl", required=true)
     private String trackingUrl;
 
+    /**
+     * @return The HTTP URL of the ApplicationMaster, HistoryServer, or TimelineServer that provides application-specific information. The URL uses the internal hostname, and requires a proxy server for resolution and, possibly, access.
+     * 
+     */
     public String trackingUrl() {
         return this.trackingUrl;
     }
@@ -88,21 +104,45 @@ public final class YarnApplicationResponse extends com.pulumi.resources.InvokeAr
             $ = new YarnApplicationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The application name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param progress The numerical progress of the application, from 1 to 100.
+         * 
+         * @return builder
+         * 
+         */
         public Builder progress(Double progress) {
             $.progress = progress;
             return this;
         }
 
+        /**
+         * @param state The application state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param trackingUrl The HTTP URL of the ApplicationMaster, HistoryServer, or TimelineServer that provides application-specific information. The URL uses the internal hostname, and requires a proxy server for resolution and, possibly, access.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trackingUrl(String trackingUrl) {
             $.trackingUrl = trackingUrl;
             return this;

@@ -17,62 +17,62 @@ import java.util.Objects;
 @CustomType
 public final class GetStreamResult {
     /**
-     * Automatically backfill objects included in the stream source configuration. Specific objects can be excluded.
+     * @return Automatically backfill objects included in the stream source configuration. Specific objects can be excluded.
      * 
      */
     private final BackfillAllStrategyResponse backfillAll;
     /**
-     * Do not automatically backfill any objects.
+     * @return Do not automatically backfill any objects.
      * 
      */
     private final BackfillNoneStrategyResponse backfillNone;
     /**
-     * The creation time of the stream.
+     * @return The creation time of the stream.
      * 
      */
     private final String createTime;
     /**
-     * Immutable. A reference to a KMS encryption key. If provided, it will be used to encrypt the data. If left blank, data will be encrypted using an internal Stream-specific encryption key provisioned through KMS.
+     * @return Immutable. A reference to a KMS encryption key. If provided, it will be used to encrypt the data. If left blank, data will be encrypted using an internal Stream-specific encryption key provisioned through KMS.
      * 
      */
     private final String customerManagedEncryptionKey;
     /**
-     * Destination connection profile configuration.
+     * @return Destination connection profile configuration.
      * 
      */
     private final DestinationConfigResponse destinationConfig;
     /**
-     * Display name.
+     * @return Display name.
      * 
      */
     private final String displayName;
     /**
-     * Errors on the Stream.
+     * @return Errors on the Stream.
      * 
      */
     private final List<ErrorResponse> errors;
     /**
-     * Labels.
+     * @return Labels.
      * 
      */
     private final Map<String,String> labels;
     /**
-     * The stream&#39;s name.
+     * @return The stream&#39;s name.
      * 
      */
     private final String name;
     /**
-     * Source connection profile configuration.
+     * @return Source connection profile configuration.
      * 
      */
     private final SourceConfigResponse sourceConfig;
     /**
-     * The state of the stream.
+     * @return The state of the stream.
      * 
      */
     private final String state;
     /**
-     * The last update time of the stream.
+     * @return The last update time of the stream.
      * 
      */
     private final String updateTime;
@@ -106,86 +106,86 @@ public final class GetStreamResult {
     }
 
     /**
-     * Automatically backfill objects included in the stream source configuration. Specific objects can be excluded.
+     * @return Automatically backfill objects included in the stream source configuration. Specific objects can be excluded.
      * 
-    */
+     */
     public BackfillAllStrategyResponse backfillAll() {
         return this.backfillAll;
     }
     /**
-     * Do not automatically backfill any objects.
+     * @return Do not automatically backfill any objects.
      * 
-    */
+     */
     public BackfillNoneStrategyResponse backfillNone() {
         return this.backfillNone;
     }
     /**
-     * The creation time of the stream.
+     * @return The creation time of the stream.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * Immutable. A reference to a KMS encryption key. If provided, it will be used to encrypt the data. If left blank, data will be encrypted using an internal Stream-specific encryption key provisioned through KMS.
+     * @return Immutable. A reference to a KMS encryption key. If provided, it will be used to encrypt the data. If left blank, data will be encrypted using an internal Stream-specific encryption key provisioned through KMS.
      * 
-    */
+     */
     public String customerManagedEncryptionKey() {
         return this.customerManagedEncryptionKey;
     }
     /**
-     * Destination connection profile configuration.
+     * @return Destination connection profile configuration.
      * 
-    */
+     */
     public DestinationConfigResponse destinationConfig() {
         return this.destinationConfig;
     }
     /**
-     * Display name.
+     * @return Display name.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * Errors on the Stream.
+     * @return Errors on the Stream.
      * 
-    */
+     */
     public List<ErrorResponse> errors() {
         return this.errors;
     }
     /**
-     * Labels.
+     * @return Labels.
      * 
-    */
+     */
     public Map<String,String> labels() {
         return this.labels;
     }
     /**
-     * The stream&#39;s name.
+     * @return The stream&#39;s name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Source connection profile configuration.
+     * @return Source connection profile configuration.
      * 
-    */
+     */
     public SourceConfigResponse sourceConfig() {
         return this.sourceConfig;
     }
     /**
-     * The state of the stream.
+     * @return The state of the stream.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * The last update time of the stream.
+     * @return The last update time of the stream.
      * 
-    */
+     */
     public String updateTime() {
         return this.updateTime;
     }

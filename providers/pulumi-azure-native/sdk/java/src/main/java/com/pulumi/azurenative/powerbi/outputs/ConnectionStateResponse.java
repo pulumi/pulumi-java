@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ConnectionStateResponse {
     /**
-     * Actions required (if any).
+     * @return Actions required (if any).
      * 
      */
     private final @Nullable String actionsRequired;
     /**
-     * Description of the connection state.
+     * @return Description of the connection state.
      * 
      */
     private final @Nullable String description;
     /**
-     * Status of the connection.
+     * @return Status of the connection.
      * 
      */
     private final @Nullable String status;
@@ -38,23 +38,23 @@ public final class ConnectionStateResponse {
     }
 
     /**
-     * Actions required (if any).
+     * @return Actions required (if any).
      * 
-    */
+     */
     public Optional<String> actionsRequired() {
         return Optional.ofNullable(this.actionsRequired);
     }
     /**
-     * Description of the connection state.
+     * @return Description of the connection state.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Status of the connection.
+     * @return Status of the connection.
      * 
-    */
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }

@@ -19,23 +19,23 @@ import javax.annotation.Nullable;
 public final class GetTableResult {
     private final @Nullable TableBillingMode billingMode;
     /**
-     * Default TTL (Time To Live) in seconds, where zero is disabled. If the value is greater than zero, TTL is enabled for the entire table and an expiration timestamp is added to each column.
+     * @return Default TTL (Time To Live) in seconds, where zero is disabled. If the value is greater than zero, TTL is enabled for the entire table and an expiration timestamp is added to each column.
      * 
      */
     private final @Nullable Integer defaultTimeToLive;
     private final @Nullable TableEncryptionSpecification encryptionSpecification;
     /**
-     * Indicates whether point in time recovery is enabled (true) or disabled (false) on the table
+     * @return Indicates whether point in time recovery is enabled (true) or disabled (false) on the table
      * 
      */
     private final @Nullable Boolean pointInTimeRecoveryEnabled;
     /**
-     * Non-key columns of the table
+     * @return Non-key columns of the table
      * 
      */
     private final @Nullable List<TableColumn> regularColumns;
     /**
-     * An array of key-value pairs to apply to this resource
+     * @return An array of key-value pairs to apply to this resource
      * 
      */
     private final @Nullable List<TableTag> tags;
@@ -60,9 +60,9 @@ public final class GetTableResult {
         return Optional.ofNullable(this.billingMode);
     }
     /**
-     * Default TTL (Time To Live) in seconds, where zero is disabled. If the value is greater than zero, TTL is enabled for the entire table and an expiration timestamp is added to each column.
+     * @return Default TTL (Time To Live) in seconds, where zero is disabled. If the value is greater than zero, TTL is enabled for the entire table and an expiration timestamp is added to each column.
      * 
-    */
+     */
     public Optional<Integer> defaultTimeToLive() {
         return Optional.ofNullable(this.defaultTimeToLive);
     }
@@ -70,23 +70,23 @@ public final class GetTableResult {
         return Optional.ofNullable(this.encryptionSpecification);
     }
     /**
-     * Indicates whether point in time recovery is enabled (true) or disabled (false) on the table
+     * @return Indicates whether point in time recovery is enabled (true) or disabled (false) on the table
      * 
-    */
+     */
     public Optional<Boolean> pointInTimeRecoveryEnabled() {
         return Optional.ofNullable(this.pointInTimeRecoveryEnabled);
     }
     /**
-     * Non-key columns of the table
+     * @return Non-key columns of the table
      * 
-    */
+     */
     public List<TableColumn> regularColumns() {
         return this.regularColumns == null ? List.of() : this.regularColumns;
     }
     /**
-     * An array of key-value pairs to apply to this resource
+     * @return An array of key-value pairs to apply to this resource
      * 
-    */
+     */
     public List<TableTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

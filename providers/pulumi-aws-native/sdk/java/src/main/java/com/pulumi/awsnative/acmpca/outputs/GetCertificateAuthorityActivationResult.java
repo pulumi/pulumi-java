@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetCertificateAuthorityActivationResult {
     /**
-     * The complete certificate chain, including the Certificate Authority certificate.
+     * @return The complete certificate chain, including the Certificate Authority certificate.
      * 
      */
     private final @Nullable String completeCertificateChain;
     /**
-     * The status of the Certificate Authority.
+     * @return The status of the Certificate Authority.
      * 
      */
     private final @Nullable String status;
@@ -31,16 +31,16 @@ public final class GetCertificateAuthorityActivationResult {
     }
 
     /**
-     * The complete certificate chain, including the Certificate Authority certificate.
+     * @return The complete certificate chain, including the Certificate Authority certificate.
      * 
-    */
+     */
     public Optional<String> completeCertificateChain() {
         return Optional.ofNullable(this.completeCertificateChain);
     }
     /**
-     * The status of the Certificate Authority.
+     * @return The status of the Certificate Authority.
      * 
-    */
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }

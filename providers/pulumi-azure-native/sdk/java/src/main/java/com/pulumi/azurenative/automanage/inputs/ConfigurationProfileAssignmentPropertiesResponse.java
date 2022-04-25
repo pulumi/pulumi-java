@@ -26,6 +26,10 @@ public final class ConfigurationProfileAssignmentPropertiesResponse extends com.
     @Import(name="accountId")
     private @Nullable String accountId;
 
+    /**
+     * @return The Automanage account ARM Resource URI
+     * 
+     */
     public Optional<String> accountId() {
         return Optional.ofNullable(this.accountId);
     }
@@ -37,6 +41,10 @@ public final class ConfigurationProfileAssignmentPropertiesResponse extends com.
     @Import(name="compliance")
     private @Nullable ConfigurationProfileAssignmentComplianceResponse compliance;
 
+    /**
+     * @return The configuration setting for the configuration profile.
+     * 
+     */
     public Optional<ConfigurationProfileAssignmentComplianceResponse> compliance() {
         return Optional.ofNullable(this.compliance);
     }
@@ -48,6 +56,10 @@ public final class ConfigurationProfileAssignmentPropertiesResponse extends com.
     @Import(name="configurationProfile")
     private @Nullable String configurationProfile;
 
+    /**
+     * @return A value indicating configuration profile.
+     * 
+     */
     public Optional<String> configurationProfile() {
         return Optional.ofNullable(this.configurationProfile);
     }
@@ -59,6 +71,10 @@ public final class ConfigurationProfileAssignmentPropertiesResponse extends com.
     @Import(name="configurationProfilePreferenceId")
     private @Nullable String configurationProfilePreferenceId;
 
+    /**
+     * @return The configuration profile custom preferences ARM resource URI
+     * 
+     */
     public Optional<String> configurationProfilePreferenceId() {
         return Optional.ofNullable(this.configurationProfilePreferenceId);
     }
@@ -70,6 +86,10 @@ public final class ConfigurationProfileAssignmentPropertiesResponse extends com.
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The state of onboarding, which only appears in the response.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -81,6 +101,10 @@ public final class ConfigurationProfileAssignmentPropertiesResponse extends com.
     @Import(name="targetId")
     private @Nullable String targetId;
 
+    /**
+     * @return The target VM resource URI
+     * 
+     */
     public Optional<String> targetId() {
         return Optional.ofNullable(this.targetId);
     }
@@ -114,31 +138,67 @@ public final class ConfigurationProfileAssignmentPropertiesResponse extends com.
             $ = new ConfigurationProfileAssignmentPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountId The Automanage account ARM Resource URI
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountId(@Nullable String accountId) {
             $.accountId = accountId;
             return this;
         }
 
+        /**
+         * @param compliance The configuration setting for the configuration profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder compliance(@Nullable ConfigurationProfileAssignmentComplianceResponse compliance) {
             $.compliance = compliance;
             return this;
         }
 
+        /**
+         * @param configurationProfile A value indicating configuration profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationProfile(@Nullable String configurationProfile) {
             $.configurationProfile = configurationProfile;
             return this;
         }
 
+        /**
+         * @param configurationProfilePreferenceId The configuration profile custom preferences ARM resource URI
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationProfilePreferenceId(@Nullable String configurationProfilePreferenceId) {
             $.configurationProfilePreferenceId = configurationProfilePreferenceId;
             return this;
         }
 
+        /**
+         * @param provisioningState The state of onboarding, which only appears in the response.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param targetId The target VM resource URI
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetId(@Nullable String targetId) {
             $.targetId = targetId;
             return this;

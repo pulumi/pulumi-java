@@ -13,13 +13,13 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DeploymentTarget {
     /**
-     * The root configuration file to use for this deployment.
+     * @return The root configuration file to use for this deployment.
      * Structure is documented below.
      * 
      */
     private final DeploymentTargetConfig config;
     /**
-     * Specifies import files for this configuration. This can be
+     * @return Specifies import files for this configuration. This can be
      * used to import templates or other files. For example, you might
      * import a text file in order to use the file in a template.
      * Structure is documented below.
@@ -36,20 +36,20 @@ public final class DeploymentTarget {
     }
 
     /**
-     * The root configuration file to use for this deployment.
+     * @return The root configuration file to use for this deployment.
      * Structure is documented below.
      * 
-    */
+     */
     public DeploymentTargetConfig config() {
         return this.config;
     }
     /**
-     * Specifies import files for this configuration. This can be
+     * @return Specifies import files for this configuration. This can be
      * used to import templates or other files. For example, you might
      * import a text file in order to use the file in a template.
      * Structure is documented below.
      * 
-    */
+     */
     public List<DeploymentTargetImport> imports() {
         return this.imports == null ? List.of() : this.imports;
     }

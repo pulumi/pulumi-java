@@ -30,6 +30,10 @@ public final class ProtectionContainerMappingPropertiesResponse extends com.pulu
     @Import(name="health")
     private @Nullable String health;
 
+    /**
+     * @return Health of pairing.
+     * 
+     */
     public Optional<String> health() {
         return Optional.ofNullable(this.health);
     }
@@ -41,6 +45,10 @@ public final class ProtectionContainerMappingPropertiesResponse extends com.pulu
     @Import(name="healthErrorDetails")
     private @Nullable List<HealthErrorResponse> healthErrorDetails;
 
+    /**
+     * @return Health error.
+     * 
+     */
     public Optional<List<HealthErrorResponse>> healthErrorDetails() {
         return Optional.ofNullable(this.healthErrorDetails);
     }
@@ -52,6 +60,10 @@ public final class ProtectionContainerMappingPropertiesResponse extends com.pulu
     @Import(name="policyFriendlyName")
     private @Nullable String policyFriendlyName;
 
+    /**
+     * @return Friendly name of replication policy.
+     * 
+     */
     public Optional<String> policyFriendlyName() {
         return Optional.ofNullable(this.policyFriendlyName);
     }
@@ -63,6 +75,10 @@ public final class ProtectionContainerMappingPropertiesResponse extends com.pulu
     @Import(name="policyId")
     private @Nullable String policyId;
 
+    /**
+     * @return Policy ARM Id.
+     * 
+     */
     public Optional<String> policyId() {
         return Optional.ofNullable(this.policyId);
     }
@@ -74,6 +90,10 @@ public final class ProtectionContainerMappingPropertiesResponse extends com.pulu
     @Import(name="providerSpecificDetails")
     private @Nullable Either<A2AProtectionContainerMappingDetailsResponse,VMwareCbtProtectionContainerMappingDetailsResponse> providerSpecificDetails;
 
+    /**
+     * @return Provider specific provider details.
+     * 
+     */
     public Optional<Either<A2AProtectionContainerMappingDetailsResponse,VMwareCbtProtectionContainerMappingDetailsResponse>> providerSpecificDetails() {
         return Optional.ofNullable(this.providerSpecificDetails);
     }
@@ -85,6 +105,10 @@ public final class ProtectionContainerMappingPropertiesResponse extends com.pulu
     @Import(name="sourceFabricFriendlyName")
     private @Nullable String sourceFabricFriendlyName;
 
+    /**
+     * @return Friendly name of source fabric.
+     * 
+     */
     public Optional<String> sourceFabricFriendlyName() {
         return Optional.ofNullable(this.sourceFabricFriendlyName);
     }
@@ -96,6 +120,10 @@ public final class ProtectionContainerMappingPropertiesResponse extends com.pulu
     @Import(name="sourceProtectionContainerFriendlyName")
     private @Nullable String sourceProtectionContainerFriendlyName;
 
+    /**
+     * @return Friendly name of source protection container.
+     * 
+     */
     public Optional<String> sourceProtectionContainerFriendlyName() {
         return Optional.ofNullable(this.sourceProtectionContainerFriendlyName);
     }
@@ -107,6 +135,10 @@ public final class ProtectionContainerMappingPropertiesResponse extends com.pulu
     @Import(name="state")
     private @Nullable String state;
 
+    /**
+     * @return Association Status
+     * 
+     */
     public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
@@ -118,6 +150,10 @@ public final class ProtectionContainerMappingPropertiesResponse extends com.pulu
     @Import(name="targetFabricFriendlyName")
     private @Nullable String targetFabricFriendlyName;
 
+    /**
+     * @return Friendly name of target fabric.
+     * 
+     */
     public Optional<String> targetFabricFriendlyName() {
         return Optional.ofNullable(this.targetFabricFriendlyName);
     }
@@ -129,6 +165,10 @@ public final class ProtectionContainerMappingPropertiesResponse extends com.pulu
     @Import(name="targetProtectionContainerFriendlyName")
     private @Nullable String targetProtectionContainerFriendlyName;
 
+    /**
+     * @return Friendly name of paired container.
+     * 
+     */
     public Optional<String> targetProtectionContainerFriendlyName() {
         return Optional.ofNullable(this.targetProtectionContainerFriendlyName);
     }
@@ -140,6 +180,10 @@ public final class ProtectionContainerMappingPropertiesResponse extends com.pulu
     @Import(name="targetProtectionContainerId")
     private @Nullable String targetProtectionContainerId;
 
+    /**
+     * @return Paired protection container ARM ID.
+     * 
+     */
     public Optional<String> targetProtectionContainerId() {
         return Optional.ofNullable(this.targetProtectionContainerId);
     }
@@ -178,68 +222,152 @@ public final class ProtectionContainerMappingPropertiesResponse extends com.pulu
             $ = new ProtectionContainerMappingPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param health Health of pairing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder health(@Nullable String health) {
             $.health = health;
             return this;
         }
 
+        /**
+         * @param healthErrorDetails Health error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthErrorDetails(@Nullable List<HealthErrorResponse> healthErrorDetails) {
             $.healthErrorDetails = healthErrorDetails;
             return this;
         }
 
+        /**
+         * @param healthErrorDetails Health error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthErrorDetails(HealthErrorResponse... healthErrorDetails) {
             return healthErrorDetails(List.of(healthErrorDetails));
         }
 
+        /**
+         * @param policyFriendlyName Friendly name of replication policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyFriendlyName(@Nullable String policyFriendlyName) {
             $.policyFriendlyName = policyFriendlyName;
             return this;
         }
 
+        /**
+         * @param policyId Policy ARM Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyId(@Nullable String policyId) {
             $.policyId = policyId;
             return this;
         }
 
+        /**
+         * @param providerSpecificDetails Provider specific provider details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerSpecificDetails(@Nullable Either<A2AProtectionContainerMappingDetailsResponse,VMwareCbtProtectionContainerMappingDetailsResponse> providerSpecificDetails) {
             $.providerSpecificDetails = providerSpecificDetails;
             return this;
         }
 
+        /**
+         * @param providerSpecificDetails Provider specific provider details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerSpecificDetails(A2AProtectionContainerMappingDetailsResponse providerSpecificDetails) {
             return providerSpecificDetails(Either.ofLeft(providerSpecificDetails));
         }
 
+        /**
+         * @param providerSpecificDetails Provider specific provider details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerSpecificDetails(VMwareCbtProtectionContainerMappingDetailsResponse providerSpecificDetails) {
             return providerSpecificDetails(Either.ofRight(providerSpecificDetails));
         }
 
+        /**
+         * @param sourceFabricFriendlyName Friendly name of source fabric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceFabricFriendlyName(@Nullable String sourceFabricFriendlyName) {
             $.sourceFabricFriendlyName = sourceFabricFriendlyName;
             return this;
         }
 
+        /**
+         * @param sourceProtectionContainerFriendlyName Friendly name of source protection container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceProtectionContainerFriendlyName(@Nullable String sourceProtectionContainerFriendlyName) {
             $.sourceProtectionContainerFriendlyName = sourceProtectionContainerFriendlyName;
             return this;
         }
 
+        /**
+         * @param state Association Status
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable String state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param targetFabricFriendlyName Friendly name of target fabric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetFabricFriendlyName(@Nullable String targetFabricFriendlyName) {
             $.targetFabricFriendlyName = targetFabricFriendlyName;
             return this;
         }
 
+        /**
+         * @param targetProtectionContainerFriendlyName Friendly name of paired container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetProtectionContainerFriendlyName(@Nullable String targetProtectionContainerFriendlyName) {
             $.targetProtectionContainerFriendlyName = targetProtectionContainerFriendlyName;
             return this;
         }
 
+        /**
+         * @param targetProtectionContainerId Paired protection container ARM ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetProtectionContainerId(@Nullable String targetProtectionContainerId) {
             $.targetProtectionContainerId = targetProtectionContainerId;
             return this;

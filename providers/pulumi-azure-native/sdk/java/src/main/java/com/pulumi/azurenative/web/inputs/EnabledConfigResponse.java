@@ -25,6 +25,10 @@ public final class EnabledConfigResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="enabled")
     private @Nullable Boolean enabled;
 
+    /**
+     * @return True if configuration is enabled, false if it is disabled and null if configuration is not set.
+     * 
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -53,6 +57,12 @@ public final class EnabledConfigResponse extends com.pulumi.resources.InvokeArgs
             $ = new EnabledConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled True if configuration is enabled, false if it is disabled and null if configuration is not set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Boolean enabled) {
             $.enabled = enabled;
             return this;

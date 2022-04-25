@@ -29,6 +29,10 @@ public final class RepositoryPolicyState extends com.pulumi.resources.ResourceAr
     @Import(name="registryId")
     private @Nullable Output<String> registryId;
 
+    /**
+     * @return The registry ID where the repository was created.
+     * 
+     */
     public Optional<Output<String>> registryId() {
         return Optional.ofNullable(this.registryId);
     }
@@ -40,6 +44,10 @@ public final class RepositoryPolicyState extends com.pulumi.resources.ResourceAr
     @Import(name="repositoryName")
     private @Nullable Output<String> repositoryName;
 
+    /**
+     * @return Name of the repository to apply the policy.
+     * 
+     */
     public Optional<Output<String>> repositoryName() {
         return Optional.ofNullable(this.repositoryName);
     }
@@ -79,20 +87,44 @@ public final class RepositoryPolicyState extends com.pulumi.resources.ResourceAr
             return policy(Output.of(policy));
         }
 
+        /**
+         * @param registryId The registry ID where the repository was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registryId(@Nullable Output<String> registryId) {
             $.registryId = registryId;
             return this;
         }
 
+        /**
+         * @param registryId The registry ID where the repository was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registryId(String registryId) {
             return registryId(Output.of(registryId));
         }
 
+        /**
+         * @param repositoryName Name of the repository to apply the policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repositoryName(@Nullable Output<String> repositoryName) {
             $.repositoryName = repositoryName;
             return this;
         }
 
+        /**
+         * @param repositoryName Name of the repository to apply the policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repositoryName(String repositoryName) {
             return repositoryName(Output.of(repositoryName));
         }

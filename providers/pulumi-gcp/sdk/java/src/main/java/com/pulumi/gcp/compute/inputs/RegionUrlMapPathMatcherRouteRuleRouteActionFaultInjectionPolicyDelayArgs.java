@@ -24,6 +24,11 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPoli
     @Import(name="fixedDelay")
     private @Nullable Output<RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelayFixedDelayArgs> fixedDelay;
 
+    /**
+     * @return Specifies the value of the fixed delay interval.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelayFixedDelayArgs>> fixedDelay() {
         return Optional.ofNullable(this.fixedDelay);
     }
@@ -37,6 +42,12 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPoli
     @Import(name="percentage")
     private @Nullable Output<Double> percentage;
 
+    /**
+     * @return The percentage of traffic (connections/operations/requests) on which delay will
+     * be introduced as part of fault injection. The value must be between 0.0 and
+     * 100.0 inclusive.
+     * 
+     */
     public Optional<Output<Double>> percentage() {
         return Optional.ofNullable(this.percentage);
     }
@@ -66,20 +77,50 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPoli
             $ = new RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelayArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fixedDelay Specifies the value of the fixed delay interval.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fixedDelay(@Nullable Output<RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelayFixedDelayArgs> fixedDelay) {
             $.fixedDelay = fixedDelay;
             return this;
         }
 
+        /**
+         * @param fixedDelay Specifies the value of the fixed delay interval.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fixedDelay(RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelayFixedDelayArgs fixedDelay) {
             return fixedDelay(Output.of(fixedDelay));
         }
 
+        /**
+         * @param percentage The percentage of traffic (connections/operations/requests) on which delay will
+         * be introduced as part of fault injection. The value must be between 0.0 and
+         * 100.0 inclusive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder percentage(@Nullable Output<Double> percentage) {
             $.percentage = percentage;
             return this;
         }
 
+        /**
+         * @param percentage The percentage of traffic (connections/operations/requests) on which delay will
+         * be introduced as part of fault injection. The value must be between 0.0 and
+         * 100.0 inclusive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder percentage(Double percentage) {
             return percentage(Output.of(percentage));
         }

@@ -28,6 +28,10 @@ public final class GetTableGlobalSecondaryIndex extends com.pulumi.resources.Inv
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the DynamoDB table.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -102,6 +106,12 @@ public final class GetTableGlobalSecondaryIndex extends com.pulumi.resources.Inv
             return this;
         }
 
+        /**
+         * @param name The name of the DynamoDB table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

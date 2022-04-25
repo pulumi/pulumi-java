@@ -23,6 +23,10 @@ public final class GlobalClusterGlobalClusterMemberGetArgs extends com.pulumi.re
     @Import(name="dbClusterArn")
     private @Nullable Output<String> dbClusterArn;
 
+    /**
+     * @return Amazon Resource Name (ARN) of member DB Cluster.
+     * 
+     */
     public Optional<Output<String>> dbClusterArn() {
         return Optional.ofNullable(this.dbClusterArn);
     }
@@ -34,6 +38,10 @@ public final class GlobalClusterGlobalClusterMemberGetArgs extends com.pulumi.re
     @Import(name="isWriter")
     private @Nullable Output<Boolean> isWriter;
 
+    /**
+     * @return Whether the member is the primary DB Cluster.
+     * 
+     */
     public Optional<Output<Boolean>> isWriter() {
         return Optional.ofNullable(this.isWriter);
     }
@@ -63,20 +71,44 @@ public final class GlobalClusterGlobalClusterMemberGetArgs extends com.pulumi.re
             $ = new GlobalClusterGlobalClusterMemberGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dbClusterArn Amazon Resource Name (ARN) of member DB Cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dbClusterArn(@Nullable Output<String> dbClusterArn) {
             $.dbClusterArn = dbClusterArn;
             return this;
         }
 
+        /**
+         * @param dbClusterArn Amazon Resource Name (ARN) of member DB Cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dbClusterArn(String dbClusterArn) {
             return dbClusterArn(Output.of(dbClusterArn));
         }
 
+        /**
+         * @param isWriter Whether the member is the primary DB Cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isWriter(@Nullable Output<Boolean> isWriter) {
             $.isWriter = isWriter;
             return this;
         }
 
+        /**
+         * @param isWriter Whether the member is the primary DB Cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isWriter(Boolean isWriter) {
             return isWriter(Output.of(isWriter));
         }

@@ -23,6 +23,10 @@ public final class ServiceMeshTypeResponse extends com.pulumi.resources.InvokeAr
     @Import(name="code", required=true)
     private String code;
 
+    /**
+     * @return A 7 character code matching `^IST[0-9]{4}$` or `^ASM[0-9]{4}$`, intended to uniquely identify the message type. (e.g. &#34;IST0001&#34; is mapped to the &#34;InternalError&#34; message type.)
+     * 
+     */
     public String code() {
         return this.code;
     }
@@ -34,6 +38,10 @@ public final class ServiceMeshTypeResponse extends com.pulumi.resources.InvokeAr
     @Import(name="displayName", required=true)
     private String displayName;
 
+    /**
+     * @return A human-readable name for the message type. e.g. &#34;InternalError&#34;, &#34;PodMissingProxy&#34;. This should be the same for all messages of the same type. (This corresponds to the `name` field in open-source Istio.)
+     * 
+     */
     public String displayName() {
         return this.displayName;
     }
@@ -63,11 +71,23 @@ public final class ServiceMeshTypeResponse extends com.pulumi.resources.InvokeAr
             $ = new ServiceMeshTypeResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param code A 7 character code matching `^IST[0-9]{4}$` or `^ASM[0-9]{4}$`, intended to uniquely identify the message type. (e.g. &#34;IST0001&#34; is mapped to the &#34;InternalError&#34; message type.)
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(String code) {
             $.code = code;
             return this;
         }
 
+        /**
+         * @param displayName A human-readable name for the message type. e.g. &#34;InternalError&#34;, &#34;PodMissingProxy&#34;. This should be the same for all messages of the same type. (This corresponds to the `name` field in open-source Istio.)
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             $.displayName = displayName;
             return this;

@@ -29,6 +29,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="annotations")
     private @Nullable Output<Map<String,String>> annotations;
 
+    /**
+     * @return Unstructured key value map that may be set by external tools to store and arbitrary metadata. They are not queryable and should be preserved when modifying objects. Cloud Run will populate some annotations using &#39;run.googleapis.com&#39; or &#39;serving.knative.dev&#39; namespaces. This field follows Kubernetes annotations&#39; namespacing, limits, and rules. More info: http://kubernetes.io/docs/user-guide/annotations
+     * 
+     */
     public Optional<Output<Map<String,String>>> annotations() {
         return Optional.ofNullable(this.annotations);
     }
@@ -40,6 +44,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="binaryAuthorization")
     private @Nullable Output<GoogleCloudRunOpV2BinaryAuthorizationArgs> binaryAuthorization;
 
+    /**
+     * @return Settings for the Binary Authorization feature.
+     * 
+     */
     public Optional<Output<GoogleCloudRunOpV2BinaryAuthorizationArgs>> binaryAuthorization() {
         return Optional.ofNullable(this.binaryAuthorization);
     }
@@ -51,6 +59,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="client")
     private @Nullable Output<String> client;
 
+    /**
+     * @return Arbitrary identifier for the API client.
+     * 
+     */
     public Optional<Output<String>> client() {
         return Optional.ofNullable(this.client);
     }
@@ -62,6 +74,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clientVersion")
     private @Nullable Output<String> clientVersion;
 
+    /**
+     * @return Arbitrary version identifier for the API client.
+     * 
+     */
     public Optional<Output<String>> clientVersion() {
         return Optional.ofNullable(this.clientVersion);
     }
@@ -73,6 +89,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return User-provided description of the Service.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -84,6 +104,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ingress")
     private @Nullable Output<ServiceIngress> ingress;
 
+    /**
+     * @return Provides the ingress settings for this Service. On output, returns the currently observed ingress settings, or INGRESS_TRAFFIC_UNSPECIFIED if no revision is active.
+     * 
+     */
     public Optional<Output<ServiceIngress>> ingress() {
         return Optional.ofNullable(this.ingress);
     }
@@ -95,6 +119,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return Map of string keys and values that can be used to organize and categorize objects. User-provided labels are shared with Google&#39;s billing system, so they can be used to filter, or break down billing charges by team, component, environment, state, etc. For more information, visit https://cloud.google.com/resource-manager/docs/creating-managing-labels or https://cloud.google.com/run/docs/configuring/labels Cloud Run will populate some labels with &#39;run.googleapis.com&#39; or &#39;serving.knative.dev&#39; namespaces. Those labels are read-only, and user changes will not be preserved.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -106,6 +134,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="launchStage")
     private @Nullable Output<ServiceLaunchStage> launchStage;
 
+    /**
+     * @return The launch stage as defined by [Google Cloud Platform Launch Stages](http://cloud.google.com/terms/launch-stages). Cloud Run supports `ALPHA`, `BETA`, and `GA`. If no value is specified, GA is assumed.
+     * 
+     */
     public Optional<Output<ServiceLaunchStage>> launchStage() {
         return Optional.ofNullable(this.launchStage);
     }
@@ -124,6 +156,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The fully qualified name of this Service. In CreateServiceRequest, this field is ignored, and instead composed from CreateServiceRequest.parent and CreateServiceRequest.service_id. Format: projects/{project}/locations/{location}/services/{service_id}
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -149,6 +185,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="template", required=true)
     private Output<GoogleCloudRunOpV2RevisionTemplateArgs> template;
 
+    /**
+     * @return The template used to create revisions for this Service.
+     * 
+     */
     public Output<GoogleCloudRunOpV2RevisionTemplateArgs> template() {
         return this.template;
     }
@@ -160,6 +200,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="traffic")
     private @Nullable Output<List<GoogleCloudRunOpV2TrafficTargetArgs>> traffic;
 
+    /**
+     * @return Specifies how to distribute traffic over a collection of Revisions belonging to the Service. If traffic is empty or not provided, defaults to 100% traffic to the latest `Ready` Revision.
+     * 
+     */
     public Optional<Output<List<GoogleCloudRunOpV2TrafficTargetArgs>>> traffic() {
         return Optional.ofNullable(this.traffic);
     }
@@ -209,74 +253,170 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ServiceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param annotations Unstructured key value map that may be set by external tools to store and arbitrary metadata. They are not queryable and should be preserved when modifying objects. Cloud Run will populate some annotations using &#39;run.googleapis.com&#39; or &#39;serving.knative.dev&#39; namespaces. This field follows Kubernetes annotations&#39; namespacing, limits, and rules. More info: http://kubernetes.io/docs/user-guide/annotations
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(@Nullable Output<Map<String,String>> annotations) {
             $.annotations = annotations;
             return this;
         }
 
+        /**
+         * @param annotations Unstructured key value map that may be set by external tools to store and arbitrary metadata. They are not queryable and should be preserved when modifying objects. Cloud Run will populate some annotations using &#39;run.googleapis.com&#39; or &#39;serving.knative.dev&#39; namespaces. This field follows Kubernetes annotations&#39; namespacing, limits, and rules. More info: http://kubernetes.io/docs/user-guide/annotations
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(Map<String,String> annotations) {
             return annotations(Output.of(annotations));
         }
 
+        /**
+         * @param binaryAuthorization Settings for the Binary Authorization feature.
+         * 
+         * @return builder
+         * 
+         */
         public Builder binaryAuthorization(@Nullable Output<GoogleCloudRunOpV2BinaryAuthorizationArgs> binaryAuthorization) {
             $.binaryAuthorization = binaryAuthorization;
             return this;
         }
 
+        /**
+         * @param binaryAuthorization Settings for the Binary Authorization feature.
+         * 
+         * @return builder
+         * 
+         */
         public Builder binaryAuthorization(GoogleCloudRunOpV2BinaryAuthorizationArgs binaryAuthorization) {
             return binaryAuthorization(Output.of(binaryAuthorization));
         }
 
+        /**
+         * @param client Arbitrary identifier for the API client.
+         * 
+         * @return builder
+         * 
+         */
         public Builder client(@Nullable Output<String> client) {
             $.client = client;
             return this;
         }
 
+        /**
+         * @param client Arbitrary identifier for the API client.
+         * 
+         * @return builder
+         * 
+         */
         public Builder client(String client) {
             return client(Output.of(client));
         }
 
+        /**
+         * @param clientVersion Arbitrary version identifier for the API client.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientVersion(@Nullable Output<String> clientVersion) {
             $.clientVersion = clientVersion;
             return this;
         }
 
+        /**
+         * @param clientVersion Arbitrary version identifier for the API client.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientVersion(String clientVersion) {
             return clientVersion(Output.of(clientVersion));
         }
 
+        /**
+         * @param description User-provided description of the Service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description User-provided description of the Service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param ingress Provides the ingress settings for this Service. On output, returns the currently observed ingress settings, or INGRESS_TRAFFIC_UNSPECIFIED if no revision is active.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ingress(@Nullable Output<ServiceIngress> ingress) {
             $.ingress = ingress;
             return this;
         }
 
+        /**
+         * @param ingress Provides the ingress settings for this Service. On output, returns the currently observed ingress settings, or INGRESS_TRAFFIC_UNSPECIFIED if no revision is active.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ingress(ServiceIngress ingress) {
             return ingress(Output.of(ingress));
         }
 
+        /**
+         * @param labels Map of string keys and values that can be used to organize and categorize objects. User-provided labels are shared with Google&#39;s billing system, so they can be used to filter, or break down billing charges by team, component, environment, state, etc. For more information, visit https://cloud.google.com/resource-manager/docs/creating-managing-labels or https://cloud.google.com/run/docs/configuring/labels Cloud Run will populate some labels with &#39;run.googleapis.com&#39; or &#39;serving.knative.dev&#39; namespaces. Those labels are read-only, and user changes will not be preserved.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Map of string keys and values that can be used to organize and categorize objects. User-provided labels are shared with Google&#39;s billing system, so they can be used to filter, or break down billing charges by team, component, environment, state, etc. For more information, visit https://cloud.google.com/resource-manager/docs/creating-managing-labels or https://cloud.google.com/run/docs/configuring/labels Cloud Run will populate some labels with &#39;run.googleapis.com&#39; or &#39;serving.knative.dev&#39; namespaces. Those labels are read-only, and user changes will not be preserved.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param launchStage The launch stage as defined by [Google Cloud Platform Launch Stages](http://cloud.google.com/terms/launch-stages). Cloud Run supports `ALPHA`, `BETA`, and `GA`. If no value is specified, GA is assumed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder launchStage(@Nullable Output<ServiceLaunchStage> launchStage) {
             $.launchStage = launchStage;
             return this;
         }
 
+        /**
+         * @param launchStage The launch stage as defined by [Google Cloud Platform Launch Stages](http://cloud.google.com/terms/launch-stages). Cloud Run supports `ALPHA`, `BETA`, and `GA`. If no value is specified, GA is assumed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder launchStage(ServiceLaunchStage launchStage) {
             return launchStage(Output.of(launchStage));
         }
@@ -290,11 +430,23 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
             return location(Output.of(location));
         }
 
+        /**
+         * @param name The fully qualified name of this Service. In CreateServiceRequest, this field is ignored, and instead composed from CreateServiceRequest.parent and CreateServiceRequest.service_id. Format: projects/{project}/locations/{location}/services/{service_id}
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The fully qualified name of this Service. In CreateServiceRequest, this field is ignored, and instead composed from CreateServiceRequest.parent and CreateServiceRequest.service_id. Format: projects/{project}/locations/{location}/services/{service_id}
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -317,24 +469,54 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
             return serviceId(Output.of(serviceId));
         }
 
+        /**
+         * @param template The template used to create revisions for this Service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder template(Output<GoogleCloudRunOpV2RevisionTemplateArgs> template) {
             $.template = template;
             return this;
         }
 
+        /**
+         * @param template The template used to create revisions for this Service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder template(GoogleCloudRunOpV2RevisionTemplateArgs template) {
             return template(Output.of(template));
         }
 
+        /**
+         * @param traffic Specifies how to distribute traffic over a collection of Revisions belonging to the Service. If traffic is empty or not provided, defaults to 100% traffic to the latest `Ready` Revision.
+         * 
+         * @return builder
+         * 
+         */
         public Builder traffic(@Nullable Output<List<GoogleCloudRunOpV2TrafficTargetArgs>> traffic) {
             $.traffic = traffic;
             return this;
         }
 
+        /**
+         * @param traffic Specifies how to distribute traffic over a collection of Revisions belonging to the Service. If traffic is empty or not provided, defaults to 100% traffic to the latest `Ready` Revision.
+         * 
+         * @return builder
+         * 
+         */
         public Builder traffic(List<GoogleCloudRunOpV2TrafficTargetArgs> traffic) {
             return traffic(Output.of(traffic));
         }
 
+        /**
+         * @param traffic Specifies how to distribute traffic over a collection of Revisions belonging to the Service. If traffic is empty or not provided, defaults to 100% traffic to the latest `Ready` Revision.
+         * 
+         * @return builder
+         * 
+         */
         public Builder traffic(GoogleCloudRunOpV2TrafficTargetArgs... traffic) {
             return traffic(List.of(traffic));
         }

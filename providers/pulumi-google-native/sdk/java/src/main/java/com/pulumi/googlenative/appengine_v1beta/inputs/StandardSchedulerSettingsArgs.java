@@ -27,6 +27,10 @@ public final class StandardSchedulerSettingsArgs extends com.pulumi.resources.Re
     @Import(name="maxInstances")
     private @Nullable Output<Integer> maxInstances;
 
+    /**
+     * @return Maximum number of instances to run for this version. Set to zero to disable max_instances configuration.
+     * 
+     */
     public Optional<Output<Integer>> maxInstances() {
         return Optional.ofNullable(this.maxInstances);
     }
@@ -38,6 +42,10 @@ public final class StandardSchedulerSettingsArgs extends com.pulumi.resources.Re
     @Import(name="minInstances")
     private @Nullable Output<Integer> minInstances;
 
+    /**
+     * @return Minimum number of instances to run for this version. Set to zero to disable min_instances configuration.
+     * 
+     */
     public Optional<Output<Integer>> minInstances() {
         return Optional.ofNullable(this.minInstances);
     }
@@ -49,6 +57,10 @@ public final class StandardSchedulerSettingsArgs extends com.pulumi.resources.Re
     @Import(name="targetCpuUtilization")
     private @Nullable Output<Double> targetCpuUtilization;
 
+    /**
+     * @return Target CPU utilization ratio to maintain when scaling.
+     * 
+     */
     public Optional<Output<Double>> targetCpuUtilization() {
         return Optional.ofNullable(this.targetCpuUtilization);
     }
@@ -60,6 +72,10 @@ public final class StandardSchedulerSettingsArgs extends com.pulumi.resources.Re
     @Import(name="targetThroughputUtilization")
     private @Nullable Output<Double> targetThroughputUtilization;
 
+    /**
+     * @return Target throughput utilization ratio to maintain when scaling
+     * 
+     */
     public Optional<Output<Double>> targetThroughputUtilization() {
         return Optional.ofNullable(this.targetThroughputUtilization);
     }
@@ -91,38 +107,86 @@ public final class StandardSchedulerSettingsArgs extends com.pulumi.resources.Re
             $ = new StandardSchedulerSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxInstances Maximum number of instances to run for this version. Set to zero to disable max_instances configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxInstances(@Nullable Output<Integer> maxInstances) {
             $.maxInstances = maxInstances;
             return this;
         }
 
+        /**
+         * @param maxInstances Maximum number of instances to run for this version. Set to zero to disable max_instances configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxInstances(Integer maxInstances) {
             return maxInstances(Output.of(maxInstances));
         }
 
+        /**
+         * @param minInstances Minimum number of instances to run for this version. Set to zero to disable min_instances configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minInstances(@Nullable Output<Integer> minInstances) {
             $.minInstances = minInstances;
             return this;
         }
 
+        /**
+         * @param minInstances Minimum number of instances to run for this version. Set to zero to disable min_instances configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minInstances(Integer minInstances) {
             return minInstances(Output.of(minInstances));
         }
 
+        /**
+         * @param targetCpuUtilization Target CPU utilization ratio to maintain when scaling.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetCpuUtilization(@Nullable Output<Double> targetCpuUtilization) {
             $.targetCpuUtilization = targetCpuUtilization;
             return this;
         }
 
+        /**
+         * @param targetCpuUtilization Target CPU utilization ratio to maintain when scaling.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetCpuUtilization(Double targetCpuUtilization) {
             return targetCpuUtilization(Output.of(targetCpuUtilization));
         }
 
+        /**
+         * @param targetThroughputUtilization Target throughput utilization ratio to maintain when scaling
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetThroughputUtilization(@Nullable Output<Double> targetThroughputUtilization) {
             $.targetThroughputUtilization = targetThroughputUtilization;
             return this;
         }
 
+        /**
+         * @param targetThroughputUtilization Target throughput utilization ratio to maintain when scaling
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetThroughputUtilization(Double targetThroughputUtilization) {
             return targetThroughputUtilization(Output.of(targetThroughputUtilization));
         }

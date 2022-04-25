@@ -12,22 +12,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class EncryptionServicesResponse {
     /**
-     * The encryption function of the blob storage service.
+     * @return The encryption function of the blob storage service.
      * 
      */
     private final @Nullable EncryptionServiceResponse blob;
     /**
-     * The encryption function of the file storage service.
+     * @return The encryption function of the file storage service.
      * 
      */
     private final @Nullable EncryptionServiceResponse file;
     /**
-     * The encryption function of the queue storage service.
+     * @return The encryption function of the queue storage service.
      * 
      */
     private final @Nullable EncryptionServiceResponse queue;
     /**
-     * The encryption function of the table storage service.
+     * @return The encryption function of the table storage service.
      * 
      */
     private final @Nullable EncryptionServiceResponse table;
@@ -45,30 +45,30 @@ public final class EncryptionServicesResponse {
     }
 
     /**
-     * The encryption function of the blob storage service.
+     * @return The encryption function of the blob storage service.
      * 
-    */
+     */
     public Optional<EncryptionServiceResponse> blob() {
         return Optional.ofNullable(this.blob);
     }
     /**
-     * The encryption function of the file storage service.
+     * @return The encryption function of the file storage service.
      * 
-    */
+     */
     public Optional<EncryptionServiceResponse> file() {
         return Optional.ofNullable(this.file);
     }
     /**
-     * The encryption function of the queue storage service.
+     * @return The encryption function of the queue storage service.
      * 
-    */
+     */
     public Optional<EncryptionServiceResponse> queue() {
         return Optional.ofNullable(this.queue);
     }
     /**
-     * The encryption function of the table storage service.
+     * @return The encryption function of the table storage service.
      * 
-    */
+     */
     public Optional<EncryptionServiceResponse> table() {
         return Optional.ofNullable(this.table);
     }

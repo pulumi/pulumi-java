@@ -24,6 +24,10 @@ public final class ClusterJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Resource ID of the streaming job.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -35,6 +39,10 @@ public final class ClusterJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="jobState", required=true)
     private String jobState;
 
+    /**
+     * @return The current execution state of the streaming job.
+     * 
+     */
     public String jobState() {
         return this.jobState;
     }
@@ -46,6 +54,10 @@ public final class ClusterJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="streamingUnits", required=true)
     private Integer streamingUnits;
 
+    /**
+     * @return The number of streaming units that are used by the streaming job.
+     * 
+     */
     public Integer streamingUnits() {
         return this.streamingUnits;
     }
@@ -76,16 +88,34 @@ public final class ClusterJobResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ClusterJobResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Resource ID of the streaming job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param jobState The current execution state of the streaming job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobState(String jobState) {
             $.jobState = jobState;
             return this;
         }
 
+        /**
+         * @param streamingUnits The number of streaming units that are used by the streaming job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streamingUnits(Integer streamingUnits) {
             $.streamingUnits = streamingUnits;
             return this;

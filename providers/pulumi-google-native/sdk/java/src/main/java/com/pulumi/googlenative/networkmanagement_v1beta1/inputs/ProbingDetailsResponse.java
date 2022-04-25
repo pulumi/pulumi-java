@@ -27,6 +27,10 @@ public final class ProbingDetailsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="abortCause", required=true)
     private String abortCause;
 
+    /**
+     * @return The reason probing was aborted.
+     * 
+     */
     public String abortCause() {
         return this.abortCause;
     }
@@ -38,6 +42,10 @@ public final class ProbingDetailsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="endpointInfo", required=true)
     private EndpointInfoResponse endpointInfo;
 
+    /**
+     * @return The source and destination endpoints derived from the test input and used for active probing.
+     * 
+     */
     public EndpointInfoResponse endpointInfo() {
         return this.endpointInfo;
     }
@@ -49,6 +57,10 @@ public final class ProbingDetailsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="error", required=true)
     private StatusResponse error;
 
+    /**
+     * @return Details about an internal failure or the cancellation of active probing.
+     * 
+     */
     public StatusResponse error() {
         return this.error;
     }
@@ -60,6 +72,10 @@ public final class ProbingDetailsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="probingLatency", required=true)
     private LatencyDistributionResponse probingLatency;
 
+    /**
+     * @return Latency as measured by active probing in one direction: from the source to the destination endpoint.
+     * 
+     */
     public LatencyDistributionResponse probingLatency() {
         return this.probingLatency;
     }
@@ -71,6 +87,10 @@ public final class ProbingDetailsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="result", required=true)
     private String result;
 
+    /**
+     * @return The overall result of active probing.
+     * 
+     */
     public String result() {
         return this.result;
     }
@@ -82,6 +102,10 @@ public final class ProbingDetailsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="sentProbeCount", required=true)
     private Integer sentProbeCount;
 
+    /**
+     * @return Number of probes sent.
+     * 
+     */
     public Integer sentProbeCount() {
         return this.sentProbeCount;
     }
@@ -93,6 +117,10 @@ public final class ProbingDetailsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="successfulProbeCount", required=true)
     private Integer successfulProbeCount;
 
+    /**
+     * @return Number of probes that reached the destination.
+     * 
+     */
     public Integer successfulProbeCount() {
         return this.successfulProbeCount;
     }
@@ -104,6 +132,10 @@ public final class ProbingDetailsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="verifyTime", required=true)
     private String verifyTime;
 
+    /**
+     * @return The time that reachability was assessed through active probing.
+     * 
+     */
     public String verifyTime() {
         return this.verifyTime;
     }
@@ -139,41 +171,89 @@ public final class ProbingDetailsResponse extends com.pulumi.resources.InvokeArg
             $ = new ProbingDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param abortCause The reason probing was aborted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder abortCause(String abortCause) {
             $.abortCause = abortCause;
             return this;
         }
 
+        /**
+         * @param endpointInfo The source and destination endpoints derived from the test input and used for active probing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointInfo(EndpointInfoResponse endpointInfo) {
             $.endpointInfo = endpointInfo;
             return this;
         }
 
+        /**
+         * @param error Details about an internal failure or the cancellation of active probing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder error(StatusResponse error) {
             $.error = error;
             return this;
         }
 
+        /**
+         * @param probingLatency Latency as measured by active probing in one direction: from the source to the destination endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder probingLatency(LatencyDistributionResponse probingLatency) {
             $.probingLatency = probingLatency;
             return this;
         }
 
+        /**
+         * @param result The overall result of active probing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder result(String result) {
             $.result = result;
             return this;
         }
 
+        /**
+         * @param sentProbeCount Number of probes sent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sentProbeCount(Integer sentProbeCount) {
             $.sentProbeCount = sentProbeCount;
             return this;
         }
 
+        /**
+         * @param successfulProbeCount Number of probes that reached the destination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder successfulProbeCount(Integer successfulProbeCount) {
             $.successfulProbeCount = successfulProbeCount;
             return this;
         }
 
+        /**
+         * @param verifyTime The time that reachability was assessed through active probing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder verifyTime(String verifyTime) {
             $.verifyTime = verifyTime;
             return this;

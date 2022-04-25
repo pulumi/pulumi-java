@@ -14,12 +14,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetApisResult {
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     /**
-     * Set of API identifiers.
+     * @return Set of API identifiers.
      * 
      */
     private final List<String> ids;
@@ -42,16 +42,16 @@ public final class GetApisResult {
     }
 
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Set of API identifiers.
+     * @return Set of API identifiers.
      * 
-    */
+     */
     public List<String> ids() {
         return this.ids;
     }

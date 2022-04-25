@@ -22,6 +22,10 @@ public final class TaskSetScale extends com.pulumi.resources.InvokeArgs {
     @Import(name="unit")
     private @Nullable TaskSetScaleUnit unit;
 
+    /**
+     * @return The unit of measure for the scale value.
+     * 
+     */
     public Optional<TaskSetScaleUnit> unit() {
         return Optional.ofNullable(this.unit);
     }
@@ -33,6 +37,10 @@ public final class TaskSetScale extends com.pulumi.resources.InvokeArgs {
     @Import(name="value")
     private @Nullable Double value;
 
+    /**
+     * @return The value, specified as a percent total of a service&#39;s desiredCount, to scale the task set. Accepted values are numbers between 0 and 100.
+     * 
+     */
     public Optional<Double> value() {
         return Optional.ofNullable(this.value);
     }
@@ -62,11 +70,23 @@ public final class TaskSetScale extends com.pulumi.resources.InvokeArgs {
             $ = new TaskSetScale(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param unit The unit of measure for the scale value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder unit(@Nullable TaskSetScaleUnit unit) {
             $.unit = unit;
             return this;
         }
 
+        /**
+         * @param value The value, specified as a percent total of a service&#39;s desiredCount, to scale the task set. Accepted values are numbers between 0 and 100.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable Double value) {
             $.value = value;
             return this;

@@ -15,32 +15,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetQuickConnectResult {
     /**
-     * The description of the quick connect.
+     * @return The description of the quick connect.
      * 
      */
     private final @Nullable String description;
     /**
-     * The identifier of the Amazon Connect instance.
+     * @return The identifier of the Amazon Connect instance.
      * 
      */
     private final @Nullable String instanceArn;
     /**
-     * The name of the quick connect.
+     * @return The name of the quick connect.
      * 
      */
     private final @Nullable String name;
     /**
-     * The Amazon Resource Name (ARN) for the quick connect.
+     * @return The Amazon Resource Name (ARN) for the quick connect.
      * 
      */
     private final @Nullable String quickConnectArn;
     /**
-     * Configuration settings for the quick connect.
+     * @return Configuration settings for the quick connect.
      * 
      */
     private final @Nullable QuickConnectConfig quickConnectConfig;
     /**
-     * One or more tags.
+     * @return One or more tags.
      * 
      */
     private final @Nullable List<QuickConnectTag> tags;
@@ -62,44 +62,44 @@ public final class GetQuickConnectResult {
     }
 
     /**
-     * The description of the quick connect.
+     * @return The description of the quick connect.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The identifier of the Amazon Connect instance.
+     * @return The identifier of the Amazon Connect instance.
      * 
-    */
+     */
     public Optional<String> instanceArn() {
         return Optional.ofNullable(this.instanceArn);
     }
     /**
-     * The name of the quick connect.
+     * @return The name of the quick connect.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The Amazon Resource Name (ARN) for the quick connect.
+     * @return The Amazon Resource Name (ARN) for the quick connect.
      * 
-    */
+     */
     public Optional<String> quickConnectArn() {
         return Optional.ofNullable(this.quickConnectArn);
     }
     /**
-     * Configuration settings for the quick connect.
+     * @return Configuration settings for the quick connect.
      * 
-    */
+     */
     public Optional<QuickConnectConfig> quickConnectConfig() {
         return Optional.ofNullable(this.quickConnectConfig);
     }
     /**
-     * One or more tags.
+     * @return One or more tags.
      * 
-    */
+     */
     public List<QuickConnectTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

@@ -27,6 +27,10 @@ public final class AmiCopyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="architecture")
     private @Nullable Output<String> architecture;
 
+    /**
+     * @return Machine architecture for created instances. Defaults to &#34;x86_64&#34;.
+     * 
+     */
     public Optional<Output<String>> architecture() {
         return Optional.ofNullable(this.architecture);
     }
@@ -38,6 +42,10 @@ public final class AmiCopyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return The ARN of the AMI.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -49,6 +57,10 @@ public final class AmiCopyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A longer, human-readable description for the AMI.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -61,6 +73,11 @@ public final class AmiCopyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="destinationOutpostArn")
     private @Nullable Output<String> destinationOutpostArn;
 
+    /**
+     * @return The ARN of the Outpost to which to copy the AMI.
+     * Only specify this parameter when copying an AMI from an AWS Region to an Outpost. The AMI must be in the Region of the destination Outpost.
+     * 
+     */
     public Optional<Output<String>> destinationOutpostArn() {
         return Optional.ofNullable(this.destinationOutpostArn);
     }
@@ -73,6 +90,11 @@ public final class AmiCopyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="ebsBlockDevices")
     private @Nullable Output<List<AmiCopyEbsBlockDeviceGetArgs>> ebsBlockDevices;
 
+    /**
+     * @return Nested block describing an EBS block device that should be
+     * attached to created instances. The structure of this block is described below.
+     * 
+     */
     public Optional<Output<List<AmiCopyEbsBlockDeviceGetArgs>>> ebsBlockDevices() {
         return Optional.ofNullable(this.ebsBlockDevices);
     }
@@ -84,6 +106,10 @@ public final class AmiCopyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="enaSupport")
     private @Nullable Output<Boolean> enaSupport;
 
+    /**
+     * @return Specifies whether enhanced networking with ENA is enabled. Defaults to `false`.
+     * 
+     */
     public Optional<Output<Boolean>> enaSupport() {
         return Optional.ofNullable(this.enaSupport);
     }
@@ -95,6 +121,10 @@ public final class AmiCopyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="encrypted")
     private @Nullable Output<Boolean> encrypted;
 
+    /**
+     * @return Boolean controlling whether the created EBS volumes will be encrypted. Can&#39;t be used with `snapshot_id`.
+     * 
+     */
     public Optional<Output<Boolean>> encrypted() {
         return Optional.ofNullable(this.encrypted);
     }
@@ -107,6 +137,11 @@ public final class AmiCopyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="ephemeralBlockDevices")
     private @Nullable Output<List<AmiCopyEphemeralBlockDeviceGetArgs>> ephemeralBlockDevices;
 
+    /**
+     * @return Nested block describing an ephemeral block device that
+     * should be attached to created instances. The structure of this block is described below.
+     * 
+     */
     public Optional<Output<List<AmiCopyEphemeralBlockDeviceGetArgs>>> ephemeralBlockDevices() {
         return Optional.ofNullable(this.ephemeralBlockDevices);
     }
@@ -126,6 +161,11 @@ public final class AmiCopyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="imageLocation")
     private @Nullable Output<String> imageLocation;
 
+    /**
+     * @return Path to an S3 object containing an image manifest, e.g., created
+     * by the `ec2-upload-bundle` command in the EC2 command line tools.
+     * 
+     */
     public Optional<Output<String>> imageLocation() {
         return Optional.ofNullable(this.imageLocation);
     }
@@ -152,6 +192,11 @@ public final class AmiCopyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="kernelId")
     private @Nullable Output<String> kernelId;
 
+    /**
+     * @return The id of the kernel image (AKI) that will be used as the paravirtual
+     * kernel in created instances.
+     * 
+     */
     public Optional<Output<String>> kernelId() {
         return Optional.ofNullable(this.kernelId);
     }
@@ -165,6 +210,12 @@ public final class AmiCopyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="kmsKeyId")
     private @Nullable Output<String> kmsKeyId;
 
+    /**
+     * @return The full ARN of the AWS Key Management Service (AWS KMS) CMK to use when encrypting the snapshots of
+     * an image during a copy operation. This parameter is only required if you want to use a non-default CMK;
+     * if this parameter is not specified, the default CMK for EBS is used
+     * 
+     */
     public Optional<Output<String>> kmsKeyId() {
         return Optional.ofNullable(this.kmsKeyId);
     }
@@ -183,6 +234,10 @@ public final class AmiCopyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return A region-unique name for the AMI.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -223,6 +278,11 @@ public final class AmiCopyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="ramdiskId")
     private @Nullable Output<String> ramdiskId;
 
+    /**
+     * @return The id of an initrd image (ARI) that will be used when booting the
+     * created instances.
+     * 
+     */
     public Optional<Output<String>> ramdiskId() {
         return Optional.ofNullable(this.ramdiskId);
     }
@@ -234,6 +294,10 @@ public final class AmiCopyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="rootDeviceName")
     private @Nullable Output<String> rootDeviceName;
 
+    /**
+     * @return The name of the root device (for example, `/dev/sda1`, or `/dev/xvda`).
+     * 
+     */
     public Optional<Output<String>> rootDeviceName() {
         return Optional.ofNullable(this.rootDeviceName);
     }
@@ -253,6 +317,11 @@ public final class AmiCopyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceAmiId")
     private @Nullable Output<String> sourceAmiId;
 
+    /**
+     * @return The id of the AMI to copy. This id must be valid in the region
+     * given by `source_ami_region`.
+     * 
+     */
     public Optional<Output<String>> sourceAmiId() {
         return Optional.ofNullable(this.sourceAmiId);
     }
@@ -265,6 +334,11 @@ public final class AmiCopyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceAmiRegion")
     private @Nullable Output<String> sourceAmiRegion;
 
+    /**
+     * @return The region from which the AMI will be copied. This may be the
+     * same as the AWS provider region in order to create a copy within the same region.
+     * 
+     */
     public Optional<Output<String>> sourceAmiRegion() {
         return Optional.ofNullable(this.sourceAmiRegion);
     }
@@ -277,6 +351,11 @@ public final class AmiCopyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="sriovNetSupport")
     private @Nullable Output<String> sriovNetSupport;
 
+    /**
+     * @return When set to &#34;simple&#34; (the default), enables enhanced networking
+     * for created instances. No other value is supported at this time.
+     * 
+     */
     public Optional<Output<String>> sriovNetSupport() {
         return Optional.ofNullable(this.sriovNetSupport);
     }
@@ -288,6 +367,10 @@ public final class AmiCopyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -315,6 +398,12 @@ public final class AmiCopyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="virtualizationType")
     private @Nullable Output<String> virtualizationType;
 
+    /**
+     * @return Keyword to choose what virtualization mode created instances
+     * will use. Can be either &#34;paravirtual&#34; (the default) or &#34;hvm&#34;. The choice of virtualization type
+     * changes the set of further arguments that are required, as described below.
+     * 
+     */
     public Optional<Output<String>> virtualizationType() {
         return Optional.ofNullable(this.virtualizationType);
     }
@@ -372,82 +461,198 @@ public final class AmiCopyState extends com.pulumi.resources.ResourceArgs {
             $ = new AmiCopyState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param architecture Machine architecture for created instances. Defaults to &#34;x86_64&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder architecture(@Nullable Output<String> architecture) {
             $.architecture = architecture;
             return this;
         }
 
+        /**
+         * @param architecture Machine architecture for created instances. Defaults to &#34;x86_64&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder architecture(String architecture) {
             return architecture(Output.of(architecture));
         }
 
+        /**
+         * @param arn The ARN of the AMI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn The ARN of the AMI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param description A longer, human-readable description for the AMI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A longer, human-readable description for the AMI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param destinationOutpostArn The ARN of the Outpost to which to copy the AMI.
+         * Only specify this parameter when copying an AMI from an AWS Region to an Outpost. The AMI must be in the Region of the destination Outpost.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationOutpostArn(@Nullable Output<String> destinationOutpostArn) {
             $.destinationOutpostArn = destinationOutpostArn;
             return this;
         }
 
+        /**
+         * @param destinationOutpostArn The ARN of the Outpost to which to copy the AMI.
+         * Only specify this parameter when copying an AMI from an AWS Region to an Outpost. The AMI must be in the Region of the destination Outpost.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationOutpostArn(String destinationOutpostArn) {
             return destinationOutpostArn(Output.of(destinationOutpostArn));
         }
 
+        /**
+         * @param ebsBlockDevices Nested block describing an EBS block device that should be
+         * attached to created instances. The structure of this block is described below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ebsBlockDevices(@Nullable Output<List<AmiCopyEbsBlockDeviceGetArgs>> ebsBlockDevices) {
             $.ebsBlockDevices = ebsBlockDevices;
             return this;
         }
 
+        /**
+         * @param ebsBlockDevices Nested block describing an EBS block device that should be
+         * attached to created instances. The structure of this block is described below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ebsBlockDevices(List<AmiCopyEbsBlockDeviceGetArgs> ebsBlockDevices) {
             return ebsBlockDevices(Output.of(ebsBlockDevices));
         }
 
+        /**
+         * @param ebsBlockDevices Nested block describing an EBS block device that should be
+         * attached to created instances. The structure of this block is described below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ebsBlockDevices(AmiCopyEbsBlockDeviceGetArgs... ebsBlockDevices) {
             return ebsBlockDevices(List.of(ebsBlockDevices));
         }
 
+        /**
+         * @param enaSupport Specifies whether enhanced networking with ENA is enabled. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enaSupport(@Nullable Output<Boolean> enaSupport) {
             $.enaSupport = enaSupport;
             return this;
         }
 
+        /**
+         * @param enaSupport Specifies whether enhanced networking with ENA is enabled. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enaSupport(Boolean enaSupport) {
             return enaSupport(Output.of(enaSupport));
         }
 
+        /**
+         * @param encrypted Boolean controlling whether the created EBS volumes will be encrypted. Can&#39;t be used with `snapshot_id`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encrypted(@Nullable Output<Boolean> encrypted) {
             $.encrypted = encrypted;
             return this;
         }
 
+        /**
+         * @param encrypted Boolean controlling whether the created EBS volumes will be encrypted. Can&#39;t be used with `snapshot_id`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encrypted(Boolean encrypted) {
             return encrypted(Output.of(encrypted));
         }
 
+        /**
+         * @param ephemeralBlockDevices Nested block describing an ephemeral block device that
+         * should be attached to created instances. The structure of this block is described below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ephemeralBlockDevices(@Nullable Output<List<AmiCopyEphemeralBlockDeviceGetArgs>> ephemeralBlockDevices) {
             $.ephemeralBlockDevices = ephemeralBlockDevices;
             return this;
         }
 
+        /**
+         * @param ephemeralBlockDevices Nested block describing an ephemeral block device that
+         * should be attached to created instances. The structure of this block is described below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ephemeralBlockDevices(List<AmiCopyEphemeralBlockDeviceGetArgs> ephemeralBlockDevices) {
             return ephemeralBlockDevices(Output.of(ephemeralBlockDevices));
         }
 
+        /**
+         * @param ephemeralBlockDevices Nested block describing an ephemeral block device that
+         * should be attached to created instances. The structure of this block is described below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ephemeralBlockDevices(AmiCopyEphemeralBlockDeviceGetArgs... ephemeralBlockDevices) {
             return ephemeralBlockDevices(List.of(ephemeralBlockDevices));
         }
@@ -461,11 +666,25 @@ public final class AmiCopyState extends com.pulumi.resources.ResourceArgs {
             return hypervisor(Output.of(hypervisor));
         }
 
+        /**
+         * @param imageLocation Path to an S3 object containing an image manifest, e.g., created
+         * by the `ec2-upload-bundle` command in the EC2 command line tools.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageLocation(@Nullable Output<String> imageLocation) {
             $.imageLocation = imageLocation;
             return this;
         }
 
+        /**
+         * @param imageLocation Path to an S3 object containing an image manifest, e.g., created
+         * by the `ec2-upload-bundle` command in the EC2 command line tools.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageLocation(String imageLocation) {
             return imageLocation(Output.of(imageLocation));
         }
@@ -488,20 +707,50 @@ public final class AmiCopyState extends com.pulumi.resources.ResourceArgs {
             return imageType(Output.of(imageType));
         }
 
+        /**
+         * @param kernelId The id of the kernel image (AKI) that will be used as the paravirtual
+         * kernel in created instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kernelId(@Nullable Output<String> kernelId) {
             $.kernelId = kernelId;
             return this;
         }
 
+        /**
+         * @param kernelId The id of the kernel image (AKI) that will be used as the paravirtual
+         * kernel in created instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kernelId(String kernelId) {
             return kernelId(Output.of(kernelId));
         }
 
+        /**
+         * @param kmsKeyId The full ARN of the AWS Key Management Service (AWS KMS) CMK to use when encrypting the snapshots of
+         * an image during a copy operation. This parameter is only required if you want to use a non-default CMK;
+         * if this parameter is not specified, the default CMK for EBS is used
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             $.kmsKeyId = kmsKeyId;
             return this;
         }
 
+        /**
+         * @param kmsKeyId The full ARN of the AWS Key Management Service (AWS KMS) CMK to use when encrypting the snapshots of
+         * an image during a copy operation. This parameter is only required if you want to use a non-default CMK;
+         * if this parameter is not specified, the default CMK for EBS is used
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyId(String kmsKeyId) {
             return kmsKeyId(Output.of(kmsKeyId));
         }
@@ -515,11 +764,23 @@ public final class AmiCopyState extends com.pulumi.resources.ResourceArgs {
             return manageEbsSnapshots(Output.of(manageEbsSnapshots));
         }
 
+        /**
+         * @param name A region-unique name for the AMI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name A region-unique name for the AMI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -560,20 +821,46 @@ public final class AmiCopyState extends com.pulumi.resources.ResourceArgs {
             return public_(Output.of(public_));
         }
 
+        /**
+         * @param ramdiskId The id of an initrd image (ARI) that will be used when booting the
+         * created instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ramdiskId(@Nullable Output<String> ramdiskId) {
             $.ramdiskId = ramdiskId;
             return this;
         }
 
+        /**
+         * @param ramdiskId The id of an initrd image (ARI) that will be used when booting the
+         * created instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ramdiskId(String ramdiskId) {
             return ramdiskId(Output.of(ramdiskId));
         }
 
+        /**
+         * @param rootDeviceName The name of the root device (for example, `/dev/sda1`, or `/dev/xvda`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder rootDeviceName(@Nullable Output<String> rootDeviceName) {
             $.rootDeviceName = rootDeviceName;
             return this;
         }
 
+        /**
+         * @param rootDeviceName The name of the root device (for example, `/dev/sda1`, or `/dev/xvda`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder rootDeviceName(String rootDeviceName) {
             return rootDeviceName(Output.of(rootDeviceName));
         }
@@ -587,38 +874,92 @@ public final class AmiCopyState extends com.pulumi.resources.ResourceArgs {
             return rootSnapshotId(Output.of(rootSnapshotId));
         }
 
+        /**
+         * @param sourceAmiId The id of the AMI to copy. This id must be valid in the region
+         * given by `source_ami_region`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceAmiId(@Nullable Output<String> sourceAmiId) {
             $.sourceAmiId = sourceAmiId;
             return this;
         }
 
+        /**
+         * @param sourceAmiId The id of the AMI to copy. This id must be valid in the region
+         * given by `source_ami_region`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceAmiId(String sourceAmiId) {
             return sourceAmiId(Output.of(sourceAmiId));
         }
 
+        /**
+         * @param sourceAmiRegion The region from which the AMI will be copied. This may be the
+         * same as the AWS provider region in order to create a copy within the same region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceAmiRegion(@Nullable Output<String> sourceAmiRegion) {
             $.sourceAmiRegion = sourceAmiRegion;
             return this;
         }
 
+        /**
+         * @param sourceAmiRegion The region from which the AMI will be copied. This may be the
+         * same as the AWS provider region in order to create a copy within the same region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceAmiRegion(String sourceAmiRegion) {
             return sourceAmiRegion(Output.of(sourceAmiRegion));
         }
 
+        /**
+         * @param sriovNetSupport When set to &#34;simple&#34; (the default), enables enhanced networking
+         * for created instances. No other value is supported at this time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sriovNetSupport(@Nullable Output<String> sriovNetSupport) {
             $.sriovNetSupport = sriovNetSupport;
             return this;
         }
 
+        /**
+         * @param sriovNetSupport When set to &#34;simple&#34; (the default), enables enhanced networking
+         * for created instances. No other value is supported at this time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sriovNetSupport(String sriovNetSupport) {
             return sriovNetSupport(Output.of(sriovNetSupport));
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
@@ -641,11 +982,27 @@ public final class AmiCopyState extends com.pulumi.resources.ResourceArgs {
             return usageOperation(Output.of(usageOperation));
         }
 
+        /**
+         * @param virtualizationType Keyword to choose what virtualization mode created instances
+         * will use. Can be either &#34;paravirtual&#34; (the default) or &#34;hvm&#34;. The choice of virtualization type
+         * changes the set of further arguments that are required, as described below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualizationType(@Nullable Output<String> virtualizationType) {
             $.virtualizationType = virtualizationType;
             return this;
         }
 
+        /**
+         * @param virtualizationType Keyword to choose what virtualization mode created instances
+         * will use. Can be either &#34;paravirtual&#34; (the default) or &#34;hvm&#34;. The choice of virtualization type
+         * changes the set of further arguments that are required, as described below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualizationType(String virtualizationType) {
             return virtualizationType(Output.of(virtualizationType));
         }

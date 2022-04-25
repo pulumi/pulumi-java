@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class TopologySelectorTerm {
     /**
-     * A list of topology selector requirements by labels.
+     * @return A list of topology selector requirements by labels.
      * 
      */
     private final @Nullable List<TopologySelectorLabelRequirement> matchLabelExpressions;
@@ -23,9 +23,9 @@ public final class TopologySelectorTerm {
     }
 
     /**
-     * A list of topology selector requirements by labels.
+     * @return A list of topology selector requirements by labels.
      * 
-    */
+     */
     public List<TopologySelectorLabelRequirement> matchLabelExpressions() {
         return this.matchLabelExpressions == null ? List.of() : this.matchLabelExpressions;
     }

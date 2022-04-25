@@ -46,6 +46,10 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<EnvironmentTagArgs>> tags;
 
+    /**
+     * @return Metadata that you can assign to help organize the frameworks that you create. Each tag is a key-value pair.
+     * 
+     */
     public Optional<Output<List<EnvironmentTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -104,15 +108,33 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
             return networkFabricType(Output.of(networkFabricType));
         }
 
+        /**
+         * @param tags Metadata that you can assign to help organize the frameworks that you create. Each tag is a key-value pair.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<EnvironmentTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Metadata that you can assign to help organize the frameworks that you create. Each tag is a key-value pair.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<EnvironmentTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags Metadata that you can assign to help organize the frameworks that you create. Each tag is a key-value pair.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(EnvironmentTagArgs... tags) {
             return tags(List.of(tags));
         }

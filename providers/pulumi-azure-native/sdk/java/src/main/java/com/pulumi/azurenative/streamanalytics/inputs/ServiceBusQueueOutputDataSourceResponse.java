@@ -27,6 +27,10 @@ public final class ServiceBusQueueOutputDataSourceResponse extends com.pulumi.re
     @Import(name="propertyColumns")
     private @Nullable List<String> propertyColumns;
 
+    /**
+     * @return A string array of the names of output columns to be attached to Service Bus messages as custom properties.
+     * 
+     */
     public Optional<List<String>> propertyColumns() {
         return Optional.ofNullable(this.propertyColumns);
     }
@@ -38,6 +42,10 @@ public final class ServiceBusQueueOutputDataSourceResponse extends com.pulumi.re
     @Import(name="queueName")
     private @Nullable String queueName;
 
+    /**
+     * @return The name of the Service Bus Queue. Required on PUT (CreateOrReplace) requests.
+     * 
+     */
     public Optional<String> queueName() {
         return Optional.ofNullable(this.queueName);
     }
@@ -49,6 +57,10 @@ public final class ServiceBusQueueOutputDataSourceResponse extends com.pulumi.re
     @Import(name="serviceBusNamespace")
     private @Nullable String serviceBusNamespace;
 
+    /**
+     * @return The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
+     * 
+     */
     public Optional<String> serviceBusNamespace() {
         return Optional.ofNullable(this.serviceBusNamespace);
     }
@@ -60,6 +72,10 @@ public final class ServiceBusQueueOutputDataSourceResponse extends com.pulumi.re
     @Import(name="sharedAccessPolicyKey")
     private @Nullable String sharedAccessPolicyKey;
 
+    /**
+     * @return The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.
+     * 
+     */
     public Optional<String> sharedAccessPolicyKey() {
         return Optional.ofNullable(this.sharedAccessPolicyKey);
     }
@@ -71,6 +87,10 @@ public final class ServiceBusQueueOutputDataSourceResponse extends com.pulumi.re
     @Import(name="sharedAccessPolicyName")
     private @Nullable String sharedAccessPolicyName;
 
+    /**
+     * @return The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
+     * 
+     */
     public Optional<String> sharedAccessPolicyName() {
         return Optional.ofNullable(this.sharedAccessPolicyName);
     }
@@ -83,6 +103,11 @@ public final class ServiceBusQueueOutputDataSourceResponse extends com.pulumi.re
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
+     * Expected value is &#39;Microsoft.ServiceBus/Queue&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -116,35 +141,78 @@ public final class ServiceBusQueueOutputDataSourceResponse extends com.pulumi.re
             $ = new ServiceBusQueueOutputDataSourceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param propertyColumns A string array of the names of output columns to be attached to Service Bus messages as custom properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder propertyColumns(@Nullable List<String> propertyColumns) {
             $.propertyColumns = propertyColumns;
             return this;
         }
 
+        /**
+         * @param propertyColumns A string array of the names of output columns to be attached to Service Bus messages as custom properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder propertyColumns(String... propertyColumns) {
             return propertyColumns(List.of(propertyColumns));
         }
 
+        /**
+         * @param queueName The name of the Service Bus Queue. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queueName(@Nullable String queueName) {
             $.queueName = queueName;
             return this;
         }
 
+        /**
+         * @param serviceBusNamespace The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceBusNamespace(@Nullable String serviceBusNamespace) {
             $.serviceBusNamespace = serviceBusNamespace;
             return this;
         }
 
+        /**
+         * @param sharedAccessPolicyKey The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sharedAccessPolicyKey(@Nullable String sharedAccessPolicyKey) {
             $.sharedAccessPolicyKey = sharedAccessPolicyKey;
             return this;
         }
 
+        /**
+         * @param sharedAccessPolicyName The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sharedAccessPolicyName(@Nullable String sharedAccessPolicyName) {
             $.sharedAccessPolicyName = sharedAccessPolicyName;
             return this;
         }
 
+        /**
+         * @param type Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
+         * Expected value is &#39;Microsoft.ServiceBus/Queue&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

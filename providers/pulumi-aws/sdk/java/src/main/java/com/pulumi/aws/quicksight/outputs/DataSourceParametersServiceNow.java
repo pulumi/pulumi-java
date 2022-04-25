@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class DataSourceParametersServiceNow {
     /**
-     * The base URL of the Jira instance&#39;s site to which to connect.
+     * @return The base URL of the Jira instance&#39;s site to which to connect.
      * 
      */
     private final String siteBaseUrl;
@@ -21,9 +21,9 @@ public final class DataSourceParametersServiceNow {
     }
 
     /**
-     * The base URL of the Jira instance&#39;s site to which to connect.
+     * @return The base URL of the Jira instance&#39;s site to which to connect.
      * 
-    */
+     */
     public String siteBaseUrl() {
         return this.siteBaseUrl;
     }

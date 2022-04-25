@@ -26,6 +26,10 @@ public final class KeyVaultPropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="keyName")
     private @Nullable Output<String> keyName;
 
+    /**
+     * @return The name of key used to encrypt data.
+     * 
+     */
     public Optional<Output<String>> keyName() {
         return Optional.ofNullable(this.keyName);
     }
@@ -37,6 +41,10 @@ public final class KeyVaultPropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="keyVersion")
     private @Nullable Output<String> keyVersion;
 
+    /**
+     * @return The key version of the key used to encrypt data.
+     * 
+     */
     public Optional<Output<String>> keyVersion() {
         return Optional.ofNullable(this.keyVersion);
     }
@@ -48,6 +56,10 @@ public final class KeyVaultPropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="keyvaultUri")
     private @Nullable Output<String> keyvaultUri;
 
+    /**
+     * @return The URI of the key vault key used to encrypt data.
+     * 
+     */
     public Optional<Output<String>> keyvaultUri() {
         return Optional.ofNullable(this.keyvaultUri);
     }
@@ -78,29 +90,65 @@ public final class KeyVaultPropertiesArgs extends com.pulumi.resources.ResourceA
             $ = new KeyVaultPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyName The name of key used to encrypt data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyName(@Nullable Output<String> keyName) {
             $.keyName = keyName;
             return this;
         }
 
+        /**
+         * @param keyName The name of key used to encrypt data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyName(String keyName) {
             return keyName(Output.of(keyName));
         }
 
+        /**
+         * @param keyVersion The key version of the key used to encrypt data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVersion(@Nullable Output<String> keyVersion) {
             $.keyVersion = keyVersion;
             return this;
         }
 
+        /**
+         * @param keyVersion The key version of the key used to encrypt data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVersion(String keyVersion) {
             return keyVersion(Output.of(keyVersion));
         }
 
+        /**
+         * @param keyvaultUri The URI of the key vault key used to encrypt data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyvaultUri(@Nullable Output<String> keyvaultUri) {
             $.keyvaultUri = keyvaultUri;
             return this;
         }
 
+        /**
+         * @param keyvaultUri The URI of the key vault key used to encrypt data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyvaultUri(String keyvaultUri) {
             return keyvaultUri(Output.of(keyvaultUri));
         }

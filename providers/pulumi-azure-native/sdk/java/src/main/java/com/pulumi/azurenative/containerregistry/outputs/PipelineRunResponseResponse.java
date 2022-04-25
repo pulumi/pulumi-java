@@ -17,52 +17,52 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PipelineRunResponseResponse {
     /**
-     * The digest of the tar used to transfer the artifacts.
+     * @return The digest of the tar used to transfer the artifacts.
      * 
      */
     private final @Nullable String catalogDigest;
     /**
-     * The time the pipeline run finished.
+     * @return The time the pipeline run finished.
      * 
      */
     private final @Nullable String finishTime;
     /**
-     * The artifacts imported in the pipeline run.
+     * @return The artifacts imported in the pipeline run.
      * 
      */
     private final @Nullable List<String> importedArtifacts;
     /**
-     * The detailed error message for the pipeline run in the case of failure.
+     * @return The detailed error message for the pipeline run in the case of failure.
      * 
      */
     private final @Nullable String pipelineRunErrorMessage;
     /**
-     * The current progress of the copy operation.
+     * @return The current progress of the copy operation.
      * 
      */
     private final @Nullable ProgressPropertiesResponse progress;
     /**
-     * The source of the pipeline run.
+     * @return The source of the pipeline run.
      * 
      */
     private final @Nullable ImportPipelineSourcePropertiesResponse source;
     /**
-     * The time the pipeline run started.
+     * @return The time the pipeline run started.
      * 
      */
     private final @Nullable String startTime;
     /**
-     * The current status of the pipeline run.
+     * @return The current status of the pipeline run.
      * 
      */
     private final @Nullable String status;
     /**
-     * The target of the pipeline run.
+     * @return The target of the pipeline run.
      * 
      */
     private final @Nullable ExportPipelineTargetPropertiesResponse target;
     /**
-     * The trigger that caused the pipeline run.
+     * @return The trigger that caused the pipeline run.
      * 
      */
     private final @Nullable PipelineTriggerDescriptorResponse trigger;
@@ -92,72 +92,72 @@ public final class PipelineRunResponseResponse {
     }
 
     /**
-     * The digest of the tar used to transfer the artifacts.
+     * @return The digest of the tar used to transfer the artifacts.
      * 
-    */
+     */
     public Optional<String> catalogDigest() {
         return Optional.ofNullable(this.catalogDigest);
     }
     /**
-     * The time the pipeline run finished.
+     * @return The time the pipeline run finished.
      * 
-    */
+     */
     public Optional<String> finishTime() {
         return Optional.ofNullable(this.finishTime);
     }
     /**
-     * The artifacts imported in the pipeline run.
+     * @return The artifacts imported in the pipeline run.
      * 
-    */
+     */
     public List<String> importedArtifacts() {
         return this.importedArtifacts == null ? List.of() : this.importedArtifacts;
     }
     /**
-     * The detailed error message for the pipeline run in the case of failure.
+     * @return The detailed error message for the pipeline run in the case of failure.
      * 
-    */
+     */
     public Optional<String> pipelineRunErrorMessage() {
         return Optional.ofNullable(this.pipelineRunErrorMessage);
     }
     /**
-     * The current progress of the copy operation.
+     * @return The current progress of the copy operation.
      * 
-    */
+     */
     public Optional<ProgressPropertiesResponse> progress() {
         return Optional.ofNullable(this.progress);
     }
     /**
-     * The source of the pipeline run.
+     * @return The source of the pipeline run.
      * 
-    */
+     */
     public Optional<ImportPipelineSourcePropertiesResponse> source() {
         return Optional.ofNullable(this.source);
     }
     /**
-     * The time the pipeline run started.
+     * @return The time the pipeline run started.
      * 
-    */
+     */
     public Optional<String> startTime() {
         return Optional.ofNullable(this.startTime);
     }
     /**
-     * The current status of the pipeline run.
+     * @return The current status of the pipeline run.
      * 
-    */
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
     /**
-     * The target of the pipeline run.
+     * @return The target of the pipeline run.
      * 
-    */
+     */
     public Optional<ExportPipelineTargetPropertiesResponse> target() {
         return Optional.ofNullable(this.target);
     }
     /**
-     * The trigger that caused the pipeline run.
+     * @return The trigger that caused the pipeline run.
      * 
-    */
+     */
     public Optional<PipelineTriggerDescriptorResponse> trigger() {
         return Optional.ofNullable(this.trigger);
     }

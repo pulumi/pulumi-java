@@ -20,6 +20,10 @@ public final class ConnectorProfileServiceNowConnectorProfileCredentialsArgs ext
     @Import(name="password", required=true)
     private Output<String> password;
 
+    /**
+     * @return The password that corresponds to the username.
+     * 
+     */
     public Output<String> password() {
         return this.password;
     }
@@ -31,6 +35,10 @@ public final class ConnectorProfileServiceNowConnectorProfileCredentialsArgs ext
     @Import(name="username", required=true)
     private Output<String> username;
 
+    /**
+     * @return The name of the user.
+     * 
+     */
     public Output<String> username() {
         return this.username;
     }
@@ -60,20 +68,44 @@ public final class ConnectorProfileServiceNowConnectorProfileCredentialsArgs ext
             $ = new ConnectorProfileServiceNowConnectorProfileCredentialsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param password The password that corresponds to the username.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(Output<String> password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param password The password that corresponds to the username.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(String password) {
             return password(Output.of(password));
         }
 
+        /**
+         * @param username The name of the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(Output<String> username) {
             $.username = username;
             return this;
         }
 
+        /**
+         * @param username The name of the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(String username) {
             return username(Output.of(username));
         }

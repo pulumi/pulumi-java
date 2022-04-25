@@ -19,6 +19,10 @@ public final class GetBillingRoleAssignmentByDepartmentArgs extends com.pulumi.r
     @Import(name="billingAccountName", required=true)
     private String billingAccountName;
 
+    /**
+     * @return The ID that uniquely identifies a billing account.
+     * 
+     */
     public String billingAccountName() {
         return this.billingAccountName;
     }
@@ -30,6 +34,10 @@ public final class GetBillingRoleAssignmentByDepartmentArgs extends com.pulumi.r
     @Import(name="billingRoleAssignmentName", required=true)
     private String billingRoleAssignmentName;
 
+    /**
+     * @return The ID that uniquely identifies a role assignment.
+     * 
+     */
     public String billingRoleAssignmentName() {
         return this.billingRoleAssignmentName;
     }
@@ -41,6 +49,10 @@ public final class GetBillingRoleAssignmentByDepartmentArgs extends com.pulumi.r
     @Import(name="departmentName", required=true)
     private String departmentName;
 
+    /**
+     * @return The ID that uniquely identifies a department.
+     * 
+     */
     public String departmentName() {
         return this.departmentName;
     }
@@ -71,16 +83,34 @@ public final class GetBillingRoleAssignmentByDepartmentArgs extends com.pulumi.r
             $ = new GetBillingRoleAssignmentByDepartmentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param billingAccountName The ID that uniquely identifies a billing account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder billingAccountName(String billingAccountName) {
             $.billingAccountName = billingAccountName;
             return this;
         }
 
+        /**
+         * @param billingRoleAssignmentName The ID that uniquely identifies a role assignment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder billingRoleAssignmentName(String billingRoleAssignmentName) {
             $.billingRoleAssignmentName = billingRoleAssignmentName;
             return this;
         }
 
+        /**
+         * @param departmentName The ID that uniquely identifies a department.
+         * 
+         * @return builder
+         * 
+         */
         public Builder departmentName(String departmentName) {
             $.departmentName = departmentName;
             return this;

@@ -23,6 +23,10 @@ public final class RedisAccessKeysResponse extends com.pulumi.resources.InvokeAr
     @Import(name="primaryKey", required=true)
     private String primaryKey;
 
+    /**
+     * @return The current primary key that clients can use to authenticate with Redis cache.
+     * 
+     */
     public String primaryKey() {
         return this.primaryKey;
     }
@@ -34,6 +38,10 @@ public final class RedisAccessKeysResponse extends com.pulumi.resources.InvokeAr
     @Import(name="secondaryKey", required=true)
     private String secondaryKey;
 
+    /**
+     * @return The current secondary key that clients can use to authenticate with Redis cache.
+     * 
+     */
     public String secondaryKey() {
         return this.secondaryKey;
     }
@@ -63,11 +71,23 @@ public final class RedisAccessKeysResponse extends com.pulumi.resources.InvokeAr
             $ = new RedisAccessKeysResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param primaryKey The current primary key that clients can use to authenticate with Redis cache.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryKey(String primaryKey) {
             $.primaryKey = primaryKey;
             return this;
         }
 
+        /**
+         * @param secondaryKey The current secondary key that clients can use to authenticate with Redis cache.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondaryKey(String secondaryKey) {
             $.secondaryKey = secondaryKey;
             return this;

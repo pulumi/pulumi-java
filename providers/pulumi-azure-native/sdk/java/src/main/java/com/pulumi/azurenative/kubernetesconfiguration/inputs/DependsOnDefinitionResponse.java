@@ -25,6 +25,10 @@ public final class DependsOnDefinitionResponse extends com.pulumi.resources.Invo
     @Import(name="kustomizationName")
     private @Nullable String kustomizationName;
 
+    /**
+     * @return Name of the kustomization to claim dependency on
+     * 
+     */
     public Optional<String> kustomizationName() {
         return Optional.ofNullable(this.kustomizationName);
     }
@@ -53,6 +57,12 @@ public final class DependsOnDefinitionResponse extends com.pulumi.resources.Invo
             $ = new DependsOnDefinitionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kustomizationName Name of the kustomization to claim dependency on
+         * 
+         * @return builder
+         * 
+         */
         public Builder kustomizationName(@Nullable String kustomizationName) {
             $.kustomizationName = kustomizationName;
             return this;

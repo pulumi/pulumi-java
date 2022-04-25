@@ -24,6 +24,11 @@ public final class ServiceTemplateSpecVolumeSecretItemArgs extends com.pulumi.re
     @Import(name="key", required=true)
     private Output<String> key;
 
+    /**
+     * @return The Cloud Secret Manager secret version.
+     * Can be &#39;latest&#39; for the latest value or an integer for a specific version.
+     * 
+     */
     public Output<String> key() {
         return this.key;
     }
@@ -38,6 +43,13 @@ public final class ServiceTemplateSpecVolumeSecretItemArgs extends com.pulumi.re
     @Import(name="mode")
     private @Nullable Output<Integer> mode;
 
+    /**
+     * @return Mode bits to use on this file, must be a value between 0000 and 0777. If
+     * not specified, the volume defaultMode will be used. This might be in
+     * conflict with other options that affect the file mode, like fsGroup, and
+     * the result can be other mode bits set.
+     * 
+     */
     public Optional<Output<Integer>> mode() {
         return Optional.ofNullable(this.mode);
     }
@@ -52,6 +64,13 @@ public final class ServiceTemplateSpecVolumeSecretItemArgs extends com.pulumi.re
     @Import(name="path", required=true)
     private Output<String> path;
 
+    /**
+     * @return The relative path of the file to map the key to.
+     * May not be an absolute path.
+     * May not contain the path element &#39;..&#39;.
+     * May not start with the string &#39;..&#39;.
+     * 
+     */
     public Output<String> path() {
         return this.path;
     }
@@ -82,29 +101,79 @@ public final class ServiceTemplateSpecVolumeSecretItemArgs extends com.pulumi.re
             $ = new ServiceTemplateSpecVolumeSecretItemArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param key The Cloud Secret Manager secret version.
+         * Can be &#39;latest&#39; for the latest value or an integer for a specific version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(Output<String> key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param key The Cloud Secret Manager secret version.
+         * Can be &#39;latest&#39; for the latest value or an integer for a specific version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             return key(Output.of(key));
         }
 
+        /**
+         * @param mode Mode bits to use on this file, must be a value between 0000 and 0777. If
+         * not specified, the volume defaultMode will be used. This might be in
+         * conflict with other options that affect the file mode, like fsGroup, and
+         * the result can be other mode bits set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(@Nullable Output<Integer> mode) {
             $.mode = mode;
             return this;
         }
 
+        /**
+         * @param mode Mode bits to use on this file, must be a value between 0000 and 0777. If
+         * not specified, the volume defaultMode will be used. This might be in
+         * conflict with other options that affect the file mode, like fsGroup, and
+         * the result can be other mode bits set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(Integer mode) {
             return mode(Output.of(mode));
         }
 
+        /**
+         * @param path The relative path of the file to map the key to.
+         * May not be an absolute path.
+         * May not contain the path element &#39;..&#39;.
+         * May not start with the string &#39;..&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(Output<String> path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param path The relative path of the file to map the key to.
+         * May not be an absolute path.
+         * May not contain the path element &#39;..&#39;.
+         * May not start with the string &#39;..&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             return path(Output.of(path));
         }

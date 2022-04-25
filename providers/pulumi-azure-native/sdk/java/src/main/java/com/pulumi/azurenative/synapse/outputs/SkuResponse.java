@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SkuResponse {
     /**
-     * If the SKU supports scale out/in then the capacity integer should be included. If scale out/in is not possible for the resource this may be omitted.
+     * @return If the SKU supports scale out/in then the capacity integer should be included. If scale out/in is not possible for the resource this may be omitted.
      * 
      */
     private final @Nullable Integer capacity;
     /**
-     * The SKU name
+     * @return The SKU name
      * 
      */
     private final @Nullable String name;
     /**
-     * The service tier
+     * @return The service tier
      * 
      */
     private final @Nullable String tier;
@@ -39,23 +39,23 @@ public final class SkuResponse {
     }
 
     /**
-     * If the SKU supports scale out/in then the capacity integer should be included. If scale out/in is not possible for the resource this may be omitted.
+     * @return If the SKU supports scale out/in then the capacity integer should be included. If scale out/in is not possible for the resource this may be omitted.
      * 
-    */
+     */
     public Optional<Integer> capacity() {
         return Optional.ofNullable(this.capacity);
     }
     /**
-     * The SKU name
+     * @return The SKU name
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The service tier
+     * @return The service tier
      * 
-    */
+     */
     public Optional<String> tier() {
         return Optional.ofNullable(this.tier);
     }

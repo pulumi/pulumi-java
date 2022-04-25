@@ -25,6 +25,10 @@ public final class LinkedVpnTunnelsResponse extends com.pulumi.resources.InvokeA
     @Import(name="siteToSiteDataTransfer", required=true)
     private Boolean siteToSiteDataTransfer;
 
+    /**
+     * @return A value that controls whether site-to-site data transfer is enabled for these resources. Data transfer is available only in [supported locations](https://cloud.google.com/network-connectivity/docs/network-connectivity-center/concepts/locations).
+     * 
+     */
     public Boolean siteToSiteDataTransfer() {
         return this.siteToSiteDataTransfer;
     }
@@ -36,6 +40,10 @@ public final class LinkedVpnTunnelsResponse extends com.pulumi.resources.InvokeA
     @Import(name="uris", required=true)
     private List<String> uris;
 
+    /**
+     * @return The URIs of linked VPN tunnel resources.
+     * 
+     */
     public List<String> uris() {
         return this.uris;
     }
@@ -65,16 +73,34 @@ public final class LinkedVpnTunnelsResponse extends com.pulumi.resources.InvokeA
             $ = new LinkedVpnTunnelsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param siteToSiteDataTransfer A value that controls whether site-to-site data transfer is enabled for these resources. Data transfer is available only in [supported locations](https://cloud.google.com/network-connectivity/docs/network-connectivity-center/concepts/locations).
+         * 
+         * @return builder
+         * 
+         */
         public Builder siteToSiteDataTransfer(Boolean siteToSiteDataTransfer) {
             $.siteToSiteDataTransfer = siteToSiteDataTransfer;
             return this;
         }
 
+        /**
+         * @param uris The URIs of linked VPN tunnel resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uris(List<String> uris) {
             $.uris = uris;
             return this;
         }
 
+        /**
+         * @param uris The URIs of linked VPN tunnel resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uris(String... uris) {
             return uris(List.of(uris));
         }

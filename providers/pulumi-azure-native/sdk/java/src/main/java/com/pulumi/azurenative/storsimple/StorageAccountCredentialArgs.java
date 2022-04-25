@@ -25,6 +25,10 @@ public final class StorageAccountCredentialArgs extends com.pulumi.resources.Res
     @Import(name="accessKey")
     private @Nullable Output<AsymmetricEncryptedSecretArgs> accessKey;
 
+    /**
+     * @return The details of the storage account password.
+     * 
+     */
     public Optional<Output<AsymmetricEncryptedSecretArgs>> accessKey() {
         return Optional.ofNullable(this.accessKey);
     }
@@ -36,6 +40,10 @@ public final class StorageAccountCredentialArgs extends com.pulumi.resources.Res
     @Import(name="endPoint", required=true)
     private Output<String> endPoint;
 
+    /**
+     * @return The storage endpoint
+     * 
+     */
     public Output<String> endPoint() {
         return this.endPoint;
     }
@@ -47,6 +55,10 @@ public final class StorageAccountCredentialArgs extends com.pulumi.resources.Res
     @Import(name="kind")
     private @Nullable Output<Kind> kind;
 
+    /**
+     * @return The Kind of the object. Currently only Series8000 is supported
+     * 
+     */
     public Optional<Output<Kind>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -58,6 +70,10 @@ public final class StorageAccountCredentialArgs extends com.pulumi.resources.Res
     @Import(name="managerName", required=true)
     private Output<String> managerName;
 
+    /**
+     * @return The manager name
+     * 
+     */
     public Output<String> managerName() {
         return this.managerName;
     }
@@ -69,6 +85,10 @@ public final class StorageAccountCredentialArgs extends com.pulumi.resources.Res
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The resource group name
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -80,6 +100,10 @@ public final class StorageAccountCredentialArgs extends com.pulumi.resources.Res
     @Import(name="sslStatus", required=true)
     private Output<SslStatus> sslStatus;
 
+    /**
+     * @return Signifies whether SSL needs to be enabled or not.
+     * 
+     */
     public Output<SslStatus> sslStatus() {
         return this.sslStatus;
     }
@@ -91,6 +115,10 @@ public final class StorageAccountCredentialArgs extends com.pulumi.resources.Res
     @Import(name="storageAccountCredentialName")
     private @Nullable Output<String> storageAccountCredentialName;
 
+    /**
+     * @return The storage account credential name.
+     * 
+     */
     public Optional<Output<String>> storageAccountCredentialName() {
         return Optional.ofNullable(this.storageAccountCredentialName);
     }
@@ -125,65 +153,149 @@ public final class StorageAccountCredentialArgs extends com.pulumi.resources.Res
             $ = new StorageAccountCredentialArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessKey The details of the storage account password.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessKey(@Nullable Output<AsymmetricEncryptedSecretArgs> accessKey) {
             $.accessKey = accessKey;
             return this;
         }
 
+        /**
+         * @param accessKey The details of the storage account password.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessKey(AsymmetricEncryptedSecretArgs accessKey) {
             return accessKey(Output.of(accessKey));
         }
 
+        /**
+         * @param endPoint The storage endpoint
+         * 
+         * @return builder
+         * 
+         */
         public Builder endPoint(Output<String> endPoint) {
             $.endPoint = endPoint;
             return this;
         }
 
+        /**
+         * @param endPoint The storage endpoint
+         * 
+         * @return builder
+         * 
+         */
         public Builder endPoint(String endPoint) {
             return endPoint(Output.of(endPoint));
         }
 
+        /**
+         * @param kind The Kind of the object. Currently only Series8000 is supported
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<Kind> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind The Kind of the object. Currently only Series8000 is supported
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Kind kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param managerName The manager name
+         * 
+         * @return builder
+         * 
+         */
         public Builder managerName(Output<String> managerName) {
             $.managerName = managerName;
             return this;
         }
 
+        /**
+         * @param managerName The manager name
+         * 
+         * @return builder
+         * 
+         */
         public Builder managerName(String managerName) {
             return managerName(Output.of(managerName));
         }
 
+        /**
+         * @param resourceGroupName The resource group name
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param sslStatus Signifies whether SSL needs to be enabled or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sslStatus(Output<SslStatus> sslStatus) {
             $.sslStatus = sslStatus;
             return this;
         }
 
+        /**
+         * @param sslStatus Signifies whether SSL needs to be enabled or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sslStatus(SslStatus sslStatus) {
             return sslStatus(Output.of(sslStatus));
         }
 
+        /**
+         * @param storageAccountCredentialName The storage account credential name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountCredentialName(@Nullable Output<String> storageAccountCredentialName) {
             $.storageAccountCredentialName = storageAccountCredentialName;
             return this;
         }
 
+        /**
+         * @param storageAccountCredentialName The storage account credential name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountCredentialName(String storageAccountCredentialName) {
             return storageAccountCredentialName(Output.of(storageAccountCredentialName));
         }

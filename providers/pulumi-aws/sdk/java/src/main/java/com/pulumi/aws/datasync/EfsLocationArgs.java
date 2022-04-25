@@ -24,6 +24,10 @@ public final class EfsLocationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ec2Config", required=true)
     private Output<EfsLocationEc2ConfigArgs> ec2Config;
 
+    /**
+     * @return Configuration block containing EC2 configurations for connecting to the EFS File System.
+     * 
+     */
     public Output<EfsLocationEc2ConfigArgs> ec2Config() {
         return this.ec2Config;
     }
@@ -35,6 +39,10 @@ public final class EfsLocationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="efsFileSystemArn", required=true)
     private Output<String> efsFileSystemArn;
 
+    /**
+     * @return Amazon Resource Name (ARN) of EFS File System.
+     * 
+     */
     public Output<String> efsFileSystemArn() {
         return this.efsFileSystemArn;
     }
@@ -46,6 +54,10 @@ public final class EfsLocationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="subdirectory")
     private @Nullable Output<String> subdirectory;
 
+    /**
+     * @return Subdirectory to perform actions as source or destination. Default `/`.
+     * 
+     */
     public Optional<Output<String>> subdirectory() {
         return Optional.ofNullable(this.subdirectory);
     }
@@ -57,6 +69,10 @@ public final class EfsLocationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Key-value pairs of resource tags to assign to the DataSync Location. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -88,38 +104,86 @@ public final class EfsLocationArgs extends com.pulumi.resources.ResourceArgs {
             $ = new EfsLocationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ec2Config Configuration block containing EC2 configurations for connecting to the EFS File System.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ec2Config(Output<EfsLocationEc2ConfigArgs> ec2Config) {
             $.ec2Config = ec2Config;
             return this;
         }
 
+        /**
+         * @param ec2Config Configuration block containing EC2 configurations for connecting to the EFS File System.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ec2Config(EfsLocationEc2ConfigArgs ec2Config) {
             return ec2Config(Output.of(ec2Config));
         }
 
+        /**
+         * @param efsFileSystemArn Amazon Resource Name (ARN) of EFS File System.
+         * 
+         * @return builder
+         * 
+         */
         public Builder efsFileSystemArn(Output<String> efsFileSystemArn) {
             $.efsFileSystemArn = efsFileSystemArn;
             return this;
         }
 
+        /**
+         * @param efsFileSystemArn Amazon Resource Name (ARN) of EFS File System.
+         * 
+         * @return builder
+         * 
+         */
         public Builder efsFileSystemArn(String efsFileSystemArn) {
             return efsFileSystemArn(Output.of(efsFileSystemArn));
         }
 
+        /**
+         * @param subdirectory Subdirectory to perform actions as source or destination. Default `/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subdirectory(@Nullable Output<String> subdirectory) {
             $.subdirectory = subdirectory;
             return this;
         }
 
+        /**
+         * @param subdirectory Subdirectory to perform actions as source or destination. Default `/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subdirectory(String subdirectory) {
             return subdirectory(Output.of(subdirectory));
         }
 
+        /**
+         * @param tags Key-value pairs of resource tags to assign to the DataSync Location. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Key-value pairs of resource tags to assign to the DataSync Location. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

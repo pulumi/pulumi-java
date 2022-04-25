@@ -28,6 +28,10 @@ public final class LoadBalancerConfigurationResponse extends com.pulumi.resource
     @Import(name="loadBalancerResourceId")
     private @Nullable String loadBalancerResourceId;
 
+    /**
+     * @return Resource id of the load balancer.
+     * 
+     */
     public Optional<String> loadBalancerResourceId() {
         return Optional.ofNullable(this.loadBalancerResourceId);
     }
@@ -39,6 +43,10 @@ public final class LoadBalancerConfigurationResponse extends com.pulumi.resource
     @Import(name="privateIpAddress")
     private @Nullable PrivateIPAddressResponse privateIpAddress;
 
+    /**
+     * @return Private IP address.
+     * 
+     */
     public Optional<PrivateIPAddressResponse> privateIpAddress() {
         return Optional.ofNullable(this.privateIpAddress);
     }
@@ -50,6 +58,10 @@ public final class LoadBalancerConfigurationResponse extends com.pulumi.resource
     @Import(name="probePort")
     private @Nullable Integer probePort;
 
+    /**
+     * @return Probe port.
+     * 
+     */
     public Optional<Integer> probePort() {
         return Optional.ofNullable(this.probePort);
     }
@@ -61,6 +73,10 @@ public final class LoadBalancerConfigurationResponse extends com.pulumi.resource
     @Import(name="publicIpAddressResourceId")
     private @Nullable String publicIpAddressResourceId;
 
+    /**
+     * @return Resource id of the public IP.
+     * 
+     */
     public Optional<String> publicIpAddressResourceId() {
         return Optional.ofNullable(this.publicIpAddressResourceId);
     }
@@ -72,6 +88,10 @@ public final class LoadBalancerConfigurationResponse extends com.pulumi.resource
     @Import(name="sqlVirtualMachineInstances")
     private @Nullable List<String> sqlVirtualMachineInstances;
 
+    /**
+     * @return List of the SQL virtual machine instance resource id&#39;s that are enrolled into the availability group listener.
+     * 
+     */
     public Optional<List<String>> sqlVirtualMachineInstances() {
         return Optional.ofNullable(this.sqlVirtualMachineInstances);
     }
@@ -104,31 +124,67 @@ public final class LoadBalancerConfigurationResponse extends com.pulumi.resource
             $ = new LoadBalancerConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param loadBalancerResourceId Resource id of the load balancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancerResourceId(@Nullable String loadBalancerResourceId) {
             $.loadBalancerResourceId = loadBalancerResourceId;
             return this;
         }
 
+        /**
+         * @param privateIpAddress Private IP address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIpAddress(@Nullable PrivateIPAddressResponse privateIpAddress) {
             $.privateIpAddress = privateIpAddress;
             return this;
         }
 
+        /**
+         * @param probePort Probe port.
+         * 
+         * @return builder
+         * 
+         */
         public Builder probePort(@Nullable Integer probePort) {
             $.probePort = probePort;
             return this;
         }
 
+        /**
+         * @param publicIpAddressResourceId Resource id of the public IP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIpAddressResourceId(@Nullable String publicIpAddressResourceId) {
             $.publicIpAddressResourceId = publicIpAddressResourceId;
             return this;
         }
 
+        /**
+         * @param sqlVirtualMachineInstances List of the SQL virtual machine instance resource id&#39;s that are enrolled into the availability group listener.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlVirtualMachineInstances(@Nullable List<String> sqlVirtualMachineInstances) {
             $.sqlVirtualMachineInstances = sqlVirtualMachineInstances;
             return this;
         }
 
+        /**
+         * @param sqlVirtualMachineInstances List of the SQL virtual machine instance resource id&#39;s that are enrolled into the availability group listener.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlVirtualMachineInstances(String... sqlVirtualMachineInstances) {
             return sqlVirtualMachineInstances(List.of(sqlVirtualMachineInstances));
         }

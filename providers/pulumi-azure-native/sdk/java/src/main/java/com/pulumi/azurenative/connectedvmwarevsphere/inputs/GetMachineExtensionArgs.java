@@ -19,6 +19,10 @@ public final class GetMachineExtensionArgs extends com.pulumi.resources.InvokeAr
     @Import(name="extensionName", required=true)
     private String extensionName;
 
+    /**
+     * @return The name of the machine extension.
+     * 
+     */
     public String extensionName() {
         return this.extensionName;
     }
@@ -30,6 +34,10 @@ public final class GetMachineExtensionArgs extends com.pulumi.resources.InvokeAr
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the machine containing the extension.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -41,6 +49,10 @@ public final class GetMachineExtensionArgs extends com.pulumi.resources.InvokeAr
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The Resource Group Name.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetMachineExtensionArgs extends com.pulumi.resources.InvokeAr
             $ = new GetMachineExtensionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param extensionName The name of the machine extension.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extensionName(String extensionName) {
             $.extensionName = extensionName;
             return this;
         }
 
+        /**
+         * @param name The name of the machine containing the extension.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The Resource Group Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

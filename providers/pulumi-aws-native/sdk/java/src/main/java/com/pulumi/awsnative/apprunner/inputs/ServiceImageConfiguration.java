@@ -27,6 +27,10 @@ public final class ServiceImageConfiguration extends com.pulumi.resources.Invoke
     @Import(name="port")
     private @Nullable String port;
 
+    /**
+     * @return Port
+     * 
+     */
     public Optional<String> port() {
         return Optional.ofNullable(this.port);
     }
@@ -45,6 +49,10 @@ public final class ServiceImageConfiguration extends com.pulumi.resources.Invoke
     @Import(name="startCommand")
     private @Nullable String startCommand;
 
+    /**
+     * @return Start Command
+     * 
+     */
     public Optional<String> startCommand() {
         return Optional.ofNullable(this.startCommand);
     }
@@ -75,6 +83,12 @@ public final class ServiceImageConfiguration extends com.pulumi.resources.Invoke
             $ = new ServiceImageConfiguration(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param port Port
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(@Nullable String port) {
             $.port = port;
             return this;
@@ -89,6 +103,12 @@ public final class ServiceImageConfiguration extends com.pulumi.resources.Invoke
             return runtimeEnvironmentVariables(List.of(runtimeEnvironmentVariables));
         }
 
+        /**
+         * @param startCommand Start Command
+         * 
+         * @return builder
+         * 
+         */
         public Builder startCommand(@Nullable String startCommand) {
             $.startCommand = startCommand;
             return this;

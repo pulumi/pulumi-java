@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class LogConfigCounterOptionsCustomFieldResponse {
     /**
-     * This is deprecated and has no effect. Do not use.
+     * @return This is deprecated and has no effect. Do not use.
      * 
      */
     private final String name;
     /**
-     * This is deprecated and has no effect. Do not use.
+     * @return This is deprecated and has no effect. Do not use.
      * 
      */
     private final String value;
@@ -29,16 +29,16 @@ public final class LogConfigCounterOptionsCustomFieldResponse {
     }
 
     /**
-     * This is deprecated and has no effect. Do not use.
+     * @return This is deprecated and has no effect. Do not use.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * This is deprecated and has no effect. Do not use.
+     * @return This is deprecated and has no effect. Do not use.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

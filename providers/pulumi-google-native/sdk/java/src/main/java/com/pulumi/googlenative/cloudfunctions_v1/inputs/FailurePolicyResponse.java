@@ -23,6 +23,10 @@ public final class FailurePolicyResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="retry", required=true)
     private RetryResponse retry;
 
+    /**
+     * @return If specified, then the function will be retried in case of a failure.
+     * 
+     */
     public RetryResponse retry() {
         return this.retry;
     }
@@ -51,6 +55,12 @@ public final class FailurePolicyResponse extends com.pulumi.resources.InvokeArgs
             $ = new FailurePolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param retry If specified, then the function will be retried in case of a failure.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retry(RetryResponse retry) {
             $.retry = retry;
             return this;

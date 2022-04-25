@@ -26,6 +26,10 @@ public final class AuthorizationResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="authorizationType", required=true)
     private String authorizationType;
 
+    /**
+     * @return Type of authorization.
+     * 
+     */
     public String authorizationType() {
         return this.authorizationType;
     }
@@ -37,6 +41,10 @@ public final class AuthorizationResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="parameters")
     private @Nullable Map<String,String> parameters;
 
+    /**
+     * @return Authorization parameters corresponding to the authorization type.
+     * 
+     */
     public Optional<Map<String,String>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -66,11 +74,23 @@ public final class AuthorizationResponse extends com.pulumi.resources.InvokeArgs
             $ = new AuthorizationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authorizationType Type of authorization.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationType(String authorizationType) {
             $.authorizationType = authorizationType;
             return this;
         }
 
+        /**
+         * @param parameters Authorization parameters corresponding to the authorization type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Map<String,String> parameters) {
             $.parameters = parameters;
             return this;

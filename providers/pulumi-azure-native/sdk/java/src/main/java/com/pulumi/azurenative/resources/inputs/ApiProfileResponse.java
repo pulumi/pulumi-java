@@ -19,6 +19,10 @@ public final class ApiProfileResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="apiVersion", required=true)
     private String apiVersion;
 
+    /**
+     * @return The API version.
+     * 
+     */
     public String apiVersion() {
         return this.apiVersion;
     }
@@ -30,6 +34,10 @@ public final class ApiProfileResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="profileVersion", required=true)
     private String profileVersion;
 
+    /**
+     * @return The profile version.
+     * 
+     */
     public String profileVersion() {
         return this.profileVersion;
     }
@@ -59,11 +67,23 @@ public final class ApiProfileResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ApiProfileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiVersion The API version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiVersion(String apiVersion) {
             $.apiVersion = apiVersion;
             return this;
         }
 
+        /**
+         * @param profileVersion The profile version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder profileVersion(String profileVersion) {
             $.profileVersion = profileVersion;
             return this;

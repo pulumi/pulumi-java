@@ -31,6 +31,10 @@ public final class ContentKeyPolicyFairPlayConfigurationArgs extends com.pulumi.
     @Import(name="ask", required=true)
     private Output<String> ask;
 
+    /**
+     * @return The key that must be used as FairPlay Application Secret key.
+     * 
+     */
     public Output<String> ask() {
         return this.ask;
     }
@@ -42,6 +46,10 @@ public final class ContentKeyPolicyFairPlayConfigurationArgs extends com.pulumi.
     @Import(name="fairPlayPfx", required=true)
     private Output<String> fairPlayPfx;
 
+    /**
+     * @return The Base64 representation of FairPlay certificate in PKCS 12 (pfx) format (including private key).
+     * 
+     */
     public Output<String> fairPlayPfx() {
         return this.fairPlayPfx;
     }
@@ -53,6 +61,10 @@ public final class ContentKeyPolicyFairPlayConfigurationArgs extends com.pulumi.
     @Import(name="fairPlayPfxPassword", required=true)
     private Output<String> fairPlayPfxPassword;
 
+    /**
+     * @return The password encrypting FairPlay certificate in PKCS 12 (pfx) format.
+     * 
+     */
     public Output<String> fairPlayPfxPassword() {
         return this.fairPlayPfxPassword;
     }
@@ -65,6 +77,11 @@ public final class ContentKeyPolicyFairPlayConfigurationArgs extends com.pulumi.
     @Import(name="odataType", required=true)
     private Output<String> odataType;
 
+    /**
+     * @return The discriminator for derived types.
+     * Expected value is &#39;#Microsoft.Media.ContentKeyPolicyFairPlayConfiguration&#39;.
+     * 
+     */
     public Output<String> odataType() {
         return this.odataType;
     }
@@ -76,6 +93,10 @@ public final class ContentKeyPolicyFairPlayConfigurationArgs extends com.pulumi.
     @Import(name="offlineRentalConfiguration")
     private @Nullable Output<ContentKeyPolicyFairPlayOfflineRentalConfigurationArgs> offlineRentalConfiguration;
 
+    /**
+     * @return Offline rental policy
+     * 
+     */
     public Optional<Output<ContentKeyPolicyFairPlayOfflineRentalConfigurationArgs>> offlineRentalConfiguration() {
         return Optional.ofNullable(this.offlineRentalConfiguration);
     }
@@ -87,6 +108,10 @@ public final class ContentKeyPolicyFairPlayConfigurationArgs extends com.pulumi.
     @Import(name="rentalAndLeaseKeyType", required=true)
     private Output<Either<String,ContentKeyPolicyFairPlayRentalAndLeaseKeyType>> rentalAndLeaseKeyType;
 
+    /**
+     * @return The rental and lease key type.
+     * 
+     */
     public Output<Either<String,ContentKeyPolicyFairPlayRentalAndLeaseKeyType>> rentalAndLeaseKeyType() {
         return this.rentalAndLeaseKeyType;
     }
@@ -98,6 +123,10 @@ public final class ContentKeyPolicyFairPlayConfigurationArgs extends com.pulumi.
     @Import(name="rentalDuration", required=true)
     private Output<Double> rentalDuration;
 
+    /**
+     * @return The rental duration. Must be greater than or equal to 0.
+     * 
+     */
     public Output<Double> rentalDuration() {
         return this.rentalDuration;
     }
@@ -132,73 +161,171 @@ public final class ContentKeyPolicyFairPlayConfigurationArgs extends com.pulumi.
             $ = new ContentKeyPolicyFairPlayConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ask The key that must be used as FairPlay Application Secret key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ask(Output<String> ask) {
             $.ask = ask;
             return this;
         }
 
+        /**
+         * @param ask The key that must be used as FairPlay Application Secret key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ask(String ask) {
             return ask(Output.of(ask));
         }
 
+        /**
+         * @param fairPlayPfx The Base64 representation of FairPlay certificate in PKCS 12 (pfx) format (including private key).
+         * 
+         * @return builder
+         * 
+         */
         public Builder fairPlayPfx(Output<String> fairPlayPfx) {
             $.fairPlayPfx = fairPlayPfx;
             return this;
         }
 
+        /**
+         * @param fairPlayPfx The Base64 representation of FairPlay certificate in PKCS 12 (pfx) format (including private key).
+         * 
+         * @return builder
+         * 
+         */
         public Builder fairPlayPfx(String fairPlayPfx) {
             return fairPlayPfx(Output.of(fairPlayPfx));
         }
 
+        /**
+         * @param fairPlayPfxPassword The password encrypting FairPlay certificate in PKCS 12 (pfx) format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fairPlayPfxPassword(Output<String> fairPlayPfxPassword) {
             $.fairPlayPfxPassword = fairPlayPfxPassword;
             return this;
         }
 
+        /**
+         * @param fairPlayPfxPassword The password encrypting FairPlay certificate in PKCS 12 (pfx) format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fairPlayPfxPassword(String fairPlayPfxPassword) {
             return fairPlayPfxPassword(Output.of(fairPlayPfxPassword));
         }
 
+        /**
+         * @param odataType The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.ContentKeyPolicyFairPlayConfiguration&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(Output<String> odataType) {
             $.odataType = odataType;
             return this;
         }
 
+        /**
+         * @param odataType The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.ContentKeyPolicyFairPlayConfiguration&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(String odataType) {
             return odataType(Output.of(odataType));
         }
 
+        /**
+         * @param offlineRentalConfiguration Offline rental policy
+         * 
+         * @return builder
+         * 
+         */
         public Builder offlineRentalConfiguration(@Nullable Output<ContentKeyPolicyFairPlayOfflineRentalConfigurationArgs> offlineRentalConfiguration) {
             $.offlineRentalConfiguration = offlineRentalConfiguration;
             return this;
         }
 
+        /**
+         * @param offlineRentalConfiguration Offline rental policy
+         * 
+         * @return builder
+         * 
+         */
         public Builder offlineRentalConfiguration(ContentKeyPolicyFairPlayOfflineRentalConfigurationArgs offlineRentalConfiguration) {
             return offlineRentalConfiguration(Output.of(offlineRentalConfiguration));
         }
 
+        /**
+         * @param rentalAndLeaseKeyType The rental and lease key type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rentalAndLeaseKeyType(Output<Either<String,ContentKeyPolicyFairPlayRentalAndLeaseKeyType>> rentalAndLeaseKeyType) {
             $.rentalAndLeaseKeyType = rentalAndLeaseKeyType;
             return this;
         }
 
+        /**
+         * @param rentalAndLeaseKeyType The rental and lease key type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rentalAndLeaseKeyType(Either<String,ContentKeyPolicyFairPlayRentalAndLeaseKeyType> rentalAndLeaseKeyType) {
             return rentalAndLeaseKeyType(Output.of(rentalAndLeaseKeyType));
         }
 
+        /**
+         * @param rentalAndLeaseKeyType The rental and lease key type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rentalAndLeaseKeyType(String rentalAndLeaseKeyType) {
             return rentalAndLeaseKeyType(Either.ofLeft(rentalAndLeaseKeyType));
         }
 
+        /**
+         * @param rentalAndLeaseKeyType The rental and lease key type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rentalAndLeaseKeyType(ContentKeyPolicyFairPlayRentalAndLeaseKeyType rentalAndLeaseKeyType) {
             return rentalAndLeaseKeyType(Either.ofRight(rentalAndLeaseKeyType));
         }
 
+        /**
+         * @param rentalDuration The rental duration. Must be greater than or equal to 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rentalDuration(Output<Double> rentalDuration) {
             $.rentalDuration = rentalDuration;
             return this;
         }
 
+        /**
+         * @param rentalDuration The rental duration. Must be greater than or equal to 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rentalDuration(Double rentalDuration) {
             return rentalDuration(Output.of(rentalDuration));
         }

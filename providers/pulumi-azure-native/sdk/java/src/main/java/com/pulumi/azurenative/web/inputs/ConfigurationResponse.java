@@ -30,6 +30,11 @@ public final class ConfigurationResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="activeRevisionsMode")
     private @Nullable String activeRevisionsMode;
 
+    /**
+     * @return ActiveRevisionsMode controls how active revisions are handled for the Container app:
+     * &lt;list&gt;&lt;item&gt;Multiple: multiple revisions can be active. If no value if provided, this is the default&lt;/item&gt;&lt;item&gt;Single: Only one revision can be active at a time. Revision weights can not be used in this mode&lt;/item&gt;&lt;/list&gt;
+     * 
+     */
     public Optional<String> activeRevisionsMode() {
         return Optional.ofNullable(this.activeRevisionsMode);
     }
@@ -41,6 +46,10 @@ public final class ConfigurationResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="ingress")
     private @Nullable IngressResponse ingress;
 
+    /**
+     * @return Ingress configurations.
+     * 
+     */
     public Optional<IngressResponse> ingress() {
         return Optional.ofNullable(this.ingress);
     }
@@ -52,6 +61,10 @@ public final class ConfigurationResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="registries")
     private @Nullable List<RegistryCredentialsResponse> registries;
 
+    /**
+     * @return Collection of private container registry credentials for containers used by the Container app
+     * 
+     */
     public Optional<List<RegistryCredentialsResponse>> registries() {
         return Optional.ofNullable(this.registries);
     }
@@ -63,6 +76,10 @@ public final class ConfigurationResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="secrets")
     private @Nullable List<SecretResponse> secrets;
 
+    /**
+     * @return Collection of secrets used by a Container app
+     * 
+     */
     public Optional<List<SecretResponse>> secrets() {
         return Optional.ofNullable(this.secrets);
     }
@@ -94,30 +111,67 @@ public final class ConfigurationResponse extends com.pulumi.resources.InvokeArgs
             $ = new ConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param activeRevisionsMode ActiveRevisionsMode controls how active revisions are handled for the Container app:
+         * &lt;list&gt;&lt;item&gt;Multiple: multiple revisions can be active. If no value if provided, this is the default&lt;/item&gt;&lt;item&gt;Single: Only one revision can be active at a time. Revision weights can not be used in this mode&lt;/item&gt;&lt;/list&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder activeRevisionsMode(@Nullable String activeRevisionsMode) {
             $.activeRevisionsMode = activeRevisionsMode;
             return this;
         }
 
+        /**
+         * @param ingress Ingress configurations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ingress(@Nullable IngressResponse ingress) {
             $.ingress = ingress;
             return this;
         }
 
+        /**
+         * @param registries Collection of private container registry credentials for containers used by the Container app
+         * 
+         * @return builder
+         * 
+         */
         public Builder registries(@Nullable List<RegistryCredentialsResponse> registries) {
             $.registries = registries;
             return this;
         }
 
+        /**
+         * @param registries Collection of private container registry credentials for containers used by the Container app
+         * 
+         * @return builder
+         * 
+         */
         public Builder registries(RegistryCredentialsResponse... registries) {
             return registries(List.of(registries));
         }
 
+        /**
+         * @param secrets Collection of secrets used by a Container app
+         * 
+         * @return builder
+         * 
+         */
         public Builder secrets(@Nullable List<SecretResponse> secrets) {
             $.secrets = secrets;
             return this;
         }
 
+        /**
+         * @param secrets Collection of secrets used by a Container app
+         * 
+         * @return builder
+         * 
+         */
         public Builder secrets(SecretResponse... secrets) {
             return secrets(List.of(secrets));
         }

@@ -31,6 +31,10 @@ public final class RegistrationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="contactNotices")
     private @Nullable Output<List<RegistrationContactNoticesItem>> contactNotices;
 
+    /**
+     * @return The list of contact notices that the caller acknowledges. The notices needed here depend on the values specified in `registration.contact_settings`.
+     * 
+     */
     public Optional<Output<List<RegistrationContactNoticesItem>>> contactNotices() {
         return Optional.ofNullable(this.contactNotices);
     }
@@ -42,6 +46,10 @@ public final class RegistrationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="contactSettings", required=true)
     private Output<ContactSettingsArgs> contactSettings;
 
+    /**
+     * @return Settings for contact information linked to the `Registration`. You cannot update these with the `UpdateRegistration` method. To update these settings, use the `ConfigureContactSettings` method.
+     * 
+     */
     public Output<ContactSettingsArgs> contactSettings() {
         return this.contactSettings;
     }
@@ -53,6 +61,10 @@ public final class RegistrationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dnsSettings")
     private @Nullable Output<DnsSettingsArgs> dnsSettings;
 
+    /**
+     * @return Settings controlling the DNS configuration of the `Registration`. You cannot update these with the `UpdateRegistration` method. To update these settings, use the `ConfigureDnsSettings` method.
+     * 
+     */
     public Optional<Output<DnsSettingsArgs>> dnsSettings() {
         return Optional.ofNullable(this.dnsSettings);
     }
@@ -64,6 +76,10 @@ public final class RegistrationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="domainName", required=true)
     private Output<String> domainName;
 
+    /**
+     * @return Immutable. The domain name. Unicode domain names must be expressed in Punycode format.
+     * 
+     */
     public Output<String> domainName() {
         return this.domainName;
     }
@@ -75,6 +91,10 @@ public final class RegistrationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="domainNotices")
     private @Nullable Output<List<RegistrationDomainNoticesItem>> domainNotices;
 
+    /**
+     * @return The list of domain notices that you acknowledge. Call `RetrieveRegisterParameters` to see the notices that need acknowledgement.
+     * 
+     */
     public Optional<Output<List<RegistrationDomainNoticesItem>>> domainNotices() {
         return Optional.ofNullable(this.domainNotices);
     }
@@ -86,6 +106,10 @@ public final class RegistrationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return Set of labels associated with the `Registration`.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -104,6 +128,10 @@ public final class RegistrationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="managementSettings")
     private @Nullable Output<ManagementSettingsArgs> managementSettings;
 
+    /**
+     * @return Settings for management of the `Registration`, including renewal, billing, and transfer. You cannot update these with the `UpdateRegistration` method. To update these settings, use the `ConfigureManagementSettings` method.
+     * 
+     */
     public Optional<Output<ManagementSettingsArgs>> managementSettings() {
         return Optional.ofNullable(this.managementSettings);
     }
@@ -122,6 +150,10 @@ public final class RegistrationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="validateOnly")
     private @Nullable Output<Boolean> validateOnly;
 
+    /**
+     * @return When true, only validation is performed, without actually registering the domain. Follows: https://cloud.google.com/apis/design/design_patterns#request_validation
+     * 
+     */
     public Optional<Output<Boolean>> validateOnly() {
         return Optional.ofNullable(this.validateOnly);
     }
@@ -133,6 +165,10 @@ public final class RegistrationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="yearlyPrice", required=true)
     private Output<MoneyArgs> yearlyPrice;
 
+    /**
+     * @return Yearly price to register or renew the domain. The value that should be put here can be obtained from RetrieveRegisterParameters or SearchDomains calls.
+     * 
+     */
     public Output<MoneyArgs> yearlyPrice() {
         return this.yearlyPrice;
     }
@@ -171,64 +207,148 @@ public final class RegistrationArgs extends com.pulumi.resources.ResourceArgs {
             $ = new RegistrationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param contactNotices The list of contact notices that the caller acknowledges. The notices needed here depend on the values specified in `registration.contact_settings`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contactNotices(@Nullable Output<List<RegistrationContactNoticesItem>> contactNotices) {
             $.contactNotices = contactNotices;
             return this;
         }
 
+        /**
+         * @param contactNotices The list of contact notices that the caller acknowledges. The notices needed here depend on the values specified in `registration.contact_settings`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contactNotices(List<RegistrationContactNoticesItem> contactNotices) {
             return contactNotices(Output.of(contactNotices));
         }
 
+        /**
+         * @param contactNotices The list of contact notices that the caller acknowledges. The notices needed here depend on the values specified in `registration.contact_settings`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contactNotices(RegistrationContactNoticesItem... contactNotices) {
             return contactNotices(List.of(contactNotices));
         }
 
+        /**
+         * @param contactSettings Settings for contact information linked to the `Registration`. You cannot update these with the `UpdateRegistration` method. To update these settings, use the `ConfigureContactSettings` method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contactSettings(Output<ContactSettingsArgs> contactSettings) {
             $.contactSettings = contactSettings;
             return this;
         }
 
+        /**
+         * @param contactSettings Settings for contact information linked to the `Registration`. You cannot update these with the `UpdateRegistration` method. To update these settings, use the `ConfigureContactSettings` method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contactSettings(ContactSettingsArgs contactSettings) {
             return contactSettings(Output.of(contactSettings));
         }
 
+        /**
+         * @param dnsSettings Settings controlling the DNS configuration of the `Registration`. You cannot update these with the `UpdateRegistration` method. To update these settings, use the `ConfigureDnsSettings` method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsSettings(@Nullable Output<DnsSettingsArgs> dnsSettings) {
             $.dnsSettings = dnsSettings;
             return this;
         }
 
+        /**
+         * @param dnsSettings Settings controlling the DNS configuration of the `Registration`. You cannot update these with the `UpdateRegistration` method. To update these settings, use the `ConfigureDnsSettings` method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsSettings(DnsSettingsArgs dnsSettings) {
             return dnsSettings(Output.of(dnsSettings));
         }
 
+        /**
+         * @param domainName Immutable. The domain name. Unicode domain names must be expressed in Punycode format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(Output<String> domainName) {
             $.domainName = domainName;
             return this;
         }
 
+        /**
+         * @param domainName Immutable. The domain name. Unicode domain names must be expressed in Punycode format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(String domainName) {
             return domainName(Output.of(domainName));
         }
 
+        /**
+         * @param domainNotices The list of domain notices that you acknowledge. Call `RetrieveRegisterParameters` to see the notices that need acknowledgement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainNotices(@Nullable Output<List<RegistrationDomainNoticesItem>> domainNotices) {
             $.domainNotices = domainNotices;
             return this;
         }
 
+        /**
+         * @param domainNotices The list of domain notices that you acknowledge. Call `RetrieveRegisterParameters` to see the notices that need acknowledgement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainNotices(List<RegistrationDomainNoticesItem> domainNotices) {
             return domainNotices(Output.of(domainNotices));
         }
 
+        /**
+         * @param domainNotices The list of domain notices that you acknowledge. Call `RetrieveRegisterParameters` to see the notices that need acknowledgement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainNotices(RegistrationDomainNoticesItem... domainNotices) {
             return domainNotices(List.of(domainNotices));
         }
 
+        /**
+         * @param labels Set of labels associated with the `Registration`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Set of labels associated with the `Registration`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
@@ -242,11 +362,23 @@ public final class RegistrationArgs extends com.pulumi.resources.ResourceArgs {
             return location(Output.of(location));
         }
 
+        /**
+         * @param managementSettings Settings for management of the `Registration`, including renewal, billing, and transfer. You cannot update these with the `UpdateRegistration` method. To update these settings, use the `ConfigureManagementSettings` method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managementSettings(@Nullable Output<ManagementSettingsArgs> managementSettings) {
             $.managementSettings = managementSettings;
             return this;
         }
 
+        /**
+         * @param managementSettings Settings for management of the `Registration`, including renewal, billing, and transfer. You cannot update these with the `UpdateRegistration` method. To update these settings, use the `ConfigureManagementSettings` method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managementSettings(ManagementSettingsArgs managementSettings) {
             return managementSettings(Output.of(managementSettings));
         }
@@ -260,20 +392,44 @@ public final class RegistrationArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param validateOnly When true, only validation is performed, without actually registering the domain. Follows: https://cloud.google.com/apis/design/design_patterns#request_validation
+         * 
+         * @return builder
+         * 
+         */
         public Builder validateOnly(@Nullable Output<Boolean> validateOnly) {
             $.validateOnly = validateOnly;
             return this;
         }
 
+        /**
+         * @param validateOnly When true, only validation is performed, without actually registering the domain. Follows: https://cloud.google.com/apis/design/design_patterns#request_validation
+         * 
+         * @return builder
+         * 
+         */
         public Builder validateOnly(Boolean validateOnly) {
             return validateOnly(Output.of(validateOnly));
         }
 
+        /**
+         * @param yearlyPrice Yearly price to register or renew the domain. The value that should be put here can be obtained from RetrieveRegisterParameters or SearchDomains calls.
+         * 
+         * @return builder
+         * 
+         */
         public Builder yearlyPrice(Output<MoneyArgs> yearlyPrice) {
             $.yearlyPrice = yearlyPrice;
             return this;
         }
 
+        /**
+         * @param yearlyPrice Yearly price to register or renew the domain. The value that should be put here can be obtained from RetrieveRegisterParameters or SearchDomains calls.
+         * 
+         * @return builder
+         * 
+         */
         public Builder yearlyPrice(MoneyArgs yearlyPrice) {
             return yearlyPrice(Output.of(yearlyPrice));
         }

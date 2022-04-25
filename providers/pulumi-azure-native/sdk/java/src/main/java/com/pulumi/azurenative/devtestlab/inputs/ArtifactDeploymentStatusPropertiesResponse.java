@@ -26,6 +26,10 @@ public final class ArtifactDeploymentStatusPropertiesResponse extends com.pulumi
     @Import(name="artifactsApplied")
     private @Nullable Integer artifactsApplied;
 
+    /**
+     * @return The total count of the artifacts that were successfully applied.
+     * 
+     */
     public Optional<Integer> artifactsApplied() {
         return Optional.ofNullable(this.artifactsApplied);
     }
@@ -37,6 +41,10 @@ public final class ArtifactDeploymentStatusPropertiesResponse extends com.pulumi
     @Import(name="deploymentStatus")
     private @Nullable String deploymentStatus;
 
+    /**
+     * @return The deployment status of the artifact.
+     * 
+     */
     public Optional<String> deploymentStatus() {
         return Optional.ofNullable(this.deploymentStatus);
     }
@@ -48,6 +56,10 @@ public final class ArtifactDeploymentStatusPropertiesResponse extends com.pulumi
     @Import(name="totalArtifacts")
     private @Nullable Integer totalArtifacts;
 
+    /**
+     * @return The total count of the artifacts that were tentatively applied.
+     * 
+     */
     public Optional<Integer> totalArtifacts() {
         return Optional.ofNullable(this.totalArtifacts);
     }
@@ -78,16 +90,34 @@ public final class ArtifactDeploymentStatusPropertiesResponse extends com.pulumi
             $ = new ArtifactDeploymentStatusPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param artifactsApplied The total count of the artifacts that were successfully applied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder artifactsApplied(@Nullable Integer artifactsApplied) {
             $.artifactsApplied = artifactsApplied;
             return this;
         }
 
+        /**
+         * @param deploymentStatus The deployment status of the artifact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentStatus(@Nullable String deploymentStatus) {
             $.deploymentStatus = deploymentStatus;
             return this;
         }
 
+        /**
+         * @param totalArtifacts The total count of the artifacts that were tentatively applied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder totalArtifacts(@Nullable Integer totalArtifacts) {
             $.totalArtifacts = totalArtifacts;
             return this;

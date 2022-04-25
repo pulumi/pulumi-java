@@ -13,32 +13,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class VpnConnectionVgwTelemetry {
     /**
-     * The number of accepted routes.
+     * @return The number of accepted routes.
      * 
      */
     private final @Nullable Integer acceptedRouteCount;
     /**
-     * The Amazon Resource Name (ARN) of the VPN tunnel endpoint certificate.
+     * @return The Amazon Resource Name (ARN) of the VPN tunnel endpoint certificate.
      * 
      */
     private final @Nullable String certificateArn;
     /**
-     * The date and time of the last change in status.
+     * @return The date and time of the last change in status.
      * 
      */
     private final @Nullable String lastStatusChange;
     /**
-     * The Internet-routable IP address of the virtual private gateway&#39;s outside interface.
+     * @return The Internet-routable IP address of the virtual private gateway&#39;s outside interface.
      * 
      */
     private final @Nullable String outsideIpAddress;
     /**
-     * The status of the VPN tunnel.
+     * @return The status of the VPN tunnel.
      * 
      */
     private final @Nullable String status;
     /**
-     * If an error occurs, a description of the error.
+     * @return If an error occurs, a description of the error.
      * 
      */
     private final @Nullable String statusMessage;
@@ -60,44 +60,44 @@ public final class VpnConnectionVgwTelemetry {
     }
 
     /**
-     * The number of accepted routes.
+     * @return The number of accepted routes.
      * 
-    */
+     */
     public Optional<Integer> acceptedRouteCount() {
         return Optional.ofNullable(this.acceptedRouteCount);
     }
     /**
-     * The Amazon Resource Name (ARN) of the VPN tunnel endpoint certificate.
+     * @return The Amazon Resource Name (ARN) of the VPN tunnel endpoint certificate.
      * 
-    */
+     */
     public Optional<String> certificateArn() {
         return Optional.ofNullable(this.certificateArn);
     }
     /**
-     * The date and time of the last change in status.
+     * @return The date and time of the last change in status.
      * 
-    */
+     */
     public Optional<String> lastStatusChange() {
         return Optional.ofNullable(this.lastStatusChange);
     }
     /**
-     * The Internet-routable IP address of the virtual private gateway&#39;s outside interface.
+     * @return The Internet-routable IP address of the virtual private gateway&#39;s outside interface.
      * 
-    */
+     */
     public Optional<String> outsideIpAddress() {
         return Optional.ofNullable(this.outsideIpAddress);
     }
     /**
-     * The status of the VPN tunnel.
+     * @return The status of the VPN tunnel.
      * 
-    */
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
     /**
-     * If an error occurs, a description of the error.
+     * @return If an error occurs, a description of the error.
      * 
-    */
+     */
     public Optional<String> statusMessage() {
         return Optional.ofNullable(this.statusMessage);
     }

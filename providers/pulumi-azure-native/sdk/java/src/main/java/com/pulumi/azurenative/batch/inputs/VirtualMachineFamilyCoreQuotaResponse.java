@@ -24,6 +24,10 @@ public final class VirtualMachineFamilyCoreQuotaResponse extends com.pulumi.reso
     @Import(name="coreQuota", required=true)
     private Integer coreQuota;
 
+    /**
+     * @return The core quota for the VM family for the Batch account.
+     * 
+     */
     public Integer coreQuota() {
         return this.coreQuota;
     }
@@ -35,6 +39,10 @@ public final class VirtualMachineFamilyCoreQuotaResponse extends com.pulumi.reso
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The Virtual Machine family name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -64,11 +72,23 @@ public final class VirtualMachineFamilyCoreQuotaResponse extends com.pulumi.reso
             $ = new VirtualMachineFamilyCoreQuotaResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param coreQuota The core quota for the VM family for the Batch account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder coreQuota(Integer coreQuota) {
             $.coreQuota = coreQuota;
             return this;
         }
 
+        /**
+         * @param name The Virtual Machine family name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

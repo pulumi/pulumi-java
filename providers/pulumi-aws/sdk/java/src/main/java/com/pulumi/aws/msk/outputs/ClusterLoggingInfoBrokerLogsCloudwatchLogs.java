@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ClusterLoggingInfoBrokerLogsCloudwatchLogs {
     /**
-     * Indicates whether you want to enable or disable streaming broker logs to Cloudwatch Logs.
+     * @return Indicates whether you want to enable or disable streaming broker logs to Cloudwatch Logs.
      * 
      */
     private final Boolean enabled;
     /**
-     * Name of the Cloudwatch Log Group to deliver logs to.
+     * @return Name of the Cloudwatch Log Group to deliver logs to.
      * 
      */
     private final @Nullable String logGroup;
@@ -32,16 +32,16 @@ public final class ClusterLoggingInfoBrokerLogsCloudwatchLogs {
     }
 
     /**
-     * Indicates whether you want to enable or disable streaming broker logs to Cloudwatch Logs.
+     * @return Indicates whether you want to enable or disable streaming broker logs to Cloudwatch Logs.
      * 
-    */
+     */
     public Boolean enabled() {
         return this.enabled;
     }
     /**
-     * Name of the Cloudwatch Log Group to deliver logs to.
+     * @return Name of the Cloudwatch Log Group to deliver logs to.
      * 
-    */
+     */
     public Optional<String> logGroup() {
         return Optional.ofNullable(this.logGroup);
     }

@@ -25,6 +25,10 @@ public final class ApplicationPackageContactResponse extends com.pulumi.resource
     @Import(name="contactName")
     private @Nullable String contactName;
 
+    /**
+     * @return The contact name.
+     * 
+     */
     public Optional<String> contactName() {
         return Optional.ofNullable(this.contactName);
     }
@@ -36,6 +40,10 @@ public final class ApplicationPackageContactResponse extends com.pulumi.resource
     @Import(name="email", required=true)
     private String email;
 
+    /**
+     * @return The contact email.
+     * 
+     */
     public String email() {
         return this.email;
     }
@@ -47,6 +55,10 @@ public final class ApplicationPackageContactResponse extends com.pulumi.resource
     @Import(name="phone", required=true)
     private String phone;
 
+    /**
+     * @return The contact phone number.
+     * 
+     */
     public String phone() {
         return this.phone;
     }
@@ -77,16 +89,34 @@ public final class ApplicationPackageContactResponse extends com.pulumi.resource
             $ = new ApplicationPackageContactResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param contactName The contact name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contactName(@Nullable String contactName) {
             $.contactName = contactName;
             return this;
         }
 
+        /**
+         * @param email The contact email.
+         * 
+         * @return builder
+         * 
+         */
         public Builder email(String email) {
             $.email = email;
             return this;
         }
 
+        /**
+         * @param phone The contact phone number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder phone(String phone) {
             $.phone = phone;
             return this;

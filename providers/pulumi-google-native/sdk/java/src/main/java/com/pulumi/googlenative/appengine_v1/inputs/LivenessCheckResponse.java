@@ -24,6 +24,10 @@ public final class LivenessCheckResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="checkInterval", required=true)
     private String checkInterval;
 
+    /**
+     * @return Interval between health checks.
+     * 
+     */
     public String checkInterval() {
         return this.checkInterval;
     }
@@ -35,6 +39,10 @@ public final class LivenessCheckResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="failureThreshold", required=true)
     private Integer failureThreshold;
 
+    /**
+     * @return Number of consecutive failed checks required before considering the VM unhealthy.
+     * 
+     */
     public Integer failureThreshold() {
         return this.failureThreshold;
     }
@@ -46,6 +54,10 @@ public final class LivenessCheckResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="host", required=true)
     private String host;
 
+    /**
+     * @return Host header to send when performing a HTTP Liveness check. Example: &#34;myapp.appspot.com&#34;
+     * 
+     */
     public String host() {
         return this.host;
     }
@@ -57,6 +69,10 @@ public final class LivenessCheckResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="initialDelay", required=true)
     private String initialDelay;
 
+    /**
+     * @return The initial delay before starting to execute the checks.
+     * 
+     */
     public String initialDelay() {
         return this.initialDelay;
     }
@@ -68,6 +84,10 @@ public final class LivenessCheckResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="path", required=true)
     private String path;
 
+    /**
+     * @return The request path.
+     * 
+     */
     public String path() {
         return this.path;
     }
@@ -79,6 +99,10 @@ public final class LivenessCheckResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="successThreshold", required=true)
     private Integer successThreshold;
 
+    /**
+     * @return Number of consecutive successful checks required before considering the VM healthy.
+     * 
+     */
     public Integer successThreshold() {
         return this.successThreshold;
     }
@@ -90,6 +114,10 @@ public final class LivenessCheckResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="timeout", required=true)
     private String timeout;
 
+    /**
+     * @return Time before the check is considered failed.
+     * 
+     */
     public String timeout() {
         return this.timeout;
     }
@@ -124,36 +152,78 @@ public final class LivenessCheckResponse extends com.pulumi.resources.InvokeArgs
             $ = new LivenessCheckResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param checkInterval Interval between health checks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder checkInterval(String checkInterval) {
             $.checkInterval = checkInterval;
             return this;
         }
 
+        /**
+         * @param failureThreshold Number of consecutive failed checks required before considering the VM unhealthy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failureThreshold(Integer failureThreshold) {
             $.failureThreshold = failureThreshold;
             return this;
         }
 
+        /**
+         * @param host Host header to send when performing a HTTP Liveness check. Example: &#34;myapp.appspot.com&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder host(String host) {
             $.host = host;
             return this;
         }
 
+        /**
+         * @param initialDelay The initial delay before starting to execute the checks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder initialDelay(String initialDelay) {
             $.initialDelay = initialDelay;
             return this;
         }
 
+        /**
+         * @param path The request path.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param successThreshold Number of consecutive successful checks required before considering the VM healthy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder successThreshold(Integer successThreshold) {
             $.successThreshold = successThreshold;
             return this;
         }
 
+        /**
+         * @param timeout Time before the check is considered failed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeout(String timeout) {
             $.timeout = timeout;
             return this;

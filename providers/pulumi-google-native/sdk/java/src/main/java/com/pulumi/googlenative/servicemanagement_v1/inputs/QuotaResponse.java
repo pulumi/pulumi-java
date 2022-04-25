@@ -25,6 +25,10 @@ public final class QuotaResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="limits", required=true)
     private List<QuotaLimitResponse> limits;
 
+    /**
+     * @return List of `QuotaLimit` definitions for the service.
+     * 
+     */
     public List<QuotaLimitResponse> limits() {
         return this.limits;
     }
@@ -36,6 +40,10 @@ public final class QuotaResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="metricRules", required=true)
     private List<MetricRuleResponse> metricRules;
 
+    /**
+     * @return List of `MetricRule` definitions, each one mapping a selected method to one or more metrics.
+     * 
+     */
     public List<MetricRuleResponse> metricRules() {
         return this.metricRules;
     }
@@ -65,20 +73,44 @@ public final class QuotaResponse extends com.pulumi.resources.InvokeArgs {
             $ = new QuotaResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param limits List of `QuotaLimit` definitions for the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder limits(List<QuotaLimitResponse> limits) {
             $.limits = limits;
             return this;
         }
 
+        /**
+         * @param limits List of `QuotaLimit` definitions for the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder limits(QuotaLimitResponse... limits) {
             return limits(List.of(limits));
         }
 
+        /**
+         * @param metricRules List of `MetricRule` definitions, each one mapping a selected method to one or more metrics.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricRules(List<MetricRuleResponse> metricRules) {
             $.metricRules = metricRules;
             return this;
         }
 
+        /**
+         * @param metricRules List of `MetricRule` definitions, each one mapping a selected method to one or more metrics.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricRules(MetricRuleResponse... metricRules) {
             return metricRules(List.of(metricRules));
         }

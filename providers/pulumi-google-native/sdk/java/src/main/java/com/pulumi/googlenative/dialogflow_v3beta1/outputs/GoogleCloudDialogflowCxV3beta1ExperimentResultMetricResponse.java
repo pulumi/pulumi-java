@@ -12,27 +12,27 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudDialogflowCxV3beta1ExperimentResultMetricResponse {
     /**
-     * The probability that the treatment is better than all other treatments in the experiment
+     * @return The probability that the treatment is better than all other treatments in the experiment
      * 
      */
     private final GoogleCloudDialogflowCxV3beta1ExperimentResultConfidenceIntervalResponse confidenceInterval;
     /**
-     * Count value of a metric.
+     * @return Count value of a metric.
      * 
      */
     private final Double count;
     /**
-     * Count-based metric type. Only one of type or count_type is specified in each Metric.
+     * @return Count-based metric type. Only one of type or count_type is specified in each Metric.
      * 
      */
     private final String countType;
     /**
-     * Ratio value of a metric.
+     * @return Ratio value of a metric.
      * 
      */
     private final Double ratio;
     /**
-     * Ratio-based metric type. Only one of type or count_type is specified in each Metric.
+     * @return Ratio-based metric type. Only one of type or count_type is specified in each Metric.
      * 
      */
     private final String type;
@@ -52,37 +52,37 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultMetricResponse 
     }
 
     /**
-     * The probability that the treatment is better than all other treatments in the experiment
+     * @return The probability that the treatment is better than all other treatments in the experiment
      * 
-    */
+     */
     public GoogleCloudDialogflowCxV3beta1ExperimentResultConfidenceIntervalResponse confidenceInterval() {
         return this.confidenceInterval;
     }
     /**
-     * Count value of a metric.
+     * @return Count value of a metric.
      * 
-    */
+     */
     public Double count() {
         return this.count;
     }
     /**
-     * Count-based metric type. Only one of type or count_type is specified in each Metric.
+     * @return Count-based metric type. Only one of type or count_type is specified in each Metric.
      * 
-    */
+     */
     public String countType() {
         return this.countType;
     }
     /**
-     * Ratio value of a metric.
+     * @return Ratio value of a metric.
      * 
-    */
+     */
     public Double ratio() {
         return this.ratio;
     }
     /**
-     * Ratio-based metric type. Only one of type or count_type is specified in each Metric.
+     * @return Ratio-based metric type. Only one of type or count_type is specified in each Metric.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

@@ -25,6 +25,10 @@ public final class RRSetRoutingPolicyGeoPolicyResponse extends com.pulumi.resour
     @Import(name="items", required=true)
     private List<RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse> items;
 
+    /**
+     * @return The primary geo routing configuration. If there are multiple items with the same location, an error is returned instead.
+     * 
+     */
     public List<RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse> items() {
         return this.items;
     }
@@ -61,11 +65,23 @@ public final class RRSetRoutingPolicyGeoPolicyResponse extends com.pulumi.resour
             $ = new RRSetRoutingPolicyGeoPolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param items The primary geo routing configuration. If there are multiple items with the same location, an error is returned instead.
+         * 
+         * @return builder
+         * 
+         */
         public Builder items(List<RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse> items) {
             $.items = items;
             return this;
         }
 
+        /**
+         * @param items The primary geo routing configuration. If there are multiple items with the same location, an error is returned instead.
+         * 
+         * @return builder
+         * 
+         */
         public Builder items(RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse... items) {
             return items(List.of(items));
         }

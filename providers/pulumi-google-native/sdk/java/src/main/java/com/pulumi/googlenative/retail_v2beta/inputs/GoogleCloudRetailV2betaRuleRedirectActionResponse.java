@@ -23,6 +23,10 @@ public final class GoogleCloudRetailV2betaRuleRedirectActionResponse extends com
     @Import(name="redirectUri", required=true)
     private String redirectUri;
 
+    /**
+     * @return URL must have length equal or less than 2000 characters.
+     * 
+     */
     public String redirectUri() {
         return this.redirectUri;
     }
@@ -51,6 +55,12 @@ public final class GoogleCloudRetailV2betaRuleRedirectActionResponse extends com
             $ = new GoogleCloudRetailV2betaRuleRedirectActionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param redirectUri URL must have length equal or less than 2000 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder redirectUri(String redirectUri) {
             $.redirectUri = redirectUri;
             return this;

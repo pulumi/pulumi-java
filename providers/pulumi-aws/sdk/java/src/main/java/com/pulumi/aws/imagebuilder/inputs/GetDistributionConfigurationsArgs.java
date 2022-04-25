@@ -22,6 +22,10 @@ public final class GetDistributionConfigurationsArgs extends com.pulumi.resource
     @Import(name="filters")
     private @Nullable List<GetDistributionConfigurationsFilter> filters;
 
+    /**
+     * @return Configuration block(s) for filtering. Detailed below.
+     * 
+     */
     public Optional<List<GetDistributionConfigurationsFilter>> filters() {
         return Optional.ofNullable(this.filters);
     }
@@ -50,11 +54,23 @@ public final class GetDistributionConfigurationsArgs extends com.pulumi.resource
             $ = new GetDistributionConfigurationsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param filters Configuration block(s) for filtering. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(@Nullable List<GetDistributionConfigurationsFilter> filters) {
             $.filters = filters;
             return this;
         }
 
+        /**
+         * @param filters Configuration block(s) for filtering. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(GetDistributionConfigurationsFilter... filters) {
             return filters(List.of(filters));
         }

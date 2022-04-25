@@ -12,37 +12,37 @@ import java.util.Objects;
 @CustomType
 public final class X12FramingSettingsResponse {
     /**
-     * The X12 character set.
+     * @return The X12 character set.
      * 
      */
     private final String characterSet;
     /**
-     * The component separator.
+     * @return The component separator.
      * 
      */
     private final Integer componentSeparator;
     /**
-     * The data element separator.
+     * @return The data element separator.
      * 
      */
     private final Integer dataElementSeparator;
     /**
-     * The replacement character.
+     * @return The replacement character.
      * 
      */
     private final Integer replaceCharacter;
     /**
-     * The value indicating whether to replace separators in payload.
+     * @return The value indicating whether to replace separators in payload.
      * 
      */
     private final Boolean replaceSeparatorsInPayload;
     /**
-     * The segment terminator.
+     * @return The segment terminator.
      * 
      */
     private final Integer segmentTerminator;
     /**
-     * The segment terminator suffix.
+     * @return The segment terminator suffix.
      * 
      */
     private final String segmentTerminatorSuffix;
@@ -66,51 +66,51 @@ public final class X12FramingSettingsResponse {
     }
 
     /**
-     * The X12 character set.
+     * @return The X12 character set.
      * 
-    */
+     */
     public String characterSet() {
         return this.characterSet;
     }
     /**
-     * The component separator.
+     * @return The component separator.
      * 
-    */
+     */
     public Integer componentSeparator() {
         return this.componentSeparator;
     }
     /**
-     * The data element separator.
+     * @return The data element separator.
      * 
-    */
+     */
     public Integer dataElementSeparator() {
         return this.dataElementSeparator;
     }
     /**
-     * The replacement character.
+     * @return The replacement character.
      * 
-    */
+     */
     public Integer replaceCharacter() {
         return this.replaceCharacter;
     }
     /**
-     * The value indicating whether to replace separators in payload.
+     * @return The value indicating whether to replace separators in payload.
      * 
-    */
+     */
     public Boolean replaceSeparatorsInPayload() {
         return this.replaceSeparatorsInPayload;
     }
     /**
-     * The segment terminator.
+     * @return The segment terminator.
      * 
-    */
+     */
     public Integer segmentTerminator() {
         return this.segmentTerminator;
     }
     /**
-     * The segment terminator suffix.
+     * @return The segment terminator suffix.
      * 
-    */
+     */
     public String segmentTerminatorSuffix() {
         return this.segmentTerminatorSuffix;
     }

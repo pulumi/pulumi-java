@@ -22,6 +22,10 @@ public final class TaskDefinitionRuntimePlatformGetArgs extends com.pulumi.resou
     @Import(name="cpuArchitecture")
     private @Nullable Output<String> cpuArchitecture;
 
+    /**
+     * @return Must be set to either `X86_64` or `ARM64`; see [cpu architecture](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html#runtime-platform)
+     * 
+     */
     public Optional<Output<String>> cpuArchitecture() {
         return Optional.ofNullable(this.cpuArchitecture);
     }
@@ -33,6 +37,10 @@ public final class TaskDefinitionRuntimePlatformGetArgs extends com.pulumi.resou
     @Import(name="operatingSystemFamily")
     private @Nullable Output<String> operatingSystemFamily;
 
+    /**
+     * @return If the `requires_compatibilities` is `FARGATE` this field is required; must be set to a valid option from the [operating system family in the runtime platform](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html#runtime-platform) setting
+     * 
+     */
     public Optional<Output<String>> operatingSystemFamily() {
         return Optional.ofNullable(this.operatingSystemFamily);
     }
@@ -62,20 +70,44 @@ public final class TaskDefinitionRuntimePlatformGetArgs extends com.pulumi.resou
             $ = new TaskDefinitionRuntimePlatformGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cpuArchitecture Must be set to either `X86_64` or `ARM64`; see [cpu architecture](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html#runtime-platform)
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpuArchitecture(@Nullable Output<String> cpuArchitecture) {
             $.cpuArchitecture = cpuArchitecture;
             return this;
         }
 
+        /**
+         * @param cpuArchitecture Must be set to either `X86_64` or `ARM64`; see [cpu architecture](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html#runtime-platform)
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpuArchitecture(String cpuArchitecture) {
             return cpuArchitecture(Output.of(cpuArchitecture));
         }
 
+        /**
+         * @param operatingSystemFamily If the `requires_compatibilities` is `FARGATE` this field is required; must be set to a valid option from the [operating system family in the runtime platform](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html#runtime-platform) setting
+         * 
+         * @return builder
+         * 
+         */
         public Builder operatingSystemFamily(@Nullable Output<String> operatingSystemFamily) {
             $.operatingSystemFamily = operatingSystemFamily;
             return this;
         }
 
+        /**
+         * @param operatingSystemFamily If the `requires_compatibilities` is `FARGATE` this field is required; must be set to a valid option from the [operating system family in the runtime platform](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html#runtime-platform) setting
+         * 
+         * @return builder
+         * 
+         */
         public Builder operatingSystemFamily(String operatingSystemFamily) {
             return operatingSystemFamily(Output.of(operatingSystemFamily));
         }

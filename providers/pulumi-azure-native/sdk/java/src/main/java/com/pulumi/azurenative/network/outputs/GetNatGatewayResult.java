@@ -17,72 +17,72 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetNatGatewayResult {
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
     private final String etag;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final @Nullable String id;
     /**
-     * The idle timeout of the nat gateway.
+     * @return The idle timeout of the nat gateway.
      * 
      */
     private final @Nullable Integer idleTimeoutInMinutes;
     /**
-     * Resource location.
+     * @return Resource location.
      * 
      */
     private final @Nullable String location;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * The provisioning state of the NAT gateway resource.
+     * @return The provisioning state of the NAT gateway resource.
      * 
      */
     private final String provisioningState;
     /**
-     * An array of public ip addresses associated with the nat gateway resource.
+     * @return An array of public ip addresses associated with the nat gateway resource.
      * 
      */
     private final @Nullable List<SubResourceResponse> publicIpAddresses;
     /**
-     * An array of public ip prefixes associated with the nat gateway resource.
+     * @return An array of public ip prefixes associated with the nat gateway resource.
      * 
      */
     private final @Nullable List<SubResourceResponse> publicIpPrefixes;
     /**
-     * The resource GUID property of the NAT gateway resource.
+     * @return The resource GUID property of the NAT gateway resource.
      * 
      */
     private final String resourceGuid;
     /**
-     * The nat gateway SKU.
+     * @return The nat gateway SKU.
      * 
      */
     private final @Nullable NatGatewaySkuResponse sku;
     /**
-     * An array of references to the subnets using this nat gateway resource.
+     * @return An array of references to the subnets using this nat gateway resource.
      * 
      */
     private final List<SubResourceResponse> subnets;
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
     /**
-     * A list of availability zones denoting the zone in which Nat Gateway should be deployed.
+     * @return A list of availability zones denoting the zone in which Nat Gateway should be deployed.
      * 
      */
     private final @Nullable List<String> zones;
@@ -120,100 +120,100 @@ public final class GetNatGatewayResult {
     }
 
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * The idle timeout of the nat gateway.
+     * @return The idle timeout of the nat gateway.
      * 
-    */
+     */
     public Optional<Integer> idleTimeoutInMinutes() {
         return Optional.ofNullable(this.idleTimeoutInMinutes);
     }
     /**
-     * Resource location.
+     * @return Resource location.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The provisioning state of the NAT gateway resource.
+     * @return The provisioning state of the NAT gateway resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * An array of public ip addresses associated with the nat gateway resource.
+     * @return An array of public ip addresses associated with the nat gateway resource.
      * 
-    */
+     */
     public List<SubResourceResponse> publicIpAddresses() {
         return this.publicIpAddresses == null ? List.of() : this.publicIpAddresses;
     }
     /**
-     * An array of public ip prefixes associated with the nat gateway resource.
+     * @return An array of public ip prefixes associated with the nat gateway resource.
      * 
-    */
+     */
     public List<SubResourceResponse> publicIpPrefixes() {
         return this.publicIpPrefixes == null ? List.of() : this.publicIpPrefixes;
     }
     /**
-     * The resource GUID property of the NAT gateway resource.
+     * @return The resource GUID property of the NAT gateway resource.
      * 
-    */
+     */
     public String resourceGuid() {
         return this.resourceGuid;
     }
     /**
-     * The nat gateway SKU.
+     * @return The nat gateway SKU.
      * 
-    */
+     */
     public Optional<NatGatewaySkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
-     * An array of references to the subnets using this nat gateway resource.
+     * @return An array of references to the subnets using this nat gateway resource.
      * 
-    */
+     */
     public List<SubResourceResponse> subnets() {
         return this.subnets;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * A list of availability zones denoting the zone in which Nat Gateway should be deployed.
+     * @return A list of availability zones denoting the zone in which Nat Gateway should be deployed.
      * 
-    */
+     */
     public List<String> zones() {
         return this.zones == null ? List.of() : this.zones;
     }

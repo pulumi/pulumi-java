@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class RuleResultsPropertiesResponse {
     /**
-     * Expected results in the baseline.
+     * @return Expected results in the baseline.
      * 
      */
     private final @Nullable List<List<String>> results;
@@ -23,9 +23,9 @@ public final class RuleResultsPropertiesResponse {
     }
 
     /**
-     * Expected results in the baseline.
+     * @return Expected results in the baseline.
      * 
-    */
+     */
     public List<List<String>> results() {
         return this.results == null ? List.of() : this.results;
     }

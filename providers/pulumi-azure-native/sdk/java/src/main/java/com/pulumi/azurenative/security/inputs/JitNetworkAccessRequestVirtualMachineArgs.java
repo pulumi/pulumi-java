@@ -22,6 +22,10 @@ public final class JitNetworkAccessRequestVirtualMachineArgs extends com.pulumi.
     @Import(name="id", required=true)
     private Output<String> id;
 
+    /**
+     * @return Resource ID of the virtual machine that is linked to this policy
+     * 
+     */
     public Output<String> id() {
         return this.id;
     }
@@ -33,6 +37,10 @@ public final class JitNetworkAccessRequestVirtualMachineArgs extends com.pulumi.
     @Import(name="ports", required=true)
     private Output<List<JitNetworkAccessRequestPortArgs>> ports;
 
+    /**
+     * @return The ports that were opened for the virtual machine
+     * 
+     */
     public Output<List<JitNetworkAccessRequestPortArgs>> ports() {
         return this.ports;
     }
@@ -62,24 +70,54 @@ public final class JitNetworkAccessRequestVirtualMachineArgs extends com.pulumi.
             $ = new JitNetworkAccessRequestVirtualMachineArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Resource ID of the virtual machine that is linked to this policy
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Resource ID of the virtual machine that is linked to this policy
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param ports The ports that were opened for the virtual machine
+         * 
+         * @return builder
+         * 
+         */
         public Builder ports(Output<List<JitNetworkAccessRequestPortArgs>> ports) {
             $.ports = ports;
             return this;
         }
 
+        /**
+         * @param ports The ports that were opened for the virtual machine
+         * 
+         * @return builder
+         * 
+         */
         public Builder ports(List<JitNetworkAccessRequestPortArgs> ports) {
             return ports(Output.of(ports));
         }
 
+        /**
+         * @param ports The ports that were opened for the virtual machine
+         * 
+         * @return builder
+         * 
+         */
         public Builder ports(JitNetworkAccessRequestPortArgs... ports) {
             return ports(List.of(ports));
         }

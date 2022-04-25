@@ -21,132 +21,132 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetDeviceResult {
     /**
-     * Type of compute roles configured.
+     * @return Type of compute roles configured.
      * 
      */
     private final List<String> configuredRoleTypes;
     /**
-     * The Data Box Edge/Gateway device culture.
+     * @return The Data Box Edge/Gateway device culture.
      * 
      */
     private final String culture;
     /**
-     * The status of the Data Box Edge/Gateway device.
+     * @return The status of the Data Box Edge/Gateway device.
      * 
      */
     private final @Nullable String dataBoxEdgeDeviceStatus;
     /**
-     * The Description of the Data Box Edge/Gateway device.
+     * @return The Description of the Data Box Edge/Gateway device.
      * 
      */
     private final String description;
     /**
-     * The device software version number of the device (eg: 1.2.18105.6).
+     * @return The device software version number of the device (eg: 1.2.18105.6).
      * 
      */
     private final String deviceHcsVersion;
     /**
-     * The Data Box Edge/Gateway device local capacity in MB.
+     * @return The Data Box Edge/Gateway device local capacity in MB.
      * 
      */
     private final Double deviceLocalCapacity;
     /**
-     * The Data Box Edge/Gateway device model.
+     * @return The Data Box Edge/Gateway device model.
      * 
      */
     private final String deviceModel;
     /**
-     * The Data Box Edge/Gateway device software version.
+     * @return The Data Box Edge/Gateway device software version.
      * 
      */
     private final String deviceSoftwareVersion;
     /**
-     * The type of the Data Box Edge/Gateway device.
+     * @return The type of the Data Box Edge/Gateway device.
      * 
      */
     private final String deviceType;
     /**
-     * The details of Edge Profile for this resource
+     * @return The details of Edge Profile for this resource
      * 
      */
     private final EdgeProfileResponse edgeProfile;
     /**
-     * The etag for the devices.
+     * @return The etag for the devices.
      * 
      */
     private final @Nullable String etag;
     /**
-     * The Data Box Edge/Gateway device name.
+     * @return The Data Box Edge/Gateway device name.
      * 
      */
     private final String friendlyName;
     /**
-     * The path ID that uniquely identifies the object.
+     * @return The path ID that uniquely identifies the object.
      * 
      */
     private final String id;
     /**
-     * Msi identity of the resource
+     * @return Msi identity of the resource
      * 
      */
     private final @Nullable ResourceIdentityResponse identity;
     /**
-     * The etag for the devices.
+     * @return The etag for the devices.
      * 
      */
     private final String kind;
     /**
-     * The location of the device. This is a supported and registered Azure geographical region (for example, West US, East US, or Southeast Asia). The geographical region of a device cannot be changed once it is created, but if an identical geographical region is specified on update, the request will succeed.
+     * @return The location of the device. This is a supported and registered Azure geographical region (for example, West US, East US, or Southeast Asia). The geographical region of a device cannot be changed once it is created, but if an identical geographical region is specified on update, the request will succeed.
      * 
      */
     private final String location;
     /**
-     * The description of the Data Box Edge/Gateway device model.
+     * @return The description of the Data Box Edge/Gateway device model.
      * 
      */
     private final String modelDescription;
     /**
-     * The object name.
+     * @return The object name.
      * 
      */
     private final String name;
     /**
-     * The number of nodes in the cluster.
+     * @return The number of nodes in the cluster.
      * 
      */
     private final Integer nodeCount;
     /**
-     * The details of the move operation on this resource.
+     * @return The details of the move operation on this resource.
      * 
      */
     private final ResourceMoveDetailsResponse resourceMoveDetails;
     /**
-     * The Serial Number of Data Box Edge/Gateway device.
+     * @return The Serial Number of Data Box Edge/Gateway device.
      * 
      */
     private final String serialNumber;
     /**
-     * The SKU type.
+     * @return The SKU type.
      * 
      */
     private final @Nullable SkuResponse sku;
     /**
-     * DataBoxEdge Resource
+     * @return DataBoxEdge Resource
      * 
      */
     private final SystemDataResponse systemData;
     /**
-     * The list of tags that describe the device. These tags can be used to view and group this device (across resource groups).
+     * @return The list of tags that describe the device. These tags can be used to view and group this device (across resource groups).
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * The Data Box Edge/Gateway device timezone.
+     * @return The Data Box Edge/Gateway device timezone.
      * 
      */
     private final String timeZone;
     /**
-     * The hierarchical type of the object.
+     * @return The hierarchical type of the object.
      * 
      */
     private final String type;
@@ -208,184 +208,184 @@ public final class GetDeviceResult {
     }
 
     /**
-     * Type of compute roles configured.
+     * @return Type of compute roles configured.
      * 
-    */
+     */
     public List<String> configuredRoleTypes() {
         return this.configuredRoleTypes;
     }
     /**
-     * The Data Box Edge/Gateway device culture.
+     * @return The Data Box Edge/Gateway device culture.
      * 
-    */
+     */
     public String culture() {
         return this.culture;
     }
     /**
-     * The status of the Data Box Edge/Gateway device.
+     * @return The status of the Data Box Edge/Gateway device.
      * 
-    */
+     */
     public Optional<String> dataBoxEdgeDeviceStatus() {
         return Optional.ofNullable(this.dataBoxEdgeDeviceStatus);
     }
     /**
-     * The Description of the Data Box Edge/Gateway device.
+     * @return The Description of the Data Box Edge/Gateway device.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * The device software version number of the device (eg: 1.2.18105.6).
+     * @return The device software version number of the device (eg: 1.2.18105.6).
      * 
-    */
+     */
     public String deviceHcsVersion() {
         return this.deviceHcsVersion;
     }
     /**
-     * The Data Box Edge/Gateway device local capacity in MB.
+     * @return The Data Box Edge/Gateway device local capacity in MB.
      * 
-    */
+     */
     public Double deviceLocalCapacity() {
         return this.deviceLocalCapacity;
     }
     /**
-     * The Data Box Edge/Gateway device model.
+     * @return The Data Box Edge/Gateway device model.
      * 
-    */
+     */
     public String deviceModel() {
         return this.deviceModel;
     }
     /**
-     * The Data Box Edge/Gateway device software version.
+     * @return The Data Box Edge/Gateway device software version.
      * 
-    */
+     */
     public String deviceSoftwareVersion() {
         return this.deviceSoftwareVersion;
     }
     /**
-     * The type of the Data Box Edge/Gateway device.
+     * @return The type of the Data Box Edge/Gateway device.
      * 
-    */
+     */
     public String deviceType() {
         return this.deviceType;
     }
     /**
-     * The details of Edge Profile for this resource
+     * @return The details of Edge Profile for this resource
      * 
-    */
+     */
     public EdgeProfileResponse edgeProfile() {
         return this.edgeProfile;
     }
     /**
-     * The etag for the devices.
+     * @return The etag for the devices.
      * 
-    */
+     */
     public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
-     * The Data Box Edge/Gateway device name.
+     * @return The Data Box Edge/Gateway device name.
      * 
-    */
+     */
     public String friendlyName() {
         return this.friendlyName;
     }
     /**
-     * The path ID that uniquely identifies the object.
+     * @return The path ID that uniquely identifies the object.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Msi identity of the resource
+     * @return Msi identity of the resource
      * 
-    */
+     */
     public Optional<ResourceIdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
-     * The etag for the devices.
+     * @return The etag for the devices.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * The location of the device. This is a supported and registered Azure geographical region (for example, West US, East US, or Southeast Asia). The geographical region of a device cannot be changed once it is created, but if an identical geographical region is specified on update, the request will succeed.
+     * @return The location of the device. This is a supported and registered Azure geographical region (for example, West US, East US, or Southeast Asia). The geographical region of a device cannot be changed once it is created, but if an identical geographical region is specified on update, the request will succeed.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * The description of the Data Box Edge/Gateway device model.
+     * @return The description of the Data Box Edge/Gateway device model.
      * 
-    */
+     */
     public String modelDescription() {
         return this.modelDescription;
     }
     /**
-     * The object name.
+     * @return The object name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The number of nodes in the cluster.
+     * @return The number of nodes in the cluster.
      * 
-    */
+     */
     public Integer nodeCount() {
         return this.nodeCount;
     }
     /**
-     * The details of the move operation on this resource.
+     * @return The details of the move operation on this resource.
      * 
-    */
+     */
     public ResourceMoveDetailsResponse resourceMoveDetails() {
         return this.resourceMoveDetails;
     }
     /**
-     * The Serial Number of Data Box Edge/Gateway device.
+     * @return The Serial Number of Data Box Edge/Gateway device.
      * 
-    */
+     */
     public String serialNumber() {
         return this.serialNumber;
     }
     /**
-     * The SKU type.
+     * @return The SKU type.
      * 
-    */
+     */
     public Optional<SkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
-     * DataBoxEdge Resource
+     * @return DataBoxEdge Resource
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * The list of tags that describe the device. These tags can be used to view and group this device (across resource groups).
+     * @return The list of tags that describe the device. These tags can be used to view and group this device (across resource groups).
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The Data Box Edge/Gateway device timezone.
+     * @return The Data Box Edge/Gateway device timezone.
      * 
-    */
+     */
     public String timeZone() {
         return this.timeZone;
     }
     /**
-     * The hierarchical type of the object.
+     * @return The hierarchical type of the object.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

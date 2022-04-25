@@ -23,6 +23,10 @@ public final class GatewayCustomDomainArgs extends com.pulumi.resources.Resource
     @Import(name="domainName")
     private @Nullable Output<String> domainName;
 
+    /**
+     * @return The name of the Spring Cloud Gateway custom domain.
+     * 
+     */
     public Optional<Output<String>> domainName() {
         return Optional.ofNullable(this.domainName);
     }
@@ -34,6 +38,10 @@ public final class GatewayCustomDomainArgs extends com.pulumi.resources.Resource
     @Import(name="gatewayName", required=true)
     private Output<String> gatewayName;
 
+    /**
+     * @return The name of Spring Cloud Gateway.
+     * 
+     */
     public Output<String> gatewayName() {
         return this.gatewayName;
     }
@@ -45,6 +53,10 @@ public final class GatewayCustomDomainArgs extends com.pulumi.resources.Resource
     @Import(name="properties")
     private @Nullable Output<GatewayCustomDomainPropertiesArgs> properties;
 
+    /**
+     * @return The properties of custom domain for Spring Cloud Gateway
+     * 
+     */
     public Optional<Output<GatewayCustomDomainPropertiesArgs>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -56,6 +68,10 @@ public final class GatewayCustomDomainArgs extends com.pulumi.resources.Resource
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -67,6 +83,10 @@ public final class GatewayCustomDomainArgs extends com.pulumi.resources.Resource
     @Import(name="serviceName", required=true)
     private Output<String> serviceName;
 
+    /**
+     * @return The name of the Service resource.
+     * 
+     */
     public Output<String> serviceName() {
         return this.serviceName;
     }
@@ -99,47 +119,107 @@ public final class GatewayCustomDomainArgs extends com.pulumi.resources.Resource
             $ = new GatewayCustomDomainArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param domainName The name of the Spring Cloud Gateway custom domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(@Nullable Output<String> domainName) {
             $.domainName = domainName;
             return this;
         }
 
+        /**
+         * @param domainName The name of the Spring Cloud Gateway custom domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(String domainName) {
             return domainName(Output.of(domainName));
         }
 
+        /**
+         * @param gatewayName The name of Spring Cloud Gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayName(Output<String> gatewayName) {
             $.gatewayName = gatewayName;
             return this;
         }
 
+        /**
+         * @param gatewayName The name of Spring Cloud Gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayName(String gatewayName) {
             return gatewayName(Output.of(gatewayName));
         }
 
+        /**
+         * @param properties The properties of custom domain for Spring Cloud Gateway
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<GatewayCustomDomainPropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties The properties of custom domain for Spring Cloud Gateway
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(GatewayCustomDomainPropertiesArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param serviceName The name of the Service resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(Output<String> serviceName) {
             $.serviceName = serviceName;
             return this;
         }
 
+        /**
+         * @param serviceName The name of the Service resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             return serviceName(Output.of(serviceName));
         }

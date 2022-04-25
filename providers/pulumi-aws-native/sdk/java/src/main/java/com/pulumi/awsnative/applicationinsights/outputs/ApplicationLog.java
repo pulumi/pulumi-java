@@ -13,27 +13,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ApplicationLog {
     /**
-     * The type of encoding of the logs to be monitored.
+     * @return The type of encoding of the logs to be monitored.
      * 
      */
     private final @Nullable ApplicationLogEncoding encoding;
     /**
-     * The CloudWatch log group name to be associated to the monitored log.
+     * @return The CloudWatch log group name to be associated to the monitored log.
      * 
      */
     private final @Nullable String logGroupName;
     /**
-     * The path of the logs to be monitored.
+     * @return The path of the logs to be monitored.
      * 
      */
     private final @Nullable String logPath;
     /**
-     * The log type decides the log patterns against which Application Insights analyzes the log.
+     * @return The log type decides the log patterns against which Application Insights analyzes the log.
      * 
      */
     private final String logType;
     /**
-     * The name of the log pattern set.
+     * @return The name of the log pattern set.
      * 
      */
     private final @Nullable String patternSet;
@@ -53,37 +53,37 @@ public final class ApplicationLog {
     }
 
     /**
-     * The type of encoding of the logs to be monitored.
+     * @return The type of encoding of the logs to be monitored.
      * 
-    */
+     */
     public Optional<ApplicationLogEncoding> encoding() {
         return Optional.ofNullable(this.encoding);
     }
     /**
-     * The CloudWatch log group name to be associated to the monitored log.
+     * @return The CloudWatch log group name to be associated to the monitored log.
      * 
-    */
+     */
     public Optional<String> logGroupName() {
         return Optional.ofNullable(this.logGroupName);
     }
     /**
-     * The path of the logs to be monitored.
+     * @return The path of the logs to be monitored.
      * 
-    */
+     */
     public Optional<String> logPath() {
         return Optional.ofNullable(this.logPath);
     }
     /**
-     * The log type decides the log patterns against which Application Insights analyzes the log.
+     * @return The log type decides the log patterns against which Application Insights analyzes the log.
      * 
-    */
+     */
     public String logType() {
         return this.logType;
     }
     /**
-     * The name of the log pattern set.
+     * @return The name of the log pattern set.
      * 
-    */
+     */
     public Optional<String> patternSet() {
         return Optional.ofNullable(this.patternSet);
     }

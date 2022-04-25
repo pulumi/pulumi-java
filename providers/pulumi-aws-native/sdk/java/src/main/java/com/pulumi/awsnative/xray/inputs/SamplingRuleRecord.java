@@ -22,6 +22,10 @@ public final class SamplingRuleRecord extends com.pulumi.resources.InvokeArgs {
     @Import(name="createdAt")
     private @Nullable String createdAt;
 
+    /**
+     * @return When the rule was created, in Unix time seconds.
+     * 
+     */
     public Optional<String> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -33,6 +37,10 @@ public final class SamplingRuleRecord extends com.pulumi.resources.InvokeArgs {
     @Import(name="modifiedAt")
     private @Nullable String modifiedAt;
 
+    /**
+     * @return When the rule was modified, in Unix time seconds.
+     * 
+     */
     public Optional<String> modifiedAt() {
         return Optional.ofNullable(this.modifiedAt);
     }
@@ -70,11 +78,23 @@ public final class SamplingRuleRecord extends com.pulumi.resources.InvokeArgs {
             $ = new SamplingRuleRecord(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param createdAt When the rule was created, in Unix time seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdAt(@Nullable String createdAt) {
             $.createdAt = createdAt;
             return this;
         }
 
+        /**
+         * @param modifiedAt When the rule was modified, in Unix time seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder modifiedAt(@Nullable String modifiedAt) {
             $.modifiedAt = modifiedAt;
             return this;

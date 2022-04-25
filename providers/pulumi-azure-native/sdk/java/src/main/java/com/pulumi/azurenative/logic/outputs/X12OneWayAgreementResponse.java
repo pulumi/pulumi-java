@@ -11,17 +11,17 @@ import java.util.Objects;
 @CustomType
 public final class X12OneWayAgreementResponse {
     /**
-     * The X12 protocol settings.
+     * @return The X12 protocol settings.
      * 
      */
     private final X12ProtocolSettingsResponse protocolSettings;
     /**
-     * The receiver business identity
+     * @return The receiver business identity
      * 
      */
     private final BusinessIdentityResponse receiverBusinessIdentity;
     /**
-     * The sender business identity
+     * @return The sender business identity
      * 
      */
     private final BusinessIdentityResponse senderBusinessIdentity;
@@ -37,23 +37,23 @@ public final class X12OneWayAgreementResponse {
     }
 
     /**
-     * The X12 protocol settings.
+     * @return The X12 protocol settings.
      * 
-    */
+     */
     public X12ProtocolSettingsResponse protocolSettings() {
         return this.protocolSettings;
     }
     /**
-     * The receiver business identity
+     * @return The receiver business identity
      * 
-    */
+     */
     public BusinessIdentityResponse receiverBusinessIdentity() {
         return this.receiverBusinessIdentity;
     }
     /**
-     * The sender business identity
+     * @return The sender business identity
      * 
-    */
+     */
     public BusinessIdentityResponse senderBusinessIdentity() {
         return this.senderBusinessIdentity;
     }

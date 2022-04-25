@@ -26,6 +26,10 @@ public final class FirewallPolicyRuleApplicationProtocolResponse extends com.pul
     @Import(name="port")
     private @Nullable Integer port;
 
+    /**
+     * @return Port number for the protocol, cannot be greater than 64000.
+     * 
+     */
     public Optional<Integer> port() {
         return Optional.ofNullable(this.port);
     }
@@ -37,6 +41,10 @@ public final class FirewallPolicyRuleApplicationProtocolResponse extends com.pul
     @Import(name="protocolType")
     private @Nullable String protocolType;
 
+    /**
+     * @return Protocol type.
+     * 
+     */
     public Optional<String> protocolType() {
         return Optional.ofNullable(this.protocolType);
     }
@@ -66,11 +74,23 @@ public final class FirewallPolicyRuleApplicationProtocolResponse extends com.pul
             $ = new FirewallPolicyRuleApplicationProtocolResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param port Port number for the protocol, cannot be greater than 64000.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(@Nullable Integer port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param protocolType Protocol type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocolType(@Nullable String protocolType) {
             $.protocolType = protocolType;
             return this;

@@ -25,6 +25,10 @@ public final class LinuxConfigurationResponse extends com.pulumi.resources.Invok
     @Import(name="ssh")
     private @Nullable SshConfigurationResponse ssh;
 
+    /**
+     * @return Specifies the ssh key configuration for a Linux OS.
+     * 
+     */
     public Optional<SshConfigurationResponse> ssh() {
         return Optional.ofNullable(this.ssh);
     }
@@ -53,6 +57,12 @@ public final class LinuxConfigurationResponse extends com.pulumi.resources.Invok
             $ = new LinuxConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ssh Specifies the ssh key configuration for a Linux OS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ssh(@Nullable SshConfigurationResponse ssh) {
             $.ssh = ssh;
             return this;

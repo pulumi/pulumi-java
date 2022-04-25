@@ -20,6 +20,10 @@ public final class TransferJobScheduleStartTimeOfDayGetArgs extends com.pulumi.r
     @Import(name="hours", required=true)
     private Output<Integer> hours;
 
+    /**
+     * @return Hours of day in 24 hour format. Should be from 0 to 23
+     * 
+     */
     public Output<Integer> hours() {
         return this.hours;
     }
@@ -31,6 +35,10 @@ public final class TransferJobScheduleStartTimeOfDayGetArgs extends com.pulumi.r
     @Import(name="minutes", required=true)
     private Output<Integer> minutes;
 
+    /**
+     * @return Minutes of hour of day. Must be from 0 to 59.
+     * 
+     */
     public Output<Integer> minutes() {
         return this.minutes;
     }
@@ -42,6 +50,10 @@ public final class TransferJobScheduleStartTimeOfDayGetArgs extends com.pulumi.r
     @Import(name="nanos", required=true)
     private Output<Integer> nanos;
 
+    /**
+     * @return Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
+     * 
+     */
     public Output<Integer> nanos() {
         return this.nanos;
     }
@@ -53,6 +65,10 @@ public final class TransferJobScheduleStartTimeOfDayGetArgs extends com.pulumi.r
     @Import(name="seconds", required=true)
     private Output<Integer> seconds;
 
+    /**
+     * @return Seconds of minutes of the time. Must normally be from 0 to 59.
+     * 
+     */
     public Output<Integer> seconds() {
         return this.seconds;
     }
@@ -84,38 +100,86 @@ public final class TransferJobScheduleStartTimeOfDayGetArgs extends com.pulumi.r
             $ = new TransferJobScheduleStartTimeOfDayGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hours Hours of day in 24 hour format. Should be from 0 to 23
+         * 
+         * @return builder
+         * 
+         */
         public Builder hours(Output<Integer> hours) {
             $.hours = hours;
             return this;
         }
 
+        /**
+         * @param hours Hours of day in 24 hour format. Should be from 0 to 23
+         * 
+         * @return builder
+         * 
+         */
         public Builder hours(Integer hours) {
             return hours(Output.of(hours));
         }
 
+        /**
+         * @param minutes Minutes of hour of day. Must be from 0 to 59.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minutes(Output<Integer> minutes) {
             $.minutes = minutes;
             return this;
         }
 
+        /**
+         * @param minutes Minutes of hour of day. Must be from 0 to 59.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minutes(Integer minutes) {
             return minutes(Output.of(minutes));
         }
 
+        /**
+         * @param nanos Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nanos(Output<Integer> nanos) {
             $.nanos = nanos;
             return this;
         }
 
+        /**
+         * @param nanos Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nanos(Integer nanos) {
             return nanos(Output.of(nanos));
         }
 
+        /**
+         * @param seconds Seconds of minutes of the time. Must normally be from 0 to 59.
+         * 
+         * @return builder
+         * 
+         */
         public Builder seconds(Output<Integer> seconds) {
             $.seconds = seconds;
             return this;
         }
 
+        /**
+         * @param seconds Seconds of minutes of the time. Must normally be from 0 to 59.
+         * 
+         * @return builder
+         * 
+         */
         public Builder seconds(Integer seconds) {
             return seconds(Output.of(seconds));
         }

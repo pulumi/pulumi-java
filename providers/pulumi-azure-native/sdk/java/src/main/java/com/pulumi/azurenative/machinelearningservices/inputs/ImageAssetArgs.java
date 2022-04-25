@@ -27,6 +27,10 @@ public final class ImageAssetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return The Asset Id.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -38,6 +42,10 @@ public final class ImageAssetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="mimeType")
     private @Nullable Output<String> mimeType;
 
+    /**
+     * @return The mime type.
+     * 
+     */
     public Optional<Output<String>> mimeType() {
         return Optional.ofNullable(this.mimeType);
     }
@@ -49,6 +57,10 @@ public final class ImageAssetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="unpack")
     private @Nullable Output<Boolean> unpack;
 
+    /**
+     * @return Whether the Asset is unpacked.
+     * 
+     */
     public Optional<Output<Boolean>> unpack() {
         return Optional.ofNullable(this.unpack);
     }
@@ -60,6 +72,10 @@ public final class ImageAssetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="url")
     private @Nullable Output<String> url;
 
+    /**
+     * @return The Url of the Asset.
+     * 
+     */
     public Optional<Output<String>> url() {
         return Optional.ofNullable(this.url);
     }
@@ -91,38 +107,86 @@ public final class ImageAssetArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ImageAssetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id The Asset Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id The Asset Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param mimeType The mime type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mimeType(@Nullable Output<String> mimeType) {
             $.mimeType = mimeType;
             return this;
         }
 
+        /**
+         * @param mimeType The mime type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mimeType(String mimeType) {
             return mimeType(Output.of(mimeType));
         }
 
+        /**
+         * @param unpack Whether the Asset is unpacked.
+         * 
+         * @return builder
+         * 
+         */
         public Builder unpack(@Nullable Output<Boolean> unpack) {
             $.unpack = unpack;
             return this;
         }
 
+        /**
+         * @param unpack Whether the Asset is unpacked.
+         * 
+         * @return builder
+         * 
+         */
         public Builder unpack(Boolean unpack) {
             return unpack(Output.of(unpack));
         }
 
+        /**
+         * @param url The Url of the Asset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(@Nullable Output<String> url) {
             $.url = url;
             return this;
         }
 
+        /**
+         * @param url The Url of the Asset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(String url) {
             return url(Output.of(url));
         }

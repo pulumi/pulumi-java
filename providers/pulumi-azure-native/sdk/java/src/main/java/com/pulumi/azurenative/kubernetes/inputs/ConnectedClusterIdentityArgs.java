@@ -25,6 +25,10 @@ public final class ConnectedClusterIdentityArgs extends com.pulumi.resources.Res
     @Import(name="type", required=true)
     private Output<ResourceIdentityType> type;
 
+    /**
+     * @return The type of identity used for the connected cluster. The type &#39;SystemAssigned, includes a system created identity. The type &#39;None&#39; means no identity is assigned to the connected cluster.
+     * 
+     */
     public Output<ResourceIdentityType> type() {
         return this.type;
     }
@@ -53,11 +57,23 @@ public final class ConnectedClusterIdentityArgs extends com.pulumi.resources.Res
             $ = new ConnectedClusterIdentityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type The type of identity used for the connected cluster. The type &#39;SystemAssigned, includes a system created identity. The type &#39;None&#39; means no identity is assigned to the connected cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<ResourceIdentityType> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of identity used for the connected cluster. The type &#39;SystemAssigned, includes a system created identity. The type &#39;None&#39; means no identity is assigned to the connected cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(ResourceIdentityType type) {
             return type(Output.of(type));
         }

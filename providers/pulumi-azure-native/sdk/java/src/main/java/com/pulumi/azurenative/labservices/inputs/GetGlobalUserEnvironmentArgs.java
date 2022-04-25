@@ -21,6 +21,10 @@ public final class GetGlobalUserEnvironmentArgs extends com.pulumi.resources.Inv
     @Import(name="environmentId", required=true)
     private String environmentId;
 
+    /**
+     * @return The resourceId of the environment
+     * 
+     */
     public String environmentId() {
         return this.environmentId;
     }
@@ -32,6 +36,10 @@ public final class GetGlobalUserEnvironmentArgs extends com.pulumi.resources.Inv
     @Import(name="expand")
     private @Nullable String expand;
 
+    /**
+     * @return Specify the $expand query. Example: &#39;properties($expand=environment)&#39;
+     * 
+     */
     public Optional<String> expand() {
         return Optional.ofNullable(this.expand);
     }
@@ -43,6 +51,10 @@ public final class GetGlobalUserEnvironmentArgs extends com.pulumi.resources.Inv
     @Import(name="userName", required=true)
     private String userName;
 
+    /**
+     * @return The name of the user.
+     * 
+     */
     public String userName() {
         return this.userName;
     }
@@ -73,16 +85,34 @@ public final class GetGlobalUserEnvironmentArgs extends com.pulumi.resources.Inv
             $ = new GetGlobalUserEnvironmentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param environmentId The resourceId of the environment
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentId(String environmentId) {
             $.environmentId = environmentId;
             return this;
         }
 
+        /**
+         * @param expand Specify the $expand query. Example: &#39;properties($expand=environment)&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder expand(@Nullable String expand) {
             $.expand = expand;
             return this;
         }
 
+        /**
+         * @param userName The name of the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(String userName) {
             $.userName = userName;
             return this;

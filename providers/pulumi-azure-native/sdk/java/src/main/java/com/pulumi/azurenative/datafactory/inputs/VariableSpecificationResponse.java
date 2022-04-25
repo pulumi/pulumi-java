@@ -26,6 +26,10 @@ public final class VariableSpecificationResponse extends com.pulumi.resources.In
     @Import(name="defaultValue")
     private @Nullable Object defaultValue;
 
+    /**
+     * @return Default value of variable.
+     * 
+     */
     public Optional<Object> defaultValue() {
         return Optional.ofNullable(this.defaultValue);
     }
@@ -37,6 +41,10 @@ public final class VariableSpecificationResponse extends com.pulumi.resources.In
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Variable type.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -66,11 +74,23 @@ public final class VariableSpecificationResponse extends com.pulumi.resources.In
             $ = new VariableSpecificationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param defaultValue Default value of variable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultValue(@Nullable Object defaultValue) {
             $.defaultValue = defaultValue;
             return this;
         }
 
+        /**
+         * @param type Variable type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

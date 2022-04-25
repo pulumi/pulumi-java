@@ -29,6 +29,10 @@ public final class DataDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="createOption")
     private @Nullable Output<Either<String,DiskCreateOptionTypes>> createOption;
 
+    /**
+     * @return Specifies how the virtual machine should be created.
+     * 
+     */
     public Optional<Output<Either<String,DiskCreateOptionTypes>>> createOption() {
         return Optional.ofNullable(this.createOption);
     }
@@ -40,6 +44,10 @@ public final class DataDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="diskSizeGB")
     private @Nullable Output<Integer> diskSizeGB;
 
+    /**
+     * @return Specifies the size of an empty disk in gigabytes. This element can be used to overwrite the size of the disk in a virtual machine image.
+     * 
+     */
     public Optional<Output<Integer>> diskSizeGB() {
         return Optional.ofNullable(this.diskSizeGB);
     }
@@ -51,6 +59,10 @@ public final class DataDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of data disk.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -81,37 +93,85 @@ public final class DataDiskArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DataDiskArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param createOption Specifies how the virtual machine should be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createOption(@Nullable Output<Either<String,DiskCreateOptionTypes>> createOption) {
             $.createOption = createOption;
             return this;
         }
 
+        /**
+         * @param createOption Specifies how the virtual machine should be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createOption(Either<String,DiskCreateOptionTypes> createOption) {
             return createOption(Output.of(createOption));
         }
 
+        /**
+         * @param createOption Specifies how the virtual machine should be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createOption(String createOption) {
             return createOption(Either.ofLeft(createOption));
         }
 
+        /**
+         * @param createOption Specifies how the virtual machine should be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createOption(DiskCreateOptionTypes createOption) {
             return createOption(Either.ofRight(createOption));
         }
 
+        /**
+         * @param diskSizeGB Specifies the size of an empty disk in gigabytes. This element can be used to overwrite the size of the disk in a virtual machine image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskSizeGB(@Nullable Output<Integer> diskSizeGB) {
             $.diskSizeGB = diskSizeGB;
             return this;
         }
 
+        /**
+         * @param diskSizeGB Specifies the size of an empty disk in gigabytes. This element can be used to overwrite the size of the disk in a virtual machine image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskSizeGB(Integer diskSizeGB) {
             return diskSizeGB(Output.of(diskSizeGB));
         }
 
+        /**
+         * @param name The name of data disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of data disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

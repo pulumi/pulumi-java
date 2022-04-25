@@ -25,6 +25,10 @@ public final class ApiResourceGeneralInformationResponse extends com.pulumi.reso
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return The description.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -36,6 +40,10 @@ public final class ApiResourceGeneralInformationResponse extends com.pulumi.reso
     @Import(name="displayName")
     private @Nullable String displayName;
 
+    /**
+     * @return The display name.
+     * 
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -47,6 +55,10 @@ public final class ApiResourceGeneralInformationResponse extends com.pulumi.reso
     @Import(name="iconUrl")
     private @Nullable String iconUrl;
 
+    /**
+     * @return The icon url.
+     * 
+     */
     public Optional<String> iconUrl() {
         return Optional.ofNullable(this.iconUrl);
     }
@@ -58,6 +70,10 @@ public final class ApiResourceGeneralInformationResponse extends com.pulumi.reso
     @Import(name="releaseTag")
     private @Nullable String releaseTag;
 
+    /**
+     * @return The release tag.
+     * 
+     */
     public Optional<String> releaseTag() {
         return Optional.ofNullable(this.releaseTag);
     }
@@ -69,6 +85,10 @@ public final class ApiResourceGeneralInformationResponse extends com.pulumi.reso
     @Import(name="termsOfUseUrl")
     private @Nullable String termsOfUseUrl;
 
+    /**
+     * @return The terms of use url.
+     * 
+     */
     public Optional<String> termsOfUseUrl() {
         return Optional.ofNullable(this.termsOfUseUrl);
     }
@@ -80,6 +100,10 @@ public final class ApiResourceGeneralInformationResponse extends com.pulumi.reso
     @Import(name="tier")
     private @Nullable String tier;
 
+    /**
+     * @return The tier.
+     * 
+     */
     public Optional<String> tier() {
         return Optional.ofNullable(this.tier);
     }
@@ -113,31 +137,67 @@ public final class ApiResourceGeneralInformationResponse extends com.pulumi.reso
             $ = new ApiResourceGeneralInformationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description The description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param displayName The display name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable String displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param iconUrl The icon url.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iconUrl(@Nullable String iconUrl) {
             $.iconUrl = iconUrl;
             return this;
         }
 
+        /**
+         * @param releaseTag The release tag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder releaseTag(@Nullable String releaseTag) {
             $.releaseTag = releaseTag;
             return this;
         }
 
+        /**
+         * @param termsOfUseUrl The terms of use url.
+         * 
+         * @return builder
+         * 
+         */
         public Builder termsOfUseUrl(@Nullable String termsOfUseUrl) {
             $.termsOfUseUrl = termsOfUseUrl;
             return this;
         }
 
+        /**
+         * @param tier The tier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(@Nullable String tier) {
             $.tier = tier;
             return this;

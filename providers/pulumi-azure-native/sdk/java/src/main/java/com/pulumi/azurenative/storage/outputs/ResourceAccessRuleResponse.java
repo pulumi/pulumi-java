@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ResourceAccessRuleResponse {
     /**
-     * Resource Id
+     * @return Resource Id
      * 
      */
     private final @Nullable String resourceId;
     /**
-     * Tenant Id
+     * @return Tenant Id
      * 
      */
     private final @Nullable String tenantId;
@@ -31,16 +31,16 @@ public final class ResourceAccessRuleResponse {
     }
 
     /**
-     * Resource Id
+     * @return Resource Id
      * 
-    */
+     */
     public Optional<String> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
     /**
-     * Tenant Id
+     * @return Tenant Id
      * 
-    */
+     */
     public Optional<String> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }

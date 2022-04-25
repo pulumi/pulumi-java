@@ -23,6 +23,10 @@ public final class ConnectToSourcePostgreSqlSyncTaskInputResponse extends com.pu
     @Import(name="sourceConnectionInfo", required=true)
     private PostgreSqlConnectionInfoResponse sourceConnectionInfo;
 
+    /**
+     * @return Connection information for source PostgreSQL server
+     * 
+     */
     public PostgreSqlConnectionInfoResponse sourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
@@ -51,6 +55,12 @@ public final class ConnectToSourcePostgreSqlSyncTaskInputResponse extends com.pu
             $ = new ConnectToSourcePostgreSqlSyncTaskInputResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param sourceConnectionInfo Connection information for source PostgreSQL server
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceConnectionInfo(PostgreSqlConnectionInfoResponse sourceConnectionInfo) {
             $.sourceConnectionInfo = sourceConnectionInfo;
             return this;

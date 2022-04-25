@@ -26,6 +26,10 @@ public final class SourceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="authorizedResources")
     private @Nullable List<String> authorizedResources;
 
+    /**
+     * @return List of  Resource referred into query
+     * 
+     */
     public Optional<List<String>> authorizedResources() {
         return Optional.ofNullable(this.authorizedResources);
     }
@@ -37,6 +41,10 @@ public final class SourceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="dataSourceId", required=true)
     private String dataSourceId;
 
+    /**
+     * @return The resource uri over which log search query is to be run.
+     * 
+     */
     public String dataSourceId() {
         return this.dataSourceId;
     }
@@ -48,6 +56,10 @@ public final class SourceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="query")
     private @Nullable String query;
 
+    /**
+     * @return Log search query. Required for action type - AlertingAction
+     * 
+     */
     public Optional<String> query() {
         return Optional.ofNullable(this.query);
     }
@@ -59,6 +71,10 @@ public final class SourceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="queryType")
     private @Nullable String queryType;
 
+    /**
+     * @return Set value to &#39;ResultCount&#39; .
+     * 
+     */
     public Optional<String> queryType() {
         return Optional.ofNullable(this.queryType);
     }
@@ -90,25 +106,55 @@ public final class SourceResponse extends com.pulumi.resources.InvokeArgs {
             $ = new SourceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authorizedResources List of  Resource referred into query
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizedResources(@Nullable List<String> authorizedResources) {
             $.authorizedResources = authorizedResources;
             return this;
         }
 
+        /**
+         * @param authorizedResources List of  Resource referred into query
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizedResources(String... authorizedResources) {
             return authorizedResources(List.of(authorizedResources));
         }
 
+        /**
+         * @param dataSourceId The resource uri over which log search query is to be run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSourceId(String dataSourceId) {
             $.dataSourceId = dataSourceId;
             return this;
         }
 
+        /**
+         * @param query Log search query. Required for action type - AlertingAction
+         * 
+         * @return builder
+         * 
+         */
         public Builder query(@Nullable String query) {
             $.query = query;
             return this;
         }
 
+        /**
+         * @param queryType Set value to &#39;ResultCount&#39; .
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryType(@Nullable String queryType) {
             $.queryType = queryType;
             return this;

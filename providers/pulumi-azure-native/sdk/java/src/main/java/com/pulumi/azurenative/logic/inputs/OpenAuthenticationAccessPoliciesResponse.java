@@ -27,6 +27,10 @@ public final class OpenAuthenticationAccessPoliciesResponse extends com.pulumi.r
     @Import(name="policies")
     private @Nullable Map<String,OpenAuthenticationAccessPolicyResponse> policies;
 
+    /**
+     * @return Open authentication policies.
+     * 
+     */
     public Optional<Map<String,OpenAuthenticationAccessPolicyResponse>> policies() {
         return Optional.ofNullable(this.policies);
     }
@@ -55,6 +59,12 @@ public final class OpenAuthenticationAccessPoliciesResponse extends com.pulumi.r
             $ = new OpenAuthenticationAccessPoliciesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param policies Open authentication policies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policies(@Nullable Map<String,OpenAuthenticationAccessPolicyResponse> policies) {
             $.policies = policies;
             return this;

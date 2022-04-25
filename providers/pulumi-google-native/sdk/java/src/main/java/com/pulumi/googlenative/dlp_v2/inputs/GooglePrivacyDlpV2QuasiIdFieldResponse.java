@@ -24,6 +24,10 @@ public final class GooglePrivacyDlpV2QuasiIdFieldResponse extends com.pulumi.res
     @Import(name="customTag", required=true)
     private String customTag;
 
+    /**
+     * @return A auxiliary field.
+     * 
+     */
     public String customTag() {
         return this.customTag;
     }
@@ -35,6 +39,10 @@ public final class GooglePrivacyDlpV2QuasiIdFieldResponse extends com.pulumi.res
     @Import(name="field", required=true)
     private GooglePrivacyDlpV2FieldIdResponse field;
 
+    /**
+     * @return Identifies the column.
+     * 
+     */
     public GooglePrivacyDlpV2FieldIdResponse field() {
         return this.field;
     }
@@ -64,11 +72,23 @@ public final class GooglePrivacyDlpV2QuasiIdFieldResponse extends com.pulumi.res
             $ = new GooglePrivacyDlpV2QuasiIdFieldResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customTag A auxiliary field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customTag(String customTag) {
             $.customTag = customTag;
             return this;
         }
 
+        /**
+         * @param field Identifies the column.
+         * 
+         * @return builder
+         * 
+         */
         public Builder field(GooglePrivacyDlpV2FieldIdResponse field) {
             $.field = field;
             return this;

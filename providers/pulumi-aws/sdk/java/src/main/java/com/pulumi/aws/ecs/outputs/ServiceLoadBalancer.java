@@ -13,22 +13,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ServiceLoadBalancer {
     /**
-     * Name of the container to associate with the load balancer (as it appears in a container definition).
+     * @return Name of the container to associate with the load balancer (as it appears in a container definition).
      * 
      */
     private final String containerName;
     /**
-     * Port on the container to associate with the load balancer.
+     * @return Port on the container to associate with the load balancer.
      * 
      */
     private final Integer containerPort;
     /**
-     * Name of the ELB (Classic) to associate with the service.
+     * @return Name of the ELB (Classic) to associate with the service.
      * 
      */
     private final @Nullable String elbName;
     /**
-     * ARN of the Load Balancer target group to associate with the service.
+     * @return ARN of the Load Balancer target group to associate with the service.
      * 
      */
     private final @Nullable String targetGroupArn;
@@ -46,30 +46,30 @@ public final class ServiceLoadBalancer {
     }
 
     /**
-     * Name of the container to associate with the load balancer (as it appears in a container definition).
+     * @return Name of the container to associate with the load balancer (as it appears in a container definition).
      * 
-    */
+     */
     public String containerName() {
         return this.containerName;
     }
     /**
-     * Port on the container to associate with the load balancer.
+     * @return Port on the container to associate with the load balancer.
      * 
-    */
+     */
     public Integer containerPort() {
         return this.containerPort;
     }
     /**
-     * Name of the ELB (Classic) to associate with the service.
+     * @return Name of the ELB (Classic) to associate with the service.
      * 
-    */
+     */
     public Optional<String> elbName() {
         return Optional.ofNullable(this.elbName);
     }
     /**
-     * ARN of the Load Balancer target group to associate with the service.
+     * @return ARN of the Load Balancer target group to associate with the service.
      * 
-    */
+     */
     public Optional<String> targetGroupArn() {
         return Optional.ofNullable(this.targetGroupArn);
     }

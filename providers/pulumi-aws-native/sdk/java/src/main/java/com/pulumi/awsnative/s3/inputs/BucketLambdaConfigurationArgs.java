@@ -27,6 +27,10 @@ public final class BucketLambdaConfigurationArgs extends com.pulumi.resources.Re
     @Import(name="event", required=true)
     private Output<String> event;
 
+    /**
+     * @return The Amazon S3 bucket event for which to invoke the AWS Lambda function.
+     * 
+     */
     public Output<String> event() {
         return this.event;
     }
@@ -38,6 +42,10 @@ public final class BucketLambdaConfigurationArgs extends com.pulumi.resources.Re
     @Import(name="filter")
     private @Nullable Output<BucketNotificationFilterArgs> filter;
 
+    /**
+     * @return The filtering rules that determine which objects invoke the AWS Lambda function.
+     * 
+     */
     public Optional<Output<BucketNotificationFilterArgs>> filter() {
         return Optional.ofNullable(this.filter);
     }
@@ -49,6 +57,10 @@ public final class BucketLambdaConfigurationArgs extends com.pulumi.resources.Re
     @Import(name="function", required=true)
     private Output<String> function;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the AWS Lambda function that Amazon S3 invokes when the specified event type occurs.
+     * 
+     */
     public Output<String> function() {
         return this.function;
     }
@@ -79,29 +91,65 @@ public final class BucketLambdaConfigurationArgs extends com.pulumi.resources.Re
             $ = new BucketLambdaConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param event The Amazon S3 bucket event for which to invoke the AWS Lambda function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder event(Output<String> event) {
             $.event = event;
             return this;
         }
 
+        /**
+         * @param event The Amazon S3 bucket event for which to invoke the AWS Lambda function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder event(String event) {
             return event(Output.of(event));
         }
 
+        /**
+         * @param filter The filtering rules that determine which objects invoke the AWS Lambda function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(@Nullable Output<BucketNotificationFilterArgs> filter) {
             $.filter = filter;
             return this;
         }
 
+        /**
+         * @param filter The filtering rules that determine which objects invoke the AWS Lambda function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(BucketNotificationFilterArgs filter) {
             return filter(Output.of(filter));
         }
 
+        /**
+         * @param function The Amazon Resource Name (ARN) of the AWS Lambda function that Amazon S3 invokes when the specified event type occurs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder function(Output<String> function) {
             $.function = function;
             return this;
         }
 
+        /**
+         * @param function The Amazon Resource Name (ARN) of the AWS Lambda function that Amazon S3 invokes when the specified event type occurs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder function(String function) {
             return function(Output.of(function));
         }

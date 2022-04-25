@@ -13,22 +13,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SourceResponse {
     /**
-     * List of  Resource referred into query
+     * @return List of  Resource referred into query
      * 
      */
     private final @Nullable List<String> authorizedResources;
     /**
-     * The resource uri over which log search query is to be run.
+     * @return The resource uri over which log search query is to be run.
      * 
      */
     private final String dataSourceId;
     /**
-     * Log search query. Required for action type - AlertingAction
+     * @return Log search query. Required for action type - AlertingAction
      * 
      */
     private final @Nullable String query;
     /**
-     * Set value to &#39;ResultCount&#39; .
+     * @return Set value to &#39;ResultCount&#39; .
      * 
      */
     private final @Nullable String queryType;
@@ -46,30 +46,30 @@ public final class SourceResponse {
     }
 
     /**
-     * List of  Resource referred into query
+     * @return List of  Resource referred into query
      * 
-    */
+     */
     public List<String> authorizedResources() {
         return this.authorizedResources == null ? List.of() : this.authorizedResources;
     }
     /**
-     * The resource uri over which log search query is to be run.
+     * @return The resource uri over which log search query is to be run.
      * 
-    */
+     */
     public String dataSourceId() {
         return this.dataSourceId;
     }
     /**
-     * Log search query. Required for action type - AlertingAction
+     * @return Log search query. Required for action type - AlertingAction
      * 
-    */
+     */
     public Optional<String> query() {
         return Optional.ofNullable(this.query);
     }
     /**
-     * Set value to &#39;ResultCount&#39; .
+     * @return Set value to &#39;ResultCount&#39; .
      * 
-    */
+     */
     public Optional<String> queryType() {
         return Optional.ofNullable(this.queryType);
     }

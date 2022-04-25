@@ -36,6 +36,10 @@ public final class ServiceSourceConfigurationArgs extends com.pulumi.resources.R
     @Import(name="autoDeploymentsEnabled")
     private @Nullable Output<Boolean> autoDeploymentsEnabled;
 
+    /**
+     * @return Auto Deployment enabled
+     * 
+     */
     public Optional<Output<Boolean>> autoDeploymentsEnabled() {
         return Optional.ofNullable(this.autoDeploymentsEnabled);
     }
@@ -90,11 +94,23 @@ public final class ServiceSourceConfigurationArgs extends com.pulumi.resources.R
             return authenticationConfiguration(Output.of(authenticationConfiguration));
         }
 
+        /**
+         * @param autoDeploymentsEnabled Auto Deployment enabled
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoDeploymentsEnabled(@Nullable Output<Boolean> autoDeploymentsEnabled) {
             $.autoDeploymentsEnabled = autoDeploymentsEnabled;
             return this;
         }
 
+        /**
+         * @param autoDeploymentsEnabled Auto Deployment enabled
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoDeploymentsEnabled(Boolean autoDeploymentsEnabled) {
             return autoDeploymentsEnabled(Output.of(autoDeploymentsEnabled));
         }

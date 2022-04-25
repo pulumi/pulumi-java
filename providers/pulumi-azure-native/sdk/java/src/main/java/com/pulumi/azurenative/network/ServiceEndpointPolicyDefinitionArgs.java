@@ -23,6 +23,10 @@ public final class ServiceEndpointPolicyDefinitionArgs extends com.pulumi.resour
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A description for this rule. Restricted to 140 chars.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -34,6 +38,10 @@ public final class ServiceEndpointPolicyDefinitionArgs extends com.pulumi.resour
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -45,6 +53,10 @@ public final class ServiceEndpointPolicyDefinitionArgs extends com.pulumi.resour
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -56,6 +68,10 @@ public final class ServiceEndpointPolicyDefinitionArgs extends com.pulumi.resour
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -67,6 +83,10 @@ public final class ServiceEndpointPolicyDefinitionArgs extends com.pulumi.resour
     @Import(name="service")
     private @Nullable Output<String> service;
 
+    /**
+     * @return Service endpoint name.
+     * 
+     */
     public Optional<Output<String>> service() {
         return Optional.ofNullable(this.service);
     }
@@ -78,6 +98,10 @@ public final class ServiceEndpointPolicyDefinitionArgs extends com.pulumi.resour
     @Import(name="serviceEndpointPolicyDefinitionName")
     private @Nullable Output<String> serviceEndpointPolicyDefinitionName;
 
+    /**
+     * @return The name of the service endpoint policy definition name.
+     * 
+     */
     public Optional<Output<String>> serviceEndpointPolicyDefinitionName() {
         return Optional.ofNullable(this.serviceEndpointPolicyDefinitionName);
     }
@@ -89,6 +113,10 @@ public final class ServiceEndpointPolicyDefinitionArgs extends com.pulumi.resour
     @Import(name="serviceEndpointPolicyName", required=true)
     private Output<String> serviceEndpointPolicyName;
 
+    /**
+     * @return The name of the service endpoint policy.
+     * 
+     */
     public Output<String> serviceEndpointPolicyName() {
         return this.serviceEndpointPolicyName;
     }
@@ -100,6 +128,10 @@ public final class ServiceEndpointPolicyDefinitionArgs extends com.pulumi.resour
     @Import(name="serviceResources")
     private @Nullable Output<List<String>> serviceResources;
 
+    /**
+     * @return A list of service resources.
+     * 
+     */
     public Optional<Output<List<String>>> serviceResources() {
         return Optional.ofNullable(this.serviceResources);
     }
@@ -135,78 +167,180 @@ public final class ServiceEndpointPolicyDefinitionArgs extends com.pulumi.resour
             $ = new ServiceEndpointPolicyDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description A description for this rule. Restricted to 140 chars.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A description for this rule. Restricted to 140 chars.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param name The name of the resource that is unique within a resource group. This name can be used to access the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the resource that is unique within a resource group. This name can be used to access the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param service Service endpoint name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(@Nullable Output<String> service) {
             $.service = service;
             return this;
         }
 
+        /**
+         * @param service Service endpoint name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(String service) {
             return service(Output.of(service));
         }
 
+        /**
+         * @param serviceEndpointPolicyDefinitionName The name of the service endpoint policy definition name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceEndpointPolicyDefinitionName(@Nullable Output<String> serviceEndpointPolicyDefinitionName) {
             $.serviceEndpointPolicyDefinitionName = serviceEndpointPolicyDefinitionName;
             return this;
         }
 
+        /**
+         * @param serviceEndpointPolicyDefinitionName The name of the service endpoint policy definition name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceEndpointPolicyDefinitionName(String serviceEndpointPolicyDefinitionName) {
             return serviceEndpointPolicyDefinitionName(Output.of(serviceEndpointPolicyDefinitionName));
         }
 
+        /**
+         * @param serviceEndpointPolicyName The name of the service endpoint policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceEndpointPolicyName(Output<String> serviceEndpointPolicyName) {
             $.serviceEndpointPolicyName = serviceEndpointPolicyName;
             return this;
         }
 
+        /**
+         * @param serviceEndpointPolicyName The name of the service endpoint policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceEndpointPolicyName(String serviceEndpointPolicyName) {
             return serviceEndpointPolicyName(Output.of(serviceEndpointPolicyName));
         }
 
+        /**
+         * @param serviceResources A list of service resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceResources(@Nullable Output<List<String>> serviceResources) {
             $.serviceResources = serviceResources;
             return this;
         }
 
+        /**
+         * @param serviceResources A list of service resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceResources(List<String> serviceResources) {
             return serviceResources(Output.of(serviceResources));
         }
 
+        /**
+         * @param serviceResources A list of service resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceResources(String... serviceResources) {
             return serviceResources(List.of(serviceResources));
         }

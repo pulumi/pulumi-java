@@ -26,6 +26,10 @@ public final class AddressArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="addressLine1")
     private @Nullable Output<String> addressLine1;
 
+    /**
+     * @return The address line1.
+     * 
+     */
     public Optional<Output<String>> addressLine1() {
         return Optional.ofNullable(this.addressLine1);
     }
@@ -37,6 +41,10 @@ public final class AddressArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="addressLine2")
     private @Nullable Output<String> addressLine2;
 
+    /**
+     * @return The address line2.
+     * 
+     */
     public Optional<Output<String>> addressLine2() {
         return Optional.ofNullable(this.addressLine2);
     }
@@ -48,6 +56,10 @@ public final class AddressArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="addressLine3")
     private @Nullable Output<String> addressLine3;
 
+    /**
+     * @return The address line3.
+     * 
+     */
     public Optional<Output<String>> addressLine3() {
         return Optional.ofNullable(this.addressLine3);
     }
@@ -59,6 +71,10 @@ public final class AddressArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="city")
     private @Nullable Output<String> city;
 
+    /**
+     * @return The city name.
+     * 
+     */
     public Optional<Output<String>> city() {
         return Optional.ofNullable(this.city);
     }
@@ -70,6 +86,10 @@ public final class AddressArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="country", required=true)
     private Output<String> country;
 
+    /**
+     * @return The country name.
+     * 
+     */
     public Output<String> country() {
         return this.country;
     }
@@ -81,6 +101,10 @@ public final class AddressArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="postalCode")
     private @Nullable Output<String> postalCode;
 
+    /**
+     * @return The postal code.
+     * 
+     */
     public Optional<Output<String>> postalCode() {
         return Optional.ofNullable(this.postalCode);
     }
@@ -92,6 +116,10 @@ public final class AddressArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="state")
     private @Nullable Output<String> state;
 
+    /**
+     * @return The state name.
+     * 
+     */
     public Optional<Output<String>> state() {
         return Optional.ofNullable(this.state);
     }
@@ -126,65 +154,149 @@ public final class AddressArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AddressArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param addressLine1 The address line1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addressLine1(@Nullable Output<String> addressLine1) {
             $.addressLine1 = addressLine1;
             return this;
         }
 
+        /**
+         * @param addressLine1 The address line1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addressLine1(String addressLine1) {
             return addressLine1(Output.of(addressLine1));
         }
 
+        /**
+         * @param addressLine2 The address line2.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addressLine2(@Nullable Output<String> addressLine2) {
             $.addressLine2 = addressLine2;
             return this;
         }
 
+        /**
+         * @param addressLine2 The address line2.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addressLine2(String addressLine2) {
             return addressLine2(Output.of(addressLine2));
         }
 
+        /**
+         * @param addressLine3 The address line3.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addressLine3(@Nullable Output<String> addressLine3) {
             $.addressLine3 = addressLine3;
             return this;
         }
 
+        /**
+         * @param addressLine3 The address line3.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addressLine3(String addressLine3) {
             return addressLine3(Output.of(addressLine3));
         }
 
+        /**
+         * @param city The city name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder city(@Nullable Output<String> city) {
             $.city = city;
             return this;
         }
 
+        /**
+         * @param city The city name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder city(String city) {
             return city(Output.of(city));
         }
 
+        /**
+         * @param country The country name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder country(Output<String> country) {
             $.country = country;
             return this;
         }
 
+        /**
+         * @param country The country name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder country(String country) {
             return country(Output.of(country));
         }
 
+        /**
+         * @param postalCode The postal code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder postalCode(@Nullable Output<String> postalCode) {
             $.postalCode = postalCode;
             return this;
         }
 
+        /**
+         * @param postalCode The postal code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder postalCode(String postalCode) {
             return postalCode(Output.of(postalCode));
         }
 
+        /**
+         * @param state The state name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param state The state name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             return state(Output.of(state));
         }

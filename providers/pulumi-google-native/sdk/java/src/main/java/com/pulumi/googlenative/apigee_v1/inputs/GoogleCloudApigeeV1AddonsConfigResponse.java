@@ -26,6 +26,10 @@ public final class GoogleCloudApigeeV1AddonsConfigResponse extends com.pulumi.re
     @Import(name="advancedApiOpsConfig", required=true)
     private GoogleCloudApigeeV1AdvancedApiOpsConfigResponse advancedApiOpsConfig;
 
+    /**
+     * @return Configuration for the Advanced API Ops add-on.
+     * 
+     */
     public GoogleCloudApigeeV1AdvancedApiOpsConfigResponse advancedApiOpsConfig() {
         return this.advancedApiOpsConfig;
     }
@@ -37,6 +41,10 @@ public final class GoogleCloudApigeeV1AddonsConfigResponse extends com.pulumi.re
     @Import(name="connectorsPlatformConfig", required=true)
     private GoogleCloudApigeeV1ConnectorsPlatformConfigResponse connectorsPlatformConfig;
 
+    /**
+     * @return Configuration for the Connectors Platform add-on.
+     * 
+     */
     public GoogleCloudApigeeV1ConnectorsPlatformConfigResponse connectorsPlatformConfig() {
         return this.connectorsPlatformConfig;
     }
@@ -48,6 +56,10 @@ public final class GoogleCloudApigeeV1AddonsConfigResponse extends com.pulumi.re
     @Import(name="integrationConfig", required=true)
     private GoogleCloudApigeeV1IntegrationConfigResponse integrationConfig;
 
+    /**
+     * @return Configuration for the Integration add-on.
+     * 
+     */
     public GoogleCloudApigeeV1IntegrationConfigResponse integrationConfig() {
         return this.integrationConfig;
     }
@@ -59,6 +71,10 @@ public final class GoogleCloudApigeeV1AddonsConfigResponse extends com.pulumi.re
     @Import(name="monetizationConfig", required=true)
     private GoogleCloudApigeeV1MonetizationConfigResponse monetizationConfig;
 
+    /**
+     * @return Configuration for the Monetization add-on.
+     * 
+     */
     public GoogleCloudApigeeV1MonetizationConfigResponse monetizationConfig() {
         return this.monetizationConfig;
     }
@@ -90,21 +106,45 @@ public final class GoogleCloudApigeeV1AddonsConfigResponse extends com.pulumi.re
             $ = new GoogleCloudApigeeV1AddonsConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param advancedApiOpsConfig Configuration for the Advanced API Ops add-on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder advancedApiOpsConfig(GoogleCloudApigeeV1AdvancedApiOpsConfigResponse advancedApiOpsConfig) {
             $.advancedApiOpsConfig = advancedApiOpsConfig;
             return this;
         }
 
+        /**
+         * @param connectorsPlatformConfig Configuration for the Connectors Platform add-on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectorsPlatformConfig(GoogleCloudApigeeV1ConnectorsPlatformConfigResponse connectorsPlatformConfig) {
             $.connectorsPlatformConfig = connectorsPlatformConfig;
             return this;
         }
 
+        /**
+         * @param integrationConfig Configuration for the Integration add-on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder integrationConfig(GoogleCloudApigeeV1IntegrationConfigResponse integrationConfig) {
             $.integrationConfig = integrationConfig;
             return this;
         }
 
+        /**
+         * @param monetizationConfig Configuration for the Monetization add-on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monetizationConfig(GoogleCloudApigeeV1MonetizationConfigResponse monetizationConfig) {
             $.monetizationConfig = monetizationConfig;
             return this;

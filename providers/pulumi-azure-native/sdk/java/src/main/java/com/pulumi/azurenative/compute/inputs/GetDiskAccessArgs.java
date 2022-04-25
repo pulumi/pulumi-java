@@ -19,6 +19,10 @@ public final class GetDiskAccessArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="diskAccessName", required=true)
     private String diskAccessName;
 
+    /**
+     * @return The name of the disk access resource that is being created. The name can&#39;t be changed after the disk encryption set is created. Supported characters for the name are a-z, A-Z, 0-9 and _. The maximum name length is 80 characters.
+     * 
+     */
     public String diskAccessName() {
         return this.diskAccessName;
     }
@@ -30,6 +34,10 @@ public final class GetDiskAccessArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetDiskAccessArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetDiskAccessArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param diskAccessName The name of the disk access resource that is being created. The name can&#39;t be changed after the disk encryption set is created. Supported characters for the name are a-z, A-Z, 0-9 and _. The maximum name length is 80 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskAccessName(String diskAccessName) {
             $.diskAccessName = diskAccessName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

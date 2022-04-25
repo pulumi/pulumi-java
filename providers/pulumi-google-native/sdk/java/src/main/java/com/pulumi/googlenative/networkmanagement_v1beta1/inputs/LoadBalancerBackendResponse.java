@@ -24,6 +24,10 @@ public final class LoadBalancerBackendResponse extends com.pulumi.resources.Invo
     @Import(name="displayName", required=true)
     private String displayName;
 
+    /**
+     * @return Name of a Compute Engine instance or network endpoint.
+     * 
+     */
     public String displayName() {
         return this.displayName;
     }
@@ -35,6 +39,10 @@ public final class LoadBalancerBackendResponse extends com.pulumi.resources.Invo
     @Import(name="healthCheckAllowingFirewallRules", required=true)
     private List<String> healthCheckAllowingFirewallRules;
 
+    /**
+     * @return A list of firewall rule URIs allowing probes from health check IP ranges.
+     * 
+     */
     public List<String> healthCheckAllowingFirewallRules() {
         return this.healthCheckAllowingFirewallRules;
     }
@@ -46,6 +54,10 @@ public final class LoadBalancerBackendResponse extends com.pulumi.resources.Invo
     @Import(name="healthCheckBlockingFirewallRules", required=true)
     private List<String> healthCheckBlockingFirewallRules;
 
+    /**
+     * @return A list of firewall rule URIs blocking probes from health check IP ranges.
+     * 
+     */
     public List<String> healthCheckBlockingFirewallRules() {
         return this.healthCheckBlockingFirewallRules;
     }
@@ -57,6 +69,10 @@ public final class LoadBalancerBackendResponse extends com.pulumi.resources.Invo
     @Import(name="healthCheckFirewallState", required=true)
     private String healthCheckFirewallState;
 
+    /**
+     * @return State of the health check firewall configuration.
+     * 
+     */
     public String healthCheckFirewallState() {
         return this.healthCheckFirewallState;
     }
@@ -68,6 +84,10 @@ public final class LoadBalancerBackendResponse extends com.pulumi.resources.Invo
     @Import(name="uri", required=true)
     private String uri;
 
+    /**
+     * @return URI of a Compute Engine instance or network endpoint.
+     * 
+     */
     public String uri() {
         return this.uri;
     }
@@ -100,34 +120,76 @@ public final class LoadBalancerBackendResponse extends com.pulumi.resources.Invo
             $ = new LoadBalancerBackendResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayName Name of a Compute Engine instance or network endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param healthCheckAllowingFirewallRules A list of firewall rule URIs allowing probes from health check IP ranges.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthCheckAllowingFirewallRules(List<String> healthCheckAllowingFirewallRules) {
             $.healthCheckAllowingFirewallRules = healthCheckAllowingFirewallRules;
             return this;
         }
 
+        /**
+         * @param healthCheckAllowingFirewallRules A list of firewall rule URIs allowing probes from health check IP ranges.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthCheckAllowingFirewallRules(String... healthCheckAllowingFirewallRules) {
             return healthCheckAllowingFirewallRules(List.of(healthCheckAllowingFirewallRules));
         }
 
+        /**
+         * @param healthCheckBlockingFirewallRules A list of firewall rule URIs blocking probes from health check IP ranges.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthCheckBlockingFirewallRules(List<String> healthCheckBlockingFirewallRules) {
             $.healthCheckBlockingFirewallRules = healthCheckBlockingFirewallRules;
             return this;
         }
 
+        /**
+         * @param healthCheckBlockingFirewallRules A list of firewall rule URIs blocking probes from health check IP ranges.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthCheckBlockingFirewallRules(String... healthCheckBlockingFirewallRules) {
             return healthCheckBlockingFirewallRules(List.of(healthCheckBlockingFirewallRules));
         }
 
+        /**
+         * @param healthCheckFirewallState State of the health check firewall configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthCheckFirewallState(String healthCheckFirewallState) {
             $.healthCheckFirewallState = healthCheckFirewallState;
             return this;
         }
 
+        /**
+         * @param uri URI of a Compute Engine instance or network endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(String uri) {
             $.uri = uri;
             return this;

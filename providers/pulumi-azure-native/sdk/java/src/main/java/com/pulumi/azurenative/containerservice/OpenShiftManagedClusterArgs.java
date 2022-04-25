@@ -30,6 +30,10 @@ public final class OpenShiftManagedClusterArgs extends com.pulumi.resources.Reso
     @Import(name="agentPoolProfiles")
     private @Nullable Output<List<OpenShiftManagedClusterAgentPoolProfileArgs>> agentPoolProfiles;
 
+    /**
+     * @return Configuration of OpenShift cluster VMs.
+     * 
+     */
     public Optional<Output<List<OpenShiftManagedClusterAgentPoolProfileArgs>>> agentPoolProfiles() {
         return Optional.ofNullable(this.agentPoolProfiles);
     }
@@ -41,6 +45,10 @@ public final class OpenShiftManagedClusterArgs extends com.pulumi.resources.Reso
     @Import(name="authProfile")
     private @Nullable Output<OpenShiftManagedClusterAuthProfileArgs> authProfile;
 
+    /**
+     * @return Configures OpenShift authentication.
+     * 
+     */
     public Optional<Output<OpenShiftManagedClusterAuthProfileArgs>> authProfile() {
         return Optional.ofNullable(this.authProfile);
     }
@@ -52,6 +60,10 @@ public final class OpenShiftManagedClusterArgs extends com.pulumi.resources.Reso
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -63,6 +75,10 @@ public final class OpenShiftManagedClusterArgs extends com.pulumi.resources.Reso
     @Import(name="masterPoolProfile")
     private @Nullable Output<OpenShiftManagedClusterMasterPoolProfileArgs> masterPoolProfile;
 
+    /**
+     * @return Configuration for OpenShift master VMs.
+     * 
+     */
     public Optional<Output<OpenShiftManagedClusterMasterPoolProfileArgs>> masterPoolProfile() {
         return Optional.ofNullable(this.masterPoolProfile);
     }
@@ -74,6 +90,10 @@ public final class OpenShiftManagedClusterArgs extends com.pulumi.resources.Reso
     @Import(name="networkProfile")
     private @Nullable Output<NetworkProfileArgs> networkProfile;
 
+    /**
+     * @return Configuration for OpenShift networking.
+     * 
+     */
     public Optional<Output<NetworkProfileArgs>> networkProfile() {
         return Optional.ofNullable(this.networkProfile);
     }
@@ -85,6 +105,10 @@ public final class OpenShiftManagedClusterArgs extends com.pulumi.resources.Reso
     @Import(name="openShiftVersion", required=true)
     private Output<String> openShiftVersion;
 
+    /**
+     * @return Version of OpenShift specified when creating the cluster.
+     * 
+     */
     public Output<String> openShiftVersion() {
         return this.openShiftVersion;
     }
@@ -96,6 +120,10 @@ public final class OpenShiftManagedClusterArgs extends com.pulumi.resources.Reso
     @Import(name="plan")
     private @Nullable Output<PurchasePlanArgs> plan;
 
+    /**
+     * @return Define the resource plan as required by ARM for billing purposes
+     * 
+     */
     public Optional<Output<PurchasePlanArgs>> plan() {
         return Optional.ofNullable(this.plan);
     }
@@ -107,6 +135,10 @@ public final class OpenShiftManagedClusterArgs extends com.pulumi.resources.Reso
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -118,6 +150,10 @@ public final class OpenShiftManagedClusterArgs extends com.pulumi.resources.Reso
     @Import(name="resourceName")
     private @Nullable Output<String> resourceName;
 
+    /**
+     * @return The name of the OpenShift managed cluster resource.
+     * 
+     */
     public Optional<Output<String>> resourceName() {
         return Optional.ofNullable(this.resourceName);
     }
@@ -129,6 +165,10 @@ public final class OpenShiftManagedClusterArgs extends com.pulumi.resources.Reso
     @Import(name="routerProfiles")
     private @Nullable Output<List<OpenShiftRouterProfileArgs>> routerProfiles;
 
+    /**
+     * @return Configuration for OpenShift router(s).
+     * 
+     */
     public Optional<Output<List<OpenShiftRouterProfileArgs>>> routerProfiles() {
         return Optional.ofNullable(this.routerProfiles);
     }
@@ -140,6 +180,10 @@ public final class OpenShiftManagedClusterArgs extends com.pulumi.resources.Reso
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -178,109 +222,253 @@ public final class OpenShiftManagedClusterArgs extends com.pulumi.resources.Reso
             $ = new OpenShiftManagedClusterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param agentPoolProfiles Configuration of OpenShift cluster VMs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentPoolProfiles(@Nullable Output<List<OpenShiftManagedClusterAgentPoolProfileArgs>> agentPoolProfiles) {
             $.agentPoolProfiles = agentPoolProfiles;
             return this;
         }
 
+        /**
+         * @param agentPoolProfiles Configuration of OpenShift cluster VMs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentPoolProfiles(List<OpenShiftManagedClusterAgentPoolProfileArgs> agentPoolProfiles) {
             return agentPoolProfiles(Output.of(agentPoolProfiles));
         }
 
+        /**
+         * @param agentPoolProfiles Configuration of OpenShift cluster VMs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentPoolProfiles(OpenShiftManagedClusterAgentPoolProfileArgs... agentPoolProfiles) {
             return agentPoolProfiles(List.of(agentPoolProfiles));
         }
 
+        /**
+         * @param authProfile Configures OpenShift authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authProfile(@Nullable Output<OpenShiftManagedClusterAuthProfileArgs> authProfile) {
             $.authProfile = authProfile;
             return this;
         }
 
+        /**
+         * @param authProfile Configures OpenShift authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authProfile(OpenShiftManagedClusterAuthProfileArgs authProfile) {
             return authProfile(Output.of(authProfile));
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param masterPoolProfile Configuration for OpenShift master VMs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder masterPoolProfile(@Nullable Output<OpenShiftManagedClusterMasterPoolProfileArgs> masterPoolProfile) {
             $.masterPoolProfile = masterPoolProfile;
             return this;
         }
 
+        /**
+         * @param masterPoolProfile Configuration for OpenShift master VMs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder masterPoolProfile(OpenShiftManagedClusterMasterPoolProfileArgs masterPoolProfile) {
             return masterPoolProfile(Output.of(masterPoolProfile));
         }
 
+        /**
+         * @param networkProfile Configuration for OpenShift networking.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkProfile(@Nullable Output<NetworkProfileArgs> networkProfile) {
             $.networkProfile = networkProfile;
             return this;
         }
 
+        /**
+         * @param networkProfile Configuration for OpenShift networking.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkProfile(NetworkProfileArgs networkProfile) {
             return networkProfile(Output.of(networkProfile));
         }
 
+        /**
+         * @param openShiftVersion Version of OpenShift specified when creating the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder openShiftVersion(Output<String> openShiftVersion) {
             $.openShiftVersion = openShiftVersion;
             return this;
         }
 
+        /**
+         * @param openShiftVersion Version of OpenShift specified when creating the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder openShiftVersion(String openShiftVersion) {
             return openShiftVersion(Output.of(openShiftVersion));
         }
 
+        /**
+         * @param plan Define the resource plan as required by ARM for billing purposes
+         * 
+         * @return builder
+         * 
+         */
         public Builder plan(@Nullable Output<PurchasePlanArgs> plan) {
             $.plan = plan;
             return this;
         }
 
+        /**
+         * @param plan Define the resource plan as required by ARM for billing purposes
+         * 
+         * @return builder
+         * 
+         */
         public Builder plan(PurchasePlanArgs plan) {
             return plan(Output.of(plan));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param resourceName The name of the OpenShift managed cluster resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(@Nullable Output<String> resourceName) {
             $.resourceName = resourceName;
             return this;
         }
 
+        /**
+         * @param resourceName The name of the OpenShift managed cluster resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(String resourceName) {
             return resourceName(Output.of(resourceName));
         }
 
+        /**
+         * @param routerProfiles Configuration for OpenShift router(s).
+         * 
+         * @return builder
+         * 
+         */
         public Builder routerProfiles(@Nullable Output<List<OpenShiftRouterProfileArgs>> routerProfiles) {
             $.routerProfiles = routerProfiles;
             return this;
         }
 
+        /**
+         * @param routerProfiles Configuration for OpenShift router(s).
+         * 
+         * @return builder
+         * 
+         */
         public Builder routerProfiles(List<OpenShiftRouterProfileArgs> routerProfiles) {
             return routerProfiles(Output.of(routerProfiles));
         }
 
+        /**
+         * @param routerProfiles Configuration for OpenShift router(s).
+         * 
+         * @return builder
+         * 
+         */
         public Builder routerProfiles(OpenShiftRouterProfileArgs... routerProfiles) {
             return routerProfiles(List.of(routerProfiles));
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

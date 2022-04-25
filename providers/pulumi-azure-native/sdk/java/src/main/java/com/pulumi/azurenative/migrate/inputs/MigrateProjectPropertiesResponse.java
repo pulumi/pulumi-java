@@ -30,6 +30,10 @@ public final class MigrateProjectPropertiesResponse extends com.pulumi.resources
     @Import(name="lastSummaryRefreshedTime", required=true)
     private String lastSummaryRefreshedTime;
 
+    /**
+     * @return Gets the last time the project summary was refreshed.
+     * 
+     */
     public String lastSummaryRefreshedTime() {
         return this.lastSummaryRefreshedTime;
     }
@@ -41,6 +45,10 @@ public final class MigrateProjectPropertiesResponse extends com.pulumi.resources
     @Import(name="provisioningState")
     private @Nullable String provisioningState;
 
+    /**
+     * @return Provisioning state of the migrate project.
+     * 
+     */
     public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
@@ -52,6 +60,10 @@ public final class MigrateProjectPropertiesResponse extends com.pulumi.resources
     @Import(name="refreshSummaryState", required=true)
     private String refreshSummaryState;
 
+    /**
+     * @return Gets the refresh summary state.
+     * 
+     */
     public String refreshSummaryState() {
         return this.refreshSummaryState;
     }
@@ -63,6 +75,10 @@ public final class MigrateProjectPropertiesResponse extends com.pulumi.resources
     @Import(name="registeredTools")
     private @Nullable List<String> registeredTools;
 
+    /**
+     * @return Gets or sets the list of tools registered with the migrate project.
+     * 
+     */
     public Optional<List<String>> registeredTools() {
         return Optional.ofNullable(this.registeredTools);
     }
@@ -74,6 +90,10 @@ public final class MigrateProjectPropertiesResponse extends com.pulumi.resources
     @Import(name="summary", required=true)
     private Map<String,Either<DatabaseProjectSummaryResponse,ServersProjectSummaryResponse>> summary;
 
+    /**
+     * @return Gets the summary of the migrate project.
+     * 
+     */
     public Map<String,Either<DatabaseProjectSummaryResponse,ServersProjectSummaryResponse>> summary() {
         return this.summary;
     }
@@ -106,30 +126,66 @@ public final class MigrateProjectPropertiesResponse extends com.pulumi.resources
             $ = new MigrateProjectPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param lastSummaryRefreshedTime Gets the last time the project summary was refreshed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastSummaryRefreshedTime(String lastSummaryRefreshedTime) {
             $.lastSummaryRefreshedTime = lastSummaryRefreshedTime;
             return this;
         }
 
+        /**
+         * @param provisioningState Provisioning state of the migrate project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(@Nullable String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param refreshSummaryState Gets the refresh summary state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder refreshSummaryState(String refreshSummaryState) {
             $.refreshSummaryState = refreshSummaryState;
             return this;
         }
 
+        /**
+         * @param registeredTools Gets or sets the list of tools registered with the migrate project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registeredTools(@Nullable List<String> registeredTools) {
             $.registeredTools = registeredTools;
             return this;
         }
 
+        /**
+         * @param registeredTools Gets or sets the list of tools registered with the migrate project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registeredTools(String... registeredTools) {
             return registeredTools(List.of(registeredTools));
         }
 
+        /**
+         * @param summary Gets the summary of the migrate project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder summary(Map<String,Either<DatabaseProjectSummaryResponse,ServersProjectSummaryResponse>> summary) {
             $.summary = summary;
             return this;

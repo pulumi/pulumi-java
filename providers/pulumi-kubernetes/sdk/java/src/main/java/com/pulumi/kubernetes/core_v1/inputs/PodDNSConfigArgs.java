@@ -28,6 +28,10 @@ public final class PodDNSConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nameservers")
     private @Nullable Output<List<String>> nameservers;
 
+    /**
+     * @return A list of DNS name server IP addresses. This will be appended to the base nameservers generated from DNSPolicy. Duplicated nameservers will be removed.
+     * 
+     */
     public Optional<Output<List<String>>> nameservers() {
         return Optional.ofNullable(this.nameservers);
     }
@@ -39,6 +43,10 @@ public final class PodDNSConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="options")
     private @Nullable Output<List<PodDNSConfigOptionArgs>> options;
 
+    /**
+     * @return A list of DNS resolver options. This will be merged with the base options generated from DNSPolicy. Duplicated entries will be removed. Resolution options given in Options will override those that appear in the base DNSPolicy.
+     * 
+     */
     public Optional<Output<List<PodDNSConfigOptionArgs>>> options() {
         return Optional.ofNullable(this.options);
     }
@@ -50,6 +58,10 @@ public final class PodDNSConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="searches")
     private @Nullable Output<List<String>> searches;
 
+    /**
+     * @return A list of DNS search domains for host-name lookup. This will be appended to the base search paths generated from DNSPolicy. Duplicated search paths will be removed.
+     * 
+     */
     public Optional<Output<List<String>>> searches() {
         return Optional.ofNullable(this.searches);
     }
@@ -80,41 +92,95 @@ public final class PodDNSConfigArgs extends com.pulumi.resources.ResourceArgs {
             $ = new PodDNSConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param nameservers A list of DNS name server IP addresses. This will be appended to the base nameservers generated from DNSPolicy. Duplicated nameservers will be removed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nameservers(@Nullable Output<List<String>> nameservers) {
             $.nameservers = nameservers;
             return this;
         }
 
+        /**
+         * @param nameservers A list of DNS name server IP addresses. This will be appended to the base nameservers generated from DNSPolicy. Duplicated nameservers will be removed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nameservers(List<String> nameservers) {
             return nameservers(Output.of(nameservers));
         }
 
+        /**
+         * @param nameservers A list of DNS name server IP addresses. This will be appended to the base nameservers generated from DNSPolicy. Duplicated nameservers will be removed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nameservers(String... nameservers) {
             return nameservers(List.of(nameservers));
         }
 
+        /**
+         * @param options A list of DNS resolver options. This will be merged with the base options generated from DNSPolicy. Duplicated entries will be removed. Resolution options given in Options will override those that appear in the base DNSPolicy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder options(@Nullable Output<List<PodDNSConfigOptionArgs>> options) {
             $.options = options;
             return this;
         }
 
+        /**
+         * @param options A list of DNS resolver options. This will be merged with the base options generated from DNSPolicy. Duplicated entries will be removed. Resolution options given in Options will override those that appear in the base DNSPolicy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder options(List<PodDNSConfigOptionArgs> options) {
             return options(Output.of(options));
         }
 
+        /**
+         * @param options A list of DNS resolver options. This will be merged with the base options generated from DNSPolicy. Duplicated entries will be removed. Resolution options given in Options will override those that appear in the base DNSPolicy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder options(PodDNSConfigOptionArgs... options) {
             return options(List.of(options));
         }
 
+        /**
+         * @param searches A list of DNS search domains for host-name lookup. This will be appended to the base search paths generated from DNSPolicy. Duplicated search paths will be removed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder searches(@Nullable Output<List<String>> searches) {
             $.searches = searches;
             return this;
         }
 
+        /**
+         * @param searches A list of DNS search domains for host-name lookup. This will be appended to the base search paths generated from DNSPolicy. Duplicated search paths will be removed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder searches(List<String> searches) {
             return searches(Output.of(searches));
         }
 
+        /**
+         * @param searches A list of DNS search domains for host-name lookup. This will be appended to the base search paths generated from DNSPolicy. Duplicated search paths will be removed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder searches(String... searches) {
             return searches(List.of(searches));
         }

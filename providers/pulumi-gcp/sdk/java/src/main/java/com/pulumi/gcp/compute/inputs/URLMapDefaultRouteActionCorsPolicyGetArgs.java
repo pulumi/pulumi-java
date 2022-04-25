@@ -26,6 +26,11 @@ public final class URLMapDefaultRouteActionCorsPolicyGetArgs extends com.pulumi.
     @Import(name="allowCredentials")
     private @Nullable Output<Boolean> allowCredentials;
 
+    /**
+     * @return In response to a preflight request, setting this to true indicates that the actual request can include user credentials.
+     * This translates to the Access-Control-Allow-Credentials header.
+     * 
+     */
     public Optional<Output<Boolean>> allowCredentials() {
         return Optional.ofNullable(this.allowCredentials);
     }
@@ -37,6 +42,10 @@ public final class URLMapDefaultRouteActionCorsPolicyGetArgs extends com.pulumi.
     @Import(name="allowHeaders")
     private @Nullable Output<List<String>> allowHeaders;
 
+    /**
+     * @return Specifies the content for the Access-Control-Allow-Headers header.
+     * 
+     */
     public Optional<Output<List<String>>> allowHeaders() {
         return Optional.ofNullable(this.allowHeaders);
     }
@@ -48,6 +57,10 @@ public final class URLMapDefaultRouteActionCorsPolicyGetArgs extends com.pulumi.
     @Import(name="allowMethods")
     private @Nullable Output<List<String>> allowMethods;
 
+    /**
+     * @return Specifies the content for the Access-Control-Allow-Methods header.
+     * 
+     */
     public Optional<Output<List<String>>> allowMethods() {
         return Optional.ofNullable(this.allowMethods);
     }
@@ -61,6 +74,12 @@ public final class URLMapDefaultRouteActionCorsPolicyGetArgs extends com.pulumi.
     @Import(name="allowOriginRegexes")
     private @Nullable Output<List<String>> allowOriginRegexes;
 
+    /**
+     * @return Specifies the regular expression patterns that match allowed origins. For regular expression grammar
+     * please see en.cppreference.com/w/cpp/regex/ecmascript
+     * An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
+     * 
+     */
     public Optional<Output<List<String>>> allowOriginRegexes() {
         return Optional.ofNullable(this.allowOriginRegexes);
     }
@@ -73,6 +92,11 @@ public final class URLMapDefaultRouteActionCorsPolicyGetArgs extends com.pulumi.
     @Import(name="allowOrigins")
     private @Nullable Output<List<String>> allowOrigins;
 
+    /**
+     * @return Specifies the list of origins that will be allowed to do CORS requests.
+     * An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
+     * 
+     */
     public Optional<Output<List<String>>> allowOrigins() {
         return Optional.ofNullable(this.allowOrigins);
     }
@@ -84,6 +108,10 @@ public final class URLMapDefaultRouteActionCorsPolicyGetArgs extends com.pulumi.
     @Import(name="disabled")
     private @Nullable Output<Boolean> disabled;
 
+    /**
+     * @return If true, specifies the CORS policy is disabled. The default value is false, which indicates that the CORS policy is in effect.
+     * 
+     */
     public Optional<Output<Boolean>> disabled() {
         return Optional.ofNullable(this.disabled);
     }
@@ -95,6 +123,10 @@ public final class URLMapDefaultRouteActionCorsPolicyGetArgs extends com.pulumi.
     @Import(name="exposeHeaders")
     private @Nullable Output<List<String>> exposeHeaders;
 
+    /**
+     * @return Specifies the content for the Access-Control-Expose-Headers header.
+     * 
+     */
     public Optional<Output<List<String>>> exposeHeaders() {
         return Optional.ofNullable(this.exposeHeaders);
     }
@@ -107,6 +139,11 @@ public final class URLMapDefaultRouteActionCorsPolicyGetArgs extends com.pulumi.
     @Import(name="maxAge")
     private @Nullable Output<Integer> maxAge;
 
+    /**
+     * @return Specifies how long results of a preflight request can be cached in seconds.
+     * This translates to the Access-Control-Max-Age header.
+     * 
+     */
     public Optional<Output<Integer>> maxAge() {
         return Optional.ofNullable(this.maxAge);
     }
@@ -142,94 +179,233 @@ public final class URLMapDefaultRouteActionCorsPolicyGetArgs extends com.pulumi.
             $ = new URLMapDefaultRouteActionCorsPolicyGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowCredentials In response to a preflight request, setting this to true indicates that the actual request can include user credentials.
+         * This translates to the Access-Control-Allow-Credentials header.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowCredentials(@Nullable Output<Boolean> allowCredentials) {
             $.allowCredentials = allowCredentials;
             return this;
         }
 
+        /**
+         * @param allowCredentials In response to a preflight request, setting this to true indicates that the actual request can include user credentials.
+         * This translates to the Access-Control-Allow-Credentials header.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowCredentials(Boolean allowCredentials) {
             return allowCredentials(Output.of(allowCredentials));
         }
 
+        /**
+         * @param allowHeaders Specifies the content for the Access-Control-Allow-Headers header.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowHeaders(@Nullable Output<List<String>> allowHeaders) {
             $.allowHeaders = allowHeaders;
             return this;
         }
 
+        /**
+         * @param allowHeaders Specifies the content for the Access-Control-Allow-Headers header.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowHeaders(List<String> allowHeaders) {
             return allowHeaders(Output.of(allowHeaders));
         }
 
+        /**
+         * @param allowHeaders Specifies the content for the Access-Control-Allow-Headers header.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowHeaders(String... allowHeaders) {
             return allowHeaders(List.of(allowHeaders));
         }
 
+        /**
+         * @param allowMethods Specifies the content for the Access-Control-Allow-Methods header.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowMethods(@Nullable Output<List<String>> allowMethods) {
             $.allowMethods = allowMethods;
             return this;
         }
 
+        /**
+         * @param allowMethods Specifies the content for the Access-Control-Allow-Methods header.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowMethods(List<String> allowMethods) {
             return allowMethods(Output.of(allowMethods));
         }
 
+        /**
+         * @param allowMethods Specifies the content for the Access-Control-Allow-Methods header.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowMethods(String... allowMethods) {
             return allowMethods(List.of(allowMethods));
         }
 
+        /**
+         * @param allowOriginRegexes Specifies the regular expression patterns that match allowed origins. For regular expression grammar
+         * please see en.cppreference.com/w/cpp/regex/ecmascript
+         * An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowOriginRegexes(@Nullable Output<List<String>> allowOriginRegexes) {
             $.allowOriginRegexes = allowOriginRegexes;
             return this;
         }
 
+        /**
+         * @param allowOriginRegexes Specifies the regular expression patterns that match allowed origins. For regular expression grammar
+         * please see en.cppreference.com/w/cpp/regex/ecmascript
+         * An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowOriginRegexes(List<String> allowOriginRegexes) {
             return allowOriginRegexes(Output.of(allowOriginRegexes));
         }
 
+        /**
+         * @param allowOriginRegexes Specifies the regular expression patterns that match allowed origins. For regular expression grammar
+         * please see en.cppreference.com/w/cpp/regex/ecmascript
+         * An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowOriginRegexes(String... allowOriginRegexes) {
             return allowOriginRegexes(List.of(allowOriginRegexes));
         }
 
+        /**
+         * @param allowOrigins Specifies the list of origins that will be allowed to do CORS requests.
+         * An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowOrigins(@Nullable Output<List<String>> allowOrigins) {
             $.allowOrigins = allowOrigins;
             return this;
         }
 
+        /**
+         * @param allowOrigins Specifies the list of origins that will be allowed to do CORS requests.
+         * An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowOrigins(List<String> allowOrigins) {
             return allowOrigins(Output.of(allowOrigins));
         }
 
+        /**
+         * @param allowOrigins Specifies the list of origins that will be allowed to do CORS requests.
+         * An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowOrigins(String... allowOrigins) {
             return allowOrigins(List.of(allowOrigins));
         }
 
+        /**
+         * @param disabled If true, specifies the CORS policy is disabled. The default value is false, which indicates that the CORS policy is in effect.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disabled(@Nullable Output<Boolean> disabled) {
             $.disabled = disabled;
             return this;
         }
 
+        /**
+         * @param disabled If true, specifies the CORS policy is disabled. The default value is false, which indicates that the CORS policy is in effect.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disabled(Boolean disabled) {
             return disabled(Output.of(disabled));
         }
 
+        /**
+         * @param exposeHeaders Specifies the content for the Access-Control-Expose-Headers header.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exposeHeaders(@Nullable Output<List<String>> exposeHeaders) {
             $.exposeHeaders = exposeHeaders;
             return this;
         }
 
+        /**
+         * @param exposeHeaders Specifies the content for the Access-Control-Expose-Headers header.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exposeHeaders(List<String> exposeHeaders) {
             return exposeHeaders(Output.of(exposeHeaders));
         }
 
+        /**
+         * @param exposeHeaders Specifies the content for the Access-Control-Expose-Headers header.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exposeHeaders(String... exposeHeaders) {
             return exposeHeaders(List.of(exposeHeaders));
         }
 
+        /**
+         * @param maxAge Specifies how long results of a preflight request can be cached in seconds.
+         * This translates to the Access-Control-Max-Age header.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxAge(@Nullable Output<Integer> maxAge) {
             $.maxAge = maxAge;
             return this;
         }
 
+        /**
+         * @param maxAge Specifies how long results of a preflight request can be cached in seconds.
+         * This translates to the Access-Control-Max-Age header.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxAge(Integer maxAge) {
             return maxAge(Output.of(maxAge));
         }

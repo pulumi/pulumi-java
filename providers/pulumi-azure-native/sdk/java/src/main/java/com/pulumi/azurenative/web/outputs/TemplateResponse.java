@@ -16,22 +16,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class TemplateResponse {
     /**
-     * List of container definitions for the Container App.
+     * @return List of container definitions for the Container App.
      * 
      */
     private final @Nullable List<ContainerResponse> containers;
     /**
-     * Dapr configuration for the Container App.
+     * @return Dapr configuration for the Container App.
      * 
      */
     private final @Nullable DaprResponse dapr;
     /**
-     * User friendly suffix that is appended to the revision name
+     * @return User friendly suffix that is appended to the revision name
      * 
      */
     private final @Nullable String revisionSuffix;
     /**
-     * Scaling properties for the Container App.
+     * @return Scaling properties for the Container App.
      * 
      */
     private final @Nullable ScaleResponse scale;
@@ -49,30 +49,30 @@ public final class TemplateResponse {
     }
 
     /**
-     * List of container definitions for the Container App.
+     * @return List of container definitions for the Container App.
      * 
-    */
+     */
     public List<ContainerResponse> containers() {
         return this.containers == null ? List.of() : this.containers;
     }
     /**
-     * Dapr configuration for the Container App.
+     * @return Dapr configuration for the Container App.
      * 
-    */
+     */
     public Optional<DaprResponse> dapr() {
         return Optional.ofNullable(this.dapr);
     }
     /**
-     * User friendly suffix that is appended to the revision name
+     * @return User friendly suffix that is appended to the revision name
      * 
-    */
+     */
     public Optional<String> revisionSuffix() {
         return Optional.ofNullable(this.revisionSuffix);
     }
     /**
-     * Scaling properties for the Container App.
+     * @return Scaling properties for the Container App.
      * 
-    */
+     */
     public Optional<ScaleResponse> scale() {
         return Optional.ofNullable(this.scale);
     }

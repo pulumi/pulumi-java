@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class GrafeasV1beta1DiscoveryDetailsResponse {
     /**
-     * Analysis status for the discovered resource.
+     * @return Analysis status for the discovered resource.
      * 
      */
     private final DiscoveredResponse discovered;
@@ -21,9 +21,9 @@ public final class GrafeasV1beta1DiscoveryDetailsResponse {
     }
 
     /**
-     * Analysis status for the discovered resource.
+     * @return Analysis status for the discovered resource.
      * 
-    */
+     */
     public DiscoveredResponse discovered() {
         return this.discovered;
     }

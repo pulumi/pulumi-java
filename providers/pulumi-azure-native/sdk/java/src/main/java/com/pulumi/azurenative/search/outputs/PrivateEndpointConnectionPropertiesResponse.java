@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PrivateEndpointConnectionPropertiesResponse {
     /**
-     * The private endpoint resource from Microsoft.Network provider.
+     * @return The private endpoint resource from Microsoft.Network provider.
      * 
      */
     private final @Nullable PrivateEndpointConnectionPropertiesResponsePrivateEndpoint privateEndpoint;
     /**
-     * Describes the current state of an existing Private Link Service connection to the Azure Private Endpoint.
+     * @return Describes the current state of an existing Private Link Service connection to the Azure Private Endpoint.
      * 
      */
     private final @Nullable PrivateEndpointConnectionPropertiesResponsePrivateLinkServiceConnectionState privateLinkServiceConnectionState;
@@ -32,16 +32,16 @@ public final class PrivateEndpointConnectionPropertiesResponse {
     }
 
     /**
-     * The private endpoint resource from Microsoft.Network provider.
+     * @return The private endpoint resource from Microsoft.Network provider.
      * 
-    */
+     */
     public Optional<PrivateEndpointConnectionPropertiesResponsePrivateEndpoint> privateEndpoint() {
         return Optional.ofNullable(this.privateEndpoint);
     }
     /**
-     * Describes the current state of an existing Private Link Service connection to the Azure Private Endpoint.
+     * @return Describes the current state of an existing Private Link Service connection to the Azure Private Endpoint.
      * 
-    */
+     */
     public Optional<PrivateEndpointConnectionPropertiesResponsePrivateLinkServiceConnectionState> privateLinkServiceConnectionState() {
         return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }

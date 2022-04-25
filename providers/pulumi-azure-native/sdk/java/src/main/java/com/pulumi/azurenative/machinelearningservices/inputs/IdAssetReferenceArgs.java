@@ -25,6 +25,10 @@ public final class IdAssetReferenceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="assetId", required=true)
     private Output<String> assetId;
 
+    /**
+     * @return ARM resource ID of the asset.
+     * 
+     */
     public Output<String> assetId() {
         return this.assetId;
     }
@@ -37,6 +41,11 @@ public final class IdAssetReferenceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="referenceType", required=true)
     private Output<String> referenceType;
 
+    /**
+     * @return Enum to determine which reference method to use for an asset.
+     * Expected value is &#39;Id&#39;.
+     * 
+     */
     public Output<String> referenceType() {
         return this.referenceType;
     }
@@ -66,20 +75,46 @@ public final class IdAssetReferenceArgs extends com.pulumi.resources.ResourceArg
             $ = new IdAssetReferenceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param assetId ARM resource ID of the asset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assetId(Output<String> assetId) {
             $.assetId = assetId;
             return this;
         }
 
+        /**
+         * @param assetId ARM resource ID of the asset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assetId(String assetId) {
             return assetId(Output.of(assetId));
         }
 
+        /**
+         * @param referenceType Enum to determine which reference method to use for an asset.
+         * Expected value is &#39;Id&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder referenceType(Output<String> referenceType) {
             $.referenceType = referenceType;
             return this;
         }
 
+        /**
+         * @param referenceType Enum to determine which reference method to use for an asset.
+         * Expected value is &#39;Id&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder referenceType(String referenceType) {
             return referenceType(Output.of(referenceType));
         }

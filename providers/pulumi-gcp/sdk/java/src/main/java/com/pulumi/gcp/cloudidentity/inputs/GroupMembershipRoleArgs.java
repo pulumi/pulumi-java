@@ -21,6 +21,11 @@ public final class GroupMembershipRoleArgs extends com.pulumi.resources.Resource
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The name of the MembershipRole. Must be one of OWNER, MANAGER, MEMBER.
+     * Possible values are `OWNER`, `MANAGER`, and `MEMBER`.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -49,11 +54,25 @@ public final class GroupMembershipRoleArgs extends com.pulumi.resources.Resource
             $ = new GroupMembershipRoleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the MembershipRole. Must be one of OWNER, MANAGER, MEMBER.
+         * Possible values are `OWNER`, `MANAGER`, and `MEMBER`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the MembershipRole. Must be one of OWNER, MANAGER, MEMBER.
+         * Possible values are `OWNER`, `MANAGER`, and `MEMBER`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

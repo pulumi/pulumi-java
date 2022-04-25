@@ -26,6 +26,10 @@ public final class VerticalPodAutoscalingArgs extends com.pulumi.resources.Resou
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return Enables vertical pod autoscaling.
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -54,11 +58,23 @@ public final class VerticalPodAutoscalingArgs extends com.pulumi.resources.Resou
             $ = new VerticalPodAutoscalingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Enables vertical pod autoscaling.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Enables vertical pod autoscaling.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }

@@ -27,6 +27,10 @@ public final class IdentityResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="principalId", required=true)
     private String principalId;
 
+    /**
+     * @return The principal ID of resource identity.
+     * 
+     */
     public String principalId() {
         return this.principalId;
     }
@@ -38,6 +42,10 @@ public final class IdentityResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="tenantId", required=true)
     private String tenantId;
 
+    /**
+     * @return The tenant ID of resource.
+     * 
+     */
     public String tenantId() {
         return this.tenantId;
     }
@@ -49,6 +57,10 @@ public final class IdentityResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The identity type.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -60,6 +72,10 @@ public final class IdentityResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="userAssignedIdentities")
     private @Nullable Map<String,UserAssignedIdentityResponse> userAssignedIdentities;
 
+    /**
+     * @return Gets or sets a list of key value pairs that describe the set of User Assigned identities that will be used with this storage account. The key is the ARM resource identifier of the identity. Only 1 User Assigned identity is permitted here.
+     * 
+     */
     public Optional<Map<String,UserAssignedIdentityResponse>> userAssignedIdentities() {
         return Optional.ofNullable(this.userAssignedIdentities);
     }
@@ -91,21 +107,45 @@ public final class IdentityResponse extends com.pulumi.resources.InvokeArgs {
             $ = new IdentityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param principalId The principal ID of resource identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalId(String principalId) {
             $.principalId = principalId;
             return this;
         }
 
+        /**
+         * @param tenantId The tenant ID of resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(String tenantId) {
             $.tenantId = tenantId;
             return this;
         }
 
+        /**
+         * @param type The identity type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param userAssignedIdentities Gets or sets a list of key value pairs that describe the set of User Assigned identities that will be used with this storage account. The key is the ARM resource identifier of the identity. Only 1 User Assigned identity is permitted here.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userAssignedIdentities(@Nullable Map<String,UserAssignedIdentityResponse> userAssignedIdentities) {
             $.userAssignedIdentities = userAssignedIdentities;
             return this;

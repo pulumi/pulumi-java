@@ -26,6 +26,10 @@ public final class JitNetworkAccessPortRuleArgs extends com.pulumi.resources.Res
     @Import(name="allowedSourceAddressPrefix")
     private @Nullable Output<String> allowedSourceAddressPrefix;
 
+    /**
+     * @return Mutually exclusive with the &#34;allowedSourceAddressPrefixes&#34; parameter. Should be an IP address or CIDR, for example &#34;192.168.0.3&#34; or &#34;192.168.0.0/16&#34;.
+     * 
+     */
     public Optional<Output<String>> allowedSourceAddressPrefix() {
         return Optional.ofNullable(this.allowedSourceAddressPrefix);
     }
@@ -37,6 +41,10 @@ public final class JitNetworkAccessPortRuleArgs extends com.pulumi.resources.Res
     @Import(name="allowedSourceAddressPrefixes")
     private @Nullable Output<List<String>> allowedSourceAddressPrefixes;
 
+    /**
+     * @return Mutually exclusive with the &#34;allowedSourceAddressPrefix&#34; parameter.
+     * 
+     */
     public Optional<Output<List<String>>> allowedSourceAddressPrefixes() {
         return Optional.ofNullable(this.allowedSourceAddressPrefixes);
     }
@@ -48,6 +56,10 @@ public final class JitNetworkAccessPortRuleArgs extends com.pulumi.resources.Res
     @Import(name="maxRequestAccessDuration", required=true)
     private Output<String> maxRequestAccessDuration;
 
+    /**
+     * @return Maximum duration requests can be made for. In ISO 8601 duration format. Minimum 5 minutes, maximum 1 day
+     * 
+     */
     public Output<String> maxRequestAccessDuration() {
         return this.maxRequestAccessDuration;
     }
@@ -94,33 +106,75 @@ public final class JitNetworkAccessPortRuleArgs extends com.pulumi.resources.Res
             $ = new JitNetworkAccessPortRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowedSourceAddressPrefix Mutually exclusive with the &#34;allowedSourceAddressPrefixes&#34; parameter. Should be an IP address or CIDR, for example &#34;192.168.0.3&#34; or &#34;192.168.0.0/16&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedSourceAddressPrefix(@Nullable Output<String> allowedSourceAddressPrefix) {
             $.allowedSourceAddressPrefix = allowedSourceAddressPrefix;
             return this;
         }
 
+        /**
+         * @param allowedSourceAddressPrefix Mutually exclusive with the &#34;allowedSourceAddressPrefixes&#34; parameter. Should be an IP address or CIDR, for example &#34;192.168.0.3&#34; or &#34;192.168.0.0/16&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedSourceAddressPrefix(String allowedSourceAddressPrefix) {
             return allowedSourceAddressPrefix(Output.of(allowedSourceAddressPrefix));
         }
 
+        /**
+         * @param allowedSourceAddressPrefixes Mutually exclusive with the &#34;allowedSourceAddressPrefix&#34; parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedSourceAddressPrefixes(@Nullable Output<List<String>> allowedSourceAddressPrefixes) {
             $.allowedSourceAddressPrefixes = allowedSourceAddressPrefixes;
             return this;
         }
 
+        /**
+         * @param allowedSourceAddressPrefixes Mutually exclusive with the &#34;allowedSourceAddressPrefix&#34; parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedSourceAddressPrefixes(List<String> allowedSourceAddressPrefixes) {
             return allowedSourceAddressPrefixes(Output.of(allowedSourceAddressPrefixes));
         }
 
+        /**
+         * @param allowedSourceAddressPrefixes Mutually exclusive with the &#34;allowedSourceAddressPrefix&#34; parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedSourceAddressPrefixes(String... allowedSourceAddressPrefixes) {
             return allowedSourceAddressPrefixes(List.of(allowedSourceAddressPrefixes));
         }
 
+        /**
+         * @param maxRequestAccessDuration Maximum duration requests can be made for. In ISO 8601 duration format. Minimum 5 minutes, maximum 1 day
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxRequestAccessDuration(Output<String> maxRequestAccessDuration) {
             $.maxRequestAccessDuration = maxRequestAccessDuration;
             return this;
         }
 
+        /**
+         * @param maxRequestAccessDuration Maximum duration requests can be made for. In ISO 8601 duration format. Minimum 5 minutes, maximum 1 day
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxRequestAccessDuration(String maxRequestAccessDuration) {
             return maxRequestAccessDuration(Output.of(maxRequestAccessDuration));
         }

@@ -10,22 +10,22 @@ import java.util.Objects;
 @CustomType
 public final class ExternalRefResponse {
     /**
-     * An External Reference allows a Package to reference an external source of additional information, metadata, enumerations, asset identifiers, or downloadable content believed to be relevant to the Package
+     * @return An External Reference allows a Package to reference an external source of additional information, metadata, enumerations, asset identifiers, or downloadable content believed to be relevant to the Package
      * 
      */
     private final String category;
     /**
-     * Human-readable information about the purpose and target of the reference
+     * @return Human-readable information about the purpose and target of the reference
      * 
      */
     private final String comment;
     /**
-     * The unique string with no spaces necessary to access the package-specific information, metadata, or content within the target location
+     * @return The unique string with no spaces necessary to access the package-specific information, metadata, or content within the target location
      * 
      */
     private final String locator;
     /**
-     * Type of category (e.g. &#39;npm&#39; for the PACKAGE_MANAGER category)
+     * @return Type of category (e.g. &#39;npm&#39; for the PACKAGE_MANAGER category)
      * 
      */
     private final String type;
@@ -43,30 +43,30 @@ public final class ExternalRefResponse {
     }
 
     /**
-     * An External Reference allows a Package to reference an external source of additional information, metadata, enumerations, asset identifiers, or downloadable content believed to be relevant to the Package
+     * @return An External Reference allows a Package to reference an external source of additional information, metadata, enumerations, asset identifiers, or downloadable content believed to be relevant to the Package
      * 
-    */
+     */
     public String category() {
         return this.category;
     }
     /**
-     * Human-readable information about the purpose and target of the reference
+     * @return Human-readable information about the purpose and target of the reference
      * 
-    */
+     */
     public String comment() {
         return this.comment;
     }
     /**
-     * The unique string with no spaces necessary to access the package-specific information, metadata, or content within the target location
+     * @return The unique string with no spaces necessary to access the package-specific information, metadata, or content within the target location
      * 
-    */
+     */
     public String locator() {
         return this.locator;
     }
     /**
-     * Type of category (e.g. &#39;npm&#39; for the PACKAGE_MANAGER category)
+     * @return Type of category (e.g. &#39;npm&#39; for the PACKAGE_MANAGER category)
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

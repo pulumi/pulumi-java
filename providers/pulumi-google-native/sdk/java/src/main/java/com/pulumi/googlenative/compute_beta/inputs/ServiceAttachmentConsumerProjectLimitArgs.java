@@ -23,6 +23,10 @@ public final class ServiceAttachmentConsumerProjectLimitArgs extends com.pulumi.
     @Import(name="connectionLimit")
     private @Nullable Output<Integer> connectionLimit;
 
+    /**
+     * @return The value of the limit to set.
+     * 
+     */
     public Optional<Output<Integer>> connectionLimit() {
         return Optional.ofNullable(this.connectionLimit);
     }
@@ -34,6 +38,10 @@ public final class ServiceAttachmentConsumerProjectLimitArgs extends com.pulumi.
     @Import(name="projectIdOrNum")
     private @Nullable Output<String> projectIdOrNum;
 
+    /**
+     * @return The project id or number for the project to set the limit for.
+     * 
+     */
     public Optional<Output<String>> projectIdOrNum() {
         return Optional.ofNullable(this.projectIdOrNum);
     }
@@ -63,20 +71,44 @@ public final class ServiceAttachmentConsumerProjectLimitArgs extends com.pulumi.
             $ = new ServiceAttachmentConsumerProjectLimitArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param connectionLimit The value of the limit to set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionLimit(@Nullable Output<Integer> connectionLimit) {
             $.connectionLimit = connectionLimit;
             return this;
         }
 
+        /**
+         * @param connectionLimit The value of the limit to set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionLimit(Integer connectionLimit) {
             return connectionLimit(Output.of(connectionLimit));
         }
 
+        /**
+         * @param projectIdOrNum The project id or number for the project to set the limit for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectIdOrNum(@Nullable Output<String> projectIdOrNum) {
             $.projectIdOrNum = projectIdOrNum;
             return this;
         }
 
+        /**
+         * @param projectIdOrNum The project id or number for the project to set the limit for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectIdOrNum(String projectIdOrNum) {
             return projectIdOrNum(Output.of(projectIdOrNum));
         }

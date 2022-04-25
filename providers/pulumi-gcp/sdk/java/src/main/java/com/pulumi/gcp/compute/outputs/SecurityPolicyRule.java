@@ -16,7 +16,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SecurityPolicyRule {
     /**
-     * Action to take when `match` matches the request. Valid values:
+     * @return Action to take when `match` matches the request. Valid values:
      * * &#34;allow&#34; : allow access to target
      * * &#34;deny(status)&#34; : deny access to target, returns the  HTTP response code specified (valid values are 403, 404 and 502)
      * * &#34;rate_based_ban&#34; : limit client traffic to the configured threshold and ban the client if the traffic exceeds the threshold. Configure parameters for this action in RateLimitOptions. Requires rateLimitOptions to be set.
@@ -25,30 +25,30 @@ public final class SecurityPolicyRule {
      */
     private final String action;
     /**
-     * An optional description of this rule. Max size is 64.
+     * @return An optional description of this rule. Max size is 64.
      * 
      */
     private final @Nullable String description;
     /**
-     * A match condition that incoming traffic is evaluated against.
+     * @return A match condition that incoming traffic is evaluated against.
      * If it evaluates to true, the corresponding `action` is enforced. Structure is documented below.
      * 
      */
     private final SecurityPolicyRuleMatch match;
     /**
-     * When set to true, the `action` specified above is not enforced.
+     * @return When set to true, the `action` specified above is not enforced.
      * Stackdriver logs for requests that trigger a preview action are annotated as such.
      * 
      */
     private final @Nullable Boolean preview;
     /**
-     * An unique positive integer indicating the priority of evaluation for a rule.
+     * @return An unique positive integer indicating the priority of evaluation for a rule.
      * Rules are evaluated from highest priority (lowest numerically) to lowest priority (highest numerically) in order.
      * 
      */
     private final Integer priority;
     /**
-     * )
+     * @return )
      * Must be specified if the `action` is &#34;rate_based_bad&#34; or &#34;throttle&#34;. Cannot be specified for other actions. Structure is documented below.
      * 
      */
@@ -71,52 +71,52 @@ public final class SecurityPolicyRule {
     }
 
     /**
-     * Action to take when `match` matches the request. Valid values:
+     * @return Action to take when `match` matches the request. Valid values:
      * * &#34;allow&#34; : allow access to target
      * * &#34;deny(status)&#34; : deny access to target, returns the  HTTP response code specified (valid values are 403, 404 and 502)
      * * &#34;rate_based_ban&#34; : limit client traffic to the configured threshold and ban the client if the traffic exceeds the threshold. Configure parameters for this action in RateLimitOptions. Requires rateLimitOptions to be set.
      * * &#34;threshold&#34; : limit client traffic to the configured threshold. Configure parameters for this action in rateLimitOptions. Requires rateLimitOptions to be set for this.
      * 
-    */
+     */
     public String action() {
         return this.action;
     }
     /**
-     * An optional description of this rule. Max size is 64.
+     * @return An optional description of this rule. Max size is 64.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * A match condition that incoming traffic is evaluated against.
+     * @return A match condition that incoming traffic is evaluated against.
      * If it evaluates to true, the corresponding `action` is enforced. Structure is documented below.
      * 
-    */
+     */
     public SecurityPolicyRuleMatch match() {
         return this.match;
     }
     /**
-     * When set to true, the `action` specified above is not enforced.
+     * @return When set to true, the `action` specified above is not enforced.
      * Stackdriver logs for requests that trigger a preview action are annotated as such.
      * 
-    */
+     */
     public Optional<Boolean> preview() {
         return Optional.ofNullable(this.preview);
     }
     /**
-     * An unique positive integer indicating the priority of evaluation for a rule.
+     * @return An unique positive integer indicating the priority of evaluation for a rule.
      * Rules are evaluated from highest priority (lowest numerically) to lowest priority (highest numerically) in order.
      * 
-    */
+     */
     public Integer priority() {
         return this.priority;
     }
     /**
-     * )
+     * @return )
      * Must be specified if the `action` is &#34;rate_based_bad&#34; or &#34;throttle&#34;. Cannot be specified for other actions. Structure is documented below.
      * 
-    */
+     */
     public Optional<SecurityPolicyRuleRateLimitOptions> rateLimitOptions() {
         return Optional.ofNullable(this.rateLimitOptions);
     }

@@ -19,6 +19,10 @@ public final class GetWorkloadNetworkSegmentArgs extends com.pulumi.resources.In
     @Import(name="privateCloudName", required=true)
     private String privateCloudName;
 
+    /**
+     * @return Name of the private cloud
+     * 
+     */
     public String privateCloudName() {
         return this.privateCloudName;
     }
@@ -30,6 +34,10 @@ public final class GetWorkloadNetworkSegmentArgs extends com.pulumi.resources.In
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetWorkloadNetworkSegmentArgs extends com.pulumi.resources.In
     @Import(name="segmentId", required=true)
     private String segmentId;
 
+    /**
+     * @return NSX Segment identifier. Generally the same as the Segment&#39;s display name
+     * 
+     */
     public String segmentId() {
         return this.segmentId;
     }
@@ -71,16 +83,34 @@ public final class GetWorkloadNetworkSegmentArgs extends com.pulumi.resources.In
             $ = new GetWorkloadNetworkSegmentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param privateCloudName Name of the private cloud
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateCloudName(String privateCloudName) {
             $.privateCloudName = privateCloudName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param segmentId NSX Segment identifier. Generally the same as the Segment&#39;s display name
+         * 
+         * @return builder
+         * 
+         */
         public Builder segmentId(String segmentId) {
             $.segmentId = segmentId;
             return this;

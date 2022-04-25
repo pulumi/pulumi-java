@@ -26,6 +26,10 @@ public final class DefaultKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="label")
     private @Nullable Output<String> label;
 
+    /**
+     * @return Label can be used to specify Content Key when creating a Streaming Locator
+     * 
+     */
     public Optional<Output<String>> label() {
         return Optional.ofNullable(this.label);
     }
@@ -37,6 +41,10 @@ public final class DefaultKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="policyName")
     private @Nullable Output<String> policyName;
 
+    /**
+     * @return Policy used by Default Key
+     * 
+     */
     public Optional<Output<String>> policyName() {
         return Optional.ofNullable(this.policyName);
     }
@@ -66,20 +74,44 @@ public final class DefaultKeyArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DefaultKeyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param label Label can be used to specify Content Key when creating a Streaming Locator
+         * 
+         * @return builder
+         * 
+         */
         public Builder label(@Nullable Output<String> label) {
             $.label = label;
             return this;
         }
 
+        /**
+         * @param label Label can be used to specify Content Key when creating a Streaming Locator
+         * 
+         * @return builder
+         * 
+         */
         public Builder label(String label) {
             return label(Output.of(label));
         }
 
+        /**
+         * @param policyName Policy used by Default Key
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyName(@Nullable Output<String> policyName) {
             $.policyName = policyName;
             return this;
         }
 
+        /**
+         * @param policyName Policy used by Default Key
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyName(String policyName) {
             return policyName(Output.of(policyName));
         }

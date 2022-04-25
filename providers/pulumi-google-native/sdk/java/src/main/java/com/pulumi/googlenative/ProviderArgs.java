@@ -24,6 +24,10 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="appendUserAgent")
     private @Nullable Output<String> appendUserAgent;
 
+    /**
+     * @return Additional user-agent string to append to the default one (&lt;prod_name&gt;/&lt;ver&gt;).
+     * 
+     */
     public Optional<Output<String>> appendUserAgent() {
         return Optional.ofNullable(this.appendUserAgent);
     }
@@ -35,6 +39,10 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="disablePartnerName", json=true)
     private @Nullable Output<Boolean> disablePartnerName;
 
+    /**
+     * @return This will disable the Pulumi Partner Name which is used if a custom `partnerName` isn&#39;t specified.
+     * 
+     */
     public Optional<Output<Boolean>> disablePartnerName() {
         return Optional.ofNullable(this.disablePartnerName);
     }
@@ -46,6 +54,10 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="partnerName")
     private @Nullable Output<String> partnerName;
 
+    /**
+     * @return A Google Partner Name to facilitate partner resource usage attribution.
+     * 
+     */
     public Optional<Output<String>> partnerName() {
         return Optional.ofNullable(this.partnerName);
     }
@@ -57,6 +69,10 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The default project to manage resources in. If another project is specified on a resource, it will take precedence.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -68,6 +84,10 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="region")
     private @Nullable Output<String> region;
 
+    /**
+     * @return The default region to manage resources in. If another region is specified on a regional resource, it will take precedence.
+     * 
+     */
     public Optional<Output<String>> region() {
         return Optional.ofNullable(this.region);
     }
@@ -79,6 +99,10 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="zone")
     private @Nullable Output<String> zone;
 
+    /**
+     * @return The default zone to manage resources in. Generally, this zone should be within the default region you specified. If another zone is specified on a zonal resource, it will take precedence.
+     * 
+     */
     public Optional<Output<String>> zone() {
         return Optional.ofNullable(this.zone);
     }
@@ -112,56 +136,128 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ProviderArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param appendUserAgent Additional user-agent string to append to the default one (&lt;prod_name&gt;/&lt;ver&gt;).
+         * 
+         * @return builder
+         * 
+         */
         public Builder appendUserAgent(@Nullable Output<String> appendUserAgent) {
             $.appendUserAgent = appendUserAgent;
             return this;
         }
 
+        /**
+         * @param appendUserAgent Additional user-agent string to append to the default one (&lt;prod_name&gt;/&lt;ver&gt;).
+         * 
+         * @return builder
+         * 
+         */
         public Builder appendUserAgent(String appendUserAgent) {
             return appendUserAgent(Output.of(appendUserAgent));
         }
 
+        /**
+         * @param disablePartnerName This will disable the Pulumi Partner Name which is used if a custom `partnerName` isn&#39;t specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disablePartnerName(@Nullable Output<Boolean> disablePartnerName) {
             $.disablePartnerName = disablePartnerName;
             return this;
         }
 
+        /**
+         * @param disablePartnerName This will disable the Pulumi Partner Name which is used if a custom `partnerName` isn&#39;t specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disablePartnerName(Boolean disablePartnerName) {
             return disablePartnerName(Output.of(disablePartnerName));
         }
 
+        /**
+         * @param partnerName A Google Partner Name to facilitate partner resource usage attribution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partnerName(@Nullable Output<String> partnerName) {
             $.partnerName = partnerName;
             return this;
         }
 
+        /**
+         * @param partnerName A Google Partner Name to facilitate partner resource usage attribution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partnerName(String partnerName) {
             return partnerName(Output.of(partnerName));
         }
 
+        /**
+         * @param project The default project to manage resources in. If another project is specified on a resource, it will take precedence.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The default project to manage resources in. If another project is specified on a resource, it will take precedence.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param region The default region to manage resources in. If another region is specified on a regional resource, it will take precedence.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(@Nullable Output<String> region) {
             $.region = region;
             return this;
         }
 
+        /**
+         * @param region The default region to manage resources in. If another region is specified on a regional resource, it will take precedence.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(String region) {
             return region(Output.of(region));
         }
 
+        /**
+         * @param zone The default zone to manage resources in. Generally, this zone should be within the default region you specified. If another zone is specified on a zonal resource, it will take precedence.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zone(@Nullable Output<String> zone) {
             $.zone = zone;
             return this;
         }
 
+        /**
+         * @param zone The default zone to manage resources in. Generally, this zone should be within the default region you specified. If another zone is specified on a zonal resource, it will take precedence.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zone(String zone) {
             return zone(Output.of(zone));
         }

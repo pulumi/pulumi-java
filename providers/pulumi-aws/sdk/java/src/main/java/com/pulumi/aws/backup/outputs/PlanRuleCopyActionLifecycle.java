@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PlanRuleCopyActionLifecycle {
     /**
-     * Specifies the number of days after creation that a recovery point is moved to cold storage.
+     * @return Specifies the number of days after creation that a recovery point is moved to cold storage.
      * 
      */
     private final @Nullable Integer coldStorageAfter;
     /**
-     * Specifies the number of days after creation that a recovery point is deleted. Must be 90 days greater than `cold_storage_after`.
+     * @return Specifies the number of days after creation that a recovery point is deleted. Must be 90 days greater than `cold_storage_after`.
      * 
      */
     private final @Nullable Integer deleteAfter;
@@ -31,16 +31,16 @@ public final class PlanRuleCopyActionLifecycle {
     }
 
     /**
-     * Specifies the number of days after creation that a recovery point is moved to cold storage.
+     * @return Specifies the number of days after creation that a recovery point is moved to cold storage.
      * 
-    */
+     */
     public Optional<Integer> coldStorageAfter() {
         return Optional.ofNullable(this.coldStorageAfter);
     }
     /**
-     * Specifies the number of days after creation that a recovery point is deleted. Must be 90 days greater than `cold_storage_after`.
+     * @return Specifies the number of days after creation that a recovery point is deleted. Must be 90 days greater than `cold_storage_after`.
      * 
-    */
+     */
     public Optional<Integer> deleteAfter() {
         return Optional.ofNullable(this.deleteAfter);
     }

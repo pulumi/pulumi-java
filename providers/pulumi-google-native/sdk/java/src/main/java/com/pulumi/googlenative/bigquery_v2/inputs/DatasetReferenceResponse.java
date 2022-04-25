@@ -19,6 +19,10 @@ public final class DatasetReferenceResponse extends com.pulumi.resources.InvokeA
     @Import(name="datasetId", required=true)
     private String datasetId;
 
+    /**
+     * @return [Required] A unique ID for this dataset, without the project name. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters.
+     * 
+     */
     public String datasetId() {
         return this.datasetId;
     }
@@ -30,6 +34,10 @@ public final class DatasetReferenceResponse extends com.pulumi.resources.InvokeA
     @Import(name="project", required=true)
     private String project;
 
+    /**
+     * @return [Optional] The ID of the project containing this dataset.
+     * 
+     */
     public String project() {
         return this.project;
     }
@@ -59,11 +67,23 @@ public final class DatasetReferenceResponse extends com.pulumi.resources.InvokeA
             $ = new DatasetReferenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param datasetId [Required] A unique ID for this dataset, without the project name. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasetId(String datasetId) {
             $.datasetId = datasetId;
             return this;
         }
 
+        /**
+         * @param project [Optional] The ID of the project containing this dataset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             $.project = project;
             return this;

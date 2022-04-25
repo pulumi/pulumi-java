@@ -26,6 +26,10 @@ public final class AssignmentInfoResponse extends com.pulumi.resources.InvokeArg
     @Import(name="configuration")
     private @Nullable ConfigurationInfoResponse configuration;
 
+    /**
+     * @return Information about the configuration.
+     * 
+     */
     public Optional<ConfigurationInfoResponse> configuration() {
         return Optional.ofNullable(this.configuration);
     }
@@ -37,6 +41,10 @@ public final class AssignmentInfoResponse extends com.pulumi.resources.InvokeArg
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of the guest configuration assignment.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -66,11 +74,23 @@ public final class AssignmentInfoResponse extends com.pulumi.resources.InvokeArg
             $ = new AssignmentInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param configuration Information about the configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configuration(@Nullable ConfigurationInfoResponse configuration) {
             $.configuration = configuration;
             return this;
         }
 
+        /**
+         * @param name Name of the guest configuration assignment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

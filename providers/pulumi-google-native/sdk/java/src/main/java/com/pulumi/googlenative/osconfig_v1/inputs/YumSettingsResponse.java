@@ -25,6 +25,10 @@ public final class YumSettingsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="excludes", required=true)
     private List<String> excludes;
 
+    /**
+     * @return List of packages to exclude from update. These packages are excluded by using the yum `--exclude` flag.
+     * 
+     */
     public List<String> excludes() {
         return this.excludes;
     }
@@ -36,6 +40,10 @@ public final class YumSettingsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="exclusivePackages", required=true)
     private List<String> exclusivePackages;
 
+    /**
+     * @return An exclusive list of packages to be updated. These are the only packages that will be updated. If these packages are not installed, they will be ignored. This field must not be specified with any other patch configuration fields.
+     * 
+     */
     public List<String> exclusivePackages() {
         return this.exclusivePackages;
     }
@@ -47,6 +55,10 @@ public final class YumSettingsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="minimal", required=true)
     private Boolean minimal;
 
+    /**
+     * @return Will cause patch to run `yum update-minimal` instead.
+     * 
+     */
     public Boolean minimal() {
         return this.minimal;
     }
@@ -58,6 +70,10 @@ public final class YumSettingsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="security", required=true)
     private Boolean security;
 
+    /**
+     * @return Adds the `--security` flag to `yum update`. Not supported on all platforms.
+     * 
+     */
     public Boolean security() {
         return this.security;
     }
@@ -89,29 +105,65 @@ public final class YumSettingsResponse extends com.pulumi.resources.InvokeArgs {
             $ = new YumSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param excludes List of packages to exclude from update. These packages are excluded by using the yum `--exclude` flag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludes(List<String> excludes) {
             $.excludes = excludes;
             return this;
         }
 
+        /**
+         * @param excludes List of packages to exclude from update. These packages are excluded by using the yum `--exclude` flag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludes(String... excludes) {
             return excludes(List.of(excludes));
         }
 
+        /**
+         * @param exclusivePackages An exclusive list of packages to be updated. These are the only packages that will be updated. If these packages are not installed, they will be ignored. This field must not be specified with any other patch configuration fields.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exclusivePackages(List<String> exclusivePackages) {
             $.exclusivePackages = exclusivePackages;
             return this;
         }
 
+        /**
+         * @param exclusivePackages An exclusive list of packages to be updated. These are the only packages that will be updated. If these packages are not installed, they will be ignored. This field must not be specified with any other patch configuration fields.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exclusivePackages(String... exclusivePackages) {
             return exclusivePackages(List.of(exclusivePackages));
         }
 
+        /**
+         * @param minimal Will cause patch to run `yum update-minimal` instead.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minimal(Boolean minimal) {
             $.minimal = minimal;
             return this;
         }
 
+        /**
+         * @param security Adds the `--security` flag to `yum update`. Not supported on all platforms.
+         * 
+         * @return builder
+         * 
+         */
         public Builder security(Boolean security) {
             $.security = security;
             return this;

@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudDialogflowCxV3IntentInputResponse {
     /**
-     * The unique identifier of the intent. Format: `projects//locations//agents//intents/`.
+     * @return The unique identifier of the intent. Format: `projects//locations//agents//intents/`.
      * 
      */
     private final String intent;
@@ -21,9 +21,9 @@ public final class GoogleCloudDialogflowCxV3IntentInputResponse {
     }
 
     /**
-     * The unique identifier of the intent. Format: `projects//locations//agents//intents/`.
+     * @return The unique identifier of the intent. Format: `projects//locations//agents//intents/`.
      * 
-    */
+     */
     public String intent() {
         return this.intent;
     }

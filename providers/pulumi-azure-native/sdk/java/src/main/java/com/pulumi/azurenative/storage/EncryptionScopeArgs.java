@@ -27,6 +27,10 @@ public final class EncryptionScopeArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="accountName", required=true)
     private Output<String> accountName;
 
+    /**
+     * @return The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
+     * 
+     */
     public Output<String> accountName() {
         return this.accountName;
     }
@@ -38,6 +42,10 @@ public final class EncryptionScopeArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="encryptionScopeName")
     private @Nullable Output<String> encryptionScopeName;
 
+    /**
+     * @return The name of the encryption scope within the specified storage account. Encryption scope names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only. Every dash (-) character must be immediately preceded and followed by a letter or number.
+     * 
+     */
     public Optional<Output<String>> encryptionScopeName() {
         return Optional.ofNullable(this.encryptionScopeName);
     }
@@ -49,6 +57,10 @@ public final class EncryptionScopeArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="keyVaultProperties")
     private @Nullable Output<EncryptionScopeKeyVaultPropertiesArgs> keyVaultProperties;
 
+    /**
+     * @return The key vault properties for the encryption scope. This is a required field if encryption scope &#39;source&#39; attribute is set to &#39;Microsoft.KeyVault&#39;.
+     * 
+     */
     public Optional<Output<EncryptionScopeKeyVaultPropertiesArgs>> keyVaultProperties() {
         return Optional.ofNullable(this.keyVaultProperties);
     }
@@ -60,6 +72,10 @@ public final class EncryptionScopeArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="requireInfrastructureEncryption")
     private @Nullable Output<Boolean> requireInfrastructureEncryption;
 
+    /**
+     * @return A boolean indicating whether or not the service applies a secondary layer of encryption with platform managed keys for data at rest.
+     * 
+     */
     public Optional<Output<Boolean>> requireInfrastructureEncryption() {
         return Optional.ofNullable(this.requireInfrastructureEncryption);
     }
@@ -71,6 +87,10 @@ public final class EncryptionScopeArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -82,6 +102,10 @@ public final class EncryptionScopeArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="source")
     private @Nullable Output<Either<String,EncryptionScopeSource>> source;
 
+    /**
+     * @return The provider for the encryption scope. Possible values (case-insensitive):  Microsoft.Storage, Microsoft.KeyVault.
+     * 
+     */
     public Optional<Output<Either<String,EncryptionScopeSource>>> source() {
         return Optional.ofNullable(this.source);
     }
@@ -93,6 +117,10 @@ public final class EncryptionScopeArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="state")
     private @Nullable Output<Either<String,EncryptionScopeState>> state;
 
+    /**
+     * @return The state of the encryption scope. Possible values (case-insensitive):  Enabled, Disabled.
+     * 
+     */
     public Optional<Output<Either<String,EncryptionScopeState>>> state() {
         return Optional.ofNullable(this.state);
     }
@@ -127,81 +155,189 @@ public final class EncryptionScopeArgs extends com.pulumi.resources.ResourceArgs
             $ = new EncryptionScopeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param accountName The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             return accountName(Output.of(accountName));
         }
 
+        /**
+         * @param encryptionScopeName The name of the encryption scope within the specified storage account. Encryption scope names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only. Every dash (-) character must be immediately preceded and followed by a letter or number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionScopeName(@Nullable Output<String> encryptionScopeName) {
             $.encryptionScopeName = encryptionScopeName;
             return this;
         }
 
+        /**
+         * @param encryptionScopeName The name of the encryption scope within the specified storage account. Encryption scope names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only. Every dash (-) character must be immediately preceded and followed by a letter or number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionScopeName(String encryptionScopeName) {
             return encryptionScopeName(Output.of(encryptionScopeName));
         }
 
+        /**
+         * @param keyVaultProperties The key vault properties for the encryption scope. This is a required field if encryption scope &#39;source&#39; attribute is set to &#39;Microsoft.KeyVault&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultProperties(@Nullable Output<EncryptionScopeKeyVaultPropertiesArgs> keyVaultProperties) {
             $.keyVaultProperties = keyVaultProperties;
             return this;
         }
 
+        /**
+         * @param keyVaultProperties The key vault properties for the encryption scope. This is a required field if encryption scope &#39;source&#39; attribute is set to &#39;Microsoft.KeyVault&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultProperties(EncryptionScopeKeyVaultPropertiesArgs keyVaultProperties) {
             return keyVaultProperties(Output.of(keyVaultProperties));
         }
 
+        /**
+         * @param requireInfrastructureEncryption A boolean indicating whether or not the service applies a secondary layer of encryption with platform managed keys for data at rest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requireInfrastructureEncryption(@Nullable Output<Boolean> requireInfrastructureEncryption) {
             $.requireInfrastructureEncryption = requireInfrastructureEncryption;
             return this;
         }
 
+        /**
+         * @param requireInfrastructureEncryption A boolean indicating whether or not the service applies a secondary layer of encryption with platform managed keys for data at rest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requireInfrastructureEncryption(Boolean requireInfrastructureEncryption) {
             return requireInfrastructureEncryption(Output.of(requireInfrastructureEncryption));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param source The provider for the encryption scope. Possible values (case-insensitive):  Microsoft.Storage, Microsoft.KeyVault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(@Nullable Output<Either<String,EncryptionScopeSource>> source) {
             $.source = source;
             return this;
         }
 
+        /**
+         * @param source The provider for the encryption scope. Possible values (case-insensitive):  Microsoft.Storage, Microsoft.KeyVault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(Either<String,EncryptionScopeSource> source) {
             return source(Output.of(source));
         }
 
+        /**
+         * @param source The provider for the encryption scope. Possible values (case-insensitive):  Microsoft.Storage, Microsoft.KeyVault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(String source) {
             return source(Either.ofLeft(source));
         }
 
+        /**
+         * @param source The provider for the encryption scope. Possible values (case-insensitive):  Microsoft.Storage, Microsoft.KeyVault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(EncryptionScopeSource source) {
             return source(Either.ofRight(source));
         }
 
+        /**
+         * @param state The state of the encryption scope. Possible values (case-insensitive):  Enabled, Disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable Output<Either<String,EncryptionScopeState>> state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param state The state of the encryption scope. Possible values (case-insensitive):  Enabled, Disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(Either<String,EncryptionScopeState> state) {
             return state(Output.of(state));
         }
 
+        /**
+         * @param state The state of the encryption scope. Possible values (case-insensitive):  Enabled, Disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             return state(Either.ofLeft(state));
         }
 
+        /**
+         * @param state The state of the encryption scope. Possible values (case-insensitive):  Enabled, Disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(EncryptionScopeState state) {
             return state(Either.ofRight(state));
         }

@@ -27,6 +27,10 @@ public final class FirewallPolicyIntrusionDetectionConfigurationResponse extends
     @Import(name="bypassTrafficSettings")
     private @Nullable List<FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsResponse> bypassTrafficSettings;
 
+    /**
+     * @return List of rules for traffic to bypass.
+     * 
+     */
     public Optional<List<FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsResponse>> bypassTrafficSettings() {
         return Optional.ofNullable(this.bypassTrafficSettings);
     }
@@ -38,6 +42,10 @@ public final class FirewallPolicyIntrusionDetectionConfigurationResponse extends
     @Import(name="signatureOverrides")
     private @Nullable List<FirewallPolicyIntrusionDetectionSignatureSpecificationResponse> signatureOverrides;
 
+    /**
+     * @return List of specific signatures states.
+     * 
+     */
     public Optional<List<FirewallPolicyIntrusionDetectionSignatureSpecificationResponse>> signatureOverrides() {
         return Optional.ofNullable(this.signatureOverrides);
     }
@@ -67,20 +75,44 @@ public final class FirewallPolicyIntrusionDetectionConfigurationResponse extends
             $ = new FirewallPolicyIntrusionDetectionConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bypassTrafficSettings List of rules for traffic to bypass.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bypassTrafficSettings(@Nullable List<FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsResponse> bypassTrafficSettings) {
             $.bypassTrafficSettings = bypassTrafficSettings;
             return this;
         }
 
+        /**
+         * @param bypassTrafficSettings List of rules for traffic to bypass.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bypassTrafficSettings(FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsResponse... bypassTrafficSettings) {
             return bypassTrafficSettings(List.of(bypassTrafficSettings));
         }
 
+        /**
+         * @param signatureOverrides List of specific signatures states.
+         * 
+         * @return builder
+         * 
+         */
         public Builder signatureOverrides(@Nullable List<FirewallPolicyIntrusionDetectionSignatureSpecificationResponse> signatureOverrides) {
             $.signatureOverrides = signatureOverrides;
             return this;
         }
 
+        /**
+         * @param signatureOverrides List of specific signatures states.
+         * 
+         * @return builder
+         * 
+         */
         public Builder signatureOverrides(FirewallPolicyIntrusionDetectionSignatureSpecificationResponse... signatureOverrides) {
             return signatureOverrides(List.of(signatureOverrides));
         }

@@ -26,6 +26,10 @@ public final class OAuthRequirementsArgs extends com.pulumi.resources.ResourceAr
     @Import(name="canonicalScopes")
     private @Nullable Output<String> canonicalScopes;
 
+    /**
+     * @return The list of publicly documented OAuth scopes that are allowed access. An OAuth token containing any of these scopes will be accepted. Example: canonical_scopes: https://www.googleapis.com/auth/calendar, https://www.googleapis.com/auth/calendar.read
+     * 
+     */
     public Optional<Output<String>> canonicalScopes() {
         return Optional.ofNullable(this.canonicalScopes);
     }
@@ -54,11 +58,23 @@ public final class OAuthRequirementsArgs extends com.pulumi.resources.ResourceAr
             $ = new OAuthRequirementsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param canonicalScopes The list of publicly documented OAuth scopes that are allowed access. An OAuth token containing any of these scopes will be accepted. Example: canonical_scopes: https://www.googleapis.com/auth/calendar, https://www.googleapis.com/auth/calendar.read
+         * 
+         * @return builder
+         * 
+         */
         public Builder canonicalScopes(@Nullable Output<String> canonicalScopes) {
             $.canonicalScopes = canonicalScopes;
             return this;
         }
 
+        /**
+         * @param canonicalScopes The list of publicly documented OAuth scopes that are allowed access. An OAuth token containing any of these scopes will be accepted. Example: canonical_scopes: https://www.googleapis.com/auth/calendar, https://www.googleapis.com/auth/calendar.read
+         * 
+         * @return builder
+         * 
+         */
         public Builder canonicalScopes(String canonicalScopes) {
             return canonicalScopes(Output.of(canonicalScopes));
         }

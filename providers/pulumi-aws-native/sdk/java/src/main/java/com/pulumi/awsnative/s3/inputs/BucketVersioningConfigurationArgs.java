@@ -24,6 +24,10 @@ public final class BucketVersioningConfigurationArgs extends com.pulumi.resource
     @Import(name="status", required=true)
     private Output<BucketVersioningConfigurationStatus> status;
 
+    /**
+     * @return The versioning state of the bucket.
+     * 
+     */
     public Output<BucketVersioningConfigurationStatus> status() {
         return this.status;
     }
@@ -52,11 +56,23 @@ public final class BucketVersioningConfigurationArgs extends com.pulumi.resource
             $ = new BucketVersioningConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param status The versioning state of the bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(Output<BucketVersioningConfigurationStatus> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status The versioning state of the bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(BucketVersioningConfigurationStatus status) {
             return status(Output.of(status));
         }

@@ -24,6 +24,10 @@ public final class ScheduleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="crontabSpec", required=true)
     private String crontabSpec;
 
+    /**
+     * @return A crontab-like specification that the schedule uses to take snapshots.
+     * 
+     */
     public String crontabSpec() {
         return this.crontabSpec;
     }
@@ -35,6 +39,10 @@ public final class ScheduleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="prefix", required=true)
     private String prefix;
 
+    /**
+     * @return A list of snapshot names created in this schedule.
+     * 
+     */
     public String prefix() {
         return this.prefix;
     }
@@ -46,6 +54,10 @@ public final class ScheduleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="retentionCount", required=true)
     private Integer retentionCount;
 
+    /**
+     * @return The maximum number of snapshots to retain in this schedule.
+     * 
+     */
     public Integer retentionCount() {
         return this.retentionCount;
     }
@@ -76,16 +88,34 @@ public final class ScheduleResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ScheduleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param crontabSpec A crontab-like specification that the schedule uses to take snapshots.
+         * 
+         * @return builder
+         * 
+         */
         public Builder crontabSpec(String crontabSpec) {
             $.crontabSpec = crontabSpec;
             return this;
         }
 
+        /**
+         * @param prefix A list of snapshot names created in this schedule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefix(String prefix) {
             $.prefix = prefix;
             return this;
         }
 
+        /**
+         * @param retentionCount The maximum number of snapshots to retain in this schedule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionCount(Integer retentionCount) {
             $.retentionCount = retentionCount;
             return this;

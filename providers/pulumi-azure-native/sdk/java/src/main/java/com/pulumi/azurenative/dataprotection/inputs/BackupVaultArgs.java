@@ -25,6 +25,10 @@ public final class BackupVaultArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="storageSettings", required=true)
     private Output<List<StorageSettingArgs>> storageSettings;
 
+    /**
+     * @return Storage Settings
+     * 
+     */
     public Output<List<StorageSettingArgs>> storageSettings() {
         return this.storageSettings;
     }
@@ -53,15 +57,33 @@ public final class BackupVaultArgs extends com.pulumi.resources.ResourceArgs {
             $ = new BackupVaultArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param storageSettings Storage Settings
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageSettings(Output<List<StorageSettingArgs>> storageSettings) {
             $.storageSettings = storageSettings;
             return this;
         }
 
+        /**
+         * @param storageSettings Storage Settings
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageSettings(List<StorageSettingArgs> storageSettings) {
             return storageSettings(Output.of(storageSettings));
         }
 
+        /**
+         * @param storageSettings Storage Settings
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageSettings(StorageSettingArgs... storageSettings) {
             return storageSettings(List.of(storageSettings));
         }

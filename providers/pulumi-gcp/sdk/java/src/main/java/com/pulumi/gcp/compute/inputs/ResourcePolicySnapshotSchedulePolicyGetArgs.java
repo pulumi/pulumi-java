@@ -25,6 +25,11 @@ public final class ResourcePolicySnapshotSchedulePolicyGetArgs extends com.pulum
     @Import(name="retentionPolicy")
     private @Nullable Output<ResourcePolicySnapshotSchedulePolicyRetentionPolicyGetArgs> retentionPolicy;
 
+    /**
+     * @return Retention policy applied to snapshots created by this resource policy.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<ResourcePolicySnapshotSchedulePolicyRetentionPolicyGetArgs>> retentionPolicy() {
         return Optional.ofNullable(this.retentionPolicy);
     }
@@ -36,6 +41,10 @@ public final class ResourcePolicySnapshotSchedulePolicyGetArgs extends com.pulum
     @Import(name="schedule", required=true)
     private Output<ResourcePolicySnapshotSchedulePolicyScheduleGetArgs> schedule;
 
+    /**
+     * @return Specifies the frequency for the operation, using the unix-cron format.
+     * 
+     */
     public Output<ResourcePolicySnapshotSchedulePolicyScheduleGetArgs> schedule() {
         return this.schedule;
     }
@@ -48,6 +57,11 @@ public final class ResourcePolicySnapshotSchedulePolicyGetArgs extends com.pulum
     @Import(name="snapshotProperties")
     private @Nullable Output<ResourcePolicySnapshotSchedulePolicySnapshotPropertiesGetArgs> snapshotProperties;
 
+    /**
+     * @return Properties with which the snapshots are created, such as labels.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<ResourcePolicySnapshotSchedulePolicySnapshotPropertiesGetArgs>> snapshotProperties() {
         return Optional.ofNullable(this.snapshotProperties);
     }
@@ -78,29 +92,69 @@ public final class ResourcePolicySnapshotSchedulePolicyGetArgs extends com.pulum
             $ = new ResourcePolicySnapshotSchedulePolicyGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param retentionPolicy Retention policy applied to snapshots created by this resource policy.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionPolicy(@Nullable Output<ResourcePolicySnapshotSchedulePolicyRetentionPolicyGetArgs> retentionPolicy) {
             $.retentionPolicy = retentionPolicy;
             return this;
         }
 
+        /**
+         * @param retentionPolicy Retention policy applied to snapshots created by this resource policy.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionPolicy(ResourcePolicySnapshotSchedulePolicyRetentionPolicyGetArgs retentionPolicy) {
             return retentionPolicy(Output.of(retentionPolicy));
         }
 
+        /**
+         * @param schedule Specifies the frequency for the operation, using the unix-cron format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedule(Output<ResourcePolicySnapshotSchedulePolicyScheduleGetArgs> schedule) {
             $.schedule = schedule;
             return this;
         }
 
+        /**
+         * @param schedule Specifies the frequency for the operation, using the unix-cron format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedule(ResourcePolicySnapshotSchedulePolicyScheduleGetArgs schedule) {
             return schedule(Output.of(schedule));
         }
 
+        /**
+         * @param snapshotProperties Properties with which the snapshots are created, such as labels.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotProperties(@Nullable Output<ResourcePolicySnapshotSchedulePolicySnapshotPropertiesGetArgs> snapshotProperties) {
             $.snapshotProperties = snapshotProperties;
             return this;
         }
 
+        /**
+         * @param snapshotProperties Properties with which the snapshots are created, such as labels.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotProperties(ResourcePolicySnapshotSchedulePolicySnapshotPropertiesGetArgs snapshotProperties) {
             return snapshotProperties(Output.of(snapshotProperties));
         }

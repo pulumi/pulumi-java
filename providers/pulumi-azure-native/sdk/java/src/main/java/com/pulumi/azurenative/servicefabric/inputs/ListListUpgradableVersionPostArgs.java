@@ -19,6 +19,10 @@ public final class ListListUpgradableVersionPostArgs extends com.pulumi.resource
     @Import(name="clusterName", required=true)
     private String clusterName;
 
+    /**
+     * @return The name of the cluster resource.
+     * 
+     */
     public String clusterName() {
         return this.clusterName;
     }
@@ -30,6 +34,10 @@ public final class ListListUpgradableVersionPostArgs extends com.pulumi.resource
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class ListListUpgradableVersionPostArgs extends com.pulumi.resource
     @Import(name="targetVersion", required=true)
     private String targetVersion;
 
+    /**
+     * @return The target code version.
+     * 
+     */
     public String targetVersion() {
         return this.targetVersion;
     }
@@ -71,16 +83,34 @@ public final class ListListUpgradableVersionPostArgs extends com.pulumi.resource
             $ = new ListListUpgradableVersionPostArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clusterName The name of the cluster resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterName(String clusterName) {
             $.clusterName = clusterName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param targetVersion The target code version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetVersion(String targetVersion) {
             $.targetVersion = targetVersion;
             return this;

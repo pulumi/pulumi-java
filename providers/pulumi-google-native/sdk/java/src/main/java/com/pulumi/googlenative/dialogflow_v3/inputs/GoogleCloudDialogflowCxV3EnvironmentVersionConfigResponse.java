@@ -23,6 +23,10 @@ public final class GoogleCloudDialogflowCxV3EnvironmentVersionConfigResponse ext
     @Import(name="version", required=true)
     private String version;
 
+    /**
+     * @return Format: projects//locations//agents//flows//versions/.
+     * 
+     */
     public String version() {
         return this.version;
     }
@@ -51,6 +55,12 @@ public final class GoogleCloudDialogflowCxV3EnvironmentVersionConfigResponse ext
             $ = new GoogleCloudDialogflowCxV3EnvironmentVersionConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param version Format: projects//locations//agents//flows//versions/.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             $.version = version;
             return this;

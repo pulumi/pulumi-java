@@ -24,6 +24,10 @@ public final class LoadBalancerTlsCertificateArgs extends com.pulumi.resources.R
     @Import(name="certificateAlternativeNames")
     private @Nullable Output<List<String>> certificateAlternativeNames;
 
+    /**
+     * @return An array of strings listing alternative domains and subdomains for your SSL/TLS certificate.
+     * 
+     */
     public Optional<Output<List<String>>> certificateAlternativeNames() {
         return Optional.ofNullable(this.certificateAlternativeNames);
     }
@@ -35,6 +39,10 @@ public final class LoadBalancerTlsCertificateArgs extends com.pulumi.resources.R
     @Import(name="certificateDomainName", required=true)
     private Output<String> certificateDomainName;
 
+    /**
+     * @return The domain name (e.g., example.com ) for your SSL/TLS certificate.
+     * 
+     */
     public Output<String> certificateDomainName() {
         return this.certificateDomainName;
     }
@@ -46,6 +54,10 @@ public final class LoadBalancerTlsCertificateArgs extends com.pulumi.resources.R
     @Import(name="certificateName", required=true)
     private Output<String> certificateName;
 
+    /**
+     * @return The SSL/TLS certificate name.
+     * 
+     */
     public Output<String> certificateName() {
         return this.certificateName;
     }
@@ -57,6 +69,10 @@ public final class LoadBalancerTlsCertificateArgs extends com.pulumi.resources.R
     @Import(name="isAttached")
     private @Nullable Output<Boolean> isAttached;
 
+    /**
+     * @return When true, the SSL/TLS certificate is attached to the Lightsail load balancer.
+     * 
+     */
     public Optional<Output<Boolean>> isAttached() {
         return Optional.ofNullable(this.isAttached);
     }
@@ -68,6 +84,10 @@ public final class LoadBalancerTlsCertificateArgs extends com.pulumi.resources.R
     @Import(name="loadBalancerName", required=true)
     private Output<String> loadBalancerName;
 
+    /**
+     * @return The name of your load balancer.
+     * 
+     */
     public Output<String> loadBalancerName() {
         return this.loadBalancerName;
     }
@@ -100,51 +120,117 @@ public final class LoadBalancerTlsCertificateArgs extends com.pulumi.resources.R
             $ = new LoadBalancerTlsCertificateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificateAlternativeNames An array of strings listing alternative domains and subdomains for your SSL/TLS certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateAlternativeNames(@Nullable Output<List<String>> certificateAlternativeNames) {
             $.certificateAlternativeNames = certificateAlternativeNames;
             return this;
         }
 
+        /**
+         * @param certificateAlternativeNames An array of strings listing alternative domains and subdomains for your SSL/TLS certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateAlternativeNames(List<String> certificateAlternativeNames) {
             return certificateAlternativeNames(Output.of(certificateAlternativeNames));
         }
 
+        /**
+         * @param certificateAlternativeNames An array of strings listing alternative domains and subdomains for your SSL/TLS certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateAlternativeNames(String... certificateAlternativeNames) {
             return certificateAlternativeNames(List.of(certificateAlternativeNames));
         }
 
+        /**
+         * @param certificateDomainName The domain name (e.g., example.com ) for your SSL/TLS certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateDomainName(Output<String> certificateDomainName) {
             $.certificateDomainName = certificateDomainName;
             return this;
         }
 
+        /**
+         * @param certificateDomainName The domain name (e.g., example.com ) for your SSL/TLS certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateDomainName(String certificateDomainName) {
             return certificateDomainName(Output.of(certificateDomainName));
         }
 
+        /**
+         * @param certificateName The SSL/TLS certificate name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateName(Output<String> certificateName) {
             $.certificateName = certificateName;
             return this;
         }
 
+        /**
+         * @param certificateName The SSL/TLS certificate name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateName(String certificateName) {
             return certificateName(Output.of(certificateName));
         }
 
+        /**
+         * @param isAttached When true, the SSL/TLS certificate is attached to the Lightsail load balancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isAttached(@Nullable Output<Boolean> isAttached) {
             $.isAttached = isAttached;
             return this;
         }
 
+        /**
+         * @param isAttached When true, the SSL/TLS certificate is attached to the Lightsail load balancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isAttached(Boolean isAttached) {
             return isAttached(Output.of(isAttached));
         }
 
+        /**
+         * @param loadBalancerName The name of your load balancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancerName(Output<String> loadBalancerName) {
             $.loadBalancerName = loadBalancerName;
             return this;
         }
 
+        /**
+         * @param loadBalancerName The name of your load balancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancerName(String loadBalancerName) {
             return loadBalancerName(Output.of(loadBalancerName));
         }

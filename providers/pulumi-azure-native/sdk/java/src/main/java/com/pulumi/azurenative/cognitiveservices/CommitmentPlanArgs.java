@@ -23,6 +23,10 @@ public final class CommitmentPlanArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="accountName", required=true)
     private Output<String> accountName;
 
+    /**
+     * @return The name of Cognitive Services account.
+     * 
+     */
     public Output<String> accountName() {
         return this.accountName;
     }
@@ -34,6 +38,10 @@ public final class CommitmentPlanArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="commitmentPlanName")
     private @Nullable Output<String> commitmentPlanName;
 
+    /**
+     * @return The name of the commitmentPlan associated with the Cognitive Services Account
+     * 
+     */
     public Optional<Output<String>> commitmentPlanName() {
         return Optional.ofNullable(this.commitmentPlanName);
     }
@@ -45,6 +53,10 @@ public final class CommitmentPlanArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="properties")
     private @Nullable Output<CommitmentPlanPropertiesArgs> properties;
 
+    /**
+     * @return Properties of Cognitive Services account commitment plan.
+     * 
+     */
     public Optional<Output<CommitmentPlanPropertiesArgs>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -56,6 +68,10 @@ public final class CommitmentPlanArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -87,38 +103,86 @@ public final class CommitmentPlanArgs extends com.pulumi.resources.ResourceArgs 
             $ = new CommitmentPlanArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The name of Cognitive Services account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param accountName The name of Cognitive Services account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             return accountName(Output.of(accountName));
         }
 
+        /**
+         * @param commitmentPlanName The name of the commitmentPlan associated with the Cognitive Services Account
+         * 
+         * @return builder
+         * 
+         */
         public Builder commitmentPlanName(@Nullable Output<String> commitmentPlanName) {
             $.commitmentPlanName = commitmentPlanName;
             return this;
         }
 
+        /**
+         * @param commitmentPlanName The name of the commitmentPlan associated with the Cognitive Services Account
+         * 
+         * @return builder
+         * 
+         */
         public Builder commitmentPlanName(String commitmentPlanName) {
             return commitmentPlanName(Output.of(commitmentPlanName));
         }
 
+        /**
+         * @param properties Properties of Cognitive Services account commitment plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<CommitmentPlanPropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Properties of Cognitive Services account commitment plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(CommitmentPlanPropertiesArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }

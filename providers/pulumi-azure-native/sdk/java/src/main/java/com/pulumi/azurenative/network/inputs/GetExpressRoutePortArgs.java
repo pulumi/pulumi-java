@@ -19,6 +19,10 @@ public final class GetExpressRoutePortArgs extends com.pulumi.resources.InvokeAr
     @Import(name="expressRoutePortName", required=true)
     private String expressRoutePortName;
 
+    /**
+     * @return The name of ExpressRoutePort.
+     * 
+     */
     public String expressRoutePortName() {
         return this.expressRoutePortName;
     }
@@ -30,6 +34,10 @@ public final class GetExpressRoutePortArgs extends com.pulumi.resources.InvokeAr
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetExpressRoutePortArgs extends com.pulumi.resources.InvokeAr
             $ = new GetExpressRoutePortArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expressRoutePortName The name of ExpressRoutePort.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expressRoutePortName(String expressRoutePortName) {
             $.expressRoutePortName = expressRoutePortName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

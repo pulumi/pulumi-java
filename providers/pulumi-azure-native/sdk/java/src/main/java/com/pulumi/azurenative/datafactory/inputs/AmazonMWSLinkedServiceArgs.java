@@ -35,6 +35,10 @@ public final class AmazonMWSLinkedServiceArgs extends com.pulumi.resources.Resou
     @Import(name="accessKeyId", required=true)
     private Output<Object> accessKeyId;
 
+    /**
+     * @return The access key id used to access data.
+     * 
+     */
     public Output<Object> accessKeyId() {
         return this.accessKeyId;
     }
@@ -46,6 +50,10 @@ public final class AmazonMWSLinkedServiceArgs extends com.pulumi.resources.Resou
     @Import(name="annotations")
     private @Nullable Output<List<Object>> annotations;
 
+    /**
+     * @return List of tags that can be used for describing the linked service.
+     * 
+     */
     public Optional<Output<List<Object>>> annotations() {
         return Optional.ofNullable(this.annotations);
     }
@@ -57,6 +65,10 @@ public final class AmazonMWSLinkedServiceArgs extends com.pulumi.resources.Resou
     @Import(name="connectVia")
     private @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
+    /**
+     * @return The integration runtime reference.
+     * 
+     */
     public Optional<Output<IntegrationRuntimeReferenceArgs>> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
@@ -68,6 +80,10 @@ public final class AmazonMWSLinkedServiceArgs extends com.pulumi.resources.Resou
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Linked service description.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -79,6 +95,10 @@ public final class AmazonMWSLinkedServiceArgs extends com.pulumi.resources.Resou
     @Import(name="encryptedCredential")
     private @Nullable Output<Object> encryptedCredential;
 
+    /**
+     * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> encryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
@@ -90,6 +110,10 @@ public final class AmazonMWSLinkedServiceArgs extends com.pulumi.resources.Resou
     @Import(name="endpoint", required=true)
     private Output<Object> endpoint;
 
+    /**
+     * @return The endpoint of the Amazon MWS server, (i.e. mws.amazonservices.com)
+     * 
+     */
     public Output<Object> endpoint() {
         return this.endpoint;
     }
@@ -101,6 +125,10 @@ public final class AmazonMWSLinkedServiceArgs extends com.pulumi.resources.Resou
     @Import(name="marketplaceID", required=true)
     private Output<Object> marketplaceID;
 
+    /**
+     * @return The Amazon Marketplace ID you want to retrieve data from. To retrieve data from multiple Marketplace IDs, separate them with a comma (,). (i.e. A2EUQ1WTGCTBG2)
+     * 
+     */
     public Output<Object> marketplaceID() {
         return this.marketplaceID;
     }
@@ -112,6 +140,10 @@ public final class AmazonMWSLinkedServiceArgs extends com.pulumi.resources.Resou
     @Import(name="mwsAuthToken")
     private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> mwsAuthToken;
 
+    /**
+     * @return The Amazon MWS authentication token.
+     * 
+     */
     public Optional<Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>>> mwsAuthToken() {
         return Optional.ofNullable(this.mwsAuthToken);
     }
@@ -123,6 +155,10 @@ public final class AmazonMWSLinkedServiceArgs extends com.pulumi.resources.Resou
     @Import(name="parameters")
     private @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
+    /**
+     * @return Parameters for linked service.
+     * 
+     */
     public Optional<Output<Map<String,ParameterSpecificationArgs>>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -134,6 +170,10 @@ public final class AmazonMWSLinkedServiceArgs extends com.pulumi.resources.Resou
     @Import(name="secretKey")
     private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> secretKey;
 
+    /**
+     * @return The secret key used to access data.
+     * 
+     */
     public Optional<Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>>> secretKey() {
         return Optional.ofNullable(this.secretKey);
     }
@@ -145,6 +185,10 @@ public final class AmazonMWSLinkedServiceArgs extends com.pulumi.resources.Resou
     @Import(name="sellerID", required=true)
     private Output<Object> sellerID;
 
+    /**
+     * @return The Amazon seller ID.
+     * 
+     */
     public Output<Object> sellerID() {
         return this.sellerID;
     }
@@ -157,6 +201,11 @@ public final class AmazonMWSLinkedServiceArgs extends com.pulumi.resources.Resou
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Type of linked service.
+     * Expected value is &#39;AmazonMWS&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -168,6 +217,10 @@ public final class AmazonMWSLinkedServiceArgs extends com.pulumi.resources.Resou
     @Import(name="useEncryptedEndpoints")
     private @Nullable Output<Object> useEncryptedEndpoints;
 
+    /**
+     * @return Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.
+     * 
+     */
     public Optional<Output<Object>> useEncryptedEndpoints() {
         return Optional.ofNullable(this.useEncryptedEndpoints);
     }
@@ -179,6 +232,10 @@ public final class AmazonMWSLinkedServiceArgs extends com.pulumi.resources.Resou
     @Import(name="useHostVerification")
     private @Nullable Output<Object> useHostVerification;
 
+    /**
+     * @return Specifies whether to require the host name in the server&#39;s certificate to match the host name of the server when connecting over SSL. The default value is true.
+     * 
+     */
     public Optional<Output<Object>> useHostVerification() {
         return Optional.ofNullable(this.useHostVerification);
     }
@@ -190,6 +247,10 @@ public final class AmazonMWSLinkedServiceArgs extends com.pulumi.resources.Resou
     @Import(name="usePeerVerification")
     private @Nullable Output<Object> usePeerVerification;
 
+    /**
+     * @return Specifies whether to verify the identity of the server when connecting over SSL. The default value is true.
+     * 
+     */
     public Optional<Output<Object>> usePeerVerification() {
         return Optional.ofNullable(this.usePeerVerification);
     }
@@ -232,157 +293,369 @@ public final class AmazonMWSLinkedServiceArgs extends com.pulumi.resources.Resou
             $ = new AmazonMWSLinkedServiceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessKeyId The access key id used to access data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessKeyId(Output<Object> accessKeyId) {
             $.accessKeyId = accessKeyId;
             return this;
         }
 
+        /**
+         * @param accessKeyId The access key id used to access data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessKeyId(Object accessKeyId) {
             return accessKeyId(Output.of(accessKeyId));
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(@Nullable Output<List<Object>> annotations) {
             $.annotations = annotations;
             return this;
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(List<Object> annotations) {
             return annotations(Output.of(annotations));
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
 
+        /**
+         * @param connectVia The integration runtime reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
             $.connectVia = connectVia;
             return this;
         }
 
+        /**
+         * @param connectVia The integration runtime reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectVia(IntegrationRuntimeReferenceArgs connectVia) {
             return connectVia(Output.of(connectVia));
         }
 
+        /**
+         * @param description Linked service description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Linked service description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param encryptedCredential The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
             $.encryptedCredential = encryptedCredential;
             return this;
         }
 
+        /**
+         * @param encryptedCredential The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptedCredential(Object encryptedCredential) {
             return encryptedCredential(Output.of(encryptedCredential));
         }
 
+        /**
+         * @param endpoint The endpoint of the Amazon MWS server, (i.e. mws.amazonservices.com)
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoint(Output<Object> endpoint) {
             $.endpoint = endpoint;
             return this;
         }
 
+        /**
+         * @param endpoint The endpoint of the Amazon MWS server, (i.e. mws.amazonservices.com)
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoint(Object endpoint) {
             return endpoint(Output.of(endpoint));
         }
 
+        /**
+         * @param marketplaceID The Amazon Marketplace ID you want to retrieve data from. To retrieve data from multiple Marketplace IDs, separate them with a comma (,). (i.e. A2EUQ1WTGCTBG2)
+         * 
+         * @return builder
+         * 
+         */
         public Builder marketplaceID(Output<Object> marketplaceID) {
             $.marketplaceID = marketplaceID;
             return this;
         }
 
+        /**
+         * @param marketplaceID The Amazon Marketplace ID you want to retrieve data from. To retrieve data from multiple Marketplace IDs, separate them with a comma (,). (i.e. A2EUQ1WTGCTBG2)
+         * 
+         * @return builder
+         * 
+         */
         public Builder marketplaceID(Object marketplaceID) {
             return marketplaceID(Output.of(marketplaceID));
         }
 
+        /**
+         * @param mwsAuthToken The Amazon MWS authentication token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mwsAuthToken(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> mwsAuthToken) {
             $.mwsAuthToken = mwsAuthToken;
             return this;
         }
 
+        /**
+         * @param mwsAuthToken The Amazon MWS authentication token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mwsAuthToken(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> mwsAuthToken) {
             return mwsAuthToken(Output.of(mwsAuthToken));
         }
 
+        /**
+         * @param mwsAuthToken The Amazon MWS authentication token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mwsAuthToken(AzureKeyVaultSecretReferenceArgs mwsAuthToken) {
             return mwsAuthToken(Either.ofLeft(mwsAuthToken));
         }
 
+        /**
+         * @param mwsAuthToken The Amazon MWS authentication token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mwsAuthToken(SecureStringArgs mwsAuthToken) {
             return mwsAuthToken(Either.ofRight(mwsAuthToken));
         }
 
+        /**
+         * @param parameters Parameters for linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters Parameters for linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(Map<String,ParameterSpecificationArgs> parameters) {
             return parameters(Output.of(parameters));
         }
 
+        /**
+         * @param secretKey The secret key used to access data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretKey(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> secretKey) {
             $.secretKey = secretKey;
             return this;
         }
 
+        /**
+         * @param secretKey The secret key used to access data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretKey(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> secretKey) {
             return secretKey(Output.of(secretKey));
         }
 
+        /**
+         * @param secretKey The secret key used to access data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretKey(AzureKeyVaultSecretReferenceArgs secretKey) {
             return secretKey(Either.ofLeft(secretKey));
         }
 
+        /**
+         * @param secretKey The secret key used to access data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretKey(SecureStringArgs secretKey) {
             return secretKey(Either.ofRight(secretKey));
         }
 
+        /**
+         * @param sellerID The Amazon seller ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sellerID(Output<Object> sellerID) {
             $.sellerID = sellerID;
             return this;
         }
 
+        /**
+         * @param sellerID The Amazon seller ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sellerID(Object sellerID) {
             return sellerID(Output.of(sellerID));
         }
 
+        /**
+         * @param type Type of linked service.
+         * Expected value is &#39;AmazonMWS&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of linked service.
+         * Expected value is &#39;AmazonMWS&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param useEncryptedEndpoints Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useEncryptedEndpoints(@Nullable Output<Object> useEncryptedEndpoints) {
             $.useEncryptedEndpoints = useEncryptedEndpoints;
             return this;
         }
 
+        /**
+         * @param useEncryptedEndpoints Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useEncryptedEndpoints(Object useEncryptedEndpoints) {
             return useEncryptedEndpoints(Output.of(useEncryptedEndpoints));
         }
 
+        /**
+         * @param useHostVerification Specifies whether to require the host name in the server&#39;s certificate to match the host name of the server when connecting over SSL. The default value is true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useHostVerification(@Nullable Output<Object> useHostVerification) {
             $.useHostVerification = useHostVerification;
             return this;
         }
 
+        /**
+         * @param useHostVerification Specifies whether to require the host name in the server&#39;s certificate to match the host name of the server when connecting over SSL. The default value is true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useHostVerification(Object useHostVerification) {
             return useHostVerification(Output.of(useHostVerification));
         }
 
+        /**
+         * @param usePeerVerification Specifies whether to verify the identity of the server when connecting over SSL. The default value is true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder usePeerVerification(@Nullable Output<Object> usePeerVerification) {
             $.usePeerVerification = usePeerVerification;
             return this;
         }
 
+        /**
+         * @param usePeerVerification Specifies whether to verify the identity of the server when connecting over SSL. The default value is true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder usePeerVerification(Object usePeerVerification) {
             return usePeerVerification(Output.of(usePeerVerification));
         }

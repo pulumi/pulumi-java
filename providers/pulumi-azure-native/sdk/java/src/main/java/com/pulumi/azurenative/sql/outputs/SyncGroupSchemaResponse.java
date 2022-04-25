@@ -14,12 +14,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SyncGroupSchemaResponse {
     /**
-     * Name of master sync member where the schema is from.
+     * @return Name of master sync member where the schema is from.
      * 
      */
     private final @Nullable String masterSyncMemberName;
     /**
-     * List of tables in sync group schema.
+     * @return List of tables in sync group schema.
      * 
      */
     private final @Nullable List<SyncGroupSchemaTableResponse> tables;
@@ -33,16 +33,16 @@ public final class SyncGroupSchemaResponse {
     }
 
     /**
-     * Name of master sync member where the schema is from.
+     * @return Name of master sync member where the schema is from.
      * 
-    */
+     */
     public Optional<String> masterSyncMemberName() {
         return Optional.ofNullable(this.masterSyncMemberName);
     }
     /**
-     * List of tables in sync group schema.
+     * @return List of tables in sync group schema.
      * 
-    */
+     */
     public List<SyncGroupSchemaTableResponse> tables() {
         return this.tables == null ? List.of() : this.tables;
     }

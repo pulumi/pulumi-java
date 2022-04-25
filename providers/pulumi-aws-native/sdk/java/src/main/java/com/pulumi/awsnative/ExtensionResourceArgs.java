@@ -22,6 +22,10 @@ public final class ExtensionResourceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="properties", required=true)
     private Output<Map<String,Object>> properties;
 
+    /**
+     * @return Dictionary of the extension resource properties.
+     * 
+     */
     public Output<Map<String,Object>> properties() {
         return this.properties;
     }
@@ -33,6 +37,10 @@ public final class ExtensionResourceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return CloudFormation type name.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -62,20 +70,44 @@ public final class ExtensionResourceArgs extends com.pulumi.resources.ResourceAr
             $ = new ExtensionResourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param properties Dictionary of the extension resource properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Output<Map<String,Object>> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Dictionary of the extension resource properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Map<String,Object> properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param type CloudFormation type name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type CloudFormation type name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

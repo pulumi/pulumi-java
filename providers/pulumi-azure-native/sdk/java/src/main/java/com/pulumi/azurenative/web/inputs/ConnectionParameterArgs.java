@@ -27,6 +27,10 @@ public final class ConnectionParameterArgs extends com.pulumi.resources.Resource
     @Import(name="oAuthSettings")
     private @Nullable Output<ApiOAuthSettingsArgs> oAuthSettings;
 
+    /**
+     * @return OAuth settings for the connection provider
+     * 
+     */
     public Optional<Output<ApiOAuthSettingsArgs>> oAuthSettings() {
         return Optional.ofNullable(this.oAuthSettings);
     }
@@ -38,6 +42,10 @@ public final class ConnectionParameterArgs extends com.pulumi.resources.Resource
     @Import(name="type")
     private @Nullable Output<ConnectionParameterType> type;
 
+    /**
+     * @return Type of the parameter
+     * 
+     */
     public Optional<Output<ConnectionParameterType>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -67,20 +75,44 @@ public final class ConnectionParameterArgs extends com.pulumi.resources.Resource
             $ = new ConnectionParameterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param oAuthSettings OAuth settings for the connection provider
+         * 
+         * @return builder
+         * 
+         */
         public Builder oAuthSettings(@Nullable Output<ApiOAuthSettingsArgs> oAuthSettings) {
             $.oAuthSettings = oAuthSettings;
             return this;
         }
 
+        /**
+         * @param oAuthSettings OAuth settings for the connection provider
+         * 
+         * @return builder
+         * 
+         */
         public Builder oAuthSettings(ApiOAuthSettingsArgs oAuthSettings) {
             return oAuthSettings(Output.of(oAuthSettings));
         }
 
+        /**
+         * @param type Type of the parameter
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<ConnectionParameterType> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of the parameter
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(ConnectionParameterType type) {
             return type(Output.of(type));
         }

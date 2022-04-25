@@ -29,6 +29,15 @@ public final class GetInstanceTemplateNetworkInterface extends com.pulumi.resour
     @Import(name="accessConfigs", required=true)
     private List<GetInstanceTemplateNetworkInterfaceAccessConfig> accessConfigs;
 
+    /**
+     * @return Access configurations, i.e. IPs via which this
+     * instance can be accessed via the Internet. Omit to ensure that the instance
+     * is not accessible from the Internet (this means that ssh provisioners will
+     * not work unless you are running the prvovider can send traffic to the instance&#39;s
+     * network (e.g. via tunnel or because it is running on another cloud instance
+     * on that network). This block can be repeated multiple times. Structure documented below.
+     * 
+     */
     public List<GetInstanceTemplateNetworkInterfaceAccessConfig> accessConfigs() {
         return this.accessConfigs;
     }
@@ -42,6 +51,12 @@ public final class GetInstanceTemplateNetworkInterface extends com.pulumi.resour
     @Import(name="aliasIpRanges", required=true)
     private List<GetInstanceTemplateNetworkInterfaceAliasIpRange> aliasIpRanges;
 
+    /**
+     * @return An
+     * array of alias IP ranges for this network interface. Can only be specified for network
+     * interfaces on subnet-mode networks. Structure documented below.
+     * 
+     */
     public List<GetInstanceTemplateNetworkInterfaceAliasIpRange> aliasIpRanges() {
         return this.aliasIpRanges;
     }
@@ -67,6 +82,10 @@ public final class GetInstanceTemplateNetworkInterface extends com.pulumi.resour
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the instance template. One of `name` or `filter` must be provided.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -80,6 +99,12 @@ public final class GetInstanceTemplateNetworkInterface extends com.pulumi.resour
     @Import(name="network", required=true)
     private String network;
 
+    /**
+     * @return The name or self_link of the network to attach this interface to.
+     * Use `network` attribute for Legacy or Auto subnetted networks and
+     * `subnetwork` for custom subnetted networks.
+     * 
+     */
     public String network() {
         return this.network;
     }
@@ -92,6 +117,11 @@ public final class GetInstanceTemplateNetworkInterface extends com.pulumi.resour
     @Import(name="networkIp", required=true)
     private String networkIp;
 
+    /**
+     * @return The private IP address to assign to the instance. If
+     * empty, the address will be automatically assigned.
+     * 
+     */
     public String networkIp() {
         return this.networkIp;
     }
@@ -126,6 +156,12 @@ public final class GetInstanceTemplateNetworkInterface extends com.pulumi.resour
     @Import(name="subnetwork", required=true)
     private String subnetwork;
 
+    /**
+     * @return the name of the subnetwork to attach this interface
+     * to. The subnetwork must exist in the same `region` this instance will be
+     * created in. Either `network` or `subnetwork` must be provided.
+     * 
+     */
     public String subnetwork() {
         return this.subnetwork;
     }
@@ -138,6 +174,11 @@ public final class GetInstanceTemplateNetworkInterface extends com.pulumi.resour
     @Import(name="subnetworkProject", required=true)
     private String subnetworkProject;
 
+    /**
+     * @return The ID of the project in which the subnetwork belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public String subnetworkProject() {
         return this.subnetworkProject;
     }
@@ -177,20 +218,58 @@ public final class GetInstanceTemplateNetworkInterface extends com.pulumi.resour
             $ = new GetInstanceTemplateNetworkInterface(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessConfigs Access configurations, i.e. IPs via which this
+         * instance can be accessed via the Internet. Omit to ensure that the instance
+         * is not accessible from the Internet (this means that ssh provisioners will
+         * not work unless you are running the prvovider can send traffic to the instance&#39;s
+         * network (e.g. via tunnel or because it is running on another cloud instance
+         * on that network). This block can be repeated multiple times. Structure documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessConfigs(List<GetInstanceTemplateNetworkInterfaceAccessConfig> accessConfigs) {
             $.accessConfigs = accessConfigs;
             return this;
         }
 
+        /**
+         * @param accessConfigs Access configurations, i.e. IPs via which this
+         * instance can be accessed via the Internet. Omit to ensure that the instance
+         * is not accessible from the Internet (this means that ssh provisioners will
+         * not work unless you are running the prvovider can send traffic to the instance&#39;s
+         * network (e.g. via tunnel or because it is running on another cloud instance
+         * on that network). This block can be repeated multiple times. Structure documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessConfigs(GetInstanceTemplateNetworkInterfaceAccessConfig... accessConfigs) {
             return accessConfigs(List.of(accessConfigs));
         }
 
+        /**
+         * @param aliasIpRanges An
+         * array of alias IP ranges for this network interface. Can only be specified for network
+         * interfaces on subnet-mode networks. Structure documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aliasIpRanges(List<GetInstanceTemplateNetworkInterfaceAliasIpRange> aliasIpRanges) {
             $.aliasIpRanges = aliasIpRanges;
             return this;
         }
 
+        /**
+         * @param aliasIpRanges An
+         * array of alias IP ranges for this network interface. Can only be specified for network
+         * interfaces on subnet-mode networks. Structure documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aliasIpRanges(GetInstanceTemplateNetworkInterfaceAliasIpRange... aliasIpRanges) {
             return aliasIpRanges(List.of(aliasIpRanges));
         }
@@ -209,16 +288,37 @@ public final class GetInstanceTemplateNetworkInterface extends com.pulumi.resour
             return this;
         }
 
+        /**
+         * @param name The name of the instance template. One of `name` or `filter` must be provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param network The name or self_link of the network to attach this interface to.
+         * Use `network` attribute for Legacy or Auto subnetted networks and
+         * `subnetwork` for custom subnetted networks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(String network) {
             $.network = network;
             return this;
         }
 
+        /**
+         * @param networkIp The private IP address to assign to the instance. If
+         * empty, the address will be automatically assigned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkIp(String networkIp) {
             $.networkIp = networkIp;
             return this;
@@ -239,11 +339,26 @@ public final class GetInstanceTemplateNetworkInterface extends com.pulumi.resour
             return this;
         }
 
+        /**
+         * @param subnetwork the name of the subnetwork to attach this interface
+         * to. The subnetwork must exist in the same `region` this instance will be
+         * created in. Either `network` or `subnetwork` must be provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetwork(String subnetwork) {
             $.subnetwork = subnetwork;
             return this;
         }
 
+        /**
+         * @param subnetworkProject The ID of the project in which the subnetwork belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetworkProject(String subnetworkProject) {
             $.subnetworkProject = subnetworkProject;
             return this;

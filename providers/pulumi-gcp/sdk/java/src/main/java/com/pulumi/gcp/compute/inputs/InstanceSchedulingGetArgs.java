@@ -28,6 +28,12 @@ public final class InstanceSchedulingGetArgs extends com.pulumi.resources.Resour
     @Import(name="automaticRestart")
     private @Nullable Output<Boolean> automaticRestart;
 
+    /**
+     * @return Specifies if the instance should be
+     * restarted if it was terminated by Compute Engine (not a user).
+     * Defaults to true.
+     * 
+     */
     public Optional<Output<Boolean>> automaticRestart() {
         return Optional.ofNullable(this.automaticRestart);
     }
@@ -39,6 +45,10 @@ public final class InstanceSchedulingGetArgs extends com.pulumi.resources.Resour
     @Import(name="minNodeCpus")
     private @Nullable Output<Integer> minNodeCpus;
 
+    /**
+     * @return The minimum number of virtual CPUs this instance will consume when running on a sole-tenant node.
+     * 
+     */
     public Optional<Output<Integer>> minNodeCpus() {
         return Optional.ofNullable(this.minNodeCpus);
     }
@@ -54,6 +64,14 @@ public final class InstanceSchedulingGetArgs extends com.pulumi.resources.Resour
     @Import(name="nodeAffinities")
     private @Nullable Output<List<InstanceSchedulingNodeAffinityGetArgs>> nodeAffinities;
 
+    /**
+     * @return Specifies node affinities or anti-affinities
+     * to determine which sole-tenant nodes your instances and managed instance
+     * groups will use as host systems. Read more on sole-tenant node creation
+     * [here](https://cloud.google.com/compute/docs/nodes/create-nodes).
+     * Structure documented below.
+     * 
+     */
     public Optional<Output<List<InstanceSchedulingNodeAffinityGetArgs>>> nodeAffinities() {
         return Optional.ofNullable(this.nodeAffinities);
     }
@@ -67,6 +85,12 @@ public final class InstanceSchedulingGetArgs extends com.pulumi.resources.Resour
     @Import(name="onHostMaintenance")
     private @Nullable Output<String> onHostMaintenance;
 
+    /**
+     * @return Describes maintenance behavior for the
+     * instance. Can be MIGRATE or TERMINATE, for more info, read
+     * [here](https://cloud.google.com/compute/docs/instances/setting-instance-scheduling-options).
+     * 
+     */
     public Optional<Output<String>> onHostMaintenance() {
         return Optional.ofNullable(this.onHostMaintenance);
     }
@@ -80,6 +104,12 @@ public final class InstanceSchedulingGetArgs extends com.pulumi.resources.Resour
     @Import(name="preemptible")
     private @Nullable Output<Boolean> preemptible;
 
+    /**
+     * @return Specifies if the instance is preemptible.
+     * If this field is set to true, then `automatic_restart` must be
+     * set to false.  Defaults to false.
+     * 
+     */
     public Optional<Output<Boolean>> preemptible() {
         return Optional.ofNullable(this.preemptible);
     }
@@ -112,51 +142,141 @@ public final class InstanceSchedulingGetArgs extends com.pulumi.resources.Resour
             $ = new InstanceSchedulingGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param automaticRestart Specifies if the instance should be
+         * restarted if it was terminated by Compute Engine (not a user).
+         * Defaults to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automaticRestart(@Nullable Output<Boolean> automaticRestart) {
             $.automaticRestart = automaticRestart;
             return this;
         }
 
+        /**
+         * @param automaticRestart Specifies if the instance should be
+         * restarted if it was terminated by Compute Engine (not a user).
+         * Defaults to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automaticRestart(Boolean automaticRestart) {
             return automaticRestart(Output.of(automaticRestart));
         }
 
+        /**
+         * @param minNodeCpus The minimum number of virtual CPUs this instance will consume when running on a sole-tenant node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minNodeCpus(@Nullable Output<Integer> minNodeCpus) {
             $.minNodeCpus = minNodeCpus;
             return this;
         }
 
+        /**
+         * @param minNodeCpus The minimum number of virtual CPUs this instance will consume when running on a sole-tenant node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minNodeCpus(Integer minNodeCpus) {
             return minNodeCpus(Output.of(minNodeCpus));
         }
 
+        /**
+         * @param nodeAffinities Specifies node affinities or anti-affinities
+         * to determine which sole-tenant nodes your instances and managed instance
+         * groups will use as host systems. Read more on sole-tenant node creation
+         * [here](https://cloud.google.com/compute/docs/nodes/create-nodes).
+         * Structure documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeAffinities(@Nullable Output<List<InstanceSchedulingNodeAffinityGetArgs>> nodeAffinities) {
             $.nodeAffinities = nodeAffinities;
             return this;
         }
 
+        /**
+         * @param nodeAffinities Specifies node affinities or anti-affinities
+         * to determine which sole-tenant nodes your instances and managed instance
+         * groups will use as host systems. Read more on sole-tenant node creation
+         * [here](https://cloud.google.com/compute/docs/nodes/create-nodes).
+         * Structure documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeAffinities(List<InstanceSchedulingNodeAffinityGetArgs> nodeAffinities) {
             return nodeAffinities(Output.of(nodeAffinities));
         }
 
+        /**
+         * @param nodeAffinities Specifies node affinities or anti-affinities
+         * to determine which sole-tenant nodes your instances and managed instance
+         * groups will use as host systems. Read more on sole-tenant node creation
+         * [here](https://cloud.google.com/compute/docs/nodes/create-nodes).
+         * Structure documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeAffinities(InstanceSchedulingNodeAffinityGetArgs... nodeAffinities) {
             return nodeAffinities(List.of(nodeAffinities));
         }
 
+        /**
+         * @param onHostMaintenance Describes maintenance behavior for the
+         * instance. Can be MIGRATE or TERMINATE, for more info, read
+         * [here](https://cloud.google.com/compute/docs/instances/setting-instance-scheduling-options).
+         * 
+         * @return builder
+         * 
+         */
         public Builder onHostMaintenance(@Nullable Output<String> onHostMaintenance) {
             $.onHostMaintenance = onHostMaintenance;
             return this;
         }
 
+        /**
+         * @param onHostMaintenance Describes maintenance behavior for the
+         * instance. Can be MIGRATE or TERMINATE, for more info, read
+         * [here](https://cloud.google.com/compute/docs/instances/setting-instance-scheduling-options).
+         * 
+         * @return builder
+         * 
+         */
         public Builder onHostMaintenance(String onHostMaintenance) {
             return onHostMaintenance(Output.of(onHostMaintenance));
         }
 
+        /**
+         * @param preemptible Specifies if the instance is preemptible.
+         * If this field is set to true, then `automatic_restart` must be
+         * set to false.  Defaults to false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preemptible(@Nullable Output<Boolean> preemptible) {
             $.preemptible = preemptible;
             return this;
         }
 
+        /**
+         * @param preemptible Specifies if the instance is preemptible.
+         * If this field is set to true, then `automatic_restart` must be
+         * set to false.  Defaults to false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preemptible(Boolean preemptible) {
             return preemptible(Output.of(preemptible));
         }

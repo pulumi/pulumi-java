@@ -25,6 +25,10 @@ public final class IntegrationServiceEnvironmentManagedApiArgs extends com.pulum
     @Import(name="apiName")
     private @Nullable Output<String> apiName;
 
+    /**
+     * @return The api name.
+     * 
+     */
     public Optional<Output<String>> apiName() {
         return Optional.ofNullable(this.apiName);
     }
@@ -36,6 +40,10 @@ public final class IntegrationServiceEnvironmentManagedApiArgs extends com.pulum
     @Import(name="deploymentParameters")
     private @Nullable Output<IntegrationServiceEnvironmentManagedApiDeploymentParametersArgs> deploymentParameters;
 
+    /**
+     * @return The integration service environment managed api deployment parameters.
+     * 
+     */
     public Optional<Output<IntegrationServiceEnvironmentManagedApiDeploymentParametersArgs>> deploymentParameters() {
         return Optional.ofNullable(this.deploymentParameters);
     }
@@ -47,6 +55,10 @@ public final class IntegrationServiceEnvironmentManagedApiArgs extends com.pulum
     @Import(name="integrationServiceEnvironment")
     private @Nullable Output<ResourceReferenceArgs> integrationServiceEnvironment;
 
+    /**
+     * @return The integration service environment reference.
+     * 
+     */
     public Optional<Output<ResourceReferenceArgs>> integrationServiceEnvironment() {
         return Optional.ofNullable(this.integrationServiceEnvironment);
     }
@@ -58,6 +70,10 @@ public final class IntegrationServiceEnvironmentManagedApiArgs extends com.pulum
     @Import(name="integrationServiceEnvironmentName", required=true)
     private Output<String> integrationServiceEnvironmentName;
 
+    /**
+     * @return The integration service environment name.
+     * 
+     */
     public Output<String> integrationServiceEnvironmentName() {
         return this.integrationServiceEnvironmentName;
     }
@@ -69,6 +85,10 @@ public final class IntegrationServiceEnvironmentManagedApiArgs extends com.pulum
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The resource location.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -80,6 +100,10 @@ public final class IntegrationServiceEnvironmentManagedApiArgs extends com.pulum
     @Import(name="resourceGroup", required=true)
     private Output<String> resourceGroup;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public Output<String> resourceGroup() {
         return this.resourceGroup;
     }
@@ -91,6 +115,10 @@ public final class IntegrationServiceEnvironmentManagedApiArgs extends com.pulum
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return The resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -125,65 +153,149 @@ public final class IntegrationServiceEnvironmentManagedApiArgs extends com.pulum
             $ = new IntegrationServiceEnvironmentManagedApiArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiName The api name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiName(@Nullable Output<String> apiName) {
             $.apiName = apiName;
             return this;
         }
 
+        /**
+         * @param apiName The api name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiName(String apiName) {
             return apiName(Output.of(apiName));
         }
 
+        /**
+         * @param deploymentParameters The integration service environment managed api deployment parameters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentParameters(@Nullable Output<IntegrationServiceEnvironmentManagedApiDeploymentParametersArgs> deploymentParameters) {
             $.deploymentParameters = deploymentParameters;
             return this;
         }
 
+        /**
+         * @param deploymentParameters The integration service environment managed api deployment parameters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentParameters(IntegrationServiceEnvironmentManagedApiDeploymentParametersArgs deploymentParameters) {
             return deploymentParameters(Output.of(deploymentParameters));
         }
 
+        /**
+         * @param integrationServiceEnvironment The integration service environment reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder integrationServiceEnvironment(@Nullable Output<ResourceReferenceArgs> integrationServiceEnvironment) {
             $.integrationServiceEnvironment = integrationServiceEnvironment;
             return this;
         }
 
+        /**
+         * @param integrationServiceEnvironment The integration service environment reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder integrationServiceEnvironment(ResourceReferenceArgs integrationServiceEnvironment) {
             return integrationServiceEnvironment(Output.of(integrationServiceEnvironment));
         }
 
+        /**
+         * @param integrationServiceEnvironmentName The integration service environment name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder integrationServiceEnvironmentName(Output<String> integrationServiceEnvironmentName) {
             $.integrationServiceEnvironmentName = integrationServiceEnvironmentName;
             return this;
         }
 
+        /**
+         * @param integrationServiceEnvironmentName The integration service environment name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder integrationServiceEnvironmentName(String integrationServiceEnvironmentName) {
             return integrationServiceEnvironmentName(Output.of(integrationServiceEnvironmentName));
         }
 
+        /**
+         * @param location The resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param resourceGroup The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroup(Output<String> resourceGroup) {
             $.resourceGroup = resourceGroup;
             return this;
         }
 
+        /**
+         * @param resourceGroup The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroup(String resourceGroup) {
             return resourceGroup(Output.of(resourceGroup));
         }
 
+        /**
+         * @param tags The resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

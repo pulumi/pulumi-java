@@ -23,6 +23,10 @@ public final class SymptomResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="createTime", required=true)
     private String createTime;
 
+    /**
+     * @return Timestamp when the Symptom is created.
+     * 
+     */
     public String createTime() {
         return this.createTime;
     }
@@ -34,6 +38,10 @@ public final class SymptomResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="details", required=true)
     private String details;
 
+    /**
+     * @return Detailed information of the current Symptom.
+     * 
+     */
     public String details() {
         return this.details;
     }
@@ -45,6 +53,10 @@ public final class SymptomResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="symptomType", required=true)
     private String symptomType;
 
+    /**
+     * @return Type of the Symptom.
+     * 
+     */
     public String symptomType() {
         return this.symptomType;
     }
@@ -56,6 +68,10 @@ public final class SymptomResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="workerId", required=true)
     private String workerId;
 
+    /**
+     * @return A string used to uniquely distinguish a worker within a TPU node.
+     * 
+     */
     public String workerId() {
         return this.workerId;
     }
@@ -87,21 +103,45 @@ public final class SymptomResponse extends com.pulumi.resources.InvokeArgs {
             $ = new SymptomResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param createTime Timestamp when the Symptom is created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTime(String createTime) {
             $.createTime = createTime;
             return this;
         }
 
+        /**
+         * @param details Detailed information of the current Symptom.
+         * 
+         * @return builder
+         * 
+         */
         public Builder details(String details) {
             $.details = details;
             return this;
         }
 
+        /**
+         * @param symptomType Type of the Symptom.
+         * 
+         * @return builder
+         * 
+         */
         public Builder symptomType(String symptomType) {
             $.symptomType = symptomType;
             return this;
         }
 
+        /**
+         * @param workerId A string used to uniquely distinguish a worker within a TPU node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workerId(String workerId) {
             $.workerId = workerId;
             return this;

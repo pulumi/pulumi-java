@@ -23,6 +23,10 @@ public final class SiteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
     private Output<String> displayName;
 
+    /**
+     * @return Display name of the IoT site
+     * 
+     */
     public Output<String> displayName() {
         return this.displayName;
     }
@@ -34,6 +38,10 @@ public final class SiteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scope", required=true)
     private Output<String> scope;
 
+    /**
+     * @return Scope of the query (IoT Hub, /providers/Microsoft.Devices/iotHubs/myHub)
+     * 
+     */
     public Output<String> scope() {
         return this.scope;
     }
@@ -45,6 +53,10 @@ public final class SiteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Tags of the IoT site
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -75,29 +87,65 @@ public final class SiteArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SiteArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayName Display name of the IoT site
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName Display name of the IoT site
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param scope Scope of the query (IoT Hub, /providers/Microsoft.Devices/iotHubs/myHub)
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(Output<String> scope) {
             $.scope = scope;
             return this;
         }
 
+        /**
+         * @param scope Scope of the query (IoT Hub, /providers/Microsoft.Devices/iotHubs/myHub)
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(String scope) {
             return scope(Output.of(scope));
         }
 
+        /**
+         * @param tags Tags of the IoT site
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Tags of the IoT site
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

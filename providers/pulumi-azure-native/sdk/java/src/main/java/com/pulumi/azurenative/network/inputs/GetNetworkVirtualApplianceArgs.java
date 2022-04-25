@@ -21,6 +21,10 @@ public final class GetNetworkVirtualApplianceArgs extends com.pulumi.resources.I
     @Import(name="expand")
     private @Nullable String expand;
 
+    /**
+     * @return Expands referenced resources.
+     * 
+     */
     public Optional<String> expand() {
         return Optional.ofNullable(this.expand);
     }
@@ -32,6 +36,10 @@ public final class GetNetworkVirtualApplianceArgs extends com.pulumi.resources.I
     @Import(name="networkVirtualApplianceName", required=true)
     private String networkVirtualApplianceName;
 
+    /**
+     * @return The name of Network Virtual Appliance.
+     * 
+     */
     public String networkVirtualApplianceName() {
         return this.networkVirtualApplianceName;
     }
@@ -43,6 +51,10 @@ public final class GetNetworkVirtualApplianceArgs extends com.pulumi.resources.I
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -73,16 +85,34 @@ public final class GetNetworkVirtualApplianceArgs extends com.pulumi.resources.I
             $ = new GetNetworkVirtualApplianceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expand Expands referenced resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expand(@Nullable String expand) {
             $.expand = expand;
             return this;
         }
 
+        /**
+         * @param networkVirtualApplianceName The name of Network Virtual Appliance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkVirtualApplianceName(String networkVirtualApplianceName) {
             $.networkVirtualApplianceName = networkVirtualApplianceName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

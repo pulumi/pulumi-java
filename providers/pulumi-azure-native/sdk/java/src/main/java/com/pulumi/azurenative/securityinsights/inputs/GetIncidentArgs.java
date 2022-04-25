@@ -19,6 +19,10 @@ public final class GetIncidentArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="incidentId", required=true)
     private String incidentId;
 
+    /**
+     * @return Incident ID
+     * 
+     */
     public String incidentId() {
         return this.incidentId;
     }
@@ -30,6 +34,10 @@ public final class GetIncidentArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetIncidentArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="workspaceName", required=true)
     private String workspaceName;
 
+    /**
+     * @return The name of the workspace.
+     * 
+     */
     public String workspaceName() {
         return this.workspaceName;
     }
@@ -71,16 +83,34 @@ public final class GetIncidentArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetIncidentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param incidentId Incident ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder incidentId(String incidentId) {
             $.incidentId = incidentId;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param workspaceName The name of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             $.workspaceName = workspaceName;
             return this;

@@ -28,6 +28,10 @@ public final class LoadBalancingRuleResponse extends com.pulumi.resources.Invoke
     @Import(name="backendAddressPool")
     private @Nullable SubResourceResponse backendAddressPool;
 
+    /**
+     * @return A reference to a pool of DIPs. Inbound traffic is randomly load balanced across IPs in the backend IPs.
+     * 
+     */
     public Optional<SubResourceResponse> backendAddressPool() {
         return Optional.ofNullable(this.backendAddressPool);
     }
@@ -39,6 +43,10 @@ public final class LoadBalancingRuleResponse extends com.pulumi.resources.Invoke
     @Import(name="backendPort")
     private @Nullable Integer backendPort;
 
+    /**
+     * @return The port used for internal connections on the endpoint. Acceptable values are between 0 and 65535. Note that value 0 enables &#34;Any Port&#34;.
+     * 
+     */
     public Optional<Integer> backendPort() {
         return Optional.ofNullable(this.backendPort);
     }
@@ -50,6 +58,10 @@ public final class LoadBalancingRuleResponse extends com.pulumi.resources.Invoke
     @Import(name="disableOutboundSnat")
     private @Nullable Boolean disableOutboundSnat;
 
+    /**
+     * @return Configures SNAT for the VMs in the backend pool to use the publicIP address specified in the frontend of the load balancing rule.
+     * 
+     */
     public Optional<Boolean> disableOutboundSnat() {
         return Optional.ofNullable(this.disableOutboundSnat);
     }
@@ -61,6 +73,10 @@ public final class LoadBalancingRuleResponse extends com.pulumi.resources.Invoke
     @Import(name="enableFloatingIP")
     private @Nullable Boolean enableFloatingIP;
 
+    /**
+     * @return Configures a virtual machine&#39;s endpoint for the floating IP capability required to configure a SQL AlwaysOn Availability Group. This setting is required when using the SQL AlwaysOn Availability Groups in SQL server. This setting can&#39;t be changed after you create the endpoint.
+     * 
+     */
     public Optional<Boolean> enableFloatingIP() {
         return Optional.ofNullable(this.enableFloatingIP);
     }
@@ -72,6 +88,10 @@ public final class LoadBalancingRuleResponse extends com.pulumi.resources.Invoke
     @Import(name="enableTcpReset")
     private @Nullable Boolean enableTcpReset;
 
+    /**
+     * @return Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connection termination. This element is only used when the protocol is set to TCP.
+     * 
+     */
     public Optional<Boolean> enableTcpReset() {
         return Optional.ofNullable(this.enableTcpReset);
     }
@@ -83,6 +103,10 @@ public final class LoadBalancingRuleResponse extends com.pulumi.resources.Invoke
     @Import(name="etag", required=true)
     private String etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public String etag() {
         return this.etag;
     }
@@ -94,6 +118,10 @@ public final class LoadBalancingRuleResponse extends com.pulumi.resources.Invoke
     @Import(name="frontendIPConfiguration")
     private @Nullable SubResourceResponse frontendIPConfiguration;
 
+    /**
+     * @return A reference to frontend IP addresses.
+     * 
+     */
     public Optional<SubResourceResponse> frontendIPConfiguration() {
         return Optional.ofNullable(this.frontendIPConfiguration);
     }
@@ -105,6 +133,10 @@ public final class LoadBalancingRuleResponse extends com.pulumi.resources.Invoke
     @Import(name="frontendPort", required=true)
     private Integer frontendPort;
 
+    /**
+     * @return The port for the external endpoint. Port numbers for each rule must be unique within the Load Balancer. Acceptable values are between 0 and 65534. Note that value 0 enables &#34;Any Port&#34;.
+     * 
+     */
     public Integer frontendPort() {
         return this.frontendPort;
     }
@@ -116,6 +148,10 @@ public final class LoadBalancingRuleResponse extends com.pulumi.resources.Invoke
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -127,6 +163,10 @@ public final class LoadBalancingRuleResponse extends com.pulumi.resources.Invoke
     @Import(name="idleTimeoutInMinutes")
     private @Nullable Integer idleTimeoutInMinutes;
 
+    /**
+     * @return The timeout for the TCP idle connection. The value can be set between 4 and 30 minutes. The default value is 4 minutes. This element is only used when the protocol is set to TCP.
+     * 
+     */
     public Optional<Integer> idleTimeoutInMinutes() {
         return Optional.ofNullable(this.idleTimeoutInMinutes);
     }
@@ -138,6 +178,10 @@ public final class LoadBalancingRuleResponse extends com.pulumi.resources.Invoke
     @Import(name="loadDistribution")
     private @Nullable String loadDistribution;
 
+    /**
+     * @return The load distribution policy for this rule.
+     * 
+     */
     public Optional<String> loadDistribution() {
         return Optional.ofNullable(this.loadDistribution);
     }
@@ -149,6 +193,10 @@ public final class LoadBalancingRuleResponse extends com.pulumi.resources.Invoke
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The name of the resource that is unique within the set of load balancing rules used by the load balancer. This name can be used to access the resource.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -160,6 +208,10 @@ public final class LoadBalancingRuleResponse extends com.pulumi.resources.Invoke
     @Import(name="probe")
     private @Nullable SubResourceResponse probe;
 
+    /**
+     * @return The reference to the load balancer probe used by the load balancing rule.
+     * 
+     */
     public Optional<SubResourceResponse> probe() {
         return Optional.ofNullable(this.probe);
     }
@@ -171,6 +223,10 @@ public final class LoadBalancingRuleResponse extends com.pulumi.resources.Invoke
     @Import(name="protocol", required=true)
     private String protocol;
 
+    /**
+     * @return The reference to the transport protocol used by the load balancing rule.
+     * 
+     */
     public String protocol() {
         return this.protocol;
     }
@@ -182,6 +238,10 @@ public final class LoadBalancingRuleResponse extends com.pulumi.resources.Invoke
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The provisioning state of the load balancing rule resource.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -193,6 +253,10 @@ public final class LoadBalancingRuleResponse extends com.pulumi.resources.Invoke
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of the resource.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -236,81 +300,177 @@ public final class LoadBalancingRuleResponse extends com.pulumi.resources.Invoke
             $ = new LoadBalancingRuleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backendAddressPool A reference to a pool of DIPs. Inbound traffic is randomly load balanced across IPs in the backend IPs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backendAddressPool(@Nullable SubResourceResponse backendAddressPool) {
             $.backendAddressPool = backendAddressPool;
             return this;
         }
 
+        /**
+         * @param backendPort The port used for internal connections on the endpoint. Acceptable values are between 0 and 65535. Note that value 0 enables &#34;Any Port&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backendPort(@Nullable Integer backendPort) {
             $.backendPort = backendPort;
             return this;
         }
 
+        /**
+         * @param disableOutboundSnat Configures SNAT for the VMs in the backend pool to use the publicIP address specified in the frontend of the load balancing rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableOutboundSnat(@Nullable Boolean disableOutboundSnat) {
             $.disableOutboundSnat = disableOutboundSnat;
             return this;
         }
 
+        /**
+         * @param enableFloatingIP Configures a virtual machine&#39;s endpoint for the floating IP capability required to configure a SQL AlwaysOn Availability Group. This setting is required when using the SQL AlwaysOn Availability Groups in SQL server. This setting can&#39;t be changed after you create the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableFloatingIP(@Nullable Boolean enableFloatingIP) {
             $.enableFloatingIP = enableFloatingIP;
             return this;
         }
 
+        /**
+         * @param enableTcpReset Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connection termination. This element is only used when the protocol is set to TCP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableTcpReset(@Nullable Boolean enableTcpReset) {
             $.enableTcpReset = enableTcpReset;
             return this;
         }
 
+        /**
+         * @param etag A unique read-only string that changes whenever the resource is updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param frontendIPConfiguration A reference to frontend IP addresses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frontendIPConfiguration(@Nullable SubResourceResponse frontendIPConfiguration) {
             $.frontendIPConfiguration = frontendIPConfiguration;
             return this;
         }
 
+        /**
+         * @param frontendPort The port for the external endpoint. Port numbers for each rule must be unique within the Load Balancer. Acceptable values are between 0 and 65534. Note that value 0 enables &#34;Any Port&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frontendPort(Integer frontendPort) {
             $.frontendPort = frontendPort;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param idleTimeoutInMinutes The timeout for the TCP idle connection. The value can be set between 4 and 30 minutes. The default value is 4 minutes. This element is only used when the protocol is set to TCP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder idleTimeoutInMinutes(@Nullable Integer idleTimeoutInMinutes) {
             $.idleTimeoutInMinutes = idleTimeoutInMinutes;
             return this;
         }
 
+        /**
+         * @param loadDistribution The load distribution policy for this rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadDistribution(@Nullable String loadDistribution) {
             $.loadDistribution = loadDistribution;
             return this;
         }
 
+        /**
+         * @param name The name of the resource that is unique within the set of load balancing rules used by the load balancer. This name can be used to access the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param probe The reference to the load balancer probe used by the load balancing rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder probe(@Nullable SubResourceResponse probe) {
             $.probe = probe;
             return this;
         }
 
+        /**
+         * @param protocol The reference to the transport protocol used by the load balancing rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(String protocol) {
             $.protocol = protocol;
             return this;
         }
 
+        /**
+         * @param provisioningState The provisioning state of the load balancing rule resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param type Type of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

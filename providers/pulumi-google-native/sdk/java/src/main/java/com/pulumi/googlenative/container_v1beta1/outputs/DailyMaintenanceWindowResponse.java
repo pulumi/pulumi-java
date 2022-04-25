@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class DailyMaintenanceWindowResponse {
     /**
-     * [Output only] Duration of the time window, automatically chosen to be smallest possible in the given scenario.
+     * @return [Output only] Duration of the time window, automatically chosen to be smallest possible in the given scenario.
      * 
      */
     private final String duration;
     /**
-     * Time within the maintenance window to start the maintenance operations. It must be in format &#34;HH:MM&#34;, where HH : [00-23] and MM : [00-59] GMT.
+     * @return Time within the maintenance window to start the maintenance operations. It must be in format &#34;HH:MM&#34;, where HH : [00-23] and MM : [00-59] GMT.
      * 
      */
     private final String startTime;
@@ -29,16 +29,16 @@ public final class DailyMaintenanceWindowResponse {
     }
 
     /**
-     * [Output only] Duration of the time window, automatically chosen to be smallest possible in the given scenario.
+     * @return [Output only] Duration of the time window, automatically chosen to be smallest possible in the given scenario.
      * 
-    */
+     */
     public String duration() {
         return this.duration;
     }
     /**
-     * Time within the maintenance window to start the maintenance operations. It must be in format &#34;HH:MM&#34;, where HH : [00-23] and MM : [00-59] GMT.
+     * @return Time within the maintenance window to start the maintenance operations. It must be in format &#34;HH:MM&#34;, where HH : [00-23] and MM : [00-59] GMT.
      * 
-    */
+     */
     public String startTime() {
         return this.startTime;
     }

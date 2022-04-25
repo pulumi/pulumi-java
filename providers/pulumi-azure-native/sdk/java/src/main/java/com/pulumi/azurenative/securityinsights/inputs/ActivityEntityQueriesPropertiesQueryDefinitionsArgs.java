@@ -26,6 +26,10 @@ public final class ActivityEntityQueriesPropertiesQueryDefinitionsArgs extends c
     @Import(name="query")
     private @Nullable Output<String> query;
 
+    /**
+     * @return The Activity query to run on a given entity
+     * 
+     */
     public Optional<Output<String>> query() {
         return Optional.ofNullable(this.query);
     }
@@ -54,11 +58,23 @@ public final class ActivityEntityQueriesPropertiesQueryDefinitionsArgs extends c
             $ = new ActivityEntityQueriesPropertiesQueryDefinitionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param query The Activity query to run on a given entity
+         * 
+         * @return builder
+         * 
+         */
         public Builder query(@Nullable Output<String> query) {
             $.query = query;
             return this;
         }
 
+        /**
+         * @param query The Activity query to run on a given entity
+         * 
+         * @return builder
+         * 
+         */
         public Builder query(String query) {
             return query(Output.of(query));
         }

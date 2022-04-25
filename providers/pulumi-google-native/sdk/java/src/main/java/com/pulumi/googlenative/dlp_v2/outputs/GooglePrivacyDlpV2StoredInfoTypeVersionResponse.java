@@ -14,27 +14,27 @@ import java.util.Objects;
 @CustomType
 public final class GooglePrivacyDlpV2StoredInfoTypeVersionResponse {
     /**
-     * StoredInfoType configuration.
+     * @return StoredInfoType configuration.
      * 
      */
     private final GooglePrivacyDlpV2StoredInfoTypeConfigResponse config;
     /**
-     * Create timestamp of the version. Read-only, determined by the system when the version is created.
+     * @return Create timestamp of the version. Read-only, determined by the system when the version is created.
      * 
      */
     private final String createTime;
     /**
-     * Errors that occurred when creating this storedInfoType version, or anomalies detected in the storedInfoType data that render it unusable. Only the five most recent errors will be displayed, with the most recent error appearing first. For example, some of the data for stored custom dictionaries is put in the user&#39;s Google Cloud Storage bucket, and if this data is modified or deleted by the user or another system, the dictionary becomes invalid. If any errors occur, fix the problem indicated by the error message and use the UpdateStoredInfoType API method to create another version of the storedInfoType to continue using it, reusing the same `config` if it was not the source of the error.
+     * @return Errors that occurred when creating this storedInfoType version, or anomalies detected in the storedInfoType data that render it unusable. Only the five most recent errors will be displayed, with the most recent error appearing first. For example, some of the data for stored custom dictionaries is put in the user&#39;s Google Cloud Storage bucket, and if this data is modified or deleted by the user or another system, the dictionary becomes invalid. If any errors occur, fix the problem indicated by the error message and use the UpdateStoredInfoType API method to create another version of the storedInfoType to continue using it, reusing the same `config` if it was not the source of the error.
      * 
      */
     private final List<GooglePrivacyDlpV2ErrorResponse> errors;
     /**
-     * Stored info type version state. Read-only, updated by the system during dictionary creation.
+     * @return Stored info type version state. Read-only, updated by the system during dictionary creation.
      * 
      */
     private final String state;
     /**
-     * Statistics about this storedInfoType version.
+     * @return Statistics about this storedInfoType version.
      * 
      */
     private final GooglePrivacyDlpV2StoredInfoTypeStatsResponse stats;
@@ -54,37 +54,37 @@ public final class GooglePrivacyDlpV2StoredInfoTypeVersionResponse {
     }
 
     /**
-     * StoredInfoType configuration.
+     * @return StoredInfoType configuration.
      * 
-    */
+     */
     public GooglePrivacyDlpV2StoredInfoTypeConfigResponse config() {
         return this.config;
     }
     /**
-     * Create timestamp of the version. Read-only, determined by the system when the version is created.
+     * @return Create timestamp of the version. Read-only, determined by the system when the version is created.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * Errors that occurred when creating this storedInfoType version, or anomalies detected in the storedInfoType data that render it unusable. Only the five most recent errors will be displayed, with the most recent error appearing first. For example, some of the data for stored custom dictionaries is put in the user&#39;s Google Cloud Storage bucket, and if this data is modified or deleted by the user or another system, the dictionary becomes invalid. If any errors occur, fix the problem indicated by the error message and use the UpdateStoredInfoType API method to create another version of the storedInfoType to continue using it, reusing the same `config` if it was not the source of the error.
+     * @return Errors that occurred when creating this storedInfoType version, or anomalies detected in the storedInfoType data that render it unusable. Only the five most recent errors will be displayed, with the most recent error appearing first. For example, some of the data for stored custom dictionaries is put in the user&#39;s Google Cloud Storage bucket, and if this data is modified or deleted by the user or another system, the dictionary becomes invalid. If any errors occur, fix the problem indicated by the error message and use the UpdateStoredInfoType API method to create another version of the storedInfoType to continue using it, reusing the same `config` if it was not the source of the error.
      * 
-    */
+     */
     public List<GooglePrivacyDlpV2ErrorResponse> errors() {
         return this.errors;
     }
     /**
-     * Stored info type version state. Read-only, updated by the system during dictionary creation.
+     * @return Stored info type version state. Read-only, updated by the system during dictionary creation.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * Statistics about this storedInfoType version.
+     * @return Statistics about this storedInfoType version.
      * 
-    */
+     */
     public GooglePrivacyDlpV2StoredInfoTypeStatsResponse stats() {
         return this.stats;
     }

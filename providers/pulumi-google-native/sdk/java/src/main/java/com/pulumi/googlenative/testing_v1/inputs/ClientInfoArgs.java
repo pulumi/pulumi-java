@@ -28,6 +28,10 @@ public final class ClientInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clientInfoDetails")
     private @Nullable Output<List<ClientInfoDetailArgs>> clientInfoDetails;
 
+    /**
+     * @return The list of detailed information about client.
+     * 
+     */
     public Optional<Output<List<ClientInfoDetailArgs>>> clientInfoDetails() {
         return Optional.ofNullable(this.clientInfoDetails);
     }
@@ -39,6 +43,10 @@ public final class ClientInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Client name, such as gcloud.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -68,24 +76,54 @@ public final class ClientInfoArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ClientInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientInfoDetails The list of detailed information about client.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientInfoDetails(@Nullable Output<List<ClientInfoDetailArgs>> clientInfoDetails) {
             $.clientInfoDetails = clientInfoDetails;
             return this;
         }
 
+        /**
+         * @param clientInfoDetails The list of detailed information about client.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientInfoDetails(List<ClientInfoDetailArgs> clientInfoDetails) {
             return clientInfoDetails(Output.of(clientInfoDetails));
         }
 
+        /**
+         * @param clientInfoDetails The list of detailed information about client.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientInfoDetails(ClientInfoDetailArgs... clientInfoDetails) {
             return clientInfoDetails(List.of(clientInfoDetails));
         }
 
+        /**
+         * @param name Client name, such as gcloud.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Client name, such as gcloud.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

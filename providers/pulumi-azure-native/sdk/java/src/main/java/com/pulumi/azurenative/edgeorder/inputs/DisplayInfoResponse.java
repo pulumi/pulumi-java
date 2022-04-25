@@ -23,6 +23,10 @@ public final class DisplayInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="configurationDisplayName", required=true)
     private String configurationDisplayName;
 
+    /**
+     * @return Configuration display name
+     * 
+     */
     public String configurationDisplayName() {
         return this.configurationDisplayName;
     }
@@ -34,6 +38,10 @@ public final class DisplayInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="productFamilyDisplayName", required=true)
     private String productFamilyDisplayName;
 
+    /**
+     * @return Product family display name
+     * 
+     */
     public String productFamilyDisplayName() {
         return this.productFamilyDisplayName;
     }
@@ -63,11 +71,23 @@ public final class DisplayInfoResponse extends com.pulumi.resources.InvokeArgs {
             $ = new DisplayInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param configurationDisplayName Configuration display name
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationDisplayName(String configurationDisplayName) {
             $.configurationDisplayName = configurationDisplayName;
             return this;
         }
 
+        /**
+         * @param productFamilyDisplayName Product family display name
+         * 
+         * @return builder
+         * 
+         */
         public Builder productFamilyDisplayName(String productFamilyDisplayName) {
             $.productFamilyDisplayName = productFamilyDisplayName;
             return this;

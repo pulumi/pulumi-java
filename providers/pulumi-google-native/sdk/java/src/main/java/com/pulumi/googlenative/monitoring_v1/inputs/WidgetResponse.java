@@ -30,6 +30,10 @@ public final class WidgetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="alertChart", required=true)
     private AlertChartResponse alertChart;
 
+    /**
+     * @return A chart of alert policy data.
+     * 
+     */
     public AlertChartResponse alertChart() {
         return this.alertChart;
     }
@@ -41,6 +45,10 @@ public final class WidgetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="blank", required=true)
     private EmptyResponse blank;
 
+    /**
+     * @return A blank space.
+     * 
+     */
     public EmptyResponse blank() {
         return this.blank;
     }
@@ -52,6 +60,10 @@ public final class WidgetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="logsPanel", required=true)
     private LogsPanelResponse logsPanel;
 
+    /**
+     * @return A widget that shows a stream of logs.
+     * 
+     */
     public LogsPanelResponse logsPanel() {
         return this.logsPanel;
     }
@@ -63,6 +75,10 @@ public final class WidgetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="scorecard", required=true)
     private ScorecardResponse scorecard;
 
+    /**
+     * @return A scorecard summarizing time series data.
+     * 
+     */
     public ScorecardResponse scorecard() {
         return this.scorecard;
     }
@@ -74,6 +90,10 @@ public final class WidgetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="text", required=true)
     private TextResponse text;
 
+    /**
+     * @return A raw string or markdown displaying textual content.
+     * 
+     */
     public TextResponse text() {
         return this.text;
     }
@@ -85,6 +105,10 @@ public final class WidgetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="timeSeriesTable", required=true)
     private TimeSeriesTableResponse timeSeriesTable;
 
+    /**
+     * @return A widget that displays time series data in a tabular format.
+     * 
+     */
     public TimeSeriesTableResponse timeSeriesTable() {
         return this.timeSeriesTable;
     }
@@ -96,6 +120,10 @@ public final class WidgetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="title", required=true)
     private String title;
 
+    /**
+     * @return Optional. The title of the widget.
+     * 
+     */
     public String title() {
         return this.title;
     }
@@ -107,6 +135,10 @@ public final class WidgetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="xyChart", required=true)
     private XyChartResponse xyChart;
 
+    /**
+     * @return A chart of time series data.
+     * 
+     */
     public XyChartResponse xyChart() {
         return this.xyChart;
     }
@@ -142,41 +174,89 @@ public final class WidgetResponse extends com.pulumi.resources.InvokeArgs {
             $ = new WidgetResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param alertChart A chart of alert policy data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alertChart(AlertChartResponse alertChart) {
             $.alertChart = alertChart;
             return this;
         }
 
+        /**
+         * @param blank A blank space.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blank(EmptyResponse blank) {
             $.blank = blank;
             return this;
         }
 
+        /**
+         * @param logsPanel A widget that shows a stream of logs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logsPanel(LogsPanelResponse logsPanel) {
             $.logsPanel = logsPanel;
             return this;
         }
 
+        /**
+         * @param scorecard A scorecard summarizing time series data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scorecard(ScorecardResponse scorecard) {
             $.scorecard = scorecard;
             return this;
         }
 
+        /**
+         * @param text A raw string or markdown displaying textual content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder text(TextResponse text) {
             $.text = text;
             return this;
         }
 
+        /**
+         * @param timeSeriesTable A widget that displays time series data in a tabular format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeSeriesTable(TimeSeriesTableResponse timeSeriesTable) {
             $.timeSeriesTable = timeSeriesTable;
             return this;
         }
 
+        /**
+         * @param title Optional. The title of the widget.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(String title) {
             $.title = title;
             return this;
         }
 
+        /**
+         * @param xyChart A chart of time series data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder xyChart(XyChartResponse xyChart) {
             $.xyChart = xyChart;
             return this;

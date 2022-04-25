@@ -25,6 +25,10 @@ public final class RequiredTrafficResponse extends com.pulumi.resources.InvokeAr
     @Import(name="direction", required=true)
     private String direction;
 
+    /**
+     * @return The direction of required traffic
+     * 
+     */
     public String direction() {
         return this.direction;
     }
@@ -36,6 +40,10 @@ public final class RequiredTrafficResponse extends com.pulumi.resources.InvokeAr
     @Import(name="fqdns", required=true)
     private List<String> fqdns;
 
+    /**
+     * @return The FQDN list of required traffic
+     * 
+     */
     public List<String> fqdns() {
         return this.fqdns;
     }
@@ -47,6 +55,10 @@ public final class RequiredTrafficResponse extends com.pulumi.resources.InvokeAr
     @Import(name="ips", required=true)
     private List<String> ips;
 
+    /**
+     * @return The ip list of required traffic
+     * 
+     */
     public List<String> ips() {
         return this.ips;
     }
@@ -58,6 +70,10 @@ public final class RequiredTrafficResponse extends com.pulumi.resources.InvokeAr
     @Import(name="port", required=true)
     private Integer port;
 
+    /**
+     * @return The port of required traffic
+     * 
+     */
     public Integer port() {
         return this.port;
     }
@@ -69,6 +85,10 @@ public final class RequiredTrafficResponse extends com.pulumi.resources.InvokeAr
     @Import(name="protocol", required=true)
     private String protocol;
 
+    /**
+     * @return The protocol of required traffic
+     * 
+     */
     public String protocol() {
         return this.protocol;
     }
@@ -101,34 +121,76 @@ public final class RequiredTrafficResponse extends com.pulumi.resources.InvokeAr
             $ = new RequiredTrafficResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param direction The direction of required traffic
+         * 
+         * @return builder
+         * 
+         */
         public Builder direction(String direction) {
             $.direction = direction;
             return this;
         }
 
+        /**
+         * @param fqdns The FQDN list of required traffic
+         * 
+         * @return builder
+         * 
+         */
         public Builder fqdns(List<String> fqdns) {
             $.fqdns = fqdns;
             return this;
         }
 
+        /**
+         * @param fqdns The FQDN list of required traffic
+         * 
+         * @return builder
+         * 
+         */
         public Builder fqdns(String... fqdns) {
             return fqdns(List.of(fqdns));
         }
 
+        /**
+         * @param ips The ip list of required traffic
+         * 
+         * @return builder
+         * 
+         */
         public Builder ips(List<String> ips) {
             $.ips = ips;
             return this;
         }
 
+        /**
+         * @param ips The ip list of required traffic
+         * 
+         * @return builder
+         * 
+         */
         public Builder ips(String... ips) {
             return ips(List.of(ips));
         }
 
+        /**
+         * @param port The port of required traffic
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param protocol The protocol of required traffic
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(String protocol) {
             $.protocol = protocol;
             return this;

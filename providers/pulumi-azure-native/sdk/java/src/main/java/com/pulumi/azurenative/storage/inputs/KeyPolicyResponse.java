@@ -23,6 +23,10 @@ public final class KeyPolicyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="keyExpirationPeriodInDays", required=true)
     private Integer keyExpirationPeriodInDays;
 
+    /**
+     * @return The key expiration period in days.
+     * 
+     */
     public Integer keyExpirationPeriodInDays() {
         return this.keyExpirationPeriodInDays;
     }
@@ -51,6 +55,12 @@ public final class KeyPolicyResponse extends com.pulumi.resources.InvokeArgs {
             $ = new KeyPolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyExpirationPeriodInDays The key expiration period in days.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyExpirationPeriodInDays(Integer keyExpirationPeriodInDays) {
             $.keyExpirationPeriodInDays = keyExpirationPeriodInDays;
             return this;

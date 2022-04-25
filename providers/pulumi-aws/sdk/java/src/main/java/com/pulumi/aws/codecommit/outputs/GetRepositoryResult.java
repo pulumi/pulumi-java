@@ -10,27 +10,27 @@ import java.util.Objects;
 @CustomType
 public final class GetRepositoryResult {
     /**
-     * The ARN of the repository
+     * @return The ARN of the repository
      * 
      */
     private final String arn;
     /**
-     * The URL to use for cloning the repository over HTTPS.
+     * @return The URL to use for cloning the repository over HTTPS.
      * 
      */
     private final String cloneUrlHttp;
     /**
-     * The URL to use for cloning the repository over SSH.
+     * @return The URL to use for cloning the repository over SSH.
      * 
      */
     private final String cloneUrlSsh;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     /**
-     * The ID of the repository
+     * @return The ID of the repository
      * 
      */
     private final String repositoryId;
@@ -53,37 +53,37 @@ public final class GetRepositoryResult {
     }
 
     /**
-     * The ARN of the repository
+     * @return The ARN of the repository
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
     /**
-     * The URL to use for cloning the repository over HTTPS.
+     * @return The URL to use for cloning the repository over HTTPS.
      * 
-    */
+     */
     public String cloneUrlHttp() {
         return this.cloneUrlHttp;
     }
     /**
-     * The URL to use for cloning the repository over SSH.
+     * @return The URL to use for cloning the repository over SSH.
      * 
-    */
+     */
     public String cloneUrlSsh() {
         return this.cloneUrlSsh;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The ID of the repository
+     * @return The ID of the repository
      * 
-    */
+     */
     public String repositoryId() {
         return this.repositoryId;
     }

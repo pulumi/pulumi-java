@@ -25,6 +25,10 @@ public final class DynamicGroupMetadataResponse extends com.pulumi.resources.Inv
     @Import(name="queries", required=true)
     private List<DynamicGroupQueryResponse> queries;
 
+    /**
+     * @return Memberships will be the union of all queries. Only one entry with USER resource is currently supported. Customers can create up to 100 dynamic groups.
+     * 
+     */
     public List<DynamicGroupQueryResponse> queries() {
         return this.queries;
     }
@@ -36,6 +40,10 @@ public final class DynamicGroupMetadataResponse extends com.pulumi.resources.Inv
     @Import(name="status", required=true)
     private DynamicGroupStatusResponse status;
 
+    /**
+     * @return Status of the dynamic group.
+     * 
+     */
     public DynamicGroupStatusResponse status() {
         return this.status;
     }
@@ -65,15 +73,33 @@ public final class DynamicGroupMetadataResponse extends com.pulumi.resources.Inv
             $ = new DynamicGroupMetadataResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param queries Memberships will be the union of all queries. Only one entry with USER resource is currently supported. Customers can create up to 100 dynamic groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queries(List<DynamicGroupQueryResponse> queries) {
             $.queries = queries;
             return this;
         }
 
+        /**
+         * @param queries Memberships will be the union of all queries. Only one entry with USER resource is currently supported. Customers can create up to 100 dynamic groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queries(DynamicGroupQueryResponse... queries) {
             return queries(List.of(queries));
         }
 
+        /**
+         * @param status Status of the dynamic group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(DynamicGroupStatusResponse status) {
             $.status = status;
             return this;

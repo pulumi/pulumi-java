@@ -28,6 +28,10 @@ public final class ModelVersionResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="datastoreId")
     private @Nullable String datastoreId;
 
+    /**
+     * @return ARM resource ID of the datastore where the asset is located.
+     * 
+     */
     public Optional<String> datastoreId() {
         return Optional.ofNullable(this.datastoreId);
     }
@@ -39,6 +43,10 @@ public final class ModelVersionResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return The asset description text.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -50,6 +58,10 @@ public final class ModelVersionResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="flavors")
     private @Nullable Map<String,FlavorDataResponse> flavors;
 
+    /**
+     * @return Mapping of model flavors to their properties.
+     * 
+     */
     public Optional<Map<String,FlavorDataResponse>> flavors() {
         return Optional.ofNullable(this.flavors);
     }
@@ -61,6 +73,10 @@ public final class ModelVersionResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="isAnonymous")
     private @Nullable Boolean isAnonymous;
 
+    /**
+     * @return If the name version are system generated (anonymous registration).
+     * 
+     */
     public Optional<Boolean> isAnonymous() {
         return Optional.ofNullable(this.isAnonymous);
     }
@@ -72,6 +88,10 @@ public final class ModelVersionResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="path", required=true)
     private String path;
 
+    /**
+     * @return The path of the file/directory in the datastore.
+     * 
+     */
     public String path() {
         return this.path;
     }
@@ -83,6 +103,10 @@ public final class ModelVersionResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="properties")
     private @Nullable Map<String,String> properties;
 
+    /**
+     * @return The asset property dictionary.
+     * 
+     */
     public Optional<Map<String,String>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -94,6 +118,10 @@ public final class ModelVersionResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="tags")
     private @Nullable Map<String,String> tags;
 
+    /**
+     * @return Tag dictionary. Tags can be added, removed, and updated.
+     * 
+     */
     public Optional<Map<String,String>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -128,36 +156,78 @@ public final class ModelVersionResponse extends com.pulumi.resources.InvokeArgs 
             $ = new ModelVersionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param datastoreId ARM resource ID of the datastore where the asset is located.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datastoreId(@Nullable String datastoreId) {
             $.datastoreId = datastoreId;
             return this;
         }
 
+        /**
+         * @param description The asset description text.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param flavors Mapping of model flavors to their properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder flavors(@Nullable Map<String,FlavorDataResponse> flavors) {
             $.flavors = flavors;
             return this;
         }
 
+        /**
+         * @param isAnonymous If the name version are system generated (anonymous registration).
+         * 
+         * @return builder
+         * 
+         */
         public Builder isAnonymous(@Nullable Boolean isAnonymous) {
             $.isAnonymous = isAnonymous;
             return this;
         }
 
+        /**
+         * @param path The path of the file/directory in the datastore.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param properties The asset property dictionary.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Map<String,String> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param tags Tag dictionary. Tags can be added, removed, and updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Map<String,String> tags) {
             $.tags = tags;
             return this;

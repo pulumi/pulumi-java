@@ -25,6 +25,10 @@ public final class WindowsBasedSliResponse extends com.pulumi.resources.InvokeAr
     @Import(name="goodBadMetricFilter", required=true)
     private String goodBadMetricFilter;
 
+    /**
+     * @return A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying a TimeSeries with ValueType = BOOL. The window is good if any true values appear in the window.
+     * 
+     */
     public String goodBadMetricFilter() {
         return this.goodBadMetricFilter;
     }
@@ -36,6 +40,10 @@ public final class WindowsBasedSliResponse extends com.pulumi.resources.InvokeAr
     @Import(name="goodTotalRatioThreshold", required=true)
     private PerformanceThresholdResponse goodTotalRatioThreshold;
 
+    /**
+     * @return A window is good if its performance is high enough.
+     * 
+     */
     public PerformanceThresholdResponse goodTotalRatioThreshold() {
         return this.goodTotalRatioThreshold;
     }
@@ -47,6 +55,10 @@ public final class WindowsBasedSliResponse extends com.pulumi.resources.InvokeAr
     @Import(name="metricMeanInRange", required=true)
     private MetricRangeResponse metricMeanInRange;
 
+    /**
+     * @return A window is good if the metric&#39;s value is in a good range, averaged across returned streams.
+     * 
+     */
     public MetricRangeResponse metricMeanInRange() {
         return this.metricMeanInRange;
     }
@@ -58,6 +70,10 @@ public final class WindowsBasedSliResponse extends com.pulumi.resources.InvokeAr
     @Import(name="metricSumInRange", required=true)
     private MetricRangeResponse metricSumInRange;
 
+    /**
+     * @return A window is good if the metric&#39;s value is in a good range, summed across returned streams.
+     * 
+     */
     public MetricRangeResponse metricSumInRange() {
         return this.metricSumInRange;
     }
@@ -69,6 +85,10 @@ public final class WindowsBasedSliResponse extends com.pulumi.resources.InvokeAr
     @Import(name="windowPeriod", required=true)
     private String windowPeriod;
 
+    /**
+     * @return Duration over which window quality is evaluated. Must be an integer fraction of a day and at least 60s.
+     * 
+     */
     public String windowPeriod() {
         return this.windowPeriod;
     }
@@ -101,26 +121,56 @@ public final class WindowsBasedSliResponse extends com.pulumi.resources.InvokeAr
             $ = new WindowsBasedSliResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param goodBadMetricFilter A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying a TimeSeries with ValueType = BOOL. The window is good if any true values appear in the window.
+         * 
+         * @return builder
+         * 
+         */
         public Builder goodBadMetricFilter(String goodBadMetricFilter) {
             $.goodBadMetricFilter = goodBadMetricFilter;
             return this;
         }
 
+        /**
+         * @param goodTotalRatioThreshold A window is good if its performance is high enough.
+         * 
+         * @return builder
+         * 
+         */
         public Builder goodTotalRatioThreshold(PerformanceThresholdResponse goodTotalRatioThreshold) {
             $.goodTotalRatioThreshold = goodTotalRatioThreshold;
             return this;
         }
 
+        /**
+         * @param metricMeanInRange A window is good if the metric&#39;s value is in a good range, averaged across returned streams.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricMeanInRange(MetricRangeResponse metricMeanInRange) {
             $.metricMeanInRange = metricMeanInRange;
             return this;
         }
 
+        /**
+         * @param metricSumInRange A window is good if the metric&#39;s value is in a good range, summed across returned streams.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricSumInRange(MetricRangeResponse metricSumInRange) {
             $.metricSumInRange = metricSumInRange;
             return this;
         }
 
+        /**
+         * @param windowPeriod Duration over which window quality is evaluated. Must be an integer fraction of a day and at least 60s.
+         * 
+         * @return builder
+         * 
+         */
         public Builder windowPeriod(String windowPeriod) {
             $.windowPeriod = windowPeriod;
             return this;

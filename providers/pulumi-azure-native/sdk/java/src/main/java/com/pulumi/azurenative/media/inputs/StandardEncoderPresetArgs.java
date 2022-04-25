@@ -46,6 +46,10 @@ public final class StandardEncoderPresetArgs extends com.pulumi.resources.Resour
     @Import(name="codecs", required=true)
     private Output<List<Object>> codecs;
 
+    /**
+     * @return The list of codecs to be used when encoding the input video.
+     * 
+     */
     public Output<List<Object>> codecs() {
         return this.codecs;
     }
@@ -57,6 +61,10 @@ public final class StandardEncoderPresetArgs extends com.pulumi.resources.Resour
     @Import(name="filters")
     private @Nullable Output<FiltersArgs> filters;
 
+    /**
+     * @return One or more filtering operations that are applied to the input media before encoding.
+     * 
+     */
     public Optional<Output<FiltersArgs>> filters() {
         return Optional.ofNullable(this.filters);
     }
@@ -68,6 +76,10 @@ public final class StandardEncoderPresetArgs extends com.pulumi.resources.Resour
     @Import(name="formats", required=true)
     private Output<List<Object>> formats;
 
+    /**
+     * @return The list of outputs to be produced by the encoder.
+     * 
+     */
     public Output<List<Object>> formats() {
         return this.formats;
     }
@@ -80,6 +92,11 @@ public final class StandardEncoderPresetArgs extends com.pulumi.resources.Resour
     @Import(name="odataType", required=true)
     private Output<String> odataType;
 
+    /**
+     * @return The discriminator for derived types.
+     * Expected value is &#39;#Microsoft.Media.StandardEncoderPreset&#39;.
+     * 
+     */
     public Output<String> odataType() {
         return this.odataType;
     }
@@ -111,46 +128,108 @@ public final class StandardEncoderPresetArgs extends com.pulumi.resources.Resour
             $ = new StandardEncoderPresetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param codecs The list of codecs to be used when encoding the input video.
+         * 
+         * @return builder
+         * 
+         */
         public Builder codecs(Output<List<Object>> codecs) {
             $.codecs = codecs;
             return this;
         }
 
+        /**
+         * @param codecs The list of codecs to be used when encoding the input video.
+         * 
+         * @return builder
+         * 
+         */
         public Builder codecs(List<Object> codecs) {
             return codecs(Output.of(codecs));
         }
 
+        /**
+         * @param codecs The list of codecs to be used when encoding the input video.
+         * 
+         * @return builder
+         * 
+         */
         public Builder codecs(Object... codecs) {
             return codecs(List.of(codecs));
         }
 
+        /**
+         * @param filters One or more filtering operations that are applied to the input media before encoding.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(@Nullable Output<FiltersArgs> filters) {
             $.filters = filters;
             return this;
         }
 
+        /**
+         * @param filters One or more filtering operations that are applied to the input media before encoding.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(FiltersArgs filters) {
             return filters(Output.of(filters));
         }
 
+        /**
+         * @param formats The list of outputs to be produced by the encoder.
+         * 
+         * @return builder
+         * 
+         */
         public Builder formats(Output<List<Object>> formats) {
             $.formats = formats;
             return this;
         }
 
+        /**
+         * @param formats The list of outputs to be produced by the encoder.
+         * 
+         * @return builder
+         * 
+         */
         public Builder formats(List<Object> formats) {
             return formats(Output.of(formats));
         }
 
+        /**
+         * @param formats The list of outputs to be produced by the encoder.
+         * 
+         * @return builder
+         * 
+         */
         public Builder formats(Object... formats) {
             return formats(List.of(formats));
         }
 
+        /**
+         * @param odataType The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.StandardEncoderPreset&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(Output<String> odataType) {
             $.odataType = odataType;
             return this;
         }
 
+        /**
+         * @param odataType The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.StandardEncoderPreset&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(String odataType) {
             return odataType(Output.of(odataType));
         }

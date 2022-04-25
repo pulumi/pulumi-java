@@ -27,6 +27,10 @@ public final class ResourcePolicyVmMaintenancePolicyResponse extends com.pulumi.
     @Import(name="maintenanceWindow", required=true)
     private ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse maintenanceWindow;
 
+    /**
+     * @return Maintenance windows that are applied to VMs covered by this policy.
+     * 
+     */
     public ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse maintenanceWindow() {
         return this.maintenanceWindow;
     }
@@ -61,6 +65,12 @@ public final class ResourcePolicyVmMaintenancePolicyResponse extends com.pulumi.
             return this;
         }
 
+        /**
+         * @param maintenanceWindow Maintenance windows that are applied to VMs covered by this policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maintenanceWindow(ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse maintenanceWindow) {
             $.maintenanceWindow = maintenanceWindow;
             return this;

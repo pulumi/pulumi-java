@@ -27,6 +27,10 @@ public final class AutoscaleRecurrenceResponse extends com.pulumi.resources.Invo
     @Import(name="schedule")
     private @Nullable List<AutoscaleScheduleResponse> schedule;
 
+    /**
+     * @return Array of schedule-based autoscale rules
+     * 
+     */
     public Optional<List<AutoscaleScheduleResponse>> schedule() {
         return Optional.ofNullable(this.schedule);
     }
@@ -38,6 +42,10 @@ public final class AutoscaleRecurrenceResponse extends com.pulumi.resources.Invo
     @Import(name="timeZone")
     private @Nullable String timeZone;
 
+    /**
+     * @return The time zone for the autoscale schedule times
+     * 
+     */
     public Optional<String> timeZone() {
         return Optional.ofNullable(this.timeZone);
     }
@@ -67,15 +75,33 @@ public final class AutoscaleRecurrenceResponse extends com.pulumi.resources.Invo
             $ = new AutoscaleRecurrenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param schedule Array of schedule-based autoscale rules
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedule(@Nullable List<AutoscaleScheduleResponse> schedule) {
             $.schedule = schedule;
             return this;
         }
 
+        /**
+         * @param schedule Array of schedule-based autoscale rules
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedule(AutoscaleScheduleResponse... schedule) {
             return schedule(List.of(schedule));
         }
 
+        /**
+         * @param timeZone The time zone for the autoscale schedule times
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeZone(@Nullable String timeZone) {
             $.timeZone = timeZone;
             return this;

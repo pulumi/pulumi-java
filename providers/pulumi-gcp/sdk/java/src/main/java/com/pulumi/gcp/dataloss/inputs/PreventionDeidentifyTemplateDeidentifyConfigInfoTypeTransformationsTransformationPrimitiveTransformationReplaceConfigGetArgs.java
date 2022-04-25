@@ -21,6 +21,11 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     @Import(name="newValue", required=true)
     private Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueGetArgs> newValue;
 
+    /**
+     * @return Replace each input value with a given value.
+     * Structure is documented below.
+     * 
+     */
     public Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueGetArgs> newValue() {
         return this.newValue;
     }
@@ -49,11 +54,25 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
             $ = new PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param newValue Replace each input value with a given value.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder newValue(Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueGetArgs> newValue) {
             $.newValue = newValue;
             return this;
         }
 
+        /**
+         * @param newValue Replace each input value with a given value.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder newValue(PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueGetArgs newValue) {
             return newValue(Output.of(newValue));
         }

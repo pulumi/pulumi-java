@@ -21,6 +21,10 @@ public final class ProgressPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="percentage")
     private @Nullable String percentage;
 
+    /**
+     * @return The percentage complete of the copy operation.
+     * 
+     */
     public Optional<String> percentage() {
         return Optional.ofNullable(this.percentage);
     }
@@ -49,6 +53,12 @@ public final class ProgressPropertiesResponse extends com.pulumi.resources.Invok
             $ = new ProgressPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param percentage The percentage complete of the copy operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder percentage(@Nullable String percentage) {
             $.percentage = percentage;
             return this;

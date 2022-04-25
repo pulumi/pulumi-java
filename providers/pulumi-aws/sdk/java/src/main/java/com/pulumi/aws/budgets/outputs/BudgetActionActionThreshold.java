@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class BudgetActionActionThreshold {
     /**
-     * The type of threshold for a notification. Valid values are `PERCENTAGE` or `ABSOLUTE_VALUE`.
+     * @return The type of threshold for a notification. Valid values are `PERCENTAGE` or `ABSOLUTE_VALUE`.
      * 
      */
     private final String actionThresholdType;
     /**
-     * The threshold of a notification.
+     * @return The threshold of a notification.
      * 
      */
     private final Double actionThresholdValue;
@@ -30,16 +30,16 @@ public final class BudgetActionActionThreshold {
     }
 
     /**
-     * The type of threshold for a notification. Valid values are `PERCENTAGE` or `ABSOLUTE_VALUE`.
+     * @return The type of threshold for a notification. Valid values are `PERCENTAGE` or `ABSOLUTE_VALUE`.
      * 
-    */
+     */
     public String actionThresholdType() {
         return this.actionThresholdType;
     }
     /**
-     * The threshold of a notification.
+     * @return The threshold of a notification.
      * 
-    */
+     */
     public Double actionThresholdValue() {
         return this.actionThresholdValue;
     }

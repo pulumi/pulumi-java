@@ -27,6 +27,10 @@ public final class PrivateLinkServiceConnectionArgs extends com.pulumi.resources
     @Import(name="groupIds")
     private @Nullable Output<List<String>> groupIds;
 
+    /**
+     * @return The ID(s) of the group(s) obtained from the remote resource that this private endpoint should connect to. Required on PUT (CreateOrUpdate) requests.
+     * 
+     */
     public Optional<Output<List<String>>> groupIds() {
         return Optional.ofNullable(this.groupIds);
     }
@@ -38,6 +42,10 @@ public final class PrivateLinkServiceConnectionArgs extends com.pulumi.resources
     @Import(name="privateLinkServiceId")
     private @Nullable Output<String> privateLinkServiceId;
 
+    /**
+     * @return The resource id of the private link service. Required on PUT (CreateOrUpdate) requests.
+     * 
+     */
     public Optional<Output<String>> privateLinkServiceId() {
         return Optional.ofNullable(this.privateLinkServiceId);
     }
@@ -49,6 +57,10 @@ public final class PrivateLinkServiceConnectionArgs extends com.pulumi.resources
     @Import(name="requestMessage")
     private @Nullable Output<String> requestMessage;
 
+    /**
+     * @return A message passed to the owner of the remote resource with this connection request. Restricted to 140 chars.
+     * 
+     */
     public Optional<Output<String>> requestMessage() {
         return Optional.ofNullable(this.requestMessage);
     }
@@ -79,33 +91,75 @@ public final class PrivateLinkServiceConnectionArgs extends com.pulumi.resources
             $ = new PrivateLinkServiceConnectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param groupIds The ID(s) of the group(s) obtained from the remote resource that this private endpoint should connect to. Required on PUT (CreateOrUpdate) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupIds(@Nullable Output<List<String>> groupIds) {
             $.groupIds = groupIds;
             return this;
         }
 
+        /**
+         * @param groupIds The ID(s) of the group(s) obtained from the remote resource that this private endpoint should connect to. Required on PUT (CreateOrUpdate) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupIds(List<String> groupIds) {
             return groupIds(Output.of(groupIds));
         }
 
+        /**
+         * @param groupIds The ID(s) of the group(s) obtained from the remote resource that this private endpoint should connect to. Required on PUT (CreateOrUpdate) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupIds(String... groupIds) {
             return groupIds(List.of(groupIds));
         }
 
+        /**
+         * @param privateLinkServiceId The resource id of the private link service. Required on PUT (CreateOrUpdate) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkServiceId(@Nullable Output<String> privateLinkServiceId) {
             $.privateLinkServiceId = privateLinkServiceId;
             return this;
         }
 
+        /**
+         * @param privateLinkServiceId The resource id of the private link service. Required on PUT (CreateOrUpdate) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkServiceId(String privateLinkServiceId) {
             return privateLinkServiceId(Output.of(privateLinkServiceId));
         }
 
+        /**
+         * @param requestMessage A message passed to the owner of the remote resource with this connection request. Restricted to 140 chars.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestMessage(@Nullable Output<String> requestMessage) {
             $.requestMessage = requestMessage;
             return this;
         }
 
+        /**
+         * @param requestMessage A message passed to the owner of the remote resource with this connection request. Restricted to 140 chars.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestMessage(String requestMessage) {
             return requestMessage(Output.of(requestMessage));
         }

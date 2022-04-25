@@ -38,6 +38,18 @@ public final class PodDisruptionBudgetStatusArgs extends com.pulumi.resources.Re
     @Import(name="conditions")
     private @Nullable Output<List<ConditionArgs>> conditions;
 
+    /**
+     * @return Conditions contain conditions for PDB. The disruption controller sets the DisruptionAllowed condition. The following are known values for the reason field (additional reasons could be added in the future): - SyncFailed: The controller encountered an error and wasn&#39;t able to compute
+     *               the number of allowed disruptions. Therefore no disruptions are
+     *               allowed and the status of the condition will be False.
+     * - InsufficientPods: The number of pods are either at or below the number
+     *                     required by the PodDisruptionBudget. No disruptions are
+     *                     allowed and the status of the condition will be False.
+     * - SufficientPods: There are more pods than required by the PodDisruptionBudget.
+     *                   The condition will be True, and the number of allowed
+     *                   disruptions are provided by the disruptionsAllowed property.
+     * 
+     */
     public Optional<Output<List<ConditionArgs>>> conditions() {
         return Optional.ofNullable(this.conditions);
     }
@@ -49,6 +61,10 @@ public final class PodDisruptionBudgetStatusArgs extends com.pulumi.resources.Re
     @Import(name="currentHealthy", required=true)
     private Output<Integer> currentHealthy;
 
+    /**
+     * @return current number of healthy pods
+     * 
+     */
     public Output<Integer> currentHealthy() {
         return this.currentHealthy;
     }
@@ -60,6 +76,10 @@ public final class PodDisruptionBudgetStatusArgs extends com.pulumi.resources.Re
     @Import(name="desiredHealthy", required=true)
     private Output<Integer> desiredHealthy;
 
+    /**
+     * @return minimum desired number of healthy pods
+     * 
+     */
     public Output<Integer> desiredHealthy() {
         return this.desiredHealthy;
     }
@@ -71,6 +91,10 @@ public final class PodDisruptionBudgetStatusArgs extends com.pulumi.resources.Re
     @Import(name="disruptedPods")
     private @Nullable Output<Map<String,String>> disruptedPods;
 
+    /**
+     * @return DisruptedPods contains information about pods whose eviction was processed by the API server eviction subresource handler but has not yet been observed by the PodDisruptionBudget controller. A pod will be in this map from the time when the API server processed the eviction request to the time when the pod is seen by PDB controller as having been marked for deletion (or after a timeout). The key in the map is the name of the pod and the value is the time when the API server processed the eviction request. If the deletion didn&#39;t occur and a pod is still there it will be removed from the list automatically by PodDisruptionBudget controller after some time. If everything goes smooth this map should be empty for the most of the time. Large number of entries in the map may indicate problems with pod deletions.
+     * 
+     */
     public Optional<Output<Map<String,String>>> disruptedPods() {
         return Optional.ofNullable(this.disruptedPods);
     }
@@ -82,6 +106,10 @@ public final class PodDisruptionBudgetStatusArgs extends com.pulumi.resources.Re
     @Import(name="disruptionsAllowed", required=true)
     private Output<Integer> disruptionsAllowed;
 
+    /**
+     * @return Number of pod disruptions that are currently allowed.
+     * 
+     */
     public Output<Integer> disruptionsAllowed() {
         return this.disruptionsAllowed;
     }
@@ -93,6 +121,10 @@ public final class PodDisruptionBudgetStatusArgs extends com.pulumi.resources.Re
     @Import(name="expectedPods", required=true)
     private Output<Integer> expectedPods;
 
+    /**
+     * @return total number of pods counted by this disruption budget
+     * 
+     */
     public Output<Integer> expectedPods() {
         return this.expectedPods;
     }
@@ -104,6 +136,10 @@ public final class PodDisruptionBudgetStatusArgs extends com.pulumi.resources.Re
     @Import(name="observedGeneration")
     private @Nullable Output<Integer> observedGeneration;
 
+    /**
+     * @return Most recent generation observed when updating this PDB status. DisruptionsAllowed and other status information is valid only if observedGeneration equals to PDB&#39;s object generation.
+     * 
+     */
     public Optional<Output<Integer>> observedGeneration() {
         return Optional.ofNullable(this.observedGeneration);
     }
@@ -138,69 +174,183 @@ public final class PodDisruptionBudgetStatusArgs extends com.pulumi.resources.Re
             $ = new PodDisruptionBudgetStatusArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param conditions Conditions contain conditions for PDB. The disruption controller sets the DisruptionAllowed condition. The following are known values for the reason field (additional reasons could be added in the future): - SyncFailed: The controller encountered an error and wasn&#39;t able to compute
+         *               the number of allowed disruptions. Therefore no disruptions are
+         *               allowed and the status of the condition will be False.
+         * - InsufficientPods: The number of pods are either at or below the number
+         *                     required by the PodDisruptionBudget. No disruptions are
+         *                     allowed and the status of the condition will be False.
+         * - SufficientPods: There are more pods than required by the PodDisruptionBudget.
+         *                   The condition will be True, and the number of allowed
+         *                   disruptions are provided by the disruptionsAllowed property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(@Nullable Output<List<ConditionArgs>> conditions) {
             $.conditions = conditions;
             return this;
         }
 
+        /**
+         * @param conditions Conditions contain conditions for PDB. The disruption controller sets the DisruptionAllowed condition. The following are known values for the reason field (additional reasons could be added in the future): - SyncFailed: The controller encountered an error and wasn&#39;t able to compute
+         *               the number of allowed disruptions. Therefore no disruptions are
+         *               allowed and the status of the condition will be False.
+         * - InsufficientPods: The number of pods are either at or below the number
+         *                     required by the PodDisruptionBudget. No disruptions are
+         *                     allowed and the status of the condition will be False.
+         * - SufficientPods: There are more pods than required by the PodDisruptionBudget.
+         *                   The condition will be True, and the number of allowed
+         *                   disruptions are provided by the disruptionsAllowed property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(List<ConditionArgs> conditions) {
             return conditions(Output.of(conditions));
         }
 
+        /**
+         * @param conditions Conditions contain conditions for PDB. The disruption controller sets the DisruptionAllowed condition. The following are known values for the reason field (additional reasons could be added in the future): - SyncFailed: The controller encountered an error and wasn&#39;t able to compute
+         *               the number of allowed disruptions. Therefore no disruptions are
+         *               allowed and the status of the condition will be False.
+         * - InsufficientPods: The number of pods are either at or below the number
+         *                     required by the PodDisruptionBudget. No disruptions are
+         *                     allowed and the status of the condition will be False.
+         * - SufficientPods: There are more pods than required by the PodDisruptionBudget.
+         *                   The condition will be True, and the number of allowed
+         *                   disruptions are provided by the disruptionsAllowed property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(ConditionArgs... conditions) {
             return conditions(List.of(conditions));
         }
 
+        /**
+         * @param currentHealthy current number of healthy pods
+         * 
+         * @return builder
+         * 
+         */
         public Builder currentHealthy(Output<Integer> currentHealthy) {
             $.currentHealthy = currentHealthy;
             return this;
         }
 
+        /**
+         * @param currentHealthy current number of healthy pods
+         * 
+         * @return builder
+         * 
+         */
         public Builder currentHealthy(Integer currentHealthy) {
             return currentHealthy(Output.of(currentHealthy));
         }
 
+        /**
+         * @param desiredHealthy minimum desired number of healthy pods
+         * 
+         * @return builder
+         * 
+         */
         public Builder desiredHealthy(Output<Integer> desiredHealthy) {
             $.desiredHealthy = desiredHealthy;
             return this;
         }
 
+        /**
+         * @param desiredHealthy minimum desired number of healthy pods
+         * 
+         * @return builder
+         * 
+         */
         public Builder desiredHealthy(Integer desiredHealthy) {
             return desiredHealthy(Output.of(desiredHealthy));
         }
 
+        /**
+         * @param disruptedPods DisruptedPods contains information about pods whose eviction was processed by the API server eviction subresource handler but has not yet been observed by the PodDisruptionBudget controller. A pod will be in this map from the time when the API server processed the eviction request to the time when the pod is seen by PDB controller as having been marked for deletion (or after a timeout). The key in the map is the name of the pod and the value is the time when the API server processed the eviction request. If the deletion didn&#39;t occur and a pod is still there it will be removed from the list automatically by PodDisruptionBudget controller after some time. If everything goes smooth this map should be empty for the most of the time. Large number of entries in the map may indicate problems with pod deletions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disruptedPods(@Nullable Output<Map<String,String>> disruptedPods) {
             $.disruptedPods = disruptedPods;
             return this;
         }
 
+        /**
+         * @param disruptedPods DisruptedPods contains information about pods whose eviction was processed by the API server eviction subresource handler but has not yet been observed by the PodDisruptionBudget controller. A pod will be in this map from the time when the API server processed the eviction request to the time when the pod is seen by PDB controller as having been marked for deletion (or after a timeout). The key in the map is the name of the pod and the value is the time when the API server processed the eviction request. If the deletion didn&#39;t occur and a pod is still there it will be removed from the list automatically by PodDisruptionBudget controller after some time. If everything goes smooth this map should be empty for the most of the time. Large number of entries in the map may indicate problems with pod deletions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disruptedPods(Map<String,String> disruptedPods) {
             return disruptedPods(Output.of(disruptedPods));
         }
 
+        /**
+         * @param disruptionsAllowed Number of pod disruptions that are currently allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disruptionsAllowed(Output<Integer> disruptionsAllowed) {
             $.disruptionsAllowed = disruptionsAllowed;
             return this;
         }
 
+        /**
+         * @param disruptionsAllowed Number of pod disruptions that are currently allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disruptionsAllowed(Integer disruptionsAllowed) {
             return disruptionsAllowed(Output.of(disruptionsAllowed));
         }
 
+        /**
+         * @param expectedPods total number of pods counted by this disruption budget
+         * 
+         * @return builder
+         * 
+         */
         public Builder expectedPods(Output<Integer> expectedPods) {
             $.expectedPods = expectedPods;
             return this;
         }
 
+        /**
+         * @param expectedPods total number of pods counted by this disruption budget
+         * 
+         * @return builder
+         * 
+         */
         public Builder expectedPods(Integer expectedPods) {
             return expectedPods(Output.of(expectedPods));
         }
 
+        /**
+         * @param observedGeneration Most recent generation observed when updating this PDB status. DisruptionsAllowed and other status information is valid only if observedGeneration equals to PDB&#39;s object generation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder observedGeneration(@Nullable Output<Integer> observedGeneration) {
             $.observedGeneration = observedGeneration;
             return this;
         }
 
+        /**
+         * @param observedGeneration Most recent generation observed when updating this PDB status. DisruptionsAllowed and other status information is valid only if observedGeneration equals to PDB&#39;s object generation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder observedGeneration(Integer observedGeneration) {
             return observedGeneration(Output.of(observedGeneration));
         }

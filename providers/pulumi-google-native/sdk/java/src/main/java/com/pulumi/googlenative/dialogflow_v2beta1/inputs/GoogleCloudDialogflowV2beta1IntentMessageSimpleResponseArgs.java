@@ -26,6 +26,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseArgs e
     @Import(name="displayText")
     private @Nullable Output<String> displayText;
 
+    /**
+     * @return Optional. The text to display.
+     * 
+     */
     public Optional<Output<String>> displayText() {
         return Optional.ofNullable(this.displayText);
     }
@@ -37,6 +41,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseArgs e
     @Import(name="ssml")
     private @Nullable Output<String> ssml;
 
+    /**
+     * @return One of text_to_speech or ssml must be provided. Structured spoken response to the user in the SSML format. Mutually exclusive with text_to_speech.
+     * 
+     */
     public Optional<Output<String>> ssml() {
         return Optional.ofNullable(this.ssml);
     }
@@ -48,6 +56,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseArgs e
     @Import(name="textToSpeech")
     private @Nullable Output<String> textToSpeech;
 
+    /**
+     * @return One of text_to_speech or ssml must be provided. The plain text of the speech output. Mutually exclusive with ssml.
+     * 
+     */
     public Optional<Output<String>> textToSpeech() {
         return Optional.ofNullable(this.textToSpeech);
     }
@@ -78,29 +90,65 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseArgs e
             $ = new GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayText Optional. The text to display.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayText(@Nullable Output<String> displayText) {
             $.displayText = displayText;
             return this;
         }
 
+        /**
+         * @param displayText Optional. The text to display.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayText(String displayText) {
             return displayText(Output.of(displayText));
         }
 
+        /**
+         * @param ssml One of text_to_speech or ssml must be provided. Structured spoken response to the user in the SSML format. Mutually exclusive with text_to_speech.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ssml(@Nullable Output<String> ssml) {
             $.ssml = ssml;
             return this;
         }
 
+        /**
+         * @param ssml One of text_to_speech or ssml must be provided. Structured spoken response to the user in the SSML format. Mutually exclusive with text_to_speech.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ssml(String ssml) {
             return ssml(Output.of(ssml));
         }
 
+        /**
+         * @param textToSpeech One of text_to_speech or ssml must be provided. The plain text of the speech output. Mutually exclusive with ssml.
+         * 
+         * @return builder
+         * 
+         */
         public Builder textToSpeech(@Nullable Output<String> textToSpeech) {
             $.textToSpeech = textToSpeech;
             return this;
         }
 
+        /**
+         * @param textToSpeech One of text_to_speech or ssml must be provided. The plain text of the speech output. Mutually exclusive with ssml.
+         * 
+         * @return builder
+         * 
+         */
         public Builder textToSpeech(String textToSpeech) {
             return textToSpeech(Output.of(textToSpeech));
         }

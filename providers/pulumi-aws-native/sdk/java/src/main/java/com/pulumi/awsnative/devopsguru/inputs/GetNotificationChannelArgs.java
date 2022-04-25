@@ -19,6 +19,10 @@ public final class GetNotificationChannelArgs extends com.pulumi.resources.Invok
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return The ID of a notification channel.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -47,6 +51,12 @@ public final class GetNotificationChannelArgs extends com.pulumi.resources.Invok
             $ = new GetNotificationChannelArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id The ID of a notification channel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;

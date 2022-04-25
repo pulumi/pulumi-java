@@ -27,6 +27,10 @@ public final class AzureSqlProtectedItemExtendedInfoArgs extends com.pulumi.reso
     @Import(name="oldestRecoveryPoint")
     private @Nullable Output<String> oldestRecoveryPoint;
 
+    /**
+     * @return The oldest backup copy available for this item in the service.
+     * 
+     */
     public Optional<Output<String>> oldestRecoveryPoint() {
         return Optional.ofNullable(this.oldestRecoveryPoint);
     }
@@ -38,6 +42,10 @@ public final class AzureSqlProtectedItemExtendedInfoArgs extends com.pulumi.reso
     @Import(name="policyState")
     private @Nullable Output<String> policyState;
 
+    /**
+     * @return State of the backup policy associated with this backup item.
+     * 
+     */
     public Optional<Output<String>> policyState() {
         return Optional.ofNullable(this.policyState);
     }
@@ -49,6 +57,10 @@ public final class AzureSqlProtectedItemExtendedInfoArgs extends com.pulumi.reso
     @Import(name="recoveryPointCount")
     private @Nullable Output<Integer> recoveryPointCount;
 
+    /**
+     * @return Number of available backup copies associated with this backup item.
+     * 
+     */
     public Optional<Output<Integer>> recoveryPointCount() {
         return Optional.ofNullable(this.recoveryPointCount);
     }
@@ -79,29 +91,65 @@ public final class AzureSqlProtectedItemExtendedInfoArgs extends com.pulumi.reso
             $ = new AzureSqlProtectedItemExtendedInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param oldestRecoveryPoint The oldest backup copy available for this item in the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oldestRecoveryPoint(@Nullable Output<String> oldestRecoveryPoint) {
             $.oldestRecoveryPoint = oldestRecoveryPoint;
             return this;
         }
 
+        /**
+         * @param oldestRecoveryPoint The oldest backup copy available for this item in the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oldestRecoveryPoint(String oldestRecoveryPoint) {
             return oldestRecoveryPoint(Output.of(oldestRecoveryPoint));
         }
 
+        /**
+         * @param policyState State of the backup policy associated with this backup item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyState(@Nullable Output<String> policyState) {
             $.policyState = policyState;
             return this;
         }
 
+        /**
+         * @param policyState State of the backup policy associated with this backup item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyState(String policyState) {
             return policyState(Output.of(policyState));
         }
 
+        /**
+         * @param recoveryPointCount Number of available backup copies associated with this backup item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryPointCount(@Nullable Output<Integer> recoveryPointCount) {
             $.recoveryPointCount = recoveryPointCount;
             return this;
         }
 
+        /**
+         * @param recoveryPointCount Number of available backup copies associated with this backup item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryPointCount(Integer recoveryPointCount) {
             return recoveryPointCount(Output.of(recoveryPointCount));
         }

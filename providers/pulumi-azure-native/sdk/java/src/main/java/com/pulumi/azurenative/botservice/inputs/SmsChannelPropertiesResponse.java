@@ -26,6 +26,10 @@ public final class SmsChannelPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="accountSID", required=true)
     private String accountSID;
 
+    /**
+     * @return The Sms account SID. Value only returned through POST to the action Channel List API, otherwise empty.
+     * 
+     */
     public String accountSID() {
         return this.accountSID;
     }
@@ -37,6 +41,10 @@ public final class SmsChannelPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="authToken")
     private @Nullable String authToken;
 
+    /**
+     * @return The Sms auth token. Value only returned through POST to the action Channel List API, otherwise empty.
+     * 
+     */
     public Optional<String> authToken() {
         return Optional.ofNullable(this.authToken);
     }
@@ -48,6 +56,10 @@ public final class SmsChannelPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="isEnabled", required=true)
     private Boolean isEnabled;
 
+    /**
+     * @return Whether this channel is enabled for the bot
+     * 
+     */
     public Boolean isEnabled() {
         return this.isEnabled;
     }
@@ -59,6 +71,10 @@ public final class SmsChannelPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="isValidated")
     private @Nullable Boolean isValidated;
 
+    /**
+     * @return Whether this channel is validated for the bot
+     * 
+     */
     public Optional<Boolean> isValidated() {
         return Optional.ofNullable(this.isValidated);
     }
@@ -70,6 +86,10 @@ public final class SmsChannelPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="phone", required=true)
     private String phone;
 
+    /**
+     * @return The Sms phone
+     * 
+     */
     public String phone() {
         return this.phone;
     }
@@ -102,26 +122,56 @@ public final class SmsChannelPropertiesResponse extends com.pulumi.resources.Inv
             $ = new SmsChannelPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountSID The Sms account SID. Value only returned through POST to the action Channel List API, otherwise empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountSID(String accountSID) {
             $.accountSID = accountSID;
             return this;
         }
 
+        /**
+         * @param authToken The Sms auth token. Value only returned through POST to the action Channel List API, otherwise empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authToken(@Nullable String authToken) {
             $.authToken = authToken;
             return this;
         }
 
+        /**
+         * @param isEnabled Whether this channel is enabled for the bot
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEnabled(Boolean isEnabled) {
             $.isEnabled = isEnabled;
             return this;
         }
 
+        /**
+         * @param isValidated Whether this channel is validated for the bot
+         * 
+         * @return builder
+         * 
+         */
         public Builder isValidated(@Nullable Boolean isValidated) {
             $.isValidated = isValidated;
             return this;
         }
 
+        /**
+         * @param phone The Sms phone
+         * 
+         * @return builder
+         * 
+         */
         public Builder phone(String phone) {
             $.phone = phone;
             return this;

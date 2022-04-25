@@ -25,6 +25,10 @@ public final class ExecuteDataFlowActivityTypePropertiesResponseCompute extends 
     @Import(name="computeType")
     private @Nullable Object computeType;
 
+    /**
+     * @return Compute type of the cluster which will execute data flow job. Possible values include: &#39;General&#39;, &#39;MemoryOptimized&#39;, &#39;ComputeOptimized&#39;. Type: string (or Expression with resultType string)
+     * 
+     */
     public Optional<Object> computeType() {
         return Optional.ofNullable(this.computeType);
     }
@@ -36,6 +40,10 @@ public final class ExecuteDataFlowActivityTypePropertiesResponseCompute extends 
     @Import(name="coreCount")
     private @Nullable Object coreCount;
 
+    /**
+     * @return Core count of the cluster which will execute data flow job. Supported values are: 8, 16, 32, 48, 80, 144 and 272. Type: integer (or Expression with resultType integer)
+     * 
+     */
     public Optional<Object> coreCount() {
         return Optional.ofNullable(this.coreCount);
     }
@@ -65,11 +73,23 @@ public final class ExecuteDataFlowActivityTypePropertiesResponseCompute extends 
             $ = new ExecuteDataFlowActivityTypePropertiesResponseCompute(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param computeType Compute type of the cluster which will execute data flow job. Possible values include: &#39;General&#39;, &#39;MemoryOptimized&#39;, &#39;ComputeOptimized&#39;. Type: string (or Expression with resultType string)
+         * 
+         * @return builder
+         * 
+         */
         public Builder computeType(@Nullable Object computeType) {
             $.computeType = computeType;
             return this;
         }
 
+        /**
+         * @param coreCount Core count of the cluster which will execute data flow job. Supported values are: 8, 16, 32, 48, 80, 144 and 272. Type: integer (or Expression with resultType integer)
+         * 
+         * @return builder
+         * 
+         */
         public Builder coreCount(@Nullable Object coreCount) {
             $.coreCount = coreCount;
             return this;

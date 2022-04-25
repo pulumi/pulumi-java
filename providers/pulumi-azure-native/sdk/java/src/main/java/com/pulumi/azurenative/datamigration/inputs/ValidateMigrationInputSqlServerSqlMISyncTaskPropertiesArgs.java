@@ -28,6 +28,10 @@ public final class ValidateMigrationInputSqlServerSqlMISyncTaskPropertiesArgs ex
     @Import(name="input")
     private @Nullable Output<ValidateMigrationInputSqlServerSqlMISyncTaskInputArgs> input;
 
+    /**
+     * @return Task input
+     * 
+     */
     public Optional<Output<ValidateMigrationInputSqlServerSqlMISyncTaskInputArgs>> input() {
         return Optional.ofNullable(this.input);
     }
@@ -40,6 +44,11 @@ public final class ValidateMigrationInputSqlServerSqlMISyncTaskPropertiesArgs ex
     @Import(name="taskType", required=true)
     private Output<String> taskType;
 
+    /**
+     * @return Task type.
+     * Expected value is &#39;ValidateMigrationInput.SqlServer.AzureSqlDbMI.Sync.LRS&#39;.
+     * 
+     */
     public Output<String> taskType() {
         return this.taskType;
     }
@@ -69,20 +78,46 @@ public final class ValidateMigrationInputSqlServerSqlMISyncTaskPropertiesArgs ex
             $ = new ValidateMigrationInputSqlServerSqlMISyncTaskPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param input Task input
+         * 
+         * @return builder
+         * 
+         */
         public Builder input(@Nullable Output<ValidateMigrationInputSqlServerSqlMISyncTaskInputArgs> input) {
             $.input = input;
             return this;
         }
 
+        /**
+         * @param input Task input
+         * 
+         * @return builder
+         * 
+         */
         public Builder input(ValidateMigrationInputSqlServerSqlMISyncTaskInputArgs input) {
             return input(Output.of(input));
         }
 
+        /**
+         * @param taskType Task type.
+         * Expected value is &#39;ValidateMigrationInput.SqlServer.AzureSqlDbMI.Sync.LRS&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder taskType(Output<String> taskType) {
             $.taskType = taskType;
             return this;
         }
 
+        /**
+         * @param taskType Task type.
+         * Expected value is &#39;ValidateMigrationInput.SqlServer.AzureSqlDbMI.Sync.LRS&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder taskType(String taskType) {
             return taskType(Output.of(taskType));
         }

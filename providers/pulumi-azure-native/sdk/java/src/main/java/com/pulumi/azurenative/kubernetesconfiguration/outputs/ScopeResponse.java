@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ScopeResponse {
     /**
-     * Specifies that the scope of the extensionInstance is Cluster
+     * @return Specifies that the scope of the extensionInstance is Cluster
      * 
      */
     private final @Nullable ScopeClusterResponse cluster;
     /**
-     * Specifies that the scope of the extensionInstance is Namespace
+     * @return Specifies that the scope of the extensionInstance is Namespace
      * 
      */
     private final @Nullable ScopeNamespaceResponse namespace;
@@ -32,16 +32,16 @@ public final class ScopeResponse {
     }
 
     /**
-     * Specifies that the scope of the extensionInstance is Cluster
+     * @return Specifies that the scope of the extensionInstance is Cluster
      * 
-    */
+     */
     public Optional<ScopeClusterResponse> cluster() {
         return Optional.ofNullable(this.cluster);
     }
     /**
-     * Specifies that the scope of the extensionInstance is Namespace
+     * @return Specifies that the scope of the extensionInstance is Namespace
      * 
-    */
+     */
     public Optional<ScopeNamespaceResponse> namespace() {
         return Optional.ofNullable(this.namespace);
     }

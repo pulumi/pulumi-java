@@ -12,7 +12,7 @@ public final class GetCredentialsResult {
     private final String authorizationToken;
     private final String expiresAt;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
@@ -40,9 +40,9 @@ public final class GetCredentialsResult {
         return this.expiresAt;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

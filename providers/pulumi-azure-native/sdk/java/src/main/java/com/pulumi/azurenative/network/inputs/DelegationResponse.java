@@ -26,6 +26,10 @@ public final class DelegationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="actions", required=true)
     private List<String> actions;
 
+    /**
+     * @return The actions permitted to the service upon delegation.
+     * 
+     */
     public List<String> actions() {
         return this.actions;
     }
@@ -37,6 +41,10 @@ public final class DelegationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="etag", required=true)
     private String etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public String etag() {
         return this.etag;
     }
@@ -48,6 +56,10 @@ public final class DelegationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -59,6 +71,10 @@ public final class DelegationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The name of the resource that is unique within a subnet. This name can be used to access the resource.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -70,6 +86,10 @@ public final class DelegationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The provisioning state of the service delegation resource.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -81,6 +101,10 @@ public final class DelegationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="serviceName")
     private @Nullable String serviceName;
 
+    /**
+     * @return The name of the service to whom the subnet should be delegated (e.g. Microsoft.Sql/servers).
+     * 
+     */
     public Optional<String> serviceName() {
         return Optional.ofNullable(this.serviceName);
     }
@@ -92,6 +116,10 @@ public final class DelegationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return Resource type.
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -126,40 +154,88 @@ public final class DelegationResponse extends com.pulumi.resources.InvokeArgs {
             $ = new DelegationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actions The actions permitted to the service upon delegation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(List<String> actions) {
             $.actions = actions;
             return this;
         }
 
+        /**
+         * @param actions The actions permitted to the service upon delegation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(String... actions) {
             return actions(List.of(actions));
         }
 
+        /**
+         * @param etag A unique read-only string that changes whenever the resource is updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param name The name of the resource that is unique within a subnet. This name can be used to access the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param provisioningState The provisioning state of the service delegation resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param serviceName The name of the service to whom the subnet should be delegated (e.g. Microsoft.Sql/servers).
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(@Nullable String serviceName) {
             $.serviceName = serviceName;
             return this;
         }
 
+        /**
+         * @param type Resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;

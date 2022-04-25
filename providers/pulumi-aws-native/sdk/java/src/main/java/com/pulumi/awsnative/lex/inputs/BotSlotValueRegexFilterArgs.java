@@ -24,6 +24,10 @@ public final class BotSlotValueRegexFilterArgs extends com.pulumi.resources.Reso
     @Import(name="pattern", required=true)
     private Output<String> pattern;
 
+    /**
+     * @return Regex pattern
+     * 
+     */
     public Output<String> pattern() {
         return this.pattern;
     }
@@ -52,11 +56,23 @@ public final class BotSlotValueRegexFilterArgs extends com.pulumi.resources.Reso
             $ = new BotSlotValueRegexFilterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param pattern Regex pattern
+         * 
+         * @return builder
+         * 
+         */
         public Builder pattern(Output<String> pattern) {
             $.pattern = pattern;
             return this;
         }
 
+        /**
+         * @param pattern Regex pattern
+         * 
+         * @return builder
+         * 
+         */
         public Builder pattern(String pattern) {
             return pattern(Output.of(pattern));
         }

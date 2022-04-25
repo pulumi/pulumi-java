@@ -28,6 +28,10 @@ public final class AzureBlobFSWriteSettingsArgs extends com.pulumi.resources.Res
     @Import(name="blockSizeInMB")
     private @Nullable Output<Object> blockSizeInMB;
 
+    /**
+     * @return Indicates the block size(MB) when writing data to blob. Type: integer (or Expression with resultType integer).
+     * 
+     */
     public Optional<Output<Object>> blockSizeInMB() {
         return Optional.ofNullable(this.blockSizeInMB);
     }
@@ -39,6 +43,10 @@ public final class AzureBlobFSWriteSettingsArgs extends com.pulumi.resources.Res
     @Import(name="copyBehavior")
     private @Nullable Output<Object> copyBehavior;
 
+    /**
+     * @return The type of copy behavior for copy sink.
+     * 
+     */
     public Optional<Output<Object>> copyBehavior() {
         return Optional.ofNullable(this.copyBehavior);
     }
@@ -50,6 +58,10 @@ public final class AzureBlobFSWriteSettingsArgs extends com.pulumi.resources.Res
     @Import(name="disableMetricsCollection")
     private @Nullable Output<Object> disableMetricsCollection;
 
+    /**
+     * @return If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Output<Object>> disableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
@@ -61,6 +73,10 @@ public final class AzureBlobFSWriteSettingsArgs extends com.pulumi.resources.Res
     @Import(name="maxConcurrentConnections")
     private @Nullable Output<Object> maxConcurrentConnections;
 
+    /**
+     * @return The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+     * 
+     */
     public Optional<Output<Object>> maxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
@@ -73,6 +89,11 @@ public final class AzureBlobFSWriteSettingsArgs extends com.pulumi.resources.Res
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return The write setting type.
+     * Expected value is &#39;AzureBlobFSWriteSettings&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -105,47 +126,109 @@ public final class AzureBlobFSWriteSettingsArgs extends com.pulumi.resources.Res
             $ = new AzureBlobFSWriteSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param blockSizeInMB Indicates the block size(MB) when writing data to blob. Type: integer (or Expression with resultType integer).
+         * 
+         * @return builder
+         * 
+         */
         public Builder blockSizeInMB(@Nullable Output<Object> blockSizeInMB) {
             $.blockSizeInMB = blockSizeInMB;
             return this;
         }
 
+        /**
+         * @param blockSizeInMB Indicates the block size(MB) when writing data to blob. Type: integer (or Expression with resultType integer).
+         * 
+         * @return builder
+         * 
+         */
         public Builder blockSizeInMB(Object blockSizeInMB) {
             return blockSizeInMB(Output.of(blockSizeInMB));
         }
 
+        /**
+         * @param copyBehavior The type of copy behavior for copy sink.
+         * 
+         * @return builder
+         * 
+         */
         public Builder copyBehavior(@Nullable Output<Object> copyBehavior) {
             $.copyBehavior = copyBehavior;
             return this;
         }
 
+        /**
+         * @param copyBehavior The type of copy behavior for copy sink.
+         * 
+         * @return builder
+         * 
+         */
         public Builder copyBehavior(Object copyBehavior) {
             return copyBehavior(Output.of(copyBehavior));
         }
 
+        /**
+         * @param disableMetricsCollection If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableMetricsCollection(@Nullable Output<Object> disableMetricsCollection) {
             $.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
 
+        /**
+         * @param disableMetricsCollection If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableMetricsCollection(Object disableMetricsCollection) {
             return disableMetricsCollection(Output.of(disableMetricsCollection));
         }
 
+        /**
+         * @param maxConcurrentConnections The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxConcurrentConnections(@Nullable Output<Object> maxConcurrentConnections) {
             $.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
 
+        /**
+         * @param maxConcurrentConnections The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxConcurrentConnections(Object maxConcurrentConnections) {
             return maxConcurrentConnections(Output.of(maxConcurrentConnections));
         }
 
+        /**
+         * @param type The write setting type.
+         * Expected value is &#39;AzureBlobFSWriteSettings&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The write setting type.
+         * Expected value is &#39;AzureBlobFSWriteSettings&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

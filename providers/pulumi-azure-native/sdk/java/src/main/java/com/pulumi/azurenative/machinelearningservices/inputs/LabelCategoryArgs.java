@@ -29,6 +29,10 @@ public final class LabelCategoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="allowMultiSelect")
     private @Nullable Output<Boolean> allowMultiSelect;
 
+    /**
+     * @return Indicates whether it is allowed to select multiple classes in this category.
+     * 
+     */
     public Optional<Output<Boolean>> allowMultiSelect() {
         return Optional.ofNullable(this.allowMultiSelect);
     }
@@ -40,6 +44,10 @@ public final class LabelCategoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="classes", required=true)
     private Output<Map<String,LabelClassArgs>> classes;
 
+    /**
+     * @return Dictionary of label classes in this category.
+     * 
+     */
     public Output<Map<String,LabelClassArgs>> classes() {
         return this.classes;
     }
@@ -51,6 +59,10 @@ public final class LabelCategoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return Display name of the label category.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -81,29 +93,65 @@ public final class LabelCategoryArgs extends com.pulumi.resources.ResourceArgs {
             $ = new LabelCategoryArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowMultiSelect Indicates whether it is allowed to select multiple classes in this category.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowMultiSelect(@Nullable Output<Boolean> allowMultiSelect) {
             $.allowMultiSelect = allowMultiSelect;
             return this;
         }
 
+        /**
+         * @param allowMultiSelect Indicates whether it is allowed to select multiple classes in this category.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowMultiSelect(Boolean allowMultiSelect) {
             return allowMultiSelect(Output.of(allowMultiSelect));
         }
 
+        /**
+         * @param classes Dictionary of label classes in this category.
+         * 
+         * @return builder
+         * 
+         */
         public Builder classes(Output<Map<String,LabelClassArgs>> classes) {
             $.classes = classes;
             return this;
         }
 
+        /**
+         * @param classes Dictionary of label classes in this category.
+         * 
+         * @return builder
+         * 
+         */
         public Builder classes(Map<String,LabelClassArgs> classes) {
             return classes(Output.of(classes));
         }
 
+        /**
+         * @param displayName Display name of the label category.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName Display name of the label category.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }

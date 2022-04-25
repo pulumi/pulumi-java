@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class ResourceIdentityResponse {
     /**
-     * GUID that represents the principal ID of this resource identity.
+     * @return GUID that represents the principal ID of this resource identity.
      * 
      */
     private final String principalId;
     /**
-     * GUID that represents the tenant ID of this resource identity.
+     * @return GUID that represents the tenant ID of this resource identity.
      * 
      */
     private final String tenantId;
     /**
-     * String of the resource identity type.
+     * @return String of the resource identity type.
      * 
      */
     private final String type;
@@ -36,23 +36,23 @@ public final class ResourceIdentityResponse {
     }
 
     /**
-     * GUID that represents the principal ID of this resource identity.
+     * @return GUID that represents the principal ID of this resource identity.
      * 
-    */
+     */
     public String principalId() {
         return this.principalId;
     }
     /**
-     * GUID that represents the tenant ID of this resource identity.
+     * @return GUID that represents the tenant ID of this resource identity.
      * 
-    */
+     */
     public String tenantId() {
         return this.tenantId;
     }
     /**
-     * String of the resource identity type.
+     * @return String of the resource identity type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

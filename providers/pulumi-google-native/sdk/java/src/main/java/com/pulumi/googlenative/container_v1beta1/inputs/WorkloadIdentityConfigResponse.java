@@ -23,6 +23,10 @@ public final class WorkloadIdentityConfigResponse extends com.pulumi.resources.I
     @Import(name="identityNamespace", required=true)
     private String identityNamespace;
 
+    /**
+     * @return IAM Identity Namespace to attach all Kubernetes Service Accounts to.
+     * 
+     */
     public String identityNamespace() {
         return this.identityNamespace;
     }
@@ -34,6 +38,10 @@ public final class WorkloadIdentityConfigResponse extends com.pulumi.resources.I
     @Import(name="identityProvider", required=true)
     private String identityProvider;
 
+    /**
+     * @return identity provider is the third party identity provider.
+     * 
+     */
     public String identityProvider() {
         return this.identityProvider;
     }
@@ -45,6 +53,10 @@ public final class WorkloadIdentityConfigResponse extends com.pulumi.resources.I
     @Import(name="workloadPool", required=true)
     private String workloadPool;
 
+    /**
+     * @return The workload pool to attach all Kubernetes service accounts to.
+     * 
+     */
     public String workloadPool() {
         return this.workloadPool;
     }
@@ -75,16 +87,34 @@ public final class WorkloadIdentityConfigResponse extends com.pulumi.resources.I
             $ = new WorkloadIdentityConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param identityNamespace IAM Identity Namespace to attach all Kubernetes Service Accounts to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityNamespace(String identityNamespace) {
             $.identityNamespace = identityNamespace;
             return this;
         }
 
+        /**
+         * @param identityProvider identity provider is the third party identity provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityProvider(String identityProvider) {
             $.identityProvider = identityProvider;
             return this;
         }
 
+        /**
+         * @param workloadPool The workload pool to attach all Kubernetes service accounts to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workloadPool(String workloadPool) {
             $.workloadPool = workloadPool;
             return this;

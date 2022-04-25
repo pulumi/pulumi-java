@@ -25,6 +25,10 @@ public final class OracleTableResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="oracleColumns", required=true)
     private List<OracleColumnResponse> oracleColumns;
 
+    /**
+     * @return Oracle columns in the schema. When unspecified as part of inclue/exclude lists, includes/excludes everything.
+     * 
+     */
     public List<OracleColumnResponse> oracleColumns() {
         return this.oracleColumns;
     }
@@ -36,6 +40,10 @@ public final class OracleTableResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="table", required=true)
     private String table;
 
+    /**
+     * @return Table name.
+     * 
+     */
     public String table() {
         return this.table;
     }
@@ -65,15 +73,33 @@ public final class OracleTableResponse extends com.pulumi.resources.InvokeArgs {
             $ = new OracleTableResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param oracleColumns Oracle columns in the schema. When unspecified as part of inclue/exclude lists, includes/excludes everything.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oracleColumns(List<OracleColumnResponse> oracleColumns) {
             $.oracleColumns = oracleColumns;
             return this;
         }
 
+        /**
+         * @param oracleColumns Oracle columns in the schema. When unspecified as part of inclue/exclude lists, includes/excludes everything.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oracleColumns(OracleColumnResponse... oracleColumns) {
             return oracleColumns(List.of(oracleColumns));
         }
 
+        /**
+         * @param table Table name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder table(String table) {
             $.table = table;
             return this;

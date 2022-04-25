@@ -25,6 +25,10 @@ public final class GoogleCloudDialogflowV2IntentMessageCardResponse extends com.
     @Import(name="buttons", required=true)
     private List<GoogleCloudDialogflowV2IntentMessageCardButtonResponse> buttons;
 
+    /**
+     * @return Optional. The collection of card buttons.
+     * 
+     */
     public List<GoogleCloudDialogflowV2IntentMessageCardButtonResponse> buttons() {
         return this.buttons;
     }
@@ -36,6 +40,10 @@ public final class GoogleCloudDialogflowV2IntentMessageCardResponse extends com.
     @Import(name="imageUri", required=true)
     private String imageUri;
 
+    /**
+     * @return Optional. The public URI to an image file for the card.
+     * 
+     */
     public String imageUri() {
         return this.imageUri;
     }
@@ -47,6 +55,10 @@ public final class GoogleCloudDialogflowV2IntentMessageCardResponse extends com.
     @Import(name="subtitle", required=true)
     private String subtitle;
 
+    /**
+     * @return Optional. The subtitle of the card.
+     * 
+     */
     public String subtitle() {
         return this.subtitle;
     }
@@ -58,6 +70,10 @@ public final class GoogleCloudDialogflowV2IntentMessageCardResponse extends com.
     @Import(name="title", required=true)
     private String title;
 
+    /**
+     * @return Optional. The title of the card.
+     * 
+     */
     public String title() {
         return this.title;
     }
@@ -89,25 +105,55 @@ public final class GoogleCloudDialogflowV2IntentMessageCardResponse extends com.
             $ = new GoogleCloudDialogflowV2IntentMessageCardResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param buttons Optional. The collection of card buttons.
+         * 
+         * @return builder
+         * 
+         */
         public Builder buttons(List<GoogleCloudDialogflowV2IntentMessageCardButtonResponse> buttons) {
             $.buttons = buttons;
             return this;
         }
 
+        /**
+         * @param buttons Optional. The collection of card buttons.
+         * 
+         * @return builder
+         * 
+         */
         public Builder buttons(GoogleCloudDialogflowV2IntentMessageCardButtonResponse... buttons) {
             return buttons(List.of(buttons));
         }
 
+        /**
+         * @param imageUri Optional. The public URI to an image file for the card.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageUri(String imageUri) {
             $.imageUri = imageUri;
             return this;
         }
 
+        /**
+         * @param subtitle Optional. The subtitle of the card.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subtitle(String subtitle) {
             $.subtitle = subtitle;
             return this;
         }
 
+        /**
+         * @param title Optional. The title of the card.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(String title) {
             $.title = title;
             return this;

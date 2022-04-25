@@ -26,6 +26,10 @@ public final class BucketLifecycleRuleItemActionArgs extends com.pulumi.resource
     @Import(name="storageClass")
     private @Nullable Output<String> storageClass;
 
+    /**
+     * @return Target storage class. Required iff the type of the action is SetStorageClass.
+     * 
+     */
     public Optional<Output<String>> storageClass() {
         return Optional.ofNullable(this.storageClass);
     }
@@ -37,6 +41,10 @@ public final class BucketLifecycleRuleItemActionArgs extends com.pulumi.resource
     @Import(name="type")
     private @Nullable Output<String> type;
 
+    /**
+     * @return Type of the action. Currently, only Delete and SetStorageClass are supported.
+     * 
+     */
     public Optional<Output<String>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -66,20 +74,44 @@ public final class BucketLifecycleRuleItemActionArgs extends com.pulumi.resource
             $ = new BucketLifecycleRuleItemActionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param storageClass Target storage class. Required iff the type of the action is SetStorageClass.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageClass(@Nullable Output<String> storageClass) {
             $.storageClass = storageClass;
             return this;
         }
 
+        /**
+         * @param storageClass Target storage class. Required iff the type of the action is SetStorageClass.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageClass(String storageClass) {
             return storageClass(Output.of(storageClass));
         }
 
+        /**
+         * @param type Type of the action. Currently, only Delete and SetStorageClass are supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of the action. Currently, only Delete and SetStorageClass are supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

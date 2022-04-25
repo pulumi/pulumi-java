@@ -29,6 +29,10 @@ public final class LiveEventTranscriptionArgs extends com.pulumi.resources.Resou
     @Import(name="inputTrackSelection")
     private @Nullable Output<List<LiveEventInputTrackSelectionArgs>> inputTrackSelection;
 
+    /**
+     * @return Provides a mechanism to select the audio track in the input live feed, to which speech-to-text transcription is applied. This property is reserved for future use, any value set on this property will be ignored.
+     * 
+     */
     public Optional<Output<List<LiveEventInputTrackSelectionArgs>>> inputTrackSelection() {
         return Optional.ofNullable(this.inputTrackSelection);
     }
@@ -40,6 +44,10 @@ public final class LiveEventTranscriptionArgs extends com.pulumi.resources.Resou
     @Import(name="language")
     private @Nullable Output<String> language;
 
+    /**
+     * @return Specifies the language (locale) to be used for speech-to-text transcription – it should match the spoken language in the audio track. The value should be in BCP-47 format (e.g: &#39;en-US&#39;). See https://go.microsoft.com/fwlink/?linkid=2133742 for more information about the live transcription feature and the list of supported languages.
+     * 
+     */
     public Optional<Output<String>> language() {
         return Optional.ofNullable(this.language);
     }
@@ -51,6 +59,10 @@ public final class LiveEventTranscriptionArgs extends com.pulumi.resources.Resou
     @Import(name="outputTranscriptionTrack")
     private @Nullable Output<LiveEventOutputTranscriptionTrackArgs> outputTranscriptionTrack;
 
+    /**
+     * @return Describes a transcription track in the output of a live event, generated using speech-to-text transcription. This property is reserved for future use, any value set on this property will be ignored.
+     * 
+     */
     public Optional<Output<LiveEventOutputTranscriptionTrackArgs>> outputTranscriptionTrack() {
         return Optional.ofNullable(this.outputTranscriptionTrack);
     }
@@ -81,33 +93,75 @@ public final class LiveEventTranscriptionArgs extends com.pulumi.resources.Resou
             $ = new LiveEventTranscriptionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param inputTrackSelection Provides a mechanism to select the audio track in the input live feed, to which speech-to-text transcription is applied. This property is reserved for future use, any value set on this property will be ignored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputTrackSelection(@Nullable Output<List<LiveEventInputTrackSelectionArgs>> inputTrackSelection) {
             $.inputTrackSelection = inputTrackSelection;
             return this;
         }
 
+        /**
+         * @param inputTrackSelection Provides a mechanism to select the audio track in the input live feed, to which speech-to-text transcription is applied. This property is reserved for future use, any value set on this property will be ignored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputTrackSelection(List<LiveEventInputTrackSelectionArgs> inputTrackSelection) {
             return inputTrackSelection(Output.of(inputTrackSelection));
         }
 
+        /**
+         * @param inputTrackSelection Provides a mechanism to select the audio track in the input live feed, to which speech-to-text transcription is applied. This property is reserved for future use, any value set on this property will be ignored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputTrackSelection(LiveEventInputTrackSelectionArgs... inputTrackSelection) {
             return inputTrackSelection(List.of(inputTrackSelection));
         }
 
+        /**
+         * @param language Specifies the language (locale) to be used for speech-to-text transcription – it should match the spoken language in the audio track. The value should be in BCP-47 format (e.g: &#39;en-US&#39;). See https://go.microsoft.com/fwlink/?linkid=2133742 for more information about the live transcription feature and the list of supported languages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder language(@Nullable Output<String> language) {
             $.language = language;
             return this;
         }
 
+        /**
+         * @param language Specifies the language (locale) to be used for speech-to-text transcription – it should match the spoken language in the audio track. The value should be in BCP-47 format (e.g: &#39;en-US&#39;). See https://go.microsoft.com/fwlink/?linkid=2133742 for more information about the live transcription feature and the list of supported languages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder language(String language) {
             return language(Output.of(language));
         }
 
+        /**
+         * @param outputTranscriptionTrack Describes a transcription track in the output of a live event, generated using speech-to-text transcription. This property is reserved for future use, any value set on this property will be ignored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputTranscriptionTrack(@Nullable Output<LiveEventOutputTranscriptionTrackArgs> outputTranscriptionTrack) {
             $.outputTranscriptionTrack = outputTranscriptionTrack;
             return this;
         }
 
+        /**
+         * @param outputTranscriptionTrack Describes a transcription track in the output of a live event, generated using speech-to-text transcription. This property is reserved for future use, any value set on this property will be ignored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputTranscriptionTrack(LiveEventOutputTranscriptionTrackArgs outputTranscriptionTrack) {
             return outputTranscriptionTrack(Output.of(outputTranscriptionTrack));
         }

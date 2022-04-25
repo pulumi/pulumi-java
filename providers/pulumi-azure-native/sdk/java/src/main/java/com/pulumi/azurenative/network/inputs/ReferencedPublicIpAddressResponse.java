@@ -25,6 +25,10 @@ public final class ReferencedPublicIpAddressResponse extends com.pulumi.resource
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return The PublicIPAddress Reference.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -53,6 +57,12 @@ public final class ReferencedPublicIpAddressResponse extends com.pulumi.resource
             $ = new ReferencedPublicIpAddressResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id The PublicIPAddress Reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;

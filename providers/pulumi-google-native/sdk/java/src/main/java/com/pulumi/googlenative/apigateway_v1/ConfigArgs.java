@@ -41,6 +41,10 @@ public final class ConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return Optional. Display name.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -52,6 +56,10 @@ public final class ConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="gatewayServiceAccount")
     private @Nullable Output<String> gatewayServiceAccount;
 
+    /**
+     * @return Immutable. The Google Cloud IAM Service Account that Gateways serving this config should use to authenticate to other services. This may either be the Service Account&#39;s email (`{ACCOUNT_ID}@{PROJECT}.iam.gserviceaccount.com`) or its full resource name (`projects/{PROJECT}/accounts/{UNIQUE_ID}`). This is most often used when the service is a GCP resource such as a Cloud Run Service or an IAP-secured service.
+     * 
+     */
     public Optional<Output<String>> gatewayServiceAccount() {
         return Optional.ofNullable(this.gatewayServiceAccount);
     }
@@ -63,6 +71,10 @@ public final class ConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="grpcServices")
     private @Nullable Output<List<ApigatewayApiConfigGrpcServiceDefinitionArgs>> grpcServices;
 
+    /**
+     * @return Optional. gRPC service definition files. If specified, openapi_documents must not be included.
+     * 
+     */
     public Optional<Output<List<ApigatewayApiConfigGrpcServiceDefinitionArgs>>> grpcServices() {
         return Optional.ofNullable(this.grpcServices);
     }
@@ -74,6 +86,10 @@ public final class ConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return Optional. Resource labels to represent user-provided metadata. Refer to cloud documentation on labels for more details. https://cloud.google.com/compute/docs/labeling-resources
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -92,6 +108,10 @@ public final class ConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="managedServiceConfigs")
     private @Nullable Output<List<ApigatewayApiConfigFileArgs>> managedServiceConfigs;
 
+    /**
+     * @return Optional. Service Configuration files. At least one must be included when using gRPC service definitions. See https://cloud.google.com/endpoints/docs/grpc/grpc-service-config#service_configuration_overview for the expected file contents. If multiple files are specified, the files are merged with the following rules: * All singular scalar fields are merged using &#34;last one wins&#34; semantics in the order of the files uploaded. * Repeated fields are concatenated. * Singular embedded messages are merged using these rules for nested fields.
+     * 
+     */
     public Optional<Output<List<ApigatewayApiConfigFileArgs>>> managedServiceConfigs() {
         return Optional.ofNullable(this.managedServiceConfigs);
     }
@@ -103,6 +123,10 @@ public final class ConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="openapiDocuments")
     private @Nullable Output<List<ApigatewayApiConfigOpenApiDocumentArgs>> openapiDocuments;
 
+    /**
+     * @return Optional. OpenAPI specification documents. If specified, grpc_services and managed_service_configs must not be included.
+     * 
+     */
     public Optional<Output<List<ApigatewayApiConfigOpenApiDocumentArgs>>> openapiDocuments() {
         return Optional.ofNullable(this.openapiDocuments);
     }
@@ -165,42 +189,96 @@ public final class ConfigArgs extends com.pulumi.resources.ResourceArgs {
             return apiId(Output.of(apiId));
         }
 
+        /**
+         * @param displayName Optional. Display name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName Optional. Display name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param gatewayServiceAccount Immutable. The Google Cloud IAM Service Account that Gateways serving this config should use to authenticate to other services. This may either be the Service Account&#39;s email (`{ACCOUNT_ID}@{PROJECT}.iam.gserviceaccount.com`) or its full resource name (`projects/{PROJECT}/accounts/{UNIQUE_ID}`). This is most often used when the service is a GCP resource such as a Cloud Run Service or an IAP-secured service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayServiceAccount(@Nullable Output<String> gatewayServiceAccount) {
             $.gatewayServiceAccount = gatewayServiceAccount;
             return this;
         }
 
+        /**
+         * @param gatewayServiceAccount Immutable. The Google Cloud IAM Service Account that Gateways serving this config should use to authenticate to other services. This may either be the Service Account&#39;s email (`{ACCOUNT_ID}@{PROJECT}.iam.gserviceaccount.com`) or its full resource name (`projects/{PROJECT}/accounts/{UNIQUE_ID}`). This is most often used when the service is a GCP resource such as a Cloud Run Service or an IAP-secured service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayServiceAccount(String gatewayServiceAccount) {
             return gatewayServiceAccount(Output.of(gatewayServiceAccount));
         }
 
+        /**
+         * @param grpcServices Optional. gRPC service definition files. If specified, openapi_documents must not be included.
+         * 
+         * @return builder
+         * 
+         */
         public Builder grpcServices(@Nullable Output<List<ApigatewayApiConfigGrpcServiceDefinitionArgs>> grpcServices) {
             $.grpcServices = grpcServices;
             return this;
         }
 
+        /**
+         * @param grpcServices Optional. gRPC service definition files. If specified, openapi_documents must not be included.
+         * 
+         * @return builder
+         * 
+         */
         public Builder grpcServices(List<ApigatewayApiConfigGrpcServiceDefinitionArgs> grpcServices) {
             return grpcServices(Output.of(grpcServices));
         }
 
+        /**
+         * @param grpcServices Optional. gRPC service definition files. If specified, openapi_documents must not be included.
+         * 
+         * @return builder
+         * 
+         */
         public Builder grpcServices(ApigatewayApiConfigGrpcServiceDefinitionArgs... grpcServices) {
             return grpcServices(List.of(grpcServices));
         }
 
+        /**
+         * @param labels Optional. Resource labels to represent user-provided metadata. Refer to cloud documentation on labels for more details. https://cloud.google.com/compute/docs/labeling-resources
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Optional. Resource labels to represent user-provided metadata. Refer to cloud documentation on labels for more details. https://cloud.google.com/compute/docs/labeling-resources
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
@@ -214,28 +292,64 @@ public final class ConfigArgs extends com.pulumi.resources.ResourceArgs {
             return location(Output.of(location));
         }
 
+        /**
+         * @param managedServiceConfigs Optional. Service Configuration files. At least one must be included when using gRPC service definitions. See https://cloud.google.com/endpoints/docs/grpc/grpc-service-config#service_configuration_overview for the expected file contents. If multiple files are specified, the files are merged with the following rules: * All singular scalar fields are merged using &#34;last one wins&#34; semantics in the order of the files uploaded. * Repeated fields are concatenated. * Singular embedded messages are merged using these rules for nested fields.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedServiceConfigs(@Nullable Output<List<ApigatewayApiConfigFileArgs>> managedServiceConfigs) {
             $.managedServiceConfigs = managedServiceConfigs;
             return this;
         }
 
+        /**
+         * @param managedServiceConfigs Optional. Service Configuration files. At least one must be included when using gRPC service definitions. See https://cloud.google.com/endpoints/docs/grpc/grpc-service-config#service_configuration_overview for the expected file contents. If multiple files are specified, the files are merged with the following rules: * All singular scalar fields are merged using &#34;last one wins&#34; semantics in the order of the files uploaded. * Repeated fields are concatenated. * Singular embedded messages are merged using these rules for nested fields.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedServiceConfigs(List<ApigatewayApiConfigFileArgs> managedServiceConfigs) {
             return managedServiceConfigs(Output.of(managedServiceConfigs));
         }
 
+        /**
+         * @param managedServiceConfigs Optional. Service Configuration files. At least one must be included when using gRPC service definitions. See https://cloud.google.com/endpoints/docs/grpc/grpc-service-config#service_configuration_overview for the expected file contents. If multiple files are specified, the files are merged with the following rules: * All singular scalar fields are merged using &#34;last one wins&#34; semantics in the order of the files uploaded. * Repeated fields are concatenated. * Singular embedded messages are merged using these rules for nested fields.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedServiceConfigs(ApigatewayApiConfigFileArgs... managedServiceConfigs) {
             return managedServiceConfigs(List.of(managedServiceConfigs));
         }
 
+        /**
+         * @param openapiDocuments Optional. OpenAPI specification documents. If specified, grpc_services and managed_service_configs must not be included.
+         * 
+         * @return builder
+         * 
+         */
         public Builder openapiDocuments(@Nullable Output<List<ApigatewayApiConfigOpenApiDocumentArgs>> openapiDocuments) {
             $.openapiDocuments = openapiDocuments;
             return this;
         }
 
+        /**
+         * @param openapiDocuments Optional. OpenAPI specification documents. If specified, grpc_services and managed_service_configs must not be included.
+         * 
+         * @return builder
+         * 
+         */
         public Builder openapiDocuments(List<ApigatewayApiConfigOpenApiDocumentArgs> openapiDocuments) {
             return openapiDocuments(Output.of(openapiDocuments));
         }
 
+        /**
+         * @param openapiDocuments Optional. OpenAPI specification documents. If specified, grpc_services and managed_service_configs must not be included.
+         * 
+         * @return builder
+         * 
+         */
         public Builder openapiDocuments(ApigatewayApiConfigOpenApiDocumentArgs... openapiDocuments) {
             return openapiDocuments(List.of(openapiDocuments));
         }

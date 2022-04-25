@@ -25,6 +25,10 @@ public final class IotHubResourceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The resource location.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -36,6 +40,10 @@ public final class IotHubResourceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="properties")
     private @Nullable Output<IotHubPropertiesArgs> properties;
 
+    /**
+     * @return IotHub properties
+     * 
+     */
     public Optional<Output<IotHubPropertiesArgs>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -47,6 +55,10 @@ public final class IotHubResourceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the IoT hub.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -58,6 +70,10 @@ public final class IotHubResourceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="resourceName")
     private @Nullable Output<String> resourceName;
 
+    /**
+     * @return The name of the IoT hub.
+     * 
+     */
     public Optional<Output<String>> resourceName() {
         return Optional.ofNullable(this.resourceName);
     }
@@ -69,6 +85,10 @@ public final class IotHubResourceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="sku", required=true)
     private Output<IotHubSkuInfoArgs> sku;
 
+    /**
+     * @return IotHub SKU info
+     * 
+     */
     public Output<IotHubSkuInfoArgs> sku() {
         return this.sku;
     }
@@ -80,6 +100,10 @@ public final class IotHubResourceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return The resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -113,56 +137,128 @@ public final class IotHubResourceArgs extends com.pulumi.resources.ResourceArgs 
             $ = new IotHubResourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param location The resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param properties IotHub properties
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<IotHubPropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties IotHub properties
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(IotHubPropertiesArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the IoT hub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the IoT hub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param resourceName The name of the IoT hub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(@Nullable Output<String> resourceName) {
             $.resourceName = resourceName;
             return this;
         }
 
+        /**
+         * @param resourceName The name of the IoT hub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(String resourceName) {
             return resourceName(Output.of(resourceName));
         }
 
+        /**
+         * @param sku IotHub SKU info
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(Output<IotHubSkuInfoArgs> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku IotHub SKU info
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(IotHubSkuInfoArgs sku) {
             return sku(Output.of(sku));
         }
 
+        /**
+         * @param tags The resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

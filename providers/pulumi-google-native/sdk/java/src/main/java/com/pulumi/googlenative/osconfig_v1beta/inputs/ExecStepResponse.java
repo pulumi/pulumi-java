@@ -23,6 +23,10 @@ public final class ExecStepResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="linuxExecStepConfig", required=true)
     private ExecStepConfigResponse linuxExecStepConfig;
 
+    /**
+     * @return The ExecStepConfig for all Linux VMs targeted by the PatchJob.
+     * 
+     */
     public ExecStepConfigResponse linuxExecStepConfig() {
         return this.linuxExecStepConfig;
     }
@@ -34,6 +38,10 @@ public final class ExecStepResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="windowsExecStepConfig", required=true)
     private ExecStepConfigResponse windowsExecStepConfig;
 
+    /**
+     * @return The ExecStepConfig for all Windows VMs targeted by the PatchJob.
+     * 
+     */
     public ExecStepConfigResponse windowsExecStepConfig() {
         return this.windowsExecStepConfig;
     }
@@ -63,11 +71,23 @@ public final class ExecStepResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ExecStepResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param linuxExecStepConfig The ExecStepConfig for all Linux VMs targeted by the PatchJob.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linuxExecStepConfig(ExecStepConfigResponse linuxExecStepConfig) {
             $.linuxExecStepConfig = linuxExecStepConfig;
             return this;
         }
 
+        /**
+         * @param windowsExecStepConfig The ExecStepConfig for all Windows VMs targeted by the PatchJob.
+         * 
+         * @return builder
+         * 
+         */
         public Builder windowsExecStepConfig(ExecStepConfigResponse windowsExecStepConfig) {
             $.windowsExecStepConfig = windowsExecStepConfig;
             return this;

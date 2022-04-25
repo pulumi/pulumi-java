@@ -19,6 +19,10 @@ public final class ParquetOptionsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="enableListInference", required=true)
     private Boolean enableListInference;
 
+    /**
+     * @return [Optional] Indicates whether to use schema inference specifically for Parquet LIST logical type.
+     * 
+     */
     public Boolean enableListInference() {
         return this.enableListInference;
     }
@@ -30,6 +34,10 @@ public final class ParquetOptionsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="enumAsString", required=true)
     private Boolean enumAsString;
 
+    /**
+     * @return [Optional] Indicates whether to infer Parquet ENUM logical type as STRING instead of BYTES by default.
+     * 
+     */
     public Boolean enumAsString() {
         return this.enumAsString;
     }
@@ -59,11 +67,23 @@ public final class ParquetOptionsResponse extends com.pulumi.resources.InvokeArg
             $ = new ParquetOptionsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enableListInference [Optional] Indicates whether to use schema inference specifically for Parquet LIST logical type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableListInference(Boolean enableListInference) {
             $.enableListInference = enableListInference;
             return this;
         }
 
+        /**
+         * @param enumAsString [Optional] Indicates whether to infer Parquet ENUM logical type as STRING instead of BYTES by default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enumAsString(Boolean enumAsString) {
             $.enumAsString = enumAsString;
             return this;

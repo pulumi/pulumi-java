@@ -24,6 +24,10 @@ public final class IAMAuditConfigState extends com.pulumi.resources.ResourceArgs
     @Import(name="auditLogConfigs")
     private @Nullable Output<List<IAMAuditConfigAuditLogConfigGetArgs>> auditLogConfigs;
 
+    /**
+     * @return The configuration for logging of each type of permission.  This can be specified multiple times.  Structure is documented below.
+     * 
+     */
     public Optional<Output<List<IAMAuditConfigAuditLogConfigGetArgs>>> auditLogConfigs() {
         return Optional.ofNullable(this.auditLogConfigs);
     }
@@ -35,6 +39,10 @@ public final class IAMAuditConfigState extends com.pulumi.resources.ResourceArgs
     @Import(name="etag")
     private @Nullable Output<String> etag;
 
+    /**
+     * @return (Computed) The etag of the project&#39;s IAM policy.
+     * 
+     */
     public Optional<Output<String>> etag() {
         return Optional.ofNullable(this.etag);
     }
@@ -47,6 +55,11 @@ public final class IAMAuditConfigState extends com.pulumi.resources.ResourceArgs
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The project id of the target project. This is not
+     * inferred from the provider.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -58,6 +71,10 @@ public final class IAMAuditConfigState extends com.pulumi.resources.ResourceArgs
     @Import(name="service")
     private @Nullable Output<String> service;
 
+    /**
+     * @return Service which will be enabled for audit logging.  The special value `allServices` covers all services.  Note that if there are google\_project\_iam\_audit\_config resources covering both `allServices` and a specific service then the union of the two AuditConfigs is used for that service: the `log_types` specified in each `audit_log_config` are enabled, and the `exempted_members` in each `audit_log_config` are exempted.
+     * 
+     */
     public Optional<Output<String>> service() {
         return Optional.ofNullable(this.service);
     }
@@ -89,42 +106,98 @@ public final class IAMAuditConfigState extends com.pulumi.resources.ResourceArgs
             $ = new IAMAuditConfigState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param auditLogConfigs The configuration for logging of each type of permission.  This can be specified multiple times.  Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder auditLogConfigs(@Nullable Output<List<IAMAuditConfigAuditLogConfigGetArgs>> auditLogConfigs) {
             $.auditLogConfigs = auditLogConfigs;
             return this;
         }
 
+        /**
+         * @param auditLogConfigs The configuration for logging of each type of permission.  This can be specified multiple times.  Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder auditLogConfigs(List<IAMAuditConfigAuditLogConfigGetArgs> auditLogConfigs) {
             return auditLogConfigs(Output.of(auditLogConfigs));
         }
 
+        /**
+         * @param auditLogConfigs The configuration for logging of each type of permission.  This can be specified multiple times.  Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder auditLogConfigs(IAMAuditConfigAuditLogConfigGetArgs... auditLogConfigs) {
             return auditLogConfigs(List.of(auditLogConfigs));
         }
 
+        /**
+         * @param etag (Computed) The etag of the project&#39;s IAM policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(@Nullable Output<String> etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param etag (Computed) The etag of the project&#39;s IAM policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             return etag(Output.of(etag));
         }
 
+        /**
+         * @param project The project id of the target project. This is not
+         * inferred from the provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The project id of the target project. This is not
+         * inferred from the provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param service Service which will be enabled for audit logging.  The special value `allServices` covers all services.  Note that if there are google\_project\_iam\_audit\_config resources covering both `allServices` and a specific service then the union of the two AuditConfigs is used for that service: the `log_types` specified in each `audit_log_config` are enabled, and the `exempted_members` in each `audit_log_config` are exempted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(@Nullable Output<String> service) {
             $.service = service;
             return this;
         }
 
+        /**
+         * @param service Service which will be enabled for audit logging.  The special value `allServices` covers all services.  Note that if there are google\_project\_iam\_audit\_config resources covering both `allServices` and a specific service then the union of the two AuditConfigs is used for that service: the `log_types` specified in each `audit_log_config` are enabled, and the `exempted_members` in each `audit_log_config` are exempted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(String service) {
             return service(Output.of(service));
         }

@@ -24,6 +24,10 @@ public final class GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfigRe
     @Import(name="genericWebService", required=true)
     private GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceResponse genericWebService;
 
+    /**
+     * @return Generic Service configuration of this webhook.
+     * 
+     */
     public GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceResponse genericWebService() {
         return this.genericWebService;
     }
@@ -35,6 +39,10 @@ public final class GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfigRe
     @Import(name="service", required=true)
     private String service;
 
+    /**
+     * @return The name of [Service Directory](https://cloud.google.com/service-directory) service. Format: `projects//locations//namespaces//services/`. `Location ID` of the service directory must be the same as the location of the agent.
+     * 
+     */
     public String service() {
         return this.service;
     }
@@ -64,11 +72,23 @@ public final class GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfigRe
             $ = new GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param genericWebService Generic Service configuration of this webhook.
+         * 
+         * @return builder
+         * 
+         */
         public Builder genericWebService(GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceResponse genericWebService) {
             $.genericWebService = genericWebService;
             return this;
         }
 
+        /**
+         * @param service The name of [Service Directory](https://cloud.google.com/service-directory) service. Format: `projects//locations//namespaces//services/`. `Location ID` of the service directory must be the same as the location of the agent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(String service) {
             $.service = service;
             return this;

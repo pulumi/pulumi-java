@@ -23,6 +23,10 @@ public final class ManualScalingResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="instances", required=true)
     private Integer instances;
 
+    /**
+     * @return Number of instances to assign to the service at the start. This number can later be altered by using the Modules API (https://cloud.google.com/appengine/docs/python/modules/functions) set_num_instances() function.
+     * 
+     */
     public Integer instances() {
         return this.instances;
     }
@@ -51,6 +55,12 @@ public final class ManualScalingResponse extends com.pulumi.resources.InvokeArgs
             $ = new ManualScalingResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param instances Number of instances to assign to the service at the start. This number can later be altered by using the Modules API (https://cloud.google.com/appengine/docs/python/modules/functions) set_num_instances() function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instances(Integer instances) {
             $.instances = instances;
             return this;

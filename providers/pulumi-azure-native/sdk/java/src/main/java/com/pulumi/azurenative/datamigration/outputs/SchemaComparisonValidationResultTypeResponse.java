@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class SchemaComparisonValidationResultTypeResponse {
     /**
-     * Name of the object that has the difference
+     * @return Name of the object that has the difference
      * 
      */
     private final String objectName;
     /**
-     * Type of the object that has the difference. e.g (Table/View/StoredProcedure)
+     * @return Type of the object that has the difference. e.g (Table/View/StoredProcedure)
      * 
      */
     private final String objectType;
     /**
-     * Update action type with respect to target
+     * @return Update action type with respect to target
      * 
      */
     private final String updateAction;
@@ -36,23 +36,23 @@ public final class SchemaComparisonValidationResultTypeResponse {
     }
 
     /**
-     * Name of the object that has the difference
+     * @return Name of the object that has the difference
      * 
-    */
+     */
     public String objectName() {
         return this.objectName;
     }
     /**
-     * Type of the object that has the difference. e.g (Table/View/StoredProcedure)
+     * @return Type of the object that has the difference. e.g (Table/View/StoredProcedure)
      * 
-    */
+     */
     public String objectType() {
         return this.objectType;
     }
     /**
-     * Update action type with respect to target
+     * @return Update action type with respect to target
      * 
-    */
+     */
     public String updateAction() {
         return this.updateAction;
     }

@@ -12,17 +12,17 @@ import java.util.Objects;
 @CustomType
 public final class MigrateMySqlAzureDbForMySqlSyncTaskInputResponse {
     /**
-     * Databases to migrate
+     * @return Databases to migrate
      * 
      */
     private final List<MigrateMySqlAzureDbForMySqlSyncDatabaseInputResponse> selectedDatabases;
     /**
-     * Connection information for source MySQL
+     * @return Connection information for source MySQL
      * 
      */
     private final MySqlConnectionInfoResponse sourceConnectionInfo;
     /**
-     * Connection information for target Azure Database for MySQL
+     * @return Connection information for target Azure Database for MySQL
      * 
      */
     private final MySqlConnectionInfoResponse targetConnectionInfo;
@@ -38,23 +38,23 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskInputResponse {
     }
 
     /**
-     * Databases to migrate
+     * @return Databases to migrate
      * 
-    */
+     */
     public List<MigrateMySqlAzureDbForMySqlSyncDatabaseInputResponse> selectedDatabases() {
         return this.selectedDatabases;
     }
     /**
-     * Connection information for source MySQL
+     * @return Connection information for source MySQL
      * 
-    */
+     */
     public MySqlConnectionInfoResponse sourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
     /**
-     * Connection information for target Azure Database for MySQL
+     * @return Connection information for target Azure Database for MySQL
      * 
-    */
+     */
     public MySqlConnectionInfoResponse targetConnectionInfo() {
         return this.targetConnectionInfo;
     }

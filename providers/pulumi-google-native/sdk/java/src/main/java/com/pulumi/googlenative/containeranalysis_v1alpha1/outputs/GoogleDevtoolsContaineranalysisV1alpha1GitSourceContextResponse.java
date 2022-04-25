@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextResponse {
     /**
-     * Git commit hash.
+     * @return Git commit hash.
      * 
      */
     private final String revisionId;
     /**
-     * Git repository URL.
+     * @return Git repository URL.
      * 
      */
     private final String url;
@@ -29,16 +29,16 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextRespon
     }
 
     /**
-     * Git commit hash.
+     * @return Git commit hash.
      * 
-    */
+     */
     public String revisionId() {
         return this.revisionId;
     }
     /**
-     * Git repository URL.
+     * @return Git repository URL.
      * 
-    */
+     */
     public String url() {
         return this.url;
     }

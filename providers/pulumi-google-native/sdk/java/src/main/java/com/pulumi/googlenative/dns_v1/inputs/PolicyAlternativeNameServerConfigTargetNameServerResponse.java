@@ -19,6 +19,10 @@ public final class PolicyAlternativeNameServerConfigTargetNameServerResponse ext
     @Import(name="forwardingPath", required=true)
     private String forwardingPath;
 
+    /**
+     * @return Forwarding path for this TargetNameServer. If unset or set to DEFAULT, Cloud DNS makes forwarding decisions based on address ranges; that is, RFC1918 addresses go to the VPC network, non-RFC1918 addresses go to the internet. When set to PRIVATE, Cloud DNS always sends queries through the VPC network for this target.
+     * 
+     */
     public String forwardingPath() {
         return this.forwardingPath;
     }
@@ -30,6 +34,10 @@ public final class PolicyAlternativeNameServerConfigTargetNameServerResponse ext
     @Import(name="ipv4Address", required=true)
     private String ipv4Address;
 
+    /**
+     * @return IPv4 address to forward to.
+     * 
+     */
     public String ipv4Address() {
         return this.ipv4Address;
     }
@@ -67,11 +75,23 @@ public final class PolicyAlternativeNameServerConfigTargetNameServerResponse ext
             $ = new PolicyAlternativeNameServerConfigTargetNameServerResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param forwardingPath Forwarding path for this TargetNameServer. If unset or set to DEFAULT, Cloud DNS makes forwarding decisions based on address ranges; that is, RFC1918 addresses go to the VPC network, non-RFC1918 addresses go to the internet. When set to PRIVATE, Cloud DNS always sends queries through the VPC network for this target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forwardingPath(String forwardingPath) {
             $.forwardingPath = forwardingPath;
             return this;
         }
 
+        /**
+         * @param ipv4Address IPv4 address to forward to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipv4Address(String ipv4Address) {
             $.ipv4Address = ipv4Address;
             return this;

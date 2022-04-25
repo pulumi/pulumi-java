@@ -27,6 +27,11 @@ public final class LoggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="credentials")
     private @Nullable Output<Map<String,String>> credentials;
 
+    /**
+     * @return The name and SendRule connection string of the event hub for azureEventHub logger.
+     * Instrumentation key for applicationInsights logger.
+     * 
+     */
     public Optional<Output<Map<String,String>>> credentials() {
         return Optional.ofNullable(this.credentials);
     }
@@ -38,6 +43,10 @@ public final class LoggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Logger description.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -49,6 +58,10 @@ public final class LoggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="isBuffered")
     private @Nullable Output<Boolean> isBuffered;
 
+    /**
+     * @return Whether records are buffered in the logger before publishing. Default is assumed to be true.
+     * 
+     */
     public Optional<Output<Boolean>> isBuffered() {
         return Optional.ofNullable(this.isBuffered);
     }
@@ -60,6 +73,10 @@ public final class LoggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="loggerId")
     private @Nullable Output<String> loggerId;
 
+    /**
+     * @return Logger identifier. Must be unique in the API Management service instance.
+     * 
+     */
     public Optional<Output<String>> loggerId() {
         return Optional.ofNullable(this.loggerId);
     }
@@ -71,6 +88,10 @@ public final class LoggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="loggerType", required=true)
     private Output<Either<String,LoggerType>> loggerType;
 
+    /**
+     * @return Logger type.
+     * 
+     */
     public Output<Either<String,LoggerType>> loggerType() {
         return this.loggerType;
     }
@@ -82,6 +103,10 @@ public final class LoggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -93,6 +118,10 @@ public final class LoggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceId")
     private @Nullable Output<String> resourceId;
 
+    /**
+     * @return Azure Resource Id of a log target (either Azure Event Hub resource or Azure Application Insights resource).
+     * 
+     */
     public Optional<Output<String>> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
@@ -104,6 +133,10 @@ public final class LoggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceName", required=true)
     private Output<String> serviceName;
 
+    /**
+     * @return The name of the API Management service.
+     * 
+     */
     public Output<String> serviceName() {
         return this.serviceName;
     }
@@ -139,82 +172,192 @@ public final class LoggerArgs extends com.pulumi.resources.ResourceArgs {
             $ = new LoggerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param credentials The name and SendRule connection string of the event hub for azureEventHub logger.
+         * Instrumentation key for applicationInsights logger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder credentials(@Nullable Output<Map<String,String>> credentials) {
             $.credentials = credentials;
             return this;
         }
 
+        /**
+         * @param credentials The name and SendRule connection string of the event hub for azureEventHub logger.
+         * Instrumentation key for applicationInsights logger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder credentials(Map<String,String> credentials) {
             return credentials(Output.of(credentials));
         }
 
+        /**
+         * @param description Logger description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Logger description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param isBuffered Whether records are buffered in the logger before publishing. Default is assumed to be true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isBuffered(@Nullable Output<Boolean> isBuffered) {
             $.isBuffered = isBuffered;
             return this;
         }
 
+        /**
+         * @param isBuffered Whether records are buffered in the logger before publishing. Default is assumed to be true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isBuffered(Boolean isBuffered) {
             return isBuffered(Output.of(isBuffered));
         }
 
+        /**
+         * @param loggerId Logger identifier. Must be unique in the API Management service instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loggerId(@Nullable Output<String> loggerId) {
             $.loggerId = loggerId;
             return this;
         }
 
+        /**
+         * @param loggerId Logger identifier. Must be unique in the API Management service instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loggerId(String loggerId) {
             return loggerId(Output.of(loggerId));
         }
 
+        /**
+         * @param loggerType Logger type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loggerType(Output<Either<String,LoggerType>> loggerType) {
             $.loggerType = loggerType;
             return this;
         }
 
+        /**
+         * @param loggerType Logger type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loggerType(Either<String,LoggerType> loggerType) {
             return loggerType(Output.of(loggerType));
         }
 
+        /**
+         * @param loggerType Logger type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loggerType(String loggerType) {
             return loggerType(Either.ofLeft(loggerType));
         }
 
+        /**
+         * @param loggerType Logger type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loggerType(LoggerType loggerType) {
             return loggerType(Either.ofRight(loggerType));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param resourceId Azure Resource Id of a log target (either Azure Event Hub resource or Azure Application Insights resource).
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(@Nullable Output<String> resourceId) {
             $.resourceId = resourceId;
             return this;
         }
 
+        /**
+         * @param resourceId Azure Resource Id of a log target (either Azure Event Hub resource or Azure Application Insights resource).
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(String resourceId) {
             return resourceId(Output.of(resourceId));
         }
 
+        /**
+         * @param serviceName The name of the API Management service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(Output<String> serviceName) {
             $.serviceName = serviceName;
             return this;
         }
 
+        /**
+         * @param serviceName The name of the API Management service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             return serviceName(Output.of(serviceName));
         }

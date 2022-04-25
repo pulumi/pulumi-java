@@ -23,6 +23,10 @@ public final class SystemServiceResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="publicIpAddress", required=true)
     private String publicIpAddress;
 
+    /**
+     * @return Public IP address
+     * 
+     */
     public String publicIpAddress() {
         return this.publicIpAddress;
     }
@@ -34,6 +38,10 @@ public final class SystemServiceResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="systemServiceType", required=true)
     private String systemServiceType;
 
+    /**
+     * @return The type of this system service.
+     * 
+     */
     public String systemServiceType() {
         return this.systemServiceType;
     }
@@ -45,6 +53,10 @@ public final class SystemServiceResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="version", required=true)
     private String version;
 
+    /**
+     * @return The version for this type.
+     * 
+     */
     public String version() {
         return this.version;
     }
@@ -75,16 +87,34 @@ public final class SystemServiceResponse extends com.pulumi.resources.InvokeArgs
             $ = new SystemServiceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param publicIpAddress Public IP address
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIpAddress(String publicIpAddress) {
             $.publicIpAddress = publicIpAddress;
             return this;
         }
 
+        /**
+         * @param systemServiceType The type of this system service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder systemServiceType(String systemServiceType) {
             $.systemServiceType = systemServiceType;
             return this;
         }
 
+        /**
+         * @param version The version for this type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             $.version = version;
             return this;

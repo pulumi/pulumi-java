@@ -27,6 +27,10 @@ public final class FleetServerProcessArgs extends com.pulumi.resources.ResourceA
     @Import(name="concurrentExecutions", required=true)
     private Output<Integer> concurrentExecutions;
 
+    /**
+     * @return The number of server processes that use this configuration to run concurrently on an instance.
+     * 
+     */
     public Output<Integer> concurrentExecutions() {
         return this.concurrentExecutions;
     }
@@ -42,6 +46,14 @@ public final class FleetServerProcessArgs extends com.pulumi.resources.ResourceA
     @Import(name="launchPath", required=true)
     private Output<String> launchPath;
 
+    /**
+     * @return The location of the server executable in a custom game build or the name of the Realtime script file that contains the Init() function. Game builds and Realtime scripts are installed on instances at the root:
+     * 
+     * Windows (for custom game builds only): C:\game. Example: &#34;C:\game\MyGame\server.exe&#34;
+     * 
+     * Linux: /local/game. Examples: &#34;/local/game/MyGame/server.exe&#34; or &#34;/local/game/MyRealtimeScript.js&#34;
+     * 
+     */
     public Output<String> launchPath() {
         return this.launchPath;
     }
@@ -53,6 +65,10 @@ public final class FleetServerProcessArgs extends com.pulumi.resources.ResourceA
     @Import(name="parameters")
     private @Nullable Output<String> parameters;
 
+    /**
+     * @return An optional list of parameters to pass to the server executable or Realtime script on launch.
+     * 
+     */
     public Optional<Output<String>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -83,29 +99,73 @@ public final class FleetServerProcessArgs extends com.pulumi.resources.ResourceA
             $ = new FleetServerProcessArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param concurrentExecutions The number of server processes that use this configuration to run concurrently on an instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder concurrentExecutions(Output<Integer> concurrentExecutions) {
             $.concurrentExecutions = concurrentExecutions;
             return this;
         }
 
+        /**
+         * @param concurrentExecutions The number of server processes that use this configuration to run concurrently on an instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder concurrentExecutions(Integer concurrentExecutions) {
             return concurrentExecutions(Output.of(concurrentExecutions));
         }
 
+        /**
+         * @param launchPath The location of the server executable in a custom game build or the name of the Realtime script file that contains the Init() function. Game builds and Realtime scripts are installed on instances at the root:
+         * 
+         * Windows (for custom game builds only): C:\game. Example: &#34;C:\game\MyGame\server.exe&#34;
+         * 
+         * Linux: /local/game. Examples: &#34;/local/game/MyGame/server.exe&#34; or &#34;/local/game/MyRealtimeScript.js&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder launchPath(Output<String> launchPath) {
             $.launchPath = launchPath;
             return this;
         }
 
+        /**
+         * @param launchPath The location of the server executable in a custom game build or the name of the Realtime script file that contains the Init() function. Game builds and Realtime scripts are installed on instances at the root:
+         * 
+         * Windows (for custom game builds only): C:\game. Example: &#34;C:\game\MyGame\server.exe&#34;
+         * 
+         * Linux: /local/game. Examples: &#34;/local/game/MyGame/server.exe&#34; or &#34;/local/game/MyRealtimeScript.js&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder launchPath(String launchPath) {
             return launchPath(Output.of(launchPath));
         }
 
+        /**
+         * @param parameters An optional list of parameters to pass to the server executable or Realtime script on launch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Output<String> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters An optional list of parameters to pass to the server executable or Realtime script on launch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(String parameters) {
             return parameters(Output.of(parameters));
         }

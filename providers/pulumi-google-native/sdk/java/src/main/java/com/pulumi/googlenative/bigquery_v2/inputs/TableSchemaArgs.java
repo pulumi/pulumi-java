@@ -23,6 +23,10 @@ public final class TableSchemaArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="fields")
     private @Nullable Output<List<TableFieldSchemaArgs>> fields;
 
+    /**
+     * @return Describes the fields in a table.
+     * 
+     */
     public Optional<Output<List<TableFieldSchemaArgs>>> fields() {
         return Optional.ofNullable(this.fields);
     }
@@ -51,15 +55,33 @@ public final class TableSchemaArgs extends com.pulumi.resources.ResourceArgs {
             $ = new TableSchemaArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fields Describes the fields in a table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fields(@Nullable Output<List<TableFieldSchemaArgs>> fields) {
             $.fields = fields;
             return this;
         }
 
+        /**
+         * @param fields Describes the fields in a table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fields(List<TableFieldSchemaArgs> fields) {
             return fields(Output.of(fields));
         }
 
+        /**
+         * @param fields Describes the fields in a table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fields(TableFieldSchemaArgs... fields) {
             return fields(List.of(fields));
         }

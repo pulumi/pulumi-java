@@ -29,6 +29,10 @@ public final class ApplicationScopedVolumeCreationParametersServiceFabricVolumeD
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return User readable description of the volume.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -41,6 +45,11 @@ public final class ApplicationScopedVolumeCreationParametersServiceFabricVolumeD
     @Import(name="kind", required=true)
     private Output<String> kind;
 
+    /**
+     * @return Specifies the application-scoped volume kind.
+     * Expected value is &#39;ServiceFabricVolumeDisk&#39;.
+     * 
+     */
     public Output<String> kind() {
         return this.kind;
     }
@@ -52,6 +61,10 @@ public final class ApplicationScopedVolumeCreationParametersServiceFabricVolumeD
     @Import(name="sizeDisk", required=true)
     private Output<Either<String,SizeTypes>> sizeDisk;
 
+    /**
+     * @return Volume size
+     * 
+     */
     public Output<Either<String,SizeTypes>> sizeDisk() {
         return this.sizeDisk;
     }
@@ -82,37 +95,87 @@ public final class ApplicationScopedVolumeCreationParametersServiceFabricVolumeD
             $ = new ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description User readable description of the volume.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description User readable description of the volume.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param kind Specifies the application-scoped volume kind.
+         * Expected value is &#39;ServiceFabricVolumeDisk&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Specifies the application-scoped volume kind.
+         * Expected value is &#39;ServiceFabricVolumeDisk&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param sizeDisk Volume size
+         * 
+         * @return builder
+         * 
+         */
         public Builder sizeDisk(Output<Either<String,SizeTypes>> sizeDisk) {
             $.sizeDisk = sizeDisk;
             return this;
         }
 
+        /**
+         * @param sizeDisk Volume size
+         * 
+         * @return builder
+         * 
+         */
         public Builder sizeDisk(Either<String,SizeTypes> sizeDisk) {
             return sizeDisk(Output.of(sizeDisk));
         }
 
+        /**
+         * @param sizeDisk Volume size
+         * 
+         * @return builder
+         * 
+         */
         public Builder sizeDisk(String sizeDisk) {
             return sizeDisk(Either.ofLeft(sizeDisk));
         }
 
+        /**
+         * @param sizeDisk Volume size
+         * 
+         * @return builder
+         * 
+         */
         public Builder sizeDisk(SizeTypes sizeDisk) {
             return sizeDisk(Either.ofRight(sizeDisk));
         }

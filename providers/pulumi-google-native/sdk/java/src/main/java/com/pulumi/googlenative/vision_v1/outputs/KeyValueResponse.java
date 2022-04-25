@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class KeyValueResponse {
     /**
-     * The key of the label attached to the product. Cannot be empty and cannot exceed 128 bytes.
+     * @return The key of the label attached to the product. Cannot be empty and cannot exceed 128 bytes.
      * 
      */
     private final String key;
     /**
-     * The value of the label attached to the product. Cannot be empty and cannot exceed 128 bytes.
+     * @return The value of the label attached to the product. Cannot be empty and cannot exceed 128 bytes.
      * 
      */
     private final String value;
@@ -29,16 +29,16 @@ public final class KeyValueResponse {
     }
 
     /**
-     * The key of the label attached to the product. Cannot be empty and cannot exceed 128 bytes.
+     * @return The key of the label attached to the product. Cannot be empty and cannot exceed 128 bytes.
      * 
-    */
+     */
     public String key() {
         return this.key;
     }
     /**
-     * The value of the label attached to the product. Cannot be empty and cannot exceed 128 bytes.
+     * @return The value of the label attached to the product. Cannot be empty and cannot exceed 128 bytes.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

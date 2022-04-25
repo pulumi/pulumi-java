@@ -25,6 +25,10 @@ public final class ServicePrincipalPropertiesResponse extends com.pulumi.resourc
     @Import(name="applicationId")
     private @Nullable String applicationId;
 
+    /**
+     * @return Application ID of service principal.
+     * 
+     */
     public Optional<String> applicationId() {
         return Optional.ofNullable(this.applicationId);
     }
@@ -36,6 +40,10 @@ public final class ServicePrincipalPropertiesResponse extends com.pulumi.resourc
     @Import(name="secret")
     private @Nullable String secret;
 
+    /**
+     * @return A secret string that the application uses to prove its identity, also can be referred to as application password (write only).
+     * 
+     */
     public Optional<String> secret() {
         return Optional.ofNullable(this.secret);
     }
@@ -65,11 +73,23 @@ public final class ServicePrincipalPropertiesResponse extends com.pulumi.resourc
             $ = new ServicePrincipalPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param applicationId Application ID of service principal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationId(@Nullable String applicationId) {
             $.applicationId = applicationId;
             return this;
         }
 
+        /**
+         * @param secret A secret string that the application uses to prove its identity, also can be referred to as application password (write only).
+         * 
+         * @return builder
+         * 
+         */
         public Builder secret(@Nullable String secret) {
             $.secret = secret;
             return this;

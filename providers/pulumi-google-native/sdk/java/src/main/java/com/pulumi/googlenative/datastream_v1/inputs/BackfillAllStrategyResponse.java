@@ -24,6 +24,10 @@ public final class BackfillAllStrategyResponse extends com.pulumi.resources.Invo
     @Import(name="mysqlExcludedObjects", required=true)
     private MysqlRdbmsResponse mysqlExcludedObjects;
 
+    /**
+     * @return MySQL data source objects to avoid backfilling.
+     * 
+     */
     public MysqlRdbmsResponse mysqlExcludedObjects() {
         return this.mysqlExcludedObjects;
     }
@@ -35,6 +39,10 @@ public final class BackfillAllStrategyResponse extends com.pulumi.resources.Invo
     @Import(name="oracleExcludedObjects", required=true)
     private OracleRdbmsResponse oracleExcludedObjects;
 
+    /**
+     * @return Oracle data source objects to avoid backfilling.
+     * 
+     */
     public OracleRdbmsResponse oracleExcludedObjects() {
         return this.oracleExcludedObjects;
     }
@@ -64,11 +72,23 @@ public final class BackfillAllStrategyResponse extends com.pulumi.resources.Invo
             $ = new BackfillAllStrategyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param mysqlExcludedObjects MySQL data source objects to avoid backfilling.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mysqlExcludedObjects(MysqlRdbmsResponse mysqlExcludedObjects) {
             $.mysqlExcludedObjects = mysqlExcludedObjects;
             return this;
         }
 
+        /**
+         * @param oracleExcludedObjects Oracle data source objects to avoid backfilling.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oracleExcludedObjects(OracleRdbmsResponse oracleExcludedObjects) {
             $.oracleExcludedObjects = oracleExcludedObjects;
             return this;

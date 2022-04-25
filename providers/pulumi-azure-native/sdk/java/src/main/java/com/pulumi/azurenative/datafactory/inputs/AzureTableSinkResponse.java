@@ -27,6 +27,10 @@ public final class AzureTableSinkResponse extends com.pulumi.resources.InvokeArg
     @Import(name="azureTableDefaultPartitionKeyValue")
     private @Nullable Object azureTableDefaultPartitionKeyValue;
 
+    /**
+     * @return Azure Table default partition key value. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> azureTableDefaultPartitionKeyValue() {
         return Optional.ofNullable(this.azureTableDefaultPartitionKeyValue);
     }
@@ -38,6 +42,10 @@ public final class AzureTableSinkResponse extends com.pulumi.resources.InvokeArg
     @Import(name="azureTableInsertType")
     private @Nullable Object azureTableInsertType;
 
+    /**
+     * @return Azure Table insert type. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> azureTableInsertType() {
         return Optional.ofNullable(this.azureTableInsertType);
     }
@@ -49,6 +57,10 @@ public final class AzureTableSinkResponse extends com.pulumi.resources.InvokeArg
     @Import(name="azureTablePartitionKeyName")
     private @Nullable Object azureTablePartitionKeyName;
 
+    /**
+     * @return Azure Table partition key name. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> azureTablePartitionKeyName() {
         return Optional.ofNullable(this.azureTablePartitionKeyName);
     }
@@ -60,6 +72,10 @@ public final class AzureTableSinkResponse extends com.pulumi.resources.InvokeArg
     @Import(name="azureTableRowKeyName")
     private @Nullable Object azureTableRowKeyName;
 
+    /**
+     * @return Azure Table row key name. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> azureTableRowKeyName() {
         return Optional.ofNullable(this.azureTableRowKeyName);
     }
@@ -71,6 +87,10 @@ public final class AzureTableSinkResponse extends com.pulumi.resources.InvokeArg
     @Import(name="disableMetricsCollection")
     private @Nullable Object disableMetricsCollection;
 
+    /**
+     * @return If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Object> disableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
@@ -82,6 +102,10 @@ public final class AzureTableSinkResponse extends com.pulumi.resources.InvokeArg
     @Import(name="maxConcurrentConnections")
     private @Nullable Object maxConcurrentConnections;
 
+    /**
+     * @return The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
+     * 
+     */
     public Optional<Object> maxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
@@ -93,6 +117,10 @@ public final class AzureTableSinkResponse extends com.pulumi.resources.InvokeArg
     @Import(name="sinkRetryCount")
     private @Nullable Object sinkRetryCount;
 
+    /**
+     * @return Sink retry count. Type: integer (or Expression with resultType integer).
+     * 
+     */
     public Optional<Object> sinkRetryCount() {
         return Optional.ofNullable(this.sinkRetryCount);
     }
@@ -104,6 +132,10 @@ public final class AzureTableSinkResponse extends com.pulumi.resources.InvokeArg
     @Import(name="sinkRetryWait")
     private @Nullable Object sinkRetryWait;
 
+    /**
+     * @return Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * 
+     */
     public Optional<Object> sinkRetryWait() {
         return Optional.ofNullable(this.sinkRetryWait);
     }
@@ -116,6 +148,11 @@ public final class AzureTableSinkResponse extends com.pulumi.resources.InvokeArg
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Copy sink type.
+     * Expected value is &#39;AzureTableSink&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -127,6 +164,10 @@ public final class AzureTableSinkResponse extends com.pulumi.resources.InvokeArg
     @Import(name="writeBatchSize")
     private @Nullable Object writeBatchSize;
 
+    /**
+     * @return Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.
+     * 
+     */
     public Optional<Object> writeBatchSize() {
         return Optional.ofNullable(this.writeBatchSize);
     }
@@ -138,6 +179,10 @@ public final class AzureTableSinkResponse extends com.pulumi.resources.InvokeArg
     @Import(name="writeBatchTimeout")
     private @Nullable Object writeBatchTimeout;
 
+    /**
+     * @return Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * 
+     */
     public Optional<Object> writeBatchTimeout() {
         return Optional.ofNullable(this.writeBatchTimeout);
     }
@@ -176,56 +221,123 @@ public final class AzureTableSinkResponse extends com.pulumi.resources.InvokeArg
             $ = new AzureTableSinkResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param azureTableDefaultPartitionKeyValue Azure Table default partition key value. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureTableDefaultPartitionKeyValue(@Nullable Object azureTableDefaultPartitionKeyValue) {
             $.azureTableDefaultPartitionKeyValue = azureTableDefaultPartitionKeyValue;
             return this;
         }
 
+        /**
+         * @param azureTableInsertType Azure Table insert type. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureTableInsertType(@Nullable Object azureTableInsertType) {
             $.azureTableInsertType = azureTableInsertType;
             return this;
         }
 
+        /**
+         * @param azureTablePartitionKeyName Azure Table partition key name. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureTablePartitionKeyName(@Nullable Object azureTablePartitionKeyName) {
             $.azureTablePartitionKeyName = azureTablePartitionKeyName;
             return this;
         }
 
+        /**
+         * @param azureTableRowKeyName Azure Table row key name. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureTableRowKeyName(@Nullable Object azureTableRowKeyName) {
             $.azureTableRowKeyName = azureTableRowKeyName;
             return this;
         }
 
+        /**
+         * @param disableMetricsCollection If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
             $.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
 
+        /**
+         * @param maxConcurrentConnections The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             $.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
 
+        /**
+         * @param sinkRetryCount Sink retry count. Type: integer (or Expression with resultType integer).
+         * 
+         * @return builder
+         * 
+         */
         public Builder sinkRetryCount(@Nullable Object sinkRetryCount) {
             $.sinkRetryCount = sinkRetryCount;
             return this;
         }
 
+        /**
+         * @param sinkRetryWait Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+         * 
+         * @return builder
+         * 
+         */
         public Builder sinkRetryWait(@Nullable Object sinkRetryWait) {
             $.sinkRetryWait = sinkRetryWait;
             return this;
         }
 
+        /**
+         * @param type Copy sink type.
+         * Expected value is &#39;AzureTableSink&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param writeBatchSize Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder writeBatchSize(@Nullable Object writeBatchSize) {
             $.writeBatchSize = writeBatchSize;
             return this;
         }
 
+        /**
+         * @param writeBatchTimeout Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+         * 
+         * @return builder
+         * 
+         */
         public Builder writeBatchTimeout(@Nullable Object writeBatchTimeout) {
             $.writeBatchTimeout = writeBatchTimeout;
             return this;

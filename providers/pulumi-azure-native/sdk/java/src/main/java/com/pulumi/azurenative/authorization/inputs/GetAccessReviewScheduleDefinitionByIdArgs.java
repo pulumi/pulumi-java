@@ -19,6 +19,10 @@ public final class GetAccessReviewScheduleDefinitionByIdArgs extends com.pulumi.
     @Import(name="scheduleDefinitionId", required=true)
     private String scheduleDefinitionId;
 
+    /**
+     * @return The id of the access review schedule definition.
+     * 
+     */
     public String scheduleDefinitionId() {
         return this.scheduleDefinitionId;
     }
@@ -47,6 +51,12 @@ public final class GetAccessReviewScheduleDefinitionByIdArgs extends com.pulumi.
             $ = new GetAccessReviewScheduleDefinitionByIdArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param scheduleDefinitionId The id of the access review schedule definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduleDefinitionId(String scheduleDefinitionId) {
             $.scheduleDefinitionId = scheduleDefinitionId;
             return this;

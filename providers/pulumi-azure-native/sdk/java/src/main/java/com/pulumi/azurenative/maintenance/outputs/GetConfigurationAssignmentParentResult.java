@@ -13,37 +13,37 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetConfigurationAssignmentParentResult {
     /**
-     * Fully qualified identifier of the resource
+     * @return Fully qualified identifier of the resource
      * 
      */
     private final String id;
     /**
-     * Location of the resource
+     * @return Location of the resource
      * 
      */
     private final @Nullable String location;
     /**
-     * The maintenance configuration Id
+     * @return The maintenance configuration Id
      * 
      */
     private final @Nullable String maintenanceConfigurationId;
     /**
-     * Name of the resource
+     * @return Name of the resource
      * 
      */
     private final String name;
     /**
-     * The unique resourceId
+     * @return The unique resourceId
      * 
      */
     private final @Nullable String resourceId;
     /**
-     * Azure Resource Manager metadata containing createdBy and modifiedBy information.
+     * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
      */
     private final SystemDataResponse systemData;
     /**
-     * Type of the resource
+     * @return Type of the resource
      * 
      */
     private final String type;
@@ -67,51 +67,51 @@ public final class GetConfigurationAssignmentParentResult {
     }
 
     /**
-     * Fully qualified identifier of the resource
+     * @return Fully qualified identifier of the resource
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Location of the resource
+     * @return Location of the resource
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * The maintenance configuration Id
+     * @return The maintenance configuration Id
      * 
-    */
+     */
     public Optional<String> maintenanceConfigurationId() {
         return Optional.ofNullable(this.maintenanceConfigurationId);
     }
     /**
-     * Name of the resource
+     * @return Name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The unique resourceId
+     * @return The unique resourceId
      * 
-    */
+     */
     public Optional<String> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
     /**
-     * Azure Resource Manager metadata containing createdBy and modifiedBy information.
+     * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Type of the resource
+     * @return Type of the resource
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

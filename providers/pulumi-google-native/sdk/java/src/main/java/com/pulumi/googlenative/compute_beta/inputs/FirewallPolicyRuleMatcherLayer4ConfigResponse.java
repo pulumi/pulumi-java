@@ -20,6 +20,10 @@ public final class FirewallPolicyRuleMatcherLayer4ConfigResponse extends com.pul
     @Import(name="ipProtocol", required=true)
     private String ipProtocol;
 
+    /**
+     * @return The IP protocol to which this rule applies. The protocol type is required when creating a firewall rule. This value can either be one of the following well known protocol strings (tcp, udp, icmp, esp, ah, ipip, sctp), or the IP protocol number.
+     * 
+     */
     public String ipProtocol() {
         return this.ipProtocol;
     }
@@ -31,6 +35,10 @@ public final class FirewallPolicyRuleMatcherLayer4ConfigResponse extends com.pul
     @Import(name="ports", required=true)
     private List<String> ports;
 
+    /**
+     * @return An optional list of ports to which this rule applies. This field is only applicable for UDP or TCP protocol. Each entry must be either an integer or a range. If not specified, this rule applies to connections through any port. Example inputs include: [&#34;22&#34;], [&#34;80&#34;,&#34;443&#34;], and [&#34;12345-12349&#34;].
+     * 
+     */
     public List<String> ports() {
         return this.ports;
     }
@@ -60,16 +68,34 @@ public final class FirewallPolicyRuleMatcherLayer4ConfigResponse extends com.pul
             $ = new FirewallPolicyRuleMatcherLayer4ConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ipProtocol The IP protocol to which this rule applies. The protocol type is required when creating a firewall rule. This value can either be one of the following well known protocol strings (tcp, udp, icmp, esp, ah, ipip, sctp), or the IP protocol number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipProtocol(String ipProtocol) {
             $.ipProtocol = ipProtocol;
             return this;
         }
 
+        /**
+         * @param ports An optional list of ports to which this rule applies. This field is only applicable for UDP or TCP protocol. Each entry must be either an integer or a range. If not specified, this rule applies to connections through any port. Example inputs include: [&#34;22&#34;], [&#34;80&#34;,&#34;443&#34;], and [&#34;12345-12349&#34;].
+         * 
+         * @return builder
+         * 
+         */
         public Builder ports(List<String> ports) {
             $.ports = ports;
             return this;
         }
 
+        /**
+         * @param ports An optional list of ports to which this rule applies. This field is only applicable for UDP or TCP protocol. Each entry must be either an integer or a range. If not specified, this rule applies to connections through any port. Example inputs include: [&#34;22&#34;], [&#34;80&#34;,&#34;443&#34;], and [&#34;12345-12349&#34;].
+         * 
+         * @return builder
+         * 
+         */
         public Builder ports(String... ports) {
             return ports(List.of(ports));
         }

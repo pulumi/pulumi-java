@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class StorageProfileResponse {
     /**
-     * Gets or sets the list of virtual disks associated with the virtual machine.
+     * @return Gets or sets the list of virtual disks associated with the virtual machine.
      * 
      */
     private final @Nullable List<VirtualDiskResponse> disks;
     /**
-     * Gets or sets the list of virtual SCSI controllers associated with the virtual machine.
+     * @return Gets or sets the list of virtual SCSI controllers associated with the virtual machine.
      * 
      */
     private final List<VirtualSCSIControllerResponse> scsiControllers;
@@ -32,16 +32,16 @@ public final class StorageProfileResponse {
     }
 
     /**
-     * Gets or sets the list of virtual disks associated with the virtual machine.
+     * @return Gets or sets the list of virtual disks associated with the virtual machine.
      * 
-    */
+     */
     public List<VirtualDiskResponse> disks() {
         return this.disks == null ? List.of() : this.disks;
     }
     /**
-     * Gets or sets the list of virtual SCSI controllers associated with the virtual machine.
+     * @return Gets or sets the list of virtual SCSI controllers associated with the virtual machine.
      * 
-    */
+     */
     public List<VirtualSCSIControllerResponse> scsiControllers() {
         return this.scsiControllers;
     }

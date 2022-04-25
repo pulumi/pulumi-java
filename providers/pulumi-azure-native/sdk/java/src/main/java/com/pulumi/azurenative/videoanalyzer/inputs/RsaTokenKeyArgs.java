@@ -27,6 +27,10 @@ public final class RsaTokenKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="alg", required=true)
     private Output<Either<String,AccessPolicyRsaAlgo>> alg;
 
+    /**
+     * @return RSA algorithm to be used: RS256, RS384 or RS512.
+     * 
+     */
     public Output<Either<String,AccessPolicyRsaAlgo>> alg() {
         return this.alg;
     }
@@ -38,6 +42,10 @@ public final class RsaTokenKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="e", required=true)
     private Output<String> e;
 
+    /**
+     * @return RSA public key exponent.
+     * 
+     */
     public Output<String> e() {
         return this.e;
     }
@@ -49,6 +57,10 @@ public final class RsaTokenKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kid", required=true)
     private Output<String> kid;
 
+    /**
+     * @return JWT token key id. Validation keys are looked up based on the key id present on the JWT token header.
+     * 
+     */
     public Output<String> kid() {
         return this.kid;
     }
@@ -60,6 +72,10 @@ public final class RsaTokenKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="n", required=true)
     private Output<String> n;
 
+    /**
+     * @return RSA public key modulus.
+     * 
+     */
     public Output<String> n() {
         return this.n;
     }
@@ -72,6 +88,11 @@ public final class RsaTokenKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return The discriminator for derived types.
+     * Expected value is &#39;#Microsoft.VideoAnalyzer.RsaTokenKey&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -104,55 +125,129 @@ public final class RsaTokenKeyArgs extends com.pulumi.resources.ResourceArgs {
             $ = new RsaTokenKeyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param alg RSA algorithm to be used: RS256, RS384 or RS512.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alg(Output<Either<String,AccessPolicyRsaAlgo>> alg) {
             $.alg = alg;
             return this;
         }
 
+        /**
+         * @param alg RSA algorithm to be used: RS256, RS384 or RS512.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alg(Either<String,AccessPolicyRsaAlgo> alg) {
             return alg(Output.of(alg));
         }
 
+        /**
+         * @param alg RSA algorithm to be used: RS256, RS384 or RS512.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alg(String alg) {
             return alg(Either.ofLeft(alg));
         }
 
+        /**
+         * @param alg RSA algorithm to be used: RS256, RS384 or RS512.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alg(AccessPolicyRsaAlgo alg) {
             return alg(Either.ofRight(alg));
         }
 
+        /**
+         * @param e RSA public key exponent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder e(Output<String> e) {
             $.e = e;
             return this;
         }
 
+        /**
+         * @param e RSA public key exponent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder e(String e) {
             return e(Output.of(e));
         }
 
+        /**
+         * @param kid JWT token key id. Validation keys are looked up based on the key id present on the JWT token header.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kid(Output<String> kid) {
             $.kid = kid;
             return this;
         }
 
+        /**
+         * @param kid JWT token key id. Validation keys are looked up based on the key id present on the JWT token header.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kid(String kid) {
             return kid(Output.of(kid));
         }
 
+        /**
+         * @param n RSA public key modulus.
+         * 
+         * @return builder
+         * 
+         */
         public Builder n(Output<String> n) {
             $.n = n;
             return this;
         }
 
+        /**
+         * @param n RSA public key modulus.
+         * 
+         * @return builder
+         * 
+         */
         public Builder n(String n) {
             return n(Output.of(n));
         }
 
+        /**
+         * @param type The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.VideoAnalyzer.RsaTokenKey&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.VideoAnalyzer.RsaTokenKey&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

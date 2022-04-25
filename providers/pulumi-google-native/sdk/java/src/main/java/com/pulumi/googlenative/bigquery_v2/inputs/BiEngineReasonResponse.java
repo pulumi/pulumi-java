@@ -19,6 +19,10 @@ public final class BiEngineReasonResponse extends com.pulumi.resources.InvokeArg
     @Import(name="code", required=true)
     private String code;
 
+    /**
+     * @return High-level BI Engine reason for partial or disabled acceleration.
+     * 
+     */
     public String code() {
         return this.code;
     }
@@ -30,6 +34,10 @@ public final class BiEngineReasonResponse extends com.pulumi.resources.InvokeArg
     @Import(name="message", required=true)
     private String message;
 
+    /**
+     * @return Free form human-readable reason for partial or disabled acceleration.
+     * 
+     */
     public String message() {
         return this.message;
     }
@@ -59,11 +67,23 @@ public final class BiEngineReasonResponse extends com.pulumi.resources.InvokeArg
             $ = new BiEngineReasonResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param code High-level BI Engine reason for partial or disabled acceleration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(String code) {
             $.code = code;
             return this;
         }
 
+        /**
+         * @param message Free form human-readable reason for partial or disabled acceleration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(String message) {
             $.message = message;
             return this;

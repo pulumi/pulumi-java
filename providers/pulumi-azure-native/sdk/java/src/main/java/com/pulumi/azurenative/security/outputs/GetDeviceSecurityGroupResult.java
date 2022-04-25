@@ -16,37 +16,37 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetDeviceSecurityGroupResult {
     /**
-     * The allow-list custom alert rules.
+     * @return The allow-list custom alert rules.
      * 
      */
     private final @Nullable List<AllowlistCustomAlertRuleResponse> allowlistRules;
     /**
-     * The deny-list custom alert rules.
+     * @return The deny-list custom alert rules.
      * 
      */
     private final @Nullable List<DenylistCustomAlertRuleResponse> denylistRules;
     /**
-     * Resource Id
+     * @return Resource Id
      * 
      */
     private final String id;
     /**
-     * Resource name
+     * @return Resource name
      * 
      */
     private final String name;
     /**
-     * The list of custom alert threshold rules.
+     * @return The list of custom alert threshold rules.
      * 
      */
     private final @Nullable List<ThresholdCustomAlertRuleResponse> thresholdRules;
     /**
-     * The list of custom alert time-window rules.
+     * @return The list of custom alert time-window rules.
      * 
      */
     private final @Nullable List<TimeWindowCustomAlertRuleResponse> timeWindowRules;
     /**
-     * Resource type
+     * @return Resource type
      * 
      */
     private final String type;
@@ -70,51 +70,51 @@ public final class GetDeviceSecurityGroupResult {
     }
 
     /**
-     * The allow-list custom alert rules.
+     * @return The allow-list custom alert rules.
      * 
-    */
+     */
     public List<AllowlistCustomAlertRuleResponse> allowlistRules() {
         return this.allowlistRules == null ? List.of() : this.allowlistRules;
     }
     /**
-     * The deny-list custom alert rules.
+     * @return The deny-list custom alert rules.
      * 
-    */
+     */
     public List<DenylistCustomAlertRuleResponse> denylistRules() {
         return this.denylistRules == null ? List.of() : this.denylistRules;
     }
     /**
-     * Resource Id
+     * @return Resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource name
+     * @return Resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The list of custom alert threshold rules.
+     * @return The list of custom alert threshold rules.
      * 
-    */
+     */
     public List<ThresholdCustomAlertRuleResponse> thresholdRules() {
         return this.thresholdRules == null ? List.of() : this.thresholdRules;
     }
     /**
-     * The list of custom alert time-window rules.
+     * @return The list of custom alert time-window rules.
      * 
-    */
+     */
     public List<TimeWindowCustomAlertRuleResponse> timeWindowRules() {
         return this.timeWindowRules == null ? List.of() : this.timeWindowRules;
     }
     /**
-     * Resource type
+     * @return Resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

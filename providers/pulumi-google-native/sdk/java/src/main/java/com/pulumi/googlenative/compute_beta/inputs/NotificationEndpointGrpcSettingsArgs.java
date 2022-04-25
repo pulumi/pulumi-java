@@ -28,6 +28,10 @@ public final class NotificationEndpointGrpcSettingsArgs extends com.pulumi.resou
     @Import(name="authority")
     private @Nullable Output<String> authority;
 
+    /**
+     * @return Optional. If specified, this field is used to set the authority header by the sender of notifications. See https://tools.ietf.org/html/rfc7540#section-8.1.2.3
+     * 
+     */
     public Optional<Output<String>> authority() {
         return Optional.ofNullable(this.authority);
     }
@@ -39,6 +43,10 @@ public final class NotificationEndpointGrpcSettingsArgs extends com.pulumi.resou
     @Import(name="endpoint")
     private @Nullable Output<String> endpoint;
 
+    /**
+     * @return Endpoint to which gRPC notifications are sent. This must be a valid gRPCLB DNS name.
+     * 
+     */
     public Optional<Output<String>> endpoint() {
         return Optional.ofNullable(this.endpoint);
     }
@@ -50,6 +58,10 @@ public final class NotificationEndpointGrpcSettingsArgs extends com.pulumi.resou
     @Import(name="payloadName")
     private @Nullable Output<String> payloadName;
 
+    /**
+     * @return Optional. If specified, this field is used to populate the &#34;name&#34; field in gRPC requests.
+     * 
+     */
     public Optional<Output<String>> payloadName() {
         return Optional.ofNullable(this.payloadName);
     }
@@ -61,6 +73,10 @@ public final class NotificationEndpointGrpcSettingsArgs extends com.pulumi.resou
     @Import(name="resendInterval")
     private @Nullable Output<DurationArgs> resendInterval;
 
+    /**
+     * @return Optional. This field is used to configure how often to send a full update of all non-healthy backends. If unspecified, full updates are not sent. If specified, must be in the range between 600 seconds to 3600 seconds. Nanos are disallowed.
+     * 
+     */
     public Optional<Output<DurationArgs>> resendInterval() {
         return Optional.ofNullable(this.resendInterval);
     }
@@ -72,6 +88,10 @@ public final class NotificationEndpointGrpcSettingsArgs extends com.pulumi.resou
     @Import(name="retryDurationSec")
     private @Nullable Output<Integer> retryDurationSec;
 
+    /**
+     * @return How much time (in seconds) is spent attempting notification retries until a successful response is received. Default is 30s. Limit is 20m (1200s). Must be a positive number.
+     * 
+     */
     public Optional<Output<Integer>> retryDurationSec() {
         return Optional.ofNullable(this.retryDurationSec);
     }
@@ -104,47 +124,107 @@ public final class NotificationEndpointGrpcSettingsArgs extends com.pulumi.resou
             $ = new NotificationEndpointGrpcSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authority Optional. If specified, this field is used to set the authority header by the sender of notifications. See https://tools.ietf.org/html/rfc7540#section-8.1.2.3
+         * 
+         * @return builder
+         * 
+         */
         public Builder authority(@Nullable Output<String> authority) {
             $.authority = authority;
             return this;
         }
 
+        /**
+         * @param authority Optional. If specified, this field is used to set the authority header by the sender of notifications. See https://tools.ietf.org/html/rfc7540#section-8.1.2.3
+         * 
+         * @return builder
+         * 
+         */
         public Builder authority(String authority) {
             return authority(Output.of(authority));
         }
 
+        /**
+         * @param endpoint Endpoint to which gRPC notifications are sent. This must be a valid gRPCLB DNS name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoint(@Nullable Output<String> endpoint) {
             $.endpoint = endpoint;
             return this;
         }
 
+        /**
+         * @param endpoint Endpoint to which gRPC notifications are sent. This must be a valid gRPCLB DNS name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoint(String endpoint) {
             return endpoint(Output.of(endpoint));
         }
 
+        /**
+         * @param payloadName Optional. If specified, this field is used to populate the &#34;name&#34; field in gRPC requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder payloadName(@Nullable Output<String> payloadName) {
             $.payloadName = payloadName;
             return this;
         }
 
+        /**
+         * @param payloadName Optional. If specified, this field is used to populate the &#34;name&#34; field in gRPC requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder payloadName(String payloadName) {
             return payloadName(Output.of(payloadName));
         }
 
+        /**
+         * @param resendInterval Optional. This field is used to configure how often to send a full update of all non-healthy backends. If unspecified, full updates are not sent. If specified, must be in the range between 600 seconds to 3600 seconds. Nanos are disallowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resendInterval(@Nullable Output<DurationArgs> resendInterval) {
             $.resendInterval = resendInterval;
             return this;
         }
 
+        /**
+         * @param resendInterval Optional. This field is used to configure how often to send a full update of all non-healthy backends. If unspecified, full updates are not sent. If specified, must be in the range between 600 seconds to 3600 seconds. Nanos are disallowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resendInterval(DurationArgs resendInterval) {
             return resendInterval(Output.of(resendInterval));
         }
 
+        /**
+         * @param retryDurationSec How much time (in seconds) is spent attempting notification retries until a successful response is received. Default is 30s. Limit is 20m (1200s). Must be a positive number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retryDurationSec(@Nullable Output<Integer> retryDurationSec) {
             $.retryDurationSec = retryDurationSec;
             return this;
         }
 
+        /**
+         * @param retryDurationSec How much time (in seconds) is spent attempting notification retries until a successful response is received. Default is 30s. Limit is 20m (1200s). Must be a positive number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retryDurationSec(Integer retryDurationSec) {
             return retryDurationSec(Output.of(retryDurationSec));
         }

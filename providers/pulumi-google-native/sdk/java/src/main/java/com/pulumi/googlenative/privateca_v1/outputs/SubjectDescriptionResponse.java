@@ -12,32 +12,32 @@ import java.util.Objects;
 @CustomType
 public final class SubjectDescriptionResponse {
     /**
-     * The serial number encoded in lowercase hexadecimal.
+     * @return The serial number encoded in lowercase hexadecimal.
      * 
      */
     private final String hexSerialNumber;
     /**
-     * For convenience, the actual lifetime of an issued certificate.
+     * @return For convenience, the actual lifetime of an issued certificate.
      * 
      */
     private final String lifetime;
     /**
-     * The time after which the certificate is expired. Per RFC 5280, the validity period for a certificate is the period of time from not_before_time through not_after_time, inclusive. Corresponds to &#39;not_before_time&#39; + &#39;lifetime&#39; - 1 second.
+     * @return The time after which the certificate is expired. Per RFC 5280, the validity period for a certificate is the period of time from not_before_time through not_after_time, inclusive. Corresponds to &#39;not_before_time&#39; + &#39;lifetime&#39; - 1 second.
      * 
      */
     private final String notAfterTime;
     /**
-     * The time at which the certificate becomes valid.
+     * @return The time at which the certificate becomes valid.
      * 
      */
     private final String notBeforeTime;
     /**
-     * Contains distinguished name fields such as the common name, location and / organization.
+     * @return Contains distinguished name fields such as the common name, location and / organization.
      * 
      */
     private final SubjectResponse subject;
     /**
-     * The subject alternative name fields.
+     * @return The subject alternative name fields.
      * 
      */
     private final SubjectAltNamesResponse subjectAltName;
@@ -59,44 +59,44 @@ public final class SubjectDescriptionResponse {
     }
 
     /**
-     * The serial number encoded in lowercase hexadecimal.
+     * @return The serial number encoded in lowercase hexadecimal.
      * 
-    */
+     */
     public String hexSerialNumber() {
         return this.hexSerialNumber;
     }
     /**
-     * For convenience, the actual lifetime of an issued certificate.
+     * @return For convenience, the actual lifetime of an issued certificate.
      * 
-    */
+     */
     public String lifetime() {
         return this.lifetime;
     }
     /**
-     * The time after which the certificate is expired. Per RFC 5280, the validity period for a certificate is the period of time from not_before_time through not_after_time, inclusive. Corresponds to &#39;not_before_time&#39; + &#39;lifetime&#39; - 1 second.
+     * @return The time after which the certificate is expired. Per RFC 5280, the validity period for a certificate is the period of time from not_before_time through not_after_time, inclusive. Corresponds to &#39;not_before_time&#39; + &#39;lifetime&#39; - 1 second.
      * 
-    */
+     */
     public String notAfterTime() {
         return this.notAfterTime;
     }
     /**
-     * The time at which the certificate becomes valid.
+     * @return The time at which the certificate becomes valid.
      * 
-    */
+     */
     public String notBeforeTime() {
         return this.notBeforeTime;
     }
     /**
-     * Contains distinguished name fields such as the common name, location and / organization.
+     * @return Contains distinguished name fields such as the common name, location and / organization.
      * 
-    */
+     */
     public SubjectResponse subject() {
         return this.subject;
     }
     /**
-     * The subject alternative name fields.
+     * @return The subject alternative name fields.
      * 
-    */
+     */
     public SubjectAltNamesResponse subjectAltName() {
         return this.subjectAltName;
     }

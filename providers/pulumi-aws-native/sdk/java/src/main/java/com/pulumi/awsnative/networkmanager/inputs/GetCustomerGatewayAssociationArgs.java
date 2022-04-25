@@ -19,6 +19,10 @@ public final class GetCustomerGatewayAssociationArgs extends com.pulumi.resource
     @Import(name="customerGatewayArn", required=true)
     private String customerGatewayArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the customer gateway.
+     * 
+     */
     public String customerGatewayArn() {
         return this.customerGatewayArn;
     }
@@ -30,6 +34,10 @@ public final class GetCustomerGatewayAssociationArgs extends com.pulumi.resource
     @Import(name="globalNetworkId", required=true)
     private String globalNetworkId;
 
+    /**
+     * @return The ID of the global network.
+     * 
+     */
     public String globalNetworkId() {
         return this.globalNetworkId;
     }
@@ -59,11 +67,23 @@ public final class GetCustomerGatewayAssociationArgs extends com.pulumi.resource
             $ = new GetCustomerGatewayAssociationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customerGatewayArn The Amazon Resource Name (ARN) of the customer gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customerGatewayArn(String customerGatewayArn) {
             $.customerGatewayArn = customerGatewayArn;
             return this;
         }
 
+        /**
+         * @param globalNetworkId The ID of the global network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder globalNetworkId(String globalNetworkId) {
             $.globalNetworkId = globalNetworkId;
             return this;

@@ -25,6 +25,10 @@ public final class IntegrationServiceEnvironmentAccessEndpointResponse extends c
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return The access endpoint type.
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -53,6 +57,12 @@ public final class IntegrationServiceEnvironmentAccessEndpointResponse extends c
             $ = new IntegrationServiceEnvironmentAccessEndpointResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type The access endpoint type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;

@@ -19,6 +19,10 @@ public final class GetMongoDBResourceMongoDBCollectionArgs extends com.pulumi.re
     @Import(name="accountName", required=true)
     private String accountName;
 
+    /**
+     * @return Cosmos DB database account name.
+     * 
+     */
     public String accountName() {
         return this.accountName;
     }
@@ -30,6 +34,10 @@ public final class GetMongoDBResourceMongoDBCollectionArgs extends com.pulumi.re
     @Import(name="collectionName", required=true)
     private String collectionName;
 
+    /**
+     * @return Cosmos DB collection name.
+     * 
+     */
     public String collectionName() {
         return this.collectionName;
     }
@@ -41,6 +49,10 @@ public final class GetMongoDBResourceMongoDBCollectionArgs extends com.pulumi.re
     @Import(name="databaseName", required=true)
     private String databaseName;
 
+    /**
+     * @return Cosmos DB database name.
+     * 
+     */
     public String databaseName() {
         return this.databaseName;
     }
@@ -52,6 +64,10 @@ public final class GetMongoDBResourceMongoDBCollectionArgs extends com.pulumi.re
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -83,21 +99,45 @@ public final class GetMongoDBResourceMongoDBCollectionArgs extends com.pulumi.re
             $ = new GetMongoDBResourceMongoDBCollectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName Cosmos DB database account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param collectionName Cosmos DB collection name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder collectionName(String collectionName) {
             $.collectionName = collectionName;
             return this;
         }
 
+        /**
+         * @param databaseName Cosmos DB database name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(String databaseName) {
             $.databaseName = databaseName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

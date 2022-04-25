@@ -30,6 +30,10 @@ public final class EncoderProcessorArgs extends com.pulumi.resources.ResourceArg
     @Import(name="inputs", required=true)
     private Output<List<NodeInputArgs>> inputs;
 
+    /**
+     * @return An array of upstream node references within the topology to be used as inputs for this node.
+     * 
+     */
     public Output<List<NodeInputArgs>> inputs() {
         return this.inputs;
     }
@@ -41,6 +45,10 @@ public final class EncoderProcessorArgs extends com.pulumi.resources.ResourceArg
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Node name. Must be unique within the topology.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -52,6 +60,10 @@ public final class EncoderProcessorArgs extends com.pulumi.resources.ResourceArg
     @Import(name="preset", required=true)
     private Output<Either<EncoderCustomPresetArgs,EncoderSystemPresetArgs>> preset;
 
+    /**
+     * @return The encoder preset, which defines the recipe or instructions on how the input content should be processed.
+     * 
+     */
     public Output<Either<EncoderCustomPresetArgs,EncoderSystemPresetArgs>> preset() {
         return this.preset;
     }
@@ -64,6 +76,11 @@ public final class EncoderProcessorArgs extends com.pulumi.resources.ResourceArg
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return The discriminator for derived types.
+     * Expected value is &#39;#Microsoft.VideoAnalyzer.EncoderProcessor&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -95,50 +112,118 @@ public final class EncoderProcessorArgs extends com.pulumi.resources.ResourceArg
             $ = new EncoderProcessorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param inputs An array of upstream node references within the topology to be used as inputs for this node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputs(Output<List<NodeInputArgs>> inputs) {
             $.inputs = inputs;
             return this;
         }
 
+        /**
+         * @param inputs An array of upstream node references within the topology to be used as inputs for this node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputs(List<NodeInputArgs> inputs) {
             return inputs(Output.of(inputs));
         }
 
+        /**
+         * @param inputs An array of upstream node references within the topology to be used as inputs for this node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputs(NodeInputArgs... inputs) {
             return inputs(List.of(inputs));
         }
 
+        /**
+         * @param name Node name. Must be unique within the topology.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Node name. Must be unique within the topology.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param preset The encoder preset, which defines the recipe or instructions on how the input content should be processed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preset(Output<Either<EncoderCustomPresetArgs,EncoderSystemPresetArgs>> preset) {
             $.preset = preset;
             return this;
         }
 
+        /**
+         * @param preset The encoder preset, which defines the recipe or instructions on how the input content should be processed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preset(Either<EncoderCustomPresetArgs,EncoderSystemPresetArgs> preset) {
             return preset(Output.of(preset));
         }
 
+        /**
+         * @param preset The encoder preset, which defines the recipe or instructions on how the input content should be processed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preset(EncoderCustomPresetArgs preset) {
             return preset(Either.ofLeft(preset));
         }
 
+        /**
+         * @param preset The encoder preset, which defines the recipe or instructions on how the input content should be processed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preset(EncoderSystemPresetArgs preset) {
             return preset(Either.ofRight(preset));
         }
 
+        /**
+         * @param type The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.VideoAnalyzer.EncoderProcessor&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.VideoAnalyzer.EncoderProcessor&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

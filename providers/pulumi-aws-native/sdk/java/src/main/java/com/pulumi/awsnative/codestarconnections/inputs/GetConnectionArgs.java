@@ -19,6 +19,10 @@ public final class GetConnectionArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="connectionArn", required=true)
     private String connectionArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the  connection. The ARN is used as the connection reference when the connection is shared between AWS services.
+     * 
+     */
     public String connectionArn() {
         return this.connectionArn;
     }
@@ -47,6 +51,12 @@ public final class GetConnectionArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetConnectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param connectionArn The Amazon Resource Name (ARN) of the  connection. The ARN is used as the connection reference when the connection is shared between AWS services.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionArn(String connectionArn) {
             $.connectionArn = connectionArn;
             return this;

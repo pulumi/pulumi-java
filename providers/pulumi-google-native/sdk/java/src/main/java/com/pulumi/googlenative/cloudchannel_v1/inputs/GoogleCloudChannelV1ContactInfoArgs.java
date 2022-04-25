@@ -26,6 +26,10 @@ public final class GoogleCloudChannelV1ContactInfoArgs extends com.pulumi.resour
     @Import(name="email")
     private @Nullable Output<String> email;
 
+    /**
+     * @return The customer account&#39;s contact email. Required for entitlements that create admin.google.com accounts, and serves as the customer&#39;s username for those accounts. Use this email to invite Team customers.
+     * 
+     */
     public Optional<Output<String>> email() {
         return Optional.ofNullable(this.email);
     }
@@ -37,6 +41,10 @@ public final class GoogleCloudChannelV1ContactInfoArgs extends com.pulumi.resour
     @Import(name="firstName")
     private @Nullable Output<String> firstName;
 
+    /**
+     * @return The customer account contact&#39;s first name. Optional for Team customers.
+     * 
+     */
     public Optional<Output<String>> firstName() {
         return Optional.ofNullable(this.firstName);
     }
@@ -48,6 +56,10 @@ public final class GoogleCloudChannelV1ContactInfoArgs extends com.pulumi.resour
     @Import(name="lastName")
     private @Nullable Output<String> lastName;
 
+    /**
+     * @return The customer account contact&#39;s last name. Optional for Team customers.
+     * 
+     */
     public Optional<Output<String>> lastName() {
         return Optional.ofNullable(this.lastName);
     }
@@ -59,6 +71,10 @@ public final class GoogleCloudChannelV1ContactInfoArgs extends com.pulumi.resour
     @Import(name="phone")
     private @Nullable Output<String> phone;
 
+    /**
+     * @return The customer account&#39;s contact phone number.
+     * 
+     */
     public Optional<Output<String>> phone() {
         return Optional.ofNullable(this.phone);
     }
@@ -70,6 +86,10 @@ public final class GoogleCloudChannelV1ContactInfoArgs extends com.pulumi.resour
     @Import(name="title")
     private @Nullable Output<String> title;
 
+    /**
+     * @return Optional. The customer account contact&#39;s job title.
+     * 
+     */
     public Optional<Output<String>> title() {
         return Optional.ofNullable(this.title);
     }
@@ -102,47 +122,107 @@ public final class GoogleCloudChannelV1ContactInfoArgs extends com.pulumi.resour
             $ = new GoogleCloudChannelV1ContactInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param email The customer account&#39;s contact email. Required for entitlements that create admin.google.com accounts, and serves as the customer&#39;s username for those accounts. Use this email to invite Team customers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder email(@Nullable Output<String> email) {
             $.email = email;
             return this;
         }
 
+        /**
+         * @param email The customer account&#39;s contact email. Required for entitlements that create admin.google.com accounts, and serves as the customer&#39;s username for those accounts. Use this email to invite Team customers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder email(String email) {
             return email(Output.of(email));
         }
 
+        /**
+         * @param firstName The customer account contact&#39;s first name. Optional for Team customers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder firstName(@Nullable Output<String> firstName) {
             $.firstName = firstName;
             return this;
         }
 
+        /**
+         * @param firstName The customer account contact&#39;s first name. Optional for Team customers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder firstName(String firstName) {
             return firstName(Output.of(firstName));
         }
 
+        /**
+         * @param lastName The customer account contact&#39;s last name. Optional for Team customers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastName(@Nullable Output<String> lastName) {
             $.lastName = lastName;
             return this;
         }
 
+        /**
+         * @param lastName The customer account contact&#39;s last name. Optional for Team customers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastName(String lastName) {
             return lastName(Output.of(lastName));
         }
 
+        /**
+         * @param phone The customer account&#39;s contact phone number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder phone(@Nullable Output<String> phone) {
             $.phone = phone;
             return this;
         }
 
+        /**
+         * @param phone The customer account&#39;s contact phone number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder phone(String phone) {
             return phone(Output.of(phone));
         }
 
+        /**
+         * @param title Optional. The customer account contact&#39;s job title.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(@Nullable Output<String> title) {
             $.title = title;
             return this;
         }
 
+        /**
+         * @param title Optional. The customer account contact&#39;s job title.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(String title) {
             return title(Output.of(title));
         }

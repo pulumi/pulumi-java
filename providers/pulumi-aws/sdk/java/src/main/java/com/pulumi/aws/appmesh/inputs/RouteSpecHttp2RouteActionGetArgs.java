@@ -22,6 +22,11 @@ public final class RouteSpecHttp2RouteActionGetArgs extends com.pulumi.resources
     @Import(name="weightedTargets", required=true)
     private Output<List<RouteSpecHttp2RouteActionWeightedTargetGetArgs>> weightedTargets;
 
+    /**
+     * @return The targets that traffic is routed to when a request matches the route.
+     * You can specify one or more targets and their relative weights with which to distribute traffic.
+     * 
+     */
     public Output<List<RouteSpecHttp2RouteActionWeightedTargetGetArgs>> weightedTargets() {
         return this.weightedTargets;
     }
@@ -50,15 +55,36 @@ public final class RouteSpecHttp2RouteActionGetArgs extends com.pulumi.resources
             $ = new RouteSpecHttp2RouteActionGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param weightedTargets The targets that traffic is routed to when a request matches the route.
+         * You can specify one or more targets and their relative weights with which to distribute traffic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weightedTargets(Output<List<RouteSpecHttp2RouteActionWeightedTargetGetArgs>> weightedTargets) {
             $.weightedTargets = weightedTargets;
             return this;
         }
 
+        /**
+         * @param weightedTargets The targets that traffic is routed to when a request matches the route.
+         * You can specify one or more targets and their relative weights with which to distribute traffic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weightedTargets(List<RouteSpecHttp2RouteActionWeightedTargetGetArgs> weightedTargets) {
             return weightedTargets(Output.of(weightedTargets));
         }
 
+        /**
+         * @param weightedTargets The targets that traffic is routed to when a request matches the route.
+         * You can specify one or more targets and their relative weights with which to distribute traffic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weightedTargets(RouteSpecHttp2RouteActionWeightedTargetGetArgs... weightedTargets) {
             return weightedTargets(List.of(weightedTargets));
         }

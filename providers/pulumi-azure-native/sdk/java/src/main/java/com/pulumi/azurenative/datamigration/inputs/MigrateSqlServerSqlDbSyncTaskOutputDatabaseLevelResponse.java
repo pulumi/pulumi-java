@@ -22,6 +22,10 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputDatabaseLevelResponse exte
     @Import(name="appliedChanges", required=true)
     private Double appliedChanges;
 
+    /**
+     * @return Number of applied changes
+     * 
+     */
     public Double appliedChanges() {
         return this.appliedChanges;
     }
@@ -33,6 +37,10 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputDatabaseLevelResponse exte
     @Import(name="cdcDeleteCounter", required=true)
     private Double cdcDeleteCounter;
 
+    /**
+     * @return Number of cdc deletes
+     * 
+     */
     public Double cdcDeleteCounter() {
         return this.cdcDeleteCounter;
     }
@@ -44,6 +52,10 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputDatabaseLevelResponse exte
     @Import(name="cdcInsertCounter", required=true)
     private Double cdcInsertCounter;
 
+    /**
+     * @return Number of cdc inserts
+     * 
+     */
     public Double cdcInsertCounter() {
         return this.cdcInsertCounter;
     }
@@ -55,6 +67,10 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputDatabaseLevelResponse exte
     @Import(name="cdcUpdateCounter", required=true)
     private Double cdcUpdateCounter;
 
+    /**
+     * @return Number of cdc updates
+     * 
+     */
     public Double cdcUpdateCounter() {
         return this.cdcUpdateCounter;
     }
@@ -66,6 +82,10 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputDatabaseLevelResponse exte
     @Import(name="databaseName", required=true)
     private String databaseName;
 
+    /**
+     * @return Name of the database
+     * 
+     */
     public String databaseName() {
         return this.databaseName;
     }
@@ -77,6 +97,10 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputDatabaseLevelResponse exte
     @Import(name="endedOn", required=true)
     private String endedOn;
 
+    /**
+     * @return Migration end time
+     * 
+     */
     public String endedOn() {
         return this.endedOn;
     }
@@ -88,6 +112,10 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputDatabaseLevelResponse exte
     @Import(name="fullLoadCompletedTables", required=true)
     private Double fullLoadCompletedTables;
 
+    /**
+     * @return Number of tables completed in full load
+     * 
+     */
     public Double fullLoadCompletedTables() {
         return this.fullLoadCompletedTables;
     }
@@ -99,6 +127,10 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputDatabaseLevelResponse exte
     @Import(name="fullLoadErroredTables", required=true)
     private Double fullLoadErroredTables;
 
+    /**
+     * @return Number of tables errored in full load
+     * 
+     */
     public Double fullLoadErroredTables() {
         return this.fullLoadErroredTables;
     }
@@ -110,6 +142,10 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputDatabaseLevelResponse exte
     @Import(name="fullLoadLoadingTables", required=true)
     private Double fullLoadLoadingTables;
 
+    /**
+     * @return Number of tables loading in full load
+     * 
+     */
     public Double fullLoadLoadingTables() {
         return this.fullLoadLoadingTables;
     }
@@ -121,6 +157,10 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputDatabaseLevelResponse exte
     @Import(name="fullLoadQueuedTables", required=true)
     private Double fullLoadQueuedTables;
 
+    /**
+     * @return Number of tables queued in full load
+     * 
+     */
     public Double fullLoadQueuedTables() {
         return this.fullLoadQueuedTables;
     }
@@ -132,6 +172,10 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputDatabaseLevelResponse exte
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Result identifier
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -143,6 +187,10 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputDatabaseLevelResponse exte
     @Import(name="incomingChanges", required=true)
     private Double incomingChanges;
 
+    /**
+     * @return Number of incoming changes
+     * 
+     */
     public Double incomingChanges() {
         return this.incomingChanges;
     }
@@ -154,6 +202,10 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputDatabaseLevelResponse exte
     @Import(name="initializationCompleted", required=true)
     private Boolean initializationCompleted;
 
+    /**
+     * @return Indicates if initial load (full load) has been completed
+     * 
+     */
     public Boolean initializationCompleted() {
         return this.initializationCompleted;
     }
@@ -165,6 +217,10 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputDatabaseLevelResponse exte
     @Import(name="latency", required=true)
     private Double latency;
 
+    /**
+     * @return CDC apply latency
+     * 
+     */
     public Double latency() {
         return this.latency;
     }
@@ -176,6 +232,10 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputDatabaseLevelResponse exte
     @Import(name="migrationState", required=true)
     private String migrationState;
 
+    /**
+     * @return Migration state that this database is in
+     * 
+     */
     public String migrationState() {
         return this.migrationState;
     }
@@ -188,6 +248,11 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputDatabaseLevelResponse exte
     @Import(name="resultType", required=true)
     private String resultType;
 
+    /**
+     * @return Result type
+     * Expected value is &#39;DatabaseLevelOutput&#39;.
+     * 
+     */
     public String resultType() {
         return this.resultType;
     }
@@ -199,6 +264,10 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputDatabaseLevelResponse exte
     @Import(name="startedOn", required=true)
     private String startedOn;
 
+    /**
+     * @return Migration start time
+     * 
+     */
     public String startedOn() {
         return this.startedOn;
     }
@@ -243,86 +312,189 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputDatabaseLevelResponse exte
             $ = new MigrateSqlServerSqlDbSyncTaskOutputDatabaseLevelResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param appliedChanges Number of applied changes
+         * 
+         * @return builder
+         * 
+         */
         public Builder appliedChanges(Double appliedChanges) {
             $.appliedChanges = appliedChanges;
             return this;
         }
 
+        /**
+         * @param cdcDeleteCounter Number of cdc deletes
+         * 
+         * @return builder
+         * 
+         */
         public Builder cdcDeleteCounter(Double cdcDeleteCounter) {
             $.cdcDeleteCounter = cdcDeleteCounter;
             return this;
         }
 
+        /**
+         * @param cdcInsertCounter Number of cdc inserts
+         * 
+         * @return builder
+         * 
+         */
         public Builder cdcInsertCounter(Double cdcInsertCounter) {
             $.cdcInsertCounter = cdcInsertCounter;
             return this;
         }
 
+        /**
+         * @param cdcUpdateCounter Number of cdc updates
+         * 
+         * @return builder
+         * 
+         */
         public Builder cdcUpdateCounter(Double cdcUpdateCounter) {
             $.cdcUpdateCounter = cdcUpdateCounter;
             return this;
         }
 
+        /**
+         * @param databaseName Name of the database
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(String databaseName) {
             $.databaseName = databaseName;
             return this;
         }
 
+        /**
+         * @param endedOn Migration end time
+         * 
+         * @return builder
+         * 
+         */
         public Builder endedOn(String endedOn) {
             $.endedOn = endedOn;
             return this;
         }
 
+        /**
+         * @param fullLoadCompletedTables Number of tables completed in full load
+         * 
+         * @return builder
+         * 
+         */
         public Builder fullLoadCompletedTables(Double fullLoadCompletedTables) {
             $.fullLoadCompletedTables = fullLoadCompletedTables;
             return this;
         }
 
+        /**
+         * @param fullLoadErroredTables Number of tables errored in full load
+         * 
+         * @return builder
+         * 
+         */
         public Builder fullLoadErroredTables(Double fullLoadErroredTables) {
             $.fullLoadErroredTables = fullLoadErroredTables;
             return this;
         }
 
+        /**
+         * @param fullLoadLoadingTables Number of tables loading in full load
+         * 
+         * @return builder
+         * 
+         */
         public Builder fullLoadLoadingTables(Double fullLoadLoadingTables) {
             $.fullLoadLoadingTables = fullLoadLoadingTables;
             return this;
         }
 
+        /**
+         * @param fullLoadQueuedTables Number of tables queued in full load
+         * 
+         * @return builder
+         * 
+         */
         public Builder fullLoadQueuedTables(Double fullLoadQueuedTables) {
             $.fullLoadQueuedTables = fullLoadQueuedTables;
             return this;
         }
 
+        /**
+         * @param id Result identifier
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param incomingChanges Number of incoming changes
+         * 
+         * @return builder
+         * 
+         */
         public Builder incomingChanges(Double incomingChanges) {
             $.incomingChanges = incomingChanges;
             return this;
         }
 
+        /**
+         * @param initializationCompleted Indicates if initial load (full load) has been completed
+         * 
+         * @return builder
+         * 
+         */
         public Builder initializationCompleted(Boolean initializationCompleted) {
             $.initializationCompleted = initializationCompleted;
             return this;
         }
 
+        /**
+         * @param latency CDC apply latency
+         * 
+         * @return builder
+         * 
+         */
         public Builder latency(Double latency) {
             $.latency = latency;
             return this;
         }
 
+        /**
+         * @param migrationState Migration state that this database is in
+         * 
+         * @return builder
+         * 
+         */
         public Builder migrationState(String migrationState) {
             $.migrationState = migrationState;
             return this;
         }
 
+        /**
+         * @param resultType Result type
+         * Expected value is &#39;DatabaseLevelOutput&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resultType(String resultType) {
             $.resultType = resultType;
             return this;
         }
 
+        /**
+         * @param startedOn Migration start time
+         * 
+         * @return builder
+         * 
+         */
         public Builder startedOn(String startedOn) {
             $.startedOn = startedOn;
             return this;

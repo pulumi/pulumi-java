@@ -26,6 +26,10 @@ public final class SparkRJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="archiveUris", required=true)
     private List<String> archiveUris;
 
+    /**
+     * @return Optional. HCFS URIs of archives to be extracted into the working directory of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.
+     * 
+     */
     public List<String> archiveUris() {
         return this.archiveUris;
     }
@@ -37,6 +41,10 @@ public final class SparkRJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="args", required=true)
     private List<String> args;
 
+    /**
+     * @return Optional. The arguments to pass to the driver. Do not include arguments, such as --conf, that can be set as job properties, since a collision may occur that causes an incorrect job submission.
+     * 
+     */
     public List<String> args() {
         return this.args;
     }
@@ -48,6 +56,10 @@ public final class SparkRJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="fileUris", required=true)
     private List<String> fileUris;
 
+    /**
+     * @return Optional. HCFS URIs of files to be placed in the working directory of each executor. Useful for naively parallel tasks.
+     * 
+     */
     public List<String> fileUris() {
         return this.fileUris;
     }
@@ -59,6 +71,10 @@ public final class SparkRJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="loggingConfig", required=true)
     private LoggingConfigResponse loggingConfig;
 
+    /**
+     * @return Optional. The runtime log config for job execution.
+     * 
+     */
     public LoggingConfigResponse loggingConfig() {
         return this.loggingConfig;
     }
@@ -70,6 +86,10 @@ public final class SparkRJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="mainRFileUri", required=true)
     private String mainRFileUri;
 
+    /**
+     * @return The HCFS URI of the main R file to use as the driver. Must be a .R file.
+     * 
+     */
     public String mainRFileUri() {
         return this.mainRFileUri;
     }
@@ -81,6 +101,10 @@ public final class SparkRJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="properties", required=true)
     private Map<String,String> properties;
 
+    /**
+     * @return Optional. A mapping of property names to values, used to configure SparkR. Properties that conflict with values set by the Dataproc API may be overwritten. Can include properties set in /etc/spark/conf/spark-defaults.conf and classes in user code.
+     * 
+     */
     public Map<String,String> properties() {
         return this.properties;
     }
@@ -114,43 +138,97 @@ public final class SparkRJobResponse extends com.pulumi.resources.InvokeArgs {
             $ = new SparkRJobResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param archiveUris Optional. HCFS URIs of archives to be extracted into the working directory of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.
+         * 
+         * @return builder
+         * 
+         */
         public Builder archiveUris(List<String> archiveUris) {
             $.archiveUris = archiveUris;
             return this;
         }
 
+        /**
+         * @param archiveUris Optional. HCFS URIs of archives to be extracted into the working directory of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.
+         * 
+         * @return builder
+         * 
+         */
         public Builder archiveUris(String... archiveUris) {
             return archiveUris(List.of(archiveUris));
         }
 
+        /**
+         * @param args Optional. The arguments to pass to the driver. Do not include arguments, such as --conf, that can be set as job properties, since a collision may occur that causes an incorrect job submission.
+         * 
+         * @return builder
+         * 
+         */
         public Builder args(List<String> args) {
             $.args = args;
             return this;
         }
 
+        /**
+         * @param args Optional. The arguments to pass to the driver. Do not include arguments, such as --conf, that can be set as job properties, since a collision may occur that causes an incorrect job submission.
+         * 
+         * @return builder
+         * 
+         */
         public Builder args(String... args) {
             return args(List.of(args));
         }
 
+        /**
+         * @param fileUris Optional. HCFS URIs of files to be placed in the working directory of each executor. Useful for naively parallel tasks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileUris(List<String> fileUris) {
             $.fileUris = fileUris;
             return this;
         }
 
+        /**
+         * @param fileUris Optional. HCFS URIs of files to be placed in the working directory of each executor. Useful for naively parallel tasks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileUris(String... fileUris) {
             return fileUris(List.of(fileUris));
         }
 
+        /**
+         * @param loggingConfig Optional. The runtime log config for job execution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loggingConfig(LoggingConfigResponse loggingConfig) {
             $.loggingConfig = loggingConfig;
             return this;
         }
 
+        /**
+         * @param mainRFileUri The HCFS URI of the main R file to use as the driver. Must be a .R file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mainRFileUri(String mainRFileUri) {
             $.mainRFileUri = mainRFileUri;
             return this;
         }
 
+        /**
+         * @param properties Optional. A mapping of property names to values, used to configure SparkR. Properties that conflict with values set by the Dataproc API may be overwritten. Can include properties set in /etc/spark/conf/spark-defaults.conf and classes in user code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Map<String,String> properties) {
             $.properties = properties;
             return this;

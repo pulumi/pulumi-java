@@ -33,6 +33,10 @@ public final class JobMetadataArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="bigTableDetails")
     private @Nullable Output<List<BigTableIODetailsArgs>> bigTableDetails;
 
+    /**
+     * @return Identification of a Cloud Bigtable source used in the Dataflow job.
+     * 
+     */
     public Optional<Output<List<BigTableIODetailsArgs>>> bigTableDetails() {
         return Optional.ofNullable(this.bigTableDetails);
     }
@@ -44,6 +48,10 @@ public final class JobMetadataArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="bigqueryDetails")
     private @Nullable Output<List<BigQueryIODetailsArgs>> bigqueryDetails;
 
+    /**
+     * @return Identification of a BigQuery source used in the Dataflow job.
+     * 
+     */
     public Optional<Output<List<BigQueryIODetailsArgs>>> bigqueryDetails() {
         return Optional.ofNullable(this.bigqueryDetails);
     }
@@ -55,6 +63,10 @@ public final class JobMetadataArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="datastoreDetails")
     private @Nullable Output<List<DatastoreIODetailsArgs>> datastoreDetails;
 
+    /**
+     * @return Identification of a Datastore source used in the Dataflow job.
+     * 
+     */
     public Optional<Output<List<DatastoreIODetailsArgs>>> datastoreDetails() {
         return Optional.ofNullable(this.datastoreDetails);
     }
@@ -66,6 +78,10 @@ public final class JobMetadataArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="fileDetails")
     private @Nullable Output<List<FileIODetailsArgs>> fileDetails;
 
+    /**
+     * @return Identification of a File source used in the Dataflow job.
+     * 
+     */
     public Optional<Output<List<FileIODetailsArgs>>> fileDetails() {
         return Optional.ofNullable(this.fileDetails);
     }
@@ -77,6 +93,10 @@ public final class JobMetadataArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="pubsubDetails")
     private @Nullable Output<List<PubSubIODetailsArgs>> pubsubDetails;
 
+    /**
+     * @return Identification of a Pub/Sub source used in the Dataflow job.
+     * 
+     */
     public Optional<Output<List<PubSubIODetailsArgs>>> pubsubDetails() {
         return Optional.ofNullable(this.pubsubDetails);
     }
@@ -88,6 +108,10 @@ public final class JobMetadataArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sdkVersion")
     private @Nullable Output<SdkVersionArgs> sdkVersion;
 
+    /**
+     * @return The SDK version used to run the job.
+     * 
+     */
     public Optional<Output<SdkVersionArgs>> sdkVersion() {
         return Optional.ofNullable(this.sdkVersion);
     }
@@ -99,6 +123,10 @@ public final class JobMetadataArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="spannerDetails")
     private @Nullable Output<List<SpannerIODetailsArgs>> spannerDetails;
 
+    /**
+     * @return Identification of a Spanner source used in the Dataflow job.
+     * 
+     */
     public Optional<Output<List<SpannerIODetailsArgs>>> spannerDetails() {
         return Optional.ofNullable(this.spannerDetails);
     }
@@ -133,89 +161,209 @@ public final class JobMetadataArgs extends com.pulumi.resources.ResourceArgs {
             $ = new JobMetadataArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bigTableDetails Identification of a Cloud Bigtable source used in the Dataflow job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bigTableDetails(@Nullable Output<List<BigTableIODetailsArgs>> bigTableDetails) {
             $.bigTableDetails = bigTableDetails;
             return this;
         }
 
+        /**
+         * @param bigTableDetails Identification of a Cloud Bigtable source used in the Dataflow job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bigTableDetails(List<BigTableIODetailsArgs> bigTableDetails) {
             return bigTableDetails(Output.of(bigTableDetails));
         }
 
+        /**
+         * @param bigTableDetails Identification of a Cloud Bigtable source used in the Dataflow job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bigTableDetails(BigTableIODetailsArgs... bigTableDetails) {
             return bigTableDetails(List.of(bigTableDetails));
         }
 
+        /**
+         * @param bigqueryDetails Identification of a BigQuery source used in the Dataflow job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bigqueryDetails(@Nullable Output<List<BigQueryIODetailsArgs>> bigqueryDetails) {
             $.bigqueryDetails = bigqueryDetails;
             return this;
         }
 
+        /**
+         * @param bigqueryDetails Identification of a BigQuery source used in the Dataflow job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bigqueryDetails(List<BigQueryIODetailsArgs> bigqueryDetails) {
             return bigqueryDetails(Output.of(bigqueryDetails));
         }
 
+        /**
+         * @param bigqueryDetails Identification of a BigQuery source used in the Dataflow job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bigqueryDetails(BigQueryIODetailsArgs... bigqueryDetails) {
             return bigqueryDetails(List.of(bigqueryDetails));
         }
 
+        /**
+         * @param datastoreDetails Identification of a Datastore source used in the Dataflow job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datastoreDetails(@Nullable Output<List<DatastoreIODetailsArgs>> datastoreDetails) {
             $.datastoreDetails = datastoreDetails;
             return this;
         }
 
+        /**
+         * @param datastoreDetails Identification of a Datastore source used in the Dataflow job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datastoreDetails(List<DatastoreIODetailsArgs> datastoreDetails) {
             return datastoreDetails(Output.of(datastoreDetails));
         }
 
+        /**
+         * @param datastoreDetails Identification of a Datastore source used in the Dataflow job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datastoreDetails(DatastoreIODetailsArgs... datastoreDetails) {
             return datastoreDetails(List.of(datastoreDetails));
         }
 
+        /**
+         * @param fileDetails Identification of a File source used in the Dataflow job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileDetails(@Nullable Output<List<FileIODetailsArgs>> fileDetails) {
             $.fileDetails = fileDetails;
             return this;
         }
 
+        /**
+         * @param fileDetails Identification of a File source used in the Dataflow job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileDetails(List<FileIODetailsArgs> fileDetails) {
             return fileDetails(Output.of(fileDetails));
         }
 
+        /**
+         * @param fileDetails Identification of a File source used in the Dataflow job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileDetails(FileIODetailsArgs... fileDetails) {
             return fileDetails(List.of(fileDetails));
         }
 
+        /**
+         * @param pubsubDetails Identification of a Pub/Sub source used in the Dataflow job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pubsubDetails(@Nullable Output<List<PubSubIODetailsArgs>> pubsubDetails) {
             $.pubsubDetails = pubsubDetails;
             return this;
         }
 
+        /**
+         * @param pubsubDetails Identification of a Pub/Sub source used in the Dataflow job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pubsubDetails(List<PubSubIODetailsArgs> pubsubDetails) {
             return pubsubDetails(Output.of(pubsubDetails));
         }
 
+        /**
+         * @param pubsubDetails Identification of a Pub/Sub source used in the Dataflow job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pubsubDetails(PubSubIODetailsArgs... pubsubDetails) {
             return pubsubDetails(List.of(pubsubDetails));
         }
 
+        /**
+         * @param sdkVersion The SDK version used to run the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sdkVersion(@Nullable Output<SdkVersionArgs> sdkVersion) {
             $.sdkVersion = sdkVersion;
             return this;
         }
 
+        /**
+         * @param sdkVersion The SDK version used to run the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sdkVersion(SdkVersionArgs sdkVersion) {
             return sdkVersion(Output.of(sdkVersion));
         }
 
+        /**
+         * @param spannerDetails Identification of a Spanner source used in the Dataflow job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder spannerDetails(@Nullable Output<List<SpannerIODetailsArgs>> spannerDetails) {
             $.spannerDetails = spannerDetails;
             return this;
         }
 
+        /**
+         * @param spannerDetails Identification of a Spanner source used in the Dataflow job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder spannerDetails(List<SpannerIODetailsArgs> spannerDetails) {
             return spannerDetails(Output.of(spannerDetails));
         }
 
+        /**
+         * @param spannerDetails Identification of a Spanner source used in the Dataflow job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder spannerDetails(SpannerIODetailsArgs... spannerDetails) {
             return spannerDetails(List.of(spannerDetails));
         }

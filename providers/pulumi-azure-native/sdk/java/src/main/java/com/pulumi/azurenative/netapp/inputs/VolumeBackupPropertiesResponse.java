@@ -26,6 +26,10 @@ public final class VolumeBackupPropertiesResponse extends com.pulumi.resources.I
     @Import(name="backupEnabled")
     private @Nullable Boolean backupEnabled;
 
+    /**
+     * @return Backup Enabled
+     * 
+     */
     public Optional<Boolean> backupEnabled() {
         return Optional.ofNullable(this.backupEnabled);
     }
@@ -37,6 +41,10 @@ public final class VolumeBackupPropertiesResponse extends com.pulumi.resources.I
     @Import(name="backupPolicyId")
     private @Nullable String backupPolicyId;
 
+    /**
+     * @return Backup Policy Resource ID
+     * 
+     */
     public Optional<String> backupPolicyId() {
         return Optional.ofNullable(this.backupPolicyId);
     }
@@ -48,6 +56,10 @@ public final class VolumeBackupPropertiesResponse extends com.pulumi.resources.I
     @Import(name="policyEnforced")
     private @Nullable Boolean policyEnforced;
 
+    /**
+     * @return Policy Enforced
+     * 
+     */
     public Optional<Boolean> policyEnforced() {
         return Optional.ofNullable(this.policyEnforced);
     }
@@ -59,6 +71,10 @@ public final class VolumeBackupPropertiesResponse extends com.pulumi.resources.I
     @Import(name="vaultId")
     private @Nullable String vaultId;
 
+    /**
+     * @return Vault Resource ID
+     * 
+     */
     public Optional<String> vaultId() {
         return Optional.ofNullable(this.vaultId);
     }
@@ -90,21 +106,45 @@ public final class VolumeBackupPropertiesResponse extends com.pulumi.resources.I
             $ = new VolumeBackupPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backupEnabled Backup Enabled
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupEnabled(@Nullable Boolean backupEnabled) {
             $.backupEnabled = backupEnabled;
             return this;
         }
 
+        /**
+         * @param backupPolicyId Backup Policy Resource ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupPolicyId(@Nullable String backupPolicyId) {
             $.backupPolicyId = backupPolicyId;
             return this;
         }
 
+        /**
+         * @param policyEnforced Policy Enforced
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyEnforced(@Nullable Boolean policyEnforced) {
             $.policyEnforced = policyEnforced;
             return this;
         }
 
+        /**
+         * @param vaultId Vault Resource ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder vaultId(@Nullable String vaultId) {
             $.vaultId = vaultId;
             return this;

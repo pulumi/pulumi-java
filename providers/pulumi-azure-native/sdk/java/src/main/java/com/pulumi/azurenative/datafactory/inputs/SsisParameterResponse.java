@@ -27,6 +27,10 @@ public final class SsisParameterResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="dataType")
     private @Nullable String dataType;
 
+    /**
+     * @return Parameter type.
+     * 
+     */
     public Optional<String> dataType() {
         return Optional.ofNullable(this.dataType);
     }
@@ -38,6 +42,10 @@ public final class SsisParameterResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="defaultValue")
     private @Nullable String defaultValue;
 
+    /**
+     * @return Default value of parameter.
+     * 
+     */
     public Optional<String> defaultValue() {
         return Optional.ofNullable(this.defaultValue);
     }
@@ -49,6 +57,10 @@ public final class SsisParameterResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Parameter description.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -60,6 +72,10 @@ public final class SsisParameterResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="designDefaultValue")
     private @Nullable String designDefaultValue;
 
+    /**
+     * @return Design default value of parameter.
+     * 
+     */
     public Optional<String> designDefaultValue() {
         return Optional.ofNullable(this.designDefaultValue);
     }
@@ -71,6 +87,10 @@ public final class SsisParameterResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="id")
     private @Nullable Double id;
 
+    /**
+     * @return Parameter id.
+     * 
+     */
     public Optional<Double> id() {
         return Optional.ofNullable(this.id);
     }
@@ -82,6 +102,10 @@ public final class SsisParameterResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Parameter name.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -93,6 +117,10 @@ public final class SsisParameterResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="required")
     private @Nullable Boolean required;
 
+    /**
+     * @return Whether parameter is required.
+     * 
+     */
     public Optional<Boolean> required() {
         return Optional.ofNullable(this.required);
     }
@@ -104,6 +132,10 @@ public final class SsisParameterResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="sensitive")
     private @Nullable Boolean sensitive;
 
+    /**
+     * @return Whether parameter is sensitive.
+     * 
+     */
     public Optional<Boolean> sensitive() {
         return Optional.ofNullable(this.sensitive);
     }
@@ -115,6 +147,10 @@ public final class SsisParameterResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="sensitiveDefaultValue")
     private @Nullable String sensitiveDefaultValue;
 
+    /**
+     * @return Default sensitive value of parameter.
+     * 
+     */
     public Optional<String> sensitiveDefaultValue() {
         return Optional.ofNullable(this.sensitiveDefaultValue);
     }
@@ -126,6 +162,10 @@ public final class SsisParameterResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="valueSet")
     private @Nullable Boolean valueSet;
 
+    /**
+     * @return Parameter value set.
+     * 
+     */
     public Optional<Boolean> valueSet() {
         return Optional.ofNullable(this.valueSet);
     }
@@ -137,6 +177,10 @@ public final class SsisParameterResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="valueType")
     private @Nullable String valueType;
 
+    /**
+     * @return Parameter value type.
+     * 
+     */
     public Optional<String> valueType() {
         return Optional.ofNullable(this.valueType);
     }
@@ -148,6 +192,10 @@ public final class SsisParameterResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="variable")
     private @Nullable String variable;
 
+    /**
+     * @return Parameter reference variable.
+     * 
+     */
     public Optional<String> variable() {
         return Optional.ofNullable(this.variable);
     }
@@ -187,61 +235,133 @@ public final class SsisParameterResponse extends com.pulumi.resources.InvokeArgs
             $ = new SsisParameterResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataType Parameter type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataType(@Nullable String dataType) {
             $.dataType = dataType;
             return this;
         }
 
+        /**
+         * @param defaultValue Default value of parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultValue(@Nullable String defaultValue) {
             $.defaultValue = defaultValue;
             return this;
         }
 
+        /**
+         * @param description Parameter description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param designDefaultValue Design default value of parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder designDefaultValue(@Nullable String designDefaultValue) {
             $.designDefaultValue = designDefaultValue;
             return this;
         }
 
+        /**
+         * @param id Parameter id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Double id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param name Parameter name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param required Whether parameter is required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder required(@Nullable Boolean required) {
             $.required = required;
             return this;
         }
 
+        /**
+         * @param sensitive Whether parameter is sensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sensitive(@Nullable Boolean sensitive) {
             $.sensitive = sensitive;
             return this;
         }
 
+        /**
+         * @param sensitiveDefaultValue Default sensitive value of parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sensitiveDefaultValue(@Nullable String sensitiveDefaultValue) {
             $.sensitiveDefaultValue = sensitiveDefaultValue;
             return this;
         }
 
+        /**
+         * @param valueSet Parameter value set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder valueSet(@Nullable Boolean valueSet) {
             $.valueSet = valueSet;
             return this;
         }
 
+        /**
+         * @param valueType Parameter value type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder valueType(@Nullable String valueType) {
             $.valueType = valueType;
             return this;
         }
 
+        /**
+         * @param variable Parameter reference variable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder variable(@Nullable String variable) {
             $.variable = variable;
             return this;

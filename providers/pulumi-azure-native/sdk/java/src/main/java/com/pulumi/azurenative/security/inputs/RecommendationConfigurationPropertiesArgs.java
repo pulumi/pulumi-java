@@ -28,6 +28,10 @@ public final class RecommendationConfigurationPropertiesArgs extends com.pulumi.
     @Import(name="recommendationType", required=true)
     private Output<Either<String,RecommendationType>> recommendationType;
 
+    /**
+     * @return The type of IoT Security recommendation.
+     * 
+     */
     public Output<Either<String,RecommendationType>> recommendationType() {
         return this.recommendationType;
     }
@@ -39,6 +43,10 @@ public final class RecommendationConfigurationPropertiesArgs extends com.pulumi.
     @Import(name="status", required=true)
     private Output<Either<String,RecommendationConfigStatus>> status;
 
+    /**
+     * @return Recommendation status. When the recommendation status is disabled recommendations are not generated.
+     * 
+     */
     public Output<Either<String,RecommendationConfigStatus>> status() {
         return this.status;
     }
@@ -68,36 +76,84 @@ public final class RecommendationConfigurationPropertiesArgs extends com.pulumi.
             $ = new RecommendationConfigurationPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param recommendationType The type of IoT Security recommendation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recommendationType(Output<Either<String,RecommendationType>> recommendationType) {
             $.recommendationType = recommendationType;
             return this;
         }
 
+        /**
+         * @param recommendationType The type of IoT Security recommendation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recommendationType(Either<String,RecommendationType> recommendationType) {
             return recommendationType(Output.of(recommendationType));
         }
 
+        /**
+         * @param recommendationType The type of IoT Security recommendation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recommendationType(String recommendationType) {
             return recommendationType(Either.ofLeft(recommendationType));
         }
 
+        /**
+         * @param recommendationType The type of IoT Security recommendation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recommendationType(RecommendationType recommendationType) {
             return recommendationType(Either.ofRight(recommendationType));
         }
 
+        /**
+         * @param status Recommendation status. When the recommendation status is disabled recommendations are not generated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(Output<Either<String,RecommendationConfigStatus>> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status Recommendation status. When the recommendation status is disabled recommendations are not generated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(Either<String,RecommendationConfigStatus> status) {
             return status(Output.of(status));
         }
 
+        /**
+         * @param status Recommendation status. When the recommendation status is disabled recommendations are not generated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             return status(Either.ofLeft(status));
         }
 
+        /**
+         * @param status Recommendation status. When the recommendation status is disabled recommendations are not generated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(RecommendationConfigStatus status) {
             return status(Either.ofRight(status));
         }

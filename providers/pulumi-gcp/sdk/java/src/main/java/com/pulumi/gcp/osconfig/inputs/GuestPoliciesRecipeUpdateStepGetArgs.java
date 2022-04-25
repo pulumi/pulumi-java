@@ -29,6 +29,11 @@ public final class GuestPoliciesRecipeUpdateStepGetArgs extends com.pulumi.resou
     @Import(name="archiveExtraction")
     private @Nullable Output<GuestPoliciesRecipeUpdateStepArchiveExtractionGetArgs> archiveExtraction;
 
+    /**
+     * @return Extracts an archive into the specified directory.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<GuestPoliciesRecipeUpdateStepArchiveExtractionGetArgs>> archiveExtraction() {
         return Optional.ofNullable(this.archiveExtraction);
     }
@@ -41,6 +46,11 @@ public final class GuestPoliciesRecipeUpdateStepGetArgs extends com.pulumi.resou
     @Import(name="dpkgInstallation")
     private @Nullable Output<GuestPoliciesRecipeUpdateStepDpkgInstallationGetArgs> dpkgInstallation;
 
+    /**
+     * @return Installs a deb file via dpkg.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<GuestPoliciesRecipeUpdateStepDpkgInstallationGetArgs>> dpkgInstallation() {
         return Optional.ofNullable(this.dpkgInstallation);
     }
@@ -53,6 +63,11 @@ public final class GuestPoliciesRecipeUpdateStepGetArgs extends com.pulumi.resou
     @Import(name="fileCopy")
     private @Nullable Output<GuestPoliciesRecipeUpdateStepFileCopyGetArgs> fileCopy;
 
+    /**
+     * @return Copies a file onto the instance.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<GuestPoliciesRecipeUpdateStepFileCopyGetArgs>> fileCopy() {
         return Optional.ofNullable(this.fileCopy);
     }
@@ -65,6 +80,11 @@ public final class GuestPoliciesRecipeUpdateStepGetArgs extends com.pulumi.resou
     @Import(name="fileExec")
     private @Nullable Output<GuestPoliciesRecipeUpdateStepFileExecGetArgs> fileExec;
 
+    /**
+     * @return Executes an artifact or local file.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<GuestPoliciesRecipeUpdateStepFileExecGetArgs>> fileExec() {
         return Optional.ofNullable(this.fileExec);
     }
@@ -77,6 +97,11 @@ public final class GuestPoliciesRecipeUpdateStepGetArgs extends com.pulumi.resou
     @Import(name="msiInstallation")
     private @Nullable Output<GuestPoliciesRecipeUpdateStepMsiInstallationGetArgs> msiInstallation;
 
+    /**
+     * @return Installs an MSI file.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<GuestPoliciesRecipeUpdateStepMsiInstallationGetArgs>> msiInstallation() {
         return Optional.ofNullable(this.msiInstallation);
     }
@@ -89,6 +114,11 @@ public final class GuestPoliciesRecipeUpdateStepGetArgs extends com.pulumi.resou
     @Import(name="rpmInstallation")
     private @Nullable Output<GuestPoliciesRecipeUpdateStepRpmInstallationGetArgs> rpmInstallation;
 
+    /**
+     * @return Installs an rpm file via the rpm utility.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<GuestPoliciesRecipeUpdateStepRpmInstallationGetArgs>> rpmInstallation() {
         return Optional.ofNullable(this.rpmInstallation);
     }
@@ -101,6 +131,11 @@ public final class GuestPoliciesRecipeUpdateStepGetArgs extends com.pulumi.resou
     @Import(name="scriptRun")
     private @Nullable Output<GuestPoliciesRecipeUpdateStepScriptRunGetArgs> scriptRun;
 
+    /**
+     * @return Runs commands in a shell.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<GuestPoliciesRecipeUpdateStepScriptRunGetArgs>> scriptRun() {
         return Optional.ofNullable(this.scriptRun);
     }
@@ -135,65 +170,163 @@ public final class GuestPoliciesRecipeUpdateStepGetArgs extends com.pulumi.resou
             $ = new GuestPoliciesRecipeUpdateStepGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param archiveExtraction Extracts an archive into the specified directory.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder archiveExtraction(@Nullable Output<GuestPoliciesRecipeUpdateStepArchiveExtractionGetArgs> archiveExtraction) {
             $.archiveExtraction = archiveExtraction;
             return this;
         }
 
+        /**
+         * @param archiveExtraction Extracts an archive into the specified directory.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder archiveExtraction(GuestPoliciesRecipeUpdateStepArchiveExtractionGetArgs archiveExtraction) {
             return archiveExtraction(Output.of(archiveExtraction));
         }
 
+        /**
+         * @param dpkgInstallation Installs a deb file via dpkg.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dpkgInstallation(@Nullable Output<GuestPoliciesRecipeUpdateStepDpkgInstallationGetArgs> dpkgInstallation) {
             $.dpkgInstallation = dpkgInstallation;
             return this;
         }
 
+        /**
+         * @param dpkgInstallation Installs a deb file via dpkg.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dpkgInstallation(GuestPoliciesRecipeUpdateStepDpkgInstallationGetArgs dpkgInstallation) {
             return dpkgInstallation(Output.of(dpkgInstallation));
         }
 
+        /**
+         * @param fileCopy Copies a file onto the instance.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileCopy(@Nullable Output<GuestPoliciesRecipeUpdateStepFileCopyGetArgs> fileCopy) {
             $.fileCopy = fileCopy;
             return this;
         }
 
+        /**
+         * @param fileCopy Copies a file onto the instance.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileCopy(GuestPoliciesRecipeUpdateStepFileCopyGetArgs fileCopy) {
             return fileCopy(Output.of(fileCopy));
         }
 
+        /**
+         * @param fileExec Executes an artifact or local file.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileExec(@Nullable Output<GuestPoliciesRecipeUpdateStepFileExecGetArgs> fileExec) {
             $.fileExec = fileExec;
             return this;
         }
 
+        /**
+         * @param fileExec Executes an artifact or local file.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileExec(GuestPoliciesRecipeUpdateStepFileExecGetArgs fileExec) {
             return fileExec(Output.of(fileExec));
         }
 
+        /**
+         * @param msiInstallation Installs an MSI file.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder msiInstallation(@Nullable Output<GuestPoliciesRecipeUpdateStepMsiInstallationGetArgs> msiInstallation) {
             $.msiInstallation = msiInstallation;
             return this;
         }
 
+        /**
+         * @param msiInstallation Installs an MSI file.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder msiInstallation(GuestPoliciesRecipeUpdateStepMsiInstallationGetArgs msiInstallation) {
             return msiInstallation(Output.of(msiInstallation));
         }
 
+        /**
+         * @param rpmInstallation Installs an rpm file via the rpm utility.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rpmInstallation(@Nullable Output<GuestPoliciesRecipeUpdateStepRpmInstallationGetArgs> rpmInstallation) {
             $.rpmInstallation = rpmInstallation;
             return this;
         }
 
+        /**
+         * @param rpmInstallation Installs an rpm file via the rpm utility.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rpmInstallation(GuestPoliciesRecipeUpdateStepRpmInstallationGetArgs rpmInstallation) {
             return rpmInstallation(Output.of(rpmInstallation));
         }
 
+        /**
+         * @param scriptRun Runs commands in a shell.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scriptRun(@Nullable Output<GuestPoliciesRecipeUpdateStepScriptRunGetArgs> scriptRun) {
             $.scriptRun = scriptRun;
             return this;
         }
 
+        /**
+         * @param scriptRun Runs commands in a shell.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scriptRun(GuestPoliciesRecipeUpdateStepScriptRunGetArgs scriptRun) {
             return scriptRun(Output.of(scriptRun));
         }

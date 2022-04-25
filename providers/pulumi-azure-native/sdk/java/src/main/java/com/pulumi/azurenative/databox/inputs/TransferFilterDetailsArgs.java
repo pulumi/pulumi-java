@@ -33,6 +33,10 @@ public final class TransferFilterDetailsArgs extends com.pulumi.resources.Resour
     @Import(name="azureFileFilterDetails")
     private @Nullable Output<AzureFileFilterDetailsArgs> azureFileFilterDetails;
 
+    /**
+     * @return Filter details to transfer Azure files.
+     * 
+     */
     public Optional<Output<AzureFileFilterDetailsArgs>> azureFileFilterDetails() {
         return Optional.ofNullable(this.azureFileFilterDetails);
     }
@@ -44,6 +48,10 @@ public final class TransferFilterDetailsArgs extends com.pulumi.resources.Resour
     @Import(name="blobFilterDetails")
     private @Nullable Output<BlobFilterDetailsArgs> blobFilterDetails;
 
+    /**
+     * @return Filter details to transfer blobs.
+     * 
+     */
     public Optional<Output<BlobFilterDetailsArgs>> blobFilterDetails() {
         return Optional.ofNullable(this.blobFilterDetails);
     }
@@ -55,6 +63,10 @@ public final class TransferFilterDetailsArgs extends com.pulumi.resources.Resour
     @Import(name="dataAccountType", required=true)
     private Output<Either<String,DataAccountType>> dataAccountType;
 
+    /**
+     * @return Type of the account of data.
+     * 
+     */
     public Output<Either<String,DataAccountType>> dataAccountType() {
         return this.dataAccountType;
     }
@@ -66,6 +78,10 @@ public final class TransferFilterDetailsArgs extends com.pulumi.resources.Resour
     @Import(name="filterFileDetails")
     private @Nullable Output<List<FilterFileDetailsArgs>> filterFileDetails;
 
+    /**
+     * @return Details of the filter files to be used for data transfer.
+     * 
+     */
     public Optional<Output<List<FilterFileDetailsArgs>>> filterFileDetails() {
         return Optional.ofNullable(this.filterFileDetails);
     }
@@ -97,50 +113,116 @@ public final class TransferFilterDetailsArgs extends com.pulumi.resources.Resour
             $ = new TransferFilterDetailsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param azureFileFilterDetails Filter details to transfer Azure files.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureFileFilterDetails(@Nullable Output<AzureFileFilterDetailsArgs> azureFileFilterDetails) {
             $.azureFileFilterDetails = azureFileFilterDetails;
             return this;
         }
 
+        /**
+         * @param azureFileFilterDetails Filter details to transfer Azure files.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureFileFilterDetails(AzureFileFilterDetailsArgs azureFileFilterDetails) {
             return azureFileFilterDetails(Output.of(azureFileFilterDetails));
         }
 
+        /**
+         * @param blobFilterDetails Filter details to transfer blobs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blobFilterDetails(@Nullable Output<BlobFilterDetailsArgs> blobFilterDetails) {
             $.blobFilterDetails = blobFilterDetails;
             return this;
         }
 
+        /**
+         * @param blobFilterDetails Filter details to transfer blobs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blobFilterDetails(BlobFilterDetailsArgs blobFilterDetails) {
             return blobFilterDetails(Output.of(blobFilterDetails));
         }
 
+        /**
+         * @param dataAccountType Type of the account of data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataAccountType(Output<Either<String,DataAccountType>> dataAccountType) {
             $.dataAccountType = dataAccountType;
             return this;
         }
 
+        /**
+         * @param dataAccountType Type of the account of data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataAccountType(Either<String,DataAccountType> dataAccountType) {
             return dataAccountType(Output.of(dataAccountType));
         }
 
+        /**
+         * @param dataAccountType Type of the account of data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataAccountType(String dataAccountType) {
             return dataAccountType(Either.ofLeft(dataAccountType));
         }
 
+        /**
+         * @param dataAccountType Type of the account of data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataAccountType(DataAccountType dataAccountType) {
             return dataAccountType(Either.ofRight(dataAccountType));
         }
 
+        /**
+         * @param filterFileDetails Details of the filter files to be used for data transfer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filterFileDetails(@Nullable Output<List<FilterFileDetailsArgs>> filterFileDetails) {
             $.filterFileDetails = filterFileDetails;
             return this;
         }
 
+        /**
+         * @param filterFileDetails Details of the filter files to be used for data transfer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filterFileDetails(List<FilterFileDetailsArgs> filterFileDetails) {
             return filterFileDetails(Output.of(filterFileDetails));
         }
 
+        /**
+         * @param filterFileDetails Details of the filter files to be used for data transfer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filterFileDetails(FilterFileDetailsArgs... filterFileDetails) {
             return filterFileDetails(List.of(filterFileDetails));
         }

@@ -30,6 +30,10 @@ public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cloudBuildOptions")
     private @Nullable Output<CloudBuildOptionsArgs> cloudBuildOptions;
 
+    /**
+     * @return Options for any Google Cloud Build builds created as a part of this deployment.These options will only be used if a new build is created, such as when deploying to the App Engine flexible environment using files or zip.
+     * 
+     */
     public Optional<Output<CloudBuildOptionsArgs>> cloudBuildOptions() {
         return Optional.ofNullable(this.cloudBuildOptions);
     }
@@ -41,6 +45,10 @@ public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="container")
     private @Nullable Output<ContainerInfoArgs> container;
 
+    /**
+     * @return The Docker image for the container that runs the version. Only applicable for instances running in the App Engine flexible environment.
+     * 
+     */
     public Optional<Output<ContainerInfoArgs>> container() {
         return Optional.ofNullable(this.container);
     }
@@ -52,6 +60,10 @@ public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="files")
     private @Nullable Output<Map<String,String>> files;
 
+    /**
+     * @return Manifest of the files stored in Google Cloud Storage that are included as part of this version. All files must be readable using the credentials supplied with this call.
+     * 
+     */
     public Optional<Output<Map<String,String>>> files() {
         return Optional.ofNullable(this.files);
     }
@@ -63,6 +75,10 @@ public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="zip")
     private @Nullable Output<ZipInfoArgs> zip;
 
+    /**
+     * @return The zip file for this deployment, if this is a zip deployment.
+     * 
+     */
     public Optional<Output<ZipInfoArgs>> zip() {
         return Optional.ofNullable(this.zip);
     }
@@ -94,38 +110,86 @@ public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DeploymentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cloudBuildOptions Options for any Google Cloud Build builds created as a part of this deployment.These options will only be used if a new build is created, such as when deploying to the App Engine flexible environment using files or zip.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudBuildOptions(@Nullable Output<CloudBuildOptionsArgs> cloudBuildOptions) {
             $.cloudBuildOptions = cloudBuildOptions;
             return this;
         }
 
+        /**
+         * @param cloudBuildOptions Options for any Google Cloud Build builds created as a part of this deployment.These options will only be used if a new build is created, such as when deploying to the App Engine flexible environment using files or zip.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudBuildOptions(CloudBuildOptionsArgs cloudBuildOptions) {
             return cloudBuildOptions(Output.of(cloudBuildOptions));
         }
 
+        /**
+         * @param container The Docker image for the container that runs the version. Only applicable for instances running in the App Engine flexible environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder container(@Nullable Output<ContainerInfoArgs> container) {
             $.container = container;
             return this;
         }
 
+        /**
+         * @param container The Docker image for the container that runs the version. Only applicable for instances running in the App Engine flexible environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder container(ContainerInfoArgs container) {
             return container(Output.of(container));
         }
 
+        /**
+         * @param files Manifest of the files stored in Google Cloud Storage that are included as part of this version. All files must be readable using the credentials supplied with this call.
+         * 
+         * @return builder
+         * 
+         */
         public Builder files(@Nullable Output<Map<String,String>> files) {
             $.files = files;
             return this;
         }
 
+        /**
+         * @param files Manifest of the files stored in Google Cloud Storage that are included as part of this version. All files must be readable using the credentials supplied with this call.
+         * 
+         * @return builder
+         * 
+         */
         public Builder files(Map<String,String> files) {
             return files(Output.of(files));
         }
 
+        /**
+         * @param zip The zip file for this deployment, if this is a zip deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zip(@Nullable Output<ZipInfoArgs> zip) {
             $.zip = zip;
             return this;
         }
 
+        /**
+         * @param zip The zip file for this deployment, if this is a zip deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zip(ZipInfoArgs zip) {
             return zip(Output.of(zip));
         }

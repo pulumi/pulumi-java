@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class PreventionJobTriggerInspectJobAction {
     /**
-     * Schedule for triggered jobs
+     * @return Schedule for triggered jobs
      * Structure is documented below.
      * 
      */
@@ -22,10 +22,10 @@ public final class PreventionJobTriggerInspectJobAction {
     }
 
     /**
-     * Schedule for triggered jobs
+     * @return Schedule for triggered jobs
      * Structure is documented below.
      * 
-    */
+     */
     public PreventionJobTriggerInspectJobActionSaveFindings saveFindings() {
         return this.saveFindings;
     }

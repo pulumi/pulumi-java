@@ -24,6 +24,10 @@ public final class VirtualNodeSpecListenerTlsCertificateArgs extends com.pulumi.
     @Import(name="acm")
     private @Nullable Output<VirtualNodeSpecListenerTlsCertificateAcmArgs> acm;
 
+    /**
+     * @return An AWS Certificate Manager (ACM) certificate.
+     * 
+     */
     public Optional<Output<VirtualNodeSpecListenerTlsCertificateAcmArgs>> acm() {
         return Optional.ofNullable(this.acm);
     }
@@ -35,6 +39,10 @@ public final class VirtualNodeSpecListenerTlsCertificateArgs extends com.pulumi.
     @Import(name="file")
     private @Nullable Output<VirtualNodeSpecListenerTlsCertificateFileArgs> file;
 
+    /**
+     * @return A local file certificate.
+     * 
+     */
     public Optional<Output<VirtualNodeSpecListenerTlsCertificateFileArgs>> file() {
         return Optional.ofNullable(this.file);
     }
@@ -46,6 +54,10 @@ public final class VirtualNodeSpecListenerTlsCertificateArgs extends com.pulumi.
     @Import(name="sds")
     private @Nullable Output<VirtualNodeSpecListenerTlsCertificateSdsArgs> sds;
 
+    /**
+     * @return A [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
+     * 
+     */
     public Optional<Output<VirtualNodeSpecListenerTlsCertificateSdsArgs>> sds() {
         return Optional.ofNullable(this.sds);
     }
@@ -76,29 +88,65 @@ public final class VirtualNodeSpecListenerTlsCertificateArgs extends com.pulumi.
             $ = new VirtualNodeSpecListenerTlsCertificateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param acm An AWS Certificate Manager (ACM) certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acm(@Nullable Output<VirtualNodeSpecListenerTlsCertificateAcmArgs> acm) {
             $.acm = acm;
             return this;
         }
 
+        /**
+         * @param acm An AWS Certificate Manager (ACM) certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acm(VirtualNodeSpecListenerTlsCertificateAcmArgs acm) {
             return acm(Output.of(acm));
         }
 
+        /**
+         * @param file A local file certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder file(@Nullable Output<VirtualNodeSpecListenerTlsCertificateFileArgs> file) {
             $.file = file;
             return this;
         }
 
+        /**
+         * @param file A local file certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder file(VirtualNodeSpecListenerTlsCertificateFileArgs file) {
             return file(Output.of(file));
         }
 
+        /**
+         * @param sds A [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sds(@Nullable Output<VirtualNodeSpecListenerTlsCertificateSdsArgs> sds) {
             $.sds = sds;
             return this;
         }
 
+        /**
+         * @param sds A [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sds(VirtualNodeSpecListenerTlsCertificateSdsArgs sds) {
             return sds(Output.of(sds));
         }

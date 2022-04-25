@@ -30,6 +30,10 @@ public final class JsonReadSettingsResponse extends com.pulumi.resources.InvokeA
     @Import(name="compressionProperties")
     private @Nullable Object compressionProperties;
 
+    /**
+     * @return Compression settings.
+     * 
+     */
     public Optional<Object> compressionProperties() {
         return Optional.ofNullable(this.compressionProperties);
     }
@@ -42,6 +46,11 @@ public final class JsonReadSettingsResponse extends com.pulumi.resources.InvokeA
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The read setting type.
+     * Expected value is &#39;JsonReadSettings&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -71,11 +80,24 @@ public final class JsonReadSettingsResponse extends com.pulumi.resources.InvokeA
             $ = new JsonReadSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param compressionProperties Compression settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder compressionProperties(@Nullable Object compressionProperties) {
             $.compressionProperties = compressionProperties;
             return this;
         }
 
+        /**
+         * @param type The read setting type.
+         * Expected value is &#39;JsonReadSettings&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

@@ -29,6 +29,10 @@ public final class ClusterHealthPolicyResponse extends com.pulumi.resources.Invo
     @Import(name="applicationHealthPolicies")
     private @Nullable Map<String,ApplicationHealthPolicyResponse> applicationHealthPolicies;
 
+    /**
+     * @return Defines the application health policy map used to evaluate the health of an application or one of its children entities.
+     * 
+     */
     public Optional<Map<String,ApplicationHealthPolicyResponse>> applicationHealthPolicies() {
         return Optional.ofNullable(this.applicationHealthPolicies);
     }
@@ -45,6 +49,15 @@ public final class ClusterHealthPolicyResponse extends com.pulumi.resources.Invo
     @Import(name="maxPercentUnhealthyApplications")
     private @Nullable Integer maxPercentUnhealthyApplications;
 
+    /**
+     * @return The maximum allowed percentage of unhealthy applications before reporting an error. For example, to allow 10% of applications to be unhealthy, this value would be 10.
+     * 
+     * The percentage represents the maximum tolerated percentage of applications that can be unhealthy before the cluster is considered in error.
+     * If the percentage is respected but there is at least one unhealthy application, the health is evaluated as Warning.
+     * This is calculated by dividing the number of unhealthy applications over the total number of application instances in the cluster, excluding applications of application types that are included in the ApplicationTypeHealthPolicyMap.
+     * The computation rounds up to tolerate one failure on small numbers of applications. Default percentage is zero.
+     * 
+     */
     public Optional<Integer> maxPercentUnhealthyApplications() {
         return Optional.ofNullable(this.maxPercentUnhealthyApplications);
     }
@@ -63,6 +76,17 @@ public final class ClusterHealthPolicyResponse extends com.pulumi.resources.Invo
     @Import(name="maxPercentUnhealthyNodes")
     private @Nullable Integer maxPercentUnhealthyNodes;
 
+    /**
+     * @return The maximum allowed percentage of unhealthy nodes before reporting an error. For example, to allow 10% of nodes to be unhealthy, this value would be 10.
+     * 
+     * The percentage represents the maximum tolerated percentage of nodes that can be unhealthy before the cluster is considered in error.
+     * If the percentage is respected but there is at least one unhealthy node, the health is evaluated as Warning.
+     * The percentage is calculated by dividing the number of unhealthy nodes over the total number of nodes in the cluster.
+     * The computation rounds up to tolerate one failure on small numbers of nodes. Default percentage is zero.
+     * 
+     * In large clusters, some nodes will always be down or out for repairs, so this percentage should be configured to tolerate that.
+     * 
+     */
     public Optional<Integer> maxPercentUnhealthyNodes() {
         return Optional.ofNullable(this.maxPercentUnhealthyNodes);
     }
@@ -93,16 +117,46 @@ public final class ClusterHealthPolicyResponse extends com.pulumi.resources.Invo
             $ = new ClusterHealthPolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param applicationHealthPolicies Defines the application health policy map used to evaluate the health of an application or one of its children entities.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationHealthPolicies(@Nullable Map<String,ApplicationHealthPolicyResponse> applicationHealthPolicies) {
             $.applicationHealthPolicies = applicationHealthPolicies;
             return this;
         }
 
+        /**
+         * @param maxPercentUnhealthyApplications The maximum allowed percentage of unhealthy applications before reporting an error. For example, to allow 10% of applications to be unhealthy, this value would be 10.
+         * 
+         * The percentage represents the maximum tolerated percentage of applications that can be unhealthy before the cluster is considered in error.
+         * If the percentage is respected but there is at least one unhealthy application, the health is evaluated as Warning.
+         * This is calculated by dividing the number of unhealthy applications over the total number of application instances in the cluster, excluding applications of application types that are included in the ApplicationTypeHealthPolicyMap.
+         * The computation rounds up to tolerate one failure on small numbers of applications. Default percentage is zero.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxPercentUnhealthyApplications(@Nullable Integer maxPercentUnhealthyApplications) {
             $.maxPercentUnhealthyApplications = maxPercentUnhealthyApplications;
             return this;
         }
 
+        /**
+         * @param maxPercentUnhealthyNodes The maximum allowed percentage of unhealthy nodes before reporting an error. For example, to allow 10% of nodes to be unhealthy, this value would be 10.
+         * 
+         * The percentage represents the maximum tolerated percentage of nodes that can be unhealthy before the cluster is considered in error.
+         * If the percentage is respected but there is at least one unhealthy node, the health is evaluated as Warning.
+         * The percentage is calculated by dividing the number of unhealthy nodes over the total number of nodes in the cluster.
+         * The computation rounds up to tolerate one failure on small numbers of nodes. Default percentage is zero.
+         * 
+         * In large clusters, some nodes will always be down or out for repairs, so this percentage should be configured to tolerate that.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxPercentUnhealthyNodes(@Nullable Integer maxPercentUnhealthyNodes) {
             $.maxPercentUnhealthyNodes = maxPercentUnhealthyNodes;
             return this;

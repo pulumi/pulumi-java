@@ -25,6 +25,10 @@ public final class WorkforceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) assigned by AWS to this Workforce.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -36,6 +40,10 @@ public final class WorkforceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="cognitoConfig")
     private @Nullable Output<WorkforceCognitoConfigGetArgs> cognitoConfig;
 
+    /**
+     * @return Use this parameter to configure an Amazon Cognito private workforce. A single Cognito workforce is created using and corresponds to a single Amazon Cognito user pool. Conflicts with `oidc_config`. see Cognito Config details below.
+     * 
+     */
     public Optional<Output<WorkforceCognitoConfigGetArgs>> cognitoConfig() {
         return Optional.ofNullable(this.cognitoConfig);
     }
@@ -47,6 +55,10 @@ public final class WorkforceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="oidcConfig")
     private @Nullable Output<WorkforceOidcConfigGetArgs> oidcConfig;
 
+    /**
+     * @return Use this parameter to configure a private workforce using your own OIDC Identity Provider. Conflicts with `cognito_config`. see OIDC Config details below.
+     * 
+     */
     public Optional<Output<WorkforceOidcConfigGetArgs>> oidcConfig() {
         return Optional.ofNullable(this.oidcConfig);
     }
@@ -58,6 +70,10 @@ public final class WorkforceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceIpConfig")
     private @Nullable Output<WorkforceSourceIpConfigGetArgs> sourceIpConfig;
 
+    /**
+     * @return A list of IP address ranges Used to create an allow list of IP addresses for a private workforce. By default, a workforce isn&#39;t restricted to specific IP addresses. see Source Ip Config details below.
+     * 
+     */
     public Optional<Output<WorkforceSourceIpConfigGetArgs>> sourceIpConfig() {
         return Optional.ofNullable(this.sourceIpConfig);
     }
@@ -69,6 +85,10 @@ public final class WorkforceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="subdomain")
     private @Nullable Output<String> subdomain;
 
+    /**
+     * @return The subdomain for your OIDC Identity Provider.
+     * 
+     */
     public Optional<Output<String>> subdomain() {
         return Optional.ofNullable(this.subdomain);
     }
@@ -80,6 +100,10 @@ public final class WorkforceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="workforceName")
     private @Nullable Output<String> workforceName;
 
+    /**
+     * @return The name of the Workforce (must be unique).
+     * 
+     */
     public Optional<Output<String>> workforceName() {
         return Optional.ofNullable(this.workforceName);
     }
@@ -113,56 +137,128 @@ public final class WorkforceState extends com.pulumi.resources.ResourceArgs {
             $ = new WorkforceState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn The Amazon Resource Name (ARN) assigned by AWS to this Workforce.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn The Amazon Resource Name (ARN) assigned by AWS to this Workforce.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param cognitoConfig Use this parameter to configure an Amazon Cognito private workforce. A single Cognito workforce is created using and corresponds to a single Amazon Cognito user pool. Conflicts with `oidc_config`. see Cognito Config details below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cognitoConfig(@Nullable Output<WorkforceCognitoConfigGetArgs> cognitoConfig) {
             $.cognitoConfig = cognitoConfig;
             return this;
         }
 
+        /**
+         * @param cognitoConfig Use this parameter to configure an Amazon Cognito private workforce. A single Cognito workforce is created using and corresponds to a single Amazon Cognito user pool. Conflicts with `oidc_config`. see Cognito Config details below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cognitoConfig(WorkforceCognitoConfigGetArgs cognitoConfig) {
             return cognitoConfig(Output.of(cognitoConfig));
         }
 
+        /**
+         * @param oidcConfig Use this parameter to configure a private workforce using your own OIDC Identity Provider. Conflicts with `cognito_config`. see OIDC Config details below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oidcConfig(@Nullable Output<WorkforceOidcConfigGetArgs> oidcConfig) {
             $.oidcConfig = oidcConfig;
             return this;
         }
 
+        /**
+         * @param oidcConfig Use this parameter to configure a private workforce using your own OIDC Identity Provider. Conflicts with `cognito_config`. see OIDC Config details below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oidcConfig(WorkforceOidcConfigGetArgs oidcConfig) {
             return oidcConfig(Output.of(oidcConfig));
         }
 
+        /**
+         * @param sourceIpConfig A list of IP address ranges Used to create an allow list of IP addresses for a private workforce. By default, a workforce isn&#39;t restricted to specific IP addresses. see Source Ip Config details below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceIpConfig(@Nullable Output<WorkforceSourceIpConfigGetArgs> sourceIpConfig) {
             $.sourceIpConfig = sourceIpConfig;
             return this;
         }
 
+        /**
+         * @param sourceIpConfig A list of IP address ranges Used to create an allow list of IP addresses for a private workforce. By default, a workforce isn&#39;t restricted to specific IP addresses. see Source Ip Config details below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceIpConfig(WorkforceSourceIpConfigGetArgs sourceIpConfig) {
             return sourceIpConfig(Output.of(sourceIpConfig));
         }
 
+        /**
+         * @param subdomain The subdomain for your OIDC Identity Provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subdomain(@Nullable Output<String> subdomain) {
             $.subdomain = subdomain;
             return this;
         }
 
+        /**
+         * @param subdomain The subdomain for your OIDC Identity Provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subdomain(String subdomain) {
             return subdomain(Output.of(subdomain));
         }
 
+        /**
+         * @param workforceName The name of the Workforce (must be unique).
+         * 
+         * @return builder
+         * 
+         */
         public Builder workforceName(@Nullable Output<String> workforceName) {
             $.workforceName = workforceName;
             return this;
         }
 
+        /**
+         * @param workforceName The name of the Workforce (must be unique).
+         * 
+         * @return builder
+         * 
+         */
         public Builder workforceName(String workforceName) {
             return workforceName(Output.of(workforceName));
         }

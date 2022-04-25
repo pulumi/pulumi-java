@@ -41,6 +41,10 @@ public final class CVSSv3Args extends com.pulumi.resources.ResourceArgs {
     @Import(name="attackVector")
     private @Nullable Output<CVSSv3AttackVector> attackVector;
 
+    /**
+     * @return Base Metrics Represents the intrinsic characteristics of a vulnerability that are constant over time and across user environments.
+     * 
+     */
     public Optional<Output<CVSSv3AttackVector>> attackVector() {
         return Optional.ofNullable(this.attackVector);
     }
@@ -59,6 +63,10 @@ public final class CVSSv3Args extends com.pulumi.resources.ResourceArgs {
     @Import(name="baseScore")
     private @Nullable Output<Double> baseScore;
 
+    /**
+     * @return The base score is a function of the base metric scores.
+     * 
+     */
     public Optional<Output<Double>> baseScore() {
         return Optional.ofNullable(this.baseScore);
     }
@@ -155,11 +163,23 @@ public final class CVSSv3Args extends com.pulumi.resources.ResourceArgs {
             return attackComplexity(Output.of(attackComplexity));
         }
 
+        /**
+         * @param attackVector Base Metrics Represents the intrinsic characteristics of a vulnerability that are constant over time and across user environments.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attackVector(@Nullable Output<CVSSv3AttackVector> attackVector) {
             $.attackVector = attackVector;
             return this;
         }
 
+        /**
+         * @param attackVector Base Metrics Represents the intrinsic characteristics of a vulnerability that are constant over time and across user environments.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attackVector(CVSSv3AttackVector attackVector) {
             return attackVector(Output.of(attackVector));
         }
@@ -173,11 +193,23 @@ public final class CVSSv3Args extends com.pulumi.resources.ResourceArgs {
             return availabilityImpact(Output.of(availabilityImpact));
         }
 
+        /**
+         * @param baseScore The base score is a function of the base metric scores.
+         * 
+         * @return builder
+         * 
+         */
         public Builder baseScore(@Nullable Output<Double> baseScore) {
             $.baseScore = baseScore;
             return this;
         }
 
+        /**
+         * @param baseScore The base score is a function of the base metric scores.
+         * 
+         * @return builder
+         * 
+         */
         public Builder baseScore(Double baseScore) {
             return baseScore(Output.of(baseScore));
         }

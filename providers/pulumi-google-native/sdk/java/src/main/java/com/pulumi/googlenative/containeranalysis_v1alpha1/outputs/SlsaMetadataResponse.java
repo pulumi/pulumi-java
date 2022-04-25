@@ -12,27 +12,27 @@ import java.util.Objects;
 @CustomType
 public final class SlsaMetadataResponse {
     /**
-     * The timestamp of when the build completed.
+     * @return The timestamp of when the build completed.
      * 
      */
     private final String buildFinishedOn;
     /**
-     * Identifies the particular build invocation, which can be useful for finding associated logs or other ad-hoc analysis. The value SHOULD be globally unique, per in-toto Provenance spec.
+     * @return Identifies the particular build invocation, which can be useful for finding associated logs or other ad-hoc analysis. The value SHOULD be globally unique, per in-toto Provenance spec.
      * 
      */
     private final String buildInvocationId;
     /**
-     * The timestamp of when the build started.
+     * @return The timestamp of when the build started.
      * 
      */
     private final String buildStartedOn;
     /**
-     * Indicates that the builder claims certain fields in this message to be complete.
+     * @return Indicates that the builder claims certain fields in this message to be complete.
      * 
      */
     private final SlsaCompletenessResponse completeness;
     /**
-     * If true, the builder claims that running the recipe on materials will produce bit-for-bit identical output.
+     * @return If true, the builder claims that running the recipe on materials will produce bit-for-bit identical output.
      * 
      */
     private final Boolean reproducible;
@@ -52,37 +52,37 @@ public final class SlsaMetadataResponse {
     }
 
     /**
-     * The timestamp of when the build completed.
+     * @return The timestamp of when the build completed.
      * 
-    */
+     */
     public String buildFinishedOn() {
         return this.buildFinishedOn;
     }
     /**
-     * Identifies the particular build invocation, which can be useful for finding associated logs or other ad-hoc analysis. The value SHOULD be globally unique, per in-toto Provenance spec.
+     * @return Identifies the particular build invocation, which can be useful for finding associated logs or other ad-hoc analysis. The value SHOULD be globally unique, per in-toto Provenance spec.
      * 
-    */
+     */
     public String buildInvocationId() {
         return this.buildInvocationId;
     }
     /**
-     * The timestamp of when the build started.
+     * @return The timestamp of when the build started.
      * 
-    */
+     */
     public String buildStartedOn() {
         return this.buildStartedOn;
     }
     /**
-     * Indicates that the builder claims certain fields in this message to be complete.
+     * @return Indicates that the builder claims certain fields in this message to be complete.
      * 
-    */
+     */
     public SlsaCompletenessResponse completeness() {
         return this.completeness;
     }
     /**
-     * If true, the builder claims that running the recipe on materials will produce bit-for-bit identical output.
+     * @return If true, the builder claims that running the recipe on materials will produce bit-for-bit identical output.
      * 
-    */
+     */
     public Boolean reproducible() {
         return this.reproducible;
     }

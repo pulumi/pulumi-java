@@ -13,22 +13,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetProjectResult {
     /**
-     * Dataset name
+     * @return Dataset name
      * 
      */
     private final @Nullable String datasetName;
     /**
-     * Recipe name
+     * @return Recipe name
      * 
      */
     private final @Nullable String recipeName;
     /**
-     * Role arn
+     * @return Role arn
      * 
      */
     private final @Nullable String roleArn;
     /**
-     * Sample
+     * @return Sample
      * 
      */
     private final @Nullable ProjectSample sample;
@@ -46,30 +46,30 @@ public final class GetProjectResult {
     }
 
     /**
-     * Dataset name
+     * @return Dataset name
      * 
-    */
+     */
     public Optional<String> datasetName() {
         return Optional.ofNullable(this.datasetName);
     }
     /**
-     * Recipe name
+     * @return Recipe name
      * 
-    */
+     */
     public Optional<String> recipeName() {
         return Optional.ofNullable(this.recipeName);
     }
     /**
-     * Role arn
+     * @return Role arn
      * 
-    */
+     */
     public Optional<String> roleArn() {
         return Optional.ofNullable(this.roleArn);
     }
     /**
-     * Sample
+     * @return Sample
      * 
-    */
+     */
     public Optional<ProjectSample> sample() {
         return Optional.ofNullable(this.sample);
     }

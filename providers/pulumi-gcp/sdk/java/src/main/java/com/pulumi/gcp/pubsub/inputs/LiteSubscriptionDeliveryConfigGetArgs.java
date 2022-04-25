@@ -21,6 +21,11 @@ public final class LiteSubscriptionDeliveryConfigGetArgs extends com.pulumi.reso
     @Import(name="deliveryRequirement", required=true)
     private Output<String> deliveryRequirement;
 
+    /**
+     * @return When this subscription should send messages to subscribers relative to messages persistence in storage.
+     * Possible values are `DELIVER_IMMEDIATELY`, `DELIVER_AFTER_STORED`, and `DELIVERY_REQUIREMENT_UNSPECIFIED`.
+     * 
+     */
     public Output<String> deliveryRequirement() {
         return this.deliveryRequirement;
     }
@@ -49,11 +54,25 @@ public final class LiteSubscriptionDeliveryConfigGetArgs extends com.pulumi.reso
             $ = new LiteSubscriptionDeliveryConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deliveryRequirement When this subscription should send messages to subscribers relative to messages persistence in storage.
+         * Possible values are `DELIVER_IMMEDIATELY`, `DELIVER_AFTER_STORED`, and `DELIVERY_REQUIREMENT_UNSPECIFIED`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deliveryRequirement(Output<String> deliveryRequirement) {
             $.deliveryRequirement = deliveryRequirement;
             return this;
         }
 
+        /**
+         * @param deliveryRequirement When this subscription should send messages to subscribers relative to messages persistence in storage.
+         * Possible values are `DELIVER_IMMEDIATELY`, `DELIVER_AFTER_STORED`, and `DELIVERY_REQUIREMENT_UNSPECIFIED`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deliveryRequirement(String deliveryRequirement) {
             return deliveryRequirement(Output.of(deliveryRequirement));
         }

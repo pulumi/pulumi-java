@@ -32,6 +32,10 @@ public final class BlobTriggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="annotations")
     private @Nullable Output<List<Object>> annotations;
 
+    /**
+     * @return List of tags that can be used for describing the trigger.
+     * 
+     */
     public Optional<Output<List<Object>>> annotations() {
         return Optional.ofNullable(this.annotations);
     }
@@ -43,6 +47,10 @@ public final class BlobTriggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Trigger description.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -54,6 +62,10 @@ public final class BlobTriggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="folderPath", required=true)
     private Output<String> folderPath;
 
+    /**
+     * @return The path of the container/folder that will trigger the pipeline.
+     * 
+     */
     public Output<String> folderPath() {
         return this.folderPath;
     }
@@ -65,6 +77,10 @@ public final class BlobTriggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="linkedService", required=true)
     private Output<LinkedServiceReferenceArgs> linkedService;
 
+    /**
+     * @return The Azure Storage linked service reference.
+     * 
+     */
     public Output<LinkedServiceReferenceArgs> linkedService() {
         return this.linkedService;
     }
@@ -76,6 +92,10 @@ public final class BlobTriggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxConcurrency", required=true)
     private Output<Integer> maxConcurrency;
 
+    /**
+     * @return The max number of parallel files to handle when it is triggered.
+     * 
+     */
     public Output<Integer> maxConcurrency() {
         return this.maxConcurrency;
     }
@@ -87,6 +107,10 @@ public final class BlobTriggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="pipelines")
     private @Nullable Output<List<TriggerPipelineReferenceArgs>> pipelines;
 
+    /**
+     * @return Pipelines that need to be started.
+     * 
+     */
     public Optional<Output<List<TriggerPipelineReferenceArgs>>> pipelines() {
         return Optional.ofNullable(this.pipelines);
     }
@@ -99,6 +123,11 @@ public final class BlobTriggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Trigger type.
+     * Expected value is &#39;BlobTrigger&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -133,73 +162,171 @@ public final class BlobTriggerArgs extends com.pulumi.resources.ResourceArgs {
             $ = new BlobTriggerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(@Nullable Output<List<Object>> annotations) {
             $.annotations = annotations;
             return this;
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(List<Object> annotations) {
             return annotations(Output.of(annotations));
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
 
+        /**
+         * @param description Trigger description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Trigger description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param folderPath The path of the container/folder that will trigger the pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder folderPath(Output<String> folderPath) {
             $.folderPath = folderPath;
             return this;
         }
 
+        /**
+         * @param folderPath The path of the container/folder that will trigger the pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder folderPath(String folderPath) {
             return folderPath(Output.of(folderPath));
         }
 
+        /**
+         * @param linkedService The Azure Storage linked service reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedService(Output<LinkedServiceReferenceArgs> linkedService) {
             $.linkedService = linkedService;
             return this;
         }
 
+        /**
+         * @param linkedService The Azure Storage linked service reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedService(LinkedServiceReferenceArgs linkedService) {
             return linkedService(Output.of(linkedService));
         }
 
+        /**
+         * @param maxConcurrency The max number of parallel files to handle when it is triggered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxConcurrency(Output<Integer> maxConcurrency) {
             $.maxConcurrency = maxConcurrency;
             return this;
         }
 
+        /**
+         * @param maxConcurrency The max number of parallel files to handle when it is triggered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxConcurrency(Integer maxConcurrency) {
             return maxConcurrency(Output.of(maxConcurrency));
         }
 
+        /**
+         * @param pipelines Pipelines that need to be started.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pipelines(@Nullable Output<List<TriggerPipelineReferenceArgs>> pipelines) {
             $.pipelines = pipelines;
             return this;
         }
 
+        /**
+         * @param pipelines Pipelines that need to be started.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pipelines(List<TriggerPipelineReferenceArgs> pipelines) {
             return pipelines(Output.of(pipelines));
         }
 
+        /**
+         * @param pipelines Pipelines that need to be started.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pipelines(TriggerPipelineReferenceArgs... pipelines) {
             return pipelines(List.of(pipelines));
         }
 
+        /**
+         * @param type Trigger type.
+         * Expected value is &#39;BlobTrigger&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Trigger type.
+         * Expected value is &#39;BlobTrigger&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

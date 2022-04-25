@@ -28,6 +28,10 @@ public final class ApplicationGatewayCustomErrorArgs extends com.pulumi.resource
     @Import(name="customErrorPageUrl")
     private @Nullable Output<String> customErrorPageUrl;
 
+    /**
+     * @return Error page URL of the application gateway customer error.
+     * 
+     */
     public Optional<Output<String>> customErrorPageUrl() {
         return Optional.ofNullable(this.customErrorPageUrl);
     }
@@ -39,6 +43,10 @@ public final class ApplicationGatewayCustomErrorArgs extends com.pulumi.resource
     @Import(name="statusCode")
     private @Nullable Output<Either<String,ApplicationGatewayCustomErrorStatusCode>> statusCode;
 
+    /**
+     * @return Status code of the application gateway customer error.
+     * 
+     */
     public Optional<Output<Either<String,ApplicationGatewayCustomErrorStatusCode>>> statusCode() {
         return Optional.ofNullable(this.statusCode);
     }
@@ -68,28 +76,64 @@ public final class ApplicationGatewayCustomErrorArgs extends com.pulumi.resource
             $ = new ApplicationGatewayCustomErrorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customErrorPageUrl Error page URL of the application gateway customer error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customErrorPageUrl(@Nullable Output<String> customErrorPageUrl) {
             $.customErrorPageUrl = customErrorPageUrl;
             return this;
         }
 
+        /**
+         * @param customErrorPageUrl Error page URL of the application gateway customer error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customErrorPageUrl(String customErrorPageUrl) {
             return customErrorPageUrl(Output.of(customErrorPageUrl));
         }
 
+        /**
+         * @param statusCode Status code of the application gateway customer error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statusCode(@Nullable Output<Either<String,ApplicationGatewayCustomErrorStatusCode>> statusCode) {
             $.statusCode = statusCode;
             return this;
         }
 
+        /**
+         * @param statusCode Status code of the application gateway customer error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statusCode(Either<String,ApplicationGatewayCustomErrorStatusCode> statusCode) {
             return statusCode(Output.of(statusCode));
         }
 
+        /**
+         * @param statusCode Status code of the application gateway customer error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statusCode(String statusCode) {
             return statusCode(Either.ofLeft(statusCode));
         }
 
+        /**
+         * @param statusCode Status code of the application gateway customer error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statusCode(ApplicationGatewayCustomErrorStatusCode statusCode) {
             return statusCode(Either.ofRight(statusCode));
         }

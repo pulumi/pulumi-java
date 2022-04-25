@@ -23,6 +23,11 @@ public final class InboundSamlConfigSpConfigSpCertificateGetArgs extends com.pul
     @Import(name="x509Certificate")
     private @Nullable Output<String> x509Certificate;
 
+    /**
+     * @return -
+     * The x509 certificate
+     * 
+     */
     public Optional<Output<String>> x509Certificate() {
         return Optional.ofNullable(this.x509Certificate);
     }
@@ -51,11 +56,25 @@ public final class InboundSamlConfigSpConfigSpCertificateGetArgs extends com.pul
             $ = new InboundSamlConfigSpConfigSpCertificateGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param x509Certificate -
+         * The x509 certificate
+         * 
+         * @return builder
+         * 
+         */
         public Builder x509Certificate(@Nullable Output<String> x509Certificate) {
             $.x509Certificate = x509Certificate;
             return this;
         }
 
+        /**
+         * @param x509Certificate -
+         * The x509 certificate
+         * 
+         * @return builder
+         * 
+         */
         public Builder x509Certificate(String x509Certificate) {
             return x509Certificate(Output.of(x509Certificate));
         }

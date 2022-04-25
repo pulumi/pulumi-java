@@ -24,6 +24,10 @@ public final class AccountAuditConfigurationArgs extends com.pulumi.resources.Re
     @Import(name="accountId", required=true)
     private Output<String> accountId;
 
+    /**
+     * @return Your 12-digit account ID (used as the primary identifier for the CloudFormation resource).
+     * 
+     */
     public Output<String> accountId() {
         return this.accountId;
     }
@@ -49,6 +53,10 @@ public final class AccountAuditConfigurationArgs extends com.pulumi.resources.Re
     @Import(name="roleArn", required=true)
     private Output<String> roleArn;
 
+    /**
+     * @return The ARN of the role that grants permission to AWS IoT to access information about your devices, policies, certificates and other items as required when performing an audit.
+     * 
+     */
     public Output<String> roleArn() {
         return this.roleArn;
     }
@@ -80,11 +88,23 @@ public final class AccountAuditConfigurationArgs extends com.pulumi.resources.Re
             $ = new AccountAuditConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountId Your 12-digit account ID (used as the primary identifier for the CloudFormation resource).
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountId(Output<String> accountId) {
             $.accountId = accountId;
             return this;
         }
 
+        /**
+         * @param accountId Your 12-digit account ID (used as the primary identifier for the CloudFormation resource).
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountId(String accountId) {
             return accountId(Output.of(accountId));
         }
@@ -107,11 +127,23 @@ public final class AccountAuditConfigurationArgs extends com.pulumi.resources.Re
             return auditNotificationTargetConfigurations(Output.of(auditNotificationTargetConfigurations));
         }
 
+        /**
+         * @param roleArn The ARN of the role that grants permission to AWS IoT to access information about your devices, policies, certificates and other items as required when performing an audit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(Output<String> roleArn) {
             $.roleArn = roleArn;
             return this;
         }
 
+        /**
+         * @param roleArn The ARN of the role that grants permission to AWS IoT to access information about your devices, policies, certificates and other items as required when performing an audit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(String roleArn) {
             return roleArn(Output.of(roleArn));
         }

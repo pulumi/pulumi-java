@@ -27,6 +27,10 @@ public final class AvroWriteSettingsResponse extends com.pulumi.resources.Invoke
     @Import(name="fileNamePrefix")
     private @Nullable Object fileNamePrefix;
 
+    /**
+     * @return Specifies the file name pattern &lt;fileNamePrefix&gt;_&lt;fileIndex&gt;.&lt;fileExtension&gt; when copy from non-file based store without partitionOptions. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> fileNamePrefix() {
         return Optional.ofNullable(this.fileNamePrefix);
     }
@@ -38,6 +42,10 @@ public final class AvroWriteSettingsResponse extends com.pulumi.resources.Invoke
     @Import(name="maxRowsPerFile")
     private @Nullable Object maxRowsPerFile;
 
+    /**
+     * @return Limit the written file&#39;s row count to be smaller than or equal to the specified count. Type: integer (or Expression with resultType integer).
+     * 
+     */
     public Optional<Object> maxRowsPerFile() {
         return Optional.ofNullable(this.maxRowsPerFile);
     }
@@ -49,6 +57,10 @@ public final class AvroWriteSettingsResponse extends com.pulumi.resources.Invoke
     @Import(name="recordName")
     private @Nullable String recordName;
 
+    /**
+     * @return Top level record name in write result, which is required in AVRO spec.
+     * 
+     */
     public Optional<String> recordName() {
         return Optional.ofNullable(this.recordName);
     }
@@ -60,6 +72,10 @@ public final class AvroWriteSettingsResponse extends com.pulumi.resources.Invoke
     @Import(name="recordNamespace")
     private @Nullable String recordNamespace;
 
+    /**
+     * @return Record namespace in the write result.
+     * 
+     */
     public Optional<String> recordNamespace() {
         return Optional.ofNullable(this.recordNamespace);
     }
@@ -72,6 +88,11 @@ public final class AvroWriteSettingsResponse extends com.pulumi.resources.Invoke
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The write setting type.
+     * Expected value is &#39;AvroWriteSettings&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -104,26 +125,57 @@ public final class AvroWriteSettingsResponse extends com.pulumi.resources.Invoke
             $ = new AvroWriteSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fileNamePrefix Specifies the file name pattern &lt;fileNamePrefix&gt;_&lt;fileIndex&gt;.&lt;fileExtension&gt; when copy from non-file based store without partitionOptions. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileNamePrefix(@Nullable Object fileNamePrefix) {
             $.fileNamePrefix = fileNamePrefix;
             return this;
         }
 
+        /**
+         * @param maxRowsPerFile Limit the written file&#39;s row count to be smaller than or equal to the specified count. Type: integer (or Expression with resultType integer).
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxRowsPerFile(@Nullable Object maxRowsPerFile) {
             $.maxRowsPerFile = maxRowsPerFile;
             return this;
         }
 
+        /**
+         * @param recordName Top level record name in write result, which is required in AVRO spec.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recordName(@Nullable String recordName) {
             $.recordName = recordName;
             return this;
         }
 
+        /**
+         * @param recordNamespace Record namespace in the write result.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recordNamespace(@Nullable String recordNamespace) {
             $.recordNamespace = recordNamespace;
             return this;
         }
 
+        /**
+         * @param type The write setting type.
+         * Expected value is &#39;AvroWriteSettings&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

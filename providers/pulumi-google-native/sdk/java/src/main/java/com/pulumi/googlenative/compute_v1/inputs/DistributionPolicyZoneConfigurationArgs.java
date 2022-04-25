@@ -22,6 +22,10 @@ public final class DistributionPolicyZoneConfigurationArgs extends com.pulumi.re
     @Import(name="zone")
     private @Nullable Output<String> zone;
 
+    /**
+     * @return The URL of the zone. The zone must exist in the region where the managed instance group is located.
+     * 
+     */
     public Optional<Output<String>> zone() {
         return Optional.ofNullable(this.zone);
     }
@@ -50,11 +54,23 @@ public final class DistributionPolicyZoneConfigurationArgs extends com.pulumi.re
             $ = new DistributionPolicyZoneConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param zone The URL of the zone. The zone must exist in the region where the managed instance group is located.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zone(@Nullable Output<String> zone) {
             $.zone = zone;
             return this;
         }
 
+        /**
+         * @param zone The URL of the zone. The zone must exist in the region where the managed instance group is located.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zone(String zone) {
             return zone(Output.of(zone));
         }

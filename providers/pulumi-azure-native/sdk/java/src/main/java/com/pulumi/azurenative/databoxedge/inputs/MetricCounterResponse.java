@@ -27,6 +27,10 @@ public final class MetricCounterResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="additionalDimensions")
     private @Nullable List<MetricDimensionResponse> additionalDimensions;
 
+    /**
+     * @return The additional dimensions to be added to metric.
+     * 
+     */
     public Optional<List<MetricDimensionResponse>> additionalDimensions() {
         return Optional.ofNullable(this.additionalDimensions);
     }
@@ -38,6 +42,10 @@ public final class MetricCounterResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="dimensionFilter")
     private @Nullable List<MetricDimensionResponse> dimensionFilter;
 
+    /**
+     * @return The dimension filter.
+     * 
+     */
     public Optional<List<MetricDimensionResponse>> dimensionFilter() {
         return Optional.ofNullable(this.dimensionFilter);
     }
@@ -49,6 +57,10 @@ public final class MetricCounterResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="instance")
     private @Nullable String instance;
 
+    /**
+     * @return The instance from which counter should be collected.
+     * 
+     */
     public Optional<String> instance() {
         return Optional.ofNullable(this.instance);
     }
@@ -60,6 +72,10 @@ public final class MetricCounterResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The counter name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -91,29 +107,65 @@ public final class MetricCounterResponse extends com.pulumi.resources.InvokeArgs
             $ = new MetricCounterResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param additionalDimensions The additional dimensions to be added to metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalDimensions(@Nullable List<MetricDimensionResponse> additionalDimensions) {
             $.additionalDimensions = additionalDimensions;
             return this;
         }
 
+        /**
+         * @param additionalDimensions The additional dimensions to be added to metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalDimensions(MetricDimensionResponse... additionalDimensions) {
             return additionalDimensions(List.of(additionalDimensions));
         }
 
+        /**
+         * @param dimensionFilter The dimension filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dimensionFilter(@Nullable List<MetricDimensionResponse> dimensionFilter) {
             $.dimensionFilter = dimensionFilter;
             return this;
         }
 
+        /**
+         * @param dimensionFilter The dimension filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dimensionFilter(MetricDimensionResponse... dimensionFilter) {
             return dimensionFilter(List.of(dimensionFilter));
         }
 
+        /**
+         * @param instance The instance from which counter should be collected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instance(@Nullable String instance) {
             $.instance = instance;
             return this;
         }
 
+        /**
+         * @param name The counter name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

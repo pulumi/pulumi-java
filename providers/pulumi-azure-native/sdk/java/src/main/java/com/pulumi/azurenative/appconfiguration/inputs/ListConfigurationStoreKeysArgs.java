@@ -21,6 +21,10 @@ public final class ListConfigurationStoreKeysArgs extends com.pulumi.resources.I
     @Import(name="configStoreName", required=true)
     private String configStoreName;
 
+    /**
+     * @return The name of the configuration store.
+     * 
+     */
     public String configStoreName() {
         return this.configStoreName;
     }
@@ -32,6 +36,10 @@ public final class ListConfigurationStoreKeysArgs extends com.pulumi.resources.I
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group to which the container registry belongs.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -43,6 +51,10 @@ public final class ListConfigurationStoreKeysArgs extends com.pulumi.resources.I
     @Import(name="skipToken")
     private @Nullable String skipToken;
 
+    /**
+     * @return A skip token is used to continue retrieving items after an operation returns a partial result. If a previous response contains a nextLink element, the value of the nextLink element will include a skipToken parameter that specifies a starting point to use for subsequent calls.
+     * 
+     */
     public Optional<String> skipToken() {
         return Optional.ofNullable(this.skipToken);
     }
@@ -73,16 +85,34 @@ public final class ListConfigurationStoreKeysArgs extends com.pulumi.resources.I
             $ = new ListConfigurationStoreKeysArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param configStoreName The name of the configuration store.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configStoreName(String configStoreName) {
             $.configStoreName = configStoreName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group to which the container registry belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param skipToken A skip token is used to continue retrieving items after an operation returns a partial result. If a previous response contains a nextLink element, the value of the nextLink element will include a skipToken parameter that specifies a starting point to use for subsequent calls.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skipToken(@Nullable String skipToken) {
             $.skipToken = skipToken;
             return this;

@@ -24,6 +24,10 @@ public final class QueueAuthorizationRuleArgs extends com.pulumi.resources.Resou
     @Import(name="authorizationRuleName")
     private @Nullable Output<String> authorizationRuleName;
 
+    /**
+     * @return The authorization rule name.
+     * 
+     */
     public Optional<Output<String>> authorizationRuleName() {
         return Optional.ofNullable(this.authorizationRuleName);
     }
@@ -35,6 +39,10 @@ public final class QueueAuthorizationRuleArgs extends com.pulumi.resources.Resou
     @Import(name="namespaceName", required=true)
     private Output<String> namespaceName;
 
+    /**
+     * @return The namespace name
+     * 
+     */
     public Output<String> namespaceName() {
         return this.namespaceName;
     }
@@ -46,6 +54,10 @@ public final class QueueAuthorizationRuleArgs extends com.pulumi.resources.Resou
     @Import(name="queueName", required=true)
     private Output<String> queueName;
 
+    /**
+     * @return The queue name.
+     * 
+     */
     public Output<String> queueName() {
         return this.queueName;
     }
@@ -57,6 +69,10 @@ public final class QueueAuthorizationRuleArgs extends com.pulumi.resources.Resou
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of the Resource group within the Azure subscription.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -68,6 +84,10 @@ public final class QueueAuthorizationRuleArgs extends com.pulumi.resources.Resou
     @Import(name="rights", required=true)
     private Output<List<AccessRights>> rights;
 
+    /**
+     * @return The rights associated with the rule.
+     * 
+     */
     public Output<List<AccessRights>> rights() {
         return this.rights;
     }
@@ -100,51 +120,117 @@ public final class QueueAuthorizationRuleArgs extends com.pulumi.resources.Resou
             $ = new QueueAuthorizationRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authorizationRuleName The authorization rule name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationRuleName(@Nullable Output<String> authorizationRuleName) {
             $.authorizationRuleName = authorizationRuleName;
             return this;
         }
 
+        /**
+         * @param authorizationRuleName The authorization rule name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationRuleName(String authorizationRuleName) {
             return authorizationRuleName(Output.of(authorizationRuleName));
         }
 
+        /**
+         * @param namespaceName The namespace name
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespaceName(Output<String> namespaceName) {
             $.namespaceName = namespaceName;
             return this;
         }
 
+        /**
+         * @param namespaceName The namespace name
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespaceName(String namespaceName) {
             return namespaceName(Output.of(namespaceName));
         }
 
+        /**
+         * @param queueName The queue name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queueName(Output<String> queueName) {
             $.queueName = queueName;
             return this;
         }
 
+        /**
+         * @param queueName The queue name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queueName(String queueName) {
             return queueName(Output.of(queueName));
         }
 
+        /**
+         * @param resourceGroupName Name of the Resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the Resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param rights The rights associated with the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rights(Output<List<AccessRights>> rights) {
             $.rights = rights;
             return this;
         }
 
+        /**
+         * @param rights The rights associated with the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rights(List<AccessRights> rights) {
             return rights(Output.of(rights));
         }
 
+        /**
+         * @param rights The rights associated with the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rights(AccessRights... rights) {
             return rights(List.of(rights));
         }

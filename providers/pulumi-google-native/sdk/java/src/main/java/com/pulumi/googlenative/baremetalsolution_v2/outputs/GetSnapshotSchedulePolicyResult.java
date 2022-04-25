@@ -13,22 +13,22 @@ import java.util.Objects;
 @CustomType
 public final class GetSnapshotSchedulePolicyResult {
     /**
-     * The description of the snapshot schedule policy.
+     * @return The description of the snapshot schedule policy.
      * 
      */
     private final String description;
     /**
-     * Labels as key value pairs.
+     * @return Labels as key value pairs.
      * 
      */
     private final Map<String,String> labels;
     /**
-     * The name of the snapshot schedule policy.
+     * @return The name of the snapshot schedule policy.
      * 
      */
     private final String name;
     /**
-     * The snapshot schedules contained in this policy. You can specify a maximum of 5 schedules.
+     * @return The snapshot schedules contained in this policy. You can specify a maximum of 5 schedules.
      * 
      */
     private final List<ScheduleResponse> schedules;
@@ -46,30 +46,30 @@ public final class GetSnapshotSchedulePolicyResult {
     }
 
     /**
-     * The description of the snapshot schedule policy.
+     * @return The description of the snapshot schedule policy.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * Labels as key value pairs.
+     * @return Labels as key value pairs.
      * 
-    */
+     */
     public Map<String,String> labels() {
         return this.labels;
     }
     /**
-     * The name of the snapshot schedule policy.
+     * @return The name of the snapshot schedule policy.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The snapshot schedules contained in this policy. You can specify a maximum of 5 schedules.
+     * @return The snapshot schedules contained in this policy. You can specify a maximum of 5 schedules.
      * 
-    */
+     */
     public List<ScheduleResponse> schedules() {
         return this.schedules;
     }

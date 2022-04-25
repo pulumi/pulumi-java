@@ -36,6 +36,12 @@ public final class HostedZoneArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hostedZoneTags")
     private @Nullable Output<List<HostedZoneTagArgs>> hostedZoneTags;
 
+    /**
+     * @return Adds, edits, or deletes tags for a health check or a hosted zone.
+     * 
+     * For information about using tags for cost allocation, see Using Cost Allocation Tags in the AWS Billing and Cost Management User Guide.
+     * 
+     */
     public Optional<Output<List<HostedZoneTagArgs>>> hostedZoneTags() {
         return Optional.ofNullable(this.hostedZoneTags);
     }
@@ -49,6 +55,12 @@ public final class HostedZoneArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the domain. Specify a fully qualified domain name, for example, www.example.com. The trailing dot is optional; Amazon Route 53 assumes that the domain name is fully qualified. This means that Route 53 treats www.example.com (without a trailing dot) and www.example.com. (with a trailing dot) as identical.
+     * 
+     * If you&#39;re creating a public hosted zone, this is the name you have registered with your DNS registrar. If your domain name is registered with a registrar other than Route 53, change the name servers for your domain to the set of NameServers that are returned by the Fn::GetAtt intrinsic function.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -67,6 +79,10 @@ public final class HostedZoneArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vPCs")
     private @Nullable Output<List<HostedZoneVPCArgs>> vPCs;
 
+    /**
+     * @return A complex type that contains information about the VPCs that are associated with the specified hosted zone.
+     * 
+     */
     public Optional<Output<List<HostedZoneVPCArgs>>> vPCs() {
         return Optional.ofNullable(this.vPCs);
     }
@@ -108,24 +124,64 @@ public final class HostedZoneArgs extends com.pulumi.resources.ResourceArgs {
             return hostedZoneConfig(Output.of(hostedZoneConfig));
         }
 
+        /**
+         * @param hostedZoneTags Adds, edits, or deletes tags for a health check or a hosted zone.
+         * 
+         * For information about using tags for cost allocation, see Using Cost Allocation Tags in the AWS Billing and Cost Management User Guide.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostedZoneTags(@Nullable Output<List<HostedZoneTagArgs>> hostedZoneTags) {
             $.hostedZoneTags = hostedZoneTags;
             return this;
         }
 
+        /**
+         * @param hostedZoneTags Adds, edits, or deletes tags for a health check or a hosted zone.
+         * 
+         * For information about using tags for cost allocation, see Using Cost Allocation Tags in the AWS Billing and Cost Management User Guide.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostedZoneTags(List<HostedZoneTagArgs> hostedZoneTags) {
             return hostedZoneTags(Output.of(hostedZoneTags));
         }
 
+        /**
+         * @param hostedZoneTags Adds, edits, or deletes tags for a health check or a hosted zone.
+         * 
+         * For information about using tags for cost allocation, see Using Cost Allocation Tags in the AWS Billing and Cost Management User Guide.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostedZoneTags(HostedZoneTagArgs... hostedZoneTags) {
             return hostedZoneTags(List.of(hostedZoneTags));
         }
 
+        /**
+         * @param name The name of the domain. Specify a fully qualified domain name, for example, www.example.com. The trailing dot is optional; Amazon Route 53 assumes that the domain name is fully qualified. This means that Route 53 treats www.example.com (without a trailing dot) and www.example.com. (with a trailing dot) as identical.
+         * 
+         * If you&#39;re creating a public hosted zone, this is the name you have registered with your DNS registrar. If your domain name is registered with a registrar other than Route 53, change the name servers for your domain to the set of NameServers that are returned by the Fn::GetAtt intrinsic function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the domain. Specify a fully qualified domain name, for example, www.example.com. The trailing dot is optional; Amazon Route 53 assumes that the domain name is fully qualified. This means that Route 53 treats www.example.com (without a trailing dot) and www.example.com. (with a trailing dot) as identical.
+         * 
+         * If you&#39;re creating a public hosted zone, this is the name you have registered with your DNS registrar. If your domain name is registered with a registrar other than Route 53, change the name servers for your domain to the set of NameServers that are returned by the Fn::GetAtt intrinsic function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -139,15 +195,33 @@ public final class HostedZoneArgs extends com.pulumi.resources.ResourceArgs {
             return queryLoggingConfig(Output.of(queryLoggingConfig));
         }
 
+        /**
+         * @param vPCs A complex type that contains information about the VPCs that are associated with the specified hosted zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vPCs(@Nullable Output<List<HostedZoneVPCArgs>> vPCs) {
             $.vPCs = vPCs;
             return this;
         }
 
+        /**
+         * @param vPCs A complex type that contains information about the VPCs that are associated with the specified hosted zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vPCs(List<HostedZoneVPCArgs> vPCs) {
             return vPCs(Output.of(vPCs));
         }
 
+        /**
+         * @param vPCs A complex type that contains information about the VPCs that are associated with the specified hosted zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vPCs(HostedZoneVPCArgs... vPCs) {
             return vPCs(List.of(vPCs));
         }

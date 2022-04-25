@@ -17,42 +17,42 @@ import javax.annotation.Nullable;
 @CustomType
 public final class EnvironmentImageResponseResponseEnvironment {
     /**
-     * The definition of a Docker container.
+     * @return The definition of a Docker container.
      * 
      */
     private final @Nullable ModelEnvironmentDefinitionResponseResponseDocker docker;
     /**
-     * Definition of environment variables to be defined in the environment.
+     * @return Definition of environment variables to be defined in the environment.
      * 
      */
     private final @Nullable Map<String,String> environmentVariables;
     /**
-     * The inferencing stack version added to the image. To avoid adding an inferencing stack, do not set this value. Valid values: &#34;latest&#34;.
+     * @return The inferencing stack version added to the image. To avoid adding an inferencing stack, do not set this value. Valid values: &#34;latest&#34;.
      * 
      */
     private final @Nullable String inferencingStackVersion;
     /**
-     * The name of the environment.
+     * @return The name of the environment.
      * 
      */
     private final @Nullable String name;
     /**
-     * Settings for a Python environment.
+     * @return Settings for a Python environment.
      * 
      */
     private final @Nullable ModelEnvironmentDefinitionResponseResponsePython python;
     /**
-     * Settings for a R environment.
+     * @return Settings for a R environment.
      * 
      */
     private final @Nullable ModelEnvironmentDefinitionResponseResponseR r;
     /**
-     * The configuration for a Spark environment.
+     * @return The configuration for a Spark environment.
      * 
      */
     private final @Nullable ModelEnvironmentDefinitionResponseResponseSpark spark;
     /**
-     * The environment version.
+     * @return The environment version.
      * 
      */
     private final @Nullable String version;
@@ -78,58 +78,58 @@ public final class EnvironmentImageResponseResponseEnvironment {
     }
 
     /**
-     * The definition of a Docker container.
+     * @return The definition of a Docker container.
      * 
-    */
+     */
     public Optional<ModelEnvironmentDefinitionResponseResponseDocker> docker() {
         return Optional.ofNullable(this.docker);
     }
     /**
-     * Definition of environment variables to be defined in the environment.
+     * @return Definition of environment variables to be defined in the environment.
      * 
-    */
+     */
     public Map<String,String> environmentVariables() {
         return this.environmentVariables == null ? Map.of() : this.environmentVariables;
     }
     /**
-     * The inferencing stack version added to the image. To avoid adding an inferencing stack, do not set this value. Valid values: &#34;latest&#34;.
+     * @return The inferencing stack version added to the image. To avoid adding an inferencing stack, do not set this value. Valid values: &#34;latest&#34;.
      * 
-    */
+     */
     public Optional<String> inferencingStackVersion() {
         return Optional.ofNullable(this.inferencingStackVersion);
     }
     /**
-     * The name of the environment.
+     * @return The name of the environment.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Settings for a Python environment.
+     * @return Settings for a Python environment.
      * 
-    */
+     */
     public Optional<ModelEnvironmentDefinitionResponseResponsePython> python() {
         return Optional.ofNullable(this.python);
     }
     /**
-     * Settings for a R environment.
+     * @return Settings for a R environment.
      * 
-    */
+     */
     public Optional<ModelEnvironmentDefinitionResponseResponseR> r() {
         return Optional.ofNullable(this.r);
     }
     /**
-     * The configuration for a Spark environment.
+     * @return The configuration for a Spark environment.
      * 
-    */
+     */
     public Optional<ModelEnvironmentDefinitionResponseResponseSpark> spark() {
         return Optional.ofNullable(this.spark);
     }
     /**
-     * The environment version.
+     * @return The environment version.
      * 
-    */
+     */
     public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }

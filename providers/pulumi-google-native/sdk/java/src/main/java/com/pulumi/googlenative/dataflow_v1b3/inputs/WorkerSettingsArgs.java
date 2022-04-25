@@ -27,6 +27,10 @@ public final class WorkerSettingsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="baseUrl")
     private @Nullable Output<String> baseUrl;
 
+    /**
+     * @return The base URL for accessing Google Cloud APIs. When workers access Google Cloud APIs, they logically do so via relative URLs. If this field is specified, it supplies the base URL to use for resolving these relative URLs. The normative algorithm used is defined by RFC 1808, &#34;Relative Uniform Resource Locators&#34;. If not specified, the default value is &#34;http://www.googleapis.com/&#34;
+     * 
+     */
     public Optional<Output<String>> baseUrl() {
         return Optional.ofNullable(this.baseUrl);
     }
@@ -38,6 +42,10 @@ public final class WorkerSettingsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="reportingEnabled")
     private @Nullable Output<Boolean> reportingEnabled;
 
+    /**
+     * @return Whether to send work progress updates to the service.
+     * 
+     */
     public Optional<Output<Boolean>> reportingEnabled() {
         return Optional.ofNullable(this.reportingEnabled);
     }
@@ -49,6 +57,10 @@ public final class WorkerSettingsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="servicePath")
     private @Nullable Output<String> servicePath;
 
+    /**
+     * @return The Cloud Dataflow service path relative to the root URL, for example, &#34;dataflow/v1b3/projects&#34;.
+     * 
+     */
     public Optional<Output<String>> servicePath() {
         return Optional.ofNullable(this.servicePath);
     }
@@ -60,6 +72,10 @@ public final class WorkerSettingsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="shuffleServicePath")
     private @Nullable Output<String> shuffleServicePath;
 
+    /**
+     * @return The Shuffle service path relative to the root URL, for example, &#34;shuffle/v1beta1&#34;.
+     * 
+     */
     public Optional<Output<String>> shuffleServicePath() {
         return Optional.ofNullable(this.shuffleServicePath);
     }
@@ -71,6 +87,10 @@ public final class WorkerSettingsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="tempStoragePrefix")
     private @Nullable Output<String> tempStoragePrefix;
 
+    /**
+     * @return The prefix of the resources the system should use for temporary storage. The supported resource type is: Google Cloud Storage: storage.googleapis.com/{bucket}/{object} bucket.storage.googleapis.com/{object}
+     * 
+     */
     public Optional<Output<String>> tempStoragePrefix() {
         return Optional.ofNullable(this.tempStoragePrefix);
     }
@@ -82,6 +102,10 @@ public final class WorkerSettingsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="workerId")
     private @Nullable Output<String> workerId;
 
+    /**
+     * @return The ID of the worker running this pipeline.
+     * 
+     */
     public Optional<Output<String>> workerId() {
         return Optional.ofNullable(this.workerId);
     }
@@ -115,56 +139,128 @@ public final class WorkerSettingsArgs extends com.pulumi.resources.ResourceArgs 
             $ = new WorkerSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param baseUrl The base URL for accessing Google Cloud APIs. When workers access Google Cloud APIs, they logically do so via relative URLs. If this field is specified, it supplies the base URL to use for resolving these relative URLs. The normative algorithm used is defined by RFC 1808, &#34;Relative Uniform Resource Locators&#34;. If not specified, the default value is &#34;http://www.googleapis.com/&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder baseUrl(@Nullable Output<String> baseUrl) {
             $.baseUrl = baseUrl;
             return this;
         }
 
+        /**
+         * @param baseUrl The base URL for accessing Google Cloud APIs. When workers access Google Cloud APIs, they logically do so via relative URLs. If this field is specified, it supplies the base URL to use for resolving these relative URLs. The normative algorithm used is defined by RFC 1808, &#34;Relative Uniform Resource Locators&#34;. If not specified, the default value is &#34;http://www.googleapis.com/&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder baseUrl(String baseUrl) {
             return baseUrl(Output.of(baseUrl));
         }
 
+        /**
+         * @param reportingEnabled Whether to send work progress updates to the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reportingEnabled(@Nullable Output<Boolean> reportingEnabled) {
             $.reportingEnabled = reportingEnabled;
             return this;
         }
 
+        /**
+         * @param reportingEnabled Whether to send work progress updates to the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reportingEnabled(Boolean reportingEnabled) {
             return reportingEnabled(Output.of(reportingEnabled));
         }
 
+        /**
+         * @param servicePath The Cloud Dataflow service path relative to the root URL, for example, &#34;dataflow/v1b3/projects&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePath(@Nullable Output<String> servicePath) {
             $.servicePath = servicePath;
             return this;
         }
 
+        /**
+         * @param servicePath The Cloud Dataflow service path relative to the root URL, for example, &#34;dataflow/v1b3/projects&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePath(String servicePath) {
             return servicePath(Output.of(servicePath));
         }
 
+        /**
+         * @param shuffleServicePath The Shuffle service path relative to the root URL, for example, &#34;shuffle/v1beta1&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shuffleServicePath(@Nullable Output<String> shuffleServicePath) {
             $.shuffleServicePath = shuffleServicePath;
             return this;
         }
 
+        /**
+         * @param shuffleServicePath The Shuffle service path relative to the root URL, for example, &#34;shuffle/v1beta1&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shuffleServicePath(String shuffleServicePath) {
             return shuffleServicePath(Output.of(shuffleServicePath));
         }
 
+        /**
+         * @param tempStoragePrefix The prefix of the resources the system should use for temporary storage. The supported resource type is: Google Cloud Storage: storage.googleapis.com/{bucket}/{object} bucket.storage.googleapis.com/{object}
+         * 
+         * @return builder
+         * 
+         */
         public Builder tempStoragePrefix(@Nullable Output<String> tempStoragePrefix) {
             $.tempStoragePrefix = tempStoragePrefix;
             return this;
         }
 
+        /**
+         * @param tempStoragePrefix The prefix of the resources the system should use for temporary storage. The supported resource type is: Google Cloud Storage: storage.googleapis.com/{bucket}/{object} bucket.storage.googleapis.com/{object}
+         * 
+         * @return builder
+         * 
+         */
         public Builder tempStoragePrefix(String tempStoragePrefix) {
             return tempStoragePrefix(Output.of(tempStoragePrefix));
         }
 
+        /**
+         * @param workerId The ID of the worker running this pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workerId(@Nullable Output<String> workerId) {
             $.workerId = workerId;
             return this;
         }
 
+        /**
+         * @param workerId The ID of the worker running this pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workerId(String workerId) {
             return workerId(Output.of(workerId));
         }

@@ -28,6 +28,10 @@ public final class TopologySpreadConstraintArgs extends com.pulumi.resources.Res
     @Import(name="labelSelector")
     private @Nullable Output<LabelSelectorArgs> labelSelector;
 
+    /**
+     * @return LabelSelector is used to find matching pods. Pods that match this label selector are counted to determine the number of pods in their corresponding topology domain.
+     * 
+     */
     public Optional<Output<LabelSelectorArgs>> labelSelector() {
         return Optional.ofNullable(this.labelSelector);
     }
@@ -39,6 +43,10 @@ public final class TopologySpreadConstraintArgs extends com.pulumi.resources.Res
     @Import(name="maxSkew", required=true)
     private Output<Integer> maxSkew;
 
+    /**
+     * @return MaxSkew describes the degree to which pods may be unevenly distributed. When `whenUnsatisfiable=DoNotSchedule`, it is the maximum permitted difference between the number of matching pods in the target topology and the global minimum. For example, in a 3-zone cluster, MaxSkew is set to 1, and pods with the same labelSelector spread as 1/1/0: | zone1 | zone2 | zone3 | |   P   |   P   |       | - if MaxSkew is 1, incoming pod can only be scheduled to zone3 to become 1/1/1; scheduling it onto zone1(zone2) would make the ActualSkew(2-0) on zone1(zone2) violate MaxSkew(1). - if MaxSkew is 2, incoming pod can be scheduled onto any zone. When `whenUnsatisfiable=ScheduleAnyway`, it is used to give higher precedence to topologies that satisfy it. It&#39;s a required field. Default value is 1 and 0 is not allowed.
+     * 
+     */
     public Output<Integer> maxSkew() {
         return this.maxSkew;
     }
@@ -50,6 +58,10 @@ public final class TopologySpreadConstraintArgs extends com.pulumi.resources.Res
     @Import(name="topologyKey", required=true)
     private Output<String> topologyKey;
 
+    /**
+     * @return TopologyKey is the key of node labels. Nodes that have a label with this key and identical values are considered to be in the same topology. We consider each &lt;key, value&gt; as a &#34;bucket&#34;, and try to put balanced number of pods into each bucket. It&#39;s a required field.
+     * 
+     */
     public Output<String> topologyKey() {
         return this.topologyKey;
     }
@@ -68,6 +80,17 @@ public final class TopologySpreadConstraintArgs extends com.pulumi.resources.Res
     @Import(name="whenUnsatisfiable", required=true)
     private Output<String> whenUnsatisfiable;
 
+    /**
+     * @return WhenUnsatisfiable indicates how to deal with a pod if it doesn&#39;t satisfy the spread constraint. - DoNotSchedule (default) tells the scheduler not to schedule it. - ScheduleAnyway tells the scheduler to schedule the pod in any location,
+     *   but giving higher precedence to topologies that would help reduce the
+     *   skew.
+     * A constraint is considered &#34;Unsatisfiable&#34; for an incoming pod if and only if every possible node assignment for that pod would violate &#34;MaxSkew&#34; on some topology. For example, in a 3-zone cluster, MaxSkew is set to 1, and pods with the same labelSelector spread as 3/1/1: | zone1 | zone2 | zone3 | | P P P |   P   |   P   | If WhenUnsatisfiable is set to DoNotSchedule, incoming pod can only be scheduled to zone2(zone3) to become 3/2/1(3/1/2) as ActualSkew(2-1) on zone2(zone3) satisfies MaxSkew(1). In other words, the cluster can still be imbalanced, but scheduler won&#39;t make it *more* imbalanced. It&#39;s a required field.
+     * 
+     * Possible enum values:
+     *  - `&#34;DoNotSchedule&#34;` instructs the scheduler not to schedule the pod when constraints are not satisfied.
+     *  - `&#34;ScheduleAnyway&#34;` instructs the scheduler to schedule the pod even if constraints are not satisfied.
+     * 
+     */
     public Output<String> whenUnsatisfiable() {
         return this.whenUnsatisfiable;
     }
@@ -99,38 +122,100 @@ public final class TopologySpreadConstraintArgs extends com.pulumi.resources.Res
             $ = new TopologySpreadConstraintArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param labelSelector LabelSelector is used to find matching pods. Pods that match this label selector are counted to determine the number of pods in their corresponding topology domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labelSelector(@Nullable Output<LabelSelectorArgs> labelSelector) {
             $.labelSelector = labelSelector;
             return this;
         }
 
+        /**
+         * @param labelSelector LabelSelector is used to find matching pods. Pods that match this label selector are counted to determine the number of pods in their corresponding topology domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labelSelector(LabelSelectorArgs labelSelector) {
             return labelSelector(Output.of(labelSelector));
         }
 
+        /**
+         * @param maxSkew MaxSkew describes the degree to which pods may be unevenly distributed. When `whenUnsatisfiable=DoNotSchedule`, it is the maximum permitted difference between the number of matching pods in the target topology and the global minimum. For example, in a 3-zone cluster, MaxSkew is set to 1, and pods with the same labelSelector spread as 1/1/0: | zone1 | zone2 | zone3 | |   P   |   P   |       | - if MaxSkew is 1, incoming pod can only be scheduled to zone3 to become 1/1/1; scheduling it onto zone1(zone2) would make the ActualSkew(2-0) on zone1(zone2) violate MaxSkew(1). - if MaxSkew is 2, incoming pod can be scheduled onto any zone. When `whenUnsatisfiable=ScheduleAnyway`, it is used to give higher precedence to topologies that satisfy it. It&#39;s a required field. Default value is 1 and 0 is not allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxSkew(Output<Integer> maxSkew) {
             $.maxSkew = maxSkew;
             return this;
         }
 
+        /**
+         * @param maxSkew MaxSkew describes the degree to which pods may be unevenly distributed. When `whenUnsatisfiable=DoNotSchedule`, it is the maximum permitted difference between the number of matching pods in the target topology and the global minimum. For example, in a 3-zone cluster, MaxSkew is set to 1, and pods with the same labelSelector spread as 1/1/0: | zone1 | zone2 | zone3 | |   P   |   P   |       | - if MaxSkew is 1, incoming pod can only be scheduled to zone3 to become 1/1/1; scheduling it onto zone1(zone2) would make the ActualSkew(2-0) on zone1(zone2) violate MaxSkew(1). - if MaxSkew is 2, incoming pod can be scheduled onto any zone. When `whenUnsatisfiable=ScheduleAnyway`, it is used to give higher precedence to topologies that satisfy it. It&#39;s a required field. Default value is 1 and 0 is not allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxSkew(Integer maxSkew) {
             return maxSkew(Output.of(maxSkew));
         }
 
+        /**
+         * @param topologyKey TopologyKey is the key of node labels. Nodes that have a label with this key and identical values are considered to be in the same topology. We consider each &lt;key, value&gt; as a &#34;bucket&#34;, and try to put balanced number of pods into each bucket. It&#39;s a required field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topologyKey(Output<String> topologyKey) {
             $.topologyKey = topologyKey;
             return this;
         }
 
+        /**
+         * @param topologyKey TopologyKey is the key of node labels. Nodes that have a label with this key and identical values are considered to be in the same topology. We consider each &lt;key, value&gt; as a &#34;bucket&#34;, and try to put balanced number of pods into each bucket. It&#39;s a required field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topologyKey(String topologyKey) {
             return topologyKey(Output.of(topologyKey));
         }
 
+        /**
+         * @param whenUnsatisfiable WhenUnsatisfiable indicates how to deal with a pod if it doesn&#39;t satisfy the spread constraint. - DoNotSchedule (default) tells the scheduler not to schedule it. - ScheduleAnyway tells the scheduler to schedule the pod in any location,
+         *   but giving higher precedence to topologies that would help reduce the
+         *   skew.
+         * A constraint is considered &#34;Unsatisfiable&#34; for an incoming pod if and only if every possible node assignment for that pod would violate &#34;MaxSkew&#34; on some topology. For example, in a 3-zone cluster, MaxSkew is set to 1, and pods with the same labelSelector spread as 3/1/1: | zone1 | zone2 | zone3 | | P P P |   P   |   P   | If WhenUnsatisfiable is set to DoNotSchedule, incoming pod can only be scheduled to zone2(zone3) to become 3/2/1(3/1/2) as ActualSkew(2-1) on zone2(zone3) satisfies MaxSkew(1). In other words, the cluster can still be imbalanced, but scheduler won&#39;t make it *more* imbalanced. It&#39;s a required field.
+         * 
+         * Possible enum values:
+         *  - `&#34;DoNotSchedule&#34;` instructs the scheduler not to schedule the pod when constraints are not satisfied.
+         *  - `&#34;ScheduleAnyway&#34;` instructs the scheduler to schedule the pod even if constraints are not satisfied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder whenUnsatisfiable(Output<String> whenUnsatisfiable) {
             $.whenUnsatisfiable = whenUnsatisfiable;
             return this;
         }
 
+        /**
+         * @param whenUnsatisfiable WhenUnsatisfiable indicates how to deal with a pod if it doesn&#39;t satisfy the spread constraint. - DoNotSchedule (default) tells the scheduler not to schedule it. - ScheduleAnyway tells the scheduler to schedule the pod in any location,
+         *   but giving higher precedence to topologies that would help reduce the
+         *   skew.
+         * A constraint is considered &#34;Unsatisfiable&#34; for an incoming pod if and only if every possible node assignment for that pod would violate &#34;MaxSkew&#34; on some topology. For example, in a 3-zone cluster, MaxSkew is set to 1, and pods with the same labelSelector spread as 3/1/1: | zone1 | zone2 | zone3 | | P P P |   P   |   P   | If WhenUnsatisfiable is set to DoNotSchedule, incoming pod can only be scheduled to zone2(zone3) to become 3/2/1(3/1/2) as ActualSkew(2-1) on zone2(zone3) satisfies MaxSkew(1). In other words, the cluster can still be imbalanced, but scheduler won&#39;t make it *more* imbalanced. It&#39;s a required field.
+         * 
+         * Possible enum values:
+         *  - `&#34;DoNotSchedule&#34;` instructs the scheduler not to schedule the pod when constraints are not satisfied.
+         *  - `&#34;ScheduleAnyway&#34;` instructs the scheduler to schedule the pod even if constraints are not satisfied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder whenUnsatisfiable(String whenUnsatisfiable) {
             return whenUnsatisfiable(Output.of(whenUnsatisfiable));
         }

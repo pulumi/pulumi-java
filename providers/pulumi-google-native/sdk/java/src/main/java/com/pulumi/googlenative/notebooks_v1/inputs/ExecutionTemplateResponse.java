@@ -27,6 +27,10 @@ public final class ExecutionTemplateResponse extends com.pulumi.resources.Invoke
     @Import(name="acceleratorConfig", required=true)
     private SchedulerAcceleratorConfigResponse acceleratorConfig;
 
+    /**
+     * @return Configuration (count and accelerator type) for hardware running notebook execution.
+     * 
+     */
     public SchedulerAcceleratorConfigResponse acceleratorConfig() {
         return this.acceleratorConfig;
     }
@@ -38,6 +42,10 @@ public final class ExecutionTemplateResponse extends com.pulumi.resources.Invoke
     @Import(name="containerImageUri", required=true)
     private String containerImageUri;
 
+    /**
+     * @return Container Image URI to a DLVM Example: &#39;gcr.io/deeplearning-platform-release/base-cu100&#39; More examples can be found at: https://cloud.google.com/ai-platform/deep-learning-containers/docs/choosing-container
+     * 
+     */
     public String containerImageUri() {
         return this.containerImageUri;
     }
@@ -49,6 +57,10 @@ public final class ExecutionTemplateResponse extends com.pulumi.resources.Invoke
     @Import(name="dataprocParameters", required=true)
     private DataprocParametersResponse dataprocParameters;
 
+    /**
+     * @return Parameters used in Dataproc JobType executions.
+     * 
+     */
     public DataprocParametersResponse dataprocParameters() {
         return this.dataprocParameters;
     }
@@ -60,6 +72,10 @@ public final class ExecutionTemplateResponse extends com.pulumi.resources.Invoke
     @Import(name="inputNotebookFile", required=true)
     private String inputNotebookFile;
 
+    /**
+     * @return Path to the notebook file to execute. Must be in a Google Cloud Storage bucket. Format: `gs://{bucket_name}/{folder}/{notebook_file_name}` Ex: `gs://notebook_user/scheduled_notebooks/sentiment_notebook.ipynb`
+     * 
+     */
     public String inputNotebookFile() {
         return this.inputNotebookFile;
     }
@@ -71,6 +87,10 @@ public final class ExecutionTemplateResponse extends com.pulumi.resources.Invoke
     @Import(name="jobType", required=true)
     private String jobType;
 
+    /**
+     * @return The type of Job to be used on this execution.
+     * 
+     */
     public String jobType() {
         return this.jobType;
     }
@@ -82,6 +102,10 @@ public final class ExecutionTemplateResponse extends com.pulumi.resources.Invoke
     @Import(name="kernelSpec", required=true)
     private String kernelSpec;
 
+    /**
+     * @return Name of the kernel spec to use. This must be specified if the kernel spec name on the execution target does not match the name in the input notebook file.
+     * 
+     */
     public String kernelSpec() {
         return this.kernelSpec;
     }
@@ -93,6 +117,10 @@ public final class ExecutionTemplateResponse extends com.pulumi.resources.Invoke
     @Import(name="labels", required=true)
     private Map<String,String> labels;
 
+    /**
+     * @return Labels for execution. If execution is scheduled, a field included will be &#39;nbs-scheduled&#39;. Otherwise, it is an immediate execution, and an included field will be &#39;nbs-immediate&#39;. Use fields to efficiently index between various types of executions.
+     * 
+     */
     public Map<String,String> labels() {
         return this.labels;
     }
@@ -104,6 +132,10 @@ public final class ExecutionTemplateResponse extends com.pulumi.resources.Invoke
     @Import(name="masterType", required=true)
     private String masterType;
 
+    /**
+     * @return Specifies the type of virtual machine to use for your training job&#39;s master worker. You must specify this field when `scaleTier` is set to `CUSTOM`. You can use certain Compute Engine machine types directly in this field. The following types are supported: - `n1-standard-4` - `n1-standard-8` - `n1-standard-16` - `n1-standard-32` - `n1-standard-64` - `n1-standard-96` - `n1-highmem-2` - `n1-highmem-4` - `n1-highmem-8` - `n1-highmem-16` - `n1-highmem-32` - `n1-highmem-64` - `n1-highmem-96` - `n1-highcpu-16` - `n1-highcpu-32` - `n1-highcpu-64` - `n1-highcpu-96` Alternatively, you can use the following legacy machine types: - `standard` - `large_model` - `complex_model_s` - `complex_model_m` - `complex_model_l` - `standard_gpu` - `complex_model_m_gpu` - `complex_model_l_gpu` - `standard_p100` - `complex_model_m_p100` - `standard_v100` - `large_model_v100` - `complex_model_m_v100` - `complex_model_l_v100` Finally, if you want to use a TPU for training, specify `cloud_tpu` in this field. Learn more about the [special configuration options for training with TPU](https://cloud.google.com/ai-platform/training/docs/using-tpus#configuring_a_custom_tpu_machine).
+     * 
+     */
     public String masterType() {
         return this.masterType;
     }
@@ -115,6 +147,10 @@ public final class ExecutionTemplateResponse extends com.pulumi.resources.Invoke
     @Import(name="outputNotebookFolder", required=true)
     private String outputNotebookFolder;
 
+    /**
+     * @return Path to the notebook folder to write to. Must be in a Google Cloud Storage bucket path. Format: `gs://{bucket_name}/{folder}` Ex: `gs://notebook_user/scheduled_notebooks`
+     * 
+     */
     public String outputNotebookFolder() {
         return this.outputNotebookFolder;
     }
@@ -126,6 +162,10 @@ public final class ExecutionTemplateResponse extends com.pulumi.resources.Invoke
     @Import(name="parameters", required=true)
     private String parameters;
 
+    /**
+     * @return Parameters used within the &#39;input_notebook_file&#39; notebook.
+     * 
+     */
     public String parameters() {
         return this.parameters;
     }
@@ -137,6 +177,10 @@ public final class ExecutionTemplateResponse extends com.pulumi.resources.Invoke
     @Import(name="paramsYamlFile", required=true)
     private String paramsYamlFile;
 
+    /**
+     * @return Parameters to be overridden in the notebook during execution. Ref https://papermill.readthedocs.io/en/latest/usage-parameterize.html on how to specifying parameters in the input notebook and pass them here in an YAML file. Ex: `gs://notebook_user/scheduled_notebooks/sentiment_notebook_params.yaml`
+     * 
+     */
     public String paramsYamlFile() {
         return this.paramsYamlFile;
     }
@@ -148,6 +192,10 @@ public final class ExecutionTemplateResponse extends com.pulumi.resources.Invoke
     @Import(name="serviceAccount", required=true)
     private String serviceAccount;
 
+    /**
+     * @return The email address of a service account to use when running the execution. You must have the `iam.serviceAccounts.actAs` permission for the specified service account.
+     * 
+     */
     public String serviceAccount() {
         return this.serviceAccount;
     }
@@ -159,6 +207,10 @@ public final class ExecutionTemplateResponse extends com.pulumi.resources.Invoke
     @Import(name="vertexAiParameters", required=true)
     private VertexAIParametersResponse vertexAiParameters;
 
+    /**
+     * @return Parameters used in Vertex AI JobType executions.
+     * 
+     */
     public VertexAIParametersResponse vertexAiParameters() {
         return this.vertexAiParameters;
     }
@@ -199,66 +251,144 @@ public final class ExecutionTemplateResponse extends com.pulumi.resources.Invoke
             $ = new ExecutionTemplateResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param acceleratorConfig Configuration (count and accelerator type) for hardware running notebook execution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acceleratorConfig(SchedulerAcceleratorConfigResponse acceleratorConfig) {
             $.acceleratorConfig = acceleratorConfig;
             return this;
         }
 
+        /**
+         * @param containerImageUri Container Image URI to a DLVM Example: &#39;gcr.io/deeplearning-platform-release/base-cu100&#39; More examples can be found at: https://cloud.google.com/ai-platform/deep-learning-containers/docs/choosing-container
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerImageUri(String containerImageUri) {
             $.containerImageUri = containerImageUri;
             return this;
         }
 
+        /**
+         * @param dataprocParameters Parameters used in Dataproc JobType executions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataprocParameters(DataprocParametersResponse dataprocParameters) {
             $.dataprocParameters = dataprocParameters;
             return this;
         }
 
+        /**
+         * @param inputNotebookFile Path to the notebook file to execute. Must be in a Google Cloud Storage bucket. Format: `gs://{bucket_name}/{folder}/{notebook_file_name}` Ex: `gs://notebook_user/scheduled_notebooks/sentiment_notebook.ipynb`
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputNotebookFile(String inputNotebookFile) {
             $.inputNotebookFile = inputNotebookFile;
             return this;
         }
 
+        /**
+         * @param jobType The type of Job to be used on this execution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobType(String jobType) {
             $.jobType = jobType;
             return this;
         }
 
+        /**
+         * @param kernelSpec Name of the kernel spec to use. This must be specified if the kernel spec name on the execution target does not match the name in the input notebook file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kernelSpec(String kernelSpec) {
             $.kernelSpec = kernelSpec;
             return this;
         }
 
+        /**
+         * @param labels Labels for execution. If execution is scheduled, a field included will be &#39;nbs-scheduled&#39;. Otherwise, it is an immediate execution, and an included field will be &#39;nbs-immediate&#39;. Use fields to efficiently index between various types of executions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param masterType Specifies the type of virtual machine to use for your training job&#39;s master worker. You must specify this field when `scaleTier` is set to `CUSTOM`. You can use certain Compute Engine machine types directly in this field. The following types are supported: - `n1-standard-4` - `n1-standard-8` - `n1-standard-16` - `n1-standard-32` - `n1-standard-64` - `n1-standard-96` - `n1-highmem-2` - `n1-highmem-4` - `n1-highmem-8` - `n1-highmem-16` - `n1-highmem-32` - `n1-highmem-64` - `n1-highmem-96` - `n1-highcpu-16` - `n1-highcpu-32` - `n1-highcpu-64` - `n1-highcpu-96` Alternatively, you can use the following legacy machine types: - `standard` - `large_model` - `complex_model_s` - `complex_model_m` - `complex_model_l` - `standard_gpu` - `complex_model_m_gpu` - `complex_model_l_gpu` - `standard_p100` - `complex_model_m_p100` - `standard_v100` - `large_model_v100` - `complex_model_m_v100` - `complex_model_l_v100` Finally, if you want to use a TPU for training, specify `cloud_tpu` in this field. Learn more about the [special configuration options for training with TPU](https://cloud.google.com/ai-platform/training/docs/using-tpus#configuring_a_custom_tpu_machine).
+         * 
+         * @return builder
+         * 
+         */
         public Builder masterType(String masterType) {
             $.masterType = masterType;
             return this;
         }
 
+        /**
+         * @param outputNotebookFolder Path to the notebook folder to write to. Must be in a Google Cloud Storage bucket path. Format: `gs://{bucket_name}/{folder}` Ex: `gs://notebook_user/scheduled_notebooks`
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputNotebookFolder(String outputNotebookFolder) {
             $.outputNotebookFolder = outputNotebookFolder;
             return this;
         }
 
+        /**
+         * @param parameters Parameters used within the &#39;input_notebook_file&#39; notebook.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(String parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param paramsYamlFile Parameters to be overridden in the notebook during execution. Ref https://papermill.readthedocs.io/en/latest/usage-parameterize.html on how to specifying parameters in the input notebook and pass them here in an YAML file. Ex: `gs://notebook_user/scheduled_notebooks/sentiment_notebook_params.yaml`
+         * 
+         * @return builder
+         * 
+         */
         public Builder paramsYamlFile(String paramsYamlFile) {
             $.paramsYamlFile = paramsYamlFile;
             return this;
         }
 
+        /**
+         * @param serviceAccount The email address of a service account to use when running the execution. You must have the `iam.serviceAccounts.actAs` permission for the specified service account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccount(String serviceAccount) {
             $.serviceAccount = serviceAccount;
             return this;
         }
 
+        /**
+         * @param vertexAiParameters Parameters used in Vertex AI JobType executions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vertexAiParameters(VertexAIParametersResponse vertexAiParameters) {
             $.vertexAiParameters = vertexAiParameters;
             return this;

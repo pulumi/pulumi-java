@@ -27,6 +27,10 @@ public final class UsagePlanState extends com.pulumi.resources.ResourceArgs {
     @Import(name="apiStages")
     private @Nullable Output<List<UsagePlanApiStageGetArgs>> apiStages;
 
+    /**
+     * @return The associated API stages of the usage plan.
+     * 
+     */
     public Optional<Output<List<UsagePlanApiStageGetArgs>>> apiStages() {
         return Optional.ofNullable(this.apiStages);
     }
@@ -38,6 +42,10 @@ public final class UsagePlanState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return Amazon Resource Name (ARN)
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -49,6 +57,10 @@ public final class UsagePlanState extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description of a usage plan.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -60,6 +72,10 @@ public final class UsagePlanState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the usage plan.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -71,6 +87,10 @@ public final class UsagePlanState extends com.pulumi.resources.ResourceArgs {
     @Import(name="productCode")
     private @Nullable Output<String> productCode;
 
+    /**
+     * @return The AWS Marketplace product identifier to associate with the usage plan as a SaaS product on AWS Marketplace.
+     * 
+     */
     public Optional<Output<String>> productCode() {
         return Optional.ofNullable(this.productCode);
     }
@@ -82,6 +102,10 @@ public final class UsagePlanState extends com.pulumi.resources.ResourceArgs {
     @Import(name="quotaSettings")
     private @Nullable Output<UsagePlanQuotaSettingsGetArgs> quotaSettings;
 
+    /**
+     * @return The quota settings of the usage plan.
+     * 
+     */
     public Optional<Output<UsagePlanQuotaSettingsGetArgs>> quotaSettings() {
         return Optional.ofNullable(this.quotaSettings);
     }
@@ -93,6 +117,10 @@ public final class UsagePlanState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -104,6 +132,10 @@ public final class UsagePlanState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider .
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -115,6 +147,10 @@ public final class UsagePlanState extends com.pulumi.resources.ResourceArgs {
     @Import(name="throttleSettings")
     private @Nullable Output<UsagePlanThrottleSettingsGetArgs> throttleSettings;
 
+    /**
+     * @return The throttling limits of the usage plan.
+     * 
+     */
     public Optional<Output<UsagePlanThrottleSettingsGetArgs>> throttleSettings() {
         return Optional.ofNullable(this.throttleSettings);
     }
@@ -151,87 +187,201 @@ public final class UsagePlanState extends com.pulumi.resources.ResourceArgs {
             $ = new UsagePlanState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiStages The associated API stages of the usage plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiStages(@Nullable Output<List<UsagePlanApiStageGetArgs>> apiStages) {
             $.apiStages = apiStages;
             return this;
         }
 
+        /**
+         * @param apiStages The associated API stages of the usage plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiStages(List<UsagePlanApiStageGetArgs> apiStages) {
             return apiStages(Output.of(apiStages));
         }
 
+        /**
+         * @param apiStages The associated API stages of the usage plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiStages(UsagePlanApiStageGetArgs... apiStages) {
             return apiStages(List.of(apiStages));
         }
 
+        /**
+         * @param arn Amazon Resource Name (ARN)
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn Amazon Resource Name (ARN)
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param description The description of a usage plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description of a usage plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param name The name of the usage plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the usage plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param productCode The AWS Marketplace product identifier to associate with the usage plan as a SaaS product on AWS Marketplace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder productCode(@Nullable Output<String> productCode) {
             $.productCode = productCode;
             return this;
         }
 
+        /**
+         * @param productCode The AWS Marketplace product identifier to associate with the usage plan as a SaaS product on AWS Marketplace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder productCode(String productCode) {
             return productCode(Output.of(productCode));
         }
 
+        /**
+         * @param quotaSettings The quota settings of the usage plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder quotaSettings(@Nullable Output<UsagePlanQuotaSettingsGetArgs> quotaSettings) {
             $.quotaSettings = quotaSettings;
             return this;
         }
 
+        /**
+         * @param quotaSettings The quota settings of the usage plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder quotaSettings(UsagePlanQuotaSettingsGetArgs quotaSettings) {
             return quotaSettings(Output.of(quotaSettings));
         }
 
+        /**
+         * @param tags Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }
 
+        /**
+         * @param throttleSettings The throttling limits of the usage plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder throttleSettings(@Nullable Output<UsagePlanThrottleSettingsGetArgs> throttleSettings) {
             $.throttleSettings = throttleSettings;
             return this;
         }
 
+        /**
+         * @param throttleSettings The throttling limits of the usage plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder throttleSettings(UsagePlanThrottleSettingsGetArgs throttleSettings) {
             return throttleSettings(Output.of(throttleSettings));
         }

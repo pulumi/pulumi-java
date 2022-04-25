@@ -26,6 +26,10 @@ public final class AuthInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="expiresIn")
     private @Nullable Integer expiresIn;
 
+    /**
+     * @return Time in seconds that the token remains valid
+     * 
+     */
     public Optional<Integer> expiresIn() {
         return Optional.ofNullable(this.expiresIn);
     }
@@ -37,6 +41,10 @@ public final class AuthInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="refreshToken")
     private @Nullable String refreshToken;
 
+    /**
+     * @return The refresh token used to refresh the access token.
+     * 
+     */
     public Optional<String> refreshToken() {
         return Optional.ofNullable(this.refreshToken);
     }
@@ -48,6 +56,10 @@ public final class AuthInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="scope")
     private @Nullable String scope;
 
+    /**
+     * @return The scope of the access token.
+     * 
+     */
     public Optional<String> scope() {
         return Optional.ofNullable(this.scope);
     }
@@ -59,6 +71,10 @@ public final class AuthInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="token", required=true)
     private String token;
 
+    /**
+     * @return The access token used to access the source control provider.
+     * 
+     */
     public String token() {
         return this.token;
     }
@@ -70,6 +86,10 @@ public final class AuthInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="tokenType", required=true)
     private String tokenType;
 
+    /**
+     * @return The type of Auth token.
+     * 
+     */
     public String tokenType() {
         return this.tokenType;
     }
@@ -102,26 +122,56 @@ public final class AuthInfoResponse extends com.pulumi.resources.InvokeArgs {
             $ = new AuthInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expiresIn Time in seconds that the token remains valid
+         * 
+         * @return builder
+         * 
+         */
         public Builder expiresIn(@Nullable Integer expiresIn) {
             $.expiresIn = expiresIn;
             return this;
         }
 
+        /**
+         * @param refreshToken The refresh token used to refresh the access token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder refreshToken(@Nullable String refreshToken) {
             $.refreshToken = refreshToken;
             return this;
         }
 
+        /**
+         * @param scope The scope of the access token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(@Nullable String scope) {
             $.scope = scope;
             return this;
         }
 
+        /**
+         * @param token The access token used to access the source control provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder token(String token) {
             $.token = token;
             return this;
         }
 
+        /**
+         * @param tokenType The type of Auth token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tokenType(String tokenType) {
             $.tokenType = tokenType;
             return this;

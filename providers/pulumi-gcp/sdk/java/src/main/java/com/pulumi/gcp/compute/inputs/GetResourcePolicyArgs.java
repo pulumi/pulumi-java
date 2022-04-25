@@ -21,6 +21,10 @@ public final class GetResourcePolicyArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the Resource Policy.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -32,6 +36,10 @@ public final class GetResourcePolicyArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="project")
     private @Nullable String project;
 
+    /**
+     * @return Project from which to list the Resource Policy. Defaults to project declared in the provider.
+     * 
+     */
     public Optional<String> project() {
         return Optional.ofNullable(this.project);
     }
@@ -43,6 +51,10 @@ public final class GetResourcePolicyArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="region")
     private @Nullable String region;
 
+    /**
+     * @return Region where the Resource Policy resides.
+     * 
+     */
     public Optional<String> region() {
         return Optional.ofNullable(this.region);
     }
@@ -73,16 +85,34 @@ public final class GetResourcePolicyArgs extends com.pulumi.resources.InvokeArgs
             $ = new GetResourcePolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the Resource Policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param project Project from which to list the Resource Policy. Defaults to project declared in the provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable String project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param region Region where the Resource Policy resides.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(@Nullable String region) {
             $.region = region;
             return this;

@@ -23,6 +23,10 @@ public final class GkeClusterResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="cluster", required=true)
     private String cluster;
 
+    /**
+     * @return Information specifying a GKE Cluster. Format is `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}.
+     * 
+     */
     public String cluster() {
         return this.cluster;
     }
@@ -51,6 +55,12 @@ public final class GkeClusterResponse extends com.pulumi.resources.InvokeArgs {
             $ = new GkeClusterResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cluster Information specifying a GKE Cluster. Format is `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cluster(String cluster) {
             $.cluster = cluster;
             return this;

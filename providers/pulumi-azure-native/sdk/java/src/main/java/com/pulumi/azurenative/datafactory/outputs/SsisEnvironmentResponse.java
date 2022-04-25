@@ -15,33 +15,33 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SsisEnvironmentResponse {
     /**
-     * Metadata description.
+     * @return Metadata description.
      * 
      */
     private final @Nullable String description;
     /**
-     * Folder id which contains environment.
+     * @return Folder id which contains environment.
      * 
      */
     private final @Nullable Double folderId;
     /**
-     * Metadata id.
+     * @return Metadata id.
      * 
      */
     private final @Nullable Double id;
     /**
-     * Metadata name.
+     * @return Metadata name.
      * 
      */
     private final @Nullable String name;
     /**
-     * The type of SSIS object metadata.
+     * @return The type of SSIS object metadata.
      * Expected value is &#39;Environment&#39;.
      * 
      */
     private final String type;
     /**
-     * Variable in environment
+     * @return Variable in environment
      * 
      */
     private final @Nullable List<SsisVariableResponse> variables;
@@ -63,45 +63,45 @@ public final class SsisEnvironmentResponse {
     }
 
     /**
-     * Metadata description.
+     * @return Metadata description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Folder id which contains environment.
+     * @return Folder id which contains environment.
      * 
-    */
+     */
     public Optional<Double> folderId() {
         return Optional.ofNullable(this.folderId);
     }
     /**
-     * Metadata id.
+     * @return Metadata id.
      * 
-    */
+     */
     public Optional<Double> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * Metadata name.
+     * @return Metadata name.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The type of SSIS object metadata.
+     * @return The type of SSIS object metadata.
      * Expected value is &#39;Environment&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Variable in environment
+     * @return Variable in environment
      * 
-    */
+     */
     public List<SsisVariableResponse> variables() {
         return this.variables == null ? List.of() : this.variables;
     }

@@ -24,6 +24,10 @@ public final class TransferOptionsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="deleteObjectsFromSourceAfterTransfer", required=true)
     private Boolean deleteObjectsFromSourceAfterTransfer;
 
+    /**
+     * @return Whether objects should be deleted from the source after they are transferred to the sink. **Note:** This option and delete_objects_unique_in_sink are mutually exclusive.
+     * 
+     */
     public Boolean deleteObjectsFromSourceAfterTransfer() {
         return this.deleteObjectsFromSourceAfterTransfer;
     }
@@ -35,6 +39,10 @@ public final class TransferOptionsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="deleteObjectsUniqueInSink", required=true)
     private Boolean deleteObjectsUniqueInSink;
 
+    /**
+     * @return Whether objects that exist only in the sink should be deleted. **Note:** This option and delete_objects_from_source_after_transfer are mutually exclusive.
+     * 
+     */
     public Boolean deleteObjectsUniqueInSink() {
         return this.deleteObjectsUniqueInSink;
     }
@@ -46,6 +54,10 @@ public final class TransferOptionsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="metadataOptions", required=true)
     private MetadataOptionsResponse metadataOptions;
 
+    /**
+     * @return Represents the selected metadata options for a transfer job.
+     * 
+     */
     public MetadataOptionsResponse metadataOptions() {
         return this.metadataOptions;
     }
@@ -57,6 +69,10 @@ public final class TransferOptionsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="overwriteObjectsAlreadyExistingInSink", required=true)
     private Boolean overwriteObjectsAlreadyExistingInSink;
 
+    /**
+     * @return When to overwrite objects that already exist in the sink. The default is that only objects that are different from the source are ovewritten. If true, all objects in the sink whose name matches an object in the source are overwritten with the source object.
+     * 
+     */
     public Boolean overwriteObjectsAlreadyExistingInSink() {
         return this.overwriteObjectsAlreadyExistingInSink;
     }
@@ -88,21 +104,45 @@ public final class TransferOptionsResponse extends com.pulumi.resources.InvokeAr
             $ = new TransferOptionsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deleteObjectsFromSourceAfterTransfer Whether objects should be deleted from the source after they are transferred to the sink. **Note:** This option and delete_objects_unique_in_sink are mutually exclusive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deleteObjectsFromSourceAfterTransfer(Boolean deleteObjectsFromSourceAfterTransfer) {
             $.deleteObjectsFromSourceAfterTransfer = deleteObjectsFromSourceAfterTransfer;
             return this;
         }
 
+        /**
+         * @param deleteObjectsUniqueInSink Whether objects that exist only in the sink should be deleted. **Note:** This option and delete_objects_from_source_after_transfer are mutually exclusive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deleteObjectsUniqueInSink(Boolean deleteObjectsUniqueInSink) {
             $.deleteObjectsUniqueInSink = deleteObjectsUniqueInSink;
             return this;
         }
 
+        /**
+         * @param metadataOptions Represents the selected metadata options for a transfer job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadataOptions(MetadataOptionsResponse metadataOptions) {
             $.metadataOptions = metadataOptions;
             return this;
         }
 
+        /**
+         * @param overwriteObjectsAlreadyExistingInSink When to overwrite objects that already exist in the sink. The default is that only objects that are different from the source are ovewritten. If true, all objects in the sink whose name matches an object in the source are overwritten with the source object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder overwriteObjectsAlreadyExistingInSink(Boolean overwriteObjectsAlreadyExistingInSink) {
             $.overwriteObjectsAlreadyExistingInSink = overwriteObjectsAlreadyExistingInSink;
             return this;

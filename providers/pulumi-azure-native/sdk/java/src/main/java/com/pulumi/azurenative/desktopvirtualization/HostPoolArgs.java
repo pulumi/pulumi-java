@@ -36,6 +36,10 @@ public final class HostPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="customRdpProperty")
     private @Nullable Output<String> customRdpProperty;
 
+    /**
+     * @return Custom rdp property of HostPool.
+     * 
+     */
     public Optional<Output<String>> customRdpProperty() {
         return Optional.ofNullable(this.customRdpProperty);
     }
@@ -47,6 +51,10 @@ public final class HostPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description of HostPool.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -58,6 +66,10 @@ public final class HostPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="friendlyName")
     private @Nullable Output<String> friendlyName;
 
+    /**
+     * @return Friendly name of HostPool.
+     * 
+     */
     public Optional<Output<String>> friendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
@@ -69,6 +81,10 @@ public final class HostPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hostPoolName")
     private @Nullable Output<String> hostPoolName;
 
+    /**
+     * @return The name of the host pool within the specified resource group
+     * 
+     */
     public Optional<Output<String>> hostPoolName() {
         return Optional.ofNullable(this.hostPoolName);
     }
@@ -80,6 +96,10 @@ public final class HostPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hostPoolType", required=true)
     private Output<Either<String,HostPoolType>> hostPoolType;
 
+    /**
+     * @return HostPool type for desktop.
+     * 
+     */
     public Output<Either<String,HostPoolType>> hostPoolType() {
         return this.hostPoolType;
     }
@@ -98,6 +118,10 @@ public final class HostPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kind")
     private @Nullable Output<String> kind;
 
+    /**
+     * @return Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
+     * 
+     */
     public Optional<Output<String>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -109,6 +133,10 @@ public final class HostPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="loadBalancerType", required=true)
     private Output<Either<String,LoadBalancerType>> loadBalancerType;
 
+    /**
+     * @return The type of the load balancer.
+     * 
+     */
     public Output<Either<String,LoadBalancerType>> loadBalancerType() {
         return this.loadBalancerType;
     }
@@ -120,6 +148,10 @@ public final class HostPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The geo-location where the resource lives
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -131,6 +163,10 @@ public final class HostPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="managedBy")
     private @Nullable Output<String> managedBy;
 
+    /**
+     * @return The fully qualified resource ID of the resource that manages this resource. Indicates if this resource is managed by another Azure resource. If this is present, complete mode deployment will not delete the resource if it is removed from the template since it is managed by another resource.
+     * 
+     */
     public Optional<Output<String>> managedBy() {
         return Optional.ofNullable(this.managedBy);
     }
@@ -142,6 +178,10 @@ public final class HostPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxSessionLimit")
     private @Nullable Output<Integer> maxSessionLimit;
 
+    /**
+     * @return The max session limit of HostPool.
+     * 
+     */
     public Optional<Output<Integer>> maxSessionLimit() {
         return Optional.ofNullable(this.maxSessionLimit);
     }
@@ -153,6 +193,10 @@ public final class HostPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="migrationRequest")
     private @Nullable Output<MigrationRequestPropertiesArgs> migrationRequest;
 
+    /**
+     * @return The registration info of HostPool.
+     * 
+     */
     public Optional<Output<MigrationRequestPropertiesArgs>> migrationRequest() {
         return Optional.ofNullable(this.migrationRequest);
     }
@@ -164,6 +208,10 @@ public final class HostPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="personalDesktopAssignmentType")
     private @Nullable Output<Either<String,PersonalDesktopAssignmentType>> personalDesktopAssignmentType;
 
+    /**
+     * @return PersonalDesktopAssignment type for HostPool.
+     * 
+     */
     public Optional<Output<Either<String,PersonalDesktopAssignmentType>>> personalDesktopAssignmentType() {
         return Optional.ofNullable(this.personalDesktopAssignmentType);
     }
@@ -182,6 +230,10 @@ public final class HostPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="preferredAppGroupType", required=true)
     private Output<Either<String,PreferredAppGroupType>> preferredAppGroupType;
 
+    /**
+     * @return The type of preferred application group type, default to Desktop Application Group
+     * 
+     */
     public Output<Either<String,PreferredAppGroupType>> preferredAppGroupType() {
         return this.preferredAppGroupType;
     }
@@ -193,6 +245,10 @@ public final class HostPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="registrationInfo")
     private @Nullable Output<RegistrationInfoArgs> registrationInfo;
 
+    /**
+     * @return The registration info of HostPool.
+     * 
+     */
     public Optional<Output<RegistrationInfoArgs>> registrationInfo() {
         return Optional.ofNullable(this.registrationInfo);
     }
@@ -204,6 +260,10 @@ public final class HostPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -215,6 +275,10 @@ public final class HostPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ring")
     private @Nullable Output<Integer> ring;
 
+    /**
+     * @return The ring number of HostPool.
+     * 
+     */
     public Optional<Output<Integer>> ring() {
         return Optional.ofNullable(this.ring);
     }
@@ -233,6 +297,10 @@ public final class HostPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ssoClientId")
     private @Nullable Output<String> ssoClientId;
 
+    /**
+     * @return ClientId for the registered Relying Party used to issue WVD SSO certificates.
+     * 
+     */
     public Optional<Output<String>> ssoClientId() {
         return Optional.ofNullable(this.ssoClientId);
     }
@@ -244,6 +312,10 @@ public final class HostPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ssoClientSecretKeyVaultPath")
     private @Nullable Output<String> ssoClientSecretKeyVaultPath;
 
+    /**
+     * @return Path to Azure KeyVault storing the secret used for communication to ADFS.
+     * 
+     */
     public Optional<Output<String>> ssoClientSecretKeyVaultPath() {
         return Optional.ofNullable(this.ssoClientSecretKeyVaultPath);
     }
@@ -255,6 +327,10 @@ public final class HostPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ssoSecretType")
     private @Nullable Output<Either<String,SSOSecretType>> ssoSecretType;
 
+    /**
+     * @return The type of single sign on Secret Type.
+     * 
+     */
     public Optional<Output<Either<String,SSOSecretType>>> ssoSecretType() {
         return Optional.ofNullable(this.ssoSecretType);
     }
@@ -266,6 +342,10 @@ public final class HostPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ssoadfsAuthority")
     private @Nullable Output<String> ssoadfsAuthority;
 
+    /**
+     * @return URL to customer ADFS server for signing WVD SSO certificates.
+     * 
+     */
     public Optional<Output<String>> ssoadfsAuthority() {
         return Optional.ofNullable(this.ssoadfsAuthority);
     }
@@ -277,6 +357,10 @@ public final class HostPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="startVMOnConnect")
     private @Nullable Output<Boolean> startVMOnConnect;
 
+    /**
+     * @return The flag to turn on/off StartVMOnConnect feature.
+     * 
+     */
     public Optional<Output<Boolean>> startVMOnConnect() {
         return Optional.ofNullable(this.startVMOnConnect);
     }
@@ -288,6 +372,10 @@ public final class HostPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -299,6 +387,10 @@ public final class HostPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="validationEnvironment")
     private @Nullable Output<Boolean> validationEnvironment;
 
+    /**
+     * @return Is validation environment.
+     * 
+     */
     public Optional<Output<Boolean>> validationEnvironment() {
         return Optional.ofNullable(this.validationEnvironment);
     }
@@ -310,6 +402,10 @@ public final class HostPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vmTemplate")
     private @Nullable Output<String> vmTemplate;
 
+    /**
+     * @return VM template for sessionhosts configuration within hostpool.
+     * 
+     */
     public Optional<Output<String>> vmTemplate() {
         return Optional.ofNullable(this.vmTemplate);
     }
@@ -364,55 +460,127 @@ public final class HostPoolArgs extends com.pulumi.resources.ResourceArgs {
             $ = new HostPoolArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customRdpProperty Custom rdp property of HostPool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customRdpProperty(@Nullable Output<String> customRdpProperty) {
             $.customRdpProperty = customRdpProperty;
             return this;
         }
 
+        /**
+         * @param customRdpProperty Custom rdp property of HostPool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customRdpProperty(String customRdpProperty) {
             return customRdpProperty(Output.of(customRdpProperty));
         }
 
+        /**
+         * @param description Description of HostPool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description of HostPool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param friendlyName Friendly name of HostPool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
             $.friendlyName = friendlyName;
             return this;
         }
 
+        /**
+         * @param friendlyName Friendly name of HostPool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder friendlyName(String friendlyName) {
             return friendlyName(Output.of(friendlyName));
         }
 
+        /**
+         * @param hostPoolName The name of the host pool within the specified resource group
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostPoolName(@Nullable Output<String> hostPoolName) {
             $.hostPoolName = hostPoolName;
             return this;
         }
 
+        /**
+         * @param hostPoolName The name of the host pool within the specified resource group
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostPoolName(String hostPoolName) {
             return hostPoolName(Output.of(hostPoolName));
         }
 
+        /**
+         * @param hostPoolType HostPool type for desktop.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostPoolType(Output<Either<String,HostPoolType>> hostPoolType) {
             $.hostPoolType = hostPoolType;
             return this;
         }
 
+        /**
+         * @param hostPoolType HostPool type for desktop.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostPoolType(Either<String,HostPoolType> hostPoolType) {
             return hostPoolType(Output.of(hostPoolType));
         }
 
+        /**
+         * @param hostPoolType HostPool type for desktop.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostPoolType(String hostPoolType) {
             return hostPoolType(Either.ofLeft(hostPoolType));
         }
 
+        /**
+         * @param hostPoolType HostPool type for desktop.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostPoolType(HostPoolType hostPoolType) {
             return hostPoolType(Either.ofRight(hostPoolType));
         }
@@ -426,81 +594,189 @@ public final class HostPoolArgs extends com.pulumi.resources.ResourceArgs {
             return identity(Output.of(identity));
         }
 
+        /**
+         * @param kind Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param loadBalancerType The type of the load balancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancerType(Output<Either<String,LoadBalancerType>> loadBalancerType) {
             $.loadBalancerType = loadBalancerType;
             return this;
         }
 
+        /**
+         * @param loadBalancerType The type of the load balancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancerType(Either<String,LoadBalancerType> loadBalancerType) {
             return loadBalancerType(Output.of(loadBalancerType));
         }
 
+        /**
+         * @param loadBalancerType The type of the load balancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancerType(String loadBalancerType) {
             return loadBalancerType(Either.ofLeft(loadBalancerType));
         }
 
+        /**
+         * @param loadBalancerType The type of the load balancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancerType(LoadBalancerType loadBalancerType) {
             return loadBalancerType(Either.ofRight(loadBalancerType));
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param managedBy The fully qualified resource ID of the resource that manages this resource. Indicates if this resource is managed by another Azure resource. If this is present, complete mode deployment will not delete the resource if it is removed from the template since it is managed by another resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedBy(@Nullable Output<String> managedBy) {
             $.managedBy = managedBy;
             return this;
         }
 
+        /**
+         * @param managedBy The fully qualified resource ID of the resource that manages this resource. Indicates if this resource is managed by another Azure resource. If this is present, complete mode deployment will not delete the resource if it is removed from the template since it is managed by another resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedBy(String managedBy) {
             return managedBy(Output.of(managedBy));
         }
 
+        /**
+         * @param maxSessionLimit The max session limit of HostPool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxSessionLimit(@Nullable Output<Integer> maxSessionLimit) {
             $.maxSessionLimit = maxSessionLimit;
             return this;
         }
 
+        /**
+         * @param maxSessionLimit The max session limit of HostPool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxSessionLimit(Integer maxSessionLimit) {
             return maxSessionLimit(Output.of(maxSessionLimit));
         }
 
+        /**
+         * @param migrationRequest The registration info of HostPool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder migrationRequest(@Nullable Output<MigrationRequestPropertiesArgs> migrationRequest) {
             $.migrationRequest = migrationRequest;
             return this;
         }
 
+        /**
+         * @param migrationRequest The registration info of HostPool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder migrationRequest(MigrationRequestPropertiesArgs migrationRequest) {
             return migrationRequest(Output.of(migrationRequest));
         }
 
+        /**
+         * @param personalDesktopAssignmentType PersonalDesktopAssignment type for HostPool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder personalDesktopAssignmentType(@Nullable Output<Either<String,PersonalDesktopAssignmentType>> personalDesktopAssignmentType) {
             $.personalDesktopAssignmentType = personalDesktopAssignmentType;
             return this;
         }
 
+        /**
+         * @param personalDesktopAssignmentType PersonalDesktopAssignment type for HostPool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder personalDesktopAssignmentType(Either<String,PersonalDesktopAssignmentType> personalDesktopAssignmentType) {
             return personalDesktopAssignmentType(Output.of(personalDesktopAssignmentType));
         }
 
+        /**
+         * @param personalDesktopAssignmentType PersonalDesktopAssignment type for HostPool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder personalDesktopAssignmentType(String personalDesktopAssignmentType) {
             return personalDesktopAssignmentType(Either.ofLeft(personalDesktopAssignmentType));
         }
 
+        /**
+         * @param personalDesktopAssignmentType PersonalDesktopAssignment type for HostPool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder personalDesktopAssignmentType(PersonalDesktopAssignmentType personalDesktopAssignmentType) {
             return personalDesktopAssignmentType(Either.ofRight(personalDesktopAssignmentType));
         }
@@ -514,46 +790,106 @@ public final class HostPoolArgs extends com.pulumi.resources.ResourceArgs {
             return plan(Output.of(plan));
         }
 
+        /**
+         * @param preferredAppGroupType The type of preferred application group type, default to Desktop Application Group
+         * 
+         * @return builder
+         * 
+         */
         public Builder preferredAppGroupType(Output<Either<String,PreferredAppGroupType>> preferredAppGroupType) {
             $.preferredAppGroupType = preferredAppGroupType;
             return this;
         }
 
+        /**
+         * @param preferredAppGroupType The type of preferred application group type, default to Desktop Application Group
+         * 
+         * @return builder
+         * 
+         */
         public Builder preferredAppGroupType(Either<String,PreferredAppGroupType> preferredAppGroupType) {
             return preferredAppGroupType(Output.of(preferredAppGroupType));
         }
 
+        /**
+         * @param preferredAppGroupType The type of preferred application group type, default to Desktop Application Group
+         * 
+         * @return builder
+         * 
+         */
         public Builder preferredAppGroupType(String preferredAppGroupType) {
             return preferredAppGroupType(Either.ofLeft(preferredAppGroupType));
         }
 
+        /**
+         * @param preferredAppGroupType The type of preferred application group type, default to Desktop Application Group
+         * 
+         * @return builder
+         * 
+         */
         public Builder preferredAppGroupType(PreferredAppGroupType preferredAppGroupType) {
             return preferredAppGroupType(Either.ofRight(preferredAppGroupType));
         }
 
+        /**
+         * @param registrationInfo The registration info of HostPool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registrationInfo(@Nullable Output<RegistrationInfoArgs> registrationInfo) {
             $.registrationInfo = registrationInfo;
             return this;
         }
 
+        /**
+         * @param registrationInfo The registration info of HostPool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registrationInfo(RegistrationInfoArgs registrationInfo) {
             return registrationInfo(Output.of(registrationInfo));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param ring The ring number of HostPool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ring(@Nullable Output<Integer> ring) {
             $.ring = ring;
             return this;
         }
 
+        /**
+         * @param ring The ring number of HostPool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ring(Integer ring) {
             return ring(Output.of(ring));
         }
@@ -567,82 +903,190 @@ public final class HostPoolArgs extends com.pulumi.resources.ResourceArgs {
             return sku(Output.of(sku));
         }
 
+        /**
+         * @param ssoClientId ClientId for the registered Relying Party used to issue WVD SSO certificates.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ssoClientId(@Nullable Output<String> ssoClientId) {
             $.ssoClientId = ssoClientId;
             return this;
         }
 
+        /**
+         * @param ssoClientId ClientId for the registered Relying Party used to issue WVD SSO certificates.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ssoClientId(String ssoClientId) {
             return ssoClientId(Output.of(ssoClientId));
         }
 
+        /**
+         * @param ssoClientSecretKeyVaultPath Path to Azure KeyVault storing the secret used for communication to ADFS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ssoClientSecretKeyVaultPath(@Nullable Output<String> ssoClientSecretKeyVaultPath) {
             $.ssoClientSecretKeyVaultPath = ssoClientSecretKeyVaultPath;
             return this;
         }
 
+        /**
+         * @param ssoClientSecretKeyVaultPath Path to Azure KeyVault storing the secret used for communication to ADFS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ssoClientSecretKeyVaultPath(String ssoClientSecretKeyVaultPath) {
             return ssoClientSecretKeyVaultPath(Output.of(ssoClientSecretKeyVaultPath));
         }
 
+        /**
+         * @param ssoSecretType The type of single sign on Secret Type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ssoSecretType(@Nullable Output<Either<String,SSOSecretType>> ssoSecretType) {
             $.ssoSecretType = ssoSecretType;
             return this;
         }
 
+        /**
+         * @param ssoSecretType The type of single sign on Secret Type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ssoSecretType(Either<String,SSOSecretType> ssoSecretType) {
             return ssoSecretType(Output.of(ssoSecretType));
         }
 
+        /**
+         * @param ssoSecretType The type of single sign on Secret Type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ssoSecretType(String ssoSecretType) {
             return ssoSecretType(Either.ofLeft(ssoSecretType));
         }
 
+        /**
+         * @param ssoSecretType The type of single sign on Secret Type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ssoSecretType(SSOSecretType ssoSecretType) {
             return ssoSecretType(Either.ofRight(ssoSecretType));
         }
 
+        /**
+         * @param ssoadfsAuthority URL to customer ADFS server for signing WVD SSO certificates.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ssoadfsAuthority(@Nullable Output<String> ssoadfsAuthority) {
             $.ssoadfsAuthority = ssoadfsAuthority;
             return this;
         }
 
+        /**
+         * @param ssoadfsAuthority URL to customer ADFS server for signing WVD SSO certificates.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ssoadfsAuthority(String ssoadfsAuthority) {
             return ssoadfsAuthority(Output.of(ssoadfsAuthority));
         }
 
+        /**
+         * @param startVMOnConnect The flag to turn on/off StartVMOnConnect feature.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startVMOnConnect(@Nullable Output<Boolean> startVMOnConnect) {
             $.startVMOnConnect = startVMOnConnect;
             return this;
         }
 
+        /**
+         * @param startVMOnConnect The flag to turn on/off StartVMOnConnect feature.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startVMOnConnect(Boolean startVMOnConnect) {
             return startVMOnConnect(Output.of(startVMOnConnect));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param validationEnvironment Is validation environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validationEnvironment(@Nullable Output<Boolean> validationEnvironment) {
             $.validationEnvironment = validationEnvironment;
             return this;
         }
 
+        /**
+         * @param validationEnvironment Is validation environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validationEnvironment(Boolean validationEnvironment) {
             return validationEnvironment(Output.of(validationEnvironment));
         }
 
+        /**
+         * @param vmTemplate VM template for sessionhosts configuration within hostpool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmTemplate(@Nullable Output<String> vmTemplate) {
             $.vmTemplate = vmTemplate;
             return this;
         }
 
+        /**
+         * @param vmTemplate VM template for sessionhosts configuration within hostpool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmTemplate(String vmTemplate) {
             return vmTemplate(Output.of(vmTemplate));
         }

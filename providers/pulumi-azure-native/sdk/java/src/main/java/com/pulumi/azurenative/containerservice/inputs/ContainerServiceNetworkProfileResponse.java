@@ -27,6 +27,10 @@ public final class ContainerServiceNetworkProfileResponse extends com.pulumi.res
     @Import(name="dnsServiceIP")
     private @Nullable String dnsServiceIP;
 
+    /**
+     * @return An IP address assigned to the Kubernetes DNS service. It must be within the Kubernetes service address range specified in serviceCidr.
+     * 
+     */
     public Optional<String> dnsServiceIP() {
         return Optional.ofNullable(this.dnsServiceIP);
     }
@@ -38,6 +42,10 @@ public final class ContainerServiceNetworkProfileResponse extends com.pulumi.res
     @Import(name="dockerBridgeCidr")
     private @Nullable String dockerBridgeCidr;
 
+    /**
+     * @return A CIDR notation IP range assigned to the Docker bridge network. It must not overlap with any Subnet IP ranges or the Kubernetes service address range.
+     * 
+     */
     public Optional<String> dockerBridgeCidr() {
         return Optional.ofNullable(this.dockerBridgeCidr);
     }
@@ -49,6 +57,10 @@ public final class ContainerServiceNetworkProfileResponse extends com.pulumi.res
     @Import(name="loadBalancerProfile")
     private @Nullable ManagedClusterLoadBalancerProfileResponse loadBalancerProfile;
 
+    /**
+     * @return Profile of the cluster load balancer.
+     * 
+     */
     public Optional<ManagedClusterLoadBalancerProfileResponse> loadBalancerProfile() {
         return Optional.ofNullable(this.loadBalancerProfile);
     }
@@ -60,6 +72,10 @@ public final class ContainerServiceNetworkProfileResponse extends com.pulumi.res
     @Import(name="loadBalancerSku")
     private @Nullable String loadBalancerSku;
 
+    /**
+     * @return The load balancer sku for the managed cluster.
+     * 
+     */
     public Optional<String> loadBalancerSku() {
         return Optional.ofNullable(this.loadBalancerSku);
     }
@@ -71,6 +87,10 @@ public final class ContainerServiceNetworkProfileResponse extends com.pulumi.res
     @Import(name="networkMode")
     private @Nullable String networkMode;
 
+    /**
+     * @return Network mode used for building Kubernetes network.
+     * 
+     */
     public Optional<String> networkMode() {
         return Optional.ofNullable(this.networkMode);
     }
@@ -82,6 +102,10 @@ public final class ContainerServiceNetworkProfileResponse extends com.pulumi.res
     @Import(name="networkPlugin")
     private @Nullable String networkPlugin;
 
+    /**
+     * @return Network plugin used for building Kubernetes network.
+     * 
+     */
     public Optional<String> networkPlugin() {
         return Optional.ofNullable(this.networkPlugin);
     }
@@ -93,6 +117,10 @@ public final class ContainerServiceNetworkProfileResponse extends com.pulumi.res
     @Import(name="networkPolicy")
     private @Nullable String networkPolicy;
 
+    /**
+     * @return Network policy used for building Kubernetes network.
+     * 
+     */
     public Optional<String> networkPolicy() {
         return Optional.ofNullable(this.networkPolicy);
     }
@@ -104,6 +132,10 @@ public final class ContainerServiceNetworkProfileResponse extends com.pulumi.res
     @Import(name="outboundType")
     private @Nullable String outboundType;
 
+    /**
+     * @return The outbound (egress) routing method.
+     * 
+     */
     public Optional<String> outboundType() {
         return Optional.ofNullable(this.outboundType);
     }
@@ -115,6 +147,10 @@ public final class ContainerServiceNetworkProfileResponse extends com.pulumi.res
     @Import(name="podCidr")
     private @Nullable String podCidr;
 
+    /**
+     * @return A CIDR notation IP range from which to assign pod IPs when kubenet is used.
+     * 
+     */
     public Optional<String> podCidr() {
         return Optional.ofNullable(this.podCidr);
     }
@@ -126,6 +162,10 @@ public final class ContainerServiceNetworkProfileResponse extends com.pulumi.res
     @Import(name="serviceCidr")
     private @Nullable String serviceCidr;
 
+    /**
+     * @return A CIDR notation IP range from which to assign service cluster IPs. It must not overlap with any Subnet IP ranges.
+     * 
+     */
     public Optional<String> serviceCidr() {
         return Optional.ofNullable(this.serviceCidr);
     }
@@ -163,51 +203,111 @@ public final class ContainerServiceNetworkProfileResponse extends com.pulumi.res
             $ = new ContainerServiceNetworkProfileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dnsServiceIP An IP address assigned to the Kubernetes DNS service. It must be within the Kubernetes service address range specified in serviceCidr.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsServiceIP(@Nullable String dnsServiceIP) {
             $.dnsServiceIP = dnsServiceIP;
             return this;
         }
 
+        /**
+         * @param dockerBridgeCidr A CIDR notation IP range assigned to the Docker bridge network. It must not overlap with any Subnet IP ranges or the Kubernetes service address range.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dockerBridgeCidr(@Nullable String dockerBridgeCidr) {
             $.dockerBridgeCidr = dockerBridgeCidr;
             return this;
         }
 
+        /**
+         * @param loadBalancerProfile Profile of the cluster load balancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancerProfile(@Nullable ManagedClusterLoadBalancerProfileResponse loadBalancerProfile) {
             $.loadBalancerProfile = loadBalancerProfile;
             return this;
         }
 
+        /**
+         * @param loadBalancerSku The load balancer sku for the managed cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancerSku(@Nullable String loadBalancerSku) {
             $.loadBalancerSku = loadBalancerSku;
             return this;
         }
 
+        /**
+         * @param networkMode Network mode used for building Kubernetes network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkMode(@Nullable String networkMode) {
             $.networkMode = networkMode;
             return this;
         }
 
+        /**
+         * @param networkPlugin Network plugin used for building Kubernetes network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkPlugin(@Nullable String networkPlugin) {
             $.networkPlugin = networkPlugin;
             return this;
         }
 
+        /**
+         * @param networkPolicy Network policy used for building Kubernetes network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkPolicy(@Nullable String networkPolicy) {
             $.networkPolicy = networkPolicy;
             return this;
         }
 
+        /**
+         * @param outboundType The outbound (egress) routing method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outboundType(@Nullable String outboundType) {
             $.outboundType = outboundType;
             return this;
         }
 
+        /**
+         * @param podCidr A CIDR notation IP range from which to assign pod IPs when kubenet is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder podCidr(@Nullable String podCidr) {
             $.podCidr = podCidr;
             return this;
         }
 
+        /**
+         * @param serviceCidr A CIDR notation IP range from which to assign service cluster IPs. It must not overlap with any Subnet IP ranges.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceCidr(@Nullable String serviceCidr) {
             $.serviceCidr = serviceCidr;
             return this;

@@ -23,6 +23,10 @@ public final class GoogleCloudDialogflowV2SuggestionFeatureResponse extends com.
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of Human Agent Assistant API feature to request.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -51,6 +55,12 @@ public final class GoogleCloudDialogflowV2SuggestionFeatureResponse extends com.
             $ = new GoogleCloudDialogflowV2SuggestionFeatureResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type Type of Human Agent Assistant API feature to request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

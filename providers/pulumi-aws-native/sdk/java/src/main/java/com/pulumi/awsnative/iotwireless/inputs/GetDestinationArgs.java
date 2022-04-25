@@ -19,6 +19,10 @@ public final class GetDestinationArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Unique name of destination
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -47,6 +51,12 @@ public final class GetDestinationArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetDestinationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Unique name of destination
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

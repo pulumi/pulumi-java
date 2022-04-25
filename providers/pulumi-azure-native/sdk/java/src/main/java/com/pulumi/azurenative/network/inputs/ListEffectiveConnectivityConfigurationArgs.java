@@ -21,6 +21,10 @@ public final class ListEffectiveConnectivityConfigurationArgs extends com.pulumi
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -32,6 +36,10 @@ public final class ListEffectiveConnectivityConfigurationArgs extends com.pulumi
     @Import(name="skipToken")
     private @Nullable String skipToken;
 
+    /**
+     * @return When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
+     * 
+     */
     public Optional<String> skipToken() {
         return Optional.ofNullable(this.skipToken);
     }
@@ -43,6 +51,10 @@ public final class ListEffectiveConnectivityConfigurationArgs extends com.pulumi
     @Import(name="virtualNetworkName", required=true)
     private String virtualNetworkName;
 
+    /**
+     * @return The name of the virtual network.
+     * 
+     */
     public String virtualNetworkName() {
         return this.virtualNetworkName;
     }
@@ -73,16 +85,34 @@ public final class ListEffectiveConnectivityConfigurationArgs extends com.pulumi
             $ = new ListEffectiveConnectivityConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param skipToken When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skipToken(@Nullable String skipToken) {
             $.skipToken = skipToken;
             return this;
         }
 
+        /**
+         * @param virtualNetworkName The name of the virtual network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetworkName(String virtualNetworkName) {
             $.virtualNetworkName = virtualNetworkName;
             return this;

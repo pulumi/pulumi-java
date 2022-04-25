@@ -19,6 +19,10 @@ public final class GetFilterArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="arn", required=true)
     private String arn;
 
+    /**
+     * @return Findings filter ARN.
+     * 
+     */
     public String arn() {
         return this.arn;
     }
@@ -47,6 +51,12 @@ public final class GetFilterArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetFilterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn Findings filter ARN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             $.arn = arn;
             return this;

@@ -26,6 +26,10 @@ public final class StateNotificationConfigArgs extends com.pulumi.resources.Reso
     @Import(name="pubsubTopicName")
     private @Nullable Output<String> pubsubTopicName;
 
+    /**
+     * @return A Cloud Pub/Sub topic name. For example, `projects/myProject/topics/deviceEvents`.
+     * 
+     */
     public Optional<Output<String>> pubsubTopicName() {
         return Optional.ofNullable(this.pubsubTopicName);
     }
@@ -54,11 +58,23 @@ public final class StateNotificationConfigArgs extends com.pulumi.resources.Reso
             $ = new StateNotificationConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param pubsubTopicName A Cloud Pub/Sub topic name. For example, `projects/myProject/topics/deviceEvents`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pubsubTopicName(@Nullable Output<String> pubsubTopicName) {
             $.pubsubTopicName = pubsubTopicName;
             return this;
         }
 
+        /**
+         * @param pubsubTopicName A Cloud Pub/Sub topic name. For example, `projects/myProject/topics/deviceEvents`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pubsubTopicName(String pubsubTopicName) {
             return pubsubTopicName(Output.of(pubsubTopicName));
         }

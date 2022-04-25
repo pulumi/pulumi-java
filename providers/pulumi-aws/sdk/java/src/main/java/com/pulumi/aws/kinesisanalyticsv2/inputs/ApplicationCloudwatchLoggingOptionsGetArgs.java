@@ -29,6 +29,10 @@ public final class ApplicationCloudwatchLoggingOptionsGetArgs extends com.pulumi
     @Import(name="logStreamArn", required=true)
     private Output<String> logStreamArn;
 
+    /**
+     * @return The ARN of the CloudWatch log stream to receive application messages.
+     * 
+     */
     public Output<String> logStreamArn() {
         return this.logStreamArn;
     }
@@ -67,11 +71,23 @@ public final class ApplicationCloudwatchLoggingOptionsGetArgs extends com.pulumi
             return cloudwatchLoggingOptionId(Output.of(cloudwatchLoggingOptionId));
         }
 
+        /**
+         * @param logStreamArn The ARN of the CloudWatch log stream to receive application messages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logStreamArn(Output<String> logStreamArn) {
             $.logStreamArn = logStreamArn;
             return this;
         }
 
+        /**
+         * @param logStreamArn The ARN of the CloudWatch log stream to receive application messages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logStreamArn(String logStreamArn) {
             return logStreamArn(Output.of(logStreamArn));
         }

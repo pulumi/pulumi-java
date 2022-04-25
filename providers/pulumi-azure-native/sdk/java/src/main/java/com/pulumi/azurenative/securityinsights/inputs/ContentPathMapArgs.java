@@ -28,6 +28,10 @@ public final class ContentPathMapArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="contentType")
     private @Nullable Output<Either<String,ContentType>> contentType;
 
+    /**
+     * @return Content type.
+     * 
+     */
     public Optional<Output<Either<String,ContentType>>> contentType() {
         return Optional.ofNullable(this.contentType);
     }
@@ -39,6 +43,10 @@ public final class ContentPathMapArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="path")
     private @Nullable Output<String> path;
 
+    /**
+     * @return The path to the content.
+     * 
+     */
     public Optional<Output<String>> path() {
         return Optional.ofNullable(this.path);
     }
@@ -68,28 +76,64 @@ public final class ContentPathMapArgs extends com.pulumi.resources.ResourceArgs 
             $ = new ContentPathMapArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param contentType Content type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentType(@Nullable Output<Either<String,ContentType>> contentType) {
             $.contentType = contentType;
             return this;
         }
 
+        /**
+         * @param contentType Content type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentType(Either<String,ContentType> contentType) {
             return contentType(Output.of(contentType));
         }
 
+        /**
+         * @param contentType Content type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentType(String contentType) {
             return contentType(Either.ofLeft(contentType));
         }
 
+        /**
+         * @param contentType Content type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentType(ContentType contentType) {
             return contentType(Either.ofRight(contentType));
         }
 
+        /**
+         * @param path The path to the content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(@Nullable Output<String> path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param path The path to the content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             return path(Output.of(path));
         }

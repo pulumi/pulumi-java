@@ -22,6 +22,10 @@ public final class DatasetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Optional. User-provided description of the annotation specification set. The description can be up to 10000 characters long.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -33,6 +37,10 @@ public final class DatasetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
     private Output<String> displayName;
 
+    /**
+     * @return The display name of the dataset. Maximum of 64 characters.
+     * 
+     */
     public Output<String> displayName() {
         return this.displayName;
     }
@@ -44,6 +52,10 @@ public final class DatasetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="lastMigrateTime")
     private @Nullable Output<String> lastMigrateTime;
 
+    /**
+     * @return Last time that the Dataset is migrated to AI Platform V2. If any of the AnnotatedDataset is migrated, the last_migration_time in Dataset is also updated.
+     * 
+     */
     public Optional<Output<String>> lastMigrateTime() {
         return Optional.ofNullable(this.lastMigrateTime);
     }
@@ -82,29 +94,65 @@ public final class DatasetArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DatasetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Optional. User-provided description of the annotation specification set. The description can be up to 10000 characters long.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Optional. User-provided description of the annotation specification set. The description can be up to 10000 characters long.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param displayName The display name of the dataset. Maximum of 64 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName The display name of the dataset. Maximum of 64 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param lastMigrateTime Last time that the Dataset is migrated to AI Platform V2. If any of the AnnotatedDataset is migrated, the last_migration_time in Dataset is also updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastMigrateTime(@Nullable Output<String> lastMigrateTime) {
             $.lastMigrateTime = lastMigrateTime;
             return this;
         }
 
+        /**
+         * @param lastMigrateTime Last time that the Dataset is migrated to AI Platform V2. If any of the AnnotatedDataset is migrated, the last_migration_time in Dataset is also updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastMigrateTime(String lastMigrateTime) {
             return lastMigrateTime(Output.of(lastMigrateTime));
         }

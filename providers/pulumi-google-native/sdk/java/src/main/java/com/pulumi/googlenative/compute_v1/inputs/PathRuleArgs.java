@@ -29,6 +29,10 @@ public final class PathRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="paths")
     private @Nullable Output<List<String>> paths;
 
+    /**
+     * @return The list of path patterns to match. Each must start with / and the only place a * is allowed is at the end following a /. The string fed to the path matcher does not include any text after the first ? or #, and those chars are not allowed here.
+     * 
+     */
     public Optional<Output<List<String>>> paths() {
         return Optional.ofNullable(this.paths);
     }
@@ -40,6 +44,10 @@ public final class PathRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="routeAction")
     private @Nullable Output<HttpRouteActionArgs> routeAction;
 
+    /**
+     * @return In response to a matching path, the load balancer performs advanced routing actions, such as URL rewrites and header transformations, before forwarding the request to the selected backend. If routeAction specifies any weightedBackendServices, service must not be set. Conversely if service is set, routeAction cannot contain any weightedBackendServices. Only one of routeAction or urlRedirect must be set. URL maps for external HTTP(S) load balancers support only the urlRewrite action within a path rule&#39;s routeAction.
+     * 
+     */
     public Optional<Output<HttpRouteActionArgs>> routeAction() {
         return Optional.ofNullable(this.routeAction);
     }
@@ -51,6 +59,10 @@ public final class PathRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="service")
     private @Nullable Output<String> service;
 
+    /**
+     * @return The full or partial URL of the backend service resource to which traffic is directed if this rule is matched. If routeAction is also specified, advanced routing actions, such as URL rewrites, take effect before sending the request to the backend. However, if service is specified, routeAction cannot contain any weightedBackendServices. Conversely, if routeAction specifies any weightedBackendServices, service must not be specified. Only one of urlRedirect, service or routeAction.weightedBackendService must be set.
+     * 
+     */
     public Optional<Output<String>> service() {
         return Optional.ofNullable(this.service);
     }
@@ -62,6 +74,10 @@ public final class PathRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="urlRedirect")
     private @Nullable Output<HttpRedirectActionArgs> urlRedirect;
 
+    /**
+     * @return When a path pattern is matched, the request is redirected to a URL specified by urlRedirect. If urlRedirect is specified, service or routeAction must not be set. Not supported when the URL map is bound to a target gRPC proxy.
+     * 
+     */
     public Optional<Output<HttpRedirectActionArgs>> urlRedirect() {
         return Optional.ofNullable(this.urlRedirect);
     }
@@ -93,42 +109,96 @@ public final class PathRuleArgs extends com.pulumi.resources.ResourceArgs {
             $ = new PathRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param paths The list of path patterns to match. Each must start with / and the only place a * is allowed is at the end following a /. The string fed to the path matcher does not include any text after the first ? or #, and those chars are not allowed here.
+         * 
+         * @return builder
+         * 
+         */
         public Builder paths(@Nullable Output<List<String>> paths) {
             $.paths = paths;
             return this;
         }
 
+        /**
+         * @param paths The list of path patterns to match. Each must start with / and the only place a * is allowed is at the end following a /. The string fed to the path matcher does not include any text after the first ? or #, and those chars are not allowed here.
+         * 
+         * @return builder
+         * 
+         */
         public Builder paths(List<String> paths) {
             return paths(Output.of(paths));
         }
 
+        /**
+         * @param paths The list of path patterns to match. Each must start with / and the only place a * is allowed is at the end following a /. The string fed to the path matcher does not include any text after the first ? or #, and those chars are not allowed here.
+         * 
+         * @return builder
+         * 
+         */
         public Builder paths(String... paths) {
             return paths(List.of(paths));
         }
 
+        /**
+         * @param routeAction In response to a matching path, the load balancer performs advanced routing actions, such as URL rewrites and header transformations, before forwarding the request to the selected backend. If routeAction specifies any weightedBackendServices, service must not be set. Conversely if service is set, routeAction cannot contain any weightedBackendServices. Only one of routeAction or urlRedirect must be set. URL maps for external HTTP(S) load balancers support only the urlRewrite action within a path rule&#39;s routeAction.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routeAction(@Nullable Output<HttpRouteActionArgs> routeAction) {
             $.routeAction = routeAction;
             return this;
         }
 
+        /**
+         * @param routeAction In response to a matching path, the load balancer performs advanced routing actions, such as URL rewrites and header transformations, before forwarding the request to the selected backend. If routeAction specifies any weightedBackendServices, service must not be set. Conversely if service is set, routeAction cannot contain any weightedBackendServices. Only one of routeAction or urlRedirect must be set. URL maps for external HTTP(S) load balancers support only the urlRewrite action within a path rule&#39;s routeAction.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routeAction(HttpRouteActionArgs routeAction) {
             return routeAction(Output.of(routeAction));
         }
 
+        /**
+         * @param service The full or partial URL of the backend service resource to which traffic is directed if this rule is matched. If routeAction is also specified, advanced routing actions, such as URL rewrites, take effect before sending the request to the backend. However, if service is specified, routeAction cannot contain any weightedBackendServices. Conversely, if routeAction specifies any weightedBackendServices, service must not be specified. Only one of urlRedirect, service or routeAction.weightedBackendService must be set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(@Nullable Output<String> service) {
             $.service = service;
             return this;
         }
 
+        /**
+         * @param service The full or partial URL of the backend service resource to which traffic is directed if this rule is matched. If routeAction is also specified, advanced routing actions, such as URL rewrites, take effect before sending the request to the backend. However, if service is specified, routeAction cannot contain any weightedBackendServices. Conversely, if routeAction specifies any weightedBackendServices, service must not be specified. Only one of urlRedirect, service or routeAction.weightedBackendService must be set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(String service) {
             return service(Output.of(service));
         }
 
+        /**
+         * @param urlRedirect When a path pattern is matched, the request is redirected to a URL specified by urlRedirect. If urlRedirect is specified, service or routeAction must not be set. Not supported when the URL map is bound to a target gRPC proxy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder urlRedirect(@Nullable Output<HttpRedirectActionArgs> urlRedirect) {
             $.urlRedirect = urlRedirect;
             return this;
         }
 
+        /**
+         * @param urlRedirect When a path pattern is matched, the request is redirected to a URL specified by urlRedirect. If urlRedirect is specified, service or routeAction must not be set. Not supported when the URL map is bound to a target gRPC proxy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder urlRedirect(HttpRedirectActionArgs urlRedirect) {
             return urlRedirect(Output.of(urlRedirect));
         }

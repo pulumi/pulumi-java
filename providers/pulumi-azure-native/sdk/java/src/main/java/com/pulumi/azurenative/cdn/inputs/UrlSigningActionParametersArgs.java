@@ -30,6 +30,10 @@ public final class UrlSigningActionParametersArgs extends com.pulumi.resources.R
     @Import(name="algorithm")
     private @Nullable Output<Either<String,Algorithm>> algorithm;
 
+    /**
+     * @return Algorithm to use for URL signing
+     * 
+     */
     public Optional<Output<Either<String,Algorithm>>> algorithm() {
         return Optional.ofNullable(this.algorithm);
     }
@@ -48,6 +52,10 @@ public final class UrlSigningActionParametersArgs extends com.pulumi.resources.R
     @Import(name="parameterNameOverride")
     private @Nullable Output<List<UrlSigningParamIdentifierArgs>> parameterNameOverride;
 
+    /**
+     * @return Defines which query string parameters in the url to be considered for expires, key id etc.
+     * 
+     */
     public Optional<Output<List<UrlSigningParamIdentifierArgs>>> parameterNameOverride() {
         return Optional.ofNullable(this.parameterNameOverride);
     }
@@ -78,19 +86,43 @@ public final class UrlSigningActionParametersArgs extends com.pulumi.resources.R
             $ = new UrlSigningActionParametersArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param algorithm Algorithm to use for URL signing
+         * 
+         * @return builder
+         * 
+         */
         public Builder algorithm(@Nullable Output<Either<String,Algorithm>> algorithm) {
             $.algorithm = algorithm;
             return this;
         }
 
+        /**
+         * @param algorithm Algorithm to use for URL signing
+         * 
+         * @return builder
+         * 
+         */
         public Builder algorithm(Either<String,Algorithm> algorithm) {
             return algorithm(Output.of(algorithm));
         }
 
+        /**
+         * @param algorithm Algorithm to use for URL signing
+         * 
+         * @return builder
+         * 
+         */
         public Builder algorithm(String algorithm) {
             return algorithm(Either.ofLeft(algorithm));
         }
 
+        /**
+         * @param algorithm Algorithm to use for URL signing
+         * 
+         * @return builder
+         * 
+         */
         public Builder algorithm(Algorithm algorithm) {
             return algorithm(Either.ofRight(algorithm));
         }
@@ -104,15 +136,33 @@ public final class UrlSigningActionParametersArgs extends com.pulumi.resources.R
             return odataType(Output.of(odataType));
         }
 
+        /**
+         * @param parameterNameOverride Defines which query string parameters in the url to be considered for expires, key id etc.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameterNameOverride(@Nullable Output<List<UrlSigningParamIdentifierArgs>> parameterNameOverride) {
             $.parameterNameOverride = parameterNameOverride;
             return this;
         }
 
+        /**
+         * @param parameterNameOverride Defines which query string parameters in the url to be considered for expires, key id etc.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameterNameOverride(List<UrlSigningParamIdentifierArgs> parameterNameOverride) {
             return parameterNameOverride(Output.of(parameterNameOverride));
         }
 
+        /**
+         * @param parameterNameOverride Defines which query string parameters in the url to be considered for expires, key id etc.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameterNameOverride(UrlSigningParamIdentifierArgs... parameterNameOverride) {
             return parameterNameOverride(List.of(parameterNameOverride));
         }

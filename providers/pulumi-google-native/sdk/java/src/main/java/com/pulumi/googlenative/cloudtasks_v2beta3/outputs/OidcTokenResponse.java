@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class OidcTokenResponse {
     /**
-     * Audience to be used when generating OIDC token. If not specified, the URI specified in target will be used.
+     * @return Audience to be used when generating OIDC token. If not specified, the URI specified in target will be used.
      * 
      */
     private final String audience;
     /**
-     * [Service account email](https://cloud.google.com/iam/docs/service-accounts) to be used for generating OIDC token. The service account must be within the same project as the queue. The caller must have iam.serviceAccounts.actAs permission for the service account.
+     * @return [Service account email](https://cloud.google.com/iam/docs/service-accounts) to be used for generating OIDC token. The service account must be within the same project as the queue. The caller must have iam.serviceAccounts.actAs permission for the service account.
      * 
      */
     private final String serviceAccountEmail;
@@ -29,16 +29,16 @@ public final class OidcTokenResponse {
     }
 
     /**
-     * Audience to be used when generating OIDC token. If not specified, the URI specified in target will be used.
+     * @return Audience to be used when generating OIDC token. If not specified, the URI specified in target will be used.
      * 
-    */
+     */
     public String audience() {
         return this.audience;
     }
     /**
-     * [Service account email](https://cloud.google.com/iam/docs/service-accounts) to be used for generating OIDC token. The service account must be within the same project as the queue. The caller must have iam.serviceAccounts.actAs permission for the service account.
+     * @return [Service account email](https://cloud.google.com/iam/docs/service-accounts) to be used for generating OIDC token. The service account must be within the same project as the queue. The caller must have iam.serviceAccounts.actAs permission for the service account.
      * 
-    */
+     */
     public String serviceAccountEmail() {
         return this.serviceAccountEmail;
     }

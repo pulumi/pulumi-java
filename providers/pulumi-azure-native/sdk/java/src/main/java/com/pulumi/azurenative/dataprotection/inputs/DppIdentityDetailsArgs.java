@@ -26,6 +26,10 @@ public final class DppIdentityDetailsArgs extends com.pulumi.resources.ResourceA
     @Import(name="type")
     private @Nullable Output<String> type;
 
+    /**
+     * @return The identityType which can be either SystemAssigned or None
+     * 
+     */
     public Optional<Output<String>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -54,11 +58,23 @@ public final class DppIdentityDetailsArgs extends com.pulumi.resources.ResourceA
             $ = new DppIdentityDetailsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type The identityType which can be either SystemAssigned or None
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The identityType which can be either SystemAssigned or None
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

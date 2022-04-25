@@ -37,6 +37,10 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="accountRecoverySetting")
     private @Nullable Output<UserPoolAccountRecoverySettingGetArgs> accountRecoverySetting;
 
+    /**
+     * @return Configuration block to define which verified available method a user can use to recover their forgotten password. Detailed below.
+     * 
+     */
     public Optional<Output<UserPoolAccountRecoverySettingGetArgs>> accountRecoverySetting() {
         return Optional.ofNullable(this.accountRecoverySetting);
     }
@@ -48,6 +52,10 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="adminCreateUserConfig")
     private @Nullable Output<UserPoolAdminCreateUserConfigGetArgs> adminCreateUserConfig;
 
+    /**
+     * @return Configuration block for creating a new user profile. Detailed below.
+     * 
+     */
     public Optional<Output<UserPoolAdminCreateUserConfigGetArgs>> adminCreateUserConfig() {
         return Optional.ofNullable(this.adminCreateUserConfig);
     }
@@ -59,6 +67,10 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="aliasAttributes")
     private @Nullable Output<List<String>> aliasAttributes;
 
+    /**
+     * @return Attributes supported as an alias for this user pool. Valid values: `phone_number`, `email`, or `preferred_username`. Conflicts with `username_attributes`.
+     * 
+     */
     public Optional<Output<List<String>>> aliasAttributes() {
         return Optional.ofNullable(this.aliasAttributes);
     }
@@ -70,6 +82,10 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return ARN of the user pool.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -81,6 +97,10 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="autoVerifiedAttributes")
     private @Nullable Output<List<String>> autoVerifiedAttributes;
 
+    /**
+     * @return Attributes to be auto-verified. Valid values: `email`, `phone_number`.
+     * 
+     */
     public Optional<Output<List<String>>> autoVerifiedAttributes() {
         return Optional.ofNullable(this.autoVerifiedAttributes);
     }
@@ -92,6 +112,10 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="creationDate")
     private @Nullable Output<String> creationDate;
 
+    /**
+     * @return Date the user pool was created.
+     * 
+     */
     public Optional<Output<String>> creationDate() {
         return Optional.ofNullable(this.creationDate);
     }
@@ -103,6 +127,10 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="customDomain")
     private @Nullable Output<String> customDomain;
 
+    /**
+     * @return A custom domain name that you provide to Amazon Cognito. This parameter applies only if you use a custom domain to host the sign-up and sign-in pages for your application. For example: `auth.example.com`.
+     * 
+     */
     public Optional<Output<String>> customDomain() {
         return Optional.ofNullable(this.customDomain);
     }
@@ -114,6 +142,10 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="deviceConfiguration")
     private @Nullable Output<UserPoolDeviceConfigurationGetArgs> deviceConfiguration;
 
+    /**
+     * @return Configuration block for the user pool&#39;s device tracking. Detailed below.
+     * 
+     */
     public Optional<Output<UserPoolDeviceConfigurationGetArgs>> deviceConfiguration() {
         return Optional.ofNullable(this.deviceConfiguration);
     }
@@ -125,6 +157,10 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="domain")
     private @Nullable Output<String> domain;
 
+    /**
+     * @return Holds the domain prefix if the user pool has a domain associated with it.
+     * 
+     */
     public Optional<Output<String>> domain() {
         return Optional.ofNullable(this.domain);
     }
@@ -136,6 +172,10 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="emailConfiguration")
     private @Nullable Output<UserPoolEmailConfigurationGetArgs> emailConfiguration;
 
+    /**
+     * @return Configuration block for configuring email. Detailed below.
+     * 
+     */
     public Optional<Output<UserPoolEmailConfigurationGetArgs>> emailConfiguration() {
         return Optional.ofNullable(this.emailConfiguration);
     }
@@ -147,6 +187,10 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="emailVerificationMessage")
     private @Nullable Output<String> emailVerificationMessage;
 
+    /**
+     * @return String representing the email verification message. Conflicts with `verification_message_template` configuration block `email_message` argument.
+     * 
+     */
     public Optional<Output<String>> emailVerificationMessage() {
         return Optional.ofNullable(this.emailVerificationMessage);
     }
@@ -158,6 +202,10 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="emailVerificationSubject")
     private @Nullable Output<String> emailVerificationSubject;
 
+    /**
+     * @return String representing the email verification subject. Conflicts with `verification_message_template` configuration block `email_subject` argument.
+     * 
+     */
     public Optional<Output<String>> emailVerificationSubject() {
         return Optional.ofNullable(this.emailVerificationSubject);
     }
@@ -169,6 +217,10 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="endpoint")
     private @Nullable Output<String> endpoint;
 
+    /**
+     * @return Endpoint name of the user pool. Example format: `cognito-idp.REGION.amazonaws.com/xxxx_yyyyy`
+     * 
+     */
     public Optional<Output<String>> endpoint() {
         return Optional.ofNullable(this.endpoint);
     }
@@ -180,6 +232,10 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="estimatedNumberOfUsers")
     private @Nullable Output<Integer> estimatedNumberOfUsers;
 
+    /**
+     * @return A number estimating the size of the user pool.
+     * 
+     */
     public Optional<Output<Integer>> estimatedNumberOfUsers() {
         return Optional.ofNullable(this.estimatedNumberOfUsers);
     }
@@ -191,6 +247,10 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="lambdaConfig")
     private @Nullable Output<UserPoolLambdaConfigGetArgs> lambdaConfig;
 
+    /**
+     * @return Configuration block for the AWS Lambda triggers associated with the user pool. Detailed below.
+     * 
+     */
     public Optional<Output<UserPoolLambdaConfigGetArgs>> lambdaConfig() {
         return Optional.ofNullable(this.lambdaConfig);
     }
@@ -202,6 +262,10 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="lastModifiedDate")
     private @Nullable Output<String> lastModifiedDate;
 
+    /**
+     * @return Date the user pool was last modified.
+     * 
+     */
     public Optional<Output<String>> lastModifiedDate() {
         return Optional.ofNullable(this.lastModifiedDate);
     }
@@ -213,6 +277,10 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="mfaConfiguration")
     private @Nullable Output<String> mfaConfiguration;
 
+    /**
+     * @return Multi-Factor Authentication (MFA) configuration for the User Pool. Defaults of `OFF`. Valid values are `OFF` (MFA Tokens are not required), `ON` (MFA is required for all users to sign in; requires at least one of `sms_configuration` or `software_token_mfa_configuration` to be configured), or `OPTIONAL` (MFA Will be required only for individual users who have MFA Enabled; requires at least one of `sms_configuration` or `software_token_mfa_configuration` to be configured).
+     * 
+     */
     public Optional<Output<String>> mfaConfiguration() {
         return Optional.ofNullable(this.mfaConfiguration);
     }
@@ -224,6 +292,10 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the attribute.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -235,6 +307,10 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="passwordPolicy")
     private @Nullable Output<UserPoolPasswordPolicyGetArgs> passwordPolicy;
 
+    /**
+     * @return Configuration blocked for information about the user pool password policy. Detailed below.
+     * 
+     */
     public Optional<Output<UserPoolPasswordPolicyGetArgs>> passwordPolicy() {
         return Optional.ofNullable(this.passwordPolicy);
     }
@@ -246,6 +322,10 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="schemas")
     private @Nullable Output<List<UserPoolSchemaGetArgs>> schemas;
 
+    /**
+     * @return Configuration block for the schema attributes of a user pool. Detailed below. Schema attributes from the [standard attribute set](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-attributes.html#cognito-user-pools-standard-attributes) only need to be specified if they are different from the default configuration. Attributes can be added, but not modified or removed. Maximum of 50 attributes.
+     * 
+     */
     public Optional<Output<List<UserPoolSchemaGetArgs>>> schemas() {
         return Optional.ofNullable(this.schemas);
     }
@@ -257,6 +337,10 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="smsAuthenticationMessage")
     private @Nullable Output<String> smsAuthenticationMessage;
 
+    /**
+     * @return String representing the SMS authentication message. The Message must contain the `{####}` placeholder, which will be replaced with the code.
+     * 
+     */
     public Optional<Output<String>> smsAuthenticationMessage() {
         return Optional.ofNullable(this.smsAuthenticationMessage);
     }
@@ -268,6 +352,10 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="smsConfiguration")
     private @Nullable Output<UserPoolSmsConfigurationGetArgs> smsConfiguration;
 
+    /**
+     * @return Configuration block for Short Message Service (SMS) settings. Detailed below. These settings apply to SMS user verification and SMS Multi-Factor Authentication (MFA). Due to Cognito API restrictions, the SMS configuration cannot be removed without recreating the Cognito User Pool. For user data safety, this resource will ignore the removal of this configuration by disabling drift detection.
+     * 
+     */
     public Optional<Output<UserPoolSmsConfigurationGetArgs>> smsConfiguration() {
         return Optional.ofNullable(this.smsConfiguration);
     }
@@ -279,6 +367,10 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="smsVerificationMessage")
     private @Nullable Output<String> smsVerificationMessage;
 
+    /**
+     * @return String representing the SMS verification message. Conflicts with `verification_message_template` configuration block `sms_message` argument.
+     * 
+     */
     public Optional<Output<String>> smsVerificationMessage() {
         return Optional.ofNullable(this.smsVerificationMessage);
     }
@@ -290,6 +382,10 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="softwareTokenMfaConfiguration")
     private @Nullable Output<UserPoolSoftwareTokenMfaConfigurationGetArgs> softwareTokenMfaConfiguration;
 
+    /**
+     * @return Configuration block for software token Mult-Factor Authentication (MFA) settings. Detailed below.
+     * 
+     */
     public Optional<Output<UserPoolSoftwareTokenMfaConfigurationGetArgs>> softwareTokenMfaConfiguration() {
         return Optional.ofNullable(this.softwareTokenMfaConfiguration);
     }
@@ -301,6 +397,10 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Map of tags to assign to the User Pool. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -312,6 +412,10 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider .
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -323,6 +427,10 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="userPoolAddOns")
     private @Nullable Output<UserPoolUserPoolAddOnsGetArgs> userPoolAddOns;
 
+    /**
+     * @return Configuration block for user pool add-ons to enable user pool advanced security mode features. Detailed below.
+     * 
+     */
     public Optional<Output<UserPoolUserPoolAddOnsGetArgs>> userPoolAddOns() {
         return Optional.ofNullable(this.userPoolAddOns);
     }
@@ -334,6 +442,10 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="usernameAttributes")
     private @Nullable Output<List<String>> usernameAttributes;
 
+    /**
+     * @return Whether email addresses or phone numbers can be specified as usernames when a user signs up. Conflicts with `alias_attributes`.
+     * 
+     */
     public Optional<Output<List<String>>> usernameAttributes() {
         return Optional.ofNullable(this.usernameAttributes);
     }
@@ -345,6 +457,10 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="usernameConfiguration")
     private @Nullable Output<UserPoolUsernameConfigurationGetArgs> usernameConfiguration;
 
+    /**
+     * @return Configuration block for username configuration. Detailed below.
+     * 
+     */
     public Optional<Output<UserPoolUsernameConfigurationGetArgs>> usernameConfiguration() {
         return Optional.ofNullable(this.usernameConfiguration);
     }
@@ -356,6 +472,10 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="verificationMessageTemplate")
     private @Nullable Output<UserPoolVerificationMessageTemplateGetArgs> verificationMessageTemplate;
 
+    /**
+     * @return Configuration block for verification message templates. Detailed below.
+     * 
+     */
     public Optional<Output<UserPoolVerificationMessageTemplateGetArgs>> verificationMessageTemplate() {
         return Optional.ofNullable(this.verificationMessageTemplate);
     }
@@ -413,288 +533,672 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
             $ = new UserPoolState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountRecoverySetting Configuration block to define which verified available method a user can use to recover their forgotten password. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountRecoverySetting(@Nullable Output<UserPoolAccountRecoverySettingGetArgs> accountRecoverySetting) {
             $.accountRecoverySetting = accountRecoverySetting;
             return this;
         }
 
+        /**
+         * @param accountRecoverySetting Configuration block to define which verified available method a user can use to recover their forgotten password. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountRecoverySetting(UserPoolAccountRecoverySettingGetArgs accountRecoverySetting) {
             return accountRecoverySetting(Output.of(accountRecoverySetting));
         }
 
+        /**
+         * @param adminCreateUserConfig Configuration block for creating a new user profile. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder adminCreateUserConfig(@Nullable Output<UserPoolAdminCreateUserConfigGetArgs> adminCreateUserConfig) {
             $.adminCreateUserConfig = adminCreateUserConfig;
             return this;
         }
 
+        /**
+         * @param adminCreateUserConfig Configuration block for creating a new user profile. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder adminCreateUserConfig(UserPoolAdminCreateUserConfigGetArgs adminCreateUserConfig) {
             return adminCreateUserConfig(Output.of(adminCreateUserConfig));
         }
 
+        /**
+         * @param aliasAttributes Attributes supported as an alias for this user pool. Valid values: `phone_number`, `email`, or `preferred_username`. Conflicts with `username_attributes`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aliasAttributes(@Nullable Output<List<String>> aliasAttributes) {
             $.aliasAttributes = aliasAttributes;
             return this;
         }
 
+        /**
+         * @param aliasAttributes Attributes supported as an alias for this user pool. Valid values: `phone_number`, `email`, or `preferred_username`. Conflicts with `username_attributes`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aliasAttributes(List<String> aliasAttributes) {
             return aliasAttributes(Output.of(aliasAttributes));
         }
 
+        /**
+         * @param aliasAttributes Attributes supported as an alias for this user pool. Valid values: `phone_number`, `email`, or `preferred_username`. Conflicts with `username_attributes`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aliasAttributes(String... aliasAttributes) {
             return aliasAttributes(List.of(aliasAttributes));
         }
 
+        /**
+         * @param arn ARN of the user pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn ARN of the user pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param autoVerifiedAttributes Attributes to be auto-verified. Valid values: `email`, `phone_number`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoVerifiedAttributes(@Nullable Output<List<String>> autoVerifiedAttributes) {
             $.autoVerifiedAttributes = autoVerifiedAttributes;
             return this;
         }
 
+        /**
+         * @param autoVerifiedAttributes Attributes to be auto-verified. Valid values: `email`, `phone_number`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoVerifiedAttributes(List<String> autoVerifiedAttributes) {
             return autoVerifiedAttributes(Output.of(autoVerifiedAttributes));
         }
 
+        /**
+         * @param autoVerifiedAttributes Attributes to be auto-verified. Valid values: `email`, `phone_number`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoVerifiedAttributes(String... autoVerifiedAttributes) {
             return autoVerifiedAttributes(List.of(autoVerifiedAttributes));
         }
 
+        /**
+         * @param creationDate Date the user pool was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder creationDate(@Nullable Output<String> creationDate) {
             $.creationDate = creationDate;
             return this;
         }
 
+        /**
+         * @param creationDate Date the user pool was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder creationDate(String creationDate) {
             return creationDate(Output.of(creationDate));
         }
 
+        /**
+         * @param customDomain A custom domain name that you provide to Amazon Cognito. This parameter applies only if you use a custom domain to host the sign-up and sign-in pages for your application. For example: `auth.example.com`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customDomain(@Nullable Output<String> customDomain) {
             $.customDomain = customDomain;
             return this;
         }
 
+        /**
+         * @param customDomain A custom domain name that you provide to Amazon Cognito. This parameter applies only if you use a custom domain to host the sign-up and sign-in pages for your application. For example: `auth.example.com`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customDomain(String customDomain) {
             return customDomain(Output.of(customDomain));
         }
 
+        /**
+         * @param deviceConfiguration Configuration block for the user pool&#39;s device tracking. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceConfiguration(@Nullable Output<UserPoolDeviceConfigurationGetArgs> deviceConfiguration) {
             $.deviceConfiguration = deviceConfiguration;
             return this;
         }
 
+        /**
+         * @param deviceConfiguration Configuration block for the user pool&#39;s device tracking. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceConfiguration(UserPoolDeviceConfigurationGetArgs deviceConfiguration) {
             return deviceConfiguration(Output.of(deviceConfiguration));
         }
 
+        /**
+         * @param domain Holds the domain prefix if the user pool has a domain associated with it.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domain(@Nullable Output<String> domain) {
             $.domain = domain;
             return this;
         }
 
+        /**
+         * @param domain Holds the domain prefix if the user pool has a domain associated with it.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domain(String domain) {
             return domain(Output.of(domain));
         }
 
+        /**
+         * @param emailConfiguration Configuration block for configuring email. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder emailConfiguration(@Nullable Output<UserPoolEmailConfigurationGetArgs> emailConfiguration) {
             $.emailConfiguration = emailConfiguration;
             return this;
         }
 
+        /**
+         * @param emailConfiguration Configuration block for configuring email. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder emailConfiguration(UserPoolEmailConfigurationGetArgs emailConfiguration) {
             return emailConfiguration(Output.of(emailConfiguration));
         }
 
+        /**
+         * @param emailVerificationMessage String representing the email verification message. Conflicts with `verification_message_template` configuration block `email_message` argument.
+         * 
+         * @return builder
+         * 
+         */
         public Builder emailVerificationMessage(@Nullable Output<String> emailVerificationMessage) {
             $.emailVerificationMessage = emailVerificationMessage;
             return this;
         }
 
+        /**
+         * @param emailVerificationMessage String representing the email verification message. Conflicts with `verification_message_template` configuration block `email_message` argument.
+         * 
+         * @return builder
+         * 
+         */
         public Builder emailVerificationMessage(String emailVerificationMessage) {
             return emailVerificationMessage(Output.of(emailVerificationMessage));
         }
 
+        /**
+         * @param emailVerificationSubject String representing the email verification subject. Conflicts with `verification_message_template` configuration block `email_subject` argument.
+         * 
+         * @return builder
+         * 
+         */
         public Builder emailVerificationSubject(@Nullable Output<String> emailVerificationSubject) {
             $.emailVerificationSubject = emailVerificationSubject;
             return this;
         }
 
+        /**
+         * @param emailVerificationSubject String representing the email verification subject. Conflicts with `verification_message_template` configuration block `email_subject` argument.
+         * 
+         * @return builder
+         * 
+         */
         public Builder emailVerificationSubject(String emailVerificationSubject) {
             return emailVerificationSubject(Output.of(emailVerificationSubject));
         }
 
+        /**
+         * @param endpoint Endpoint name of the user pool. Example format: `cognito-idp.REGION.amazonaws.com/xxxx_yyyyy`
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoint(@Nullable Output<String> endpoint) {
             $.endpoint = endpoint;
             return this;
         }
 
+        /**
+         * @param endpoint Endpoint name of the user pool. Example format: `cognito-idp.REGION.amazonaws.com/xxxx_yyyyy`
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoint(String endpoint) {
             return endpoint(Output.of(endpoint));
         }
 
+        /**
+         * @param estimatedNumberOfUsers A number estimating the size of the user pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder estimatedNumberOfUsers(@Nullable Output<Integer> estimatedNumberOfUsers) {
             $.estimatedNumberOfUsers = estimatedNumberOfUsers;
             return this;
         }
 
+        /**
+         * @param estimatedNumberOfUsers A number estimating the size of the user pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder estimatedNumberOfUsers(Integer estimatedNumberOfUsers) {
             return estimatedNumberOfUsers(Output.of(estimatedNumberOfUsers));
         }
 
+        /**
+         * @param lambdaConfig Configuration block for the AWS Lambda triggers associated with the user pool. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lambdaConfig(@Nullable Output<UserPoolLambdaConfigGetArgs> lambdaConfig) {
             $.lambdaConfig = lambdaConfig;
             return this;
         }
 
+        /**
+         * @param lambdaConfig Configuration block for the AWS Lambda triggers associated with the user pool. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lambdaConfig(UserPoolLambdaConfigGetArgs lambdaConfig) {
             return lambdaConfig(Output.of(lambdaConfig));
         }
 
+        /**
+         * @param lastModifiedDate Date the user pool was last modified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastModifiedDate(@Nullable Output<String> lastModifiedDate) {
             $.lastModifiedDate = lastModifiedDate;
             return this;
         }
 
+        /**
+         * @param lastModifiedDate Date the user pool was last modified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastModifiedDate(String lastModifiedDate) {
             return lastModifiedDate(Output.of(lastModifiedDate));
         }
 
+        /**
+         * @param mfaConfiguration Multi-Factor Authentication (MFA) configuration for the User Pool. Defaults of `OFF`. Valid values are `OFF` (MFA Tokens are not required), `ON` (MFA is required for all users to sign in; requires at least one of `sms_configuration` or `software_token_mfa_configuration` to be configured), or `OPTIONAL` (MFA Will be required only for individual users who have MFA Enabled; requires at least one of `sms_configuration` or `software_token_mfa_configuration` to be configured).
+         * 
+         * @return builder
+         * 
+         */
         public Builder mfaConfiguration(@Nullable Output<String> mfaConfiguration) {
             $.mfaConfiguration = mfaConfiguration;
             return this;
         }
 
+        /**
+         * @param mfaConfiguration Multi-Factor Authentication (MFA) configuration for the User Pool. Defaults of `OFF`. Valid values are `OFF` (MFA Tokens are not required), `ON` (MFA is required for all users to sign in; requires at least one of `sms_configuration` or `software_token_mfa_configuration` to be configured), or `OPTIONAL` (MFA Will be required only for individual users who have MFA Enabled; requires at least one of `sms_configuration` or `software_token_mfa_configuration` to be configured).
+         * 
+         * @return builder
+         * 
+         */
         public Builder mfaConfiguration(String mfaConfiguration) {
             return mfaConfiguration(Output.of(mfaConfiguration));
         }
 
+        /**
+         * @param name Name of the attribute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the attribute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param passwordPolicy Configuration blocked for information about the user pool password policy. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder passwordPolicy(@Nullable Output<UserPoolPasswordPolicyGetArgs> passwordPolicy) {
             $.passwordPolicy = passwordPolicy;
             return this;
         }
 
+        /**
+         * @param passwordPolicy Configuration blocked for information about the user pool password policy. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder passwordPolicy(UserPoolPasswordPolicyGetArgs passwordPolicy) {
             return passwordPolicy(Output.of(passwordPolicy));
         }
 
+        /**
+         * @param schemas Configuration block for the schema attributes of a user pool. Detailed below. Schema attributes from the [standard attribute set](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-attributes.html#cognito-user-pools-standard-attributes) only need to be specified if they are different from the default configuration. Attributes can be added, but not modified or removed. Maximum of 50 attributes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemas(@Nullable Output<List<UserPoolSchemaGetArgs>> schemas) {
             $.schemas = schemas;
             return this;
         }
 
+        /**
+         * @param schemas Configuration block for the schema attributes of a user pool. Detailed below. Schema attributes from the [standard attribute set](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-attributes.html#cognito-user-pools-standard-attributes) only need to be specified if they are different from the default configuration. Attributes can be added, but not modified or removed. Maximum of 50 attributes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemas(List<UserPoolSchemaGetArgs> schemas) {
             return schemas(Output.of(schemas));
         }
 
+        /**
+         * @param schemas Configuration block for the schema attributes of a user pool. Detailed below. Schema attributes from the [standard attribute set](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-attributes.html#cognito-user-pools-standard-attributes) only need to be specified if they are different from the default configuration. Attributes can be added, but not modified or removed. Maximum of 50 attributes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemas(UserPoolSchemaGetArgs... schemas) {
             return schemas(List.of(schemas));
         }
 
+        /**
+         * @param smsAuthenticationMessage String representing the SMS authentication message. The Message must contain the `{####}` placeholder, which will be replaced with the code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder smsAuthenticationMessage(@Nullable Output<String> smsAuthenticationMessage) {
             $.smsAuthenticationMessage = smsAuthenticationMessage;
             return this;
         }
 
+        /**
+         * @param smsAuthenticationMessage String representing the SMS authentication message. The Message must contain the `{####}` placeholder, which will be replaced with the code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder smsAuthenticationMessage(String smsAuthenticationMessage) {
             return smsAuthenticationMessage(Output.of(smsAuthenticationMessage));
         }
 
+        /**
+         * @param smsConfiguration Configuration block for Short Message Service (SMS) settings. Detailed below. These settings apply to SMS user verification and SMS Multi-Factor Authentication (MFA). Due to Cognito API restrictions, the SMS configuration cannot be removed without recreating the Cognito User Pool. For user data safety, this resource will ignore the removal of this configuration by disabling drift detection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder smsConfiguration(@Nullable Output<UserPoolSmsConfigurationGetArgs> smsConfiguration) {
             $.smsConfiguration = smsConfiguration;
             return this;
         }
 
+        /**
+         * @param smsConfiguration Configuration block for Short Message Service (SMS) settings. Detailed below. These settings apply to SMS user verification and SMS Multi-Factor Authentication (MFA). Due to Cognito API restrictions, the SMS configuration cannot be removed without recreating the Cognito User Pool. For user data safety, this resource will ignore the removal of this configuration by disabling drift detection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder smsConfiguration(UserPoolSmsConfigurationGetArgs smsConfiguration) {
             return smsConfiguration(Output.of(smsConfiguration));
         }
 
+        /**
+         * @param smsVerificationMessage String representing the SMS verification message. Conflicts with `verification_message_template` configuration block `sms_message` argument.
+         * 
+         * @return builder
+         * 
+         */
         public Builder smsVerificationMessage(@Nullable Output<String> smsVerificationMessage) {
             $.smsVerificationMessage = smsVerificationMessage;
             return this;
         }
 
+        /**
+         * @param smsVerificationMessage String representing the SMS verification message. Conflicts with `verification_message_template` configuration block `sms_message` argument.
+         * 
+         * @return builder
+         * 
+         */
         public Builder smsVerificationMessage(String smsVerificationMessage) {
             return smsVerificationMessage(Output.of(smsVerificationMessage));
         }
 
+        /**
+         * @param softwareTokenMfaConfiguration Configuration block for software token Mult-Factor Authentication (MFA) settings. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder softwareTokenMfaConfiguration(@Nullable Output<UserPoolSoftwareTokenMfaConfigurationGetArgs> softwareTokenMfaConfiguration) {
             $.softwareTokenMfaConfiguration = softwareTokenMfaConfiguration;
             return this;
         }
 
+        /**
+         * @param softwareTokenMfaConfiguration Configuration block for software token Mult-Factor Authentication (MFA) settings. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder softwareTokenMfaConfiguration(UserPoolSoftwareTokenMfaConfigurationGetArgs softwareTokenMfaConfiguration) {
             return softwareTokenMfaConfiguration(Output.of(softwareTokenMfaConfiguration));
         }
 
+        /**
+         * @param tags Map of tags to assign to the User Pool. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Map of tags to assign to the User Pool. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }
 
+        /**
+         * @param userPoolAddOns Configuration block for user pool add-ons to enable user pool advanced security mode features. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userPoolAddOns(@Nullable Output<UserPoolUserPoolAddOnsGetArgs> userPoolAddOns) {
             $.userPoolAddOns = userPoolAddOns;
             return this;
         }
 
+        /**
+         * @param userPoolAddOns Configuration block for user pool add-ons to enable user pool advanced security mode features. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userPoolAddOns(UserPoolUserPoolAddOnsGetArgs userPoolAddOns) {
             return userPoolAddOns(Output.of(userPoolAddOns));
         }
 
+        /**
+         * @param usernameAttributes Whether email addresses or phone numbers can be specified as usernames when a user signs up. Conflicts with `alias_attributes`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder usernameAttributes(@Nullable Output<List<String>> usernameAttributes) {
             $.usernameAttributes = usernameAttributes;
             return this;
         }
 
+        /**
+         * @param usernameAttributes Whether email addresses or phone numbers can be specified as usernames when a user signs up. Conflicts with `alias_attributes`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder usernameAttributes(List<String> usernameAttributes) {
             return usernameAttributes(Output.of(usernameAttributes));
         }
 
+        /**
+         * @param usernameAttributes Whether email addresses or phone numbers can be specified as usernames when a user signs up. Conflicts with `alias_attributes`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder usernameAttributes(String... usernameAttributes) {
             return usernameAttributes(List.of(usernameAttributes));
         }
 
+        /**
+         * @param usernameConfiguration Configuration block for username configuration. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder usernameConfiguration(@Nullable Output<UserPoolUsernameConfigurationGetArgs> usernameConfiguration) {
             $.usernameConfiguration = usernameConfiguration;
             return this;
         }
 
+        /**
+         * @param usernameConfiguration Configuration block for username configuration. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder usernameConfiguration(UserPoolUsernameConfigurationGetArgs usernameConfiguration) {
             return usernameConfiguration(Output.of(usernameConfiguration));
         }
 
+        /**
+         * @param verificationMessageTemplate Configuration block for verification message templates. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder verificationMessageTemplate(@Nullable Output<UserPoolVerificationMessageTemplateGetArgs> verificationMessageTemplate) {
             $.verificationMessageTemplate = verificationMessageTemplate;
             return this;
         }
 
+        /**
+         * @param verificationMessageTemplate Configuration block for verification message templates. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder verificationMessageTemplate(UserPoolVerificationMessageTemplateGetArgs verificationMessageTemplate) {
             return verificationMessageTemplate(Output.of(verificationMessageTemplate));
         }

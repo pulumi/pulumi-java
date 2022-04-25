@@ -20,6 +20,10 @@ public final class PipelineArtifactStoreEncryptionKeyGetArgs extends com.pulumi.
     @Import(name="id", required=true)
     private Output<String> id;
 
+    /**
+     * @return The KMS key ARN or ID
+     * 
+     */
     public Output<String> id() {
         return this.id;
     }
@@ -31,6 +35,10 @@ public final class PipelineArtifactStoreEncryptionKeyGetArgs extends com.pulumi.
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return The type of key; currently only `KMS` is supported
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -60,20 +68,44 @@ public final class PipelineArtifactStoreEncryptionKeyGetArgs extends com.pulumi.
             $ = new PipelineArtifactStoreEncryptionKeyGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id The KMS key ARN or ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id The KMS key ARN or ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param type The type of key; currently only `KMS` is supported
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of key; currently only `KMS` is supported
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

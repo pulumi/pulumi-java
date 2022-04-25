@@ -26,6 +26,10 @@ public final class NotificationRateLimitArgs extends com.pulumi.resources.Resour
     @Import(name="period")
     private @Nullable Output<String> period;
 
+    /**
+     * @return Not more than one notification per period.
+     * 
+     */
     public Optional<Output<String>> period() {
         return Optional.ofNullable(this.period);
     }
@@ -54,11 +58,23 @@ public final class NotificationRateLimitArgs extends com.pulumi.resources.Resour
             $ = new NotificationRateLimitArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param period Not more than one notification per period.
+         * 
+         * @return builder
+         * 
+         */
         public Builder period(@Nullable Output<String> period) {
             $.period = period;
             return this;
         }
 
+        /**
+         * @param period Not more than one notification per period.
+         * 
+         * @return builder
+         * 
+         */
         public Builder period(String period) {
             return period(Output.of(period));
         }

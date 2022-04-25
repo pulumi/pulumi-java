@@ -24,6 +24,10 @@ public final class BotAliasConversationLogsGetArgs extends com.pulumi.resources.
     @Import(name="iamRoleArn", required=true)
     private Output<String> iamRoleArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the IAM role used to write your logs to CloudWatch Logs or an S3 bucket. Must be between 20 and 2048 characters in length.
+     * 
+     */
     public Output<String> iamRoleArn() {
         return this.iamRoleArn;
     }
@@ -35,6 +39,10 @@ public final class BotAliasConversationLogsGetArgs extends com.pulumi.resources.
     @Import(name="logSettings")
     private @Nullable Output<List<BotAliasConversationLogsLogSettingGetArgs>> logSettings;
 
+    /**
+     * @return The settings for your conversation logs. You can log text, audio, or both. Attributes are documented under log_settings.
+     * 
+     */
     public Optional<Output<List<BotAliasConversationLogsLogSettingGetArgs>>> logSettings() {
         return Optional.ofNullable(this.logSettings);
     }
@@ -64,24 +72,54 @@ public final class BotAliasConversationLogsGetArgs extends com.pulumi.resources.
             $ = new BotAliasConversationLogsGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param iamRoleArn The Amazon Resource Name (ARN) of the IAM role used to write your logs to CloudWatch Logs or an S3 bucket. Must be between 20 and 2048 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iamRoleArn(Output<String> iamRoleArn) {
             $.iamRoleArn = iamRoleArn;
             return this;
         }
 
+        /**
+         * @param iamRoleArn The Amazon Resource Name (ARN) of the IAM role used to write your logs to CloudWatch Logs or an S3 bucket. Must be between 20 and 2048 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iamRoleArn(String iamRoleArn) {
             return iamRoleArn(Output.of(iamRoleArn));
         }
 
+        /**
+         * @param logSettings The settings for your conversation logs. You can log text, audio, or both. Attributes are documented under log_settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logSettings(@Nullable Output<List<BotAliasConversationLogsLogSettingGetArgs>> logSettings) {
             $.logSettings = logSettings;
             return this;
         }
 
+        /**
+         * @param logSettings The settings for your conversation logs. You can log text, audio, or both. Attributes are documented under log_settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logSettings(List<BotAliasConversationLogsLogSettingGetArgs> logSettings) {
             return logSettings(Output.of(logSettings));
         }
 
+        /**
+         * @param logSettings The settings for your conversation logs. You can log text, audio, or both. Attributes are documented under log_settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logSettings(BotAliasConversationLogsLogSettingGetArgs... logSettings) {
             return logSettings(List.of(logSettings));
         }

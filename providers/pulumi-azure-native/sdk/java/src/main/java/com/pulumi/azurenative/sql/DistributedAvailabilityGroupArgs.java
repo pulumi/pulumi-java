@@ -24,6 +24,10 @@ public final class DistributedAvailabilityGroupArgs extends com.pulumi.resources
     @Import(name="distributedAvailabilityGroupName")
     private @Nullable Output<String> distributedAvailabilityGroupName;
 
+    /**
+     * @return The distributed availability group name.
+     * 
+     */
     public Optional<Output<String>> distributedAvailabilityGroupName() {
         return Optional.ofNullable(this.distributedAvailabilityGroupName);
     }
@@ -35,6 +39,10 @@ public final class DistributedAvailabilityGroupArgs extends com.pulumi.resources
     @Import(name="managedInstanceName", required=true)
     private Output<String> managedInstanceName;
 
+    /**
+     * @return The name of the managed instance.
+     * 
+     */
     public Output<String> managedInstanceName() {
         return this.managedInstanceName;
     }
@@ -46,6 +54,10 @@ public final class DistributedAvailabilityGroupArgs extends com.pulumi.resources
     @Import(name="primaryAvailabilityGroupName")
     private @Nullable Output<String> primaryAvailabilityGroupName;
 
+    /**
+     * @return The primary availability group name
+     * 
+     */
     public Optional<Output<String>> primaryAvailabilityGroupName() {
         return Optional.ofNullable(this.primaryAvailabilityGroupName);
     }
@@ -57,6 +69,10 @@ public final class DistributedAvailabilityGroupArgs extends com.pulumi.resources
     @Import(name="replicationMode")
     private @Nullable Output<Either<String,ReplicationMode>> replicationMode;
 
+    /**
+     * @return The replication mode of a distributed availability group. Parameter will be ignored during link creation.
+     * 
+     */
     public Optional<Output<Either<String,ReplicationMode>>> replicationMode() {
         return Optional.ofNullable(this.replicationMode);
     }
@@ -68,6 +84,10 @@ public final class DistributedAvailabilityGroupArgs extends com.pulumi.resources
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -79,6 +99,10 @@ public final class DistributedAvailabilityGroupArgs extends com.pulumi.resources
     @Import(name="secondaryAvailabilityGroupName")
     private @Nullable Output<String> secondaryAvailabilityGroupName;
 
+    /**
+     * @return The secondary availability group name
+     * 
+     */
     public Optional<Output<String>> secondaryAvailabilityGroupName() {
         return Optional.ofNullable(this.secondaryAvailabilityGroupName);
     }
@@ -90,6 +114,10 @@ public final class DistributedAvailabilityGroupArgs extends com.pulumi.resources
     @Import(name="sourceEndpoint")
     private @Nullable Output<String> sourceEndpoint;
 
+    /**
+     * @return The source endpoint
+     * 
+     */
     public Optional<Output<String>> sourceEndpoint() {
         return Optional.ofNullable(this.sourceEndpoint);
     }
@@ -101,6 +129,10 @@ public final class DistributedAvailabilityGroupArgs extends com.pulumi.resources
     @Import(name="targetDatabase")
     private @Nullable Output<String> targetDatabase;
 
+    /**
+     * @return The name of the target database
+     * 
+     */
     public Optional<Output<String>> targetDatabase() {
         return Optional.ofNullable(this.targetDatabase);
     }
@@ -136,82 +168,190 @@ public final class DistributedAvailabilityGroupArgs extends com.pulumi.resources
             $ = new DistributedAvailabilityGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param distributedAvailabilityGroupName The distributed availability group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder distributedAvailabilityGroupName(@Nullable Output<String> distributedAvailabilityGroupName) {
             $.distributedAvailabilityGroupName = distributedAvailabilityGroupName;
             return this;
         }
 
+        /**
+         * @param distributedAvailabilityGroupName The distributed availability group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder distributedAvailabilityGroupName(String distributedAvailabilityGroupName) {
             return distributedAvailabilityGroupName(Output.of(distributedAvailabilityGroupName));
         }
 
+        /**
+         * @param managedInstanceName The name of the managed instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedInstanceName(Output<String> managedInstanceName) {
             $.managedInstanceName = managedInstanceName;
             return this;
         }
 
+        /**
+         * @param managedInstanceName The name of the managed instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedInstanceName(String managedInstanceName) {
             return managedInstanceName(Output.of(managedInstanceName));
         }
 
+        /**
+         * @param primaryAvailabilityGroupName The primary availability group name
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryAvailabilityGroupName(@Nullable Output<String> primaryAvailabilityGroupName) {
             $.primaryAvailabilityGroupName = primaryAvailabilityGroupName;
             return this;
         }
 
+        /**
+         * @param primaryAvailabilityGroupName The primary availability group name
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryAvailabilityGroupName(String primaryAvailabilityGroupName) {
             return primaryAvailabilityGroupName(Output.of(primaryAvailabilityGroupName));
         }
 
+        /**
+         * @param replicationMode The replication mode of a distributed availability group. Parameter will be ignored during link creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicationMode(@Nullable Output<Either<String,ReplicationMode>> replicationMode) {
             $.replicationMode = replicationMode;
             return this;
         }
 
+        /**
+         * @param replicationMode The replication mode of a distributed availability group. Parameter will be ignored during link creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicationMode(Either<String,ReplicationMode> replicationMode) {
             return replicationMode(Output.of(replicationMode));
         }
 
+        /**
+         * @param replicationMode The replication mode of a distributed availability group. Parameter will be ignored during link creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicationMode(String replicationMode) {
             return replicationMode(Either.ofLeft(replicationMode));
         }
 
+        /**
+         * @param replicationMode The replication mode of a distributed availability group. Parameter will be ignored during link creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicationMode(ReplicationMode replicationMode) {
             return replicationMode(Either.ofRight(replicationMode));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param secondaryAvailabilityGroupName The secondary availability group name
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondaryAvailabilityGroupName(@Nullable Output<String> secondaryAvailabilityGroupName) {
             $.secondaryAvailabilityGroupName = secondaryAvailabilityGroupName;
             return this;
         }
 
+        /**
+         * @param secondaryAvailabilityGroupName The secondary availability group name
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondaryAvailabilityGroupName(String secondaryAvailabilityGroupName) {
             return secondaryAvailabilityGroupName(Output.of(secondaryAvailabilityGroupName));
         }
 
+        /**
+         * @param sourceEndpoint The source endpoint
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceEndpoint(@Nullable Output<String> sourceEndpoint) {
             $.sourceEndpoint = sourceEndpoint;
             return this;
         }
 
+        /**
+         * @param sourceEndpoint The source endpoint
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceEndpoint(String sourceEndpoint) {
             return sourceEndpoint(Output.of(sourceEndpoint));
         }
 
+        /**
+         * @param targetDatabase The name of the target database
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetDatabase(@Nullable Output<String> targetDatabase) {
             $.targetDatabase = targetDatabase;
             return this;
         }
 
+        /**
+         * @param targetDatabase The name of the target database
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetDatabase(String targetDatabase) {
             return targetDatabase(Output.of(targetDatabase));
         }

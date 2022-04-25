@@ -20,6 +20,10 @@ public final class OrganizationAdminAccountArgs extends com.pulumi.resources.Res
     @Import(name="adminAccountId", required=true)
     private Output<String> adminAccountId;
 
+    /**
+     * @return The AWS account identifier of the account to designate as the Security Hub administrator account.
+     * 
+     */
     public Output<String> adminAccountId() {
         return this.adminAccountId;
     }
@@ -48,11 +52,23 @@ public final class OrganizationAdminAccountArgs extends com.pulumi.resources.Res
             $ = new OrganizationAdminAccountArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param adminAccountId The AWS account identifier of the account to designate as the Security Hub administrator account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder adminAccountId(Output<String> adminAccountId) {
             $.adminAccountId = adminAccountId;
             return this;
         }
 
+        /**
+         * @param adminAccountId The AWS account identifier of the account to designate as the Security Hub administrator account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder adminAccountId(String adminAccountId) {
             return adminAccountId(Output.of(adminAccountId));
         }

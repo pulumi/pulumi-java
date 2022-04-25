@@ -19,6 +19,10 @@ public final class GetManagedPrivateEndpointArgs extends com.pulumi.resources.In
     @Import(name="clusterName", required=true)
     private String clusterName;
 
+    /**
+     * @return The name of the Kusto cluster.
+     * 
+     */
     public String clusterName() {
         return this.clusterName;
     }
@@ -30,6 +34,10 @@ public final class GetManagedPrivateEndpointArgs extends com.pulumi.resources.In
     @Import(name="managedPrivateEndpointName", required=true)
     private String managedPrivateEndpointName;
 
+    /**
+     * @return The name of the managed private endpoint.
+     * 
+     */
     public String managedPrivateEndpointName() {
         return this.managedPrivateEndpointName;
     }
@@ -41,6 +49,10 @@ public final class GetManagedPrivateEndpointArgs extends com.pulumi.resources.In
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group containing the Kusto cluster.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetManagedPrivateEndpointArgs extends com.pulumi.resources.In
             $ = new GetManagedPrivateEndpointArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clusterName The name of the Kusto cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterName(String clusterName) {
             $.clusterName = clusterName;
             return this;
         }
 
+        /**
+         * @param managedPrivateEndpointName The name of the managed private endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedPrivateEndpointName(String managedPrivateEndpointName) {
             $.managedPrivateEndpointName = managedPrivateEndpointName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group containing the Kusto cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

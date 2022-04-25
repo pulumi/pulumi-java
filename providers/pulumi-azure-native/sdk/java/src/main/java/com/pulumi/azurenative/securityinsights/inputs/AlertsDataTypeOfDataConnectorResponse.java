@@ -25,6 +25,10 @@ public final class AlertsDataTypeOfDataConnectorResponse extends com.pulumi.reso
     @Import(name="alerts")
     private @Nullable DataConnectorDataTypeCommonResponse alerts;
 
+    /**
+     * @return Alerts data type connection.
+     * 
+     */
     public Optional<DataConnectorDataTypeCommonResponse> alerts() {
         return Optional.ofNullable(this.alerts);
     }
@@ -53,6 +57,12 @@ public final class AlertsDataTypeOfDataConnectorResponse extends com.pulumi.reso
             $ = new AlertsDataTypeOfDataConnectorResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param alerts Alerts data type connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alerts(@Nullable DataConnectorDataTypeCommonResponse alerts) {
             $.alerts = alerts;
             return this;

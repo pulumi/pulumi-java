@@ -25,6 +25,10 @@ public final class ParameterDefinitionResponse extends com.pulumi.resources.Invo
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of the parameter declared in the pipeline topology.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -36,6 +40,10 @@ public final class ParameterDefinitionResponse extends com.pulumi.resources.Invo
     @Import(name="value")
     private @Nullable String value;
 
+    /**
+     * @return Parameter value to be applied on this specific pipeline.
+     * 
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
@@ -65,11 +73,23 @@ public final class ParameterDefinitionResponse extends com.pulumi.resources.Invo
             $ = new ParameterDefinitionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name of the parameter declared in the pipeline topology.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param value Parameter value to be applied on this specific pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable String value) {
             $.value = value;
             return this;

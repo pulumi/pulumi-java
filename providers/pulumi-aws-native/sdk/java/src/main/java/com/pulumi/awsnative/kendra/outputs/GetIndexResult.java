@@ -19,17 +19,17 @@ import javax.annotation.Nullable;
 public final class GetIndexResult {
     private final @Nullable String arn;
     /**
-     * Capacity units
+     * @return Capacity units
      * 
      */
     private final @Nullable IndexCapacityUnitsConfiguration capacityUnits;
     /**
-     * A description for the index
+     * @return A description for the index
      * 
      */
     private final @Nullable String description;
     /**
-     * Document metadata configurations
+     * @return Document metadata configurations
      * 
      */
     private final @Nullable List<IndexDocumentMetadataConfiguration> documentMetadataConfigurations;
@@ -37,7 +37,7 @@ public final class GetIndexResult {
     private final @Nullable String name;
     private final @Nullable String roleArn;
     /**
-     * Tags for labeling the index
+     * @return Tags for labeling the index
      * 
      */
     private final @Nullable List<IndexTag> tags;
@@ -72,23 +72,23 @@ public final class GetIndexResult {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * Capacity units
+     * @return Capacity units
      * 
-    */
+     */
     public Optional<IndexCapacityUnitsConfiguration> capacityUnits() {
         return Optional.ofNullable(this.capacityUnits);
     }
     /**
-     * A description for the index
+     * @return A description for the index
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Document metadata configurations
+     * @return Document metadata configurations
      * 
-    */
+     */
     public List<IndexDocumentMetadataConfiguration> documentMetadataConfigurations() {
         return this.documentMetadataConfigurations == null ? List.of() : this.documentMetadataConfigurations;
     }
@@ -102,9 +102,9 @@ public final class GetIndexResult {
         return Optional.ofNullable(this.roleArn);
     }
     /**
-     * Tags for labeling the index
+     * @return Tags for labeling the index
      * 
-    */
+     */
     public List<IndexTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

@@ -23,6 +23,10 @@ public final class TagFilterResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return This is the filter tag name, it can have 1 - 128 characters
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -34,6 +38,10 @@ public final class TagFilterResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="op", required=true)
     private String op;
 
+    /**
+     * @return This is the comparison operator which is used for object comparison and filtering. Only == (equality operator) is currently supported
+     * 
+     */
     public String op() {
         return this.op;
     }
@@ -45,6 +53,10 @@ public final class TagFilterResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="value", required=true)
     private String value;
 
+    /**
+     * @return This is the filter tag value field used for tag based filtering, it can have 0 - 256 characters
+     * 
+     */
     public String value() {
         return this.value;
     }
@@ -75,16 +87,34 @@ public final class TagFilterResponse extends com.pulumi.resources.InvokeArgs {
             $ = new TagFilterResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name This is the filter tag name, it can have 1 - 128 characters
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param op This is the comparison operator which is used for object comparison and filtering. Only == (equality operator) is currently supported
+         * 
+         * @return builder
+         * 
+         */
         public Builder op(String op) {
             $.op = op;
             return this;
         }
 
+        /**
+         * @param value This is the filter tag value field used for tag based filtering, it can have 0 - 256 characters
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             $.value = value;
             return this;

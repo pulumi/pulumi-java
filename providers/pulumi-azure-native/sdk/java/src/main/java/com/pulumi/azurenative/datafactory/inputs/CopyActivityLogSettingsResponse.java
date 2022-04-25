@@ -25,6 +25,10 @@ public final class CopyActivityLogSettingsResponse extends com.pulumi.resources.
     @Import(name="enableReliableLogging")
     private @Nullable Object enableReliableLogging;
 
+    /**
+     * @return Specifies whether to enable reliable logging. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Object> enableReliableLogging() {
         return Optional.ofNullable(this.enableReliableLogging);
     }
@@ -36,6 +40,10 @@ public final class CopyActivityLogSettingsResponse extends com.pulumi.resources.
     @Import(name="logLevel")
     private @Nullable Object logLevel;
 
+    /**
+     * @return Gets or sets the log level, support: Info, Warning. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> logLevel() {
         return Optional.ofNullable(this.logLevel);
     }
@@ -65,11 +73,23 @@ public final class CopyActivityLogSettingsResponse extends com.pulumi.resources.
             $ = new CopyActivityLogSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enableReliableLogging Specifies whether to enable reliable logging. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableReliableLogging(@Nullable Object enableReliableLogging) {
             $.enableReliableLogging = enableReliableLogging;
             return this;
         }
 
+        /**
+         * @param logLevel Gets or sets the log level, support: Info, Warning. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder logLevel(@Nullable Object logLevel) {
             $.logLevel = logLevel;
             return this;

@@ -12,14 +12,14 @@ import javax.annotation.Nullable;
 @CustomType
 public final class TopicSchemaSettings {
     /**
-     * The encoding of messages validated against schema.
+     * @return The encoding of messages validated against schema.
      * Default value is `ENCODING_UNSPECIFIED`.
      * Possible values are `ENCODING_UNSPECIFIED`, `JSON`, and `BINARY`.
      * 
      */
     private final @Nullable String encoding;
     /**
-     * The name of the schema that messages published should be
+     * @return The name of the schema that messages published should be
      * validated against. Format is projects/{project}/schemas/{schema}.
      * The value of this field will be _deleted-schema_
      * if the schema has been deleted.
@@ -36,21 +36,21 @@ public final class TopicSchemaSettings {
     }
 
     /**
-     * The encoding of messages validated against schema.
+     * @return The encoding of messages validated against schema.
      * Default value is `ENCODING_UNSPECIFIED`.
      * Possible values are `ENCODING_UNSPECIFIED`, `JSON`, and `BINARY`.
      * 
-    */
+     */
     public Optional<String> encoding() {
         return Optional.ofNullable(this.encoding);
     }
     /**
-     * The name of the schema that messages published should be
+     * @return The name of the schema that messages published should be
      * validated against. Format is projects/{project}/schemas/{schema}.
      * The value of this field will be _deleted-schema_
      * if the schema has been deleted.
      * 
-    */
+     */
     public String schema() {
         return this.schema;
     }

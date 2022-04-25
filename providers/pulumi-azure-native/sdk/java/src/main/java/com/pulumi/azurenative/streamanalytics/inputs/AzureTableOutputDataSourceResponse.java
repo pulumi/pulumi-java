@@ -28,6 +28,10 @@ public final class AzureTableOutputDataSourceResponse extends com.pulumi.resourc
     @Import(name="accountKey")
     private @Nullable String accountKey;
 
+    /**
+     * @return The account key for the Azure Storage account. Required on PUT (CreateOrReplace) requests.
+     * 
+     */
     public Optional<String> accountKey() {
         return Optional.ofNullable(this.accountKey);
     }
@@ -39,6 +43,10 @@ public final class AzureTableOutputDataSourceResponse extends com.pulumi.resourc
     @Import(name="accountName")
     private @Nullable String accountName;
 
+    /**
+     * @return The name of the Azure Storage account. Required on PUT (CreateOrReplace) requests.
+     * 
+     */
     public Optional<String> accountName() {
         return Optional.ofNullable(this.accountName);
     }
@@ -50,6 +58,10 @@ public final class AzureTableOutputDataSourceResponse extends com.pulumi.resourc
     @Import(name="batchSize")
     private @Nullable Integer batchSize;
 
+    /**
+     * @return The number of rows to write to the Azure Table at a time.
+     * 
+     */
     public Optional<Integer> batchSize() {
         return Optional.ofNullable(this.batchSize);
     }
@@ -61,6 +73,10 @@ public final class AzureTableOutputDataSourceResponse extends com.pulumi.resourc
     @Import(name="columnsToRemove")
     private @Nullable List<String> columnsToRemove;
 
+    /**
+     * @return If specified, each item in the array is the name of a column to remove (if present) from output event entities.
+     * 
+     */
     public Optional<List<String>> columnsToRemove() {
         return Optional.ofNullable(this.columnsToRemove);
     }
@@ -72,6 +88,10 @@ public final class AzureTableOutputDataSourceResponse extends com.pulumi.resourc
     @Import(name="partitionKey")
     private @Nullable String partitionKey;
 
+    /**
+     * @return This element indicates the name of a column from the SELECT statement in the query that will be used as the partition key for the Azure Table. Required on PUT (CreateOrReplace) requests.
+     * 
+     */
     public Optional<String> partitionKey() {
         return Optional.ofNullable(this.partitionKey);
     }
@@ -83,6 +103,10 @@ public final class AzureTableOutputDataSourceResponse extends com.pulumi.resourc
     @Import(name="rowKey")
     private @Nullable String rowKey;
 
+    /**
+     * @return This element indicates the name of a column from the SELECT statement in the query that will be used as the row key for the Azure Table. Required on PUT (CreateOrReplace) requests.
+     * 
+     */
     public Optional<String> rowKey() {
         return Optional.ofNullable(this.rowKey);
     }
@@ -94,6 +118,10 @@ public final class AzureTableOutputDataSourceResponse extends com.pulumi.resourc
     @Import(name="table")
     private @Nullable String table;
 
+    /**
+     * @return The name of the Azure Table. Required on PUT (CreateOrReplace) requests.
+     * 
+     */
     public Optional<String> table() {
         return Optional.ofNullable(this.table);
     }
@@ -106,6 +134,11 @@ public final class AzureTableOutputDataSourceResponse extends com.pulumi.resourc
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
+     * Expected value is &#39;Microsoft.Storage/Table&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -141,45 +174,100 @@ public final class AzureTableOutputDataSourceResponse extends com.pulumi.resourc
             $ = new AzureTableOutputDataSourceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountKey The account key for the Azure Storage account. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountKey(@Nullable String accountKey) {
             $.accountKey = accountKey;
             return this;
         }
 
+        /**
+         * @param accountName The name of the Azure Storage account. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(@Nullable String accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param batchSize The number of rows to write to the Azure Table at a time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder batchSize(@Nullable Integer batchSize) {
             $.batchSize = batchSize;
             return this;
         }
 
+        /**
+         * @param columnsToRemove If specified, each item in the array is the name of a column to remove (if present) from output event entities.
+         * 
+         * @return builder
+         * 
+         */
         public Builder columnsToRemove(@Nullable List<String> columnsToRemove) {
             $.columnsToRemove = columnsToRemove;
             return this;
         }
 
+        /**
+         * @param columnsToRemove If specified, each item in the array is the name of a column to remove (if present) from output event entities.
+         * 
+         * @return builder
+         * 
+         */
         public Builder columnsToRemove(String... columnsToRemove) {
             return columnsToRemove(List.of(columnsToRemove));
         }
 
+        /**
+         * @param partitionKey This element indicates the name of a column from the SELECT statement in the query that will be used as the partition key for the Azure Table. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionKey(@Nullable String partitionKey) {
             $.partitionKey = partitionKey;
             return this;
         }
 
+        /**
+         * @param rowKey This element indicates the name of a column from the SELECT statement in the query that will be used as the row key for the Azure Table. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rowKey(@Nullable String rowKey) {
             $.rowKey = rowKey;
             return this;
         }
 
+        /**
+         * @param table The name of the Azure Table. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder table(@Nullable String table) {
             $.table = table;
             return this;
         }
 
+        /**
+         * @param type Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
+         * Expected value is &#39;Microsoft.Storage/Table&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

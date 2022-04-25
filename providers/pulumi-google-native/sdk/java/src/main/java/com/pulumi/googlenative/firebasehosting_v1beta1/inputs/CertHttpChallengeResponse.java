@@ -23,6 +23,10 @@ public final class CertHttpChallengeResponse extends com.pulumi.resources.Invoke
     @Import(name="path", required=true)
     private String path;
 
+    /**
+     * @return The URL path on which to serve the specified token to satisfy the certificate challenge.
+     * 
+     */
     public String path() {
         return this.path;
     }
@@ -34,6 +38,10 @@ public final class CertHttpChallengeResponse extends com.pulumi.resources.Invoke
     @Import(name="token", required=true)
     private String token;
 
+    /**
+     * @return The token to serve at the specified URL path to satisfy the certificate challenge.
+     * 
+     */
     public String token() {
         return this.token;
     }
@@ -63,11 +71,23 @@ public final class CertHttpChallengeResponse extends com.pulumi.resources.Invoke
             $ = new CertHttpChallengeResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param path The URL path on which to serve the specified token to satisfy the certificate challenge.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param token The token to serve at the specified URL path to satisfy the certificate challenge.
+         * 
+         * @return builder
+         * 
+         */
         public Builder token(String token) {
             $.token = token;
             return this;

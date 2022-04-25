@@ -25,6 +25,10 @@ public final class ApiKeyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="keyName")
     private @Nullable String keyName;
 
+    /**
+     * @return Gets or sets the API key name.
+     * 
+     */
     public Optional<String> keyName() {
         return Optional.ofNullable(this.keyName);
     }
@@ -36,6 +40,10 @@ public final class ApiKeyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="value")
     private @Nullable String value;
 
+    /**
+     * @return Gets or sets the API key value.
+     * 
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
@@ -65,11 +73,23 @@ public final class ApiKeyResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ApiKeyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyName Gets or sets the API key name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyName(@Nullable String keyName) {
             $.keyName = keyName;
             return this;
         }
 
+        /**
+         * @param value Gets or sets the API key value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable String value) {
             $.value = value;
             return this;

@@ -28,6 +28,11 @@ public final class RuntimeState extends com.pulumi.resources.ResourceArgs {
     @Import(name="accessConfig")
     private @Nullable Output<RuntimeAccessConfigGetArgs> accessConfig;
 
+    /**
+     * @return The config settings for accessing runtime.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<RuntimeAccessConfigGetArgs>> accessConfig() {
         return Optional.ofNullable(this.accessConfig);
     }
@@ -40,6 +45,11 @@ public final class RuntimeState extends com.pulumi.resources.ResourceArgs {
     @Import(name="healthState")
     private @Nullable Output<String> healthState;
 
+    /**
+     * @return The health state of this runtime. For a list of possible output values, see
+     * &#39;https://cloud.google.com/vertex-ai/docs/workbench/ reference/rest/v1/projects.locations.runtimes#healthstate&#39;.
+     * 
+     */
     public Optional<Output<String>> healthState() {
         return Optional.ofNullable(this.healthState);
     }
@@ -51,6 +61,10 @@ public final class RuntimeState extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return A reference to the zone where the machine resides.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -62,6 +76,10 @@ public final class RuntimeState extends com.pulumi.resources.ResourceArgs {
     @Import(name="metrics")
     private @Nullable Output<List<RuntimeMetricGetArgs>> metrics;
 
+    /**
+     * @return Contains Runtime daemon metrics such as Service status and JupyterLab status
+     * 
+     */
     public Optional<Output<List<RuntimeMetricGetArgs>>> metrics() {
         return Optional.ofNullable(this.metrics);
     }
@@ -73,6 +91,10 @@ public final class RuntimeState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name specified for the Notebook instance.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -85,6 +107,11 @@ public final class RuntimeState extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -97,6 +124,11 @@ public final class RuntimeState extends com.pulumi.resources.ResourceArgs {
     @Import(name="softwareConfig")
     private @Nullable Output<RuntimeSoftwareConfigGetArgs> softwareConfig;
 
+    /**
+     * @return The config settings for software inside the runtime.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<RuntimeSoftwareConfigGetArgs>> softwareConfig() {
         return Optional.ofNullable(this.softwareConfig);
     }
@@ -108,6 +140,10 @@ public final class RuntimeState extends com.pulumi.resources.ResourceArgs {
     @Import(name="state")
     private @Nullable Output<String> state;
 
+    /**
+     * @return The state of this runtime.
+     * 
+     */
     public Optional<Output<String>> state() {
         return Optional.ofNullable(this.state);
     }
@@ -120,6 +156,11 @@ public final class RuntimeState extends com.pulumi.resources.ResourceArgs {
     @Import(name="virtualMachine")
     private @Nullable Output<RuntimeVirtualMachineGetArgs> virtualMachine;
 
+    /**
+     * @return Use a Compute Engine VM image to start the managed notebook instance.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<RuntimeVirtualMachineGetArgs>> virtualMachine() {
         return Optional.ofNullable(this.virtualMachine);
     }
@@ -156,87 +197,211 @@ public final class RuntimeState extends com.pulumi.resources.ResourceArgs {
             $ = new RuntimeState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessConfig The config settings for accessing runtime.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessConfig(@Nullable Output<RuntimeAccessConfigGetArgs> accessConfig) {
             $.accessConfig = accessConfig;
             return this;
         }
 
+        /**
+         * @param accessConfig The config settings for accessing runtime.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessConfig(RuntimeAccessConfigGetArgs accessConfig) {
             return accessConfig(Output.of(accessConfig));
         }
 
+        /**
+         * @param healthState The health state of this runtime. For a list of possible output values, see
+         * &#39;https://cloud.google.com/vertex-ai/docs/workbench/ reference/rest/v1/projects.locations.runtimes#healthstate&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthState(@Nullable Output<String> healthState) {
             $.healthState = healthState;
             return this;
         }
 
+        /**
+         * @param healthState The health state of this runtime. For a list of possible output values, see
+         * &#39;https://cloud.google.com/vertex-ai/docs/workbench/ reference/rest/v1/projects.locations.runtimes#healthstate&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthState(String healthState) {
             return healthState(Output.of(healthState));
         }
 
+        /**
+         * @param location A reference to the zone where the machine resides.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location A reference to the zone where the machine resides.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param metrics Contains Runtime daemon metrics such as Service status and JupyterLab status
+         * 
+         * @return builder
+         * 
+         */
         public Builder metrics(@Nullable Output<List<RuntimeMetricGetArgs>> metrics) {
             $.metrics = metrics;
             return this;
         }
 
+        /**
+         * @param metrics Contains Runtime daemon metrics such as Service status and JupyterLab status
+         * 
+         * @return builder
+         * 
+         */
         public Builder metrics(List<RuntimeMetricGetArgs> metrics) {
             return metrics(Output.of(metrics));
         }
 
+        /**
+         * @param metrics Contains Runtime daemon metrics such as Service status and JupyterLab status
+         * 
+         * @return builder
+         * 
+         */
         public Builder metrics(RuntimeMetricGetArgs... metrics) {
             return metrics(List.of(metrics));
         }
 
+        /**
+         * @param name The name specified for the Notebook instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name specified for the Notebook instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param softwareConfig The config settings for software inside the runtime.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder softwareConfig(@Nullable Output<RuntimeSoftwareConfigGetArgs> softwareConfig) {
             $.softwareConfig = softwareConfig;
             return this;
         }
 
+        /**
+         * @param softwareConfig The config settings for software inside the runtime.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder softwareConfig(RuntimeSoftwareConfigGetArgs softwareConfig) {
             return softwareConfig(Output.of(softwareConfig));
         }
 
+        /**
+         * @param state The state of this runtime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param state The state of this runtime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             return state(Output.of(state));
         }
 
+        /**
+         * @param virtualMachine Use a Compute Engine VM image to start the managed notebook instance.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualMachine(@Nullable Output<RuntimeVirtualMachineGetArgs> virtualMachine) {
             $.virtualMachine = virtualMachine;
             return this;
         }
 
+        /**
+         * @param virtualMachine Use a Compute Engine VM image to start the managed notebook instance.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualMachine(RuntimeVirtualMachineGetArgs virtualMachine) {
             return virtualMachine(Output.of(virtualMachine));
         }

@@ -28,6 +28,10 @@ public final class SystemParameterRuleArgs extends com.pulumi.resources.Resource
     @Import(name="parameters")
     private @Nullable Output<List<SystemParameterArgs>> parameters;
 
+    /**
+     * @return Define parameters. Multiple names may be defined for a parameter. For a given method call, only one of them should be used. If multiple names are used the behavior is implementation-dependent. If none of the specified names are present the behavior is parameter-dependent.
+     * 
+     */
     public Optional<Output<List<SystemParameterArgs>>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -39,6 +43,10 @@ public final class SystemParameterRuleArgs extends com.pulumi.resources.Resource
     @Import(name="selector")
     private @Nullable Output<String> selector;
 
+    /**
+     * @return Selects the methods to which this rule applies. Use &#39;*&#39; to indicate all methods in all APIs. Refer to selector for syntax details.
+     * 
+     */
     public Optional<Output<String>> selector() {
         return Optional.ofNullable(this.selector);
     }
@@ -68,24 +76,54 @@ public final class SystemParameterRuleArgs extends com.pulumi.resources.Resource
             $ = new SystemParameterRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param parameters Define parameters. Multiple names may be defined for a parameter. For a given method call, only one of them should be used. If multiple names are used the behavior is implementation-dependent. If none of the specified names are present the behavior is parameter-dependent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Output<List<SystemParameterArgs>> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters Define parameters. Multiple names may be defined for a parameter. For a given method call, only one of them should be used. If multiple names are used the behavior is implementation-dependent. If none of the specified names are present the behavior is parameter-dependent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(List<SystemParameterArgs> parameters) {
             return parameters(Output.of(parameters));
         }
 
+        /**
+         * @param parameters Define parameters. Multiple names may be defined for a parameter. For a given method call, only one of them should be used. If multiple names are used the behavior is implementation-dependent. If none of the specified names are present the behavior is parameter-dependent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(SystemParameterArgs... parameters) {
             return parameters(List.of(parameters));
         }
 
+        /**
+         * @param selector Selects the methods to which this rule applies. Use &#39;*&#39; to indicate all methods in all APIs. Refer to selector for syntax details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selector(@Nullable Output<String> selector) {
             $.selector = selector;
             return this;
         }
 
+        /**
+         * @param selector Selects the methods to which this rule applies. Use &#39;*&#39; to indicate all methods in all APIs. Refer to selector for syntax details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selector(String selector) {
             return selector(Output.of(selector));
         }

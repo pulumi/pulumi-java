@@ -27,6 +27,10 @@ public final class GooglePrivacyDlpV2AuxiliaryTableArgs extends com.pulumi.resou
     @Import(name="quasiIds", required=true)
     private Output<List<GooglePrivacyDlpV2QuasiIdFieldArgs>> quasiIds;
 
+    /**
+     * @return Quasi-identifier columns.
+     * 
+     */
     public Output<List<GooglePrivacyDlpV2QuasiIdFieldArgs>> quasiIds() {
         return this.quasiIds;
     }
@@ -38,6 +42,10 @@ public final class GooglePrivacyDlpV2AuxiliaryTableArgs extends com.pulumi.resou
     @Import(name="relativeFrequency", required=true)
     private Output<GooglePrivacyDlpV2FieldIdArgs> relativeFrequency;
 
+    /**
+     * @return The relative frequency column must contain a floating-point number between 0 and 1 (inclusive). Null values are assumed to be zero.
+     * 
+     */
     public Output<GooglePrivacyDlpV2FieldIdArgs> relativeFrequency() {
         return this.relativeFrequency;
     }
@@ -49,6 +57,10 @@ public final class GooglePrivacyDlpV2AuxiliaryTableArgs extends com.pulumi.resou
     @Import(name="table", required=true)
     private Output<GooglePrivacyDlpV2BigQueryTableArgs> table;
 
+    /**
+     * @return Auxiliary table location.
+     * 
+     */
     public Output<GooglePrivacyDlpV2BigQueryTableArgs> table() {
         return this.table;
     }
@@ -79,33 +91,75 @@ public final class GooglePrivacyDlpV2AuxiliaryTableArgs extends com.pulumi.resou
             $ = new GooglePrivacyDlpV2AuxiliaryTableArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param quasiIds Quasi-identifier columns.
+         * 
+         * @return builder
+         * 
+         */
         public Builder quasiIds(Output<List<GooglePrivacyDlpV2QuasiIdFieldArgs>> quasiIds) {
             $.quasiIds = quasiIds;
             return this;
         }
 
+        /**
+         * @param quasiIds Quasi-identifier columns.
+         * 
+         * @return builder
+         * 
+         */
         public Builder quasiIds(List<GooglePrivacyDlpV2QuasiIdFieldArgs> quasiIds) {
             return quasiIds(Output.of(quasiIds));
         }
 
+        /**
+         * @param quasiIds Quasi-identifier columns.
+         * 
+         * @return builder
+         * 
+         */
         public Builder quasiIds(GooglePrivacyDlpV2QuasiIdFieldArgs... quasiIds) {
             return quasiIds(List.of(quasiIds));
         }
 
+        /**
+         * @param relativeFrequency The relative frequency column must contain a floating-point number between 0 and 1 (inclusive). Null values are assumed to be zero.
+         * 
+         * @return builder
+         * 
+         */
         public Builder relativeFrequency(Output<GooglePrivacyDlpV2FieldIdArgs> relativeFrequency) {
             $.relativeFrequency = relativeFrequency;
             return this;
         }
 
+        /**
+         * @param relativeFrequency The relative frequency column must contain a floating-point number between 0 and 1 (inclusive). Null values are assumed to be zero.
+         * 
+         * @return builder
+         * 
+         */
         public Builder relativeFrequency(GooglePrivacyDlpV2FieldIdArgs relativeFrequency) {
             return relativeFrequency(Output.of(relativeFrequency));
         }
 
+        /**
+         * @param table Auxiliary table location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder table(Output<GooglePrivacyDlpV2BigQueryTableArgs> table) {
             $.table = table;
             return this;
         }
 
+        /**
+         * @param table Auxiliary table location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder table(GooglePrivacyDlpV2BigQueryTableArgs table) {
             return table(Output.of(table));
         }

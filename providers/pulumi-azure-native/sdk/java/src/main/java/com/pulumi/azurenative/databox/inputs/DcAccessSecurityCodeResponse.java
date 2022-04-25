@@ -25,6 +25,10 @@ public final class DcAccessSecurityCodeResponse extends com.pulumi.resources.Inv
     @Import(name="forwardDCAccessCode")
     private @Nullable String forwardDCAccessCode;
 
+    /**
+     * @return Forward Dc access security code.
+     * 
+     */
     public Optional<String> forwardDCAccessCode() {
         return Optional.ofNullable(this.forwardDCAccessCode);
     }
@@ -36,6 +40,10 @@ public final class DcAccessSecurityCodeResponse extends com.pulumi.resources.Inv
     @Import(name="reverseDCAccessCode")
     private @Nullable String reverseDCAccessCode;
 
+    /**
+     * @return Reverse Dc access security code.
+     * 
+     */
     public Optional<String> reverseDCAccessCode() {
         return Optional.ofNullable(this.reverseDCAccessCode);
     }
@@ -65,11 +73,23 @@ public final class DcAccessSecurityCodeResponse extends com.pulumi.resources.Inv
             $ = new DcAccessSecurityCodeResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param forwardDCAccessCode Forward Dc access security code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forwardDCAccessCode(@Nullable String forwardDCAccessCode) {
             $.forwardDCAccessCode = forwardDCAccessCode;
             return this;
         }
 
+        /**
+         * @param reverseDCAccessCode Reverse Dc access security code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reverseDCAccessCode(@Nullable String reverseDCAccessCode) {
             $.reverseDCAccessCode = reverseDCAccessCode;
             return this;

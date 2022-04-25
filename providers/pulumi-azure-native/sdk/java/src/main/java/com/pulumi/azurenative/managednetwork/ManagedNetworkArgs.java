@@ -24,6 +24,10 @@ public final class ManagedNetworkArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The geo-location where the resource lives
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -35,6 +39,10 @@ public final class ManagedNetworkArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="managedNetworkName")
     private @Nullable Output<String> managedNetworkName;
 
+    /**
+     * @return The name of the Managed Network.
+     * 
+     */
     public Optional<Output<String>> managedNetworkName() {
         return Optional.ofNullable(this.managedNetworkName);
     }
@@ -46,6 +54,10 @@ public final class ManagedNetworkArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -57,6 +69,10 @@ public final class ManagedNetworkArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="scope")
     private @Nullable Output<ScopeArgs> scope;
 
+    /**
+     * @return The collection of management groups, subscriptions, virtual networks, and subnets by the Managed Network. This is a read-only property that is reflective of all ScopeAssignments for this Managed Network
+     * 
+     */
     public Optional<Output<ScopeArgs>> scope() {
         return Optional.ofNullable(this.scope);
     }
@@ -68,6 +84,10 @@ public final class ManagedNetworkArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -100,47 +120,107 @@ public final class ManagedNetworkArgs extends com.pulumi.resources.ResourceArgs 
             $ = new ManagedNetworkArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param managedNetworkName The name of the Managed Network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedNetworkName(@Nullable Output<String> managedNetworkName) {
             $.managedNetworkName = managedNetworkName;
             return this;
         }
 
+        /**
+         * @param managedNetworkName The name of the Managed Network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedNetworkName(String managedNetworkName) {
             return managedNetworkName(Output.of(managedNetworkName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param scope The collection of management groups, subscriptions, virtual networks, and subnets by the Managed Network. This is a read-only property that is reflective of all ScopeAssignments for this Managed Network
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(@Nullable Output<ScopeArgs> scope) {
             $.scope = scope;
             return this;
         }
 
+        /**
+         * @param scope The collection of management groups, subscriptions, virtual networks, and subnets by the Managed Network. This is a read-only property that is reflective of all ScopeAssignments for this Managed Network
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(ScopeArgs scope) {
             return scope(Output.of(scope));
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

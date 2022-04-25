@@ -29,6 +29,10 @@ public final class EnterprisePolicyArgs extends com.pulumi.resources.ResourceArg
     @Import(name="encryption")
     private @Nullable Output<PropertiesEncryptionArgs> encryption;
 
+    /**
+     * @return The encryption settings for a configuration store.
+     * 
+     */
     public Optional<Output<PropertiesEncryptionArgs>> encryption() {
         return Optional.ofNullable(this.encryption);
     }
@@ -40,6 +44,10 @@ public final class EnterprisePolicyArgs extends com.pulumi.resources.ResourceArg
     @Import(name="enterprisePolicyName")
     private @Nullable Output<String> enterprisePolicyName;
 
+    /**
+     * @return Name of the EnterprisePolicy.
+     * 
+     */
     public Optional<Output<String>> enterprisePolicyName() {
         return Optional.ofNullable(this.enterprisePolicyName);
     }
@@ -51,6 +59,10 @@ public final class EnterprisePolicyArgs extends com.pulumi.resources.ResourceArg
     @Import(name="identity")
     private @Nullable Output<EnterprisePolicyIdentityArgs> identity;
 
+    /**
+     * @return The identity of the EnterprisePolicy.
+     * 
+     */
     public Optional<Output<EnterprisePolicyIdentityArgs>> identity() {
         return Optional.ofNullable(this.identity);
     }
@@ -62,6 +74,10 @@ public final class EnterprisePolicyArgs extends com.pulumi.resources.ResourceArg
     @Import(name="kind", required=true)
     private Output<Either<String,EnterprisePolicyKind>> kind;
 
+    /**
+     * @return The kind (type) of Enterprise Policy.
+     * 
+     */
     public Output<Either<String,EnterprisePolicyKind>> kind() {
         return this.kind;
     }
@@ -73,6 +89,10 @@ public final class EnterprisePolicyArgs extends com.pulumi.resources.ResourceArg
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The geo-location where the resource lives
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -84,6 +104,10 @@ public final class EnterprisePolicyArgs extends com.pulumi.resources.ResourceArg
     @Import(name="lockbox")
     private @Nullable Output<PropertiesLockboxArgs> lockbox;
 
+    /**
+     * @return Settings concerning lockbox.
+     * 
+     */
     public Optional<Output<PropertiesLockboxArgs>> lockbox() {
         return Optional.ofNullable(this.lockbox);
     }
@@ -95,6 +119,10 @@ public final class EnterprisePolicyArgs extends com.pulumi.resources.ResourceArg
     @Import(name="networkInjection")
     private @Nullable Output<PropertiesNetworkInjectionArgs> networkInjection;
 
+    /**
+     * @return Settings concerning network injection.
+     * 
+     */
     public Optional<Output<PropertiesNetworkInjectionArgs>> networkInjection() {
         return Optional.ofNullable(this.networkInjection);
     }
@@ -106,6 +134,10 @@ public final class EnterprisePolicyArgs extends com.pulumi.resources.ResourceArg
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -117,6 +149,10 @@ public final class EnterprisePolicyArgs extends com.pulumi.resources.ResourceArg
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -153,91 +189,211 @@ public final class EnterprisePolicyArgs extends com.pulumi.resources.ResourceArg
             $ = new EnterprisePolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param encryption The encryption settings for a configuration store.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryption(@Nullable Output<PropertiesEncryptionArgs> encryption) {
             $.encryption = encryption;
             return this;
         }
 
+        /**
+         * @param encryption The encryption settings for a configuration store.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryption(PropertiesEncryptionArgs encryption) {
             return encryption(Output.of(encryption));
         }
 
+        /**
+         * @param enterprisePolicyName Name of the EnterprisePolicy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enterprisePolicyName(@Nullable Output<String> enterprisePolicyName) {
             $.enterprisePolicyName = enterprisePolicyName;
             return this;
         }
 
+        /**
+         * @param enterprisePolicyName Name of the EnterprisePolicy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enterprisePolicyName(String enterprisePolicyName) {
             return enterprisePolicyName(Output.of(enterprisePolicyName));
         }
 
+        /**
+         * @param identity The identity of the EnterprisePolicy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(@Nullable Output<EnterprisePolicyIdentityArgs> identity) {
             $.identity = identity;
             return this;
         }
 
+        /**
+         * @param identity The identity of the EnterprisePolicy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(EnterprisePolicyIdentityArgs identity) {
             return identity(Output.of(identity));
         }
 
+        /**
+         * @param kind The kind (type) of Enterprise Policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Output<Either<String,EnterprisePolicyKind>> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind The kind (type) of Enterprise Policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Either<String,EnterprisePolicyKind> kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param kind The kind (type) of Enterprise Policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Either.ofLeft(kind));
         }
 
+        /**
+         * @param kind The kind (type) of Enterprise Policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(EnterprisePolicyKind kind) {
             return kind(Either.ofRight(kind));
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param lockbox Settings concerning lockbox.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lockbox(@Nullable Output<PropertiesLockboxArgs> lockbox) {
             $.lockbox = lockbox;
             return this;
         }
 
+        /**
+         * @param lockbox Settings concerning lockbox.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lockbox(PropertiesLockboxArgs lockbox) {
             return lockbox(Output.of(lockbox));
         }
 
+        /**
+         * @param networkInjection Settings concerning network injection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInjection(@Nullable Output<PropertiesNetworkInjectionArgs> networkInjection) {
             $.networkInjection = networkInjection;
             return this;
         }
 
+        /**
+         * @param networkInjection Settings concerning network injection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInjection(PropertiesNetworkInjectionArgs networkInjection) {
             return networkInjection(Output.of(networkInjection));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

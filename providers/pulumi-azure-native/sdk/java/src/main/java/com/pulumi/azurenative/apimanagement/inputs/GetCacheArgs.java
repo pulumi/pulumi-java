@@ -19,6 +19,10 @@ public final class GetCacheArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="cacheId", required=true)
     private String cacheId;
 
+    /**
+     * @return Identifier of the Cache entity. Cache identifier (should be either &#39;default&#39; or valid Azure region identifier).
+     * 
+     */
     public String cacheId() {
         return this.cacheId;
     }
@@ -30,6 +34,10 @@ public final class GetCacheArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetCacheArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="serviceName", required=true)
     private String serviceName;
 
+    /**
+     * @return The name of the API Management service.
+     * 
+     */
     public String serviceName() {
         return this.serviceName;
     }
@@ -71,16 +83,34 @@ public final class GetCacheArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetCacheArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cacheId Identifier of the Cache entity. Cache identifier (should be either &#39;default&#39; or valid Azure region identifier).
+         * 
+         * @return builder
+         * 
+         */
         public Builder cacheId(String cacheId) {
             $.cacheId = cacheId;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param serviceName The name of the API Management service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             $.serviceName = serviceName;
             return this;

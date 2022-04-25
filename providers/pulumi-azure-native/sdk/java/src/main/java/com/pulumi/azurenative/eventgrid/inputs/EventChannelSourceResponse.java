@@ -26,6 +26,11 @@ public final class EventChannelSourceResponse extends com.pulumi.resources.Invok
     @Import(name="source")
     private @Nullable String source;
 
+    /**
+     * @return The identifier of the resource that&#39;s the source of the events.
+     * This represents a unique resource in the partner&#39;s resource model.
+     * 
+     */
     public Optional<String> source() {
         return Optional.ofNullable(this.source);
     }
@@ -54,6 +59,13 @@ public final class EventChannelSourceResponse extends com.pulumi.resources.Invok
             $ = new EventChannelSourceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param source The identifier of the resource that&#39;s the source of the events.
+         * This represents a unique resource in the partner&#39;s resource model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(@Nullable String source) {
             $.source = source;
             return this;

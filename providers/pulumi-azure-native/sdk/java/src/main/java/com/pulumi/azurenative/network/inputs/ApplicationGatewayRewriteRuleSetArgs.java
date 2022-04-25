@@ -28,6 +28,10 @@ public final class ApplicationGatewayRewriteRuleSetArgs extends com.pulumi.resou
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -39,6 +43,10 @@ public final class ApplicationGatewayRewriteRuleSetArgs extends com.pulumi.resou
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the rewrite rule set that is unique within an Application Gateway.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -50,6 +58,10 @@ public final class ApplicationGatewayRewriteRuleSetArgs extends com.pulumi.resou
     @Import(name="rewriteRules")
     private @Nullable Output<List<ApplicationGatewayRewriteRuleArgs>> rewriteRules;
 
+    /**
+     * @return Rewrite rules in the rewrite rule set.
+     * 
+     */
     public Optional<Output<List<ApplicationGatewayRewriteRuleArgs>>> rewriteRules() {
         return Optional.ofNullable(this.rewriteRules);
     }
@@ -80,33 +92,75 @@ public final class ApplicationGatewayRewriteRuleSetArgs extends com.pulumi.resou
             $ = new ApplicationGatewayRewriteRuleSetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param name Name of the rewrite rule set that is unique within an Application Gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the rewrite rule set that is unique within an Application Gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param rewriteRules Rewrite rules in the rewrite rule set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rewriteRules(@Nullable Output<List<ApplicationGatewayRewriteRuleArgs>> rewriteRules) {
             $.rewriteRules = rewriteRules;
             return this;
         }
 
+        /**
+         * @param rewriteRules Rewrite rules in the rewrite rule set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rewriteRules(List<ApplicationGatewayRewriteRuleArgs> rewriteRules) {
             return rewriteRules(Output.of(rewriteRules));
         }
 
+        /**
+         * @param rewriteRules Rewrite rules in the rewrite rule set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rewriteRules(ApplicationGatewayRewriteRuleArgs... rewriteRules) {
             return rewriteRules(List.of(rewriteRules));
         }

@@ -23,6 +23,10 @@ public final class ServiceTemplateSpecContainerEnvArgs extends com.pulumi.resour
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Volume&#39;s name.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -41,6 +45,17 @@ public final class ServiceTemplateSpecContainerEnvArgs extends com.pulumi.resour
     @Import(name="value")
     private @Nullable Output<String> value;
 
+    /**
+     * @return Variable references $(VAR_NAME) are expanded
+     * using the previous defined environment variables in the container and
+     * any route environment variables. If a variable cannot be resolved,
+     * the reference in the input string will be unchanged. The $(VAR_NAME)
+     * syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped
+     * references will never be expanded, regardless of whether the variable
+     * exists or not.
+     * Defaults to &#34;&#34;.
+     * 
+     */
     public Optional<Output<String>> value() {
         return Optional.ofNullable(this.value);
     }
@@ -53,6 +68,11 @@ public final class ServiceTemplateSpecContainerEnvArgs extends com.pulumi.resour
     @Import(name="valueFrom")
     private @Nullable Output<ServiceTemplateSpecContainerEnvValueFromArgs> valueFrom;
 
+    /**
+     * @return Source for the environment variable&#39;s value. Only supports secret_key_ref.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<ServiceTemplateSpecContainerEnvValueFromArgs>> valueFrom() {
         return Optional.ofNullable(this.valueFrom);
     }
@@ -83,29 +103,81 @@ public final class ServiceTemplateSpecContainerEnvArgs extends com.pulumi.resour
             $ = new ServiceTemplateSpecContainerEnvArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Volume&#39;s name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Volume&#39;s name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param value Variable references $(VAR_NAME) are expanded
+         * using the previous defined environment variables in the container and
+         * any route environment variables. If a variable cannot be resolved,
+         * the reference in the input string will be unchanged. The $(VAR_NAME)
+         * syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped
+         * references will never be expanded, regardless of whether the variable
+         * exists or not.
+         * Defaults to &#34;&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value Variable references $(VAR_NAME) are expanded
+         * using the previous defined environment variables in the container and
+         * any route environment variables. If a variable cannot be resolved,
+         * the reference in the input string will be unchanged. The $(VAR_NAME)
+         * syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped
+         * references will never be expanded, regardless of whether the variable
+         * exists or not.
+         * Defaults to &#34;&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }
 
+        /**
+         * @param valueFrom Source for the environment variable&#39;s value. Only supports secret_key_ref.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder valueFrom(@Nullable Output<ServiceTemplateSpecContainerEnvValueFromArgs> valueFrom) {
             $.valueFrom = valueFrom;
             return this;
         }
 
+        /**
+         * @param valueFrom Source for the environment variable&#39;s value. Only supports secret_key_ref.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder valueFrom(ServiceTemplateSpecContainerEnvValueFromArgs valueFrom) {
             return valueFrom(Output.of(valueFrom));
         }

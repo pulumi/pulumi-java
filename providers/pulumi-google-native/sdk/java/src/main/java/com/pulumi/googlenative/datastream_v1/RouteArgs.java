@@ -24,6 +24,10 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="destinationAddress", required=true)
     private Output<String> destinationAddress;
 
+    /**
+     * @return Destination address for connection
+     * 
+     */
     public Output<String> destinationAddress() {
         return this.destinationAddress;
     }
@@ -35,6 +39,10 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="destinationPort")
     private @Nullable Output<Integer> destinationPort;
 
+    /**
+     * @return Destination port for connection
+     * 
+     */
     public Optional<Output<Integer>> destinationPort() {
         return Optional.ofNullable(this.destinationPort);
     }
@@ -46,6 +54,10 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
     private Output<String> displayName;
 
+    /**
+     * @return Display name.
+     * 
+     */
     public Output<String> displayName() {
         return this.displayName;
     }
@@ -57,6 +69,10 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return Labels.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -128,38 +144,86 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
             $ = new RouteArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param destinationAddress Destination address for connection
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationAddress(Output<String> destinationAddress) {
             $.destinationAddress = destinationAddress;
             return this;
         }
 
+        /**
+         * @param destinationAddress Destination address for connection
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationAddress(String destinationAddress) {
             return destinationAddress(Output.of(destinationAddress));
         }
 
+        /**
+         * @param destinationPort Destination port for connection
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationPort(@Nullable Output<Integer> destinationPort) {
             $.destinationPort = destinationPort;
             return this;
         }
 
+        /**
+         * @param destinationPort Destination port for connection
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationPort(Integer destinationPort) {
             return destinationPort(Output.of(destinationPort));
         }
 
+        /**
+         * @param displayName Display name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName Display name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param labels Labels.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Labels.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }

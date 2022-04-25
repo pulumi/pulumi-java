@@ -26,6 +26,10 @@ public final class BandwidthScheduleResponse extends com.pulumi.resources.Invoke
     @Import(name="days", required=true)
     private List<String> days;
 
+    /**
+     * @return The days of the week when this schedule is applicable.
+     * 
+     */
     public List<String> days() {
         return this.days;
     }
@@ -37,6 +41,10 @@ public final class BandwidthScheduleResponse extends com.pulumi.resources.Invoke
     @Import(name="rateInMbps", required=true)
     private Integer rateInMbps;
 
+    /**
+     * @return The rate in Mbps.
+     * 
+     */
     public Integer rateInMbps() {
         return this.rateInMbps;
     }
@@ -48,6 +56,10 @@ public final class BandwidthScheduleResponse extends com.pulumi.resources.Invoke
     @Import(name="start", required=true)
     private TimeResponse start;
 
+    /**
+     * @return The start time of the schedule.
+     * 
+     */
     public TimeResponse start() {
         return this.start;
     }
@@ -59,6 +71,10 @@ public final class BandwidthScheduleResponse extends com.pulumi.resources.Invoke
     @Import(name="stop", required=true)
     private TimeResponse stop;
 
+    /**
+     * @return The stop time of the schedule.
+     * 
+     */
     public TimeResponse stop() {
         return this.stop;
     }
@@ -90,25 +106,55 @@ public final class BandwidthScheduleResponse extends com.pulumi.resources.Invoke
             $ = new BandwidthScheduleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param days The days of the week when this schedule is applicable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder days(List<String> days) {
             $.days = days;
             return this;
         }
 
+        /**
+         * @param days The days of the week when this schedule is applicable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder days(String... days) {
             return days(List.of(days));
         }
 
+        /**
+         * @param rateInMbps The rate in Mbps.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rateInMbps(Integer rateInMbps) {
             $.rateInMbps = rateInMbps;
             return this;
         }
 
+        /**
+         * @param start The start time of the schedule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder start(TimeResponse start) {
             $.start = start;
             return this;
         }
 
+        /**
+         * @param stop The stop time of the schedule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stop(TimeResponse stop) {
             $.stop = stop;
             return this;

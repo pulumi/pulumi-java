@@ -27,6 +27,10 @@ public final class Ipv6ExpressRouteCircuitPeeringConfigResponse extends com.pulu
     @Import(name="microsoftPeeringConfig")
     private @Nullable ExpressRouteCircuitPeeringConfigResponse microsoftPeeringConfig;
 
+    /**
+     * @return The Microsoft peering configuration.
+     * 
+     */
     public Optional<ExpressRouteCircuitPeeringConfigResponse> microsoftPeeringConfig() {
         return Optional.ofNullable(this.microsoftPeeringConfig);
     }
@@ -38,6 +42,10 @@ public final class Ipv6ExpressRouteCircuitPeeringConfigResponse extends com.pulu
     @Import(name="primaryPeerAddressPrefix")
     private @Nullable String primaryPeerAddressPrefix;
 
+    /**
+     * @return The primary address prefix.
+     * 
+     */
     public Optional<String> primaryPeerAddressPrefix() {
         return Optional.ofNullable(this.primaryPeerAddressPrefix);
     }
@@ -49,6 +57,10 @@ public final class Ipv6ExpressRouteCircuitPeeringConfigResponse extends com.pulu
     @Import(name="routeFilter")
     private @Nullable SubResourceResponse routeFilter;
 
+    /**
+     * @return The reference to the RouteFilter resource.
+     * 
+     */
     public Optional<SubResourceResponse> routeFilter() {
         return Optional.ofNullable(this.routeFilter);
     }
@@ -60,6 +72,10 @@ public final class Ipv6ExpressRouteCircuitPeeringConfigResponse extends com.pulu
     @Import(name="secondaryPeerAddressPrefix")
     private @Nullable String secondaryPeerAddressPrefix;
 
+    /**
+     * @return The secondary address prefix.
+     * 
+     */
     public Optional<String> secondaryPeerAddressPrefix() {
         return Optional.ofNullable(this.secondaryPeerAddressPrefix);
     }
@@ -71,6 +87,10 @@ public final class Ipv6ExpressRouteCircuitPeeringConfigResponse extends com.pulu
     @Import(name="state")
     private @Nullable String state;
 
+    /**
+     * @return The state of peering.
+     * 
+     */
     public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
@@ -103,26 +123,56 @@ public final class Ipv6ExpressRouteCircuitPeeringConfigResponse extends com.pulu
             $ = new Ipv6ExpressRouteCircuitPeeringConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param microsoftPeeringConfig The Microsoft peering configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder microsoftPeeringConfig(@Nullable ExpressRouteCircuitPeeringConfigResponse microsoftPeeringConfig) {
             $.microsoftPeeringConfig = microsoftPeeringConfig;
             return this;
         }
 
+        /**
+         * @param primaryPeerAddressPrefix The primary address prefix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryPeerAddressPrefix(@Nullable String primaryPeerAddressPrefix) {
             $.primaryPeerAddressPrefix = primaryPeerAddressPrefix;
             return this;
         }
 
+        /**
+         * @param routeFilter The reference to the RouteFilter resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routeFilter(@Nullable SubResourceResponse routeFilter) {
             $.routeFilter = routeFilter;
             return this;
         }
 
+        /**
+         * @param secondaryPeerAddressPrefix The secondary address prefix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondaryPeerAddressPrefix(@Nullable String secondaryPeerAddressPrefix) {
             $.secondaryPeerAddressPrefix = secondaryPeerAddressPrefix;
             return this;
         }
 
+        /**
+         * @param state The state of peering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable String state) {
             $.state = state;
             return this;

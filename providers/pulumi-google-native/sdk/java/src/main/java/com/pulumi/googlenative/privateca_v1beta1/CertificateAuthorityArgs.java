@@ -37,6 +37,10 @@ public final class CertificateAuthorityArgs extends com.pulumi.resources.Resourc
     @Import(name="certificatePolicy")
     private @Nullable Output<CertificateAuthorityPolicyArgs> certificatePolicy;
 
+    /**
+     * @return Optional. The CertificateAuthorityPolicy to enforce when issuing Certificates from this CertificateAuthority.
+     * 
+     */
     public Optional<Output<CertificateAuthorityPolicyArgs>> certificatePolicy() {
         return Optional.ofNullable(this.certificatePolicy);
     }
@@ -48,6 +52,10 @@ public final class CertificateAuthorityArgs extends com.pulumi.resources.Resourc
     @Import(name="config", required=true)
     private Output<CertificateConfigArgs> config;
 
+    /**
+     * @return Immutable. The config used to create a self-signed X.509 certificate or CSR.
+     * 
+     */
     public Output<CertificateConfigArgs> config() {
         return this.config;
     }
@@ -59,6 +67,10 @@ public final class CertificateAuthorityArgs extends com.pulumi.resources.Resourc
     @Import(name="gcsBucket")
     private @Nullable Output<String> gcsBucket;
 
+    /**
+     * @return Immutable. The name of a Cloud Storage bucket where this CertificateAuthority will publish content, such as the CA certificate and CRLs. This must be a bucket name, without any prefixes (such as `gs://`) or suffixes (such as `.googleapis.com`). For example, to use a bucket named `my-bucket`, you would simply specify `my-bucket`. If not specified, a managed bucket will be created.
+     * 
+     */
     public Optional<Output<String>> gcsBucket() {
         return Optional.ofNullable(this.gcsBucket);
     }
@@ -70,6 +82,10 @@ public final class CertificateAuthorityArgs extends com.pulumi.resources.Resourc
     @Import(name="issuingOptions")
     private @Nullable Output<IssuingOptionsArgs> issuingOptions;
 
+    /**
+     * @return Optional. The IssuingOptions to follow when issuing Certificates from this CertificateAuthority.
+     * 
+     */
     public Optional<Output<IssuingOptionsArgs>> issuingOptions() {
         return Optional.ofNullable(this.issuingOptions);
     }
@@ -81,6 +97,10 @@ public final class CertificateAuthorityArgs extends com.pulumi.resources.Resourc
     @Import(name="keySpec", required=true)
     private Output<KeyVersionSpecArgs> keySpec;
 
+    /**
+     * @return Immutable. Used when issuing certificates for this CertificateAuthority. If this CertificateAuthority is a self-signed CertificateAuthority, this key is also used to sign the self-signed CA certificate. Otherwise, it is used to sign a CSR.
+     * 
+     */
     public Output<KeyVersionSpecArgs> keySpec() {
         return this.keySpec;
     }
@@ -92,6 +112,10 @@ public final class CertificateAuthorityArgs extends com.pulumi.resources.Resourc
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return Optional. Labels with user-defined metadata.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -103,6 +127,10 @@ public final class CertificateAuthorityArgs extends com.pulumi.resources.Resourc
     @Import(name="lifetime", required=true)
     private Output<String> lifetime;
 
+    /**
+     * @return The desired lifetime of the CA certificate. Used to create the &#34;not_before_time&#34; and &#34;not_after_time&#34; fields inside an X.509 certificate.
+     * 
+     */
     public Output<String> lifetime() {
         return this.lifetime;
     }
@@ -135,6 +163,10 @@ public final class CertificateAuthorityArgs extends com.pulumi.resources.Resourc
     @Import(name="subordinateConfig")
     private @Nullable Output<SubordinateConfigArgs> subordinateConfig;
 
+    /**
+     * @return Optional. If this is a subordinate CertificateAuthority, this field will be set with the subordinate configuration, which describes its issuers. This may be updated, but this CertificateAuthority must continue to validate.
+     * 
+     */
     public Optional<Output<SubordinateConfigArgs>> subordinateConfig() {
         return Optional.ofNullable(this.subordinateConfig);
     }
@@ -146,6 +178,10 @@ public final class CertificateAuthorityArgs extends com.pulumi.resources.Resourc
     @Import(name="tier", required=true)
     private Output<CertificateAuthorityTier> tier;
 
+    /**
+     * @return Immutable. The Tier of this CertificateAuthority.
+     * 
+     */
     public Output<CertificateAuthorityTier> tier() {
         return this.tier;
     }
@@ -157,6 +193,10 @@ public final class CertificateAuthorityArgs extends com.pulumi.resources.Resourc
     @Import(name="type", required=true)
     private Output<CertificateAuthorityType> type;
 
+    /**
+     * @return Immutable. The Type of this CertificateAuthority.
+     * 
+     */
     public Output<CertificateAuthorityType> type() {
         return this.type;
     }
@@ -207,65 +247,149 @@ public final class CertificateAuthorityArgs extends com.pulumi.resources.Resourc
             return certificateAuthorityId(Output.of(certificateAuthorityId));
         }
 
+        /**
+         * @param certificatePolicy Optional. The CertificateAuthorityPolicy to enforce when issuing Certificates from this CertificateAuthority.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificatePolicy(@Nullable Output<CertificateAuthorityPolicyArgs> certificatePolicy) {
             $.certificatePolicy = certificatePolicy;
             return this;
         }
 
+        /**
+         * @param certificatePolicy Optional. The CertificateAuthorityPolicy to enforce when issuing Certificates from this CertificateAuthority.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificatePolicy(CertificateAuthorityPolicyArgs certificatePolicy) {
             return certificatePolicy(Output.of(certificatePolicy));
         }
 
+        /**
+         * @param config Immutable. The config used to create a self-signed X.509 certificate or CSR.
+         * 
+         * @return builder
+         * 
+         */
         public Builder config(Output<CertificateConfigArgs> config) {
             $.config = config;
             return this;
         }
 
+        /**
+         * @param config Immutable. The config used to create a self-signed X.509 certificate or CSR.
+         * 
+         * @return builder
+         * 
+         */
         public Builder config(CertificateConfigArgs config) {
             return config(Output.of(config));
         }
 
+        /**
+         * @param gcsBucket Immutable. The name of a Cloud Storage bucket where this CertificateAuthority will publish content, such as the CA certificate and CRLs. This must be a bucket name, without any prefixes (such as `gs://`) or suffixes (such as `.googleapis.com`). For example, to use a bucket named `my-bucket`, you would simply specify `my-bucket`. If not specified, a managed bucket will be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gcsBucket(@Nullable Output<String> gcsBucket) {
             $.gcsBucket = gcsBucket;
             return this;
         }
 
+        /**
+         * @param gcsBucket Immutable. The name of a Cloud Storage bucket where this CertificateAuthority will publish content, such as the CA certificate and CRLs. This must be a bucket name, without any prefixes (such as `gs://`) or suffixes (such as `.googleapis.com`). For example, to use a bucket named `my-bucket`, you would simply specify `my-bucket`. If not specified, a managed bucket will be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gcsBucket(String gcsBucket) {
             return gcsBucket(Output.of(gcsBucket));
         }
 
+        /**
+         * @param issuingOptions Optional. The IssuingOptions to follow when issuing Certificates from this CertificateAuthority.
+         * 
+         * @return builder
+         * 
+         */
         public Builder issuingOptions(@Nullable Output<IssuingOptionsArgs> issuingOptions) {
             $.issuingOptions = issuingOptions;
             return this;
         }
 
+        /**
+         * @param issuingOptions Optional. The IssuingOptions to follow when issuing Certificates from this CertificateAuthority.
+         * 
+         * @return builder
+         * 
+         */
         public Builder issuingOptions(IssuingOptionsArgs issuingOptions) {
             return issuingOptions(Output.of(issuingOptions));
         }
 
+        /**
+         * @param keySpec Immutable. Used when issuing certificates for this CertificateAuthority. If this CertificateAuthority is a self-signed CertificateAuthority, this key is also used to sign the self-signed CA certificate. Otherwise, it is used to sign a CSR.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keySpec(Output<KeyVersionSpecArgs> keySpec) {
             $.keySpec = keySpec;
             return this;
         }
 
+        /**
+         * @param keySpec Immutable. Used when issuing certificates for this CertificateAuthority. If this CertificateAuthority is a self-signed CertificateAuthority, this key is also used to sign the self-signed CA certificate. Otherwise, it is used to sign a CSR.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keySpec(KeyVersionSpecArgs keySpec) {
             return keySpec(Output.of(keySpec));
         }
 
+        /**
+         * @param labels Optional. Labels with user-defined metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Optional. Labels with user-defined metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param lifetime The desired lifetime of the CA certificate. Used to create the &#34;not_before_time&#34; and &#34;not_after_time&#34; fields inside an X.509 certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lifetime(Output<String> lifetime) {
             $.lifetime = lifetime;
             return this;
         }
 
+        /**
+         * @param lifetime The desired lifetime of the CA certificate. Used to create the &#34;not_before_time&#34; and &#34;not_after_time&#34; fields inside an X.509 certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lifetime(String lifetime) {
             return lifetime(Output.of(lifetime));
         }
@@ -297,29 +421,65 @@ public final class CertificateAuthorityArgs extends com.pulumi.resources.Resourc
             return requestId(Output.of(requestId));
         }
 
+        /**
+         * @param subordinateConfig Optional. If this is a subordinate CertificateAuthority, this field will be set with the subordinate configuration, which describes its issuers. This may be updated, but this CertificateAuthority must continue to validate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subordinateConfig(@Nullable Output<SubordinateConfigArgs> subordinateConfig) {
             $.subordinateConfig = subordinateConfig;
             return this;
         }
 
+        /**
+         * @param subordinateConfig Optional. If this is a subordinate CertificateAuthority, this field will be set with the subordinate configuration, which describes its issuers. This may be updated, but this CertificateAuthority must continue to validate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subordinateConfig(SubordinateConfigArgs subordinateConfig) {
             return subordinateConfig(Output.of(subordinateConfig));
         }
 
+        /**
+         * @param tier Immutable. The Tier of this CertificateAuthority.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(Output<CertificateAuthorityTier> tier) {
             $.tier = tier;
             return this;
         }
 
+        /**
+         * @param tier Immutable. The Tier of this CertificateAuthority.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(CertificateAuthorityTier tier) {
             return tier(Output.of(tier));
         }
 
+        /**
+         * @param type Immutable. The Type of this CertificateAuthority.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<CertificateAuthorityType> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Immutable. The Type of this CertificateAuthority.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(CertificateAuthorityType type) {
             return type(Output.of(type));
         }

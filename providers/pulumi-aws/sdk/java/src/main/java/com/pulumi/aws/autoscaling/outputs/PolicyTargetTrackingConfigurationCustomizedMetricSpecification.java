@@ -14,27 +14,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PolicyTargetTrackingConfigurationCustomizedMetricSpecification {
     /**
-     * The dimensions of the metric.
+     * @return The dimensions of the metric.
      * 
      */
     private final @Nullable List<PolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricDimension> metricDimensions;
     /**
-     * The name of the metric.
+     * @return The name of the metric.
      * 
      */
     private final String metricName;
     /**
-     * The namespace of the metric.
+     * @return The namespace of the metric.
      * 
      */
     private final String namespace;
     /**
-     * The statistic of the metric.
+     * @return The statistic of the metric.
      * 
      */
     private final String statistic;
     /**
-     * The unit of the metric.
+     * @return The unit of the metric.
      * 
      */
     private final @Nullable String unit;
@@ -54,37 +54,37 @@ public final class PolicyTargetTrackingConfigurationCustomizedMetricSpecificatio
     }
 
     /**
-     * The dimensions of the metric.
+     * @return The dimensions of the metric.
      * 
-    */
+     */
     public List<PolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricDimension> metricDimensions() {
         return this.metricDimensions == null ? List.of() : this.metricDimensions;
     }
     /**
-     * The name of the metric.
+     * @return The name of the metric.
      * 
-    */
+     */
     public String metricName() {
         return this.metricName;
     }
     /**
-     * The namespace of the metric.
+     * @return The namespace of the metric.
      * 
-    */
+     */
     public String namespace() {
         return this.namespace;
     }
     /**
-     * The statistic of the metric.
+     * @return The statistic of the metric.
      * 
-    */
+     */
     public String statistic() {
         return this.statistic;
     }
     /**
-     * The unit of the metric.
+     * @return The unit of the metric.
      * 
-    */
+     */
     public Optional<String> unit() {
         return Optional.ofNullable(this.unit);
     }

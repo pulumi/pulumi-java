@@ -23,6 +23,10 @@ public final class VpcIpv4CidrBlockAssociationState extends com.pulumi.resources
     @Import(name="cidrBlock")
     private @Nullable Output<String> cidrBlock;
 
+    /**
+     * @return The IPv4 CIDR block for the VPC. CIDR can be explicitly set or it can be derived from IPAM using `ipv4_netmask_length`.
+     * 
+     */
     public Optional<Output<String>> cidrBlock() {
         return Optional.ofNullable(this.cidrBlock);
     }
@@ -34,6 +38,10 @@ public final class VpcIpv4CidrBlockAssociationState extends com.pulumi.resources
     @Import(name="ipv4IpamPoolId")
     private @Nullable Output<String> ipv4IpamPoolId;
 
+    /**
+     * @return The ID of an IPv4 IPAM pool you want to use for allocating this VPC&#39;s CIDR. IPAM is a VPC feature that you can use to automate your IP address management workflows including assigning, tracking, troubleshooting, and auditing IP addresses across AWS Regions and accounts. Using IPAM you can monitor IP address usage throughout your AWS Organization.
+     * 
+     */
     public Optional<Output<String>> ipv4IpamPoolId() {
         return Optional.ofNullable(this.ipv4IpamPoolId);
     }
@@ -45,6 +53,10 @@ public final class VpcIpv4CidrBlockAssociationState extends com.pulumi.resources
     @Import(name="ipv4NetmaskLength")
     private @Nullable Output<Integer> ipv4NetmaskLength;
 
+    /**
+     * @return The netmask length of the IPv4 CIDR you want to allocate to this VPC. Requires specifying a `ipv4_ipam_pool_id`.
+     * 
+     */
     public Optional<Output<Integer>> ipv4NetmaskLength() {
         return Optional.ofNullable(this.ipv4NetmaskLength);
     }
@@ -56,6 +68,10 @@ public final class VpcIpv4CidrBlockAssociationState extends com.pulumi.resources
     @Import(name="vpcId")
     private @Nullable Output<String> vpcId;
 
+    /**
+     * @return The ID of the VPC to make the association with.
+     * 
+     */
     public Optional<Output<String>> vpcId() {
         return Optional.ofNullable(this.vpcId);
     }
@@ -87,38 +103,86 @@ public final class VpcIpv4CidrBlockAssociationState extends com.pulumi.resources
             $ = new VpcIpv4CidrBlockAssociationState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cidrBlock The IPv4 CIDR block for the VPC. CIDR can be explicitly set or it can be derived from IPAM using `ipv4_netmask_length`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cidrBlock(@Nullable Output<String> cidrBlock) {
             $.cidrBlock = cidrBlock;
             return this;
         }
 
+        /**
+         * @param cidrBlock The IPv4 CIDR block for the VPC. CIDR can be explicitly set or it can be derived from IPAM using `ipv4_netmask_length`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cidrBlock(String cidrBlock) {
             return cidrBlock(Output.of(cidrBlock));
         }
 
+        /**
+         * @param ipv4IpamPoolId The ID of an IPv4 IPAM pool you want to use for allocating this VPC&#39;s CIDR. IPAM is a VPC feature that you can use to automate your IP address management workflows including assigning, tracking, troubleshooting, and auditing IP addresses across AWS Regions and accounts. Using IPAM you can monitor IP address usage throughout your AWS Organization.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipv4IpamPoolId(@Nullable Output<String> ipv4IpamPoolId) {
             $.ipv4IpamPoolId = ipv4IpamPoolId;
             return this;
         }
 
+        /**
+         * @param ipv4IpamPoolId The ID of an IPv4 IPAM pool you want to use for allocating this VPC&#39;s CIDR. IPAM is a VPC feature that you can use to automate your IP address management workflows including assigning, tracking, troubleshooting, and auditing IP addresses across AWS Regions and accounts. Using IPAM you can monitor IP address usage throughout your AWS Organization.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipv4IpamPoolId(String ipv4IpamPoolId) {
             return ipv4IpamPoolId(Output.of(ipv4IpamPoolId));
         }
 
+        /**
+         * @param ipv4NetmaskLength The netmask length of the IPv4 CIDR you want to allocate to this VPC. Requires specifying a `ipv4_ipam_pool_id`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipv4NetmaskLength(@Nullable Output<Integer> ipv4NetmaskLength) {
             $.ipv4NetmaskLength = ipv4NetmaskLength;
             return this;
         }
 
+        /**
+         * @param ipv4NetmaskLength The netmask length of the IPv4 CIDR you want to allocate to this VPC. Requires specifying a `ipv4_ipam_pool_id`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipv4NetmaskLength(Integer ipv4NetmaskLength) {
             return ipv4NetmaskLength(Output.of(ipv4NetmaskLength));
         }
 
+        /**
+         * @param vpcId The ID of the VPC to make the association with.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcId(@Nullable Output<String> vpcId) {
             $.vpcId = vpcId;
             return this;
         }
 
+        /**
+         * @param vpcId The ID of the VPC to make the association with.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcId(String vpcId) {
             return vpcId(Output.of(vpcId));
         }

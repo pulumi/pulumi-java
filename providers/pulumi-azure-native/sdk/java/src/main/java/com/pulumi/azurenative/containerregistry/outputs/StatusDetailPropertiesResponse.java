@@ -10,27 +10,27 @@ import java.util.Objects;
 @CustomType
 public final class StatusDetailPropertiesResponse {
     /**
-     * The code of the status.
+     * @return The code of the status.
      * 
      */
     private final String code;
     /**
-     * The correlation ID of the status.
+     * @return The correlation ID of the status.
      * 
      */
     private final String correlationId;
     /**
-     * The description of the status.
+     * @return The description of the status.
      * 
      */
     private final String description;
     /**
-     * The timestamp of the status.
+     * @return The timestamp of the status.
      * 
      */
     private final String timestamp;
     /**
-     * The component of the connected registry corresponding to the status.
+     * @return The component of the connected registry corresponding to the status.
      * 
      */
     private final String type;
@@ -50,37 +50,37 @@ public final class StatusDetailPropertiesResponse {
     }
 
     /**
-     * The code of the status.
+     * @return The code of the status.
      * 
-    */
+     */
     public String code() {
         return this.code;
     }
     /**
-     * The correlation ID of the status.
+     * @return The correlation ID of the status.
      * 
-    */
+     */
     public String correlationId() {
         return this.correlationId;
     }
     /**
-     * The description of the status.
+     * @return The description of the status.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * The timestamp of the status.
+     * @return The timestamp of the status.
      * 
-    */
+     */
     public String timestamp() {
         return this.timestamp;
     }
     /**
-     * The component of the connected registry corresponding to the status.
+     * @return The component of the connected registry corresponding to the status.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

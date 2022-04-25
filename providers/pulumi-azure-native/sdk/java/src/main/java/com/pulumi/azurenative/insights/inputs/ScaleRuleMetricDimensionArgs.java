@@ -27,6 +27,10 @@ public final class ScaleRuleMetricDimensionArgs extends com.pulumi.resources.Res
     @Import(name="dimensionName", required=true)
     private Output<String> dimensionName;
 
+    /**
+     * @return Name of the dimension.
+     * 
+     */
     public Output<String> dimensionName() {
         return this.dimensionName;
     }
@@ -38,6 +42,10 @@ public final class ScaleRuleMetricDimensionArgs extends com.pulumi.resources.Res
     @Import(name="operator", required=true)
     private Output<Either<String,ScaleRuleMetricDimensionOperationType>> operator;
 
+    /**
+     * @return the dimension operator. Only &#39;Equals&#39; and &#39;NotEquals&#39; are supported. &#39;Equals&#39; being equal to any of the values. &#39;NotEquals&#39; being not equal to all of the values
+     * 
+     */
     public Output<Either<String,ScaleRuleMetricDimensionOperationType>> operator() {
         return this.operator;
     }
@@ -49,6 +57,10 @@ public final class ScaleRuleMetricDimensionArgs extends com.pulumi.resources.Res
     @Import(name="values", required=true)
     private Output<List<String>> values;
 
+    /**
+     * @return list of dimension values. For example: [&#34;App1&#34;,&#34;App2&#34;].
+     * 
+     */
     public Output<List<String>> values() {
         return this.values;
     }
@@ -79,41 +91,95 @@ public final class ScaleRuleMetricDimensionArgs extends com.pulumi.resources.Res
             $ = new ScaleRuleMetricDimensionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dimensionName Name of the dimension.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dimensionName(Output<String> dimensionName) {
             $.dimensionName = dimensionName;
             return this;
         }
 
+        /**
+         * @param dimensionName Name of the dimension.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dimensionName(String dimensionName) {
             return dimensionName(Output.of(dimensionName));
         }
 
+        /**
+         * @param operator the dimension operator. Only &#39;Equals&#39; and &#39;NotEquals&#39; are supported. &#39;Equals&#39; being equal to any of the values. &#39;NotEquals&#39; being not equal to all of the values
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(Output<Either<String,ScaleRuleMetricDimensionOperationType>> operator) {
             $.operator = operator;
             return this;
         }
 
+        /**
+         * @param operator the dimension operator. Only &#39;Equals&#39; and &#39;NotEquals&#39; are supported. &#39;Equals&#39; being equal to any of the values. &#39;NotEquals&#39; being not equal to all of the values
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(Either<String,ScaleRuleMetricDimensionOperationType> operator) {
             return operator(Output.of(operator));
         }
 
+        /**
+         * @param operator the dimension operator. Only &#39;Equals&#39; and &#39;NotEquals&#39; are supported. &#39;Equals&#39; being equal to any of the values. &#39;NotEquals&#39; being not equal to all of the values
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(String operator) {
             return operator(Either.ofLeft(operator));
         }
 
+        /**
+         * @param operator the dimension operator. Only &#39;Equals&#39; and &#39;NotEquals&#39; are supported. &#39;Equals&#39; being equal to any of the values. &#39;NotEquals&#39; being not equal to all of the values
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(ScaleRuleMetricDimensionOperationType operator) {
             return operator(Either.ofRight(operator));
         }
 
+        /**
+         * @param values list of dimension values. For example: [&#34;App1&#34;,&#34;App2&#34;].
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(Output<List<String>> values) {
             $.values = values;
             return this;
         }
 
+        /**
+         * @param values list of dimension values. For example: [&#34;App1&#34;,&#34;App2&#34;].
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(List<String> values) {
             return values(Output.of(values));
         }
 
+        /**
+         * @param values list of dimension values. For example: [&#34;App1&#34;,&#34;App2&#34;].
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(String... values) {
             return values(List.of(values));
         }

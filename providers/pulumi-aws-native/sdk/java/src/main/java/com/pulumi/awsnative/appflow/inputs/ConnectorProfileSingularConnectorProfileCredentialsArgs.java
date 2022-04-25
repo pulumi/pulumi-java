@@ -20,6 +20,10 @@ public final class ConnectorProfileSingularConnectorProfileCredentialsArgs exten
     @Import(name="apiKey", required=true)
     private Output<String> apiKey;
 
+    /**
+     * @return A unique alphanumeric identiﬁer used to authenticate a user, developer, or calling program to your API.
+     * 
+     */
     public Output<String> apiKey() {
         return this.apiKey;
     }
@@ -48,11 +52,23 @@ public final class ConnectorProfileSingularConnectorProfileCredentialsArgs exten
             $ = new ConnectorProfileSingularConnectorProfileCredentialsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiKey A unique alphanumeric identiﬁer used to authenticate a user, developer, or calling program to your API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiKey(Output<String> apiKey) {
             $.apiKey = apiKey;
             return this;
         }
 
+        /**
+         * @param apiKey A unique alphanumeric identiﬁer used to authenticate a user, developer, or calling program to your API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiKey(String apiKey) {
             return apiKey(Output.of(apiKey));
         }

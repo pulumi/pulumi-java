@@ -28,6 +28,10 @@ public final class ApplicationGatewayFirewallDisabledRuleGroupArgs extends com.p
     @Import(name="ruleGroupName", required=true)
     private Output<String> ruleGroupName;
 
+    /**
+     * @return The name of the rule group that will be disabled.
+     * 
+     */
     public Output<String> ruleGroupName() {
         return this.ruleGroupName;
     }
@@ -39,6 +43,10 @@ public final class ApplicationGatewayFirewallDisabledRuleGroupArgs extends com.p
     @Import(name="rules")
     private @Nullable Output<List<Integer>> rules;
 
+    /**
+     * @return The list of rules that will be disabled. If null, all rules of the rule group will be disabled.
+     * 
+     */
     public Optional<Output<List<Integer>>> rules() {
         return Optional.ofNullable(this.rules);
     }
@@ -68,24 +76,54 @@ public final class ApplicationGatewayFirewallDisabledRuleGroupArgs extends com.p
             $ = new ApplicationGatewayFirewallDisabledRuleGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ruleGroupName The name of the rule group that will be disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleGroupName(Output<String> ruleGroupName) {
             $.ruleGroupName = ruleGroupName;
             return this;
         }
 
+        /**
+         * @param ruleGroupName The name of the rule group that will be disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleGroupName(String ruleGroupName) {
             return ruleGroupName(Output.of(ruleGroupName));
         }
 
+        /**
+         * @param rules The list of rules that will be disabled. If null, all rules of the rule group will be disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(@Nullable Output<List<Integer>> rules) {
             $.rules = rules;
             return this;
         }
 
+        /**
+         * @param rules The list of rules that will be disabled. If null, all rules of the rule group will be disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(List<Integer> rules) {
             return rules(Output.of(rules));
         }
 
+        /**
+         * @param rules The list of rules that will be disabled. If null, all rules of the rule group will be disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(Integer... rules) {
             return rules(List.of(rules));
         }

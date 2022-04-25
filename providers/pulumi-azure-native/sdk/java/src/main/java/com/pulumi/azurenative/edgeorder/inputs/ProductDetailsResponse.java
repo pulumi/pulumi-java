@@ -30,6 +30,10 @@ public final class ProductDetailsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="count", required=true)
     private Integer count;
 
+    /**
+     * @return Quantity of the product
+     * 
+     */
     public Integer count() {
         return this.count;
     }
@@ -41,6 +45,10 @@ public final class ProductDetailsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="deviceDetails", required=true)
     private List<DeviceDetailsResponse> deviceDetails;
 
+    /**
+     * @return list of device details
+     * 
+     */
     public List<DeviceDetailsResponse> deviceDetails() {
         return this.deviceDetails;
     }
@@ -52,6 +60,10 @@ public final class ProductDetailsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="displayInfo")
     private @Nullable DisplayInfoResponse displayInfo;
 
+    /**
+     * @return Display details of the product
+     * 
+     */
     public Optional<DisplayInfoResponse> displayInfo() {
         return Optional.ofNullable(this.displayInfo);
     }
@@ -63,6 +75,10 @@ public final class ProductDetailsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="hierarchyInformation", required=true)
     private HierarchyInformationResponse hierarchyInformation;
 
+    /**
+     * @return Hierarchy of the product which uniquely identifies the product
+     * 
+     */
     public HierarchyInformationResponse hierarchyInformation() {
         return this.hierarchyInformation;
     }
@@ -74,6 +90,10 @@ public final class ProductDetailsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="productDoubleEncryptionStatus", required=true)
     private String productDoubleEncryptionStatus;
 
+    /**
+     * @return Double encryption status of the configuration. Read-only field.
+     * 
+     */
     public String productDoubleEncryptionStatus() {
         return this.productDoubleEncryptionStatus;
     }
@@ -106,30 +126,66 @@ public final class ProductDetailsResponse extends com.pulumi.resources.InvokeArg
             $ = new ProductDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param count Quantity of the product
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(Integer count) {
             $.count = count;
             return this;
         }
 
+        /**
+         * @param deviceDetails list of device details
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceDetails(List<DeviceDetailsResponse> deviceDetails) {
             $.deviceDetails = deviceDetails;
             return this;
         }
 
+        /**
+         * @param deviceDetails list of device details
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceDetails(DeviceDetailsResponse... deviceDetails) {
             return deviceDetails(List.of(deviceDetails));
         }
 
+        /**
+         * @param displayInfo Display details of the product
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayInfo(@Nullable DisplayInfoResponse displayInfo) {
             $.displayInfo = displayInfo;
             return this;
         }
 
+        /**
+         * @param hierarchyInformation Hierarchy of the product which uniquely identifies the product
+         * 
+         * @return builder
+         * 
+         */
         public Builder hierarchyInformation(HierarchyInformationResponse hierarchyInformation) {
             $.hierarchyInformation = hierarchyInformation;
             return this;
         }
 
+        /**
+         * @param productDoubleEncryptionStatus Double encryption status of the configuration. Read-only field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder productDoubleEncryptionStatus(String productDoubleEncryptionStatus) {
             $.productDoubleEncryptionStatus = productDoubleEncryptionStatus;
             return this;

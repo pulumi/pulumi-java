@@ -15,7 +15,7 @@ public final class GetServiceTemplateMetadata {
     private final Integer generation;
     private final Map<String,String> labels;
     /**
-     * The name of the Cloud Run Service.
+     * @return The name of the Cloud Run Service.
      * 
      */
     private final String name;
@@ -54,9 +54,9 @@ public final class GetServiceTemplateMetadata {
         return this.labels;
     }
     /**
-     * The name of the Cloud Run Service.
+     * @return The name of the Cloud Run Service.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

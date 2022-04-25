@@ -27,6 +27,10 @@ public final class SecretResourcePropertiesArgs extends com.pulumi.resources.Res
     @Import(name="contentType")
     private @Nullable Output<String> contentType;
 
+    /**
+     * @return The type of the content stored in the secret value. The value of this property is opaque to Service Fabric. Once set, the value of this property cannot be changed.
+     * 
+     */
     public Optional<Output<String>> contentType() {
         return Optional.ofNullable(this.contentType);
     }
@@ -38,6 +42,10 @@ public final class SecretResourcePropertiesArgs extends com.pulumi.resources.Res
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return User readable description of the secret.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -50,6 +58,11 @@ public final class SecretResourcePropertiesArgs extends com.pulumi.resources.Res
     @Import(name="kind", required=true)
     private Output<String> kind;
 
+    /**
+     * @return Describes the kind of secret.
+     * Expected value is &#39;SecretResourceProperties&#39;.
+     * 
+     */
     public Output<String> kind() {
         return this.kind;
     }
@@ -80,29 +93,67 @@ public final class SecretResourcePropertiesArgs extends com.pulumi.resources.Res
             $ = new SecretResourcePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param contentType The type of the content stored in the secret value. The value of this property is opaque to Service Fabric. Once set, the value of this property cannot be changed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentType(@Nullable Output<String> contentType) {
             $.contentType = contentType;
             return this;
         }
 
+        /**
+         * @param contentType The type of the content stored in the secret value. The value of this property is opaque to Service Fabric. Once set, the value of this property cannot be changed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentType(String contentType) {
             return contentType(Output.of(contentType));
         }
 
+        /**
+         * @param description User readable description of the secret.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description User readable description of the secret.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param kind Describes the kind of secret.
+         * Expected value is &#39;SecretResourceProperties&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Describes the kind of secret.
+         * Expected value is &#39;SecretResourceProperties&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }

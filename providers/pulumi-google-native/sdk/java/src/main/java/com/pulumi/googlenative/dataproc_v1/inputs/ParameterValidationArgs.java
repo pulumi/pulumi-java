@@ -27,6 +27,10 @@ public final class ParameterValidationArgs extends com.pulumi.resources.Resource
     @Import(name="regex")
     private @Nullable Output<RegexValidationArgs> regex;
 
+    /**
+     * @return Validation based on regular expressions.
+     * 
+     */
     public Optional<Output<RegexValidationArgs>> regex() {
         return Optional.ofNullable(this.regex);
     }
@@ -38,6 +42,10 @@ public final class ParameterValidationArgs extends com.pulumi.resources.Resource
     @Import(name="values")
     private @Nullable Output<ValueValidationArgs> values;
 
+    /**
+     * @return Validation based on a list of allowed values.
+     * 
+     */
     public Optional<Output<ValueValidationArgs>> values() {
         return Optional.ofNullable(this.values);
     }
@@ -67,20 +75,44 @@ public final class ParameterValidationArgs extends com.pulumi.resources.Resource
             $ = new ParameterValidationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param regex Validation based on regular expressions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regex(@Nullable Output<RegexValidationArgs> regex) {
             $.regex = regex;
             return this;
         }
 
+        /**
+         * @param regex Validation based on regular expressions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regex(RegexValidationArgs regex) {
             return regex(Output.of(regex));
         }
 
+        /**
+         * @param values Validation based on a list of allowed values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(@Nullable Output<ValueValidationArgs> values) {
             $.values = values;
             return this;
         }
 
+        /**
+         * @param values Validation based on a list of allowed values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(ValueValidationArgs values) {
             return values(Output.of(values));
         }

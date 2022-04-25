@@ -27,6 +27,10 @@ public final class LoginScopesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scopes")
     private @Nullable Output<List<String>> scopes;
 
+    /**
+     * @return A list of the scopes that should be requested while authenticating.
+     * 
+     */
     public Optional<Output<List<String>>> scopes() {
         return Optional.ofNullable(this.scopes);
     }
@@ -55,15 +59,33 @@ public final class LoginScopesArgs extends com.pulumi.resources.ResourceArgs {
             $ = new LoginScopesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param scopes A list of the scopes that should be requested while authenticating.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scopes(@Nullable Output<List<String>> scopes) {
             $.scopes = scopes;
             return this;
         }
 
+        /**
+         * @param scopes A list of the scopes that should be requested while authenticating.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scopes(List<String> scopes) {
             return scopes(Output.of(scopes));
         }
 
+        /**
+         * @param scopes A list of the scopes that should be requested while authenticating.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scopes(String... scopes) {
             return scopes(List.of(scopes));
         }

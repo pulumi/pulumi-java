@@ -19,6 +19,10 @@ public final class BotAliasCloudWatchLogGroupLogDestination extends com.pulumi.r
     @Import(name="cloudWatchLogGroupArn", required=true)
     private String cloudWatchLogGroupArn;
 
+    /**
+     * @return A string used to identify this tag
+     * 
+     */
     public String cloudWatchLogGroupArn() {
         return this.cloudWatchLogGroupArn;
     }
@@ -30,6 +34,10 @@ public final class BotAliasCloudWatchLogGroupLogDestination extends com.pulumi.r
     @Import(name="logPrefix", required=true)
     private String logPrefix;
 
+    /**
+     * @return A string containing the value for the tag
+     * 
+     */
     public String logPrefix() {
         return this.logPrefix;
     }
@@ -59,11 +67,23 @@ public final class BotAliasCloudWatchLogGroupLogDestination extends com.pulumi.r
             $ = new BotAliasCloudWatchLogGroupLogDestination(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cloudWatchLogGroupArn A string used to identify this tag
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudWatchLogGroupArn(String cloudWatchLogGroupArn) {
             $.cloudWatchLogGroupArn = cloudWatchLogGroupArn;
             return this;
         }
 
+        /**
+         * @param logPrefix A string containing the value for the tag
+         * 
+         * @return builder
+         * 
+         */
         public Builder logPrefix(String logPrefix) {
             $.logPrefix = logPrefix;
             return this;

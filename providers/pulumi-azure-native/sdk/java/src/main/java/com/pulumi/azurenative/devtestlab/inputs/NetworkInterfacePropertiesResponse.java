@@ -26,6 +26,10 @@ public final class NetworkInterfacePropertiesResponse extends com.pulumi.resourc
     @Import(name="dnsName")
     private @Nullable String dnsName;
 
+    /**
+     * @return The DNS name.
+     * 
+     */
     public Optional<String> dnsName() {
         return Optional.ofNullable(this.dnsName);
     }
@@ -37,6 +41,10 @@ public final class NetworkInterfacePropertiesResponse extends com.pulumi.resourc
     @Import(name="privateIpAddress")
     private @Nullable String privateIpAddress;
 
+    /**
+     * @return The private IP address.
+     * 
+     */
     public Optional<String> privateIpAddress() {
         return Optional.ofNullable(this.privateIpAddress);
     }
@@ -48,6 +56,10 @@ public final class NetworkInterfacePropertiesResponse extends com.pulumi.resourc
     @Import(name="publicIpAddress")
     private @Nullable String publicIpAddress;
 
+    /**
+     * @return The public IP address.
+     * 
+     */
     public Optional<String> publicIpAddress() {
         return Optional.ofNullable(this.publicIpAddress);
     }
@@ -59,6 +71,10 @@ public final class NetworkInterfacePropertiesResponse extends com.pulumi.resourc
     @Import(name="publicIpAddressId")
     private @Nullable String publicIpAddressId;
 
+    /**
+     * @return The resource ID of the public IP address.
+     * 
+     */
     public Optional<String> publicIpAddressId() {
         return Optional.ofNullable(this.publicIpAddressId);
     }
@@ -70,6 +86,10 @@ public final class NetworkInterfacePropertiesResponse extends com.pulumi.resourc
     @Import(name="rdpAuthority")
     private @Nullable String rdpAuthority;
 
+    /**
+     * @return The RdpAuthority property is a server DNS host name or IP address followed by the service port number for RDP (Remote Desktop Protocol).
+     * 
+     */
     public Optional<String> rdpAuthority() {
         return Optional.ofNullable(this.rdpAuthority);
     }
@@ -81,6 +101,10 @@ public final class NetworkInterfacePropertiesResponse extends com.pulumi.resourc
     @Import(name="sharedPublicIpAddressConfiguration")
     private @Nullable SharedPublicIpAddressConfigurationResponse sharedPublicIpAddressConfiguration;
 
+    /**
+     * @return The configuration for sharing a public IP address across multiple virtual machines.
+     * 
+     */
     public Optional<SharedPublicIpAddressConfigurationResponse> sharedPublicIpAddressConfiguration() {
         return Optional.ofNullable(this.sharedPublicIpAddressConfiguration);
     }
@@ -92,6 +116,10 @@ public final class NetworkInterfacePropertiesResponse extends com.pulumi.resourc
     @Import(name="sshAuthority")
     private @Nullable String sshAuthority;
 
+    /**
+     * @return The SshAuthority property is a server DNS host name or IP address followed by the service port number for SSH.
+     * 
+     */
     public Optional<String> sshAuthority() {
         return Optional.ofNullable(this.sshAuthority);
     }
@@ -103,6 +131,10 @@ public final class NetworkInterfacePropertiesResponse extends com.pulumi.resourc
     @Import(name="subnetId")
     private @Nullable String subnetId;
 
+    /**
+     * @return The resource ID of the sub net.
+     * 
+     */
     public Optional<String> subnetId() {
         return Optional.ofNullable(this.subnetId);
     }
@@ -114,6 +146,10 @@ public final class NetworkInterfacePropertiesResponse extends com.pulumi.resourc
     @Import(name="virtualNetworkId")
     private @Nullable String virtualNetworkId;
 
+    /**
+     * @return The resource ID of the virtual network.
+     * 
+     */
     public Optional<String> virtualNetworkId() {
         return Optional.ofNullable(this.virtualNetworkId);
     }
@@ -150,46 +186,100 @@ public final class NetworkInterfacePropertiesResponse extends com.pulumi.resourc
             $ = new NetworkInterfacePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dnsName The DNS name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsName(@Nullable String dnsName) {
             $.dnsName = dnsName;
             return this;
         }
 
+        /**
+         * @param privateIpAddress The private IP address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIpAddress(@Nullable String privateIpAddress) {
             $.privateIpAddress = privateIpAddress;
             return this;
         }
 
+        /**
+         * @param publicIpAddress The public IP address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIpAddress(@Nullable String publicIpAddress) {
             $.publicIpAddress = publicIpAddress;
             return this;
         }
 
+        /**
+         * @param publicIpAddressId The resource ID of the public IP address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIpAddressId(@Nullable String publicIpAddressId) {
             $.publicIpAddressId = publicIpAddressId;
             return this;
         }
 
+        /**
+         * @param rdpAuthority The RdpAuthority property is a server DNS host name or IP address followed by the service port number for RDP (Remote Desktop Protocol).
+         * 
+         * @return builder
+         * 
+         */
         public Builder rdpAuthority(@Nullable String rdpAuthority) {
             $.rdpAuthority = rdpAuthority;
             return this;
         }
 
+        /**
+         * @param sharedPublicIpAddressConfiguration The configuration for sharing a public IP address across multiple virtual machines.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sharedPublicIpAddressConfiguration(@Nullable SharedPublicIpAddressConfigurationResponse sharedPublicIpAddressConfiguration) {
             $.sharedPublicIpAddressConfiguration = sharedPublicIpAddressConfiguration;
             return this;
         }
 
+        /**
+         * @param sshAuthority The SshAuthority property is a server DNS host name or IP address followed by the service port number for SSH.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sshAuthority(@Nullable String sshAuthority) {
             $.sshAuthority = sshAuthority;
             return this;
         }
 
+        /**
+         * @param subnetId The resource ID of the sub net.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetId(@Nullable String subnetId) {
             $.subnetId = subnetId;
             return this;
         }
 
+        /**
+         * @param virtualNetworkId The resource ID of the virtual network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetworkId(@Nullable String virtualNetworkId) {
             $.virtualNetworkId = virtualNetworkId;
             return this;

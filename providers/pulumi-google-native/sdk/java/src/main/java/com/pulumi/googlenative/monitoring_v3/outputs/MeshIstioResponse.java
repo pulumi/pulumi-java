@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class MeshIstioResponse {
     /**
-     * Identifier for the mesh in which this Istio service is defined. Corresponds to the mesh_uid metric label in Istio metrics.
+     * @return Identifier for the mesh in which this Istio service is defined. Corresponds to the mesh_uid metric label in Istio metrics.
      * 
      */
     private final String meshUid;
     /**
-     * The name of the Istio service underlying this service. Corresponds to the destination_service_name metric label in Istio metrics.
+     * @return The name of the Istio service underlying this service. Corresponds to the destination_service_name metric label in Istio metrics.
      * 
      */
     private final String serviceName;
     /**
-     * The namespace of the Istio service underlying this service. Corresponds to the destination_service_namespace metric label in Istio metrics.
+     * @return The namespace of the Istio service underlying this service. Corresponds to the destination_service_namespace metric label in Istio metrics.
      * 
      */
     private final String serviceNamespace;
@@ -36,23 +36,23 @@ public final class MeshIstioResponse {
     }
 
     /**
-     * Identifier for the mesh in which this Istio service is defined. Corresponds to the mesh_uid metric label in Istio metrics.
+     * @return Identifier for the mesh in which this Istio service is defined. Corresponds to the mesh_uid metric label in Istio metrics.
      * 
-    */
+     */
     public String meshUid() {
         return this.meshUid;
     }
     /**
-     * The name of the Istio service underlying this service. Corresponds to the destination_service_name metric label in Istio metrics.
+     * @return The name of the Istio service underlying this service. Corresponds to the destination_service_name metric label in Istio metrics.
      * 
-    */
+     */
     public String serviceName() {
         return this.serviceName;
     }
     /**
-     * The namespace of the Istio service underlying this service. Corresponds to the destination_service_namespace metric label in Istio metrics.
+     * @return The namespace of the Istio service underlying this service. Corresponds to the destination_service_namespace metric label in Istio metrics.
      * 
-    */
+     */
     public String serviceNamespace() {
         return this.serviceNamespace;
     }

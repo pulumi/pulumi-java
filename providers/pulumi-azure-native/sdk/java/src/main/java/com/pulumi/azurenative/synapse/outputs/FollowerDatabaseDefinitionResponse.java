@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class FollowerDatabaseDefinitionResponse {
     /**
-     * Resource name of the attached database configuration in the follower cluster.
+     * @return Resource name of the attached database configuration in the follower cluster.
      * 
      */
     private final String attachedDatabaseConfigurationName;
     /**
-     * The database name owned by this cluster that was followed. * in case following all databases.
+     * @return The database name owned by this cluster that was followed. * in case following all databases.
      * 
      */
     private final String databaseName;
     /**
-     * Resource id of the cluster that follows a database owned by this cluster.
+     * @return Resource id of the cluster that follows a database owned by this cluster.
      * 
      */
     private final String kustoPoolResourceId;
@@ -36,23 +36,23 @@ public final class FollowerDatabaseDefinitionResponse {
     }
 
     /**
-     * Resource name of the attached database configuration in the follower cluster.
+     * @return Resource name of the attached database configuration in the follower cluster.
      * 
-    */
+     */
     public String attachedDatabaseConfigurationName() {
         return this.attachedDatabaseConfigurationName;
     }
     /**
-     * The database name owned by this cluster that was followed. * in case following all databases.
+     * @return The database name owned by this cluster that was followed. * in case following all databases.
      * 
-    */
+     */
     public String databaseName() {
         return this.databaseName;
     }
     /**
-     * Resource id of the cluster that follows a database owned by this cluster.
+     * @return Resource id of the cluster that follows a database owned by this cluster.
      * 
-    */
+     */
     public String kustoPoolResourceId() {
         return this.kustoPoolResourceId;
     }

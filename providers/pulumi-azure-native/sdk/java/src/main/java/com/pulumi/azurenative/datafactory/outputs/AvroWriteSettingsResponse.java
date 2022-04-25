@@ -13,27 +13,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AvroWriteSettingsResponse {
     /**
-     * Specifies the file name pattern &lt;fileNamePrefix&gt;_&lt;fileIndex&gt;.&lt;fileExtension&gt; when copy from non-file based store without partitionOptions. Type: string (or Expression with resultType string).
+     * @return Specifies the file name pattern &lt;fileNamePrefix&gt;_&lt;fileIndex&gt;.&lt;fileExtension&gt; when copy from non-file based store without partitionOptions. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object fileNamePrefix;
     /**
-     * Limit the written file&#39;s row count to be smaller than or equal to the specified count. Type: integer (or Expression with resultType integer).
+     * @return Limit the written file&#39;s row count to be smaller than or equal to the specified count. Type: integer (or Expression with resultType integer).
      * 
      */
     private final @Nullable Object maxRowsPerFile;
     /**
-     * Top level record name in write result, which is required in AVRO spec.
+     * @return Top level record name in write result, which is required in AVRO spec.
      * 
      */
     private final @Nullable String recordName;
     /**
-     * Record namespace in the write result.
+     * @return Record namespace in the write result.
      * 
      */
     private final @Nullable String recordNamespace;
     /**
-     * The write setting type.
+     * @return The write setting type.
      * Expected value is &#39;AvroWriteSettings&#39;.
      * 
      */
@@ -54,38 +54,38 @@ public final class AvroWriteSettingsResponse {
     }
 
     /**
-     * Specifies the file name pattern &lt;fileNamePrefix&gt;_&lt;fileIndex&gt;.&lt;fileExtension&gt; when copy from non-file based store without partitionOptions. Type: string (or Expression with resultType string).
+     * @return Specifies the file name pattern &lt;fileNamePrefix&gt;_&lt;fileIndex&gt;.&lt;fileExtension&gt; when copy from non-file based store without partitionOptions. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> fileNamePrefix() {
         return Optional.ofNullable(this.fileNamePrefix);
     }
     /**
-     * Limit the written file&#39;s row count to be smaller than or equal to the specified count. Type: integer (or Expression with resultType integer).
+     * @return Limit the written file&#39;s row count to be smaller than or equal to the specified count. Type: integer (or Expression with resultType integer).
      * 
-    */
+     */
     public Optional<Object> maxRowsPerFile() {
         return Optional.ofNullable(this.maxRowsPerFile);
     }
     /**
-     * Top level record name in write result, which is required in AVRO spec.
+     * @return Top level record name in write result, which is required in AVRO spec.
      * 
-    */
+     */
     public Optional<String> recordName() {
         return Optional.ofNullable(this.recordName);
     }
     /**
-     * Record namespace in the write result.
+     * @return Record namespace in the write result.
      * 
-    */
+     */
     public Optional<String> recordNamespace() {
         return Optional.ofNullable(this.recordNamespace);
     }
     /**
-     * The write setting type.
+     * @return The write setting type.
      * Expected value is &#39;AvroWriteSettings&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

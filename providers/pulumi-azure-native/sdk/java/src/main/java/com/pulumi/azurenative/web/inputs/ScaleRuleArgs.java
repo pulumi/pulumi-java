@@ -29,6 +29,10 @@ public final class ScaleRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="azureQueue")
     private @Nullable Output<QueueScaleRuleArgs> azureQueue;
 
+    /**
+     * @return Azure Queue based scaling.
+     * 
+     */
     public Optional<Output<QueueScaleRuleArgs>> azureQueue() {
         return Optional.ofNullable(this.azureQueue);
     }
@@ -40,6 +44,10 @@ public final class ScaleRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="custom")
     private @Nullable Output<CustomScaleRuleArgs> custom;
 
+    /**
+     * @return Custom scale rule.
+     * 
+     */
     public Optional<Output<CustomScaleRuleArgs>> custom() {
         return Optional.ofNullable(this.custom);
     }
@@ -51,6 +59,10 @@ public final class ScaleRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="http")
     private @Nullable Output<HttpScaleRuleArgs> http;
 
+    /**
+     * @return HTTP requests based scaling.
+     * 
+     */
     public Optional<Output<HttpScaleRuleArgs>> http() {
         return Optional.ofNullable(this.http);
     }
@@ -62,6 +74,10 @@ public final class ScaleRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Scale Rule Name
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -93,38 +109,86 @@ public final class ScaleRuleArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ScaleRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param azureQueue Azure Queue based scaling.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureQueue(@Nullable Output<QueueScaleRuleArgs> azureQueue) {
             $.azureQueue = azureQueue;
             return this;
         }
 
+        /**
+         * @param azureQueue Azure Queue based scaling.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureQueue(QueueScaleRuleArgs azureQueue) {
             return azureQueue(Output.of(azureQueue));
         }
 
+        /**
+         * @param custom Custom scale rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder custom(@Nullable Output<CustomScaleRuleArgs> custom) {
             $.custom = custom;
             return this;
         }
 
+        /**
+         * @param custom Custom scale rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder custom(CustomScaleRuleArgs custom) {
             return custom(Output.of(custom));
         }
 
+        /**
+         * @param http HTTP requests based scaling.
+         * 
+         * @return builder
+         * 
+         */
         public Builder http(@Nullable Output<HttpScaleRuleArgs> http) {
             $.http = http;
             return this;
         }
 
+        /**
+         * @param http HTTP requests based scaling.
+         * 
+         * @return builder
+         * 
+         */
         public Builder http(HttpScaleRuleArgs http) {
             return http(Output.of(http));
         }
 
+        /**
+         * @param name Scale Rule Name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Scale Rule Name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

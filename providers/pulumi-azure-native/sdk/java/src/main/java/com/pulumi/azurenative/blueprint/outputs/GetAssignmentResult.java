@@ -18,72 +18,72 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetAssignmentResult {
     /**
-     * ID of the published version of a blueprint definition.
+     * @return ID of the published version of a blueprint definition.
      * 
      */
     private final @Nullable String blueprintId;
     /**
-     * Multi-line explain this resource.
+     * @return Multi-line explain this resource.
      * 
      */
     private final @Nullable String description;
     /**
-     * One-liner string explain this resource.
+     * @return One-liner string explain this resource.
      * 
      */
     private final @Nullable String displayName;
     /**
-     * String Id used to locate any resource on Azure.
+     * @return String Id used to locate any resource on Azure.
      * 
      */
     private final String id;
     /**
-     * Managed identity for this blueprint assignment.
+     * @return Managed identity for this blueprint assignment.
      * 
      */
     private final ManagedServiceIdentityResponse identity;
     /**
-     * The location of this blueprint assignment.
+     * @return The location of this blueprint assignment.
      * 
      */
     private final String location;
     /**
-     * Defines how resources deployed by a blueprint assignment are locked.
+     * @return Defines how resources deployed by a blueprint assignment are locked.
      * 
      */
     private final @Nullable AssignmentLockSettingsResponse locks;
     /**
-     * Name of this resource.
+     * @return Name of this resource.
      * 
      */
     private final String name;
     /**
-     * Blueprint assignment parameter values.
+     * @return Blueprint assignment parameter values.
      * 
      */
     private final Map<String,ParameterValueResponse> parameters;
     /**
-     * State of the blueprint assignment.
+     * @return State of the blueprint assignment.
      * 
      */
     private final String provisioningState;
     /**
-     * Names and locations of resource group placeholders.
+     * @return Names and locations of resource group placeholders.
      * 
      */
     private final Map<String,ResourceGroupValueResponse> resourceGroups;
     /**
-     * The target subscription scope of the blueprint assignment (format: &#39;/subscriptions/{subscriptionId}&#39;). For management group level assignments, the property is required.
+     * @return The target subscription scope of the blueprint assignment (format: &#39;/subscriptions/{subscriptionId}&#39;). For management group level assignments, the property is required.
      * 
      */
     private final @Nullable String scope;
     /**
-     * Status of blueprint assignment. This field is readonly.
+     * @return Status of blueprint assignment. This field is readonly.
      * 
      */
     private final AssignmentStatusResponse status;
     /**
-     * Type of this resource.
+     * @return Type of this resource.
      * 
      */
     private final String type;
@@ -121,100 +121,100 @@ public final class GetAssignmentResult {
     }
 
     /**
-     * ID of the published version of a blueprint definition.
+     * @return ID of the published version of a blueprint definition.
      * 
-    */
+     */
     public Optional<String> blueprintId() {
         return Optional.ofNullable(this.blueprintId);
     }
     /**
-     * Multi-line explain this resource.
+     * @return Multi-line explain this resource.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * One-liner string explain this resource.
+     * @return One-liner string explain this resource.
      * 
-    */
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
-     * String Id used to locate any resource on Azure.
+     * @return String Id used to locate any resource on Azure.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Managed identity for this blueprint assignment.
+     * @return Managed identity for this blueprint assignment.
      * 
-    */
+     */
     public ManagedServiceIdentityResponse identity() {
         return this.identity;
     }
     /**
-     * The location of this blueprint assignment.
+     * @return The location of this blueprint assignment.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Defines how resources deployed by a blueprint assignment are locked.
+     * @return Defines how resources deployed by a blueprint assignment are locked.
      * 
-    */
+     */
     public Optional<AssignmentLockSettingsResponse> locks() {
         return Optional.ofNullable(this.locks);
     }
     /**
-     * Name of this resource.
+     * @return Name of this resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Blueprint assignment parameter values.
+     * @return Blueprint assignment parameter values.
      * 
-    */
+     */
     public Map<String,ParameterValueResponse> parameters() {
         return this.parameters;
     }
     /**
-     * State of the blueprint assignment.
+     * @return State of the blueprint assignment.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Names and locations of resource group placeholders.
+     * @return Names and locations of resource group placeholders.
      * 
-    */
+     */
     public Map<String,ResourceGroupValueResponse> resourceGroups() {
         return this.resourceGroups;
     }
     /**
-     * The target subscription scope of the blueprint assignment (format: &#39;/subscriptions/{subscriptionId}&#39;). For management group level assignments, the property is required.
+     * @return The target subscription scope of the blueprint assignment (format: &#39;/subscriptions/{subscriptionId}&#39;). For management group level assignments, the property is required.
      * 
-    */
+     */
     public Optional<String> scope() {
         return Optional.ofNullable(this.scope);
     }
     /**
-     * Status of blueprint assignment. This field is readonly.
+     * @return Status of blueprint assignment. This field is readonly.
      * 
-    */
+     */
     public AssignmentStatusResponse status() {
         return this.status;
     }
     /**
-     * Type of this resource.
+     * @return Type of this resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

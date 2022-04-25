@@ -28,6 +28,10 @@ public final class KafkaRestPropertiesArgs extends com.pulumi.resources.Resource
     @Import(name="clientGroupInfo")
     private @Nullable Output<ClientGroupInfoArgs> clientGroupInfo;
 
+    /**
+     * @return The information of AAD security group.
+     * 
+     */
     public Optional<Output<ClientGroupInfoArgs>> clientGroupInfo() {
         return Optional.ofNullable(this.clientGroupInfo);
     }
@@ -39,6 +43,10 @@ public final class KafkaRestPropertiesArgs extends com.pulumi.resources.Resource
     @Import(name="configurationOverride")
     private @Nullable Output<Map<String,String>> configurationOverride;
 
+    /**
+     * @return The configurations that need to be overriden.
+     * 
+     */
     public Optional<Output<Map<String,String>>> configurationOverride() {
         return Optional.ofNullable(this.configurationOverride);
     }
@@ -68,20 +76,44 @@ public final class KafkaRestPropertiesArgs extends com.pulumi.resources.Resource
             $ = new KafkaRestPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientGroupInfo The information of AAD security group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientGroupInfo(@Nullable Output<ClientGroupInfoArgs> clientGroupInfo) {
             $.clientGroupInfo = clientGroupInfo;
             return this;
         }
 
+        /**
+         * @param clientGroupInfo The information of AAD security group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientGroupInfo(ClientGroupInfoArgs clientGroupInfo) {
             return clientGroupInfo(Output.of(clientGroupInfo));
         }
 
+        /**
+         * @param configurationOverride The configurations that need to be overriden.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationOverride(@Nullable Output<Map<String,String>> configurationOverride) {
             $.configurationOverride = configurationOverride;
             return this;
         }
 
+        /**
+         * @param configurationOverride The configurations that need to be overriden.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationOverride(Map<String,String> configurationOverride) {
             return configurationOverride(Output.of(configurationOverride));
         }

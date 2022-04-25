@@ -25,6 +25,10 @@ public final class DiagnosticsProfileResponse extends com.pulumi.resources.Invok
     @Import(name="bootDiagnostics")
     private @Nullable BootDiagnosticsResponse bootDiagnostics;
 
+    /**
+     * @return Boot Diagnostics is a debugging feature which allows you to view Console Output and Screenshot to diagnose VM status. &lt;br&gt;&lt;br&gt; You can easily view the output of your console log. &lt;br&gt;&lt;br&gt; Azure also enables you to see a screenshot of the VM from the hypervisor.
+     * 
+     */
     public Optional<BootDiagnosticsResponse> bootDiagnostics() {
         return Optional.ofNullable(this.bootDiagnostics);
     }
@@ -53,6 +57,12 @@ public final class DiagnosticsProfileResponse extends com.pulumi.resources.Invok
             $ = new DiagnosticsProfileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bootDiagnostics Boot Diagnostics is a debugging feature which allows you to view Console Output and Screenshot to diagnose VM status. &lt;br&gt;&lt;br&gt; You can easily view the output of your console log. &lt;br&gt;&lt;br&gt; Azure also enables you to see a screenshot of the VM from the hypervisor.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bootDiagnostics(@Nullable BootDiagnosticsResponse bootDiagnostics) {
             $.bootDiagnostics = bootDiagnostics;
             return this;

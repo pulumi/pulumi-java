@@ -26,6 +26,10 @@ public final class VpnLinkProviderPropertiesResponse extends com.pulumi.resource
     @Import(name="linkProviderName")
     private @Nullable String linkProviderName;
 
+    /**
+     * @return Name of the link provider.
+     * 
+     */
     public Optional<String> linkProviderName() {
         return Optional.ofNullable(this.linkProviderName);
     }
@@ -37,6 +41,10 @@ public final class VpnLinkProviderPropertiesResponse extends com.pulumi.resource
     @Import(name="linkSpeedInMbps")
     private @Nullable Integer linkSpeedInMbps;
 
+    /**
+     * @return Link speed.
+     * 
+     */
     public Optional<Integer> linkSpeedInMbps() {
         return Optional.ofNullable(this.linkSpeedInMbps);
     }
@@ -66,11 +74,23 @@ public final class VpnLinkProviderPropertiesResponse extends com.pulumi.resource
             $ = new VpnLinkProviderPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param linkProviderName Name of the link provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkProviderName(@Nullable String linkProviderName) {
             $.linkProviderName = linkProviderName;
             return this;
         }
 
+        /**
+         * @param linkSpeedInMbps Link speed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkSpeedInMbps(@Nullable Integer linkSpeedInMbps) {
             $.linkSpeedInMbps = linkSpeedInMbps;
             return this;

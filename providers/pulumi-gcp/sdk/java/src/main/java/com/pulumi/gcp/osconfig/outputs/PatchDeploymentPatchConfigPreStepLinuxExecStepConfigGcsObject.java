@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class PatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObject {
     /**
-     * Bucket of the Cloud Storage object.
+     * @return Bucket of the Cloud Storage object.
      * 
      */
     private final String bucket;
     /**
-     * Generation number of the Cloud Storage object. This is used to ensure that the ExecStep specified by this PatchJob does not change.
+     * @return Generation number of the Cloud Storage object. This is used to ensure that the ExecStep specified by this PatchJob does not change.
      * 
      */
     private final String generationNumber;
     /**
-     * Name of the Cloud Storage object.
+     * @return Name of the Cloud Storage object.
      * 
      */
     private final String object;
@@ -36,23 +36,23 @@ public final class PatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObject
     }
 
     /**
-     * Bucket of the Cloud Storage object.
+     * @return Bucket of the Cloud Storage object.
      * 
-    */
+     */
     public String bucket() {
         return this.bucket;
     }
     /**
-     * Generation number of the Cloud Storage object. This is used to ensure that the ExecStep specified by this PatchJob does not change.
+     * @return Generation number of the Cloud Storage object. This is used to ensure that the ExecStep specified by this PatchJob does not change.
      * 
-    */
+     */
     public String generationNumber() {
         return this.generationNumber;
     }
     /**
-     * Name of the Cloud Storage object.
+     * @return Name of the Cloud Storage object.
      * 
-    */
+     */
     public String object() {
         return this.object;
     }

@@ -26,6 +26,10 @@ public final class NormalizedCoordinateArgs extends com.pulumi.resources.Resourc
     @Import(name="x")
     private @Nullable Output<Double> x;
 
+    /**
+     * @return Normalized x coordinate.
+     * 
+     */
     public Optional<Output<Double>> x() {
         return Optional.ofNullable(this.x);
     }
@@ -37,6 +41,10 @@ public final class NormalizedCoordinateArgs extends com.pulumi.resources.Resourc
     @Import(name="y")
     private @Nullable Output<Double> y;
 
+    /**
+     * @return Normalized y coordinate.
+     * 
+     */
     public Optional<Output<Double>> y() {
         return Optional.ofNullable(this.y);
     }
@@ -66,20 +74,44 @@ public final class NormalizedCoordinateArgs extends com.pulumi.resources.Resourc
             $ = new NormalizedCoordinateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param x Normalized x coordinate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder x(@Nullable Output<Double> x) {
             $.x = x;
             return this;
         }
 
+        /**
+         * @param x Normalized x coordinate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder x(Double x) {
             return x(Output.of(x));
         }
 
+        /**
+         * @param y Normalized y coordinate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder y(@Nullable Output<Double> y) {
             $.y = y;
             return this;
         }
 
+        /**
+         * @param y Normalized y coordinate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder y(Double y) {
             return y(Output.of(y));
         }

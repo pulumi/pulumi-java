@@ -22,6 +22,10 @@ public final class ServerTrustCertificateArgs extends com.pulumi.resources.Resou
     @Import(name="certificateName")
     private @Nullable Output<String> certificateName;
 
+    /**
+     * @return Name of of the certificate to upload.
+     * 
+     */
     public Optional<Output<String>> certificateName() {
         return Optional.ofNullable(this.certificateName);
     }
@@ -33,6 +37,10 @@ public final class ServerTrustCertificateArgs extends com.pulumi.resources.Resou
     @Import(name="managedInstanceName", required=true)
     private Output<String> managedInstanceName;
 
+    /**
+     * @return The name of the managed instance.
+     * 
+     */
     public Output<String> managedInstanceName() {
         return this.managedInstanceName;
     }
@@ -44,6 +52,10 @@ public final class ServerTrustCertificateArgs extends com.pulumi.resources.Resou
     @Import(name="publicBlob")
     private @Nullable Output<String> publicBlob;
 
+    /**
+     * @return The certificate public blob
+     * 
+     */
     public Optional<Output<String>> publicBlob() {
         return Optional.ofNullable(this.publicBlob);
     }
@@ -55,6 +67,10 @@ public final class ServerTrustCertificateArgs extends com.pulumi.resources.Resou
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -86,38 +102,86 @@ public final class ServerTrustCertificateArgs extends com.pulumi.resources.Resou
             $ = new ServerTrustCertificateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificateName Name of of the certificate to upload.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateName(@Nullable Output<String> certificateName) {
             $.certificateName = certificateName;
             return this;
         }
 
+        /**
+         * @param certificateName Name of of the certificate to upload.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateName(String certificateName) {
             return certificateName(Output.of(certificateName));
         }
 
+        /**
+         * @param managedInstanceName The name of the managed instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedInstanceName(Output<String> managedInstanceName) {
             $.managedInstanceName = managedInstanceName;
             return this;
         }
 
+        /**
+         * @param managedInstanceName The name of the managed instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedInstanceName(String managedInstanceName) {
             return managedInstanceName(Output.of(managedInstanceName));
         }
 
+        /**
+         * @param publicBlob The certificate public blob
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicBlob(@Nullable Output<String> publicBlob) {
             $.publicBlob = publicBlob;
             return this;
         }
 
+        /**
+         * @param publicBlob The certificate public blob
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicBlob(String publicBlob) {
             return publicBlob(Output.of(publicBlob));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }

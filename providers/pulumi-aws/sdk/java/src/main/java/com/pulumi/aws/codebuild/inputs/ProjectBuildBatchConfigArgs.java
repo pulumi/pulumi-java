@@ -25,6 +25,10 @@ public final class ProjectBuildBatchConfigArgs extends com.pulumi.resources.Reso
     @Import(name="combineArtifacts")
     private @Nullable Output<Boolean> combineArtifacts;
 
+    /**
+     * @return Specifies if the build artifacts for the batch build should be combined into a single artifact location.
+     * 
+     */
     public Optional<Output<Boolean>> combineArtifacts() {
         return Optional.ofNullable(this.combineArtifacts);
     }
@@ -36,6 +40,10 @@ public final class ProjectBuildBatchConfigArgs extends com.pulumi.resources.Reso
     @Import(name="restrictions")
     private @Nullable Output<ProjectBuildBatchConfigRestrictionsArgs> restrictions;
 
+    /**
+     * @return Specifies the restrictions for the batch build.
+     * 
+     */
     public Optional<Output<ProjectBuildBatchConfigRestrictionsArgs>> restrictions() {
         return Optional.ofNullable(this.restrictions);
     }
@@ -47,6 +55,10 @@ public final class ProjectBuildBatchConfigArgs extends com.pulumi.resources.Reso
     @Import(name="serviceRole", required=true)
     private Output<String> serviceRole;
 
+    /**
+     * @return Specifies the service role ARN for the batch build project.
+     * 
+     */
     public Output<String> serviceRole() {
         return this.serviceRole;
     }
@@ -58,6 +70,10 @@ public final class ProjectBuildBatchConfigArgs extends com.pulumi.resources.Reso
     @Import(name="timeoutInMins")
     private @Nullable Output<Integer> timeoutInMins;
 
+    /**
+     * @return Specifies the maximum amount of time, in minutes, that the batch build must be completed in.
+     * 
+     */
     public Optional<Output<Integer>> timeoutInMins() {
         return Optional.ofNullable(this.timeoutInMins);
     }
@@ -89,38 +105,86 @@ public final class ProjectBuildBatchConfigArgs extends com.pulumi.resources.Reso
             $ = new ProjectBuildBatchConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param combineArtifacts Specifies if the build artifacts for the batch build should be combined into a single artifact location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder combineArtifacts(@Nullable Output<Boolean> combineArtifacts) {
             $.combineArtifacts = combineArtifacts;
             return this;
         }
 
+        /**
+         * @param combineArtifacts Specifies if the build artifacts for the batch build should be combined into a single artifact location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder combineArtifacts(Boolean combineArtifacts) {
             return combineArtifacts(Output.of(combineArtifacts));
         }
 
+        /**
+         * @param restrictions Specifies the restrictions for the batch build.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restrictions(@Nullable Output<ProjectBuildBatchConfigRestrictionsArgs> restrictions) {
             $.restrictions = restrictions;
             return this;
         }
 
+        /**
+         * @param restrictions Specifies the restrictions for the batch build.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restrictions(ProjectBuildBatchConfigRestrictionsArgs restrictions) {
             return restrictions(Output.of(restrictions));
         }
 
+        /**
+         * @param serviceRole Specifies the service role ARN for the batch build project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceRole(Output<String> serviceRole) {
             $.serviceRole = serviceRole;
             return this;
         }
 
+        /**
+         * @param serviceRole Specifies the service role ARN for the batch build project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceRole(String serviceRole) {
             return serviceRole(Output.of(serviceRole));
         }
 
+        /**
+         * @param timeoutInMins Specifies the maximum amount of time, in minutes, that the batch build must be completed in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeoutInMins(@Nullable Output<Integer> timeoutInMins) {
             $.timeoutInMins = timeoutInMins;
             return this;
         }
 
+        /**
+         * @param timeoutInMins Specifies the maximum amount of time, in minutes, that the batch build must be completed in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeoutInMins(Integer timeoutInMins) {
             return timeoutInMins(Output.of(timeoutInMins));
         }

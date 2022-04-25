@@ -12,27 +12,27 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleResponse {
     /**
-     * Setting this to true means that all values are allowed. This field can be set only in Policies for list constraints.
+     * @return Setting this to true means that all values are allowed. This field can be set only in Policies for list constraints.
      * 
      */
     private final Boolean allowAll;
     /**
-     * A condition which determines whether this rule is used in the evaluation of the policy. When set, the `expression` field in the `Expr&#39; must include from 1 to 10 subexpressions, joined by the &#34;||&#34; or &#34;&amp;&amp;&#34; operators. Each subexpression must be of the form &#34;resource.matchTag(&#39;/tag_key_short_name, &#39;tag_value_short_name&#39;)&#34;. or &#34;resource.matchTagId(&#39;tagKeys/key_id&#39;, &#39;tagValues/value_id&#39;)&#34;. where key_name and value_name are the resource names for Label Keys and Values. These names are available from the Tag Manager Service. An example expression is: &#34;resource.matchTag(&#39;123456789/environment, &#39;prod&#39;)&#34;. or &#34;resource.matchTagId(&#39;tagKeys/123&#39;, &#39;tagValues/456&#39;)&#34;.
+     * @return A condition which determines whether this rule is used in the evaluation of the policy. When set, the `expression` field in the `Expr&#39; must include from 1 to 10 subexpressions, joined by the &#34;||&#34; or &#34;&amp;&amp;&#34; operators. Each subexpression must be of the form &#34;resource.matchTag(&#39;/tag_key_short_name, &#39;tag_value_short_name&#39;)&#34;. or &#34;resource.matchTagId(&#39;tagKeys/key_id&#39;, &#39;tagValues/value_id&#39;)&#34;. where key_name and value_name are the resource names for Label Keys and Values. These names are available from the Tag Manager Service. An example expression is: &#34;resource.matchTag(&#39;123456789/environment, &#39;prod&#39;)&#34;. or &#34;resource.matchTagId(&#39;tagKeys/123&#39;, &#39;tagValues/456&#39;)&#34;.
      * 
      */
     private final GoogleTypeExprResponse condition;
     /**
-     * Setting this to true means that all values are denied. This field can be set only in Policies for list constraints.
+     * @return Setting this to true means that all values are denied. This field can be set only in Policies for list constraints.
      * 
      */
     private final Boolean denyAll;
     /**
-     * If `true`, then the `Policy` is enforced. If `false`, then any configuration is acceptable. This field can be set only in Policies for boolean constraints.
+     * @return If `true`, then the `Policy` is enforced. If `false`, then any configuration is acceptable. This field can be set only in Policies for boolean constraints.
      * 
      */
     private final Boolean enforce;
     /**
-     * List of values to be used for this PolicyRule. This field can be set only in Policies for list constraints.
+     * @return List of values to be used for this PolicyRule. This field can be set only in Policies for list constraints.
      * 
      */
     private final GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesResponse values;
@@ -52,37 +52,37 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleResponse {
     }
 
     /**
-     * Setting this to true means that all values are allowed. This field can be set only in Policies for list constraints.
+     * @return Setting this to true means that all values are allowed. This field can be set only in Policies for list constraints.
      * 
-    */
+     */
     public Boolean allowAll() {
         return this.allowAll;
     }
     /**
-     * A condition which determines whether this rule is used in the evaluation of the policy. When set, the `expression` field in the `Expr&#39; must include from 1 to 10 subexpressions, joined by the &#34;||&#34; or &#34;&amp;&amp;&#34; operators. Each subexpression must be of the form &#34;resource.matchTag(&#39;/tag_key_short_name, &#39;tag_value_short_name&#39;)&#34;. or &#34;resource.matchTagId(&#39;tagKeys/key_id&#39;, &#39;tagValues/value_id&#39;)&#34;. where key_name and value_name are the resource names for Label Keys and Values. These names are available from the Tag Manager Service. An example expression is: &#34;resource.matchTag(&#39;123456789/environment, &#39;prod&#39;)&#34;. or &#34;resource.matchTagId(&#39;tagKeys/123&#39;, &#39;tagValues/456&#39;)&#34;.
+     * @return A condition which determines whether this rule is used in the evaluation of the policy. When set, the `expression` field in the `Expr&#39; must include from 1 to 10 subexpressions, joined by the &#34;||&#34; or &#34;&amp;&amp;&#34; operators. Each subexpression must be of the form &#34;resource.matchTag(&#39;/tag_key_short_name, &#39;tag_value_short_name&#39;)&#34;. or &#34;resource.matchTagId(&#39;tagKeys/key_id&#39;, &#39;tagValues/value_id&#39;)&#34;. where key_name and value_name are the resource names for Label Keys and Values. These names are available from the Tag Manager Service. An example expression is: &#34;resource.matchTag(&#39;123456789/environment, &#39;prod&#39;)&#34;. or &#34;resource.matchTagId(&#39;tagKeys/123&#39;, &#39;tagValues/456&#39;)&#34;.
      * 
-    */
+     */
     public GoogleTypeExprResponse condition() {
         return this.condition;
     }
     /**
-     * Setting this to true means that all values are denied. This field can be set only in Policies for list constraints.
+     * @return Setting this to true means that all values are denied. This field can be set only in Policies for list constraints.
      * 
-    */
+     */
     public Boolean denyAll() {
         return this.denyAll;
     }
     /**
-     * If `true`, then the `Policy` is enforced. If `false`, then any configuration is acceptable. This field can be set only in Policies for boolean constraints.
+     * @return If `true`, then the `Policy` is enforced. If `false`, then any configuration is acceptable. This field can be set only in Policies for boolean constraints.
      * 
-    */
+     */
     public Boolean enforce() {
         return this.enforce;
     }
     /**
-     * List of values to be used for this PolicyRule. This field can be set only in Policies for list constraints.
+     * @return List of values to be used for this PolicyRule. This field can be set only in Policies for list constraints.
      * 
-    */
+     */
     public GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesResponse values() {
         return this.values;
     }

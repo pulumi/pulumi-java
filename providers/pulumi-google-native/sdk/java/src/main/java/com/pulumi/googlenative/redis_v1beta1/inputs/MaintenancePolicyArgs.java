@@ -28,6 +28,10 @@ public final class MaintenancePolicyArgs extends com.pulumi.resources.ResourceAr
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Optional. Description of what this policy is for. Create/Update methods return INVALID_ARGUMENT if the length is greater than 512.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -39,6 +43,10 @@ public final class MaintenancePolicyArgs extends com.pulumi.resources.ResourceAr
     @Import(name="weeklyMaintenanceWindow")
     private @Nullable Output<List<WeeklyMaintenanceWindowArgs>> weeklyMaintenanceWindow;
 
+    /**
+     * @return Optional. Maintenance window that is applied to resources covered by this policy. Minimum 1. For the current version, the maximum number of weekly_window is expected to be one.
+     * 
+     */
     public Optional<Output<List<WeeklyMaintenanceWindowArgs>>> weeklyMaintenanceWindow() {
         return Optional.ofNullable(this.weeklyMaintenanceWindow);
     }
@@ -68,24 +76,54 @@ public final class MaintenancePolicyArgs extends com.pulumi.resources.ResourceAr
             $ = new MaintenancePolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Optional. Description of what this policy is for. Create/Update methods return INVALID_ARGUMENT if the length is greater than 512.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Optional. Description of what this policy is for. Create/Update methods return INVALID_ARGUMENT if the length is greater than 512.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param weeklyMaintenanceWindow Optional. Maintenance window that is applied to resources covered by this policy. Minimum 1. For the current version, the maximum number of weekly_window is expected to be one.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weeklyMaintenanceWindow(@Nullable Output<List<WeeklyMaintenanceWindowArgs>> weeklyMaintenanceWindow) {
             $.weeklyMaintenanceWindow = weeklyMaintenanceWindow;
             return this;
         }
 
+        /**
+         * @param weeklyMaintenanceWindow Optional. Maintenance window that is applied to resources covered by this policy. Minimum 1. For the current version, the maximum number of weekly_window is expected to be one.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weeklyMaintenanceWindow(List<WeeklyMaintenanceWindowArgs> weeklyMaintenanceWindow) {
             return weeklyMaintenanceWindow(Output.of(weeklyMaintenanceWindow));
         }
 
+        /**
+         * @param weeklyMaintenanceWindow Optional. Maintenance window that is applied to resources covered by this policy. Minimum 1. For the current version, the maximum number of weekly_window is expected to be one.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weeklyMaintenanceWindow(WeeklyMaintenanceWindowArgs... weeklyMaintenanceWindow) {
             return weeklyMaintenanceWindow(List.of(weeklyMaintenanceWindow));
         }

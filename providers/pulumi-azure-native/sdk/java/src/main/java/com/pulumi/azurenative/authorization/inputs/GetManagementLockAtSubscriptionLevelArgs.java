@@ -19,6 +19,10 @@ public final class GetManagementLockAtSubscriptionLevelArgs extends com.pulumi.r
     @Import(name="lockName", required=true)
     private String lockName;
 
+    /**
+     * @return The name of the lock to get.
+     * 
+     */
     public String lockName() {
         return this.lockName;
     }
@@ -47,6 +51,12 @@ public final class GetManagementLockAtSubscriptionLevelArgs extends com.pulumi.r
             $ = new GetManagementLockAtSubscriptionLevelArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param lockName The name of the lock to get.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lockName(String lockName) {
             $.lockName = lockName;
             return this;

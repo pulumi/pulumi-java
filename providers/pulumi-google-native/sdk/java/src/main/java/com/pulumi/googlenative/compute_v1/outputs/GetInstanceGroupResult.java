@@ -13,62 +13,62 @@ import java.util.Objects;
 @CustomType
 public final class GetInstanceGroupResult {
     /**
-     * The creation timestamp for this instance group in RFC3339 text format.
+     * @return The creation timestamp for this instance group in RFC3339 text format.
      * 
      */
     private final String creationTimestamp;
     /**
-     * An optional description of this resource. Provide this property when you create the resource.
+     * @return An optional description of this resource. Provide this property when you create the resource.
      * 
      */
     private final String description;
     /**
-     * The fingerprint of the named ports. The system uses this fingerprint to detect conflicts when multiple users change the named ports concurrently.
+     * @return The fingerprint of the named ports. The system uses this fingerprint to detect conflicts when multiple users change the named ports concurrently.
      * 
      */
     private final String fingerprint;
     /**
-     * The resource type, which is always compute#instanceGroup for instance groups.
+     * @return The resource type, which is always compute#instanceGroup for instance groups.
      * 
      */
     private final String kind;
     /**
-     * The name of the instance group. The name must be 1-63 characters long, and comply with RFC1035.
+     * @return The name of the instance group. The name must be 1-63 characters long, and comply with RFC1035.
      * 
      */
     private final String name;
     /**
-     *  Assigns a name to a port number. For example: {name: &#34;http&#34;, port: 80} This allows the system to reference ports by the assigned name instead of a port number. Named ports can also contain multiple ports. For example: [{name: &#34;http&#34;, port: 80},{name: &#34;http&#34;, port: 8080}] Named ports apply to all instances in this instance group.
+     * @return  Assigns a name to a port number. For example: {name: &#34;http&#34;, port: 80} This allows the system to reference ports by the assigned name instead of a port number. Named ports can also contain multiple ports. For example: [{name: &#34;http&#34;, port: 80},{name: &#34;http&#34;, port: 8080}] Named ports apply to all instances in this instance group.
      * 
      */
     private final List<NamedPortResponse> namedPorts;
     /**
-     * The URL of the network to which all instances in the instance group belong. If your instance has multiple network interfaces, then the network and subnetwork fields only refer to the network and subnet used by your primary interface (nic0).
+     * @return The URL of the network to which all instances in the instance group belong. If your instance has multiple network interfaces, then the network and subnetwork fields only refer to the network and subnet used by your primary interface (nic0).
      * 
      */
     private final String network;
     /**
-     * The URL of the region where the instance group is located (for regional resources).
+     * @return The URL of the region where the instance group is located (for regional resources).
      * 
      */
     private final String region;
     /**
-     * The URL for this instance group. The server generates this URL.
+     * @return The URL for this instance group. The server generates this URL.
      * 
      */
     private final String selfLink;
     /**
-     * The total number of instances in the instance group.
+     * @return The total number of instances in the instance group.
      * 
      */
     private final Integer size;
     /**
-     * The URL of the subnetwork to which all instances in the instance group belong. If your instance has multiple network interfaces, then the network and subnetwork fields only refer to the network and subnet used by your primary interface (nic0).
+     * @return The URL of the subnetwork to which all instances in the instance group belong. If your instance has multiple network interfaces, then the network and subnetwork fields only refer to the network and subnet used by your primary interface (nic0).
      * 
      */
     private final String subnetwork;
     /**
-     * The URL of the zone where the instance group is located (for zonal resources).
+     * @return The URL of the zone where the instance group is located (for zonal resources).
      * 
      */
     private final String zone;
@@ -102,86 +102,86 @@ public final class GetInstanceGroupResult {
     }
 
     /**
-     * The creation timestamp for this instance group in RFC3339 text format.
+     * @return The creation timestamp for this instance group in RFC3339 text format.
      * 
-    */
+     */
     public String creationTimestamp() {
         return this.creationTimestamp;
     }
     /**
-     * An optional description of this resource. Provide this property when you create the resource.
+     * @return An optional description of this resource. Provide this property when you create the resource.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * The fingerprint of the named ports. The system uses this fingerprint to detect conflicts when multiple users change the named ports concurrently.
+     * @return The fingerprint of the named ports. The system uses this fingerprint to detect conflicts when multiple users change the named ports concurrently.
      * 
-    */
+     */
     public String fingerprint() {
         return this.fingerprint;
     }
     /**
-     * The resource type, which is always compute#instanceGroup for instance groups.
+     * @return The resource type, which is always compute#instanceGroup for instance groups.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * The name of the instance group. The name must be 1-63 characters long, and comply with RFC1035.
+     * @return The name of the instance group. The name must be 1-63 characters long, and comply with RFC1035.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     *  Assigns a name to a port number. For example: {name: &#34;http&#34;, port: 80} This allows the system to reference ports by the assigned name instead of a port number. Named ports can also contain multiple ports. For example: [{name: &#34;http&#34;, port: 80},{name: &#34;http&#34;, port: 8080}] Named ports apply to all instances in this instance group.
+     * @return  Assigns a name to a port number. For example: {name: &#34;http&#34;, port: 80} This allows the system to reference ports by the assigned name instead of a port number. Named ports can also contain multiple ports. For example: [{name: &#34;http&#34;, port: 80},{name: &#34;http&#34;, port: 8080}] Named ports apply to all instances in this instance group.
      * 
-    */
+     */
     public List<NamedPortResponse> namedPorts() {
         return this.namedPorts;
     }
     /**
-     * The URL of the network to which all instances in the instance group belong. If your instance has multiple network interfaces, then the network and subnetwork fields only refer to the network and subnet used by your primary interface (nic0).
+     * @return The URL of the network to which all instances in the instance group belong. If your instance has multiple network interfaces, then the network and subnetwork fields only refer to the network and subnet used by your primary interface (nic0).
      * 
-    */
+     */
     public String network() {
         return this.network;
     }
     /**
-     * The URL of the region where the instance group is located (for regional resources).
+     * @return The URL of the region where the instance group is located (for regional resources).
      * 
-    */
+     */
     public String region() {
         return this.region;
     }
     /**
-     * The URL for this instance group. The server generates this URL.
+     * @return The URL for this instance group. The server generates this URL.
      * 
-    */
+     */
     public String selfLink() {
         return this.selfLink;
     }
     /**
-     * The total number of instances in the instance group.
+     * @return The total number of instances in the instance group.
      * 
-    */
+     */
     public Integer size() {
         return this.size;
     }
     /**
-     * The URL of the subnetwork to which all instances in the instance group belong. If your instance has multiple network interfaces, then the network and subnetwork fields only refer to the network and subnet used by your primary interface (nic0).
+     * @return The URL of the subnetwork to which all instances in the instance group belong. If your instance has multiple network interfaces, then the network and subnetwork fields only refer to the network and subnet used by your primary interface (nic0).
      * 
-    */
+     */
     public String subnetwork() {
         return this.subnetwork;
     }
     /**
-     * The URL of the zone where the instance group is located (for zonal resources).
+     * @return The URL of the zone where the instance group is located (for zonal resources).
      * 
-    */
+     */
     public String zone() {
         return this.zone;
     }

@@ -28,6 +28,10 @@ public final class NetworkPolicyPortArgs extends com.pulumi.resources.ResourceAr
     @Import(name="port")
     private @Nullable Output<Either<Integer,String>> port;
 
+    /**
+     * @return If specified, the port on the given protocol.  This can either be a numerical or named port on a pod.  If this field is not provided, this matches all port names and numbers. If present, only traffic on the specified protocol AND port will be matched.
+     * 
+     */
     public Optional<Output<Either<Integer,String>>> port() {
         return Optional.ofNullable(this.port);
     }
@@ -39,6 +43,10 @@ public final class NetworkPolicyPortArgs extends com.pulumi.resources.ResourceAr
     @Import(name="protocol")
     private @Nullable Output<String> protocol;
 
+    /**
+     * @return Optional.  The protocol (TCP, UDP, or SCTP) which traffic must match. If not specified, this field defaults to TCP.
+     * 
+     */
     public Optional<Output<String>> protocol() {
         return Optional.ofNullable(this.protocol);
     }
@@ -68,28 +76,64 @@ public final class NetworkPolicyPortArgs extends com.pulumi.resources.ResourceAr
             $ = new NetworkPolicyPortArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param port If specified, the port on the given protocol.  This can either be a numerical or named port on a pod.  If this field is not provided, this matches all port names and numbers. If present, only traffic on the specified protocol AND port will be matched.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(@Nullable Output<Either<Integer,String>> port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param port If specified, the port on the given protocol.  This can either be a numerical or named port on a pod.  If this field is not provided, this matches all port names and numbers. If present, only traffic on the specified protocol AND port will be matched.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Either<Integer,String> port) {
             return port(Output.of(port));
         }
 
+        /**
+         * @param port If specified, the port on the given protocol.  This can either be a numerical or named port on a pod.  If this field is not provided, this matches all port names and numbers. If present, only traffic on the specified protocol AND port will be matched.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             return port(Either.ofLeft(port));
         }
 
+        /**
+         * @param port If specified, the port on the given protocol.  This can either be a numerical or named port on a pod.  If this field is not provided, this matches all port names and numbers. If present, only traffic on the specified protocol AND port will be matched.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(String port) {
             return port(Either.ofRight(port));
         }
 
+        /**
+         * @param protocol Optional.  The protocol (TCP, UDP, or SCTP) which traffic must match. If not specified, this field defaults to TCP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(@Nullable Output<String> protocol) {
             $.protocol = protocol;
             return this;
         }
 
+        /**
+         * @param protocol Optional.  The protocol (TCP, UDP, or SCTP) which traffic must match. If not specified, this field defaults to TCP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(String protocol) {
             return protocol(Output.of(protocol));
         }

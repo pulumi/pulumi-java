@@ -12,12 +12,12 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsResponse {
     /**
-     * If set to true, allowed_package_names are not enforced.
+     * @return If set to true, allowed_package_names are not enforced.
      * 
      */
     private final Boolean allowAllPackageNames;
     /**
-     * Android package names of apps allowed to use the key. Example: &#39;com.companyname.appname&#39;
+     * @return Android package names of apps allowed to use the key. Example: &#39;com.companyname.appname&#39;
      * 
      */
     private final List<String> allowedPackageNames;
@@ -31,16 +31,16 @@ public final class GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsResponse {
     }
 
     /**
-     * If set to true, allowed_package_names are not enforced.
+     * @return If set to true, allowed_package_names are not enforced.
      * 
-    */
+     */
     public Boolean allowAllPackageNames() {
         return this.allowAllPackageNames;
     }
     /**
-     * Android package names of apps allowed to use the key. Example: &#39;com.companyname.appname&#39;
+     * @return Android package names of apps allowed to use the key. Example: &#39;com.companyname.appname&#39;
      * 
-    */
+     */
     public List<String> allowedPackageNames() {
         return this.allowedPackageNames;
     }

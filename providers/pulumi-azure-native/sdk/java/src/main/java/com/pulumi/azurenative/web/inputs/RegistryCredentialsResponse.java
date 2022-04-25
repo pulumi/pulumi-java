@@ -25,6 +25,10 @@ public final class RegistryCredentialsResponse extends com.pulumi.resources.Invo
     @Import(name="passwordSecretRef")
     private @Nullable String passwordSecretRef;
 
+    /**
+     * @return The name of the Secret that contains the registry login password
+     * 
+     */
     public Optional<String> passwordSecretRef() {
         return Optional.ofNullable(this.passwordSecretRef);
     }
@@ -36,6 +40,10 @@ public final class RegistryCredentialsResponse extends com.pulumi.resources.Invo
     @Import(name="server")
     private @Nullable String server;
 
+    /**
+     * @return Container Registry Server
+     * 
+     */
     public Optional<String> server() {
         return Optional.ofNullable(this.server);
     }
@@ -47,6 +55,10 @@ public final class RegistryCredentialsResponse extends com.pulumi.resources.Invo
     @Import(name="username")
     private @Nullable String username;
 
+    /**
+     * @return Container Registry Username
+     * 
+     */
     public Optional<String> username() {
         return Optional.ofNullable(this.username);
     }
@@ -77,16 +89,34 @@ public final class RegistryCredentialsResponse extends com.pulumi.resources.Invo
             $ = new RegistryCredentialsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param passwordSecretRef The name of the Secret that contains the registry login password
+         * 
+         * @return builder
+         * 
+         */
         public Builder passwordSecretRef(@Nullable String passwordSecretRef) {
             $.passwordSecretRef = passwordSecretRef;
             return this;
         }
 
+        /**
+         * @param server Container Registry Server
+         * 
+         * @return builder
+         * 
+         */
         public Builder server(@Nullable String server) {
             $.server = server;
             return this;
         }
 
+        /**
+         * @param username Container Registry Username
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(@Nullable String username) {
             $.username = username;
             return this;

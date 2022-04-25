@@ -14,32 +14,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CrawlerS3Target {
     /**
-     * The name of the connection to use to connect to the Delta table target.
+     * @return The name of the connection to use to connect to the Delta table target.
      * 
      */
     private final @Nullable String connectionName;
     /**
-     * The ARN of the dead-letter SQS queue.
+     * @return The ARN of the dead-letter SQS queue.
      * 
      */
     private final @Nullable String dlqEventQueueArn;
     /**
-     * The ARN of the SQS queue to receive S3 notifications from.
+     * @return The ARN of the SQS queue to receive S3 notifications from.
      * 
      */
     private final @Nullable String eventQueueArn;
     /**
-     * A list of glob patterns used to exclude from the crawl.
+     * @return A list of glob patterns used to exclude from the crawl.
      * 
      */
     private final @Nullable List<String> exclusions;
     /**
-     * The path of the Amazon DocumentDB or MongoDB target (database/collection).
+     * @return The path of the Amazon DocumentDB or MongoDB target (database/collection).
      * 
      */
     private final String path;
     /**
-     * Sets the number of files in each leaf folder to be crawled when crawling sample files in a dataset. If not set, all the files are crawled. A valid value is an integer between 1 and 249.
+     * @return Sets the number of files in each leaf folder to be crawled when crawling sample files in a dataset. If not set, all the files are crawled. A valid value is an integer between 1 and 249.
      * 
      */
     private final @Nullable Integer sampleSize;
@@ -61,44 +61,44 @@ public final class CrawlerS3Target {
     }
 
     /**
-     * The name of the connection to use to connect to the Delta table target.
+     * @return The name of the connection to use to connect to the Delta table target.
      * 
-    */
+     */
     public Optional<String> connectionName() {
         return Optional.ofNullable(this.connectionName);
     }
     /**
-     * The ARN of the dead-letter SQS queue.
+     * @return The ARN of the dead-letter SQS queue.
      * 
-    */
+     */
     public Optional<String> dlqEventQueueArn() {
         return Optional.ofNullable(this.dlqEventQueueArn);
     }
     /**
-     * The ARN of the SQS queue to receive S3 notifications from.
+     * @return The ARN of the SQS queue to receive S3 notifications from.
      * 
-    */
+     */
     public Optional<String> eventQueueArn() {
         return Optional.ofNullable(this.eventQueueArn);
     }
     /**
-     * A list of glob patterns used to exclude from the crawl.
+     * @return A list of glob patterns used to exclude from the crawl.
      * 
-    */
+     */
     public List<String> exclusions() {
         return this.exclusions == null ? List.of() : this.exclusions;
     }
     /**
-     * The path of the Amazon DocumentDB or MongoDB target (database/collection).
+     * @return The path of the Amazon DocumentDB or MongoDB target (database/collection).
      * 
-    */
+     */
     public String path() {
         return this.path;
     }
     /**
-     * Sets the number of files in each leaf folder to be crawled when crawling sample files in a dataset. If not set, all the files are crawled. A valid value is an integer between 1 and 249.
+     * @return Sets the number of files in each leaf folder to be crawled when crawling sample files in a dataset. If not set, all the files are crawled. A valid value is an integer between 1 and 249.
      * 
-    */
+     */
     public Optional<Integer> sampleSize() {
         return Optional.ofNullable(this.sampleSize);
     }

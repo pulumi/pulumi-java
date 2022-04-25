@@ -24,6 +24,10 @@ public final class GeoReplicationStatsResponse extends com.pulumi.resources.Invo
     @Import(name="canFailover", required=true)
     private Boolean canFailover;
 
+    /**
+     * @return A boolean flag which indicates whether or not account failover is supported for the account.
+     * 
+     */
     public Boolean canFailover() {
         return this.canFailover;
     }
@@ -35,6 +39,10 @@ public final class GeoReplicationStatsResponse extends com.pulumi.resources.Invo
     @Import(name="lastSyncTime", required=true)
     private String lastSyncTime;
 
+    /**
+     * @return All primary writes preceding this UTC date/time value are guaranteed to be available for read operations. Primary writes following this point in time may or may not be available for reads. Element may be default value if value of LastSyncTime is not available, this can happen if secondary is offline or we are in bootstrap.
+     * 
+     */
     public String lastSyncTime() {
         return this.lastSyncTime;
     }
@@ -46,6 +54,10 @@ public final class GeoReplicationStatsResponse extends com.pulumi.resources.Invo
     @Import(name="status", required=true)
     private String status;
 
+    /**
+     * @return The status of the secondary location. Possible values are: - Live: Indicates that the secondary location is active and operational. - Bootstrap: Indicates initial synchronization from the primary location to the secondary location is in progress.This typically occurs when replication is first enabled. - Unavailable: Indicates that the secondary location is temporarily unavailable.
+     * 
+     */
     public String status() {
         return this.status;
     }
@@ -76,16 +88,34 @@ public final class GeoReplicationStatsResponse extends com.pulumi.resources.Invo
             $ = new GeoReplicationStatsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param canFailover A boolean flag which indicates whether or not account failover is supported for the account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder canFailover(Boolean canFailover) {
             $.canFailover = canFailover;
             return this;
         }
 
+        /**
+         * @param lastSyncTime All primary writes preceding this UTC date/time value are guaranteed to be available for read operations. Primary writes following this point in time may or may not be available for reads. Element may be default value if value of LastSyncTime is not available, this can happen if secondary is offline or we are in bootstrap.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastSyncTime(String lastSyncTime) {
             $.lastSyncTime = lastSyncTime;
             return this;
         }
 
+        /**
+         * @param status The status of the secondary location. Possible values are: - Live: Indicates that the secondary location is active and operational. - Bootstrap: Indicates initial synchronization from the primary location to the secondary location is in progress.This typically occurs when replication is first enabled. - Unavailable: Indicates that the secondary location is temporarily unavailable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             $.status = status;
             return this;

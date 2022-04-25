@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class AliasContextResponse {
     /**
-     * The alias kind.
+     * @return The alias kind.
      * 
      */
     private final String kind;
     /**
-     * The alias name.
+     * @return The alias name.
      * 
      */
     private final String name;
@@ -29,16 +29,16 @@ public final class AliasContextResponse {
     }
 
     /**
-     * The alias kind.
+     * @return The alias kind.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * The alias name.
+     * @return The alias name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

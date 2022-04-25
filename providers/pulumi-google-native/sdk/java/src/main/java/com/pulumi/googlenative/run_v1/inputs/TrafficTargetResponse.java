@@ -25,6 +25,10 @@ public final class TrafficTargetResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="configurationName", required=true)
     private String configurationName;
 
+    /**
+     * @return ConfigurationName of a configuration to whose latest revision we will send this portion of traffic. When the &#34;status.latestReadyRevisionName&#34; of the referenced configuration changes, we will automatically migrate traffic from the prior &#34;latest ready&#34; revision to the new one. This field is never set in Route&#39;s status, only its spec. This is mutually exclusive with RevisionName. Cloud Run currently supports a single ConfigurationName.
+     * 
+     */
     public String configurationName() {
         return this.configurationName;
     }
@@ -36,6 +40,10 @@ public final class TrafficTargetResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="latestRevision", required=true)
     private Boolean latestRevision;
 
+    /**
+     * @return Optional. LatestRevision may be provided to indicate that the latest ready Revision of the Configuration should be used for this traffic target. When provided LatestRevision must be true if RevisionName is empty; it must be false when RevisionName is non-empty.
+     * 
+     */
     public Boolean latestRevision() {
         return this.latestRevision;
     }
@@ -47,6 +55,10 @@ public final class TrafficTargetResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="percent", required=true)
     private Integer percent;
 
+    /**
+     * @return Percent specifies percent of the traffic to this Revision or Configuration. This defaults to zero if unspecified.
+     * 
+     */
     public Integer percent() {
         return this.percent;
     }
@@ -58,6 +70,10 @@ public final class TrafficTargetResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="revisionName", required=true)
     private String revisionName;
 
+    /**
+     * @return RevisionName of a specific revision to which to send this portion of traffic. This is mutually exclusive with ConfigurationName.
+     * 
+     */
     public String revisionName() {
         return this.revisionName;
     }
@@ -69,6 +85,10 @@ public final class TrafficTargetResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="tag", required=true)
     private String tag;
 
+    /**
+     * @return Optional. Tag is used to expose a dedicated url for referencing this target exclusively.
+     * 
+     */
     public String tag() {
         return this.tag;
     }
@@ -80,6 +100,10 @@ public final class TrafficTargetResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="url", required=true)
     private String url;
 
+    /**
+     * @return URL displays the URL for accessing tagged traffic targets. URL is displayed in status, and is disallowed on spec. URL must contain a scheme (e.g. http://) and a hostname, but may not contain anything else (e.g. basic auth, url path, etc.)
+     * 
+     */
     public String url() {
         return this.url;
     }
@@ -113,31 +137,67 @@ public final class TrafficTargetResponse extends com.pulumi.resources.InvokeArgs
             $ = new TrafficTargetResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param configurationName ConfigurationName of a configuration to whose latest revision we will send this portion of traffic. When the &#34;status.latestReadyRevisionName&#34; of the referenced configuration changes, we will automatically migrate traffic from the prior &#34;latest ready&#34; revision to the new one. This field is never set in Route&#39;s status, only its spec. This is mutually exclusive with RevisionName. Cloud Run currently supports a single ConfigurationName.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationName(String configurationName) {
             $.configurationName = configurationName;
             return this;
         }
 
+        /**
+         * @param latestRevision Optional. LatestRevision may be provided to indicate that the latest ready Revision of the Configuration should be used for this traffic target. When provided LatestRevision must be true if RevisionName is empty; it must be false when RevisionName is non-empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder latestRevision(Boolean latestRevision) {
             $.latestRevision = latestRevision;
             return this;
         }
 
+        /**
+         * @param percent Percent specifies percent of the traffic to this Revision or Configuration. This defaults to zero if unspecified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder percent(Integer percent) {
             $.percent = percent;
             return this;
         }
 
+        /**
+         * @param revisionName RevisionName of a specific revision to which to send this portion of traffic. This is mutually exclusive with ConfigurationName.
+         * 
+         * @return builder
+         * 
+         */
         public Builder revisionName(String revisionName) {
             $.revisionName = revisionName;
             return this;
         }
 
+        /**
+         * @param tag Optional. Tag is used to expose a dedicated url for referencing this target exclusively.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tag(String tag) {
             $.tag = tag;
             return this;
         }
 
+        /**
+         * @param url URL displays the URL for accessing tagged traffic targets. URL is displayed in status, and is disallowed on spec. URL must contain a scheme (e.g. http://) and a hostname, but may not contain anything else (e.g. basic auth, url path, etc.)
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(String url) {
             $.url = url;
             return this;

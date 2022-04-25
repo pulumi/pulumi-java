@@ -14,42 +14,42 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetDiskAccessResult {
     /**
-     * Resource Id
+     * @return Resource Id
      * 
      */
     private final String id;
     /**
-     * Resource location
+     * @return Resource location
      * 
      */
     private final String location;
     /**
-     * Resource name
+     * @return Resource name
      * 
      */
     private final String name;
     /**
-     * A readonly collection of private endpoint connections created on the disk. Currently only one endpoint connection is supported.
+     * @return A readonly collection of private endpoint connections created on the disk. Currently only one endpoint connection is supported.
      * 
      */
     private final List<PrivateEndpointConnectionResponse> privateEndpointConnections;
     /**
-     * The disk access resource provisioning state.
+     * @return The disk access resource provisioning state.
      * 
      */
     private final String provisioningState;
     /**
-     * Resource tags
+     * @return Resource tags
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * The time when the disk access was created.
+     * @return The time when the disk access was created.
      * 
      */
     private final String timeCreated;
     /**
-     * Resource type
+     * @return Resource type
      * 
      */
     private final String type;
@@ -75,58 +75,58 @@ public final class GetDiskAccessResult {
     }
 
     /**
-     * Resource Id
+     * @return Resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource location
+     * @return Resource location
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Resource name
+     * @return Resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * A readonly collection of private endpoint connections created on the disk. Currently only one endpoint connection is supported.
+     * @return A readonly collection of private endpoint connections created on the disk. Currently only one endpoint connection is supported.
      * 
-    */
+     */
     public List<PrivateEndpointConnectionResponse> privateEndpointConnections() {
         return this.privateEndpointConnections;
     }
     /**
-     * The disk access resource provisioning state.
+     * @return The disk access resource provisioning state.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Resource tags
+     * @return Resource tags
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The time when the disk access was created.
+     * @return The time when the disk access was created.
      * 
-    */
+     */
     public String timeCreated() {
         return this.timeCreated;
     }
     /**
-     * Resource type
+     * @return Resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

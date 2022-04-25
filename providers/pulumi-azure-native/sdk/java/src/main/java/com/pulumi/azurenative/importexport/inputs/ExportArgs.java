@@ -27,6 +27,10 @@ public final class ExportArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="blobListBlobPath")
     private @Nullable Output<String> blobListBlobPath;
 
+    /**
+     * @return The relative URI to the block blob that contains the list of blob paths or blob path prefixes as defined above, beginning with the container name. If the blob is in root container, the URI must begin with $root.
+     * 
+     */
     public Optional<Output<String>> blobListBlobPath() {
         return Optional.ofNullable(this.blobListBlobPath);
     }
@@ -38,6 +42,10 @@ public final class ExportArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="blobPath")
     private @Nullable Output<List<String>> blobPath;
 
+    /**
+     * @return A collection of blob-path strings.
+     * 
+     */
     public Optional<Output<List<String>>> blobPath() {
         return Optional.ofNullable(this.blobPath);
     }
@@ -49,6 +57,10 @@ public final class ExportArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="blobPathPrefix")
     private @Nullable Output<List<String>> blobPathPrefix;
 
+    /**
+     * @return A collection of blob-prefix strings.
+     * 
+     */
     public Optional<Output<List<String>>> blobPathPrefix() {
         return Optional.ofNullable(this.blobPathPrefix);
     }
@@ -79,37 +91,85 @@ public final class ExportArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ExportArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param blobListBlobPath The relative URI to the block blob that contains the list of blob paths or blob path prefixes as defined above, beginning with the container name. If the blob is in root container, the URI must begin with $root.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blobListBlobPath(@Nullable Output<String> blobListBlobPath) {
             $.blobListBlobPath = blobListBlobPath;
             return this;
         }
 
+        /**
+         * @param blobListBlobPath The relative URI to the block blob that contains the list of blob paths or blob path prefixes as defined above, beginning with the container name. If the blob is in root container, the URI must begin with $root.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blobListBlobPath(String blobListBlobPath) {
             return blobListBlobPath(Output.of(blobListBlobPath));
         }
 
+        /**
+         * @param blobPath A collection of blob-path strings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blobPath(@Nullable Output<List<String>> blobPath) {
             $.blobPath = blobPath;
             return this;
         }
 
+        /**
+         * @param blobPath A collection of blob-path strings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blobPath(List<String> blobPath) {
             return blobPath(Output.of(blobPath));
         }
 
+        /**
+         * @param blobPath A collection of blob-path strings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blobPath(String... blobPath) {
             return blobPath(List.of(blobPath));
         }
 
+        /**
+         * @param blobPathPrefix A collection of blob-prefix strings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blobPathPrefix(@Nullable Output<List<String>> blobPathPrefix) {
             $.blobPathPrefix = blobPathPrefix;
             return this;
         }
 
+        /**
+         * @param blobPathPrefix A collection of blob-prefix strings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blobPathPrefix(List<String> blobPathPrefix) {
             return blobPathPrefix(Output.of(blobPathPrefix));
         }
 
+        /**
+         * @param blobPathPrefix A collection of blob-prefix strings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blobPathPrefix(String... blobPathPrefix) {
             return blobPathPrefix(List.of(blobPathPrefix));
         }

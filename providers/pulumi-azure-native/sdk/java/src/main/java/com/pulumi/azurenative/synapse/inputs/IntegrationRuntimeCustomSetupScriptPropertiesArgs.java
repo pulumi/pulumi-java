@@ -27,6 +27,10 @@ public final class IntegrationRuntimeCustomSetupScriptPropertiesArgs extends com
     @Import(name="blobContainerUri")
     private @Nullable Output<String> blobContainerUri;
 
+    /**
+     * @return The URI of the Azure blob container that contains the custom setup script.
+     * 
+     */
     public Optional<Output<String>> blobContainerUri() {
         return Optional.ofNullable(this.blobContainerUri);
     }
@@ -38,6 +42,10 @@ public final class IntegrationRuntimeCustomSetupScriptPropertiesArgs extends com
     @Import(name="sasToken")
     private @Nullable Output<SecureStringArgs> sasToken;
 
+    /**
+     * @return The SAS token of the Azure blob container.
+     * 
+     */
     public Optional<Output<SecureStringArgs>> sasToken() {
         return Optional.ofNullable(this.sasToken);
     }
@@ -67,20 +75,44 @@ public final class IntegrationRuntimeCustomSetupScriptPropertiesArgs extends com
             $ = new IntegrationRuntimeCustomSetupScriptPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param blobContainerUri The URI of the Azure blob container that contains the custom setup script.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blobContainerUri(@Nullable Output<String> blobContainerUri) {
             $.blobContainerUri = blobContainerUri;
             return this;
         }
 
+        /**
+         * @param blobContainerUri The URI of the Azure blob container that contains the custom setup script.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blobContainerUri(String blobContainerUri) {
             return blobContainerUri(Output.of(blobContainerUri));
         }
 
+        /**
+         * @param sasToken The SAS token of the Azure blob container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sasToken(@Nullable Output<SecureStringArgs> sasToken) {
             $.sasToken = sasToken;
             return this;
         }
 
+        /**
+         * @param sasToken The SAS token of the Azure blob container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sasToken(SecureStringArgs sasToken) {
             return sasToken(Output.of(sasToken));
         }

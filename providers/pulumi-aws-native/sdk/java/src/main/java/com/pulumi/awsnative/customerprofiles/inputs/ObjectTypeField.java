@@ -26,6 +26,10 @@ public final class ObjectTypeField extends com.pulumi.resources.InvokeArgs {
     @Import(name="contentType")
     private @Nullable ObjectTypeFieldContentType contentType;
 
+    /**
+     * @return The content type of the field. Used for determining equality when searching.
+     * 
+     */
     public Optional<ObjectTypeFieldContentType> contentType() {
         return Optional.ofNullable(this.contentType);
     }
@@ -37,6 +41,10 @@ public final class ObjectTypeField extends com.pulumi.resources.InvokeArgs {
     @Import(name="source")
     private @Nullable String source;
 
+    /**
+     * @return A field of a ProfileObject. For example: _source.FirstName, where &#34;_source&#34; is a ProfileObjectType of a Zendesk user and &#34;FirstName&#34; is a field in that ObjectType.
+     * 
+     */
     public Optional<String> source() {
         return Optional.ofNullable(this.source);
     }
@@ -48,6 +56,10 @@ public final class ObjectTypeField extends com.pulumi.resources.InvokeArgs {
     @Import(name="target")
     private @Nullable String target;
 
+    /**
+     * @return The location of the data in the standard ProfileObject model. For example: _profile.Address.PostalCode.
+     * 
+     */
     public Optional<String> target() {
         return Optional.ofNullable(this.target);
     }
@@ -78,16 +90,34 @@ public final class ObjectTypeField extends com.pulumi.resources.InvokeArgs {
             $ = new ObjectTypeField(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param contentType The content type of the field. Used for determining equality when searching.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentType(@Nullable ObjectTypeFieldContentType contentType) {
             $.contentType = contentType;
             return this;
         }
 
+        /**
+         * @param source A field of a ProfileObject. For example: _source.FirstName, where &#34;_source&#34; is a ProfileObjectType of a Zendesk user and &#34;FirstName&#34; is a field in that ObjectType.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(@Nullable String source) {
             $.source = source;
             return this;
         }
 
+        /**
+         * @param target The location of the data in the standard ProfileObject model. For example: _profile.Address.PostalCode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder target(@Nullable String target) {
             $.target = target;
             return this;

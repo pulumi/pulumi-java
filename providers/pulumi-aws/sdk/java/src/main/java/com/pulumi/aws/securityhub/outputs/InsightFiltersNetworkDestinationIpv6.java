@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class InsightFiltersNetworkDestinationIpv6 {
     /**
-     * A finding&#39;s CIDR value.
+     * @return A finding&#39;s CIDR value.
      * 
      */
     private final String cidr;
@@ -21,9 +21,9 @@ public final class InsightFiltersNetworkDestinationIpv6 {
     }
 
     /**
-     * A finding&#39;s CIDR value.
+     * @return A finding&#39;s CIDR value.
      * 
-    */
+     */
     public String cidr() {
         return this.cidr;
     }

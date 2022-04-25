@@ -25,6 +25,10 @@ public final class CloudTieringCachePerformanceResponse extends com.pulumi.resou
     @Import(name="cacheHitBytes", required=true)
     private Double cacheHitBytes;
 
+    /**
+     * @return Count of bytes that were served from the local server
+     * 
+     */
     public Double cacheHitBytes() {
         return this.cacheHitBytes;
     }
@@ -36,6 +40,10 @@ public final class CloudTieringCachePerformanceResponse extends com.pulumi.resou
     @Import(name="cacheHitBytesPercent", required=true)
     private Integer cacheHitBytesPercent;
 
+    /**
+     * @return Percentage of total bytes (hit + miss) that were served from the local server
+     * 
+     */
     public Integer cacheHitBytesPercent() {
         return this.cacheHitBytesPercent;
     }
@@ -47,6 +55,10 @@ public final class CloudTieringCachePerformanceResponse extends com.pulumi.resou
     @Import(name="cacheMissBytes", required=true)
     private Double cacheMissBytes;
 
+    /**
+     * @return Count of bytes that were served from the cloud
+     * 
+     */
     public Double cacheMissBytes() {
         return this.cacheMissBytes;
     }
@@ -58,6 +70,10 @@ public final class CloudTieringCachePerformanceResponse extends com.pulumi.resou
     @Import(name="lastUpdatedTimestamp", required=true)
     private String lastUpdatedTimestamp;
 
+    /**
+     * @return Last updated timestamp
+     * 
+     */
     public String lastUpdatedTimestamp() {
         return this.lastUpdatedTimestamp;
     }
@@ -89,21 +105,45 @@ public final class CloudTieringCachePerformanceResponse extends com.pulumi.resou
             $ = new CloudTieringCachePerformanceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cacheHitBytes Count of bytes that were served from the local server
+         * 
+         * @return builder
+         * 
+         */
         public Builder cacheHitBytes(Double cacheHitBytes) {
             $.cacheHitBytes = cacheHitBytes;
             return this;
         }
 
+        /**
+         * @param cacheHitBytesPercent Percentage of total bytes (hit + miss) that were served from the local server
+         * 
+         * @return builder
+         * 
+         */
         public Builder cacheHitBytesPercent(Integer cacheHitBytesPercent) {
             $.cacheHitBytesPercent = cacheHitBytesPercent;
             return this;
         }
 
+        /**
+         * @param cacheMissBytes Count of bytes that were served from the cloud
+         * 
+         * @return builder
+         * 
+         */
         public Builder cacheMissBytes(Double cacheMissBytes) {
             $.cacheMissBytes = cacheMissBytes;
             return this;
         }
 
+        /**
+         * @param lastUpdatedTimestamp Last updated timestamp
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastUpdatedTimestamp(String lastUpdatedTimestamp) {
             $.lastUpdatedTimestamp = lastUpdatedTimestamp;
             return this;

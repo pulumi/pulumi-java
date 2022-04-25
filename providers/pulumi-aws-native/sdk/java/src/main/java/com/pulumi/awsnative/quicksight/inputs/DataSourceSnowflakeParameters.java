@@ -23,6 +23,10 @@ public final class DataSourceSnowflakeParameters extends com.pulumi.resources.In
     @Import(name="database", required=true)
     private String database;
 
+    /**
+     * @return &lt;p&gt;Database.&lt;/p&gt;
+     * 
+     */
     public String database() {
         return this.database;
     }
@@ -34,6 +38,10 @@ public final class DataSourceSnowflakeParameters extends com.pulumi.resources.In
     @Import(name="host", required=true)
     private String host;
 
+    /**
+     * @return &lt;p&gt;Host.&lt;/p&gt;
+     * 
+     */
     public String host() {
         return this.host;
     }
@@ -45,6 +53,10 @@ public final class DataSourceSnowflakeParameters extends com.pulumi.resources.In
     @Import(name="warehouse", required=true)
     private String warehouse;
 
+    /**
+     * @return &lt;p&gt;Warehouse.&lt;/p&gt;
+     * 
+     */
     public String warehouse() {
         return this.warehouse;
     }
@@ -75,16 +87,34 @@ public final class DataSourceSnowflakeParameters extends com.pulumi.resources.In
             $ = new DataSourceSnowflakeParameters(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param database &lt;p&gt;Database.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder database(String database) {
             $.database = database;
             return this;
         }
 
+        /**
+         * @param host &lt;p&gt;Host.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder host(String host) {
             $.host = host;
             return this;
         }
 
+        /**
+         * @param warehouse &lt;p&gt;Warehouse.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder warehouse(String warehouse) {
             $.warehouse = warehouse;
             return this;

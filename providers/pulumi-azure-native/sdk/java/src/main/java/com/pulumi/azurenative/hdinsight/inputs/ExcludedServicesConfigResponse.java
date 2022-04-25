@@ -25,6 +25,10 @@ public final class ExcludedServicesConfigResponse extends com.pulumi.resources.I
     @Import(name="excludedServicesConfigId")
     private @Nullable String excludedServicesConfigId;
 
+    /**
+     * @return The config id of excluded services.
+     * 
+     */
     public Optional<String> excludedServicesConfigId() {
         return Optional.ofNullable(this.excludedServicesConfigId);
     }
@@ -36,6 +40,10 @@ public final class ExcludedServicesConfigResponse extends com.pulumi.resources.I
     @Import(name="excludedServicesList")
     private @Nullable String excludedServicesList;
 
+    /**
+     * @return The list of excluded services.
+     * 
+     */
     public Optional<String> excludedServicesList() {
         return Optional.ofNullable(this.excludedServicesList);
     }
@@ -65,11 +73,23 @@ public final class ExcludedServicesConfigResponse extends com.pulumi.resources.I
             $ = new ExcludedServicesConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param excludedServicesConfigId The config id of excluded services.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludedServicesConfigId(@Nullable String excludedServicesConfigId) {
             $.excludedServicesConfigId = excludedServicesConfigId;
             return this;
         }
 
+        /**
+         * @param excludedServicesList The list of excluded services.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludedServicesList(@Nullable String excludedServicesList) {
             $.excludedServicesList = excludedServicesList;
             return this;

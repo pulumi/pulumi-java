@@ -24,6 +24,10 @@ public final class WorkflowS3TagArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="key", required=true)
     private Output<String> key;
 
+    /**
+     * @return The name assigned to the tag that you create.
+     * 
+     */
     public Output<String> key() {
         return this.key;
     }
@@ -35,6 +39,10 @@ public final class WorkflowS3TagArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="value", required=true)
     private Output<String> value;
 
+    /**
+     * @return The value that corresponds to the key.
+     * 
+     */
     public Output<String> value() {
         return this.value;
     }
@@ -64,20 +72,44 @@ public final class WorkflowS3TagArgs extends com.pulumi.resources.ResourceArgs {
             $ = new WorkflowS3TagArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param key The name assigned to the tag that you create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(Output<String> key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param key The name assigned to the tag that you create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             return key(Output.of(key));
         }
 
+        /**
+         * @param value The value that corresponds to the key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value The value that corresponds to the key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

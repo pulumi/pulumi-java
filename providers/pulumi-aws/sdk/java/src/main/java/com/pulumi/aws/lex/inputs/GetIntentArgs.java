@@ -21,6 +21,10 @@ public final class GetIntentArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the intent. The name is case sensitive.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -32,6 +36,10 @@ public final class GetIntentArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="version")
     private @Nullable String version;
 
+    /**
+     * @return The version of the intent.
+     * 
+     */
     public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }
@@ -61,11 +69,23 @@ public final class GetIntentArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetIntentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the intent. The name is case sensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param version The version of the intent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable String version) {
             $.version = version;
             return this;

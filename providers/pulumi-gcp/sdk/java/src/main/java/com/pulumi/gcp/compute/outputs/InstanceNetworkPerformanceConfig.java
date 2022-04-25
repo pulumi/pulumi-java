@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class InstanceNetworkPerformanceConfig {
     /**
-     * The egress bandwidth tier to enable.
+     * @return The egress bandwidth tier to enable.
      * Possible values: TIER_1, DEFAULT
      * 
      */
@@ -22,10 +22,10 @@ public final class InstanceNetworkPerformanceConfig {
     }
 
     /**
-     * The egress bandwidth tier to enable.
+     * @return The egress bandwidth tier to enable.
      * Possible values: TIER_1, DEFAULT
      * 
-    */
+     */
     public String totalEgressBandwidthTier() {
         return this.totalEgressBandwidthTier;
     }

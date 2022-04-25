@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class NonceResponse {
     /**
-     * The time after the request is made when the nonce should expire.
+     * @return The time after the request is made when the nonce should expire.
      * 
      */
     private final @Nullable String nonceExpirationInterval;
     /**
-     * &lt;code&gt;false&lt;/code&gt; if the nonce should not be validated while completing the login flow; otherwise, &lt;code&gt;true&lt;/code&gt;.
+     * @return &lt;code&gt;false&lt;/code&gt; if the nonce should not be validated while completing the login flow; otherwise, &lt;code&gt;true&lt;/code&gt;.
      * 
      */
     private final @Nullable Boolean validateNonce;
@@ -32,16 +32,16 @@ public final class NonceResponse {
     }
 
     /**
-     * The time after the request is made when the nonce should expire.
+     * @return The time after the request is made when the nonce should expire.
      * 
-    */
+     */
     public Optional<String> nonceExpirationInterval() {
         return Optional.ofNullable(this.nonceExpirationInterval);
     }
     /**
-     * &lt;code&gt;false&lt;/code&gt; if the nonce should not be validated while completing the login flow; otherwise, &lt;code&gt;true&lt;/code&gt;.
+     * @return &lt;code&gt;false&lt;/code&gt; if the nonce should not be validated while completing the login flow; otherwise, &lt;code&gt;true&lt;/code&gt;.
      * 
-    */
+     */
     public Optional<Boolean> validateNonce() {
         return Optional.ofNullable(this.validateNonce);
     }

@@ -31,6 +31,10 @@ public final class SchemaPackageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ignoreMinOccurs")
     private @Nullable Output<Boolean> ignoreMinOccurs;
 
+    /**
+     * @return Flag to ignore all min_occurs restrictions in the schema. This means that incoming messages can omit any group, segment, field, component, or subcomponent.
+     * 
+     */
     public Optional<Output<Boolean>> ignoreMinOccurs() {
         return Optional.ofNullable(this.ignoreMinOccurs);
     }
@@ -42,6 +46,10 @@ public final class SchemaPackageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="schemas")
     private @Nullable Output<List<Hl7SchemaConfigArgs>> schemas;
 
+    /**
+     * @return Schema configs that are layered based on their VersionSources that match the incoming message. Schema configs present in higher indices override those in lower indices with the same message type and trigger event if their VersionSources all match an incoming message.
+     * 
+     */
     public Optional<Output<List<Hl7SchemaConfigArgs>>> schemas() {
         return Optional.ofNullable(this.schemas);
     }
@@ -53,6 +61,10 @@ public final class SchemaPackageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="schematizedParsingType")
     private @Nullable Output<SchemaPackageSchematizedParsingType> schematizedParsingType;
 
+    /**
+     * @return Determines how messages that fail to parse are handled.
+     * 
+     */
     public Optional<Output<SchemaPackageSchematizedParsingType>> schematizedParsingType() {
         return Optional.ofNullable(this.schematizedParsingType);
     }
@@ -64,6 +76,10 @@ public final class SchemaPackageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="types")
     private @Nullable Output<List<Hl7TypesConfigArgs>> types;
 
+    /**
+     * @return Schema type definitions that are layered based on their VersionSources that match the incoming message. Type definitions present in higher indices override those in lower indices with the same type name if their VersionSources all match an incoming message.
+     * 
+     */
     public Optional<Output<List<Hl7TypesConfigArgs>>> types() {
         return Optional.ofNullable(this.types);
     }
@@ -75,6 +91,10 @@ public final class SchemaPackageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="unexpectedSegmentHandling")
     private @Nullable Output<SchemaPackageUnexpectedSegmentHandling> unexpectedSegmentHandling;
 
+    /**
+     * @return Determines how unexpected segments (segments not matched to the schema) are handled.
+     * 
+     */
     public Optional<Output<SchemaPackageUnexpectedSegmentHandling>> unexpectedSegmentHandling() {
         return Optional.ofNullable(this.unexpectedSegmentHandling);
     }
@@ -107,55 +127,127 @@ public final class SchemaPackageArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SchemaPackageArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ignoreMinOccurs Flag to ignore all min_occurs restrictions in the schema. This means that incoming messages can omit any group, segment, field, component, or subcomponent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ignoreMinOccurs(@Nullable Output<Boolean> ignoreMinOccurs) {
             $.ignoreMinOccurs = ignoreMinOccurs;
             return this;
         }
 
+        /**
+         * @param ignoreMinOccurs Flag to ignore all min_occurs restrictions in the schema. This means that incoming messages can omit any group, segment, field, component, or subcomponent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ignoreMinOccurs(Boolean ignoreMinOccurs) {
             return ignoreMinOccurs(Output.of(ignoreMinOccurs));
         }
 
+        /**
+         * @param schemas Schema configs that are layered based on their VersionSources that match the incoming message. Schema configs present in higher indices override those in lower indices with the same message type and trigger event if their VersionSources all match an incoming message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemas(@Nullable Output<List<Hl7SchemaConfigArgs>> schemas) {
             $.schemas = schemas;
             return this;
         }
 
+        /**
+         * @param schemas Schema configs that are layered based on their VersionSources that match the incoming message. Schema configs present in higher indices override those in lower indices with the same message type and trigger event if their VersionSources all match an incoming message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemas(List<Hl7SchemaConfigArgs> schemas) {
             return schemas(Output.of(schemas));
         }
 
+        /**
+         * @param schemas Schema configs that are layered based on their VersionSources that match the incoming message. Schema configs present in higher indices override those in lower indices with the same message type and trigger event if their VersionSources all match an incoming message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemas(Hl7SchemaConfigArgs... schemas) {
             return schemas(List.of(schemas));
         }
 
+        /**
+         * @param schematizedParsingType Determines how messages that fail to parse are handled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schematizedParsingType(@Nullable Output<SchemaPackageSchematizedParsingType> schematizedParsingType) {
             $.schematizedParsingType = schematizedParsingType;
             return this;
         }
 
+        /**
+         * @param schematizedParsingType Determines how messages that fail to parse are handled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schematizedParsingType(SchemaPackageSchematizedParsingType schematizedParsingType) {
             return schematizedParsingType(Output.of(schematizedParsingType));
         }
 
+        /**
+         * @param types Schema type definitions that are layered based on their VersionSources that match the incoming message. Type definitions present in higher indices override those in lower indices with the same type name if their VersionSources all match an incoming message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder types(@Nullable Output<List<Hl7TypesConfigArgs>> types) {
             $.types = types;
             return this;
         }
 
+        /**
+         * @param types Schema type definitions that are layered based on their VersionSources that match the incoming message. Type definitions present in higher indices override those in lower indices with the same type name if their VersionSources all match an incoming message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder types(List<Hl7TypesConfigArgs> types) {
             return types(Output.of(types));
         }
 
+        /**
+         * @param types Schema type definitions that are layered based on their VersionSources that match the incoming message. Type definitions present in higher indices override those in lower indices with the same type name if their VersionSources all match an incoming message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder types(Hl7TypesConfigArgs... types) {
             return types(List.of(types));
         }
 
+        /**
+         * @param unexpectedSegmentHandling Determines how unexpected segments (segments not matched to the schema) are handled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder unexpectedSegmentHandling(@Nullable Output<SchemaPackageUnexpectedSegmentHandling> unexpectedSegmentHandling) {
             $.unexpectedSegmentHandling = unexpectedSegmentHandling;
             return this;
         }
 
+        /**
+         * @param unexpectedSegmentHandling Determines how unexpected segments (segments not matched to the schema) are handled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder unexpectedSegmentHandling(SchemaPackageUnexpectedSegmentHandling unexpectedSegmentHandling) {
             return unexpectedSegmentHandling(Output.of(unexpectedSegmentHandling));
         }

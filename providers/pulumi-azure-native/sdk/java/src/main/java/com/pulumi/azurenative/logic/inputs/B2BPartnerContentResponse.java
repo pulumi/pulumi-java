@@ -26,6 +26,10 @@ public final class B2BPartnerContentResponse extends com.pulumi.resources.Invoke
     @Import(name="businessIdentities")
     private @Nullable List<BusinessIdentityResponse> businessIdentities;
 
+    /**
+     * @return The list of partner business identities.
+     * 
+     */
     public Optional<List<BusinessIdentityResponse>> businessIdentities() {
         return Optional.ofNullable(this.businessIdentities);
     }
@@ -54,11 +58,23 @@ public final class B2BPartnerContentResponse extends com.pulumi.resources.Invoke
             $ = new B2BPartnerContentResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param businessIdentities The list of partner business identities.
+         * 
+         * @return builder
+         * 
+         */
         public Builder businessIdentities(@Nullable List<BusinessIdentityResponse> businessIdentities) {
             $.businessIdentities = businessIdentities;
             return this;
         }
 
+        /**
+         * @param businessIdentities The list of partner business identities.
+         * 
+         * @return builder
+         * 
+         */
         public Builder businessIdentities(BusinessIdentityResponse... businessIdentities) {
             return businessIdentities(List.of(businessIdentities));
         }

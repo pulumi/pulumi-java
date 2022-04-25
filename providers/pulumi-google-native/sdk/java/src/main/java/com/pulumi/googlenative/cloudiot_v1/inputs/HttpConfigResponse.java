@@ -23,6 +23,10 @@ public final class HttpConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="httpEnabledState", required=true)
     private String httpEnabledState;
 
+    /**
+     * @return If enabled, allows devices to use DeviceService via the HTTP protocol. Otherwise, any requests to DeviceService will fail for this registry.
+     * 
+     */
     public String httpEnabledState() {
         return this.httpEnabledState;
     }
@@ -51,6 +55,12 @@ public final class HttpConfigResponse extends com.pulumi.resources.InvokeArgs {
             $ = new HttpConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param httpEnabledState If enabled, allows devices to use DeviceService via the HTTP protocol. Otherwise, any requests to DeviceService will fail for this registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpEnabledState(String httpEnabledState) {
             $.httpEnabledState = httpEnabledState;
             return this;

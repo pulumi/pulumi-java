@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class BatchReleaseCriteriaResponse {
     /**
-     * The batch size in bytes.
+     * @return The batch size in bytes.
      * 
      */
     private final @Nullable Integer batchSize;
     /**
-     * The message count.
+     * @return The message count.
      * 
      */
     private final @Nullable Integer messageCount;
     /**
-     * The recurrence.
+     * @return The recurrence.
      * 
      */
     private final @Nullable WorkflowTriggerRecurrenceResponse recurrence;
@@ -39,23 +39,23 @@ public final class BatchReleaseCriteriaResponse {
     }
 
     /**
-     * The batch size in bytes.
+     * @return The batch size in bytes.
      * 
-    */
+     */
     public Optional<Integer> batchSize() {
         return Optional.ofNullable(this.batchSize);
     }
     /**
-     * The message count.
+     * @return The message count.
      * 
-    */
+     */
     public Optional<Integer> messageCount() {
         return Optional.ofNullable(this.messageCount);
     }
     /**
-     * The recurrence.
+     * @return The recurrence.
      * 
-    */
+     */
     public Optional<WorkflowTriggerRecurrenceResponse> recurrence() {
         return Optional.ofNullable(this.recurrence);
     }

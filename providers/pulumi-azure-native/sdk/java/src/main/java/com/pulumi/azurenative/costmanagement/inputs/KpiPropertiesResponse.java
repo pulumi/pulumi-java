@@ -26,6 +26,10 @@ public final class KpiPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="enabled")
     private @Nullable Boolean enabled;
 
+    /**
+     * @return show the KPI in the UI?
+     * 
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -37,6 +41,10 @@ public final class KpiPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return ID of resource related to metric (budget).
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -48,6 +56,10 @@ public final class KpiPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return KPI type (Forecast, Budget).
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -78,16 +90,34 @@ public final class KpiPropertiesResponse extends com.pulumi.resources.InvokeArgs
             $ = new KpiPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled show the KPI in the UI?
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Boolean enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param id ID of resource related to metric (budget).
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param type KPI type (Forecast, Budget).
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;

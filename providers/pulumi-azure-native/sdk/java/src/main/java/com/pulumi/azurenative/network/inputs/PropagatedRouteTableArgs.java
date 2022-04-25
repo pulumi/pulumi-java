@@ -28,6 +28,10 @@ public final class PropagatedRouteTableArgs extends com.pulumi.resources.Resourc
     @Import(name="ids")
     private @Nullable Output<List<SubResourceArgs>> ids;
 
+    /**
+     * @return The list of resource ids of all the RouteTables.
+     * 
+     */
     public Optional<Output<List<SubResourceArgs>>> ids() {
         return Optional.ofNullable(this.ids);
     }
@@ -39,6 +43,10 @@ public final class PropagatedRouteTableArgs extends com.pulumi.resources.Resourc
     @Import(name="labels")
     private @Nullable Output<List<String>> labels;
 
+    /**
+     * @return The list of labels.
+     * 
+     */
     public Optional<Output<List<String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -68,28 +76,64 @@ public final class PropagatedRouteTableArgs extends com.pulumi.resources.Resourc
             $ = new PropagatedRouteTableArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ids The list of resource ids of all the RouteTables.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ids(@Nullable Output<List<SubResourceArgs>> ids) {
             $.ids = ids;
             return this;
         }
 
+        /**
+         * @param ids The list of resource ids of all the RouteTables.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ids(List<SubResourceArgs> ids) {
             return ids(Output.of(ids));
         }
 
+        /**
+         * @param ids The list of resource ids of all the RouteTables.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ids(SubResourceArgs... ids) {
             return ids(List.of(ids));
         }
 
+        /**
+         * @param labels The list of labels.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<List<String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels The list of labels.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(List<String> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param labels The list of labels.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(String... labels) {
             return labels(List.of(labels));
         }

@@ -20,6 +20,10 @@ public final class NodeSchedulingConfigGetArgs extends com.pulumi.resources.Reso
     @Import(name="preemptible", required=true)
     private Output<Boolean> preemptible;
 
+    /**
+     * @return Defines whether the TPU instance is preemptible.
+     * 
+     */
     public Output<Boolean> preemptible() {
         return this.preemptible;
     }
@@ -48,11 +52,23 @@ public final class NodeSchedulingConfigGetArgs extends com.pulumi.resources.Reso
             $ = new NodeSchedulingConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param preemptible Defines whether the TPU instance is preemptible.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preemptible(Output<Boolean> preemptible) {
             $.preemptible = preemptible;
             return this;
         }
 
+        /**
+         * @param preemptible Defines whether the TPU instance is preemptible.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preemptible(Boolean preemptible) {
             return preemptible(Output.of(preemptible));
         }

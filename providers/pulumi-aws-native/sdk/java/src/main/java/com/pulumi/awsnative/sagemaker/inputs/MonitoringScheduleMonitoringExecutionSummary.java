@@ -26,6 +26,10 @@ public final class MonitoringScheduleMonitoringExecutionSummary extends com.pulu
     @Import(name="creationTime", required=true)
     private String creationTime;
 
+    /**
+     * @return The time at which the monitoring job was created.
+     * 
+     */
     public String creationTime() {
         return this.creationTime;
     }
@@ -44,6 +48,10 @@ public final class MonitoringScheduleMonitoringExecutionSummary extends com.pulu
     @Import(name="failureReason")
     private @Nullable String failureReason;
 
+    /**
+     * @return Contains the reason a monitoring job failed, if it failed.
+     * 
+     */
     public Optional<String> failureReason() {
         return Optional.ofNullable(this.failureReason);
     }
@@ -55,6 +63,10 @@ public final class MonitoringScheduleMonitoringExecutionSummary extends com.pulu
     @Import(name="lastModifiedTime", required=true)
     private String lastModifiedTime;
 
+    /**
+     * @return A timestamp that indicates the last time the monitoring job was modified.
+     * 
+     */
     public String lastModifiedTime() {
         return this.lastModifiedTime;
     }
@@ -66,6 +78,10 @@ public final class MonitoringScheduleMonitoringExecutionSummary extends com.pulu
     @Import(name="monitoringExecutionStatus", required=true)
     private MonitoringScheduleMonitoringExecutionSummaryMonitoringExecutionStatus monitoringExecutionStatus;
 
+    /**
+     * @return The status of the monitoring job.
+     * 
+     */
     public MonitoringScheduleMonitoringExecutionSummaryMonitoringExecutionStatus monitoringExecutionStatus() {
         return this.monitoringExecutionStatus;
     }
@@ -84,6 +100,10 @@ public final class MonitoringScheduleMonitoringExecutionSummary extends com.pulu
     @Import(name="processingJobArn")
     private @Nullable String processingJobArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the monitoring job.
+     * 
+     */
     public Optional<String> processingJobArn() {
         return Optional.ofNullable(this.processingJobArn);
     }
@@ -95,6 +115,10 @@ public final class MonitoringScheduleMonitoringExecutionSummary extends com.pulu
     @Import(name="scheduledTime", required=true)
     private String scheduledTime;
 
+    /**
+     * @return The time the monitoring job was scheduled.
+     * 
+     */
     public String scheduledTime() {
         return this.scheduledTime;
     }
@@ -130,6 +154,12 @@ public final class MonitoringScheduleMonitoringExecutionSummary extends com.pulu
             $ = new MonitoringScheduleMonitoringExecutionSummary(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param creationTime The time at which the monitoring job was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder creationTime(String creationTime) {
             $.creationTime = creationTime;
             return this;
@@ -140,16 +170,34 @@ public final class MonitoringScheduleMonitoringExecutionSummary extends com.pulu
             return this;
         }
 
+        /**
+         * @param failureReason Contains the reason a monitoring job failed, if it failed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failureReason(@Nullable String failureReason) {
             $.failureReason = failureReason;
             return this;
         }
 
+        /**
+         * @param lastModifiedTime A timestamp that indicates the last time the monitoring job was modified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastModifiedTime(String lastModifiedTime) {
             $.lastModifiedTime = lastModifiedTime;
             return this;
         }
 
+        /**
+         * @param monitoringExecutionStatus The status of the monitoring job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitoringExecutionStatus(MonitoringScheduleMonitoringExecutionSummaryMonitoringExecutionStatus monitoringExecutionStatus) {
             $.monitoringExecutionStatus = monitoringExecutionStatus;
             return this;
@@ -160,11 +208,23 @@ public final class MonitoringScheduleMonitoringExecutionSummary extends com.pulu
             return this;
         }
 
+        /**
+         * @param processingJobArn The Amazon Resource Name (ARN) of the monitoring job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder processingJobArn(@Nullable String processingJobArn) {
             $.processingJobArn = processingJobArn;
             return this;
         }
 
+        /**
+         * @param scheduledTime The time the monitoring job was scheduled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduledTime(String scheduledTime) {
             $.scheduledTime = scheduledTime;
             return this;

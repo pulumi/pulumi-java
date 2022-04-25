@@ -19,6 +19,10 @@ public final class GetSqlResourceSqlStoredProcedureArgs extends com.pulumi.resou
     @Import(name="accountName", required=true)
     private String accountName;
 
+    /**
+     * @return Cosmos DB database account name.
+     * 
+     */
     public String accountName() {
         return this.accountName;
     }
@@ -30,6 +34,10 @@ public final class GetSqlResourceSqlStoredProcedureArgs extends com.pulumi.resou
     @Import(name="containerName", required=true)
     private String containerName;
 
+    /**
+     * @return Cosmos DB container name.
+     * 
+     */
     public String containerName() {
         return this.containerName;
     }
@@ -41,6 +49,10 @@ public final class GetSqlResourceSqlStoredProcedureArgs extends com.pulumi.resou
     @Import(name="databaseName", required=true)
     private String databaseName;
 
+    /**
+     * @return Cosmos DB database name.
+     * 
+     */
     public String databaseName() {
         return this.databaseName;
     }
@@ -52,6 +64,10 @@ public final class GetSqlResourceSqlStoredProcedureArgs extends com.pulumi.resou
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -63,6 +79,10 @@ public final class GetSqlResourceSqlStoredProcedureArgs extends com.pulumi.resou
     @Import(name="storedProcedureName", required=true)
     private String storedProcedureName;
 
+    /**
+     * @return Cosmos DB storedProcedure name.
+     * 
+     */
     public String storedProcedureName() {
         return this.storedProcedureName;
     }
@@ -95,26 +115,56 @@ public final class GetSqlResourceSqlStoredProcedureArgs extends com.pulumi.resou
             $ = new GetSqlResourceSqlStoredProcedureArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName Cosmos DB database account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param containerName Cosmos DB container name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerName(String containerName) {
             $.containerName = containerName;
             return this;
         }
 
+        /**
+         * @param databaseName Cosmos DB database name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(String databaseName) {
             $.databaseName = databaseName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param storedProcedureName Cosmos DB storedProcedure name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storedProcedureName(String storedProcedureName) {
             $.storedProcedureName = storedProcedureName;
             return this;

@@ -23,6 +23,10 @@ public final class KeyVaultReferenceResponse extends com.pulumi.resources.Invoke
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Azure resource ID of the Key Vault.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -51,6 +55,12 @@ public final class KeyVaultReferenceResponse extends com.pulumi.resources.Invoke
             $ = new KeyVaultReferenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Azure resource ID of the Key Vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;

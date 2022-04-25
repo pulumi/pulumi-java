@@ -26,6 +26,10 @@ public final class OracleSourceConfigArgs extends com.pulumi.resources.ResourceA
     @Import(name="excludeObjects")
     private @Nullable Output<OracleRdbmsArgs> excludeObjects;
 
+    /**
+     * @return Oracle objects to exclude from the stream.
+     * 
+     */
     public Optional<Output<OracleRdbmsArgs>> excludeObjects() {
         return Optional.ofNullable(this.excludeObjects);
     }
@@ -37,6 +41,10 @@ public final class OracleSourceConfigArgs extends com.pulumi.resources.ResourceA
     @Import(name="includeObjects")
     private @Nullable Output<OracleRdbmsArgs> includeObjects;
 
+    /**
+     * @return Oracle objects to include in the stream.
+     * 
+     */
     public Optional<Output<OracleRdbmsArgs>> includeObjects() {
         return Optional.ofNullable(this.includeObjects);
     }
@@ -66,20 +74,44 @@ public final class OracleSourceConfigArgs extends com.pulumi.resources.ResourceA
             $ = new OracleSourceConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param excludeObjects Oracle objects to exclude from the stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludeObjects(@Nullable Output<OracleRdbmsArgs> excludeObjects) {
             $.excludeObjects = excludeObjects;
             return this;
         }
 
+        /**
+         * @param excludeObjects Oracle objects to exclude from the stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludeObjects(OracleRdbmsArgs excludeObjects) {
             return excludeObjects(Output.of(excludeObjects));
         }
 
+        /**
+         * @param includeObjects Oracle objects to include in the stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeObjects(@Nullable Output<OracleRdbmsArgs> includeObjects) {
             $.includeObjects = includeObjects;
             return this;
         }
 
+        /**
+         * @param includeObjects Oracle objects to include in the stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeObjects(OracleRdbmsArgs includeObjects) {
             return includeObjects(Output.of(includeObjects));
         }

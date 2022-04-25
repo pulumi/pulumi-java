@@ -24,6 +24,12 @@ public final class HookDefaultVersionArgs extends com.pulumi.resources.ResourceA
     @Import(name="typeName")
     private @Nullable Output<String> typeName;
 
+    /**
+     * @return The name of the type being registered.
+     * 
+     * We recommend that type names adhere to the following pattern: company_or_organization::service::type.
+     * 
+     */
     public Optional<Output<String>> typeName() {
         return Optional.ofNullable(this.typeName);
     }
@@ -35,6 +41,10 @@ public final class HookDefaultVersionArgs extends com.pulumi.resources.ResourceA
     @Import(name="typeVersionArn")
     private @Nullable Output<String> typeVersionArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the type version.
+     * 
+     */
     public Optional<Output<String>> typeVersionArn() {
         return Optional.ofNullable(this.typeVersionArn);
     }
@@ -46,6 +56,10 @@ public final class HookDefaultVersionArgs extends com.pulumi.resources.ResourceA
     @Import(name="versionId")
     private @Nullable Output<String> versionId;
 
+    /**
+     * @return The ID of an existing version of the hook to set as the default.
+     * 
+     */
     public Optional<Output<String>> versionId() {
         return Optional.ofNullable(this.versionId);
     }
@@ -76,29 +90,69 @@ public final class HookDefaultVersionArgs extends com.pulumi.resources.ResourceA
             $ = new HookDefaultVersionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param typeName The name of the type being registered.
+         * 
+         * We recommend that type names adhere to the following pattern: company_or_organization::service::type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder typeName(@Nullable Output<String> typeName) {
             $.typeName = typeName;
             return this;
         }
 
+        /**
+         * @param typeName The name of the type being registered.
+         * 
+         * We recommend that type names adhere to the following pattern: company_or_organization::service::type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder typeName(String typeName) {
             return typeName(Output.of(typeName));
         }
 
+        /**
+         * @param typeVersionArn The Amazon Resource Name (ARN) of the type version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder typeVersionArn(@Nullable Output<String> typeVersionArn) {
             $.typeVersionArn = typeVersionArn;
             return this;
         }
 
+        /**
+         * @param typeVersionArn The Amazon Resource Name (ARN) of the type version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder typeVersionArn(String typeVersionArn) {
             return typeVersionArn(Output.of(typeVersionArn));
         }
 
+        /**
+         * @param versionId The ID of an existing version of the hook to set as the default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionId(@Nullable Output<String> versionId) {
             $.versionId = versionId;
             return this;
         }
 
+        /**
+         * @param versionId The ID of an existing version of the hook to set as the default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionId(String versionId) {
             return versionId(Output.of(versionId));
         }

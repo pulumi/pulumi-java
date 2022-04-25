@@ -29,6 +29,10 @@ public final class BackupInstanceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="dataSourceInfo", required=true)
     private Output<DatasourceArgs> dataSourceInfo;
 
+    /**
+     * @return Gets or sets the data source information.
+     * 
+     */
     public Output<DatasourceArgs> dataSourceInfo() {
         return this.dataSourceInfo;
     }
@@ -40,6 +44,10 @@ public final class BackupInstanceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="dataSourceSetInfo")
     private @Nullable Output<DatasourceSetArgs> dataSourceSetInfo;
 
+    /**
+     * @return Gets or sets the data source set information.
+     * 
+     */
     public Optional<Output<DatasourceSetArgs>> dataSourceSetInfo() {
         return Optional.ofNullable(this.dataSourceSetInfo);
     }
@@ -51,6 +59,10 @@ public final class BackupInstanceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="friendlyName")
     private @Nullable Output<String> friendlyName;
 
+    /**
+     * @return Gets or sets the Backup Instance friendly name.
+     * 
+     */
     public Optional<Output<String>> friendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
@@ -69,6 +81,10 @@ public final class BackupInstanceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="policyInfo", required=true)
     private Output<PolicyInfoArgs> policyInfo;
 
+    /**
+     * @return Gets or sets the policy information.
+     * 
+     */
     public Output<PolicyInfoArgs> policyInfo() {
         return this.policyInfo;
     }
@@ -101,29 +117,65 @@ public final class BackupInstanceArgs extends com.pulumi.resources.ResourceArgs 
             $ = new BackupInstanceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataSourceInfo Gets or sets the data source information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSourceInfo(Output<DatasourceArgs> dataSourceInfo) {
             $.dataSourceInfo = dataSourceInfo;
             return this;
         }
 
+        /**
+         * @param dataSourceInfo Gets or sets the data source information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSourceInfo(DatasourceArgs dataSourceInfo) {
             return dataSourceInfo(Output.of(dataSourceInfo));
         }
 
+        /**
+         * @param dataSourceSetInfo Gets or sets the data source set information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSourceSetInfo(@Nullable Output<DatasourceSetArgs> dataSourceSetInfo) {
             $.dataSourceSetInfo = dataSourceSetInfo;
             return this;
         }
 
+        /**
+         * @param dataSourceSetInfo Gets or sets the data source set information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSourceSetInfo(DatasourceSetArgs dataSourceSetInfo) {
             return dataSourceSetInfo(Output.of(dataSourceSetInfo));
         }
 
+        /**
+         * @param friendlyName Gets or sets the Backup Instance friendly name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
             $.friendlyName = friendlyName;
             return this;
         }
 
+        /**
+         * @param friendlyName Gets or sets the Backup Instance friendly name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder friendlyName(String friendlyName) {
             return friendlyName(Output.of(friendlyName));
         }
@@ -137,11 +189,23 @@ public final class BackupInstanceArgs extends com.pulumi.resources.ResourceArgs 
             return objectType(Output.of(objectType));
         }
 
+        /**
+         * @param policyInfo Gets or sets the policy information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyInfo(Output<PolicyInfoArgs> policyInfo) {
             $.policyInfo = policyInfo;
             return this;
         }
 
+        /**
+         * @param policyInfo Gets or sets the policy information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyInfo(PolicyInfoArgs policyInfo) {
             return policyInfo(Output.of(policyInfo));
         }

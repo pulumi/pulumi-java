@@ -23,6 +23,10 @@ public final class CloudRunResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="path", required=true)
     private String path;
 
+    /**
+     * @return Optional. The relative path on the Cloud Run service the events should be sent to. The value must conform to the definition of a URI path segment (section 3.3 of RFC2396). Examples: &#34;/route&#34;, &#34;route&#34;, &#34;route/subroute&#34;.
+     * 
+     */
     public String path() {
         return this.path;
     }
@@ -34,6 +38,10 @@ public final class CloudRunResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="region", required=true)
     private String region;
 
+    /**
+     * @return The region the Cloud Run service is deployed in.
+     * 
+     */
     public String region() {
         return this.region;
     }
@@ -45,6 +53,10 @@ public final class CloudRunResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="service", required=true)
     private String service;
 
+    /**
+     * @return The name of the Cloud Run service being addressed. See https://cloud.google.com/run/docs/reference/rest/v1/namespaces.services. Only services located in the same project as the trigger object can be addressed.
+     * 
+     */
     public String service() {
         return this.service;
     }
@@ -75,16 +87,34 @@ public final class CloudRunResponse extends com.pulumi.resources.InvokeArgs {
             $ = new CloudRunResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param path Optional. The relative path on the Cloud Run service the events should be sent to. The value must conform to the definition of a URI path segment (section 3.3 of RFC2396). Examples: &#34;/route&#34;, &#34;route&#34;, &#34;route/subroute&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param region The region the Cloud Run service is deployed in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(String region) {
             $.region = region;
             return this;
         }
 
+        /**
+         * @param service The name of the Cloud Run service being addressed. See https://cloud.google.com/run/docs/reference/rest/v1/namespaces.services. Only services located in the same project as the trigger object can be addressed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(String service) {
             $.service = service;
             return this;

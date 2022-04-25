@@ -28,6 +28,10 @@ public final class LinuxOsInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="linuxOsState")
     private @Nullable Output<Either<String,LinuxOsState>> linuxOsState;
 
+    /**
+     * @return The state of the Linux OS (i.e. NonDeprovisioned, DeprovisionRequested, DeprovisionApplied).
+     * 
+     */
     public Optional<Output<Either<String,LinuxOsState>>> linuxOsState() {
         return Optional.ofNullable(this.linuxOsState);
     }
@@ -56,19 +60,43 @@ public final class LinuxOsInfoArgs extends com.pulumi.resources.ResourceArgs {
             $ = new LinuxOsInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param linuxOsState The state of the Linux OS (i.e. NonDeprovisioned, DeprovisionRequested, DeprovisionApplied).
+         * 
+         * @return builder
+         * 
+         */
         public Builder linuxOsState(@Nullable Output<Either<String,LinuxOsState>> linuxOsState) {
             $.linuxOsState = linuxOsState;
             return this;
         }
 
+        /**
+         * @param linuxOsState The state of the Linux OS (i.e. NonDeprovisioned, DeprovisionRequested, DeprovisionApplied).
+         * 
+         * @return builder
+         * 
+         */
         public Builder linuxOsState(Either<String,LinuxOsState> linuxOsState) {
             return linuxOsState(Output.of(linuxOsState));
         }
 
+        /**
+         * @param linuxOsState The state of the Linux OS (i.e. NonDeprovisioned, DeprovisionRequested, DeprovisionApplied).
+         * 
+         * @return builder
+         * 
+         */
         public Builder linuxOsState(String linuxOsState) {
             return linuxOsState(Either.ofLeft(linuxOsState));
         }
 
+        /**
+         * @param linuxOsState The state of the Linux OS (i.e. NonDeprovisioned, DeprovisionRequested, DeprovisionApplied).
+         * 
+         * @return builder
+         * 
+         */
         public Builder linuxOsState(LinuxOsState linuxOsState) {
             return linuxOsState(Either.ofRight(linuxOsState));
         }

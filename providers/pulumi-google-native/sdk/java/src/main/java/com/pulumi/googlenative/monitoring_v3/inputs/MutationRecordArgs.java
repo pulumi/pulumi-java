@@ -26,6 +26,10 @@ public final class MutationRecordArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="mutateTime")
     private @Nullable Output<String> mutateTime;
 
+    /**
+     * @return When the change occurred.
+     * 
+     */
     public Optional<Output<String>> mutateTime() {
         return Optional.ofNullable(this.mutateTime);
     }
@@ -37,6 +41,10 @@ public final class MutationRecordArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="mutatedBy")
     private @Nullable Output<String> mutatedBy;
 
+    /**
+     * @return The email address of the user making the change.
+     * 
+     */
     public Optional<Output<String>> mutatedBy() {
         return Optional.ofNullable(this.mutatedBy);
     }
@@ -66,20 +74,44 @@ public final class MutationRecordArgs extends com.pulumi.resources.ResourceArgs 
             $ = new MutationRecordArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param mutateTime When the change occurred.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mutateTime(@Nullable Output<String> mutateTime) {
             $.mutateTime = mutateTime;
             return this;
         }
 
+        /**
+         * @param mutateTime When the change occurred.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mutateTime(String mutateTime) {
             return mutateTime(Output.of(mutateTime));
         }
 
+        /**
+         * @param mutatedBy The email address of the user making the change.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mutatedBy(@Nullable Output<String> mutatedBy) {
             $.mutatedBy = mutatedBy;
             return this;
         }
 
+        /**
+         * @param mutatedBy The email address of the user making the change.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mutatedBy(String mutatedBy) {
             return mutatedBy(Output.of(mutatedBy));
         }

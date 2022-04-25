@@ -27,6 +27,10 @@ public final class BlobInventoryPolicyFilterResponse extends com.pulumi.resource
     @Import(name="blobTypes", required=true)
     private List<String> blobTypes;
 
+    /**
+     * @return An array of predefined enum values. Valid values include blockBlob, appendBlob, pageBlob. Hns accounts does not support pageBlobs.
+     * 
+     */
     public List<String> blobTypes() {
         return this.blobTypes;
     }
@@ -38,6 +42,10 @@ public final class BlobInventoryPolicyFilterResponse extends com.pulumi.resource
     @Import(name="includeBlobVersions")
     private @Nullable Boolean includeBlobVersions;
 
+    /**
+     * @return Includes blob versions in blob inventory when value set to true.
+     * 
+     */
     public Optional<Boolean> includeBlobVersions() {
         return Optional.ofNullable(this.includeBlobVersions);
     }
@@ -49,6 +57,10 @@ public final class BlobInventoryPolicyFilterResponse extends com.pulumi.resource
     @Import(name="includeSnapshots")
     private @Nullable Boolean includeSnapshots;
 
+    /**
+     * @return Includes blob snapshots in blob inventory when value set to true.
+     * 
+     */
     public Optional<Boolean> includeSnapshots() {
         return Optional.ofNullable(this.includeSnapshots);
     }
@@ -60,6 +72,10 @@ public final class BlobInventoryPolicyFilterResponse extends com.pulumi.resource
     @Import(name="prefixMatch")
     private @Nullable List<String> prefixMatch;
 
+    /**
+     * @return An array of strings for blob prefixes to be matched.
+     * 
+     */
     public Optional<List<String>> prefixMatch() {
         return Optional.ofNullable(this.prefixMatch);
     }
@@ -91,30 +107,66 @@ public final class BlobInventoryPolicyFilterResponse extends com.pulumi.resource
             $ = new BlobInventoryPolicyFilterResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param blobTypes An array of predefined enum values. Valid values include blockBlob, appendBlob, pageBlob. Hns accounts does not support pageBlobs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blobTypes(List<String> blobTypes) {
             $.blobTypes = blobTypes;
             return this;
         }
 
+        /**
+         * @param blobTypes An array of predefined enum values. Valid values include blockBlob, appendBlob, pageBlob. Hns accounts does not support pageBlobs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blobTypes(String... blobTypes) {
             return blobTypes(List.of(blobTypes));
         }
 
+        /**
+         * @param includeBlobVersions Includes blob versions in blob inventory when value set to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeBlobVersions(@Nullable Boolean includeBlobVersions) {
             $.includeBlobVersions = includeBlobVersions;
             return this;
         }
 
+        /**
+         * @param includeSnapshots Includes blob snapshots in blob inventory when value set to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeSnapshots(@Nullable Boolean includeSnapshots) {
             $.includeSnapshots = includeSnapshots;
             return this;
         }
 
+        /**
+         * @param prefixMatch An array of strings for blob prefixes to be matched.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefixMatch(@Nullable List<String> prefixMatch) {
             $.prefixMatch = prefixMatch;
             return this;
         }
 
+        /**
+         * @param prefixMatch An array of strings for blob prefixes to be matched.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefixMatch(String... prefixMatch) {
             return prefixMatch(List.of(prefixMatch));
         }

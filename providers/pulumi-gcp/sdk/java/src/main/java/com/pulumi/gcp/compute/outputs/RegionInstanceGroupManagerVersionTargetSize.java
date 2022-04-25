@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class RegionInstanceGroupManagerVersionTargetSize {
     /**
-     * , The number of instances which are managed for this version. Conflicts with `percent`.
+     * @return , The number of instances which are managed for this version. Conflicts with `percent`.
      * 
      */
     private final @Nullable Integer fixed;
     /**
-     * , The number of instances (calculated as percentage) which are managed for this version. Conflicts with `fixed`.
+     * @return , The number of instances (calculated as percentage) which are managed for this version. Conflicts with `fixed`.
      * Note that when using `percent`, rounding will be in favor of explicitly set `target_size` values; a managed instance group with 2 instances and 2 `version`s,
      * one of which has a `target_size.percent` of `60` will create 2 instances of that `version`.
      * 
@@ -33,18 +33,18 @@ public final class RegionInstanceGroupManagerVersionTargetSize {
     }
 
     /**
-     * , The number of instances which are managed for this version. Conflicts with `percent`.
+     * @return , The number of instances which are managed for this version. Conflicts with `percent`.
      * 
-    */
+     */
     public Optional<Integer> fixed() {
         return Optional.ofNullable(this.fixed);
     }
     /**
-     * , The number of instances (calculated as percentage) which are managed for this version. Conflicts with `fixed`.
+     * @return , The number of instances (calculated as percentage) which are managed for this version. Conflicts with `fixed`.
      * Note that when using `percent`, rounding will be in favor of explicitly set `target_size` values; a managed instance group with 2 instances and 2 `version`s,
      * one of which has a `target_size.percent` of `60` will create 2 instances of that `version`.
      * 
-    */
+     */
     public Optional<Integer> percent() {
         return Optional.ofNullable(this.percent);
     }

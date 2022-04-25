@@ -23,6 +23,10 @@ public final class LogAnalyticsOutputResponse extends com.pulumi.resources.Invok
     @Import(name="output", required=true)
     private String output;
 
+    /**
+     * @return Output file Uri path to blob container.
+     * 
+     */
     public String output() {
         return this.output;
     }
@@ -51,6 +55,12 @@ public final class LogAnalyticsOutputResponse extends com.pulumi.resources.Invok
             $ = new LogAnalyticsOutputResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param output Output file Uri path to blob container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder output(String output) {
             $.output = output;
             return this;

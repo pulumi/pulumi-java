@@ -27,6 +27,10 @@ public final class OpenShiftManagedClusterIdentityProviderArgs extends com.pulum
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the provider.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -38,6 +42,10 @@ public final class OpenShiftManagedClusterIdentityProviderArgs extends com.pulum
     @Import(name="provider")
     private @Nullable Output<OpenShiftManagedClusterAADIdentityProviderArgs> provider;
 
+    /**
+     * @return Configuration of the provider.
+     * 
+     */
     public Optional<Output<OpenShiftManagedClusterAADIdentityProviderArgs>> provider() {
         return Optional.ofNullable(this.provider);
     }
@@ -67,20 +75,44 @@ public final class OpenShiftManagedClusterIdentityProviderArgs extends com.pulum
             $ = new OpenShiftManagedClusterIdentityProviderArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name of the provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param provider Configuration of the provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provider(@Nullable Output<OpenShiftManagedClusterAADIdentityProviderArgs> provider) {
             $.provider = provider;
             return this;
         }
 
+        /**
+         * @param provider Configuration of the provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provider(OpenShiftManagedClusterAADIdentityProviderArgs provider) {
             return provider(Output.of(provider));
         }

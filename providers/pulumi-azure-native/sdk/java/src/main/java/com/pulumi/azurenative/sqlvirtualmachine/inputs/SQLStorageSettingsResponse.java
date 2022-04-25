@@ -27,6 +27,10 @@ public final class SQLStorageSettingsResponse extends com.pulumi.resources.Invok
     @Import(name="defaultFilePath")
     private @Nullable String defaultFilePath;
 
+    /**
+     * @return SQL Server default file path
+     * 
+     */
     public Optional<String> defaultFilePath() {
         return Optional.ofNullable(this.defaultFilePath);
     }
@@ -38,6 +42,10 @@ public final class SQLStorageSettingsResponse extends com.pulumi.resources.Invok
     @Import(name="luns")
     private @Nullable List<Integer> luns;
 
+    /**
+     * @return Logical Unit Numbers for the disks.
+     * 
+     */
     public Optional<List<Integer>> luns() {
         return Optional.ofNullable(this.luns);
     }
@@ -67,16 +75,34 @@ public final class SQLStorageSettingsResponse extends com.pulumi.resources.Invok
             $ = new SQLStorageSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param defaultFilePath SQL Server default file path
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultFilePath(@Nullable String defaultFilePath) {
             $.defaultFilePath = defaultFilePath;
             return this;
         }
 
+        /**
+         * @param luns Logical Unit Numbers for the disks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder luns(@Nullable List<Integer> luns) {
             $.luns = luns;
             return this;
         }
 
+        /**
+         * @param luns Logical Unit Numbers for the disks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder luns(Integer... luns) {
             return luns(List.of(luns));
         }

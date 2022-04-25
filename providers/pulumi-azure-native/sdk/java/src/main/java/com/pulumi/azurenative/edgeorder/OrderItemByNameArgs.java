@@ -25,6 +25,10 @@ public final class OrderItemByNameArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="addressDetails", required=true)
     private Output<AddressDetailsArgs> addressDetails;
 
+    /**
+     * @return Represents shipping and return address for order item
+     * 
+     */
     public Output<AddressDetailsArgs> addressDetails() {
         return this.addressDetails;
     }
@@ -36,6 +40,10 @@ public final class OrderItemByNameArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The geo-location where the resource lives
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -47,6 +55,10 @@ public final class OrderItemByNameArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="orderId", required=true)
     private Output<String> orderId;
 
+    /**
+     * @return Id of the order to which order item belongs to
+     * 
+     */
     public Output<String> orderId() {
         return this.orderId;
     }
@@ -58,6 +70,10 @@ public final class OrderItemByNameArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="orderItemDetails", required=true)
     private Output<OrderItemDetailsArgs> orderItemDetails;
 
+    /**
+     * @return Represents order item details.
+     * 
+     */
     public Output<OrderItemDetailsArgs> orderItemDetails() {
         return this.orderItemDetails;
     }
@@ -69,6 +85,10 @@ public final class OrderItemByNameArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="orderItemName")
     private @Nullable Output<String> orderItemName;
 
+    /**
+     * @return The name of the order item
+     * 
+     */
     public Optional<Output<String>> orderItemName() {
         return Optional.ofNullable(this.orderItemName);
     }
@@ -80,6 +100,10 @@ public final class OrderItemByNameArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -91,6 +115,10 @@ public final class OrderItemByNameArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -125,65 +153,149 @@ public final class OrderItemByNameArgs extends com.pulumi.resources.ResourceArgs
             $ = new OrderItemByNameArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param addressDetails Represents shipping and return address for order item
+         * 
+         * @return builder
+         * 
+         */
         public Builder addressDetails(Output<AddressDetailsArgs> addressDetails) {
             $.addressDetails = addressDetails;
             return this;
         }
 
+        /**
+         * @param addressDetails Represents shipping and return address for order item
+         * 
+         * @return builder
+         * 
+         */
         public Builder addressDetails(AddressDetailsArgs addressDetails) {
             return addressDetails(Output.of(addressDetails));
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param orderId Id of the order to which order item belongs to
+         * 
+         * @return builder
+         * 
+         */
         public Builder orderId(Output<String> orderId) {
             $.orderId = orderId;
             return this;
         }
 
+        /**
+         * @param orderId Id of the order to which order item belongs to
+         * 
+         * @return builder
+         * 
+         */
         public Builder orderId(String orderId) {
             return orderId(Output.of(orderId));
         }
 
+        /**
+         * @param orderItemDetails Represents order item details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder orderItemDetails(Output<OrderItemDetailsArgs> orderItemDetails) {
             $.orderItemDetails = orderItemDetails;
             return this;
         }
 
+        /**
+         * @param orderItemDetails Represents order item details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder orderItemDetails(OrderItemDetailsArgs orderItemDetails) {
             return orderItemDetails(Output.of(orderItemDetails));
         }
 
+        /**
+         * @param orderItemName The name of the order item
+         * 
+         * @return builder
+         * 
+         */
         public Builder orderItemName(@Nullable Output<String> orderItemName) {
             $.orderItemName = orderItemName;
             return this;
         }
 
+        /**
+         * @param orderItemName The name of the order item
+         * 
+         * @return builder
+         * 
+         */
         public Builder orderItemName(String orderItemName) {
             return orderItemName(Output.of(orderItemName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

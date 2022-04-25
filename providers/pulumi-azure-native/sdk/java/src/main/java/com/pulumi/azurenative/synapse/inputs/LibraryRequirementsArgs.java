@@ -26,6 +26,10 @@ public final class LibraryRequirementsArgs extends com.pulumi.resources.Resource
     @Import(name="content")
     private @Nullable Output<String> content;
 
+    /**
+     * @return The library requirements.
+     * 
+     */
     public Optional<Output<String>> content() {
         return Optional.ofNullable(this.content);
     }
@@ -37,6 +41,10 @@ public final class LibraryRequirementsArgs extends com.pulumi.resources.Resource
     @Import(name="filename")
     private @Nullable Output<String> filename;
 
+    /**
+     * @return The filename of the library requirements file.
+     * 
+     */
     public Optional<Output<String>> filename() {
         return Optional.ofNullable(this.filename);
     }
@@ -66,20 +74,44 @@ public final class LibraryRequirementsArgs extends com.pulumi.resources.Resource
             $ = new LibraryRequirementsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param content The library requirements.
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(@Nullable Output<String> content) {
             $.content = content;
             return this;
         }
 
+        /**
+         * @param content The library requirements.
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(String content) {
             return content(Output.of(content));
         }
 
+        /**
+         * @param filename The filename of the library requirements file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filename(@Nullable Output<String> filename) {
             $.filename = filename;
             return this;
         }
 
+        /**
+         * @param filename The filename of the library requirements file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filename(String filename) {
             return filename(Output.of(filename));
         }

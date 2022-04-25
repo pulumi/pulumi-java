@@ -28,6 +28,10 @@ public final class UpgradeHistoryEntryArgs extends com.pulumi.resources.Resource
     @Import(name="action")
     private @Nullable Output<UpgradeHistoryEntryAction> action;
 
+    /**
+     * @return Action. Rolloback or Upgrade.
+     * 
+     */
     public Optional<Output<UpgradeHistoryEntryAction>> action() {
         return Optional.ofNullable(this.action);
     }
@@ -39,6 +43,10 @@ public final class UpgradeHistoryEntryArgs extends com.pulumi.resources.Resource
     @Import(name="containerImage")
     private @Nullable Output<String> containerImage;
 
+    /**
+     * @return The container image before this instance upgrade.
+     * 
+     */
     public Optional<Output<String>> containerImage() {
         return Optional.ofNullable(this.containerImage);
     }
@@ -50,6 +58,10 @@ public final class UpgradeHistoryEntryArgs extends com.pulumi.resources.Resource
     @Import(name="createTime")
     private @Nullable Output<String> createTime;
 
+    /**
+     * @return The time that this instance upgrade history entry is created.
+     * 
+     */
     public Optional<Output<String>> createTime() {
         return Optional.ofNullable(this.createTime);
     }
@@ -61,6 +73,10 @@ public final class UpgradeHistoryEntryArgs extends com.pulumi.resources.Resource
     @Import(name="framework")
     private @Nullable Output<String> framework;
 
+    /**
+     * @return The framework of this notebook instance.
+     * 
+     */
     public Optional<Output<String>> framework() {
         return Optional.ofNullable(this.framework);
     }
@@ -72,6 +88,10 @@ public final class UpgradeHistoryEntryArgs extends com.pulumi.resources.Resource
     @Import(name="snapshot")
     private @Nullable Output<String> snapshot;
 
+    /**
+     * @return The snapshot of the boot disk of this notebook instance before upgrade.
+     * 
+     */
     public Optional<Output<String>> snapshot() {
         return Optional.ofNullable(this.snapshot);
     }
@@ -83,6 +103,10 @@ public final class UpgradeHistoryEntryArgs extends com.pulumi.resources.Resource
     @Import(name="state")
     private @Nullable Output<UpgradeHistoryEntryState> state;
 
+    /**
+     * @return The state of this instance upgrade history entry.
+     * 
+     */
     public Optional<Output<UpgradeHistoryEntryState>> state() {
         return Optional.ofNullable(this.state);
     }
@@ -94,6 +118,10 @@ public final class UpgradeHistoryEntryArgs extends com.pulumi.resources.Resource
     @Import(name="targetImage")
     private @Nullable Output<String> targetImage;
 
+    /**
+     * @return Target VM Image. Format: ainotebooks-vm/project/image-name/name.
+     * 
+     */
     public Optional<Output<String>> targetImage() {
         return Optional.ofNullable(this.targetImage);
     }
@@ -105,6 +133,10 @@ public final class UpgradeHistoryEntryArgs extends com.pulumi.resources.Resource
     @Import(name="targetVersion")
     private @Nullable Output<String> targetVersion;
 
+    /**
+     * @return Target VM Version, like m63.
+     * 
+     */
     public Optional<Output<String>> targetVersion() {
         return Optional.ofNullable(this.targetVersion);
     }
@@ -116,6 +148,10 @@ public final class UpgradeHistoryEntryArgs extends com.pulumi.resources.Resource
     @Import(name="version")
     private @Nullable Output<String> version;
 
+    /**
+     * @return The version of the notebook instance before this upgrade.
+     * 
+     */
     public Optional<Output<String>> version() {
         return Optional.ofNullable(this.version);
     }
@@ -127,6 +163,10 @@ public final class UpgradeHistoryEntryArgs extends com.pulumi.resources.Resource
     @Import(name="vmImage")
     private @Nullable Output<String> vmImage;
 
+    /**
+     * @return The VM image before this instance upgrade.
+     * 
+     */
     public Optional<Output<String>> vmImage() {
         return Optional.ofNullable(this.vmImage);
     }
@@ -164,92 +204,212 @@ public final class UpgradeHistoryEntryArgs extends com.pulumi.resources.Resource
             $ = new UpgradeHistoryEntryArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action Action. Rolloback or Upgrade.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(@Nullable Output<UpgradeHistoryEntryAction> action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param action Action. Rolloback or Upgrade.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(UpgradeHistoryEntryAction action) {
             return action(Output.of(action));
         }
 
+        /**
+         * @param containerImage The container image before this instance upgrade.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerImage(@Nullable Output<String> containerImage) {
             $.containerImage = containerImage;
             return this;
         }
 
+        /**
+         * @param containerImage The container image before this instance upgrade.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerImage(String containerImage) {
             return containerImage(Output.of(containerImage));
         }
 
+        /**
+         * @param createTime The time that this instance upgrade history entry is created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTime(@Nullable Output<String> createTime) {
             $.createTime = createTime;
             return this;
         }
 
+        /**
+         * @param createTime The time that this instance upgrade history entry is created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTime(String createTime) {
             return createTime(Output.of(createTime));
         }
 
+        /**
+         * @param framework The framework of this notebook instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder framework(@Nullable Output<String> framework) {
             $.framework = framework;
             return this;
         }
 
+        /**
+         * @param framework The framework of this notebook instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder framework(String framework) {
             return framework(Output.of(framework));
         }
 
+        /**
+         * @param snapshot The snapshot of the boot disk of this notebook instance before upgrade.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshot(@Nullable Output<String> snapshot) {
             $.snapshot = snapshot;
             return this;
         }
 
+        /**
+         * @param snapshot The snapshot of the boot disk of this notebook instance before upgrade.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshot(String snapshot) {
             return snapshot(Output.of(snapshot));
         }
 
+        /**
+         * @param state The state of this instance upgrade history entry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable Output<UpgradeHistoryEntryState> state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param state The state of this instance upgrade history entry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(UpgradeHistoryEntryState state) {
             return state(Output.of(state));
         }
 
+        /**
+         * @param targetImage Target VM Image. Format: ainotebooks-vm/project/image-name/name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetImage(@Nullable Output<String> targetImage) {
             $.targetImage = targetImage;
             return this;
         }
 
+        /**
+         * @param targetImage Target VM Image. Format: ainotebooks-vm/project/image-name/name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetImage(String targetImage) {
             return targetImage(Output.of(targetImage));
         }
 
+        /**
+         * @param targetVersion Target VM Version, like m63.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetVersion(@Nullable Output<String> targetVersion) {
             $.targetVersion = targetVersion;
             return this;
         }
 
+        /**
+         * @param targetVersion Target VM Version, like m63.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetVersion(String targetVersion) {
             return targetVersion(Output.of(targetVersion));
         }
 
+        /**
+         * @param version The version of the notebook instance before this upgrade.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable Output<String> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version The version of the notebook instance before this upgrade.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             return version(Output.of(version));
         }
 
+        /**
+         * @param vmImage The VM image before this instance upgrade.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmImage(@Nullable Output<String> vmImage) {
             $.vmImage = vmImage;
             return this;
         }
 
+        /**
+         * @param vmImage The VM image before this instance upgrade.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmImage(String vmImage) {
             return vmImage(Output.of(vmImage));
         }

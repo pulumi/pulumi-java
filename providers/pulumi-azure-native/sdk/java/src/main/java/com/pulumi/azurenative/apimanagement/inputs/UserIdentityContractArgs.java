@@ -26,6 +26,10 @@ public final class UserIdentityContractArgs extends com.pulumi.resources.Resourc
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Identifier value within provider.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -37,6 +41,10 @@ public final class UserIdentityContractArgs extends com.pulumi.resources.Resourc
     @Import(name="provider")
     private @Nullable Output<String> provider;
 
+    /**
+     * @return Identity provider name.
+     * 
+     */
     public Optional<Output<String>> provider() {
         return Optional.ofNullable(this.provider);
     }
@@ -66,20 +74,44 @@ public final class UserIdentityContractArgs extends com.pulumi.resources.Resourc
             $ = new UserIdentityContractArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Identifier value within provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Identifier value within provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param provider Identity provider name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provider(@Nullable Output<String> provider) {
             $.provider = provider;
             return this;
         }
 
+        /**
+         * @param provider Identity provider name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provider(String provider) {
             return provider(Output.of(provider));
         }

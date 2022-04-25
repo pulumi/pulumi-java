@@ -10,28 +10,28 @@ import java.util.Objects;
 @CustomType
 public final class GetDefaultServiceAccountResult {
     /**
-     * The display name for the service account.
+     * @return The display name for the service account.
      * 
      */
     private final String displayName;
     /**
-     * Email address of the default service account used by VMs running in this project
+     * @return Email address of the default service account used by VMs running in this project
      * 
      */
     private final String email;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     /**
-     * The fully-qualified name of the service account.
+     * @return The fully-qualified name of the service account.
      * 
      */
     private final String name;
     private final String project;
     /**
-     * The unique id of the service account.
+     * @return The unique id of the service account.
      * 
      */
     private final String uniqueId;
@@ -53,30 +53,30 @@ public final class GetDefaultServiceAccountResult {
     }
 
     /**
-     * The display name for the service account.
+     * @return The display name for the service account.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * Email address of the default service account used by VMs running in this project
+     * @return Email address of the default service account used by VMs running in this project
      * 
-    */
+     */
     public String email() {
         return this.email;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The fully-qualified name of the service account.
+     * @return The fully-qualified name of the service account.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
@@ -84,9 +84,9 @@ public final class GetDefaultServiceAccountResult {
         return this.project;
     }
     /**
-     * The unique id of the service account.
+     * @return The unique id of the service account.
      * 
-    */
+     */
     public String uniqueId() {
         return this.uniqueId;
     }

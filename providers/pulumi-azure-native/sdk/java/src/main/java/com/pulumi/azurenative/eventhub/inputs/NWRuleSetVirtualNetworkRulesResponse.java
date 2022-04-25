@@ -26,6 +26,10 @@ public final class NWRuleSetVirtualNetworkRulesResponse extends com.pulumi.resou
     @Import(name="ignoreMissingVnetServiceEndpoint")
     private @Nullable Boolean ignoreMissingVnetServiceEndpoint;
 
+    /**
+     * @return Value that indicates whether to ignore missing VNet Service Endpoint
+     * 
+     */
     public Optional<Boolean> ignoreMissingVnetServiceEndpoint() {
         return Optional.ofNullable(this.ignoreMissingVnetServiceEndpoint);
     }
@@ -37,6 +41,10 @@ public final class NWRuleSetVirtualNetworkRulesResponse extends com.pulumi.resou
     @Import(name="subnet")
     private @Nullable SubnetResponse subnet;
 
+    /**
+     * @return Subnet properties
+     * 
+     */
     public Optional<SubnetResponse> subnet() {
         return Optional.ofNullable(this.subnet);
     }
@@ -66,11 +74,23 @@ public final class NWRuleSetVirtualNetworkRulesResponse extends com.pulumi.resou
             $ = new NWRuleSetVirtualNetworkRulesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ignoreMissingVnetServiceEndpoint Value that indicates whether to ignore missing VNet Service Endpoint
+         * 
+         * @return builder
+         * 
+         */
         public Builder ignoreMissingVnetServiceEndpoint(@Nullable Boolean ignoreMissingVnetServiceEndpoint) {
             $.ignoreMissingVnetServiceEndpoint = ignoreMissingVnetServiceEndpoint;
             return this;
         }
 
+        /**
+         * @param subnet Subnet properties
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnet(@Nullable SubnetResponse subnet) {
             $.subnet = subnet;
             return this;

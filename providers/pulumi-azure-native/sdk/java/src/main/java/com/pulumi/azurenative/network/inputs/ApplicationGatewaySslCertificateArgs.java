@@ -26,6 +26,10 @@ public final class ApplicationGatewaySslCertificateArgs extends com.pulumi.resou
     @Import(name="data")
     private @Nullable Output<String> data;
 
+    /**
+     * @return Base-64 encoded pfx certificate. Only applicable in PUT Request.
+     * 
+     */
     public Optional<Output<String>> data() {
         return Optional.ofNullable(this.data);
     }
@@ -37,6 +41,10 @@ public final class ApplicationGatewaySslCertificateArgs extends com.pulumi.resou
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -48,6 +56,10 @@ public final class ApplicationGatewaySslCertificateArgs extends com.pulumi.resou
     @Import(name="keyVaultSecretId")
     private @Nullable Output<String> keyVaultSecretId;
 
+    /**
+     * @return Secret Id of (base-64 encoded unencrypted pfx) &#39;Secret&#39; or &#39;Certificate&#39; object stored in KeyVault.
+     * 
+     */
     public Optional<Output<String>> keyVaultSecretId() {
         return Optional.ofNullable(this.keyVaultSecretId);
     }
@@ -59,6 +71,10 @@ public final class ApplicationGatewaySslCertificateArgs extends com.pulumi.resou
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the SSL certificate that is unique within an Application Gateway.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -70,6 +86,10 @@ public final class ApplicationGatewaySslCertificateArgs extends com.pulumi.resou
     @Import(name="password")
     private @Nullable Output<String> password;
 
+    /**
+     * @return Password for the pfx file specified in data. Only applicable in PUT request.
+     * 
+     */
     public Optional<Output<String>> password() {
         return Optional.ofNullable(this.password);
     }
@@ -102,47 +122,107 @@ public final class ApplicationGatewaySslCertificateArgs extends com.pulumi.resou
             $ = new ApplicationGatewaySslCertificateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param data Base-64 encoded pfx certificate. Only applicable in PUT Request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder data(@Nullable Output<String> data) {
             $.data = data;
             return this;
         }
 
+        /**
+         * @param data Base-64 encoded pfx certificate. Only applicable in PUT Request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder data(String data) {
             return data(Output.of(data));
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param keyVaultSecretId Secret Id of (base-64 encoded unencrypted pfx) &#39;Secret&#39; or &#39;Certificate&#39; object stored in KeyVault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultSecretId(@Nullable Output<String> keyVaultSecretId) {
             $.keyVaultSecretId = keyVaultSecretId;
             return this;
         }
 
+        /**
+         * @param keyVaultSecretId Secret Id of (base-64 encoded unencrypted pfx) &#39;Secret&#39; or &#39;Certificate&#39; object stored in KeyVault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultSecretId(String keyVaultSecretId) {
             return keyVaultSecretId(Output.of(keyVaultSecretId));
         }
 
+        /**
+         * @param name Name of the SSL certificate that is unique within an Application Gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the SSL certificate that is unique within an Application Gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param password Password for the pfx file specified in data. Only applicable in PUT request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(@Nullable Output<String> password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param password Password for the pfx file specified in data. Only applicable in PUT request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(String password) {
             return password(Output.of(password));
         }

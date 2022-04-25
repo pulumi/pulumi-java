@@ -27,6 +27,10 @@ public final class KPIResourceHealthDetailsResponse extends com.pulumi.resources
     @Import(name="resourceHealthDetails")
     private @Nullable List<ResourceHealthDetailsResponse> resourceHealthDetails;
 
+    /**
+     * @return Resource Health Status
+     * 
+     */
     public Optional<List<ResourceHealthDetailsResponse>> resourceHealthDetails() {
         return Optional.ofNullable(this.resourceHealthDetails);
     }
@@ -38,6 +42,10 @@ public final class KPIResourceHealthDetailsResponse extends com.pulumi.resources
     @Import(name="resourceHealthStatus")
     private @Nullable String resourceHealthStatus;
 
+    /**
+     * @return Resource Health Status
+     * 
+     */
     public Optional<String> resourceHealthStatus() {
         return Optional.ofNullable(this.resourceHealthStatus);
     }
@@ -67,15 +75,33 @@ public final class KPIResourceHealthDetailsResponse extends com.pulumi.resources
             $ = new KPIResourceHealthDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceHealthDetails Resource Health Status
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceHealthDetails(@Nullable List<ResourceHealthDetailsResponse> resourceHealthDetails) {
             $.resourceHealthDetails = resourceHealthDetails;
             return this;
         }
 
+        /**
+         * @param resourceHealthDetails Resource Health Status
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceHealthDetails(ResourceHealthDetailsResponse... resourceHealthDetails) {
             return resourceHealthDetails(List.of(resourceHealthDetails));
         }
 
+        /**
+         * @param resourceHealthStatus Resource Health Status
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceHealthStatus(@Nullable String resourceHealthStatus) {
             $.resourceHealthStatus = resourceHealthStatus;
             return this;

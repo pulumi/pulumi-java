@@ -27,6 +27,10 @@ public final class StatusCodesRangeBasedTriggerArgs extends com.pulumi.resources
     @Import(name="count")
     private @Nullable Output<Integer> count;
 
+    /**
+     * @return Request Count.
+     * 
+     */
     public Optional<Output<Integer>> count() {
         return Optional.ofNullable(this.count);
     }
@@ -45,6 +49,10 @@ public final class StatusCodesRangeBasedTriggerArgs extends com.pulumi.resources
     @Import(name="statusCodes")
     private @Nullable Output<String> statusCodes;
 
+    /**
+     * @return HTTP status code.
+     * 
+     */
     public Optional<Output<String>> statusCodes() {
         return Optional.ofNullable(this.statusCodes);
     }
@@ -56,6 +64,10 @@ public final class StatusCodesRangeBasedTriggerArgs extends com.pulumi.resources
     @Import(name="timeInterval")
     private @Nullable Output<String> timeInterval;
 
+    /**
+     * @return Time interval.
+     * 
+     */
     public Optional<Output<String>> timeInterval() {
         return Optional.ofNullable(this.timeInterval);
     }
@@ -87,11 +99,23 @@ public final class StatusCodesRangeBasedTriggerArgs extends com.pulumi.resources
             $ = new StatusCodesRangeBasedTriggerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param count Request Count.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(@Nullable Output<Integer> count) {
             $.count = count;
             return this;
         }
 
+        /**
+         * @param count Request Count.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(Integer count) {
             return count(Output.of(count));
         }
@@ -105,20 +129,44 @@ public final class StatusCodesRangeBasedTriggerArgs extends com.pulumi.resources
             return path(Output.of(path));
         }
 
+        /**
+         * @param statusCodes HTTP status code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statusCodes(@Nullable Output<String> statusCodes) {
             $.statusCodes = statusCodes;
             return this;
         }
 
+        /**
+         * @param statusCodes HTTP status code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statusCodes(String statusCodes) {
             return statusCodes(Output.of(statusCodes));
         }
 
+        /**
+         * @param timeInterval Time interval.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeInterval(@Nullable Output<String> timeInterval) {
             $.timeInterval = timeInterval;
             return this;
         }
 
+        /**
+         * @param timeInterval Time interval.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeInterval(String timeInterval) {
             return timeInterval(Output.of(timeInterval));
         }

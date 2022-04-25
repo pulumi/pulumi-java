@@ -23,6 +23,10 @@ public final class LanguageCodePairResponse extends com.pulumi.resources.InvokeA
     @Import(name="sourceLanguageCode", required=true)
     private String sourceLanguageCode;
 
+    /**
+     * @return The BCP-47 language code of the input text, for example, &#34;en-US&#34;. Expected to be an exact match for GlossaryTerm.language_code.
+     * 
+     */
     public String sourceLanguageCode() {
         return this.sourceLanguageCode;
     }
@@ -34,6 +38,10 @@ public final class LanguageCodePairResponse extends com.pulumi.resources.InvokeA
     @Import(name="targetLanguageCode", required=true)
     private String targetLanguageCode;
 
+    /**
+     * @return The BCP-47 language code for translation output, for example, &#34;zh-CN&#34;. Expected to be an exact match for GlossaryTerm.language_code.
+     * 
+     */
     public String targetLanguageCode() {
         return this.targetLanguageCode;
     }
@@ -63,11 +71,23 @@ public final class LanguageCodePairResponse extends com.pulumi.resources.InvokeA
             $ = new LanguageCodePairResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param sourceLanguageCode The BCP-47 language code of the input text, for example, &#34;en-US&#34;. Expected to be an exact match for GlossaryTerm.language_code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceLanguageCode(String sourceLanguageCode) {
             $.sourceLanguageCode = sourceLanguageCode;
             return this;
         }
 
+        /**
+         * @param targetLanguageCode The BCP-47 language code for translation output, for example, &#34;zh-CN&#34;. Expected to be an exact match for GlossaryTerm.language_code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetLanguageCode(String targetLanguageCode) {
             $.targetLanguageCode = targetLanguageCode;
             return this;

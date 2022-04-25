@@ -14,12 +14,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class JobDefinitionRetryStrategy {
     /**
-     * The number of times to move a job to the `RUNNABLE` status. You may specify between `1` and `10` attempts.
+     * @return The number of times to move a job to the `RUNNABLE` status. You may specify between `1` and `10` attempts.
      * 
      */
     private final @Nullable Integer attempts;
     /**
-     * The evaluate on exit conditions under which the job should be retried or failed. If this parameter is specified, then the `attempts` parameter must also be specified. You may specify up to 5 configuration blocks.
+     * @return The evaluate on exit conditions under which the job should be retried or failed. If this parameter is specified, then the `attempts` parameter must also be specified. You may specify up to 5 configuration blocks.
      * 
      */
     private final @Nullable List<JobDefinitionRetryStrategyEvaluateOnExit> evaluateOnExits;
@@ -33,16 +33,16 @@ public final class JobDefinitionRetryStrategy {
     }
 
     /**
-     * The number of times to move a job to the `RUNNABLE` status. You may specify between `1` and `10` attempts.
+     * @return The number of times to move a job to the `RUNNABLE` status. You may specify between `1` and `10` attempts.
      * 
-    */
+     */
     public Optional<Integer> attempts() {
         return Optional.ofNullable(this.attempts);
     }
     /**
-     * The evaluate on exit conditions under which the job should be retried or failed. If this parameter is specified, then the `attempts` parameter must also be specified. You may specify up to 5 configuration blocks.
+     * @return The evaluate on exit conditions under which the job should be retried or failed. If this parameter is specified, then the `attempts` parameter must also be specified. You may specify up to 5 configuration blocks.
      * 
-    */
+     */
     public List<JobDefinitionRetryStrategyEvaluateOnExit> evaluateOnExits() {
         return this.evaluateOnExits == null ? List.of() : this.evaluateOnExits;
     }

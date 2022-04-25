@@ -26,6 +26,10 @@ public final class IdentityPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return Managed service identity type.
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -37,6 +41,10 @@ public final class IdentityPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="userAssigned")
     private @Nullable UserAssignedPropertiesResponse userAssigned;
 
+    /**
+     * @return User assigned identity properties.
+     * 
+     */
     public Optional<UserAssignedPropertiesResponse> userAssigned() {
         return Optional.ofNullable(this.userAssigned);
     }
@@ -66,11 +74,23 @@ public final class IdentityPropertiesResponse extends com.pulumi.resources.Invok
             $ = new IdentityPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type Managed service identity type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param userAssigned User assigned identity properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userAssigned(@Nullable UserAssignedPropertiesResponse userAssigned) {
             $.userAssigned = userAssigned;
             return this;

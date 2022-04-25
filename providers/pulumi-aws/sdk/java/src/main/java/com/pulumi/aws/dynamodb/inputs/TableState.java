@@ -33,6 +33,10 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return The arn of the table
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -44,6 +48,10 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
     @Import(name="attributes")
     private @Nullable Output<List<TableAttributeGetArgs>> attributes;
 
+    /**
+     * @return List of nested attribute definitions. Only required for `hash_key` and `range_key` attributes. Each attribute has two properties:
+     * 
+     */
     public Optional<Output<List<TableAttributeGetArgs>>> attributes() {
         return Optional.ofNullable(this.attributes);
     }
@@ -55,6 +63,10 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
     @Import(name="billingMode")
     private @Nullable Output<String> billingMode;
 
+    /**
+     * @return Controls how you are charged for read and write throughput and how you manage capacity. The valid values are `PROVISIONED` and `PAY_PER_REQUEST`. Defaults to `PROVISIONED`.
+     * 
+     */
     public Optional<Output<String>> billingMode() {
         return Optional.ofNullable(this.billingMode);
     }
@@ -68,6 +80,12 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
     @Import(name="globalSecondaryIndexes")
     private @Nullable Output<List<TableGlobalSecondaryIndexGetArgs>> globalSecondaryIndexes;
 
+    /**
+     * @return Describe a GSI for the table;
+     * subject to the normal limits on the number of GSIs, projected
+     * attributes, etc.
+     * 
+     */
     public Optional<Output<List<TableGlobalSecondaryIndexGetArgs>>> globalSecondaryIndexes() {
         return Optional.ofNullable(this.globalSecondaryIndexes);
     }
@@ -80,6 +98,11 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
     @Import(name="hashKey")
     private @Nullable Output<String> hashKey;
 
+    /**
+     * @return The name of the hash key in the index; must be
+     * defined as an attribute in the resource.
+     * 
+     */
     public Optional<Output<String>> hashKey() {
         return Optional.ofNullable(this.hashKey);
     }
@@ -93,6 +116,12 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
     @Import(name="localSecondaryIndexes")
     private @Nullable Output<List<TableLocalSecondaryIndexGetArgs>> localSecondaryIndexes;
 
+    /**
+     * @return Describe an LSI on the table;
+     * these can only be allocated *at creation* so you cannot change this
+     * definition after you have created the resource.
+     * 
+     */
     public Optional<Output<List<TableLocalSecondaryIndexGetArgs>>> localSecondaryIndexes() {
         return Optional.ofNullable(this.localSecondaryIndexes);
     }
@@ -104,6 +133,10 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the index
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -115,6 +148,10 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
     @Import(name="pointInTimeRecovery")
     private @Nullable Output<TablePointInTimeRecoveryGetArgs> pointInTimeRecovery;
 
+    /**
+     * @return Enable point-in-time recovery options.
+     * 
+     */
     public Optional<Output<TablePointInTimeRecoveryGetArgs>> pointInTimeRecovery() {
         return Optional.ofNullable(this.pointInTimeRecovery);
     }
@@ -126,6 +163,10 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
     @Import(name="rangeKey")
     private @Nullable Output<String> rangeKey;
 
+    /**
+     * @return The name of the range key; must be defined
+     * 
+     */
     public Optional<Output<String>> rangeKey() {
         return Optional.ofNullable(this.rangeKey);
     }
@@ -137,6 +178,10 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
     @Import(name="readCapacity")
     private @Nullable Output<Integer> readCapacity;
 
+    /**
+     * @return The number of read units for this index. Must be set if billing_mode is set to PROVISIONED.
+     * 
+     */
     public Optional<Output<Integer>> readCapacity() {
         return Optional.ofNullable(this.readCapacity);
     }
@@ -148,6 +193,10 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
     @Import(name="replicas")
     private @Nullable Output<List<TableReplicaGetArgs>> replicas;
 
+    /**
+     * @return Configuration block(s) with [DynamoDB Global Tables V2 (version 2019.11.21)](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V2.html) replication configurations. Detailed below.
+     * 
+     */
     public Optional<Output<List<TableReplicaGetArgs>>> replicas() {
         return Optional.ofNullable(this.replicas);
     }
@@ -159,6 +208,10 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
     @Import(name="restoreDateTime")
     private @Nullable Output<String> restoreDateTime;
 
+    /**
+     * @return The time of the point-in-time recovery point to restore.
+     * 
+     */
     public Optional<Output<String>> restoreDateTime() {
         return Optional.ofNullable(this.restoreDateTime);
     }
@@ -170,6 +223,10 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
     @Import(name="restoreSourceName")
     private @Nullable Output<String> restoreSourceName;
 
+    /**
+     * @return The name of the table to restore. Must match the name of an existing table.
+     * 
+     */
     public Optional<Output<String>> restoreSourceName() {
         return Optional.ofNullable(this.restoreSourceName);
     }
@@ -181,6 +238,10 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
     @Import(name="restoreToLatestTime")
     private @Nullable Output<Boolean> restoreToLatestTime;
 
+    /**
+     * @return If set, restores table to the most recent point-in-time recovery point.
+     * 
+     */
     public Optional<Output<Boolean>> restoreToLatestTime() {
         return Optional.ofNullable(this.restoreToLatestTime);
     }
@@ -192,6 +253,10 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
     @Import(name="serverSideEncryption")
     private @Nullable Output<TableServerSideEncryptionGetArgs> serverSideEncryption;
 
+    /**
+     * @return Encryption at rest options. AWS DynamoDB tables are automatically encrypted at rest with an AWS owned Customer Master Key if this argument isn&#39;t specified.
+     * 
+     */
     public Optional<Output<TableServerSideEncryptionGetArgs>> serverSideEncryption() {
         return Optional.ofNullable(this.serverSideEncryption);
     }
@@ -203,6 +268,10 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
     @Import(name="streamArn")
     private @Nullable Output<String> streamArn;
 
+    /**
+     * @return The ARN of the Table Stream. Only available when `stream_enabled = true`
+     * 
+     */
     public Optional<Output<String>> streamArn() {
         return Optional.ofNullable(this.streamArn);
     }
@@ -214,6 +283,10 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
     @Import(name="streamEnabled")
     private @Nullable Output<Boolean> streamEnabled;
 
+    /**
+     * @return Indicates whether Streams are to be enabled (true) or disabled (false).
+     * 
+     */
     public Optional<Output<Boolean>> streamEnabled() {
         return Optional.ofNullable(this.streamEnabled);
     }
@@ -228,6 +301,13 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
     @Import(name="streamLabel")
     private @Nullable Output<String> streamLabel;
 
+    /**
+     * @return A timestamp, in ISO 8601 format, for this stream. Note that this timestamp is not
+     * a unique identifier for the stream on its own. However, the combination of AWS customer ID,
+     * table name and this field is guaranteed to be unique.
+     * It can be used for creating CloudWatch Alarms. Only available when `stream_enabled = true`
+     * 
+     */
     public Optional<Output<String>> streamLabel() {
         return Optional.ofNullable(this.streamLabel);
     }
@@ -239,6 +319,10 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
     @Import(name="streamViewType")
     private @Nullable Output<String> streamViewType;
 
+    /**
+     * @return When an item in the table is modified, StreamViewType determines what information is written to the table&#39;s stream. Valid values are `KEYS_ONLY`, `NEW_IMAGE`, `OLD_IMAGE`, `NEW_AND_OLD_IMAGES`.
+     * 
+     */
     public Optional<Output<String>> streamViewType() {
         return Optional.ofNullable(this.streamViewType);
     }
@@ -250,6 +334,10 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tableClass")
     private @Nullable Output<String> tableClass;
 
+    /**
+     * @return The storage class of the table. Valid values are `STANDARD` and `STANDARD_INFREQUENT_ACCESS`.
+     * 
+     */
     public Optional<Output<String>> tableClass() {
         return Optional.ofNullable(this.tableClass);
     }
@@ -261,6 +349,10 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A map of tags to populate on the created table. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -272,6 +364,10 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider .
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -283,6 +379,10 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
     @Import(name="ttl")
     private @Nullable Output<TableTtlGetArgs> ttl;
 
+    /**
+     * @return Defines ttl, has two properties, and can only be specified once:
+     * 
+     */
     public Optional<Output<TableTtlGetArgs>> ttl() {
         return Optional.ofNullable(this.ttl);
     }
@@ -294,6 +394,10 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
     @Import(name="writeCapacity")
     private @Nullable Output<Integer> writeCapacity;
 
+    /**
+     * @return The number of write units for this index. Must be set if billing_mode is set to PROVISIONED.
+     * 
+     */
     public Optional<Output<Integer>> writeCapacity() {
         return Optional.ofNullable(this.writeCapacity);
     }
@@ -345,234 +449,566 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
             $ = new TableState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn The arn of the table
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn The arn of the table
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param attributes List of nested attribute definitions. Only required for `hash_key` and `range_key` attributes. Each attribute has two properties:
+         * 
+         * @return builder
+         * 
+         */
         public Builder attributes(@Nullable Output<List<TableAttributeGetArgs>> attributes) {
             $.attributes = attributes;
             return this;
         }
 
+        /**
+         * @param attributes List of nested attribute definitions. Only required for `hash_key` and `range_key` attributes. Each attribute has two properties:
+         * 
+         * @return builder
+         * 
+         */
         public Builder attributes(List<TableAttributeGetArgs> attributes) {
             return attributes(Output.of(attributes));
         }
 
+        /**
+         * @param attributes List of nested attribute definitions. Only required for `hash_key` and `range_key` attributes. Each attribute has two properties:
+         * 
+         * @return builder
+         * 
+         */
         public Builder attributes(TableAttributeGetArgs... attributes) {
             return attributes(List.of(attributes));
         }
 
+        /**
+         * @param billingMode Controls how you are charged for read and write throughput and how you manage capacity. The valid values are `PROVISIONED` and `PAY_PER_REQUEST`. Defaults to `PROVISIONED`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder billingMode(@Nullable Output<String> billingMode) {
             $.billingMode = billingMode;
             return this;
         }
 
+        /**
+         * @param billingMode Controls how you are charged for read and write throughput and how you manage capacity. The valid values are `PROVISIONED` and `PAY_PER_REQUEST`. Defaults to `PROVISIONED`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder billingMode(String billingMode) {
             return billingMode(Output.of(billingMode));
         }
 
+        /**
+         * @param globalSecondaryIndexes Describe a GSI for the table;
+         * subject to the normal limits on the number of GSIs, projected
+         * attributes, etc.
+         * 
+         * @return builder
+         * 
+         */
         public Builder globalSecondaryIndexes(@Nullable Output<List<TableGlobalSecondaryIndexGetArgs>> globalSecondaryIndexes) {
             $.globalSecondaryIndexes = globalSecondaryIndexes;
             return this;
         }
 
+        /**
+         * @param globalSecondaryIndexes Describe a GSI for the table;
+         * subject to the normal limits on the number of GSIs, projected
+         * attributes, etc.
+         * 
+         * @return builder
+         * 
+         */
         public Builder globalSecondaryIndexes(List<TableGlobalSecondaryIndexGetArgs> globalSecondaryIndexes) {
             return globalSecondaryIndexes(Output.of(globalSecondaryIndexes));
         }
 
+        /**
+         * @param globalSecondaryIndexes Describe a GSI for the table;
+         * subject to the normal limits on the number of GSIs, projected
+         * attributes, etc.
+         * 
+         * @return builder
+         * 
+         */
         public Builder globalSecondaryIndexes(TableGlobalSecondaryIndexGetArgs... globalSecondaryIndexes) {
             return globalSecondaryIndexes(List.of(globalSecondaryIndexes));
         }
 
+        /**
+         * @param hashKey The name of the hash key in the index; must be
+         * defined as an attribute in the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hashKey(@Nullable Output<String> hashKey) {
             $.hashKey = hashKey;
             return this;
         }
 
+        /**
+         * @param hashKey The name of the hash key in the index; must be
+         * defined as an attribute in the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hashKey(String hashKey) {
             return hashKey(Output.of(hashKey));
         }
 
+        /**
+         * @param localSecondaryIndexes Describe an LSI on the table;
+         * these can only be allocated *at creation* so you cannot change this
+         * definition after you have created the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localSecondaryIndexes(@Nullable Output<List<TableLocalSecondaryIndexGetArgs>> localSecondaryIndexes) {
             $.localSecondaryIndexes = localSecondaryIndexes;
             return this;
         }
 
+        /**
+         * @param localSecondaryIndexes Describe an LSI on the table;
+         * these can only be allocated *at creation* so you cannot change this
+         * definition after you have created the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localSecondaryIndexes(List<TableLocalSecondaryIndexGetArgs> localSecondaryIndexes) {
             return localSecondaryIndexes(Output.of(localSecondaryIndexes));
         }
 
+        /**
+         * @param localSecondaryIndexes Describe an LSI on the table;
+         * these can only be allocated *at creation* so you cannot change this
+         * definition after you have created the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localSecondaryIndexes(TableLocalSecondaryIndexGetArgs... localSecondaryIndexes) {
             return localSecondaryIndexes(List.of(localSecondaryIndexes));
         }
 
+        /**
+         * @param name The name of the index
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the index
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param pointInTimeRecovery Enable point-in-time recovery options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pointInTimeRecovery(@Nullable Output<TablePointInTimeRecoveryGetArgs> pointInTimeRecovery) {
             $.pointInTimeRecovery = pointInTimeRecovery;
             return this;
         }
 
+        /**
+         * @param pointInTimeRecovery Enable point-in-time recovery options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pointInTimeRecovery(TablePointInTimeRecoveryGetArgs pointInTimeRecovery) {
             return pointInTimeRecovery(Output.of(pointInTimeRecovery));
         }
 
+        /**
+         * @param rangeKey The name of the range key; must be defined
+         * 
+         * @return builder
+         * 
+         */
         public Builder rangeKey(@Nullable Output<String> rangeKey) {
             $.rangeKey = rangeKey;
             return this;
         }
 
+        /**
+         * @param rangeKey The name of the range key; must be defined
+         * 
+         * @return builder
+         * 
+         */
         public Builder rangeKey(String rangeKey) {
             return rangeKey(Output.of(rangeKey));
         }
 
+        /**
+         * @param readCapacity The number of read units for this index. Must be set if billing_mode is set to PROVISIONED.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readCapacity(@Nullable Output<Integer> readCapacity) {
             $.readCapacity = readCapacity;
             return this;
         }
 
+        /**
+         * @param readCapacity The number of read units for this index. Must be set if billing_mode is set to PROVISIONED.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readCapacity(Integer readCapacity) {
             return readCapacity(Output.of(readCapacity));
         }
 
+        /**
+         * @param replicas Configuration block(s) with [DynamoDB Global Tables V2 (version 2019.11.21)](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V2.html) replication configurations. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicas(@Nullable Output<List<TableReplicaGetArgs>> replicas) {
             $.replicas = replicas;
             return this;
         }
 
+        /**
+         * @param replicas Configuration block(s) with [DynamoDB Global Tables V2 (version 2019.11.21)](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V2.html) replication configurations. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicas(List<TableReplicaGetArgs> replicas) {
             return replicas(Output.of(replicas));
         }
 
+        /**
+         * @param replicas Configuration block(s) with [DynamoDB Global Tables V2 (version 2019.11.21)](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V2.html) replication configurations. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicas(TableReplicaGetArgs... replicas) {
             return replicas(List.of(replicas));
         }
 
+        /**
+         * @param restoreDateTime The time of the point-in-time recovery point to restore.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restoreDateTime(@Nullable Output<String> restoreDateTime) {
             $.restoreDateTime = restoreDateTime;
             return this;
         }
 
+        /**
+         * @param restoreDateTime The time of the point-in-time recovery point to restore.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restoreDateTime(String restoreDateTime) {
             return restoreDateTime(Output.of(restoreDateTime));
         }
 
+        /**
+         * @param restoreSourceName The name of the table to restore. Must match the name of an existing table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restoreSourceName(@Nullable Output<String> restoreSourceName) {
             $.restoreSourceName = restoreSourceName;
             return this;
         }
 
+        /**
+         * @param restoreSourceName The name of the table to restore. Must match the name of an existing table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restoreSourceName(String restoreSourceName) {
             return restoreSourceName(Output.of(restoreSourceName));
         }
 
+        /**
+         * @param restoreToLatestTime If set, restores table to the most recent point-in-time recovery point.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restoreToLatestTime(@Nullable Output<Boolean> restoreToLatestTime) {
             $.restoreToLatestTime = restoreToLatestTime;
             return this;
         }
 
+        /**
+         * @param restoreToLatestTime If set, restores table to the most recent point-in-time recovery point.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restoreToLatestTime(Boolean restoreToLatestTime) {
             return restoreToLatestTime(Output.of(restoreToLatestTime));
         }
 
+        /**
+         * @param serverSideEncryption Encryption at rest options. AWS DynamoDB tables are automatically encrypted at rest with an AWS owned Customer Master Key if this argument isn&#39;t specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverSideEncryption(@Nullable Output<TableServerSideEncryptionGetArgs> serverSideEncryption) {
             $.serverSideEncryption = serverSideEncryption;
             return this;
         }
 
+        /**
+         * @param serverSideEncryption Encryption at rest options. AWS DynamoDB tables are automatically encrypted at rest with an AWS owned Customer Master Key if this argument isn&#39;t specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverSideEncryption(TableServerSideEncryptionGetArgs serverSideEncryption) {
             return serverSideEncryption(Output.of(serverSideEncryption));
         }
 
+        /**
+         * @param streamArn The ARN of the Table Stream. Only available when `stream_enabled = true`
+         * 
+         * @return builder
+         * 
+         */
         public Builder streamArn(@Nullable Output<String> streamArn) {
             $.streamArn = streamArn;
             return this;
         }
 
+        /**
+         * @param streamArn The ARN of the Table Stream. Only available when `stream_enabled = true`
+         * 
+         * @return builder
+         * 
+         */
         public Builder streamArn(String streamArn) {
             return streamArn(Output.of(streamArn));
         }
 
+        /**
+         * @param streamEnabled Indicates whether Streams are to be enabled (true) or disabled (false).
+         * 
+         * @return builder
+         * 
+         */
         public Builder streamEnabled(@Nullable Output<Boolean> streamEnabled) {
             $.streamEnabled = streamEnabled;
             return this;
         }
 
+        /**
+         * @param streamEnabled Indicates whether Streams are to be enabled (true) or disabled (false).
+         * 
+         * @return builder
+         * 
+         */
         public Builder streamEnabled(Boolean streamEnabled) {
             return streamEnabled(Output.of(streamEnabled));
         }
 
+        /**
+         * @param streamLabel A timestamp, in ISO 8601 format, for this stream. Note that this timestamp is not
+         * a unique identifier for the stream on its own. However, the combination of AWS customer ID,
+         * table name and this field is guaranteed to be unique.
+         * It can be used for creating CloudWatch Alarms. Only available when `stream_enabled = true`
+         * 
+         * @return builder
+         * 
+         */
         public Builder streamLabel(@Nullable Output<String> streamLabel) {
             $.streamLabel = streamLabel;
             return this;
         }
 
+        /**
+         * @param streamLabel A timestamp, in ISO 8601 format, for this stream. Note that this timestamp is not
+         * a unique identifier for the stream on its own. However, the combination of AWS customer ID,
+         * table name and this field is guaranteed to be unique.
+         * It can be used for creating CloudWatch Alarms. Only available when `stream_enabled = true`
+         * 
+         * @return builder
+         * 
+         */
         public Builder streamLabel(String streamLabel) {
             return streamLabel(Output.of(streamLabel));
         }
 
+        /**
+         * @param streamViewType When an item in the table is modified, StreamViewType determines what information is written to the table&#39;s stream. Valid values are `KEYS_ONLY`, `NEW_IMAGE`, `OLD_IMAGE`, `NEW_AND_OLD_IMAGES`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streamViewType(@Nullable Output<String> streamViewType) {
             $.streamViewType = streamViewType;
             return this;
         }
 
+        /**
+         * @param streamViewType When an item in the table is modified, StreamViewType determines what information is written to the table&#39;s stream. Valid values are `KEYS_ONLY`, `NEW_IMAGE`, `OLD_IMAGE`, `NEW_AND_OLD_IMAGES`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streamViewType(String streamViewType) {
             return streamViewType(Output.of(streamViewType));
         }
 
+        /**
+         * @param tableClass The storage class of the table. Valid values are `STANDARD` and `STANDARD_INFREQUENT_ACCESS`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableClass(@Nullable Output<String> tableClass) {
             $.tableClass = tableClass;
             return this;
         }
 
+        /**
+         * @param tableClass The storage class of the table. Valid values are `STANDARD` and `STANDARD_INFREQUENT_ACCESS`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableClass(String tableClass) {
             return tableClass(Output.of(tableClass));
         }
 
+        /**
+         * @param tags A map of tags to populate on the created table. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A map of tags to populate on the created table. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }
 
+        /**
+         * @param ttl Defines ttl, has two properties, and can only be specified once:
+         * 
+         * @return builder
+         * 
+         */
         public Builder ttl(@Nullable Output<TableTtlGetArgs> ttl) {
             $.ttl = ttl;
             return this;
         }
 
+        /**
+         * @param ttl Defines ttl, has two properties, and can only be specified once:
+         * 
+         * @return builder
+         * 
+         */
         public Builder ttl(TableTtlGetArgs ttl) {
             return ttl(Output.of(ttl));
         }
 
+        /**
+         * @param writeCapacity The number of write units for this index. Must be set if billing_mode is set to PROVISIONED.
+         * 
+         * @return builder
+         * 
+         */
         public Builder writeCapacity(@Nullable Output<Integer> writeCapacity) {
             $.writeCapacity = writeCapacity;
             return this;
         }
 
+        /**
+         * @param writeCapacity The number of write units for this index. Must be set if billing_mode is set to PROVISIONED.
+         * 
+         * @return builder
+         * 
+         */
         public Builder writeCapacity(Integer writeCapacity) {
             return writeCapacity(Output.of(writeCapacity));
         }

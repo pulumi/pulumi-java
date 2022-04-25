@@ -23,6 +23,10 @@ public final class RelationshipTypeFieldMappingResponse extends com.pulumi.resou
     @Import(name="profileFieldName", required=true)
     private String profileFieldName;
 
+    /**
+     * @return Specifies the fieldName in profile.
+     * 
+     */
     public String profileFieldName() {
         return this.profileFieldName;
     }
@@ -34,6 +38,10 @@ public final class RelationshipTypeFieldMappingResponse extends com.pulumi.resou
     @Import(name="relatedProfileKeyProperty", required=true)
     private String relatedProfileKeyProperty;
 
+    /**
+     * @return Specifies the KeyProperty (from StrongId) of the related profile.
+     * 
+     */
     public String relatedProfileKeyProperty() {
         return this.relatedProfileKeyProperty;
     }
@@ -63,11 +71,23 @@ public final class RelationshipTypeFieldMappingResponse extends com.pulumi.resou
             $ = new RelationshipTypeFieldMappingResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param profileFieldName Specifies the fieldName in profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder profileFieldName(String profileFieldName) {
             $.profileFieldName = profileFieldName;
             return this;
         }
 
+        /**
+         * @param relatedProfileKeyProperty Specifies the KeyProperty (from StrongId) of the related profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder relatedProfileKeyProperty(String relatedProfileKeyProperty) {
             $.relatedProfileKeyProperty = relatedProfileKeyProperty;
             return this;

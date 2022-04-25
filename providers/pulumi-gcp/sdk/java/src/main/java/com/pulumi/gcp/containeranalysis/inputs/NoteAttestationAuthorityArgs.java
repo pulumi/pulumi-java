@@ -28,6 +28,18 @@ public final class NoteAttestationAuthorityArgs extends com.pulumi.resources.Res
     @Import(name="hint", required=true)
     private Output<NoteAttestationAuthorityHintArgs> hint;
 
+    /**
+     * @return This submessage provides human-readable hints about the purpose of
+     * the AttestationAuthority. Because the name of a Note acts as its
+     * resource reference, it is important to disambiguate the canonical
+     * name of the Note (which might be a UUID for security purposes)
+     * from &#34;readable&#34; names more suitable for debug output. Note that
+     * these hints should NOT be used to look up AttestationAuthorities
+     * in security sensitive contexts, such as when looking up
+     * Attestations to verify.
+     * Structure is documented below.
+     * 
+     */
     public Output<NoteAttestationAuthorityHintArgs> hint() {
         return this.hint;
     }
@@ -56,11 +68,39 @@ public final class NoteAttestationAuthorityArgs extends com.pulumi.resources.Res
             $ = new NoteAttestationAuthorityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hint This submessage provides human-readable hints about the purpose of
+         * the AttestationAuthority. Because the name of a Note acts as its
+         * resource reference, it is important to disambiguate the canonical
+         * name of the Note (which might be a UUID for security purposes)
+         * from &#34;readable&#34; names more suitable for debug output. Note that
+         * these hints should NOT be used to look up AttestationAuthorities
+         * in security sensitive contexts, such as when looking up
+         * Attestations to verify.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hint(Output<NoteAttestationAuthorityHintArgs> hint) {
             $.hint = hint;
             return this;
         }
 
+        /**
+         * @param hint This submessage provides human-readable hints about the purpose of
+         * the AttestationAuthority. Because the name of a Note acts as its
+         * resource reference, it is important to disambiguate the canonical
+         * name of the Note (which might be a UUID for security purposes)
+         * from &#34;readable&#34; names more suitable for debug output. Note that
+         * these hints should NOT be used to look up AttestationAuthorities
+         * in security sensitive contexts, such as when looking up
+         * Attestations to verify.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hint(NoteAttestationAuthorityHintArgs hint) {
             return hint(Output.of(hint));
         }

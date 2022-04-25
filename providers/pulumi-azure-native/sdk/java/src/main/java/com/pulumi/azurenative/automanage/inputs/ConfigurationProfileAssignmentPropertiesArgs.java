@@ -28,6 +28,10 @@ public final class ConfigurationProfileAssignmentPropertiesArgs extends com.pulu
     @Import(name="accountId")
     private @Nullable Output<String> accountId;
 
+    /**
+     * @return The Automanage account ARM Resource URI
+     * 
+     */
     public Optional<Output<String>> accountId() {
         return Optional.ofNullable(this.accountId);
     }
@@ -39,6 +43,10 @@ public final class ConfigurationProfileAssignmentPropertiesArgs extends com.pulu
     @Import(name="configurationProfile")
     private @Nullable Output<Either<String,ConfigurationProfile>> configurationProfile;
 
+    /**
+     * @return A value indicating configuration profile.
+     * 
+     */
     public Optional<Output<Either<String,ConfigurationProfile>>> configurationProfile() {
         return Optional.ofNullable(this.configurationProfile);
     }
@@ -50,6 +58,10 @@ public final class ConfigurationProfileAssignmentPropertiesArgs extends com.pulu
     @Import(name="configurationProfilePreferenceId")
     private @Nullable Output<String> configurationProfilePreferenceId;
 
+    /**
+     * @return The configuration profile custom preferences ARM resource URI
+     * 
+     */
     public Optional<Output<String>> configurationProfilePreferenceId() {
         return Optional.ofNullable(this.configurationProfilePreferenceId);
     }
@@ -61,6 +73,10 @@ public final class ConfigurationProfileAssignmentPropertiesArgs extends com.pulu
     @Import(name="targetId")
     private @Nullable Output<String> targetId;
 
+    /**
+     * @return The target VM resource URI
+     * 
+     */
     public Optional<Output<String>> targetId() {
         return Optional.ofNullable(this.targetId);
     }
@@ -92,46 +108,106 @@ public final class ConfigurationProfileAssignmentPropertiesArgs extends com.pulu
             $ = new ConfigurationProfileAssignmentPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountId The Automanage account ARM Resource URI
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountId(@Nullable Output<String> accountId) {
             $.accountId = accountId;
             return this;
         }
 
+        /**
+         * @param accountId The Automanage account ARM Resource URI
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountId(String accountId) {
             return accountId(Output.of(accountId));
         }
 
+        /**
+         * @param configurationProfile A value indicating configuration profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationProfile(@Nullable Output<Either<String,ConfigurationProfile>> configurationProfile) {
             $.configurationProfile = configurationProfile;
             return this;
         }
 
+        /**
+         * @param configurationProfile A value indicating configuration profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationProfile(Either<String,ConfigurationProfile> configurationProfile) {
             return configurationProfile(Output.of(configurationProfile));
         }
 
+        /**
+         * @param configurationProfile A value indicating configuration profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationProfile(String configurationProfile) {
             return configurationProfile(Either.ofLeft(configurationProfile));
         }
 
+        /**
+         * @param configurationProfile A value indicating configuration profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationProfile(ConfigurationProfile configurationProfile) {
             return configurationProfile(Either.ofRight(configurationProfile));
         }
 
+        /**
+         * @param configurationProfilePreferenceId The configuration profile custom preferences ARM resource URI
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationProfilePreferenceId(@Nullable Output<String> configurationProfilePreferenceId) {
             $.configurationProfilePreferenceId = configurationProfilePreferenceId;
             return this;
         }
 
+        /**
+         * @param configurationProfilePreferenceId The configuration profile custom preferences ARM resource URI
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationProfilePreferenceId(String configurationProfilePreferenceId) {
             return configurationProfilePreferenceId(Output.of(configurationProfilePreferenceId));
         }
 
+        /**
+         * @param targetId The target VM resource URI
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetId(@Nullable Output<String> targetId) {
             $.targetId = targetId;
             return this;
         }
 
+        /**
+         * @param targetId The target VM resource URI
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetId(String targetId) {
             return targetId(Output.of(targetId));
         }

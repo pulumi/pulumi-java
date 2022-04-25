@@ -30,6 +30,10 @@ public final class SetVariableActivityResponse extends com.pulumi.resources.Invo
     @Import(name="dependsOn")
     private @Nullable List<ActivityDependencyResponse> dependsOn;
 
+    /**
+     * @return Activity depends on condition.
+     * 
+     */
     public Optional<List<ActivityDependencyResponse>> dependsOn() {
         return Optional.ofNullable(this.dependsOn);
     }
@@ -41,6 +45,10 @@ public final class SetVariableActivityResponse extends com.pulumi.resources.Invo
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Activity description.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -52,6 +60,10 @@ public final class SetVariableActivityResponse extends com.pulumi.resources.Invo
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Activity name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -64,6 +76,11 @@ public final class SetVariableActivityResponse extends com.pulumi.resources.Invo
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of activity.
+     * Expected value is &#39;SetVariable&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -75,6 +92,10 @@ public final class SetVariableActivityResponse extends com.pulumi.resources.Invo
     @Import(name="userProperties")
     private @Nullable List<UserPropertyResponse> userProperties;
 
+    /**
+     * @return Activity user properties.
+     * 
+     */
     public Optional<List<UserPropertyResponse>> userProperties() {
         return Optional.ofNullable(this.userProperties);
     }
@@ -86,6 +107,10 @@ public final class SetVariableActivityResponse extends com.pulumi.resources.Invo
     @Import(name="value")
     private @Nullable Object value;
 
+    /**
+     * @return Value to be set. Could be a static value or Expression
+     * 
+     */
     public Optional<Object> value() {
         return Optional.ofNullable(this.value);
     }
@@ -97,6 +122,10 @@ public final class SetVariableActivityResponse extends com.pulumi.resources.Invo
     @Import(name="variableName")
     private @Nullable String variableName;
 
+    /**
+     * @return Name of the variable whose value needs to be set.
+     * 
+     */
     public Optional<String> variableName() {
         return Optional.ofNullable(this.variableName);
     }
@@ -131,44 +160,99 @@ public final class SetVariableActivityResponse extends com.pulumi.resources.Invo
             $ = new SetVariableActivityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dependsOn Activity depends on condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
             $.dependsOn = dependsOn;
             return this;
         }
 
+        /**
+         * @param dependsOn Activity depends on condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(ActivityDependencyResponse... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
 
+        /**
+         * @param description Activity description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param name Activity name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param type Type of activity.
+         * Expected value is &#39;SetVariable&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param userProperties Activity user properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
             $.userProperties = userProperties;
             return this;
         }
 
+        /**
+         * @param userProperties Activity user properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProperties(UserPropertyResponse... userProperties) {
             return userProperties(List.of(userProperties));
         }
 
+        /**
+         * @param value Value to be set. Could be a static value or Expression
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable Object value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param variableName Name of the variable whose value needs to be set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder variableName(@Nullable String variableName) {
             $.variableName = variableName;
             return this;

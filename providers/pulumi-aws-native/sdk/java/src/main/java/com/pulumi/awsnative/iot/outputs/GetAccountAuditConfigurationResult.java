@@ -16,7 +16,7 @@ public final class GetAccountAuditConfigurationResult {
     private final @Nullable AccountAuditConfigurationAuditCheckConfigurations auditCheckConfigurations;
     private final @Nullable AccountAuditConfigurationAuditNotificationTargetConfigurations auditNotificationTargetConfigurations;
     /**
-     * The ARN of the role that grants permission to AWS IoT to access information about your devices, policies, certificates and other items as required when performing an audit.
+     * @return The ARN of the role that grants permission to AWS IoT to access information about your devices, policies, certificates and other items as required when performing an audit.
      * 
      */
     private final @Nullable String roleArn;
@@ -38,9 +38,9 @@ public final class GetAccountAuditConfigurationResult {
         return Optional.ofNullable(this.auditNotificationTargetConfigurations);
     }
     /**
-     * The ARN of the role that grants permission to AWS IoT to access information about your devices, policies, certificates and other items as required when performing an audit.
+     * @return The ARN of the role that grants permission to AWS IoT to access information about your devices, policies, certificates and other items as required when performing an audit.
      * 
-    */
+     */
     public Optional<String> roleArn() {
         return Optional.ofNullable(this.roleArn);
     }

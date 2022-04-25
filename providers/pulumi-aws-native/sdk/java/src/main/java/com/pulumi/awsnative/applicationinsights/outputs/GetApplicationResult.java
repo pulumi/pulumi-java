@@ -18,47 +18,47 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetApplicationResult {
     /**
-     * The ARN of the ApplicationInsights application.
+     * @return The ARN of the ApplicationInsights application.
      * 
      */
     private final @Nullable String applicationARN;
     /**
-     * If set to true, application will be configured with recommended monitoring configuration.
+     * @return If set to true, application will be configured with recommended monitoring configuration.
      * 
      */
     private final @Nullable Boolean autoConfigurationEnabled;
     /**
-     * Indicates whether Application Insights can listen to CloudWatch events for the application resources.
+     * @return Indicates whether Application Insights can listen to CloudWatch events for the application resources.
      * 
      */
     private final @Nullable Boolean cWEMonitorEnabled;
     /**
-     * The monitoring settings of the components.
+     * @return The monitoring settings of the components.
      * 
      */
     private final @Nullable List<ApplicationComponentMonitoringSetting> componentMonitoringSettings;
     /**
-     * The custom grouped components.
+     * @return The custom grouped components.
      * 
      */
     private final @Nullable List<ApplicationCustomComponent> customComponents;
     /**
-     * The log pattern sets.
+     * @return The log pattern sets.
      * 
      */
     private final @Nullable List<ApplicationLogPatternSet> logPatternSets;
     /**
-     * When set to true, creates opsItems for any problems detected on an application.
+     * @return When set to true, creates opsItems for any problems detected on an application.
      * 
      */
     private final @Nullable Boolean opsCenterEnabled;
     /**
-     * The SNS topic provided to Application Insights that is associated to the created opsItem.
+     * @return The SNS topic provided to Application Insights that is associated to the created opsItem.
      * 
      */
     private final @Nullable String opsItemSNSTopicArn;
     /**
-     * The tags of Application Insights application.
+     * @return The tags of Application Insights application.
      * 
      */
     private final @Nullable List<ApplicationTag> tags;
@@ -86,65 +86,65 @@ public final class GetApplicationResult {
     }
 
     /**
-     * The ARN of the ApplicationInsights application.
+     * @return The ARN of the ApplicationInsights application.
      * 
-    */
+     */
     public Optional<String> applicationARN() {
         return Optional.ofNullable(this.applicationARN);
     }
     /**
-     * If set to true, application will be configured with recommended monitoring configuration.
+     * @return If set to true, application will be configured with recommended monitoring configuration.
      * 
-    */
+     */
     public Optional<Boolean> autoConfigurationEnabled() {
         return Optional.ofNullable(this.autoConfigurationEnabled);
     }
     /**
-     * Indicates whether Application Insights can listen to CloudWatch events for the application resources.
+     * @return Indicates whether Application Insights can listen to CloudWatch events for the application resources.
      * 
-    */
+     */
     public Optional<Boolean> cWEMonitorEnabled() {
         return Optional.ofNullable(this.cWEMonitorEnabled);
     }
     /**
-     * The monitoring settings of the components.
+     * @return The monitoring settings of the components.
      * 
-    */
+     */
     public List<ApplicationComponentMonitoringSetting> componentMonitoringSettings() {
         return this.componentMonitoringSettings == null ? List.of() : this.componentMonitoringSettings;
     }
     /**
-     * The custom grouped components.
+     * @return The custom grouped components.
      * 
-    */
+     */
     public List<ApplicationCustomComponent> customComponents() {
         return this.customComponents == null ? List.of() : this.customComponents;
     }
     /**
-     * The log pattern sets.
+     * @return The log pattern sets.
      * 
-    */
+     */
     public List<ApplicationLogPatternSet> logPatternSets() {
         return this.logPatternSets == null ? List.of() : this.logPatternSets;
     }
     /**
-     * When set to true, creates opsItems for any problems detected on an application.
+     * @return When set to true, creates opsItems for any problems detected on an application.
      * 
-    */
+     */
     public Optional<Boolean> opsCenterEnabled() {
         return Optional.ofNullable(this.opsCenterEnabled);
     }
     /**
-     * The SNS topic provided to Application Insights that is associated to the created opsItem.
+     * @return The SNS topic provided to Application Insights that is associated to the created opsItem.
      * 
-    */
+     */
     public Optional<String> opsItemSNSTopicArn() {
         return Optional.ofNullable(this.opsItemSNSTopicArn);
     }
     /**
-     * The tags of Application Insights application.
+     * @return The tags of Application Insights application.
      * 
-    */
+     */
     public List<ApplicationTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

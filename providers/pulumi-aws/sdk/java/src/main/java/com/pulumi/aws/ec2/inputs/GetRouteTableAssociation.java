@@ -20,6 +20,10 @@ public final class GetRouteTableAssociation extends com.pulumi.resources.InvokeA
     @Import(name="gatewayId", required=true)
     private String gatewayId;
 
+    /**
+     * @return ID of an Internet Gateway or Virtual Private Gateway which is connected to the Route Table (not exported if not passed as a parameter).
+     * 
+     */
     public String gatewayId() {
         return this.gatewayId;
     }
@@ -31,6 +35,10 @@ public final class GetRouteTableAssociation extends com.pulumi.resources.InvokeA
     @Import(name="main", required=true)
     private Boolean main;
 
+    /**
+     * @return Whether the association is due to the main route table.
+     * 
+     */
     public Boolean main() {
         return this.main;
     }
@@ -42,6 +50,10 @@ public final class GetRouteTableAssociation extends com.pulumi.resources.InvokeA
     @Import(name="routeTableAssociationId", required=true)
     private String routeTableAssociationId;
 
+    /**
+     * @return Association ID.
+     * 
+     */
     public String routeTableAssociationId() {
         return this.routeTableAssociationId;
     }
@@ -53,6 +65,10 @@ public final class GetRouteTableAssociation extends com.pulumi.resources.InvokeA
     @Import(name="routeTableId", required=true)
     private String routeTableId;
 
+    /**
+     * @return ID of the specific Route Table to retrieve.
+     * 
+     */
     public String routeTableId() {
         return this.routeTableId;
     }
@@ -64,6 +80,10 @@ public final class GetRouteTableAssociation extends com.pulumi.resources.InvokeA
     @Import(name="subnetId", required=true)
     private String subnetId;
 
+    /**
+     * @return ID of a Subnet which is connected to the Route Table (not exported if not passed as a parameter).
+     * 
+     */
     public String subnetId() {
         return this.subnetId;
     }
@@ -96,26 +116,56 @@ public final class GetRouteTableAssociation extends com.pulumi.resources.InvokeA
             $ = new GetRouteTableAssociation(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param gatewayId ID of an Internet Gateway or Virtual Private Gateway which is connected to the Route Table (not exported if not passed as a parameter).
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayId(String gatewayId) {
             $.gatewayId = gatewayId;
             return this;
         }
 
+        /**
+         * @param main Whether the association is due to the main route table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder main(Boolean main) {
             $.main = main;
             return this;
         }
 
+        /**
+         * @param routeTableAssociationId Association ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routeTableAssociationId(String routeTableAssociationId) {
             $.routeTableAssociationId = routeTableAssociationId;
             return this;
         }
 
+        /**
+         * @param routeTableId ID of the specific Route Table to retrieve.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routeTableId(String routeTableId) {
             $.routeTableId = routeTableId;
             return this;
         }
 
+        /**
+         * @param subnetId ID of a Subnet which is connected to the Route Table (not exported if not passed as a parameter).
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetId(String subnetId) {
             $.subnetId = subnetId;
             return this;

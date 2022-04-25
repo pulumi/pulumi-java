@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class ClusterTag {
     /**
-     * The key for the tag. May not be null.
+     * @return The key for the tag. May not be null.
      * 
      */
     private final String key;
     /**
-     * The tag&#39;s value. May be null.
+     * @return The tag&#39;s value. May be null.
      * 
      */
     private final String value;
@@ -29,16 +29,16 @@ public final class ClusterTag {
     }
 
     /**
-     * The key for the tag. May not be null.
+     * @return The key for the tag. May not be null.
      * 
-    */
+     */
     public String key() {
         return this.key;
     }
     /**
-     * The tag&#39;s value. May be null.
+     * @return The tag&#39;s value. May be null.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

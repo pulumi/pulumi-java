@@ -27,6 +27,10 @@ public final class FirewallPolicyLogAnalyticsResourcesResponse extends com.pulum
     @Import(name="defaultWorkspaceId")
     private @Nullable SubResourceResponse defaultWorkspaceId;
 
+    /**
+     * @return The default workspace Id for Firewall Policy Insights.
+     * 
+     */
     public Optional<SubResourceResponse> defaultWorkspaceId() {
         return Optional.ofNullable(this.defaultWorkspaceId);
     }
@@ -38,6 +42,10 @@ public final class FirewallPolicyLogAnalyticsResourcesResponse extends com.pulum
     @Import(name="workspaces")
     private @Nullable List<FirewallPolicyLogAnalyticsWorkspaceResponse> workspaces;
 
+    /**
+     * @return List of workspaces for Firewall Policy Insights.
+     * 
+     */
     public Optional<List<FirewallPolicyLogAnalyticsWorkspaceResponse>> workspaces() {
         return Optional.ofNullable(this.workspaces);
     }
@@ -67,16 +75,34 @@ public final class FirewallPolicyLogAnalyticsResourcesResponse extends com.pulum
             $ = new FirewallPolicyLogAnalyticsResourcesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param defaultWorkspaceId The default workspace Id for Firewall Policy Insights.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultWorkspaceId(@Nullable SubResourceResponse defaultWorkspaceId) {
             $.defaultWorkspaceId = defaultWorkspaceId;
             return this;
         }
 
+        /**
+         * @param workspaces List of workspaces for Firewall Policy Insights.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaces(@Nullable List<FirewallPolicyLogAnalyticsWorkspaceResponse> workspaces) {
             $.workspaces = workspaces;
             return this;
         }
 
+        /**
+         * @param workspaces List of workspaces for Firewall Policy Insights.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaces(FirewallPolicyLogAnalyticsWorkspaceResponse... workspaces) {
             return workspaces(List.of(workspaces));
         }

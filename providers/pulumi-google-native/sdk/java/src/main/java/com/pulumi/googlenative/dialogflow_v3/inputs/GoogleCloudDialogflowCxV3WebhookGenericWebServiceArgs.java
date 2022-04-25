@@ -28,6 +28,10 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebServiceArgs extends
     @Import(name="allowedCaCerts")
     private @Nullable Output<List<String>> allowedCaCerts;
 
+    /**
+     * @return Optional. Specifies a list of allowed custom CA certificates (in DER format) for HTTPS verification. This overrides the default SSL trust store. If this is empty or unspecified, Dialogflow will use Google&#39;s default trust store to verify certificates. N.B. Make sure the HTTPS server certificates are signed with &#34;subject alt name&#34;. For instance a certificate can be self-signed using the following command, openssl x509 -req -days 200 -in example.com.csr \ -signkey example.com.key \ -out example.com.crt \ -extfile &lt;(printf &#34;\nsubjectAltName=&#39;DNS:www.example.com&#39;&#34;)
+     * 
+     */
     public Optional<Output<List<String>>> allowedCaCerts() {
         return Optional.ofNullable(this.allowedCaCerts);
     }
@@ -39,6 +43,10 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebServiceArgs extends
     @Import(name="password")
     private @Nullable Output<String> password;
 
+    /**
+     * @return The password for HTTP Basic authentication.
+     * 
+     */
     public Optional<Output<String>> password() {
         return Optional.ofNullable(this.password);
     }
@@ -50,6 +58,10 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebServiceArgs extends
     @Import(name="requestHeaders")
     private @Nullable Output<Map<String,String>> requestHeaders;
 
+    /**
+     * @return The HTTP request headers to send together with webhook requests.
+     * 
+     */
     public Optional<Output<Map<String,String>>> requestHeaders() {
         return Optional.ofNullable(this.requestHeaders);
     }
@@ -61,6 +73,10 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebServiceArgs extends
     @Import(name="uri", required=true)
     private Output<String> uri;
 
+    /**
+     * @return The webhook URI for receiving POST requests. It must use https protocol.
+     * 
+     */
     public Output<String> uri() {
         return this.uri;
     }
@@ -72,6 +88,10 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebServiceArgs extends
     @Import(name="username")
     private @Nullable Output<String> username;
 
+    /**
+     * @return The user name for HTTP Basic authentication.
+     * 
+     */
     public Optional<Output<String>> username() {
         return Optional.ofNullable(this.username);
     }
@@ -104,51 +124,117 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebServiceArgs extends
             $ = new GoogleCloudDialogflowCxV3WebhookGenericWebServiceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowedCaCerts Optional. Specifies a list of allowed custom CA certificates (in DER format) for HTTPS verification. This overrides the default SSL trust store. If this is empty or unspecified, Dialogflow will use Google&#39;s default trust store to verify certificates. N.B. Make sure the HTTPS server certificates are signed with &#34;subject alt name&#34;. For instance a certificate can be self-signed using the following command, openssl x509 -req -days 200 -in example.com.csr \ -signkey example.com.key \ -out example.com.crt \ -extfile &lt;(printf &#34;\nsubjectAltName=&#39;DNS:www.example.com&#39;&#34;)
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedCaCerts(@Nullable Output<List<String>> allowedCaCerts) {
             $.allowedCaCerts = allowedCaCerts;
             return this;
         }
 
+        /**
+         * @param allowedCaCerts Optional. Specifies a list of allowed custom CA certificates (in DER format) for HTTPS verification. This overrides the default SSL trust store. If this is empty or unspecified, Dialogflow will use Google&#39;s default trust store to verify certificates. N.B. Make sure the HTTPS server certificates are signed with &#34;subject alt name&#34;. For instance a certificate can be self-signed using the following command, openssl x509 -req -days 200 -in example.com.csr \ -signkey example.com.key \ -out example.com.crt \ -extfile &lt;(printf &#34;\nsubjectAltName=&#39;DNS:www.example.com&#39;&#34;)
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedCaCerts(List<String> allowedCaCerts) {
             return allowedCaCerts(Output.of(allowedCaCerts));
         }
 
+        /**
+         * @param allowedCaCerts Optional. Specifies a list of allowed custom CA certificates (in DER format) for HTTPS verification. This overrides the default SSL trust store. If this is empty or unspecified, Dialogflow will use Google&#39;s default trust store to verify certificates. N.B. Make sure the HTTPS server certificates are signed with &#34;subject alt name&#34;. For instance a certificate can be self-signed using the following command, openssl x509 -req -days 200 -in example.com.csr \ -signkey example.com.key \ -out example.com.crt \ -extfile &lt;(printf &#34;\nsubjectAltName=&#39;DNS:www.example.com&#39;&#34;)
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedCaCerts(String... allowedCaCerts) {
             return allowedCaCerts(List.of(allowedCaCerts));
         }
 
+        /**
+         * @param password The password for HTTP Basic authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(@Nullable Output<String> password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param password The password for HTTP Basic authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(String password) {
             return password(Output.of(password));
         }
 
+        /**
+         * @param requestHeaders The HTTP request headers to send together with webhook requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestHeaders(@Nullable Output<Map<String,String>> requestHeaders) {
             $.requestHeaders = requestHeaders;
             return this;
         }
 
+        /**
+         * @param requestHeaders The HTTP request headers to send together with webhook requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestHeaders(Map<String,String> requestHeaders) {
             return requestHeaders(Output.of(requestHeaders));
         }
 
+        /**
+         * @param uri The webhook URI for receiving POST requests. It must use https protocol.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(Output<String> uri) {
             $.uri = uri;
             return this;
         }
 
+        /**
+         * @param uri The webhook URI for receiving POST requests. It must use https protocol.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(String uri) {
             return uri(Output.of(uri));
         }
 
+        /**
+         * @param username The user name for HTTP Basic authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(@Nullable Output<String> username) {
             $.username = username;
             return this;
         }
 
+        /**
+         * @param username The user name for HTTP Basic authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(String username) {
             return username(Output.of(username));
         }

@@ -27,6 +27,10 @@ public final class NetworkProfileResponse extends com.pulumi.resources.InvokeArg
     @Import(name="circuitId", required=true)
     private String circuitId;
 
+    /**
+     * @return Specifies the circuit id for connecting to express route.
+     * 
+     */
     public String circuitId() {
         return this.circuitId;
     }
@@ -38,6 +42,10 @@ public final class NetworkProfileResponse extends com.pulumi.resources.InvokeArg
     @Import(name="networkInterfaces")
     private @Nullable List<IpAddressResponse> networkInterfaces;
 
+    /**
+     * @return Specifies the network interfaces for the HANA instance.
+     * 
+     */
     public Optional<List<IpAddressResponse>> networkInterfaces() {
         return Optional.ofNullable(this.networkInterfaces);
     }
@@ -67,16 +75,34 @@ public final class NetworkProfileResponse extends com.pulumi.resources.InvokeArg
             $ = new NetworkProfileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param circuitId Specifies the circuit id for connecting to express route.
+         * 
+         * @return builder
+         * 
+         */
         public Builder circuitId(String circuitId) {
             $.circuitId = circuitId;
             return this;
         }
 
+        /**
+         * @param networkInterfaces Specifies the network interfaces for the HANA instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaces(@Nullable List<IpAddressResponse> networkInterfaces) {
             $.networkInterfaces = networkInterfaces;
             return this;
         }
 
+        /**
+         * @param networkInterfaces Specifies the network interfaces for the HANA instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaces(IpAddressResponse... networkInterfaces) {
             return networkInterfaces(List.of(networkInterfaces));
         }

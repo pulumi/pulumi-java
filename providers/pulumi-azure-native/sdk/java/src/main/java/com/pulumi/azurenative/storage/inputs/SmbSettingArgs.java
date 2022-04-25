@@ -27,6 +27,10 @@ public final class SmbSettingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="authenticationMethods")
     private @Nullable Output<String> authenticationMethods;
 
+    /**
+     * @return SMB authentication methods supported by server. Valid values are NTLMv2, Kerberos. Should be passed as a string with delimiter &#39;;&#39;.
+     * 
+     */
     public Optional<Output<String>> authenticationMethods() {
         return Optional.ofNullable(this.authenticationMethods);
     }
@@ -38,6 +42,10 @@ public final class SmbSettingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="channelEncryption")
     private @Nullable Output<String> channelEncryption;
 
+    /**
+     * @return SMB channel encryption supported by server. Valid values are AES-128-CCM, AES-128-GCM, AES-256-GCM. Should be passed as a string with delimiter &#39;;&#39;.
+     * 
+     */
     public Optional<Output<String>> channelEncryption() {
         return Optional.ofNullable(this.channelEncryption);
     }
@@ -49,6 +57,10 @@ public final class SmbSettingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kerberosTicketEncryption")
     private @Nullable Output<String> kerberosTicketEncryption;
 
+    /**
+     * @return Kerberos ticket encryption supported by server. Valid values are RC4-HMAC, AES-256. Should be passed as a string with delimiter &#39;;&#39;
+     * 
+     */
     public Optional<Output<String>> kerberosTicketEncryption() {
         return Optional.ofNullable(this.kerberosTicketEncryption);
     }
@@ -60,6 +72,10 @@ public final class SmbSettingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="multichannel")
     private @Nullable Output<MultichannelArgs> multichannel;
 
+    /**
+     * @return Multichannel setting. Applies to Premium FileStorage only.
+     * 
+     */
     public Optional<Output<MultichannelArgs>> multichannel() {
         return Optional.ofNullable(this.multichannel);
     }
@@ -71,6 +87,10 @@ public final class SmbSettingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="versions")
     private @Nullable Output<String> versions;
 
+    /**
+     * @return SMB protocol versions supported by server. Valid values are SMB2.1, SMB3.0, SMB3.1.1. Should be passed as a string with delimiter &#39;;&#39;.
+     * 
+     */
     public Optional<Output<String>> versions() {
         return Optional.ofNullable(this.versions);
     }
@@ -103,47 +123,107 @@ public final class SmbSettingArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SmbSettingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authenticationMethods SMB authentication methods supported by server. Valid values are NTLMv2, Kerberos. Should be passed as a string with delimiter &#39;;&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationMethods(@Nullable Output<String> authenticationMethods) {
             $.authenticationMethods = authenticationMethods;
             return this;
         }
 
+        /**
+         * @param authenticationMethods SMB authentication methods supported by server. Valid values are NTLMv2, Kerberos. Should be passed as a string with delimiter &#39;;&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationMethods(String authenticationMethods) {
             return authenticationMethods(Output.of(authenticationMethods));
         }
 
+        /**
+         * @param channelEncryption SMB channel encryption supported by server. Valid values are AES-128-CCM, AES-128-GCM, AES-256-GCM. Should be passed as a string with delimiter &#39;;&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder channelEncryption(@Nullable Output<String> channelEncryption) {
             $.channelEncryption = channelEncryption;
             return this;
         }
 
+        /**
+         * @param channelEncryption SMB channel encryption supported by server. Valid values are AES-128-CCM, AES-128-GCM, AES-256-GCM. Should be passed as a string with delimiter &#39;;&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder channelEncryption(String channelEncryption) {
             return channelEncryption(Output.of(channelEncryption));
         }
 
+        /**
+         * @param kerberosTicketEncryption Kerberos ticket encryption supported by server. Valid values are RC4-HMAC, AES-256. Should be passed as a string with delimiter &#39;;&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder kerberosTicketEncryption(@Nullable Output<String> kerberosTicketEncryption) {
             $.kerberosTicketEncryption = kerberosTicketEncryption;
             return this;
         }
 
+        /**
+         * @param kerberosTicketEncryption Kerberos ticket encryption supported by server. Valid values are RC4-HMAC, AES-256. Should be passed as a string with delimiter &#39;;&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder kerberosTicketEncryption(String kerberosTicketEncryption) {
             return kerberosTicketEncryption(Output.of(kerberosTicketEncryption));
         }
 
+        /**
+         * @param multichannel Multichannel setting. Applies to Premium FileStorage only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder multichannel(@Nullable Output<MultichannelArgs> multichannel) {
             $.multichannel = multichannel;
             return this;
         }
 
+        /**
+         * @param multichannel Multichannel setting. Applies to Premium FileStorage only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder multichannel(MultichannelArgs multichannel) {
             return multichannel(Output.of(multichannel));
         }
 
+        /**
+         * @param versions SMB protocol versions supported by server. Valid values are SMB2.1, SMB3.0, SMB3.1.1. Should be passed as a string with delimiter &#39;;&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versions(@Nullable Output<String> versions) {
             $.versions = versions;
             return this;
         }
 
+        /**
+         * @param versions SMB protocol versions supported by server. Valid values are SMB2.1, SMB3.0, SMB3.1.1. Should be passed as a string with delimiter &#39;;&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versions(String versions) {
             return versions(Output.of(versions));
         }

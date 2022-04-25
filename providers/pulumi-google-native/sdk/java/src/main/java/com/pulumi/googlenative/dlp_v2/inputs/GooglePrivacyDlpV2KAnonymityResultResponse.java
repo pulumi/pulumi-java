@@ -24,6 +24,10 @@ public final class GooglePrivacyDlpV2KAnonymityResultResponse extends com.pulumi
     @Import(name="equivalenceClassHistogramBuckets", required=true)
     private List<GooglePrivacyDlpV2KAnonymityHistogramBucketResponse> equivalenceClassHistogramBuckets;
 
+    /**
+     * @return Histogram of k-anonymity equivalence classes.
+     * 
+     */
     public List<GooglePrivacyDlpV2KAnonymityHistogramBucketResponse> equivalenceClassHistogramBuckets() {
         return this.equivalenceClassHistogramBuckets;
     }
@@ -52,11 +56,23 @@ public final class GooglePrivacyDlpV2KAnonymityResultResponse extends com.pulumi
             $ = new GooglePrivacyDlpV2KAnonymityResultResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param equivalenceClassHistogramBuckets Histogram of k-anonymity equivalence classes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder equivalenceClassHistogramBuckets(List<GooglePrivacyDlpV2KAnonymityHistogramBucketResponse> equivalenceClassHistogramBuckets) {
             $.equivalenceClassHistogramBuckets = equivalenceClassHistogramBuckets;
             return this;
         }
 
+        /**
+         * @param equivalenceClassHistogramBuckets Histogram of k-anonymity equivalence classes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder equivalenceClassHistogramBuckets(GooglePrivacyDlpV2KAnonymityHistogramBucketResponse... equivalenceClassHistogramBuckets) {
             return equivalenceClassHistogramBuckets(List.of(equivalenceClassHistogramBuckets));
         }

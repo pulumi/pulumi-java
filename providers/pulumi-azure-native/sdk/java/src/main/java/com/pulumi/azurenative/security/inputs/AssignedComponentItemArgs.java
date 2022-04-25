@@ -26,6 +26,10 @@ public final class AssignedComponentItemArgs extends com.pulumi.resources.Resour
     @Import(name="key")
     private @Nullable Output<String> key;
 
+    /**
+     * @return unique key to a security assessment object
+     * 
+     */
     public Optional<Output<String>> key() {
         return Optional.ofNullable(this.key);
     }
@@ -54,11 +58,23 @@ public final class AssignedComponentItemArgs extends com.pulumi.resources.Resour
             $ = new AssignedComponentItemArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param key unique key to a security assessment object
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(@Nullable Output<String> key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param key unique key to a security assessment object
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             return key(Output.of(key));
         }

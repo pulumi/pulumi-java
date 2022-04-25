@@ -22,82 +22,82 @@ import javax.annotation.Nullable;
 @CustomType
 public final class VirtualMachineInstanceViewResponse {
     /**
-     * Resource id of the dedicated host, on which the virtual machine is allocated through automatic placement, when the virtual machine is associated with a dedicated host group that has automatic placement enabled. &lt;br&gt;&lt;br&gt;Minimum api-version: 2020-06-01.
+     * @return Resource id of the dedicated host, on which the virtual machine is allocated through automatic placement, when the virtual machine is associated with a dedicated host group that has automatic placement enabled. &lt;br&gt;&lt;br&gt;Minimum api-version: 2020-06-01.
      * 
      */
     private final String assignedHost;
     /**
-     * Boot Diagnostics is a debugging feature which allows you to view Console Output and Screenshot to diagnose VM status. &lt;br&gt;&lt;br&gt; You can easily view the output of your console log. &lt;br&gt;&lt;br&gt; Azure also enables you to see a screenshot of the VM from the hypervisor.
+     * @return Boot Diagnostics is a debugging feature which allows you to view Console Output and Screenshot to diagnose VM status. &lt;br&gt;&lt;br&gt; You can easily view the output of your console log. &lt;br&gt;&lt;br&gt; Azure also enables you to see a screenshot of the VM from the hypervisor.
      * 
      */
     private final @Nullable BootDiagnosticsInstanceViewResponse bootDiagnostics;
     /**
-     * The computer name assigned to the virtual machine.
+     * @return The computer name assigned to the virtual machine.
      * 
      */
     private final @Nullable String computerName;
     /**
-     * The virtual machine disk information.
+     * @return The virtual machine disk information.
      * 
      */
     private final @Nullable List<DiskInstanceViewResponse> disks;
     /**
-     * The extensions information.
+     * @return The extensions information.
      * 
      */
     private final @Nullable List<VirtualMachineExtensionInstanceViewResponse> extensions;
     /**
-     * Specifies the HyperVGeneration Type associated with a resource
+     * @return Specifies the HyperVGeneration Type associated with a resource
      * 
      */
     private final @Nullable String hyperVGeneration;
     /**
-     * The Maintenance Operation status on the virtual machine.
+     * @return The Maintenance Operation status on the virtual machine.
      * 
      */
     private final @Nullable MaintenanceRedeployStatusResponse maintenanceRedeployStatus;
     /**
-     * The Operating System running on the virtual machine.
+     * @return The Operating System running on the virtual machine.
      * 
      */
     private final @Nullable String osName;
     /**
-     * The version of Operating System running on the virtual machine.
+     * @return The version of Operating System running on the virtual machine.
      * 
      */
     private final @Nullable String osVersion;
     /**
-     * [Preview Feature] The status of virtual machine patch operations.
+     * @return [Preview Feature] The status of virtual machine patch operations.
      * 
      */
     private final @Nullable VirtualMachinePatchStatusResponse patchStatus;
     /**
-     * Specifies the fault domain of the virtual machine.
+     * @return Specifies the fault domain of the virtual machine.
      * 
      */
     private final @Nullable Integer platformFaultDomain;
     /**
-     * Specifies the update domain of the virtual machine.
+     * @return Specifies the update domain of the virtual machine.
      * 
      */
     private final @Nullable Integer platformUpdateDomain;
     /**
-     * The Remote desktop certificate thumbprint.
+     * @return The Remote desktop certificate thumbprint.
      * 
      */
     private final @Nullable String rdpThumbPrint;
     /**
-     * The resource status information.
+     * @return The resource status information.
      * 
      */
     private final @Nullable List<InstanceViewStatusResponse> statuses;
     /**
-     * The VM Agent running on the virtual machine.
+     * @return The VM Agent running on the virtual machine.
      * 
      */
     private final @Nullable VirtualMachineAgentInstanceViewResponse vmAgent;
     /**
-     * The health status for the VM.
+     * @return The health status for the VM.
      * 
      */
     private final VirtualMachineHealthStatusResponse vmHealth;
@@ -139,114 +139,114 @@ public final class VirtualMachineInstanceViewResponse {
     }
 
     /**
-     * Resource id of the dedicated host, on which the virtual machine is allocated through automatic placement, when the virtual machine is associated with a dedicated host group that has automatic placement enabled. &lt;br&gt;&lt;br&gt;Minimum api-version: 2020-06-01.
+     * @return Resource id of the dedicated host, on which the virtual machine is allocated through automatic placement, when the virtual machine is associated with a dedicated host group that has automatic placement enabled. &lt;br&gt;&lt;br&gt;Minimum api-version: 2020-06-01.
      * 
-    */
+     */
     public String assignedHost() {
         return this.assignedHost;
     }
     /**
-     * Boot Diagnostics is a debugging feature which allows you to view Console Output and Screenshot to diagnose VM status. &lt;br&gt;&lt;br&gt; You can easily view the output of your console log. &lt;br&gt;&lt;br&gt; Azure also enables you to see a screenshot of the VM from the hypervisor.
+     * @return Boot Diagnostics is a debugging feature which allows you to view Console Output and Screenshot to diagnose VM status. &lt;br&gt;&lt;br&gt; You can easily view the output of your console log. &lt;br&gt;&lt;br&gt; Azure also enables you to see a screenshot of the VM from the hypervisor.
      * 
-    */
+     */
     public Optional<BootDiagnosticsInstanceViewResponse> bootDiagnostics() {
         return Optional.ofNullable(this.bootDiagnostics);
     }
     /**
-     * The computer name assigned to the virtual machine.
+     * @return The computer name assigned to the virtual machine.
      * 
-    */
+     */
     public Optional<String> computerName() {
         return Optional.ofNullable(this.computerName);
     }
     /**
-     * The virtual machine disk information.
+     * @return The virtual machine disk information.
      * 
-    */
+     */
     public List<DiskInstanceViewResponse> disks() {
         return this.disks == null ? List.of() : this.disks;
     }
     /**
-     * The extensions information.
+     * @return The extensions information.
      * 
-    */
+     */
     public List<VirtualMachineExtensionInstanceViewResponse> extensions() {
         return this.extensions == null ? List.of() : this.extensions;
     }
     /**
-     * Specifies the HyperVGeneration Type associated with a resource
+     * @return Specifies the HyperVGeneration Type associated with a resource
      * 
-    */
+     */
     public Optional<String> hyperVGeneration() {
         return Optional.ofNullable(this.hyperVGeneration);
     }
     /**
-     * The Maintenance Operation status on the virtual machine.
+     * @return The Maintenance Operation status on the virtual machine.
      * 
-    */
+     */
     public Optional<MaintenanceRedeployStatusResponse> maintenanceRedeployStatus() {
         return Optional.ofNullable(this.maintenanceRedeployStatus);
     }
     /**
-     * The Operating System running on the virtual machine.
+     * @return The Operating System running on the virtual machine.
      * 
-    */
+     */
     public Optional<String> osName() {
         return Optional.ofNullable(this.osName);
     }
     /**
-     * The version of Operating System running on the virtual machine.
+     * @return The version of Operating System running on the virtual machine.
      * 
-    */
+     */
     public Optional<String> osVersion() {
         return Optional.ofNullable(this.osVersion);
     }
     /**
-     * [Preview Feature] The status of virtual machine patch operations.
+     * @return [Preview Feature] The status of virtual machine patch operations.
      * 
-    */
+     */
     public Optional<VirtualMachinePatchStatusResponse> patchStatus() {
         return Optional.ofNullable(this.patchStatus);
     }
     /**
-     * Specifies the fault domain of the virtual machine.
+     * @return Specifies the fault domain of the virtual machine.
      * 
-    */
+     */
     public Optional<Integer> platformFaultDomain() {
         return Optional.ofNullable(this.platformFaultDomain);
     }
     /**
-     * Specifies the update domain of the virtual machine.
+     * @return Specifies the update domain of the virtual machine.
      * 
-    */
+     */
     public Optional<Integer> platformUpdateDomain() {
         return Optional.ofNullable(this.platformUpdateDomain);
     }
     /**
-     * The Remote desktop certificate thumbprint.
+     * @return The Remote desktop certificate thumbprint.
      * 
-    */
+     */
     public Optional<String> rdpThumbPrint() {
         return Optional.ofNullable(this.rdpThumbPrint);
     }
     /**
-     * The resource status information.
+     * @return The resource status information.
      * 
-    */
+     */
     public List<InstanceViewStatusResponse> statuses() {
         return this.statuses == null ? List.of() : this.statuses;
     }
     /**
-     * The VM Agent running on the virtual machine.
+     * @return The VM Agent running on the virtual machine.
      * 
-    */
+     */
     public Optional<VirtualMachineAgentInstanceViewResponse> vmAgent() {
         return Optional.ofNullable(this.vmAgent);
     }
     /**
-     * The health status for the VM.
+     * @return The health status for the VM.
      * 
-    */
+     */
     public VirtualMachineHealthStatusResponse vmHealth() {
         return this.vmHealth;
     }

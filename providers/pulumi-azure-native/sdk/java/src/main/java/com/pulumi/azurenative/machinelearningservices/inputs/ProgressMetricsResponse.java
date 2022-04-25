@@ -24,6 +24,10 @@ public final class ProgressMetricsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="completedDatapointCount", required=true)
     private Double completedDatapointCount;
 
+    /**
+     * @return The completed datapoint count.
+     * 
+     */
     public Double completedDatapointCount() {
         return this.completedDatapointCount;
     }
@@ -35,6 +39,10 @@ public final class ProgressMetricsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="incrementalDatasetLastRefreshTime", required=true)
     private String incrementalDatasetLastRefreshTime;
 
+    /**
+     * @return The time of last successful incremental dataset refresh in UTC.
+     * 
+     */
     public String incrementalDatasetLastRefreshTime() {
         return this.incrementalDatasetLastRefreshTime;
     }
@@ -46,6 +54,10 @@ public final class ProgressMetricsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="skippedDatapointCount", required=true)
     private Double skippedDatapointCount;
 
+    /**
+     * @return The skipped datapoint count.
+     * 
+     */
     public Double skippedDatapointCount() {
         return this.skippedDatapointCount;
     }
@@ -57,6 +69,10 @@ public final class ProgressMetricsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="totalDatapointCount", required=true)
     private Double totalDatapointCount;
 
+    /**
+     * @return The total datapoint count.
+     * 
+     */
     public Double totalDatapointCount() {
         return this.totalDatapointCount;
     }
@@ -88,21 +104,45 @@ public final class ProgressMetricsResponse extends com.pulumi.resources.InvokeAr
             $ = new ProgressMetricsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param completedDatapointCount The completed datapoint count.
+         * 
+         * @return builder
+         * 
+         */
         public Builder completedDatapointCount(Double completedDatapointCount) {
             $.completedDatapointCount = completedDatapointCount;
             return this;
         }
 
+        /**
+         * @param incrementalDatasetLastRefreshTime The time of last successful incremental dataset refresh in UTC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder incrementalDatasetLastRefreshTime(String incrementalDatasetLastRefreshTime) {
             $.incrementalDatasetLastRefreshTime = incrementalDatasetLastRefreshTime;
             return this;
         }
 
+        /**
+         * @param skippedDatapointCount The skipped datapoint count.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skippedDatapointCount(Double skippedDatapointCount) {
             $.skippedDatapointCount = skippedDatapointCount;
             return this;
         }
 
+        /**
+         * @param totalDatapointCount The total datapoint count.
+         * 
+         * @return builder
+         * 
+         */
         public Builder totalDatapointCount(Double totalDatapointCount) {
             $.totalDatapointCount = totalDatapointCount;
             return this;

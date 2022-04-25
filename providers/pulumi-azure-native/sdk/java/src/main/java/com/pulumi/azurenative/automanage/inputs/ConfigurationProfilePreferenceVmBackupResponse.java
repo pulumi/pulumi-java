@@ -26,6 +26,10 @@ public final class ConfigurationProfilePreferenceVmBackupResponse extends com.pu
     @Import(name="instantRpRetentionRangeInDays")
     private @Nullable Integer instantRpRetentionRangeInDays;
 
+    /**
+     * @return Instant RP retention policy range in days
+     * 
+     */
     public Optional<Integer> instantRpRetentionRangeInDays() {
         return Optional.ofNullable(this.instantRpRetentionRangeInDays);
     }
@@ -37,6 +41,10 @@ public final class ConfigurationProfilePreferenceVmBackupResponse extends com.pu
     @Import(name="retentionPolicy")
     private @Nullable String retentionPolicy;
 
+    /**
+     * @return Retention policy with the details on backup copy retention ranges.
+     * 
+     */
     public Optional<String> retentionPolicy() {
         return Optional.ofNullable(this.retentionPolicy);
     }
@@ -48,6 +56,10 @@ public final class ConfigurationProfilePreferenceVmBackupResponse extends com.pu
     @Import(name="schedulePolicy")
     private @Nullable String schedulePolicy;
 
+    /**
+     * @return Backup schedule specified as part of backup policy.
+     * 
+     */
     public Optional<String> schedulePolicy() {
         return Optional.ofNullable(this.schedulePolicy);
     }
@@ -59,6 +71,10 @@ public final class ConfigurationProfilePreferenceVmBackupResponse extends com.pu
     @Import(name="timeZone")
     private @Nullable String timeZone;
 
+    /**
+     * @return TimeZone optional input as string. For example: Pacific Standard Time
+     * 
+     */
     public Optional<String> timeZone() {
         return Optional.ofNullable(this.timeZone);
     }
@@ -90,21 +106,45 @@ public final class ConfigurationProfilePreferenceVmBackupResponse extends com.pu
             $ = new ConfigurationProfilePreferenceVmBackupResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param instantRpRetentionRangeInDays Instant RP retention policy range in days
+         * 
+         * @return builder
+         * 
+         */
         public Builder instantRpRetentionRangeInDays(@Nullable Integer instantRpRetentionRangeInDays) {
             $.instantRpRetentionRangeInDays = instantRpRetentionRangeInDays;
             return this;
         }
 
+        /**
+         * @param retentionPolicy Retention policy with the details on backup copy retention ranges.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionPolicy(@Nullable String retentionPolicy) {
             $.retentionPolicy = retentionPolicy;
             return this;
         }
 
+        /**
+         * @param schedulePolicy Backup schedule specified as part of backup policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedulePolicy(@Nullable String schedulePolicy) {
             $.schedulePolicy = schedulePolicy;
             return this;
         }
 
+        /**
+         * @param timeZone TimeZone optional input as string. For example: Pacific Standard Time
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeZone(@Nullable String timeZone) {
             $.timeZone = timeZone;
             return this;

@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ListAuthorizationServerSecretsResult {
     /**
-     * oAuth Authorization Server Secrets.
+     * @return oAuth Authorization Server Secrets.
      * 
      */
     private final @Nullable String clientSecret;
     /**
-     * Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner password.
+     * @return Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner password.
      * 
      */
     private final @Nullable String resourceOwnerPassword;
     /**
-     * Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner username.
+     * @return Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner username.
      * 
      */
     private final @Nullable String resourceOwnerUsername;
@@ -38,23 +38,23 @@ public final class ListAuthorizationServerSecretsResult {
     }
 
     /**
-     * oAuth Authorization Server Secrets.
+     * @return oAuth Authorization Server Secrets.
      * 
-    */
+     */
     public Optional<String> clientSecret() {
         return Optional.ofNullable(this.clientSecret);
     }
     /**
-     * Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner password.
+     * @return Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner password.
      * 
-    */
+     */
     public Optional<String> resourceOwnerPassword() {
         return Optional.ofNullable(this.resourceOwnerPassword);
     }
     /**
-     * Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner username.
+     * @return Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner username.
      * 
-    */
+     */
     public Optional<String> resourceOwnerUsername() {
         return Optional.ofNullable(this.resourceOwnerUsername);
     }

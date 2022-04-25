@@ -26,6 +26,13 @@ public final class ProjectSecondarySourceAuthGetArgs extends com.pulumi.resource
     @Import(name="resource")
     private @Nullable Output<String> resource;
 
+    /**
+     * @return Resource value that applies to the specified authorization type. Use the `aws.codebuild.SourceCredential` resource instead.
+     * 
+     * @deprecated
+     * Use the aws_codebuild_source_credential resource instead
+     * 
+     */
     @Deprecated /* Use the aws_codebuild_source_credential resource instead */
     public Optional<Output<String>> resource() {
         return Optional.ofNullable(this.resource);
@@ -42,6 +49,13 @@ public final class ProjectSecondarySourceAuthGetArgs extends com.pulumi.resource
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Type of repository that contains the source code to be built. Valid values: `CODECOMMIT`, `CODEPIPELINE`, `GITHUB`, `GITHUB_ENTERPRISE`, `BITBUCKET`, `S3`, `NO_SOURCE`.
+     * 
+     * @deprecated
+     * Use the aws_codebuild_source_credential resource instead
+     * 
+     */
     @Deprecated /* Use the aws_codebuild_source_credential resource instead */
     public Output<String> type() {
         return this.type;
@@ -72,20 +86,60 @@ public final class ProjectSecondarySourceAuthGetArgs extends com.pulumi.resource
             $ = new ProjectSecondarySourceAuthGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resource Resource value that applies to the specified authorization type. Use the `aws.codebuild.SourceCredential` resource instead.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Use the aws_codebuild_source_credential resource instead
+         * 
+         */
+        @Deprecated /* Use the aws_codebuild_source_credential resource instead */
         public Builder resource(@Nullable Output<String> resource) {
             $.resource = resource;
             return this;
         }
 
+        /**
+         * @param resource Resource value that applies to the specified authorization type. Use the `aws.codebuild.SourceCredential` resource instead.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Use the aws_codebuild_source_credential resource instead
+         * 
+         */
+        @Deprecated /* Use the aws_codebuild_source_credential resource instead */
         public Builder resource(String resource) {
             return resource(Output.of(resource));
         }
 
+        /**
+         * @param type Type of repository that contains the source code to be built. Valid values: `CODECOMMIT`, `CODEPIPELINE`, `GITHUB`, `GITHUB_ENTERPRISE`, `BITBUCKET`, `S3`, `NO_SOURCE`.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Use the aws_codebuild_source_credential resource instead
+         * 
+         */
+        @Deprecated /* Use the aws_codebuild_source_credential resource instead */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of repository that contains the source code to be built. Valid values: `CODECOMMIT`, `CODEPIPELINE`, `GITHUB`, `GITHUB_ENTERPRISE`, `BITBUCKET`, `S3`, `NO_SOURCE`.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Use the aws_codebuild_source_credential resource instead
+         * 
+         */
+        @Deprecated /* Use the aws_codebuild_source_credential resource instead */
         public Builder type(String type) {
             return type(Output.of(type));
         }

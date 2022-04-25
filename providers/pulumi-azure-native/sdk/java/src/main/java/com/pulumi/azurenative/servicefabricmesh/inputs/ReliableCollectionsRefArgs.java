@@ -27,6 +27,10 @@ public final class ReliableCollectionsRefArgs extends com.pulumi.resources.Resou
     @Import(name="doNotPersistState")
     private @Nullable Output<Boolean> doNotPersistState;
 
+    /**
+     * @return False (the default) if ReliableCollections state is persisted to disk as usual. True if you do not want to persist state, in which case replication is still enabled and you can use ReliableCollections as distributed cache.
+     * 
+     */
     public Optional<Output<Boolean>> doNotPersistState() {
         return Optional.ofNullable(this.doNotPersistState);
     }
@@ -38,6 +42,10 @@ public final class ReliableCollectionsRefArgs extends com.pulumi.resources.Resou
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Name of ReliableCollection resource. Right now it&#39;s not used and you can use any string.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -67,20 +75,44 @@ public final class ReliableCollectionsRefArgs extends com.pulumi.resources.Resou
             $ = new ReliableCollectionsRefArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param doNotPersistState False (the default) if ReliableCollections state is persisted to disk as usual. True if you do not want to persist state, in which case replication is still enabled and you can use ReliableCollections as distributed cache.
+         * 
+         * @return builder
+         * 
+         */
         public Builder doNotPersistState(@Nullable Output<Boolean> doNotPersistState) {
             $.doNotPersistState = doNotPersistState;
             return this;
         }
 
+        /**
+         * @param doNotPersistState False (the default) if ReliableCollections state is persisted to disk as usual. True if you do not want to persist state, in which case replication is still enabled and you can use ReliableCollections as distributed cache.
+         * 
+         * @return builder
+         * 
+         */
         public Builder doNotPersistState(Boolean doNotPersistState) {
             return doNotPersistState(Output.of(doNotPersistState));
         }
 
+        /**
+         * @param name Name of ReliableCollection resource. Right now it&#39;s not used and you can use any string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of ReliableCollection resource. Right now it&#39;s not used and you can use any string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

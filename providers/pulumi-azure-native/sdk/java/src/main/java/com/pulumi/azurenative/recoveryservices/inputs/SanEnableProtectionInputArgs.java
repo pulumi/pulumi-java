@@ -28,6 +28,11 @@ public final class SanEnableProtectionInputArgs extends com.pulumi.resources.Res
     @Import(name="instanceType")
     private @Nullable Output<String> instanceType;
 
+    /**
+     * @return The class type.
+     * Expected value is &#39;San&#39;.
+     * 
+     */
     public Optional<Output<String>> instanceType() {
         return Optional.ofNullable(this.instanceType);
     }
@@ -56,11 +61,25 @@ public final class SanEnableProtectionInputArgs extends com.pulumi.resources.Res
             $ = new SanEnableProtectionInputArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param instanceType The class type.
+         * Expected value is &#39;San&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(@Nullable Output<String> instanceType) {
             $.instanceType = instanceType;
             return this;
         }
 
+        /**
+         * @param instanceType The class type.
+         * Expected value is &#39;San&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(String instanceType) {
             return instanceType(Output.of(instanceType));
         }

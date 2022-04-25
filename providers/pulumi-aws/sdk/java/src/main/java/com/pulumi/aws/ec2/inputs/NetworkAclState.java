@@ -26,6 +26,10 @@ public final class NetworkAclState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return The ARN of the network ACL
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -37,6 +41,10 @@ public final class NetworkAclState extends com.pulumi.resources.ResourceArgs {
     @Import(name="egress")
     private @Nullable Output<List<NetworkAclEgressGetArgs>> egress;
 
+    /**
+     * @return Specifies an egress rule. Parameters defined below.
+     * 
+     */
     public Optional<Output<List<NetworkAclEgressGetArgs>>> egress() {
         return Optional.ofNullable(this.egress);
     }
@@ -48,6 +56,10 @@ public final class NetworkAclState extends com.pulumi.resources.ResourceArgs {
     @Import(name="ingress")
     private @Nullable Output<List<NetworkAclIngressGetArgs>> ingress;
 
+    /**
+     * @return Specifies an ingress rule. Parameters defined below.
+     * 
+     */
     public Optional<Output<List<NetworkAclIngressGetArgs>>> ingress() {
         return Optional.ofNullable(this.ingress);
     }
@@ -59,6 +71,10 @@ public final class NetworkAclState extends com.pulumi.resources.ResourceArgs {
     @Import(name="ownerId")
     private @Nullable Output<String> ownerId;
 
+    /**
+     * @return The ID of the AWS account that owns the network ACL.
+     * 
+     */
     public Optional<Output<String>> ownerId() {
         return Optional.ofNullable(this.ownerId);
     }
@@ -70,6 +86,10 @@ public final class NetworkAclState extends com.pulumi.resources.ResourceArgs {
     @Import(name="subnetIds")
     private @Nullable Output<List<String>> subnetIds;
 
+    /**
+     * @return A list of Subnet IDs to apply the ACL to
+     * 
+     */
     public Optional<Output<List<String>>> subnetIds() {
         return Optional.ofNullable(this.subnetIds);
     }
@@ -81,6 +101,10 @@ public final class NetworkAclState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A mapping of tags to assign to the resource.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -92,6 +116,10 @@ public final class NetworkAclState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -103,6 +131,10 @@ public final class NetworkAclState extends com.pulumi.resources.ResourceArgs {
     @Import(name="vpcId")
     private @Nullable Output<String> vpcId;
 
+    /**
+     * @return The ID of the associated VPC.
+     * 
+     */
     public Optional<Output<String>> vpcId() {
         return Optional.ofNullable(this.vpcId);
     }
@@ -138,86 +170,200 @@ public final class NetworkAclState extends com.pulumi.resources.ResourceArgs {
             $ = new NetworkAclState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn The ARN of the network ACL
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn The ARN of the network ACL
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param egress Specifies an egress rule. Parameters defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder egress(@Nullable Output<List<NetworkAclEgressGetArgs>> egress) {
             $.egress = egress;
             return this;
         }
 
+        /**
+         * @param egress Specifies an egress rule. Parameters defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder egress(List<NetworkAclEgressGetArgs> egress) {
             return egress(Output.of(egress));
         }
 
+        /**
+         * @param egress Specifies an egress rule. Parameters defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder egress(NetworkAclEgressGetArgs... egress) {
             return egress(List.of(egress));
         }
 
+        /**
+         * @param ingress Specifies an ingress rule. Parameters defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ingress(@Nullable Output<List<NetworkAclIngressGetArgs>> ingress) {
             $.ingress = ingress;
             return this;
         }
 
+        /**
+         * @param ingress Specifies an ingress rule. Parameters defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ingress(List<NetworkAclIngressGetArgs> ingress) {
             return ingress(Output.of(ingress));
         }
 
+        /**
+         * @param ingress Specifies an ingress rule. Parameters defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ingress(NetworkAclIngressGetArgs... ingress) {
             return ingress(List.of(ingress));
         }
 
+        /**
+         * @param ownerId The ID of the AWS account that owns the network ACL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ownerId(@Nullable Output<String> ownerId) {
             $.ownerId = ownerId;
             return this;
         }
 
+        /**
+         * @param ownerId The ID of the AWS account that owns the network ACL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ownerId(String ownerId) {
             return ownerId(Output.of(ownerId));
         }
 
+        /**
+         * @param subnetIds A list of Subnet IDs to apply the ACL to
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetIds(@Nullable Output<List<String>> subnetIds) {
             $.subnetIds = subnetIds;
             return this;
         }
 
+        /**
+         * @param subnetIds A list of Subnet IDs to apply the ACL to
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetIds(List<String> subnetIds) {
             return subnetIds(Output.of(subnetIds));
         }
 
+        /**
+         * @param subnetIds A list of Subnet IDs to apply the ACL to
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetIds(String... subnetIds) {
             return subnetIds(List.of(subnetIds));
         }
 
+        /**
+         * @param tags A mapping of tags to assign to the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A mapping of tags to assign to the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }
 
+        /**
+         * @param vpcId The ID of the associated VPC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcId(@Nullable Output<String> vpcId) {
             $.vpcId = vpcId;
             return this;
         }
 
+        /**
+         * @param vpcId The ID of the associated VPC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcId(String vpcId) {
             return vpcId(Output.of(vpcId));
         }

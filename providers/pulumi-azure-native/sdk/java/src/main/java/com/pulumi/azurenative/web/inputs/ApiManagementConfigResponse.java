@@ -25,6 +25,10 @@ public final class ApiManagementConfigResponse extends com.pulumi.resources.Invo
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return APIM-Api Identifier.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -53,6 +57,12 @@ public final class ApiManagementConfigResponse extends com.pulumi.resources.Invo
             $ = new ApiManagementConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id APIM-Api Identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;

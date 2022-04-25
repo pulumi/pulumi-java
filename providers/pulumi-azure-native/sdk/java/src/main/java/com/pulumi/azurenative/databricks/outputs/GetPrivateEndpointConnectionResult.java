@@ -11,22 +11,22 @@ import java.util.Objects;
 @CustomType
 public final class GetPrivateEndpointConnectionResult {
     /**
-     * The resource identifier.
+     * @return The resource identifier.
      * 
      */
     private final String id;
     /**
-     * The resource name.
+     * @return The resource name.
      * 
      */
     private final String name;
     /**
-     * The private endpoint connection properties.
+     * @return The private endpoint connection properties.
      * 
      */
     private final PrivateEndpointConnectionPropertiesResponse properties;
     /**
-     * The resource type.
+     * @return The resource type.
      * 
      */
     private final String type;
@@ -44,30 +44,30 @@ public final class GetPrivateEndpointConnectionResult {
     }
 
     /**
-     * The resource identifier.
+     * @return The resource identifier.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The resource name.
+     * @return The resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The private endpoint connection properties.
+     * @return The private endpoint connection properties.
      * 
-    */
+     */
     public PrivateEndpointConnectionPropertiesResponse properties() {
         return this.properties;
     }
     /**
-     * The resource type.
+     * @return The resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

@@ -33,6 +33,10 @@ public final class ValidateMigrationInputSqlServerSqlMITaskInputArgs extends com
     @Import(name="backupBlobShare", required=true)
     private Output<BlobShareArgs> backupBlobShare;
 
+    /**
+     * @return SAS URI of Azure Storage Account Container to be used for storing backup files.
+     * 
+     */
     public Output<BlobShareArgs> backupBlobShare() {
         return this.backupBlobShare;
     }
@@ -44,6 +48,10 @@ public final class ValidateMigrationInputSqlServerSqlMITaskInputArgs extends com
     @Import(name="backupFileShare")
     private @Nullable Output<FileShareArgs> backupFileShare;
 
+    /**
+     * @return Backup file share information for all selected databases.
+     * 
+     */
     public Optional<Output<FileShareArgs>> backupFileShare() {
         return Optional.ofNullable(this.backupFileShare);
     }
@@ -55,6 +63,10 @@ public final class ValidateMigrationInputSqlServerSqlMITaskInputArgs extends com
     @Import(name="backupMode")
     private @Nullable Output<Either<String,BackupMode>> backupMode;
 
+    /**
+     * @return Backup Mode to specify whether to use existing backup or create new backup.
+     * 
+     */
     public Optional<Output<Either<String,BackupMode>>> backupMode() {
         return Optional.ofNullable(this.backupMode);
     }
@@ -66,6 +78,10 @@ public final class ValidateMigrationInputSqlServerSqlMITaskInputArgs extends com
     @Import(name="selectedDatabases", required=true)
     private Output<List<MigrateSqlServerSqlMIDatabaseInputArgs>> selectedDatabases;
 
+    /**
+     * @return Databases to migrate
+     * 
+     */
     public Output<List<MigrateSqlServerSqlMIDatabaseInputArgs>> selectedDatabases() {
         return this.selectedDatabases;
     }
@@ -77,6 +93,10 @@ public final class ValidateMigrationInputSqlServerSqlMITaskInputArgs extends com
     @Import(name="selectedLogins")
     private @Nullable Output<List<String>> selectedLogins;
 
+    /**
+     * @return Logins to migrate
+     * 
+     */
     public Optional<Output<List<String>>> selectedLogins() {
         return Optional.ofNullable(this.selectedLogins);
     }
@@ -88,6 +108,10 @@ public final class ValidateMigrationInputSqlServerSqlMITaskInputArgs extends com
     @Import(name="sourceConnectionInfo", required=true)
     private Output<SqlConnectionInfoArgs> sourceConnectionInfo;
 
+    /**
+     * @return Information for connecting to source
+     * 
+     */
     public Output<SqlConnectionInfoArgs> sourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
@@ -99,6 +123,10 @@ public final class ValidateMigrationInputSqlServerSqlMITaskInputArgs extends com
     @Import(name="targetConnectionInfo", required=true)
     private Output<SqlConnectionInfoArgs> targetConnectionInfo;
 
+    /**
+     * @return Information for connecting to target
+     * 
+     */
     public Output<SqlConnectionInfoArgs> targetConnectionInfo() {
         return this.targetConnectionInfo;
     }
@@ -133,81 +161,189 @@ public final class ValidateMigrationInputSqlServerSqlMITaskInputArgs extends com
             $ = new ValidateMigrationInputSqlServerSqlMITaskInputArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backupBlobShare SAS URI of Azure Storage Account Container to be used for storing backup files.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupBlobShare(Output<BlobShareArgs> backupBlobShare) {
             $.backupBlobShare = backupBlobShare;
             return this;
         }
 
+        /**
+         * @param backupBlobShare SAS URI of Azure Storage Account Container to be used for storing backup files.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupBlobShare(BlobShareArgs backupBlobShare) {
             return backupBlobShare(Output.of(backupBlobShare));
         }
 
+        /**
+         * @param backupFileShare Backup file share information for all selected databases.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupFileShare(@Nullable Output<FileShareArgs> backupFileShare) {
             $.backupFileShare = backupFileShare;
             return this;
         }
 
+        /**
+         * @param backupFileShare Backup file share information for all selected databases.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupFileShare(FileShareArgs backupFileShare) {
             return backupFileShare(Output.of(backupFileShare));
         }
 
+        /**
+         * @param backupMode Backup Mode to specify whether to use existing backup or create new backup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupMode(@Nullable Output<Either<String,BackupMode>> backupMode) {
             $.backupMode = backupMode;
             return this;
         }
 
+        /**
+         * @param backupMode Backup Mode to specify whether to use existing backup or create new backup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupMode(Either<String,BackupMode> backupMode) {
             return backupMode(Output.of(backupMode));
         }
 
+        /**
+         * @param backupMode Backup Mode to specify whether to use existing backup or create new backup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupMode(String backupMode) {
             return backupMode(Either.ofLeft(backupMode));
         }
 
+        /**
+         * @param backupMode Backup Mode to specify whether to use existing backup or create new backup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupMode(BackupMode backupMode) {
             return backupMode(Either.ofRight(backupMode));
         }
 
+        /**
+         * @param selectedDatabases Databases to migrate
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectedDatabases(Output<List<MigrateSqlServerSqlMIDatabaseInputArgs>> selectedDatabases) {
             $.selectedDatabases = selectedDatabases;
             return this;
         }
 
+        /**
+         * @param selectedDatabases Databases to migrate
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectedDatabases(List<MigrateSqlServerSqlMIDatabaseInputArgs> selectedDatabases) {
             return selectedDatabases(Output.of(selectedDatabases));
         }
 
+        /**
+         * @param selectedDatabases Databases to migrate
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectedDatabases(MigrateSqlServerSqlMIDatabaseInputArgs... selectedDatabases) {
             return selectedDatabases(List.of(selectedDatabases));
         }
 
+        /**
+         * @param selectedLogins Logins to migrate
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectedLogins(@Nullable Output<List<String>> selectedLogins) {
             $.selectedLogins = selectedLogins;
             return this;
         }
 
+        /**
+         * @param selectedLogins Logins to migrate
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectedLogins(List<String> selectedLogins) {
             return selectedLogins(Output.of(selectedLogins));
         }
 
+        /**
+         * @param selectedLogins Logins to migrate
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectedLogins(String... selectedLogins) {
             return selectedLogins(List.of(selectedLogins));
         }
 
+        /**
+         * @param sourceConnectionInfo Information for connecting to source
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceConnectionInfo(Output<SqlConnectionInfoArgs> sourceConnectionInfo) {
             $.sourceConnectionInfo = sourceConnectionInfo;
             return this;
         }
 
+        /**
+         * @param sourceConnectionInfo Information for connecting to source
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceConnectionInfo(SqlConnectionInfoArgs sourceConnectionInfo) {
             return sourceConnectionInfo(Output.of(sourceConnectionInfo));
         }
 
+        /**
+         * @param targetConnectionInfo Information for connecting to target
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetConnectionInfo(Output<SqlConnectionInfoArgs> targetConnectionInfo) {
             $.targetConnectionInfo = targetConnectionInfo;
             return this;
         }
 
+        /**
+         * @param targetConnectionInfo Information for connecting to target
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetConnectionInfo(SqlConnectionInfoArgs targetConnectionInfo) {
             return targetConnectionInfo(Output.of(targetConnectionInfo));
         }

@@ -26,6 +26,10 @@ public final class RelationshipOccurrenceArgs extends com.pulumi.resources.Resou
     @Import(name="comment")
     private @Nullable Output<String> comment;
 
+    /**
+     * @return A place for the SPDX file creator to record any general comments about the relationship
+     * 
+     */
     public Optional<Output<String>> comment() {
         return Optional.ofNullable(this.comment);
     }
@@ -37,6 +41,10 @@ public final class RelationshipOccurrenceArgs extends com.pulumi.resources.Resou
     @Import(name="source")
     private @Nullable Output<String> source;
 
+    /**
+     * @return Also referred to as SPDXRef-A The source SPDX element (file, package, etc)
+     * 
+     */
     public Optional<Output<String>> source() {
         return Optional.ofNullable(this.source);
     }
@@ -48,6 +56,10 @@ public final class RelationshipOccurrenceArgs extends com.pulumi.resources.Resou
     @Import(name="target")
     private @Nullable Output<String> target;
 
+    /**
+     * @return Also referred to as SPDXRef-B The target SPDC element (file, package, etc) In cases where there are &#34;known unknowns&#34;, the use of the keyword NOASSERTION can be used The keywords NONE can be used to indicate that an SPDX element (package/file/snippet) has no other elements connected by some relationship to it
+     * 
+     */
     public Optional<Output<String>> target() {
         return Optional.ofNullable(this.target);
     }
@@ -78,29 +90,65 @@ public final class RelationshipOccurrenceArgs extends com.pulumi.resources.Resou
             $ = new RelationshipOccurrenceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param comment A place for the SPDX file creator to record any general comments about the relationship
+         * 
+         * @return builder
+         * 
+         */
         public Builder comment(@Nullable Output<String> comment) {
             $.comment = comment;
             return this;
         }
 
+        /**
+         * @param comment A place for the SPDX file creator to record any general comments about the relationship
+         * 
+         * @return builder
+         * 
+         */
         public Builder comment(String comment) {
             return comment(Output.of(comment));
         }
 
+        /**
+         * @param source Also referred to as SPDXRef-A The source SPDX element (file, package, etc)
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(@Nullable Output<String> source) {
             $.source = source;
             return this;
         }
 
+        /**
+         * @param source Also referred to as SPDXRef-A The source SPDX element (file, package, etc)
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(String source) {
             return source(Output.of(source));
         }
 
+        /**
+         * @param target Also referred to as SPDXRef-B The target SPDC element (file, package, etc) In cases where there are &#34;known unknowns&#34;, the use of the keyword NOASSERTION can be used The keywords NONE can be used to indicate that an SPDX element (package/file/snippet) has no other elements connected by some relationship to it
+         * 
+         * @return builder
+         * 
+         */
         public Builder target(@Nullable Output<String> target) {
             $.target = target;
             return this;
         }
 
+        /**
+         * @param target Also referred to as SPDXRef-B The target SPDC element (file, package, etc) In cases where there are &#34;known unknowns&#34;, the use of the keyword NOASSERTION can be used The keywords NONE can be used to indicate that an SPDX element (package/file/snippet) has no other elements connected by some relationship to it
+         * 
+         * @return builder
+         * 
+         */
         public Builder target(String target) {
             return target(Output.of(target));
         }

@@ -23,6 +23,10 @@ public final class UserDefinedFunctionResourceResponse extends com.pulumi.resour
     @Import(name="inlineCode", required=true)
     private String inlineCode;
 
+    /**
+     * @return [Pick one] An inline resource that contains code for a user-defined function (UDF). Providing a inline code resource is equivalent to providing a URI for a file containing the same code.
+     * 
+     */
     public String inlineCode() {
         return this.inlineCode;
     }
@@ -34,6 +38,10 @@ public final class UserDefinedFunctionResourceResponse extends com.pulumi.resour
     @Import(name="resourceUri", required=true)
     private String resourceUri;
 
+    /**
+     * @return [Pick one] A code resource to load from a Google Cloud Storage URI (gs://bucket/path).
+     * 
+     */
     public String resourceUri() {
         return this.resourceUri;
     }
@@ -63,11 +71,23 @@ public final class UserDefinedFunctionResourceResponse extends com.pulumi.resour
             $ = new UserDefinedFunctionResourceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param inlineCode [Pick one] An inline resource that contains code for a user-defined function (UDF). Providing a inline code resource is equivalent to providing a URI for a file containing the same code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inlineCode(String inlineCode) {
             $.inlineCode = inlineCode;
             return this;
         }
 
+        /**
+         * @param resourceUri [Pick one] A code resource to load from a Google Cloud Storage URI (gs://bucket/path).
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceUri(String resourceUri) {
             $.resourceUri = resourceUri;
             return this;

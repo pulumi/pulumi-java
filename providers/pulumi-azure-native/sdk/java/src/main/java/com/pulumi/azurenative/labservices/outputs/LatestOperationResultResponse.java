@@ -10,32 +10,32 @@ import java.util.Objects;
 @CustomType
 public final class LatestOperationResultResponse {
     /**
-     * Error code on failure.
+     * @return Error code on failure.
      * 
      */
     private final String errorCode;
     /**
-     * The error message.
+     * @return The error message.
      * 
      */
     private final String errorMessage;
     /**
-     * The HttpMethod - PUT/POST/DELETE for the operation.
+     * @return The HttpMethod - PUT/POST/DELETE for the operation.
      * 
      */
     private final String httpMethod;
     /**
-     * The URL to use to check long-running operation status
+     * @return The URL to use to check long-running operation status
      * 
      */
     private final String operationUrl;
     /**
-     * Request URI of the operation.
+     * @return Request URI of the operation.
      * 
      */
     private final String requestUri;
     /**
-     * The current status of the operation.
+     * @return The current status of the operation.
      * 
      */
     private final String status;
@@ -57,44 +57,44 @@ public final class LatestOperationResultResponse {
     }
 
     /**
-     * Error code on failure.
+     * @return Error code on failure.
      * 
-    */
+     */
     public String errorCode() {
         return this.errorCode;
     }
     /**
-     * The error message.
+     * @return The error message.
      * 
-    */
+     */
     public String errorMessage() {
         return this.errorMessage;
     }
     /**
-     * The HttpMethod - PUT/POST/DELETE for the operation.
+     * @return The HttpMethod - PUT/POST/DELETE for the operation.
      * 
-    */
+     */
     public String httpMethod() {
         return this.httpMethod;
     }
     /**
-     * The URL to use to check long-running operation status
+     * @return The URL to use to check long-running operation status
      * 
-    */
+     */
     public String operationUrl() {
         return this.operationUrl;
     }
     /**
-     * Request URI of the operation.
+     * @return Request URI of the operation.
      * 
-    */
+     */
     public String requestUri() {
         return this.requestUri;
     }
     /**
-     * The current status of the operation.
+     * @return The current status of the operation.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }

@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class InstantSnapshotResourceStatusResponse {
     /**
-     * The storage size of this instant snapshot.
+     * @return The storage size of this instant snapshot.
      * 
      */
     private final String storageSizeBytes;
@@ -21,9 +21,9 @@ public final class InstantSnapshotResourceStatusResponse {
     }
 
     /**
-     * The storage size of this instant snapshot.
+     * @return The storage size of this instant snapshot.
      * 
-    */
+     */
     public String storageSizeBytes() {
         return this.storageSizeBytes;
     }

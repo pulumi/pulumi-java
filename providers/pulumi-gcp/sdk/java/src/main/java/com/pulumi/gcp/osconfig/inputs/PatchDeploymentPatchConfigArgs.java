@@ -30,6 +30,11 @@ public final class PatchDeploymentPatchConfigArgs extends com.pulumi.resources.R
     @Import(name="apt")
     private @Nullable Output<PatchDeploymentPatchConfigAptArgs> apt;
 
+    /**
+     * @return Apt update settings. Use this setting to override the default apt patch rules.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<PatchDeploymentPatchConfigAptArgs>> apt() {
         return Optional.ofNullable(this.apt);
     }
@@ -42,6 +47,11 @@ public final class PatchDeploymentPatchConfigArgs extends com.pulumi.resources.R
     @Import(name="goo")
     private @Nullable Output<PatchDeploymentPatchConfigGooArgs> goo;
 
+    /**
+     * @return goo update settings. Use this setting to override the default goo patch rules.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<PatchDeploymentPatchConfigGooArgs>> goo() {
         return Optional.ofNullable(this.goo);
     }
@@ -54,6 +64,11 @@ public final class PatchDeploymentPatchConfigArgs extends com.pulumi.resources.R
     @Import(name="postStep")
     private @Nullable Output<PatchDeploymentPatchConfigPostStepArgs> postStep;
 
+    /**
+     * @return The ExecStep to run after the patch update.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<PatchDeploymentPatchConfigPostStepArgs>> postStep() {
         return Optional.ofNullable(this.postStep);
     }
@@ -66,6 +81,11 @@ public final class PatchDeploymentPatchConfigArgs extends com.pulumi.resources.R
     @Import(name="preStep")
     private @Nullable Output<PatchDeploymentPatchConfigPreStepArgs> preStep;
 
+    /**
+     * @return The ExecStep to run before the patch update.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<PatchDeploymentPatchConfigPreStepArgs>> preStep() {
         return Optional.ofNullable(this.preStep);
     }
@@ -78,6 +98,11 @@ public final class PatchDeploymentPatchConfigArgs extends com.pulumi.resources.R
     @Import(name="rebootConfig")
     private @Nullable Output<String> rebootConfig;
 
+    /**
+     * @return Post-patch reboot settings.
+     * Possible values are `DEFAULT`, `ALWAYS`, and `NEVER`.
+     * 
+     */
     public Optional<Output<String>> rebootConfig() {
         return Optional.ofNullable(this.rebootConfig);
     }
@@ -90,6 +115,11 @@ public final class PatchDeploymentPatchConfigArgs extends com.pulumi.resources.R
     @Import(name="windowsUpdate")
     private @Nullable Output<PatchDeploymentPatchConfigWindowsUpdateArgs> windowsUpdate;
 
+    /**
+     * @return Windows update settings. Use this setting to override the default Windows patch rules.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<PatchDeploymentPatchConfigWindowsUpdateArgs>> windowsUpdate() {
         return Optional.ofNullable(this.windowsUpdate);
     }
@@ -102,6 +132,11 @@ public final class PatchDeploymentPatchConfigArgs extends com.pulumi.resources.R
     @Import(name="yum")
     private @Nullable Output<PatchDeploymentPatchConfigYumArgs> yum;
 
+    /**
+     * @return Yum update settings. Use this setting to override the default yum patch rules.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<PatchDeploymentPatchConfigYumArgs>> yum() {
         return Optional.ofNullable(this.yum);
     }
@@ -114,6 +149,11 @@ public final class PatchDeploymentPatchConfigArgs extends com.pulumi.resources.R
     @Import(name="zypper")
     private @Nullable Output<PatchDeploymentPatchConfigZypperArgs> zypper;
 
+    /**
+     * @return zypper update settings. Use this setting to override the default zypper patch rules.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<PatchDeploymentPatchConfigZypperArgs>> zypper() {
         return Optional.ofNullable(this.zypper);
     }
@@ -149,74 +189,186 @@ public final class PatchDeploymentPatchConfigArgs extends com.pulumi.resources.R
             $ = new PatchDeploymentPatchConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apt Apt update settings. Use this setting to override the default apt patch rules.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apt(@Nullable Output<PatchDeploymentPatchConfigAptArgs> apt) {
             $.apt = apt;
             return this;
         }
 
+        /**
+         * @param apt Apt update settings. Use this setting to override the default apt patch rules.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apt(PatchDeploymentPatchConfigAptArgs apt) {
             return apt(Output.of(apt));
         }
 
+        /**
+         * @param goo goo update settings. Use this setting to override the default goo patch rules.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder goo(@Nullable Output<PatchDeploymentPatchConfigGooArgs> goo) {
             $.goo = goo;
             return this;
         }
 
+        /**
+         * @param goo goo update settings. Use this setting to override the default goo patch rules.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder goo(PatchDeploymentPatchConfigGooArgs goo) {
             return goo(Output.of(goo));
         }
 
+        /**
+         * @param postStep The ExecStep to run after the patch update.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder postStep(@Nullable Output<PatchDeploymentPatchConfigPostStepArgs> postStep) {
             $.postStep = postStep;
             return this;
         }
 
+        /**
+         * @param postStep The ExecStep to run after the patch update.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder postStep(PatchDeploymentPatchConfigPostStepArgs postStep) {
             return postStep(Output.of(postStep));
         }
 
+        /**
+         * @param preStep The ExecStep to run before the patch update.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preStep(@Nullable Output<PatchDeploymentPatchConfigPreStepArgs> preStep) {
             $.preStep = preStep;
             return this;
         }
 
+        /**
+         * @param preStep The ExecStep to run before the patch update.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preStep(PatchDeploymentPatchConfigPreStepArgs preStep) {
             return preStep(Output.of(preStep));
         }
 
+        /**
+         * @param rebootConfig Post-patch reboot settings.
+         * Possible values are `DEFAULT`, `ALWAYS`, and `NEVER`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rebootConfig(@Nullable Output<String> rebootConfig) {
             $.rebootConfig = rebootConfig;
             return this;
         }
 
+        /**
+         * @param rebootConfig Post-patch reboot settings.
+         * Possible values are `DEFAULT`, `ALWAYS`, and `NEVER`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rebootConfig(String rebootConfig) {
             return rebootConfig(Output.of(rebootConfig));
         }
 
+        /**
+         * @param windowsUpdate Windows update settings. Use this setting to override the default Windows patch rules.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder windowsUpdate(@Nullable Output<PatchDeploymentPatchConfigWindowsUpdateArgs> windowsUpdate) {
             $.windowsUpdate = windowsUpdate;
             return this;
         }
 
+        /**
+         * @param windowsUpdate Windows update settings. Use this setting to override the default Windows patch rules.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder windowsUpdate(PatchDeploymentPatchConfigWindowsUpdateArgs windowsUpdate) {
             return windowsUpdate(Output.of(windowsUpdate));
         }
 
+        /**
+         * @param yum Yum update settings. Use this setting to override the default yum patch rules.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder yum(@Nullable Output<PatchDeploymentPatchConfigYumArgs> yum) {
             $.yum = yum;
             return this;
         }
 
+        /**
+         * @param yum Yum update settings. Use this setting to override the default yum patch rules.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder yum(PatchDeploymentPatchConfigYumArgs yum) {
             return yum(Output.of(yum));
         }
 
+        /**
+         * @param zypper zypper update settings. Use this setting to override the default zypper patch rules.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zypper(@Nullable Output<PatchDeploymentPatchConfigZypperArgs> zypper) {
             $.zypper = zypper;
             return this;
         }
 
+        /**
+         * @param zypper zypper update settings. Use this setting to override the default zypper patch rules.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zypper(PatchDeploymentPatchConfigZypperArgs zypper) {
             return zypper(Output.of(zypper));
         }

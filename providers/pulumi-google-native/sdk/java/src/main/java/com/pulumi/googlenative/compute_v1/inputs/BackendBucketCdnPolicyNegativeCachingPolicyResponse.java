@@ -23,6 +23,10 @@ public final class BackendBucketCdnPolicyNegativeCachingPolicyResponse extends c
     @Import(name="code", required=true)
     private Integer code;
 
+    /**
+     * @return The HTTP status code to define a TTL against. Only HTTP status codes 300, 301, 302, 307, 308, 404, 405, 410, 421, 451 and 501 are can be specified as values, and you cannot specify a status code more than once.
+     * 
+     */
     public Integer code() {
         return this.code;
     }
@@ -34,6 +38,10 @@ public final class BackendBucketCdnPolicyNegativeCachingPolicyResponse extends c
     @Import(name="ttl", required=true)
     private Integer ttl;
 
+    /**
+     * @return The TTL (in seconds) for which to cache responses with the corresponding status code. The maximum allowed value is 1800s (30 minutes), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.
+     * 
+     */
     public Integer ttl() {
         return this.ttl;
     }
@@ -63,11 +71,23 @@ public final class BackendBucketCdnPolicyNegativeCachingPolicyResponse extends c
             $ = new BackendBucketCdnPolicyNegativeCachingPolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param code The HTTP status code to define a TTL against. Only HTTP status codes 300, 301, 302, 307, 308, 404, 405, 410, 421, 451 and 501 are can be specified as values, and you cannot specify a status code more than once.
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(Integer code) {
             $.code = code;
             return this;
         }
 
+        /**
+         * @param ttl The TTL (in seconds) for which to cache responses with the corresponding status code. The maximum allowed value is 1800s (30 minutes), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ttl(Integer ttl) {
             $.ttl = ttl;
             return this;

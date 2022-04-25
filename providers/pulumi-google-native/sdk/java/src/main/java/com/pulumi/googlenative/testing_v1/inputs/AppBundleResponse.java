@@ -23,6 +23,10 @@ public final class AppBundleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="bundleLocation", required=true)
     private FileReferenceResponse bundleLocation;
 
+    /**
+     * @return .aab file representing the app bundle under test.
+     * 
+     */
     public FileReferenceResponse bundleLocation() {
         return this.bundleLocation;
     }
@@ -51,6 +55,12 @@ public final class AppBundleResponse extends com.pulumi.resources.InvokeArgs {
             $ = new AppBundleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bundleLocation .aab file representing the app bundle under test.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bundleLocation(FileReferenceResponse bundleLocation) {
             $.bundleLocation = bundleLocation;
             return this;

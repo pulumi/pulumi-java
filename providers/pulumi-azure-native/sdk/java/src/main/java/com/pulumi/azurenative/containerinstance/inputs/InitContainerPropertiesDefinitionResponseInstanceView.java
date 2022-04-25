@@ -26,6 +26,10 @@ public final class InitContainerPropertiesDefinitionResponseInstanceView extends
     @Import(name="currentState", required=true)
     private ContainerStateResponse currentState;
 
+    /**
+     * @return The current state of the init container.
+     * 
+     */
     public ContainerStateResponse currentState() {
         return this.currentState;
     }
@@ -37,6 +41,10 @@ public final class InitContainerPropertiesDefinitionResponseInstanceView extends
     @Import(name="events", required=true)
     private List<EventResponse> events;
 
+    /**
+     * @return The events of the init container.
+     * 
+     */
     public List<EventResponse> events() {
         return this.events;
     }
@@ -48,6 +56,10 @@ public final class InitContainerPropertiesDefinitionResponseInstanceView extends
     @Import(name="previousState", required=true)
     private ContainerStateResponse previousState;
 
+    /**
+     * @return The previous state of the init container.
+     * 
+     */
     public ContainerStateResponse previousState() {
         return this.previousState;
     }
@@ -59,6 +71,10 @@ public final class InitContainerPropertiesDefinitionResponseInstanceView extends
     @Import(name="restartCount", required=true)
     private Integer restartCount;
 
+    /**
+     * @return The number of times that the init container has been restarted.
+     * 
+     */
     public Integer restartCount() {
         return this.restartCount;
     }
@@ -90,25 +106,55 @@ public final class InitContainerPropertiesDefinitionResponseInstanceView extends
             $ = new InitContainerPropertiesDefinitionResponseInstanceView(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param currentState The current state of the init container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder currentState(ContainerStateResponse currentState) {
             $.currentState = currentState;
             return this;
         }
 
+        /**
+         * @param events The events of the init container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder events(List<EventResponse> events) {
             $.events = events;
             return this;
         }
 
+        /**
+         * @param events The events of the init container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder events(EventResponse... events) {
             return events(List.of(events));
         }
 
+        /**
+         * @param previousState The previous state of the init container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder previousState(ContainerStateResponse previousState) {
             $.previousState = previousState;
             return this;
         }
 
+        /**
+         * @param restartCount The number of times that the init container has been restarted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restartCount(Integer restartCount) {
             $.restartCount = restartCount;
             return this;

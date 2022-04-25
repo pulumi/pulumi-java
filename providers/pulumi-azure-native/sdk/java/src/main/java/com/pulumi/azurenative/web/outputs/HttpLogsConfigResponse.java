@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class HttpLogsConfigResponse {
     /**
-     * Http logs to azure blob storage configuration.
+     * @return Http logs to azure blob storage configuration.
      * 
      */
     private final @Nullable AzureBlobStorageHttpLogsConfigResponse azureBlobStorage;
     /**
-     * Http logs to file system configuration.
+     * @return Http logs to file system configuration.
      * 
      */
     private final @Nullable FileSystemHttpLogsConfigResponse fileSystem;
@@ -32,16 +32,16 @@ public final class HttpLogsConfigResponse {
     }
 
     /**
-     * Http logs to azure blob storage configuration.
+     * @return Http logs to azure blob storage configuration.
      * 
-    */
+     */
     public Optional<AzureBlobStorageHttpLogsConfigResponse> azureBlobStorage() {
         return Optional.ofNullable(this.azureBlobStorage);
     }
     /**
-     * Http logs to file system configuration.
+     * @return Http logs to file system configuration.
      * 
-    */
+     */
     public Optional<FileSystemHttpLogsConfigResponse> fileSystem() {
         return Optional.ofNullable(this.fileSystem);
     }

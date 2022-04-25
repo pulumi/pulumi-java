@@ -27,6 +27,10 @@ public final class ContainerRecipeInstanceBlockDeviceMappingArgs extends com.pul
     @Import(name="deviceName")
     private @Nullable Output<String> deviceName;
 
+    /**
+     * @return The device to which these mappings apply.
+     * 
+     */
     public Optional<Output<String>> deviceName() {
         return Optional.ofNullable(this.deviceName);
     }
@@ -38,6 +42,10 @@ public final class ContainerRecipeInstanceBlockDeviceMappingArgs extends com.pul
     @Import(name="ebs")
     private @Nullable Output<ContainerRecipeEbsInstanceBlockDeviceSpecificationArgs> ebs;
 
+    /**
+     * @return Use to manage Amazon EBS-specific configuration for this mapping.
+     * 
+     */
     public Optional<Output<ContainerRecipeEbsInstanceBlockDeviceSpecificationArgs>> ebs() {
         return Optional.ofNullable(this.ebs);
     }
@@ -49,6 +57,10 @@ public final class ContainerRecipeInstanceBlockDeviceMappingArgs extends com.pul
     @Import(name="noDevice")
     private @Nullable Output<String> noDevice;
 
+    /**
+     * @return Use to remove a mapping from the parent image.
+     * 
+     */
     public Optional<Output<String>> noDevice() {
         return Optional.ofNullable(this.noDevice);
     }
@@ -60,6 +72,10 @@ public final class ContainerRecipeInstanceBlockDeviceMappingArgs extends com.pul
     @Import(name="virtualName")
     private @Nullable Output<String> virtualName;
 
+    /**
+     * @return Use to manage instance ephemeral devices.
+     * 
+     */
     public Optional<Output<String>> virtualName() {
         return Optional.ofNullable(this.virtualName);
     }
@@ -91,38 +107,86 @@ public final class ContainerRecipeInstanceBlockDeviceMappingArgs extends com.pul
             $ = new ContainerRecipeInstanceBlockDeviceMappingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deviceName The device to which these mappings apply.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(@Nullable Output<String> deviceName) {
             $.deviceName = deviceName;
             return this;
         }
 
+        /**
+         * @param deviceName The device to which these mappings apply.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(String deviceName) {
             return deviceName(Output.of(deviceName));
         }
 
+        /**
+         * @param ebs Use to manage Amazon EBS-specific configuration for this mapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ebs(@Nullable Output<ContainerRecipeEbsInstanceBlockDeviceSpecificationArgs> ebs) {
             $.ebs = ebs;
             return this;
         }
 
+        /**
+         * @param ebs Use to manage Amazon EBS-specific configuration for this mapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ebs(ContainerRecipeEbsInstanceBlockDeviceSpecificationArgs ebs) {
             return ebs(Output.of(ebs));
         }
 
+        /**
+         * @param noDevice Use to remove a mapping from the parent image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder noDevice(@Nullable Output<String> noDevice) {
             $.noDevice = noDevice;
             return this;
         }
 
+        /**
+         * @param noDevice Use to remove a mapping from the parent image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder noDevice(String noDevice) {
             return noDevice(Output.of(noDevice));
         }
 
+        /**
+         * @param virtualName Use to manage instance ephemeral devices.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualName(@Nullable Output<String> virtualName) {
             $.virtualName = virtualName;
             return this;
         }
 
+        /**
+         * @param virtualName Use to manage instance ephemeral devices.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualName(String virtualName) {
             return virtualName(Output.of(virtualName));
         }

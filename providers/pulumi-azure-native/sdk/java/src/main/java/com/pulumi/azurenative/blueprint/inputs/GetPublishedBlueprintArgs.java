@@ -19,6 +19,10 @@ public final class GetPublishedBlueprintArgs extends com.pulumi.resources.Invoke
     @Import(name="blueprintName", required=true)
     private String blueprintName;
 
+    /**
+     * @return Name of the blueprint definition.
+     * 
+     */
     public String blueprintName() {
         return this.blueprintName;
     }
@@ -30,6 +34,10 @@ public final class GetPublishedBlueprintArgs extends com.pulumi.resources.Invoke
     @Import(name="resourceScope", required=true)
     private String resourceScope;
 
+    /**
+     * @return The scope of the resource. Valid scopes are: management group (format: &#39;/providers/Microsoft.Management/managementGroups/{managementGroup}&#39;), subscription (format: &#39;/subscriptions/{subscriptionId}&#39;).
+     * 
+     */
     public String resourceScope() {
         return this.resourceScope;
     }
@@ -41,6 +49,10 @@ public final class GetPublishedBlueprintArgs extends com.pulumi.resources.Invoke
     @Import(name="versionId", required=true)
     private String versionId;
 
+    /**
+     * @return Version of the published blueprint definition.
+     * 
+     */
     public String versionId() {
         return this.versionId;
     }
@@ -71,16 +83,34 @@ public final class GetPublishedBlueprintArgs extends com.pulumi.resources.Invoke
             $ = new GetPublishedBlueprintArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param blueprintName Name of the blueprint definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blueprintName(String blueprintName) {
             $.blueprintName = blueprintName;
             return this;
         }
 
+        /**
+         * @param resourceScope The scope of the resource. Valid scopes are: management group (format: &#39;/providers/Microsoft.Management/managementGroups/{managementGroup}&#39;), subscription (format: &#39;/subscriptions/{subscriptionId}&#39;).
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceScope(String resourceScope) {
             $.resourceScope = resourceScope;
             return this;
         }
 
+        /**
+         * @param versionId Version of the published blueprint definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionId(String versionId) {
             $.versionId = versionId;
             return this;

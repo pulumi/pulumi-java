@@ -29,6 +29,10 @@ public final class X12FramingSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="characterSet", required=true)
     private Output<Either<String,X12CharacterSet>> characterSet;
 
+    /**
+     * @return The X12 character set.
+     * 
+     */
     public Output<Either<String,X12CharacterSet>> characterSet() {
         return this.characterSet;
     }
@@ -40,6 +44,10 @@ public final class X12FramingSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="componentSeparator", required=true)
     private Output<Integer> componentSeparator;
 
+    /**
+     * @return The component separator.
+     * 
+     */
     public Output<Integer> componentSeparator() {
         return this.componentSeparator;
     }
@@ -51,6 +59,10 @@ public final class X12FramingSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="dataElementSeparator", required=true)
     private Output<Integer> dataElementSeparator;
 
+    /**
+     * @return The data element separator.
+     * 
+     */
     public Output<Integer> dataElementSeparator() {
         return this.dataElementSeparator;
     }
@@ -62,6 +74,10 @@ public final class X12FramingSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="replaceCharacter", required=true)
     private Output<Integer> replaceCharacter;
 
+    /**
+     * @return The replacement character.
+     * 
+     */
     public Output<Integer> replaceCharacter() {
         return this.replaceCharacter;
     }
@@ -73,6 +89,10 @@ public final class X12FramingSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="replaceSeparatorsInPayload", required=true)
     private Output<Boolean> replaceSeparatorsInPayload;
 
+    /**
+     * @return The value indicating whether to replace separators in payload.
+     * 
+     */
     public Output<Boolean> replaceSeparatorsInPayload() {
         return this.replaceSeparatorsInPayload;
     }
@@ -84,6 +104,10 @@ public final class X12FramingSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="segmentTerminator", required=true)
     private Output<Integer> segmentTerminator;
 
+    /**
+     * @return The segment terminator.
+     * 
+     */
     public Output<Integer> segmentTerminator() {
         return this.segmentTerminator;
     }
@@ -95,6 +119,10 @@ public final class X12FramingSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="segmentTerminatorSuffix", required=true)
     private Output<SegmentTerminatorSuffix> segmentTerminatorSuffix;
 
+    /**
+     * @return The segment terminator suffix.
+     * 
+     */
     public Output<SegmentTerminatorSuffix> segmentTerminatorSuffix() {
         return this.segmentTerminatorSuffix;
     }
@@ -129,73 +157,169 @@ public final class X12FramingSettingsArgs extends com.pulumi.resources.ResourceA
             $ = new X12FramingSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param characterSet The X12 character set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder characterSet(Output<Either<String,X12CharacterSet>> characterSet) {
             $.characterSet = characterSet;
             return this;
         }
 
+        /**
+         * @param characterSet The X12 character set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder characterSet(Either<String,X12CharacterSet> characterSet) {
             return characterSet(Output.of(characterSet));
         }
 
+        /**
+         * @param characterSet The X12 character set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder characterSet(String characterSet) {
             return characterSet(Either.ofLeft(characterSet));
         }
 
+        /**
+         * @param characterSet The X12 character set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder characterSet(X12CharacterSet characterSet) {
             return characterSet(Either.ofRight(characterSet));
         }
 
+        /**
+         * @param componentSeparator The component separator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder componentSeparator(Output<Integer> componentSeparator) {
             $.componentSeparator = componentSeparator;
             return this;
         }
 
+        /**
+         * @param componentSeparator The component separator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder componentSeparator(Integer componentSeparator) {
             return componentSeparator(Output.of(componentSeparator));
         }
 
+        /**
+         * @param dataElementSeparator The data element separator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataElementSeparator(Output<Integer> dataElementSeparator) {
             $.dataElementSeparator = dataElementSeparator;
             return this;
         }
 
+        /**
+         * @param dataElementSeparator The data element separator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataElementSeparator(Integer dataElementSeparator) {
             return dataElementSeparator(Output.of(dataElementSeparator));
         }
 
+        /**
+         * @param replaceCharacter The replacement character.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replaceCharacter(Output<Integer> replaceCharacter) {
             $.replaceCharacter = replaceCharacter;
             return this;
         }
 
+        /**
+         * @param replaceCharacter The replacement character.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replaceCharacter(Integer replaceCharacter) {
             return replaceCharacter(Output.of(replaceCharacter));
         }
 
+        /**
+         * @param replaceSeparatorsInPayload The value indicating whether to replace separators in payload.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replaceSeparatorsInPayload(Output<Boolean> replaceSeparatorsInPayload) {
             $.replaceSeparatorsInPayload = replaceSeparatorsInPayload;
             return this;
         }
 
+        /**
+         * @param replaceSeparatorsInPayload The value indicating whether to replace separators in payload.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replaceSeparatorsInPayload(Boolean replaceSeparatorsInPayload) {
             return replaceSeparatorsInPayload(Output.of(replaceSeparatorsInPayload));
         }
 
+        /**
+         * @param segmentTerminator The segment terminator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder segmentTerminator(Output<Integer> segmentTerminator) {
             $.segmentTerminator = segmentTerminator;
             return this;
         }
 
+        /**
+         * @param segmentTerminator The segment terminator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder segmentTerminator(Integer segmentTerminator) {
             return segmentTerminator(Output.of(segmentTerminator));
         }
 
+        /**
+         * @param segmentTerminatorSuffix The segment terminator suffix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder segmentTerminatorSuffix(Output<SegmentTerminatorSuffix> segmentTerminatorSuffix) {
             $.segmentTerminatorSuffix = segmentTerminatorSuffix;
             return this;
         }
 
+        /**
+         * @param segmentTerminatorSuffix The segment terminator suffix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder segmentTerminatorSuffix(SegmentTerminatorSuffix segmentTerminatorSuffix) {
             return segmentTerminatorSuffix(Output.of(segmentTerminatorSuffix));
         }

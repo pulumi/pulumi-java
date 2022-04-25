@@ -27,6 +27,10 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="count")
     private @Nullable Output<Integer> count;
 
+    /**
+     * @return The absolute number of time series that must fail the predicate for the condition to be triggered.
+     * 
+     */
     public Optional<Output<Integer>> count() {
         return Optional.ofNullable(this.count);
     }
@@ -38,6 +42,10 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="percent")
     private @Nullable Output<Double> percent;
 
+    /**
+     * @return The percentage of time series that must fail the predicate for the condition to be triggered.
+     * 
+     */
     public Optional<Output<Double>> percent() {
         return Optional.ofNullable(this.percent);
     }
@@ -67,20 +75,44 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
             $ = new TriggerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param count The absolute number of time series that must fail the predicate for the condition to be triggered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(@Nullable Output<Integer> count) {
             $.count = count;
             return this;
         }
 
+        /**
+         * @param count The absolute number of time series that must fail the predicate for the condition to be triggered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(Integer count) {
             return count(Output.of(count));
         }
 
+        /**
+         * @param percent The percentage of time series that must fail the predicate for the condition to be triggered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder percent(@Nullable Output<Double> percent) {
             $.percent = percent;
             return this;
         }
 
+        /**
+         * @param percent The percentage of time series that must fail the predicate for the condition to be triggered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder percent(Double percent) {
             return percent(Output.of(percent));
         }

@@ -72,6 +72,10 @@ public final class BucketReplicationDestination extends com.pulumi.resources.Inv
     @Import(name="storageClass")
     private @Nullable BucketReplicationDestinationStorageClass storageClass;
 
+    /**
+     * @return The storage class to use when replicating objects, such as S3 Standard or reduced redundancy.
+     * 
+     */
     public Optional<BucketReplicationDestinationStorageClass> storageClass() {
         return Optional.ofNullable(this.storageClass);
     }
@@ -136,6 +140,12 @@ public final class BucketReplicationDestination extends com.pulumi.resources.Inv
             return this;
         }
 
+        /**
+         * @param storageClass The storage class to use when replicating objects, such as S3 Standard or reduced redundancy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageClass(@Nullable BucketReplicationDestinationStorageClass storageClass) {
             $.storageClass = storageClass;
             return this;

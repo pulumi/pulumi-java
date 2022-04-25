@@ -19,6 +19,10 @@ public final class PermissionScopeResponse extends com.pulumi.resources.InvokeAr
     @Import(name="permissions", required=true)
     private String permissions;
 
+    /**
+     * @return The permissions for the local user. Possible values include: Read (r), Write (w), Delete (d), List (l), and Create (c).
+     * 
+     */
     public String permissions() {
         return this.permissions;
     }
@@ -30,6 +34,10 @@ public final class PermissionScopeResponse extends com.pulumi.resources.InvokeAr
     @Import(name="resourceName", required=true)
     private String resourceName;
 
+    /**
+     * @return The name of resource, normally the container name or the file share name, used by the local user.
+     * 
+     */
     public String resourceName() {
         return this.resourceName;
     }
@@ -41,6 +49,10 @@ public final class PermissionScopeResponse extends com.pulumi.resources.InvokeAr
     @Import(name="service", required=true)
     private String service;
 
+    /**
+     * @return The service used by the local user, e.g. blob, file.
+     * 
+     */
     public String service() {
         return this.service;
     }
@@ -71,16 +83,34 @@ public final class PermissionScopeResponse extends com.pulumi.resources.InvokeAr
             $ = new PermissionScopeResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param permissions The permissions for the local user. Possible values include: Read (r), Write (w), Delete (d), List (l), and Create (c).
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissions(String permissions) {
             $.permissions = permissions;
             return this;
         }
 
+        /**
+         * @param resourceName The name of resource, normally the container name or the file share name, used by the local user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(String resourceName) {
             $.resourceName = resourceName;
             return this;
         }
 
+        /**
+         * @param service The service used by the local user, e.g. blob, file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(String service) {
             $.service = service;
             return this;

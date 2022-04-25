@@ -24,6 +24,10 @@ public final class ManagedInstancePecPropertyResponse extends com.pulumi.resourc
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -35,6 +39,10 @@ public final class ManagedInstancePecPropertyResponse extends com.pulumi.resourc
     @Import(name="properties", required=true)
     private ManagedInstancePrivateEndpointConnectionPropertiesResponse properties;
 
+    /**
+     * @return Private endpoint connection properties
+     * 
+     */
     public ManagedInstancePrivateEndpointConnectionPropertiesResponse properties() {
         return this.properties;
     }
@@ -64,11 +72,23 @@ public final class ManagedInstancePecPropertyResponse extends com.pulumi.resourc
             $ = new ManagedInstancePecPropertyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param properties Private endpoint connection properties
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(ManagedInstancePrivateEndpointConnectionPropertiesResponse properties) {
             $.properties = properties;
             return this;

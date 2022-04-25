@@ -23,6 +23,11 @@ public final class CxPageFormParameterFillBehaviorGetArgs extends com.pulumi.res
     @Import(name="initialPromptFulfillment")
     private @Nullable Output<CxPageFormParameterFillBehaviorInitialPromptFulfillmentGetArgs> initialPromptFulfillment;
 
+    /**
+     * @return The fulfillment to provide the initial prompt that the agent can present to the user in order to fill the parameter.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<CxPageFormParameterFillBehaviorInitialPromptFulfillmentGetArgs>> initialPromptFulfillment() {
         return Optional.ofNullable(this.initialPromptFulfillment);
     }
@@ -51,11 +56,25 @@ public final class CxPageFormParameterFillBehaviorGetArgs extends com.pulumi.res
             $ = new CxPageFormParameterFillBehaviorGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param initialPromptFulfillment The fulfillment to provide the initial prompt that the agent can present to the user in order to fill the parameter.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder initialPromptFulfillment(@Nullable Output<CxPageFormParameterFillBehaviorInitialPromptFulfillmentGetArgs> initialPromptFulfillment) {
             $.initialPromptFulfillment = initialPromptFulfillment;
             return this;
         }
 
+        /**
+         * @param initialPromptFulfillment The fulfillment to provide the initial prompt that the agent can present to the user in order to fill the parameter.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder initialPromptFulfillment(CxPageFormParameterFillBehaviorInitialPromptFulfillmentGetArgs initialPromptFulfillment) {
             return initialPromptFulfillment(Output.of(initialPromptFulfillment));
         }

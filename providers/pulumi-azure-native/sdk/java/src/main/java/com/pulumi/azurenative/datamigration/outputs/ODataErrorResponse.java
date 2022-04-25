@@ -11,17 +11,17 @@ import java.util.Objects;
 @CustomType
 public final class ODataErrorResponse {
     /**
-     * The machine-readable description of the error, such as &#39;InvalidRequest&#39; or &#39;InternalServerError&#39;
+     * @return The machine-readable description of the error, such as &#39;InvalidRequest&#39; or &#39;InternalServerError&#39;
      * 
      */
     private final String code;
     /**
-     * Inner errors that caused this error
+     * @return Inner errors that caused this error
      * 
      */
     private final List<ODataErrorResponse> details;
     /**
-     * The human-readable description of the error
+     * @return The human-readable description of the error
      * 
      */
     private final String message;
@@ -37,23 +37,23 @@ public final class ODataErrorResponse {
     }
 
     /**
-     * The machine-readable description of the error, such as &#39;InvalidRequest&#39; or &#39;InternalServerError&#39;
+     * @return The machine-readable description of the error, such as &#39;InvalidRequest&#39; or &#39;InternalServerError&#39;
      * 
-    */
+     */
     public String code() {
         return this.code;
     }
     /**
-     * Inner errors that caused this error
+     * @return Inner errors that caused this error
      * 
-    */
+     */
     public List<ODataErrorResponse> details() {
         return this.details;
     }
     /**
-     * The human-readable description of the error
+     * @return The human-readable description of the error
      * 
-    */
+     */
     public String message() {
         return this.message;
     }

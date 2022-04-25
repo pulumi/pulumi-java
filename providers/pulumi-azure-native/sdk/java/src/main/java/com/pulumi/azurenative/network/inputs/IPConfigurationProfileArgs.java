@@ -27,6 +27,10 @@ public final class IPConfigurationProfileArgs extends com.pulumi.resources.Resou
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -38,6 +42,10 @@ public final class IPConfigurationProfileArgs extends com.pulumi.resources.Resou
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the resource. This name can be used to access the resource.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -49,6 +57,10 @@ public final class IPConfigurationProfileArgs extends com.pulumi.resources.Resou
     @Import(name="subnet")
     private @Nullable Output<SubnetArgs> subnet;
 
+    /**
+     * @return The reference to the subnet resource to create a container network interface ip configuration.
+     * 
+     */
     public Optional<Output<SubnetArgs>> subnet() {
         return Optional.ofNullable(this.subnet);
     }
@@ -79,29 +91,65 @@ public final class IPConfigurationProfileArgs extends com.pulumi.resources.Resou
             $ = new IPConfigurationProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param name The name of the resource. This name can be used to access the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the resource. This name can be used to access the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param subnet The reference to the subnet resource to create a container network interface ip configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnet(@Nullable Output<SubnetArgs> subnet) {
             $.subnet = subnet;
             return this;
         }
 
+        /**
+         * @param subnet The reference to the subnet resource to create a container network interface ip configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnet(SubnetArgs subnet) {
             return subnet(Output.of(subnet));
         }

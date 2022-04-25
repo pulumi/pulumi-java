@@ -17,57 +17,57 @@ import java.util.Objects;
 @CustomType
 public final class GetConnectionProfileResult {
     /**
-     * The create time of the resource.
+     * @return The create time of the resource.
      * 
      */
     private final String createTime;
     /**
-     * Display name.
+     * @return Display name.
      * 
      */
     private final String displayName;
     /**
-     * Forward SSH tunnel connectivity.
+     * @return Forward SSH tunnel connectivity.
      * 
      */
     private final ForwardSshTunnelConnectivityResponse forwardSshConnectivity;
     /**
-     * Cloud Storage ConnectionProfile configuration.
+     * @return Cloud Storage ConnectionProfile configuration.
      * 
      */
     private final GcsProfileResponse gcsProfile;
     /**
-     * Labels.
+     * @return Labels.
      * 
      */
     private final Map<String,String> labels;
     /**
-     * MySQL ConnectionProfile configuration.
+     * @return MySQL ConnectionProfile configuration.
      * 
      */
     private final MysqlProfileResponse mysqlProfile;
     /**
-     * The resource&#39;s name.
+     * @return The resource&#39;s name.
      * 
      */
     private final String name;
     /**
-     * Oracle ConnectionProfile configuration.
+     * @return Oracle ConnectionProfile configuration.
      * 
      */
     private final OracleProfileResponse oracleProfile;
     /**
-     * Private connectivity.
+     * @return Private connectivity.
      * 
      */
     private final PrivateConnectivityResponse privateConnectivity;
     /**
-     * Static Service IP connectivity.
+     * @return Static Service IP connectivity.
      * 
      */
     private final StaticServiceIpConnectivityResponse staticServiceIpConnectivity;
     /**
-     * The update time of the resource.
+     * @return The update time of the resource.
      * 
      */
     private final String updateTime;
@@ -99,79 +99,79 @@ public final class GetConnectionProfileResult {
     }
 
     /**
-     * The create time of the resource.
+     * @return The create time of the resource.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * Display name.
+     * @return Display name.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * Forward SSH tunnel connectivity.
+     * @return Forward SSH tunnel connectivity.
      * 
-    */
+     */
     public ForwardSshTunnelConnectivityResponse forwardSshConnectivity() {
         return this.forwardSshConnectivity;
     }
     /**
-     * Cloud Storage ConnectionProfile configuration.
+     * @return Cloud Storage ConnectionProfile configuration.
      * 
-    */
+     */
     public GcsProfileResponse gcsProfile() {
         return this.gcsProfile;
     }
     /**
-     * Labels.
+     * @return Labels.
      * 
-    */
+     */
     public Map<String,String> labels() {
         return this.labels;
     }
     /**
-     * MySQL ConnectionProfile configuration.
+     * @return MySQL ConnectionProfile configuration.
      * 
-    */
+     */
     public MysqlProfileResponse mysqlProfile() {
         return this.mysqlProfile;
     }
     /**
-     * The resource&#39;s name.
+     * @return The resource&#39;s name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Oracle ConnectionProfile configuration.
+     * @return Oracle ConnectionProfile configuration.
      * 
-    */
+     */
     public OracleProfileResponse oracleProfile() {
         return this.oracleProfile;
     }
     /**
-     * Private connectivity.
+     * @return Private connectivity.
      * 
-    */
+     */
     public PrivateConnectivityResponse privateConnectivity() {
         return this.privateConnectivity;
     }
     /**
-     * Static Service IP connectivity.
+     * @return Static Service IP connectivity.
      * 
-    */
+     */
     public StaticServiceIpConnectivityResponse staticServiceIpConnectivity() {
         return this.staticServiceIpConnectivity;
     }
     /**
-     * The update time of the resource.
+     * @return The update time of the resource.
      * 
-    */
+     */
     public String updateTime() {
         return this.updateTime;
     }

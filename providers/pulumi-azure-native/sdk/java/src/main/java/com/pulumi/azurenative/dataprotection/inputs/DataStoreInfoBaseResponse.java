@@ -23,6 +23,10 @@ public final class DataStoreInfoBaseResponse extends com.pulumi.resources.Invoke
     @Import(name="dataStoreType", required=true)
     private String dataStoreType;
 
+    /**
+     * @return type of datastore; Operational/Vault/Archive
+     * 
+     */
     public String dataStoreType() {
         return this.dataStoreType;
     }
@@ -34,6 +38,10 @@ public final class DataStoreInfoBaseResponse extends com.pulumi.resources.Invoke
     @Import(name="objectType", required=true)
     private String objectType;
 
+    /**
+     * @return Type of Datasource object, used to initialize the right inherited type
+     * 
+     */
     public String objectType() {
         return this.objectType;
     }
@@ -63,11 +71,23 @@ public final class DataStoreInfoBaseResponse extends com.pulumi.resources.Invoke
             $ = new DataStoreInfoBaseResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataStoreType type of datastore; Operational/Vault/Archive
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataStoreType(String dataStoreType) {
             $.dataStoreType = dataStoreType;
             return this;
         }
 
+        /**
+         * @param objectType Type of Datasource object, used to initialize the right inherited type
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectType(String objectType) {
             $.objectType = objectType;
             return this;

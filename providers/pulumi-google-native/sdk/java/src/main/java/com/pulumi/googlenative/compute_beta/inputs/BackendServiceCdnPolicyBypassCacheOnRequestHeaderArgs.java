@@ -26,6 +26,10 @@ public final class BackendServiceCdnPolicyBypassCacheOnRequestHeaderArgs extends
     @Import(name="headerName")
     private @Nullable Output<String> headerName;
 
+    /**
+     * @return The header field name to match on when bypassing cache. Values are case-insensitive.
+     * 
+     */
     public Optional<Output<String>> headerName() {
         return Optional.ofNullable(this.headerName);
     }
@@ -54,11 +58,23 @@ public final class BackendServiceCdnPolicyBypassCacheOnRequestHeaderArgs extends
             $ = new BackendServiceCdnPolicyBypassCacheOnRequestHeaderArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param headerName The header field name to match on when bypassing cache. Values are case-insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headerName(@Nullable Output<String> headerName) {
             $.headerName = headerName;
             return this;
         }
 
+        /**
+         * @param headerName The header field name to match on when bypassing cache. Values are case-insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headerName(String headerName) {
             return headerName(Output.of(headerName));
         }

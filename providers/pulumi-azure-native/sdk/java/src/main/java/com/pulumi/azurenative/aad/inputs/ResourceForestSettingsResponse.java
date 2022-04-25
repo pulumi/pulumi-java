@@ -27,6 +27,10 @@ public final class ResourceForestSettingsResponse extends com.pulumi.resources.I
     @Import(name="resourceForest")
     private @Nullable String resourceForest;
 
+    /**
+     * @return Resource Forest
+     * 
+     */
     public Optional<String> resourceForest() {
         return Optional.ofNullable(this.resourceForest);
     }
@@ -38,6 +42,10 @@ public final class ResourceForestSettingsResponse extends com.pulumi.resources.I
     @Import(name="settings")
     private @Nullable List<ForestTrustResponse> settings;
 
+    /**
+     * @return List of settings for Resource Forest
+     * 
+     */
     public Optional<List<ForestTrustResponse>> settings() {
         return Optional.ofNullable(this.settings);
     }
@@ -67,16 +75,34 @@ public final class ResourceForestSettingsResponse extends com.pulumi.resources.I
             $ = new ResourceForestSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceForest Resource Forest
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceForest(@Nullable String resourceForest) {
             $.resourceForest = resourceForest;
             return this;
         }
 
+        /**
+         * @param settings List of settings for Resource Forest
+         * 
+         * @return builder
+         * 
+         */
         public Builder settings(@Nullable List<ForestTrustResponse> settings) {
             $.settings = settings;
             return this;
         }
 
+        /**
+         * @param settings List of settings for Resource Forest
+         * 
+         * @return builder
+         * 
+         */
         public Builder settings(ForestTrustResponse... settings) {
             return settings(List.of(settings));
         }

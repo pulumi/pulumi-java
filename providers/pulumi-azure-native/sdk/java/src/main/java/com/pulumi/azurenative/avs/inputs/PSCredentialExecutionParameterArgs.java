@@ -27,6 +27,10 @@ public final class PSCredentialExecutionParameterArgs extends com.pulumi.resourc
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The parameter name
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -38,6 +42,10 @@ public final class PSCredentialExecutionParameterArgs extends com.pulumi.resourc
     @Import(name="password")
     private @Nullable Output<String> password;
 
+    /**
+     * @return password for login
+     * 
+     */
     public Optional<Output<String>> password() {
         return Optional.ofNullable(this.password);
     }
@@ -50,6 +58,11 @@ public final class PSCredentialExecutionParameterArgs extends com.pulumi.resourc
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return The type of execution parameter
+     * Expected value is &#39;Credential&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -61,6 +74,10 @@ public final class PSCredentialExecutionParameterArgs extends com.pulumi.resourc
     @Import(name="username")
     private @Nullable Output<String> username;
 
+    /**
+     * @return username for login
+     * 
+     */
     public Optional<Output<String>> username() {
         return Optional.ofNullable(this.username);
     }
@@ -92,38 +109,88 @@ public final class PSCredentialExecutionParameterArgs extends com.pulumi.resourc
             $ = new PSCredentialExecutionParameterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The parameter name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The parameter name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param password password for login
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(@Nullable Output<String> password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param password password for login
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(String password) {
             return password(Output.of(password));
         }
 
+        /**
+         * @param type The type of execution parameter
+         * Expected value is &#39;Credential&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of execution parameter
+         * Expected value is &#39;Credential&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param username username for login
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(@Nullable Output<String> username) {
             $.username = username;
             return this;
         }
 
+        /**
+         * @param username username for login
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(String username) {
             return username(Output.of(username));
         }

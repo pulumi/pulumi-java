@@ -28,6 +28,10 @@ public final class AutoprovisioningNodePoolDefaultsResponse extends com.pulumi.r
     @Import(name="bootDiskKmsKey", required=true)
     private String bootDiskKmsKey;
 
+    /**
+     * @return The Customer Managed Encryption Key used to encrypt the boot disk attached to each node in the node pool. This should be of the form projects/[KEY_PROJECT_ID]/locations/[LOCATION]/keyRings/[RING_NAME]/cryptoKeys/[KEY_NAME]. For more information about protecting resources with Cloud KMS Keys please see: https://cloud.google.com/compute/docs/disks/customer-managed-encryption
+     * 
+     */
     public String bootDiskKmsKey() {
         return this.bootDiskKmsKey;
     }
@@ -39,6 +43,10 @@ public final class AutoprovisioningNodePoolDefaultsResponse extends com.pulumi.r
     @Import(name="diskSizeGb", required=true)
     private Integer diskSizeGb;
 
+    /**
+     * @return Size of the disk attached to each node, specified in GB. The smallest allowed disk size is 10GB. If unspecified, the default disk size is 100GB.
+     * 
+     */
     public Integer diskSizeGb() {
         return this.diskSizeGb;
     }
@@ -50,6 +58,10 @@ public final class AutoprovisioningNodePoolDefaultsResponse extends com.pulumi.r
     @Import(name="diskType", required=true)
     private String diskType;
 
+    /**
+     * @return Type of the disk attached to each node (e.g. &#39;pd-standard&#39;, &#39;pd-ssd&#39; or &#39;pd-balanced&#39;) If unspecified, the default disk type is &#39;pd-standard&#39;
+     * 
+     */
     public String diskType() {
         return this.diskType;
     }
@@ -61,6 +73,10 @@ public final class AutoprovisioningNodePoolDefaultsResponse extends com.pulumi.r
     @Import(name="imageType", required=true)
     private String imageType;
 
+    /**
+     * @return The image type to use for NAP created node.
+     * 
+     */
     public String imageType() {
         return this.imageType;
     }
@@ -72,6 +88,10 @@ public final class AutoprovisioningNodePoolDefaultsResponse extends com.pulumi.r
     @Import(name="management", required=true)
     private NodeManagementResponse management;
 
+    /**
+     * @return Specifies the node management options for NAP created node-pools.
+     * 
+     */
     public NodeManagementResponse management() {
         return this.management;
     }
@@ -83,6 +103,10 @@ public final class AutoprovisioningNodePoolDefaultsResponse extends com.pulumi.r
     @Import(name="minCpuPlatform", required=true)
     private String minCpuPlatform;
 
+    /**
+     * @return Minimum CPU platform to be used for NAP created node pools. The instance may be scheduled on the specified or newer CPU platform. Applicable values are the friendly names of CPU platforms, such as minCpuPlatform: Intel Haswell or minCpuPlatform: Intel Sandy Bridge. For more information, read [how to specify min CPU platform](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform) To unset the min cpu platform field pass &#34;automatic&#34; as field value.
+     * 
+     */
     public String minCpuPlatform() {
         return this.minCpuPlatform;
     }
@@ -94,6 +118,10 @@ public final class AutoprovisioningNodePoolDefaultsResponse extends com.pulumi.r
     @Import(name="oauthScopes", required=true)
     private List<String> oauthScopes;
 
+    /**
+     * @return Scopes that are used by NAP when creating node pools.
+     * 
+     */
     public List<String> oauthScopes() {
         return this.oauthScopes;
     }
@@ -105,6 +133,10 @@ public final class AutoprovisioningNodePoolDefaultsResponse extends com.pulumi.r
     @Import(name="serviceAccount", required=true)
     private String serviceAccount;
 
+    /**
+     * @return The Google Cloud Platform Service Account to be used by the node VMs.
+     * 
+     */
     public String serviceAccount() {
         return this.serviceAccount;
     }
@@ -116,6 +148,10 @@ public final class AutoprovisioningNodePoolDefaultsResponse extends com.pulumi.r
     @Import(name="shieldedInstanceConfig", required=true)
     private ShieldedInstanceConfigResponse shieldedInstanceConfig;
 
+    /**
+     * @return Shielded Instance options.
+     * 
+     */
     public ShieldedInstanceConfigResponse shieldedInstanceConfig() {
         return this.shieldedInstanceConfig;
     }
@@ -127,6 +163,10 @@ public final class AutoprovisioningNodePoolDefaultsResponse extends com.pulumi.r
     @Import(name="upgradeSettings", required=true)
     private UpgradeSettingsResponse upgradeSettings;
 
+    /**
+     * @return Specifies the upgrade settings for NAP created node pools
+     * 
+     */
     public UpgradeSettingsResponse upgradeSettings() {
         return this.upgradeSettings;
     }
@@ -164,55 +204,121 @@ public final class AutoprovisioningNodePoolDefaultsResponse extends com.pulumi.r
             $ = new AutoprovisioningNodePoolDefaultsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bootDiskKmsKey The Customer Managed Encryption Key used to encrypt the boot disk attached to each node in the node pool. This should be of the form projects/[KEY_PROJECT_ID]/locations/[LOCATION]/keyRings/[RING_NAME]/cryptoKeys/[KEY_NAME]. For more information about protecting resources with Cloud KMS Keys please see: https://cloud.google.com/compute/docs/disks/customer-managed-encryption
+         * 
+         * @return builder
+         * 
+         */
         public Builder bootDiskKmsKey(String bootDiskKmsKey) {
             $.bootDiskKmsKey = bootDiskKmsKey;
             return this;
         }
 
+        /**
+         * @param diskSizeGb Size of the disk attached to each node, specified in GB. The smallest allowed disk size is 10GB. If unspecified, the default disk size is 100GB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskSizeGb(Integer diskSizeGb) {
             $.diskSizeGb = diskSizeGb;
             return this;
         }
 
+        /**
+         * @param diskType Type of the disk attached to each node (e.g. &#39;pd-standard&#39;, &#39;pd-ssd&#39; or &#39;pd-balanced&#39;) If unspecified, the default disk type is &#39;pd-standard&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskType(String diskType) {
             $.diskType = diskType;
             return this;
         }
 
+        /**
+         * @param imageType The image type to use for NAP created node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageType(String imageType) {
             $.imageType = imageType;
             return this;
         }
 
+        /**
+         * @param management Specifies the node management options for NAP created node-pools.
+         * 
+         * @return builder
+         * 
+         */
         public Builder management(NodeManagementResponse management) {
             $.management = management;
             return this;
         }
 
+        /**
+         * @param minCpuPlatform Minimum CPU platform to be used for NAP created node pools. The instance may be scheduled on the specified or newer CPU platform. Applicable values are the friendly names of CPU platforms, such as minCpuPlatform: Intel Haswell or minCpuPlatform: Intel Sandy Bridge. For more information, read [how to specify min CPU platform](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform) To unset the min cpu platform field pass &#34;automatic&#34; as field value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minCpuPlatform(String minCpuPlatform) {
             $.minCpuPlatform = minCpuPlatform;
             return this;
         }
 
+        /**
+         * @param oauthScopes Scopes that are used by NAP when creating node pools.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oauthScopes(List<String> oauthScopes) {
             $.oauthScopes = oauthScopes;
             return this;
         }
 
+        /**
+         * @param oauthScopes Scopes that are used by NAP when creating node pools.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oauthScopes(String... oauthScopes) {
             return oauthScopes(List.of(oauthScopes));
         }
 
+        /**
+         * @param serviceAccount The Google Cloud Platform Service Account to be used by the node VMs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccount(String serviceAccount) {
             $.serviceAccount = serviceAccount;
             return this;
         }
 
+        /**
+         * @param shieldedInstanceConfig Shielded Instance options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shieldedInstanceConfig(ShieldedInstanceConfigResponse shieldedInstanceConfig) {
             $.shieldedInstanceConfig = shieldedInstanceConfig;
             return this;
         }
 
+        /**
+         * @param upgradeSettings Specifies the upgrade settings for NAP created node pools
+         * 
+         * @return builder
+         * 
+         */
         public Builder upgradeSettings(UpgradeSettingsResponse upgradeSettings) {
             $.upgradeSettings = upgradeSettings;
             return this;

@@ -23,6 +23,10 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesCon
     @Import(name="cookieBehavior", required=true)
     private Output<String> cookieBehavior;
 
+    /**
+     * @return Determines whether any cookies in viewer requests are included in the cache key and automatically included in requests that CloudFront sends to the origin. Valid values are `none`, `whitelist`, `allExcept`, `all`.
+     * 
+     */
     public Output<String> cookieBehavior() {
         return this.cookieBehavior;
     }
@@ -34,6 +38,10 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesCon
     @Import(name="cookies")
     private @Nullable Output<CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookiesGetArgs> cookies;
 
+    /**
+     * @return Object that contains a list of cookie names. See Items for more information.
+     * 
+     */
     public Optional<Output<CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookiesGetArgs>> cookies() {
         return Optional.ofNullable(this.cookies);
     }
@@ -63,20 +71,44 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesCon
             $ = new CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cookieBehavior Determines whether any cookies in viewer requests are included in the cache key and automatically included in requests that CloudFront sends to the origin. Valid values are `none`, `whitelist`, `allExcept`, `all`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cookieBehavior(Output<String> cookieBehavior) {
             $.cookieBehavior = cookieBehavior;
             return this;
         }
 
+        /**
+         * @param cookieBehavior Determines whether any cookies in viewer requests are included in the cache key and automatically included in requests that CloudFront sends to the origin. Valid values are `none`, `whitelist`, `allExcept`, `all`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cookieBehavior(String cookieBehavior) {
             return cookieBehavior(Output.of(cookieBehavior));
         }
 
+        /**
+         * @param cookies Object that contains a list of cookie names. See Items for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cookies(@Nullable Output<CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookiesGetArgs> cookies) {
             $.cookies = cookies;
             return this;
         }
 
+        /**
+         * @param cookies Object that contains a list of cookie names. See Items for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cookies(CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookiesGetArgs cookies) {
             return cookies(Output.of(cookies));
         }

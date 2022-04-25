@@ -14,25 +14,25 @@ import javax.annotation.Nullable;
 @CustomType
 public final class URLMapDefaultRouteActionWeightedBackendServiceHeaderAction {
     /**
-     * Headers to add to a matching request prior to forwarding the request to the backendService.
+     * @return Headers to add to a matching request prior to forwarding the request to the backendService.
      * Structure is documented below.
      * 
      */
     private final @Nullable List<URLMapDefaultRouteActionWeightedBackendServiceHeaderActionRequestHeadersToAdd> requestHeadersToAdds;
     /**
-     * A list of header names for headers that need to be removed from the request prior to
+     * @return A list of header names for headers that need to be removed from the request prior to
      * forwarding the request to the backendService.
      * 
      */
     private final @Nullable List<String> requestHeadersToRemoves;
     /**
-     * Headers to add the response prior to sending the response back to the client.
+     * @return Headers to add the response prior to sending the response back to the client.
      * Structure is documented below.
      * 
      */
     private final @Nullable List<URLMapDefaultRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAdd> responseHeadersToAdds;
     /**
-     * A list of header names for headers that need to be removed from the response prior to sending the
+     * @return A list of header names for headers that need to be removed from the response prior to sending the
      * response back to the client.
      * 
      */
@@ -51,34 +51,34 @@ public final class URLMapDefaultRouteActionWeightedBackendServiceHeaderAction {
     }
 
     /**
-     * Headers to add to a matching request prior to forwarding the request to the backendService.
+     * @return Headers to add to a matching request prior to forwarding the request to the backendService.
      * Structure is documented below.
      * 
-    */
+     */
     public List<URLMapDefaultRouteActionWeightedBackendServiceHeaderActionRequestHeadersToAdd> requestHeadersToAdds() {
         return this.requestHeadersToAdds == null ? List.of() : this.requestHeadersToAdds;
     }
     /**
-     * A list of header names for headers that need to be removed from the request prior to
+     * @return A list of header names for headers that need to be removed from the request prior to
      * forwarding the request to the backendService.
      * 
-    */
+     */
     public List<String> requestHeadersToRemoves() {
         return this.requestHeadersToRemoves == null ? List.of() : this.requestHeadersToRemoves;
     }
     /**
-     * Headers to add the response prior to sending the response back to the client.
+     * @return Headers to add the response prior to sending the response back to the client.
      * Structure is documented below.
      * 
-    */
+     */
     public List<URLMapDefaultRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAdd> responseHeadersToAdds() {
         return this.responseHeadersToAdds == null ? List.of() : this.responseHeadersToAdds;
     }
     /**
-     * A list of header names for headers that need to be removed from the response prior to sending the
+     * @return A list of header names for headers that need to be removed from the response prior to sending the
      * response back to the client.
      * 
-    */
+     */
     public List<String> responseHeadersToRemoves() {
         return this.responseHeadersToRemoves == null ? List.of() : this.responseHeadersToRemoves;
     }

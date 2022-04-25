@@ -23,6 +23,10 @@ public final class ValidationErrorResponse extends com.pulumi.resources.InvokeAr
     @Import(name="severity", required=true)
     private String severity;
 
+    /**
+     * @return Severity of the error
+     * 
+     */
     public String severity() {
         return this.severity;
     }
@@ -34,6 +38,10 @@ public final class ValidationErrorResponse extends com.pulumi.resources.InvokeAr
     @Import(name="text", required=true)
     private String text;
 
+    /**
+     * @return Error Text
+     * 
+     */
     public String text() {
         return this.text;
     }
@@ -63,11 +71,23 @@ public final class ValidationErrorResponse extends com.pulumi.resources.InvokeAr
             $ = new ValidationErrorResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param severity Severity of the error
+         * 
+         * @return builder
+         * 
+         */
         public Builder severity(String severity) {
             $.severity = severity;
             return this;
         }
 
+        /**
+         * @param text Error Text
+         * 
+         * @return builder
+         * 
+         */
         public Builder text(String text) {
             $.text = text;
             return this;

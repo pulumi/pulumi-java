@@ -25,6 +25,10 @@ public final class DataSourceSqlServerParametersArgs extends com.pulumi.resource
     @Import(name="database", required=true)
     private Output<String> database;
 
+    /**
+     * @return &lt;p&gt;Database.&lt;/p&gt;
+     * 
+     */
     public Output<String> database() {
         return this.database;
     }
@@ -36,6 +40,10 @@ public final class DataSourceSqlServerParametersArgs extends com.pulumi.resource
     @Import(name="host", required=true)
     private Output<String> host;
 
+    /**
+     * @return &lt;p&gt;Host.&lt;/p&gt;
+     * 
+     */
     public Output<String> host() {
         return this.host;
     }
@@ -47,6 +55,10 @@ public final class DataSourceSqlServerParametersArgs extends com.pulumi.resource
     @Import(name="port", required=true)
     private Output<Double> port;
 
+    /**
+     * @return &lt;p&gt;Port.&lt;/p&gt;
+     * 
+     */
     public Output<Double> port() {
         return this.port;
     }
@@ -77,29 +89,65 @@ public final class DataSourceSqlServerParametersArgs extends com.pulumi.resource
             $ = new DataSourceSqlServerParametersArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param database &lt;p&gt;Database.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder database(Output<String> database) {
             $.database = database;
             return this;
         }
 
+        /**
+         * @param database &lt;p&gt;Database.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder database(String database) {
             return database(Output.of(database));
         }
 
+        /**
+         * @param host &lt;p&gt;Host.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder host(Output<String> host) {
             $.host = host;
             return this;
         }
 
+        /**
+         * @param host &lt;p&gt;Host.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder host(String host) {
             return host(Output.of(host));
         }
 
+        /**
+         * @param port &lt;p&gt;Port.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Output<Double> port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param port &lt;p&gt;Port.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Double port) {
             return port(Output.of(port));
         }

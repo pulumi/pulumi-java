@@ -28,6 +28,10 @@ public final class VmUtilizationInfoArgs extends com.pulumi.resources.ResourceAr
     @Import(name="utilization")
     private @Nullable Output<VmUtilizationMetricsArgs> utilization;
 
+    /**
+     * @return Utilization metrics for this VM.
+     * 
+     */
     public Optional<Output<VmUtilizationMetricsArgs>> utilization() {
         return Optional.ofNullable(this.utilization);
     }
@@ -39,6 +43,10 @@ public final class VmUtilizationInfoArgs extends com.pulumi.resources.ResourceAr
     @Import(name="vmId")
     private @Nullable Output<String> vmId;
 
+    /**
+     * @return The VM&#39;s ID in the source.
+     * 
+     */
     public Optional<Output<String>> vmId() {
         return Optional.ofNullable(this.vmId);
     }
@@ -50,6 +58,10 @@ public final class VmUtilizationInfoArgs extends com.pulumi.resources.ResourceAr
     @Import(name="vmwareVmDetails")
     private @Nullable Output<VmwareVmDetailsArgs> vmwareVmDetails;
 
+    /**
+     * @return The description of the VM in a Source of type Vmware.
+     * 
+     */
     public Optional<Output<VmwareVmDetailsArgs>> vmwareVmDetails() {
         return Optional.ofNullable(this.vmwareVmDetails);
     }
@@ -80,29 +92,65 @@ public final class VmUtilizationInfoArgs extends com.pulumi.resources.ResourceAr
             $ = new VmUtilizationInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param utilization Utilization metrics for this VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder utilization(@Nullable Output<VmUtilizationMetricsArgs> utilization) {
             $.utilization = utilization;
             return this;
         }
 
+        /**
+         * @param utilization Utilization metrics for this VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder utilization(VmUtilizationMetricsArgs utilization) {
             return utilization(Output.of(utilization));
         }
 
+        /**
+         * @param vmId The VM&#39;s ID in the source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmId(@Nullable Output<String> vmId) {
             $.vmId = vmId;
             return this;
         }
 
+        /**
+         * @param vmId The VM&#39;s ID in the source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmId(String vmId) {
             return vmId(Output.of(vmId));
         }
 
+        /**
+         * @param vmwareVmDetails The description of the VM in a Source of type Vmware.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmwareVmDetails(@Nullable Output<VmwareVmDetailsArgs> vmwareVmDetails) {
             $.vmwareVmDetails = vmwareVmDetails;
             return this;
         }
 
+        /**
+         * @param vmwareVmDetails The description of the VM in a Source of type Vmware.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmwareVmDetails(VmwareVmDetailsArgs vmwareVmDetails) {
             return vmwareVmDetails(Output.of(vmwareVmDetails));
         }

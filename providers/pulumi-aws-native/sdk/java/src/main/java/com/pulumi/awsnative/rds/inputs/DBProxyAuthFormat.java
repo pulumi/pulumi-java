@@ -23,6 +23,10 @@ public final class DBProxyAuthFormat extends com.pulumi.resources.InvokeArgs {
     @Import(name="authScheme")
     private @Nullable DBProxyAuthFormatAuthScheme authScheme;
 
+    /**
+     * @return The type of authentication that the proxy uses for connections from the proxy to the underlying database.
+     * 
+     */
     public Optional<DBProxyAuthFormatAuthScheme> authScheme() {
         return Optional.ofNullable(this.authScheme);
     }
@@ -34,6 +38,10 @@ public final class DBProxyAuthFormat extends com.pulumi.resources.InvokeArgs {
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return A user-specified description about the authentication used by a proxy to log in as a specific database user.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -45,6 +53,10 @@ public final class DBProxyAuthFormat extends com.pulumi.resources.InvokeArgs {
     @Import(name="iAMAuth")
     private @Nullable DBProxyAuthFormatIAMAuth iAMAuth;
 
+    /**
+     * @return Whether to require or disallow AWS Identity and Access Management (IAM) authentication for connections to the proxy.
+     * 
+     */
     public Optional<DBProxyAuthFormatIAMAuth> iAMAuth() {
         return Optional.ofNullable(this.iAMAuth);
     }
@@ -56,6 +68,10 @@ public final class DBProxyAuthFormat extends com.pulumi.resources.InvokeArgs {
     @Import(name="secretArn")
     private @Nullable String secretArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) representing the secret that the proxy uses to authenticate to the RDS DB instance or Aurora DB cluster. These secrets are stored within Amazon Secrets Manager.
+     * 
+     */
     public Optional<String> secretArn() {
         return Optional.ofNullable(this.secretArn);
     }
@@ -67,6 +83,10 @@ public final class DBProxyAuthFormat extends com.pulumi.resources.InvokeArgs {
     @Import(name="userName")
     private @Nullable String userName;
 
+    /**
+     * @return The name of the database user to which the proxy connects.
+     * 
+     */
     public Optional<String> userName() {
         return Optional.ofNullable(this.userName);
     }
@@ -99,26 +119,56 @@ public final class DBProxyAuthFormat extends com.pulumi.resources.InvokeArgs {
             $ = new DBProxyAuthFormat(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authScheme The type of authentication that the proxy uses for connections from the proxy to the underlying database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authScheme(@Nullable DBProxyAuthFormatAuthScheme authScheme) {
             $.authScheme = authScheme;
             return this;
         }
 
+        /**
+         * @param description A user-specified description about the authentication used by a proxy to log in as a specific database user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param iAMAuth Whether to require or disallow AWS Identity and Access Management (IAM) authentication for connections to the proxy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iAMAuth(@Nullable DBProxyAuthFormatIAMAuth iAMAuth) {
             $.iAMAuth = iAMAuth;
             return this;
         }
 
+        /**
+         * @param secretArn The Amazon Resource Name (ARN) representing the secret that the proxy uses to authenticate to the RDS DB instance or Aurora DB cluster. These secrets are stored within Amazon Secrets Manager.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretArn(@Nullable String secretArn) {
             $.secretArn = secretArn;
             return this;
         }
 
+        /**
+         * @param userName The name of the database user to which the proxy connects.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(@Nullable String userName) {
             $.userName = userName;
             return this;

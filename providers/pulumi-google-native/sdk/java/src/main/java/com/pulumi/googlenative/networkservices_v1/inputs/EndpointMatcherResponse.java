@@ -23,6 +23,10 @@ public final class EndpointMatcherResponse extends com.pulumi.resources.InvokeAr
     @Import(name="metadataLabelMatcher", required=true)
     private EndpointMatcherMetadataLabelMatcherResponse metadataLabelMatcher;
 
+    /**
+     * @return The matcher is based on node metadata presented by xDS clients.
+     * 
+     */
     public EndpointMatcherMetadataLabelMatcherResponse metadataLabelMatcher() {
         return this.metadataLabelMatcher;
     }
@@ -51,6 +55,12 @@ public final class EndpointMatcherResponse extends com.pulumi.resources.InvokeAr
             $ = new EndpointMatcherResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param metadataLabelMatcher The matcher is based on node metadata presented by xDS clients.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadataLabelMatcher(EndpointMatcherMetadataLabelMatcherResponse metadataLabelMatcher) {
             $.metadataLabelMatcher = metadataLabelMatcher;
             return this;

@@ -26,6 +26,10 @@ public final class MoveResourceDependencyOverrideArgs extends com.pulumi.resourc
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Gets or sets the ARM ID of the dependent resource.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -38,6 +42,11 @@ public final class MoveResourceDependencyOverrideArgs extends com.pulumi.resourc
     @Import(name="targetId")
     private @Nullable Output<String> targetId;
 
+    /**
+     * @return Gets or sets the resource ARM id of either the MoveResource or the resource ARM ID of
+     * the dependent resource.
+     * 
+     */
     public Optional<Output<String>> targetId() {
         return Optional.ofNullable(this.targetId);
     }
@@ -67,20 +76,46 @@ public final class MoveResourceDependencyOverrideArgs extends com.pulumi.resourc
             $ = new MoveResourceDependencyOverrideArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Gets or sets the ARM ID of the dependent resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Gets or sets the ARM ID of the dependent resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param targetId Gets or sets the resource ARM id of either the MoveResource or the resource ARM ID of
+         * the dependent resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetId(@Nullable Output<String> targetId) {
             $.targetId = targetId;
             return this;
         }
 
+        /**
+         * @param targetId Gets or sets the resource ARM id of either the MoveResource or the resource ARM ID of
+         * the dependent resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetId(String targetId) {
             return targetId(Output.of(targetId));
         }

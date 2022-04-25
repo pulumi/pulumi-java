@@ -24,6 +24,10 @@ public final class MavenRepositoryConfigResponse extends com.pulumi.resources.In
     @Import(name="allowSnapshotOverwrites", required=true)
     private Boolean allowSnapshotOverwrites;
 
+    /**
+     * @return The repository with this flag will allow publishing the same snapshot versions.
+     * 
+     */
     public Boolean allowSnapshotOverwrites() {
         return this.allowSnapshotOverwrites;
     }
@@ -35,6 +39,10 @@ public final class MavenRepositoryConfigResponse extends com.pulumi.resources.In
     @Import(name="versionPolicy", required=true)
     private String versionPolicy;
 
+    /**
+     * @return Version policy defines the versions that the registry will accept.
+     * 
+     */
     public String versionPolicy() {
         return this.versionPolicy;
     }
@@ -64,11 +72,23 @@ public final class MavenRepositoryConfigResponse extends com.pulumi.resources.In
             $ = new MavenRepositoryConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowSnapshotOverwrites The repository with this flag will allow publishing the same snapshot versions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowSnapshotOverwrites(Boolean allowSnapshotOverwrites) {
             $.allowSnapshotOverwrites = allowSnapshotOverwrites;
             return this;
         }
 
+        /**
+         * @param versionPolicy Version policy defines the versions that the registry will accept.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionPolicy(String versionPolicy) {
             $.versionPolicy = versionPolicy;
             return this;

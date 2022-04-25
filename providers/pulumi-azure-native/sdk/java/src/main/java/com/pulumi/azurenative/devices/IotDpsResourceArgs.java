@@ -25,6 +25,10 @@ public final class IotDpsResourceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The resource location.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -36,6 +40,10 @@ public final class IotDpsResourceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="properties", required=true)
     private Output<IotDpsPropertiesDescriptionArgs> properties;
 
+    /**
+     * @return Service specific properties for a provisioning service
+     * 
+     */
     public Output<IotDpsPropertiesDescriptionArgs> properties() {
         return this.properties;
     }
@@ -47,6 +55,10 @@ public final class IotDpsResourceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="provisioningServiceName")
     private @Nullable Output<String> provisioningServiceName;
 
+    /**
+     * @return Name of provisioning service to create or update.
+     * 
+     */
     public Optional<Output<String>> provisioningServiceName() {
         return Optional.ofNullable(this.provisioningServiceName);
     }
@@ -58,6 +70,10 @@ public final class IotDpsResourceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Resource group identifier.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -69,6 +85,10 @@ public final class IotDpsResourceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="sku", required=true)
     private Output<IotDpsSkuInfoArgs> sku;
 
+    /**
+     * @return Sku info for a provisioning Service.
+     * 
+     */
     public Output<IotDpsSkuInfoArgs> sku() {
         return this.sku;
     }
@@ -80,6 +100,10 @@ public final class IotDpsResourceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return The resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -113,56 +137,128 @@ public final class IotDpsResourceArgs extends com.pulumi.resources.ResourceArgs 
             $ = new IotDpsResourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param location The resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param properties Service specific properties for a provisioning service
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Output<IotDpsPropertiesDescriptionArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Service specific properties for a provisioning service
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(IotDpsPropertiesDescriptionArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param provisioningServiceName Name of provisioning service to create or update.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningServiceName(@Nullable Output<String> provisioningServiceName) {
             $.provisioningServiceName = provisioningServiceName;
             return this;
         }
 
+        /**
+         * @param provisioningServiceName Name of provisioning service to create or update.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningServiceName(String provisioningServiceName) {
             return provisioningServiceName(Output.of(provisioningServiceName));
         }
 
+        /**
+         * @param resourceGroupName Resource group identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Resource group identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param sku Sku info for a provisioning Service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(Output<IotDpsSkuInfoArgs> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku Sku info for a provisioning Service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(IotDpsSkuInfoArgs sku) {
             return sku(Output.of(sku));
         }
 
+        /**
+         * @param tags The resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

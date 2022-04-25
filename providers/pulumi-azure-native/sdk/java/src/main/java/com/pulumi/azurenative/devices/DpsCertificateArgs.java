@@ -23,6 +23,10 @@ public final class DpsCertificateArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="certificate")
     private @Nullable Output<String> certificate;
 
+    /**
+     * @return Base-64 representation of the X509 leaf certificate .cer file or just .pem file content.
+     * 
+     */
     public Optional<Output<String>> certificate() {
         return Optional.ofNullable(this.certificate);
     }
@@ -34,6 +38,10 @@ public final class DpsCertificateArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="certificateName")
     private @Nullable Output<String> certificateName;
 
+    /**
+     * @return The name of the certificate create or update.
+     * 
+     */
     public Optional<Output<String>> certificateName() {
         return Optional.ofNullable(this.certificateName);
     }
@@ -45,6 +53,10 @@ public final class DpsCertificateArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="isVerified")
     private @Nullable Output<Boolean> isVerified;
 
+    /**
+     * @return True indicates that the certificate will be created in verified state and proof of possession will not be required.
+     * 
+     */
     public Optional<Output<Boolean>> isVerified() {
         return Optional.ofNullable(this.isVerified);
     }
@@ -56,6 +68,10 @@ public final class DpsCertificateArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="provisioningServiceName", required=true)
     private Output<String> provisioningServiceName;
 
+    /**
+     * @return The name of the provisioning service.
+     * 
+     */
     public Output<String> provisioningServiceName() {
         return this.provisioningServiceName;
     }
@@ -67,6 +83,10 @@ public final class DpsCertificateArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Resource group identifier.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -99,47 +119,107 @@ public final class DpsCertificateArgs extends com.pulumi.resources.ResourceArgs 
             $ = new DpsCertificateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificate Base-64 representation of the X509 leaf certificate .cer file or just .pem file content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificate(@Nullable Output<String> certificate) {
             $.certificate = certificate;
             return this;
         }
 
+        /**
+         * @param certificate Base-64 representation of the X509 leaf certificate .cer file or just .pem file content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificate(String certificate) {
             return certificate(Output.of(certificate));
         }
 
+        /**
+         * @param certificateName The name of the certificate create or update.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateName(@Nullable Output<String> certificateName) {
             $.certificateName = certificateName;
             return this;
         }
 
+        /**
+         * @param certificateName The name of the certificate create or update.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateName(String certificateName) {
             return certificateName(Output.of(certificateName));
         }
 
+        /**
+         * @param isVerified True indicates that the certificate will be created in verified state and proof of possession will not be required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isVerified(@Nullable Output<Boolean> isVerified) {
             $.isVerified = isVerified;
             return this;
         }
 
+        /**
+         * @param isVerified True indicates that the certificate will be created in verified state and proof of possession will not be required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isVerified(Boolean isVerified) {
             return isVerified(Output.of(isVerified));
         }
 
+        /**
+         * @param provisioningServiceName The name of the provisioning service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningServiceName(Output<String> provisioningServiceName) {
             $.provisioningServiceName = provisioningServiceName;
             return this;
         }
 
+        /**
+         * @param provisioningServiceName The name of the provisioning service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningServiceName(String provisioningServiceName) {
             return provisioningServiceName(Output.of(provisioningServiceName));
         }
 
+        /**
+         * @param resourceGroupName Resource group identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Resource group identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }

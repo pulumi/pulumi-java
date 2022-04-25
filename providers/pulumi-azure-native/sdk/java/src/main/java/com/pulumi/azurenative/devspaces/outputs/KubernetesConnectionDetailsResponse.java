@@ -12,13 +12,13 @@ import javax.annotation.Nullable;
 @CustomType
 public final class KubernetesConnectionDetailsResponse {
     /**
-     * Gets the Instance type.
+     * @return Gets the Instance type.
      * Expected value is &#39;Kubernetes&#39;.
      * 
      */
     private final String instanceType;
     /**
-     * Gets the kubeconfig for the cluster.
+     * @return Gets the kubeconfig for the cluster.
      * 
      */
     private final @Nullable String kubeConfig;
@@ -32,17 +32,17 @@ public final class KubernetesConnectionDetailsResponse {
     }
 
     /**
-     * Gets the Instance type.
+     * @return Gets the Instance type.
      * Expected value is &#39;Kubernetes&#39;.
      * 
-    */
+     */
     public String instanceType() {
         return this.instanceType;
     }
     /**
-     * Gets the kubeconfig for the cluster.
+     * @return Gets the kubeconfig for the cluster.
      * 
-    */
+     */
     public Optional<String> kubeConfig() {
         return Optional.ofNullable(this.kubeConfig);
     }

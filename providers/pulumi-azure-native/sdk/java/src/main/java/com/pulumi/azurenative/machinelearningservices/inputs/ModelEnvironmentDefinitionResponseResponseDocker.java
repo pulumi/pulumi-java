@@ -26,6 +26,10 @@ public final class ModelEnvironmentDefinitionResponseResponseDocker extends com.
     @Import(name="baseDockerfile")
     private @Nullable String baseDockerfile;
 
+    /**
+     * @return Base Dockerfile used for Docker-based runs. Mutually exclusive with BaseImage.
+     * 
+     */
     public Optional<String> baseDockerfile() {
         return Optional.ofNullable(this.baseDockerfile);
     }
@@ -37,6 +41,10 @@ public final class ModelEnvironmentDefinitionResponseResponseDocker extends com.
     @Import(name="baseImage")
     private @Nullable String baseImage;
 
+    /**
+     * @return Base image used for Docker-based runs. Mutually exclusive with BaseDockerfile.
+     * 
+     */
     public Optional<String> baseImage() {
         return Optional.ofNullable(this.baseImage);
     }
@@ -48,6 +56,10 @@ public final class ModelEnvironmentDefinitionResponseResponseDocker extends com.
     @Import(name="baseImageRegistry")
     private @Nullable ModelDockerSectionResponseResponseBaseImageRegistry baseImageRegistry;
 
+    /**
+     * @return Image registry that contains the base image.
+     * 
+     */
     public Optional<ModelDockerSectionResponseResponseBaseImageRegistry> baseImageRegistry() {
         return Optional.ofNullable(this.baseImageRegistry);
     }
@@ -78,16 +90,34 @@ public final class ModelEnvironmentDefinitionResponseResponseDocker extends com.
             $ = new ModelEnvironmentDefinitionResponseResponseDocker(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param baseDockerfile Base Dockerfile used for Docker-based runs. Mutually exclusive with BaseImage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder baseDockerfile(@Nullable String baseDockerfile) {
             $.baseDockerfile = baseDockerfile;
             return this;
         }
 
+        /**
+         * @param baseImage Base image used for Docker-based runs. Mutually exclusive with BaseDockerfile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder baseImage(@Nullable String baseImage) {
             $.baseImage = baseImage;
             return this;
         }
 
+        /**
+         * @param baseImageRegistry Image registry that contains the base image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder baseImageRegistry(@Nullable ModelDockerSectionResponseResponseBaseImageRegistry baseImageRegistry) {
             $.baseImageRegistry = baseImageRegistry;
             return this;

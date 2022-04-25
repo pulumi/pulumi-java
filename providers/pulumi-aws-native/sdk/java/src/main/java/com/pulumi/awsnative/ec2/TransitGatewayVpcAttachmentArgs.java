@@ -32,6 +32,10 @@ public final class TransitGatewayVpcAttachmentArgs extends com.pulumi.resources.
     @Import(name="options")
     private @Nullable Output<OptionsPropertiesArgs> options;
 
+    /**
+     * @return The options for the transit gateway vpc attachment.
+     * 
+     */
     public Optional<Output<OptionsPropertiesArgs>> options() {
         return Optional.ofNullable(this.options);
     }
@@ -114,11 +118,23 @@ public final class TransitGatewayVpcAttachmentArgs extends com.pulumi.resources.
             return addSubnetIds(List.of(addSubnetIds));
         }
 
+        /**
+         * @param options The options for the transit gateway vpc attachment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder options(@Nullable Output<OptionsPropertiesArgs> options) {
             $.options = options;
             return this;
         }
 
+        /**
+         * @param options The options for the transit gateway vpc attachment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder options(OptionsPropertiesArgs options) {
             return options(Output.of(options));
         }

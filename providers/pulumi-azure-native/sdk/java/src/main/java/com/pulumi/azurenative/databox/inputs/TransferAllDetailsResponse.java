@@ -27,6 +27,10 @@ public final class TransferAllDetailsResponse extends com.pulumi.resources.Invok
     @Import(name="dataAccountType", required=true)
     private String dataAccountType;
 
+    /**
+     * @return Type of the account of data
+     * 
+     */
     public String dataAccountType() {
         return this.dataAccountType;
     }
@@ -38,6 +42,10 @@ public final class TransferAllDetailsResponse extends com.pulumi.resources.Invok
     @Import(name="transferAllBlobs")
     private @Nullable Boolean transferAllBlobs;
 
+    /**
+     * @return To indicate if all Azure blobs have to be transferred
+     * 
+     */
     public Optional<Boolean> transferAllBlobs() {
         return Optional.ofNullable(this.transferAllBlobs);
     }
@@ -49,6 +57,10 @@ public final class TransferAllDetailsResponse extends com.pulumi.resources.Invok
     @Import(name="transferAllFiles")
     private @Nullable Boolean transferAllFiles;
 
+    /**
+     * @return To indicate if all Azure Files have to be transferred
+     * 
+     */
     public Optional<Boolean> transferAllFiles() {
         return Optional.ofNullable(this.transferAllFiles);
     }
@@ -79,16 +91,34 @@ public final class TransferAllDetailsResponse extends com.pulumi.resources.Invok
             $ = new TransferAllDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataAccountType Type of the account of data
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataAccountType(String dataAccountType) {
             $.dataAccountType = dataAccountType;
             return this;
         }
 
+        /**
+         * @param transferAllBlobs To indicate if all Azure blobs have to be transferred
+         * 
+         * @return builder
+         * 
+         */
         public Builder transferAllBlobs(@Nullable Boolean transferAllBlobs) {
             $.transferAllBlobs = transferAllBlobs;
             return this;
         }
 
+        /**
+         * @param transferAllFiles To indicate if all Azure Files have to be transferred
+         * 
+         * @return builder
+         * 
+         */
         public Builder transferAllFiles(@Nullable Boolean transferAllFiles) {
             $.transferAllFiles = transferAllFiles;
             return this;

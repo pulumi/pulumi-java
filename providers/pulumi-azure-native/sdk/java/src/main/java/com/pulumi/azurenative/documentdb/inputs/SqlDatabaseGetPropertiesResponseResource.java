@@ -22,6 +22,10 @@ public final class SqlDatabaseGetPropertiesResponseResource extends com.pulumi.r
     @Import(name="colls")
     private @Nullable String colls;
 
+    /**
+     * @return A system generated property that specified the addressable path of the collections resource.
+     * 
+     */
     public Optional<String> colls() {
         return Optional.ofNullable(this.colls);
     }
@@ -33,6 +37,10 @@ public final class SqlDatabaseGetPropertiesResponseResource extends com.pulumi.r
     @Import(name="etag", required=true)
     private String etag;
 
+    /**
+     * @return A system generated property representing the resource etag required for optimistic concurrency control.
+     * 
+     */
     public String etag() {
         return this.etag;
     }
@@ -44,6 +52,10 @@ public final class SqlDatabaseGetPropertiesResponseResource extends com.pulumi.r
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Name of the Cosmos DB SQL database
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -55,6 +67,10 @@ public final class SqlDatabaseGetPropertiesResponseResource extends com.pulumi.r
     @Import(name="rid", required=true)
     private String rid;
 
+    /**
+     * @return A system generated property. A unique identifier.
+     * 
+     */
     public String rid() {
         return this.rid;
     }
@@ -66,6 +82,10 @@ public final class SqlDatabaseGetPropertiesResponseResource extends com.pulumi.r
     @Import(name="ts", required=true)
     private Double ts;
 
+    /**
+     * @return A system generated property that denotes the last updated timestamp of the resource.
+     * 
+     */
     public Double ts() {
         return this.ts;
     }
@@ -77,6 +97,10 @@ public final class SqlDatabaseGetPropertiesResponseResource extends com.pulumi.r
     @Import(name="users")
     private @Nullable String users;
 
+    /**
+     * @return A system generated property that specifies the addressable path of the users resource.
+     * 
+     */
     public Optional<String> users() {
         return Optional.ofNullable(this.users);
     }
@@ -110,31 +134,67 @@ public final class SqlDatabaseGetPropertiesResponseResource extends com.pulumi.r
             $ = new SqlDatabaseGetPropertiesResponseResource(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param colls A system generated property that specified the addressable path of the collections resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder colls(@Nullable String colls) {
             $.colls = colls;
             return this;
         }
 
+        /**
+         * @param etag A system generated property representing the resource etag required for optimistic concurrency control.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param id Name of the Cosmos DB SQL database
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param rid A system generated property. A unique identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rid(String rid) {
             $.rid = rid;
             return this;
         }
 
+        /**
+         * @param ts A system generated property that denotes the last updated timestamp of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ts(Double ts) {
             $.ts = ts;
             return this;
         }
 
+        /**
+         * @param users A system generated property that specifies the addressable path of the users resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder users(@Nullable String users) {
             $.users = users;
             return this;

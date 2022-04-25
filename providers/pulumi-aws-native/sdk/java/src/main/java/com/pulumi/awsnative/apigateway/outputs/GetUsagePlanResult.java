@@ -17,37 +17,37 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetUsagePlanResult {
     /**
-     * The API stages to associate with this usage plan.
+     * @return The API stages to associate with this usage plan.
      * 
      */
     private final @Nullable List<UsagePlanApiStage> apiStages;
     /**
-     * A description of the usage plan.
+     * @return A description of the usage plan.
      * 
      */
     private final @Nullable String description;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final @Nullable String id;
     /**
-     * Configures the number of requests that users can make within a given interval.
+     * @return Configures the number of requests that users can make within a given interval.
      * 
      */
     private final @Nullable UsagePlanQuotaSettings quota;
     /**
-     * An array of arbitrary tags (key-value pairs) to associate with the usage plan.
+     * @return An array of arbitrary tags (key-value pairs) to associate with the usage plan.
      * 
      */
     private final @Nullable List<UsagePlanTag> tags;
     /**
-     * Configures the overall request rate (average requests per second) and burst capacity.
+     * @return Configures the overall request rate (average requests per second) and burst capacity.
      * 
      */
     private final @Nullable UsagePlanThrottleSettings throttle;
     /**
-     * A name for the usage plan.
+     * @return A name for the usage plan.
      * 
      */
     private final @Nullable String usagePlanName;
@@ -71,51 +71,51 @@ public final class GetUsagePlanResult {
     }
 
     /**
-     * The API stages to associate with this usage plan.
+     * @return The API stages to associate with this usage plan.
      * 
-    */
+     */
     public List<UsagePlanApiStage> apiStages() {
         return this.apiStages == null ? List.of() : this.apiStages;
     }
     /**
-     * A description of the usage plan.
+     * @return A description of the usage plan.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * Configures the number of requests that users can make within a given interval.
+     * @return Configures the number of requests that users can make within a given interval.
      * 
-    */
+     */
     public Optional<UsagePlanQuotaSettings> quota() {
         return Optional.ofNullable(this.quota);
     }
     /**
-     * An array of arbitrary tags (key-value pairs) to associate with the usage plan.
+     * @return An array of arbitrary tags (key-value pairs) to associate with the usage plan.
      * 
-    */
+     */
     public List<UsagePlanTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
-     * Configures the overall request rate (average requests per second) and burst capacity.
+     * @return Configures the overall request rate (average requests per second) and burst capacity.
      * 
-    */
+     */
     public Optional<UsagePlanThrottleSettings> throttle() {
         return Optional.ofNullable(this.throttle);
     }
     /**
-     * A name for the usage plan.
+     * @return A name for the usage plan.
      * 
-    */
+     */
     public Optional<String> usagePlanName() {
         return Optional.ofNullable(this.usagePlanName);
     }

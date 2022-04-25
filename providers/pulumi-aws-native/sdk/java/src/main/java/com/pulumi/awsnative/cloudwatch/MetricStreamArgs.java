@@ -25,6 +25,10 @@ public final class MetricStreamArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="excludeFilters")
     private @Nullable Output<List<MetricStreamFilterArgs>> excludeFilters;
 
+    /**
+     * @return Define which metrics will be not streamed. Metrics matched by multiple instances of MetricStreamFilter are joined with an OR operation by default. If both IncludeFilters and ExcludeFilters are omitted, all metrics in the account will be streamed. IncludeFilters and ExcludeFilters are mutually exclusive. Default to null.
+     * 
+     */
     public Optional<Output<List<MetricStreamFilterArgs>>> excludeFilters() {
         return Optional.ofNullable(this.excludeFilters);
     }
@@ -36,6 +40,10 @@ public final class MetricStreamArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="firehoseArn", required=true)
     private Output<String> firehoseArn;
 
+    /**
+     * @return The ARN of the Kinesis Firehose where to stream the data.
+     * 
+     */
     public Output<String> firehoseArn() {
         return this.firehoseArn;
     }
@@ -47,6 +55,10 @@ public final class MetricStreamArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="includeFilters")
     private @Nullable Output<List<MetricStreamFilterArgs>> includeFilters;
 
+    /**
+     * @return Define which metrics will be streamed. Metrics matched by multiple instances of MetricStreamFilter are joined with an OR operation by default. If both IncludeFilters and ExcludeFilters are omitted, all metrics in the account will be streamed. IncludeFilters and ExcludeFilters are mutually exclusive. Default to null.
+     * 
+     */
     public Optional<Output<List<MetricStreamFilterArgs>>> includeFilters() {
         return Optional.ofNullable(this.includeFilters);
     }
@@ -58,6 +70,10 @@ public final class MetricStreamArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the metric stream.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -69,6 +85,10 @@ public final class MetricStreamArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="outputFormat", required=true)
     private Output<String> outputFormat;
 
+    /**
+     * @return The output format of the data streamed to the Kinesis Firehose.
+     * 
+     */
     public Output<String> outputFormat() {
         return this.outputFormat;
     }
@@ -80,6 +100,10 @@ public final class MetricStreamArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="roleArn", required=true)
     private Output<String> roleArn;
 
+    /**
+     * @return The ARN of the role that provides access to the Kinesis Firehose.
+     * 
+     */
     public Output<String> roleArn() {
         return this.roleArn;
     }
@@ -91,6 +115,10 @@ public final class MetricStreamArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<MetricStreamTagArgs>> tags;
 
+    /**
+     * @return A set of tags to assign to the delivery stream.
+     * 
+     */
     public Optional<Output<List<MetricStreamTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -125,77 +153,179 @@ public final class MetricStreamArgs extends com.pulumi.resources.ResourceArgs {
             $ = new MetricStreamArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param excludeFilters Define which metrics will be not streamed. Metrics matched by multiple instances of MetricStreamFilter are joined with an OR operation by default. If both IncludeFilters and ExcludeFilters are omitted, all metrics in the account will be streamed. IncludeFilters and ExcludeFilters are mutually exclusive. Default to null.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludeFilters(@Nullable Output<List<MetricStreamFilterArgs>> excludeFilters) {
             $.excludeFilters = excludeFilters;
             return this;
         }
 
+        /**
+         * @param excludeFilters Define which metrics will be not streamed. Metrics matched by multiple instances of MetricStreamFilter are joined with an OR operation by default. If both IncludeFilters and ExcludeFilters are omitted, all metrics in the account will be streamed. IncludeFilters and ExcludeFilters are mutually exclusive. Default to null.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludeFilters(List<MetricStreamFilterArgs> excludeFilters) {
             return excludeFilters(Output.of(excludeFilters));
         }
 
+        /**
+         * @param excludeFilters Define which metrics will be not streamed. Metrics matched by multiple instances of MetricStreamFilter are joined with an OR operation by default. If both IncludeFilters and ExcludeFilters are omitted, all metrics in the account will be streamed. IncludeFilters and ExcludeFilters are mutually exclusive. Default to null.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludeFilters(MetricStreamFilterArgs... excludeFilters) {
             return excludeFilters(List.of(excludeFilters));
         }
 
+        /**
+         * @param firehoseArn The ARN of the Kinesis Firehose where to stream the data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder firehoseArn(Output<String> firehoseArn) {
             $.firehoseArn = firehoseArn;
             return this;
         }
 
+        /**
+         * @param firehoseArn The ARN of the Kinesis Firehose where to stream the data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder firehoseArn(String firehoseArn) {
             return firehoseArn(Output.of(firehoseArn));
         }
 
+        /**
+         * @param includeFilters Define which metrics will be streamed. Metrics matched by multiple instances of MetricStreamFilter are joined with an OR operation by default. If both IncludeFilters and ExcludeFilters are omitted, all metrics in the account will be streamed. IncludeFilters and ExcludeFilters are mutually exclusive. Default to null.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeFilters(@Nullable Output<List<MetricStreamFilterArgs>> includeFilters) {
             $.includeFilters = includeFilters;
             return this;
         }
 
+        /**
+         * @param includeFilters Define which metrics will be streamed. Metrics matched by multiple instances of MetricStreamFilter are joined with an OR operation by default. If both IncludeFilters and ExcludeFilters are omitted, all metrics in the account will be streamed. IncludeFilters and ExcludeFilters are mutually exclusive. Default to null.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeFilters(List<MetricStreamFilterArgs> includeFilters) {
             return includeFilters(Output.of(includeFilters));
         }
 
+        /**
+         * @param includeFilters Define which metrics will be streamed. Metrics matched by multiple instances of MetricStreamFilter are joined with an OR operation by default. If both IncludeFilters and ExcludeFilters are omitted, all metrics in the account will be streamed. IncludeFilters and ExcludeFilters are mutually exclusive. Default to null.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeFilters(MetricStreamFilterArgs... includeFilters) {
             return includeFilters(List.of(includeFilters));
         }
 
+        /**
+         * @param name Name of the metric stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the metric stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param outputFormat The output format of the data streamed to the Kinesis Firehose.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputFormat(Output<String> outputFormat) {
             $.outputFormat = outputFormat;
             return this;
         }
 
+        /**
+         * @param outputFormat The output format of the data streamed to the Kinesis Firehose.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputFormat(String outputFormat) {
             return outputFormat(Output.of(outputFormat));
         }
 
+        /**
+         * @param roleArn The ARN of the role that provides access to the Kinesis Firehose.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(Output<String> roleArn) {
             $.roleArn = roleArn;
             return this;
         }
 
+        /**
+         * @param roleArn The ARN of the role that provides access to the Kinesis Firehose.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(String roleArn) {
             return roleArn(Output.of(roleArn));
         }
 
+        /**
+         * @param tags A set of tags to assign to the delivery stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<MetricStreamTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A set of tags to assign to the delivery stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<MetricStreamTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags A set of tags to assign to the delivery stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(MetricStreamTagArgs... tags) {
             return tags(List.of(tags));
         }

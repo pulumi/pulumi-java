@@ -25,6 +25,10 @@ public final class MediaGraphArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accountName", required=true)
     private Output<String> accountName;
 
+    /**
+     * @return The Media Services account name.
+     * 
+     */
     public Output<String> accountName() {
         return this.accountName;
     }
@@ -36,6 +40,10 @@ public final class MediaGraphArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Media Graph description.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -47,6 +55,10 @@ public final class MediaGraphArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="mediaGraphName")
     private @Nullable Output<String> mediaGraphName;
 
+    /**
+     * @return The Media Graph name.
+     * 
+     */
     public Optional<Output<String>> mediaGraphName() {
         return Optional.ofNullable(this.mediaGraphName);
     }
@@ -58,6 +70,10 @@ public final class MediaGraphArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group within the Azure subscription.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -69,6 +85,10 @@ public final class MediaGraphArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sinks", required=true)
     private Output<List<MediaGraphAssetSinkArgs>> sinks;
 
+    /**
+     * @return Media Graph sinks.
+     * 
+     */
     public Output<List<MediaGraphAssetSinkArgs>> sinks() {
         return this.sinks;
     }
@@ -80,6 +100,10 @@ public final class MediaGraphArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sources", required=true)
     private Output<List<MediaGraphRtspSourceArgs>> sources;
 
+    /**
+     * @return Media Graph sources.
+     * 
+     */
     public Output<List<MediaGraphRtspSourceArgs>> sources() {
         return this.sources;
     }
@@ -113,64 +137,148 @@ public final class MediaGraphArgs extends com.pulumi.resources.ResourceArgs {
             $ = new MediaGraphArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The Media Services account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param accountName The Media Services account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             return accountName(Output.of(accountName));
         }
 
+        /**
+         * @param description Media Graph description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Media Graph description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param mediaGraphName The Media Graph name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mediaGraphName(@Nullable Output<String> mediaGraphName) {
             $.mediaGraphName = mediaGraphName;
             return this;
         }
 
+        /**
+         * @param mediaGraphName The Media Graph name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mediaGraphName(String mediaGraphName) {
             return mediaGraphName(Output.of(mediaGraphName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param sinks Media Graph sinks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sinks(Output<List<MediaGraphAssetSinkArgs>> sinks) {
             $.sinks = sinks;
             return this;
         }
 
+        /**
+         * @param sinks Media Graph sinks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sinks(List<MediaGraphAssetSinkArgs> sinks) {
             return sinks(Output.of(sinks));
         }
 
+        /**
+         * @param sinks Media Graph sinks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sinks(MediaGraphAssetSinkArgs... sinks) {
             return sinks(List.of(sinks));
         }
 
+        /**
+         * @param sources Media Graph sources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sources(Output<List<MediaGraphRtspSourceArgs>> sources) {
             $.sources = sources;
             return this;
         }
 
+        /**
+         * @param sources Media Graph sources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sources(List<MediaGraphRtspSourceArgs> sources) {
             return sources(Output.of(sources));
         }
 
+        /**
+         * @param sources Media Graph sources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sources(MediaGraphRtspSourceArgs... sources) {
             return sources(List.of(sources));
         }

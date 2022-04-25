@@ -26,6 +26,10 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsR
     @Import(name="metrics", required=true)
     private List<GoogleCloudDialogflowCxV3beta1ExperimentResultMetricResponse> metrics;
 
+    /**
+     * @return The metrics and corresponding confidence intervals in the inference result.
+     * 
+     */
     public List<GoogleCloudDialogflowCxV3beta1ExperimentResultMetricResponse> metrics() {
         return this.metrics;
     }
@@ -37,6 +41,10 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsR
     @Import(name="sessionCount", required=true)
     private Integer sessionCount;
 
+    /**
+     * @return Number of sessions that were allocated to this version.
+     * 
+     */
     public Integer sessionCount() {
         return this.sessionCount;
     }
@@ -48,6 +56,10 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsR
     @Import(name="version", required=true)
     private String version;
 
+    /**
+     * @return The name of the flow Version. Format: `projects//locations//agents//flows//versions/`.
+     * 
+     */
     public String version() {
         return this.version;
     }
@@ -78,20 +90,44 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsR
             $ = new GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param metrics The metrics and corresponding confidence intervals in the inference result.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metrics(List<GoogleCloudDialogflowCxV3beta1ExperimentResultMetricResponse> metrics) {
             $.metrics = metrics;
             return this;
         }
 
+        /**
+         * @param metrics The metrics and corresponding confidence intervals in the inference result.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metrics(GoogleCloudDialogflowCxV3beta1ExperimentResultMetricResponse... metrics) {
             return metrics(List.of(metrics));
         }
 
+        /**
+         * @param sessionCount Number of sessions that were allocated to this version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sessionCount(Integer sessionCount) {
             $.sessionCount = sessionCount;
             return this;
         }
 
+        /**
+         * @param version The name of the flow Version. Format: `projects//locations//agents//flows//versions/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             $.version = version;
             return this;

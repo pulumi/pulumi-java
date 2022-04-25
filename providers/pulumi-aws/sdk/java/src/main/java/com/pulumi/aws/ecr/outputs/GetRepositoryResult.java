@@ -14,39 +14,39 @@ import java.util.Objects;
 @CustomType
 public final class GetRepositoryResult {
     /**
-     * Full ARN of the repository.
+     * @return Full ARN of the repository.
      * 
      */
     private final String arn;
     /**
-     * Encryption configuration for the repository. See Encryption Configuration below.
+     * @return Encryption configuration for the repository. See Encryption Configuration below.
      * 
      */
     private final List<GetRepositoryEncryptionConfiguration> encryptionConfigurations;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     /**
-     * Configuration block that defines image scanning configuration for the repository. See Image Scanning Configuration below.
+     * @return Configuration block that defines image scanning configuration for the repository. See Image Scanning Configuration below.
      * 
      */
     private final List<GetRepositoryImageScanningConfiguration> imageScanningConfigurations;
     /**
-     * The tag mutability setting for the repository.
+     * @return The tag mutability setting for the repository.
      * 
      */
     private final String imageTagMutability;
     private final String name;
     private final String registryId;
     /**
-     * The URL of the repository (in the form `aws_account_id.dkr.ecr.region.amazonaws.com/repositoryName`).
+     * @return The URL of the repository (in the form `aws_account_id.dkr.ecr.region.amazonaws.com/repositoryName`).
      * 
      */
     private final String repositoryUrl;
     /**
-     * A map of tags assigned to the resource.
+     * @return A map of tags assigned to the resource.
      * 
      */
     private final Map<String,String> tags;
@@ -74,37 +74,37 @@ public final class GetRepositoryResult {
     }
 
     /**
-     * Full ARN of the repository.
+     * @return Full ARN of the repository.
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
     /**
-     * Encryption configuration for the repository. See Encryption Configuration below.
+     * @return Encryption configuration for the repository. See Encryption Configuration below.
      * 
-    */
+     */
     public List<GetRepositoryEncryptionConfiguration> encryptionConfigurations() {
         return this.encryptionConfigurations;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Configuration block that defines image scanning configuration for the repository. See Image Scanning Configuration below.
+     * @return Configuration block that defines image scanning configuration for the repository. See Image Scanning Configuration below.
      * 
-    */
+     */
     public List<GetRepositoryImageScanningConfiguration> imageScanningConfigurations() {
         return this.imageScanningConfigurations;
     }
     /**
-     * The tag mutability setting for the repository.
+     * @return The tag mutability setting for the repository.
      * 
-    */
+     */
     public String imageTagMutability() {
         return this.imageTagMutability;
     }
@@ -115,16 +115,16 @@ public final class GetRepositoryResult {
         return this.registryId;
     }
     /**
-     * The URL of the repository (in the form `aws_account_id.dkr.ecr.region.amazonaws.com/repositoryName`).
+     * @return The URL of the repository (in the form `aws_account_id.dkr.ecr.region.amazonaws.com/repositoryName`).
      * 
-    */
+     */
     public String repositoryUrl() {
         return this.repositoryUrl;
     }
     /**
-     * A map of tags assigned to the resource.
+     * @return A map of tags assigned to the resource.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags;
     }

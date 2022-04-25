@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ListenerRuleActionFixedResponse {
     /**
-     * The content type. Valid values are `text/plain`, `text/css`, `text/html`, `application/javascript` and `application/json`.
+     * @return The content type. Valid values are `text/plain`, `text/css`, `text/html`, `application/javascript` and `application/json`.
      * 
      */
     private final String contentType;
     /**
-     * The message body.
+     * @return The message body.
      * 
      */
     private final @Nullable String messageBody;
     /**
-     * The HTTP response code. Valid values are `2XX`, `4XX`, or `5XX`.
+     * @return The HTTP response code. Valid values are `2XX`, `4XX`, or `5XX`.
      * 
      */
     private final @Nullable String statusCode;
@@ -38,23 +38,23 @@ public final class ListenerRuleActionFixedResponse {
     }
 
     /**
-     * The content type. Valid values are `text/plain`, `text/css`, `text/html`, `application/javascript` and `application/json`.
+     * @return The content type. Valid values are `text/plain`, `text/css`, `text/html`, `application/javascript` and `application/json`.
      * 
-    */
+     */
     public String contentType() {
         return this.contentType;
     }
     /**
-     * The message body.
+     * @return The message body.
      * 
-    */
+     */
     public Optional<String> messageBody() {
         return Optional.ofNullable(this.messageBody);
     }
     /**
-     * The HTTP response code. Valid values are `2XX`, `4XX`, or `5XX`.
+     * @return The HTTP response code. Valid values are `2XX`, `4XX`, or `5XX`.
      * 
-    */
+     */
     public Optional<String> statusCode() {
         return Optional.ofNullable(this.statusCode);
     }

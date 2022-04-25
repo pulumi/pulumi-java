@@ -15,32 +15,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetGatewayResult {
     /**
-     * Fully qualified resource Id for the resource.
+     * @return Fully qualified resource Id for the resource.
      * 
      */
     private final String id;
     /**
-     * The name of the resource.
+     * @return The name of the resource.
      * 
      */
     private final String name;
     /**
-     * Spring Cloud Gateway properties payload
+     * @return Spring Cloud Gateway properties payload
      * 
      */
     private final GatewayPropertiesResponse properties;
     /**
-     * Sku of the Spring Cloud Gateway resource
+     * @return Sku of the Spring Cloud Gateway resource
      * 
      */
     private final @Nullable SkuResponse sku;
     /**
-     * Metadata pertaining to creation and last modification of the resource.
+     * @return Metadata pertaining to creation and last modification of the resource.
      * 
      */
     private final SystemDataResponse systemData;
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
      */
     private final String type;
@@ -62,44 +62,44 @@ public final class GetGatewayResult {
     }
 
     /**
-     * Fully qualified resource Id for the resource.
+     * @return Fully qualified resource Id for the resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The name of the resource.
+     * @return The name of the resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Spring Cloud Gateway properties payload
+     * @return Spring Cloud Gateway properties payload
      * 
-    */
+     */
     public GatewayPropertiesResponse properties() {
         return this.properties;
     }
     /**
-     * Sku of the Spring Cloud Gateway resource
+     * @return Sku of the Spring Cloud Gateway resource
      * 
-    */
+     */
     public Optional<SkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
-     * Metadata pertaining to creation and last modification of the resource.
+     * @return Metadata pertaining to creation and last modification of the resource.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

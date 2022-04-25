@@ -27,6 +27,10 @@ public final class TarReadSettingsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="preserveCompressionFileNameAsFolder")
     private @Nullable Object preserveCompressionFileNameAsFolder;
 
+    /**
+     * @return Preserve the compression file name as folder path. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Object> preserveCompressionFileNameAsFolder() {
         return Optional.ofNullable(this.preserveCompressionFileNameAsFolder);
     }
@@ -39,6 +43,11 @@ public final class TarReadSettingsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The Compression setting type.
+     * Expected value is &#39;TarReadSettings&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -68,11 +77,24 @@ public final class TarReadSettingsResponse extends com.pulumi.resources.InvokeAr
             $ = new TarReadSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param preserveCompressionFileNameAsFolder Preserve the compression file name as folder path. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder preserveCompressionFileNameAsFolder(@Nullable Object preserveCompressionFileNameAsFolder) {
             $.preserveCompressionFileNameAsFolder = preserveCompressionFileNameAsFolder;
             return this;
         }
 
+        /**
+         * @param type The Compression setting type.
+         * Expected value is &#39;TarReadSettings&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

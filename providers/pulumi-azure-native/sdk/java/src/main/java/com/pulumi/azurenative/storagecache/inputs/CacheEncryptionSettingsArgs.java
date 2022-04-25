@@ -26,6 +26,10 @@ public final class CacheEncryptionSettingsArgs extends com.pulumi.resources.Reso
     @Import(name="keyEncryptionKey")
     private @Nullable Output<KeyVaultKeyReferenceArgs> keyEncryptionKey;
 
+    /**
+     * @return Specifies the location of the key encryption key in Key Vault.
+     * 
+     */
     public Optional<Output<KeyVaultKeyReferenceArgs>> keyEncryptionKey() {
         return Optional.ofNullable(this.keyEncryptionKey);
     }
@@ -54,11 +58,23 @@ public final class CacheEncryptionSettingsArgs extends com.pulumi.resources.Reso
             $ = new CacheEncryptionSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyEncryptionKey Specifies the location of the key encryption key in Key Vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyEncryptionKey(@Nullable Output<KeyVaultKeyReferenceArgs> keyEncryptionKey) {
             $.keyEncryptionKey = keyEncryptionKey;
             return this;
         }
 
+        /**
+         * @param keyEncryptionKey Specifies the location of the key encryption key in Key Vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyEncryptionKey(KeyVaultKeyReferenceArgs keyEncryptionKey) {
             return keyEncryptionKey(Output.of(keyEncryptionKey));
         }

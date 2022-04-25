@@ -26,6 +26,10 @@ public final class GatewayDetailsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="gatewayResourceId")
     private @Nullable Output<String> gatewayResourceId;
 
+    /**
+     * @return Gateway resource to be associated with the server.
+     * 
+     */
     public Optional<Output<String>> gatewayResourceId() {
         return Optional.ofNullable(this.gatewayResourceId);
     }
@@ -54,11 +58,23 @@ public final class GatewayDetailsArgs extends com.pulumi.resources.ResourceArgs 
             $ = new GatewayDetailsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param gatewayResourceId Gateway resource to be associated with the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayResourceId(@Nullable Output<String> gatewayResourceId) {
             $.gatewayResourceId = gatewayResourceId;
             return this;
         }
 
+        /**
+         * @param gatewayResourceId Gateway resource to be associated with the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayResourceId(String gatewayResourceId) {
             return gatewayResourceId(Output.of(gatewayResourceId));
         }

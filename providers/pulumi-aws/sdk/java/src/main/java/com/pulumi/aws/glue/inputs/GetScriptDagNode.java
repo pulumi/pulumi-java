@@ -24,6 +24,10 @@ public final class GetScriptDagNode extends com.pulumi.resources.InvokeArgs {
     @Import(name="args", required=true)
     private List<GetScriptDagNodeArg> args;
 
+    /**
+     * @return Nested configuration an argument or property of a node. Defined below.
+     * 
+     */
     public List<GetScriptDagNodeArg> args() {
         return this.args;
     }
@@ -35,6 +39,10 @@ public final class GetScriptDagNode extends com.pulumi.resources.InvokeArgs {
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return A node identifier that is unique within the node&#39;s graph.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -46,6 +54,10 @@ public final class GetScriptDagNode extends com.pulumi.resources.InvokeArgs {
     @Import(name="lineNumber")
     private @Nullable Integer lineNumber;
 
+    /**
+     * @return The line number of the node.
+     * 
+     */
     public Optional<Integer> lineNumber() {
         return Optional.ofNullable(this.lineNumber);
     }
@@ -57,6 +69,10 @@ public final class GetScriptDagNode extends com.pulumi.resources.InvokeArgs {
     @Import(name="nodeType", required=true)
     private String nodeType;
 
+    /**
+     * @return The type of node this is.
+     * 
+     */
     public String nodeType() {
         return this.nodeType;
     }
@@ -88,25 +104,55 @@ public final class GetScriptDagNode extends com.pulumi.resources.InvokeArgs {
             $ = new GetScriptDagNode(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param args Nested configuration an argument or property of a node. Defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder args(List<GetScriptDagNodeArg> args) {
             $.args = args;
             return this;
         }
 
+        /**
+         * @param args Nested configuration an argument or property of a node. Defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder args(GetScriptDagNodeArg... args) {
             return args(List.of(args));
         }
 
+        /**
+         * @param id A node identifier that is unique within the node&#39;s graph.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param lineNumber The line number of the node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lineNumber(@Nullable Integer lineNumber) {
             $.lineNumber = lineNumber;
             return this;
         }
 
+        /**
+         * @param nodeType The type of node this is.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeType(String nodeType) {
             $.nodeType = nodeType;
             return this;

@@ -21,6 +21,10 @@ public final class ListSiteIdentifiersAssignedToHostNameArgs extends com.pulumi.
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Name of the object.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -49,6 +53,12 @@ public final class ListSiteIdentifiersAssignedToHostNameArgs extends com.pulumi.
             $ = new ListSiteIdentifiersAssignedToHostNameArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name of the object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;

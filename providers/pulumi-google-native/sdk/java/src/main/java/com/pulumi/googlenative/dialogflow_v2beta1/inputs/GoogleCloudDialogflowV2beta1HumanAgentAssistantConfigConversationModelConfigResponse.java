@@ -23,6 +23,10 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversa
     @Import(name="model", required=true)
     private String model;
 
+    /**
+     * @return Conversation model resource name. Format: `projects//conversationModels/`.
+     * 
+     */
     public String model() {
         return this.model;
     }
@@ -51,6 +55,12 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversa
             $ = new GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationModelConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param model Conversation model resource name. Format: `projects//conversationModels/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder model(String model) {
             $.model = model;
             return this;

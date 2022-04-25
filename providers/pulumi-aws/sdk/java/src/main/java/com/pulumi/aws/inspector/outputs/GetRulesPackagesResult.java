@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class GetRulesPackagesResult {
     /**
-     * A list of the AWS Inspector Rules Packages arns available in the AWS region.
+     * @return A list of the AWS Inspector Rules Packages arns available in the AWS region.
      * 
      */
     private final List<String> arns;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
@@ -30,16 +30,16 @@ public final class GetRulesPackagesResult {
     }
 
     /**
-     * A list of the AWS Inspector Rules Packages arns available in the AWS region.
+     * @return A list of the AWS Inspector Rules Packages arns available in the AWS region.
      * 
-    */
+     */
     public List<String> arns() {
         return this.arns;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

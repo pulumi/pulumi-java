@@ -31,6 +31,10 @@ public final class ForwardingConfigurationArgs extends com.pulumi.resources.Reso
     @Import(name="backendPool")
     private @Nullable Output<SubResourceArgs> backendPool;
 
+    /**
+     * @return A reference to the BackendPool which this rule routes to.
+     * 
+     */
     public Optional<Output<SubResourceArgs>> backendPool() {
         return Optional.ofNullable(this.backendPool);
     }
@@ -42,6 +46,10 @@ public final class ForwardingConfigurationArgs extends com.pulumi.resources.Reso
     @Import(name="cacheConfiguration")
     private @Nullable Output<CacheConfigurationArgs> cacheConfiguration;
 
+    /**
+     * @return The caching configuration associated with this rule.
+     * 
+     */
     public Optional<Output<CacheConfigurationArgs>> cacheConfiguration() {
         return Optional.ofNullable(this.cacheConfiguration);
     }
@@ -53,6 +61,10 @@ public final class ForwardingConfigurationArgs extends com.pulumi.resources.Reso
     @Import(name="customForwardingPath")
     private @Nullable Output<String> customForwardingPath;
 
+    /**
+     * @return A custom path used to rewrite resource paths matched by this rule. Leave empty to use incoming path.
+     * 
+     */
     public Optional<Output<String>> customForwardingPath() {
         return Optional.ofNullable(this.customForwardingPath);
     }
@@ -64,6 +76,10 @@ public final class ForwardingConfigurationArgs extends com.pulumi.resources.Reso
     @Import(name="forwardingProtocol")
     private @Nullable Output<Either<String,FrontDoorForwardingProtocol>> forwardingProtocol;
 
+    /**
+     * @return Protocol this rule will use when forwarding traffic to backends.
+     * 
+     */
     public Optional<Output<Either<String,FrontDoorForwardingProtocol>>> forwardingProtocol() {
         return Optional.ofNullable(this.forwardingProtocol);
     }
@@ -75,6 +91,11 @@ public final class ForwardingConfigurationArgs extends com.pulumi.resources.Reso
     @Import(name="odataType", required=true)
     private Output<String> odataType;
 
+    /**
+     * @return
+     * Expected value is &#39;#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration&#39;.
+     * 
+     */
     public Output<String> odataType() {
         return this.odataType;
     }
@@ -107,55 +128,129 @@ public final class ForwardingConfigurationArgs extends com.pulumi.resources.Reso
             $ = new ForwardingConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backendPool A reference to the BackendPool which this rule routes to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backendPool(@Nullable Output<SubResourceArgs> backendPool) {
             $.backendPool = backendPool;
             return this;
         }
 
+        /**
+         * @param backendPool A reference to the BackendPool which this rule routes to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backendPool(SubResourceArgs backendPool) {
             return backendPool(Output.of(backendPool));
         }
 
+        /**
+         * @param cacheConfiguration The caching configuration associated with this rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cacheConfiguration(@Nullable Output<CacheConfigurationArgs> cacheConfiguration) {
             $.cacheConfiguration = cacheConfiguration;
             return this;
         }
 
+        /**
+         * @param cacheConfiguration The caching configuration associated with this rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cacheConfiguration(CacheConfigurationArgs cacheConfiguration) {
             return cacheConfiguration(Output.of(cacheConfiguration));
         }
 
+        /**
+         * @param customForwardingPath A custom path used to rewrite resource paths matched by this rule. Leave empty to use incoming path.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customForwardingPath(@Nullable Output<String> customForwardingPath) {
             $.customForwardingPath = customForwardingPath;
             return this;
         }
 
+        /**
+         * @param customForwardingPath A custom path used to rewrite resource paths matched by this rule. Leave empty to use incoming path.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customForwardingPath(String customForwardingPath) {
             return customForwardingPath(Output.of(customForwardingPath));
         }
 
+        /**
+         * @param forwardingProtocol Protocol this rule will use when forwarding traffic to backends.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forwardingProtocol(@Nullable Output<Either<String,FrontDoorForwardingProtocol>> forwardingProtocol) {
             $.forwardingProtocol = forwardingProtocol;
             return this;
         }
 
+        /**
+         * @param forwardingProtocol Protocol this rule will use when forwarding traffic to backends.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forwardingProtocol(Either<String,FrontDoorForwardingProtocol> forwardingProtocol) {
             return forwardingProtocol(Output.of(forwardingProtocol));
         }
 
+        /**
+         * @param forwardingProtocol Protocol this rule will use when forwarding traffic to backends.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forwardingProtocol(String forwardingProtocol) {
             return forwardingProtocol(Either.ofLeft(forwardingProtocol));
         }
 
+        /**
+         * @param forwardingProtocol Protocol this rule will use when forwarding traffic to backends.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forwardingProtocol(FrontDoorForwardingProtocol forwardingProtocol) {
             return forwardingProtocol(Either.ofRight(forwardingProtocol));
         }
 
+        /**
+         * @param odataType
+         * Expected value is &#39;#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(Output<String> odataType) {
             $.odataType = odataType;
             return this;
         }
 
+        /**
+         * @param odataType
+         * Expected value is &#39;#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(String odataType) {
             return odataType(Output.of(odataType));
         }

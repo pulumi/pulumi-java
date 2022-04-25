@@ -19,6 +19,10 @@ public final class GetExpressRouteCircuitPeeringArgs extends com.pulumi.resource
     @Import(name="circuitName", required=true)
     private String circuitName;
 
+    /**
+     * @return The name of the express route circuit.
+     * 
+     */
     public String circuitName() {
         return this.circuitName;
     }
@@ -30,6 +34,10 @@ public final class GetExpressRouteCircuitPeeringArgs extends com.pulumi.resource
     @Import(name="peeringName", required=true)
     private String peeringName;
 
+    /**
+     * @return The name of the peering.
+     * 
+     */
     public String peeringName() {
         return this.peeringName;
     }
@@ -41,6 +49,10 @@ public final class GetExpressRouteCircuitPeeringArgs extends com.pulumi.resource
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetExpressRouteCircuitPeeringArgs extends com.pulumi.resource
             $ = new GetExpressRouteCircuitPeeringArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param circuitName The name of the express route circuit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder circuitName(String circuitName) {
             $.circuitName = circuitName;
             return this;
         }
 
+        /**
+         * @param peeringName The name of the peering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peeringName(String peeringName) {
             $.peeringName = peeringName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

@@ -25,6 +25,10 @@ public final class CopyProgressResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="accountId", required=true)
     private String accountId;
 
+    /**
+     * @return Id of the account where the data needs to be uploaded.
+     * 
+     */
     public String accountId() {
         return this.accountId;
     }
@@ -36,6 +40,10 @@ public final class CopyProgressResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="bytesProcessed", required=true)
     private Double bytesProcessed;
 
+    /**
+     * @return To indicate bytes transferred.
+     * 
+     */
     public Double bytesProcessed() {
         return this.bytesProcessed;
     }
@@ -47,6 +55,10 @@ public final class CopyProgressResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="dataAccountType", required=true)
     private String dataAccountType;
 
+    /**
+     * @return Data Account Type.
+     * 
+     */
     public String dataAccountType() {
         return this.dataAccountType;
     }
@@ -58,6 +70,10 @@ public final class CopyProgressResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="directoriesErroredOut", required=true)
     private Double directoriesErroredOut;
 
+    /**
+     * @return To indicate directories errored out in the job.
+     * 
+     */
     public Double directoriesErroredOut() {
         return this.directoriesErroredOut;
     }
@@ -69,6 +85,10 @@ public final class CopyProgressResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="filesErroredOut", required=true)
     private Double filesErroredOut;
 
+    /**
+     * @return Number of files which could not be copied
+     * 
+     */
     public Double filesErroredOut() {
         return this.filesErroredOut;
     }
@@ -80,6 +100,10 @@ public final class CopyProgressResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="filesProcessed", required=true)
     private Double filesProcessed;
 
+    /**
+     * @return Number of files processed
+     * 
+     */
     public Double filesProcessed() {
         return this.filesProcessed;
     }
@@ -91,6 +115,10 @@ public final class CopyProgressResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="invalidDirectoriesProcessed", required=true)
     private Double invalidDirectoriesProcessed;
 
+    /**
+     * @return To indicate directories renamed
+     * 
+     */
     public Double invalidDirectoriesProcessed() {
         return this.invalidDirectoriesProcessed;
     }
@@ -102,6 +130,10 @@ public final class CopyProgressResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="invalidFileBytesUploaded", required=true)
     private Double invalidFileBytesUploaded;
 
+    /**
+     * @return Total amount of data not adhering to azure naming conventions which were processed by automatic renaming
+     * 
+     */
     public Double invalidFileBytesUploaded() {
         return this.invalidFileBytesUploaded;
     }
@@ -113,6 +145,10 @@ public final class CopyProgressResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="invalidFilesProcessed", required=true)
     private Double invalidFilesProcessed;
 
+    /**
+     * @return Number of files not adhering to azure naming conventions which were processed by automatic renaming
+     * 
+     */
     public Double invalidFilesProcessed() {
         return this.invalidFilesProcessed;
     }
@@ -125,6 +161,11 @@ public final class CopyProgressResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="isEnumerationInProgress", required=true)
     private Boolean isEnumerationInProgress;
 
+    /**
+     * @return To indicate if enumeration of data is in progress.
+     * Until this is true, the TotalBytesToProcess may not be valid.
+     * 
+     */
     public Boolean isEnumerationInProgress() {
         return this.isEnumerationInProgress;
     }
@@ -136,6 +177,10 @@ public final class CopyProgressResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="renamedContainerCount", required=true)
     private Double renamedContainerCount;
 
+    /**
+     * @return Number of folders not adhering to azure naming conventions which were processed by automatic renaming
+     * 
+     */
     public Double renamedContainerCount() {
         return this.renamedContainerCount;
     }
@@ -147,6 +192,10 @@ public final class CopyProgressResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="storageAccountName", required=true)
     private String storageAccountName;
 
+    /**
+     * @return Name of the storage account. This will be empty for data account types other than storage account.
+     * 
+     */
     public String storageAccountName() {
         return this.storageAccountName;
     }
@@ -158,6 +207,10 @@ public final class CopyProgressResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="totalBytesToProcess", required=true)
     private Double totalBytesToProcess;
 
+    /**
+     * @return Total amount of data to be processed by the job.
+     * 
+     */
     public Double totalBytesToProcess() {
         return this.totalBytesToProcess;
     }
@@ -169,6 +222,10 @@ public final class CopyProgressResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="totalFilesToProcess", required=true)
     private Double totalFilesToProcess;
 
+    /**
+     * @return Total files to process
+     * 
+     */
     public Double totalFilesToProcess() {
         return this.totalFilesToProcess;
     }
@@ -180,6 +237,10 @@ public final class CopyProgressResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="transferType", required=true)
     private String transferType;
 
+    /**
+     * @return Transfer type of data
+     * 
+     */
     public String transferType() {
         return this.transferType;
     }
@@ -222,76 +283,167 @@ public final class CopyProgressResponse extends com.pulumi.resources.InvokeArgs 
             $ = new CopyProgressResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountId Id of the account where the data needs to be uploaded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountId(String accountId) {
             $.accountId = accountId;
             return this;
         }
 
+        /**
+         * @param bytesProcessed To indicate bytes transferred.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bytesProcessed(Double bytesProcessed) {
             $.bytesProcessed = bytesProcessed;
             return this;
         }
 
+        /**
+         * @param dataAccountType Data Account Type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataAccountType(String dataAccountType) {
             $.dataAccountType = dataAccountType;
             return this;
         }
 
+        /**
+         * @param directoriesErroredOut To indicate directories errored out in the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder directoriesErroredOut(Double directoriesErroredOut) {
             $.directoriesErroredOut = directoriesErroredOut;
             return this;
         }
 
+        /**
+         * @param filesErroredOut Number of files which could not be copied
+         * 
+         * @return builder
+         * 
+         */
         public Builder filesErroredOut(Double filesErroredOut) {
             $.filesErroredOut = filesErroredOut;
             return this;
         }
 
+        /**
+         * @param filesProcessed Number of files processed
+         * 
+         * @return builder
+         * 
+         */
         public Builder filesProcessed(Double filesProcessed) {
             $.filesProcessed = filesProcessed;
             return this;
         }
 
+        /**
+         * @param invalidDirectoriesProcessed To indicate directories renamed
+         * 
+         * @return builder
+         * 
+         */
         public Builder invalidDirectoriesProcessed(Double invalidDirectoriesProcessed) {
             $.invalidDirectoriesProcessed = invalidDirectoriesProcessed;
             return this;
         }
 
+        /**
+         * @param invalidFileBytesUploaded Total amount of data not adhering to azure naming conventions which were processed by automatic renaming
+         * 
+         * @return builder
+         * 
+         */
         public Builder invalidFileBytesUploaded(Double invalidFileBytesUploaded) {
             $.invalidFileBytesUploaded = invalidFileBytesUploaded;
             return this;
         }
 
+        /**
+         * @param invalidFilesProcessed Number of files not adhering to azure naming conventions which were processed by automatic renaming
+         * 
+         * @return builder
+         * 
+         */
         public Builder invalidFilesProcessed(Double invalidFilesProcessed) {
             $.invalidFilesProcessed = invalidFilesProcessed;
             return this;
         }
 
+        /**
+         * @param isEnumerationInProgress To indicate if enumeration of data is in progress.
+         * Until this is true, the TotalBytesToProcess may not be valid.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEnumerationInProgress(Boolean isEnumerationInProgress) {
             $.isEnumerationInProgress = isEnumerationInProgress;
             return this;
         }
 
+        /**
+         * @param renamedContainerCount Number of folders not adhering to azure naming conventions which were processed by automatic renaming
+         * 
+         * @return builder
+         * 
+         */
         public Builder renamedContainerCount(Double renamedContainerCount) {
             $.renamedContainerCount = renamedContainerCount;
             return this;
         }
 
+        /**
+         * @param storageAccountName Name of the storage account. This will be empty for data account types other than storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountName(String storageAccountName) {
             $.storageAccountName = storageAccountName;
             return this;
         }
 
+        /**
+         * @param totalBytesToProcess Total amount of data to be processed by the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder totalBytesToProcess(Double totalBytesToProcess) {
             $.totalBytesToProcess = totalBytesToProcess;
             return this;
         }
 
+        /**
+         * @param totalFilesToProcess Total files to process
+         * 
+         * @return builder
+         * 
+         */
         public Builder totalFilesToProcess(Double totalFilesToProcess) {
             $.totalFilesToProcess = totalFilesToProcess;
             return this;
         }
 
+        /**
+         * @param transferType Transfer type of data
+         * 
+         * @return builder
+         * 
+         */
         public Builder transferType(String transferType) {
             $.transferType = transferType;
             return this;

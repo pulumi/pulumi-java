@@ -23,6 +23,10 @@ public final class EndpointsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="hcxCloudManager", required=true)
     private String hcxCloudManager;
 
+    /**
+     * @return Endpoint for the HCX Cloud Manager
+     * 
+     */
     public String hcxCloudManager() {
         return this.hcxCloudManager;
     }
@@ -34,6 +38,10 @@ public final class EndpointsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="nsxtManager", required=true)
     private String nsxtManager;
 
+    /**
+     * @return Endpoint for the NSX-T Data Center manager
+     * 
+     */
     public String nsxtManager() {
         return this.nsxtManager;
     }
@@ -45,6 +53,10 @@ public final class EndpointsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="vcsa", required=true)
     private String vcsa;
 
+    /**
+     * @return Endpoint for Virtual Center Server Appliance
+     * 
+     */
     public String vcsa() {
         return this.vcsa;
     }
@@ -75,16 +87,34 @@ public final class EndpointsResponse extends com.pulumi.resources.InvokeArgs {
             $ = new EndpointsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hcxCloudManager Endpoint for the HCX Cloud Manager
+         * 
+         * @return builder
+         * 
+         */
         public Builder hcxCloudManager(String hcxCloudManager) {
             $.hcxCloudManager = hcxCloudManager;
             return this;
         }
 
+        /**
+         * @param nsxtManager Endpoint for the NSX-T Data Center manager
+         * 
+         * @return builder
+         * 
+         */
         public Builder nsxtManager(String nsxtManager) {
             $.nsxtManager = nsxtManager;
             return this;
         }
 
+        /**
+         * @param vcsa Endpoint for Virtual Center Server Appliance
+         * 
+         * @return builder
+         * 
+         */
         public Builder vcsa(String vcsa) {
             $.vcsa = vcsa;
             return this;

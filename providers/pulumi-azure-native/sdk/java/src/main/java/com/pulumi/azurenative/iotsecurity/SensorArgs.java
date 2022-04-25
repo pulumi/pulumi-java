@@ -25,6 +25,10 @@ public final class SensorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scope", required=true)
     private Output<String> scope;
 
+    /**
+     * @return Scope of the query (IoT Hub, /providers/Microsoft.Devices/iotHubs/myHub)
+     * 
+     */
     public Output<String> scope() {
         return this.scope;
     }
@@ -36,6 +40,10 @@ public final class SensorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sensorName")
     private @Nullable Output<String> sensorName;
 
+    /**
+     * @return Name of the IoT sensor
+     * 
+     */
     public Optional<Output<String>> sensorName() {
         return Optional.ofNullable(this.sensorName);
     }
@@ -47,6 +55,10 @@ public final class SensorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sensorType")
     private @Nullable Output<Either<String,SensorType>> sensorType;
 
+    /**
+     * @return Type of sensor
+     * 
+     */
     public Optional<Output<Either<String,SensorType>>> sensorType() {
         return Optional.ofNullable(this.sensorType);
     }
@@ -58,6 +70,10 @@ public final class SensorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tiAutomaticUpdates")
     private @Nullable Output<Boolean> tiAutomaticUpdates;
 
+    /**
+     * @return TI Automatic mode status of the IoT sensor
+     * 
+     */
     public Optional<Output<Boolean>> tiAutomaticUpdates() {
         return Optional.ofNullable(this.tiAutomaticUpdates);
     }
@@ -69,6 +85,10 @@ public final class SensorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="zone")
     private @Nullable Output<String> zone;
 
+    /**
+     * @return Zone of the IoT sensor
+     * 
+     */
     public Optional<Output<String>> zone() {
         return Optional.ofNullable(this.zone);
     }
@@ -101,55 +121,127 @@ public final class SensorArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SensorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param scope Scope of the query (IoT Hub, /providers/Microsoft.Devices/iotHubs/myHub)
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(Output<String> scope) {
             $.scope = scope;
             return this;
         }
 
+        /**
+         * @param scope Scope of the query (IoT Hub, /providers/Microsoft.Devices/iotHubs/myHub)
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(String scope) {
             return scope(Output.of(scope));
         }
 
+        /**
+         * @param sensorName Name of the IoT sensor
+         * 
+         * @return builder
+         * 
+         */
         public Builder sensorName(@Nullable Output<String> sensorName) {
             $.sensorName = sensorName;
             return this;
         }
 
+        /**
+         * @param sensorName Name of the IoT sensor
+         * 
+         * @return builder
+         * 
+         */
         public Builder sensorName(String sensorName) {
             return sensorName(Output.of(sensorName));
         }
 
+        /**
+         * @param sensorType Type of sensor
+         * 
+         * @return builder
+         * 
+         */
         public Builder sensorType(@Nullable Output<Either<String,SensorType>> sensorType) {
             $.sensorType = sensorType;
             return this;
         }
 
+        /**
+         * @param sensorType Type of sensor
+         * 
+         * @return builder
+         * 
+         */
         public Builder sensorType(Either<String,SensorType> sensorType) {
             return sensorType(Output.of(sensorType));
         }
 
+        /**
+         * @param sensorType Type of sensor
+         * 
+         * @return builder
+         * 
+         */
         public Builder sensorType(String sensorType) {
             return sensorType(Either.ofLeft(sensorType));
         }
 
+        /**
+         * @param sensorType Type of sensor
+         * 
+         * @return builder
+         * 
+         */
         public Builder sensorType(SensorType sensorType) {
             return sensorType(Either.ofRight(sensorType));
         }
 
+        /**
+         * @param tiAutomaticUpdates TI Automatic mode status of the IoT sensor
+         * 
+         * @return builder
+         * 
+         */
         public Builder tiAutomaticUpdates(@Nullable Output<Boolean> tiAutomaticUpdates) {
             $.tiAutomaticUpdates = tiAutomaticUpdates;
             return this;
         }
 
+        /**
+         * @param tiAutomaticUpdates TI Automatic mode status of the IoT sensor
+         * 
+         * @return builder
+         * 
+         */
         public Builder tiAutomaticUpdates(Boolean tiAutomaticUpdates) {
             return tiAutomaticUpdates(Output.of(tiAutomaticUpdates));
         }
 
+        /**
+         * @param zone Zone of the IoT sensor
+         * 
+         * @return builder
+         * 
+         */
         public Builder zone(@Nullable Output<String> zone) {
             $.zone = zone;
             return this;
         }
 
+        /**
+         * @param zone Zone of the IoT sensor
+         * 
+         * @return builder
+         * 
+         */
         public Builder zone(String zone) {
             return zone(Output.of(zone));
         }

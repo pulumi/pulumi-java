@@ -25,6 +25,10 @@ public final class RepoSourceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="branchName", required=true)
     private String branchName;
 
+    /**
+     * @return Regex matching branches to build. The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax
+     * 
+     */
     public String branchName() {
         return this.branchName;
     }
@@ -36,6 +40,10 @@ public final class RepoSourceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="commitSha", required=true)
     private String commitSha;
 
+    /**
+     * @return Explicit commit SHA to build.
+     * 
+     */
     public String commitSha() {
         return this.commitSha;
     }
@@ -47,6 +55,10 @@ public final class RepoSourceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="dir", required=true)
     private String dir;
 
+    /**
+     * @return Directory, relative to the source root, in which to run the build. This must be a relative path. If a step&#39;s `dir` is specified and is an absolute path, this value is ignored for that step&#39;s execution.
+     * 
+     */
     public String dir() {
         return this.dir;
     }
@@ -58,6 +70,10 @@ public final class RepoSourceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="invertRegex", required=true)
     private Boolean invertRegex;
 
+    /**
+     * @return Only trigger a build if the revision regex does NOT match the revision regex.
+     * 
+     */
     public Boolean invertRegex() {
         return this.invertRegex;
     }
@@ -69,6 +85,10 @@ public final class RepoSourceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="project", required=true)
     private String project;
 
+    /**
+     * @return ID of the project that owns the Cloud Source Repository. If omitted, the project ID requesting the build is assumed.
+     * 
+     */
     public String project() {
         return this.project;
     }
@@ -80,6 +100,10 @@ public final class RepoSourceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="repoName", required=true)
     private String repoName;
 
+    /**
+     * @return Name of the Cloud Source Repository.
+     * 
+     */
     public String repoName() {
         return this.repoName;
     }
@@ -91,6 +115,10 @@ public final class RepoSourceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="substitutions", required=true)
     private Map<String,String> substitutions;
 
+    /**
+     * @return Substitutions to use in a triggered build. Should only be used with RunBuildTrigger
+     * 
+     */
     public Map<String,String> substitutions() {
         return this.substitutions;
     }
@@ -102,6 +130,10 @@ public final class RepoSourceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="tagName", required=true)
     private String tagName;
 
+    /**
+     * @return Regex matching tags to build. The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax
+     * 
+     */
     public String tagName() {
         return this.tagName;
     }
@@ -137,41 +169,89 @@ public final class RepoSourceResponse extends com.pulumi.resources.InvokeArgs {
             $ = new RepoSourceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param branchName Regex matching branches to build. The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax
+         * 
+         * @return builder
+         * 
+         */
         public Builder branchName(String branchName) {
             $.branchName = branchName;
             return this;
         }
 
+        /**
+         * @param commitSha Explicit commit SHA to build.
+         * 
+         * @return builder
+         * 
+         */
         public Builder commitSha(String commitSha) {
             $.commitSha = commitSha;
             return this;
         }
 
+        /**
+         * @param dir Directory, relative to the source root, in which to run the build. This must be a relative path. If a step&#39;s `dir` is specified and is an absolute path, this value is ignored for that step&#39;s execution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dir(String dir) {
             $.dir = dir;
             return this;
         }
 
+        /**
+         * @param invertRegex Only trigger a build if the revision regex does NOT match the revision regex.
+         * 
+         * @return builder
+         * 
+         */
         public Builder invertRegex(Boolean invertRegex) {
             $.invertRegex = invertRegex;
             return this;
         }
 
+        /**
+         * @param project ID of the project that owns the Cloud Source Repository. If omitted, the project ID requesting the build is assumed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param repoName Name of the Cloud Source Repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repoName(String repoName) {
             $.repoName = repoName;
             return this;
         }
 
+        /**
+         * @param substitutions Substitutions to use in a triggered build. Should only be used with RunBuildTrigger
+         * 
+         * @return builder
+         * 
+         */
         public Builder substitutions(Map<String,String> substitutions) {
             $.substitutions = substitutions;
             return this;
         }
 
+        /**
+         * @param tagName Regex matching tags to build. The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagName(String tagName) {
             $.tagName = tagName;
             return this;

@@ -22,6 +22,10 @@ public final class BackupPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="backupPolicyName")
     private @Nullable Output<String> backupPolicyName;
 
+    /**
+     * @return Name of the policy
+     * 
+     */
     public Optional<Output<String>> backupPolicyName() {
         return Optional.ofNullable(this.backupPolicyName);
     }
@@ -33,6 +37,10 @@ public final class BackupPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties")
     private @Nullable Output<com.pulumi.azurenative.dataprotection.inputs.BackupPolicyArgs> properties;
 
+    /**
+     * @return BaseBackupPolicyResource properties
+     * 
+     */
     public Optional<Output<com.pulumi.azurenative.dataprotection.inputs.BackupPolicyArgs>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -44,6 +52,10 @@ public final class BackupPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group where the backup vault is present.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -55,6 +67,10 @@ public final class BackupPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vaultName", required=true)
     private Output<String> vaultName;
 
+    /**
+     * @return The name of the backup vault.
+     * 
+     */
     public Output<String> vaultName() {
         return this.vaultName;
     }
@@ -86,38 +102,86 @@ public final class BackupPolicyArgs extends com.pulumi.resources.ResourceArgs {
             $ = new BackupPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backupPolicyName Name of the policy
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupPolicyName(@Nullable Output<String> backupPolicyName) {
             $.backupPolicyName = backupPolicyName;
             return this;
         }
 
+        /**
+         * @param backupPolicyName Name of the policy
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupPolicyName(String backupPolicyName) {
             return backupPolicyName(Output.of(backupPolicyName));
         }
 
+        /**
+         * @param properties BaseBackupPolicyResource properties
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<com.pulumi.azurenative.dataprotection.inputs.BackupPolicyArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties BaseBackupPolicyResource properties
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(com.pulumi.azurenative.dataprotection.inputs.BackupPolicyArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group where the backup vault is present.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group where the backup vault is present.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param vaultName The name of the backup vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vaultName(Output<String> vaultName) {
             $.vaultName = vaultName;
             return this;
         }
 
+        /**
+         * @param vaultName The name of the backup vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vaultName(String vaultName) {
             return vaultName(Output.of(vaultName));
         }

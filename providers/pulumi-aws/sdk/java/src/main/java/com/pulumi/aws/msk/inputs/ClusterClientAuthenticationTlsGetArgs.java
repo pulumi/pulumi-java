@@ -23,6 +23,10 @@ public final class ClusterClientAuthenticationTlsGetArgs extends com.pulumi.reso
     @Import(name="certificateAuthorityArns")
     private @Nullable Output<List<String>> certificateAuthorityArns;
 
+    /**
+     * @return List of ACM Certificate Authority Amazon Resource Names (ARNs).
+     * 
+     */
     public Optional<Output<List<String>>> certificateAuthorityArns() {
         return Optional.ofNullable(this.certificateAuthorityArns);
     }
@@ -51,15 +55,33 @@ public final class ClusterClientAuthenticationTlsGetArgs extends com.pulumi.reso
             $ = new ClusterClientAuthenticationTlsGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificateAuthorityArns List of ACM Certificate Authority Amazon Resource Names (ARNs).
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateAuthorityArns(@Nullable Output<List<String>> certificateAuthorityArns) {
             $.certificateAuthorityArns = certificateAuthorityArns;
             return this;
         }
 
+        /**
+         * @param certificateAuthorityArns List of ACM Certificate Authority Amazon Resource Names (ARNs).
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateAuthorityArns(List<String> certificateAuthorityArns) {
             return certificateAuthorityArns(Output.of(certificateAuthorityArns));
         }
 
+        /**
+         * @param certificateAuthorityArns List of ACM Certificate Authority Amazon Resource Names (ARNs).
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateAuthorityArns(String... certificateAuthorityArns) {
             return certificateAuthorityArns(List.of(certificateAuthorityArns));
         }

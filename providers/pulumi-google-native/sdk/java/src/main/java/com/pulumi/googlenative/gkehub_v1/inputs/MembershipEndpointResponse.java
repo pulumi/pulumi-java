@@ -28,6 +28,10 @@ public final class MembershipEndpointResponse extends com.pulumi.resources.Invok
     @Import(name="edgeCluster", required=true)
     private EdgeClusterResponse edgeCluster;
 
+    /**
+     * @return Optional. Specific information for a Google Edge cluster.
+     * 
+     */
     public EdgeClusterResponse edgeCluster() {
         return this.edgeCluster;
     }
@@ -39,6 +43,10 @@ public final class MembershipEndpointResponse extends com.pulumi.resources.Invok
     @Import(name="gkeCluster", required=true)
     private GkeClusterResponse gkeCluster;
 
+    /**
+     * @return Optional. Specific information for a GKE-on-GCP cluster.
+     * 
+     */
     public GkeClusterResponse gkeCluster() {
         return this.gkeCluster;
     }
@@ -50,6 +58,10 @@ public final class MembershipEndpointResponse extends com.pulumi.resources.Invok
     @Import(name="kubernetesMetadata", required=true)
     private KubernetesMetadataResponse kubernetesMetadata;
 
+    /**
+     * @return Useful Kubernetes-specific metadata.
+     * 
+     */
     public KubernetesMetadataResponse kubernetesMetadata() {
         return this.kubernetesMetadata;
     }
@@ -61,6 +73,10 @@ public final class MembershipEndpointResponse extends com.pulumi.resources.Invok
     @Import(name="kubernetesResource", required=true)
     private KubernetesResourceResponse kubernetesResource;
 
+    /**
+     * @return Optional. The in-cluster Kubernetes Resources that should be applied for a correctly registered cluster, in the steady state. These resources: * Ensure that the cluster is exclusively registered to one and only one Hub Membership. * Propagate Workload Pool Information available in the Membership Authority field. * Ensure proper initial configuration of default Hub Features.
+     * 
+     */
     public KubernetesResourceResponse kubernetesResource() {
         return this.kubernetesResource;
     }
@@ -72,6 +88,10 @@ public final class MembershipEndpointResponse extends com.pulumi.resources.Invok
     @Import(name="multiCloudCluster", required=true)
     private MultiCloudClusterResponse multiCloudCluster;
 
+    /**
+     * @return Optional. Specific information for a GKE Multi-Cloud cluster.
+     * 
+     */
     public MultiCloudClusterResponse multiCloudCluster() {
         return this.multiCloudCluster;
     }
@@ -83,6 +103,10 @@ public final class MembershipEndpointResponse extends com.pulumi.resources.Invok
     @Import(name="onPremCluster", required=true)
     private OnPremClusterResponse onPremCluster;
 
+    /**
+     * @return Optional. Specific information for a GKE On-Prem cluster. An onprem user-cluster who has no resourceLink is not allowed to use this field, it should have a nil &#34;type&#34; instead.
+     * 
+     */
     public OnPremClusterResponse onPremCluster() {
         return this.onPremCluster;
     }
@@ -116,31 +140,67 @@ public final class MembershipEndpointResponse extends com.pulumi.resources.Invok
             $ = new MembershipEndpointResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param edgeCluster Optional. Specific information for a Google Edge cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder edgeCluster(EdgeClusterResponse edgeCluster) {
             $.edgeCluster = edgeCluster;
             return this;
         }
 
+        /**
+         * @param gkeCluster Optional. Specific information for a GKE-on-GCP cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gkeCluster(GkeClusterResponse gkeCluster) {
             $.gkeCluster = gkeCluster;
             return this;
         }
 
+        /**
+         * @param kubernetesMetadata Useful Kubernetes-specific metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kubernetesMetadata(KubernetesMetadataResponse kubernetesMetadata) {
             $.kubernetesMetadata = kubernetesMetadata;
             return this;
         }
 
+        /**
+         * @param kubernetesResource Optional. The in-cluster Kubernetes Resources that should be applied for a correctly registered cluster, in the steady state. These resources: * Ensure that the cluster is exclusively registered to one and only one Hub Membership. * Propagate Workload Pool Information available in the Membership Authority field. * Ensure proper initial configuration of default Hub Features.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kubernetesResource(KubernetesResourceResponse kubernetesResource) {
             $.kubernetesResource = kubernetesResource;
             return this;
         }
 
+        /**
+         * @param multiCloudCluster Optional. Specific information for a GKE Multi-Cloud cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder multiCloudCluster(MultiCloudClusterResponse multiCloudCluster) {
             $.multiCloudCluster = multiCloudCluster;
             return this;
         }
 
+        /**
+         * @param onPremCluster Optional. Specific information for a GKE On-Prem cluster. An onprem user-cluster who has no resourceLink is not allowed to use this field, it should have a nil &#34;type&#34; instead.
+         * 
+         * @return builder
+         * 
+         */
         public Builder onPremCluster(OnPremClusterResponse onPremCluster) {
             $.onPremCluster = onPremCluster;
             return this;

@@ -28,6 +28,10 @@ public final class ConfigurationStoreArgs extends com.pulumi.resources.ResourceA
     @Import(name="configStoreName")
     private @Nullable Output<String> configStoreName;
 
+    /**
+     * @return The name of the configuration store.
+     * 
+     */
     public Optional<Output<String>> configStoreName() {
         return Optional.ofNullable(this.configStoreName);
     }
@@ -39,6 +43,10 @@ public final class ConfigurationStoreArgs extends com.pulumi.resources.ResourceA
     @Import(name="encryption")
     private @Nullable Output<EncryptionPropertiesArgs> encryption;
 
+    /**
+     * @return The encryption settings of the configuration store.
+     * 
+     */
     public Optional<Output<EncryptionPropertiesArgs>> encryption() {
         return Optional.ofNullable(this.encryption);
     }
@@ -50,6 +58,10 @@ public final class ConfigurationStoreArgs extends com.pulumi.resources.ResourceA
     @Import(name="identity")
     private @Nullable Output<ResourceIdentityArgs> identity;
 
+    /**
+     * @return The managed identity information, if configured.
+     * 
+     */
     public Optional<Output<ResourceIdentityArgs>> identity() {
         return Optional.ofNullable(this.identity);
     }
@@ -61,6 +73,10 @@ public final class ConfigurationStoreArgs extends com.pulumi.resources.ResourceA
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The location of the resource. This cannot be changed after the resource is created.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -72,6 +88,10 @@ public final class ConfigurationStoreArgs extends com.pulumi.resources.ResourceA
     @Import(name="publicNetworkAccess")
     private @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
 
+    /**
+     * @return Control permission for data plane traffic coming from public networks while private endpoint is enabled.
+     * 
+     */
     public Optional<Output<Either<String,PublicNetworkAccess>>> publicNetworkAccess() {
         return Optional.ofNullable(this.publicNetworkAccess);
     }
@@ -83,6 +103,10 @@ public final class ConfigurationStoreArgs extends com.pulumi.resources.ResourceA
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group to which the container registry belongs.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -94,6 +118,10 @@ public final class ConfigurationStoreArgs extends com.pulumi.resources.ResourceA
     @Import(name="sku", required=true)
     private Output<SkuArgs> sku;
 
+    /**
+     * @return The sku of the configuration store.
+     * 
+     */
     public Output<SkuArgs> sku() {
         return this.sku;
     }
@@ -105,6 +133,10 @@ public final class ConfigurationStoreArgs extends com.pulumi.resources.ResourceA
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return The tags of the resource.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -140,82 +172,190 @@ public final class ConfigurationStoreArgs extends com.pulumi.resources.ResourceA
             $ = new ConfigurationStoreArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param configStoreName The name of the configuration store.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configStoreName(@Nullable Output<String> configStoreName) {
             $.configStoreName = configStoreName;
             return this;
         }
 
+        /**
+         * @param configStoreName The name of the configuration store.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configStoreName(String configStoreName) {
             return configStoreName(Output.of(configStoreName));
         }
 
+        /**
+         * @param encryption The encryption settings of the configuration store.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryption(@Nullable Output<EncryptionPropertiesArgs> encryption) {
             $.encryption = encryption;
             return this;
         }
 
+        /**
+         * @param encryption The encryption settings of the configuration store.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryption(EncryptionPropertiesArgs encryption) {
             return encryption(Output.of(encryption));
         }
 
+        /**
+         * @param identity The managed identity information, if configured.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(@Nullable Output<ResourceIdentityArgs> identity) {
             $.identity = identity;
             return this;
         }
 
+        /**
+         * @param identity The managed identity information, if configured.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(ResourceIdentityArgs identity) {
             return identity(Output.of(identity));
         }
 
+        /**
+         * @param location The location of the resource. This cannot be changed after the resource is created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The location of the resource. This cannot be changed after the resource is created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param publicNetworkAccess Control permission for data plane traffic coming from public networks while private endpoint is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicNetworkAccess(@Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess) {
             $.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
 
+        /**
+         * @param publicNetworkAccess Control permission for data plane traffic coming from public networks while private endpoint is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicNetworkAccess(Either<String,PublicNetworkAccess> publicNetworkAccess) {
             return publicNetworkAccess(Output.of(publicNetworkAccess));
         }
 
+        /**
+         * @param publicNetworkAccess Control permission for data plane traffic coming from public networks while private endpoint is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicNetworkAccess(String publicNetworkAccess) {
             return publicNetworkAccess(Either.ofLeft(publicNetworkAccess));
         }
 
+        /**
+         * @param publicNetworkAccess Control permission for data plane traffic coming from public networks while private endpoint is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicNetworkAccess(PublicNetworkAccess publicNetworkAccess) {
             return publicNetworkAccess(Either.ofRight(publicNetworkAccess));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group to which the container registry belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group to which the container registry belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param sku The sku of the configuration store.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(Output<SkuArgs> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku The sku of the configuration store.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(SkuArgs sku) {
             return sku(Output.of(sku));
         }
 
+        /**
+         * @param tags The tags of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The tags of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

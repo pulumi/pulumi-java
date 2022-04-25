@@ -29,6 +29,10 @@ public final class NetworkACLArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="allow")
     private @Nullable Output<List<Either<String,SignalRRequestType>>> allow;
 
+    /**
+     * @return Allowed request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
+     * 
+     */
     public Optional<Output<List<Either<String,SignalRRequestType>>>> allow() {
         return Optional.ofNullable(this.allow);
     }
@@ -40,6 +44,10 @@ public final class NetworkACLArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deny")
     private @Nullable Output<List<Either<String,SignalRRequestType>>> deny;
 
+    /**
+     * @return Denied request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
+     * 
+     */
     public Optional<Output<List<Either<String,SignalRRequestType>>>> deny() {
         return Optional.ofNullable(this.deny);
     }
@@ -69,28 +77,64 @@ public final class NetworkACLArgs extends com.pulumi.resources.ResourceArgs {
             $ = new NetworkACLArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allow Allowed request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allow(@Nullable Output<List<Either<String,SignalRRequestType>>> allow) {
             $.allow = allow;
             return this;
         }
 
+        /**
+         * @param allow Allowed request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allow(List<Either<String,SignalRRequestType>> allow) {
             return allow(Output.of(allow));
         }
 
+        /**
+         * @param allow Allowed request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allow(Either<String,SignalRRequestType>... allow) {
             return allow(List.of(allow));
         }
 
+        /**
+         * @param deny Denied request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deny(@Nullable Output<List<Either<String,SignalRRequestType>>> deny) {
             $.deny = deny;
             return this;
         }
 
+        /**
+         * @param deny Denied request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deny(List<Either<String,SignalRRequestType>> deny) {
             return deny(Output.of(deny));
         }
 
+        /**
+         * @param deny Denied request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deny(Either<String,SignalRRequestType>... deny) {
             return deny(List.of(deny));
         }

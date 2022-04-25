@@ -26,6 +26,10 @@ public final class NonComplianceMessageArgs extends com.pulumi.resources.Resourc
     @Import(name="message", required=true)
     private Output<String> message;
 
+    /**
+     * @return A message that describes why a resource is non-compliant with the policy. This is shown in &#39;deny&#39; error messages and on resource&#39;s non-compliant compliance results.
+     * 
+     */
     public Output<String> message() {
         return this.message;
     }
@@ -37,6 +41,10 @@ public final class NonComplianceMessageArgs extends com.pulumi.resources.Resourc
     @Import(name="policyDefinitionReferenceId")
     private @Nullable Output<String> policyDefinitionReferenceId;
 
+    /**
+     * @return The policy definition reference ID within a policy set definition the message is intended for. This is only applicable if the policy assignment assigns a policy set definition. If this is not provided the message applies to all policies assigned by this policy assignment.
+     * 
+     */
     public Optional<Output<String>> policyDefinitionReferenceId() {
         return Optional.ofNullable(this.policyDefinitionReferenceId);
     }
@@ -66,20 +74,44 @@ public final class NonComplianceMessageArgs extends com.pulumi.resources.Resourc
             $ = new NonComplianceMessageArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param message A message that describes why a resource is non-compliant with the policy. This is shown in &#39;deny&#39; error messages and on resource&#39;s non-compliant compliance results.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(Output<String> message) {
             $.message = message;
             return this;
         }
 
+        /**
+         * @param message A message that describes why a resource is non-compliant with the policy. This is shown in &#39;deny&#39; error messages and on resource&#39;s non-compliant compliance results.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(String message) {
             return message(Output.of(message));
         }
 
+        /**
+         * @param policyDefinitionReferenceId The policy definition reference ID within a policy set definition the message is intended for. This is only applicable if the policy assignment assigns a policy set definition. If this is not provided the message applies to all policies assigned by this policy assignment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyDefinitionReferenceId(@Nullable Output<String> policyDefinitionReferenceId) {
             $.policyDefinitionReferenceId = policyDefinitionReferenceId;
             return this;
         }
 
+        /**
+         * @param policyDefinitionReferenceId The policy definition reference ID within a policy set definition the message is intended for. This is only applicable if the policy assignment assigns a policy set definition. If this is not provided the message applies to all policies assigned by this policy assignment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyDefinitionReferenceId(String policyDefinitionReferenceId) {
             return policyDefinitionReferenceId(Output.of(policyDefinitionReferenceId));
         }

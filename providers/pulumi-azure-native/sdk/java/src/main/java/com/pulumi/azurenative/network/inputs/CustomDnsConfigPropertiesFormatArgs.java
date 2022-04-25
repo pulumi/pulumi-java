@@ -27,6 +27,10 @@ public final class CustomDnsConfigPropertiesFormatArgs extends com.pulumi.resour
     @Import(name="fqdn")
     private @Nullable Output<String> fqdn;
 
+    /**
+     * @return Fqdn that resolves to private endpoint ip address.
+     * 
+     */
     public Optional<Output<String>> fqdn() {
         return Optional.ofNullable(this.fqdn);
     }
@@ -38,6 +42,10 @@ public final class CustomDnsConfigPropertiesFormatArgs extends com.pulumi.resour
     @Import(name="ipAddresses")
     private @Nullable Output<List<String>> ipAddresses;
 
+    /**
+     * @return A list of private ip addresses of the private endpoint.
+     * 
+     */
     public Optional<Output<List<String>>> ipAddresses() {
         return Optional.ofNullable(this.ipAddresses);
     }
@@ -67,24 +75,54 @@ public final class CustomDnsConfigPropertiesFormatArgs extends com.pulumi.resour
             $ = new CustomDnsConfigPropertiesFormatArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fqdn Fqdn that resolves to private endpoint ip address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fqdn(@Nullable Output<String> fqdn) {
             $.fqdn = fqdn;
             return this;
         }
 
+        /**
+         * @param fqdn Fqdn that resolves to private endpoint ip address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fqdn(String fqdn) {
             return fqdn(Output.of(fqdn));
         }
 
+        /**
+         * @param ipAddresses A list of private ip addresses of the private endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddresses(@Nullable Output<List<String>> ipAddresses) {
             $.ipAddresses = ipAddresses;
             return this;
         }
 
+        /**
+         * @param ipAddresses A list of private ip addresses of the private endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddresses(List<String> ipAddresses) {
             return ipAddresses(Output.of(ipAddresses));
         }
 
+        /**
+         * @param ipAddresses A list of private ip addresses of the private endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddresses(String... ipAddresses) {
             return ipAddresses(List.of(ipAddresses));
         }

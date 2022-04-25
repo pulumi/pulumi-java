@@ -14,18 +14,18 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetTestablePermissionsResult {
     /**
-     * The the support level of this permission for custom roles.
+     * @return The the support level of this permission for custom roles.
      * 
      */
     private final @Nullable String customSupportLevel;
     private final String fullResourceName;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     /**
-     * A list of permissions matching the provided input. Structure is defined below.
+     * @return A list of permissions matching the provided input. Structure is defined below.
      * 
      */
     private final List<GetTestablePermissionsPermission> permissions;
@@ -46,9 +46,9 @@ public final class GetTestablePermissionsResult {
     }
 
     /**
-     * The the support level of this permission for custom roles.
+     * @return The the support level of this permission for custom roles.
      * 
-    */
+     */
     public Optional<String> customSupportLevel() {
         return Optional.ofNullable(this.customSupportLevel);
     }
@@ -56,16 +56,16 @@ public final class GetTestablePermissionsResult {
         return this.fullResourceName;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * A list of permissions matching the provided input. Structure is defined below.
+     * @return A list of permissions matching the provided input. Structure is defined below.
      * 
-    */
+     */
     public List<GetTestablePermissionsPermission> permissions() {
         return this.permissions;
     }

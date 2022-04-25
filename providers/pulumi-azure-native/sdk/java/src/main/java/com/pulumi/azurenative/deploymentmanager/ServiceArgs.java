@@ -23,6 +23,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The geo-location where the resource lives
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -34,6 +38,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -45,6 +53,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceName")
     private @Nullable Output<String> serviceName;
 
+    /**
+     * @return The name of the service resource.
+     * 
+     */
     public Optional<Output<String>> serviceName() {
         return Optional.ofNullable(this.serviceName);
     }
@@ -56,6 +68,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceTopologyName", required=true)
     private Output<String> serviceTopologyName;
 
+    /**
+     * @return The name of the service topology .
+     * 
+     */
     public Output<String> serviceTopologyName() {
         return this.serviceTopologyName;
     }
@@ -67,6 +83,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -78,6 +98,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="targetLocation", required=true)
     private Output<String> targetLocation;
 
+    /**
+     * @return The Azure location to which the resources in the service belong to or should be deployed to.
+     * 
+     */
     public Output<String> targetLocation() {
         return this.targetLocation;
     }
@@ -89,6 +113,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="targetSubscriptionId", required=true)
     private Output<String> targetSubscriptionId;
 
+    /**
+     * @return The subscription to which the resources in the service belong to or should be deployed to.
+     * 
+     */
     public Output<String> targetSubscriptionId() {
         return this.targetSubscriptionId;
     }
@@ -123,65 +151,149 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ServiceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param serviceName The name of the service resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(@Nullable Output<String> serviceName) {
             $.serviceName = serviceName;
             return this;
         }
 
+        /**
+         * @param serviceName The name of the service resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             return serviceName(Output.of(serviceName));
         }
 
+        /**
+         * @param serviceTopologyName The name of the service topology .
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceTopologyName(Output<String> serviceTopologyName) {
             $.serviceTopologyName = serviceTopologyName;
             return this;
         }
 
+        /**
+         * @param serviceTopologyName The name of the service topology .
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceTopologyName(String serviceTopologyName) {
             return serviceTopologyName(Output.of(serviceTopologyName));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param targetLocation The Azure location to which the resources in the service belong to or should be deployed to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetLocation(Output<String> targetLocation) {
             $.targetLocation = targetLocation;
             return this;
         }
 
+        /**
+         * @param targetLocation The Azure location to which the resources in the service belong to or should be deployed to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetLocation(String targetLocation) {
             return targetLocation(Output.of(targetLocation));
         }
 
+        /**
+         * @param targetSubscriptionId The subscription to which the resources in the service belong to or should be deployed to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetSubscriptionId(Output<String> targetSubscriptionId) {
             $.targetSubscriptionId = targetSubscriptionId;
             return this;
         }
 
+        /**
+         * @param targetSubscriptionId The subscription to which the resources in the service belong to or should be deployed to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetSubscriptionId(String targetSubscriptionId) {
             return targetSubscriptionId(Output.of(targetSubscriptionId));
         }

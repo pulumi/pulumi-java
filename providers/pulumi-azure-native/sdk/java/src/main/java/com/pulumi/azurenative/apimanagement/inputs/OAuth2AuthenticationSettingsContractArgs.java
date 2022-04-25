@@ -26,6 +26,10 @@ public final class OAuth2AuthenticationSettingsContractArgs extends com.pulumi.r
     @Import(name="authorizationServerId")
     private @Nullable Output<String> authorizationServerId;
 
+    /**
+     * @return OAuth authorization server identifier.
+     * 
+     */
     public Optional<Output<String>> authorizationServerId() {
         return Optional.ofNullable(this.authorizationServerId);
     }
@@ -37,6 +41,10 @@ public final class OAuth2AuthenticationSettingsContractArgs extends com.pulumi.r
     @Import(name="scope")
     private @Nullable Output<String> scope;
 
+    /**
+     * @return operations scope.
+     * 
+     */
     public Optional<Output<String>> scope() {
         return Optional.ofNullable(this.scope);
     }
@@ -66,20 +74,44 @@ public final class OAuth2AuthenticationSettingsContractArgs extends com.pulumi.r
             $ = new OAuth2AuthenticationSettingsContractArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authorizationServerId OAuth authorization server identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationServerId(@Nullable Output<String> authorizationServerId) {
             $.authorizationServerId = authorizationServerId;
             return this;
         }
 
+        /**
+         * @param authorizationServerId OAuth authorization server identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationServerId(String authorizationServerId) {
             return authorizationServerId(Output.of(authorizationServerId));
         }
 
+        /**
+         * @param scope operations scope.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(@Nullable Output<String> scope) {
             $.scope = scope;
             return this;
         }
 
+        /**
+         * @param scope operations scope.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(String scope) {
             return scope(Output.of(scope));
         }

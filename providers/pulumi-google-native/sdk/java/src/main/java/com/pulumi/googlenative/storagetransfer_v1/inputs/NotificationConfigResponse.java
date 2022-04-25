@@ -24,6 +24,10 @@ public final class NotificationConfigResponse extends com.pulumi.resources.Invok
     @Import(name="eventTypes", required=true)
     private List<String> eventTypes;
 
+    /**
+     * @return Event types for which a notification is desired. If empty, send notifications for all event types.
+     * 
+     */
     public List<String> eventTypes() {
         return this.eventTypes;
     }
@@ -35,6 +39,10 @@ public final class NotificationConfigResponse extends com.pulumi.resources.Invok
     @Import(name="payloadFormat", required=true)
     private String payloadFormat;
 
+    /**
+     * @return The desired format of the notification message payloads.
+     * 
+     */
     public String payloadFormat() {
         return this.payloadFormat;
     }
@@ -46,6 +54,10 @@ public final class NotificationConfigResponse extends com.pulumi.resources.Invok
     @Import(name="pubsubTopic", required=true)
     private String pubsubTopic;
 
+    /**
+     * @return The `Topic.name` of the Pub/Sub topic to which to publish notifications. Must be of the format: `projects/{project}/topics/{topic}`. Not matching this format results in an INVALID_ARGUMENT error.
+     * 
+     */
     public String pubsubTopic() {
         return this.pubsubTopic;
     }
@@ -76,20 +88,44 @@ public final class NotificationConfigResponse extends com.pulumi.resources.Invok
             $ = new NotificationConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param eventTypes Event types for which a notification is desired. If empty, send notifications for all event types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventTypes(List<String> eventTypes) {
             $.eventTypes = eventTypes;
             return this;
         }
 
+        /**
+         * @param eventTypes Event types for which a notification is desired. If empty, send notifications for all event types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventTypes(String... eventTypes) {
             return eventTypes(List.of(eventTypes));
         }
 
+        /**
+         * @param payloadFormat The desired format of the notification message payloads.
+         * 
+         * @return builder
+         * 
+         */
         public Builder payloadFormat(String payloadFormat) {
             $.payloadFormat = payloadFormat;
             return this;
         }
 
+        /**
+         * @param pubsubTopic The `Topic.name` of the Pub/Sub topic to which to publish notifications. Must be of the format: `projects/{project}/topics/{topic}`. Not matching this format results in an INVALID_ARGUMENT error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pubsubTopic(String pubsubTopic) {
             $.pubsubTopic = pubsubTopic;
             return this;

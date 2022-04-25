@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class ContentKeyPolicyRsaTokenKeyResponse {
     /**
-     * The RSA Parameter exponent
+     * @return The RSA Parameter exponent
      * 
      */
     private final String exponent;
     /**
-     * The RSA Parameter modulus
+     * @return The RSA Parameter modulus
      * 
      */
     private final String modulus;
     /**
-     * The discriminator for derived types.
+     * @return The discriminator for derived types.
      * Expected value is &#39;#Microsoft.Media.ContentKeyPolicyRsaTokenKey&#39;.
      * 
      */
@@ -37,24 +37,24 @@ public final class ContentKeyPolicyRsaTokenKeyResponse {
     }
 
     /**
-     * The RSA Parameter exponent
+     * @return The RSA Parameter exponent
      * 
-    */
+     */
     public String exponent() {
         return this.exponent;
     }
     /**
-     * The RSA Parameter modulus
+     * @return The RSA Parameter modulus
      * 
-    */
+     */
     public String modulus() {
         return this.modulus;
     }
     /**
-     * The discriminator for derived types.
+     * @return The discriminator for derived types.
      * Expected value is &#39;#Microsoft.Media.ContentKeyPolicyRsaTokenKey&#39;.
      * 
-    */
+     */
     public String odataType() {
         return this.odataType;
     }

@@ -22,6 +22,10 @@ public final class NodePoolManagementGetArgs extends com.pulumi.resources.Resour
     @Import(name="autoRepair")
     private @Nullable Output<Boolean> autoRepair;
 
+    /**
+     * @return Whether the nodes will be automatically repaired.
+     * 
+     */
     public Optional<Output<Boolean>> autoRepair() {
         return Optional.ofNullable(this.autoRepair);
     }
@@ -33,6 +37,10 @@ public final class NodePoolManagementGetArgs extends com.pulumi.resources.Resour
     @Import(name="autoUpgrade")
     private @Nullable Output<Boolean> autoUpgrade;
 
+    /**
+     * @return Whether the nodes will be automatically upgraded.
+     * 
+     */
     public Optional<Output<Boolean>> autoUpgrade() {
         return Optional.ofNullable(this.autoUpgrade);
     }
@@ -62,20 +70,44 @@ public final class NodePoolManagementGetArgs extends com.pulumi.resources.Resour
             $ = new NodePoolManagementGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoRepair Whether the nodes will be automatically repaired.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoRepair(@Nullable Output<Boolean> autoRepair) {
             $.autoRepair = autoRepair;
             return this;
         }
 
+        /**
+         * @param autoRepair Whether the nodes will be automatically repaired.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoRepair(Boolean autoRepair) {
             return autoRepair(Output.of(autoRepair));
         }
 
+        /**
+         * @param autoUpgrade Whether the nodes will be automatically upgraded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoUpgrade(@Nullable Output<Boolean> autoUpgrade) {
             $.autoUpgrade = autoUpgrade;
             return this;
         }
 
+        /**
+         * @param autoUpgrade Whether the nodes will be automatically upgraded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoUpgrade(Boolean autoUpgrade) {
             return autoUpgrade(Output.of(autoUpgrade));
         }

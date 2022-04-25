@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudDialogflowCxV3TestRunDifferenceResponse {
     /**
-     * A description of the diff, showing the actual output vs expected output.
+     * @return A description of the diff, showing the actual output vs expected output.
      * 
      */
     private final String description;
     /**
-     * The type of diff.
+     * @return The type of diff.
      * 
      */
     private final String type;
@@ -29,16 +29,16 @@ public final class GoogleCloudDialogflowCxV3TestRunDifferenceResponse {
     }
 
     /**
-     * A description of the diff, showing the actual output vs expected output.
+     * @return A description of the diff, showing the actual output vs expected output.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * The type of diff.
+     * @return The type of diff.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

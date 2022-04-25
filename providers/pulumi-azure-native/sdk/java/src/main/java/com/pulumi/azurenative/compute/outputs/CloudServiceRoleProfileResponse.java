@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CloudServiceRoleProfileResponse {
     /**
-     * List of roles for the cloud service.
+     * @return List of roles for the cloud service.
      * 
      */
     private final @Nullable List<CloudServiceRoleProfilePropertiesResponse> roles;
@@ -23,9 +23,9 @@ public final class CloudServiceRoleProfileResponse {
     }
 
     /**
-     * List of roles for the cloud service.
+     * @return List of roles for the cloud service.
      * 
-    */
+     */
     public List<CloudServiceRoleProfilePropertiesResponse> roles() {
         return this.roles == null ? List.of() : this.roles;
     }

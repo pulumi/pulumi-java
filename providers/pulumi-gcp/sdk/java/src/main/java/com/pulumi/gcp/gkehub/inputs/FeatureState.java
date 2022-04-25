@@ -27,6 +27,10 @@ public final class FeatureState extends com.pulumi.resources.ResourceArgs {
     @Import(name="createTime")
     private @Nullable Output<String> createTime;
 
+    /**
+     * @return Output only. When the Feature resource was created.
+     * 
+     */
     public Optional<Output<String>> createTime() {
         return Optional.ofNullable(this.createTime);
     }
@@ -38,6 +42,10 @@ public final class FeatureState extends com.pulumi.resources.ResourceArgs {
     @Import(name="deleteTime")
     private @Nullable Output<String> deleteTime;
 
+    /**
+     * @return Output only. When the Feature resource was deleted.
+     * 
+     */
     public Optional<Output<String>> deleteTime() {
         return Optional.ofNullable(this.deleteTime);
     }
@@ -49,6 +57,10 @@ public final class FeatureState extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return GCP labels for this Feature.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -60,6 +72,10 @@ public final class FeatureState extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The location for the resource
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -71,6 +87,10 @@ public final class FeatureState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The full, unique name of this Feature resource
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -82,6 +102,10 @@ public final class FeatureState extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The project for the resource
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -93,6 +117,10 @@ public final class FeatureState extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceStates")
     private @Nullable Output<List<FeatureResourceStateGetArgs>> resourceStates;
 
+    /**
+     * @return State of the Feature resource itself.
+     * 
+     */
     public Optional<Output<List<FeatureResourceStateGetArgs>>> resourceStates() {
         return Optional.ofNullable(this.resourceStates);
     }
@@ -104,6 +132,10 @@ public final class FeatureState extends com.pulumi.resources.ResourceArgs {
     @Import(name="spec")
     private @Nullable Output<FeatureSpecGetArgs> spec;
 
+    /**
+     * @return Optional. Hub-wide Feature configuration. If this Feature does not support any Hub-wide configuration, this field may be unused.
+     * 
+     */
     public Optional<Output<FeatureSpecGetArgs>> spec() {
         return Optional.ofNullable(this.spec);
     }
@@ -115,6 +147,10 @@ public final class FeatureState extends com.pulumi.resources.ResourceArgs {
     @Import(name="states")
     private @Nullable Output<List<FeatureStateGetArgs>> states;
 
+    /**
+     * @return Output only. The Hub-wide Feature state
+     * 
+     */
     public Optional<Output<List<FeatureStateGetArgs>>> states() {
         return Optional.ofNullable(this.states);
     }
@@ -126,6 +162,10 @@ public final class FeatureState extends com.pulumi.resources.ResourceArgs {
     @Import(name="updateTime")
     private @Nullable Output<String> updateTime;
 
+    /**
+     * @return Output only. When the Feature resource was last updated.
+     * 
+     */
     public Optional<Output<String>> updateTime() {
         return Optional.ofNullable(this.updateTime);
     }
@@ -163,100 +203,232 @@ public final class FeatureState extends com.pulumi.resources.ResourceArgs {
             $ = new FeatureState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param createTime Output only. When the Feature resource was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTime(@Nullable Output<String> createTime) {
             $.createTime = createTime;
             return this;
         }
 
+        /**
+         * @param createTime Output only. When the Feature resource was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTime(String createTime) {
             return createTime(Output.of(createTime));
         }
 
+        /**
+         * @param deleteTime Output only. When the Feature resource was deleted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deleteTime(@Nullable Output<String> deleteTime) {
             $.deleteTime = deleteTime;
             return this;
         }
 
+        /**
+         * @param deleteTime Output only. When the Feature resource was deleted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deleteTime(String deleteTime) {
             return deleteTime(Output.of(deleteTime));
         }
 
+        /**
+         * @param labels GCP labels for this Feature.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels GCP labels for this Feature.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param location The location for the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The location for the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param name The full, unique name of this Feature resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The full, unique name of this Feature resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param project The project for the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The project for the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param resourceStates State of the Feature resource itself.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceStates(@Nullable Output<List<FeatureResourceStateGetArgs>> resourceStates) {
             $.resourceStates = resourceStates;
             return this;
         }
 
+        /**
+         * @param resourceStates State of the Feature resource itself.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceStates(List<FeatureResourceStateGetArgs> resourceStates) {
             return resourceStates(Output.of(resourceStates));
         }
 
+        /**
+         * @param resourceStates State of the Feature resource itself.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceStates(FeatureResourceStateGetArgs... resourceStates) {
             return resourceStates(List.of(resourceStates));
         }
 
+        /**
+         * @param spec Optional. Hub-wide Feature configuration. If this Feature does not support any Hub-wide configuration, this field may be unused.
+         * 
+         * @return builder
+         * 
+         */
         public Builder spec(@Nullable Output<FeatureSpecGetArgs> spec) {
             $.spec = spec;
             return this;
         }
 
+        /**
+         * @param spec Optional. Hub-wide Feature configuration. If this Feature does not support any Hub-wide configuration, this field may be unused.
+         * 
+         * @return builder
+         * 
+         */
         public Builder spec(FeatureSpecGetArgs spec) {
             return spec(Output.of(spec));
         }
 
+        /**
+         * @param states Output only. The Hub-wide Feature state
+         * 
+         * @return builder
+         * 
+         */
         public Builder states(@Nullable Output<List<FeatureStateGetArgs>> states) {
             $.states = states;
             return this;
         }
 
+        /**
+         * @param states Output only. The Hub-wide Feature state
+         * 
+         * @return builder
+         * 
+         */
         public Builder states(List<FeatureStateGetArgs> states) {
             return states(Output.of(states));
         }
 
+        /**
+         * @param states Output only. The Hub-wide Feature state
+         * 
+         * @return builder
+         * 
+         */
         public Builder states(FeatureStateGetArgs... states) {
             return states(List.of(states));
         }
 
+        /**
+         * @param updateTime Output only. When the Feature resource was last updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateTime(@Nullable Output<String> updateTime) {
             $.updateTime = updateTime;
             return this;
         }
 
+        /**
+         * @param updateTime Output only. When the Feature resource was last updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateTime(String updateTime) {
             return updateTime(Output.of(updateTime));
         }

@@ -26,6 +26,10 @@ public final class AdvancedScheduleMonthlyOccurrenceResponse extends com.pulumi.
     @Import(name="day")
     private @Nullable String day;
 
+    /**
+     * @return Day of the occurrence. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.
+     * 
+     */
     public Optional<String> day() {
         return Optional.ofNullable(this.day);
     }
@@ -37,6 +41,10 @@ public final class AdvancedScheduleMonthlyOccurrenceResponse extends com.pulumi.
     @Import(name="occurrence")
     private @Nullable Integer occurrence;
 
+    /**
+     * @return Occurrence of the week within the month. Must be between 1 and 5
+     * 
+     */
     public Optional<Integer> occurrence() {
         return Optional.ofNullable(this.occurrence);
     }
@@ -66,11 +74,23 @@ public final class AdvancedScheduleMonthlyOccurrenceResponse extends com.pulumi.
             $ = new AdvancedScheduleMonthlyOccurrenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param day Day of the occurrence. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.
+         * 
+         * @return builder
+         * 
+         */
         public Builder day(@Nullable String day) {
             $.day = day;
             return this;
         }
 
+        /**
+         * @param occurrence Occurrence of the week within the month. Must be between 1 and 5
+         * 
+         * @return builder
+         * 
+         */
         public Builder occurrence(@Nullable Integer occurrence) {
             $.occurrence = occurrence;
             return this;

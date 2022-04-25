@@ -28,6 +28,10 @@ public final class SharedPrivateLinkResourcePropertiesArgs extends com.pulumi.re
     @Import(name="groupId")
     private @Nullable Output<String> groupId;
 
+    /**
+     * @return The group id from the provider of resource the shared private link resource is for.
+     * 
+     */
     public Optional<Output<String>> groupId() {
         return Optional.ofNullable(this.groupId);
     }
@@ -39,6 +43,10 @@ public final class SharedPrivateLinkResourcePropertiesArgs extends com.pulumi.re
     @Import(name="privateLinkResourceId")
     private @Nullable Output<String> privateLinkResourceId;
 
+    /**
+     * @return The resource id of the resource the shared private link resource is for.
+     * 
+     */
     public Optional<Output<String>> privateLinkResourceId() {
         return Optional.ofNullable(this.privateLinkResourceId);
     }
@@ -50,6 +58,10 @@ public final class SharedPrivateLinkResourcePropertiesArgs extends com.pulumi.re
     @Import(name="provisioningState")
     private @Nullable Output<SharedPrivateLinkResourceProvisioningState> provisioningState;
 
+    /**
+     * @return The provisioning state of the shared private link resource. Can be Updating, Deleting, Failed, Succeeded or Incomplete.
+     * 
+     */
     public Optional<Output<SharedPrivateLinkResourceProvisioningState>> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
@@ -61,6 +73,10 @@ public final class SharedPrivateLinkResourcePropertiesArgs extends com.pulumi.re
     @Import(name="requestMessage")
     private @Nullable Output<String> requestMessage;
 
+    /**
+     * @return The request message for requesting approval of the shared private link resource.
+     * 
+     */
     public Optional<Output<String>> requestMessage() {
         return Optional.ofNullable(this.requestMessage);
     }
@@ -72,6 +88,10 @@ public final class SharedPrivateLinkResourcePropertiesArgs extends com.pulumi.re
     @Import(name="resourceRegion")
     private @Nullable Output<String> resourceRegion;
 
+    /**
+     * @return Optional. Can be used to specify the Azure Resource Manager location of the resource to which a shared private link is to be created. This is only required for those resources whose DNS configuration are regional (such as Azure Kubernetes Service).
+     * 
+     */
     public Optional<Output<String>> resourceRegion() {
         return Optional.ofNullable(this.resourceRegion);
     }
@@ -83,6 +103,10 @@ public final class SharedPrivateLinkResourcePropertiesArgs extends com.pulumi.re
     @Import(name="status")
     private @Nullable Output<SharedPrivateLinkResourceStatus> status;
 
+    /**
+     * @return Status of the shared private link resource. Can be Pending, Approved, Rejected or Disconnected.
+     * 
+     */
     public Optional<Output<SharedPrivateLinkResourceStatus>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -116,56 +140,128 @@ public final class SharedPrivateLinkResourcePropertiesArgs extends com.pulumi.re
             $ = new SharedPrivateLinkResourcePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param groupId The group id from the provider of resource the shared private link resource is for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupId(@Nullable Output<String> groupId) {
             $.groupId = groupId;
             return this;
         }
 
+        /**
+         * @param groupId The group id from the provider of resource the shared private link resource is for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupId(String groupId) {
             return groupId(Output.of(groupId));
         }
 
+        /**
+         * @param privateLinkResourceId The resource id of the resource the shared private link resource is for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkResourceId(@Nullable Output<String> privateLinkResourceId) {
             $.privateLinkResourceId = privateLinkResourceId;
             return this;
         }
 
+        /**
+         * @param privateLinkResourceId The resource id of the resource the shared private link resource is for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkResourceId(String privateLinkResourceId) {
             return privateLinkResourceId(Output.of(privateLinkResourceId));
         }
 
+        /**
+         * @param provisioningState The provisioning state of the shared private link resource. Can be Updating, Deleting, Failed, Succeeded or Incomplete.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(@Nullable Output<SharedPrivateLinkResourceProvisioningState> provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param provisioningState The provisioning state of the shared private link resource. Can be Updating, Deleting, Failed, Succeeded or Incomplete.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(SharedPrivateLinkResourceProvisioningState provisioningState) {
             return provisioningState(Output.of(provisioningState));
         }
 
+        /**
+         * @param requestMessage The request message for requesting approval of the shared private link resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestMessage(@Nullable Output<String> requestMessage) {
             $.requestMessage = requestMessage;
             return this;
         }
 
+        /**
+         * @param requestMessage The request message for requesting approval of the shared private link resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestMessage(String requestMessage) {
             return requestMessage(Output.of(requestMessage));
         }
 
+        /**
+         * @param resourceRegion Optional. Can be used to specify the Azure Resource Manager location of the resource to which a shared private link is to be created. This is only required for those resources whose DNS configuration are regional (such as Azure Kubernetes Service).
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceRegion(@Nullable Output<String> resourceRegion) {
             $.resourceRegion = resourceRegion;
             return this;
         }
 
+        /**
+         * @param resourceRegion Optional. Can be used to specify the Azure Resource Manager location of the resource to which a shared private link is to be created. This is only required for those resources whose DNS configuration are regional (such as Azure Kubernetes Service).
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceRegion(String resourceRegion) {
             return resourceRegion(Output.of(resourceRegion));
         }
 
+        /**
+         * @param status Status of the shared private link resource. Can be Pending, Approved, Rejected or Disconnected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<SharedPrivateLinkResourceStatus> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status Status of the shared private link resource. Can be Pending, Approved, Rejected or Disconnected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(SharedPrivateLinkResourceStatus status) {
             return status(Output.of(status));
         }

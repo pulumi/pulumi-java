@@ -23,6 +23,10 @@ public final class CloudBuildOptionsResponse extends com.pulumi.resources.Invoke
     @Import(name="appYamlPath", required=true)
     private String appYamlPath;
 
+    /**
+     * @return Path to the yaml file used in deployment, used to determine runtime configuration details.Required for flexible environment builds.See https://cloud.google.com/appengine/docs/standard/python/config/appref for more details.
+     * 
+     */
     public String appYamlPath() {
         return this.appYamlPath;
     }
@@ -34,6 +38,10 @@ public final class CloudBuildOptionsResponse extends com.pulumi.resources.Invoke
     @Import(name="cloudBuildTimeout", required=true)
     private String cloudBuildTimeout;
 
+    /**
+     * @return The Cloud Build timeout used as part of any dependent builds performed by version creation. Defaults to 10 minutes.
+     * 
+     */
     public String cloudBuildTimeout() {
         return this.cloudBuildTimeout;
     }
@@ -63,11 +71,23 @@ public final class CloudBuildOptionsResponse extends com.pulumi.resources.Invoke
             $ = new CloudBuildOptionsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param appYamlPath Path to the yaml file used in deployment, used to determine runtime configuration details.Required for flexible environment builds.See https://cloud.google.com/appengine/docs/standard/python/config/appref for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appYamlPath(String appYamlPath) {
             $.appYamlPath = appYamlPath;
             return this;
         }
 
+        /**
+         * @param cloudBuildTimeout The Cloud Build timeout used as part of any dependent builds performed by version creation. Defaults to 10 minutes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudBuildTimeout(String cloudBuildTimeout) {
             $.cloudBuildTimeout = cloudBuildTimeout;
             return this;

@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class GetResponseHeadersPolicySecurityHeadersConfigFrameOption {
     /**
-     * The value of the X-Frame-Options HTTP response header. Valid values: `DENY` | `SAMEORIGIN`
+     * @return The value of the X-Frame-Options HTTP response header. Valid values: `DENY` | `SAMEORIGIN`
      * 
      */
     private final String frameOption;
     /**
-     * A Boolean value that determines whether CloudFront overrides the X-XSS-Protection HTTP response header received from the origin with the one specified in this response headers policy.
+     * @return A Boolean value that determines whether CloudFront overrides the X-XSS-Protection HTTP response header received from the origin with the one specified in this response headers policy.
      * 
      */
     private final Boolean override;
@@ -30,16 +30,16 @@ public final class GetResponseHeadersPolicySecurityHeadersConfigFrameOption {
     }
 
     /**
-     * The value of the X-Frame-Options HTTP response header. Valid values: `DENY` | `SAMEORIGIN`
+     * @return The value of the X-Frame-Options HTTP response header. Valid values: `DENY` | `SAMEORIGIN`
      * 
-    */
+     */
     public String frameOption() {
         return this.frameOption;
     }
     /**
-     * A Boolean value that determines whether CloudFront overrides the X-XSS-Protection HTTP response header received from the origin with the one specified in this response headers policy.
+     * @return A Boolean value that determines whether CloudFront overrides the X-XSS-Protection HTTP response header received from the origin with the one specified in this response headers policy.
      * 
-    */
+     */
     public Boolean override() {
         return this.override;
     }

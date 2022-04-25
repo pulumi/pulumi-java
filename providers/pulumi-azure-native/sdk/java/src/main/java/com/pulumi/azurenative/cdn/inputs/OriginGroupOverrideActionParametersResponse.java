@@ -31,6 +31,10 @@ public final class OriginGroupOverrideActionParametersResponse extends com.pulum
     @Import(name="originGroup", required=true)
     private ResourceReferenceResponse originGroup;
 
+    /**
+     * @return defines the OriginGroup that would override the DefaultOriginGroup.
+     * 
+     */
     public ResourceReferenceResponse originGroup() {
         return this.originGroup;
     }
@@ -65,6 +69,12 @@ public final class OriginGroupOverrideActionParametersResponse extends com.pulum
             return this;
         }
 
+        /**
+         * @param originGroup defines the OriginGroup that would override the DefaultOriginGroup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder originGroup(ResourceReferenceResponse originGroup) {
             $.originGroup = originGroup;
             return this;

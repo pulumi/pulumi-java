@@ -32,6 +32,10 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The human-readable description of the environment. The maximum length is 500 characters. If exceeded, the request is rejected.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -43,6 +47,10 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
     private Output<String> displayName;
 
+    /**
+     * @return The human-readable name of the environment (unique in an agent). Limit of 64 characters.
+     * 
+     */
     public Output<String> displayName() {
         return this.displayName;
     }
@@ -61,6 +69,10 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the environment. Format: `projects//locations//agents//environments/`.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -79,6 +91,10 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="testCasesConfig")
     private @Nullable Output<GoogleCloudDialogflowCxV3EnvironmentTestCasesConfigArgs> testCasesConfig;
 
+    /**
+     * @return The test cases config for continuous tests of this environment.
+     * 
+     */
     public Optional<Output<GoogleCloudDialogflowCxV3EnvironmentTestCasesConfigArgs>> testCasesConfig() {
         return Optional.ofNullable(this.testCasesConfig);
     }
@@ -90,6 +106,10 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="versionConfigs", required=true)
     private Output<List<GoogleCloudDialogflowCxV3EnvironmentVersionConfigArgs>> versionConfigs;
 
+    /**
+     * @return A list of configurations for flow versions. You should include version configs for all flows that are reachable from `Start Flow` in the agent. Otherwise, an error will be returned.
+     * 
+     */
     public Output<List<GoogleCloudDialogflowCxV3EnvironmentVersionConfigArgs>> versionConfigs() {
         return this.versionConfigs;
     }
@@ -134,20 +154,44 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
             return agentId(Output.of(agentId));
         }
 
+        /**
+         * @param description The human-readable description of the environment. The maximum length is 500 characters. If exceeded, the request is rejected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The human-readable description of the environment. The maximum length is 500 characters. If exceeded, the request is rejected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param displayName The human-readable name of the environment (unique in an agent). Limit of 64 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName The human-readable name of the environment (unique in an agent). Limit of 64 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
@@ -161,11 +205,23 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
             return location(Output.of(location));
         }
 
+        /**
+         * @param name The name of the environment. Format: `projects//locations//agents//environments/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the environment. Format: `projects//locations//agents//environments/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -179,24 +235,54 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param testCasesConfig The test cases config for continuous tests of this environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testCasesConfig(@Nullable Output<GoogleCloudDialogflowCxV3EnvironmentTestCasesConfigArgs> testCasesConfig) {
             $.testCasesConfig = testCasesConfig;
             return this;
         }
 
+        /**
+         * @param testCasesConfig The test cases config for continuous tests of this environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testCasesConfig(GoogleCloudDialogflowCxV3EnvironmentTestCasesConfigArgs testCasesConfig) {
             return testCasesConfig(Output.of(testCasesConfig));
         }
 
+        /**
+         * @param versionConfigs A list of configurations for flow versions. You should include version configs for all flows that are reachable from `Start Flow` in the agent. Otherwise, an error will be returned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionConfigs(Output<List<GoogleCloudDialogflowCxV3EnvironmentVersionConfigArgs>> versionConfigs) {
             $.versionConfigs = versionConfigs;
             return this;
         }
 
+        /**
+         * @param versionConfigs A list of configurations for flow versions. You should include version configs for all flows that are reachable from `Start Flow` in the agent. Otherwise, an error will be returned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionConfigs(List<GoogleCloudDialogflowCxV3EnvironmentVersionConfigArgs> versionConfigs) {
             return versionConfigs(Output.of(versionConfigs));
         }
 
+        /**
+         * @param versionConfigs A list of configurations for flow versions. You should include version configs for all flows that are reachable from `Start Flow` in the agent. Otherwise, an error will be returned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionConfigs(GoogleCloudDialogflowCxV3EnvironmentVersionConfigArgs... versionConfigs) {
             return versionConfigs(List.of(versionConfigs));
         }

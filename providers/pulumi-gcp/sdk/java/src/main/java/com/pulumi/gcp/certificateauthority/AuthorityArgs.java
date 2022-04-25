@@ -26,6 +26,10 @@ public final class AuthorityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="certificateAuthorityId", required=true)
     private Output<String> certificateAuthorityId;
 
+    /**
+     * @return The user provided Resource ID for this Certificate Authority.
+     * 
+     */
     public Output<String> certificateAuthorityId() {
         return this.certificateAuthorityId;
     }
@@ -38,6 +42,11 @@ public final class AuthorityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="config", required=true)
     private Output<AuthorityConfigArgs> config;
 
+    /**
+     * @return The config used to create a self-signed X.509 certificate or CSR.
+     * Structure is documented below.
+     * 
+     */
     public Output<AuthorityConfigArgs> config() {
         return this.config;
     }
@@ -53,6 +62,14 @@ public final class AuthorityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="gcsBucket")
     private @Nullable Output<String> gcsBucket;
 
+    /**
+     * @return The name of a Cloud Storage bucket where this CertificateAuthority will publish content,
+     * such as the CA certificate and CRLs. This must be a bucket name, without any prefixes
+     * (such as `gs://`) or suffixes (such as `.googleapis.com`). For example, to use a bucket named
+     * my-bucket, you would simply specify `my-bucket`. If not specified, a managed bucket will be
+     * created.
+     * 
+     */
     public Optional<Output<String>> gcsBucket() {
         return Optional.ofNullable(this.gcsBucket);
     }
@@ -65,6 +82,11 @@ public final class AuthorityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ignoreActiveCertificatesOnDeletion")
     private @Nullable Output<Boolean> ignoreActiveCertificatesOnDeletion;
 
+    /**
+     * @return This field allows the CA to be deleted even if the CA has active certs. Active certs include both unrevoked and unexpired certs.
+     * Use with care. Defaults to `false`.
+     * 
+     */
     public Optional<Output<Boolean>> ignoreActiveCertificatesOnDeletion() {
         return Optional.ofNullable(this.ignoreActiveCertificatesOnDeletion);
     }
@@ -79,6 +101,13 @@ public final class AuthorityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="keySpec", required=true)
     private Output<AuthorityKeySpecArgs> keySpec;
 
+    /**
+     * @return Used when issuing certificates for this CertificateAuthority. If this CertificateAuthority
+     * is a self-signed CertificateAuthority, this key is also used to sign the self-signed CA
+     * certificate. Otherwise, it is used to sign a CSR.
+     * Structure is documented below.
+     * 
+     */
     public Output<AuthorityKeySpecArgs> keySpec() {
         return this.keySpec;
     }
@@ -92,6 +121,12 @@ public final class AuthorityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return Labels with user-defined metadata.
+     * An object containing a list of &#34;key&#34;: value pairs. Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;:
+     * &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -105,6 +140,12 @@ public final class AuthorityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="lifetime")
     private @Nullable Output<String> lifetime;
 
+    /**
+     * @return The desired lifetime of the CA certificate. Used to create the &#34;notBeforeTime&#34; and
+     * &#34;notAfterTime&#34; fields inside an X.509 certificate. A duration in seconds with up to nine
+     * fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
+     * 
+     */
     public Optional<Output<String>> lifetime() {
         return Optional.ofNullable(this.lifetime);
     }
@@ -117,6 +158,11 @@ public final class AuthorityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location", required=true)
     private Output<String> location;
 
+    /**
+     * @return Location of the CertificateAuthority. A full list of valid locations can be found by
+     * running `gcloud privateca locations list`.
+     * 
+     */
     public Output<String> location() {
         return this.location;
     }
@@ -128,6 +174,10 @@ public final class AuthorityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="pool", required=true)
     private Output<String> pool;
 
+    /**
+     * @return The name of the CaPool this Certificate Authority belongs to.
+     * 
+     */
     public Output<String> pool() {
         return this.pool;
     }
@@ -140,6 +190,11 @@ public final class AuthorityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -156,6 +211,15 @@ public final class AuthorityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type")
     private @Nullable Output<String> type;
 
+    /**
+     * @return The Type of this CertificateAuthority.
+     * &gt; **Note:** For `SUBORDINATE` Certificate Authorities, they need to
+     * be manually activated (via Cloud Console of `gcloud`) before they can
+     * issue certificates.
+     * Default value is `SELF_SIGNED`.
+     * Possible values are `SELF_SIGNED` and `SUBORDINATE`.
+     * 
+     */
     public Optional<Output<String>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -194,101 +258,273 @@ public final class AuthorityArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AuthorityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificateAuthorityId The user provided Resource ID for this Certificate Authority.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateAuthorityId(Output<String> certificateAuthorityId) {
             $.certificateAuthorityId = certificateAuthorityId;
             return this;
         }
 
+        /**
+         * @param certificateAuthorityId The user provided Resource ID for this Certificate Authority.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateAuthorityId(String certificateAuthorityId) {
             return certificateAuthorityId(Output.of(certificateAuthorityId));
         }
 
+        /**
+         * @param config The config used to create a self-signed X.509 certificate or CSR.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder config(Output<AuthorityConfigArgs> config) {
             $.config = config;
             return this;
         }
 
+        /**
+         * @param config The config used to create a self-signed X.509 certificate or CSR.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder config(AuthorityConfigArgs config) {
             return config(Output.of(config));
         }
 
+        /**
+         * @param gcsBucket The name of a Cloud Storage bucket where this CertificateAuthority will publish content,
+         * such as the CA certificate and CRLs. This must be a bucket name, without any prefixes
+         * (such as `gs://`) or suffixes (such as `.googleapis.com`). For example, to use a bucket named
+         * my-bucket, you would simply specify `my-bucket`. If not specified, a managed bucket will be
+         * created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gcsBucket(@Nullable Output<String> gcsBucket) {
             $.gcsBucket = gcsBucket;
             return this;
         }
 
+        /**
+         * @param gcsBucket The name of a Cloud Storage bucket where this CertificateAuthority will publish content,
+         * such as the CA certificate and CRLs. This must be a bucket name, without any prefixes
+         * (such as `gs://`) or suffixes (such as `.googleapis.com`). For example, to use a bucket named
+         * my-bucket, you would simply specify `my-bucket`. If not specified, a managed bucket will be
+         * created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gcsBucket(String gcsBucket) {
             return gcsBucket(Output.of(gcsBucket));
         }
 
+        /**
+         * @param ignoreActiveCertificatesOnDeletion This field allows the CA to be deleted even if the CA has active certs. Active certs include both unrevoked and unexpired certs.
+         * Use with care. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ignoreActiveCertificatesOnDeletion(@Nullable Output<Boolean> ignoreActiveCertificatesOnDeletion) {
             $.ignoreActiveCertificatesOnDeletion = ignoreActiveCertificatesOnDeletion;
             return this;
         }
 
+        /**
+         * @param ignoreActiveCertificatesOnDeletion This field allows the CA to be deleted even if the CA has active certs. Active certs include both unrevoked and unexpired certs.
+         * Use with care. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ignoreActiveCertificatesOnDeletion(Boolean ignoreActiveCertificatesOnDeletion) {
             return ignoreActiveCertificatesOnDeletion(Output.of(ignoreActiveCertificatesOnDeletion));
         }
 
+        /**
+         * @param keySpec Used when issuing certificates for this CertificateAuthority. If this CertificateAuthority
+         * is a self-signed CertificateAuthority, this key is also used to sign the self-signed CA
+         * certificate. Otherwise, it is used to sign a CSR.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keySpec(Output<AuthorityKeySpecArgs> keySpec) {
             $.keySpec = keySpec;
             return this;
         }
 
+        /**
+         * @param keySpec Used when issuing certificates for this CertificateAuthority. If this CertificateAuthority
+         * is a self-signed CertificateAuthority, this key is also used to sign the self-signed CA
+         * certificate. Otherwise, it is used to sign a CSR.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keySpec(AuthorityKeySpecArgs keySpec) {
             return keySpec(Output.of(keySpec));
         }
 
+        /**
+         * @param labels Labels with user-defined metadata.
+         * An object containing a list of &#34;key&#34;: value pairs. Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;:
+         * &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Labels with user-defined metadata.
+         * An object containing a list of &#34;key&#34;: value pairs. Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;:
+         * &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param lifetime The desired lifetime of the CA certificate. Used to create the &#34;notBeforeTime&#34; and
+         * &#34;notAfterTime&#34; fields inside an X.509 certificate. A duration in seconds with up to nine
+         * fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lifetime(@Nullable Output<String> lifetime) {
             $.lifetime = lifetime;
             return this;
         }
 
+        /**
+         * @param lifetime The desired lifetime of the CA certificate. Used to create the &#34;notBeforeTime&#34; and
+         * &#34;notAfterTime&#34; fields inside an X.509 certificate. A duration in seconds with up to nine
+         * fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lifetime(String lifetime) {
             return lifetime(Output.of(lifetime));
         }
 
+        /**
+         * @param location Location of the CertificateAuthority. A full list of valid locations can be found by
+         * running `gcloud privateca locations list`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Location of the CertificateAuthority. A full list of valid locations can be found by
+         * running `gcloud privateca locations list`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param pool The name of the CaPool this Certificate Authority belongs to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pool(Output<String> pool) {
             $.pool = pool;
             return this;
         }
 
+        /**
+         * @param pool The name of the CaPool this Certificate Authority belongs to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pool(String pool) {
             return pool(Output.of(pool));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param type The Type of this CertificateAuthority.
+         * &gt; **Note:** For `SUBORDINATE` Certificate Authorities, they need to
+         * be manually activated (via Cloud Console of `gcloud`) before they can
+         * issue certificates.
+         * Default value is `SELF_SIGNED`.
+         * Possible values are `SELF_SIGNED` and `SUBORDINATE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The Type of this CertificateAuthority.
+         * &gt; **Note:** For `SUBORDINATE` Certificate Authorities, they need to
+         * be manually activated (via Cloud Console of `gcloud`) before they can
+         * issue certificates.
+         * Default value is `SELF_SIGNED`.
+         * Possible values are `SELF_SIGNED` and `SUBORDINATE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

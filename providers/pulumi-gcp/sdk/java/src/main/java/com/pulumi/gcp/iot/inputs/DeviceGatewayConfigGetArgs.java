@@ -23,6 +23,11 @@ public final class DeviceGatewayConfigGetArgs extends com.pulumi.resources.Resou
     @Import(name="gatewayAuthMethod")
     private @Nullable Output<String> gatewayAuthMethod;
 
+    /**
+     * @return Indicates whether the device is a gateway.
+     * Possible values are `ASSOCIATION_ONLY`, `DEVICE_AUTH_TOKEN_ONLY`, and `ASSOCIATION_AND_DEVICE_AUTH_TOKEN`.
+     * 
+     */
     public Optional<Output<String>> gatewayAuthMethod() {
         return Optional.ofNullable(this.gatewayAuthMethod);
     }
@@ -36,6 +41,12 @@ public final class DeviceGatewayConfigGetArgs extends com.pulumi.resources.Resou
     @Import(name="gatewayType")
     private @Nullable Output<String> gatewayType;
 
+    /**
+     * @return Indicates whether the device is a gateway.
+     * Default value is `NON_GATEWAY`.
+     * Possible values are `GATEWAY` and `NON_GATEWAY`.
+     * 
+     */
     public Optional<Output<String>> gatewayType() {
         return Optional.ofNullable(this.gatewayType);
     }
@@ -48,6 +59,11 @@ public final class DeviceGatewayConfigGetArgs extends com.pulumi.resources.Resou
     @Import(name="lastAccessedGatewayId")
     private @Nullable Output<String> lastAccessedGatewayId;
 
+    /**
+     * @return -
+     * The ID of the gateway the device accessed most recently.
+     * 
+     */
     public Optional<Output<String>> lastAccessedGatewayId() {
         return Optional.ofNullable(this.lastAccessedGatewayId);
     }
@@ -60,6 +76,11 @@ public final class DeviceGatewayConfigGetArgs extends com.pulumi.resources.Resou
     @Import(name="lastAccessedGatewayTime")
     private @Nullable Output<String> lastAccessedGatewayTime;
 
+    /**
+     * @return -
+     * The most recent time at which the device accessed the gateway specified in last_accessed_gateway.
+     * 
+     */
     public Optional<Output<String>> lastAccessedGatewayTime() {
         return Optional.ofNullable(this.lastAccessedGatewayTime);
     }
@@ -91,38 +112,96 @@ public final class DeviceGatewayConfigGetArgs extends com.pulumi.resources.Resou
             $ = new DeviceGatewayConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param gatewayAuthMethod Indicates whether the device is a gateway.
+         * Possible values are `ASSOCIATION_ONLY`, `DEVICE_AUTH_TOKEN_ONLY`, and `ASSOCIATION_AND_DEVICE_AUTH_TOKEN`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayAuthMethod(@Nullable Output<String> gatewayAuthMethod) {
             $.gatewayAuthMethod = gatewayAuthMethod;
             return this;
         }
 
+        /**
+         * @param gatewayAuthMethod Indicates whether the device is a gateway.
+         * Possible values are `ASSOCIATION_ONLY`, `DEVICE_AUTH_TOKEN_ONLY`, and `ASSOCIATION_AND_DEVICE_AUTH_TOKEN`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayAuthMethod(String gatewayAuthMethod) {
             return gatewayAuthMethod(Output.of(gatewayAuthMethod));
         }
 
+        /**
+         * @param gatewayType Indicates whether the device is a gateway.
+         * Default value is `NON_GATEWAY`.
+         * Possible values are `GATEWAY` and `NON_GATEWAY`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayType(@Nullable Output<String> gatewayType) {
             $.gatewayType = gatewayType;
             return this;
         }
 
+        /**
+         * @param gatewayType Indicates whether the device is a gateway.
+         * Default value is `NON_GATEWAY`.
+         * Possible values are `GATEWAY` and `NON_GATEWAY`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayType(String gatewayType) {
             return gatewayType(Output.of(gatewayType));
         }
 
+        /**
+         * @param lastAccessedGatewayId -
+         * The ID of the gateway the device accessed most recently.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastAccessedGatewayId(@Nullable Output<String> lastAccessedGatewayId) {
             $.lastAccessedGatewayId = lastAccessedGatewayId;
             return this;
         }
 
+        /**
+         * @param lastAccessedGatewayId -
+         * The ID of the gateway the device accessed most recently.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastAccessedGatewayId(String lastAccessedGatewayId) {
             return lastAccessedGatewayId(Output.of(lastAccessedGatewayId));
         }
 
+        /**
+         * @param lastAccessedGatewayTime -
+         * The most recent time at which the device accessed the gateway specified in last_accessed_gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastAccessedGatewayTime(@Nullable Output<String> lastAccessedGatewayTime) {
             $.lastAccessedGatewayTime = lastAccessedGatewayTime;
             return this;
         }
 
+        /**
+         * @param lastAccessedGatewayTime -
+         * The most recent time at which the device accessed the gateway specified in last_accessed_gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastAccessedGatewayTime(String lastAccessedGatewayTime) {
             return lastAccessedGatewayTime(Output.of(lastAccessedGatewayTime));
         }

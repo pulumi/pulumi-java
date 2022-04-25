@@ -24,6 +24,10 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="agentVersion")
     private @Nullable Output<String> agentVersion;
 
+    /**
+     * @return Optional. The agent version loaded into this environment. Supported formats: - `projects//agent/versions/` - `projects//locations//agent/versions/`
+     * 
+     */
     public Optional<Output<String>> agentVersion() {
         return Optional.ofNullable(this.agentVersion);
     }
@@ -35,6 +39,10 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Optional. The developer-provided description for this environment. The maximum length is 500 characters. If exceeded, the request is rejected.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -53,6 +61,10 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="fulfillment")
     private @Nullable Output<GoogleCloudDialogflowV2FulfillmentArgs> fulfillment;
 
+    /**
+     * @return Optional. The fulfillment settings to use for this environment.
+     * 
+     */
     public Optional<Output<GoogleCloudDialogflowV2FulfillmentArgs>> fulfillment() {
         return Optional.ofNullable(this.fulfillment);
     }
@@ -78,6 +90,10 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="textToSpeechSettings")
     private @Nullable Output<GoogleCloudDialogflowV2TextToSpeechSettingsArgs> textToSpeechSettings;
 
+    /**
+     * @return Optional. Text to speech settings for this environment.
+     * 
+     */
     public Optional<Output<GoogleCloudDialogflowV2TextToSpeechSettingsArgs>> textToSpeechSettings() {
         return Optional.ofNullable(this.textToSpeechSettings);
     }
@@ -112,20 +128,44 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
             $ = new EnvironmentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param agentVersion Optional. The agent version loaded into this environment. Supported formats: - `projects//agent/versions/` - `projects//locations//agent/versions/`
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentVersion(@Nullable Output<String> agentVersion) {
             $.agentVersion = agentVersion;
             return this;
         }
 
+        /**
+         * @param agentVersion Optional. The agent version loaded into this environment. Supported formats: - `projects//agent/versions/` - `projects//locations//agent/versions/`
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentVersion(String agentVersion) {
             return agentVersion(Output.of(agentVersion));
         }
 
+        /**
+         * @param description Optional. The developer-provided description for this environment. The maximum length is 500 characters. If exceeded, the request is rejected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Optional. The developer-provided description for this environment. The maximum length is 500 characters. If exceeded, the request is rejected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
@@ -139,11 +179,23 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
             return environmentId(Output.of(environmentId));
         }
 
+        /**
+         * @param fulfillment Optional. The fulfillment settings to use for this environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fulfillment(@Nullable Output<GoogleCloudDialogflowV2FulfillmentArgs> fulfillment) {
             $.fulfillment = fulfillment;
             return this;
         }
 
+        /**
+         * @param fulfillment Optional. The fulfillment settings to use for this environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fulfillment(GoogleCloudDialogflowV2FulfillmentArgs fulfillment) {
             return fulfillment(Output.of(fulfillment));
         }
@@ -166,11 +218,23 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param textToSpeechSettings Optional. Text to speech settings for this environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder textToSpeechSettings(@Nullable Output<GoogleCloudDialogflowV2TextToSpeechSettingsArgs> textToSpeechSettings) {
             $.textToSpeechSettings = textToSpeechSettings;
             return this;
         }
 
+        /**
+         * @param textToSpeechSettings Optional. Text to speech settings for this environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder textToSpeechSettings(GoogleCloudDialogflowV2TextToSpeechSettingsArgs textToSpeechSettings) {
             return textToSpeechSettings(Output.of(textToSpeechSettings));
         }

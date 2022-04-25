@@ -25,6 +25,10 @@ public final class TimeSeriesQueryResponse extends com.pulumi.resources.InvokeAr
     @Import(name="timeSeriesFilter", required=true)
     private TimeSeriesFilterResponse timeSeriesFilter;
 
+    /**
+     * @return Filter parameters to fetch time series.
+     * 
+     */
     public TimeSeriesFilterResponse timeSeriesFilter() {
         return this.timeSeriesFilter;
     }
@@ -36,6 +40,10 @@ public final class TimeSeriesQueryResponse extends com.pulumi.resources.InvokeAr
     @Import(name="timeSeriesFilterRatio", required=true)
     private TimeSeriesFilterRatioResponse timeSeriesFilterRatio;
 
+    /**
+     * @return Parameters to fetch a ratio between two time series filters.
+     * 
+     */
     public TimeSeriesFilterRatioResponse timeSeriesFilterRatio() {
         return this.timeSeriesFilterRatio;
     }
@@ -47,6 +55,10 @@ public final class TimeSeriesQueryResponse extends com.pulumi.resources.InvokeAr
     @Import(name="timeSeriesQueryLanguage", required=true)
     private String timeSeriesQueryLanguage;
 
+    /**
+     * @return A query used to fetch time series.
+     * 
+     */
     public String timeSeriesQueryLanguage() {
         return this.timeSeriesQueryLanguage;
     }
@@ -58,6 +70,10 @@ public final class TimeSeriesQueryResponse extends com.pulumi.resources.InvokeAr
     @Import(name="unitOverride", required=true)
     private String unitOverride;
 
+    /**
+     * @return The unit of data contained in fetched time series. If non-empty, this unit will override any unit that accompanies fetched data. The format is the same as the unit (https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.metricDescriptors) field in MetricDescriptor.
+     * 
+     */
     public String unitOverride() {
         return this.unitOverride;
     }
@@ -89,21 +105,45 @@ public final class TimeSeriesQueryResponse extends com.pulumi.resources.InvokeAr
             $ = new TimeSeriesQueryResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param timeSeriesFilter Filter parameters to fetch time series.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeSeriesFilter(TimeSeriesFilterResponse timeSeriesFilter) {
             $.timeSeriesFilter = timeSeriesFilter;
             return this;
         }
 
+        /**
+         * @param timeSeriesFilterRatio Parameters to fetch a ratio between two time series filters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeSeriesFilterRatio(TimeSeriesFilterRatioResponse timeSeriesFilterRatio) {
             $.timeSeriesFilterRatio = timeSeriesFilterRatio;
             return this;
         }
 
+        /**
+         * @param timeSeriesQueryLanguage A query used to fetch time series.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeSeriesQueryLanguage(String timeSeriesQueryLanguage) {
             $.timeSeriesQueryLanguage = timeSeriesQueryLanguage;
             return this;
         }
 
+        /**
+         * @param unitOverride The unit of data contained in fetched time series. If non-empty, this unit will override any unit that accompanies fetched data. The format is the same as the unit (https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.metricDescriptors) field in MetricDescriptor.
+         * 
+         * @return builder
+         * 
+         */
         public Builder unitOverride(String unitOverride) {
             $.unitOverride = unitOverride;
             return this;

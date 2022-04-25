@@ -24,6 +24,10 @@ public final class ApplicationLogPattern extends com.pulumi.resources.InvokeArgs
     @Import(name="pattern", required=true)
     private String pattern;
 
+    /**
+     * @return The log pattern.
+     * 
+     */
     public String pattern() {
         return this.pattern;
     }
@@ -35,6 +39,10 @@ public final class ApplicationLogPattern extends com.pulumi.resources.InvokeArgs
     @Import(name="patternName", required=true)
     private String patternName;
 
+    /**
+     * @return The name of the log pattern.
+     * 
+     */
     public String patternName() {
         return this.patternName;
     }
@@ -46,6 +54,10 @@ public final class ApplicationLogPattern extends com.pulumi.resources.InvokeArgs
     @Import(name="rank", required=true)
     private Integer rank;
 
+    /**
+     * @return Rank of the log pattern.
+     * 
+     */
     public Integer rank() {
         return this.rank;
     }
@@ -76,16 +88,34 @@ public final class ApplicationLogPattern extends com.pulumi.resources.InvokeArgs
             $ = new ApplicationLogPattern(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param pattern The log pattern.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pattern(String pattern) {
             $.pattern = pattern;
             return this;
         }
 
+        /**
+         * @param patternName The name of the log pattern.
+         * 
+         * @return builder
+         * 
+         */
         public Builder patternName(String patternName) {
             $.patternName = patternName;
             return this;
         }
 
+        /**
+         * @param rank Rank of the log pattern.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rank(Integer rank) {
             $.rank = rank;
             return this;

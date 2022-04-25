@@ -25,6 +25,10 @@ public final class AccessPolicyUser extends com.pulumi.resources.InvokeArgs {
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return The AWS SSO ID of the user.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -53,6 +57,12 @@ public final class AccessPolicyUser extends com.pulumi.resources.InvokeArgs {
             $ = new AccessPolicyUser(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id The AWS SSO ID of the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;

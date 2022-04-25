@@ -11,47 +11,47 @@ import java.util.Objects;
 @CustomType
 public final class InMageRcmMobilityAgentDetailsResponse {
     /**
-     * The agent version expiry date.
+     * @return The agent version expiry date.
      * 
      */
     private final String agentVersionExpiryDate;
     /**
-     * The driver version.
+     * @return The driver version.
      * 
      */
     private final String driverVersion;
     /**
-     * The driver version expiry date.
+     * @return The driver version expiry date.
      * 
      */
     private final String driverVersionExpiryDate;
     /**
-     * A value indicating whether agent is upgradeable or not.
+     * @return A value indicating whether agent is upgradeable or not.
      * 
      */
     private final String isUpgradeable;
     /**
-     * The time of the last heartbeat received from the agent.
+     * @return The time of the last heartbeat received from the agent.
      * 
      */
     private final String lastHeartbeatUtc;
     /**
-     * The latest upgradeable version available without reboot.
+     * @return The latest upgradeable version available without reboot.
      * 
      */
     private final String latestUpgradableVersionWithoutReboot;
     /**
-     * The latest agent version available.
+     * @return The latest agent version available.
      * 
      */
     private final String latestVersion;
     /**
-     * The whether update is possible or not.
+     * @return The whether update is possible or not.
      * 
      */
     private final List<String> reasonsBlockingUpgrade;
     /**
-     * The agent version.
+     * @return The agent version.
      * 
      */
     private final String version;
@@ -79,65 +79,65 @@ public final class InMageRcmMobilityAgentDetailsResponse {
     }
 
     /**
-     * The agent version expiry date.
+     * @return The agent version expiry date.
      * 
-    */
+     */
     public String agentVersionExpiryDate() {
         return this.agentVersionExpiryDate;
     }
     /**
-     * The driver version.
+     * @return The driver version.
      * 
-    */
+     */
     public String driverVersion() {
         return this.driverVersion;
     }
     /**
-     * The driver version expiry date.
+     * @return The driver version expiry date.
      * 
-    */
+     */
     public String driverVersionExpiryDate() {
         return this.driverVersionExpiryDate;
     }
     /**
-     * A value indicating whether agent is upgradeable or not.
+     * @return A value indicating whether agent is upgradeable or not.
      * 
-    */
+     */
     public String isUpgradeable() {
         return this.isUpgradeable;
     }
     /**
-     * The time of the last heartbeat received from the agent.
+     * @return The time of the last heartbeat received from the agent.
      * 
-    */
+     */
     public String lastHeartbeatUtc() {
         return this.lastHeartbeatUtc;
     }
     /**
-     * The latest upgradeable version available without reboot.
+     * @return The latest upgradeable version available without reboot.
      * 
-    */
+     */
     public String latestUpgradableVersionWithoutReboot() {
         return this.latestUpgradableVersionWithoutReboot;
     }
     /**
-     * The latest agent version available.
+     * @return The latest agent version available.
      * 
-    */
+     */
     public String latestVersion() {
         return this.latestVersion;
     }
     /**
-     * The whether update is possible or not.
+     * @return The whether update is possible or not.
      * 
-    */
+     */
     public List<String> reasonsBlockingUpgrade() {
         return this.reasonsBlockingUpgrade;
     }
     /**
-     * The agent version.
+     * @return The agent version.
      * 
-    */
+     */
     public String version() {
         return this.version;
     }

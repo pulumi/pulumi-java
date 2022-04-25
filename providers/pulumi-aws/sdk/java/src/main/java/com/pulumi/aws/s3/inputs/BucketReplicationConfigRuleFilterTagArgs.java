@@ -20,6 +20,10 @@ public final class BucketReplicationConfigRuleFilterTagArgs extends com.pulumi.r
     @Import(name="key", required=true)
     private Output<String> key;
 
+    /**
+     * @return Name of the object key.
+     * 
+     */
     public Output<String> key() {
         return this.key;
     }
@@ -31,6 +35,10 @@ public final class BucketReplicationConfigRuleFilterTagArgs extends com.pulumi.r
     @Import(name="value", required=true)
     private Output<String> value;
 
+    /**
+     * @return Value of the tag.
+     * 
+     */
     public Output<String> value() {
         return this.value;
     }
@@ -60,20 +68,44 @@ public final class BucketReplicationConfigRuleFilterTagArgs extends com.pulumi.r
             $ = new BucketReplicationConfigRuleFilterTagArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param key Name of the object key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(Output<String> key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param key Name of the object key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             return key(Output.of(key));
         }
 
+        /**
+         * @param value Value of the tag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value Value of the tag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

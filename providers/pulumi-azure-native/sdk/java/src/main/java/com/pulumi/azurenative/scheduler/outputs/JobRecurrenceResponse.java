@@ -14,22 +14,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class JobRecurrenceResponse {
     /**
-     * Gets or sets the maximum number of times that the job should run.
+     * @return Gets or sets the maximum number of times that the job should run.
      * 
      */
     private final @Nullable Integer count;
     /**
-     * Gets or sets the time at which the job will complete.
+     * @return Gets or sets the time at which the job will complete.
      * 
      */
     private final @Nullable String endTime;
     /**
-     * Gets or sets the frequency of recurrence (second, minute, hour, day, week, month).
+     * @return Gets or sets the frequency of recurrence (second, minute, hour, day, week, month).
      * 
      */
     private final @Nullable String frequency;
     /**
-     * Gets or sets the interval between retries.
+     * @return Gets or sets the interval between retries.
      * 
      */
     private final @Nullable Integer interval;
@@ -50,30 +50,30 @@ public final class JobRecurrenceResponse {
     }
 
     /**
-     * Gets or sets the maximum number of times that the job should run.
+     * @return Gets or sets the maximum number of times that the job should run.
      * 
-    */
+     */
     public Optional<Integer> count() {
         return Optional.ofNullable(this.count);
     }
     /**
-     * Gets or sets the time at which the job will complete.
+     * @return Gets or sets the time at which the job will complete.
      * 
-    */
+     */
     public Optional<String> endTime() {
         return Optional.ofNullable(this.endTime);
     }
     /**
-     * Gets or sets the frequency of recurrence (second, minute, hour, day, week, month).
+     * @return Gets or sets the frequency of recurrence (second, minute, hour, day, week, month).
      * 
-    */
+     */
     public Optional<String> frequency() {
         return Optional.ofNullable(this.frequency);
     }
     /**
-     * Gets or sets the interval between retries.
+     * @return Gets or sets the interval between retries.
      * 
-    */
+     */
     public Optional<Integer> interval() {
         return Optional.ofNullable(this.interval);
     }

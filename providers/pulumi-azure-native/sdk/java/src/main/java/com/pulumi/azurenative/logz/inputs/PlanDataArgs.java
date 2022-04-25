@@ -22,6 +22,10 @@ public final class PlanDataArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="billingCycle")
     private @Nullable Output<String> billingCycle;
 
+    /**
+     * @return different billing cycles like MONTHLY/WEEKLY. this could be enum
+     * 
+     */
     public Optional<Output<String>> billingCycle() {
         return Optional.ofNullable(this.billingCycle);
     }
@@ -33,6 +37,10 @@ public final class PlanDataArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="effectiveDate")
     private @Nullable Output<String> effectiveDate;
 
+    /**
+     * @return date when plan was applied
+     * 
+     */
     public Optional<Output<String>> effectiveDate() {
         return Optional.ofNullable(this.effectiveDate);
     }
@@ -44,6 +52,10 @@ public final class PlanDataArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="planDetails")
     private @Nullable Output<String> planDetails;
 
+    /**
+     * @return plan id as published by Logz
+     * 
+     */
     public Optional<Output<String>> planDetails() {
         return Optional.ofNullable(this.planDetails);
     }
@@ -55,6 +67,10 @@ public final class PlanDataArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="usageType")
     private @Nullable Output<String> usageType;
 
+    /**
+     * @return different usage type like PAYG/COMMITTED. this could be enum
+     * 
+     */
     public Optional<Output<String>> usageType() {
         return Optional.ofNullable(this.usageType);
     }
@@ -86,38 +102,86 @@ public final class PlanDataArgs extends com.pulumi.resources.ResourceArgs {
             $ = new PlanDataArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param billingCycle different billing cycles like MONTHLY/WEEKLY. this could be enum
+         * 
+         * @return builder
+         * 
+         */
         public Builder billingCycle(@Nullable Output<String> billingCycle) {
             $.billingCycle = billingCycle;
             return this;
         }
 
+        /**
+         * @param billingCycle different billing cycles like MONTHLY/WEEKLY. this could be enum
+         * 
+         * @return builder
+         * 
+         */
         public Builder billingCycle(String billingCycle) {
             return billingCycle(Output.of(billingCycle));
         }
 
+        /**
+         * @param effectiveDate date when plan was applied
+         * 
+         * @return builder
+         * 
+         */
         public Builder effectiveDate(@Nullable Output<String> effectiveDate) {
             $.effectiveDate = effectiveDate;
             return this;
         }
 
+        /**
+         * @param effectiveDate date when plan was applied
+         * 
+         * @return builder
+         * 
+         */
         public Builder effectiveDate(String effectiveDate) {
             return effectiveDate(Output.of(effectiveDate));
         }
 
+        /**
+         * @param planDetails plan id as published by Logz
+         * 
+         * @return builder
+         * 
+         */
         public Builder planDetails(@Nullable Output<String> planDetails) {
             $.planDetails = planDetails;
             return this;
         }
 
+        /**
+         * @param planDetails plan id as published by Logz
+         * 
+         * @return builder
+         * 
+         */
         public Builder planDetails(String planDetails) {
             return planDetails(Output.of(planDetails));
         }
 
+        /**
+         * @param usageType different usage type like PAYG/COMMITTED. this could be enum
+         * 
+         * @return builder
+         * 
+         */
         public Builder usageType(@Nullable Output<String> usageType) {
             $.usageType = usageType;
             return this;
         }
 
+        /**
+         * @param usageType different usage type like PAYG/COMMITTED. this could be enum
+         * 
+         * @return builder
+         * 
+         */
         public Builder usageType(String usageType) {
             return usageType(Output.of(usageType));
         }

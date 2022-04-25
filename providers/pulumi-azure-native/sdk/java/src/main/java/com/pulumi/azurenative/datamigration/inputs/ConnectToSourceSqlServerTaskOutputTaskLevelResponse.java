@@ -27,6 +27,10 @@ public final class ConnectToSourceSqlServerTaskOutputTaskLevelResponse extends c
     @Import(name="agentJobs", required=true)
     private Map<String,String> agentJobs;
 
+    /**
+     * @return Source agent jobs as a map from agent job name to id.
+     * 
+     */
     public Map<String,String> agentJobs() {
         return this.agentJobs;
     }
@@ -38,6 +42,10 @@ public final class ConnectToSourceSqlServerTaskOutputTaskLevelResponse extends c
     @Import(name="databases", required=true)
     private Map<String,String> databases;
 
+    /**
+     * @return Source databases as a map from database name to database id
+     * 
+     */
     public Map<String,String> databases() {
         return this.databases;
     }
@@ -49,6 +57,10 @@ public final class ConnectToSourceSqlServerTaskOutputTaskLevelResponse extends c
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Result identifier
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -60,6 +72,10 @@ public final class ConnectToSourceSqlServerTaskOutputTaskLevelResponse extends c
     @Import(name="logins", required=true)
     private Map<String,String> logins;
 
+    /**
+     * @return Source logins as a map from login name to login id.
+     * 
+     */
     public Map<String,String> logins() {
         return this.logins;
     }
@@ -72,6 +88,11 @@ public final class ConnectToSourceSqlServerTaskOutputTaskLevelResponse extends c
     @Import(name="resultType", required=true)
     private String resultType;
 
+    /**
+     * @return Type of result - database level or task level
+     * Expected value is &#39;TaskLevelOutput&#39;.
+     * 
+     */
     public String resultType() {
         return this.resultType;
     }
@@ -83,6 +104,10 @@ public final class ConnectToSourceSqlServerTaskOutputTaskLevelResponse extends c
     @Import(name="sourceServerBrandVersion", required=true)
     private String sourceServerBrandVersion;
 
+    /**
+     * @return Source server brand version
+     * 
+     */
     public String sourceServerBrandVersion() {
         return this.sourceServerBrandVersion;
     }
@@ -94,6 +119,10 @@ public final class ConnectToSourceSqlServerTaskOutputTaskLevelResponse extends c
     @Import(name="sourceServerVersion", required=true)
     private String sourceServerVersion;
 
+    /**
+     * @return Source server version
+     * 
+     */
     public String sourceServerVersion() {
         return this.sourceServerVersion;
     }
@@ -105,6 +134,10 @@ public final class ConnectToSourceSqlServerTaskOutputTaskLevelResponse extends c
     @Import(name="validationErrors", required=true)
     private List<ReportableExceptionResponse> validationErrors;
 
+    /**
+     * @return Validation errors
+     * 
+     */
     public List<ReportableExceptionResponse> validationErrors() {
         return this.validationErrors;
     }
@@ -140,46 +173,101 @@ public final class ConnectToSourceSqlServerTaskOutputTaskLevelResponse extends c
             $ = new ConnectToSourceSqlServerTaskOutputTaskLevelResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param agentJobs Source agent jobs as a map from agent job name to id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentJobs(Map<String,String> agentJobs) {
             $.agentJobs = agentJobs;
             return this;
         }
 
+        /**
+         * @param databases Source databases as a map from database name to database id
+         * 
+         * @return builder
+         * 
+         */
         public Builder databases(Map<String,String> databases) {
             $.databases = databases;
             return this;
         }
 
+        /**
+         * @param id Result identifier
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param logins Source logins as a map from login name to login id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logins(Map<String,String> logins) {
             $.logins = logins;
             return this;
         }
 
+        /**
+         * @param resultType Type of result - database level or task level
+         * Expected value is &#39;TaskLevelOutput&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resultType(String resultType) {
             $.resultType = resultType;
             return this;
         }
 
+        /**
+         * @param sourceServerBrandVersion Source server brand version
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceServerBrandVersion(String sourceServerBrandVersion) {
             $.sourceServerBrandVersion = sourceServerBrandVersion;
             return this;
         }
 
+        /**
+         * @param sourceServerVersion Source server version
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceServerVersion(String sourceServerVersion) {
             $.sourceServerVersion = sourceServerVersion;
             return this;
         }
 
+        /**
+         * @param validationErrors Validation errors
+         * 
+         * @return builder
+         * 
+         */
         public Builder validationErrors(List<ReportableExceptionResponse> validationErrors) {
             $.validationErrors = validationErrors;
             return this;
         }
 
+        /**
+         * @param validationErrors Validation errors
+         * 
+         * @return builder
+         * 
+         */
         public Builder validationErrors(ReportableExceptionResponse... validationErrors) {
             return validationErrors(List.of(validationErrors));
         }

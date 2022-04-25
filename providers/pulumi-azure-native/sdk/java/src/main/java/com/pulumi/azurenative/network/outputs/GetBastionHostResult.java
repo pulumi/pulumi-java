@@ -15,47 +15,47 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetBastionHostResult {
     /**
-     * FQDN for the endpoint on which bastion host is accessible.
+     * @return FQDN for the endpoint on which bastion host is accessible.
      * 
      */
     private final @Nullable String dnsName;
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
     private final String etag;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final @Nullable String id;
     /**
-     * IP configuration of the Bastion Host resource.
+     * @return IP configuration of the Bastion Host resource.
      * 
      */
     private final @Nullable List<BastionHostIPConfigurationResponse> ipConfigurations;
     /**
-     * Resource location.
+     * @return Resource location.
      * 
      */
     private final @Nullable String location;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * The provisioning state of the bastion host resource.
+     * @return The provisioning state of the bastion host resource.
      * 
      */
     private final String provisioningState;
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
@@ -83,65 +83,65 @@ public final class GetBastionHostResult {
     }
 
     /**
-     * FQDN for the endpoint on which bastion host is accessible.
+     * @return FQDN for the endpoint on which bastion host is accessible.
      * 
-    */
+     */
     public Optional<String> dnsName() {
         return Optional.ofNullable(this.dnsName);
     }
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * IP configuration of the Bastion Host resource.
+     * @return IP configuration of the Bastion Host resource.
      * 
-    */
+     */
     public List<BastionHostIPConfigurationResponse> ipConfigurations() {
         return this.ipConfigurations == null ? List.of() : this.ipConfigurations;
     }
     /**
-     * Resource location.
+     * @return Resource location.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The provisioning state of the bastion host resource.
+     * @return The provisioning state of the bastion host resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

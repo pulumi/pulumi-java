@@ -14,37 +14,37 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetPrivateEndpointConnectionResult {
     /**
-     * Optional ETag.
+     * @return Optional ETag.
      * 
      */
     private final @Nullable String eTag;
     /**
-     * Resource Id represents the complete path to the resource.
+     * @return Resource Id represents the complete path to the resource.
      * 
      */
     private final String id;
     /**
-     * Resource location.
+     * @return Resource location.
      * 
      */
     private final @Nullable String location;
     /**
-     * Resource name associated with the resource.
+     * @return Resource name associated with the resource.
      * 
      */
     private final String name;
     /**
-     * PrivateEndpointConnectionResource properties
+     * @return PrivateEndpointConnectionResource properties
      * 
      */
     private final PrivateEndpointConnectionResponse properties;
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/...
+     * @return Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/...
      * 
      */
     private final String type;
@@ -68,51 +68,51 @@ public final class GetPrivateEndpointConnectionResult {
     }
 
     /**
-     * Optional ETag.
+     * @return Optional ETag.
      * 
-    */
+     */
     public Optional<String> eTag() {
         return Optional.ofNullable(this.eTag);
     }
     /**
-     * Resource Id represents the complete path to the resource.
+     * @return Resource Id represents the complete path to the resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource location.
+     * @return Resource location.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * Resource name associated with the resource.
+     * @return Resource name associated with the resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * PrivateEndpointConnectionResource properties
+     * @return PrivateEndpointConnectionResource properties
      * 
-    */
+     */
     public PrivateEndpointConnectionResponse properties() {
         return this.properties;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/...
+     * @return Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/...
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

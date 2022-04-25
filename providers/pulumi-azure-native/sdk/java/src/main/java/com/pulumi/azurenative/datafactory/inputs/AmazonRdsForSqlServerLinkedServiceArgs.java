@@ -36,6 +36,10 @@ public final class AmazonRdsForSqlServerLinkedServiceArgs extends com.pulumi.res
     @Import(name="alwaysEncryptedSettings")
     private @Nullable Output<SqlAlwaysEncryptedPropertiesArgs> alwaysEncryptedSettings;
 
+    /**
+     * @return Sql always encrypted properties.
+     * 
+     */
     public Optional<Output<SqlAlwaysEncryptedPropertiesArgs>> alwaysEncryptedSettings() {
         return Optional.ofNullable(this.alwaysEncryptedSettings);
     }
@@ -47,6 +51,10 @@ public final class AmazonRdsForSqlServerLinkedServiceArgs extends com.pulumi.res
     @Import(name="annotations")
     private @Nullable Output<List<Object>> annotations;
 
+    /**
+     * @return List of tags that can be used for describing the linked service.
+     * 
+     */
     public Optional<Output<List<Object>>> annotations() {
         return Optional.ofNullable(this.annotations);
     }
@@ -58,6 +66,10 @@ public final class AmazonRdsForSqlServerLinkedServiceArgs extends com.pulumi.res
     @Import(name="connectVia")
     private @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
+    /**
+     * @return The integration runtime reference.
+     * 
+     */
     public Optional<Output<IntegrationRuntimeReferenceArgs>> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
@@ -69,6 +81,10 @@ public final class AmazonRdsForSqlServerLinkedServiceArgs extends com.pulumi.res
     @Import(name="connectionString", required=true)
     private Output<Object> connectionString;
 
+    /**
+     * @return The connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
+     * 
+     */
     public Output<Object> connectionString() {
         return this.connectionString;
     }
@@ -80,6 +96,10 @@ public final class AmazonRdsForSqlServerLinkedServiceArgs extends com.pulumi.res
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Linked service description.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -91,6 +111,10 @@ public final class AmazonRdsForSqlServerLinkedServiceArgs extends com.pulumi.res
     @Import(name="encryptedCredential")
     private @Nullable Output<Object> encryptedCredential;
 
+    /**
+     * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> encryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
@@ -102,6 +126,10 @@ public final class AmazonRdsForSqlServerLinkedServiceArgs extends com.pulumi.res
     @Import(name="parameters")
     private @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
+    /**
+     * @return Parameters for linked service.
+     * 
+     */
     public Optional<Output<Map<String,ParameterSpecificationArgs>>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -113,6 +141,10 @@ public final class AmazonRdsForSqlServerLinkedServiceArgs extends com.pulumi.res
     @Import(name="password")
     private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
+    /**
+     * @return The on-premises Windows authentication password.
+     * 
+     */
     public Optional<Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>>> password() {
         return Optional.ofNullable(this.password);
     }
@@ -125,6 +157,11 @@ public final class AmazonRdsForSqlServerLinkedServiceArgs extends com.pulumi.res
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Type of linked service.
+     * Expected value is &#39;AmazonRdsForSqlServer&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -136,6 +173,10 @@ public final class AmazonRdsForSqlServerLinkedServiceArgs extends com.pulumi.res
     @Import(name="userName")
     private @Nullable Output<Object> userName;
 
+    /**
+     * @return The on-premises Windows authentication user name. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> userName() {
         return Optional.ofNullable(this.userName);
     }
@@ -173,104 +214,244 @@ public final class AmazonRdsForSqlServerLinkedServiceArgs extends com.pulumi.res
             $ = new AmazonRdsForSqlServerLinkedServiceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param alwaysEncryptedSettings Sql always encrypted properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alwaysEncryptedSettings(@Nullable Output<SqlAlwaysEncryptedPropertiesArgs> alwaysEncryptedSettings) {
             $.alwaysEncryptedSettings = alwaysEncryptedSettings;
             return this;
         }
 
+        /**
+         * @param alwaysEncryptedSettings Sql always encrypted properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alwaysEncryptedSettings(SqlAlwaysEncryptedPropertiesArgs alwaysEncryptedSettings) {
             return alwaysEncryptedSettings(Output.of(alwaysEncryptedSettings));
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(@Nullable Output<List<Object>> annotations) {
             $.annotations = annotations;
             return this;
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(List<Object> annotations) {
             return annotations(Output.of(annotations));
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
 
+        /**
+         * @param connectVia The integration runtime reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
             $.connectVia = connectVia;
             return this;
         }
 
+        /**
+         * @param connectVia The integration runtime reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectVia(IntegrationRuntimeReferenceArgs connectVia) {
             return connectVia(Output.of(connectVia));
         }
 
+        /**
+         * @param connectionString The connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionString(Output<Object> connectionString) {
             $.connectionString = connectionString;
             return this;
         }
 
+        /**
+         * @param connectionString The connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionString(Object connectionString) {
             return connectionString(Output.of(connectionString));
         }
 
+        /**
+         * @param description Linked service description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Linked service description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param encryptedCredential The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
             $.encryptedCredential = encryptedCredential;
             return this;
         }
 
+        /**
+         * @param encryptedCredential The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptedCredential(Object encryptedCredential) {
             return encryptedCredential(Output.of(encryptedCredential));
         }
 
+        /**
+         * @param parameters Parameters for linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters Parameters for linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(Map<String,ParameterSpecificationArgs> parameters) {
             return parameters(Output.of(parameters));
         }
 
+        /**
+         * @param password The on-premises Windows authentication password.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param password The on-premises Windows authentication password.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
             return password(Output.of(password));
         }
 
+        /**
+         * @param password The on-premises Windows authentication password.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(AzureKeyVaultSecretReferenceArgs password) {
             return password(Either.ofLeft(password));
         }
 
+        /**
+         * @param password The on-premises Windows authentication password.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(SecureStringArgs password) {
             return password(Either.ofRight(password));
         }
 
+        /**
+         * @param type Type of linked service.
+         * Expected value is &#39;AmazonRdsForSqlServer&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of linked service.
+         * Expected value is &#39;AmazonRdsForSqlServer&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param userName The on-premises Windows authentication user name. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(@Nullable Output<Object> userName) {
             $.userName = userName;
             return this;
         }
 
+        /**
+         * @param userName The on-premises Windows authentication user name. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(Object userName) {
             return userName(Output.of(userName));
         }

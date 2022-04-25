@@ -23,6 +23,10 @@ public final class TransportResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="pubsub", required=true)
     private PubsubResponse pubsub;
 
+    /**
+     * @return The Pub/Sub topic and subscription used by Eventarc as a transport intermediary.
+     * 
+     */
     public PubsubResponse pubsub() {
         return this.pubsub;
     }
@@ -51,6 +55,12 @@ public final class TransportResponse extends com.pulumi.resources.InvokeArgs {
             $ = new TransportResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param pubsub The Pub/Sub topic and subscription used by Eventarc as a transport intermediary.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pubsub(PubsubResponse pubsub) {
             $.pubsub = pubsub;
             return this;

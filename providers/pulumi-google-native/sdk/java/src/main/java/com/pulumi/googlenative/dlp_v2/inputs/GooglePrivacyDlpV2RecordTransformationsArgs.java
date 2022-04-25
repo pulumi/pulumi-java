@@ -28,6 +28,10 @@ public final class GooglePrivacyDlpV2RecordTransformationsArgs extends com.pulum
     @Import(name="fieldTransformations")
     private @Nullable Output<List<GooglePrivacyDlpV2FieldTransformationArgs>> fieldTransformations;
 
+    /**
+     * @return Transform the record by applying various field transformations.
+     * 
+     */
     public Optional<Output<List<GooglePrivacyDlpV2FieldTransformationArgs>>> fieldTransformations() {
         return Optional.ofNullable(this.fieldTransformations);
     }
@@ -39,6 +43,10 @@ public final class GooglePrivacyDlpV2RecordTransformationsArgs extends com.pulum
     @Import(name="recordSuppressions")
     private @Nullable Output<List<GooglePrivacyDlpV2RecordSuppressionArgs>> recordSuppressions;
 
+    /**
+     * @return Configuration defining which records get suppressed entirely. Records that match any suppression rule are omitted from the output.
+     * 
+     */
     public Optional<Output<List<GooglePrivacyDlpV2RecordSuppressionArgs>>> recordSuppressions() {
         return Optional.ofNullable(this.recordSuppressions);
     }
@@ -68,28 +76,64 @@ public final class GooglePrivacyDlpV2RecordTransformationsArgs extends com.pulum
             $ = new GooglePrivacyDlpV2RecordTransformationsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fieldTransformations Transform the record by applying various field transformations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fieldTransformations(@Nullable Output<List<GooglePrivacyDlpV2FieldTransformationArgs>> fieldTransformations) {
             $.fieldTransformations = fieldTransformations;
             return this;
         }
 
+        /**
+         * @param fieldTransformations Transform the record by applying various field transformations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fieldTransformations(List<GooglePrivacyDlpV2FieldTransformationArgs> fieldTransformations) {
             return fieldTransformations(Output.of(fieldTransformations));
         }
 
+        /**
+         * @param fieldTransformations Transform the record by applying various field transformations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fieldTransformations(GooglePrivacyDlpV2FieldTransformationArgs... fieldTransformations) {
             return fieldTransformations(List.of(fieldTransformations));
         }
 
+        /**
+         * @param recordSuppressions Configuration defining which records get suppressed entirely. Records that match any suppression rule are omitted from the output.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recordSuppressions(@Nullable Output<List<GooglePrivacyDlpV2RecordSuppressionArgs>> recordSuppressions) {
             $.recordSuppressions = recordSuppressions;
             return this;
         }
 
+        /**
+         * @param recordSuppressions Configuration defining which records get suppressed entirely. Records that match any suppression rule are omitted from the output.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recordSuppressions(List<GooglePrivacyDlpV2RecordSuppressionArgs> recordSuppressions) {
             return recordSuppressions(Output.of(recordSuppressions));
         }
 
+        /**
+         * @param recordSuppressions Configuration defining which records get suppressed entirely. Records that match any suppression rule are omitted from the output.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recordSuppressions(GooglePrivacyDlpV2RecordSuppressionArgs... recordSuppressions) {
             return recordSuppressions(List.of(recordSuppressions));
         }

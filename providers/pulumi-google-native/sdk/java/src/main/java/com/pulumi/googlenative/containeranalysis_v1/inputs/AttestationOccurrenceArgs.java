@@ -29,6 +29,10 @@ public final class AttestationOccurrenceArgs extends com.pulumi.resources.Resour
     @Import(name="jwts")
     private @Nullable Output<List<JwtArgs>> jwts;
 
+    /**
+     * @return One or more JWTs encoding a self-contained attestation. Each JWT encodes the payload that it verifies within the JWT itself. Verifier implementation SHOULD ignore the `serialized_payload` field when verifying these JWTs. If only JWTs are present on this AttestationOccurrence, then the `serialized_payload` SHOULD be left empty. Each JWT SHOULD encode a claim specific to the `resource_uri` of this Occurrence, but this is not validated by Grafeas metadata API implementations. The JWT itself is opaque to Grafeas.
+     * 
+     */
     public Optional<Output<List<JwtArgs>>> jwts() {
         return Optional.ofNullable(this.jwts);
     }
@@ -40,6 +44,10 @@ public final class AttestationOccurrenceArgs extends com.pulumi.resources.Resour
     @Import(name="serializedPayload", required=true)
     private Output<String> serializedPayload;
 
+    /**
+     * @return The serialized payload that is verified by one or more `signatures`.
+     * 
+     */
     public Output<String> serializedPayload() {
         return this.serializedPayload;
     }
@@ -51,6 +59,10 @@ public final class AttestationOccurrenceArgs extends com.pulumi.resources.Resour
     @Import(name="signatures")
     private @Nullable Output<List<SignatureArgs>> signatures;
 
+    /**
+     * @return One or more signatures over `serialized_payload`. Verifier implementations should consider this attestation message verified if at least one `signature` verifies `serialized_payload`. See `Signature` in common.proto for more details on signature structure and verification.
+     * 
+     */
     public Optional<Output<List<SignatureArgs>>> signatures() {
         return Optional.ofNullable(this.signatures);
     }
@@ -81,37 +93,85 @@ public final class AttestationOccurrenceArgs extends com.pulumi.resources.Resour
             $ = new AttestationOccurrenceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param jwts One or more JWTs encoding a self-contained attestation. Each JWT encodes the payload that it verifies within the JWT itself. Verifier implementation SHOULD ignore the `serialized_payload` field when verifying these JWTs. If only JWTs are present on this AttestationOccurrence, then the `serialized_payload` SHOULD be left empty. Each JWT SHOULD encode a claim specific to the `resource_uri` of this Occurrence, but this is not validated by Grafeas metadata API implementations. The JWT itself is opaque to Grafeas.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jwts(@Nullable Output<List<JwtArgs>> jwts) {
             $.jwts = jwts;
             return this;
         }
 
+        /**
+         * @param jwts One or more JWTs encoding a self-contained attestation. Each JWT encodes the payload that it verifies within the JWT itself. Verifier implementation SHOULD ignore the `serialized_payload` field when verifying these JWTs. If only JWTs are present on this AttestationOccurrence, then the `serialized_payload` SHOULD be left empty. Each JWT SHOULD encode a claim specific to the `resource_uri` of this Occurrence, but this is not validated by Grafeas metadata API implementations. The JWT itself is opaque to Grafeas.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jwts(List<JwtArgs> jwts) {
             return jwts(Output.of(jwts));
         }
 
+        /**
+         * @param jwts One or more JWTs encoding a self-contained attestation. Each JWT encodes the payload that it verifies within the JWT itself. Verifier implementation SHOULD ignore the `serialized_payload` field when verifying these JWTs. If only JWTs are present on this AttestationOccurrence, then the `serialized_payload` SHOULD be left empty. Each JWT SHOULD encode a claim specific to the `resource_uri` of this Occurrence, but this is not validated by Grafeas metadata API implementations. The JWT itself is opaque to Grafeas.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jwts(JwtArgs... jwts) {
             return jwts(List.of(jwts));
         }
 
+        /**
+         * @param serializedPayload The serialized payload that is verified by one or more `signatures`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serializedPayload(Output<String> serializedPayload) {
             $.serializedPayload = serializedPayload;
             return this;
         }
 
+        /**
+         * @param serializedPayload The serialized payload that is verified by one or more `signatures`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serializedPayload(String serializedPayload) {
             return serializedPayload(Output.of(serializedPayload));
         }
 
+        /**
+         * @param signatures One or more signatures over `serialized_payload`. Verifier implementations should consider this attestation message verified if at least one `signature` verifies `serialized_payload`. See `Signature` in common.proto for more details on signature structure and verification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder signatures(@Nullable Output<List<SignatureArgs>> signatures) {
             $.signatures = signatures;
             return this;
         }
 
+        /**
+         * @param signatures One or more signatures over `serialized_payload`. Verifier implementations should consider this attestation message verified if at least one `signature` verifies `serialized_payload`. See `Signature` in common.proto for more details on signature structure and verification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder signatures(List<SignatureArgs> signatures) {
             return signatures(Output.of(signatures));
         }
 
+        /**
+         * @param signatures One or more signatures over `serialized_payload`. Verifier implementations should consider this attestation message verified if at least one `signature` verifies `serialized_payload`. See `Signature` in common.proto for more details on signature structure and verification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder signatures(SignatureArgs... signatures) {
             return signatures(List.of(signatures));
         }

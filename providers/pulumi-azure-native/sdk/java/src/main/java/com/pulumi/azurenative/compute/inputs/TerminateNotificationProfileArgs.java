@@ -23,6 +23,10 @@ public final class TerminateNotificationProfileArgs extends com.pulumi.resources
     @Import(name="enable")
     private @Nullable Output<Boolean> enable;
 
+    /**
+     * @return Specifies whether the Terminate Scheduled event is enabled or disabled.
+     * 
+     */
     public Optional<Output<Boolean>> enable() {
         return Optional.ofNullable(this.enable);
     }
@@ -34,6 +38,10 @@ public final class TerminateNotificationProfileArgs extends com.pulumi.resources
     @Import(name="notBeforeTimeout")
     private @Nullable Output<String> notBeforeTimeout;
 
+    /**
+     * @return Configurable length of time a Virtual Machine being deleted will have to potentially approve the Terminate Scheduled Event before the event is auto approved (timed out). The configuration must be specified in ISO 8601 format, the default value is 5 minutes (PT5M)
+     * 
+     */
     public Optional<Output<String>> notBeforeTimeout() {
         return Optional.ofNullable(this.notBeforeTimeout);
     }
@@ -63,20 +71,44 @@ public final class TerminateNotificationProfileArgs extends com.pulumi.resources
             $ = new TerminateNotificationProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enable Specifies whether the Terminate Scheduled event is enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enable(@Nullable Output<Boolean> enable) {
             $.enable = enable;
             return this;
         }
 
+        /**
+         * @param enable Specifies whether the Terminate Scheduled event is enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enable(Boolean enable) {
             return enable(Output.of(enable));
         }
 
+        /**
+         * @param notBeforeTimeout Configurable length of time a Virtual Machine being deleted will have to potentially approve the Terminate Scheduled Event before the event is auto approved (timed out). The configuration must be specified in ISO 8601 format, the default value is 5 minutes (PT5M)
+         * 
+         * @return builder
+         * 
+         */
         public Builder notBeforeTimeout(@Nullable Output<String> notBeforeTimeout) {
             $.notBeforeTimeout = notBeforeTimeout;
             return this;
         }
 
+        /**
+         * @param notBeforeTimeout Configurable length of time a Virtual Machine being deleted will have to potentially approve the Terminate Scheduled Event before the event is auto approved (timed out). The configuration must be specified in ISO 8601 format, the default value is 5 minutes (PT5M)
+         * 
+         * @return builder
+         * 
+         */
         public Builder notBeforeTimeout(String notBeforeTimeout) {
             return notBeforeTimeout(Output.of(notBeforeTimeout));
         }

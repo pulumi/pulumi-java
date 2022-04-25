@@ -30,6 +30,10 @@ public final class ConnectionMonitorTestConfigurationResponse extends com.pulumi
     @Import(name="httpConfiguration")
     private @Nullable ConnectionMonitorHttpConfigurationResponse httpConfiguration;
 
+    /**
+     * @return The parameters used to perform test evaluation over HTTP.
+     * 
+     */
     public Optional<ConnectionMonitorHttpConfigurationResponse> httpConfiguration() {
         return Optional.ofNullable(this.httpConfiguration);
     }
@@ -41,6 +45,10 @@ public final class ConnectionMonitorTestConfigurationResponse extends com.pulumi
     @Import(name="icmpConfiguration")
     private @Nullable ConnectionMonitorIcmpConfigurationResponse icmpConfiguration;
 
+    /**
+     * @return The parameters used to perform test evaluation over ICMP.
+     * 
+     */
     public Optional<ConnectionMonitorIcmpConfigurationResponse> icmpConfiguration() {
         return Optional.ofNullable(this.icmpConfiguration);
     }
@@ -52,6 +60,10 @@ public final class ConnectionMonitorTestConfigurationResponse extends com.pulumi
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the connection monitor test configuration.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -63,6 +75,10 @@ public final class ConnectionMonitorTestConfigurationResponse extends com.pulumi
     @Import(name="preferredIPVersion")
     private @Nullable String preferredIPVersion;
 
+    /**
+     * @return The preferred IP version to use in test evaluation. The connection monitor may choose to use a different version depending on other parameters.
+     * 
+     */
     public Optional<String> preferredIPVersion() {
         return Optional.ofNullable(this.preferredIPVersion);
     }
@@ -74,6 +90,10 @@ public final class ConnectionMonitorTestConfigurationResponse extends com.pulumi
     @Import(name="protocol", required=true)
     private String protocol;
 
+    /**
+     * @return The protocol to use in test evaluation.
+     * 
+     */
     public String protocol() {
         return this.protocol;
     }
@@ -85,6 +105,10 @@ public final class ConnectionMonitorTestConfigurationResponse extends com.pulumi
     @Import(name="successThreshold")
     private @Nullable ConnectionMonitorSuccessThresholdResponse successThreshold;
 
+    /**
+     * @return The threshold for declaring a test successful.
+     * 
+     */
     public Optional<ConnectionMonitorSuccessThresholdResponse> successThreshold() {
         return Optional.ofNullable(this.successThreshold);
     }
@@ -96,6 +120,10 @@ public final class ConnectionMonitorTestConfigurationResponse extends com.pulumi
     @Import(name="tcpConfiguration")
     private @Nullable ConnectionMonitorTcpConfigurationResponse tcpConfiguration;
 
+    /**
+     * @return The parameters used to perform test evaluation over TCP.
+     * 
+     */
     public Optional<ConnectionMonitorTcpConfigurationResponse> tcpConfiguration() {
         return Optional.ofNullable(this.tcpConfiguration);
     }
@@ -107,6 +135,10 @@ public final class ConnectionMonitorTestConfigurationResponse extends com.pulumi
     @Import(name="testFrequencySec")
     private @Nullable Integer testFrequencySec;
 
+    /**
+     * @return The frequency of test evaluation, in seconds.
+     * 
+     */
     public Optional<Integer> testFrequencySec() {
         return Optional.ofNullable(this.testFrequencySec);
     }
@@ -142,41 +174,89 @@ public final class ConnectionMonitorTestConfigurationResponse extends com.pulumi
             $ = new ConnectionMonitorTestConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param httpConfiguration The parameters used to perform test evaluation over HTTP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpConfiguration(@Nullable ConnectionMonitorHttpConfigurationResponse httpConfiguration) {
             $.httpConfiguration = httpConfiguration;
             return this;
         }
 
+        /**
+         * @param icmpConfiguration The parameters used to perform test evaluation over ICMP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder icmpConfiguration(@Nullable ConnectionMonitorIcmpConfigurationResponse icmpConfiguration) {
             $.icmpConfiguration = icmpConfiguration;
             return this;
         }
 
+        /**
+         * @param name The name of the connection monitor test configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param preferredIPVersion The preferred IP version to use in test evaluation. The connection monitor may choose to use a different version depending on other parameters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preferredIPVersion(@Nullable String preferredIPVersion) {
             $.preferredIPVersion = preferredIPVersion;
             return this;
         }
 
+        /**
+         * @param protocol The protocol to use in test evaluation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(String protocol) {
             $.protocol = protocol;
             return this;
         }
 
+        /**
+         * @param successThreshold The threshold for declaring a test successful.
+         * 
+         * @return builder
+         * 
+         */
         public Builder successThreshold(@Nullable ConnectionMonitorSuccessThresholdResponse successThreshold) {
             $.successThreshold = successThreshold;
             return this;
         }
 
+        /**
+         * @param tcpConfiguration The parameters used to perform test evaluation over TCP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tcpConfiguration(@Nullable ConnectionMonitorTcpConfigurationResponse tcpConfiguration) {
             $.tcpConfiguration = tcpConfiguration;
             return this;
         }
 
+        /**
+         * @param testFrequencySec The frequency of test evaluation, in seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testFrequencySec(@Nullable Integer testFrequencySec) {
             $.testFrequencySec = testFrequencySec;
             return this;

@@ -28,6 +28,10 @@ public final class TestExecutionResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="environment", required=true)
     private EnvironmentResponse environment;
 
+    /**
+     * @return How the host machine(s) are configured.
+     * 
+     */
     public EnvironmentResponse environment() {
         return this.environment;
     }
@@ -39,6 +43,10 @@ public final class TestExecutionResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="matrixId", required=true)
     private String matrixId;
 
+    /**
+     * @return Id of the containing TestMatrix.
+     * 
+     */
     public String matrixId() {
         return this.matrixId;
     }
@@ -50,6 +58,10 @@ public final class TestExecutionResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="project", required=true)
     private String project;
 
+    /**
+     * @return The cloud project that owns the test execution.
+     * 
+     */
     public String project() {
         return this.project;
     }
@@ -61,6 +73,10 @@ public final class TestExecutionResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="shard", required=true)
     private ShardResponse shard;
 
+    /**
+     * @return Details about the shard.
+     * 
+     */
     public ShardResponse shard() {
         return this.shard;
     }
@@ -72,6 +88,10 @@ public final class TestExecutionResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="state", required=true)
     private String state;
 
+    /**
+     * @return Indicates the current progress of the test execution (e.g., FINISHED).
+     * 
+     */
     public String state() {
         return this.state;
     }
@@ -83,6 +103,10 @@ public final class TestExecutionResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="testDetails", required=true)
     private TestDetailsResponse testDetails;
 
+    /**
+     * @return Additional details about the running test.
+     * 
+     */
     public TestDetailsResponse testDetails() {
         return this.testDetails;
     }
@@ -94,6 +118,10 @@ public final class TestExecutionResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="testSpecification", required=true)
     private TestSpecificationResponse testSpecification;
 
+    /**
+     * @return How to run the test.
+     * 
+     */
     public TestSpecificationResponse testSpecification() {
         return this.testSpecification;
     }
@@ -105,6 +133,10 @@ public final class TestExecutionResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="timestamp", required=true)
     private String timestamp;
 
+    /**
+     * @return The time this test execution was initially created.
+     * 
+     */
     public String timestamp() {
         return this.timestamp;
     }
@@ -116,6 +148,10 @@ public final class TestExecutionResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="toolResultsStep", required=true)
     private ToolResultsStepResponse toolResultsStep;
 
+    /**
+     * @return Where the results for this execution are written.
+     * 
+     */
     public ToolResultsStepResponse toolResultsStep() {
         return this.toolResultsStep;
     }
@@ -152,46 +188,100 @@ public final class TestExecutionResponse extends com.pulumi.resources.InvokeArgs
             $ = new TestExecutionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param environment How the host machine(s) are configured.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environment(EnvironmentResponse environment) {
             $.environment = environment;
             return this;
         }
 
+        /**
+         * @param matrixId Id of the containing TestMatrix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matrixId(String matrixId) {
             $.matrixId = matrixId;
             return this;
         }
 
+        /**
+         * @param project The cloud project that owns the test execution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param shard Details about the shard.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shard(ShardResponse shard) {
             $.shard = shard;
             return this;
         }
 
+        /**
+         * @param state Indicates the current progress of the test execution (e.g., FINISHED).
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param testDetails Additional details about the running test.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testDetails(TestDetailsResponse testDetails) {
             $.testDetails = testDetails;
             return this;
         }
 
+        /**
+         * @param testSpecification How to run the test.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testSpecification(TestSpecificationResponse testSpecification) {
             $.testSpecification = testSpecification;
             return this;
         }
 
+        /**
+         * @param timestamp The time this test execution was initially created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timestamp(String timestamp) {
             $.timestamp = timestamp;
             return this;
         }
 
+        /**
+         * @param toolResultsStep Where the results for this execution are written.
+         * 
+         * @return builder
+         * 
+         */
         public Builder toolResultsStep(ToolResultsStepResponse toolResultsStep) {
             $.toolResultsStep = toolResultsStep;
             return this;

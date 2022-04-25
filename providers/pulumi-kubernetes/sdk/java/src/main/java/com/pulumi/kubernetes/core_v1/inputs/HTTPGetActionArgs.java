@@ -30,6 +30,10 @@ public final class HTTPGetActionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="host")
     private @Nullable Output<String> host;
 
+    /**
+     * @return Host name to connect to, defaults to the pod IP. You probably want to set &#34;Host&#34; in httpHeaders instead.
+     * 
+     */
     public Optional<Output<String>> host() {
         return Optional.ofNullable(this.host);
     }
@@ -41,6 +45,10 @@ public final class HTTPGetActionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="httpHeaders")
     private @Nullable Output<List<HTTPHeaderArgs>> httpHeaders;
 
+    /**
+     * @return Custom headers to set in the request. HTTP allows repeated headers.
+     * 
+     */
     public Optional<Output<List<HTTPHeaderArgs>>> httpHeaders() {
         return Optional.ofNullable(this.httpHeaders);
     }
@@ -52,6 +60,10 @@ public final class HTTPGetActionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="path")
     private @Nullable Output<String> path;
 
+    /**
+     * @return Path to access on the HTTP server.
+     * 
+     */
     public Optional<Output<String>> path() {
         return Optional.ofNullable(this.path);
     }
@@ -63,6 +75,10 @@ public final class HTTPGetActionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="port", required=true)
     private Output<Either<Integer,String>> port;
 
+    /**
+     * @return Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.
+     * 
+     */
     public Output<Either<Integer,String>> port() {
         return this.port;
     }
@@ -78,6 +94,14 @@ public final class HTTPGetActionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scheme")
     private @Nullable Output<String> scheme;
 
+    /**
+     * @return Scheme to use for connecting to the host. Defaults to HTTP.
+     * 
+     * Possible enum values:
+     *  - `&#34;HTTP&#34;` means that the scheme used will be http://
+     *  - `&#34;HTTPS&#34;` means that the scheme used will be https://
+     * 
+     */
     public Optional<Output<String>> scheme() {
         return Optional.ofNullable(this.scheme);
     }
@@ -110,59 +134,145 @@ public final class HTTPGetActionArgs extends com.pulumi.resources.ResourceArgs {
             $ = new HTTPGetActionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param host Host name to connect to, defaults to the pod IP. You probably want to set &#34;Host&#34; in httpHeaders instead.
+         * 
+         * @return builder
+         * 
+         */
         public Builder host(@Nullable Output<String> host) {
             $.host = host;
             return this;
         }
 
+        /**
+         * @param host Host name to connect to, defaults to the pod IP. You probably want to set &#34;Host&#34; in httpHeaders instead.
+         * 
+         * @return builder
+         * 
+         */
         public Builder host(String host) {
             return host(Output.of(host));
         }
 
+        /**
+         * @param httpHeaders Custom headers to set in the request. HTTP allows repeated headers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpHeaders(@Nullable Output<List<HTTPHeaderArgs>> httpHeaders) {
             $.httpHeaders = httpHeaders;
             return this;
         }
 
+        /**
+         * @param httpHeaders Custom headers to set in the request. HTTP allows repeated headers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpHeaders(List<HTTPHeaderArgs> httpHeaders) {
             return httpHeaders(Output.of(httpHeaders));
         }
 
+        /**
+         * @param httpHeaders Custom headers to set in the request. HTTP allows repeated headers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpHeaders(HTTPHeaderArgs... httpHeaders) {
             return httpHeaders(List.of(httpHeaders));
         }
 
+        /**
+         * @param path Path to access on the HTTP server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(@Nullable Output<String> path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param path Path to access on the HTTP server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             return path(Output.of(path));
         }
 
+        /**
+         * @param port Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Output<Either<Integer,String>> port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param port Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Either<Integer,String> port) {
             return port(Output.of(port));
         }
 
+        /**
+         * @param port Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             return port(Either.ofLeft(port));
         }
 
+        /**
+         * @param port Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(String port) {
             return port(Either.ofRight(port));
         }
 
+        /**
+         * @param scheme Scheme to use for connecting to the host. Defaults to HTTP.
+         * 
+         * Possible enum values:
+         *  - `&#34;HTTP&#34;` means that the scheme used will be http://
+         *  - `&#34;HTTPS&#34;` means that the scheme used will be https://
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheme(@Nullable Output<String> scheme) {
             $.scheme = scheme;
             return this;
         }
 
+        /**
+         * @param scheme Scheme to use for connecting to the host. Defaults to HTTP.
+         * 
+         * Possible enum values:
+         *  - `&#34;HTTP&#34;` means that the scheme used will be http://
+         *  - `&#34;HTTPS&#34;` means that the scheme used will be https://
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheme(String scheme) {
             return scheme(Output.of(scheme));
         }

@@ -22,6 +22,10 @@ public final class JobMaxRecurrenceResponse extends com.pulumi.resources.InvokeA
     @Import(name="frequency")
     private @Nullable String frequency;
 
+    /**
+     * @return Gets or sets the frequency of recurrence (second, minute, hour, day, week, month).
+     * 
+     */
     public Optional<String> frequency() {
         return Optional.ofNullable(this.frequency);
     }
@@ -33,6 +37,10 @@ public final class JobMaxRecurrenceResponse extends com.pulumi.resources.InvokeA
     @Import(name="interval")
     private @Nullable Integer interval;
 
+    /**
+     * @return Gets or sets the interval between retries.
+     * 
+     */
     public Optional<Integer> interval() {
         return Optional.ofNullable(this.interval);
     }
@@ -62,11 +70,23 @@ public final class JobMaxRecurrenceResponse extends com.pulumi.resources.InvokeA
             $ = new JobMaxRecurrenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param frequency Gets or sets the frequency of recurrence (second, minute, hour, day, week, month).
+         * 
+         * @return builder
+         * 
+         */
         public Builder frequency(@Nullable String frequency) {
             $.frequency = frequency;
             return this;
         }
 
+        /**
+         * @param interval Gets or sets the interval between retries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interval(@Nullable Integer interval) {
             $.interval = interval;
             return this;

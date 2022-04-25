@@ -25,6 +25,10 @@ public final class TableDataSetResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="minAlignmentPeriod", required=true)
     private String minAlignmentPeriod;
 
+    /**
+     * @return Optional. The lower bound on data point frequency for this data set, implemented by specifying the minimum alignment period to use in a time series query For example, if the data is published once every 10 minutes, the min_alignment_period should be at least 10 minutes. It would not make sense to fetch and align data at one minute intervals.
+     * 
+     */
     public String minAlignmentPeriod() {
         return this.minAlignmentPeriod;
     }
@@ -36,6 +40,10 @@ public final class TableDataSetResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="tableDisplayOptions", required=true)
     private TableDisplayOptionsResponse tableDisplayOptions;
 
+    /**
+     * @return Optional. Table display options for configuring how the table is rendered.
+     * 
+     */
     public TableDisplayOptionsResponse tableDisplayOptions() {
         return this.tableDisplayOptions;
     }
@@ -47,6 +55,10 @@ public final class TableDataSetResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="tableTemplate", required=true)
     private String tableTemplate;
 
+    /**
+     * @return Optional. A template string for naming TimeSeries in the resulting data set. This should be a string with interpolations of the form ${label_name}, which will resolve to the label&#39;s value i.e. &#34;${resource.labels.project_id}.&#34;
+     * 
+     */
     public String tableTemplate() {
         return this.tableTemplate;
     }
@@ -58,6 +70,10 @@ public final class TableDataSetResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="timeSeriesQuery", required=true)
     private TimeSeriesQueryResponse timeSeriesQuery;
 
+    /**
+     * @return Fields for querying time series data from the Stackdriver metrics API.
+     * 
+     */
     public TimeSeriesQueryResponse timeSeriesQuery() {
         return this.timeSeriesQuery;
     }
@@ -89,21 +105,45 @@ public final class TableDataSetResponse extends com.pulumi.resources.InvokeArgs 
             $ = new TableDataSetResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param minAlignmentPeriod Optional. The lower bound on data point frequency for this data set, implemented by specifying the minimum alignment period to use in a time series query For example, if the data is published once every 10 minutes, the min_alignment_period should be at least 10 minutes. It would not make sense to fetch and align data at one minute intervals.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minAlignmentPeriod(String minAlignmentPeriod) {
             $.minAlignmentPeriod = minAlignmentPeriod;
             return this;
         }
 
+        /**
+         * @param tableDisplayOptions Optional. Table display options for configuring how the table is rendered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableDisplayOptions(TableDisplayOptionsResponse tableDisplayOptions) {
             $.tableDisplayOptions = tableDisplayOptions;
             return this;
         }
 
+        /**
+         * @param tableTemplate Optional. A template string for naming TimeSeries in the resulting data set. This should be a string with interpolations of the form ${label_name}, which will resolve to the label&#39;s value i.e. &#34;${resource.labels.project_id}.&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableTemplate(String tableTemplate) {
             $.tableTemplate = tableTemplate;
             return this;
         }
 
+        /**
+         * @param timeSeriesQuery Fields for querying time series data from the Stackdriver metrics API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeSeriesQuery(TimeSeriesQueryResponse timeSeriesQuery) {
             $.timeSeriesQuery = timeSeriesQuery;
             return this;

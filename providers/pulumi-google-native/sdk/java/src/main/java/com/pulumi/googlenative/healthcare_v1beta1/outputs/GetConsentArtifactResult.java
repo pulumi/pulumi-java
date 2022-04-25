@@ -14,42 +14,42 @@ import java.util.Objects;
 @CustomType
 public final class GetConsentArtifactResult {
     /**
-     * Optional. Screenshots, PDFs, or other binary information documenting the user&#39;s consent.
+     * @return Optional. Screenshots, PDFs, or other binary information documenting the user&#39;s consent.
      * 
      */
     private final List<ImageResponse> consentContentScreenshots;
     /**
-     * Optional. An string indicating the version of the consent information shown to the user.
+     * @return Optional. An string indicating the version of the consent information shown to the user.
      * 
      */
     private final String consentContentVersion;
     /**
-     * Optional. A signature from a guardian.
+     * @return Optional. A signature from a guardian.
      * 
      */
     private final SignatureResponse guardianSignature;
     /**
-     * Optional. Metadata associated with the Consent artifact. For example, the consent locale or user agent version.
+     * @return Optional. Metadata associated with the Consent artifact. For example, the consent locale or user agent version.
      * 
      */
     private final Map<String,String> metadata;
     /**
-     * Resource name of the Consent artifact, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consentArtifacts/{consent_artifact_id}`. Cannot be changed after creation.
+     * @return Resource name of the Consent artifact, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consentArtifacts/{consent_artifact_id}`. Cannot be changed after creation.
      * 
      */
     private final String name;
     /**
-     * User&#39;s UUID provided by the client.
+     * @return User&#39;s UUID provided by the client.
      * 
      */
     private final String userId;
     /**
-     * Optional. User&#39;s signature.
+     * @return Optional. User&#39;s signature.
      * 
      */
     private final SignatureResponse userSignature;
     /**
-     * Optional. A signature from a witness.
+     * @return Optional. A signature from a witness.
      * 
      */
     private final SignatureResponse witnessSignature;
@@ -75,58 +75,58 @@ public final class GetConsentArtifactResult {
     }
 
     /**
-     * Optional. Screenshots, PDFs, or other binary information documenting the user&#39;s consent.
+     * @return Optional. Screenshots, PDFs, or other binary information documenting the user&#39;s consent.
      * 
-    */
+     */
     public List<ImageResponse> consentContentScreenshots() {
         return this.consentContentScreenshots;
     }
     /**
-     * Optional. An string indicating the version of the consent information shown to the user.
+     * @return Optional. An string indicating the version of the consent information shown to the user.
      * 
-    */
+     */
     public String consentContentVersion() {
         return this.consentContentVersion;
     }
     /**
-     * Optional. A signature from a guardian.
+     * @return Optional. A signature from a guardian.
      * 
-    */
+     */
     public SignatureResponse guardianSignature() {
         return this.guardianSignature;
     }
     /**
-     * Optional. Metadata associated with the Consent artifact. For example, the consent locale or user agent version.
+     * @return Optional. Metadata associated with the Consent artifact. For example, the consent locale or user agent version.
      * 
-    */
+     */
     public Map<String,String> metadata() {
         return this.metadata;
     }
     /**
-     * Resource name of the Consent artifact, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consentArtifacts/{consent_artifact_id}`. Cannot be changed after creation.
+     * @return Resource name of the Consent artifact, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consentArtifacts/{consent_artifact_id}`. Cannot be changed after creation.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * User&#39;s UUID provided by the client.
+     * @return User&#39;s UUID provided by the client.
      * 
-    */
+     */
     public String userId() {
         return this.userId;
     }
     /**
-     * Optional. User&#39;s signature.
+     * @return Optional. User&#39;s signature.
      * 
-    */
+     */
     public SignatureResponse userSignature() {
         return this.userSignature;
     }
     /**
-     * Optional. A signature from a witness.
+     * @return Optional. A signature from a witness.
      * 
-    */
+     */
     public SignatureResponse witnessSignature() {
         return this.witnessSignature;
     }

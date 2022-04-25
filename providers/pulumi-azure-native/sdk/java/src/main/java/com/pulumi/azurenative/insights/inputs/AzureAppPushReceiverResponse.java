@@ -23,6 +23,10 @@ public final class AzureAppPushReceiverResponse extends com.pulumi.resources.Inv
     @Import(name="emailAddress", required=true)
     private String emailAddress;
 
+    /**
+     * @return The email address registered for the Azure mobile app.
+     * 
+     */
     public String emailAddress() {
         return this.emailAddress;
     }
@@ -34,6 +38,10 @@ public final class AzureAppPushReceiverResponse extends com.pulumi.resources.Inv
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the Azure mobile app push receiver. Names must be unique across all receivers within an action group.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -63,11 +71,23 @@ public final class AzureAppPushReceiverResponse extends com.pulumi.resources.Inv
             $ = new AzureAppPushReceiverResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param emailAddress The email address registered for the Azure mobile app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder emailAddress(String emailAddress) {
             $.emailAddress = emailAddress;
             return this;
         }
 
+        /**
+         * @param name The name of the Azure mobile app push receiver. Names must be unique across all receivers within an action group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

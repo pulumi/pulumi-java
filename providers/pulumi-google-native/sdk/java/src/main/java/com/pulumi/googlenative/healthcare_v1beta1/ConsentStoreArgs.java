@@ -38,6 +38,10 @@ public final class ConsentStoreArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultConsentTtl")
     private @Nullable Output<String> defaultConsentTtl;
 
+    /**
+     * @return Optional. Default time to live for Consents created in this store. Must be at least 24 hours. Updating this field will not affect the expiration time of existing consents.
+     * 
+     */
     public Optional<Output<String>> defaultConsentTtl() {
         return Optional.ofNullable(this.defaultConsentTtl);
     }
@@ -49,6 +53,10 @@ public final class ConsentStoreArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableConsentCreateOnUpdate")
     private @Nullable Output<Boolean> enableConsentCreateOnUpdate;
 
+    /**
+     * @return Optional. If `true`, UpdateConsent creates the Consent if it does not already exist. If unspecified, defaults to `false`.
+     * 
+     */
     public Optional<Output<Boolean>> enableConsentCreateOnUpdate() {
         return Optional.ofNullable(this.enableConsentCreateOnUpdate);
     }
@@ -60,6 +68,10 @@ public final class ConsentStoreArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return Optional. User-supplied key-value pairs used to organize consent stores. Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: \p{Ll}\p{Lo}{0,62}. Label values must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63}. No more than 64 labels can be associated with a given store. For more information: https://cloud.google.com/healthcare/docs/how-tos/labeling-resources
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -78,6 +90,10 @@ public final class ConsentStoreArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Resource name of the consent store, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}`. Cannot be changed after creation.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -138,29 +154,65 @@ public final class ConsentStoreArgs extends com.pulumi.resources.ResourceArgs {
             return datasetId(Output.of(datasetId));
         }
 
+        /**
+         * @param defaultConsentTtl Optional. Default time to live for Consents created in this store. Must be at least 24 hours. Updating this field will not affect the expiration time of existing consents.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultConsentTtl(@Nullable Output<String> defaultConsentTtl) {
             $.defaultConsentTtl = defaultConsentTtl;
             return this;
         }
 
+        /**
+         * @param defaultConsentTtl Optional. Default time to live for Consents created in this store. Must be at least 24 hours. Updating this field will not affect the expiration time of existing consents.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultConsentTtl(String defaultConsentTtl) {
             return defaultConsentTtl(Output.of(defaultConsentTtl));
         }
 
+        /**
+         * @param enableConsentCreateOnUpdate Optional. If `true`, UpdateConsent creates the Consent if it does not already exist. If unspecified, defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableConsentCreateOnUpdate(@Nullable Output<Boolean> enableConsentCreateOnUpdate) {
             $.enableConsentCreateOnUpdate = enableConsentCreateOnUpdate;
             return this;
         }
 
+        /**
+         * @param enableConsentCreateOnUpdate Optional. If `true`, UpdateConsent creates the Consent if it does not already exist. If unspecified, defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableConsentCreateOnUpdate(Boolean enableConsentCreateOnUpdate) {
             return enableConsentCreateOnUpdate(Output.of(enableConsentCreateOnUpdate));
         }
 
+        /**
+         * @param labels Optional. User-supplied key-value pairs used to organize consent stores. Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: \p{Ll}\p{Lo}{0,62}. Label values must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63}. No more than 64 labels can be associated with a given store. For more information: https://cloud.google.com/healthcare/docs/how-tos/labeling-resources
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Optional. User-supplied key-value pairs used to organize consent stores. Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: \p{Ll}\p{Lo}{0,62}. Label values must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63}. No more than 64 labels can be associated with a given store. For more information: https://cloud.google.com/healthcare/docs/how-tos/labeling-resources
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
@@ -174,11 +226,23 @@ public final class ConsentStoreArgs extends com.pulumi.resources.ResourceArgs {
             return location(Output.of(location));
         }
 
+        /**
+         * @param name Resource name of the consent store, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}`. Cannot be changed after creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Resource name of the consent store, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}`. Cannot be changed after creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

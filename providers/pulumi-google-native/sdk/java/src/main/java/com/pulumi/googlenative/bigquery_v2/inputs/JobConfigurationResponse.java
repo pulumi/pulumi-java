@@ -25,6 +25,10 @@ public final class JobConfigurationResponse extends com.pulumi.resources.InvokeA
     @Import(name="copy", required=true)
     private JobConfigurationTableCopyResponse copy;
 
+    /**
+     * @return [Pick one] Copies a table.
+     * 
+     */
     public JobConfigurationTableCopyResponse copy() {
         return this.copy;
     }
@@ -36,6 +40,10 @@ public final class JobConfigurationResponse extends com.pulumi.resources.InvokeA
     @Import(name="dryRun", required=true)
     private Boolean dryRun;
 
+    /**
+     * @return [Optional] If set, don&#39;t actually run this job. A valid query will return a mostly empty response with some processing statistics, while an invalid query will return the same error it would if it wasn&#39;t a dry run. Behavior of non-query jobs is undefined.
+     * 
+     */
     public Boolean dryRun() {
         return this.dryRun;
     }
@@ -47,6 +55,10 @@ public final class JobConfigurationResponse extends com.pulumi.resources.InvokeA
     @Import(name="extract", required=true)
     private JobConfigurationExtractResponse extract;
 
+    /**
+     * @return [Pick one] Configures an extract job.
+     * 
+     */
     public JobConfigurationExtractResponse extract() {
         return this.extract;
     }
@@ -58,6 +70,10 @@ public final class JobConfigurationResponse extends com.pulumi.resources.InvokeA
     @Import(name="jobTimeoutMs", required=true)
     private String jobTimeoutMs;
 
+    /**
+     * @return [Optional] Job timeout in milliseconds. If this time limit is exceeded, BigQuery may attempt to terminate the job.
+     * 
+     */
     public String jobTimeoutMs() {
         return this.jobTimeoutMs;
     }
@@ -69,6 +85,10 @@ public final class JobConfigurationResponse extends com.pulumi.resources.InvokeA
     @Import(name="jobType", required=true)
     private String jobType;
 
+    /**
+     * @return The type of the job. Can be QUERY, LOAD, EXTRACT, COPY or UNKNOWN.
+     * 
+     */
     public String jobType() {
         return this.jobType;
     }
@@ -80,6 +100,10 @@ public final class JobConfigurationResponse extends com.pulumi.resources.InvokeA
     @Import(name="labels", required=true)
     private Map<String,String> labels;
 
+    /**
+     * @return The labels associated with this job. You can use these to organize and group your jobs. Label keys and values can be no longer than 63 characters, can only contain lowercase letters, numeric characters, underscores and dashes. International characters are allowed. Label values are optional. Label keys must start with a letter and each label in the list must have a different key.
+     * 
+     */
     public Map<String,String> labels() {
         return this.labels;
     }
@@ -91,6 +115,10 @@ public final class JobConfigurationResponse extends com.pulumi.resources.InvokeA
     @Import(name="load", required=true)
     private JobConfigurationLoadResponse load;
 
+    /**
+     * @return [Pick one] Configures a load job.
+     * 
+     */
     public JobConfigurationLoadResponse load() {
         return this.load;
     }
@@ -102,6 +130,10 @@ public final class JobConfigurationResponse extends com.pulumi.resources.InvokeA
     @Import(name="query", required=true)
     private JobConfigurationQueryResponse query;
 
+    /**
+     * @return [Pick one] Configures a query job.
+     * 
+     */
     public JobConfigurationQueryResponse query() {
         return this.query;
     }
@@ -137,41 +169,89 @@ public final class JobConfigurationResponse extends com.pulumi.resources.InvokeA
             $ = new JobConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param copy [Pick one] Copies a table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder copy(JobConfigurationTableCopyResponse copy) {
             $.copy = copy;
             return this;
         }
 
+        /**
+         * @param dryRun [Optional] If set, don&#39;t actually run this job. A valid query will return a mostly empty response with some processing statistics, while an invalid query will return the same error it would if it wasn&#39;t a dry run. Behavior of non-query jobs is undefined.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dryRun(Boolean dryRun) {
             $.dryRun = dryRun;
             return this;
         }
 
+        /**
+         * @param extract [Pick one] Configures an extract job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extract(JobConfigurationExtractResponse extract) {
             $.extract = extract;
             return this;
         }
 
+        /**
+         * @param jobTimeoutMs [Optional] Job timeout in milliseconds. If this time limit is exceeded, BigQuery may attempt to terminate the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobTimeoutMs(String jobTimeoutMs) {
             $.jobTimeoutMs = jobTimeoutMs;
             return this;
         }
 
+        /**
+         * @param jobType The type of the job. Can be QUERY, LOAD, EXTRACT, COPY or UNKNOWN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobType(String jobType) {
             $.jobType = jobType;
             return this;
         }
 
+        /**
+         * @param labels The labels associated with this job. You can use these to organize and group your jobs. Label keys and values can be no longer than 63 characters, can only contain lowercase letters, numeric characters, underscores and dashes. International characters are allowed. Label values are optional. Label keys must start with a letter and each label in the list must have a different key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param load [Pick one] Configures a load job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder load(JobConfigurationLoadResponse load) {
             $.load = load;
             return this;
         }
 
+        /**
+         * @param query [Pick one] Configures a query job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder query(JobConfigurationQueryResponse query) {
             $.query = query;
             return this;

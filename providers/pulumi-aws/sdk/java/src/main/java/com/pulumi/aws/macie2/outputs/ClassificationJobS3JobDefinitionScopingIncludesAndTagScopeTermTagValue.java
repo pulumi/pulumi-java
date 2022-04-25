@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermTagValue {
     /**
-     * The object property to use in the condition.
+     * @return The object property to use in the condition.
      * 
      */
     private final @Nullable String key;
@@ -27,9 +27,9 @@ public final class ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTer
     }
 
     /**
-     * The object property to use in the condition.
+     * @return The object property to use in the condition.
      * 
-    */
+     */
     public Optional<String> key() {
         return Optional.ofNullable(this.key);
     }

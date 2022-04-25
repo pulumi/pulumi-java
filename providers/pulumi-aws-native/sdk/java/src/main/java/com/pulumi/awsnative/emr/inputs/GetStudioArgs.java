@@ -19,6 +19,10 @@ public final class GetStudioArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="studioId", required=true)
     private String studioId;
 
+    /**
+     * @return The ID of the EMR Studio.
+     * 
+     */
     public String studioId() {
         return this.studioId;
     }
@@ -47,6 +51,12 @@ public final class GetStudioArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetStudioArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param studioId The ID of the EMR Studio.
+         * 
+         * @return builder
+         * 
+         */
         public Builder studioId(String studioId) {
             $.studioId = studioId;
             return this;

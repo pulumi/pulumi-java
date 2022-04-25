@@ -24,6 +24,10 @@ public final class GuestPoliciesRecipeInstallStepMsiInstallationGetArgs extends 
     @Import(name="allowedExitCodes")
     private @Nullable Output<List<Integer>> allowedExitCodes;
 
+    /**
+     * @return Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
+     * 
+     */
     public Optional<Output<List<Integer>>> allowedExitCodes() {
         return Optional.ofNullable(this.allowedExitCodes);
     }
@@ -35,6 +39,10 @@ public final class GuestPoliciesRecipeInstallStepMsiInstallationGetArgs extends 
     @Import(name="artifactId", required=true)
     private Output<String> artifactId;
 
+    /**
+     * @return The id of the relevant artifact in the recipe.
+     * 
+     */
     public Output<String> artifactId() {
         return this.artifactId;
     }
@@ -46,6 +54,10 @@ public final class GuestPoliciesRecipeInstallStepMsiInstallationGetArgs extends 
     @Import(name="flags")
     private @Nullable Output<List<String>> flags;
 
+    /**
+     * @return The flags to use when installing the MSI. Defaults to the install flag.
+     * 
+     */
     public Optional<Output<List<String>>> flags() {
         return Optional.ofNullable(this.flags);
     }
@@ -76,37 +88,85 @@ public final class GuestPoliciesRecipeInstallStepMsiInstallationGetArgs extends 
             $ = new GuestPoliciesRecipeInstallStepMsiInstallationGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowedExitCodes Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedExitCodes(@Nullable Output<List<Integer>> allowedExitCodes) {
             $.allowedExitCodes = allowedExitCodes;
             return this;
         }
 
+        /**
+         * @param allowedExitCodes Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedExitCodes(List<Integer> allowedExitCodes) {
             return allowedExitCodes(Output.of(allowedExitCodes));
         }
 
+        /**
+         * @param allowedExitCodes Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedExitCodes(Integer... allowedExitCodes) {
             return allowedExitCodes(List.of(allowedExitCodes));
         }
 
+        /**
+         * @param artifactId The id of the relevant artifact in the recipe.
+         * 
+         * @return builder
+         * 
+         */
         public Builder artifactId(Output<String> artifactId) {
             $.artifactId = artifactId;
             return this;
         }
 
+        /**
+         * @param artifactId The id of the relevant artifact in the recipe.
+         * 
+         * @return builder
+         * 
+         */
         public Builder artifactId(String artifactId) {
             return artifactId(Output.of(artifactId));
         }
 
+        /**
+         * @param flags The flags to use when installing the MSI. Defaults to the install flag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder flags(@Nullable Output<List<String>> flags) {
             $.flags = flags;
             return this;
         }
 
+        /**
+         * @param flags The flags to use when installing the MSI. Defaults to the install flag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder flags(List<String> flags) {
             return flags(Output.of(flags));
         }
 
+        /**
+         * @param flags The flags to use when installing the MSI. Defaults to the install flag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder flags(String... flags) {
             return flags(List.of(flags));
         }

@@ -12,17 +12,17 @@ import java.util.Objects;
 @CustomType
 public final class SourceResponse {
     /**
-     * If provided, get the source from this location in a Cloud Source Repository.
+     * @return If provided, get the source from this location in a Cloud Source Repository.
      * 
      */
     private final RepoSourceResponse repoSource;
     /**
-     * If provided, get the source from this location in Google Cloud Storage.
+     * @return If provided, get the source from this location in Google Cloud Storage.
      * 
      */
     private final StorageSourceResponse storageSource;
     /**
-     * If provided, get the source from this manifest in Google Cloud Storage. This feature is in Preview; see description [here](https://github.com/GoogleCloudPlatform/cloud-builders/tree/master/gcs-fetcher).
+     * @return If provided, get the source from this manifest in Google Cloud Storage. This feature is in Preview; see description [here](https://github.com/GoogleCloudPlatform/cloud-builders/tree/master/gcs-fetcher).
      * 
      */
     private final StorageSourceManifestResponse storageSourceManifest;
@@ -38,23 +38,23 @@ public final class SourceResponse {
     }
 
     /**
-     * If provided, get the source from this location in a Cloud Source Repository.
+     * @return If provided, get the source from this location in a Cloud Source Repository.
      * 
-    */
+     */
     public RepoSourceResponse repoSource() {
         return this.repoSource;
     }
     /**
-     * If provided, get the source from this location in Google Cloud Storage.
+     * @return If provided, get the source from this location in Google Cloud Storage.
      * 
-    */
+     */
     public StorageSourceResponse storageSource() {
         return this.storageSource;
     }
     /**
-     * If provided, get the source from this manifest in Google Cloud Storage. This feature is in Preview; see description [here](https://github.com/GoogleCloudPlatform/cloud-builders/tree/master/gcs-fetcher).
+     * @return If provided, get the source from this manifest in Google Cloud Storage. This feature is in Preview; see description [here](https://github.com/GoogleCloudPlatform/cloud-builders/tree/master/gcs-fetcher).
      * 
-    */
+     */
     public StorageSourceManifestResponse storageSourceManifest() {
         return this.storageSourceManifest;
     }

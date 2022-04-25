@@ -27,6 +27,10 @@ public final class RemotePrivateEndpointConnectionResponse extends com.pulumi.re
     @Import(name="privateEndpoint")
     private @Nullable ArmIdWrapperResponse privateEndpoint;
 
+    /**
+     * @return PrivateEndpoint of a remote private endpoint connection
+     * 
+     */
     public Optional<ArmIdWrapperResponse> privateEndpoint() {
         return Optional.ofNullable(this.privateEndpoint);
     }
@@ -38,6 +42,10 @@ public final class RemotePrivateEndpointConnectionResponse extends com.pulumi.re
     @Import(name="privateLinkServiceConnectionState")
     private @Nullable PrivateLinkConnectionStateResponse privateLinkServiceConnectionState;
 
+    /**
+     * @return The state of a private link connection
+     * 
+     */
     public Optional<PrivateLinkConnectionStateResponse> privateLinkServiceConnectionState() {
         return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
@@ -75,11 +83,23 @@ public final class RemotePrivateEndpointConnectionResponse extends com.pulumi.re
             $ = new RemotePrivateEndpointConnectionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param privateEndpoint PrivateEndpoint of a remote private endpoint connection
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpoint(@Nullable ArmIdWrapperResponse privateEndpoint) {
             $.privateEndpoint = privateEndpoint;
             return this;
         }
 
+        /**
+         * @param privateLinkServiceConnectionState The state of a private link connection
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkServiceConnectionState(@Nullable PrivateLinkConnectionStateResponse privateLinkServiceConnectionState) {
             $.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
             return this;

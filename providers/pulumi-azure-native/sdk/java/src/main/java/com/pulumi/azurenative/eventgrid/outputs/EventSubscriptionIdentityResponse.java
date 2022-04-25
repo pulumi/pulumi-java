@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class EventSubscriptionIdentityResponse {
     /**
-     * The type of managed identity used. The type &#39;SystemAssigned, UserAssigned&#39; includes both an implicitly created identity and a set of user-assigned identities. The type &#39;None&#39; will remove any identity.
+     * @return The type of managed identity used. The type &#39;SystemAssigned, UserAssigned&#39; includes both an implicitly created identity and a set of user-assigned identities. The type &#39;None&#39; will remove any identity.
      * 
      */
     private final @Nullable String type;
     /**
-     * The user identity associated with the resource.
+     * @return The user identity associated with the resource.
      * 
      */
     private final @Nullable String userAssignedIdentity;
@@ -31,16 +31,16 @@ public final class EventSubscriptionIdentityResponse {
     }
 
     /**
-     * The type of managed identity used. The type &#39;SystemAssigned, UserAssigned&#39; includes both an implicitly created identity and a set of user-assigned identities. The type &#39;None&#39; will remove any identity.
+     * @return The type of managed identity used. The type &#39;SystemAssigned, UserAssigned&#39; includes both an implicitly created identity and a set of user-assigned identities. The type &#39;None&#39; will remove any identity.
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
     /**
-     * The user identity associated with the resource.
+     * @return The user identity associated with the resource.
      * 
-    */
+     */
     public Optional<String> userAssignedIdentity() {
         return Optional.ofNullable(this.userAssignedIdentity);
     }

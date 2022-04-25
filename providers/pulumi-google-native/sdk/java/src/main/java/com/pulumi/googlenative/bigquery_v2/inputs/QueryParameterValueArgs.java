@@ -24,6 +24,10 @@ public final class QueryParameterValueArgs extends com.pulumi.resources.Resource
     @Import(name="arrayValues")
     private @Nullable Output<List<QueryParameterValueArgs>> arrayValues;
 
+    /**
+     * @return [Optional] The array values, if this is an array type.
+     * 
+     */
     public Optional<Output<List<QueryParameterValueArgs>>> arrayValues() {
         return Optional.ofNullable(this.arrayValues);
     }
@@ -35,6 +39,10 @@ public final class QueryParameterValueArgs extends com.pulumi.resources.Resource
     @Import(name="structValues")
     private @Nullable Output<Map<String,String>> structValues;
 
+    /**
+     * @return [Optional] The struct field values, in order of the struct type&#39;s declaration.
+     * 
+     */
     public Optional<Output<Map<String,String>>> structValues() {
         return Optional.ofNullable(this.structValues);
     }
@@ -46,6 +54,10 @@ public final class QueryParameterValueArgs extends com.pulumi.resources.Resource
     @Import(name="value")
     private @Nullable Output<String> value;
 
+    /**
+     * @return [Optional] The value of this value, if a simple scalar type.
+     * 
+     */
     public Optional<Output<String>> value() {
         return Optional.ofNullable(this.value);
     }
@@ -76,33 +88,75 @@ public final class QueryParameterValueArgs extends com.pulumi.resources.Resource
             $ = new QueryParameterValueArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arrayValues [Optional] The array values, if this is an array type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arrayValues(@Nullable Output<List<QueryParameterValueArgs>> arrayValues) {
             $.arrayValues = arrayValues;
             return this;
         }
 
+        /**
+         * @param arrayValues [Optional] The array values, if this is an array type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arrayValues(List<QueryParameterValueArgs> arrayValues) {
             return arrayValues(Output.of(arrayValues));
         }
 
+        /**
+         * @param arrayValues [Optional] The array values, if this is an array type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arrayValues(QueryParameterValueArgs... arrayValues) {
             return arrayValues(List.of(arrayValues));
         }
 
+        /**
+         * @param structValues [Optional] The struct field values, in order of the struct type&#39;s declaration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder structValues(@Nullable Output<Map<String,String>> structValues) {
             $.structValues = structValues;
             return this;
         }
 
+        /**
+         * @param structValues [Optional] The struct field values, in order of the struct type&#39;s declaration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder structValues(Map<String,String> structValues) {
             return structValues(Output.of(structValues));
         }
 
+        /**
+         * @param value [Optional] The value of this value, if a simple scalar type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value [Optional] The value of this value, if a simple scalar type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

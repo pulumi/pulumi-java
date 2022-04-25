@@ -27,6 +27,10 @@ public final class ActivityDependencyArgs extends com.pulumi.resources.ResourceA
     @Import(name="activity", required=true)
     private Output<String> activity;
 
+    /**
+     * @return Activity name.
+     * 
+     */
     public Output<String> activity() {
         return this.activity;
     }
@@ -38,6 +42,10 @@ public final class ActivityDependencyArgs extends com.pulumi.resources.ResourceA
     @Import(name="dependencyConditions", required=true)
     private Output<List<Either<String,DependencyCondition>>> dependencyConditions;
 
+    /**
+     * @return Match-Condition for the dependency.
+     * 
+     */
     public Output<List<Either<String,DependencyCondition>>> dependencyConditions() {
         return this.dependencyConditions;
     }
@@ -67,24 +75,54 @@ public final class ActivityDependencyArgs extends com.pulumi.resources.ResourceA
             $ = new ActivityDependencyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param activity Activity name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder activity(Output<String> activity) {
             $.activity = activity;
             return this;
         }
 
+        /**
+         * @param activity Activity name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder activity(String activity) {
             return activity(Output.of(activity));
         }
 
+        /**
+         * @param dependencyConditions Match-Condition for the dependency.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependencyConditions(Output<List<Either<String,DependencyCondition>>> dependencyConditions) {
             $.dependencyConditions = dependencyConditions;
             return this;
         }
 
+        /**
+         * @param dependencyConditions Match-Condition for the dependency.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependencyConditions(List<Either<String,DependencyCondition>> dependencyConditions) {
             return dependencyConditions(Output.of(dependencyConditions));
         }
 
+        /**
+         * @param dependencyConditions Match-Condition for the dependency.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependencyConditions(Either<String,DependencyCondition>... dependencyConditions) {
             return dependencyConditions(List.of(dependencyConditions));
         }

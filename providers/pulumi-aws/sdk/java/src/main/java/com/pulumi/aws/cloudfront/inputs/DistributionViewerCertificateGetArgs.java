@@ -26,6 +26,13 @@ public final class DistributionViewerCertificateGetArgs extends com.pulumi.resou
     @Import(name="acmCertificateArn")
     private @Nullable Output<String> acmCertificateArn;
 
+    /**
+     * @return The ARN of the [AWS Certificate Manager](https://aws.amazon.com/certificate-manager/)
+     * certificate that you wish to use with this distribution. Specify this,
+     * `cloudfront_default_certificate`, or `iam_certificate_id`.  The ACM
+     * certificate must be in  US-EAST-1.
+     * 
+     */
     public Optional<Output<String>> acmCertificateArn() {
         return Optional.ofNullable(this.acmCertificateArn);
     }
@@ -39,6 +46,12 @@ public final class DistributionViewerCertificateGetArgs extends com.pulumi.resou
     @Import(name="cloudfrontDefaultCertificate")
     private @Nullable Output<Boolean> cloudfrontDefaultCertificate;
 
+    /**
+     * @return `true` if you want viewers to use HTTPS
+     * to request your objects and you&#39;re using the CloudFront domain name for your
+     * distribution. Specify this, `acm_certificate_arn`, or `iam_certificate_id`.
+     * 
+     */
     public Optional<Output<Boolean>> cloudfrontDefaultCertificate() {
         return Optional.ofNullable(this.cloudfrontDefaultCertificate);
     }
@@ -52,6 +65,12 @@ public final class DistributionViewerCertificateGetArgs extends com.pulumi.resou
     @Import(name="iamCertificateId")
     private @Nullable Output<String> iamCertificateId;
 
+    /**
+     * @return The IAM certificate identifier of the custom viewer
+     * certificate for this distribution if you are using a custom domain. Specify
+     * this, `acm_certificate_arn`, or `cloudfront_default_certificate`.
+     * 
+     */
     public Optional<Output<String>> iamCertificateId() {
         return Optional.ofNullable(this.iamCertificateId);
     }
@@ -74,6 +93,21 @@ public final class DistributionViewerCertificateGetArgs extends com.pulumi.resou
     @Import(name="minimumProtocolVersion")
     private @Nullable Output<String> minimumProtocolVersion;
 
+    /**
+     * @return The minimum version of the SSL protocol that
+     * you want CloudFront to use for HTTPS connections. Can only be set if
+     * `cloudfront_default_certificate = false`. See all possible values in
+     * [this](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/secure-connections-supported-viewer-protocols-ciphers.html)
+     * table under &#34;Security policy.&#34; Some examples include: `TLSv1.2_2019` and
+     * `TLSv1.2_2021`. Default: `TLSv1`. **NOTE**:
+     * If you are using a custom certificate (specified with `acm_certificate_arn`
+     * or `iam_certificate_id`), and have specified `sni-only` in
+     * `ssl_support_method`, `TLSv1` or later must be specified. If you have
+     * specified `vip` in `ssl_support_method`, only `SSLv3` or `TLSv1` can be
+     * specified. If you have specified `cloudfront_default_certificate`, `TLSv1`
+     * must be specified.
+     * 
+     */
     public Optional<Output<String>> minimumProtocolVersion() {
         return Optional.ofNullable(this.minimumProtocolVersion);
     }
@@ -113,38 +147,122 @@ public final class DistributionViewerCertificateGetArgs extends com.pulumi.resou
             $ = new DistributionViewerCertificateGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param acmCertificateArn The ARN of the [AWS Certificate Manager](https://aws.amazon.com/certificate-manager/)
+         * certificate that you wish to use with this distribution. Specify this,
+         * `cloudfront_default_certificate`, or `iam_certificate_id`.  The ACM
+         * certificate must be in  US-EAST-1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acmCertificateArn(@Nullable Output<String> acmCertificateArn) {
             $.acmCertificateArn = acmCertificateArn;
             return this;
         }
 
+        /**
+         * @param acmCertificateArn The ARN of the [AWS Certificate Manager](https://aws.amazon.com/certificate-manager/)
+         * certificate that you wish to use with this distribution. Specify this,
+         * `cloudfront_default_certificate`, or `iam_certificate_id`.  The ACM
+         * certificate must be in  US-EAST-1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acmCertificateArn(String acmCertificateArn) {
             return acmCertificateArn(Output.of(acmCertificateArn));
         }
 
+        /**
+         * @param cloudfrontDefaultCertificate `true` if you want viewers to use HTTPS
+         * to request your objects and you&#39;re using the CloudFront domain name for your
+         * distribution. Specify this, `acm_certificate_arn`, or `iam_certificate_id`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudfrontDefaultCertificate(@Nullable Output<Boolean> cloudfrontDefaultCertificate) {
             $.cloudfrontDefaultCertificate = cloudfrontDefaultCertificate;
             return this;
         }
 
+        /**
+         * @param cloudfrontDefaultCertificate `true` if you want viewers to use HTTPS
+         * to request your objects and you&#39;re using the CloudFront domain name for your
+         * distribution. Specify this, `acm_certificate_arn`, or `iam_certificate_id`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudfrontDefaultCertificate(Boolean cloudfrontDefaultCertificate) {
             return cloudfrontDefaultCertificate(Output.of(cloudfrontDefaultCertificate));
         }
 
+        /**
+         * @param iamCertificateId The IAM certificate identifier of the custom viewer
+         * certificate for this distribution if you are using a custom domain. Specify
+         * this, `acm_certificate_arn`, or `cloudfront_default_certificate`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iamCertificateId(@Nullable Output<String> iamCertificateId) {
             $.iamCertificateId = iamCertificateId;
             return this;
         }
 
+        /**
+         * @param iamCertificateId The IAM certificate identifier of the custom viewer
+         * certificate for this distribution if you are using a custom domain. Specify
+         * this, `acm_certificate_arn`, or `cloudfront_default_certificate`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iamCertificateId(String iamCertificateId) {
             return iamCertificateId(Output.of(iamCertificateId));
         }
 
+        /**
+         * @param minimumProtocolVersion The minimum version of the SSL protocol that
+         * you want CloudFront to use for HTTPS connections. Can only be set if
+         * `cloudfront_default_certificate = false`. See all possible values in
+         * [this](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/secure-connections-supported-viewer-protocols-ciphers.html)
+         * table under &#34;Security policy.&#34; Some examples include: `TLSv1.2_2019` and
+         * `TLSv1.2_2021`. Default: `TLSv1`. **NOTE**:
+         * If you are using a custom certificate (specified with `acm_certificate_arn`
+         * or `iam_certificate_id`), and have specified `sni-only` in
+         * `ssl_support_method`, `TLSv1` or later must be specified. If you have
+         * specified `vip` in `ssl_support_method`, only `SSLv3` or `TLSv1` can be
+         * specified. If you have specified `cloudfront_default_certificate`, `TLSv1`
+         * must be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minimumProtocolVersion(@Nullable Output<String> minimumProtocolVersion) {
             $.minimumProtocolVersion = minimumProtocolVersion;
             return this;
         }
 
+        /**
+         * @param minimumProtocolVersion The minimum version of the SSL protocol that
+         * you want CloudFront to use for HTTPS connections. Can only be set if
+         * `cloudfront_default_certificate = false`. See all possible values in
+         * [this](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/secure-connections-supported-viewer-protocols-ciphers.html)
+         * table under &#34;Security policy.&#34; Some examples include: `TLSv1.2_2019` and
+         * `TLSv1.2_2021`. Default: `TLSv1`. **NOTE**:
+         * If you are using a custom certificate (specified with `acm_certificate_arn`
+         * or `iam_certificate_id`), and have specified `sni-only` in
+         * `ssl_support_method`, `TLSv1` or later must be specified. If you have
+         * specified `vip` in `ssl_support_method`, only `SSLv3` or `TLSv1` can be
+         * specified. If you have specified `cloudfront_default_certificate`, `TLSv1`
+         * must be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minimumProtocolVersion(String minimumProtocolVersion) {
             return minimumProtocolVersion(Output.of(minimumProtocolVersion));
         }

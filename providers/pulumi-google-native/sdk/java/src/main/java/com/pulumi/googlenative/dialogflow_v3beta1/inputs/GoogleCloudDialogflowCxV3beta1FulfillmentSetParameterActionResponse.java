@@ -24,6 +24,10 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionRe
     @Import(name="parameter", required=true)
     private String parameter;
 
+    /**
+     * @return Display name of the parameter.
+     * 
+     */
     public String parameter() {
         return this.parameter;
     }
@@ -35,6 +39,10 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionRe
     @Import(name="value", required=true)
     private Object value;
 
+    /**
+     * @return The new value of the parameter. A null value clears the parameter.
+     * 
+     */
     public Object value() {
         return this.value;
     }
@@ -64,11 +72,23 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionRe
             $ = new GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param parameter Display name of the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameter(String parameter) {
             $.parameter = parameter;
             return this;
         }
 
+        /**
+         * @param value The new value of the parameter. A null value clears the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Object value) {
             $.value = value;
             return this;

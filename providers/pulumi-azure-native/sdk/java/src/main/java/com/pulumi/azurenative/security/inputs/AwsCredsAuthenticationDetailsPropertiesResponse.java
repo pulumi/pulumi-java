@@ -25,6 +25,10 @@ public final class AwsCredsAuthenticationDetailsPropertiesResponse extends com.p
     @Import(name="accountId", required=true)
     private String accountId;
 
+    /**
+     * @return The ID of the cloud account
+     * 
+     */
     public String accountId() {
         return this.accountId;
     }
@@ -36,6 +40,10 @@ public final class AwsCredsAuthenticationDetailsPropertiesResponse extends com.p
     @Import(name="authenticationProvisioningState", required=true)
     private String authenticationProvisioningState;
 
+    /**
+     * @return State of the multi-cloud connector
+     * 
+     */
     public String authenticationProvisioningState() {
         return this.authenticationProvisioningState;
     }
@@ -48,6 +56,11 @@ public final class AwsCredsAuthenticationDetailsPropertiesResponse extends com.p
     @Import(name="authenticationType", required=true)
     private String authenticationType;
 
+    /**
+     * @return Connect to your cloud account, for AWS use either account credentials or role-based authentication. For GCP use account organization credentials.
+     * Expected value is &#39;awsCreds&#39;.
+     * 
+     */
     public String authenticationType() {
         return this.authenticationType;
     }
@@ -59,6 +72,10 @@ public final class AwsCredsAuthenticationDetailsPropertiesResponse extends com.p
     @Import(name="awsAccessKeyId", required=true)
     private String awsAccessKeyId;
 
+    /**
+     * @return Public key element of the AWS credential object (write only)
+     * 
+     */
     public String awsAccessKeyId() {
         return this.awsAccessKeyId;
     }
@@ -70,6 +87,10 @@ public final class AwsCredsAuthenticationDetailsPropertiesResponse extends com.p
     @Import(name="awsSecretAccessKey", required=true)
     private String awsSecretAccessKey;
 
+    /**
+     * @return Secret key element of the AWS credential object (write only)
+     * 
+     */
     public String awsSecretAccessKey() {
         return this.awsSecretAccessKey;
     }
@@ -81,6 +102,10 @@ public final class AwsCredsAuthenticationDetailsPropertiesResponse extends com.p
     @Import(name="grantedPermissions", required=true)
     private List<String> grantedPermissions;
 
+    /**
+     * @return The permissions detected in the cloud account.
+     * 
+     */
     public List<String> grantedPermissions() {
         return this.grantedPermissions;
     }
@@ -114,36 +139,79 @@ public final class AwsCredsAuthenticationDetailsPropertiesResponse extends com.p
             $ = new AwsCredsAuthenticationDetailsPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountId The ID of the cloud account
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountId(String accountId) {
             $.accountId = accountId;
             return this;
         }
 
+        /**
+         * @param authenticationProvisioningState State of the multi-cloud connector
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationProvisioningState(String authenticationProvisioningState) {
             $.authenticationProvisioningState = authenticationProvisioningState;
             return this;
         }
 
+        /**
+         * @param authenticationType Connect to your cloud account, for AWS use either account credentials or role-based authentication. For GCP use account organization credentials.
+         * Expected value is &#39;awsCreds&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationType(String authenticationType) {
             $.authenticationType = authenticationType;
             return this;
         }
 
+        /**
+         * @param awsAccessKeyId Public key element of the AWS credential object (write only)
+         * 
+         * @return builder
+         * 
+         */
         public Builder awsAccessKeyId(String awsAccessKeyId) {
             $.awsAccessKeyId = awsAccessKeyId;
             return this;
         }
 
+        /**
+         * @param awsSecretAccessKey Secret key element of the AWS credential object (write only)
+         * 
+         * @return builder
+         * 
+         */
         public Builder awsSecretAccessKey(String awsSecretAccessKey) {
             $.awsSecretAccessKey = awsSecretAccessKey;
             return this;
         }
 
+        /**
+         * @param grantedPermissions The permissions detected in the cloud account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder grantedPermissions(List<String> grantedPermissions) {
             $.grantedPermissions = grantedPermissions;
             return this;
         }
 
+        /**
+         * @param grantedPermissions The permissions detected in the cloud account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder grantedPermissions(String... grantedPermissions) {
             return grantedPermissions(List.of(grantedPermissions));
         }

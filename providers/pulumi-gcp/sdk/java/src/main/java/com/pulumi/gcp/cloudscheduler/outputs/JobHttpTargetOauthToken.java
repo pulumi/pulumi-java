@@ -12,13 +12,13 @@ import javax.annotation.Nullable;
 @CustomType
 public final class JobHttpTargetOauthToken {
     /**
-     * OAuth scope to be used for generating OAuth access token. If not specified,
+     * @return OAuth scope to be used for generating OAuth access token. If not specified,
      * &#34;https://www.googleapis.com/auth/cloud-platform&#34; will be used.
      * 
      */
     private final @Nullable String scope;
     /**
-     * Service account email to be used for generating OAuth token.
+     * @return Service account email to be used for generating OAuth token.
      * The service account must be within the same project as the job.
      * 
      */
@@ -33,18 +33,18 @@ public final class JobHttpTargetOauthToken {
     }
 
     /**
-     * OAuth scope to be used for generating OAuth access token. If not specified,
+     * @return OAuth scope to be used for generating OAuth access token. If not specified,
      * &#34;https://www.googleapis.com/auth/cloud-platform&#34; will be used.
      * 
-    */
+     */
     public Optional<String> scope() {
         return Optional.ofNullable(this.scope);
     }
     /**
-     * Service account email to be used for generating OAuth token.
+     * @return Service account email to be used for generating OAuth token.
      * The service account must be within the same project as the job.
      * 
-    */
+     */
     public String serviceAccountEmail() {
         return this.serviceAccountEmail;
     }

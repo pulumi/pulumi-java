@@ -30,6 +30,10 @@ public final class ExecutionStatisticsResponse extends com.pulumi.resources.Invo
     @Import(name="cpuTimeMs", required=true)
     private Double cpuTimeMs;
 
+    /**
+     * @return CPU Time in millisecond(s) for the query execution
+     * 
+     */
     public Double cpuTimeMs() {
         return this.cpuTimeMs;
     }
@@ -41,6 +45,10 @@ public final class ExecutionStatisticsResponse extends com.pulumi.resources.Invo
     @Import(name="elapsedTimeMs", required=true)
     private Double elapsedTimeMs;
 
+    /**
+     * @return Time taken in millisecond(s) for executing the query
+     * 
+     */
     public Double elapsedTimeMs() {
         return this.elapsedTimeMs;
     }
@@ -52,6 +60,10 @@ public final class ExecutionStatisticsResponse extends com.pulumi.resources.Invo
     @Import(name="executionCount", required=true)
     private Double executionCount;
 
+    /**
+     * @return No. of query executions
+     * 
+     */
     public Double executionCount() {
         return this.executionCount;
     }
@@ -63,6 +75,10 @@ public final class ExecutionStatisticsResponse extends com.pulumi.resources.Invo
     @Import(name="hasErrors", required=true)
     private Boolean hasErrors;
 
+    /**
+     * @return Indicates whether the query resulted in an error
+     * 
+     */
     public Boolean hasErrors() {
         return this.hasErrors;
     }
@@ -74,6 +90,10 @@ public final class ExecutionStatisticsResponse extends com.pulumi.resources.Invo
     @Import(name="sqlErrors", required=true)
     private List<String> sqlErrors;
 
+    /**
+     * @return List of sql Errors
+     * 
+     */
     public List<String> sqlErrors() {
         return this.sqlErrors;
     }
@@ -85,6 +105,10 @@ public final class ExecutionStatisticsResponse extends com.pulumi.resources.Invo
     @Import(name="waitStats")
     private @Nullable Map<String,WaitStatisticsResponse> waitStats;
 
+    /**
+     * @return Dictionary of sql query execution wait types and the respective statistics
+     * 
+     */
     public Optional<Map<String,WaitStatisticsResponse>> waitStats() {
         return Optional.ofNullable(this.waitStats);
     }
@@ -118,35 +142,77 @@ public final class ExecutionStatisticsResponse extends com.pulumi.resources.Invo
             $ = new ExecutionStatisticsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cpuTimeMs CPU Time in millisecond(s) for the query execution
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpuTimeMs(Double cpuTimeMs) {
             $.cpuTimeMs = cpuTimeMs;
             return this;
         }
 
+        /**
+         * @param elapsedTimeMs Time taken in millisecond(s) for executing the query
+         * 
+         * @return builder
+         * 
+         */
         public Builder elapsedTimeMs(Double elapsedTimeMs) {
             $.elapsedTimeMs = elapsedTimeMs;
             return this;
         }
 
+        /**
+         * @param executionCount No. of query executions
+         * 
+         * @return builder
+         * 
+         */
         public Builder executionCount(Double executionCount) {
             $.executionCount = executionCount;
             return this;
         }
 
+        /**
+         * @param hasErrors Indicates whether the query resulted in an error
+         * 
+         * @return builder
+         * 
+         */
         public Builder hasErrors(Boolean hasErrors) {
             $.hasErrors = hasErrors;
             return this;
         }
 
+        /**
+         * @param sqlErrors List of sql Errors
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlErrors(List<String> sqlErrors) {
             $.sqlErrors = sqlErrors;
             return this;
         }
 
+        /**
+         * @param sqlErrors List of sql Errors
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlErrors(String... sqlErrors) {
             return sqlErrors(List.of(sqlErrors));
         }
 
+        /**
+         * @param waitStats Dictionary of sql query execution wait types and the respective statistics
+         * 
+         * @return builder
+         * 
+         */
         public Builder waitStats(@Nullable Map<String,WaitStatisticsResponse> waitStats) {
             $.waitStats = waitStats;
             return this;

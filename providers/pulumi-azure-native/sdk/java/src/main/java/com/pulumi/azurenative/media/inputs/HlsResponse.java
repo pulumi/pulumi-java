@@ -25,6 +25,10 @@ public final class HlsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="fragmentsPerTsSegment")
     private @Nullable Integer fragmentsPerTsSegment;
 
+    /**
+     * @return The number of fragments in an HTTP Live Streaming (HLS) TS segment in the output of the live event. This value does not affect the packing ratio for HLS CMAF output.
+     * 
+     */
     public Optional<Integer> fragmentsPerTsSegment() {
         return Optional.ofNullable(this.fragmentsPerTsSegment);
     }
@@ -53,6 +57,12 @@ public final class HlsResponse extends com.pulumi.resources.InvokeArgs {
             $ = new HlsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fragmentsPerTsSegment The number of fragments in an HTTP Live Streaming (HLS) TS segment in the output of the live event. This value does not affect the packing ratio for HLS CMAF output.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fragmentsPerTsSegment(@Nullable Integer fragmentsPerTsSegment) {
             $.fragmentsPerTsSegment = fragmentsPerTsSegment;
             return this;

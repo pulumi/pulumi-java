@@ -26,6 +26,10 @@ public final class DnsConfigurationResponse extends com.pulumi.resources.InvokeA
     @Import(name="nameServers", required=true)
     private List<String> nameServers;
 
+    /**
+     * @return The DNS servers for the container group.
+     * 
+     */
     public List<String> nameServers() {
         return this.nameServers;
     }
@@ -37,6 +41,10 @@ public final class DnsConfigurationResponse extends com.pulumi.resources.InvokeA
     @Import(name="options")
     private @Nullable String options;
 
+    /**
+     * @return The DNS options for the container group.
+     * 
+     */
     public Optional<String> options() {
         return Optional.ofNullable(this.options);
     }
@@ -48,6 +56,10 @@ public final class DnsConfigurationResponse extends com.pulumi.resources.InvokeA
     @Import(name="searchDomains")
     private @Nullable String searchDomains;
 
+    /**
+     * @return The DNS search domains for hostname lookup in the container group.
+     * 
+     */
     public Optional<String> searchDomains() {
         return Optional.ofNullable(this.searchDomains);
     }
@@ -78,20 +90,44 @@ public final class DnsConfigurationResponse extends com.pulumi.resources.InvokeA
             $ = new DnsConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param nameServers The DNS servers for the container group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nameServers(List<String> nameServers) {
             $.nameServers = nameServers;
             return this;
         }
 
+        /**
+         * @param nameServers The DNS servers for the container group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nameServers(String... nameServers) {
             return nameServers(List.of(nameServers));
         }
 
+        /**
+         * @param options The DNS options for the container group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder options(@Nullable String options) {
             $.options = options;
             return this;
         }
 
+        /**
+         * @param searchDomains The DNS search domains for hostname lookup in the container group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder searchDomains(@Nullable String searchDomains) {
             $.searchDomains = searchDomains;
             return this;

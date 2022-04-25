@@ -28,6 +28,10 @@ public final class MLAssistConfigurationResponse extends com.pulumi.resources.In
     @Import(name="inferencingComputeBinding", required=true)
     private ComputeBindingResponse inferencingComputeBinding;
 
+    /**
+     * @return The compute designated for inferencing.
+     * 
+     */
     public ComputeBindingResponse inferencingComputeBinding() {
         return this.inferencingComputeBinding;
     }
@@ -39,6 +43,10 @@ public final class MLAssistConfigurationResponse extends com.pulumi.resources.In
     @Import(name="mlAssistEnabled")
     private @Nullable Boolean mlAssistEnabled;
 
+    /**
+     * @return Indicates whether MLAssist feature is enabled.
+     * 
+     */
     public Optional<Boolean> mlAssistEnabled() {
         return Optional.ofNullable(this.mlAssistEnabled);
     }
@@ -50,6 +58,10 @@ public final class MLAssistConfigurationResponse extends com.pulumi.resources.In
     @Import(name="modelNamePrefix", required=true)
     private String modelNamePrefix;
 
+    /**
+     * @return Name prefix to use for machine learning model. For each iteration modelName will be appended with iteration e.g.{modelName}_{i}.
+     * 
+     */
     public String modelNamePrefix() {
         return this.modelNamePrefix;
     }
@@ -61,6 +73,10 @@ public final class MLAssistConfigurationResponse extends com.pulumi.resources.In
     @Import(name="prelabelAccuracyThreshold")
     private @Nullable Double prelabelAccuracyThreshold;
 
+    /**
+     * @return Prelabel accuracy threshold used in MLAssist feature.
+     * 
+     */
     public Optional<Double> prelabelAccuracyThreshold() {
         return Optional.ofNullable(this.prelabelAccuracyThreshold);
     }
@@ -72,6 +88,10 @@ public final class MLAssistConfigurationResponse extends com.pulumi.resources.In
     @Import(name="trainingComputeBinding", required=true)
     private ComputeBindingResponse trainingComputeBinding;
 
+    /**
+     * @return The compute designated for training.
+     * 
+     */
     public ComputeBindingResponse trainingComputeBinding() {
         return this.trainingComputeBinding;
     }
@@ -104,26 +124,56 @@ public final class MLAssistConfigurationResponse extends com.pulumi.resources.In
             $ = new MLAssistConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param inferencingComputeBinding The compute designated for inferencing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inferencingComputeBinding(ComputeBindingResponse inferencingComputeBinding) {
             $.inferencingComputeBinding = inferencingComputeBinding;
             return this;
         }
 
+        /**
+         * @param mlAssistEnabled Indicates whether MLAssist feature is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mlAssistEnabled(@Nullable Boolean mlAssistEnabled) {
             $.mlAssistEnabled = mlAssistEnabled;
             return this;
         }
 
+        /**
+         * @param modelNamePrefix Name prefix to use for machine learning model. For each iteration modelName will be appended with iteration e.g.{modelName}_{i}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder modelNamePrefix(String modelNamePrefix) {
             $.modelNamePrefix = modelNamePrefix;
             return this;
         }
 
+        /**
+         * @param prelabelAccuracyThreshold Prelabel accuracy threshold used in MLAssist feature.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prelabelAccuracyThreshold(@Nullable Double prelabelAccuracyThreshold) {
             $.prelabelAccuracyThreshold = prelabelAccuracyThreshold;
             return this;
         }
 
+        /**
+         * @param trainingComputeBinding The compute designated for training.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trainingComputeBinding(ComputeBindingResponse trainingComputeBinding) {
             $.trainingComputeBinding = trainingComputeBinding;
             return this;

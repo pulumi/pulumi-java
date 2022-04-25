@@ -27,6 +27,10 @@ public final class MongoIndexArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="key")
     private @Nullable Output<MongoIndexKeysArgs> key;
 
+    /**
+     * @return Cosmos DB MongoDB collection index keys
+     * 
+     */
     public Optional<Output<MongoIndexKeysArgs>> key() {
         return Optional.ofNullable(this.key);
     }
@@ -38,6 +42,10 @@ public final class MongoIndexArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="options")
     private @Nullable Output<MongoIndexOptionsArgs> options;
 
+    /**
+     * @return Cosmos DB MongoDB collection index key options
+     * 
+     */
     public Optional<Output<MongoIndexOptionsArgs>> options() {
         return Optional.ofNullable(this.options);
     }
@@ -67,20 +75,44 @@ public final class MongoIndexArgs extends com.pulumi.resources.ResourceArgs {
             $ = new MongoIndexArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param key Cosmos DB MongoDB collection index keys
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(@Nullable Output<MongoIndexKeysArgs> key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param key Cosmos DB MongoDB collection index keys
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(MongoIndexKeysArgs key) {
             return key(Output.of(key));
         }
 
+        /**
+         * @param options Cosmos DB MongoDB collection index key options
+         * 
+         * @return builder
+         * 
+         */
         public Builder options(@Nullable Output<MongoIndexOptionsArgs> options) {
             $.options = options;
             return this;
         }
 
+        /**
+         * @param options Cosmos DB MongoDB collection index key options
+         * 
+         * @return builder
+         * 
+         */
         public Builder options(MongoIndexOptionsArgs options) {
             return options(Output.of(options));
         }

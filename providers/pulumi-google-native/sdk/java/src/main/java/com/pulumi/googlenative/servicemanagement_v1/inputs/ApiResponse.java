@@ -28,6 +28,10 @@ public final class ApiResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="methods", required=true)
     private List<MethodResponse> methods;
 
+    /**
+     * @return The methods of this interface, in unspecified order.
+     * 
+     */
     public List<MethodResponse> methods() {
         return this.methods;
     }
@@ -39,6 +43,10 @@ public final class ApiResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="mixins", required=true)
     private List<MixinResponse> mixins;
 
+    /**
+     * @return Included interfaces. See Mixin.
+     * 
+     */
     public List<MixinResponse> mixins() {
         return this.mixins;
     }
@@ -50,6 +58,10 @@ public final class ApiResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The fully qualified name of this interface, including package name followed by the interface&#39;s simple name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -61,6 +73,10 @@ public final class ApiResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="options", required=true)
     private List<OptionResponse> options;
 
+    /**
+     * @return Any metadata attached to the interface.
+     * 
+     */
     public List<OptionResponse> options() {
         return this.options;
     }
@@ -72,6 +88,10 @@ public final class ApiResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="sourceContext", required=true)
     private SourceContextResponse sourceContext;
 
+    /**
+     * @return Source context for the protocol buffer service represented by this message.
+     * 
+     */
     public SourceContextResponse sourceContext() {
         return this.sourceContext;
     }
@@ -83,6 +103,10 @@ public final class ApiResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="syntax", required=true)
     private String syntax;
 
+    /**
+     * @return The source syntax of the service.
+     * 
+     */
     public String syntax() {
         return this.syntax;
     }
@@ -94,6 +118,10 @@ public final class ApiResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="version", required=true)
     private String version;
 
+    /**
+     * @return A version string for this interface. If specified, must have the form `major-version.minor-version`, as in `1.10`. If the minor version is omitted, it defaults to zero. If the entire version field is empty, the major version is derived from the package name, as outlined below. If the field is not empty, the version in the package name will be verified to be consistent with what is provided here. The versioning schema uses [semantic versioning](http://semver.org) where the major version number indicates a breaking change and the minor version an additive, non-breaking change. Both version numbers are signals to users what to expect from different versions, and should be carefully chosen based on the product plan. The major version is also reflected in the package name of the interface, which must end in `v`, as in `google.feature.v1`. For major versions 0 and 1, the suffix can be omitted. Zero major versions must only be used for experimental, non-GA interfaces.
+     * 
+     */
     public String version() {
         return this.version;
     }
@@ -128,48 +156,108 @@ public final class ApiResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ApiResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param methods The methods of this interface, in unspecified order.
+         * 
+         * @return builder
+         * 
+         */
         public Builder methods(List<MethodResponse> methods) {
             $.methods = methods;
             return this;
         }
 
+        /**
+         * @param methods The methods of this interface, in unspecified order.
+         * 
+         * @return builder
+         * 
+         */
         public Builder methods(MethodResponse... methods) {
             return methods(List.of(methods));
         }
 
+        /**
+         * @param mixins Included interfaces. See Mixin.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mixins(List<MixinResponse> mixins) {
             $.mixins = mixins;
             return this;
         }
 
+        /**
+         * @param mixins Included interfaces. See Mixin.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mixins(MixinResponse... mixins) {
             return mixins(List.of(mixins));
         }
 
+        /**
+         * @param name The fully qualified name of this interface, including package name followed by the interface&#39;s simple name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param options Any metadata attached to the interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder options(List<OptionResponse> options) {
             $.options = options;
             return this;
         }
 
+        /**
+         * @param options Any metadata attached to the interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder options(OptionResponse... options) {
             return options(List.of(options));
         }
 
+        /**
+         * @param sourceContext Source context for the protocol buffer service represented by this message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceContext(SourceContextResponse sourceContext) {
             $.sourceContext = sourceContext;
             return this;
         }
 
+        /**
+         * @param syntax The source syntax of the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder syntax(String syntax) {
             $.syntax = syntax;
             return this;
         }
 
+        /**
+         * @param version A version string for this interface. If specified, must have the form `major-version.minor-version`, as in `1.10`. If the minor version is omitted, it defaults to zero. If the entire version field is empty, the major version is derived from the package name, as outlined below. If the field is not empty, the version in the package name will be verified to be consistent with what is provided here. The versioning schema uses [semantic versioning](http://semver.org) where the major version number indicates a breaking change and the minor version an additive, non-breaking change. Both version numbers are signals to users what to expect from different versions, and should be carefully chosen based on the product plan. The major version is also reflected in the package name of the interface, which must end in `v`, as in `google.feature.v1`. For major versions 0 and 1, the suffix can be omitted. Zero major versions must only be used for experimental, non-GA interfaces.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             $.version = version;
             return this;

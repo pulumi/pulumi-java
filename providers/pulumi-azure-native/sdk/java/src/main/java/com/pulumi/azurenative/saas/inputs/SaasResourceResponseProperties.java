@@ -29,6 +29,10 @@ public final class SaasResourceResponseProperties extends com.pulumi.resources.I
     @Import(name="autoRenew")
     private @Nullable Boolean autoRenew;
 
+    /**
+     * @return Whether the SaaS subscription will auto renew upon term end.
+     * 
+     */
     public Optional<Boolean> autoRenew() {
         return Optional.ofNullable(this.autoRenew);
     }
@@ -40,6 +44,10 @@ public final class SaasResourceResponseProperties extends com.pulumi.resources.I
     @Import(name="created", required=true)
     private String created;
 
+    /**
+     * @return The created date of this resource.
+     * 
+     */
     public String created() {
         return this.created;
     }
@@ -51,6 +59,10 @@ public final class SaasResourceResponseProperties extends com.pulumi.resources.I
     @Import(name="isFreeTrial")
     private @Nullable Boolean isFreeTrial;
 
+    /**
+     * @return Whether the current term is a Free Trial term
+     * 
+     */
     public Optional<Boolean> isFreeTrial() {
         return Optional.ofNullable(this.isFreeTrial);
     }
@@ -62,6 +74,10 @@ public final class SaasResourceResponseProperties extends com.pulumi.resources.I
     @Import(name="lastModified")
     private @Nullable String lastModified;
 
+    /**
+     * @return The last modifier date if this resource.
+     * 
+     */
     public Optional<String> lastModified() {
         return Optional.ofNullable(this.lastModified);
     }
@@ -73,6 +89,10 @@ public final class SaasResourceResponseProperties extends com.pulumi.resources.I
     @Import(name="offerId")
     private @Nullable String offerId;
 
+    /**
+     * @return The offer id.
+     * 
+     */
     public Optional<String> offerId() {
         return Optional.ofNullable(this.offerId);
     }
@@ -84,6 +104,10 @@ public final class SaasResourceResponseProperties extends com.pulumi.resources.I
     @Import(name="paymentChannelMetadata")
     private @Nullable Map<String,String> paymentChannelMetadata;
 
+    /**
+     * @return The metadata about the SaaS subscription such as the AzureSubscriptionId and ResourceUri.
+     * 
+     */
     public Optional<Map<String,String>> paymentChannelMetadata() {
         return Optional.ofNullable(this.paymentChannelMetadata);
     }
@@ -95,6 +119,10 @@ public final class SaasResourceResponseProperties extends com.pulumi.resources.I
     @Import(name="paymentChannelType")
     private @Nullable String paymentChannelType;
 
+    /**
+     * @return The Payment channel for the SaasSubscription.
+     * 
+     */
     public Optional<String> paymentChannelType() {
         return Optional.ofNullable(this.paymentChannelType);
     }
@@ -106,6 +134,10 @@ public final class SaasResourceResponseProperties extends com.pulumi.resources.I
     @Import(name="publisherId")
     private @Nullable String publisherId;
 
+    /**
+     * @return The publisher id.
+     * 
+     */
     public Optional<String> publisherId() {
         return Optional.ofNullable(this.publisherId);
     }
@@ -117,6 +149,10 @@ public final class SaasResourceResponseProperties extends com.pulumi.resources.I
     @Import(name="publisherTestEnvironment")
     private @Nullable String publisherTestEnvironment;
 
+    /**
+     * @return The environment in the publisher side for this resource.
+     * 
+     */
     public Optional<String> publisherTestEnvironment() {
         return Optional.ofNullable(this.publisherTestEnvironment);
     }
@@ -128,6 +164,10 @@ public final class SaasResourceResponseProperties extends com.pulumi.resources.I
     @Import(name="quantity")
     private @Nullable Double quantity;
 
+    /**
+     * @return The seat count.
+     * 
+     */
     public Optional<Double> quantity() {
         return Optional.ofNullable(this.quantity);
     }
@@ -139,6 +179,10 @@ public final class SaasResourceResponseProperties extends com.pulumi.resources.I
     @Import(name="saasResourceName")
     private @Nullable String saasResourceName;
 
+    /**
+     * @return The SaaS resource name.
+     * 
+     */
     public Optional<String> saasResourceName() {
         return Optional.ofNullable(this.saasResourceName);
     }
@@ -150,6 +194,10 @@ public final class SaasResourceResponseProperties extends com.pulumi.resources.I
     @Import(name="saasSessionId")
     private @Nullable String saasSessionId;
 
+    /**
+     * @return The saas session id used for dev service migration request.
+     * 
+     */
     public Optional<String> saasSessionId() {
         return Optional.ofNullable(this.saasSessionId);
     }
@@ -161,6 +209,10 @@ public final class SaasResourceResponseProperties extends com.pulumi.resources.I
     @Import(name="saasSubscriptionId")
     private @Nullable String saasSubscriptionId;
 
+    /**
+     * @return The saas subscription id used for tenant to subscription level migration request.
+     * 
+     */
     public Optional<String> saasSubscriptionId() {
         return Optional.ofNullable(this.saasSubscriptionId);
     }
@@ -172,6 +224,10 @@ public final class SaasResourceResponseProperties extends com.pulumi.resources.I
     @Import(name="skuId")
     private @Nullable String skuId;
 
+    /**
+     * @return The plan id.
+     * 
+     */
     public Optional<String> skuId() {
         return Optional.ofNullable(this.skuId);
     }
@@ -183,6 +239,10 @@ public final class SaasResourceResponseProperties extends com.pulumi.resources.I
     @Import(name="status")
     private @Nullable String status;
 
+    /**
+     * @return The SaaS Subscription Status.
+     * 
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
@@ -194,6 +254,10 @@ public final class SaasResourceResponseProperties extends com.pulumi.resources.I
     @Import(name="term")
     private @Nullable SaasPropertiesResponseTerm term;
 
+    /**
+     * @return The current Term object.
+     * 
+     */
     public Optional<SaasPropertiesResponseTerm> term() {
         return Optional.ofNullable(this.term);
     }
@@ -205,6 +269,10 @@ public final class SaasResourceResponseProperties extends com.pulumi.resources.I
     @Import(name="termId")
     private @Nullable String termId;
 
+    /**
+     * @return The current Term id.
+     * 
+     */
     public Optional<String> termId() {
         return Optional.ofNullable(this.termId);
     }
@@ -249,86 +317,188 @@ public final class SaasResourceResponseProperties extends com.pulumi.resources.I
             $ = new SaasResourceResponseProperties(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoRenew Whether the SaaS subscription will auto renew upon term end.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoRenew(@Nullable Boolean autoRenew) {
             $.autoRenew = autoRenew;
             return this;
         }
 
+        /**
+         * @param created The created date of this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder created(String created) {
             $.created = created;
             return this;
         }
 
+        /**
+         * @param isFreeTrial Whether the current term is a Free Trial term
+         * 
+         * @return builder
+         * 
+         */
         public Builder isFreeTrial(@Nullable Boolean isFreeTrial) {
             $.isFreeTrial = isFreeTrial;
             return this;
         }
 
+        /**
+         * @param lastModified The last modifier date if this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastModified(@Nullable String lastModified) {
             $.lastModified = lastModified;
             return this;
         }
 
+        /**
+         * @param offerId The offer id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder offerId(@Nullable String offerId) {
             $.offerId = offerId;
             return this;
         }
 
+        /**
+         * @param paymentChannelMetadata The metadata about the SaaS subscription such as the AzureSubscriptionId and ResourceUri.
+         * 
+         * @return builder
+         * 
+         */
         public Builder paymentChannelMetadata(@Nullable Map<String,String> paymentChannelMetadata) {
             $.paymentChannelMetadata = paymentChannelMetadata;
             return this;
         }
 
+        /**
+         * @param paymentChannelType The Payment channel for the SaasSubscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder paymentChannelType(@Nullable String paymentChannelType) {
             $.paymentChannelType = paymentChannelType;
             return this;
         }
 
+        /**
+         * @param publisherId The publisher id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publisherId(@Nullable String publisherId) {
             $.publisherId = publisherId;
             return this;
         }
 
+        /**
+         * @param publisherTestEnvironment The environment in the publisher side for this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publisherTestEnvironment(@Nullable String publisherTestEnvironment) {
             $.publisherTestEnvironment = publisherTestEnvironment;
             return this;
         }
 
+        /**
+         * @param quantity The seat count.
+         * 
+         * @return builder
+         * 
+         */
         public Builder quantity(@Nullable Double quantity) {
             $.quantity = quantity;
             return this;
         }
 
+        /**
+         * @param saasResourceName The SaaS resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder saasResourceName(@Nullable String saasResourceName) {
             $.saasResourceName = saasResourceName;
             return this;
         }
 
+        /**
+         * @param saasSessionId The saas session id used for dev service migration request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder saasSessionId(@Nullable String saasSessionId) {
             $.saasSessionId = saasSessionId;
             return this;
         }
 
+        /**
+         * @param saasSubscriptionId The saas subscription id used for tenant to subscription level migration request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder saasSubscriptionId(@Nullable String saasSubscriptionId) {
             $.saasSubscriptionId = saasSubscriptionId;
             return this;
         }
 
+        /**
+         * @param skuId The plan id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skuId(@Nullable String skuId) {
             $.skuId = skuId;
             return this;
         }
 
+        /**
+         * @param status The SaaS Subscription Status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable String status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param term The current Term object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder term(@Nullable SaasPropertiesResponseTerm term) {
             $.term = term;
             return this;
         }
 
+        /**
+         * @param termId The current Term id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder termId(@Nullable String termId) {
             $.termId = termId;
             return this;

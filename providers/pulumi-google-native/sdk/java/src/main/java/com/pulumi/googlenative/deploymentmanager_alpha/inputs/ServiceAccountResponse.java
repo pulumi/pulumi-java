@@ -23,6 +23,10 @@ public final class ServiceAccountResponse extends com.pulumi.resources.InvokeArg
     @Import(name="email", required=true)
     private String email;
 
+    /**
+     * @return The IAM service account email address like test@myproject.iam.gserviceaccount.com
+     * 
+     */
     public String email() {
         return this.email;
     }
@@ -51,6 +55,12 @@ public final class ServiceAccountResponse extends com.pulumi.resources.InvokeArg
             $ = new ServiceAccountResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param email The IAM service account email address like test@myproject.iam.gserviceaccount.com
+         * 
+         * @return builder
+         * 
+         */
         public Builder email(String email) {
             $.email = email;
             return this;

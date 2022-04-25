@@ -22,6 +22,10 @@ public final class InstanceGroupManagerAllInstancesConfigArgs extends com.pulumi
     @Import(name="properties")
     private @Nullable Output<InstancePropertiesPatchArgs> properties;
 
+    /**
+     * @return Properties for instances that are created using this instances config. You can add or modify properties using the instanceGroupManagers.patch or regionInstanceGroupManagers.patch. After setting instances_config, you must update your instances to use it; for example, you can use the applyUpdatesToInstances method.
+     * 
+     */
     public Optional<Output<InstancePropertiesPatchArgs>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -50,11 +54,23 @@ public final class InstanceGroupManagerAllInstancesConfigArgs extends com.pulumi
             $ = new InstanceGroupManagerAllInstancesConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param properties Properties for instances that are created using this instances config. You can add or modify properties using the instanceGroupManagers.patch or regionInstanceGroupManagers.patch. After setting instances_config, you must update your instances to use it; for example, you can use the applyUpdatesToInstances method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<InstancePropertiesPatchArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Properties for instances that are created using this instances config. You can add or modify properties using the instanceGroupManagers.patch or regionInstanceGroupManagers.patch. After setting instances_config, you must update your instances to use it; for example, you can use the applyUpdatesToInstances method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(InstancePropertiesPatchArgs properties) {
             return properties(Output.of(properties));
         }

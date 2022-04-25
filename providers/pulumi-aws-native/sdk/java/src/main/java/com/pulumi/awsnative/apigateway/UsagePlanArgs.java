@@ -27,6 +27,10 @@ public final class UsagePlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="apiStages")
     private @Nullable Output<List<UsagePlanApiStageArgs>> apiStages;
 
+    /**
+     * @return The API stages to associate with this usage plan.
+     * 
+     */
     public Optional<Output<List<UsagePlanApiStageArgs>>> apiStages() {
         return Optional.ofNullable(this.apiStages);
     }
@@ -38,6 +42,10 @@ public final class UsagePlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A description of the usage plan.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -49,6 +57,10 @@ public final class UsagePlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="quota")
     private @Nullable Output<UsagePlanQuotaSettingsArgs> quota;
 
+    /**
+     * @return Configures the number of requests that users can make within a given interval.
+     * 
+     */
     public Optional<Output<UsagePlanQuotaSettingsArgs>> quota() {
         return Optional.ofNullable(this.quota);
     }
@@ -60,6 +72,10 @@ public final class UsagePlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<UsagePlanTagArgs>> tags;
 
+    /**
+     * @return An array of arbitrary tags (key-value pairs) to associate with the usage plan.
+     * 
+     */
     public Optional<Output<List<UsagePlanTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -71,6 +87,10 @@ public final class UsagePlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="throttle")
     private @Nullable Output<UsagePlanThrottleSettingsArgs> throttle;
 
+    /**
+     * @return Configures the overall request rate (average requests per second) and burst capacity.
+     * 
+     */
     public Optional<Output<UsagePlanThrottleSettingsArgs>> throttle() {
         return Optional.ofNullable(this.throttle);
     }
@@ -82,6 +102,10 @@ public final class UsagePlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="usagePlanName")
     private @Nullable Output<String> usagePlanName;
 
+    /**
+     * @return A name for the usage plan.
+     * 
+     */
     public Optional<Output<String>> usagePlanName() {
         return Optional.ofNullable(this.usagePlanName);
     }
@@ -115,64 +139,148 @@ public final class UsagePlanArgs extends com.pulumi.resources.ResourceArgs {
             $ = new UsagePlanArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiStages The API stages to associate with this usage plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiStages(@Nullable Output<List<UsagePlanApiStageArgs>> apiStages) {
             $.apiStages = apiStages;
             return this;
         }
 
+        /**
+         * @param apiStages The API stages to associate with this usage plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiStages(List<UsagePlanApiStageArgs> apiStages) {
             return apiStages(Output.of(apiStages));
         }
 
+        /**
+         * @param apiStages The API stages to associate with this usage plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiStages(UsagePlanApiStageArgs... apiStages) {
             return apiStages(List.of(apiStages));
         }
 
+        /**
+         * @param description A description of the usage plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A description of the usage plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param quota Configures the number of requests that users can make within a given interval.
+         * 
+         * @return builder
+         * 
+         */
         public Builder quota(@Nullable Output<UsagePlanQuotaSettingsArgs> quota) {
             $.quota = quota;
             return this;
         }
 
+        /**
+         * @param quota Configures the number of requests that users can make within a given interval.
+         * 
+         * @return builder
+         * 
+         */
         public Builder quota(UsagePlanQuotaSettingsArgs quota) {
             return quota(Output.of(quota));
         }
 
+        /**
+         * @param tags An array of arbitrary tags (key-value pairs) to associate with the usage plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<UsagePlanTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags An array of arbitrary tags (key-value pairs) to associate with the usage plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<UsagePlanTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags An array of arbitrary tags (key-value pairs) to associate with the usage plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(UsagePlanTagArgs... tags) {
             return tags(List.of(tags));
         }
 
+        /**
+         * @param throttle Configures the overall request rate (average requests per second) and burst capacity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder throttle(@Nullable Output<UsagePlanThrottleSettingsArgs> throttle) {
             $.throttle = throttle;
             return this;
         }
 
+        /**
+         * @param throttle Configures the overall request rate (average requests per second) and burst capacity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder throttle(UsagePlanThrottleSettingsArgs throttle) {
             return throttle(Output.of(throttle));
         }
 
+        /**
+         * @param usagePlanName A name for the usage plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder usagePlanName(@Nullable Output<String> usagePlanName) {
             $.usagePlanName = usagePlanName;
             return this;
         }
 
+        /**
+         * @param usagePlanName A name for the usage plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder usagePlanName(String usagePlanName) {
             return usagePlanName(Output.of(usagePlanName));
         }

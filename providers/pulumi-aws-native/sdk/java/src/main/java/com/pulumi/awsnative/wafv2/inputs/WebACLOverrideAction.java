@@ -25,6 +25,10 @@ public final class WebACLOverrideAction extends com.pulumi.resources.InvokeArgs 
     @Import(name="count")
     private @Nullable Object count;
 
+    /**
+     * @return Count traffic towards application.
+     * 
+     */
     public Optional<Object> count() {
         return Optional.ofNullable(this.count);
     }
@@ -36,6 +40,10 @@ public final class WebACLOverrideAction extends com.pulumi.resources.InvokeArgs 
     @Import(name="none")
     private @Nullable Object none;
 
+    /**
+     * @return Keep the RuleGroup or ManagedRuleGroup behavior as is.
+     * 
+     */
     public Optional<Object> none() {
         return Optional.ofNullable(this.none);
     }
@@ -65,11 +73,23 @@ public final class WebACLOverrideAction extends com.pulumi.resources.InvokeArgs 
             $ = new WebACLOverrideAction(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param count Count traffic towards application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(@Nullable Object count) {
             $.count = count;
             return this;
         }
 
+        /**
+         * @param none Keep the RuleGroup or ManagedRuleGroup behavior as is.
+         * 
+         * @return builder
+         * 
+         */
         public Builder none(@Nullable Object none) {
             $.none = none;
             return this;

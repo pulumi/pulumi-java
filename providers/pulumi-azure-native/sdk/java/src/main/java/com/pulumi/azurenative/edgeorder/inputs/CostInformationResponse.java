@@ -25,6 +25,10 @@ public final class CostInformationResponse extends com.pulumi.resources.InvokeAr
     @Import(name="billingInfoUrl", required=true)
     private String billingInfoUrl;
 
+    /**
+     * @return Default url to display billing information
+     * 
+     */
     public String billingInfoUrl() {
         return this.billingInfoUrl;
     }
@@ -36,6 +40,10 @@ public final class CostInformationResponse extends com.pulumi.resources.InvokeAr
     @Import(name="billingMeterDetails", required=true)
     private List<BillingMeterDetailsResponse> billingMeterDetails;
 
+    /**
+     * @return Details on the various billing aspects for the product system.
+     * 
+     */
     public List<BillingMeterDetailsResponse> billingMeterDetails() {
         return this.billingMeterDetails;
     }
@@ -65,16 +73,34 @@ public final class CostInformationResponse extends com.pulumi.resources.InvokeAr
             $ = new CostInformationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param billingInfoUrl Default url to display billing information
+         * 
+         * @return builder
+         * 
+         */
         public Builder billingInfoUrl(String billingInfoUrl) {
             $.billingInfoUrl = billingInfoUrl;
             return this;
         }
 
+        /**
+         * @param billingMeterDetails Details on the various billing aspects for the product system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder billingMeterDetails(List<BillingMeterDetailsResponse> billingMeterDetails) {
             $.billingMeterDetails = billingMeterDetails;
             return this;
         }
 
+        /**
+         * @param billingMeterDetails Details on the various billing aspects for the product system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder billingMeterDetails(BillingMeterDetailsResponse... billingMeterDetails) {
             return billingMeterDetails(List.of(billingMeterDetails));
         }

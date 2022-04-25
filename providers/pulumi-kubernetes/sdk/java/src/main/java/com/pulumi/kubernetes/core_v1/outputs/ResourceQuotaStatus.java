@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ResourceQuotaStatus {
     /**
-     * Hard is the set of enforced hard limits for each named resource. More info: https://kubernetes.io/docs/concepts/policy/resource-quotas/
+     * @return Hard is the set of enforced hard limits for each named resource. More info: https://kubernetes.io/docs/concepts/policy/resource-quotas/
      * 
      */
     private final @Nullable Map<String,String> hard;
     /**
-     * Used is the current observed total usage of the resource in the namespace.
+     * @return Used is the current observed total usage of the resource in the namespace.
      * 
      */
     private final @Nullable Map<String,String> used;
@@ -31,16 +31,16 @@ public final class ResourceQuotaStatus {
     }
 
     /**
-     * Hard is the set of enforced hard limits for each named resource. More info: https://kubernetes.io/docs/concepts/policy/resource-quotas/
+     * @return Hard is the set of enforced hard limits for each named resource. More info: https://kubernetes.io/docs/concepts/policy/resource-quotas/
      * 
-    */
+     */
     public Map<String,String> hard() {
         return this.hard == null ? Map.of() : this.hard;
     }
     /**
-     * Used is the current observed total usage of the resource in the namespace.
+     * @return Used is the current observed total usage of the resource in the namespace.
      * 
-    */
+     */
     public Map<String,String> used() {
         return this.used == null ? Map.of() : this.used;
     }

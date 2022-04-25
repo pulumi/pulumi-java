@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class OperationBatchStatusResponseItemResponse {
     /**
-     * status of the long running operation for an environment
+     * @return status of the long running operation for an environment
      * 
      */
     private final String operationUrl;
     /**
-     * status of the long running operation for an environment
+     * @return status of the long running operation for an environment
      * 
      */
     private final String status;
@@ -29,16 +29,16 @@ public final class OperationBatchStatusResponseItemResponse {
     }
 
     /**
-     * status of the long running operation for an environment
+     * @return status of the long running operation for an environment
      * 
-    */
+     */
     public String operationUrl() {
         return this.operationUrl;
     }
     /**
-     * status of the long running operation for an environment
+     * @return status of the long running operation for an environment
      * 
-    */
+     */
     public String status() {
         return this.status;
     }

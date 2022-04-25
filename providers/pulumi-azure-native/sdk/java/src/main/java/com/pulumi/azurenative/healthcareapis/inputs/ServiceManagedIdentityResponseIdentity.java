@@ -25,6 +25,10 @@ public final class ServiceManagedIdentityResponseIdentity extends com.pulumi.res
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return Type of identity being specified, currently SystemAssigned and None are allowed.
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -53,6 +57,12 @@ public final class ServiceManagedIdentityResponseIdentity extends com.pulumi.res
             $ = new ServiceManagedIdentityResponseIdentity(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type Type of identity being specified, currently SystemAssigned and None are allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;

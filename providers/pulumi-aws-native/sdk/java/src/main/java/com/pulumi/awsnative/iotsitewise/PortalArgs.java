@@ -25,6 +25,10 @@ public final class PortalArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="alarms")
     private @Nullable Output<AlarmsPropertiesArgs> alarms;
 
+    /**
+     * @return Contains the configuration information of an alarm created in an AWS IoT SiteWise Monitor portal. You can use the alarm to monitor an asset property and get notified when the asset property value is outside a specified range.
+     * 
+     */
     public Optional<Output<AlarmsPropertiesArgs>> alarms() {
         return Optional.ofNullable(this.alarms);
     }
@@ -36,6 +40,10 @@ public final class PortalArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="notificationSenderEmail")
     private @Nullable Output<String> notificationSenderEmail;
 
+    /**
+     * @return The email address that sends alarm notifications.
+     * 
+     */
     public Optional<Output<String>> notificationSenderEmail() {
         return Optional.ofNullable(this.notificationSenderEmail);
     }
@@ -47,6 +55,10 @@ public final class PortalArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="portalAuthMode")
     private @Nullable Output<String> portalAuthMode;
 
+    /**
+     * @return The service to use to authenticate users to the portal. Choose from SSO or IAM. You can&#39;t change this value after you create a portal.
+     * 
+     */
     public Optional<Output<String>> portalAuthMode() {
         return Optional.ofNullable(this.portalAuthMode);
     }
@@ -58,6 +70,10 @@ public final class PortalArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="portalContactEmail", required=true)
     private Output<String> portalContactEmail;
 
+    /**
+     * @return The AWS administrator&#39;s contact email address.
+     * 
+     */
     public Output<String> portalContactEmail() {
         return this.portalContactEmail;
     }
@@ -69,6 +85,10 @@ public final class PortalArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="portalDescription")
     private @Nullable Output<String> portalDescription;
 
+    /**
+     * @return A description for the portal.
+     * 
+     */
     public Optional<Output<String>> portalDescription() {
         return Optional.ofNullable(this.portalDescription);
     }
@@ -80,6 +100,10 @@ public final class PortalArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="portalName")
     private @Nullable Output<String> portalName;
 
+    /**
+     * @return A friendly name for the portal.
+     * 
+     */
     public Optional<Output<String>> portalName() {
         return Optional.ofNullable(this.portalName);
     }
@@ -91,6 +115,10 @@ public final class PortalArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="roleArn", required=true)
     private Output<String> roleArn;
 
+    /**
+     * @return The ARN of a service role that allows the portal&#39;s users to access your AWS IoT SiteWise resources on your behalf.
+     * 
+     */
     public Output<String> roleArn() {
         return this.roleArn;
     }
@@ -102,6 +130,10 @@ public final class PortalArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<PortalTagArgs>> tags;
 
+    /**
+     * @return A list of key-value pairs that contain metadata for the portal.
+     * 
+     */
     public Optional<Output<List<PortalTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -137,78 +169,180 @@ public final class PortalArgs extends com.pulumi.resources.ResourceArgs {
             $ = new PortalArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param alarms Contains the configuration information of an alarm created in an AWS IoT SiteWise Monitor portal. You can use the alarm to monitor an asset property and get notified when the asset property value is outside a specified range.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alarms(@Nullable Output<AlarmsPropertiesArgs> alarms) {
             $.alarms = alarms;
             return this;
         }
 
+        /**
+         * @param alarms Contains the configuration information of an alarm created in an AWS IoT SiteWise Monitor portal. You can use the alarm to monitor an asset property and get notified when the asset property value is outside a specified range.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alarms(AlarmsPropertiesArgs alarms) {
             return alarms(Output.of(alarms));
         }
 
+        /**
+         * @param notificationSenderEmail The email address that sends alarm notifications.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationSenderEmail(@Nullable Output<String> notificationSenderEmail) {
             $.notificationSenderEmail = notificationSenderEmail;
             return this;
         }
 
+        /**
+         * @param notificationSenderEmail The email address that sends alarm notifications.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationSenderEmail(String notificationSenderEmail) {
             return notificationSenderEmail(Output.of(notificationSenderEmail));
         }
 
+        /**
+         * @param portalAuthMode The service to use to authenticate users to the portal. Choose from SSO or IAM. You can&#39;t change this value after you create a portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder portalAuthMode(@Nullable Output<String> portalAuthMode) {
             $.portalAuthMode = portalAuthMode;
             return this;
         }
 
+        /**
+         * @param portalAuthMode The service to use to authenticate users to the portal. Choose from SSO or IAM. You can&#39;t change this value after you create a portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder portalAuthMode(String portalAuthMode) {
             return portalAuthMode(Output.of(portalAuthMode));
         }
 
+        /**
+         * @param portalContactEmail The AWS administrator&#39;s contact email address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder portalContactEmail(Output<String> portalContactEmail) {
             $.portalContactEmail = portalContactEmail;
             return this;
         }
 
+        /**
+         * @param portalContactEmail The AWS administrator&#39;s contact email address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder portalContactEmail(String portalContactEmail) {
             return portalContactEmail(Output.of(portalContactEmail));
         }
 
+        /**
+         * @param portalDescription A description for the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder portalDescription(@Nullable Output<String> portalDescription) {
             $.portalDescription = portalDescription;
             return this;
         }
 
+        /**
+         * @param portalDescription A description for the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder portalDescription(String portalDescription) {
             return portalDescription(Output.of(portalDescription));
         }
 
+        /**
+         * @param portalName A friendly name for the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder portalName(@Nullable Output<String> portalName) {
             $.portalName = portalName;
             return this;
         }
 
+        /**
+         * @param portalName A friendly name for the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder portalName(String portalName) {
             return portalName(Output.of(portalName));
         }
 
+        /**
+         * @param roleArn The ARN of a service role that allows the portal&#39;s users to access your AWS IoT SiteWise resources on your behalf.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(Output<String> roleArn) {
             $.roleArn = roleArn;
             return this;
         }
 
+        /**
+         * @param roleArn The ARN of a service role that allows the portal&#39;s users to access your AWS IoT SiteWise resources on your behalf.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(String roleArn) {
             return roleArn(Output.of(roleArn));
         }
 
+        /**
+         * @param tags A list of key-value pairs that contain metadata for the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<PortalTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A list of key-value pairs that contain metadata for the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<PortalTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags A list of key-value pairs that contain metadata for the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(PortalTagArgs... tags) {
             return tags(List.of(tags));
         }

@@ -27,6 +27,10 @@ public final class GoogleCloudDialogflowCxV3EventHandlerArgs extends com.pulumi.
     @Import(name="event", required=true)
     private Output<String> event;
 
+    /**
+     * @return The name of the event to handle.
+     * 
+     */
     public Output<String> event() {
         return this.event;
     }
@@ -38,6 +42,10 @@ public final class GoogleCloudDialogflowCxV3EventHandlerArgs extends com.pulumi.
     @Import(name="targetFlow")
     private @Nullable Output<String> targetFlow;
 
+    /**
+     * @return The target flow to transition to. Format: `projects//locations//agents//flows/`.
+     * 
+     */
     public Optional<Output<String>> targetFlow() {
         return Optional.ofNullable(this.targetFlow);
     }
@@ -49,6 +57,10 @@ public final class GoogleCloudDialogflowCxV3EventHandlerArgs extends com.pulumi.
     @Import(name="targetPage")
     private @Nullable Output<String> targetPage;
 
+    /**
+     * @return The target page to transition to. Format: `projects//locations//agents//flows//pages/`.
+     * 
+     */
     public Optional<Output<String>> targetPage() {
         return Optional.ofNullable(this.targetPage);
     }
@@ -60,6 +72,10 @@ public final class GoogleCloudDialogflowCxV3EventHandlerArgs extends com.pulumi.
     @Import(name="triggerFulfillment")
     private @Nullable Output<GoogleCloudDialogflowCxV3FulfillmentArgs> triggerFulfillment;
 
+    /**
+     * @return The fulfillment to call when the event occurs. Handling webhook errors with a fulfillment enabled with webhook could cause infinite loop. It is invalid to specify such fulfillment for a handler handling webhooks.
+     * 
+     */
     public Optional<Output<GoogleCloudDialogflowCxV3FulfillmentArgs>> triggerFulfillment() {
         return Optional.ofNullable(this.triggerFulfillment);
     }
@@ -91,38 +107,86 @@ public final class GoogleCloudDialogflowCxV3EventHandlerArgs extends com.pulumi.
             $ = new GoogleCloudDialogflowCxV3EventHandlerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param event The name of the event to handle.
+         * 
+         * @return builder
+         * 
+         */
         public Builder event(Output<String> event) {
             $.event = event;
             return this;
         }
 
+        /**
+         * @param event The name of the event to handle.
+         * 
+         * @return builder
+         * 
+         */
         public Builder event(String event) {
             return event(Output.of(event));
         }
 
+        /**
+         * @param targetFlow The target flow to transition to. Format: `projects//locations//agents//flows/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetFlow(@Nullable Output<String> targetFlow) {
             $.targetFlow = targetFlow;
             return this;
         }
 
+        /**
+         * @param targetFlow The target flow to transition to. Format: `projects//locations//agents//flows/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetFlow(String targetFlow) {
             return targetFlow(Output.of(targetFlow));
         }
 
+        /**
+         * @param targetPage The target page to transition to. Format: `projects//locations//agents//flows//pages/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetPage(@Nullable Output<String> targetPage) {
             $.targetPage = targetPage;
             return this;
         }
 
+        /**
+         * @param targetPage The target page to transition to. Format: `projects//locations//agents//flows//pages/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetPage(String targetPage) {
             return targetPage(Output.of(targetPage));
         }
 
+        /**
+         * @param triggerFulfillment The fulfillment to call when the event occurs. Handling webhook errors with a fulfillment enabled with webhook could cause infinite loop. It is invalid to specify such fulfillment for a handler handling webhooks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder triggerFulfillment(@Nullable Output<GoogleCloudDialogflowCxV3FulfillmentArgs> triggerFulfillment) {
             $.triggerFulfillment = triggerFulfillment;
             return this;
         }
 
+        /**
+         * @param triggerFulfillment The fulfillment to call when the event occurs. Handling webhook errors with a fulfillment enabled with webhook could cause infinite loop. It is invalid to specify such fulfillment for a handler handling webhooks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder triggerFulfillment(GoogleCloudDialogflowCxV3FulfillmentArgs triggerFulfillment) {
             return triggerFulfillment(Output.of(triggerFulfillment));
         }

@@ -26,6 +26,10 @@ public final class PrivateClusterMasterGlobalAccessConfigArgs extends com.pulumi
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return Whenever master is accessible globally or not.
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -54,11 +58,23 @@ public final class PrivateClusterMasterGlobalAccessConfigArgs extends com.pulumi
             $ = new PrivateClusterMasterGlobalAccessConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Whenever master is accessible globally or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Whenever master is accessible globally or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }

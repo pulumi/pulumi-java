@@ -25,6 +25,10 @@ public final class RuleGroupCustomRequestHandlingArgs extends com.pulumi.resourc
     @Import(name="insertHeaders", required=true)
     private Output<List<RuleGroupCustomHTTPHeaderArgs>> insertHeaders;
 
+    /**
+     * @return Collection of HTTP headers.
+     * 
+     */
     public Output<List<RuleGroupCustomHTTPHeaderArgs>> insertHeaders() {
         return this.insertHeaders;
     }
@@ -53,15 +57,33 @@ public final class RuleGroupCustomRequestHandlingArgs extends com.pulumi.resourc
             $ = new RuleGroupCustomRequestHandlingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param insertHeaders Collection of HTTP headers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder insertHeaders(Output<List<RuleGroupCustomHTTPHeaderArgs>> insertHeaders) {
             $.insertHeaders = insertHeaders;
             return this;
         }
 
+        /**
+         * @param insertHeaders Collection of HTTP headers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder insertHeaders(List<RuleGroupCustomHTTPHeaderArgs> insertHeaders) {
             return insertHeaders(Output.of(insertHeaders));
         }
 
+        /**
+         * @param insertHeaders Collection of HTTP headers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder insertHeaders(RuleGroupCustomHTTPHeaderArgs... insertHeaders) {
             return insertHeaders(List.of(insertHeaders));
         }

@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class InfrastructureConfigurationS3Logs {
     /**
-     * S3BucketName
+     * @return S3BucketName
      * 
      */
     private final @Nullable String s3BucketName;
     /**
-     * S3KeyPrefix
+     * @return S3KeyPrefix
      * 
      */
     private final @Nullable String s3KeyPrefix;
@@ -31,16 +31,16 @@ public final class InfrastructureConfigurationS3Logs {
     }
 
     /**
-     * S3BucketName
+     * @return S3BucketName
      * 
-    */
+     */
     public Optional<String> s3BucketName() {
         return Optional.ofNullable(this.s3BucketName);
     }
     /**
-     * S3KeyPrefix
+     * @return S3KeyPrefix
      * 
-    */
+     */
     public Optional<String> s3KeyPrefix() {
         return Optional.ofNullable(this.s3KeyPrefix);
     }

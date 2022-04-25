@@ -23,6 +23,10 @@ public final class SecurityPolicyRuleRedirectOptionsArgs extends com.pulumi.reso
     @Import(name="target")
     private @Nullable Output<String> target;
 
+    /**
+     * @return Target for the redirect action. This is required if the type is EXTERNAL_302 and cannot be specified for GOOGLE_RECAPTCHA.
+     * 
+     */
     public Optional<Output<String>> target() {
         return Optional.ofNullable(this.target);
     }
@@ -34,6 +38,10 @@ public final class SecurityPolicyRuleRedirectOptionsArgs extends com.pulumi.reso
     @Import(name="type")
     private @Nullable Output<SecurityPolicyRuleRedirectOptionsType> type;
 
+    /**
+     * @return Type of the redirect action.
+     * 
+     */
     public Optional<Output<SecurityPolicyRuleRedirectOptionsType>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -63,20 +71,44 @@ public final class SecurityPolicyRuleRedirectOptionsArgs extends com.pulumi.reso
             $ = new SecurityPolicyRuleRedirectOptionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param target Target for the redirect action. This is required if the type is EXTERNAL_302 and cannot be specified for GOOGLE_RECAPTCHA.
+         * 
+         * @return builder
+         * 
+         */
         public Builder target(@Nullable Output<String> target) {
             $.target = target;
             return this;
         }
 
+        /**
+         * @param target Target for the redirect action. This is required if the type is EXTERNAL_302 and cannot be specified for GOOGLE_RECAPTCHA.
+         * 
+         * @return builder
+         * 
+         */
         public Builder target(String target) {
             return target(Output.of(target));
         }
 
+        /**
+         * @param type Type of the redirect action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<SecurityPolicyRuleRedirectOptionsType> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of the redirect action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(SecurityPolicyRuleRedirectOptionsType type) {
             return type(Output.of(type));
         }

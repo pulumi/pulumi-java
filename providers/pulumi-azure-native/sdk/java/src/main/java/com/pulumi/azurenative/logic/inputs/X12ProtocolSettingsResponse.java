@@ -37,6 +37,10 @@ public final class X12ProtocolSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="acknowledgementSettings", required=true)
     private X12AcknowledgementSettingsResponse acknowledgementSettings;
 
+    /**
+     * @return The X12 acknowledgment settings.
+     * 
+     */
     public X12AcknowledgementSettingsResponse acknowledgementSettings() {
         return this.acknowledgementSettings;
     }
@@ -48,6 +52,10 @@ public final class X12ProtocolSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="envelopeOverrides")
     private @Nullable List<X12EnvelopeOverrideResponse> envelopeOverrides;
 
+    /**
+     * @return The X12 envelope override settings.
+     * 
+     */
     public Optional<List<X12EnvelopeOverrideResponse>> envelopeOverrides() {
         return Optional.ofNullable(this.envelopeOverrides);
     }
@@ -59,6 +67,10 @@ public final class X12ProtocolSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="envelopeSettings", required=true)
     private X12EnvelopeSettingsResponse envelopeSettings;
 
+    /**
+     * @return The X12 envelope settings.
+     * 
+     */
     public X12EnvelopeSettingsResponse envelopeSettings() {
         return this.envelopeSettings;
     }
@@ -70,6 +82,10 @@ public final class X12ProtocolSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="framingSettings", required=true)
     private X12FramingSettingsResponse framingSettings;
 
+    /**
+     * @return The X12 framing settings.
+     * 
+     */
     public X12FramingSettingsResponse framingSettings() {
         return this.framingSettings;
     }
@@ -81,6 +97,10 @@ public final class X12ProtocolSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="messageFilter", required=true)
     private X12MessageFilterResponse messageFilter;
 
+    /**
+     * @return The X12 message filter.
+     * 
+     */
     public X12MessageFilterResponse messageFilter() {
         return this.messageFilter;
     }
@@ -92,6 +112,10 @@ public final class X12ProtocolSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="messageFilterList")
     private @Nullable List<X12MessageIdentifierResponse> messageFilterList;
 
+    /**
+     * @return The X12 message filter list.
+     * 
+     */
     public Optional<List<X12MessageIdentifierResponse>> messageFilterList() {
         return Optional.ofNullable(this.messageFilterList);
     }
@@ -103,6 +127,10 @@ public final class X12ProtocolSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="processingSettings", required=true)
     private X12ProcessingSettingsResponse processingSettings;
 
+    /**
+     * @return The X12 processing settings.
+     * 
+     */
     public X12ProcessingSettingsResponse processingSettings() {
         return this.processingSettings;
     }
@@ -114,6 +142,10 @@ public final class X12ProtocolSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="schemaReferences", required=true)
     private List<X12SchemaReferenceResponse> schemaReferences;
 
+    /**
+     * @return The X12 schema references.
+     * 
+     */
     public List<X12SchemaReferenceResponse> schemaReferences() {
         return this.schemaReferences;
     }
@@ -125,6 +157,10 @@ public final class X12ProtocolSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="securitySettings", required=true)
     private X12SecuritySettingsResponse securitySettings;
 
+    /**
+     * @return The X12 security settings.
+     * 
+     */
     public X12SecuritySettingsResponse securitySettings() {
         return this.securitySettings;
     }
@@ -136,6 +172,10 @@ public final class X12ProtocolSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="validationOverrides")
     private @Nullable List<X12ValidationOverrideResponse> validationOverrides;
 
+    /**
+     * @return The X12 validation override settings.
+     * 
+     */
     public Optional<List<X12ValidationOverrideResponse>> validationOverrides() {
         return Optional.ofNullable(this.validationOverrides);
     }
@@ -147,6 +187,10 @@ public final class X12ProtocolSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="validationSettings", required=true)
     private X12ValidationSettingsResponse validationSettings;
 
+    /**
+     * @return The X12 validation settings.
+     * 
+     */
     public X12ValidationSettingsResponse validationSettings() {
         return this.validationSettings;
     }
@@ -158,6 +202,10 @@ public final class X12ProtocolSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="x12DelimiterOverrides")
     private @Nullable List<X12DelimiterOverridesResponse> x12DelimiterOverrides;
 
+    /**
+     * @return The X12 delimiter override settings.
+     * 
+     */
     public Optional<List<X12DelimiterOverridesResponse>> x12DelimiterOverrides() {
         return Optional.ofNullable(this.x12DelimiterOverrides);
     }
@@ -197,82 +245,184 @@ public final class X12ProtocolSettingsResponse extends com.pulumi.resources.Invo
             $ = new X12ProtocolSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param acknowledgementSettings The X12 acknowledgment settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acknowledgementSettings(X12AcknowledgementSettingsResponse acknowledgementSettings) {
             $.acknowledgementSettings = acknowledgementSettings;
             return this;
         }
 
+        /**
+         * @param envelopeOverrides The X12 envelope override settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder envelopeOverrides(@Nullable List<X12EnvelopeOverrideResponse> envelopeOverrides) {
             $.envelopeOverrides = envelopeOverrides;
             return this;
         }
 
+        /**
+         * @param envelopeOverrides The X12 envelope override settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder envelopeOverrides(X12EnvelopeOverrideResponse... envelopeOverrides) {
             return envelopeOverrides(List.of(envelopeOverrides));
         }
 
+        /**
+         * @param envelopeSettings The X12 envelope settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder envelopeSettings(X12EnvelopeSettingsResponse envelopeSettings) {
             $.envelopeSettings = envelopeSettings;
             return this;
         }
 
+        /**
+         * @param framingSettings The X12 framing settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder framingSettings(X12FramingSettingsResponse framingSettings) {
             $.framingSettings = framingSettings;
             return this;
         }
 
+        /**
+         * @param messageFilter The X12 message filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageFilter(X12MessageFilterResponse messageFilter) {
             $.messageFilter = messageFilter;
             return this;
         }
 
+        /**
+         * @param messageFilterList The X12 message filter list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageFilterList(@Nullable List<X12MessageIdentifierResponse> messageFilterList) {
             $.messageFilterList = messageFilterList;
             return this;
         }
 
+        /**
+         * @param messageFilterList The X12 message filter list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageFilterList(X12MessageIdentifierResponse... messageFilterList) {
             return messageFilterList(List.of(messageFilterList));
         }
 
+        /**
+         * @param processingSettings The X12 processing settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder processingSettings(X12ProcessingSettingsResponse processingSettings) {
             $.processingSettings = processingSettings;
             return this;
         }
 
+        /**
+         * @param schemaReferences The X12 schema references.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaReferences(List<X12SchemaReferenceResponse> schemaReferences) {
             $.schemaReferences = schemaReferences;
             return this;
         }
 
+        /**
+         * @param schemaReferences The X12 schema references.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaReferences(X12SchemaReferenceResponse... schemaReferences) {
             return schemaReferences(List.of(schemaReferences));
         }
 
+        /**
+         * @param securitySettings The X12 security settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securitySettings(X12SecuritySettingsResponse securitySettings) {
             $.securitySettings = securitySettings;
             return this;
         }
 
+        /**
+         * @param validationOverrides The X12 validation override settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validationOverrides(@Nullable List<X12ValidationOverrideResponse> validationOverrides) {
             $.validationOverrides = validationOverrides;
             return this;
         }
 
+        /**
+         * @param validationOverrides The X12 validation override settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validationOverrides(X12ValidationOverrideResponse... validationOverrides) {
             return validationOverrides(List.of(validationOverrides));
         }
 
+        /**
+         * @param validationSettings The X12 validation settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validationSettings(X12ValidationSettingsResponse validationSettings) {
             $.validationSettings = validationSettings;
             return this;
         }
 
+        /**
+         * @param x12DelimiterOverrides The X12 delimiter override settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder x12DelimiterOverrides(@Nullable List<X12DelimiterOverridesResponse> x12DelimiterOverrides) {
             $.x12DelimiterOverrides = x12DelimiterOverrides;
             return this;
         }
 
+        /**
+         * @param x12DelimiterOverrides The X12 delimiter override settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder x12DelimiterOverrides(X12DelimiterOverridesResponse... x12DelimiterOverrides) {
             return x12DelimiterOverrides(List.of(x12DelimiterOverrides));
         }

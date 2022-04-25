@@ -25,6 +25,10 @@ public final class InMageRcmPolicyDetailsResponse extends com.pulumi.resources.I
     @Import(name="appConsistentFrequencyInMinutes", required=true)
     private Integer appConsistentFrequencyInMinutes;
 
+    /**
+     * @return The app consistent snapshot frequency in minutes.
+     * 
+     */
     public Integer appConsistentFrequencyInMinutes() {
         return this.appConsistentFrequencyInMinutes;
     }
@@ -36,6 +40,10 @@ public final class InMageRcmPolicyDetailsResponse extends com.pulumi.resources.I
     @Import(name="crashConsistentFrequencyInMinutes", required=true)
     private Integer crashConsistentFrequencyInMinutes;
 
+    /**
+     * @return The crash consistent snapshot frequency in minutes.
+     * 
+     */
     public Integer crashConsistentFrequencyInMinutes() {
         return this.crashConsistentFrequencyInMinutes;
     }
@@ -47,6 +55,10 @@ public final class InMageRcmPolicyDetailsResponse extends com.pulumi.resources.I
     @Import(name="enableMultiVmSync", required=true)
     private String enableMultiVmSync;
 
+    /**
+     * @return A value indicating whether multi-VM sync has to be enabled.
+     * 
+     */
     public String enableMultiVmSync() {
         return this.enableMultiVmSync;
     }
@@ -59,6 +71,11 @@ public final class InMageRcmPolicyDetailsResponse extends com.pulumi.resources.I
     @Import(name="instanceType", required=true)
     private String instanceType;
 
+    /**
+     * @return Gets the class type. Overridden in derived classes.
+     * Expected value is &#39;InMageRcm&#39;.
+     * 
+     */
     public String instanceType() {
         return this.instanceType;
     }
@@ -70,6 +87,10 @@ public final class InMageRcmPolicyDetailsResponse extends com.pulumi.resources.I
     @Import(name="recoveryPointHistoryInMinutes", required=true)
     private Integer recoveryPointHistoryInMinutes;
 
+    /**
+     * @return The duration in minutes until which the recovery points need to be stored.
+     * 
+     */
     public Integer recoveryPointHistoryInMinutes() {
         return this.recoveryPointHistoryInMinutes;
     }
@@ -102,26 +123,57 @@ public final class InMageRcmPolicyDetailsResponse extends com.pulumi.resources.I
             $ = new InMageRcmPolicyDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param appConsistentFrequencyInMinutes The app consistent snapshot frequency in minutes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appConsistentFrequencyInMinutes(Integer appConsistentFrequencyInMinutes) {
             $.appConsistentFrequencyInMinutes = appConsistentFrequencyInMinutes;
             return this;
         }
 
+        /**
+         * @param crashConsistentFrequencyInMinutes The crash consistent snapshot frequency in minutes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder crashConsistentFrequencyInMinutes(Integer crashConsistentFrequencyInMinutes) {
             $.crashConsistentFrequencyInMinutes = crashConsistentFrequencyInMinutes;
             return this;
         }
 
+        /**
+         * @param enableMultiVmSync A value indicating whether multi-VM sync has to be enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableMultiVmSync(String enableMultiVmSync) {
             $.enableMultiVmSync = enableMultiVmSync;
             return this;
         }
 
+        /**
+         * @param instanceType Gets the class type. Overridden in derived classes.
+         * Expected value is &#39;InMageRcm&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(String instanceType) {
             $.instanceType = instanceType;
             return this;
         }
 
+        /**
+         * @param recoveryPointHistoryInMinutes The duration in minutes until which the recovery points need to be stored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryPointHistoryInMinutes(Integer recoveryPointHistoryInMinutes) {
             $.recoveryPointHistoryInMinutes = recoveryPointHistoryInMinutes;
             return this;

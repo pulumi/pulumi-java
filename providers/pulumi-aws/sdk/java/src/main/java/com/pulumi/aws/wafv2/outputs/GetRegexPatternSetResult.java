@@ -12,23 +12,23 @@ import java.util.Objects;
 @CustomType
 public final class GetRegexPatternSetResult {
     /**
-     * The Amazon Resource Name (ARN) of the entity.
+     * @return The Amazon Resource Name (ARN) of the entity.
      * 
      */
     private final String arn;
     /**
-     * The description of the set that helps with identification.
+     * @return The description of the set that helps with identification.
      * 
      */
     private final String description;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     private final String name;
     /**
-     * One or more blocks of regular expression patterns that AWS WAF is searching for. See Regular Expression below for details.
+     * @return One or more blocks of regular expression patterns that AWS WAF is searching for. See Regular Expression below for details.
      * 
      */
     private final List<GetRegexPatternSetRegularExpression> regularExpressions;
@@ -51,23 +51,23 @@ public final class GetRegexPatternSetResult {
     }
 
     /**
-     * The Amazon Resource Name (ARN) of the entity.
+     * @return The Amazon Resource Name (ARN) of the entity.
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
     /**
-     * The description of the set that helps with identification.
+     * @return The description of the set that helps with identification.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
@@ -75,9 +75,9 @@ public final class GetRegexPatternSetResult {
         return this.name;
     }
     /**
-     * One or more blocks of regular expression patterns that AWS WAF is searching for. See Regular Expression below for details.
+     * @return One or more blocks of regular expression patterns that AWS WAF is searching for. See Regular Expression below for details.
      * 
-    */
+     */
     public List<GetRegexPatternSetRegularExpression> regularExpressions() {
         return this.regularExpressions;
     }

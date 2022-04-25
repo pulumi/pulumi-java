@@ -30,6 +30,10 @@ public final class PlatformPropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="architecture")
     private @Nullable Output<Either<String,Architecture>> architecture;
 
+    /**
+     * @return The OS architecture.
+     * 
+     */
     public Optional<Output<Either<String,Architecture>>> architecture() {
         return Optional.ofNullable(this.architecture);
     }
@@ -41,6 +45,10 @@ public final class PlatformPropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="os", required=true)
     private Output<Either<String,OS>> os;
 
+    /**
+     * @return The operating system type required for the run.
+     * 
+     */
     public Output<Either<String,OS>> os() {
         return this.os;
     }
@@ -52,6 +60,10 @@ public final class PlatformPropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="variant")
     private @Nullable Output<Either<String,Variant>> variant;
 
+    /**
+     * @return Variant of the CPU.
+     * 
+     */
     public Optional<Output<Either<String,Variant>>> variant() {
         return Optional.ofNullable(this.variant);
     }
@@ -82,53 +94,125 @@ public final class PlatformPropertiesArgs extends com.pulumi.resources.ResourceA
             $ = new PlatformPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param architecture The OS architecture.
+         * 
+         * @return builder
+         * 
+         */
         public Builder architecture(@Nullable Output<Either<String,Architecture>> architecture) {
             $.architecture = architecture;
             return this;
         }
 
+        /**
+         * @param architecture The OS architecture.
+         * 
+         * @return builder
+         * 
+         */
         public Builder architecture(Either<String,Architecture> architecture) {
             return architecture(Output.of(architecture));
         }
 
+        /**
+         * @param architecture The OS architecture.
+         * 
+         * @return builder
+         * 
+         */
         public Builder architecture(String architecture) {
             return architecture(Either.ofLeft(architecture));
         }
 
+        /**
+         * @param architecture The OS architecture.
+         * 
+         * @return builder
+         * 
+         */
         public Builder architecture(Architecture architecture) {
             return architecture(Either.ofRight(architecture));
         }
 
+        /**
+         * @param os The operating system type required for the run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder os(Output<Either<String,OS>> os) {
             $.os = os;
             return this;
         }
 
+        /**
+         * @param os The operating system type required for the run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder os(Either<String,OS> os) {
             return os(Output.of(os));
         }
 
+        /**
+         * @param os The operating system type required for the run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder os(String os) {
             return os(Either.ofLeft(os));
         }
 
+        /**
+         * @param os The operating system type required for the run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder os(OS os) {
             return os(Either.ofRight(os));
         }
 
+        /**
+         * @param variant Variant of the CPU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder variant(@Nullable Output<Either<String,Variant>> variant) {
             $.variant = variant;
             return this;
         }
 
+        /**
+         * @param variant Variant of the CPU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder variant(Either<String,Variant> variant) {
             return variant(Output.of(variant));
         }
 
+        /**
+         * @param variant Variant of the CPU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder variant(String variant) {
             return variant(Either.ofLeft(variant));
         }
 
+        /**
+         * @param variant Variant of the CPU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder variant(Variant variant) {
             return variant(Either.ofRight(variant));
         }

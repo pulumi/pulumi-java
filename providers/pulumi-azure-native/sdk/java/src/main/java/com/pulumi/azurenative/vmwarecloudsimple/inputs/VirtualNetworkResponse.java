@@ -24,6 +24,10 @@ public final class VirtualNetworkResponse extends com.pulumi.resources.InvokeArg
     @Import(name="assignable", required=true)
     private Boolean assignable;
 
+    /**
+     * @return can be used in vm creation/deletion
+     * 
+     */
     public Boolean assignable() {
         return this.assignable;
     }
@@ -35,6 +39,10 @@ public final class VirtualNetworkResponse extends com.pulumi.resources.InvokeArg
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return virtual network id (privateCloudId:vsphereId)
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -46,6 +54,10 @@ public final class VirtualNetworkResponse extends com.pulumi.resources.InvokeArg
     @Import(name="location", required=true)
     private String location;
 
+    /**
+     * @return Azure region
+     * 
+     */
     public String location() {
         return this.location;
     }
@@ -57,6 +69,10 @@ public final class VirtualNetworkResponse extends com.pulumi.resources.InvokeArg
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return {VirtualNetworkName}
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -68,6 +84,10 @@ public final class VirtualNetworkResponse extends com.pulumi.resources.InvokeArg
     @Import(name="privateCloudId", required=true)
     private String privateCloudId;
 
+    /**
+     * @return The Private Cloud id
+     * 
+     */
     public String privateCloudId() {
         return this.privateCloudId;
     }
@@ -79,6 +99,10 @@ public final class VirtualNetworkResponse extends com.pulumi.resources.InvokeArg
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return {resourceProviderNamespace}/{resourceType}
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -112,31 +136,67 @@ public final class VirtualNetworkResponse extends com.pulumi.resources.InvokeArg
             $ = new VirtualNetworkResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param assignable can be used in vm creation/deletion
+         * 
+         * @return builder
+         * 
+         */
         public Builder assignable(Boolean assignable) {
             $.assignable = assignable;
             return this;
         }
 
+        /**
+         * @param id virtual network id (privateCloudId:vsphereId)
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param location Azure region
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param name {VirtualNetworkName}
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param privateCloudId The Private Cloud id
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateCloudId(String privateCloudId) {
             $.privateCloudId = privateCloudId;
             return this;
         }
 
+        /**
+         * @param type {resourceProviderNamespace}/{resourceType}
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

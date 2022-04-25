@@ -13,17 +13,17 @@ import java.util.Objects;
 @CustomType
 public final class GooglePrivacyDlpV2RiskAnalysisJobConfigResponse {
     /**
-     * Actions to execute at the completion of the job. Are executed in the order provided.
+     * @return Actions to execute at the completion of the job. Are executed in the order provided.
      * 
      */
     private final List<GooglePrivacyDlpV2ActionResponse> actions;
     /**
-     * Privacy metric to compute.
+     * @return Privacy metric to compute.
      * 
      */
     private final GooglePrivacyDlpV2PrivacyMetricResponse privacyMetric;
     /**
-     * Input dataset to compute metrics over.
+     * @return Input dataset to compute metrics over.
      * 
      */
     private final GooglePrivacyDlpV2BigQueryTableResponse sourceTable;
@@ -39,23 +39,23 @@ public final class GooglePrivacyDlpV2RiskAnalysisJobConfigResponse {
     }
 
     /**
-     * Actions to execute at the completion of the job. Are executed in the order provided.
+     * @return Actions to execute at the completion of the job. Are executed in the order provided.
      * 
-    */
+     */
     public List<GooglePrivacyDlpV2ActionResponse> actions() {
         return this.actions;
     }
     /**
-     * Privacy metric to compute.
+     * @return Privacy metric to compute.
      * 
-    */
+     */
     public GooglePrivacyDlpV2PrivacyMetricResponse privacyMetric() {
         return this.privacyMetric;
     }
     /**
-     * Input dataset to compute metrics over.
+     * @return Input dataset to compute metrics over.
      * 
-    */
+     */
     public GooglePrivacyDlpV2BigQueryTableResponse sourceTable() {
         return this.sourceTable;
     }

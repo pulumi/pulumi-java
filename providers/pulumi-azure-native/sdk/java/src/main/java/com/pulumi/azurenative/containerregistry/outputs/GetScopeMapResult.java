@@ -14,44 +14,44 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetScopeMapResult {
     /**
-     * The list of scoped permissions for registry artifacts.
+     * @return The list of scoped permissions for registry artifacts.
      * E.g. repositories/repository-name/content/read,
      * repositories/repository-name/metadata/write
      * 
      */
     private final List<String> actions;
     /**
-     * The creation date of scope map.
+     * @return The creation date of scope map.
      * 
      */
     private final String creationDate;
     /**
-     * The user friendly description of the scope map.
+     * @return The user friendly description of the scope map.
      * 
      */
     private final @Nullable String description;
     /**
-     * The resource ID.
+     * @return The resource ID.
      * 
      */
     private final String id;
     /**
-     * The name of the resource.
+     * @return The name of the resource.
      * 
      */
     private final String name;
     /**
-     * Provisioning state of the resource.
+     * @return Provisioning state of the resource.
      * 
      */
     private final String provisioningState;
     /**
-     * Metadata pertaining to creation and last modification of the resource.
+     * @return Metadata pertaining to creation and last modification of the resource.
      * 
      */
     private final SystemDataResponse systemData;
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
      */
     private final String type;
@@ -77,60 +77,60 @@ public final class GetScopeMapResult {
     }
 
     /**
-     * The list of scoped permissions for registry artifacts.
+     * @return The list of scoped permissions for registry artifacts.
      * E.g. repositories/repository-name/content/read,
      * repositories/repository-name/metadata/write
      * 
-    */
+     */
     public List<String> actions() {
         return this.actions;
     }
     /**
-     * The creation date of scope map.
+     * @return The creation date of scope map.
      * 
-    */
+     */
     public String creationDate() {
         return this.creationDate;
     }
     /**
-     * The user friendly description of the scope map.
+     * @return The user friendly description of the scope map.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The resource ID.
+     * @return The resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The name of the resource.
+     * @return The name of the resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Provisioning state of the resource.
+     * @return Provisioning state of the resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Metadata pertaining to creation and last modification of the resource.
+     * @return Metadata pertaining to creation and last modification of the resource.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

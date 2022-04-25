@@ -17,57 +17,57 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetFailoverGroupResult {
     /**
-     * List of databases in the failover group.
+     * @return List of databases in the failover group.
      * 
      */
     private final @Nullable List<String> databases;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final String id;
     /**
-     * Resource location.
+     * @return Resource location.
      * 
      */
     private final String location;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * List of partner server information for the failover group.
+     * @return List of partner server information for the failover group.
      * 
      */
     private final List<PartnerInfoResponse> partnerServers;
     /**
-     * Read-only endpoint of the failover group instance.
+     * @return Read-only endpoint of the failover group instance.
      * 
      */
     private final @Nullable FailoverGroupReadOnlyEndpointResponse readOnlyEndpoint;
     /**
-     * Read-write endpoint of the failover group instance.
+     * @return Read-write endpoint of the failover group instance.
      * 
      */
     private final FailoverGroupReadWriteEndpointResponse readWriteEndpoint;
     /**
-     * Local replication role of the failover group instance.
+     * @return Local replication role of the failover group instance.
      * 
      */
     private final String replicationRole;
     /**
-     * Replication state of the failover group instance.
+     * @return Replication state of the failover group instance.
      * 
      */
     private final String replicationState;
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
@@ -99,79 +99,79 @@ public final class GetFailoverGroupResult {
     }
 
     /**
-     * List of databases in the failover group.
+     * @return List of databases in the failover group.
      * 
-    */
+     */
     public List<String> databases() {
         return this.databases == null ? List.of() : this.databases;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource location.
+     * @return Resource location.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * List of partner server information for the failover group.
+     * @return List of partner server information for the failover group.
      * 
-    */
+     */
     public List<PartnerInfoResponse> partnerServers() {
         return this.partnerServers;
     }
     /**
-     * Read-only endpoint of the failover group instance.
+     * @return Read-only endpoint of the failover group instance.
      * 
-    */
+     */
     public Optional<FailoverGroupReadOnlyEndpointResponse> readOnlyEndpoint() {
         return Optional.ofNullable(this.readOnlyEndpoint);
     }
     /**
-     * Read-write endpoint of the failover group instance.
+     * @return Read-write endpoint of the failover group instance.
      * 
-    */
+     */
     public FailoverGroupReadWriteEndpointResponse readWriteEndpoint() {
         return this.readWriteEndpoint;
     }
     /**
-     * Local replication role of the failover group instance.
+     * @return Local replication role of the failover group instance.
      * 
-    */
+     */
     public String replicationRole() {
         return this.replicationRole;
     }
     /**
-     * Replication state of the failover group instance.
+     * @return Replication state of the failover group instance.
      * 
-    */
+     */
     public String replicationState() {
         return this.replicationState;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

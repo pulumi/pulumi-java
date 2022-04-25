@@ -26,6 +26,10 @@ public final class SnapshotArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="creationData")
     private @Nullable Output<CreationDataArgs> creationData;
 
+    /**
+     * @return CreationData to be used to specify the source agent pool resource ID to create this snapshot.
+     * 
+     */
     public Optional<Output<CreationDataArgs>> creationData() {
         return Optional.ofNullable(this.creationData);
     }
@@ -37,6 +41,10 @@ public final class SnapshotArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -48,6 +56,10 @@ public final class SnapshotArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,6 +71,10 @@ public final class SnapshotArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceName")
     private @Nullable Output<String> resourceName;
 
+    /**
+     * @return The name of the managed cluster resource.
+     * 
+     */
     public Optional<Output<String>> resourceName() {
         return Optional.ofNullable(this.resourceName);
     }
@@ -70,6 +86,10 @@ public final class SnapshotArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="snapshotType")
     private @Nullable Output<Either<String,SnapshotType>> snapshotType;
 
+    /**
+     * @return The type of a snapshot. The default is NodePool.
+     * 
+     */
     public Optional<Output<Either<String,SnapshotType>>> snapshotType() {
         return Optional.ofNullable(this.snapshotType);
     }
@@ -81,6 +101,10 @@ public final class SnapshotArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -114,64 +138,148 @@ public final class SnapshotArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SnapshotArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param creationData CreationData to be used to specify the source agent pool resource ID to create this snapshot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder creationData(@Nullable Output<CreationDataArgs> creationData) {
             $.creationData = creationData;
             return this;
         }
 
+        /**
+         * @param creationData CreationData to be used to specify the source agent pool resource ID to create this snapshot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder creationData(CreationDataArgs creationData) {
             return creationData(Output.of(creationData));
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param resourceName The name of the managed cluster resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(@Nullable Output<String> resourceName) {
             $.resourceName = resourceName;
             return this;
         }
 
+        /**
+         * @param resourceName The name of the managed cluster resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(String resourceName) {
             return resourceName(Output.of(resourceName));
         }
 
+        /**
+         * @param snapshotType The type of a snapshot. The default is NodePool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotType(@Nullable Output<Either<String,SnapshotType>> snapshotType) {
             $.snapshotType = snapshotType;
             return this;
         }
 
+        /**
+         * @param snapshotType The type of a snapshot. The default is NodePool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotType(Either<String,SnapshotType> snapshotType) {
             return snapshotType(Output.of(snapshotType));
         }
 
+        /**
+         * @param snapshotType The type of a snapshot. The default is NodePool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotType(String snapshotType) {
             return snapshotType(Either.ofLeft(snapshotType));
         }
 
+        /**
+         * @param snapshotType The type of a snapshot. The default is NodePool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotType(SnapshotType snapshotType) {
             return snapshotType(Either.ofRight(snapshotType));
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

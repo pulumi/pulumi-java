@@ -23,6 +23,10 @@ public final class TagOptionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="active")
     private @Nullable Output<Boolean> active;
 
+    /**
+     * @return Whether tag option is active. Default is `true`.
+     * 
+     */
     public Optional<Output<Boolean>> active() {
         return Optional.ofNullable(this.active);
     }
@@ -34,6 +38,10 @@ public final class TagOptionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="key")
     private @Nullable Output<String> key;
 
+    /**
+     * @return Tag option key.
+     * 
+     */
     public Optional<Output<String>> key() {
         return Optional.ofNullable(this.key);
     }
@@ -52,6 +60,10 @@ public final class TagOptionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="value")
     private @Nullable Output<String> value;
 
+    /**
+     * @return Tag option value.
+     * 
+     */
     public Optional<Output<String>> value() {
         return Optional.ofNullable(this.value);
     }
@@ -83,20 +95,44 @@ public final class TagOptionState extends com.pulumi.resources.ResourceArgs {
             $ = new TagOptionState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param active Whether tag option is active. Default is `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder active(@Nullable Output<Boolean> active) {
             $.active = active;
             return this;
         }
 
+        /**
+         * @param active Whether tag option is active. Default is `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder active(Boolean active) {
             return active(Output.of(active));
         }
 
+        /**
+         * @param key Tag option key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(@Nullable Output<String> key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param key Tag option key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             return key(Output.of(key));
         }
@@ -110,11 +146,23 @@ public final class TagOptionState extends com.pulumi.resources.ResourceArgs {
             return owner(Output.of(owner));
         }
 
+        /**
+         * @param value Tag option value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value Tag option value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

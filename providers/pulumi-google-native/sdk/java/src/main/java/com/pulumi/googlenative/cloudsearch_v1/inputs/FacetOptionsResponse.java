@@ -24,6 +24,10 @@ public final class FacetOptionsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="numFacetBuckets", required=true)
     private Integer numFacetBuckets;
 
+    /**
+     * @return Maximum number of facet buckets that should be returned for this facet. Defaults to 10. Maximum value is 100.
+     * 
+     */
     public Integer numFacetBuckets() {
         return this.numFacetBuckets;
     }
@@ -35,6 +39,10 @@ public final class FacetOptionsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="objectType", required=true)
     private String objectType;
 
+    /**
+     * @return If object_type is set, only those objects of that type will be used to compute facets. If empty, then all objects will be used to compute facets.
+     * 
+     */
     public String objectType() {
         return this.objectType;
     }
@@ -46,6 +54,10 @@ public final class FacetOptionsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="operatorName", required=true)
     private String operatorName;
 
+    /**
+     * @return Name of the operator chosen for faceting. @see cloudsearch.SchemaPropertyOptions
+     * 
+     */
     public String operatorName() {
         return this.operatorName;
     }
@@ -57,6 +69,10 @@ public final class FacetOptionsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="sourceName", required=true)
     private String sourceName;
 
+    /**
+     * @return Source name to facet on. Format: datasources/{source_id} If empty, all data sources will be used.
+     * 
+     */
     public String sourceName() {
         return this.sourceName;
     }
@@ -88,21 +104,45 @@ public final class FacetOptionsResponse extends com.pulumi.resources.InvokeArgs 
             $ = new FacetOptionsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param numFacetBuckets Maximum number of facet buckets that should be returned for this facet. Defaults to 10. Maximum value is 100.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numFacetBuckets(Integer numFacetBuckets) {
             $.numFacetBuckets = numFacetBuckets;
             return this;
         }
 
+        /**
+         * @param objectType If object_type is set, only those objects of that type will be used to compute facets. If empty, then all objects will be used to compute facets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectType(String objectType) {
             $.objectType = objectType;
             return this;
         }
 
+        /**
+         * @param operatorName Name of the operator chosen for faceting. @see cloudsearch.SchemaPropertyOptions
+         * 
+         * @return builder
+         * 
+         */
         public Builder operatorName(String operatorName) {
             $.operatorName = operatorName;
             return this;
         }
 
+        /**
+         * @param sourceName Source name to facet on. Format: datasources/{source_id} If empty, all data sources will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceName(String sourceName) {
             $.sourceName = sourceName;
             return this;

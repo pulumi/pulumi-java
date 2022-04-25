@@ -10,22 +10,22 @@ import java.util.Objects;
 @CustomType
 public final class StatusMessageResponse {
     /**
-     * Service-defined message code.
+     * @return Service-defined message code.
      * 
      */
     private final String code;
     /**
-     * Time in UTC at which the message was created.
+     * @return Time in UTC at which the message was created.
      * 
      */
     private final String createdTimeUtc;
     /**
-     * Severity level of the status message.
+     * @return Severity level of the status message.
      * 
      */
     private final String level;
     /**
-     * A human-readable representation of the message code.
+     * @return A human-readable representation of the message code.
      * 
      */
     private final String message;
@@ -43,30 +43,30 @@ public final class StatusMessageResponse {
     }
 
     /**
-     * Service-defined message code.
+     * @return Service-defined message code.
      * 
-    */
+     */
     public String code() {
         return this.code;
     }
     /**
-     * Time in UTC at which the message was created.
+     * @return Time in UTC at which the message was created.
      * 
-    */
+     */
     public String createdTimeUtc() {
         return this.createdTimeUtc;
     }
     /**
-     * Severity level of the status message.
+     * @return Severity level of the status message.
      * 
-    */
+     */
     public String level() {
         return this.level;
     }
     /**
-     * A human-readable representation of the message code.
+     * @return A human-readable representation of the message code.
      * 
-    */
+     */
     public String message() {
         return this.message;
     }

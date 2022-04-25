@@ -25,6 +25,10 @@ public final class SecurityContactPropertiesResponseAlertNotifications extends c
     @Import(name="minimalSeverity")
     private @Nullable String minimalSeverity;
 
+    /**
+     * @return Defines the minimal alert severity which will be sent as email notifications
+     * 
+     */
     public Optional<String> minimalSeverity() {
         return Optional.ofNullable(this.minimalSeverity);
     }
@@ -36,6 +40,10 @@ public final class SecurityContactPropertiesResponseAlertNotifications extends c
     @Import(name="state")
     private @Nullable String state;
 
+    /**
+     * @return Defines if email notifications will be sent about new security alerts
+     * 
+     */
     public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
@@ -65,11 +73,23 @@ public final class SecurityContactPropertiesResponseAlertNotifications extends c
             $ = new SecurityContactPropertiesResponseAlertNotifications(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param minimalSeverity Defines the minimal alert severity which will be sent as email notifications
+         * 
+         * @return builder
+         * 
+         */
         public Builder minimalSeverity(@Nullable String minimalSeverity) {
             $.minimalSeverity = minimalSeverity;
             return this;
         }
 
+        /**
+         * @param state Defines if email notifications will be sent about new security alerts
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable String state) {
             $.state = state;
             return this;

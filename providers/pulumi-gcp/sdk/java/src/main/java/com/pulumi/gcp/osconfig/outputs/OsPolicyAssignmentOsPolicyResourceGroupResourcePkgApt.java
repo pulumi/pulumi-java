@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgApt {
     /**
-     * Required. The name of the repository.
+     * @return Required. The name of the repository.
      * 
      */
     private final String name;
@@ -21,9 +21,9 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgApt {
     }
 
     /**
-     * Required. The name of the repository.
+     * @return Required. The name of the repository.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

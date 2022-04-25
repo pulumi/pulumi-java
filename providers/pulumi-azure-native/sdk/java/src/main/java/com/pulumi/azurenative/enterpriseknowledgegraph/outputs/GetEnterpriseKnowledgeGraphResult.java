@@ -15,37 +15,37 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetEnterpriseKnowledgeGraphResult {
     /**
-     * Specifies the resource ID.
+     * @return Specifies the resource ID.
      * 
      */
     private final String id;
     /**
-     * Specifies the location of the resource.
+     * @return Specifies the location of the resource.
      * 
      */
     private final @Nullable String location;
     /**
-     * Specifies the name of the resource.
+     * @return Specifies the name of the resource.
      * 
      */
     private final String name;
     /**
-     * The set of properties specific to EnterpriseKnowledgeGraph resource
+     * @return The set of properties specific to EnterpriseKnowledgeGraph resource
      * 
      */
     private final EnterpriseKnowledgeGraphPropertiesResponse properties;
     /**
-     * Gets or sets the SKU of the resource.
+     * @return Gets or sets the SKU of the resource.
      * 
      */
     private final @Nullable SkuResponse sku;
     /**
-     * Contains resource tags defined as key/value pairs.
+     * @return Contains resource tags defined as key/value pairs.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Specifies the type of the resource.
+     * @return Specifies the type of the resource.
      * 
      */
     private final String type;
@@ -69,51 +69,51 @@ public final class GetEnterpriseKnowledgeGraphResult {
     }
 
     /**
-     * Specifies the resource ID.
+     * @return Specifies the resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Specifies the location of the resource.
+     * @return Specifies the location of the resource.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * Specifies the name of the resource.
+     * @return Specifies the name of the resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The set of properties specific to EnterpriseKnowledgeGraph resource
+     * @return The set of properties specific to EnterpriseKnowledgeGraph resource
      * 
-    */
+     */
     public EnterpriseKnowledgeGraphPropertiesResponse properties() {
         return this.properties;
     }
     /**
-     * Gets or sets the SKU of the resource.
+     * @return Gets or sets the SKU of the resource.
      * 
-    */
+     */
     public Optional<SkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
-     * Contains resource tags defined as key/value pairs.
+     * @return Contains resource tags defined as key/value pairs.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Specifies the type of the resource.
+     * @return Specifies the type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

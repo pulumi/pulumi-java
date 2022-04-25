@@ -26,6 +26,10 @@ public final class WebPubSubTlsSettingsResponse extends com.pulumi.resources.Inv
     @Import(name="clientCertEnabled")
     private @Nullable Boolean clientCertEnabled;
 
+    /**
+     * @return Request client certificate during TLS handshake if enabled
+     * 
+     */
     public Optional<Boolean> clientCertEnabled() {
         return Optional.ofNullable(this.clientCertEnabled);
     }
@@ -54,6 +58,12 @@ public final class WebPubSubTlsSettingsResponse extends com.pulumi.resources.Inv
             $ = new WebPubSubTlsSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientCertEnabled Request client certificate during TLS handshake if enabled
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientCertEnabled(@Nullable Boolean clientCertEnabled) {
             $.clientCertEnabled = clientCertEnabled;
             return this;

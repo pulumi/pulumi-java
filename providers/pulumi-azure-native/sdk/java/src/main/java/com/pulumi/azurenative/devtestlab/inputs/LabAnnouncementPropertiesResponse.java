@@ -26,6 +26,10 @@ public final class LabAnnouncementPropertiesResponse extends com.pulumi.resource
     @Import(name="enabled")
     private @Nullable String enabled;
 
+    /**
+     * @return Is the lab announcement active/enabled at this time?
+     * 
+     */
     public Optional<String> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -37,6 +41,10 @@ public final class LabAnnouncementPropertiesResponse extends com.pulumi.resource
     @Import(name="expirationDate")
     private @Nullable String expirationDate;
 
+    /**
+     * @return The time at which the announcement expires (null for never)
+     * 
+     */
     public Optional<String> expirationDate() {
         return Optional.ofNullable(this.expirationDate);
     }
@@ -48,6 +56,10 @@ public final class LabAnnouncementPropertiesResponse extends com.pulumi.resource
     @Import(name="expired")
     private @Nullable Boolean expired;
 
+    /**
+     * @return Has this announcement expired?
+     * 
+     */
     public Optional<Boolean> expired() {
         return Optional.ofNullable(this.expired);
     }
@@ -59,6 +71,10 @@ public final class LabAnnouncementPropertiesResponse extends com.pulumi.resource
     @Import(name="markdown")
     private @Nullable String markdown;
 
+    /**
+     * @return The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.
+     * 
+     */
     public Optional<String> markdown() {
         return Optional.ofNullable(this.markdown);
     }
@@ -70,6 +86,10 @@ public final class LabAnnouncementPropertiesResponse extends com.pulumi.resource
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The provisioning status of the resource.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -81,6 +101,10 @@ public final class LabAnnouncementPropertiesResponse extends com.pulumi.resource
     @Import(name="title")
     private @Nullable String title;
 
+    /**
+     * @return The plain text title for the lab announcement
+     * 
+     */
     public Optional<String> title() {
         return Optional.ofNullable(this.title);
     }
@@ -92,6 +116,10 @@ public final class LabAnnouncementPropertiesResponse extends com.pulumi.resource
     @Import(name="uniqueIdentifier", required=true)
     private String uniqueIdentifier;
 
+    /**
+     * @return The unique immutable identifier of a resource (Guid).
+     * 
+     */
     public String uniqueIdentifier() {
         return this.uniqueIdentifier;
     }
@@ -126,36 +154,78 @@ public final class LabAnnouncementPropertiesResponse extends com.pulumi.resource
             $ = new LabAnnouncementPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Is the lab announcement active/enabled at this time?
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable String enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param expirationDate The time at which the announcement expires (null for never)
+         * 
+         * @return builder
+         * 
+         */
         public Builder expirationDate(@Nullable String expirationDate) {
             $.expirationDate = expirationDate;
             return this;
         }
 
+        /**
+         * @param expired Has this announcement expired?
+         * 
+         * @return builder
+         * 
+         */
         public Builder expired(@Nullable Boolean expired) {
             $.expired = expired;
             return this;
         }
 
+        /**
+         * @param markdown The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.
+         * 
+         * @return builder
+         * 
+         */
         public Builder markdown(@Nullable String markdown) {
             $.markdown = markdown;
             return this;
         }
 
+        /**
+         * @param provisioningState The provisioning status of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param title The plain text title for the lab announcement
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(@Nullable String title) {
             $.title = title;
             return this;
         }
 
+        /**
+         * @param uniqueIdentifier The unique immutable identifier of a resource (Guid).
+         * 
+         * @return builder
+         * 
+         */
         public Builder uniqueIdentifier(String uniqueIdentifier) {
             $.uniqueIdentifier = uniqueIdentifier;
             return this;

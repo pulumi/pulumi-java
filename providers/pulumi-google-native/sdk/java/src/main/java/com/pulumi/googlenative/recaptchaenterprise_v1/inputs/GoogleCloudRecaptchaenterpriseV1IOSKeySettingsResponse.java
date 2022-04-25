@@ -25,6 +25,10 @@ public final class GoogleCloudRecaptchaenterpriseV1IOSKeySettingsResponse extend
     @Import(name="allowAllBundleIds", required=true)
     private Boolean allowAllBundleIds;
 
+    /**
+     * @return If set to true, allowed_bundle_ids are not enforced.
+     * 
+     */
     public Boolean allowAllBundleIds() {
         return this.allowAllBundleIds;
     }
@@ -36,6 +40,10 @@ public final class GoogleCloudRecaptchaenterpriseV1IOSKeySettingsResponse extend
     @Import(name="allowedBundleIds", required=true)
     private List<String> allowedBundleIds;
 
+    /**
+     * @return iOS bundle ids of apps allowed to use the key. Example: &#39;com.companyname.productname.appname&#39;
+     * 
+     */
     public List<String> allowedBundleIds() {
         return this.allowedBundleIds;
     }
@@ -65,16 +73,34 @@ public final class GoogleCloudRecaptchaenterpriseV1IOSKeySettingsResponse extend
             $ = new GoogleCloudRecaptchaenterpriseV1IOSKeySettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowAllBundleIds If set to true, allowed_bundle_ids are not enforced.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowAllBundleIds(Boolean allowAllBundleIds) {
             $.allowAllBundleIds = allowAllBundleIds;
             return this;
         }
 
+        /**
+         * @param allowedBundleIds iOS bundle ids of apps allowed to use the key. Example: &#39;com.companyname.productname.appname&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedBundleIds(List<String> allowedBundleIds) {
             $.allowedBundleIds = allowedBundleIds;
             return this;
         }
 
+        /**
+         * @param allowedBundleIds iOS bundle ids of apps allowed to use the key. Example: &#39;com.companyname.productname.appname&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedBundleIds(String... allowedBundleIds) {
             return allowedBundleIds(List.of(allowedBundleIds));
         }

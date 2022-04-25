@@ -27,6 +27,10 @@ public final class DataFlowStagingInfoArgs extends com.pulumi.resources.Resource
     @Import(name="folderPath")
     private @Nullable Output<Object> folderPath;
 
+    /**
+     * @return Folder path for staging blob. Type: string (or Expression with resultType string)
+     * 
+     */
     public Optional<Output<Object>> folderPath() {
         return Optional.ofNullable(this.folderPath);
     }
@@ -38,6 +42,10 @@ public final class DataFlowStagingInfoArgs extends com.pulumi.resources.Resource
     @Import(name="linkedService")
     private @Nullable Output<LinkedServiceReferenceArgs> linkedService;
 
+    /**
+     * @return Staging linked service reference.
+     * 
+     */
     public Optional<Output<LinkedServiceReferenceArgs>> linkedService() {
         return Optional.ofNullable(this.linkedService);
     }
@@ -67,20 +75,44 @@ public final class DataFlowStagingInfoArgs extends com.pulumi.resources.Resource
             $ = new DataFlowStagingInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param folderPath Folder path for staging blob. Type: string (or Expression with resultType string)
+         * 
+         * @return builder
+         * 
+         */
         public Builder folderPath(@Nullable Output<Object> folderPath) {
             $.folderPath = folderPath;
             return this;
         }
 
+        /**
+         * @param folderPath Folder path for staging blob. Type: string (or Expression with resultType string)
+         * 
+         * @return builder
+         * 
+         */
         public Builder folderPath(Object folderPath) {
             return folderPath(Output.of(folderPath));
         }
 
+        /**
+         * @param linkedService Staging linked service reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedService(@Nullable Output<LinkedServiceReferenceArgs> linkedService) {
             $.linkedService = linkedService;
             return this;
         }
 
+        /**
+         * @param linkedService Staging linked service reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedService(LinkedServiceReferenceArgs linkedService) {
             return linkedService(Output.of(linkedService));
         }

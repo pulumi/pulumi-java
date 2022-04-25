@@ -23,6 +23,10 @@ public final class StorageAccountKeyResponse extends com.pulumi.resources.Invoke
     @Import(name="creationTime", required=true)
     private String creationTime;
 
+    /**
+     * @return Creation time of the key, in round trip date format.
+     * 
+     */
     public String creationTime() {
         return this.creationTime;
     }
@@ -34,6 +38,10 @@ public final class StorageAccountKeyResponse extends com.pulumi.resources.Invoke
     @Import(name="keyName", required=true)
     private String keyName;
 
+    /**
+     * @return Name of the key.
+     * 
+     */
     public String keyName() {
         return this.keyName;
     }
@@ -45,6 +53,10 @@ public final class StorageAccountKeyResponse extends com.pulumi.resources.Invoke
     @Import(name="permissions", required=true)
     private String permissions;
 
+    /**
+     * @return Permissions for the key -- read-only or full permissions.
+     * 
+     */
     public String permissions() {
         return this.permissions;
     }
@@ -56,6 +68,10 @@ public final class StorageAccountKeyResponse extends com.pulumi.resources.Invoke
     @Import(name="value", required=true)
     private String value;
 
+    /**
+     * @return Base 64-encoded value of the key.
+     * 
+     */
     public String value() {
         return this.value;
     }
@@ -87,21 +103,45 @@ public final class StorageAccountKeyResponse extends com.pulumi.resources.Invoke
             $ = new StorageAccountKeyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param creationTime Creation time of the key, in round trip date format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder creationTime(String creationTime) {
             $.creationTime = creationTime;
             return this;
         }
 
+        /**
+         * @param keyName Name of the key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyName(String keyName) {
             $.keyName = keyName;
             return this;
         }
 
+        /**
+         * @param permissions Permissions for the key -- read-only or full permissions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissions(String permissions) {
             $.permissions = permissions;
             return this;
         }
 
+        /**
+         * @param value Base 64-encoded value of the key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             $.value = value;
             return this;

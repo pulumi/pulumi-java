@@ -22,6 +22,10 @@ public final class ManagedZoneServiceDirectoryConfigNamespaceArgs extends com.pu
     @Import(name="deletionTime")
     private @Nullable Output<String> deletionTime;
 
+    /**
+     * @return The time that the namespace backing this zone was deleted; an empty string if it still exists. This is in RFC3339 text format. Output only.
+     * 
+     */
     public Optional<Output<String>> deletionTime() {
         return Optional.ofNullable(this.deletionTime);
     }
@@ -40,6 +44,10 @@ public final class ManagedZoneServiceDirectoryConfigNamespaceArgs extends com.pu
     @Import(name="namespaceUrl")
     private @Nullable Output<String> namespaceUrl;
 
+    /**
+     * @return The fully qualified URL of the namespace associated with the zone. Format must be https://servicedirectory.googleapis.com/v1/projects/{project}/locations/{location}/namespaces/{namespace}
+     * 
+     */
     public Optional<Output<String>> namespaceUrl() {
         return Optional.ofNullable(this.namespaceUrl);
     }
@@ -70,11 +78,23 @@ public final class ManagedZoneServiceDirectoryConfigNamespaceArgs extends com.pu
             $ = new ManagedZoneServiceDirectoryConfigNamespaceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deletionTime The time that the namespace backing this zone was deleted; an empty string if it still exists. This is in RFC3339 text format. Output only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deletionTime(@Nullable Output<String> deletionTime) {
             $.deletionTime = deletionTime;
             return this;
         }
 
+        /**
+         * @param deletionTime The time that the namespace backing this zone was deleted; an empty string if it still exists. This is in RFC3339 text format. Output only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deletionTime(String deletionTime) {
             return deletionTime(Output.of(deletionTime));
         }
@@ -88,11 +108,23 @@ public final class ManagedZoneServiceDirectoryConfigNamespaceArgs extends com.pu
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param namespaceUrl The fully qualified URL of the namespace associated with the zone. Format must be https://servicedirectory.googleapis.com/v1/projects/{project}/locations/{location}/namespaces/{namespace}
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespaceUrl(@Nullable Output<String> namespaceUrl) {
             $.namespaceUrl = namespaceUrl;
             return this;
         }
 
+        /**
+         * @param namespaceUrl The fully qualified URL of the namespace associated with the zone. Format must be https://servicedirectory.googleapis.com/v1/projects/{project}/locations/{location}/namespaces/{namespace}
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespaceUrl(String namespaceUrl) {
             return namespaceUrl(Output.of(namespaceUrl));
         }

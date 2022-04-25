@@ -15,18 +15,18 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AnalyticsApplicationInputsSchema {
     /**
-     * The Record Column mapping for the streaming source data element.
+     * @return The Record Column mapping for the streaming source data element.
      * See Record Columns below for more details.
      * 
      */
     private final List<AnalyticsApplicationInputsSchemaRecordColumn> recordColumns;
     /**
-     * The Encoding of the record in the streaming source.
+     * @return The Encoding of the record in the streaming source.
      * 
      */
     private final @Nullable String recordEncoding;
     /**
-     * The Record Format and mapping information to schematize a record.
+     * @return The Record Format and mapping information to schematize a record.
      * See Record Format below for more details.
      * 
      */
@@ -43,25 +43,25 @@ public final class AnalyticsApplicationInputsSchema {
     }
 
     /**
-     * The Record Column mapping for the streaming source data element.
+     * @return The Record Column mapping for the streaming source data element.
      * See Record Columns below for more details.
      * 
-    */
+     */
     public List<AnalyticsApplicationInputsSchemaRecordColumn> recordColumns() {
         return this.recordColumns;
     }
     /**
-     * The Encoding of the record in the streaming source.
+     * @return The Encoding of the record in the streaming source.
      * 
-    */
+     */
     public Optional<String> recordEncoding() {
         return Optional.ofNullable(this.recordEncoding);
     }
     /**
-     * The Record Format and mapping information to schematize a record.
+     * @return The Record Format and mapping information to schematize a record.
      * See Record Format below for more details.
      * 
-    */
+     */
     public AnalyticsApplicationInputsSchemaRecordFormat recordFormat() {
         return this.recordFormat;
     }

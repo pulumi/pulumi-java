@@ -26,6 +26,10 @@ public final class ReportAggregationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="function", required=true)
     private Output<Either<String,FunctionType>> function;
 
+    /**
+     * @return The name of the aggregation function to use.
+     * 
+     */
     public Output<Either<String,FunctionType>> function() {
         return this.function;
     }
@@ -37,6 +41,10 @@ public final class ReportAggregationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The name of the column to aggregate.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -66,28 +74,64 @@ public final class ReportAggregationArgs extends com.pulumi.resources.ResourceAr
             $ = new ReportAggregationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param function The name of the aggregation function to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder function(Output<Either<String,FunctionType>> function) {
             $.function = function;
             return this;
         }
 
+        /**
+         * @param function The name of the aggregation function to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder function(Either<String,FunctionType> function) {
             return function(Output.of(function));
         }
 
+        /**
+         * @param function The name of the aggregation function to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder function(String function) {
             return function(Either.ofLeft(function));
         }
 
+        /**
+         * @param function The name of the aggregation function to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder function(FunctionType function) {
             return function(Either.ofRight(function));
         }
 
+        /**
+         * @param name The name of the column to aggregate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the column to aggregate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

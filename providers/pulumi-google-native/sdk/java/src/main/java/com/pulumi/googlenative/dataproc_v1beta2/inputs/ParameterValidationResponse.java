@@ -24,6 +24,10 @@ public final class ParameterValidationResponse extends com.pulumi.resources.Invo
     @Import(name="regex", required=true)
     private RegexValidationResponse regex;
 
+    /**
+     * @return Validation based on regular expressions.
+     * 
+     */
     public RegexValidationResponse regex() {
         return this.regex;
     }
@@ -35,6 +39,10 @@ public final class ParameterValidationResponse extends com.pulumi.resources.Invo
     @Import(name="values", required=true)
     private ValueValidationResponse values;
 
+    /**
+     * @return Validation based on a list of allowed values.
+     * 
+     */
     public ValueValidationResponse values() {
         return this.values;
     }
@@ -64,11 +72,23 @@ public final class ParameterValidationResponse extends com.pulumi.resources.Invo
             $ = new ParameterValidationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param regex Validation based on regular expressions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regex(RegexValidationResponse regex) {
             $.regex = regex;
             return this;
         }
 
+        /**
+         * @param values Validation based on a list of allowed values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(ValueValidationResponse values) {
             $.values = values;
             return this;

@@ -19,6 +19,10 @@ public final class GetNotebookWorkspaceArgs extends com.pulumi.resources.InvokeA
     @Import(name="accountName", required=true)
     private String accountName;
 
+    /**
+     * @return Cosmos DB database account name.
+     * 
+     */
     public String accountName() {
         return this.accountName;
     }
@@ -30,6 +34,10 @@ public final class GetNotebookWorkspaceArgs extends com.pulumi.resources.InvokeA
     @Import(name="notebookWorkspaceName", required=true)
     private String notebookWorkspaceName;
 
+    /**
+     * @return The name of the notebook workspace resource.
+     * 
+     */
     public String notebookWorkspaceName() {
         return this.notebookWorkspaceName;
     }
@@ -41,6 +49,10 @@ public final class GetNotebookWorkspaceArgs extends com.pulumi.resources.InvokeA
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetNotebookWorkspaceArgs extends com.pulumi.resources.InvokeA
             $ = new GetNotebookWorkspaceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName Cosmos DB database account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param notebookWorkspaceName The name of the notebook workspace resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notebookWorkspaceName(String notebookWorkspaceName) {
             $.notebookWorkspaceName = notebookWorkspaceName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

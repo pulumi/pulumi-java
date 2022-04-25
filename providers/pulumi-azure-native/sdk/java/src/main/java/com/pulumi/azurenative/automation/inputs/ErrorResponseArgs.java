@@ -26,6 +26,10 @@ public final class ErrorResponseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="code")
     private @Nullable Output<String> code;
 
+    /**
+     * @return Error code
+     * 
+     */
     public Optional<Output<String>> code() {
         return Optional.ofNullable(this.code);
     }
@@ -37,6 +41,10 @@ public final class ErrorResponseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="message")
     private @Nullable Output<String> message;
 
+    /**
+     * @return Error message indicating why the operation failed.
+     * 
+     */
     public Optional<Output<String>> message() {
         return Optional.ofNullable(this.message);
     }
@@ -66,20 +74,44 @@ public final class ErrorResponseArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ErrorResponseArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param code Error code
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(@Nullable Output<String> code) {
             $.code = code;
             return this;
         }
 
+        /**
+         * @param code Error code
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(String code) {
             return code(Output.of(code));
         }
 
+        /**
+         * @param message Error message indicating why the operation failed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(@Nullable Output<String> message) {
             $.message = message;
             return this;
         }
 
+        /**
+         * @param message Error message indicating why the operation failed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(String message) {
             return message(Output.of(message));
         }

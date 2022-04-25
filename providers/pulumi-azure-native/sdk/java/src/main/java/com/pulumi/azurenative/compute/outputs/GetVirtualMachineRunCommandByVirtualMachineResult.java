@@ -19,82 +19,82 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetVirtualMachineRunCommandByVirtualMachineResult {
     /**
-     * Optional. If set to true, provisioning will complete as soon as the script starts and will not wait for script to complete.
+     * @return Optional. If set to true, provisioning will complete as soon as the script starts and will not wait for script to complete.
      * 
      */
     private final @Nullable Boolean asyncExecution;
     /**
-     * Specifies the Azure storage blob where script error stream will be uploaded.
+     * @return Specifies the Azure storage blob where script error stream will be uploaded.
      * 
      */
     private final @Nullable String errorBlobUri;
     /**
-     * Resource Id
+     * @return Resource Id
      * 
      */
     private final String id;
     /**
-     * The virtual machine run command instance view.
+     * @return The virtual machine run command instance view.
      * 
      */
     private final VirtualMachineRunCommandInstanceViewResponse instanceView;
     /**
-     * Resource location
+     * @return Resource location
      * 
      */
     private final String location;
     /**
-     * Resource name
+     * @return Resource name
      * 
      */
     private final String name;
     /**
-     * Specifies the Azure storage blob where script output stream will be uploaded.
+     * @return Specifies the Azure storage blob where script output stream will be uploaded.
      * 
      */
     private final @Nullable String outputBlobUri;
     /**
-     * The parameters used by the script.
+     * @return The parameters used by the script.
      * 
      */
     private final @Nullable List<RunCommandInputParameterResponse> parameters;
     /**
-     * The parameters used by the script.
+     * @return The parameters used by the script.
      * 
      */
     private final @Nullable List<RunCommandInputParameterResponse> protectedParameters;
     /**
-     * The provisioning state, which only appears in the response.
+     * @return The provisioning state, which only appears in the response.
      * 
      */
     private final String provisioningState;
     /**
-     * Specifies the user account password on the VM when executing the run command.
+     * @return Specifies the user account password on the VM when executing the run command.
      * 
      */
     private final @Nullable String runAsPassword;
     /**
-     * Specifies the user account on the VM when executing the run command.
+     * @return Specifies the user account on the VM when executing the run command.
      * 
      */
     private final @Nullable String runAsUser;
     /**
-     * The source of the run command script.
+     * @return The source of the run command script.
      * 
      */
     private final @Nullable VirtualMachineRunCommandScriptSourceResponse source;
     /**
-     * Resource tags
+     * @return Resource tags
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * The timeout in seconds to execute the run command.
+     * @return The timeout in seconds to execute the run command.
      * 
      */
     private final @Nullable Integer timeoutInSeconds;
     /**
-     * Resource type
+     * @return Resource type
      * 
      */
     private final String type;
@@ -136,114 +136,114 @@ public final class GetVirtualMachineRunCommandByVirtualMachineResult {
     }
 
     /**
-     * Optional. If set to true, provisioning will complete as soon as the script starts and will not wait for script to complete.
+     * @return Optional. If set to true, provisioning will complete as soon as the script starts and will not wait for script to complete.
      * 
-    */
+     */
     public Optional<Boolean> asyncExecution() {
         return Optional.ofNullable(this.asyncExecution);
     }
     /**
-     * Specifies the Azure storage blob where script error stream will be uploaded.
+     * @return Specifies the Azure storage blob where script error stream will be uploaded.
      * 
-    */
+     */
     public Optional<String> errorBlobUri() {
         return Optional.ofNullable(this.errorBlobUri);
     }
     /**
-     * Resource Id
+     * @return Resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The virtual machine run command instance view.
+     * @return The virtual machine run command instance view.
      * 
-    */
+     */
     public VirtualMachineRunCommandInstanceViewResponse instanceView() {
         return this.instanceView;
     }
     /**
-     * Resource location
+     * @return Resource location
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Resource name
+     * @return Resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Specifies the Azure storage blob where script output stream will be uploaded.
+     * @return Specifies the Azure storage blob where script output stream will be uploaded.
      * 
-    */
+     */
     public Optional<String> outputBlobUri() {
         return Optional.ofNullable(this.outputBlobUri);
     }
     /**
-     * The parameters used by the script.
+     * @return The parameters used by the script.
      * 
-    */
+     */
     public List<RunCommandInputParameterResponse> parameters() {
         return this.parameters == null ? List.of() : this.parameters;
     }
     /**
-     * The parameters used by the script.
+     * @return The parameters used by the script.
      * 
-    */
+     */
     public List<RunCommandInputParameterResponse> protectedParameters() {
         return this.protectedParameters == null ? List.of() : this.protectedParameters;
     }
     /**
-     * The provisioning state, which only appears in the response.
+     * @return The provisioning state, which only appears in the response.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Specifies the user account password on the VM when executing the run command.
+     * @return Specifies the user account password on the VM when executing the run command.
      * 
-    */
+     */
     public Optional<String> runAsPassword() {
         return Optional.ofNullable(this.runAsPassword);
     }
     /**
-     * Specifies the user account on the VM when executing the run command.
+     * @return Specifies the user account on the VM when executing the run command.
      * 
-    */
+     */
     public Optional<String> runAsUser() {
         return Optional.ofNullable(this.runAsUser);
     }
     /**
-     * The source of the run command script.
+     * @return The source of the run command script.
      * 
-    */
+     */
     public Optional<VirtualMachineRunCommandScriptSourceResponse> source() {
         return Optional.ofNullable(this.source);
     }
     /**
-     * Resource tags
+     * @return Resource tags
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The timeout in seconds to execute the run command.
+     * @return The timeout in seconds to execute the run command.
      * 
-    */
+     */
     public Optional<Integer> timeoutInSeconds() {
         return Optional.ofNullable(this.timeoutInSeconds);
     }
     /**
-     * Resource type
+     * @return Resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

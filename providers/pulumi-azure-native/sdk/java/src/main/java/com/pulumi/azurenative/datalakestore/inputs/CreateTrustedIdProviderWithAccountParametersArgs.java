@@ -24,6 +24,10 @@ public final class CreateTrustedIdProviderWithAccountParametersArgs extends com.
     @Import(name="idProvider", required=true)
     private Output<String> idProvider;
 
+    /**
+     * @return The URL of this trusted identity provider.
+     * 
+     */
     public Output<String> idProvider() {
         return this.idProvider;
     }
@@ -35,6 +39,10 @@ public final class CreateTrustedIdProviderWithAccountParametersArgs extends com.
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The unique name of the trusted identity provider to create.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -64,20 +72,44 @@ public final class CreateTrustedIdProviderWithAccountParametersArgs extends com.
             $ = new CreateTrustedIdProviderWithAccountParametersArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param idProvider The URL of this trusted identity provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder idProvider(Output<String> idProvider) {
             $.idProvider = idProvider;
             return this;
         }
 
+        /**
+         * @param idProvider The URL of this trusted identity provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder idProvider(String idProvider) {
             return idProvider(Output.of(idProvider));
         }
 
+        /**
+         * @param name The unique name of the trusted identity provider to create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The unique name of the trusted identity provider to create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

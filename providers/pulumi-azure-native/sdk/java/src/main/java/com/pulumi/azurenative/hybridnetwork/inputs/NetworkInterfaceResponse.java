@@ -27,6 +27,10 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
     @Import(name="ipConfigurations")
     private @Nullable List<NetworkInterfaceIPConfigurationResponse> ipConfigurations;
 
+    /**
+     * @return A list of IP configurations of the network interface.
+     * 
+     */
     public Optional<List<NetworkInterfaceIPConfigurationResponse>> ipConfigurations() {
         return Optional.ofNullable(this.ipConfigurations);
     }
@@ -38,6 +42,10 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
     @Import(name="macAddress")
     private @Nullable String macAddress;
 
+    /**
+     * @return The MAC address of the network interface.
+     * 
+     */
     public Optional<String> macAddress() {
         return Optional.ofNullable(this.macAddress);
     }
@@ -49,6 +57,10 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
     @Import(name="networkInterfaceName")
     private @Nullable String networkInterfaceName;
 
+    /**
+     * @return The name of the network interface.
+     * 
+     */
     public Optional<String> networkInterfaceName() {
         return Optional.ofNullable(this.networkInterfaceName);
     }
@@ -60,6 +72,10 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
     @Import(name="vmSwitchType")
     private @Nullable String vmSwitchType;
 
+    /**
+     * @return The type of the VM switch.
+     * 
+     */
     public Optional<String> vmSwitchType() {
         return Optional.ofNullable(this.vmSwitchType);
     }
@@ -91,25 +107,55 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
             $ = new NetworkInterfaceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ipConfigurations A list of IP configurations of the network interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipConfigurations(@Nullable List<NetworkInterfaceIPConfigurationResponse> ipConfigurations) {
             $.ipConfigurations = ipConfigurations;
             return this;
         }
 
+        /**
+         * @param ipConfigurations A list of IP configurations of the network interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipConfigurations(NetworkInterfaceIPConfigurationResponse... ipConfigurations) {
             return ipConfigurations(List.of(ipConfigurations));
         }
 
+        /**
+         * @param macAddress The MAC address of the network interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder macAddress(@Nullable String macAddress) {
             $.macAddress = macAddress;
             return this;
         }
 
+        /**
+         * @param networkInterfaceName The name of the network interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaceName(@Nullable String networkInterfaceName) {
             $.networkInterfaceName = networkInterfaceName;
             return this;
         }
 
+        /**
+         * @param vmSwitchType The type of the VM switch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmSwitchType(@Nullable String vmSwitchType) {
             $.vmSwitchType = vmSwitchType;
             return this;

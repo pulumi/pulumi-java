@@ -26,6 +26,10 @@ public final class ServiceAcrConfigurationInfoResponse extends com.pulumi.resour
     @Import(name="loginServers")
     private @Nullable List<String> loginServers;
 
+    /**
+     * @return The list of the ACR login servers.
+     * 
+     */
     public Optional<List<String>> loginServers() {
         return Optional.ofNullable(this.loginServers);
     }
@@ -54,11 +58,23 @@ public final class ServiceAcrConfigurationInfoResponse extends com.pulumi.resour
             $ = new ServiceAcrConfigurationInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param loginServers The list of the ACR login servers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loginServers(@Nullable List<String> loginServers) {
             $.loginServers = loginServers;
             return this;
         }
 
+        /**
+         * @param loginServers The list of the ACR login servers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loginServers(String... loginServers) {
             return loginServers(List.of(loginServers));
         }

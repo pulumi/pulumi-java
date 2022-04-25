@@ -28,6 +28,10 @@ public final class X509ParametersResponse extends com.pulumi.resources.InvokeArg
     @Import(name="additionalExtensions", required=true)
     private List<X509ExtensionResponse> additionalExtensions;
 
+    /**
+     * @return Optional. Describes custom X.509 extensions.
+     * 
+     */
     public List<X509ExtensionResponse> additionalExtensions() {
         return this.additionalExtensions;
     }
@@ -39,6 +43,10 @@ public final class X509ParametersResponse extends com.pulumi.resources.InvokeArg
     @Import(name="aiaOcspServers", required=true)
     private List<String> aiaOcspServers;
 
+    /**
+     * @return Optional. Describes Online Certificate Status Protocol (OCSP) endpoint addresses that appear in the &#34;Authority Information Access&#34; extension in the certificate.
+     * 
+     */
     public List<String> aiaOcspServers() {
         return this.aiaOcspServers;
     }
@@ -50,6 +58,10 @@ public final class X509ParametersResponse extends com.pulumi.resources.InvokeArg
     @Import(name="caOptions", required=true)
     private CaOptionsResponse caOptions;
 
+    /**
+     * @return Optional. Describes options in this X509Parameters that are relevant in a CA certificate.
+     * 
+     */
     public CaOptionsResponse caOptions() {
         return this.caOptions;
     }
@@ -61,6 +73,10 @@ public final class X509ParametersResponse extends com.pulumi.resources.InvokeArg
     @Import(name="keyUsage", required=true)
     private KeyUsageResponse keyUsage;
 
+    /**
+     * @return Optional. Indicates the intended use for keys that correspond to a certificate.
+     * 
+     */
     public KeyUsageResponse keyUsage() {
         return this.keyUsage;
     }
@@ -72,6 +88,10 @@ public final class X509ParametersResponse extends com.pulumi.resources.InvokeArg
     @Import(name="policyIds", required=true)
     private List<ObjectIdResponse> policyIds;
 
+    /**
+     * @return Optional. Describes the X.509 certificate policy object identifiers, per https://tools.ietf.org/html/rfc5280#section-4.2.1.4.
+     * 
+     */
     public List<ObjectIdResponse> policyIds() {
         return this.policyIds;
     }
@@ -104,39 +124,87 @@ public final class X509ParametersResponse extends com.pulumi.resources.InvokeArg
             $ = new X509ParametersResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param additionalExtensions Optional. Describes custom X.509 extensions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalExtensions(List<X509ExtensionResponse> additionalExtensions) {
             $.additionalExtensions = additionalExtensions;
             return this;
         }
 
+        /**
+         * @param additionalExtensions Optional. Describes custom X.509 extensions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalExtensions(X509ExtensionResponse... additionalExtensions) {
             return additionalExtensions(List.of(additionalExtensions));
         }
 
+        /**
+         * @param aiaOcspServers Optional. Describes Online Certificate Status Protocol (OCSP) endpoint addresses that appear in the &#34;Authority Information Access&#34; extension in the certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aiaOcspServers(List<String> aiaOcspServers) {
             $.aiaOcspServers = aiaOcspServers;
             return this;
         }
 
+        /**
+         * @param aiaOcspServers Optional. Describes Online Certificate Status Protocol (OCSP) endpoint addresses that appear in the &#34;Authority Information Access&#34; extension in the certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aiaOcspServers(String... aiaOcspServers) {
             return aiaOcspServers(List.of(aiaOcspServers));
         }
 
+        /**
+         * @param caOptions Optional. Describes options in this X509Parameters that are relevant in a CA certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder caOptions(CaOptionsResponse caOptions) {
             $.caOptions = caOptions;
             return this;
         }
 
+        /**
+         * @param keyUsage Optional. Indicates the intended use for keys that correspond to a certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyUsage(KeyUsageResponse keyUsage) {
             $.keyUsage = keyUsage;
             return this;
         }
 
+        /**
+         * @param policyIds Optional. Describes the X.509 certificate policy object identifiers, per https://tools.ietf.org/html/rfc5280#section-4.2.1.4.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyIds(List<ObjectIdResponse> policyIds) {
             $.policyIds = policyIds;
             return this;
         }
 
+        /**
+         * @param policyIds Optional. Describes the X.509 certificate policy object identifiers, per https://tools.ietf.org/html/rfc5280#section-4.2.1.4.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyIds(ObjectIdResponse... policyIds) {
             return policyIds(List.of(policyIds));
         }

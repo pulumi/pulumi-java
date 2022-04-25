@@ -19,6 +19,10 @@ public final class GetExperimentArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="experimentName", required=true)
     private String experimentName;
 
+    /**
+     * @return The Experiment identifier associated with the Experiment
+     * 
+     */
     public String experimentName() {
         return this.experimentName;
     }
@@ -30,6 +34,10 @@ public final class GetExperimentArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="profileName", required=true)
     private String profileName;
 
+    /**
+     * @return The Profile identifier associated with the Tenant and Partner
+     * 
+     */
     public String profileName() {
         return this.profileName;
     }
@@ -41,6 +49,10 @@ public final class GetExperimentArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Name of the Resource group within the Azure subscription.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetExperimentArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetExperimentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param experimentName The Experiment identifier associated with the Experiment
+         * 
+         * @return builder
+         * 
+         */
         public Builder experimentName(String experimentName) {
             $.experimentName = experimentName;
             return this;
         }
 
+        /**
+         * @param profileName The Profile identifier associated with the Tenant and Partner
+         * 
+         * @return builder
+         * 
+         */
         public Builder profileName(String profileName) {
             $.profileName = profileName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the Resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

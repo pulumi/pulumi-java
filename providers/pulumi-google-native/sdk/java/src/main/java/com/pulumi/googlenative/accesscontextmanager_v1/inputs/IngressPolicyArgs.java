@@ -27,6 +27,10 @@ public final class IngressPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ingressFrom")
     private @Nullable Output<IngressFromArgs> ingressFrom;
 
+    /**
+     * @return Defines the conditions on the source of a request causing this IngressPolicy to apply.
+     * 
+     */
     public Optional<Output<IngressFromArgs>> ingressFrom() {
         return Optional.ofNullable(this.ingressFrom);
     }
@@ -38,6 +42,10 @@ public final class IngressPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ingressTo")
     private @Nullable Output<IngressToArgs> ingressTo;
 
+    /**
+     * @return Defines the conditions on the ApiOperation and request destination that cause this IngressPolicy to apply.
+     * 
+     */
     public Optional<Output<IngressToArgs>> ingressTo() {
         return Optional.ofNullable(this.ingressTo);
     }
@@ -67,20 +75,44 @@ public final class IngressPolicyArgs extends com.pulumi.resources.ResourceArgs {
             $ = new IngressPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ingressFrom Defines the conditions on the source of a request causing this IngressPolicy to apply.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ingressFrom(@Nullable Output<IngressFromArgs> ingressFrom) {
             $.ingressFrom = ingressFrom;
             return this;
         }
 
+        /**
+         * @param ingressFrom Defines the conditions on the source of a request causing this IngressPolicy to apply.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ingressFrom(IngressFromArgs ingressFrom) {
             return ingressFrom(Output.of(ingressFrom));
         }
 
+        /**
+         * @param ingressTo Defines the conditions on the ApiOperation and request destination that cause this IngressPolicy to apply.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ingressTo(@Nullable Output<IngressToArgs> ingressTo) {
             $.ingressTo = ingressTo;
             return this;
         }
 
+        /**
+         * @param ingressTo Defines the conditions on the ApiOperation and request destination that cause this IngressPolicy to apply.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ingressTo(IngressToArgs ingressTo) {
             return ingressTo(Output.of(ingressTo));
         }

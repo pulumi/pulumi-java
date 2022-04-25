@@ -25,6 +25,10 @@ public final class MoveResourcePropertiesResponseErrors extends com.pulumi.resou
     @Import(name="properties")
     private @Nullable MoveResourceErrorBodyResponse properties;
 
+    /**
+     * @return The move resource error body.
+     * 
+     */
     public Optional<MoveResourceErrorBodyResponse> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -53,6 +57,12 @@ public final class MoveResourcePropertiesResponseErrors extends com.pulumi.resou
             $ = new MoveResourcePropertiesResponseErrors(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param properties The move resource error body.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable MoveResourceErrorBodyResponse properties) {
             $.properties = properties;
             return this;

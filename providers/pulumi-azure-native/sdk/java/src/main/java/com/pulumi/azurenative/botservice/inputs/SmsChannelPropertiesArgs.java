@@ -27,6 +27,10 @@ public final class SmsChannelPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="accountSID", required=true)
     private Output<String> accountSID;
 
+    /**
+     * @return The Sms account SID. Value only returned through POST to the action Channel List API, otherwise empty.
+     * 
+     */
     public Output<String> accountSID() {
         return this.accountSID;
     }
@@ -38,6 +42,10 @@ public final class SmsChannelPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="authToken")
     private @Nullable Output<String> authToken;
 
+    /**
+     * @return The Sms auth token. Value only returned through POST to the action Channel List API, otherwise empty.
+     * 
+     */
     public Optional<Output<String>> authToken() {
         return Optional.ofNullable(this.authToken);
     }
@@ -49,6 +57,10 @@ public final class SmsChannelPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="isEnabled", required=true)
     private Output<Boolean> isEnabled;
 
+    /**
+     * @return Whether this channel is enabled for the bot
+     * 
+     */
     public Output<Boolean> isEnabled() {
         return this.isEnabled;
     }
@@ -60,6 +72,10 @@ public final class SmsChannelPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="isValidated")
     private @Nullable Output<Boolean> isValidated;
 
+    /**
+     * @return Whether this channel is validated for the bot
+     * 
+     */
     public Optional<Output<Boolean>> isValidated() {
         return Optional.ofNullable(this.isValidated);
     }
@@ -71,6 +87,10 @@ public final class SmsChannelPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="phone", required=true)
     private Output<String> phone;
 
+    /**
+     * @return The Sms phone
+     * 
+     */
     public Output<String> phone() {
         return this.phone;
     }
@@ -103,47 +123,107 @@ public final class SmsChannelPropertiesArgs extends com.pulumi.resources.Resourc
             $ = new SmsChannelPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountSID The Sms account SID. Value only returned through POST to the action Channel List API, otherwise empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountSID(Output<String> accountSID) {
             $.accountSID = accountSID;
             return this;
         }
 
+        /**
+         * @param accountSID The Sms account SID. Value only returned through POST to the action Channel List API, otherwise empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountSID(String accountSID) {
             return accountSID(Output.of(accountSID));
         }
 
+        /**
+         * @param authToken The Sms auth token. Value only returned through POST to the action Channel List API, otherwise empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authToken(@Nullable Output<String> authToken) {
             $.authToken = authToken;
             return this;
         }
 
+        /**
+         * @param authToken The Sms auth token. Value only returned through POST to the action Channel List API, otherwise empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authToken(String authToken) {
             return authToken(Output.of(authToken));
         }
 
+        /**
+         * @param isEnabled Whether this channel is enabled for the bot
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEnabled(Output<Boolean> isEnabled) {
             $.isEnabled = isEnabled;
             return this;
         }
 
+        /**
+         * @param isEnabled Whether this channel is enabled for the bot
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEnabled(Boolean isEnabled) {
             return isEnabled(Output.of(isEnabled));
         }
 
+        /**
+         * @param isValidated Whether this channel is validated for the bot
+         * 
+         * @return builder
+         * 
+         */
         public Builder isValidated(@Nullable Output<Boolean> isValidated) {
             $.isValidated = isValidated;
             return this;
         }
 
+        /**
+         * @param isValidated Whether this channel is validated for the bot
+         * 
+         * @return builder
+         * 
+         */
         public Builder isValidated(Boolean isValidated) {
             return isValidated(Output.of(isValidated));
         }
 
+        /**
+         * @param phone The Sms phone
+         * 
+         * @return builder
+         * 
+         */
         public Builder phone(Output<String> phone) {
             $.phone = phone;
             return this;
         }
 
+        /**
+         * @param phone The Sms phone
+         * 
+         * @return builder
+         * 
+         */
         public Builder phone(String phone) {
             return phone(Output.of(phone));
         }

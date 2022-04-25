@@ -38,6 +38,10 @@ public final class ConnectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="connectorConfiguration", required=true)
     private Output<Object> connectorConfiguration;
 
+    /**
+     * @return The configuration for the connector.
+     * 
+     */
     public Output<Object> connectorConfiguration() {
         return this.connectorConfiguration;
     }
@@ -49,6 +53,10 @@ public final class ConnectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="connectorDescription")
     private @Nullable Output<String> connectorDescription;
 
+    /**
+     * @return A summary description of the connector.
+     * 
+     */
     public Optional<Output<String>> connectorDescription() {
         return Optional.ofNullable(this.connectorDescription);
     }
@@ -60,6 +68,10 @@ public final class ConnectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="connectorName")
     private @Nullable Output<String> connectorName;
 
+    /**
+     * @return The name of the connector.
+     * 
+     */
     public Optional<Output<String>> connectorName() {
         return Optional.ofNullable(this.connectorName);
     }
@@ -92,6 +104,10 @@ public final class ConnectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kafkaConnectVersion", required=true)
     private Output<String> kafkaConnectVersion;
 
+    /**
+     * @return The version of Kafka Connect. It has to be compatible with both the Kafka cluster&#39;s version and the plugins.
+     * 
+     */
     public Output<String> kafkaConnectVersion() {
         return this.kafkaConnectVersion;
     }
@@ -110,6 +126,10 @@ public final class ConnectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="plugins", required=true)
     private Output<List<ConnectorPluginArgs>> plugins;
 
+    /**
+     * @return List of plugins to use with the connector.
+     * 
+     */
     public Output<List<ConnectorPluginArgs>> plugins() {
         return this.plugins;
     }
@@ -121,6 +141,10 @@ public final class ConnectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceExecutionRoleArn", required=true)
     private Output<String> serviceExecutionRoleArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the IAM role used by the connector to access Amazon S3 objects and other external resources.
+     * 
+     */
     public Output<String> serviceExecutionRoleArn() {
         return this.serviceExecutionRoleArn;
     }
@@ -176,29 +200,65 @@ public final class ConnectorArgs extends com.pulumi.resources.ResourceArgs {
             return capacity(Output.of(capacity));
         }
 
+        /**
+         * @param connectorConfiguration The configuration for the connector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectorConfiguration(Output<Object> connectorConfiguration) {
             $.connectorConfiguration = connectorConfiguration;
             return this;
         }
 
+        /**
+         * @param connectorConfiguration The configuration for the connector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectorConfiguration(Object connectorConfiguration) {
             return connectorConfiguration(Output.of(connectorConfiguration));
         }
 
+        /**
+         * @param connectorDescription A summary description of the connector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectorDescription(@Nullable Output<String> connectorDescription) {
             $.connectorDescription = connectorDescription;
             return this;
         }
 
+        /**
+         * @param connectorDescription A summary description of the connector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectorDescription(String connectorDescription) {
             return connectorDescription(Output.of(connectorDescription));
         }
 
+        /**
+         * @param connectorName The name of the connector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectorName(@Nullable Output<String> connectorName) {
             $.connectorName = connectorName;
             return this;
         }
 
+        /**
+         * @param connectorName The name of the connector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectorName(String connectorName) {
             return connectorName(Output.of(connectorName));
         }
@@ -230,11 +290,23 @@ public final class ConnectorArgs extends com.pulumi.resources.ResourceArgs {
             return kafkaClusterEncryptionInTransit(Output.of(kafkaClusterEncryptionInTransit));
         }
 
+        /**
+         * @param kafkaConnectVersion The version of Kafka Connect. It has to be compatible with both the Kafka cluster&#39;s version and the plugins.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kafkaConnectVersion(Output<String> kafkaConnectVersion) {
             $.kafkaConnectVersion = kafkaConnectVersion;
             return this;
         }
 
+        /**
+         * @param kafkaConnectVersion The version of Kafka Connect. It has to be compatible with both the Kafka cluster&#39;s version and the plugins.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kafkaConnectVersion(String kafkaConnectVersion) {
             return kafkaConnectVersion(Output.of(kafkaConnectVersion));
         }
@@ -248,24 +320,54 @@ public final class ConnectorArgs extends com.pulumi.resources.ResourceArgs {
             return logDelivery(Output.of(logDelivery));
         }
 
+        /**
+         * @param plugins List of plugins to use with the connector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder plugins(Output<List<ConnectorPluginArgs>> plugins) {
             $.plugins = plugins;
             return this;
         }
 
+        /**
+         * @param plugins List of plugins to use with the connector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder plugins(List<ConnectorPluginArgs> plugins) {
             return plugins(Output.of(plugins));
         }
 
+        /**
+         * @param plugins List of plugins to use with the connector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder plugins(ConnectorPluginArgs... plugins) {
             return plugins(List.of(plugins));
         }
 
+        /**
+         * @param serviceExecutionRoleArn The Amazon Resource Name (ARN) of the IAM role used by the connector to access Amazon S3 objects and other external resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceExecutionRoleArn(Output<String> serviceExecutionRoleArn) {
             $.serviceExecutionRoleArn = serviceExecutionRoleArn;
             return this;
         }
 
+        /**
+         * @param serviceExecutionRoleArn The Amazon Resource Name (ARN) of the IAM role used by the connector to access Amazon S3 objects and other external resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceExecutionRoleArn(String serviceExecutionRoleArn) {
             return serviceExecutionRoleArn(Output.of(serviceExecutionRoleArn));
         }

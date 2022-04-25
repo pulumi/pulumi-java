@@ -23,6 +23,10 @@ public final class GoogleCloudDialogflowCxV3beta1AdvancedSettingsResponse extend
     @Import(name="loggingSettings", required=true)
     private GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettingsResponse loggingSettings;
 
+    /**
+     * @return Settings for logging. Settings for Dialogflow History, Contact Center messages, StackDriver logs, and speech logging. Exposed at the following levels: - Agent level.
+     * 
+     */
     public GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettingsResponse loggingSettings() {
         return this.loggingSettings;
     }
@@ -51,6 +55,12 @@ public final class GoogleCloudDialogflowCxV3beta1AdvancedSettingsResponse extend
             $ = new GoogleCloudDialogflowCxV3beta1AdvancedSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param loggingSettings Settings for logging. Settings for Dialogflow History, Contact Center messages, StackDriver logs, and speech logging. Exposed at the following levels: - Agent level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loggingSettings(GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettingsResponse loggingSettings) {
             $.loggingSettings = loggingSettings;
             return this;

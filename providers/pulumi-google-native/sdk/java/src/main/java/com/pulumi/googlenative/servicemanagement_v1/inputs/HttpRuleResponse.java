@@ -25,6 +25,10 @@ public final class HttpRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="additionalBindings", required=true)
     private List<HttpRuleResponse> additionalBindings;
 
+    /**
+     * @return Additional HTTP bindings for the selector. Nested bindings must not contain an `additional_bindings` field themselves (that is, the nesting may only be one level deep).
+     * 
+     */
     public List<HttpRuleResponse> additionalBindings() {
         return this.additionalBindings;
     }
@@ -36,6 +40,10 @@ public final class HttpRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="body", required=true)
     private String body;
 
+    /**
+     * @return The name of the request field whose value is mapped to the HTTP request body, or `*` for mapping all request fields not captured by the path pattern to the HTTP body, or omitted for not having any HTTP request body. NOTE: the referred field must be present at the top-level of the request message type.
+     * 
+     */
     public String body() {
         return this.body;
     }
@@ -47,6 +55,10 @@ public final class HttpRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="custom", required=true)
     private CustomHttpPatternResponse custom;
 
+    /**
+     * @return The custom pattern is used for specifying an HTTP method that is not included in the `pattern` field, such as HEAD, or &#34;*&#34; to leave the HTTP method unspecified for this rule. The wild-card rule is useful for services that provide content to Web (HTML) clients.
+     * 
+     */
     public CustomHttpPatternResponse custom() {
         return this.custom;
     }
@@ -58,6 +70,10 @@ public final class HttpRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="delete", required=true)
     private String delete;
 
+    /**
+     * @return Maps to HTTP DELETE. Used for deleting a resource.
+     * 
+     */
     public String delete() {
         return this.delete;
     }
@@ -69,6 +85,10 @@ public final class HttpRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="get", required=true)
     private String get;
 
+    /**
+     * @return Maps to HTTP GET. Used for listing and getting information about resources.
+     * 
+     */
     public String get() {
         return this.get;
     }
@@ -80,6 +100,10 @@ public final class HttpRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="patch", required=true)
     private String patch;
 
+    /**
+     * @return Maps to HTTP PATCH. Used for updating a resource.
+     * 
+     */
     public String patch() {
         return this.patch;
     }
@@ -91,6 +115,10 @@ public final class HttpRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="post", required=true)
     private String post;
 
+    /**
+     * @return Maps to HTTP POST. Used for creating a resource or performing an action.
+     * 
+     */
     public String post() {
         return this.post;
     }
@@ -102,6 +130,10 @@ public final class HttpRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="put", required=true)
     private String put;
 
+    /**
+     * @return Maps to HTTP PUT. Used for replacing a resource.
+     * 
+     */
     public String put() {
         return this.put;
     }
@@ -113,6 +145,10 @@ public final class HttpRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="responseBody", required=true)
     private String responseBody;
 
+    /**
+     * @return Optional. The name of the response field whose value is mapped to the HTTP response body. When omitted, the entire response message will be used as the HTTP response body. NOTE: The referred field must be present at the top-level of the response message type.
+     * 
+     */
     public String responseBody() {
         return this.responseBody;
     }
@@ -124,6 +160,10 @@ public final class HttpRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="selector", required=true)
     private String selector;
 
+    /**
+     * @return Selects a method to which this rule applies. Refer to selector for syntax details.
+     * 
+     */
     public String selector() {
         return this.selector;
     }
@@ -161,55 +201,121 @@ public final class HttpRuleResponse extends com.pulumi.resources.InvokeArgs {
             $ = new HttpRuleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param additionalBindings Additional HTTP bindings for the selector. Nested bindings must not contain an `additional_bindings` field themselves (that is, the nesting may only be one level deep).
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalBindings(List<HttpRuleResponse> additionalBindings) {
             $.additionalBindings = additionalBindings;
             return this;
         }
 
+        /**
+         * @param additionalBindings Additional HTTP bindings for the selector. Nested bindings must not contain an `additional_bindings` field themselves (that is, the nesting may only be one level deep).
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalBindings(HttpRuleResponse... additionalBindings) {
             return additionalBindings(List.of(additionalBindings));
         }
 
+        /**
+         * @param body The name of the request field whose value is mapped to the HTTP request body, or `*` for mapping all request fields not captured by the path pattern to the HTTP body, or omitted for not having any HTTP request body. NOTE: the referred field must be present at the top-level of the request message type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder body(String body) {
             $.body = body;
             return this;
         }
 
+        /**
+         * @param custom The custom pattern is used for specifying an HTTP method that is not included in the `pattern` field, such as HEAD, or &#34;*&#34; to leave the HTTP method unspecified for this rule. The wild-card rule is useful for services that provide content to Web (HTML) clients.
+         * 
+         * @return builder
+         * 
+         */
         public Builder custom(CustomHttpPatternResponse custom) {
             $.custom = custom;
             return this;
         }
 
+        /**
+         * @param delete Maps to HTTP DELETE. Used for deleting a resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder delete(String delete) {
             $.delete = delete;
             return this;
         }
 
+        /**
+         * @param get Maps to HTTP GET. Used for listing and getting information about resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder get(String get) {
             $.get = get;
             return this;
         }
 
+        /**
+         * @param patch Maps to HTTP PATCH. Used for updating a resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder patch(String patch) {
             $.patch = patch;
             return this;
         }
 
+        /**
+         * @param post Maps to HTTP POST. Used for creating a resource or performing an action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder post(String post) {
             $.post = post;
             return this;
         }
 
+        /**
+         * @param put Maps to HTTP PUT. Used for replacing a resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder put(String put) {
             $.put = put;
             return this;
         }
 
+        /**
+         * @param responseBody Optional. The name of the response field whose value is mapped to the HTTP response body. When omitted, the entire response message will be used as the HTTP response body. NOTE: The referred field must be present at the top-level of the response message type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder responseBody(String responseBody) {
             $.responseBody = responseBody;
             return this;
         }
 
+        /**
+         * @param selector Selects a method to which this rule applies. Refer to selector for syntax details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selector(String selector) {
             $.selector = selector;
             return this;

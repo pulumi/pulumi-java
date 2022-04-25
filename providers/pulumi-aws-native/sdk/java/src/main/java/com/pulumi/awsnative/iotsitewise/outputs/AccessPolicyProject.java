@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AccessPolicyProject {
     /**
-     * The ID of the project.
+     * @return The ID of the project.
      * 
      */
     private final @Nullable String id;
@@ -23,9 +23,9 @@ public final class AccessPolicyProject {
     }
 
     /**
-     * The ID of the project.
+     * @return The ID of the project.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }

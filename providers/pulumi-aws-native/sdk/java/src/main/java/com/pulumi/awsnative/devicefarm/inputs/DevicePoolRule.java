@@ -27,6 +27,10 @@ public final class DevicePoolRule extends com.pulumi.resources.InvokeArgs {
     @Import(name="attribute")
     private @Nullable DevicePoolRuleAttribute attribute;
 
+    /**
+     * @return The rule&#39;s stringified attribute.
+     * 
+     */
     public Optional<DevicePoolRuleAttribute> attribute() {
         return Optional.ofNullable(this.attribute);
     }
@@ -38,6 +42,10 @@ public final class DevicePoolRule extends com.pulumi.resources.InvokeArgs {
     @Import(name="operator")
     private @Nullable DevicePoolRuleOperator operator;
 
+    /**
+     * @return Specifies how Device Farm compares the rule&#39;s attribute to the value.
+     * 
+     */
     public Optional<DevicePoolRuleOperator> operator() {
         return Optional.ofNullable(this.operator);
     }
@@ -49,6 +57,10 @@ public final class DevicePoolRule extends com.pulumi.resources.InvokeArgs {
     @Import(name="value")
     private @Nullable String value;
 
+    /**
+     * @return The rule&#39;s value.
+     * 
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
@@ -79,16 +91,34 @@ public final class DevicePoolRule extends com.pulumi.resources.InvokeArgs {
             $ = new DevicePoolRule(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param attribute The rule&#39;s stringified attribute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attribute(@Nullable DevicePoolRuleAttribute attribute) {
             $.attribute = attribute;
             return this;
         }
 
+        /**
+         * @param operator Specifies how Device Farm compares the rule&#39;s attribute to the value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(@Nullable DevicePoolRuleOperator operator) {
             $.operator = operator;
             return this;
         }
 
+        /**
+         * @param value The rule&#39;s value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable String value) {
             $.value = value;
             return this;

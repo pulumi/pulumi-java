@@ -25,6 +25,10 @@ public final class EndpointAccessVpcSecurityGroup extends com.pulumi.resources.I
     @Import(name="status")
     private @Nullable String status;
 
+    /**
+     * @return The status of the VPC security group.
+     * 
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
@@ -36,6 +40,10 @@ public final class EndpointAccessVpcSecurityGroup extends com.pulumi.resources.I
     @Import(name="vpcSecurityGroupId")
     private @Nullable String vpcSecurityGroupId;
 
+    /**
+     * @return The identifier of the VPC security group.
+     * 
+     */
     public Optional<String> vpcSecurityGroupId() {
         return Optional.ofNullable(this.vpcSecurityGroupId);
     }
@@ -65,11 +73,23 @@ public final class EndpointAccessVpcSecurityGroup extends com.pulumi.resources.I
             $ = new EndpointAccessVpcSecurityGroup(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param status The status of the VPC security group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable String status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param vpcSecurityGroupId The identifier of the VPC security group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcSecurityGroupId(@Nullable String vpcSecurityGroupId) {
             $.vpcSecurityGroupId = vpcSecurityGroupId;
             return this;

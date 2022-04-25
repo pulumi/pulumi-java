@@ -23,6 +23,10 @@ public final class EcKeyTypeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="signatureAlgorithm", required=true)
     private String signatureAlgorithm;
 
+    /**
+     * @return Optional. A signature algorithm that must be used. If this is omitted, any EC-based signature algorithm will be allowed.
+     * 
+     */
     public String signatureAlgorithm() {
         return this.signatureAlgorithm;
     }
@@ -51,6 +55,12 @@ public final class EcKeyTypeResponse extends com.pulumi.resources.InvokeArgs {
             $ = new EcKeyTypeResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param signatureAlgorithm Optional. A signature algorithm that must be used. If this is omitted, any EC-based signature algorithm will be allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder signatureAlgorithm(String signatureAlgorithm) {
             $.signatureAlgorithm = signatureAlgorithm;
             return this;

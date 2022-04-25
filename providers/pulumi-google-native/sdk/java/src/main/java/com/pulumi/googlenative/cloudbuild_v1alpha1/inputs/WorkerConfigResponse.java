@@ -24,6 +24,10 @@ public final class WorkerConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="diskSizeGb", required=true)
     private String diskSizeGb;
 
+    /**
+     * @return Size of the disk attached to the worker, in GB. See https://cloud.google.com/compute/docs/disks/ If `0` is specified, Cloud Build will use a standard disk size. `disk_size` is overridden if you specify a different disk size in `build_options`. In this case, a VM with a disk size specified in the `build_options` will be created on demand at build time. For more information see https://cloud.google.com/cloud-build/docs/api/reference/rest/v1/projects.builds#buildoptions
+     * 
+     */
     public String diskSizeGb() {
         return this.diskSizeGb;
     }
@@ -35,6 +39,10 @@ public final class WorkerConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="machineType", required=true)
     private String machineType;
 
+    /**
+     * @return Machine Type of the worker, such as n1-standard-1. See https://cloud.google.com/compute/docs/machine-types. If left blank, Cloud Build will use a standard unspecified machine to create the worker pool. `machine_type` is overridden if you specify a different machine type in `build_options`. In this case, the VM specified in the `build_options` will be created on demand at build time. For more information see https://cloud.google.com/cloud-build/docs/speeding-up-builds#using_custom_virtual_machine_sizes
+     * 
+     */
     public String machineType() {
         return this.machineType;
     }
@@ -46,6 +54,10 @@ public final class WorkerConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="network", required=true)
     private NetworkResponse network;
 
+    /**
+     * @return The network definition used to create the worker. If this section is left empty, the workers will be created in WorkerPool.project_id on the default network.
+     * 
+     */
     public NetworkResponse network() {
         return this.network;
     }
@@ -57,6 +69,10 @@ public final class WorkerConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="tag", required=true)
     private String tag;
 
+    /**
+     * @return The tag applied to the worker, and the same tag used by the firewall rule. It is used to identify the Cloud Build workers among other VMs. The default value for tag is `worker`.
+     * 
+     */
     public String tag() {
         return this.tag;
     }
@@ -88,21 +104,45 @@ public final class WorkerConfigResponse extends com.pulumi.resources.InvokeArgs 
             $ = new WorkerConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param diskSizeGb Size of the disk attached to the worker, in GB. See https://cloud.google.com/compute/docs/disks/ If `0` is specified, Cloud Build will use a standard disk size. `disk_size` is overridden if you specify a different disk size in `build_options`. In this case, a VM with a disk size specified in the `build_options` will be created on demand at build time. For more information see https://cloud.google.com/cloud-build/docs/api/reference/rest/v1/projects.builds#buildoptions
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskSizeGb(String diskSizeGb) {
             $.diskSizeGb = diskSizeGb;
             return this;
         }
 
+        /**
+         * @param machineType Machine Type of the worker, such as n1-standard-1. See https://cloud.google.com/compute/docs/machine-types. If left blank, Cloud Build will use a standard unspecified machine to create the worker pool. `machine_type` is overridden if you specify a different machine type in `build_options`. In this case, the VM specified in the `build_options` will be created on demand at build time. For more information see https://cloud.google.com/cloud-build/docs/speeding-up-builds#using_custom_virtual_machine_sizes
+         * 
+         * @return builder
+         * 
+         */
         public Builder machineType(String machineType) {
             $.machineType = machineType;
             return this;
         }
 
+        /**
+         * @param network The network definition used to create the worker. If this section is left empty, the workers will be created in WorkerPool.project_id on the default network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(NetworkResponse network) {
             $.network = network;
             return this;
         }
 
+        /**
+         * @param tag The tag applied to the worker, and the same tag used by the firewall rule. It is used to identify the Cloud Build workers among other VMs. The default value for tag is `worker`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tag(String tag) {
             $.tag = tag;
             return this;

@@ -19,6 +19,10 @@ public final class JwtResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="compactJwt", required=true)
     private String compactJwt;
 
+    /**
+     * @return The compact encoding of a JWS, which is always three base64 encoded strings joined by periods. For details, see: https://tools.ietf.org/html/rfc7515.html#section-3.1
+     * 
+     */
     public String compactJwt() {
         return this.compactJwt;
     }
@@ -47,6 +51,12 @@ public final class JwtResponse extends com.pulumi.resources.InvokeArgs {
             $ = new JwtResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param compactJwt The compact encoding of a JWS, which is always three base64 encoded strings joined by periods. For details, see: https://tools.ietf.org/html/rfc7515.html#section-3.1
+         * 
+         * @return builder
+         * 
+         */
         public Builder compactJwt(String compactJwt) {
             $.compactJwt = compactJwt;
             return this;

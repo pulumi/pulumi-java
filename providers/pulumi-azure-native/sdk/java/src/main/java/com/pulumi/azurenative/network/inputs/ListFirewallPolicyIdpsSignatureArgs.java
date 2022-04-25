@@ -25,6 +25,10 @@ public final class ListFirewallPolicyIdpsSignatureArgs extends com.pulumi.resour
     @Import(name="filters")
     private @Nullable List<FilterItems> filters;
 
+    /**
+     * @return Contain all filters names and values
+     * 
+     */
     public Optional<List<FilterItems>> filters() {
         return Optional.ofNullable(this.filters);
     }
@@ -36,6 +40,10 @@ public final class ListFirewallPolicyIdpsSignatureArgs extends com.pulumi.resour
     @Import(name="firewallPolicyName", required=true)
     private String firewallPolicyName;
 
+    /**
+     * @return The name of the Firewall Policy.
+     * 
+     */
     public String firewallPolicyName() {
         return this.firewallPolicyName;
     }
@@ -47,6 +55,10 @@ public final class ListFirewallPolicyIdpsSignatureArgs extends com.pulumi.resour
     @Import(name="orderBy")
     private @Nullable OrderBy orderBy;
 
+    /**
+     * @return Column to sort response by
+     * 
+     */
     public Optional<OrderBy> orderBy() {
         return Optional.ofNullable(this.orderBy);
     }
@@ -58,6 +70,10 @@ public final class ListFirewallPolicyIdpsSignatureArgs extends com.pulumi.resour
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -69,6 +85,10 @@ public final class ListFirewallPolicyIdpsSignatureArgs extends com.pulumi.resour
     @Import(name="resultsPerPage")
     private @Nullable Integer resultsPerPage;
 
+    /**
+     * @return The number of the results to return in each page
+     * 
+     */
     public Optional<Integer> resultsPerPage() {
         return Optional.ofNullable(this.resultsPerPage);
     }
@@ -80,6 +100,10 @@ public final class ListFirewallPolicyIdpsSignatureArgs extends com.pulumi.resour
     @Import(name="search")
     private @Nullable String search;
 
+    /**
+     * @return Search term in all columns
+     * 
+     */
     public Optional<String> search() {
         return Optional.ofNullable(this.search);
     }
@@ -91,6 +115,10 @@ public final class ListFirewallPolicyIdpsSignatureArgs extends com.pulumi.resour
     @Import(name="skip")
     private @Nullable Integer skip;
 
+    /**
+     * @return The number of records matching the filter to skip
+     * 
+     */
     public Optional<Integer> skip() {
         return Optional.ofNullable(this.skip);
     }
@@ -125,40 +153,88 @@ public final class ListFirewallPolicyIdpsSignatureArgs extends com.pulumi.resour
             $ = new ListFirewallPolicyIdpsSignatureArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param filters Contain all filters names and values
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(@Nullable List<FilterItems> filters) {
             $.filters = filters;
             return this;
         }
 
+        /**
+         * @param filters Contain all filters names and values
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(FilterItems... filters) {
             return filters(List.of(filters));
         }
 
+        /**
+         * @param firewallPolicyName The name of the Firewall Policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder firewallPolicyName(String firewallPolicyName) {
             $.firewallPolicyName = firewallPolicyName;
             return this;
         }
 
+        /**
+         * @param orderBy Column to sort response by
+         * 
+         * @return builder
+         * 
+         */
         public Builder orderBy(@Nullable OrderBy orderBy) {
             $.orderBy = orderBy;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resultsPerPage The number of the results to return in each page
+         * 
+         * @return builder
+         * 
+         */
         public Builder resultsPerPage(@Nullable Integer resultsPerPage) {
             $.resultsPerPage = resultsPerPage;
             return this;
         }
 
+        /**
+         * @param search Search term in all columns
+         * 
+         * @return builder
+         * 
+         */
         public Builder search(@Nullable String search) {
             $.search = search;
             return this;
         }
 
+        /**
+         * @param skip The number of records matching the filter to skip
+         * 
+         * @return builder
+         * 
+         */
         public Builder skip(@Nullable Integer skip) {
             $.skip = skip;
             return this;

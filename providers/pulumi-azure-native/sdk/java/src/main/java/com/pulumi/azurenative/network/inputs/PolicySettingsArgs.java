@@ -31,6 +31,10 @@ public final class PolicySettingsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="fileUploadLimitInMb")
     private @Nullable Output<Integer> fileUploadLimitInMb;
 
+    /**
+     * @return Maximum file upload size in Mb for WAF.
+     * 
+     */
     public Optional<Output<Integer>> fileUploadLimitInMb() {
         return Optional.ofNullable(this.fileUploadLimitInMb);
     }
@@ -42,6 +46,10 @@ public final class PolicySettingsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="maxRequestBodySizeInKb")
     private @Nullable Output<Integer> maxRequestBodySizeInKb;
 
+    /**
+     * @return Maximum request body size in Kb for WAF.
+     * 
+     */
     public Optional<Output<Integer>> maxRequestBodySizeInKb() {
         return Optional.ofNullable(this.maxRequestBodySizeInKb);
     }
@@ -53,6 +61,10 @@ public final class PolicySettingsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="mode")
     private @Nullable Output<Either<String,WebApplicationFirewallMode>> mode;
 
+    /**
+     * @return The mode of the policy.
+     * 
+     */
     public Optional<Output<Either<String,WebApplicationFirewallMode>>> mode() {
         return Optional.ofNullable(this.mode);
     }
@@ -64,6 +76,10 @@ public final class PolicySettingsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="requestBodyCheck")
     private @Nullable Output<Boolean> requestBodyCheck;
 
+    /**
+     * @return Whether to allow WAF to check request Body.
+     * 
+     */
     public Optional<Output<Boolean>> requestBodyCheck() {
         return Optional.ofNullable(this.requestBodyCheck);
     }
@@ -75,6 +91,10 @@ public final class PolicySettingsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="state")
     private @Nullable Output<Either<String,WebApplicationFirewallEnabledState>> state;
 
+    /**
+     * @return The state of the policy.
+     * 
+     */
     public Optional<Output<Either<String,WebApplicationFirewallEnabledState>>> state() {
         return Optional.ofNullable(this.state);
     }
@@ -107,63 +127,147 @@ public final class PolicySettingsArgs extends com.pulumi.resources.ResourceArgs 
             $ = new PolicySettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fileUploadLimitInMb Maximum file upload size in Mb for WAF.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileUploadLimitInMb(@Nullable Output<Integer> fileUploadLimitInMb) {
             $.fileUploadLimitInMb = fileUploadLimitInMb;
             return this;
         }
 
+        /**
+         * @param fileUploadLimitInMb Maximum file upload size in Mb for WAF.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileUploadLimitInMb(Integer fileUploadLimitInMb) {
             return fileUploadLimitInMb(Output.of(fileUploadLimitInMb));
         }
 
+        /**
+         * @param maxRequestBodySizeInKb Maximum request body size in Kb for WAF.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxRequestBodySizeInKb(@Nullable Output<Integer> maxRequestBodySizeInKb) {
             $.maxRequestBodySizeInKb = maxRequestBodySizeInKb;
             return this;
         }
 
+        /**
+         * @param maxRequestBodySizeInKb Maximum request body size in Kb for WAF.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxRequestBodySizeInKb(Integer maxRequestBodySizeInKb) {
             return maxRequestBodySizeInKb(Output.of(maxRequestBodySizeInKb));
         }
 
+        /**
+         * @param mode The mode of the policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(@Nullable Output<Either<String,WebApplicationFirewallMode>> mode) {
             $.mode = mode;
             return this;
         }
 
+        /**
+         * @param mode The mode of the policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(Either<String,WebApplicationFirewallMode> mode) {
             return mode(Output.of(mode));
         }
 
+        /**
+         * @param mode The mode of the policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(String mode) {
             return mode(Either.ofLeft(mode));
         }
 
+        /**
+         * @param mode The mode of the policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(WebApplicationFirewallMode mode) {
             return mode(Either.ofRight(mode));
         }
 
+        /**
+         * @param requestBodyCheck Whether to allow WAF to check request Body.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestBodyCheck(@Nullable Output<Boolean> requestBodyCheck) {
             $.requestBodyCheck = requestBodyCheck;
             return this;
         }
 
+        /**
+         * @param requestBodyCheck Whether to allow WAF to check request Body.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestBodyCheck(Boolean requestBodyCheck) {
             return requestBodyCheck(Output.of(requestBodyCheck));
         }
 
+        /**
+         * @param state The state of the policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable Output<Either<String,WebApplicationFirewallEnabledState>> state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param state The state of the policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(Either<String,WebApplicationFirewallEnabledState> state) {
             return state(Output.of(state));
         }
 
+        /**
+         * @param state The state of the policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             return state(Either.ofLeft(state));
         }
 
+        /**
+         * @param state The state of the policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(WebApplicationFirewallEnabledState state) {
             return state(Either.ofRight(state));
         }

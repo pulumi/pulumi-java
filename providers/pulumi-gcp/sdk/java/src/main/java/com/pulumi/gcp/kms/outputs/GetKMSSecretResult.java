@@ -15,12 +15,12 @@ public final class GetKMSSecretResult {
     private final String ciphertext;
     private final String cryptoKey;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     /**
-     * Contains the result of decrypting the provided ciphertext.
+     * @return Contains the result of decrypting the provided ciphertext.
      * 
      */
     private final String plaintext;
@@ -49,16 +49,16 @@ public final class GetKMSSecretResult {
         return this.cryptoKey;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Contains the result of decrypting the provided ciphertext.
+     * @return Contains the result of decrypting the provided ciphertext.
      * 
-    */
+     */
     public String plaintext() {
         return this.plaintext;
     }

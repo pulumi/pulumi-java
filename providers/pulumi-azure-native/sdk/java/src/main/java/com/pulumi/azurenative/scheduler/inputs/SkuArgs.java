@@ -22,6 +22,10 @@ public final class SkuArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<SkuDefinition> name;
 
+    /**
+     * @return Gets or set the SKU.
+     * 
+     */
     public Optional<Output<SkuDefinition>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -50,11 +54,23 @@ public final class SkuArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SkuArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Gets or set the SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<SkuDefinition> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Gets or set the SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(SkuDefinition name) {
             return name(Output.of(name));
         }

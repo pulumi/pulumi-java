@@ -22,6 +22,10 @@ public final class LaunchTemplateCreditSpecificationArgs extends com.pulumi.reso
     @Import(name="cpuCredits")
     private @Nullable Output<String> cpuCredits;
 
+    /**
+     * @return The credit option for CPU usage. Can be `&#34;standard&#34;` or `&#34;unlimited&#34;`. T3 instances are launched as unlimited by default. T2 instances are launched as standard by default.
+     * 
+     */
     public Optional<Output<String>> cpuCredits() {
         return Optional.ofNullable(this.cpuCredits);
     }
@@ -50,11 +54,23 @@ public final class LaunchTemplateCreditSpecificationArgs extends com.pulumi.reso
             $ = new LaunchTemplateCreditSpecificationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cpuCredits The credit option for CPU usage. Can be `&#34;standard&#34;` or `&#34;unlimited&#34;`. T3 instances are launched as unlimited by default. T2 instances are launched as standard by default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpuCredits(@Nullable Output<String> cpuCredits) {
             $.cpuCredits = cpuCredits;
             return this;
         }
 
+        /**
+         * @param cpuCredits The credit option for CPU usage. Can be `&#34;standard&#34;` or `&#34;unlimited&#34;`. T3 instances are launched as unlimited by default. T2 instances are launched as standard by default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpuCredits(String cpuCredits) {
             return cpuCredits(Output.of(cpuCredits));
         }

@@ -10,13 +10,13 @@ import java.util.Objects;
 @CustomType
 public final class ContentKeyPolicyX509CertificateTokenKeyResponse {
     /**
-     * The discriminator for derived types.
+     * @return The discriminator for derived types.
      * Expected value is &#39;#Microsoft.Media.ContentKeyPolicyX509CertificateTokenKey&#39;.
      * 
      */
     private final String odataType;
     /**
-     * The raw data field of a certificate in PKCS 12 format (X509Certificate2 in .NET)
+     * @return The raw data field of a certificate in PKCS 12 format (X509Certificate2 in .NET)
      * 
      */
     private final String rawBody;
@@ -30,17 +30,17 @@ public final class ContentKeyPolicyX509CertificateTokenKeyResponse {
     }
 
     /**
-     * The discriminator for derived types.
+     * @return The discriminator for derived types.
      * Expected value is &#39;#Microsoft.Media.ContentKeyPolicyX509CertificateTokenKey&#39;.
      * 
-    */
+     */
     public String odataType() {
         return this.odataType;
     }
     /**
-     * The raw data field of a certificate in PKCS 12 format (X509Certificate2 in .NET)
+     * @return The raw data field of a certificate in PKCS 12 format (X509Certificate2 in .NET)
      * 
-    */
+     */
     public String rawBody() {
         return this.rawBody;
     }

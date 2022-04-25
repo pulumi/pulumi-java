@@ -25,6 +25,10 @@ public final class ExpressRouteCircuitPeeringIdResponse extends com.pulumi.resou
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return The ID of the ExpressRoute circuit peering.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -53,6 +57,12 @@ public final class ExpressRouteCircuitPeeringIdResponse extends com.pulumi.resou
             $ = new ExpressRouteCircuitPeeringIdResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id The ID of the ExpressRoute circuit peering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;

@@ -11,17 +11,17 @@ import java.util.Objects;
 @CustomType
 public final class MetricDimensionResponse {
     /**
-     * Name of the dimension.
+     * @return Name of the dimension.
      * 
      */
     private final String name;
     /**
-     * the dimension operator. Only &#39;Include&#39; and &#39;Exclude&#39; are supported
+     * @return the dimension operator. Only &#39;Include&#39; and &#39;Exclude&#39; are supported
      * 
      */
     private final String operator;
     /**
-     * list of dimension values.
+     * @return list of dimension values.
      * 
      */
     private final List<String> values;
@@ -37,23 +37,23 @@ public final class MetricDimensionResponse {
     }
 
     /**
-     * Name of the dimension.
+     * @return Name of the dimension.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * the dimension operator. Only &#39;Include&#39; and &#39;Exclude&#39; are supported
+     * @return the dimension operator. Only &#39;Include&#39; and &#39;Exclude&#39; are supported
      * 
-    */
+     */
     public String operator() {
         return this.operator;
     }
     /**
-     * list of dimension values.
+     * @return list of dimension values.
      * 
-    */
+     */
     public List<String> values() {
         return this.values;
     }

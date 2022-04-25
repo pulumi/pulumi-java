@@ -26,6 +26,10 @@ public final class CloudFunctionEndpointArgs extends com.pulumi.resources.Resour
     @Import(name="uri")
     private @Nullable Output<String> uri;
 
+    /**
+     * @return A [Cloud function](https://cloud.google.com/functions) name.
+     * 
+     */
     public Optional<Output<String>> uri() {
         return Optional.ofNullable(this.uri);
     }
@@ -54,11 +58,23 @@ public final class CloudFunctionEndpointArgs extends com.pulumi.resources.Resour
             $ = new CloudFunctionEndpointArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param uri A [Cloud function](https://cloud.google.com/functions) name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(@Nullable Output<String> uri) {
             $.uri = uri;
             return this;
         }
 
+        /**
+         * @param uri A [Cloud function](https://cloud.google.com/functions) name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(String uri) {
             return uri(Output.of(uri));
         }

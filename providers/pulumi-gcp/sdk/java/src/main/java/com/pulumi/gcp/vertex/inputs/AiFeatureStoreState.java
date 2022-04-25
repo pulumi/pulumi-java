@@ -26,6 +26,11 @@ public final class AiFeatureStoreState extends com.pulumi.resources.ResourceArgs
     @Import(name="createTime")
     private @Nullable Output<String> createTime;
 
+    /**
+     * @return The timestamp of when the featurestore was created in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond resolution and up to
+     * nine fractional digits.
+     * 
+     */
     public Optional<Output<String>> createTime() {
         return Optional.ofNullable(this.createTime);
     }
@@ -37,6 +42,10 @@ public final class AiFeatureStoreState extends com.pulumi.resources.ResourceArgs
     @Import(name="etag")
     private @Nullable Output<String> etag;
 
+    /**
+     * @return Used to perform consistent read-modify-write updates.
+     * 
+     */
     public Optional<Output<String>> etag() {
         return Optional.ofNullable(this.etag);
     }
@@ -48,6 +57,10 @@ public final class AiFeatureStoreState extends com.pulumi.resources.ResourceArgs
     @Import(name="forceDestroy")
     private @Nullable Output<Boolean> forceDestroy;
 
+    /**
+     * @return If set to true, any EntityTypes and Features for this Featurestore will also be deleted
+     * 
+     */
     public Optional<Output<Boolean>> forceDestroy() {
         return Optional.ofNullable(this.forceDestroy);
     }
@@ -59,6 +72,10 @@ public final class AiFeatureStoreState extends com.pulumi.resources.ResourceArgs
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return A set of key/value label pairs to assign to this Featurestore.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -70,6 +87,10 @@ public final class AiFeatureStoreState extends com.pulumi.resources.ResourceArgs
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the Featurestore. This value may be up to 60 characters, and valid characters are [a-z0-9_]. The first character cannot be a number.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -82,6 +103,11 @@ public final class AiFeatureStoreState extends com.pulumi.resources.ResourceArgs
     @Import(name="onlineServingConfig")
     private @Nullable Output<AiFeatureStoreOnlineServingConfigGetArgs> onlineServingConfig;
 
+    /**
+     * @return Config for online serving resources.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<AiFeatureStoreOnlineServingConfigGetArgs>> onlineServingConfig() {
         return Optional.ofNullable(this.onlineServingConfig);
     }
@@ -94,6 +120,11 @@ public final class AiFeatureStoreState extends com.pulumi.resources.ResourceArgs
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -105,6 +136,10 @@ public final class AiFeatureStoreState extends com.pulumi.resources.ResourceArgs
     @Import(name="region")
     private @Nullable Output<String> region;
 
+    /**
+     * @return The region of the dataset. eg us-central1
+     * 
+     */
     public Optional<Output<String>> region() {
         return Optional.ofNullable(this.region);
     }
@@ -117,6 +152,11 @@ public final class AiFeatureStoreState extends com.pulumi.resources.ResourceArgs
     @Import(name="updateTime")
     private @Nullable Output<String> updateTime;
 
+    /**
+     * @return The timestamp of when the featurestore was last updated in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond resolution and up
+     * to nine fractional digits.
+     * 
+     */
     public Optional<Output<String>> updateTime() {
         return Optional.ofNullable(this.updateTime);
     }
@@ -153,83 +193,199 @@ public final class AiFeatureStoreState extends com.pulumi.resources.ResourceArgs
             $ = new AiFeatureStoreState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param createTime The timestamp of when the featurestore was created in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond resolution and up to
+         * nine fractional digits.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTime(@Nullable Output<String> createTime) {
             $.createTime = createTime;
             return this;
         }
 
+        /**
+         * @param createTime The timestamp of when the featurestore was created in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond resolution and up to
+         * nine fractional digits.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTime(String createTime) {
             return createTime(Output.of(createTime));
         }
 
+        /**
+         * @param etag Used to perform consistent read-modify-write updates.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(@Nullable Output<String> etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param etag Used to perform consistent read-modify-write updates.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             return etag(Output.of(etag));
         }
 
+        /**
+         * @param forceDestroy If set to true, any EntityTypes and Features for this Featurestore will also be deleted
+         * 
+         * @return builder
+         * 
+         */
         public Builder forceDestroy(@Nullable Output<Boolean> forceDestroy) {
             $.forceDestroy = forceDestroy;
             return this;
         }
 
+        /**
+         * @param forceDestroy If set to true, any EntityTypes and Features for this Featurestore will also be deleted
+         * 
+         * @return builder
+         * 
+         */
         public Builder forceDestroy(Boolean forceDestroy) {
             return forceDestroy(Output.of(forceDestroy));
         }
 
+        /**
+         * @param labels A set of key/value label pairs to assign to this Featurestore.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels A set of key/value label pairs to assign to this Featurestore.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param name The name of the Featurestore. This value may be up to 60 characters, and valid characters are [a-z0-9_]. The first character cannot be a number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the Featurestore. This value may be up to 60 characters, and valid characters are [a-z0-9_]. The first character cannot be a number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param onlineServingConfig Config for online serving resources.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder onlineServingConfig(@Nullable Output<AiFeatureStoreOnlineServingConfigGetArgs> onlineServingConfig) {
             $.onlineServingConfig = onlineServingConfig;
             return this;
         }
 
+        /**
+         * @param onlineServingConfig Config for online serving resources.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder onlineServingConfig(AiFeatureStoreOnlineServingConfigGetArgs onlineServingConfig) {
             return onlineServingConfig(Output.of(onlineServingConfig));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param region The region of the dataset. eg us-central1
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(@Nullable Output<String> region) {
             $.region = region;
             return this;
         }
 
+        /**
+         * @param region The region of the dataset. eg us-central1
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(String region) {
             return region(Output.of(region));
         }
 
+        /**
+         * @param updateTime The timestamp of when the featurestore was last updated in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond resolution and up
+         * to nine fractional digits.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateTime(@Nullable Output<String> updateTime) {
             $.updateTime = updateTime;
             return this;
         }
 
+        /**
+         * @param updateTime The timestamp of when the featurestore was last updated in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond resolution and up
+         * to nine fractional digits.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateTime(String updateTime) {
             return updateTime(Output.of(updateTime));
         }

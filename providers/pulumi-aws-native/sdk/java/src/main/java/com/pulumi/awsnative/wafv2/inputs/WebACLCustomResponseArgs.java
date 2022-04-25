@@ -29,6 +29,10 @@ public final class WebACLCustomResponseArgs extends com.pulumi.resources.Resourc
     @Import(name="customResponseBodyKey")
     private @Nullable Output<String> customResponseBodyKey;
 
+    /**
+     * @return Custom response body key.
+     * 
+     */
     public Optional<Output<String>> customResponseBodyKey() {
         return Optional.ofNullable(this.customResponseBodyKey);
     }
@@ -47,6 +51,10 @@ public final class WebACLCustomResponseArgs extends com.pulumi.resources.Resourc
     @Import(name="responseHeaders")
     private @Nullable Output<List<WebACLCustomHTTPHeaderArgs>> responseHeaders;
 
+    /**
+     * @return Collection of HTTP headers.
+     * 
+     */
     public Optional<Output<List<WebACLCustomHTTPHeaderArgs>>> responseHeaders() {
         return Optional.ofNullable(this.responseHeaders);
     }
@@ -77,11 +85,23 @@ public final class WebACLCustomResponseArgs extends com.pulumi.resources.Resourc
             $ = new WebACLCustomResponseArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customResponseBodyKey Custom response body key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customResponseBodyKey(@Nullable Output<String> customResponseBodyKey) {
             $.customResponseBodyKey = customResponseBodyKey;
             return this;
         }
 
+        /**
+         * @param customResponseBodyKey Custom response body key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customResponseBodyKey(String customResponseBodyKey) {
             return customResponseBodyKey(Output.of(customResponseBodyKey));
         }
@@ -95,15 +115,33 @@ public final class WebACLCustomResponseArgs extends com.pulumi.resources.Resourc
             return responseCode(Output.of(responseCode));
         }
 
+        /**
+         * @param responseHeaders Collection of HTTP headers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder responseHeaders(@Nullable Output<List<WebACLCustomHTTPHeaderArgs>> responseHeaders) {
             $.responseHeaders = responseHeaders;
             return this;
         }
 
+        /**
+         * @param responseHeaders Collection of HTTP headers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder responseHeaders(List<WebACLCustomHTTPHeaderArgs> responseHeaders) {
             return responseHeaders(Output.of(responseHeaders));
         }
 
+        /**
+         * @param responseHeaders Collection of HTTP headers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder responseHeaders(WebACLCustomHTTPHeaderArgs... responseHeaders) {
             return responseHeaders(List.of(responseHeaders));
         }

@@ -14,17 +14,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class VpcEndpointProperties {
     /**
-     * One or more network interfaces of the endpoint. Also known as an interface endpoint.
+     * @return One or more network interfaces of the endpoint. Also known as an interface endpoint.
      * 
      */
     private final @Nullable List<EndpointAccessNetworkInterface> networkInterfaces;
     /**
-     * The connection endpoint ID for connecting an Amazon Redshift cluster through the proxy.
+     * @return The connection endpoint ID for connecting an Amazon Redshift cluster through the proxy.
      * 
      */
     private final @Nullable String vpcEndpointId;
     /**
-     * The VPC identifier that the endpoint is associated.
+     * @return The VPC identifier that the endpoint is associated.
      * 
      */
     private final @Nullable String vpcId;
@@ -40,23 +40,23 @@ public final class VpcEndpointProperties {
     }
 
     /**
-     * One or more network interfaces of the endpoint. Also known as an interface endpoint.
+     * @return One or more network interfaces of the endpoint. Also known as an interface endpoint.
      * 
-    */
+     */
     public List<EndpointAccessNetworkInterface> networkInterfaces() {
         return this.networkInterfaces == null ? List.of() : this.networkInterfaces;
     }
     /**
-     * The connection endpoint ID for connecting an Amazon Redshift cluster through the proxy.
+     * @return The connection endpoint ID for connecting an Amazon Redshift cluster through the proxy.
      * 
-    */
+     */
     public Optional<String> vpcEndpointId() {
         return Optional.ofNullable(this.vpcEndpointId);
     }
     /**
-     * The VPC identifier that the endpoint is associated.
+     * @return The VPC identifier that the endpoint is associated.
      * 
-    */
+     */
     public Optional<String> vpcId() {
         return Optional.ofNullable(this.vpcId);
     }

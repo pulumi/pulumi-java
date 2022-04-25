@@ -32,6 +32,10 @@ public final class P2SVpnGatewayResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="customDnsServers")
     private @Nullable List<String> customDnsServers;
 
+    /**
+     * @return List of all customer specified DNS servers IP addresses.
+     * 
+     */
     public Optional<List<String>> customDnsServers() {
         return Optional.ofNullable(this.customDnsServers);
     }
@@ -43,6 +47,10 @@ public final class P2SVpnGatewayResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="etag", required=true)
     private String etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public String etag() {
         return this.etag;
     }
@@ -54,6 +62,10 @@ public final class P2SVpnGatewayResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -65,6 +77,10 @@ public final class P2SVpnGatewayResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="isRoutingPreferenceInternet")
     private @Nullable Boolean isRoutingPreferenceInternet;
 
+    /**
+     * @return Enable Routing Preference property for the Public IP Interface of the P2SVpnGateway.
+     * 
+     */
     public Optional<Boolean> isRoutingPreferenceInternet() {
         return Optional.ofNullable(this.isRoutingPreferenceInternet);
     }
@@ -76,6 +92,10 @@ public final class P2SVpnGatewayResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="location", required=true)
     private String location;
 
+    /**
+     * @return Resource location.
+     * 
+     */
     public String location() {
         return this.location;
     }
@@ -87,6 +107,10 @@ public final class P2SVpnGatewayResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Resource name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -98,6 +122,10 @@ public final class P2SVpnGatewayResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="p2SConnectionConfigurations")
     private @Nullable List<P2SConnectionConfigurationResponse> p2SConnectionConfigurations;
 
+    /**
+     * @return List of all p2s connection configurations of the gateway.
+     * 
+     */
     public Optional<List<P2SConnectionConfigurationResponse>> p2SConnectionConfigurations() {
         return Optional.ofNullable(this.p2SConnectionConfigurations);
     }
@@ -109,6 +137,10 @@ public final class P2SVpnGatewayResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The provisioning state of the P2S VPN gateway resource.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -120,6 +152,10 @@ public final class P2SVpnGatewayResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="tags")
     private @Nullable Map<String,String> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Map<String,String>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -131,6 +167,10 @@ public final class P2SVpnGatewayResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Resource type.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -142,6 +182,10 @@ public final class P2SVpnGatewayResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="virtualHub")
     private @Nullable SubResourceResponse virtualHub;
 
+    /**
+     * @return The VirtualHub to which the gateway belongs.
+     * 
+     */
     public Optional<SubResourceResponse> virtualHub() {
         return Optional.ofNullable(this.virtualHub);
     }
@@ -153,6 +197,10 @@ public final class P2SVpnGatewayResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="vpnClientConnectionHealth", required=true)
     private VpnClientConnectionHealthResponse vpnClientConnectionHealth;
 
+    /**
+     * @return All P2S VPN clients&#39; connection health status.
+     * 
+     */
     public VpnClientConnectionHealthResponse vpnClientConnectionHealth() {
         return this.vpnClientConnectionHealth;
     }
@@ -164,6 +212,10 @@ public final class P2SVpnGatewayResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="vpnGatewayScaleUnit")
     private @Nullable Integer vpnGatewayScaleUnit;
 
+    /**
+     * @return The scale unit for this p2s vpn gateway.
+     * 
+     */
     public Optional<Integer> vpnGatewayScaleUnit() {
         return Optional.ofNullable(this.vpnGatewayScaleUnit);
     }
@@ -175,6 +227,10 @@ public final class P2SVpnGatewayResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="vpnServerConfiguration")
     private @Nullable SubResourceResponse vpnServerConfiguration;
 
+    /**
+     * @return The VpnServerConfiguration to which the p2sVpnGateway is attached to.
+     * 
+     */
     public Optional<SubResourceResponse> vpnServerConfiguration() {
         return Optional.ofNullable(this.vpnServerConfiguration);
     }
@@ -216,79 +272,175 @@ public final class P2SVpnGatewayResponse extends com.pulumi.resources.InvokeArgs
             $ = new P2SVpnGatewayResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customDnsServers List of all customer specified DNS servers IP addresses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customDnsServers(@Nullable List<String> customDnsServers) {
             $.customDnsServers = customDnsServers;
             return this;
         }
 
+        /**
+         * @param customDnsServers List of all customer specified DNS servers IP addresses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customDnsServers(String... customDnsServers) {
             return customDnsServers(List.of(customDnsServers));
         }
 
+        /**
+         * @param etag A unique read-only string that changes whenever the resource is updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param isRoutingPreferenceInternet Enable Routing Preference property for the Public IP Interface of the P2SVpnGateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isRoutingPreferenceInternet(@Nullable Boolean isRoutingPreferenceInternet) {
             $.isRoutingPreferenceInternet = isRoutingPreferenceInternet;
             return this;
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param name Resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param p2SConnectionConfigurations List of all p2s connection configurations of the gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder p2SConnectionConfigurations(@Nullable List<P2SConnectionConfigurationResponse> p2SConnectionConfigurations) {
             $.p2SConnectionConfigurations = p2SConnectionConfigurations;
             return this;
         }
 
+        /**
+         * @param p2SConnectionConfigurations List of all p2s connection configurations of the gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder p2SConnectionConfigurations(P2SConnectionConfigurationResponse... p2SConnectionConfigurations) {
             return p2SConnectionConfigurations(List.of(p2SConnectionConfigurations));
         }
 
+        /**
+         * @param provisioningState The provisioning state of the P2S VPN gateway resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Map<String,String> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param type Resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param virtualHub The VirtualHub to which the gateway belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualHub(@Nullable SubResourceResponse virtualHub) {
             $.virtualHub = virtualHub;
             return this;
         }
 
+        /**
+         * @param vpnClientConnectionHealth All P2S VPN clients&#39; connection health status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpnClientConnectionHealth(VpnClientConnectionHealthResponse vpnClientConnectionHealth) {
             $.vpnClientConnectionHealth = vpnClientConnectionHealth;
             return this;
         }
 
+        /**
+         * @param vpnGatewayScaleUnit The scale unit for this p2s vpn gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpnGatewayScaleUnit(@Nullable Integer vpnGatewayScaleUnit) {
             $.vpnGatewayScaleUnit = vpnGatewayScaleUnit;
             return this;
         }
 
+        /**
+         * @param vpnServerConfiguration The VpnServerConfiguration to which the p2sVpnGateway is attached to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpnServerConfiguration(@Nullable SubResourceResponse vpnServerConfiguration) {
             $.vpnServerConfiguration = vpnServerConfiguration;
             return this;

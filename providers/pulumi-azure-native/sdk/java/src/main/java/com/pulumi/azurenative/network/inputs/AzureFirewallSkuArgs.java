@@ -29,6 +29,10 @@ public final class AzureFirewallSkuArgs extends com.pulumi.resources.ResourceArg
     @Import(name="name")
     private @Nullable Output<Either<String,AzureFirewallSkuName>> name;
 
+    /**
+     * @return Name of an Azure Firewall SKU.
+     * 
+     */
     public Optional<Output<Either<String,AzureFirewallSkuName>>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -40,6 +44,10 @@ public final class AzureFirewallSkuArgs extends com.pulumi.resources.ResourceArg
     @Import(name="tier")
     private @Nullable Output<Either<String,AzureFirewallSkuTier>> tier;
 
+    /**
+     * @return Tier of an Azure Firewall.
+     * 
+     */
     public Optional<Output<Either<String,AzureFirewallSkuTier>>> tier() {
         return Optional.ofNullable(this.tier);
     }
@@ -69,36 +77,84 @@ public final class AzureFirewallSkuArgs extends com.pulumi.resources.ResourceArg
             $ = new AzureFirewallSkuArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name of an Azure Firewall SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<Either<String,AzureFirewallSkuName>> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of an Azure Firewall SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Either<String,AzureFirewallSkuName> name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param name Name of an Azure Firewall SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Either.ofLeft(name));
         }
 
+        /**
+         * @param name Name of an Azure Firewall SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(AzureFirewallSkuName name) {
             return name(Either.ofRight(name));
         }
 
+        /**
+         * @param tier Tier of an Azure Firewall.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(@Nullable Output<Either<String,AzureFirewallSkuTier>> tier) {
             $.tier = tier;
             return this;
         }
 
+        /**
+         * @param tier Tier of an Azure Firewall.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(Either<String,AzureFirewallSkuTier> tier) {
             return tier(Output.of(tier));
         }
 
+        /**
+         * @param tier Tier of an Azure Firewall.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(String tier) {
             return tier(Either.ofLeft(tier));
         }
 
+        /**
+         * @param tier Tier of an Azure Firewall.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(AzureFirewallSkuTier tier) {
             return tier(Either.ofRight(tier));
         }

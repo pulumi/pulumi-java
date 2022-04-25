@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 public final class ContainerPublicDomainName {
     private final @Nullable String certificateName;
     /**
-     * An object that describes the configuration for the containers of the deployment.
+     * @return An object that describes the configuration for the containers of the deployment.
      * 
      */
     private final @Nullable List<String> domainNames;
@@ -31,9 +31,9 @@ public final class ContainerPublicDomainName {
         return Optional.ofNullable(this.certificateName);
     }
     /**
-     * An object that describes the configuration for the containers of the deployment.
+     * @return An object that describes the configuration for the containers of the deployment.
      * 
-    */
+     */
     public List<String> domainNames() {
         return this.domainNames == null ? List.of() : this.domainNames;
     }

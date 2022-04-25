@@ -11,22 +11,22 @@ import java.util.Objects;
 @CustomType
 public final class MoveResourceErrorBodyResponse {
     /**
-     * An identifier for the error. Codes are invariant and are intended to be consumed programmatically.
+     * @return An identifier for the error. Codes are invariant and are intended to be consumed programmatically.
      * 
      */
     private final String code;
     /**
-     * A list of additional details about the error.
+     * @return A list of additional details about the error.
      * 
      */
     private final List<MoveResourceErrorBodyResponse> details;
     /**
-     * A message describing the error, intended to be suitable for display in a user interface.
+     * @return A message describing the error, intended to be suitable for display in a user interface.
      * 
      */
     private final String message;
     /**
-     * The target of the particular error. For example, the name of the property in error.
+     * @return The target of the particular error. For example, the name of the property in error.
      * 
      */
     private final String target;
@@ -44,30 +44,30 @@ public final class MoveResourceErrorBodyResponse {
     }
 
     /**
-     * An identifier for the error. Codes are invariant and are intended to be consumed programmatically.
+     * @return An identifier for the error. Codes are invariant and are intended to be consumed programmatically.
      * 
-    */
+     */
     public String code() {
         return this.code;
     }
     /**
-     * A list of additional details about the error.
+     * @return A list of additional details about the error.
      * 
-    */
+     */
     public List<MoveResourceErrorBodyResponse> details() {
         return this.details;
     }
     /**
-     * A message describing the error, intended to be suitable for display in a user interface.
+     * @return A message describing the error, intended to be suitable for display in a user interface.
      * 
-    */
+     */
     public String message() {
         return this.message;
     }
     /**
-     * The target of the particular error. For example, the name of the property in error.
+     * @return The target of the particular error. For example, the name of the property in error.
      * 
-    */
+     */
     public String target() {
         return this.target;
     }

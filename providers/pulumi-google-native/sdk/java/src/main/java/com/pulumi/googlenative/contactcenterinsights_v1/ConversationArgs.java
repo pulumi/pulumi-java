@@ -26,6 +26,10 @@ public final class ConversationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="agentId")
     private @Nullable Output<String> agentId;
 
+    /**
+     * @return An opaque, user-specified string representing the human agent who handled the conversation.
+     * 
+     */
     public Optional<Output<String>> agentId() {
         return Optional.ofNullable(this.agentId);
     }
@@ -37,6 +41,10 @@ public final class ConversationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="callMetadata")
     private @Nullable Output<GoogleCloudContactcenterinsightsV1ConversationCallMetadataArgs> callMetadata;
 
+    /**
+     * @return Call-specific metadata.
+     * 
+     */
     public Optional<Output<GoogleCloudContactcenterinsightsV1ConversationCallMetadataArgs>> callMetadata() {
         return Optional.ofNullable(this.callMetadata);
     }
@@ -55,6 +63,10 @@ public final class ConversationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dataSource")
     private @Nullable Output<GoogleCloudContactcenterinsightsV1ConversationDataSourceArgs> dataSource;
 
+    /**
+     * @return The source of the audio and transcription for the conversation.
+     * 
+     */
     public Optional<Output<GoogleCloudContactcenterinsightsV1ConversationDataSourceArgs>> dataSource() {
         return Optional.ofNullable(this.dataSource);
     }
@@ -66,6 +78,10 @@ public final class ConversationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="expireTime")
     private @Nullable Output<String> expireTime;
 
+    /**
+     * @return The time at which this conversation should expire. After this time, the conversation data and any associated analyses will be deleted.
+     * 
+     */
     public Optional<Output<String>> expireTime() {
         return Optional.ofNullable(this.expireTime);
     }
@@ -77,6 +93,10 @@ public final class ConversationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return A map for the user to specify any custom fields. A maximum of 20 labels per conversation is allowed, with a maximum of 256 characters per entry.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -88,6 +108,10 @@ public final class ConversationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="languageCode")
     private @Nullable Output<String> languageCode;
 
+    /**
+     * @return A user-specified language code for the conversation.
+     * 
+     */
     public Optional<Output<String>> languageCode() {
         return Optional.ofNullable(this.languageCode);
     }
@@ -106,6 +130,10 @@ public final class ConversationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="medium")
     private @Nullable Output<ConversationMedium> medium;
 
+    /**
+     * @return Immutable. The conversation medium, if unspecified will default to PHONE_CALL.
+     * 
+     */
     public Optional<Output<ConversationMedium>> medium() {
         return Optional.ofNullable(this.medium);
     }
@@ -117,6 +145,10 @@ public final class ConversationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Immutable. The resource name of the conversation. Format: projects/{project}/locations/{location}/conversations/{conversation}
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -128,6 +160,10 @@ public final class ConversationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="obfuscatedUserId")
     private @Nullable Output<String> obfuscatedUserId;
 
+    /**
+     * @return Obfuscated user ID which the customer sent to us.
+     * 
+     */
     public Optional<Output<String>> obfuscatedUserId() {
         return Optional.ofNullable(this.obfuscatedUserId);
     }
@@ -146,6 +182,10 @@ public final class ConversationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="startTime")
     private @Nullable Output<String> startTime;
 
+    /**
+     * @return The time at which the conversation started.
+     * 
+     */
     public Optional<Output<String>> startTime() {
         return Optional.ofNullable(this.startTime);
     }
@@ -157,6 +197,10 @@ public final class ConversationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ttl")
     private @Nullable Output<String> ttl;
 
+    /**
+     * @return Input only. The TTL for this resource. If specified, then this TTL will be used to calculate the expire time.
+     * 
+     */
     public Optional<Output<String>> ttl() {
         return Optional.ofNullable(this.ttl);
     }
@@ -198,20 +242,44 @@ public final class ConversationArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ConversationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param agentId An opaque, user-specified string representing the human agent who handled the conversation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentId(@Nullable Output<String> agentId) {
             $.agentId = agentId;
             return this;
         }
 
+        /**
+         * @param agentId An opaque, user-specified string representing the human agent who handled the conversation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentId(String agentId) {
             return agentId(Output.of(agentId));
         }
 
+        /**
+         * @param callMetadata Call-specific metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder callMetadata(@Nullable Output<GoogleCloudContactcenterinsightsV1ConversationCallMetadataArgs> callMetadata) {
             $.callMetadata = callMetadata;
             return this;
         }
 
+        /**
+         * @param callMetadata Call-specific metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder callMetadata(GoogleCloudContactcenterinsightsV1ConversationCallMetadataArgs callMetadata) {
             return callMetadata(Output.of(callMetadata));
         }
@@ -225,38 +293,86 @@ public final class ConversationArgs extends com.pulumi.resources.ResourceArgs {
             return conversationId(Output.of(conversationId));
         }
 
+        /**
+         * @param dataSource The source of the audio and transcription for the conversation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSource(@Nullable Output<GoogleCloudContactcenterinsightsV1ConversationDataSourceArgs> dataSource) {
             $.dataSource = dataSource;
             return this;
         }
 
+        /**
+         * @param dataSource The source of the audio and transcription for the conversation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSource(GoogleCloudContactcenterinsightsV1ConversationDataSourceArgs dataSource) {
             return dataSource(Output.of(dataSource));
         }
 
+        /**
+         * @param expireTime The time at which this conversation should expire. After this time, the conversation data and any associated analyses will be deleted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expireTime(@Nullable Output<String> expireTime) {
             $.expireTime = expireTime;
             return this;
         }
 
+        /**
+         * @param expireTime The time at which this conversation should expire. After this time, the conversation data and any associated analyses will be deleted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expireTime(String expireTime) {
             return expireTime(Output.of(expireTime));
         }
 
+        /**
+         * @param labels A map for the user to specify any custom fields. A maximum of 20 labels per conversation is allowed, with a maximum of 256 characters per entry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels A map for the user to specify any custom fields. A maximum of 20 labels per conversation is allowed, with a maximum of 256 characters per entry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param languageCode A user-specified language code for the conversation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder languageCode(@Nullable Output<String> languageCode) {
             $.languageCode = languageCode;
             return this;
         }
 
+        /**
+         * @param languageCode A user-specified language code for the conversation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder languageCode(String languageCode) {
             return languageCode(Output.of(languageCode));
         }
@@ -270,29 +386,65 @@ public final class ConversationArgs extends com.pulumi.resources.ResourceArgs {
             return location(Output.of(location));
         }
 
+        /**
+         * @param medium Immutable. The conversation medium, if unspecified will default to PHONE_CALL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder medium(@Nullable Output<ConversationMedium> medium) {
             $.medium = medium;
             return this;
         }
 
+        /**
+         * @param medium Immutable. The conversation medium, if unspecified will default to PHONE_CALL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder medium(ConversationMedium medium) {
             return medium(Output.of(medium));
         }
 
+        /**
+         * @param name Immutable. The resource name of the conversation. Format: projects/{project}/locations/{location}/conversations/{conversation}
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Immutable. The resource name of the conversation. Format: projects/{project}/locations/{location}/conversations/{conversation}
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param obfuscatedUserId Obfuscated user ID which the customer sent to us.
+         * 
+         * @return builder
+         * 
+         */
         public Builder obfuscatedUserId(@Nullable Output<String> obfuscatedUserId) {
             $.obfuscatedUserId = obfuscatedUserId;
             return this;
         }
 
+        /**
+         * @param obfuscatedUserId Obfuscated user ID which the customer sent to us.
+         * 
+         * @return builder
+         * 
+         */
         public Builder obfuscatedUserId(String obfuscatedUserId) {
             return obfuscatedUserId(Output.of(obfuscatedUserId));
         }
@@ -306,20 +458,44 @@ public final class ConversationArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param startTime The time at which the conversation started.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(@Nullable Output<String> startTime) {
             $.startTime = startTime;
             return this;
         }
 
+        /**
+         * @param startTime The time at which the conversation started.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             return startTime(Output.of(startTime));
         }
 
+        /**
+         * @param ttl Input only. The TTL for this resource. If specified, then this TTL will be used to calculate the expire time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ttl(@Nullable Output<String> ttl) {
             $.ttl = ttl;
             return this;
         }
 
+        /**
+         * @param ttl Input only. The TTL for this resource. If specified, then this TTL will be used to calculate the expire time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ttl(String ttl) {
             return ttl(Output.of(ttl));
         }

@@ -35,6 +35,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accessPolicies")
     private @Nullable Output<String> accessPolicies;
 
+    /**
+     * @return IAM policy document specifying the access policies for the domain.
+     * 
+     */
     public Optional<Output<String>> accessPolicies() {
         return Optional.ofNullable(this.accessPolicies);
     }
@@ -53,6 +57,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="advancedSecurityOptions")
     private @Nullable Output<DomainAdvancedSecurityOptionsArgs> advancedSecurityOptions;
 
+    /**
+     * @return Configuration block for [fine-grained access control](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/fgac.html). Detailed below.
+     * 
+     */
     public Optional<Output<DomainAdvancedSecurityOptionsArgs>> advancedSecurityOptions() {
         return Optional.ofNullable(this.advancedSecurityOptions);
     }
@@ -64,6 +72,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="autoTuneOptions")
     private @Nullable Output<DomainAutoTuneOptionsArgs> autoTuneOptions;
 
+    /**
+     * @return Configuration block for the Auto-Tune options of the domain. Detailed below.
+     * 
+     */
     public Optional<Output<DomainAutoTuneOptionsArgs>> autoTuneOptions() {
         return Optional.ofNullable(this.autoTuneOptions);
     }
@@ -75,6 +87,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clusterConfig")
     private @Nullable Output<DomainClusterConfigArgs> clusterConfig;
 
+    /**
+     * @return Configuration block for the cluster of the domain. Detailed below.
+     * 
+     */
     public Optional<Output<DomainClusterConfigArgs>> clusterConfig() {
         return Optional.ofNullable(this.clusterConfig);
     }
@@ -86,6 +102,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cognitoOptions")
     private @Nullable Output<DomainCognitoOptionsArgs> cognitoOptions;
 
+    /**
+     * @return Configuration block for authenticating Kibana with Cognito. Detailed below.
+     * 
+     */
     public Optional<Output<DomainCognitoOptionsArgs>> cognitoOptions() {
         return Optional.ofNullable(this.cognitoOptions);
     }
@@ -97,6 +117,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="domainEndpointOptions")
     private @Nullable Output<DomainDomainEndpointOptionsArgs> domainEndpointOptions;
 
+    /**
+     * @return Configuration block for domain endpoint HTTP(S) related options. Detailed below.
+     * 
+     */
     public Optional<Output<DomainDomainEndpointOptionsArgs>> domainEndpointOptions() {
         return Optional.ofNullable(this.domainEndpointOptions);
     }
@@ -108,6 +132,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="domainName")
     private @Nullable Output<String> domainName;
 
+    /**
+     * @return Name of the domain.
+     * 
+     */
     public Optional<Output<String>> domainName() {
         return Optional.ofNullable(this.domainName);
     }
@@ -119,6 +147,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ebsOptions")
     private @Nullable Output<DomainEbsOptionsArgs> ebsOptions;
 
+    /**
+     * @return Configuration block for EBS related options, may be required based on chosen [instance size](https://aws.amazon.com/elasticsearch-service/pricing/). Detailed below.
+     * 
+     */
     public Optional<Output<DomainEbsOptionsArgs>> ebsOptions() {
         return Optional.ofNullable(this.ebsOptions);
     }
@@ -130,6 +162,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="elasticsearchVersion")
     private @Nullable Output<String> elasticsearchVersion;
 
+    /**
+     * @return Version of Elasticsearch to deploy. Defaults to `1.5`.
+     * 
+     */
     public Optional<Output<String>> elasticsearchVersion() {
         return Optional.ofNullable(this.elasticsearchVersion);
     }
@@ -141,6 +177,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="encryptAtRest")
     private @Nullable Output<DomainEncryptAtRestArgs> encryptAtRest;
 
+    /**
+     * @return Configuration block for encrypt at rest options. Only available for [certain instance types](http://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/aes-supported-instance-types.html). Detailed below.
+     * 
+     */
     public Optional<Output<DomainEncryptAtRestArgs>> encryptAtRest() {
         return Optional.ofNullable(this.encryptAtRest);
     }
@@ -152,6 +192,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="logPublishingOptions")
     private @Nullable Output<List<DomainLogPublishingOptionArgs>> logPublishingOptions;
 
+    /**
+     * @return Configuration block for publishing slow and application logs to CloudWatch Logs. This block can be declared multiple times, for each log_type, within the same resource. Detailed below.
+     * 
+     */
     public Optional<Output<List<DomainLogPublishingOptionArgs>>> logPublishingOptions() {
         return Optional.ofNullable(this.logPublishingOptions);
     }
@@ -163,6 +207,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nodeToNodeEncryption")
     private @Nullable Output<DomainNodeToNodeEncryptionArgs> nodeToNodeEncryption;
 
+    /**
+     * @return Configuration block for node-to-node encryption options. Detailed below.
+     * 
+     */
     public Optional<Output<DomainNodeToNodeEncryptionArgs>> nodeToNodeEncryption() {
         return Optional.ofNullable(this.nodeToNodeEncryption);
     }
@@ -174,6 +222,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="snapshotOptions")
     private @Nullable Output<DomainSnapshotOptionsArgs> snapshotOptions;
 
+    /**
+     * @return Configuration block for snapshot related options. Detailed below. DEPRECATED. For domains running Elasticsearch 5.3 and later, Amazon ES takes hourly automated snapshots, making this setting irrelevant. For domains running earlier versions of Elasticsearch, Amazon ES takes daily automated snapshots.
+     * 
+     */
     public Optional<Output<DomainSnapshotOptionsArgs>> snapshotOptions() {
         return Optional.ofNullable(this.snapshotOptions);
     }
@@ -185,6 +237,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -196,6 +252,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vpcOptions")
     private @Nullable Output<DomainVpcOptionsArgs> vpcOptions;
 
+    /**
+     * @return Configuration block for VPC related options. Adding or removing this configuration forces a new resource ([documentation](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-vpc.html#es-vpc-limitations)). Detailed below.
+     * 
+     */
     public Optional<Output<DomainVpcOptionsArgs>> vpcOptions() {
         return Optional.ofNullable(this.vpcOptions);
     }
@@ -239,11 +299,23 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DomainArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessPolicies IAM policy document specifying the access policies for the domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessPolicies(@Nullable Output<String> accessPolicies) {
             $.accessPolicies = accessPolicies;
             return this;
         }
 
+        /**
+         * @param accessPolicies IAM policy document specifying the access policies for the domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessPolicies(String accessPolicies) {
             return accessPolicies(Output.of(accessPolicies));
         }
@@ -257,132 +329,306 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
             return advancedOptions(Output.of(advancedOptions));
         }
 
+        /**
+         * @param advancedSecurityOptions Configuration block for [fine-grained access control](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/fgac.html). Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder advancedSecurityOptions(@Nullable Output<DomainAdvancedSecurityOptionsArgs> advancedSecurityOptions) {
             $.advancedSecurityOptions = advancedSecurityOptions;
             return this;
         }
 
+        /**
+         * @param advancedSecurityOptions Configuration block for [fine-grained access control](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/fgac.html). Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder advancedSecurityOptions(DomainAdvancedSecurityOptionsArgs advancedSecurityOptions) {
             return advancedSecurityOptions(Output.of(advancedSecurityOptions));
         }
 
+        /**
+         * @param autoTuneOptions Configuration block for the Auto-Tune options of the domain. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoTuneOptions(@Nullable Output<DomainAutoTuneOptionsArgs> autoTuneOptions) {
             $.autoTuneOptions = autoTuneOptions;
             return this;
         }
 
+        /**
+         * @param autoTuneOptions Configuration block for the Auto-Tune options of the domain. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoTuneOptions(DomainAutoTuneOptionsArgs autoTuneOptions) {
             return autoTuneOptions(Output.of(autoTuneOptions));
         }
 
+        /**
+         * @param clusterConfig Configuration block for the cluster of the domain. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterConfig(@Nullable Output<DomainClusterConfigArgs> clusterConfig) {
             $.clusterConfig = clusterConfig;
             return this;
         }
 
+        /**
+         * @param clusterConfig Configuration block for the cluster of the domain. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterConfig(DomainClusterConfigArgs clusterConfig) {
             return clusterConfig(Output.of(clusterConfig));
         }
 
+        /**
+         * @param cognitoOptions Configuration block for authenticating Kibana with Cognito. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cognitoOptions(@Nullable Output<DomainCognitoOptionsArgs> cognitoOptions) {
             $.cognitoOptions = cognitoOptions;
             return this;
         }
 
+        /**
+         * @param cognitoOptions Configuration block for authenticating Kibana with Cognito. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cognitoOptions(DomainCognitoOptionsArgs cognitoOptions) {
             return cognitoOptions(Output.of(cognitoOptions));
         }
 
+        /**
+         * @param domainEndpointOptions Configuration block for domain endpoint HTTP(S) related options. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainEndpointOptions(@Nullable Output<DomainDomainEndpointOptionsArgs> domainEndpointOptions) {
             $.domainEndpointOptions = domainEndpointOptions;
             return this;
         }
 
+        /**
+         * @param domainEndpointOptions Configuration block for domain endpoint HTTP(S) related options. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainEndpointOptions(DomainDomainEndpointOptionsArgs domainEndpointOptions) {
             return domainEndpointOptions(Output.of(domainEndpointOptions));
         }
 
+        /**
+         * @param domainName Name of the domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(@Nullable Output<String> domainName) {
             $.domainName = domainName;
             return this;
         }
 
+        /**
+         * @param domainName Name of the domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(String domainName) {
             return domainName(Output.of(domainName));
         }
 
+        /**
+         * @param ebsOptions Configuration block for EBS related options, may be required based on chosen [instance size](https://aws.amazon.com/elasticsearch-service/pricing/). Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ebsOptions(@Nullable Output<DomainEbsOptionsArgs> ebsOptions) {
             $.ebsOptions = ebsOptions;
             return this;
         }
 
+        /**
+         * @param ebsOptions Configuration block for EBS related options, may be required based on chosen [instance size](https://aws.amazon.com/elasticsearch-service/pricing/). Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ebsOptions(DomainEbsOptionsArgs ebsOptions) {
             return ebsOptions(Output.of(ebsOptions));
         }
 
+        /**
+         * @param elasticsearchVersion Version of Elasticsearch to deploy. Defaults to `1.5`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder elasticsearchVersion(@Nullable Output<String> elasticsearchVersion) {
             $.elasticsearchVersion = elasticsearchVersion;
             return this;
         }
 
+        /**
+         * @param elasticsearchVersion Version of Elasticsearch to deploy. Defaults to `1.5`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder elasticsearchVersion(String elasticsearchVersion) {
             return elasticsearchVersion(Output.of(elasticsearchVersion));
         }
 
+        /**
+         * @param encryptAtRest Configuration block for encrypt at rest options. Only available for [certain instance types](http://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/aes-supported-instance-types.html). Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptAtRest(@Nullable Output<DomainEncryptAtRestArgs> encryptAtRest) {
             $.encryptAtRest = encryptAtRest;
             return this;
         }
 
+        /**
+         * @param encryptAtRest Configuration block for encrypt at rest options. Only available for [certain instance types](http://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/aes-supported-instance-types.html). Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptAtRest(DomainEncryptAtRestArgs encryptAtRest) {
             return encryptAtRest(Output.of(encryptAtRest));
         }
 
+        /**
+         * @param logPublishingOptions Configuration block for publishing slow and application logs to CloudWatch Logs. This block can be declared multiple times, for each log_type, within the same resource. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logPublishingOptions(@Nullable Output<List<DomainLogPublishingOptionArgs>> logPublishingOptions) {
             $.logPublishingOptions = logPublishingOptions;
             return this;
         }
 
+        /**
+         * @param logPublishingOptions Configuration block for publishing slow and application logs to CloudWatch Logs. This block can be declared multiple times, for each log_type, within the same resource. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logPublishingOptions(List<DomainLogPublishingOptionArgs> logPublishingOptions) {
             return logPublishingOptions(Output.of(logPublishingOptions));
         }
 
+        /**
+         * @param logPublishingOptions Configuration block for publishing slow and application logs to CloudWatch Logs. This block can be declared multiple times, for each log_type, within the same resource. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logPublishingOptions(DomainLogPublishingOptionArgs... logPublishingOptions) {
             return logPublishingOptions(List.of(logPublishingOptions));
         }
 
+        /**
+         * @param nodeToNodeEncryption Configuration block for node-to-node encryption options. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeToNodeEncryption(@Nullable Output<DomainNodeToNodeEncryptionArgs> nodeToNodeEncryption) {
             $.nodeToNodeEncryption = nodeToNodeEncryption;
             return this;
         }
 
+        /**
+         * @param nodeToNodeEncryption Configuration block for node-to-node encryption options. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeToNodeEncryption(DomainNodeToNodeEncryptionArgs nodeToNodeEncryption) {
             return nodeToNodeEncryption(Output.of(nodeToNodeEncryption));
         }
 
+        /**
+         * @param snapshotOptions Configuration block for snapshot related options. Detailed below. DEPRECATED. For domains running Elasticsearch 5.3 and later, Amazon ES takes hourly automated snapshots, making this setting irrelevant. For domains running earlier versions of Elasticsearch, Amazon ES takes daily automated snapshots.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotOptions(@Nullable Output<DomainSnapshotOptionsArgs> snapshotOptions) {
             $.snapshotOptions = snapshotOptions;
             return this;
         }
 
+        /**
+         * @param snapshotOptions Configuration block for snapshot related options. Detailed below. DEPRECATED. For domains running Elasticsearch 5.3 and later, Amazon ES takes hourly automated snapshots, making this setting irrelevant. For domains running earlier versions of Elasticsearch, Amazon ES takes daily automated snapshots.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotOptions(DomainSnapshotOptionsArgs snapshotOptions) {
             return snapshotOptions(Output.of(snapshotOptions));
         }
 
+        /**
+         * @param tags Map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param vpcOptions Configuration block for VPC related options. Adding or removing this configuration forces a new resource ([documentation](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-vpc.html#es-vpc-limitations)). Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcOptions(@Nullable Output<DomainVpcOptionsArgs> vpcOptions) {
             $.vpcOptions = vpcOptions;
             return this;
         }
 
+        /**
+         * @param vpcOptions Configuration block for VPC related options. Adding or removing this configuration forces a new resource ([documentation](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-vpc.html#es-vpc-limitations)). Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcOptions(DomainVpcOptionsArgs vpcOptions) {
             return vpcOptions(Output.of(vpcOptions));
         }

@@ -10,22 +10,22 @@ import java.util.Objects;
 @CustomType
 public final class CircuitResponse {
     /**
-     * Identifier of the ExpressRoute Circuit (Microsoft Colo only)
+     * @return Identifier of the ExpressRoute Circuit (Microsoft Colo only)
      * 
      */
     private final String expressRouteID;
     /**
-     * ExpressRoute Circuit private peering identifier
+     * @return ExpressRoute Circuit private peering identifier
      * 
      */
     private final String expressRoutePrivatePeeringID;
     /**
-     * CIDR of primary subnet
+     * @return CIDR of primary subnet
      * 
      */
     private final String primarySubnet;
     /**
-     * CIDR of secondary subnet
+     * @return CIDR of secondary subnet
      * 
      */
     private final String secondarySubnet;
@@ -43,30 +43,30 @@ public final class CircuitResponse {
     }
 
     /**
-     * Identifier of the ExpressRoute Circuit (Microsoft Colo only)
+     * @return Identifier of the ExpressRoute Circuit (Microsoft Colo only)
      * 
-    */
+     */
     public String expressRouteID() {
         return this.expressRouteID;
     }
     /**
-     * ExpressRoute Circuit private peering identifier
+     * @return ExpressRoute Circuit private peering identifier
      * 
-    */
+     */
     public String expressRoutePrivatePeeringID() {
         return this.expressRoutePrivatePeeringID;
     }
     /**
-     * CIDR of primary subnet
+     * @return CIDR of primary subnet
      * 
-    */
+     */
     public String primarySubnet() {
         return this.primarySubnet;
     }
     /**
-     * CIDR of secondary subnet
+     * @return CIDR of secondary subnet
      * 
-    */
+     */
     public String secondarySubnet() {
         return this.secondarySubnet;
     }

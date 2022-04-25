@@ -23,6 +23,10 @@ public final class ForwardingRuleServiceDirectoryRegistrationResponse extends co
     @Import(name="namespace", required=true)
     private String namespace;
 
+    /**
+     * @return Service Directory namespace to register the forwarding rule under.
+     * 
+     */
     public String namespace() {
         return this.namespace;
     }
@@ -34,6 +38,10 @@ public final class ForwardingRuleServiceDirectoryRegistrationResponse extends co
     @Import(name="service", required=true)
     private String service;
 
+    /**
+     * @return Service Directory service to register the forwarding rule under.
+     * 
+     */
     public String service() {
         return this.service;
     }
@@ -45,6 +53,10 @@ public final class ForwardingRuleServiceDirectoryRegistrationResponse extends co
     @Import(name="serviceDirectoryRegion", required=true)
     private String serviceDirectoryRegion;
 
+    /**
+     * @return [Optional] Service Directory region to register this global forwarding rule under. Default to &#34;us-central1&#34;. Only used for PSC for Google APIs. All PSC for Google APIs Forwarding Rules on the same network should use the same Service Directory region.
+     * 
+     */
     public String serviceDirectoryRegion() {
         return this.serviceDirectoryRegion;
     }
@@ -75,16 +87,34 @@ public final class ForwardingRuleServiceDirectoryRegistrationResponse extends co
             $ = new ForwardingRuleServiceDirectoryRegistrationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param namespace Service Directory namespace to register the forwarding rule under.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespace(String namespace) {
             $.namespace = namespace;
             return this;
         }
 
+        /**
+         * @param service Service Directory service to register the forwarding rule under.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(String service) {
             $.service = service;
             return this;
         }
 
+        /**
+         * @param serviceDirectoryRegion [Optional] Service Directory region to register this global forwarding rule under. Default to &#34;us-central1&#34;. Only used for PSC for Google APIs. All PSC for Google APIs Forwarding Rules on the same network should use the same Service Directory region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceDirectoryRegion(String serviceDirectoryRegion) {
             $.serviceDirectoryRegion = serviceDirectoryRegion;
             return this;

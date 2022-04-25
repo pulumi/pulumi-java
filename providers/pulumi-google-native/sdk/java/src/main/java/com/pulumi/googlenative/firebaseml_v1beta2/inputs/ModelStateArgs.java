@@ -26,6 +26,10 @@ public final class ModelStateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="published")
     private @Nullable Output<Boolean> published;
 
+    /**
+     * @return Indicates if this model has been published.
+     * 
+     */
     public Optional<Output<Boolean>> published() {
         return Optional.ofNullable(this.published);
     }
@@ -54,11 +58,23 @@ public final class ModelStateArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ModelStateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param published Indicates if this model has been published.
+         * 
+         * @return builder
+         * 
+         */
         public Builder published(@Nullable Output<Boolean> published) {
             $.published = published;
             return this;
         }
 
+        /**
+         * @param published Indicates if this model has been published.
+         * 
+         * @return builder
+         * 
+         */
         public Builder published(Boolean published) {
             return published(Output.of(published));
         }

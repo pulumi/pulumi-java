@@ -13,37 +13,37 @@ import java.util.Objects;
 @CustomType
 public final class GetServiceLevelObjectiveResult {
     /**
-     * A calendar period, semantically &#34;since the start of the current &#34;. At this time, only DAY, WEEK, FORTNIGHT, and MONTH are supported.
+     * @return A calendar period, semantically &#34;since the start of the current &#34;. At this time, only DAY, WEEK, FORTNIGHT, and MONTH are supported.
      * 
      */
     private final String calendarPeriod;
     /**
-     * Name used for UI elements listing this SLO.
+     * @return Name used for UI elements listing this SLO.
      * 
      */
     private final String displayName;
     /**
-     * The fraction of service that must be good in order for this objective to be met. 0 &lt; goal &lt;= 0.999.
+     * @return The fraction of service that must be good in order for this objective to be met. 0 &lt; goal &lt;= 0.999.
      * 
      */
     private final Double goal;
     /**
-     * Resource name for this ServiceLevelObjective. The format is: projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]
+     * @return Resource name for this ServiceLevelObjective. The format is: projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]
      * 
      */
     private final String name;
     /**
-     * A rolling time period, semantically &#34;in the past &#34;. Must be an integer multiple of 1 day no larger than 30 days.
+     * @return A rolling time period, semantically &#34;in the past &#34;. Must be an integer multiple of 1 day no larger than 30 days.
      * 
      */
     private final String rollingPeriod;
     /**
-     * The definition of good service, used to measure and calculate the quality of the Service&#39;s performance with respect to a single aspect of service quality.
+     * @return The definition of good service, used to measure and calculate the quality of the Service&#39;s performance with respect to a single aspect of service quality.
      * 
      */
     private final ServiceLevelIndicatorResponse serviceLevelIndicator;
     /**
-     * Labels which have been used to annotate the service-level objective. Label keys must start with a letter. Label keys and values may contain lowercase letters, numbers, underscores, and dashes. Label keys and values have a maximum length of 63 characters, and must be less than 128 bytes in size. Up to 64 label entries may be stored. For labels which do not have a semantic value, the empty string may be supplied for the label value.
+     * @return Labels which have been used to annotate the service-level objective. Label keys must start with a letter. Label keys and values may contain lowercase letters, numbers, underscores, and dashes. Label keys and values have a maximum length of 63 characters, and must be less than 128 bytes in size. Up to 64 label entries may be stored. For labels which do not have a semantic value, the empty string may be supplied for the label value.
      * 
      */
     private final Map<String,String> userLabels;
@@ -67,51 +67,51 @@ public final class GetServiceLevelObjectiveResult {
     }
 
     /**
-     * A calendar period, semantically &#34;since the start of the current &#34;. At this time, only DAY, WEEK, FORTNIGHT, and MONTH are supported.
+     * @return A calendar period, semantically &#34;since the start of the current &#34;. At this time, only DAY, WEEK, FORTNIGHT, and MONTH are supported.
      * 
-    */
+     */
     public String calendarPeriod() {
         return this.calendarPeriod;
     }
     /**
-     * Name used for UI elements listing this SLO.
+     * @return Name used for UI elements listing this SLO.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * The fraction of service that must be good in order for this objective to be met. 0 &lt; goal &lt;= 0.999.
+     * @return The fraction of service that must be good in order for this objective to be met. 0 &lt; goal &lt;= 0.999.
      * 
-    */
+     */
     public Double goal() {
         return this.goal;
     }
     /**
-     * Resource name for this ServiceLevelObjective. The format is: projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]
+     * @return Resource name for this ServiceLevelObjective. The format is: projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * A rolling time period, semantically &#34;in the past &#34;. Must be an integer multiple of 1 day no larger than 30 days.
+     * @return A rolling time period, semantically &#34;in the past &#34;. Must be an integer multiple of 1 day no larger than 30 days.
      * 
-    */
+     */
     public String rollingPeriod() {
         return this.rollingPeriod;
     }
     /**
-     * The definition of good service, used to measure and calculate the quality of the Service&#39;s performance with respect to a single aspect of service quality.
+     * @return The definition of good service, used to measure and calculate the quality of the Service&#39;s performance with respect to a single aspect of service quality.
      * 
-    */
+     */
     public ServiceLevelIndicatorResponse serviceLevelIndicator() {
         return this.serviceLevelIndicator;
     }
     /**
-     * Labels which have been used to annotate the service-level objective. Label keys must start with a letter. Label keys and values may contain lowercase letters, numbers, underscores, and dashes. Label keys and values have a maximum length of 63 characters, and must be less than 128 bytes in size. Up to 64 label entries may be stored. For labels which do not have a semantic value, the empty string may be supplied for the label value.
+     * @return Labels which have been used to annotate the service-level objective. Label keys must start with a letter. Label keys and values may contain lowercase letters, numbers, underscores, and dashes. Label keys and values have a maximum length of 63 characters, and must be less than 128 bytes in size. Up to 64 label entries may be stored. For labels which do not have a semantic value, the empty string may be supplied for the label value.
      * 
-    */
+     */
     public Map<String,String> userLabels() {
         return this.userLabels;
     }

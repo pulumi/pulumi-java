@@ -29,6 +29,10 @@ public final class AS2MdnSettingsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="dispositionNotificationTo")
     private @Nullable Output<String> dispositionNotificationTo;
 
+    /**
+     * @return The disposition notification to header value.
+     * 
+     */
     public Optional<Output<String>> dispositionNotificationTo() {
         return Optional.ofNullable(this.dispositionNotificationTo);
     }
@@ -40,6 +44,10 @@ public final class AS2MdnSettingsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="mdnText")
     private @Nullable Output<String> mdnText;
 
+    /**
+     * @return The MDN text.
+     * 
+     */
     public Optional<Output<String>> mdnText() {
         return Optional.ofNullable(this.mdnText);
     }
@@ -51,6 +59,10 @@ public final class AS2MdnSettingsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="micHashingAlgorithm", required=true)
     private Output<Either<String,HashingAlgorithm>> micHashingAlgorithm;
 
+    /**
+     * @return The signing or hashing algorithm.
+     * 
+     */
     public Output<Either<String,HashingAlgorithm>> micHashingAlgorithm() {
         return this.micHashingAlgorithm;
     }
@@ -62,6 +74,10 @@ public final class AS2MdnSettingsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="needMDN", required=true)
     private Output<Boolean> needMDN;
 
+    /**
+     * @return The value indicating whether to send or request a MDN.
+     * 
+     */
     public Output<Boolean> needMDN() {
         return this.needMDN;
     }
@@ -73,6 +89,10 @@ public final class AS2MdnSettingsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="receiptDeliveryUrl")
     private @Nullable Output<String> receiptDeliveryUrl;
 
+    /**
+     * @return The receipt delivery URL.
+     * 
+     */
     public Optional<Output<String>> receiptDeliveryUrl() {
         return Optional.ofNullable(this.receiptDeliveryUrl);
     }
@@ -84,6 +104,10 @@ public final class AS2MdnSettingsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="sendInboundMDNToMessageBox", required=true)
     private Output<Boolean> sendInboundMDNToMessageBox;
 
+    /**
+     * @return The value indicating whether to send inbound MDN to message box.
+     * 
+     */
     public Output<Boolean> sendInboundMDNToMessageBox() {
         return this.sendInboundMDNToMessageBox;
     }
@@ -95,6 +119,10 @@ public final class AS2MdnSettingsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="sendMDNAsynchronously", required=true)
     private Output<Boolean> sendMDNAsynchronously;
 
+    /**
+     * @return The value indicating whether to send the asynchronous MDN.
+     * 
+     */
     public Output<Boolean> sendMDNAsynchronously() {
         return this.sendMDNAsynchronously;
     }
@@ -106,6 +134,10 @@ public final class AS2MdnSettingsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="signMDN", required=true)
     private Output<Boolean> signMDN;
 
+    /**
+     * @return The value indicating whether the MDN needs to be signed or not.
+     * 
+     */
     public Output<Boolean> signMDN() {
         return this.signMDN;
     }
@@ -117,6 +149,10 @@ public final class AS2MdnSettingsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="signOutboundMDNIfOptional", required=true)
     private Output<Boolean> signOutboundMDNIfOptional;
 
+    /**
+     * @return The value indicating whether to sign the outbound MDN if optional.
+     * 
+     */
     public Output<Boolean> signOutboundMDNIfOptional() {
         return this.signOutboundMDNIfOptional;
     }
@@ -153,91 +189,211 @@ public final class AS2MdnSettingsArgs extends com.pulumi.resources.ResourceArgs 
             $ = new AS2MdnSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dispositionNotificationTo The disposition notification to header value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dispositionNotificationTo(@Nullable Output<String> dispositionNotificationTo) {
             $.dispositionNotificationTo = dispositionNotificationTo;
             return this;
         }
 
+        /**
+         * @param dispositionNotificationTo The disposition notification to header value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dispositionNotificationTo(String dispositionNotificationTo) {
             return dispositionNotificationTo(Output.of(dispositionNotificationTo));
         }
 
+        /**
+         * @param mdnText The MDN text.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mdnText(@Nullable Output<String> mdnText) {
             $.mdnText = mdnText;
             return this;
         }
 
+        /**
+         * @param mdnText The MDN text.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mdnText(String mdnText) {
             return mdnText(Output.of(mdnText));
         }
 
+        /**
+         * @param micHashingAlgorithm The signing or hashing algorithm.
+         * 
+         * @return builder
+         * 
+         */
         public Builder micHashingAlgorithm(Output<Either<String,HashingAlgorithm>> micHashingAlgorithm) {
             $.micHashingAlgorithm = micHashingAlgorithm;
             return this;
         }
 
+        /**
+         * @param micHashingAlgorithm The signing or hashing algorithm.
+         * 
+         * @return builder
+         * 
+         */
         public Builder micHashingAlgorithm(Either<String,HashingAlgorithm> micHashingAlgorithm) {
             return micHashingAlgorithm(Output.of(micHashingAlgorithm));
         }
 
+        /**
+         * @param micHashingAlgorithm The signing or hashing algorithm.
+         * 
+         * @return builder
+         * 
+         */
         public Builder micHashingAlgorithm(String micHashingAlgorithm) {
             return micHashingAlgorithm(Either.ofLeft(micHashingAlgorithm));
         }
 
+        /**
+         * @param micHashingAlgorithm The signing or hashing algorithm.
+         * 
+         * @return builder
+         * 
+         */
         public Builder micHashingAlgorithm(HashingAlgorithm micHashingAlgorithm) {
             return micHashingAlgorithm(Either.ofRight(micHashingAlgorithm));
         }
 
+        /**
+         * @param needMDN The value indicating whether to send or request a MDN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder needMDN(Output<Boolean> needMDN) {
             $.needMDN = needMDN;
             return this;
         }
 
+        /**
+         * @param needMDN The value indicating whether to send or request a MDN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder needMDN(Boolean needMDN) {
             return needMDN(Output.of(needMDN));
         }
 
+        /**
+         * @param receiptDeliveryUrl The receipt delivery URL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder receiptDeliveryUrl(@Nullable Output<String> receiptDeliveryUrl) {
             $.receiptDeliveryUrl = receiptDeliveryUrl;
             return this;
         }
 
+        /**
+         * @param receiptDeliveryUrl The receipt delivery URL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder receiptDeliveryUrl(String receiptDeliveryUrl) {
             return receiptDeliveryUrl(Output.of(receiptDeliveryUrl));
         }
 
+        /**
+         * @param sendInboundMDNToMessageBox The value indicating whether to send inbound MDN to message box.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sendInboundMDNToMessageBox(Output<Boolean> sendInboundMDNToMessageBox) {
             $.sendInboundMDNToMessageBox = sendInboundMDNToMessageBox;
             return this;
         }
 
+        /**
+         * @param sendInboundMDNToMessageBox The value indicating whether to send inbound MDN to message box.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sendInboundMDNToMessageBox(Boolean sendInboundMDNToMessageBox) {
             return sendInboundMDNToMessageBox(Output.of(sendInboundMDNToMessageBox));
         }
 
+        /**
+         * @param sendMDNAsynchronously The value indicating whether to send the asynchronous MDN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sendMDNAsynchronously(Output<Boolean> sendMDNAsynchronously) {
             $.sendMDNAsynchronously = sendMDNAsynchronously;
             return this;
         }
 
+        /**
+         * @param sendMDNAsynchronously The value indicating whether to send the asynchronous MDN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sendMDNAsynchronously(Boolean sendMDNAsynchronously) {
             return sendMDNAsynchronously(Output.of(sendMDNAsynchronously));
         }
 
+        /**
+         * @param signMDN The value indicating whether the MDN needs to be signed or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder signMDN(Output<Boolean> signMDN) {
             $.signMDN = signMDN;
             return this;
         }
 
+        /**
+         * @param signMDN The value indicating whether the MDN needs to be signed or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder signMDN(Boolean signMDN) {
             return signMDN(Output.of(signMDN));
         }
 
+        /**
+         * @param signOutboundMDNIfOptional The value indicating whether to sign the outbound MDN if optional.
+         * 
+         * @return builder
+         * 
+         */
         public Builder signOutboundMDNIfOptional(Output<Boolean> signOutboundMDNIfOptional) {
             $.signOutboundMDNIfOptional = signOutboundMDNIfOptional;
             return this;
         }
 
+        /**
+         * @param signOutboundMDNIfOptional The value indicating whether to sign the outbound MDN if optional.
+         * 
+         * @return builder
+         * 
+         */
         public Builder signOutboundMDNIfOptional(Boolean signOutboundMDNIfOptional) {
             return signOutboundMDNIfOptional(Output.of(signOutboundMDNIfOptional));
         }

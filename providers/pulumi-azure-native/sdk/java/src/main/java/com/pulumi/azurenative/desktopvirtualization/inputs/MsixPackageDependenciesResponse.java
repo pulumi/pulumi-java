@@ -25,6 +25,10 @@ public final class MsixPackageDependenciesResponse extends com.pulumi.resources.
     @Import(name="dependencyName")
     private @Nullable String dependencyName;
 
+    /**
+     * @return Name of package dependency.
+     * 
+     */
     public Optional<String> dependencyName() {
         return Optional.ofNullable(this.dependencyName);
     }
@@ -36,6 +40,10 @@ public final class MsixPackageDependenciesResponse extends com.pulumi.resources.
     @Import(name="minVersion")
     private @Nullable String minVersion;
 
+    /**
+     * @return Dependency version required.
+     * 
+     */
     public Optional<String> minVersion() {
         return Optional.ofNullable(this.minVersion);
     }
@@ -47,6 +55,10 @@ public final class MsixPackageDependenciesResponse extends com.pulumi.resources.
     @Import(name="publisher")
     private @Nullable String publisher;
 
+    /**
+     * @return Name of dependency publisher.
+     * 
+     */
     public Optional<String> publisher() {
         return Optional.ofNullable(this.publisher);
     }
@@ -77,16 +89,34 @@ public final class MsixPackageDependenciesResponse extends com.pulumi.resources.
             $ = new MsixPackageDependenciesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dependencyName Name of package dependency.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependencyName(@Nullable String dependencyName) {
             $.dependencyName = dependencyName;
             return this;
         }
 
+        /**
+         * @param minVersion Dependency version required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minVersion(@Nullable String minVersion) {
             $.minVersion = minVersion;
             return this;
         }
 
+        /**
+         * @param publisher Name of dependency publisher.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publisher(@Nullable String publisher) {
             $.publisher = publisher;
             return this;

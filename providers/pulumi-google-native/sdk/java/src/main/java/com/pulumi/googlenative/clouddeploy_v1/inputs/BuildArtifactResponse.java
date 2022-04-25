@@ -23,6 +23,10 @@ public final class BuildArtifactResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="image", required=true)
     private String image;
 
+    /**
+     * @return Image name in Skaffold configuration.
+     * 
+     */
     public String image() {
         return this.image;
     }
@@ -34,6 +38,10 @@ public final class BuildArtifactResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="tag", required=true)
     private String tag;
 
+    /**
+     * @return Image tag to use. This will generally be the full path to an image, such as &#34;gcr.io/my-project/busybox:1.2.3&#34; or &#34;gcr.io/my-project/busybox@sha256:abc123&#34;.
+     * 
+     */
     public String tag() {
         return this.tag;
     }
@@ -63,11 +71,23 @@ public final class BuildArtifactResponse extends com.pulumi.resources.InvokeArgs
             $ = new BuildArtifactResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param image Image name in Skaffold configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder image(String image) {
             $.image = image;
             return this;
         }
 
+        /**
+         * @param tag Image tag to use. This will generally be the full path to an image, such as &#34;gcr.io/my-project/busybox:1.2.3&#34; or &#34;gcr.io/my-project/busybox@sha256:abc123&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tag(String tag) {
             $.tag = tag;
             return this;

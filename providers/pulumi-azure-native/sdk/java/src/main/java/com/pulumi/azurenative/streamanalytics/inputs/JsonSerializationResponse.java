@@ -26,6 +26,10 @@ public final class JsonSerializationResponse extends com.pulumi.resources.Invoke
     @Import(name="encoding")
     private @Nullable String encoding;
 
+    /**
+     * @return Specifies the encoding of the incoming data in the case of input and the encoding of outgoing data in the case of output. Required on PUT (CreateOrReplace) requests.
+     * 
+     */
     public Optional<String> encoding() {
         return Optional.ofNullable(this.encoding);
     }
@@ -37,6 +41,10 @@ public final class JsonSerializationResponse extends com.pulumi.resources.Invoke
     @Import(name="format")
     private @Nullable String format;
 
+    /**
+     * @return This property only applies to JSON serialization of outputs only. It is not applicable to inputs. This property specifies the format of the JSON the output will be written in. The currently supported values are &#39;lineSeparated&#39; indicating the output will be formatted by having each JSON object separated by a new line and &#39;array&#39; indicating the output will be formatted as an array of JSON objects. Default value is &#39;lineSeparated&#39; if left null.
+     * 
+     */
     public Optional<String> format() {
         return Optional.ofNullable(this.format);
     }
@@ -49,6 +57,11 @@ public final class JsonSerializationResponse extends com.pulumi.resources.Invoke
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Indicates the type of serialization that the input or output uses. Required on PUT (CreateOrReplace) requests.
+     * Expected value is &#39;Json&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -79,16 +92,35 @@ public final class JsonSerializationResponse extends com.pulumi.resources.Invoke
             $ = new JsonSerializationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param encoding Specifies the encoding of the incoming data in the case of input and the encoding of outgoing data in the case of output. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encoding(@Nullable String encoding) {
             $.encoding = encoding;
             return this;
         }
 
+        /**
+         * @param format This property only applies to JSON serialization of outputs only. It is not applicable to inputs. This property specifies the format of the JSON the output will be written in. The currently supported values are &#39;lineSeparated&#39; indicating the output will be formatted by having each JSON object separated by a new line and &#39;array&#39; indicating the output will be formatted as an array of JSON objects. Default value is &#39;lineSeparated&#39; if left null.
+         * 
+         * @return builder
+         * 
+         */
         public Builder format(@Nullable String format) {
             $.format = format;
             return this;
         }
 
+        /**
+         * @param type Indicates the type of serialization that the input or output uses. Required on PUT (CreateOrReplace) requests.
+         * Expected value is &#39;Json&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

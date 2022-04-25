@@ -13,27 +13,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetGroupResult {
     /**
-     * For optimistic concurrency control.
+     * @return For optimistic concurrency control.
      * 
      */
     private final @Nullable String eTag;
     /**
-     * Path reference to this group. /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Migrate/assessmentProjects/{projectName}/groups/{groupName}
+     * @return Path reference to this group. /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Migrate/assessmentProjects/{projectName}/groups/{groupName}
      * 
      */
     private final String id;
     /**
-     * Name of the group.
+     * @return Name of the group.
      * 
      */
     private final String name;
     /**
-     * Properties of the group.
+     * @return Properties of the group.
      * 
      */
     private final GroupPropertiesResponse properties;
     /**
-     * Type of the object = [Microsoft.Migrate/assessmentProjects/groups].
+     * @return Type of the object = [Microsoft.Migrate/assessmentProjects/groups].
      * 
      */
     private final String type;
@@ -53,37 +53,37 @@ public final class GetGroupResult {
     }
 
     /**
-     * For optimistic concurrency control.
+     * @return For optimistic concurrency control.
      * 
-    */
+     */
     public Optional<String> eTag() {
         return Optional.ofNullable(this.eTag);
     }
     /**
-     * Path reference to this group. /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Migrate/assessmentProjects/{projectName}/groups/{groupName}
+     * @return Path reference to this group. /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Migrate/assessmentProjects/{projectName}/groups/{groupName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Name of the group.
+     * @return Name of the group.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Properties of the group.
+     * @return Properties of the group.
      * 
-    */
+     */
     public GroupPropertiesResponse properties() {
         return this.properties;
     }
     /**
-     * Type of the object = [Microsoft.Migrate/assessmentProjects/groups].
+     * @return Type of the object = [Microsoft.Migrate/assessmentProjects/groups].
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

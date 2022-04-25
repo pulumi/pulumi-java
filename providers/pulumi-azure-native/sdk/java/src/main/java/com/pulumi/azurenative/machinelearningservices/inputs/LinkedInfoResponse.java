@@ -25,6 +25,10 @@ public final class LinkedInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="linkedId")
     private @Nullable String linkedId;
 
+    /**
+     * @return LinkedId id.
+     * 
+     */
     public Optional<String> linkedId() {
         return Optional.ofNullable(this.linkedId);
     }
@@ -36,6 +40,10 @@ public final class LinkedInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="linkedResourceName")
     private @Nullable String linkedResourceName;
 
+    /**
+     * @return Linked resource name.
+     * 
+     */
     public Optional<String> linkedResourceName() {
         return Optional.ofNullable(this.linkedResourceName);
     }
@@ -47,6 +55,10 @@ public final class LinkedInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="origin")
     private @Nullable String origin;
 
+    /**
+     * @return Datastore origin
+     * 
+     */
     public Optional<String> origin() {
         return Optional.ofNullable(this.origin);
     }
@@ -77,16 +89,34 @@ public final class LinkedInfoResponse extends com.pulumi.resources.InvokeArgs {
             $ = new LinkedInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param linkedId LinkedId id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedId(@Nullable String linkedId) {
             $.linkedId = linkedId;
             return this;
         }
 
+        /**
+         * @param linkedResourceName Linked resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedResourceName(@Nullable String linkedResourceName) {
             $.linkedResourceName = linkedResourceName;
             return this;
         }
 
+        /**
+         * @param origin Datastore origin
+         * 
+         * @return builder
+         * 
+         */
         public Builder origin(@Nullable String origin) {
             $.origin = origin;
             return this;

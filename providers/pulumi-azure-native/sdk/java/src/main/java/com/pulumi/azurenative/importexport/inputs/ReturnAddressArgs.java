@@ -26,6 +26,10 @@ public final class ReturnAddressArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="city", required=true)
     private Output<String> city;
 
+    /**
+     * @return The city name to use when returning the drives.
+     * 
+     */
     public Output<String> city() {
         return this.city;
     }
@@ -37,6 +41,10 @@ public final class ReturnAddressArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="countryOrRegion", required=true)
     private Output<String> countryOrRegion;
 
+    /**
+     * @return The country or region to use when returning the drives.
+     * 
+     */
     public Output<String> countryOrRegion() {
         return this.countryOrRegion;
     }
@@ -48,6 +56,10 @@ public final class ReturnAddressArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="email", required=true)
     private Output<String> email;
 
+    /**
+     * @return Email address of the recipient of the returned drives.
+     * 
+     */
     public Output<String> email() {
         return this.email;
     }
@@ -59,6 +71,10 @@ public final class ReturnAddressArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="phone", required=true)
     private Output<String> phone;
 
+    /**
+     * @return Phone number of the recipient of the returned drives.
+     * 
+     */
     public Output<String> phone() {
         return this.phone;
     }
@@ -70,6 +86,10 @@ public final class ReturnAddressArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="postalCode", required=true)
     private Output<String> postalCode;
 
+    /**
+     * @return The postal code to use when returning the drives.
+     * 
+     */
     public Output<String> postalCode() {
         return this.postalCode;
     }
@@ -81,6 +101,10 @@ public final class ReturnAddressArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="recipientName", required=true)
     private Output<String> recipientName;
 
+    /**
+     * @return The name of the recipient who will receive the hard drives when they are returned.
+     * 
+     */
     public Output<String> recipientName() {
         return this.recipientName;
     }
@@ -92,6 +116,10 @@ public final class ReturnAddressArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="stateOrProvince")
     private @Nullable Output<String> stateOrProvince;
 
+    /**
+     * @return The state or province to use when returning the drives.
+     * 
+     */
     public Optional<Output<String>> stateOrProvince() {
         return Optional.ofNullable(this.stateOrProvince);
     }
@@ -103,6 +131,10 @@ public final class ReturnAddressArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="streetAddress1", required=true)
     private Output<String> streetAddress1;
 
+    /**
+     * @return The first line of the street address to use when returning the drives.
+     * 
+     */
     public Output<String> streetAddress1() {
         return this.streetAddress1;
     }
@@ -114,6 +146,10 @@ public final class ReturnAddressArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="streetAddress2")
     private @Nullable Output<String> streetAddress2;
 
+    /**
+     * @return The second line of the street address to use when returning the drives.
+     * 
+     */
     public Optional<Output<String>> streetAddress2() {
         return Optional.ofNullable(this.streetAddress2);
     }
@@ -150,83 +186,191 @@ public final class ReturnAddressArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ReturnAddressArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param city The city name to use when returning the drives.
+         * 
+         * @return builder
+         * 
+         */
         public Builder city(Output<String> city) {
             $.city = city;
             return this;
         }
 
+        /**
+         * @param city The city name to use when returning the drives.
+         * 
+         * @return builder
+         * 
+         */
         public Builder city(String city) {
             return city(Output.of(city));
         }
 
+        /**
+         * @param countryOrRegion The country or region to use when returning the drives.
+         * 
+         * @return builder
+         * 
+         */
         public Builder countryOrRegion(Output<String> countryOrRegion) {
             $.countryOrRegion = countryOrRegion;
             return this;
         }
 
+        /**
+         * @param countryOrRegion The country or region to use when returning the drives.
+         * 
+         * @return builder
+         * 
+         */
         public Builder countryOrRegion(String countryOrRegion) {
             return countryOrRegion(Output.of(countryOrRegion));
         }
 
+        /**
+         * @param email Email address of the recipient of the returned drives.
+         * 
+         * @return builder
+         * 
+         */
         public Builder email(Output<String> email) {
             $.email = email;
             return this;
         }
 
+        /**
+         * @param email Email address of the recipient of the returned drives.
+         * 
+         * @return builder
+         * 
+         */
         public Builder email(String email) {
             return email(Output.of(email));
         }
 
+        /**
+         * @param phone Phone number of the recipient of the returned drives.
+         * 
+         * @return builder
+         * 
+         */
         public Builder phone(Output<String> phone) {
             $.phone = phone;
             return this;
         }
 
+        /**
+         * @param phone Phone number of the recipient of the returned drives.
+         * 
+         * @return builder
+         * 
+         */
         public Builder phone(String phone) {
             return phone(Output.of(phone));
         }
 
+        /**
+         * @param postalCode The postal code to use when returning the drives.
+         * 
+         * @return builder
+         * 
+         */
         public Builder postalCode(Output<String> postalCode) {
             $.postalCode = postalCode;
             return this;
         }
 
+        /**
+         * @param postalCode The postal code to use when returning the drives.
+         * 
+         * @return builder
+         * 
+         */
         public Builder postalCode(String postalCode) {
             return postalCode(Output.of(postalCode));
         }
 
+        /**
+         * @param recipientName The name of the recipient who will receive the hard drives when they are returned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recipientName(Output<String> recipientName) {
             $.recipientName = recipientName;
             return this;
         }
 
+        /**
+         * @param recipientName The name of the recipient who will receive the hard drives when they are returned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recipientName(String recipientName) {
             return recipientName(Output.of(recipientName));
         }
 
+        /**
+         * @param stateOrProvince The state or province to use when returning the drives.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stateOrProvince(@Nullable Output<String> stateOrProvince) {
             $.stateOrProvince = stateOrProvince;
             return this;
         }
 
+        /**
+         * @param stateOrProvince The state or province to use when returning the drives.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stateOrProvince(String stateOrProvince) {
             return stateOrProvince(Output.of(stateOrProvince));
         }
 
+        /**
+         * @param streetAddress1 The first line of the street address to use when returning the drives.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streetAddress1(Output<String> streetAddress1) {
             $.streetAddress1 = streetAddress1;
             return this;
         }
 
+        /**
+         * @param streetAddress1 The first line of the street address to use when returning the drives.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streetAddress1(String streetAddress1) {
             return streetAddress1(Output.of(streetAddress1));
         }
 
+        /**
+         * @param streetAddress2 The second line of the street address to use when returning the drives.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streetAddress2(@Nullable Output<String> streetAddress2) {
             $.streetAddress2 = streetAddress2;
             return this;
         }
 
+        /**
+         * @param streetAddress2 The second line of the street address to use when returning the drives.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streetAddress2(String streetAddress2) {
             return streetAddress2(Output.of(streetAddress2));
         }

@@ -29,6 +29,10 @@ public final class ShareSettingsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="projectMap")
     private @Nullable Output<Map<String,String>> projectMap;
 
+    /**
+     * @return A map of project id and project config. This is only valid when share_type&#39;s value is SPECIFIC_PROJECTS.
+     * 
+     */
     public Optional<Output<Map<String,String>>> projectMap() {
         return Optional.ofNullable(this.projectMap);
     }
@@ -40,6 +44,10 @@ public final class ShareSettingsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="projects")
     private @Nullable Output<List<String>> projects;
 
+    /**
+     * @return A List of Project names to specify consumer projects for this shared-reservation. This is only valid when share_type&#39;s value is SPECIFIC_PROJECTS.
+     * 
+     */
     public Optional<Output<List<String>>> projects() {
         return Optional.ofNullable(this.projects);
     }
@@ -51,6 +59,10 @@ public final class ShareSettingsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="shareType")
     private @Nullable Output<ShareSettingsShareType> shareType;
 
+    /**
+     * @return Type of sharing for this shared-reservation
+     * 
+     */
     public Optional<Output<ShareSettingsShareType>> shareType() {
         return Optional.ofNullable(this.shareType);
     }
@@ -81,33 +93,75 @@ public final class ShareSettingsArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ShareSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param projectMap A map of project id and project config. This is only valid when share_type&#39;s value is SPECIFIC_PROJECTS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectMap(@Nullable Output<Map<String,String>> projectMap) {
             $.projectMap = projectMap;
             return this;
         }
 
+        /**
+         * @param projectMap A map of project id and project config. This is only valid when share_type&#39;s value is SPECIFIC_PROJECTS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectMap(Map<String,String> projectMap) {
             return projectMap(Output.of(projectMap));
         }
 
+        /**
+         * @param projects A List of Project names to specify consumer projects for this shared-reservation. This is only valid when share_type&#39;s value is SPECIFIC_PROJECTS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projects(@Nullable Output<List<String>> projects) {
             $.projects = projects;
             return this;
         }
 
+        /**
+         * @param projects A List of Project names to specify consumer projects for this shared-reservation. This is only valid when share_type&#39;s value is SPECIFIC_PROJECTS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projects(List<String> projects) {
             return projects(Output.of(projects));
         }
 
+        /**
+         * @param projects A List of Project names to specify consumer projects for this shared-reservation. This is only valid when share_type&#39;s value is SPECIFIC_PROJECTS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projects(String... projects) {
             return projects(List.of(projects));
         }
 
+        /**
+         * @param shareType Type of sharing for this shared-reservation
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareType(@Nullable Output<ShareSettingsShareType> shareType) {
             $.shareType = shareType;
             return this;
         }
 
+        /**
+         * @param shareType Type of sharing for this shared-reservation
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareType(ShareSettingsShareType shareType) {
             return shareType(Output.of(shareType));
         }

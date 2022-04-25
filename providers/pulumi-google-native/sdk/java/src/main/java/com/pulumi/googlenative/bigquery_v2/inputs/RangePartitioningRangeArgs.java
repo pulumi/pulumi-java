@@ -26,6 +26,10 @@ public final class RangePartitioningRangeArgs extends com.pulumi.resources.Resou
     @Import(name="end")
     private @Nullable Output<String> end;
 
+    /**
+     * @return [TrustedTester] [Required] The end of range partitioning, exclusive.
+     * 
+     */
     public Optional<Output<String>> end() {
         return Optional.ofNullable(this.end);
     }
@@ -37,6 +41,10 @@ public final class RangePartitioningRangeArgs extends com.pulumi.resources.Resou
     @Import(name="interval")
     private @Nullable Output<String> interval;
 
+    /**
+     * @return [TrustedTester] [Required] The width of each interval.
+     * 
+     */
     public Optional<Output<String>> interval() {
         return Optional.ofNullable(this.interval);
     }
@@ -48,6 +56,10 @@ public final class RangePartitioningRangeArgs extends com.pulumi.resources.Resou
     @Import(name="start")
     private @Nullable Output<String> start;
 
+    /**
+     * @return [TrustedTester] [Required] The start of range partitioning, inclusive.
+     * 
+     */
     public Optional<Output<String>> start() {
         return Optional.ofNullable(this.start);
     }
@@ -78,29 +90,65 @@ public final class RangePartitioningRangeArgs extends com.pulumi.resources.Resou
             $ = new RangePartitioningRangeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param end [TrustedTester] [Required] The end of range partitioning, exclusive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder end(@Nullable Output<String> end) {
             $.end = end;
             return this;
         }
 
+        /**
+         * @param end [TrustedTester] [Required] The end of range partitioning, exclusive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder end(String end) {
             return end(Output.of(end));
         }
 
+        /**
+         * @param interval [TrustedTester] [Required] The width of each interval.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interval(@Nullable Output<String> interval) {
             $.interval = interval;
             return this;
         }
 
+        /**
+         * @param interval [TrustedTester] [Required] The width of each interval.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interval(String interval) {
             return interval(Output.of(interval));
         }
 
+        /**
+         * @param start [TrustedTester] [Required] The start of range partitioning, inclusive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder start(@Nullable Output<String> start) {
             $.start = start;
             return this;
         }
 
+        /**
+         * @param start [TrustedTester] [Required] The start of range partitioning, inclusive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder start(String start) {
             return start(Output.of(start));
         }

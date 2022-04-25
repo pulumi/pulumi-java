@@ -27,6 +27,10 @@ public final class AutomaticRepairsPolicyArgs extends com.pulumi.resources.Resou
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return Specifies whether automatic repairs should be enabled on the virtual machine scale set. The default value is false.
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -38,6 +42,10 @@ public final class AutomaticRepairsPolicyArgs extends com.pulumi.resources.Resou
     @Import(name="gracePeriod")
     private @Nullable Output<String> gracePeriod;
 
+    /**
+     * @return The amount of time for which automatic repairs are suspended due to a state change on VM. The grace time starts after the state change has completed. This helps avoid premature or accidental repairs. The time duration should be specified in ISO 8601 format. The minimum allowed grace period is 30 minutes (PT30M), which is also the default value. The maximum allowed grace period is 90 minutes (PT90M).
+     * 
+     */
     public Optional<Output<String>> gracePeriod() {
         return Optional.ofNullable(this.gracePeriod);
     }
@@ -67,20 +75,44 @@ public final class AutomaticRepairsPolicyArgs extends com.pulumi.resources.Resou
             $ = new AutomaticRepairsPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Specifies whether automatic repairs should be enabled on the virtual machine scale set. The default value is false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Specifies whether automatic repairs should be enabled on the virtual machine scale set. The default value is false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param gracePeriod The amount of time for which automatic repairs are suspended due to a state change on VM. The grace time starts after the state change has completed. This helps avoid premature or accidental repairs. The time duration should be specified in ISO 8601 format. The minimum allowed grace period is 30 minutes (PT30M), which is also the default value. The maximum allowed grace period is 90 minutes (PT90M).
+         * 
+         * @return builder
+         * 
+         */
         public Builder gracePeriod(@Nullable Output<String> gracePeriod) {
             $.gracePeriod = gracePeriod;
             return this;
         }
 
+        /**
+         * @param gracePeriod The amount of time for which automatic repairs are suspended due to a state change on VM. The grace time starts after the state change has completed. This helps avoid premature or accidental repairs. The time duration should be specified in ISO 8601 format. The minimum allowed grace period is 30 minutes (PT30M), which is also the default value. The maximum allowed grace period is 90 minutes (PT90M).
+         * 
+         * @return builder
+         * 
+         */
         public Builder gracePeriod(String gracePeriod) {
             return gracePeriod(Output.of(gracePeriod));
         }

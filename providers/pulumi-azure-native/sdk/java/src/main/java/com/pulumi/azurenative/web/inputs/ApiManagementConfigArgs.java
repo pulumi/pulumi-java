@@ -26,6 +26,10 @@ public final class ApiManagementConfigArgs extends com.pulumi.resources.Resource
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return APIM-Api Identifier.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -54,11 +58,23 @@ public final class ApiManagementConfigArgs extends com.pulumi.resources.Resource
             $ = new ApiManagementConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id APIM-Api Identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id APIM-Api Identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }

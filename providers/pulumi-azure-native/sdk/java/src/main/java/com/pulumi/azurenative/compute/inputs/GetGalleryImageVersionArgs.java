@@ -21,6 +21,10 @@ public final class GetGalleryImageVersionArgs extends com.pulumi.resources.Invok
     @Import(name="expand")
     private @Nullable String expand;
 
+    /**
+     * @return The expand expression to apply on the operation.
+     * 
+     */
     public Optional<String> expand() {
         return Optional.ofNullable(this.expand);
     }
@@ -32,6 +36,10 @@ public final class GetGalleryImageVersionArgs extends com.pulumi.resources.Invok
     @Import(name="galleryImageName", required=true)
     private String galleryImageName;
 
+    /**
+     * @return The name of the gallery image definition in which the Image Version resides.
+     * 
+     */
     public String galleryImageName() {
         return this.galleryImageName;
     }
@@ -43,6 +51,10 @@ public final class GetGalleryImageVersionArgs extends com.pulumi.resources.Invok
     @Import(name="galleryImageVersionName", required=true)
     private String galleryImageVersionName;
 
+    /**
+     * @return The name of the gallery image version to be retrieved.
+     * 
+     */
     public String galleryImageVersionName() {
         return this.galleryImageVersionName;
     }
@@ -54,6 +66,10 @@ public final class GetGalleryImageVersionArgs extends com.pulumi.resources.Invok
     @Import(name="galleryName", required=true)
     private String galleryName;
 
+    /**
+     * @return The name of the Shared Image Gallery in which the Image Definition resides.
+     * 
+     */
     public String galleryName() {
         return this.galleryName;
     }
@@ -65,6 +81,10 @@ public final class GetGalleryImageVersionArgs extends com.pulumi.resources.Invok
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -97,26 +117,56 @@ public final class GetGalleryImageVersionArgs extends com.pulumi.resources.Invok
             $ = new GetGalleryImageVersionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expand The expand expression to apply on the operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expand(@Nullable String expand) {
             $.expand = expand;
             return this;
         }
 
+        /**
+         * @param galleryImageName The name of the gallery image definition in which the Image Version resides.
+         * 
+         * @return builder
+         * 
+         */
         public Builder galleryImageName(String galleryImageName) {
             $.galleryImageName = galleryImageName;
             return this;
         }
 
+        /**
+         * @param galleryImageVersionName The name of the gallery image version to be retrieved.
+         * 
+         * @return builder
+         * 
+         */
         public Builder galleryImageVersionName(String galleryImageVersionName) {
             $.galleryImageVersionName = galleryImageVersionName;
             return this;
         }
 
+        /**
+         * @param galleryName The name of the Shared Image Gallery in which the Image Definition resides.
+         * 
+         * @return builder
+         * 
+         */
         public Builder galleryName(String galleryName) {
             $.galleryName = galleryName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

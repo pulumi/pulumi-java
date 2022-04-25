@@ -36,6 +36,11 @@ public final class MabProtectionPolicyArgs extends com.pulumi.resources.Resource
     @Import(name="backupManagementType", required=true)
     private Output<String> backupManagementType;
 
+    /**
+     * @return This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+     * Expected value is &#39;MAB&#39;.
+     * 
+     */
     public Output<String> backupManagementType() {
         return this.backupManagementType;
     }
@@ -47,6 +52,10 @@ public final class MabProtectionPolicyArgs extends com.pulumi.resources.Resource
     @Import(name="protectedItemsCount")
     private @Nullable Output<Integer> protectedItemsCount;
 
+    /**
+     * @return Number of items associated with this policy.
+     * 
+     */
     public Optional<Output<Integer>> protectedItemsCount() {
         return Optional.ofNullable(this.protectedItemsCount);
     }
@@ -58,6 +67,10 @@ public final class MabProtectionPolicyArgs extends com.pulumi.resources.Resource
     @Import(name="retentionPolicy")
     private @Nullable Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy;
 
+    /**
+     * @return Retention policy details.
+     * 
+     */
     public Optional<Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>>> retentionPolicy() {
         return Optional.ofNullable(this.retentionPolicy);
     }
@@ -69,6 +82,10 @@ public final class MabProtectionPolicyArgs extends com.pulumi.resources.Resource
     @Import(name="schedulePolicy")
     private @Nullable Output<Object> schedulePolicy;
 
+    /**
+     * @return Backup schedule of backup policy.
+     * 
+     */
     public Optional<Output<Object>> schedulePolicy() {
         return Optional.ofNullable(this.schedulePolicy);
     }
@@ -100,46 +117,108 @@ public final class MabProtectionPolicyArgs extends com.pulumi.resources.Resource
             $ = new MabProtectionPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backupManagementType This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+         * Expected value is &#39;MAB&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupManagementType(Output<String> backupManagementType) {
             $.backupManagementType = backupManagementType;
             return this;
         }
 
+        /**
+         * @param backupManagementType This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+         * Expected value is &#39;MAB&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupManagementType(String backupManagementType) {
             return backupManagementType(Output.of(backupManagementType));
         }
 
+        /**
+         * @param protectedItemsCount Number of items associated with this policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectedItemsCount(@Nullable Output<Integer> protectedItemsCount) {
             $.protectedItemsCount = protectedItemsCount;
             return this;
         }
 
+        /**
+         * @param protectedItemsCount Number of items associated with this policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectedItemsCount(Integer protectedItemsCount) {
             return protectedItemsCount(Output.of(protectedItemsCount));
         }
 
+        /**
+         * @param retentionPolicy Retention policy details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionPolicy(@Nullable Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy) {
             $.retentionPolicy = retentionPolicy;
             return this;
         }
 
+        /**
+         * @param retentionPolicy Retention policy details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionPolicy(Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs> retentionPolicy) {
             return retentionPolicy(Output.of(retentionPolicy));
         }
 
+        /**
+         * @param retentionPolicy Retention policy details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionPolicy(LongTermRetentionPolicyArgs retentionPolicy) {
             return retentionPolicy(Either.ofLeft(retentionPolicy));
         }
 
+        /**
+         * @param retentionPolicy Retention policy details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionPolicy(SimpleRetentionPolicyArgs retentionPolicy) {
             return retentionPolicy(Either.ofRight(retentionPolicy));
         }
 
+        /**
+         * @param schedulePolicy Backup schedule of backup policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedulePolicy(@Nullable Output<Object> schedulePolicy) {
             $.schedulePolicy = schedulePolicy;
             return this;
         }
 
+        /**
+         * @param schedulePolicy Backup schedule of backup policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedulePolicy(Object schedulePolicy) {
             return schedulePolicy(Output.of(schedulePolicy));
         }

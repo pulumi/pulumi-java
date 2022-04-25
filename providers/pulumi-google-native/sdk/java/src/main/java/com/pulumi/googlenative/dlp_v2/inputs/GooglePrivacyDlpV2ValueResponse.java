@@ -27,6 +27,10 @@ public final class GooglePrivacyDlpV2ValueResponse extends com.pulumi.resources.
     @Import(name="booleanValue", required=true)
     private Boolean booleanValue;
 
+    /**
+     * @return boolean
+     * 
+     */
     public Boolean booleanValue() {
         return this.booleanValue;
     }
@@ -38,6 +42,10 @@ public final class GooglePrivacyDlpV2ValueResponse extends com.pulumi.resources.
     @Import(name="dateValue", required=true)
     private GoogleTypeDateResponse dateValue;
 
+    /**
+     * @return date
+     * 
+     */
     public GoogleTypeDateResponse dateValue() {
         return this.dateValue;
     }
@@ -49,6 +57,10 @@ public final class GooglePrivacyDlpV2ValueResponse extends com.pulumi.resources.
     @Import(name="dayOfWeekValue", required=true)
     private String dayOfWeekValue;
 
+    /**
+     * @return day of week
+     * 
+     */
     public String dayOfWeekValue() {
         return this.dayOfWeekValue;
     }
@@ -60,6 +72,10 @@ public final class GooglePrivacyDlpV2ValueResponse extends com.pulumi.resources.
     @Import(name="floatValue", required=true)
     private Double floatValue;
 
+    /**
+     * @return float
+     * 
+     */
     public Double floatValue() {
         return this.floatValue;
     }
@@ -71,6 +87,10 @@ public final class GooglePrivacyDlpV2ValueResponse extends com.pulumi.resources.
     @Import(name="integerValue", required=true)
     private String integerValue;
 
+    /**
+     * @return integer
+     * 
+     */
     public String integerValue() {
         return this.integerValue;
     }
@@ -82,6 +102,10 @@ public final class GooglePrivacyDlpV2ValueResponse extends com.pulumi.resources.
     @Import(name="stringValue", required=true)
     private String stringValue;
 
+    /**
+     * @return string
+     * 
+     */
     public String stringValue() {
         return this.stringValue;
     }
@@ -93,6 +117,10 @@ public final class GooglePrivacyDlpV2ValueResponse extends com.pulumi.resources.
     @Import(name="timeValue", required=true)
     private GoogleTypeTimeOfDayResponse timeValue;
 
+    /**
+     * @return time of day
+     * 
+     */
     public GoogleTypeTimeOfDayResponse timeValue() {
         return this.timeValue;
     }
@@ -104,6 +132,10 @@ public final class GooglePrivacyDlpV2ValueResponse extends com.pulumi.resources.
     @Import(name="timestampValue", required=true)
     private String timestampValue;
 
+    /**
+     * @return timestamp
+     * 
+     */
     public String timestampValue() {
         return this.timestampValue;
     }
@@ -139,41 +171,89 @@ public final class GooglePrivacyDlpV2ValueResponse extends com.pulumi.resources.
             $ = new GooglePrivacyDlpV2ValueResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param booleanValue boolean
+         * 
+         * @return builder
+         * 
+         */
         public Builder booleanValue(Boolean booleanValue) {
             $.booleanValue = booleanValue;
             return this;
         }
 
+        /**
+         * @param dateValue date
+         * 
+         * @return builder
+         * 
+         */
         public Builder dateValue(GoogleTypeDateResponse dateValue) {
             $.dateValue = dateValue;
             return this;
         }
 
+        /**
+         * @param dayOfWeekValue day of week
+         * 
+         * @return builder
+         * 
+         */
         public Builder dayOfWeekValue(String dayOfWeekValue) {
             $.dayOfWeekValue = dayOfWeekValue;
             return this;
         }
 
+        /**
+         * @param floatValue float
+         * 
+         * @return builder
+         * 
+         */
         public Builder floatValue(Double floatValue) {
             $.floatValue = floatValue;
             return this;
         }
 
+        /**
+         * @param integerValue integer
+         * 
+         * @return builder
+         * 
+         */
         public Builder integerValue(String integerValue) {
             $.integerValue = integerValue;
             return this;
         }
 
+        /**
+         * @param stringValue string
+         * 
+         * @return builder
+         * 
+         */
         public Builder stringValue(String stringValue) {
             $.stringValue = stringValue;
             return this;
         }
 
+        /**
+         * @param timeValue time of day
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeValue(GoogleTypeTimeOfDayResponse timeValue) {
             $.timeValue = timeValue;
             return this;
         }
 
+        /**
+         * @param timestampValue timestamp
+         * 
+         * @return builder
+         * 
+         */
         public Builder timestampValue(String timestampValue) {
             $.timestampValue = timestampValue;
             return this;

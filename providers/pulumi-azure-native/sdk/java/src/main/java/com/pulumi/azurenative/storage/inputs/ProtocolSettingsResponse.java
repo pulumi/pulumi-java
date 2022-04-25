@@ -25,6 +25,10 @@ public final class ProtocolSettingsResponse extends com.pulumi.resources.InvokeA
     @Import(name="smb")
     private @Nullable SmbSettingResponse smb;
 
+    /**
+     * @return Setting for SMB protocol
+     * 
+     */
     public Optional<SmbSettingResponse> smb() {
         return Optional.ofNullable(this.smb);
     }
@@ -53,6 +57,12 @@ public final class ProtocolSettingsResponse extends com.pulumi.resources.InvokeA
             $ = new ProtocolSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param smb Setting for SMB protocol
+         * 
+         * @return builder
+         * 
+         */
         public Builder smb(@Nullable SmbSettingResponse smb) {
             $.smb = smb;
             return this;

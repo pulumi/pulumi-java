@@ -20,6 +20,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigMetastoreConfigG
     @Import(name="dataprocMetastoreService", required=true)
     private Output<String> dataprocMetastoreService;
 
+    /**
+     * @return Required. Resource name of an existing Dataproc Metastore service. Example: * `projects/`
+     * 
+     */
     public Output<String> dataprocMetastoreService() {
         return this.dataprocMetastoreService;
     }
@@ -48,11 +52,23 @@ public final class WorkflowTemplatePlacementManagedClusterConfigMetastoreConfigG
             $ = new WorkflowTemplatePlacementManagedClusterConfigMetastoreConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataprocMetastoreService Required. Resource name of an existing Dataproc Metastore service. Example: * `projects/`
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataprocMetastoreService(Output<String> dataprocMetastoreService) {
             $.dataprocMetastoreService = dataprocMetastoreService;
             return this;
         }
 
+        /**
+         * @param dataprocMetastoreService Required. Resource name of an existing Dataproc Metastore service. Example: * `projects/`
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataprocMetastoreService(String dataprocMetastoreService) {
             return dataprocMetastoreService(Output.of(dataprocMetastoreService));
         }

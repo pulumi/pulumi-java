@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class BucketLifecycleRule {
     /**
-     * The Lifecycle Rule&#39;s action configuration. A single block of this type is supported. Structure is documented below.
+     * @return The Lifecycle Rule&#39;s action configuration. A single block of this type is supported. Structure is documented below.
      * 
      */
     private final BucketLifecycleRuleAction action;
     /**
-     * The Lifecycle Rule&#39;s condition configuration. A single block of this type is supported. Structure is documented below.
+     * @return The Lifecycle Rule&#39;s condition configuration. A single block of this type is supported. Structure is documented below.
      * 
      */
     private final BucketLifecycleRuleCondition condition;
@@ -30,16 +30,16 @@ public final class BucketLifecycleRule {
     }
 
     /**
-     * The Lifecycle Rule&#39;s action configuration. A single block of this type is supported. Structure is documented below.
+     * @return The Lifecycle Rule&#39;s action configuration. A single block of this type is supported. Structure is documented below.
      * 
-    */
+     */
     public BucketLifecycleRuleAction action() {
         return this.action;
     }
     /**
-     * The Lifecycle Rule&#39;s condition configuration. A single block of this type is supported. Structure is documented below.
+     * @return The Lifecycle Rule&#39;s condition configuration. A single block of this type is supported. Structure is documented below.
      * 
-    */
+     */
     public BucketLifecycleRuleCondition condition() {
         return this.condition;
     }

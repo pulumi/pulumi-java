@@ -25,6 +25,10 @@ public final class MasterAuthorizedNetworksConfigResponse extends com.pulumi.res
     @Import(name="cidrBlocks", required=true)
     private List<CidrBlockResponse> cidrBlocks;
 
+    /**
+     * @return cidr_blocks define up to 50 external networks that could access Kubernetes master through HTTPS.
+     * 
+     */
     public List<CidrBlockResponse> cidrBlocks() {
         return this.cidrBlocks;
     }
@@ -36,6 +40,10 @@ public final class MasterAuthorizedNetworksConfigResponse extends com.pulumi.res
     @Import(name="enabled", required=true)
     private Boolean enabled;
 
+    /**
+     * @return Whether or not master authorized networks is enabled.
+     * 
+     */
     public Boolean enabled() {
         return this.enabled;
     }
@@ -65,15 +73,33 @@ public final class MasterAuthorizedNetworksConfigResponse extends com.pulumi.res
             $ = new MasterAuthorizedNetworksConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cidrBlocks cidr_blocks define up to 50 external networks that could access Kubernetes master through HTTPS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cidrBlocks(List<CidrBlockResponse> cidrBlocks) {
             $.cidrBlocks = cidrBlocks;
             return this;
         }
 
+        /**
+         * @param cidrBlocks cidr_blocks define up to 50 external networks that could access Kubernetes master through HTTPS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cidrBlocks(CidrBlockResponse... cidrBlocks) {
             return cidrBlocks(List.of(cidrBlocks));
         }
 
+        /**
+         * @param enabled Whether or not master authorized networks is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             $.enabled = enabled;
             return this;

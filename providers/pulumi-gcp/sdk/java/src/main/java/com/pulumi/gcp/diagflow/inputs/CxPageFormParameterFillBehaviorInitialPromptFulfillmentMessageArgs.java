@@ -22,6 +22,10 @@ public final class CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessag
     @Import(name="text")
     private @Nullable Output<CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageTextArgs> text;
 
+    /**
+     * @return A collection of text responses.
+     * 
+     */
     public Optional<Output<CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageTextArgs>> text() {
         return Optional.ofNullable(this.text);
     }
@@ -50,11 +54,23 @@ public final class CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessag
             $ = new CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param text A collection of text responses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder text(@Nullable Output<CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageTextArgs> text) {
             $.text = text;
             return this;
         }
 
+        /**
+         * @param text A collection of text responses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder text(CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageTextArgs text) {
             return text(Output.of(text));
         }

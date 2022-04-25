@@ -26,6 +26,10 @@ public final class InTotoProvenanceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="builderConfig")
     private @Nullable Output<BuilderConfigArgs> builderConfig;
 
+    /**
+     * @return required
+     * 
+     */
     public Optional<Output<BuilderConfigArgs>> builderConfig() {
         return Optional.ofNullable(this.builderConfig);
     }
@@ -37,6 +41,10 @@ public final class InTotoProvenanceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="materials")
     private @Nullable Output<List<String>> materials;
 
+    /**
+     * @return The collection of artifacts that influenced the build including sources, dependencies, build tools, base images, and so on. This is considered to be incomplete unless metadata.completeness.materials is true. Unset or null is equivalent to empty.
+     * 
+     */
     public Optional<Output<List<String>>> materials() {
         return Optional.ofNullable(this.materials);
     }
@@ -55,6 +63,10 @@ public final class InTotoProvenanceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="recipe")
     private @Nullable Output<RecipeArgs> recipe;
 
+    /**
+     * @return Identifies the configuration used for the build. When combined with materials, this SHOULD fully describe the build, such that re-running this recipe results in bit-for-bit identical output (if the build is reproducible). required
+     * 
+     */
     public Optional<Output<RecipeArgs>> recipe() {
         return Optional.ofNullable(this.recipe);
     }
@@ -86,24 +98,54 @@ public final class InTotoProvenanceArgs extends com.pulumi.resources.ResourceArg
             $ = new InTotoProvenanceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param builderConfig required
+         * 
+         * @return builder
+         * 
+         */
         public Builder builderConfig(@Nullable Output<BuilderConfigArgs> builderConfig) {
             $.builderConfig = builderConfig;
             return this;
         }
 
+        /**
+         * @param builderConfig required
+         * 
+         * @return builder
+         * 
+         */
         public Builder builderConfig(BuilderConfigArgs builderConfig) {
             return builderConfig(Output.of(builderConfig));
         }
 
+        /**
+         * @param materials The collection of artifacts that influenced the build including sources, dependencies, build tools, base images, and so on. This is considered to be incomplete unless metadata.completeness.materials is true. Unset or null is equivalent to empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder materials(@Nullable Output<List<String>> materials) {
             $.materials = materials;
             return this;
         }
 
+        /**
+         * @param materials The collection of artifacts that influenced the build including sources, dependencies, build tools, base images, and so on. This is considered to be incomplete unless metadata.completeness.materials is true. Unset or null is equivalent to empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder materials(List<String> materials) {
             return materials(Output.of(materials));
         }
 
+        /**
+         * @param materials The collection of artifacts that influenced the build including sources, dependencies, build tools, base images, and so on. This is considered to be incomplete unless metadata.completeness.materials is true. Unset or null is equivalent to empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder materials(String... materials) {
             return materials(List.of(materials));
         }
@@ -117,11 +159,23 @@ public final class InTotoProvenanceArgs extends com.pulumi.resources.ResourceArg
             return metadata(Output.of(metadata));
         }
 
+        /**
+         * @param recipe Identifies the configuration used for the build. When combined with materials, this SHOULD fully describe the build, such that re-running this recipe results in bit-for-bit identical output (if the build is reproducible). required
+         * 
+         * @return builder
+         * 
+         */
         public Builder recipe(@Nullable Output<RecipeArgs> recipe) {
             $.recipe = recipe;
             return this;
         }
 
+        /**
+         * @param recipe Identifies the configuration used for the build. When combined with materials, this SHOULD fully describe the build, such that re-running this recipe results in bit-for-bit identical output (if the build is reproducible). required
+         * 
+         * @return builder
+         * 
+         */
         public Builder recipe(RecipeArgs recipe) {
             return recipe(Output.of(recipe));
         }

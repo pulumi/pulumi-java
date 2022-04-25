@@ -23,6 +23,10 @@ public final class ADLSGen2FileSystemDataSetMappingArgs extends com.pulumi.resou
     @Import(name="accountName", required=true)
     private Output<String> accountName;
 
+    /**
+     * @return The name of the share account.
+     * 
+     */
     public Output<String> accountName() {
         return this.accountName;
     }
@@ -34,6 +38,10 @@ public final class ADLSGen2FileSystemDataSetMappingArgs extends com.pulumi.resou
     @Import(name="dataSetId", required=true)
     private Output<String> dataSetId;
 
+    /**
+     * @return The id of the source data set.
+     * 
+     */
     public Output<String> dataSetId() {
         return this.dataSetId;
     }
@@ -45,6 +53,10 @@ public final class ADLSGen2FileSystemDataSetMappingArgs extends com.pulumi.resou
     @Import(name="dataSetMappingName")
     private @Nullable Output<String> dataSetMappingName;
 
+    /**
+     * @return The name of the data set mapping to be created.
+     * 
+     */
     public Optional<Output<String>> dataSetMappingName() {
         return Optional.ofNullable(this.dataSetMappingName);
     }
@@ -56,6 +68,10 @@ public final class ADLSGen2FileSystemDataSetMappingArgs extends com.pulumi.resou
     @Import(name="fileSystem", required=true)
     private Output<String> fileSystem;
 
+    /**
+     * @return The file system name.
+     * 
+     */
     public Output<String> fileSystem() {
         return this.fileSystem;
     }
@@ -68,6 +84,11 @@ public final class ADLSGen2FileSystemDataSetMappingArgs extends com.pulumi.resou
     @Import(name="kind", required=true)
     private Output<String> kind;
 
+    /**
+     * @return Kind of data set mapping.
+     * Expected value is &#39;AdlsGen2FileSystem&#39;.
+     * 
+     */
     public Output<String> kind() {
         return this.kind;
     }
@@ -79,6 +100,10 @@ public final class ADLSGen2FileSystemDataSetMappingArgs extends com.pulumi.resou
     @Import(name="resourceGroup", required=true)
     private Output<String> resourceGroup;
 
+    /**
+     * @return Resource group of storage account.
+     * 
+     */
     public Output<String> resourceGroup() {
         return this.resourceGroup;
     }
@@ -90,6 +115,10 @@ public final class ADLSGen2FileSystemDataSetMappingArgs extends com.pulumi.resou
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -101,6 +130,10 @@ public final class ADLSGen2FileSystemDataSetMappingArgs extends com.pulumi.resou
     @Import(name="shareSubscriptionName", required=true)
     private Output<String> shareSubscriptionName;
 
+    /**
+     * @return The name of the share subscription which will hold the data set sink.
+     * 
+     */
     public Output<String> shareSubscriptionName() {
         return this.shareSubscriptionName;
     }
@@ -112,6 +145,10 @@ public final class ADLSGen2FileSystemDataSetMappingArgs extends com.pulumi.resou
     @Import(name="storageAccountName", required=true)
     private Output<String> storageAccountName;
 
+    /**
+     * @return Storage account name of the source data set.
+     * 
+     */
     public Output<String> storageAccountName() {
         return this.storageAccountName;
     }
@@ -123,6 +160,10 @@ public final class ADLSGen2FileSystemDataSetMappingArgs extends com.pulumi.resou
     @Import(name="subscriptionId", required=true)
     private Output<String> subscriptionId;
 
+    /**
+     * @return Subscription id of storage account.
+     * 
+     */
     public Output<String> subscriptionId() {
         return this.subscriptionId;
     }
@@ -160,92 +201,214 @@ public final class ADLSGen2FileSystemDataSetMappingArgs extends com.pulumi.resou
             $ = new ADLSGen2FileSystemDataSetMappingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The name of the share account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param accountName The name of the share account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             return accountName(Output.of(accountName));
         }
 
+        /**
+         * @param dataSetId The id of the source data set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSetId(Output<String> dataSetId) {
             $.dataSetId = dataSetId;
             return this;
         }
 
+        /**
+         * @param dataSetId The id of the source data set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSetId(String dataSetId) {
             return dataSetId(Output.of(dataSetId));
         }
 
+        /**
+         * @param dataSetMappingName The name of the data set mapping to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSetMappingName(@Nullable Output<String> dataSetMappingName) {
             $.dataSetMappingName = dataSetMappingName;
             return this;
         }
 
+        /**
+         * @param dataSetMappingName The name of the data set mapping to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSetMappingName(String dataSetMappingName) {
             return dataSetMappingName(Output.of(dataSetMappingName));
         }
 
+        /**
+         * @param fileSystem The file system name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileSystem(Output<String> fileSystem) {
             $.fileSystem = fileSystem;
             return this;
         }
 
+        /**
+         * @param fileSystem The file system name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileSystem(String fileSystem) {
             return fileSystem(Output.of(fileSystem));
         }
 
+        /**
+         * @param kind Kind of data set mapping.
+         * Expected value is &#39;AdlsGen2FileSystem&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Kind of data set mapping.
+         * Expected value is &#39;AdlsGen2FileSystem&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param resourceGroup Resource group of storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroup(Output<String> resourceGroup) {
             $.resourceGroup = resourceGroup;
             return this;
         }
 
+        /**
+         * @param resourceGroup Resource group of storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroup(String resourceGroup) {
             return resourceGroup(Output.of(resourceGroup));
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param shareSubscriptionName The name of the share subscription which will hold the data set sink.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareSubscriptionName(Output<String> shareSubscriptionName) {
             $.shareSubscriptionName = shareSubscriptionName;
             return this;
         }
 
+        /**
+         * @param shareSubscriptionName The name of the share subscription which will hold the data set sink.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareSubscriptionName(String shareSubscriptionName) {
             return shareSubscriptionName(Output.of(shareSubscriptionName));
         }
 
+        /**
+         * @param storageAccountName Storage account name of the source data set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountName(Output<String> storageAccountName) {
             $.storageAccountName = storageAccountName;
             return this;
         }
 
+        /**
+         * @param storageAccountName Storage account name of the source data set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountName(String storageAccountName) {
             return storageAccountName(Output.of(storageAccountName));
         }
 
+        /**
+         * @param subscriptionId Subscription id of storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptionId(Output<String> subscriptionId) {
             $.subscriptionId = subscriptionId;
             return this;
         }
 
+        /**
+         * @param subscriptionId Subscription id of storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptionId(String subscriptionId) {
             return subscriptionId(Output.of(subscriptionId));
         }

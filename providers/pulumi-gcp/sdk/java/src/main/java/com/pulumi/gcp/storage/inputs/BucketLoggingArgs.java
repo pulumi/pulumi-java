@@ -22,6 +22,10 @@ public final class BucketLoggingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="logBucket", required=true)
     private Output<String> logBucket;
 
+    /**
+     * @return The bucket that will receive log objects.
+     * 
+     */
     public Output<String> logBucket() {
         return this.logBucket;
     }
@@ -34,6 +38,11 @@ public final class BucketLoggingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="logObjectPrefix")
     private @Nullable Output<String> logObjectPrefix;
 
+    /**
+     * @return The object prefix for log objects. If it&#39;s not provided,
+     * by default GCS sets this to this bucket&#39;s name.
+     * 
+     */
     public Optional<Output<String>> logObjectPrefix() {
         return Optional.ofNullable(this.logObjectPrefix);
     }
@@ -63,20 +72,46 @@ public final class BucketLoggingArgs extends com.pulumi.resources.ResourceArgs {
             $ = new BucketLoggingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param logBucket The bucket that will receive log objects.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logBucket(Output<String> logBucket) {
             $.logBucket = logBucket;
             return this;
         }
 
+        /**
+         * @param logBucket The bucket that will receive log objects.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logBucket(String logBucket) {
             return logBucket(Output.of(logBucket));
         }
 
+        /**
+         * @param logObjectPrefix The object prefix for log objects. If it&#39;s not provided,
+         * by default GCS sets this to this bucket&#39;s name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logObjectPrefix(@Nullable Output<String> logObjectPrefix) {
             $.logObjectPrefix = logObjectPrefix;
             return this;
         }
 
+        /**
+         * @param logObjectPrefix The object prefix for log objects. If it&#39;s not provided,
+         * by default GCS sets this to this bucket&#39;s name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logObjectPrefix(String logObjectPrefix) {
             return logObjectPrefix(Output.of(logObjectPrefix));
         }

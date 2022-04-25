@@ -23,6 +23,10 @@ public final class NetworkEndpointGroupServerlessDeploymentResponse extends com.
     @Import(name="platform", required=true)
     private String platform;
 
+    /**
+     * @return The platform of the backend target(s) of this NEG. Possible values include: 1. API Gateway: apigateway.googleapis.com 2. App Engine: appengine.googleapis.com 3. Cloud Functions: cloudfunctions.googleapis.com 4. Cloud Run: run.googleapis.com
+     * 
+     */
     public String platform() {
         return this.platform;
     }
@@ -34,6 +38,10 @@ public final class NetworkEndpointGroupServerlessDeploymentResponse extends com.
     @Import(name="resource", required=true)
     private String resource;
 
+    /**
+     * @return The user-defined name of the workload/instance. This value must be provided explicitly or in the urlMask. The resource identified by this value is platform-specific and is as follows: 1. API Gateway: The gateway ID 2. App Engine: The service name 3. Cloud Functions: The function name 4. Cloud Run: The service name
+     * 
+     */
     public String resource() {
         return this.resource;
     }
@@ -45,6 +53,10 @@ public final class NetworkEndpointGroupServerlessDeploymentResponse extends com.
     @Import(name="urlMask", required=true)
     private String urlMask;
 
+    /**
+     * @return A template to parse platform-specific fields from a request URL. URL mask allows for routing to multiple resources on the same serverless platform without having to create multiple Network Endpoint Groups and backend resources. The fields parsed by this template are platform-specific and are as follows: 1. API Gateway: The gateway ID 2. App Engine: The service and version 3. Cloud Functions: The function name 4. Cloud Run: The service and tag
+     * 
+     */
     public String urlMask() {
         return this.urlMask;
     }
@@ -56,6 +68,10 @@ public final class NetworkEndpointGroupServerlessDeploymentResponse extends com.
     @Import(name="version", required=true)
     private String version;
 
+    /**
+     * @return The optional resource version. The version identified by this value is platform-specific and is follows: 1. API Gateway: Unused 2. App Engine: The service version 3. Cloud Functions: Unused 4. Cloud Run: The service tag
+     * 
+     */
     public String version() {
         return this.version;
     }
@@ -87,21 +103,45 @@ public final class NetworkEndpointGroupServerlessDeploymentResponse extends com.
             $ = new NetworkEndpointGroupServerlessDeploymentResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param platform The platform of the backend target(s) of this NEG. Possible values include: 1. API Gateway: apigateway.googleapis.com 2. App Engine: appengine.googleapis.com 3. Cloud Functions: cloudfunctions.googleapis.com 4. Cloud Run: run.googleapis.com
+         * 
+         * @return builder
+         * 
+         */
         public Builder platform(String platform) {
             $.platform = platform;
             return this;
         }
 
+        /**
+         * @param resource The user-defined name of the workload/instance. This value must be provided explicitly or in the urlMask. The resource identified by this value is platform-specific and is as follows: 1. API Gateway: The gateway ID 2. App Engine: The service name 3. Cloud Functions: The function name 4. Cloud Run: The service name
+         * 
+         * @return builder
+         * 
+         */
         public Builder resource(String resource) {
             $.resource = resource;
             return this;
         }
 
+        /**
+         * @param urlMask A template to parse platform-specific fields from a request URL. URL mask allows for routing to multiple resources on the same serverless platform without having to create multiple Network Endpoint Groups and backend resources. The fields parsed by this template are platform-specific and are as follows: 1. API Gateway: The gateway ID 2. App Engine: The service and version 3. Cloud Functions: The function name 4. Cloud Run: The service and tag
+         * 
+         * @return builder
+         * 
+         */
         public Builder urlMask(String urlMask) {
             $.urlMask = urlMask;
             return this;
         }
 
+        /**
+         * @param version The optional resource version. The version identified by this value is platform-specific and is follows: 1. API Gateway: Unused 2. App Engine: The service version 3. Cloud Functions: Unused 4. Cloud Run: The service tag
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             $.version = version;
             return this;

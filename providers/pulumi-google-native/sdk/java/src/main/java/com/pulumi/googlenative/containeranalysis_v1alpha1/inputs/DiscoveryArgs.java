@@ -26,6 +26,10 @@ public final class DiscoveryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="analysisKind")
     private @Nullable Output<DiscoveryAnalysisKind> analysisKind;
 
+    /**
+     * @return The kind of analysis that is handled by this discovery.
+     * 
+     */
     public Optional<Output<DiscoveryAnalysisKind>> analysisKind() {
         return Optional.ofNullable(this.analysisKind);
     }
@@ -54,11 +58,23 @@ public final class DiscoveryArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DiscoveryArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param analysisKind The kind of analysis that is handled by this discovery.
+         * 
+         * @return builder
+         * 
+         */
         public Builder analysisKind(@Nullable Output<DiscoveryAnalysisKind> analysisKind) {
             $.analysisKind = analysisKind;
             return this;
         }
 
+        /**
+         * @param analysisKind The kind of analysis that is handled by this discovery.
+         * 
+         * @return builder
+         * 
+         */
         public Builder analysisKind(DiscoveryAnalysisKind analysisKind) {
             return analysisKind(Output.of(analysisKind));
         }

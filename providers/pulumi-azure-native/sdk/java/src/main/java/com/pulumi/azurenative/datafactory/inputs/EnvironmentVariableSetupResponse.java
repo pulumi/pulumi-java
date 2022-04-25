@@ -25,6 +25,11 @@ public final class EnvironmentVariableSetupResponse extends com.pulumi.resources
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The type of custom setup.
+     * Expected value is &#39;EnvironmentVariableSetup&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -36,6 +41,10 @@ public final class EnvironmentVariableSetupResponse extends com.pulumi.resources
     @Import(name="variableName", required=true)
     private String variableName;
 
+    /**
+     * @return The name of the environment variable.
+     * 
+     */
     public String variableName() {
         return this.variableName;
     }
@@ -47,6 +56,10 @@ public final class EnvironmentVariableSetupResponse extends com.pulumi.resources
     @Import(name="variableValue", required=true)
     private String variableValue;
 
+    /**
+     * @return The value of the environment variable.
+     * 
+     */
     public String variableValue() {
         return this.variableValue;
     }
@@ -77,16 +90,35 @@ public final class EnvironmentVariableSetupResponse extends com.pulumi.resources
             $ = new EnvironmentVariableSetupResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type The type of custom setup.
+         * Expected value is &#39;EnvironmentVariableSetup&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param variableName The name of the environment variable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder variableName(String variableName) {
             $.variableName = variableName;
             return this;
         }
 
+        /**
+         * @param variableValue The value of the environment variable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder variableValue(String variableValue) {
             $.variableValue = variableValue;
             return this;

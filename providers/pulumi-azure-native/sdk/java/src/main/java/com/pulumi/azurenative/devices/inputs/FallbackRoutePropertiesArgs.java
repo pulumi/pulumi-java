@@ -30,6 +30,10 @@ public final class FallbackRoutePropertiesArgs extends com.pulumi.resources.Reso
     @Import(name="condition")
     private @Nullable Output<String> condition;
 
+    /**
+     * @return The condition which is evaluated in order to apply the fallback route. If the condition is not provided it will evaluate to true by default. For grammar, See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language
+     * 
+     */
     public Optional<Output<String>> condition() {
         return Optional.ofNullable(this.condition);
     }
@@ -41,6 +45,10 @@ public final class FallbackRoutePropertiesArgs extends com.pulumi.resources.Reso
     @Import(name="endpointNames", required=true)
     private Output<List<String>> endpointNames;
 
+    /**
+     * @return The list of endpoints to which the messages that satisfy the condition are routed to. Currently only 1 endpoint is allowed.
+     * 
+     */
     public Output<List<String>> endpointNames() {
         return this.endpointNames;
     }
@@ -52,6 +60,10 @@ public final class FallbackRoutePropertiesArgs extends com.pulumi.resources.Reso
     @Import(name="isEnabled", required=true)
     private Output<Boolean> isEnabled;
 
+    /**
+     * @return Used to specify whether the fallback route is enabled.
+     * 
+     */
     public Output<Boolean> isEnabled() {
         return this.isEnabled;
     }
@@ -63,6 +75,10 @@ public final class FallbackRoutePropertiesArgs extends com.pulumi.resources.Reso
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the route. The name can only include alphanumeric characters, periods, underscores, hyphens, has a maximum length of 64 characters, and must be unique.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -74,6 +90,10 @@ public final class FallbackRoutePropertiesArgs extends com.pulumi.resources.Reso
     @Import(name="source", required=true)
     private Output<Either<String,RoutingSource>> source;
 
+    /**
+     * @return The source to which the routing rule is to be applied to. For example, DeviceMessages
+     * 
+     */
     public Output<Either<String,RoutingSource>> source() {
         return this.source;
     }
@@ -106,59 +126,137 @@ public final class FallbackRoutePropertiesArgs extends com.pulumi.resources.Reso
             $ = new FallbackRoutePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param condition The condition which is evaluated in order to apply the fallback route. If the condition is not provided it will evaluate to true by default. For grammar, See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language
+         * 
+         * @return builder
+         * 
+         */
         public Builder condition(@Nullable Output<String> condition) {
             $.condition = condition;
             return this;
         }
 
+        /**
+         * @param condition The condition which is evaluated in order to apply the fallback route. If the condition is not provided it will evaluate to true by default. For grammar, See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language
+         * 
+         * @return builder
+         * 
+         */
         public Builder condition(String condition) {
             return condition(Output.of(condition));
         }
 
+        /**
+         * @param endpointNames The list of endpoints to which the messages that satisfy the condition are routed to. Currently only 1 endpoint is allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointNames(Output<List<String>> endpointNames) {
             $.endpointNames = endpointNames;
             return this;
         }
 
+        /**
+         * @param endpointNames The list of endpoints to which the messages that satisfy the condition are routed to. Currently only 1 endpoint is allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointNames(List<String> endpointNames) {
             return endpointNames(Output.of(endpointNames));
         }
 
+        /**
+         * @param endpointNames The list of endpoints to which the messages that satisfy the condition are routed to. Currently only 1 endpoint is allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointNames(String... endpointNames) {
             return endpointNames(List.of(endpointNames));
         }
 
+        /**
+         * @param isEnabled Used to specify whether the fallback route is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEnabled(Output<Boolean> isEnabled) {
             $.isEnabled = isEnabled;
             return this;
         }
 
+        /**
+         * @param isEnabled Used to specify whether the fallback route is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEnabled(Boolean isEnabled) {
             return isEnabled(Output.of(isEnabled));
         }
 
+        /**
+         * @param name The name of the route. The name can only include alphanumeric characters, periods, underscores, hyphens, has a maximum length of 64 characters, and must be unique.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the route. The name can only include alphanumeric characters, periods, underscores, hyphens, has a maximum length of 64 characters, and must be unique.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param source The source to which the routing rule is to be applied to. For example, DeviceMessages
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(Output<Either<String,RoutingSource>> source) {
             $.source = source;
             return this;
         }
 
+        /**
+         * @param source The source to which the routing rule is to be applied to. For example, DeviceMessages
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(Either<String,RoutingSource> source) {
             return source(Output.of(source));
         }
 
+        /**
+         * @param source The source to which the routing rule is to be applied to. For example, DeviceMessages
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(String source) {
             return source(Either.ofLeft(source));
         }
 
+        /**
+         * @param source The source to which the routing rule is to be applied to. For example, DeviceMessages
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(RoutingSource source) {
             return source(Either.ofRight(source));
         }

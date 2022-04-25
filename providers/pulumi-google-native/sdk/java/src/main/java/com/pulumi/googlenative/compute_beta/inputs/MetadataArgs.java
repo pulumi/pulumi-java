@@ -27,6 +27,10 @@ public final class MetadataArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="items")
     private @Nullable Output<List<MetadataItemsItemArgs>> items;
 
+    /**
+     * @return Array of key/value pairs. The total size of all keys and values must be less than 512 KB.
+     * 
+     */
     public Optional<Output<List<MetadataItemsItemArgs>>> items() {
         return Optional.ofNullable(this.items);
     }
@@ -55,15 +59,33 @@ public final class MetadataArgs extends com.pulumi.resources.ResourceArgs {
             $ = new MetadataArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param items Array of key/value pairs. The total size of all keys and values must be less than 512 KB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder items(@Nullable Output<List<MetadataItemsItemArgs>> items) {
             $.items = items;
             return this;
         }
 
+        /**
+         * @param items Array of key/value pairs. The total size of all keys and values must be less than 512 KB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder items(List<MetadataItemsItemArgs> items) {
             return items(Output.of(items));
         }
 
+        /**
+         * @param items Array of key/value pairs. The total size of all keys and values must be less than 512 KB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder items(MetadataItemsItemArgs... items) {
             return items(List.of(items));
         }

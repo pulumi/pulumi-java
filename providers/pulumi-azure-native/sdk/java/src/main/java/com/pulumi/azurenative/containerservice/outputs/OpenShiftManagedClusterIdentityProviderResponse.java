@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class OpenShiftManagedClusterIdentityProviderResponse {
     /**
-     * Name of the provider.
+     * @return Name of the provider.
      * 
      */
     private final @Nullable String name;
     /**
-     * Configuration of the provider.
+     * @return Configuration of the provider.
      * 
      */
     private final @Nullable OpenShiftManagedClusterAADIdentityProviderResponse provider;
@@ -32,16 +32,16 @@ public final class OpenShiftManagedClusterIdentityProviderResponse {
     }
 
     /**
-     * Name of the provider.
+     * @return Name of the provider.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Configuration of the provider.
+     * @return Configuration of the provider.
      * 
-    */
+     */
     public Optional<OpenShiftManagedClusterAADIdentityProviderResponse> provider() {
         return Optional.ofNullable(this.provider);
     }

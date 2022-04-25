@@ -14,12 +14,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class WebPubSubHubPropertiesResponse {
     /**
-     * The settings for configuring if anonymous connections are allowed for this hub: &#34;allow&#34; or &#34;deny&#34;. Default to &#34;deny&#34;.
+     * @return The settings for configuring if anonymous connections are allowed for this hub: &#34;allow&#34; or &#34;deny&#34;. Default to &#34;deny&#34;.
      * 
      */
     private final @Nullable String anonymousConnectPolicy;
     /**
-     * Event handler of a hub.
+     * @return Event handler of a hub.
      * 
      */
     private final @Nullable List<EventHandlerResponse> eventHandlers;
@@ -33,16 +33,16 @@ public final class WebPubSubHubPropertiesResponse {
     }
 
     /**
-     * The settings for configuring if anonymous connections are allowed for this hub: &#34;allow&#34; or &#34;deny&#34;. Default to &#34;deny&#34;.
+     * @return The settings for configuring if anonymous connections are allowed for this hub: &#34;allow&#34; or &#34;deny&#34;. Default to &#34;deny&#34;.
      * 
-    */
+     */
     public Optional<String> anonymousConnectPolicy() {
         return Optional.ofNullable(this.anonymousConnectPolicy);
     }
     /**
-     * Event handler of a hub.
+     * @return Event handler of a hub.
      * 
-    */
+     */
     public List<EventHandlerResponse> eventHandlers() {
         return this.eventHandlers == null ? List.of() : this.eventHandlers;
     }

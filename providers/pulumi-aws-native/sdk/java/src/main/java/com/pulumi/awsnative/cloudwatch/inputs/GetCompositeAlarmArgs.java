@@ -19,6 +19,10 @@ public final class GetCompositeAlarmArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="alarmName", required=true)
     private String alarmName;
 
+    /**
+     * @return The name of the Composite Alarm
+     * 
+     */
     public String alarmName() {
         return this.alarmName;
     }
@@ -47,6 +51,12 @@ public final class GetCompositeAlarmArgs extends com.pulumi.resources.InvokeArgs
             $ = new GetCompositeAlarmArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param alarmName The name of the Composite Alarm
+         * 
+         * @return builder
+         * 
+         */
         public Builder alarmName(String alarmName) {
             $.alarmName = alarmName;
             return this;

@@ -27,6 +27,10 @@ public final class LoadBalancerStatusArgs extends com.pulumi.resources.ResourceA
     @Import(name="ingress")
     private @Nullable Output<List<LoadBalancerIngressArgs>> ingress;
 
+    /**
+     * @return Ingress is a list containing ingress points for the load-balancer. Traffic intended for the service should be sent to these ingress points.
+     * 
+     */
     public Optional<Output<List<LoadBalancerIngressArgs>>> ingress() {
         return Optional.ofNullable(this.ingress);
     }
@@ -55,15 +59,33 @@ public final class LoadBalancerStatusArgs extends com.pulumi.resources.ResourceA
             $ = new LoadBalancerStatusArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ingress Ingress is a list containing ingress points for the load-balancer. Traffic intended for the service should be sent to these ingress points.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ingress(@Nullable Output<List<LoadBalancerIngressArgs>> ingress) {
             $.ingress = ingress;
             return this;
         }
 
+        /**
+         * @param ingress Ingress is a list containing ingress points for the load-balancer. Traffic intended for the service should be sent to these ingress points.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ingress(List<LoadBalancerIngressArgs> ingress) {
             return ingress(Output.of(ingress));
         }
 
+        /**
+         * @param ingress Ingress is a list containing ingress points for the load-balancer. Traffic intended for the service should be sent to these ingress points.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ingress(LoadBalancerIngressArgs... ingress) {
             return ingress(List.of(ingress));
         }

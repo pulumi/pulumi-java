@@ -26,6 +26,10 @@ public final class HubIPAddressesResponse extends com.pulumi.resources.InvokeArg
     @Import(name="privateIPAddress")
     private @Nullable String privateIPAddress;
 
+    /**
+     * @return Private IP Address associated with azure firewall.
+     * 
+     */
     public Optional<String> privateIPAddress() {
         return Optional.ofNullable(this.privateIPAddress);
     }
@@ -37,6 +41,10 @@ public final class HubIPAddressesResponse extends com.pulumi.resources.InvokeArg
     @Import(name="publicIPs")
     private @Nullable HubPublicIPAddressesResponse publicIPs;
 
+    /**
+     * @return Public IP addresses associated with azure firewall.
+     * 
+     */
     public Optional<HubPublicIPAddressesResponse> publicIPs() {
         return Optional.ofNullable(this.publicIPs);
     }
@@ -66,11 +74,23 @@ public final class HubIPAddressesResponse extends com.pulumi.resources.InvokeArg
             $ = new HubIPAddressesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param privateIPAddress Private IP Address associated with azure firewall.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIPAddress(@Nullable String privateIPAddress) {
             $.privateIPAddress = privateIPAddress;
             return this;
         }
 
+        /**
+         * @param publicIPs Public IP addresses associated with azure firewall.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIPs(@Nullable HubPublicIPAddressesResponse publicIPs) {
             $.publicIPs = publicIPs;
             return this;

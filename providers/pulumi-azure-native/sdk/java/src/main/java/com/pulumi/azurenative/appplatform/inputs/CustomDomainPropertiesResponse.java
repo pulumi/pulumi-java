@@ -25,6 +25,10 @@ public final class CustomDomainPropertiesResponse extends com.pulumi.resources.I
     @Import(name="appName", required=true)
     private String appName;
 
+    /**
+     * @return The app name of domain.
+     * 
+     */
     public String appName() {
         return this.appName;
     }
@@ -36,6 +40,10 @@ public final class CustomDomainPropertiesResponse extends com.pulumi.resources.I
     @Import(name="certName")
     private @Nullable String certName;
 
+    /**
+     * @return The bound certificate name of domain.
+     * 
+     */
     public Optional<String> certName() {
         return Optional.ofNullable(this.certName);
     }
@@ -47,6 +55,10 @@ public final class CustomDomainPropertiesResponse extends com.pulumi.resources.I
     @Import(name="thumbprint")
     private @Nullable String thumbprint;
 
+    /**
+     * @return The thumbprint of bound certificate.
+     * 
+     */
     public Optional<String> thumbprint() {
         return Optional.ofNullable(this.thumbprint);
     }
@@ -77,16 +89,34 @@ public final class CustomDomainPropertiesResponse extends com.pulumi.resources.I
             $ = new CustomDomainPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param appName The app name of domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appName(String appName) {
             $.appName = appName;
             return this;
         }
 
+        /**
+         * @param certName The bound certificate name of domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certName(@Nullable String certName) {
             $.certName = certName;
             return this;
         }
 
+        /**
+         * @param thumbprint The thumbprint of bound certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thumbprint(@Nullable String thumbprint) {
             $.thumbprint = thumbprint;
             return this;

@@ -29,6 +29,10 @@ public final class MaintenanceWindowArgs extends com.pulumi.resources.ResourceAr
     @Import(name="dailyMaintenanceWindow")
     private @Nullable Output<DailyMaintenanceWindowArgs> dailyMaintenanceWindow;
 
+    /**
+     * @return DailyMaintenanceWindow specifies a daily maintenance operation window.
+     * 
+     */
     public Optional<Output<DailyMaintenanceWindowArgs>> dailyMaintenanceWindow() {
         return Optional.ofNullable(this.dailyMaintenanceWindow);
     }
@@ -40,6 +44,10 @@ public final class MaintenanceWindowArgs extends com.pulumi.resources.ResourceAr
     @Import(name="maintenanceExclusions")
     private @Nullable Output<Map<String,String>> maintenanceExclusions;
 
+    /**
+     * @return Exceptions to maintenance window. Non-emergency maintenance should not occur in these windows.
+     * 
+     */
     public Optional<Output<Map<String,String>>> maintenanceExclusions() {
         return Optional.ofNullable(this.maintenanceExclusions);
     }
@@ -51,6 +59,10 @@ public final class MaintenanceWindowArgs extends com.pulumi.resources.ResourceAr
     @Import(name="recurringWindow")
     private @Nullable Output<RecurringTimeWindowArgs> recurringWindow;
 
+    /**
+     * @return RecurringWindow specifies some number of recurring time periods for maintenance to occur. The time windows may be overlapping. If no maintenance windows are set, maintenance can occur at any time.
+     * 
+     */
     public Optional<Output<RecurringTimeWindowArgs>> recurringWindow() {
         return Optional.ofNullable(this.recurringWindow);
     }
@@ -81,29 +93,65 @@ public final class MaintenanceWindowArgs extends com.pulumi.resources.ResourceAr
             $ = new MaintenanceWindowArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dailyMaintenanceWindow DailyMaintenanceWindow specifies a daily maintenance operation window.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dailyMaintenanceWindow(@Nullable Output<DailyMaintenanceWindowArgs> dailyMaintenanceWindow) {
             $.dailyMaintenanceWindow = dailyMaintenanceWindow;
             return this;
         }
 
+        /**
+         * @param dailyMaintenanceWindow DailyMaintenanceWindow specifies a daily maintenance operation window.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dailyMaintenanceWindow(DailyMaintenanceWindowArgs dailyMaintenanceWindow) {
             return dailyMaintenanceWindow(Output.of(dailyMaintenanceWindow));
         }
 
+        /**
+         * @param maintenanceExclusions Exceptions to maintenance window. Non-emergency maintenance should not occur in these windows.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maintenanceExclusions(@Nullable Output<Map<String,String>> maintenanceExclusions) {
             $.maintenanceExclusions = maintenanceExclusions;
             return this;
         }
 
+        /**
+         * @param maintenanceExclusions Exceptions to maintenance window. Non-emergency maintenance should not occur in these windows.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maintenanceExclusions(Map<String,String> maintenanceExclusions) {
             return maintenanceExclusions(Output.of(maintenanceExclusions));
         }
 
+        /**
+         * @param recurringWindow RecurringWindow specifies some number of recurring time periods for maintenance to occur. The time windows may be overlapping. If no maintenance windows are set, maintenance can occur at any time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recurringWindow(@Nullable Output<RecurringTimeWindowArgs> recurringWindow) {
             $.recurringWindow = recurringWindow;
             return this;
         }
 
+        /**
+         * @param recurringWindow RecurringWindow specifies some number of recurring time periods for maintenance to occur. The time windows may be overlapping. If no maintenance windows are set, maintenance can occur at any time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recurringWindow(RecurringTimeWindowArgs recurringWindow) {
             return recurringWindow(Output.of(recurringWindow));
         }

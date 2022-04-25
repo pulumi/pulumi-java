@@ -25,6 +25,10 @@ public final class VirtualHardDiskResponse extends com.pulumi.resources.InvokeAr
     @Import(name="uri")
     private @Nullable String uri;
 
+    /**
+     * @return Specifies the virtual hard disk&#39;s uri.
+     * 
+     */
     public Optional<String> uri() {
         return Optional.ofNullable(this.uri);
     }
@@ -53,6 +57,12 @@ public final class VirtualHardDiskResponse extends com.pulumi.resources.InvokeAr
             $ = new VirtualHardDiskResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param uri Specifies the virtual hard disk&#39;s uri.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(@Nullable String uri) {
             $.uri = uri;
             return this;

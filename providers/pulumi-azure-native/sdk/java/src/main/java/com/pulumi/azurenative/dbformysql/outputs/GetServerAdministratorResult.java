@@ -10,37 +10,37 @@ import java.util.Objects;
 @CustomType
 public final class GetServerAdministratorResult {
     /**
-     * The type of administrator.
+     * @return The type of administrator.
      * 
      */
     private final String administratorType;
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
      */
     private final String id;
     /**
-     * The server administrator login account name.
+     * @return The server administrator login account name.
      * 
      */
     private final String login;
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
      */
     private final String name;
     /**
-     * The server administrator Sid (Secure ID).
+     * @return The server administrator Sid (Secure ID).
      * 
      */
     private final String sid;
     /**
-     * The server Active Directory Administrator tenant id.
+     * @return The server Active Directory Administrator tenant id.
      * 
      */
     private final String tenantId;
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     private final String type;
@@ -64,51 +64,51 @@ public final class GetServerAdministratorResult {
     }
 
     /**
-     * The type of administrator.
+     * @return The type of administrator.
      * 
-    */
+     */
     public String administratorType() {
         return this.administratorType;
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The server administrator login account name.
+     * @return The server administrator login account name.
      * 
-    */
+     */
     public String login() {
         return this.login;
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The server administrator Sid (Secure ID).
+     * @return The server administrator Sid (Secure ID).
      * 
-    */
+     */
     public String sid() {
         return this.sid;
     }
     /**
-     * The server Active Directory Administrator tenant id.
+     * @return The server Active Directory Administrator tenant id.
      * 
-    */
+     */
     public String tenantId() {
         return this.tenantId;
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

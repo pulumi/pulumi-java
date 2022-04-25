@@ -30,6 +30,10 @@ public final class EnvironmentImageResponseResponseEnvironment extends com.pulum
     @Import(name="docker")
     private @Nullable ModelEnvironmentDefinitionResponseResponseDocker docker;
 
+    /**
+     * @return The definition of a Docker container.
+     * 
+     */
     public Optional<ModelEnvironmentDefinitionResponseResponseDocker> docker() {
         return Optional.ofNullable(this.docker);
     }
@@ -41,6 +45,10 @@ public final class EnvironmentImageResponseResponseEnvironment extends com.pulum
     @Import(name="environmentVariables")
     private @Nullable Map<String,String> environmentVariables;
 
+    /**
+     * @return Definition of environment variables to be defined in the environment.
+     * 
+     */
     public Optional<Map<String,String>> environmentVariables() {
         return Optional.ofNullable(this.environmentVariables);
     }
@@ -52,6 +60,10 @@ public final class EnvironmentImageResponseResponseEnvironment extends com.pulum
     @Import(name="inferencingStackVersion")
     private @Nullable String inferencingStackVersion;
 
+    /**
+     * @return The inferencing stack version added to the image. To avoid adding an inferencing stack, do not set this value. Valid values: &#34;latest&#34;.
+     * 
+     */
     public Optional<String> inferencingStackVersion() {
         return Optional.ofNullable(this.inferencingStackVersion);
     }
@@ -63,6 +75,10 @@ public final class EnvironmentImageResponseResponseEnvironment extends com.pulum
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The name of the environment.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -74,6 +90,10 @@ public final class EnvironmentImageResponseResponseEnvironment extends com.pulum
     @Import(name="python")
     private @Nullable ModelEnvironmentDefinitionResponseResponsePython python;
 
+    /**
+     * @return Settings for a Python environment.
+     * 
+     */
     public Optional<ModelEnvironmentDefinitionResponseResponsePython> python() {
         return Optional.ofNullable(this.python);
     }
@@ -85,6 +105,10 @@ public final class EnvironmentImageResponseResponseEnvironment extends com.pulum
     @Import(name="r")
     private @Nullable ModelEnvironmentDefinitionResponseResponseR r;
 
+    /**
+     * @return Settings for a R environment.
+     * 
+     */
     public Optional<ModelEnvironmentDefinitionResponseResponseR> r() {
         return Optional.ofNullable(this.r);
     }
@@ -96,6 +120,10 @@ public final class EnvironmentImageResponseResponseEnvironment extends com.pulum
     @Import(name="spark")
     private @Nullable ModelEnvironmentDefinitionResponseResponseSpark spark;
 
+    /**
+     * @return The configuration for a Spark environment.
+     * 
+     */
     public Optional<ModelEnvironmentDefinitionResponseResponseSpark> spark() {
         return Optional.ofNullable(this.spark);
     }
@@ -107,6 +135,10 @@ public final class EnvironmentImageResponseResponseEnvironment extends com.pulum
     @Import(name="version")
     private @Nullable String version;
 
+    /**
+     * @return The environment version.
+     * 
+     */
     public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }
@@ -142,41 +174,89 @@ public final class EnvironmentImageResponseResponseEnvironment extends com.pulum
             $ = new EnvironmentImageResponseResponseEnvironment(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param docker The definition of a Docker container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder docker(@Nullable ModelEnvironmentDefinitionResponseResponseDocker docker) {
             $.docker = docker;
             return this;
         }
 
+        /**
+         * @param environmentVariables Definition of environment variables to be defined in the environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentVariables(@Nullable Map<String,String> environmentVariables) {
             $.environmentVariables = environmentVariables;
             return this;
         }
 
+        /**
+         * @param inferencingStackVersion The inferencing stack version added to the image. To avoid adding an inferencing stack, do not set this value. Valid values: &#34;latest&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inferencingStackVersion(@Nullable String inferencingStackVersion) {
             $.inferencingStackVersion = inferencingStackVersion;
             return this;
         }
 
+        /**
+         * @param name The name of the environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param python Settings for a Python environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder python(@Nullable ModelEnvironmentDefinitionResponseResponsePython python) {
             $.python = python;
             return this;
         }
 
+        /**
+         * @param r Settings for a R environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder r(@Nullable ModelEnvironmentDefinitionResponseResponseR r) {
             $.r = r;
             return this;
         }
 
+        /**
+         * @param spark The configuration for a Spark environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder spark(@Nullable ModelEnvironmentDefinitionResponseResponseSpark spark) {
             $.spark = spark;
             return this;
         }
 
+        /**
+         * @param version The environment version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable String version) {
             $.version = version;
             return this;

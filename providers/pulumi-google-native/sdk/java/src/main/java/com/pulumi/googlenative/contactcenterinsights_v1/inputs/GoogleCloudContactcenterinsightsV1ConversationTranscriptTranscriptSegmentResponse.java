@@ -30,6 +30,10 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
     @Import(name="channelTag", required=true)
     private Integer channelTag;
 
+    /**
+     * @return For conversations derived from multi-channel audio, this is the channel number corresponding to the audio from that channel. For audioChannelCount = N, its output values can range from &#39;1&#39; to &#39;N&#39;. A channel tag of 0 indicates that the audio is mono.
+     * 
+     */
     public Integer channelTag() {
         return this.channelTag;
     }
@@ -41,6 +45,10 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
     @Import(name="confidence", required=true)
     private Double confidence;
 
+    /**
+     * @return A confidence estimate between 0.0 and 1.0 of the fidelity of this segment. A default value of 0.0 indicates that the value is unset.
+     * 
+     */
     public Double confidence() {
         return this.confidence;
     }
@@ -52,6 +60,10 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
     @Import(name="dialogflowSegmentMetadata", required=true)
     private GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentDialogflowSegmentMetadataResponse dialogflowSegmentMetadata;
 
+    /**
+     * @return CCAI metadata relating to the current transcript segment.
+     * 
+     */
     public GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentDialogflowSegmentMetadataResponse dialogflowSegmentMetadata() {
         return this.dialogflowSegmentMetadata;
     }
@@ -63,6 +75,10 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
     @Import(name="languageCode", required=true)
     private String languageCode;
 
+    /**
+     * @return The language code of this segment as a [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language tag. Example: &#34;en-US&#34;.
+     * 
+     */
     public String languageCode() {
         return this.languageCode;
     }
@@ -74,6 +90,10 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
     @Import(name="messageTime", required=true)
     private String messageTime;
 
+    /**
+     * @return The time that the message occurred, if provided.
+     * 
+     */
     public String messageTime() {
         return this.messageTime;
     }
@@ -85,6 +105,10 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
     @Import(name="segmentParticipant", required=true)
     private GoogleCloudContactcenterinsightsV1ConversationParticipantResponse segmentParticipant;
 
+    /**
+     * @return The participant of this segment.
+     * 
+     */
     public GoogleCloudContactcenterinsightsV1ConversationParticipantResponse segmentParticipant() {
         return this.segmentParticipant;
     }
@@ -96,6 +120,10 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
     @Import(name="sentiment", required=true)
     private GoogleCloudContactcenterinsightsV1SentimentDataResponse sentiment;
 
+    /**
+     * @return The sentiment for this transcript segment.
+     * 
+     */
     public GoogleCloudContactcenterinsightsV1SentimentDataResponse sentiment() {
         return this.sentiment;
     }
@@ -107,6 +135,10 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
     @Import(name="text", required=true)
     private String text;
 
+    /**
+     * @return The text of this segment.
+     * 
+     */
     public String text() {
         return this.text;
     }
@@ -118,6 +150,10 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
     @Import(name="words", required=true)
     private List<GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfoResponse> words;
 
+    /**
+     * @return A list of the word-specific information for each word in the segment.
+     * 
+     */
     public List<GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfoResponse> words() {
         return this.words;
     }
@@ -154,51 +190,111 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
             $ = new GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param channelTag For conversations derived from multi-channel audio, this is the channel number corresponding to the audio from that channel. For audioChannelCount = N, its output values can range from &#39;1&#39; to &#39;N&#39;. A channel tag of 0 indicates that the audio is mono.
+         * 
+         * @return builder
+         * 
+         */
         public Builder channelTag(Integer channelTag) {
             $.channelTag = channelTag;
             return this;
         }
 
+        /**
+         * @param confidence A confidence estimate between 0.0 and 1.0 of the fidelity of this segment. A default value of 0.0 indicates that the value is unset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder confidence(Double confidence) {
             $.confidence = confidence;
             return this;
         }
 
+        /**
+         * @param dialogflowSegmentMetadata CCAI metadata relating to the current transcript segment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dialogflowSegmentMetadata(GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentDialogflowSegmentMetadataResponse dialogflowSegmentMetadata) {
             $.dialogflowSegmentMetadata = dialogflowSegmentMetadata;
             return this;
         }
 
+        /**
+         * @param languageCode The language code of this segment as a [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language tag. Example: &#34;en-US&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder languageCode(String languageCode) {
             $.languageCode = languageCode;
             return this;
         }
 
+        /**
+         * @param messageTime The time that the message occurred, if provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageTime(String messageTime) {
             $.messageTime = messageTime;
             return this;
         }
 
+        /**
+         * @param segmentParticipant The participant of this segment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder segmentParticipant(GoogleCloudContactcenterinsightsV1ConversationParticipantResponse segmentParticipant) {
             $.segmentParticipant = segmentParticipant;
             return this;
         }
 
+        /**
+         * @param sentiment The sentiment for this transcript segment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sentiment(GoogleCloudContactcenterinsightsV1SentimentDataResponse sentiment) {
             $.sentiment = sentiment;
             return this;
         }
 
+        /**
+         * @param text The text of this segment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder text(String text) {
             $.text = text;
             return this;
         }
 
+        /**
+         * @param words A list of the word-specific information for each word in the segment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder words(List<GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfoResponse> words) {
             $.words = words;
             return this;
         }
 
+        /**
+         * @param words A list of the word-specific information for each word in the segment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder words(GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfoResponse... words) {
             return words(List.of(words));
         }

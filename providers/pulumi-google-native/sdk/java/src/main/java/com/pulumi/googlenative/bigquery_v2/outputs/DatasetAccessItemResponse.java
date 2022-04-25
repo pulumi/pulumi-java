@@ -13,47 +13,47 @@ import java.util.Objects;
 @CustomType
 public final class DatasetAccessItemResponse {
     /**
-     * [Pick one] A grant authorizing all resources of a particular type in a particular dataset access to this dataset. Only views are supported for now. The role field is not required when this field is set. If that dataset is deleted and re-created, its access needs to be granted again via an update operation.
+     * @return [Pick one] A grant authorizing all resources of a particular type in a particular dataset access to this dataset. Only views are supported for now. The role field is not required when this field is set. If that dataset is deleted and re-created, its access needs to be granted again via an update operation.
      * 
      */
     private final DatasetAccessEntryResponse dataset;
     /**
-     * [Pick one] A domain to grant access to. Any users signed in with the domain specified will be granted the specified access. Example: &#34;example.com&#34;. Maps to IAM policy member &#34;domain:DOMAIN&#34;.
+     * @return [Pick one] A domain to grant access to. Any users signed in with the domain specified will be granted the specified access. Example: &#34;example.com&#34;. Maps to IAM policy member &#34;domain:DOMAIN&#34;.
      * 
      */
     private final String domain;
     /**
-     * [Pick one] An email address of a Google Group to grant access to. Maps to IAM policy member &#34;group:GROUP&#34;.
+     * @return [Pick one] An email address of a Google Group to grant access to. Maps to IAM policy member &#34;group:GROUP&#34;.
      * 
      */
     private final String groupByEmail;
     /**
-     * [Pick one] Some other type of member that appears in the IAM Policy but isn&#39;t a user, group, domain, or special group.
+     * @return [Pick one] Some other type of member that appears in the IAM Policy but isn&#39;t a user, group, domain, or special group.
      * 
      */
     private final String iamMember;
     /**
-     * [Required] An IAM role ID that should be granted to the user, group, or domain specified in this access entry. The following legacy mappings will be applied: OWNER  roles/bigquery.dataOwner WRITER  roles/bigquery.dataEditor READER  roles/bigquery.dataViewer This field will accept any of the above formats, but will return only the legacy format. For example, if you set this field to &#34;roles/bigquery.dataOwner&#34;, it will be returned back as &#34;OWNER&#34;.
+     * @return [Required] An IAM role ID that should be granted to the user, group, or domain specified in this access entry. The following legacy mappings will be applied: OWNER  roles/bigquery.dataOwner WRITER  roles/bigquery.dataEditor READER  roles/bigquery.dataViewer This field will accept any of the above formats, but will return only the legacy format. For example, if you set this field to &#34;roles/bigquery.dataOwner&#34;, it will be returned back as &#34;OWNER&#34;.
      * 
      */
     private final String role;
     /**
-     * [Pick one] A routine from a different dataset to grant access to. Queries executed against that routine will have read access to views/tables/routines in this dataset. Only UDF is supported for now. The role field is not required when this field is set. If that routine is updated by any user, access to the routine needs to be granted again via an update operation.
+     * @return [Pick one] A routine from a different dataset to grant access to. Queries executed against that routine will have read access to views/tables/routines in this dataset. Only UDF is supported for now. The role field is not required when this field is set. If that routine is updated by any user, access to the routine needs to be granted again via an update operation.
      * 
      */
     private final RoutineReferenceResponse routine;
     /**
-     * [Pick one] A special group to grant access to. Possible values include: projectOwners: Owners of the enclosing project. projectReaders: Readers of the enclosing project. projectWriters: Writers of the enclosing project. allAuthenticatedUsers: All authenticated BigQuery users. Maps to similarly-named IAM members.
+     * @return [Pick one] A special group to grant access to. Possible values include: projectOwners: Owners of the enclosing project. projectReaders: Readers of the enclosing project. projectWriters: Writers of the enclosing project. allAuthenticatedUsers: All authenticated BigQuery users. Maps to similarly-named IAM members.
      * 
      */
     private final String specialGroup;
     /**
-     * [Pick one] An email address of a user to grant access to. For example: fred@example.com. Maps to IAM policy member &#34;user:EMAIL&#34; or &#34;serviceAccount:EMAIL&#34;.
+     * @return [Pick one] An email address of a user to grant access to. For example: fred@example.com. Maps to IAM policy member &#34;user:EMAIL&#34; or &#34;serviceAccount:EMAIL&#34;.
      * 
      */
     private final String userByEmail;
     /**
-     * [Pick one] A view from a different dataset to grant access to. Queries executed against that view will have read access to tables in this dataset. The role field is not required when this field is set. If that view is updated by any user, access to the view needs to be granted again via an update operation.
+     * @return [Pick one] A view from a different dataset to grant access to. Queries executed against that view will have read access to tables in this dataset. The role field is not required when this field is set. If that view is updated by any user, access to the view needs to be granted again via an update operation.
      * 
      */
     private final TableReferenceResponse view;
@@ -81,65 +81,65 @@ public final class DatasetAccessItemResponse {
     }
 
     /**
-     * [Pick one] A grant authorizing all resources of a particular type in a particular dataset access to this dataset. Only views are supported for now. The role field is not required when this field is set. If that dataset is deleted and re-created, its access needs to be granted again via an update operation.
+     * @return [Pick one] A grant authorizing all resources of a particular type in a particular dataset access to this dataset. Only views are supported for now. The role field is not required when this field is set. If that dataset is deleted and re-created, its access needs to be granted again via an update operation.
      * 
-    */
+     */
     public DatasetAccessEntryResponse dataset() {
         return this.dataset;
     }
     /**
-     * [Pick one] A domain to grant access to. Any users signed in with the domain specified will be granted the specified access. Example: &#34;example.com&#34;. Maps to IAM policy member &#34;domain:DOMAIN&#34;.
+     * @return [Pick one] A domain to grant access to. Any users signed in with the domain specified will be granted the specified access. Example: &#34;example.com&#34;. Maps to IAM policy member &#34;domain:DOMAIN&#34;.
      * 
-    */
+     */
     public String domain() {
         return this.domain;
     }
     /**
-     * [Pick one] An email address of a Google Group to grant access to. Maps to IAM policy member &#34;group:GROUP&#34;.
+     * @return [Pick one] An email address of a Google Group to grant access to. Maps to IAM policy member &#34;group:GROUP&#34;.
      * 
-    */
+     */
     public String groupByEmail() {
         return this.groupByEmail;
     }
     /**
-     * [Pick one] Some other type of member that appears in the IAM Policy but isn&#39;t a user, group, domain, or special group.
+     * @return [Pick one] Some other type of member that appears in the IAM Policy but isn&#39;t a user, group, domain, or special group.
      * 
-    */
+     */
     public String iamMember() {
         return this.iamMember;
     }
     /**
-     * [Required] An IAM role ID that should be granted to the user, group, or domain specified in this access entry. The following legacy mappings will be applied: OWNER  roles/bigquery.dataOwner WRITER  roles/bigquery.dataEditor READER  roles/bigquery.dataViewer This field will accept any of the above formats, but will return only the legacy format. For example, if you set this field to &#34;roles/bigquery.dataOwner&#34;, it will be returned back as &#34;OWNER&#34;.
+     * @return [Required] An IAM role ID that should be granted to the user, group, or domain specified in this access entry. The following legacy mappings will be applied: OWNER  roles/bigquery.dataOwner WRITER  roles/bigquery.dataEditor READER  roles/bigquery.dataViewer This field will accept any of the above formats, but will return only the legacy format. For example, if you set this field to &#34;roles/bigquery.dataOwner&#34;, it will be returned back as &#34;OWNER&#34;.
      * 
-    */
+     */
     public String role() {
         return this.role;
     }
     /**
-     * [Pick one] A routine from a different dataset to grant access to. Queries executed against that routine will have read access to views/tables/routines in this dataset. Only UDF is supported for now. The role field is not required when this field is set. If that routine is updated by any user, access to the routine needs to be granted again via an update operation.
+     * @return [Pick one] A routine from a different dataset to grant access to. Queries executed against that routine will have read access to views/tables/routines in this dataset. Only UDF is supported for now. The role field is not required when this field is set. If that routine is updated by any user, access to the routine needs to be granted again via an update operation.
      * 
-    */
+     */
     public RoutineReferenceResponse routine() {
         return this.routine;
     }
     /**
-     * [Pick one] A special group to grant access to. Possible values include: projectOwners: Owners of the enclosing project. projectReaders: Readers of the enclosing project. projectWriters: Writers of the enclosing project. allAuthenticatedUsers: All authenticated BigQuery users. Maps to similarly-named IAM members.
+     * @return [Pick one] A special group to grant access to. Possible values include: projectOwners: Owners of the enclosing project. projectReaders: Readers of the enclosing project. projectWriters: Writers of the enclosing project. allAuthenticatedUsers: All authenticated BigQuery users. Maps to similarly-named IAM members.
      * 
-    */
+     */
     public String specialGroup() {
         return this.specialGroup;
     }
     /**
-     * [Pick one] An email address of a user to grant access to. For example: fred@example.com. Maps to IAM policy member &#34;user:EMAIL&#34; or &#34;serviceAccount:EMAIL&#34;.
+     * @return [Pick one] An email address of a user to grant access to. For example: fred@example.com. Maps to IAM policy member &#34;user:EMAIL&#34; or &#34;serviceAccount:EMAIL&#34;.
      * 
-    */
+     */
     public String userByEmail() {
         return this.userByEmail;
     }
     /**
-     * [Pick one] A view from a different dataset to grant access to. Queries executed against that view will have read access to tables in this dataset. The role field is not required when this field is set. If that view is updated by any user, access to the view needs to be granted again via an update operation.
+     * @return [Pick one] A view from a different dataset to grant access to. Queries executed against that view will have read access to tables in this dataset. The role field is not required when this field is set. If that view is updated by any user, access to the view needs to be granted again via an update operation.
      * 
-    */
+     */
     public TableReferenceResponse view() {
         return this.view;
     }

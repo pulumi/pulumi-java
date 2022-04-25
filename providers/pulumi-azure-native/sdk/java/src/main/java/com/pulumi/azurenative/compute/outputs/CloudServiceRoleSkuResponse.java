@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CloudServiceRoleSkuResponse {
     /**
-     * Specifies the number of role instances in the cloud service.
+     * @return Specifies the number of role instances in the cloud service.
      * 
      */
     private final @Nullable Double capacity;
     /**
-     * The sku name. NOTE: If the new SKU is not supported on the hardware the cloud service is currently on, you need to delete and recreate the cloud service or move back to the old sku.
+     * @return The sku name. NOTE: If the new SKU is not supported on the hardware the cloud service is currently on, you need to delete and recreate the cloud service or move back to the old sku.
      * 
      */
     private final @Nullable String name;
     /**
-     * Specifies the tier of the cloud service. Possible Values are &lt;br /&gt;&lt;br /&gt; **Standard** &lt;br /&gt;&lt;br /&gt; **Basic**
+     * @return Specifies the tier of the cloud service. Possible Values are &lt;br /&gt;&lt;br /&gt; **Standard** &lt;br /&gt;&lt;br /&gt; **Basic**
      * 
      */
     private final @Nullable String tier;
@@ -39,23 +39,23 @@ public final class CloudServiceRoleSkuResponse {
     }
 
     /**
-     * Specifies the number of role instances in the cloud service.
+     * @return Specifies the number of role instances in the cloud service.
      * 
-    */
+     */
     public Optional<Double> capacity() {
         return Optional.ofNullable(this.capacity);
     }
     /**
-     * The sku name. NOTE: If the new SKU is not supported on the hardware the cloud service is currently on, you need to delete and recreate the cloud service or move back to the old sku.
+     * @return The sku name. NOTE: If the new SKU is not supported on the hardware the cloud service is currently on, you need to delete and recreate the cloud service or move back to the old sku.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Specifies the tier of the cloud service. Possible Values are &lt;br /&gt;&lt;br /&gt; **Standard** &lt;br /&gt;&lt;br /&gt; **Basic**
+     * @return Specifies the tier of the cloud service. Possible Values are &lt;br /&gt;&lt;br /&gt; **Standard** &lt;br /&gt;&lt;br /&gt; **Basic**
      * 
-    */
+     */
     public Optional<String> tier() {
         return Optional.ofNullable(this.tier);
     }

@@ -28,6 +28,11 @@ public final class SecretAuthInfoArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="authType", required=true)
     private Output<String> authType;
 
+    /**
+     * @return The authentication type.
+     * Expected value is &#39;secret&#39;.
+     * 
+     */
     public Output<String> authType() {
         return this.authType;
     }
@@ -39,6 +44,10 @@ public final class SecretAuthInfoArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Username or account name for secret auth.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -50,6 +59,10 @@ public final class SecretAuthInfoArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="secret")
     private @Nullable Output<String> secret;
 
+    /**
+     * @return Password or account key for secret auth.
+     * 
+     */
     public Optional<Output<String>> secret() {
         return Optional.ofNullable(this.secret);
     }
@@ -80,29 +93,67 @@ public final class SecretAuthInfoArgs extends com.pulumi.resources.ResourceArgs 
             $ = new SecretAuthInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authType The authentication type.
+         * Expected value is &#39;secret&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authType(Output<String> authType) {
             $.authType = authType;
             return this;
         }
 
+        /**
+         * @param authType The authentication type.
+         * Expected value is &#39;secret&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authType(String authType) {
             return authType(Output.of(authType));
         }
 
+        /**
+         * @param name Username or account name for secret auth.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Username or account name for secret auth.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param secret Password or account key for secret auth.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secret(@Nullable Output<String> secret) {
             $.secret = secret;
             return this;
         }
 
+        /**
+         * @param secret Password or account key for secret auth.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secret(String secret) {
             return secret(Output.of(secret));
         }

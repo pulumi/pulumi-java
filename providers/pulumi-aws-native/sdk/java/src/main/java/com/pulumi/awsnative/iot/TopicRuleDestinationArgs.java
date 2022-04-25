@@ -24,6 +24,10 @@ public final class TopicRuleDestinationArgs extends com.pulumi.resources.Resourc
     @Import(name="httpUrlProperties")
     private @Nullable Output<TopicRuleDestinationHttpUrlDestinationSummaryArgs> httpUrlProperties;
 
+    /**
+     * @return HTTP URL destination properties.
+     * 
+     */
     public Optional<Output<TopicRuleDestinationHttpUrlDestinationSummaryArgs>> httpUrlProperties() {
         return Optional.ofNullable(this.httpUrlProperties);
     }
@@ -35,6 +39,10 @@ public final class TopicRuleDestinationArgs extends com.pulumi.resources.Resourc
     @Import(name="status")
     private @Nullable Output<TopicRuleDestinationStatus> status;
 
+    /**
+     * @return The status of the TopicRuleDestination.
+     * 
+     */
     public Optional<Output<TopicRuleDestinationStatus>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -46,6 +54,10 @@ public final class TopicRuleDestinationArgs extends com.pulumi.resources.Resourc
     @Import(name="vpcProperties")
     private @Nullable Output<TopicRuleDestinationVpcDestinationPropertiesArgs> vpcProperties;
 
+    /**
+     * @return VPC destination properties.
+     * 
+     */
     public Optional<Output<TopicRuleDestinationVpcDestinationPropertiesArgs>> vpcProperties() {
         return Optional.ofNullable(this.vpcProperties);
     }
@@ -76,29 +88,65 @@ public final class TopicRuleDestinationArgs extends com.pulumi.resources.Resourc
             $ = new TopicRuleDestinationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param httpUrlProperties HTTP URL destination properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpUrlProperties(@Nullable Output<TopicRuleDestinationHttpUrlDestinationSummaryArgs> httpUrlProperties) {
             $.httpUrlProperties = httpUrlProperties;
             return this;
         }
 
+        /**
+         * @param httpUrlProperties HTTP URL destination properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpUrlProperties(TopicRuleDestinationHttpUrlDestinationSummaryArgs httpUrlProperties) {
             return httpUrlProperties(Output.of(httpUrlProperties));
         }
 
+        /**
+         * @param status The status of the TopicRuleDestination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<TopicRuleDestinationStatus> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status The status of the TopicRuleDestination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(TopicRuleDestinationStatus status) {
             return status(Output.of(status));
         }
 
+        /**
+         * @param vpcProperties VPC destination properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcProperties(@Nullable Output<TopicRuleDestinationVpcDestinationPropertiesArgs> vpcProperties) {
             $.vpcProperties = vpcProperties;
             return this;
         }
 
+        /**
+         * @param vpcProperties VPC destination properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcProperties(TopicRuleDestinationVpcDestinationPropertiesArgs vpcProperties) {
             return vpcProperties(Output.of(vpcProperties));
         }

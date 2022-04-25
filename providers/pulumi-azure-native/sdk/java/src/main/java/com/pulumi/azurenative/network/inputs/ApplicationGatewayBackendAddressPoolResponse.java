@@ -28,6 +28,10 @@ public final class ApplicationGatewayBackendAddressPoolResponse extends com.pulu
     @Import(name="backendAddresses")
     private @Nullable List<ApplicationGatewayBackendAddressResponse> backendAddresses;
 
+    /**
+     * @return Backend addresses.
+     * 
+     */
     public Optional<List<ApplicationGatewayBackendAddressResponse>> backendAddresses() {
         return Optional.ofNullable(this.backendAddresses);
     }
@@ -39,6 +43,10 @@ public final class ApplicationGatewayBackendAddressPoolResponse extends com.pulu
     @Import(name="backendIPConfigurations", required=true)
     private List<NetworkInterfaceIPConfigurationResponse> backendIPConfigurations;
 
+    /**
+     * @return Collection of references to IPs defined in network interfaces.
+     * 
+     */
     public List<NetworkInterfaceIPConfigurationResponse> backendIPConfigurations() {
         return this.backendIPConfigurations;
     }
@@ -50,6 +58,10 @@ public final class ApplicationGatewayBackendAddressPoolResponse extends com.pulu
     @Import(name="etag", required=true)
     private String etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public String etag() {
         return this.etag;
     }
@@ -61,6 +73,10 @@ public final class ApplicationGatewayBackendAddressPoolResponse extends com.pulu
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -72,6 +88,10 @@ public final class ApplicationGatewayBackendAddressPoolResponse extends com.pulu
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Name of the backend address pool that is unique within an Application Gateway.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -83,6 +103,10 @@ public final class ApplicationGatewayBackendAddressPoolResponse extends com.pulu
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The provisioning state of the backend address pool resource.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -94,6 +118,10 @@ public final class ApplicationGatewayBackendAddressPoolResponse extends com.pulu
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of the resource.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -128,44 +156,98 @@ public final class ApplicationGatewayBackendAddressPoolResponse extends com.pulu
             $ = new ApplicationGatewayBackendAddressPoolResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backendAddresses Backend addresses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backendAddresses(@Nullable List<ApplicationGatewayBackendAddressResponse> backendAddresses) {
             $.backendAddresses = backendAddresses;
             return this;
         }
 
+        /**
+         * @param backendAddresses Backend addresses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backendAddresses(ApplicationGatewayBackendAddressResponse... backendAddresses) {
             return backendAddresses(List.of(backendAddresses));
         }
 
+        /**
+         * @param backendIPConfigurations Collection of references to IPs defined in network interfaces.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backendIPConfigurations(List<NetworkInterfaceIPConfigurationResponse> backendIPConfigurations) {
             $.backendIPConfigurations = backendIPConfigurations;
             return this;
         }
 
+        /**
+         * @param backendIPConfigurations Collection of references to IPs defined in network interfaces.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backendIPConfigurations(NetworkInterfaceIPConfigurationResponse... backendIPConfigurations) {
             return backendIPConfigurations(List.of(backendIPConfigurations));
         }
 
+        /**
+         * @param etag A unique read-only string that changes whenever the resource is updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param name Name of the backend address pool that is unique within an Application Gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param provisioningState The provisioning state of the backend address pool resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param type Type of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

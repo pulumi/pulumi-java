@@ -25,6 +25,10 @@ public final class LaunchProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return &lt;p&gt;The description.&lt;/p&gt;
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -37,6 +41,11 @@ public final class LaunchProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ec2SubnetIds", required=true)
     private Output<List<String>> ec2SubnetIds;
 
+    /**
+     * @return &lt;p&gt;Specifies the IDs of the EC2 subnets where streaming sessions will be accessible from.
+     *             These subnets must support the specified instance types. &lt;/p&gt;
+     * 
+     */
     public Output<List<String>> ec2SubnetIds() {
         return this.ec2SubnetIds;
     }
@@ -49,6 +58,11 @@ public final class LaunchProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="launchProfileProtocolVersions", required=true)
     private Output<List<String>> launchProfileProtocolVersions;
 
+    /**
+     * @return &lt;p&gt;The version number of the protocol that is used by the launch profile. The only valid
+     *             version is &#34;2021-03-31&#34;.&lt;/p&gt;
+     * 
+     */
     public Output<List<String>> launchProfileProtocolVersions() {
         return this.launchProfileProtocolVersions;
     }
@@ -60,6 +74,10 @@ public final class LaunchProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return &lt;p&gt;The name for the launch profile.&lt;/p&gt;
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -79,6 +97,11 @@ public final class LaunchProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="studioComponentIds", required=true)
     private Output<List<String>> studioComponentIds;
 
+    /**
+     * @return &lt;p&gt;Unique identifiers for a collection of studio components that can be used with this
+     *             launch profile.&lt;/p&gt;
+     * 
+     */
     public Output<List<String>> studioComponentIds() {
         return this.studioComponentIds;
     }
@@ -90,6 +113,10 @@ public final class LaunchProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="studioId", required=true)
     private Output<String> studioId;
 
+    /**
+     * @return &lt;p&gt;The studio ID. &lt;/p&gt;
+     * 
+     */
     public Output<String> studioId() {
         return this.studioId;
     }
@@ -132,46 +159,112 @@ public final class LaunchProfileArgs extends com.pulumi.resources.ResourceArgs {
             $ = new LaunchProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description &lt;p&gt;The description.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description &lt;p&gt;The description.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param ec2SubnetIds &lt;p&gt;Specifies the IDs of the EC2 subnets where streaming sessions will be accessible from.
+         *             These subnets must support the specified instance types. &lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder ec2SubnetIds(Output<List<String>> ec2SubnetIds) {
             $.ec2SubnetIds = ec2SubnetIds;
             return this;
         }
 
+        /**
+         * @param ec2SubnetIds &lt;p&gt;Specifies the IDs of the EC2 subnets where streaming sessions will be accessible from.
+         *             These subnets must support the specified instance types. &lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder ec2SubnetIds(List<String> ec2SubnetIds) {
             return ec2SubnetIds(Output.of(ec2SubnetIds));
         }
 
+        /**
+         * @param ec2SubnetIds &lt;p&gt;Specifies the IDs of the EC2 subnets where streaming sessions will be accessible from.
+         *             These subnets must support the specified instance types. &lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder ec2SubnetIds(String... ec2SubnetIds) {
             return ec2SubnetIds(List.of(ec2SubnetIds));
         }
 
+        /**
+         * @param launchProfileProtocolVersions &lt;p&gt;The version number of the protocol that is used by the launch profile. The only valid
+         *             version is &#34;2021-03-31&#34;.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder launchProfileProtocolVersions(Output<List<String>> launchProfileProtocolVersions) {
             $.launchProfileProtocolVersions = launchProfileProtocolVersions;
             return this;
         }
 
+        /**
+         * @param launchProfileProtocolVersions &lt;p&gt;The version number of the protocol that is used by the launch profile. The only valid
+         *             version is &#34;2021-03-31&#34;.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder launchProfileProtocolVersions(List<String> launchProfileProtocolVersions) {
             return launchProfileProtocolVersions(Output.of(launchProfileProtocolVersions));
         }
 
+        /**
+         * @param launchProfileProtocolVersions &lt;p&gt;The version number of the protocol that is used by the launch profile. The only valid
+         *             version is &#34;2021-03-31&#34;.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder launchProfileProtocolVersions(String... launchProfileProtocolVersions) {
             return launchProfileProtocolVersions(List.of(launchProfileProtocolVersions));
         }
 
+        /**
+         * @param name &lt;p&gt;The name for the launch profile.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name &lt;p&gt;The name for the launch profile.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -185,24 +278,57 @@ public final class LaunchProfileArgs extends com.pulumi.resources.ResourceArgs {
             return streamConfiguration(Output.of(streamConfiguration));
         }
 
+        /**
+         * @param studioComponentIds &lt;p&gt;Unique identifiers for a collection of studio components that can be used with this
+         *             launch profile.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder studioComponentIds(Output<List<String>> studioComponentIds) {
             $.studioComponentIds = studioComponentIds;
             return this;
         }
 
+        /**
+         * @param studioComponentIds &lt;p&gt;Unique identifiers for a collection of studio components that can be used with this
+         *             launch profile.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder studioComponentIds(List<String> studioComponentIds) {
             return studioComponentIds(Output.of(studioComponentIds));
         }
 
+        /**
+         * @param studioComponentIds &lt;p&gt;Unique identifiers for a collection of studio components that can be used with this
+         *             launch profile.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder studioComponentIds(String... studioComponentIds) {
             return studioComponentIds(List.of(studioComponentIds));
         }
 
+        /**
+         * @param studioId &lt;p&gt;The studio ID. &lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder studioId(Output<String> studioId) {
             $.studioId = studioId;
             return this;
         }
 
+        /**
+         * @param studioId &lt;p&gt;The studio ID. &lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder studioId(String studioId) {
             return studioId(Output.of(studioId));
         }

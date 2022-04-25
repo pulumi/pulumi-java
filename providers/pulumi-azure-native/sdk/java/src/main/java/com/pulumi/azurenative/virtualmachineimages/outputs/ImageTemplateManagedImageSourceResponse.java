@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class ImageTemplateManagedImageSourceResponse {
     /**
-     * ARM resource id of the managed image in customer subscription
+     * @return ARM resource id of the managed image in customer subscription
      * 
      */
     private final String imageId;
     /**
-     * Specifies the type of source image you want to start with.
+     * @return Specifies the type of source image you want to start with.
      * Expected value is &#39;ManagedImage&#39;.
      * 
      */
@@ -30,17 +30,17 @@ public final class ImageTemplateManagedImageSourceResponse {
     }
 
     /**
-     * ARM resource id of the managed image in customer subscription
+     * @return ARM resource id of the managed image in customer subscription
      * 
-    */
+     */
     public String imageId() {
         return this.imageId;
     }
     /**
-     * Specifies the type of source image you want to start with.
+     * @return Specifies the type of source image you want to start with.
      * Expected value is &#39;ManagedImage&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

@@ -22,6 +22,10 @@ public final class TriggerBuildSourceStorageSourceArgs extends com.pulumi.resour
     @Import(name="bucket", required=true)
     private Output<String> bucket;
 
+    /**
+     * @return Google Cloud Storage bucket containing the source.
+     * 
+     */
     public Output<String> bucket() {
         return this.bucket;
     }
@@ -34,6 +38,11 @@ public final class TriggerBuildSourceStorageSourceArgs extends com.pulumi.resour
     @Import(name="generation")
     private @Nullable Output<String> generation;
 
+    /**
+     * @return Google Cloud Storage generation for the object.
+     * If the generation is omitted, the latest generation will be used
+     * 
+     */
     public Optional<Output<String>> generation() {
         return Optional.ofNullable(this.generation);
     }
@@ -46,6 +55,11 @@ public final class TriggerBuildSourceStorageSourceArgs extends com.pulumi.resour
     @Import(name="object", required=true)
     private Output<String> object;
 
+    /**
+     * @return Google Cloud Storage object containing the source.
+     * This object must be a gzipped archive file (.tar.gz) containing source to build.
+     * 
+     */
     public Output<String> object() {
         return this.object;
     }
@@ -76,29 +90,69 @@ public final class TriggerBuildSourceStorageSourceArgs extends com.pulumi.resour
             $ = new TriggerBuildSourceStorageSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bucket Google Cloud Storage bucket containing the source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucket(Output<String> bucket) {
             $.bucket = bucket;
             return this;
         }
 
+        /**
+         * @param bucket Google Cloud Storage bucket containing the source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucket(String bucket) {
             return bucket(Output.of(bucket));
         }
 
+        /**
+         * @param generation Google Cloud Storage generation for the object.
+         * If the generation is omitted, the latest generation will be used
+         * 
+         * @return builder
+         * 
+         */
         public Builder generation(@Nullable Output<String> generation) {
             $.generation = generation;
             return this;
         }
 
+        /**
+         * @param generation Google Cloud Storage generation for the object.
+         * If the generation is omitted, the latest generation will be used
+         * 
+         * @return builder
+         * 
+         */
         public Builder generation(String generation) {
             return generation(Output.of(generation));
         }
 
+        /**
+         * @param object Google Cloud Storage object containing the source.
+         * This object must be a gzipped archive file (.tar.gz) containing source to build.
+         * 
+         * @return builder
+         * 
+         */
         public Builder object(Output<String> object) {
             $.object = object;
             return this;
         }
 
+        /**
+         * @param object Google Cloud Storage object containing the source.
+         * This object must be a gzipped archive file (.tar.gz) containing source to build.
+         * 
+         * @return builder
+         * 
+         */
         public Builder object(String object) {
             return object(Output.of(object));
         }

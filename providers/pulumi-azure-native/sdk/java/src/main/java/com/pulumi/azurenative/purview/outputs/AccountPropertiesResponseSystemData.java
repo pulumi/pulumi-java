@@ -10,32 +10,32 @@ import java.util.Objects;
 @CustomType
 public final class AccountPropertiesResponseSystemData {
     /**
-     * The timestamp of resource creation (UTC).
+     * @return The timestamp of resource creation (UTC).
      * 
      */
     private final String createdAt;
     /**
-     * The identity that created the resource.
+     * @return The identity that created the resource.
      * 
      */
     private final String createdBy;
     /**
-     * The type of identity that created the resource.
+     * @return The type of identity that created the resource.
      * 
      */
     private final String createdByType;
     /**
-     * The timestamp of the last modification the resource (UTC).
+     * @return The timestamp of the last modification the resource (UTC).
      * 
      */
     private final String lastModifiedAt;
     /**
-     * The identity that last modified the resource.
+     * @return The identity that last modified the resource.
      * 
      */
     private final String lastModifiedBy;
     /**
-     * The type of identity that last modified the resource.
+     * @return The type of identity that last modified the resource.
      * 
      */
     private final String lastModifiedByType;
@@ -57,44 +57,44 @@ public final class AccountPropertiesResponseSystemData {
     }
 
     /**
-     * The timestamp of resource creation (UTC).
+     * @return The timestamp of resource creation (UTC).
      * 
-    */
+     */
     public String createdAt() {
         return this.createdAt;
     }
     /**
-     * The identity that created the resource.
+     * @return The identity that created the resource.
      * 
-    */
+     */
     public String createdBy() {
         return this.createdBy;
     }
     /**
-     * The type of identity that created the resource.
+     * @return The type of identity that created the resource.
      * 
-    */
+     */
     public String createdByType() {
         return this.createdByType;
     }
     /**
-     * The timestamp of the last modification the resource (UTC).
+     * @return The timestamp of the last modification the resource (UTC).
      * 
-    */
+     */
     public String lastModifiedAt() {
         return this.lastModifiedAt;
     }
     /**
-     * The identity that last modified the resource.
+     * @return The identity that last modified the resource.
      * 
-    */
+     */
     public String lastModifiedBy() {
         return this.lastModifiedBy;
     }
     /**
-     * The type of identity that last modified the resource.
+     * @return The type of identity that last modified the resource.
      * 
-    */
+     */
     public String lastModifiedByType() {
         return this.lastModifiedByType;
     }

@@ -19,6 +19,10 @@ public final class GetRuleGroupsNamespaceArgs extends com.pulumi.resources.Invok
     @Import(name="arn", required=true)
     private String arn;
 
+    /**
+     * @return The RuleGroupsNamespace ARN.
+     * 
+     */
     public String arn() {
         return this.arn;
     }
@@ -47,6 +51,12 @@ public final class GetRuleGroupsNamespaceArgs extends com.pulumi.resources.Invok
             $ = new GetRuleGroupsNamespaceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn The RuleGroupsNamespace ARN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             $.arn = arn;
             return this;

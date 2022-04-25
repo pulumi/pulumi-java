@@ -23,6 +23,10 @@ public final class SecretManagerSecretResponse extends com.pulumi.resources.Invo
     @Import(name="env", required=true)
     private String env;
 
+    /**
+     * @return Environment variable name to associate with the secret. Secret environment variables must be unique across all of a build&#39;s secrets, and must be used by at least one build step.
+     * 
+     */
     public String env() {
         return this.env;
     }
@@ -34,6 +38,10 @@ public final class SecretManagerSecretResponse extends com.pulumi.resources.Invo
     @Import(name="versionName", required=true)
     private String versionName;
 
+    /**
+     * @return Resource name of the SecretVersion. In format: projects/*{@literal /}secrets/*{@literal /}versions/*
+     * 
+     */
     public String versionName() {
         return this.versionName;
     }
@@ -63,11 +71,23 @@ public final class SecretManagerSecretResponse extends com.pulumi.resources.Invo
             $ = new SecretManagerSecretResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param env Environment variable name to associate with the secret. Secret environment variables must be unique across all of a build&#39;s secrets, and must be used by at least one build step.
+         * 
+         * @return builder
+         * 
+         */
         public Builder env(String env) {
             $.env = env;
             return this;
         }
 
+        /**
+         * @param versionName Resource name of the SecretVersion. In format: projects/*{@literal /}secrets/*{@literal /}versions/*
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionName(String versionName) {
             $.versionName = versionName;
             return this;

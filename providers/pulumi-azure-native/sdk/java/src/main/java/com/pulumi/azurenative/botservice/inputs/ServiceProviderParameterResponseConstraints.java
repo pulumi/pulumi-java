@@ -25,6 +25,10 @@ public final class ServiceProviderParameterResponseConstraints extends com.pulum
     @Import(name="required")
     private @Nullable Boolean required;
 
+    /**
+     * @return Whether required the constraints of the bot meta data.
+     * 
+     */
     public Optional<Boolean> required() {
         return Optional.ofNullable(this.required);
     }
@@ -53,6 +57,12 @@ public final class ServiceProviderParameterResponseConstraints extends com.pulum
             $ = new ServiceProviderParameterResponseConstraints(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param required Whether required the constraints of the bot meta data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder required(@Nullable Boolean required) {
             $.required = required;
             return this;

@@ -28,6 +28,10 @@ public final class RoutingServiceBusTopicEndpointPropertiesArgs extends com.pulu
     @Import(name="authenticationType")
     private @Nullable Output<Either<String,AuthenticationType>> authenticationType;
 
+    /**
+     * @return Method used to authenticate against the service bus topic endpoint
+     * 
+     */
     public Optional<Output<Either<String,AuthenticationType>>> authenticationType() {
         return Optional.ofNullable(this.authenticationType);
     }
@@ -39,6 +43,10 @@ public final class RoutingServiceBusTopicEndpointPropertiesArgs extends com.pulu
     @Import(name="connectionString")
     private @Nullable Output<String> connectionString;
 
+    /**
+     * @return The connection string of the service bus topic endpoint.
+     * 
+     */
     public Optional<Output<String>> connectionString() {
         return Optional.ofNullable(this.connectionString);
     }
@@ -50,6 +58,10 @@ public final class RoutingServiceBusTopicEndpointPropertiesArgs extends com.pulu
     @Import(name="endpointUri")
     private @Nullable Output<String> endpointUri;
 
+    /**
+     * @return The url of the service bus topic endpoint. It must include the protocol sb://
+     * 
+     */
     public Optional<Output<String>> endpointUri() {
         return Optional.ofNullable(this.endpointUri);
     }
@@ -61,6 +73,10 @@ public final class RoutingServiceBusTopicEndpointPropertiesArgs extends com.pulu
     @Import(name="entityPath")
     private @Nullable Output<String> entityPath;
 
+    /**
+     * @return Queue name on the service bus topic
+     * 
+     */
     public Optional<Output<String>> entityPath() {
         return Optional.ofNullable(this.entityPath);
     }
@@ -72,6 +88,10 @@ public final class RoutingServiceBusTopicEndpointPropertiesArgs extends com.pulu
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Id of the service bus topic endpoint
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -83,6 +103,10 @@ public final class RoutingServiceBusTopicEndpointPropertiesArgs extends com.pulu
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.  The name need not be the same as the actual topic name.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -94,6 +118,10 @@ public final class RoutingServiceBusTopicEndpointPropertiesArgs extends com.pulu
     @Import(name="resourceGroup")
     private @Nullable Output<String> resourceGroup;
 
+    /**
+     * @return The name of the resource group of the service bus topic endpoint.
+     * 
+     */
     public Optional<Output<String>> resourceGroup() {
         return Optional.ofNullable(this.resourceGroup);
     }
@@ -105,6 +133,10 @@ public final class RoutingServiceBusTopicEndpointPropertiesArgs extends com.pulu
     @Import(name="subscriptionId")
     private @Nullable Output<String> subscriptionId;
 
+    /**
+     * @return The subscription identifier of the service bus topic endpoint.
+     * 
+     */
     public Optional<Output<String>> subscriptionId() {
         return Optional.ofNullable(this.subscriptionId);
     }
@@ -140,82 +172,190 @@ public final class RoutingServiceBusTopicEndpointPropertiesArgs extends com.pulu
             $ = new RoutingServiceBusTopicEndpointPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authenticationType Method used to authenticate against the service bus topic endpoint
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationType(@Nullable Output<Either<String,AuthenticationType>> authenticationType) {
             $.authenticationType = authenticationType;
             return this;
         }
 
+        /**
+         * @param authenticationType Method used to authenticate against the service bus topic endpoint
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationType(Either<String,AuthenticationType> authenticationType) {
             return authenticationType(Output.of(authenticationType));
         }
 
+        /**
+         * @param authenticationType Method used to authenticate against the service bus topic endpoint
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationType(String authenticationType) {
             return authenticationType(Either.ofLeft(authenticationType));
         }
 
+        /**
+         * @param authenticationType Method used to authenticate against the service bus topic endpoint
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationType(AuthenticationType authenticationType) {
             return authenticationType(Either.ofRight(authenticationType));
         }
 
+        /**
+         * @param connectionString The connection string of the service bus topic endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionString(@Nullable Output<String> connectionString) {
             $.connectionString = connectionString;
             return this;
         }
 
+        /**
+         * @param connectionString The connection string of the service bus topic endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionString(String connectionString) {
             return connectionString(Output.of(connectionString));
         }
 
+        /**
+         * @param endpointUri The url of the service bus topic endpoint. It must include the protocol sb://
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointUri(@Nullable Output<String> endpointUri) {
             $.endpointUri = endpointUri;
             return this;
         }
 
+        /**
+         * @param endpointUri The url of the service bus topic endpoint. It must include the protocol sb://
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointUri(String endpointUri) {
             return endpointUri(Output.of(endpointUri));
         }
 
+        /**
+         * @param entityPath Queue name on the service bus topic
+         * 
+         * @return builder
+         * 
+         */
         public Builder entityPath(@Nullable Output<String> entityPath) {
             $.entityPath = entityPath;
             return this;
         }
 
+        /**
+         * @param entityPath Queue name on the service bus topic
+         * 
+         * @return builder
+         * 
+         */
         public Builder entityPath(String entityPath) {
             return entityPath(Output.of(entityPath));
         }
 
+        /**
+         * @param id Id of the service bus topic endpoint
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Id of the service bus topic endpoint
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param name The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.  The name need not be the same as the actual topic name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.  The name need not be the same as the actual topic name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param resourceGroup The name of the resource group of the service bus topic endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroup(@Nullable Output<String> resourceGroup) {
             $.resourceGroup = resourceGroup;
             return this;
         }
 
+        /**
+         * @param resourceGroup The name of the resource group of the service bus topic endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroup(String resourceGroup) {
             return resourceGroup(Output.of(resourceGroup));
         }
 
+        /**
+         * @param subscriptionId The subscription identifier of the service bus topic endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptionId(@Nullable Output<String> subscriptionId) {
             $.subscriptionId = subscriptionId;
             return this;
         }
 
+        /**
+         * @param subscriptionId The subscription identifier of the service bus topic endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptionId(String subscriptionId) {
             return subscriptionId(Output.of(subscriptionId));
         }

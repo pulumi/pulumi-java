@@ -27,6 +27,10 @@ public final class GooglePrivacyDlpV2DatastoreOptionsArgs extends com.pulumi.res
     @Import(name="kind")
     private @Nullable Output<GooglePrivacyDlpV2KindExpressionArgs> kind;
 
+    /**
+     * @return The kind to process.
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2KindExpressionArgs>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -38,6 +42,10 @@ public final class GooglePrivacyDlpV2DatastoreOptionsArgs extends com.pulumi.res
     @Import(name="partitionId")
     private @Nullable Output<GooglePrivacyDlpV2PartitionIdArgs> partitionId;
 
+    /**
+     * @return A partition ID identifies a grouping of entities. The grouping is always by project and namespace, however the namespace ID may be empty.
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2PartitionIdArgs>> partitionId() {
         return Optional.ofNullable(this.partitionId);
     }
@@ -67,20 +75,44 @@ public final class GooglePrivacyDlpV2DatastoreOptionsArgs extends com.pulumi.res
             $ = new GooglePrivacyDlpV2DatastoreOptionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kind The kind to process.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<GooglePrivacyDlpV2KindExpressionArgs> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind The kind to process.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(GooglePrivacyDlpV2KindExpressionArgs kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param partitionId A partition ID identifies a grouping of entities. The grouping is always by project and namespace, however the namespace ID may be empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionId(@Nullable Output<GooglePrivacyDlpV2PartitionIdArgs> partitionId) {
             $.partitionId = partitionId;
             return this;
         }
 
+        /**
+         * @param partitionId A partition ID identifies a grouping of entities. The grouping is always by project and namespace, however the namespace ID may be empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionId(GooglePrivacyDlpV2PartitionIdArgs partitionId) {
             return partitionId(Output.of(partitionId));
         }

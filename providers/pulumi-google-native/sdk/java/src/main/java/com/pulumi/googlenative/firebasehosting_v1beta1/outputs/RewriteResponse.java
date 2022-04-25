@@ -12,32 +12,32 @@ import java.util.Objects;
 @CustomType
 public final class RewriteResponse {
     /**
-     * The request will be forwarded to Firebase Dynamic Links.
+     * @return The request will be forwarded to Firebase Dynamic Links.
      * 
      */
     private final Boolean dynamicLinks;
     /**
-     * The function to proxy requests to. Must match the exported function name exactly.
+     * @return The function to proxy requests to. Must match the exported function name exactly.
      * 
      */
     private final String function;
     /**
-     * The user-supplied [glob](https://firebase.google.com/docs/hosting/full-config#glob_pattern_matching) to match against the request URL path.
+     * @return The user-supplied [glob](https://firebase.google.com/docs/hosting/full-config#glob_pattern_matching) to match against the request URL path.
      * 
      */
     private final String glob;
     /**
-     * The URL path to rewrite the request to.
+     * @return The URL path to rewrite the request to.
      * 
      */
     private final String path;
     /**
-     * The user-supplied RE2 regular expression to match against the request URL path.
+     * @return The user-supplied RE2 regular expression to match against the request URL path.
      * 
      */
     private final String regex;
     /**
-     * The request will be forwarded to Cloud Run.
+     * @return The request will be forwarded to Cloud Run.
      * 
      */
     private final CloudRunRewriteResponse run;
@@ -59,44 +59,44 @@ public final class RewriteResponse {
     }
 
     /**
-     * The request will be forwarded to Firebase Dynamic Links.
+     * @return The request will be forwarded to Firebase Dynamic Links.
      * 
-    */
+     */
     public Boolean dynamicLinks() {
         return this.dynamicLinks;
     }
     /**
-     * The function to proxy requests to. Must match the exported function name exactly.
+     * @return The function to proxy requests to. Must match the exported function name exactly.
      * 
-    */
+     */
     public String function() {
         return this.function;
     }
     /**
-     * The user-supplied [glob](https://firebase.google.com/docs/hosting/full-config#glob_pattern_matching) to match against the request URL path.
+     * @return The user-supplied [glob](https://firebase.google.com/docs/hosting/full-config#glob_pattern_matching) to match against the request URL path.
      * 
-    */
+     */
     public String glob() {
         return this.glob;
     }
     /**
-     * The URL path to rewrite the request to.
+     * @return The URL path to rewrite the request to.
      * 
-    */
+     */
     public String path() {
         return this.path;
     }
     /**
-     * The user-supplied RE2 regular expression to match against the request URL path.
+     * @return The user-supplied RE2 regular expression to match against the request URL path.
      * 
-    */
+     */
     public String regex() {
         return this.regex;
     }
     /**
-     * The request will be forwarded to Cloud Run.
+     * @return The request will be forwarded to Cloud Run.
      * 
-    */
+     */
     public CloudRunRewriteResponse run() {
         return this.run;
     }

@@ -22,6 +22,10 @@ public final class PipelineDefinitionPipelineObjectFieldGetArgs extends com.pulu
     @Import(name="key", required=true)
     private Output<String> key;
 
+    /**
+     * @return Field identifier.
+     * 
+     */
     public Output<String> key() {
         return this.key;
     }
@@ -33,6 +37,10 @@ public final class PipelineDefinitionPipelineObjectFieldGetArgs extends com.pulu
     @Import(name="refValue")
     private @Nullable Output<String> refValue;
 
+    /**
+     * @return Field value, expressed as the identifier of another object
+     * 
+     */
     public Optional<Output<String>> refValue() {
         return Optional.ofNullable(this.refValue);
     }
@@ -44,6 +52,10 @@ public final class PipelineDefinitionPipelineObjectFieldGetArgs extends com.pulu
     @Import(name="stringValue")
     private @Nullable Output<String> stringValue;
 
+    /**
+     * @return Field value, expressed as a String.
+     * 
+     */
     public Optional<Output<String>> stringValue() {
         return Optional.ofNullable(this.stringValue);
     }
@@ -74,29 +86,65 @@ public final class PipelineDefinitionPipelineObjectFieldGetArgs extends com.pulu
             $ = new PipelineDefinitionPipelineObjectFieldGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param key Field identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(Output<String> key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param key Field identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             return key(Output.of(key));
         }
 
+        /**
+         * @param refValue Field value, expressed as the identifier of another object
+         * 
+         * @return builder
+         * 
+         */
         public Builder refValue(@Nullable Output<String> refValue) {
             $.refValue = refValue;
             return this;
         }
 
+        /**
+         * @param refValue Field value, expressed as the identifier of another object
+         * 
+         * @return builder
+         * 
+         */
         public Builder refValue(String refValue) {
             return refValue(Output.of(refValue));
         }
 
+        /**
+         * @param stringValue Field value, expressed as a String.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stringValue(@Nullable Output<String> stringValue) {
             $.stringValue = stringValue;
             return this;
         }
 
+        /**
+         * @param stringValue Field value, expressed as a String.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stringValue(String stringValue) {
             return stringValue(Output.of(stringValue));
         }

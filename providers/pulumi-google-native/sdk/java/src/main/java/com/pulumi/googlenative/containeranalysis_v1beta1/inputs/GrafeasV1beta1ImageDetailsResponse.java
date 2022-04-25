@@ -23,6 +23,10 @@ public final class GrafeasV1beta1ImageDetailsResponse extends com.pulumi.resourc
     @Import(name="derivedImage", required=true)
     private DerivedResponse derivedImage;
 
+    /**
+     * @return Immutable. The child image derived from the base image.
+     * 
+     */
     public DerivedResponse derivedImage() {
         return this.derivedImage;
     }
@@ -51,6 +55,12 @@ public final class GrafeasV1beta1ImageDetailsResponse extends com.pulumi.resourc
             $ = new GrafeasV1beta1ImageDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param derivedImage Immutable. The child image derived from the base image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder derivedImage(DerivedResponse derivedImage) {
             $.derivedImage = derivedImage;
             return this;

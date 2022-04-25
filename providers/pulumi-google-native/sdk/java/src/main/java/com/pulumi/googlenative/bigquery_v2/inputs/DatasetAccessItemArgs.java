@@ -25,6 +25,10 @@ public final class DatasetAccessItemArgs extends com.pulumi.resources.ResourceAr
     @Import(name="dataset")
     private @Nullable Output<DatasetAccessEntryArgs> dataset;
 
+    /**
+     * @return [Pick one] A grant authorizing all resources of a particular type in a particular dataset access to this dataset. Only views are supported for now. The role field is not required when this field is set. If that dataset is deleted and re-created, its access needs to be granted again via an update operation.
+     * 
+     */
     public Optional<Output<DatasetAccessEntryArgs>> dataset() {
         return Optional.ofNullable(this.dataset);
     }
@@ -36,6 +40,10 @@ public final class DatasetAccessItemArgs extends com.pulumi.resources.ResourceAr
     @Import(name="domain")
     private @Nullable Output<String> domain;
 
+    /**
+     * @return [Pick one] A domain to grant access to. Any users signed in with the domain specified will be granted the specified access. Example: &#34;example.com&#34;. Maps to IAM policy member &#34;domain:DOMAIN&#34;.
+     * 
+     */
     public Optional<Output<String>> domain() {
         return Optional.ofNullable(this.domain);
     }
@@ -47,6 +55,10 @@ public final class DatasetAccessItemArgs extends com.pulumi.resources.ResourceAr
     @Import(name="groupByEmail")
     private @Nullable Output<String> groupByEmail;
 
+    /**
+     * @return [Pick one] An email address of a Google Group to grant access to. Maps to IAM policy member &#34;group:GROUP&#34;.
+     * 
+     */
     public Optional<Output<String>> groupByEmail() {
         return Optional.ofNullable(this.groupByEmail);
     }
@@ -58,6 +70,10 @@ public final class DatasetAccessItemArgs extends com.pulumi.resources.ResourceAr
     @Import(name="iamMember")
     private @Nullable Output<String> iamMember;
 
+    /**
+     * @return [Pick one] Some other type of member that appears in the IAM Policy but isn&#39;t a user, group, domain, or special group.
+     * 
+     */
     public Optional<Output<String>> iamMember() {
         return Optional.ofNullable(this.iamMember);
     }
@@ -69,6 +85,10 @@ public final class DatasetAccessItemArgs extends com.pulumi.resources.ResourceAr
     @Import(name="role")
     private @Nullable Output<String> role;
 
+    /**
+     * @return [Required] An IAM role ID that should be granted to the user, group, or domain specified in this access entry. The following legacy mappings will be applied: OWNER  roles/bigquery.dataOwner WRITER  roles/bigquery.dataEditor READER  roles/bigquery.dataViewer This field will accept any of the above formats, but will return only the legacy format. For example, if you set this field to &#34;roles/bigquery.dataOwner&#34;, it will be returned back as &#34;OWNER&#34;.
+     * 
+     */
     public Optional<Output<String>> role() {
         return Optional.ofNullable(this.role);
     }
@@ -80,6 +100,10 @@ public final class DatasetAccessItemArgs extends com.pulumi.resources.ResourceAr
     @Import(name="routine")
     private @Nullable Output<RoutineReferenceArgs> routine;
 
+    /**
+     * @return [Pick one] A routine from a different dataset to grant access to. Queries executed against that routine will have read access to views/tables/routines in this dataset. Only UDF is supported for now. The role field is not required when this field is set. If that routine is updated by any user, access to the routine needs to be granted again via an update operation.
+     * 
+     */
     public Optional<Output<RoutineReferenceArgs>> routine() {
         return Optional.ofNullable(this.routine);
     }
@@ -91,6 +115,10 @@ public final class DatasetAccessItemArgs extends com.pulumi.resources.ResourceAr
     @Import(name="specialGroup")
     private @Nullable Output<String> specialGroup;
 
+    /**
+     * @return [Pick one] A special group to grant access to. Possible values include: projectOwners: Owners of the enclosing project. projectReaders: Readers of the enclosing project. projectWriters: Writers of the enclosing project. allAuthenticatedUsers: All authenticated BigQuery users. Maps to similarly-named IAM members.
+     * 
+     */
     public Optional<Output<String>> specialGroup() {
         return Optional.ofNullable(this.specialGroup);
     }
@@ -102,6 +130,10 @@ public final class DatasetAccessItemArgs extends com.pulumi.resources.ResourceAr
     @Import(name="userByEmail")
     private @Nullable Output<String> userByEmail;
 
+    /**
+     * @return [Pick one] An email address of a user to grant access to. For example: fred@example.com. Maps to IAM policy member &#34;user:EMAIL&#34; or &#34;serviceAccount:EMAIL&#34;.
+     * 
+     */
     public Optional<Output<String>> userByEmail() {
         return Optional.ofNullable(this.userByEmail);
     }
@@ -113,6 +145,10 @@ public final class DatasetAccessItemArgs extends com.pulumi.resources.ResourceAr
     @Import(name="view")
     private @Nullable Output<TableReferenceArgs> view;
 
+    /**
+     * @return [Pick one] A view from a different dataset to grant access to. Queries executed against that view will have read access to tables in this dataset. The role field is not required when this field is set. If that view is updated by any user, access to the view needs to be granted again via an update operation.
+     * 
+     */
     public Optional<Output<TableReferenceArgs>> view() {
         return Optional.ofNullable(this.view);
     }
@@ -149,83 +185,191 @@ public final class DatasetAccessItemArgs extends com.pulumi.resources.ResourceAr
             $ = new DatasetAccessItemArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataset [Pick one] A grant authorizing all resources of a particular type in a particular dataset access to this dataset. Only views are supported for now. The role field is not required when this field is set. If that dataset is deleted and re-created, its access needs to be granted again via an update operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataset(@Nullable Output<DatasetAccessEntryArgs> dataset) {
             $.dataset = dataset;
             return this;
         }
 
+        /**
+         * @param dataset [Pick one] A grant authorizing all resources of a particular type in a particular dataset access to this dataset. Only views are supported for now. The role field is not required when this field is set. If that dataset is deleted and re-created, its access needs to be granted again via an update operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataset(DatasetAccessEntryArgs dataset) {
             return dataset(Output.of(dataset));
         }
 
+        /**
+         * @param domain [Pick one] A domain to grant access to. Any users signed in with the domain specified will be granted the specified access. Example: &#34;example.com&#34;. Maps to IAM policy member &#34;domain:DOMAIN&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domain(@Nullable Output<String> domain) {
             $.domain = domain;
             return this;
         }
 
+        /**
+         * @param domain [Pick one] A domain to grant access to. Any users signed in with the domain specified will be granted the specified access. Example: &#34;example.com&#34;. Maps to IAM policy member &#34;domain:DOMAIN&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domain(String domain) {
             return domain(Output.of(domain));
         }
 
+        /**
+         * @param groupByEmail [Pick one] An email address of a Google Group to grant access to. Maps to IAM policy member &#34;group:GROUP&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupByEmail(@Nullable Output<String> groupByEmail) {
             $.groupByEmail = groupByEmail;
             return this;
         }
 
+        /**
+         * @param groupByEmail [Pick one] An email address of a Google Group to grant access to. Maps to IAM policy member &#34;group:GROUP&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupByEmail(String groupByEmail) {
             return groupByEmail(Output.of(groupByEmail));
         }
 
+        /**
+         * @param iamMember [Pick one] Some other type of member that appears in the IAM Policy but isn&#39;t a user, group, domain, or special group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iamMember(@Nullable Output<String> iamMember) {
             $.iamMember = iamMember;
             return this;
         }
 
+        /**
+         * @param iamMember [Pick one] Some other type of member that appears in the IAM Policy but isn&#39;t a user, group, domain, or special group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iamMember(String iamMember) {
             return iamMember(Output.of(iamMember));
         }
 
+        /**
+         * @param role [Required] An IAM role ID that should be granted to the user, group, or domain specified in this access entry. The following legacy mappings will be applied: OWNER  roles/bigquery.dataOwner WRITER  roles/bigquery.dataEditor READER  roles/bigquery.dataViewer This field will accept any of the above formats, but will return only the legacy format. For example, if you set this field to &#34;roles/bigquery.dataOwner&#34;, it will be returned back as &#34;OWNER&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(@Nullable Output<String> role) {
             $.role = role;
             return this;
         }
 
+        /**
+         * @param role [Required] An IAM role ID that should be granted to the user, group, or domain specified in this access entry. The following legacy mappings will be applied: OWNER  roles/bigquery.dataOwner WRITER  roles/bigquery.dataEditor READER  roles/bigquery.dataViewer This field will accept any of the above formats, but will return only the legacy format. For example, if you set this field to &#34;roles/bigquery.dataOwner&#34;, it will be returned back as &#34;OWNER&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(String role) {
             return role(Output.of(role));
         }
 
+        /**
+         * @param routine [Pick one] A routine from a different dataset to grant access to. Queries executed against that routine will have read access to views/tables/routines in this dataset. Only UDF is supported for now. The role field is not required when this field is set. If that routine is updated by any user, access to the routine needs to be granted again via an update operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routine(@Nullable Output<RoutineReferenceArgs> routine) {
             $.routine = routine;
             return this;
         }
 
+        /**
+         * @param routine [Pick one] A routine from a different dataset to grant access to. Queries executed against that routine will have read access to views/tables/routines in this dataset. Only UDF is supported for now. The role field is not required when this field is set. If that routine is updated by any user, access to the routine needs to be granted again via an update operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routine(RoutineReferenceArgs routine) {
             return routine(Output.of(routine));
         }
 
+        /**
+         * @param specialGroup [Pick one] A special group to grant access to. Possible values include: projectOwners: Owners of the enclosing project. projectReaders: Readers of the enclosing project. projectWriters: Writers of the enclosing project. allAuthenticatedUsers: All authenticated BigQuery users. Maps to similarly-named IAM members.
+         * 
+         * @return builder
+         * 
+         */
         public Builder specialGroup(@Nullable Output<String> specialGroup) {
             $.specialGroup = specialGroup;
             return this;
         }
 
+        /**
+         * @param specialGroup [Pick one] A special group to grant access to. Possible values include: projectOwners: Owners of the enclosing project. projectReaders: Readers of the enclosing project. projectWriters: Writers of the enclosing project. allAuthenticatedUsers: All authenticated BigQuery users. Maps to similarly-named IAM members.
+         * 
+         * @return builder
+         * 
+         */
         public Builder specialGroup(String specialGroup) {
             return specialGroup(Output.of(specialGroup));
         }
 
+        /**
+         * @param userByEmail [Pick one] An email address of a user to grant access to. For example: fred@example.com. Maps to IAM policy member &#34;user:EMAIL&#34; or &#34;serviceAccount:EMAIL&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userByEmail(@Nullable Output<String> userByEmail) {
             $.userByEmail = userByEmail;
             return this;
         }
 
+        /**
+         * @param userByEmail [Pick one] An email address of a user to grant access to. For example: fred@example.com. Maps to IAM policy member &#34;user:EMAIL&#34; or &#34;serviceAccount:EMAIL&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userByEmail(String userByEmail) {
             return userByEmail(Output.of(userByEmail));
         }
 
+        /**
+         * @param view [Pick one] A view from a different dataset to grant access to. Queries executed against that view will have read access to tables in this dataset. The role field is not required when this field is set. If that view is updated by any user, access to the view needs to be granted again via an update operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder view(@Nullable Output<TableReferenceArgs> view) {
             $.view = view;
             return this;
         }
 
+        /**
+         * @param view [Pick one] A view from a different dataset to grant access to. Queries executed against that view will have read access to tables in this dataset. The role field is not required when this field is set. If that view is updated by any user, access to the view needs to be granted again via an update operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder view(TableReferenceArgs view) {
             return view(Output.of(view));
         }

@@ -26,6 +26,10 @@ public final class DataBoxSecretResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="accountCredentialDetails", required=true)
     private List<AccountCredentialDetailsResponse> accountCredentialDetails;
 
+    /**
+     * @return Per account level access credentials.
+     * 
+     */
     public List<AccountCredentialDetailsResponse> accountCredentialDetails() {
         return this.accountCredentialDetails;
     }
@@ -37,6 +41,10 @@ public final class DataBoxSecretResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="devicePassword", required=true)
     private String devicePassword;
 
+    /**
+     * @return Password for out of the box experience on device.
+     * 
+     */
     public String devicePassword() {
         return this.devicePassword;
     }
@@ -48,6 +56,10 @@ public final class DataBoxSecretResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="deviceSerialNumber", required=true)
     private String deviceSerialNumber;
 
+    /**
+     * @return Serial number of the assigned device.
+     * 
+     */
     public String deviceSerialNumber() {
         return this.deviceSerialNumber;
     }
@@ -59,6 +71,10 @@ public final class DataBoxSecretResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="encodedValidationCertPubKey", required=true)
     private String encodedValidationCertPubKey;
 
+    /**
+     * @return The base 64 encoded public key to authenticate with the device
+     * 
+     */
     public String encodedValidationCertPubKey() {
         return this.encodedValidationCertPubKey;
     }
@@ -70,6 +86,10 @@ public final class DataBoxSecretResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="networkConfigurations", required=true)
     private List<ApplianceNetworkConfigurationResponse> networkConfigurations;
 
+    /**
+     * @return Network configuration of the appliance.
+     * 
+     */
     public List<ApplianceNetworkConfigurationResponse> networkConfigurations() {
         return this.networkConfigurations;
     }
@@ -102,35 +122,77 @@ public final class DataBoxSecretResponse extends com.pulumi.resources.InvokeArgs
             $ = new DataBoxSecretResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountCredentialDetails Per account level access credentials.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountCredentialDetails(List<AccountCredentialDetailsResponse> accountCredentialDetails) {
             $.accountCredentialDetails = accountCredentialDetails;
             return this;
         }
 
+        /**
+         * @param accountCredentialDetails Per account level access credentials.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountCredentialDetails(AccountCredentialDetailsResponse... accountCredentialDetails) {
             return accountCredentialDetails(List.of(accountCredentialDetails));
         }
 
+        /**
+         * @param devicePassword Password for out of the box experience on device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder devicePassword(String devicePassword) {
             $.devicePassword = devicePassword;
             return this;
         }
 
+        /**
+         * @param deviceSerialNumber Serial number of the assigned device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceSerialNumber(String deviceSerialNumber) {
             $.deviceSerialNumber = deviceSerialNumber;
             return this;
         }
 
+        /**
+         * @param encodedValidationCertPubKey The base 64 encoded public key to authenticate with the device
+         * 
+         * @return builder
+         * 
+         */
         public Builder encodedValidationCertPubKey(String encodedValidationCertPubKey) {
             $.encodedValidationCertPubKey = encodedValidationCertPubKey;
             return this;
         }
 
+        /**
+         * @param networkConfigurations Network configuration of the appliance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkConfigurations(List<ApplianceNetworkConfigurationResponse> networkConfigurations) {
             $.networkConfigurations = networkConfigurations;
             return this;
         }
 
+        /**
+         * @param networkConfigurations Network configuration of the appliance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkConfigurations(ApplianceNetworkConfigurationResponse... networkConfigurations) {
             return networkConfigurations(List.of(networkConfigurations));
         }

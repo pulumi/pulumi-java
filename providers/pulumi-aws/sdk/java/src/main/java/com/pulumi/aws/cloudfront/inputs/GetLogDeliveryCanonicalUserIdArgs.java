@@ -21,6 +21,10 @@ public final class GetLogDeliveryCanonicalUserIdArgs extends com.pulumi.resource
     @Import(name="region")
     private @Nullable String region;
 
+    /**
+     * @return The region you&#39;d like the zone for. By default, fetches the current region.
+     * 
+     */
     public Optional<String> region() {
         return Optional.ofNullable(this.region);
     }
@@ -49,6 +53,12 @@ public final class GetLogDeliveryCanonicalUserIdArgs extends com.pulumi.resource
             $ = new GetLogDeliveryCanonicalUserIdArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param region The region you&#39;d like the zone for. By default, fetches the current region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(@Nullable String region) {
             $.region = region;
             return this;

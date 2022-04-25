@@ -13,27 +13,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AzureFunctionReceiverResponse {
     /**
-     * The azure resource id of the function app.
+     * @return The azure resource id of the function app.
      * 
      */
     private final String functionAppResourceId;
     /**
-     * The function name in the function app.
+     * @return The function name in the function app.
      * 
      */
     private final String functionName;
     /**
-     * The http trigger url where http request sent to.
+     * @return The http trigger url where http request sent to.
      * 
      */
     private final String httpTriggerUrl;
     /**
-     * The name of the azure function receiver. Names must be unique across all receivers within an action group.
+     * @return The name of the azure function receiver. Names must be unique across all receivers within an action group.
      * 
      */
     private final String name;
     /**
-     * Indicates whether to use common alert schema.
+     * @return Indicates whether to use common alert schema.
      * 
      */
     private final @Nullable Boolean useCommonAlertSchema;
@@ -53,37 +53,37 @@ public final class AzureFunctionReceiverResponse {
     }
 
     /**
-     * The azure resource id of the function app.
+     * @return The azure resource id of the function app.
      * 
-    */
+     */
     public String functionAppResourceId() {
         return this.functionAppResourceId;
     }
     /**
-     * The function name in the function app.
+     * @return The function name in the function app.
      * 
-    */
+     */
     public String functionName() {
         return this.functionName;
     }
     /**
-     * The http trigger url where http request sent to.
+     * @return The http trigger url where http request sent to.
      * 
-    */
+     */
     public String httpTriggerUrl() {
         return this.httpTriggerUrl;
     }
     /**
-     * The name of the azure function receiver. Names must be unique across all receivers within an action group.
+     * @return The name of the azure function receiver. Names must be unique across all receivers within an action group.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Indicates whether to use common alert schema.
+     * @return Indicates whether to use common alert schema.
      * 
-    */
+     */
     public Optional<Boolean> useCommonAlertSchema() {
         return Optional.ofNullable(this.useCommonAlertSchema);
     }

@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class TaskTag {
     /**
-     * The key for an AWS resource tag.
+     * @return The key for an AWS resource tag.
      * 
      */
     private final String key;
     /**
-     * The value for an AWS resource tag.
+     * @return The value for an AWS resource tag.
      * 
      */
     private final String value;
@@ -29,16 +29,16 @@ public final class TaskTag {
     }
 
     /**
-     * The key for an AWS resource tag.
+     * @return The key for an AWS resource tag.
      * 
-    */
+     */
     public String key() {
         return this.key;
     }
     /**
-     * The value for an AWS resource tag.
+     * @return The value for an AWS resource tag.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

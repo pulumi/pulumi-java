@@ -14,52 +14,52 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetDataExportResult {
     /**
-     * The latest data export rule modification time.
+     * @return The latest data export rule modification time.
      * 
      */
     private final @Nullable String createdDate;
     /**
-     * The data export rule ID.
+     * @return The data export rule ID.
      * 
      */
     private final @Nullable String dataExportId;
     /**
-     * Active when enabled.
+     * @return Active when enabled.
      * 
      */
     private final @Nullable Boolean enable;
     /**
-     * Optional. Allows to define an Event Hub name. Not applicable when destination is Storage Account.
+     * @return Optional. Allows to define an Event Hub name. Not applicable when destination is Storage Account.
      * 
      */
     private final @Nullable String eventHubName;
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
      */
     private final String id;
     /**
-     * Date and time when the export was last modified.
+     * @return Date and time when the export was last modified.
      * 
      */
     private final @Nullable String lastModifiedDate;
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
      */
     private final String name;
     /**
-     * The destination resource ID. This can be copied from the Properties entry of the destination resource in Azure.
+     * @return The destination resource ID. This can be copied from the Properties entry of the destination resource in Azure.
      * 
      */
     private final String resourceId;
     /**
-     * An array of tables to export, for example: [“Heartbeat, SecurityEvent”].
+     * @return An array of tables to export, for example: [“Heartbeat, SecurityEvent”].
      * 
      */
     private final List<String> tableNames;
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     private final String type;
@@ -89,72 +89,72 @@ public final class GetDataExportResult {
     }
 
     /**
-     * The latest data export rule modification time.
+     * @return The latest data export rule modification time.
      * 
-    */
+     */
     public Optional<String> createdDate() {
         return Optional.ofNullable(this.createdDate);
     }
     /**
-     * The data export rule ID.
+     * @return The data export rule ID.
      * 
-    */
+     */
     public Optional<String> dataExportId() {
         return Optional.ofNullable(this.dataExportId);
     }
     /**
-     * Active when enabled.
+     * @return Active when enabled.
      * 
-    */
+     */
     public Optional<Boolean> enable() {
         return Optional.ofNullable(this.enable);
     }
     /**
-     * Optional. Allows to define an Event Hub name. Not applicable when destination is Storage Account.
+     * @return Optional. Allows to define an Event Hub name. Not applicable when destination is Storage Account.
      * 
-    */
+     */
     public Optional<String> eventHubName() {
         return Optional.ofNullable(this.eventHubName);
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Date and time when the export was last modified.
+     * @return Date and time when the export was last modified.
      * 
-    */
+     */
     public Optional<String> lastModifiedDate() {
         return Optional.ofNullable(this.lastModifiedDate);
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The destination resource ID. This can be copied from the Properties entry of the destination resource in Azure.
+     * @return The destination resource ID. This can be copied from the Properties entry of the destination resource in Azure.
      * 
-    */
+     */
     public String resourceId() {
         return this.resourceId;
     }
     /**
-     * An array of tables to export, for example: [“Heartbeat, SecurityEvent”].
+     * @return An array of tables to export, for example: [“Heartbeat, SecurityEvent”].
      * 
-    */
+     */
     public List<String> tableNames() {
         return this.tableNames;
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

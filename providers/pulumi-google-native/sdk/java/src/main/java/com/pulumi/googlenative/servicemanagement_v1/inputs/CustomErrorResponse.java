@@ -25,6 +25,10 @@ public final class CustomErrorResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="rules", required=true)
     private List<CustomErrorRuleResponse> rules;
 
+    /**
+     * @return The list of custom error rules that apply to individual API messages. **NOTE:** All service configuration rules follow &#34;last one wins&#34; order.
+     * 
+     */
     public List<CustomErrorRuleResponse> rules() {
         return this.rules;
     }
@@ -36,6 +40,10 @@ public final class CustomErrorResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="types", required=true)
     private List<String> types;
 
+    /**
+     * @return The list of custom error detail types, e.g. &#39;google.foo.v1.CustomError&#39;.
+     * 
+     */
     public List<String> types() {
         return this.types;
     }
@@ -65,20 +73,44 @@ public final class CustomErrorResponse extends com.pulumi.resources.InvokeArgs {
             $ = new CustomErrorResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param rules The list of custom error rules that apply to individual API messages. **NOTE:** All service configuration rules follow &#34;last one wins&#34; order.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(List<CustomErrorRuleResponse> rules) {
             $.rules = rules;
             return this;
         }
 
+        /**
+         * @param rules The list of custom error rules that apply to individual API messages. **NOTE:** All service configuration rules follow &#34;last one wins&#34; order.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(CustomErrorRuleResponse... rules) {
             return rules(List.of(rules));
         }
 
+        /**
+         * @param types The list of custom error detail types, e.g. &#39;google.foo.v1.CustomError&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder types(List<String> types) {
             $.types = types;
             return this;
         }
 
+        /**
+         * @param types The list of custom error detail types, e.g. &#39;google.foo.v1.CustomError&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder types(String... types) {
             return types(List.of(types));
         }

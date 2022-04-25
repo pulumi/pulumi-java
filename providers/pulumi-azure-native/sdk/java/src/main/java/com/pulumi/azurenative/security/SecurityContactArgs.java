@@ -24,6 +24,10 @@ public final class SecurityContactArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="alertNotifications")
     private @Nullable Output<SecurityContactPropertiesAlertNotificationsArgs> alertNotifications;
 
+    /**
+     * @return Defines whether to send email notifications about new security alerts
+     * 
+     */
     public Optional<Output<SecurityContactPropertiesAlertNotificationsArgs>> alertNotifications() {
         return Optional.ofNullable(this.alertNotifications);
     }
@@ -35,6 +39,10 @@ public final class SecurityContactArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="emails")
     private @Nullable Output<String> emails;
 
+    /**
+     * @return List of email addresses which will get notifications from Azure Security Center by the configurations defined in this security contact.
+     * 
+     */
     public Optional<Output<String>> emails() {
         return Optional.ofNullable(this.emails);
     }
@@ -46,6 +54,10 @@ public final class SecurityContactArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="notificationsByRole")
     private @Nullable Output<SecurityContactPropertiesNotificationsByRoleArgs> notificationsByRole;
 
+    /**
+     * @return Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.
+     * 
+     */
     public Optional<Output<SecurityContactPropertiesNotificationsByRoleArgs>> notificationsByRole() {
         return Optional.ofNullable(this.notificationsByRole);
     }
@@ -57,6 +69,10 @@ public final class SecurityContactArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="phone")
     private @Nullable Output<String> phone;
 
+    /**
+     * @return The security contact&#39;s phone number
+     * 
+     */
     public Optional<Output<String>> phone() {
         return Optional.ofNullable(this.phone);
     }
@@ -68,6 +84,10 @@ public final class SecurityContactArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="securityContactName")
     private @Nullable Output<String> securityContactName;
 
+    /**
+     * @return Name of the security contact object
+     * 
+     */
     public Optional<Output<String>> securityContactName() {
         return Optional.ofNullable(this.securityContactName);
     }
@@ -100,47 +120,107 @@ public final class SecurityContactArgs extends com.pulumi.resources.ResourceArgs
             $ = new SecurityContactArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param alertNotifications Defines whether to send email notifications about new security alerts
+         * 
+         * @return builder
+         * 
+         */
         public Builder alertNotifications(@Nullable Output<SecurityContactPropertiesAlertNotificationsArgs> alertNotifications) {
             $.alertNotifications = alertNotifications;
             return this;
         }
 
+        /**
+         * @param alertNotifications Defines whether to send email notifications about new security alerts
+         * 
+         * @return builder
+         * 
+         */
         public Builder alertNotifications(SecurityContactPropertiesAlertNotificationsArgs alertNotifications) {
             return alertNotifications(Output.of(alertNotifications));
         }
 
+        /**
+         * @param emails List of email addresses which will get notifications from Azure Security Center by the configurations defined in this security contact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder emails(@Nullable Output<String> emails) {
             $.emails = emails;
             return this;
         }
 
+        /**
+         * @param emails List of email addresses which will get notifications from Azure Security Center by the configurations defined in this security contact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder emails(String emails) {
             return emails(Output.of(emails));
         }
 
+        /**
+         * @param notificationsByRole Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationsByRole(@Nullable Output<SecurityContactPropertiesNotificationsByRoleArgs> notificationsByRole) {
             $.notificationsByRole = notificationsByRole;
             return this;
         }
 
+        /**
+         * @param notificationsByRole Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationsByRole(SecurityContactPropertiesNotificationsByRoleArgs notificationsByRole) {
             return notificationsByRole(Output.of(notificationsByRole));
         }
 
+        /**
+         * @param phone The security contact&#39;s phone number
+         * 
+         * @return builder
+         * 
+         */
         public Builder phone(@Nullable Output<String> phone) {
             $.phone = phone;
             return this;
         }
 
+        /**
+         * @param phone The security contact&#39;s phone number
+         * 
+         * @return builder
+         * 
+         */
         public Builder phone(String phone) {
             return phone(Output.of(phone));
         }
 
+        /**
+         * @param securityContactName Name of the security contact object
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityContactName(@Nullable Output<String> securityContactName) {
             $.securityContactName = securityContactName;
             return this;
         }
 
+        /**
+         * @param securityContactName Name of the security contact object
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityContactName(String securityContactName) {
             return securityContactName(Output.of(securityContactName));
         }

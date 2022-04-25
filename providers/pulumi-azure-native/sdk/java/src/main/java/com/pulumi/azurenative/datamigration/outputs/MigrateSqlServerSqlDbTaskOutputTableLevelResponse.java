@@ -11,58 +11,58 @@ import java.util.Objects;
 @CustomType
 public final class MigrateSqlServerSqlDbTaskOutputTableLevelResponse {
     /**
-     * Migration end time
+     * @return Migration end time
      * 
      */
     private final String endedOn;
     /**
-     * Wildcard string prefix to use for querying all errors of the item
+     * @return Wildcard string prefix to use for querying all errors of the item
      * 
      */
     private final String errorPrefix;
     /**
-     * Result identifier
+     * @return Result identifier
      * 
      */
     private final String id;
     /**
-     * Number of successfully completed items
+     * @return Number of successfully completed items
      * 
      */
     private final Double itemsCompletedCount;
     /**
-     * Number of items
+     * @return Number of items
      * 
      */
     private final Double itemsCount;
     /**
-     * Name of the item
+     * @return Name of the item
      * 
      */
     private final String objectName;
     /**
-     * Wildcard string prefix to use for querying all sub-tem results of the item
+     * @return Wildcard string prefix to use for querying all sub-tem results of the item
      * 
      */
     private final String resultPrefix;
     /**
-     * Result type
+     * @return Result type
      * Expected value is &#39;TableLevelOutput&#39;.
      * 
      */
     private final String resultType;
     /**
-     * Migration start time
+     * @return Migration start time
      * 
      */
     private final String startedOn;
     /**
-     * Current state of migration
+     * @return Current state of migration
      * 
      */
     private final String state;
     /**
-     * Status message
+     * @return Status message
      * 
      */
     private final String statusMessage;
@@ -94,80 +94,80 @@ public final class MigrateSqlServerSqlDbTaskOutputTableLevelResponse {
     }
 
     /**
-     * Migration end time
+     * @return Migration end time
      * 
-    */
+     */
     public String endedOn() {
         return this.endedOn;
     }
     /**
-     * Wildcard string prefix to use for querying all errors of the item
+     * @return Wildcard string prefix to use for querying all errors of the item
      * 
-    */
+     */
     public String errorPrefix() {
         return this.errorPrefix;
     }
     /**
-     * Result identifier
+     * @return Result identifier
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Number of successfully completed items
+     * @return Number of successfully completed items
      * 
-    */
+     */
     public Double itemsCompletedCount() {
         return this.itemsCompletedCount;
     }
     /**
-     * Number of items
+     * @return Number of items
      * 
-    */
+     */
     public Double itemsCount() {
         return this.itemsCount;
     }
     /**
-     * Name of the item
+     * @return Name of the item
      * 
-    */
+     */
     public String objectName() {
         return this.objectName;
     }
     /**
-     * Wildcard string prefix to use for querying all sub-tem results of the item
+     * @return Wildcard string prefix to use for querying all sub-tem results of the item
      * 
-    */
+     */
     public String resultPrefix() {
         return this.resultPrefix;
     }
     /**
-     * Result type
+     * @return Result type
      * Expected value is &#39;TableLevelOutput&#39;.
      * 
-    */
+     */
     public String resultType() {
         return this.resultType;
     }
     /**
-     * Migration start time
+     * @return Migration start time
      * 
-    */
+     */
     public String startedOn() {
         return this.startedOn;
     }
     /**
-     * Current state of migration
+     * @return Current state of migration
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * Status message
+     * @return Status message
      * 
-    */
+     */
     public String statusMessage() {
         return this.statusMessage;
     }

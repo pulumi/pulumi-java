@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class PemCertificateListResponse {
     /**
-     * PEM formatted public certificates. One certificate per entry.
+     * @return PEM formatted public certificates. One certificate per entry.
      * 
      */
     private final List<String> certificates;
     /**
-     * The discriminator for derived types.
+     * @return The discriminator for derived types.
      * Expected value is &#39;#Microsoft.VideoAnalyzer.PemCertificateList&#39;.
      * 
      */
@@ -31,17 +31,17 @@ public final class PemCertificateListResponse {
     }
 
     /**
-     * PEM formatted public certificates. One certificate per entry.
+     * @return PEM formatted public certificates. One certificate per entry.
      * 
-    */
+     */
     public List<String> certificates() {
         return this.certificates;
     }
     /**
-     * The discriminator for derived types.
+     * @return The discriminator for derived types.
      * Expected value is &#39;#Microsoft.VideoAnalyzer.PemCertificateList&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

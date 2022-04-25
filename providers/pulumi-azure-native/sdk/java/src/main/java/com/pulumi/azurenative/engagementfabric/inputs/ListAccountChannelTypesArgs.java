@@ -19,6 +19,10 @@ public final class ListAccountChannelTypesArgs extends com.pulumi.resources.Invo
     @Import(name="accountName", required=true)
     private String accountName;
 
+    /**
+     * @return Account Name
+     * 
+     */
     public String accountName() {
         return this.accountName;
     }
@@ -30,6 +34,10 @@ public final class ListAccountChannelTypesArgs extends com.pulumi.resources.Invo
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Resource Group Name
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class ListAccountChannelTypesArgs extends com.pulumi.resources.Invo
             $ = new ListAccountChannelTypesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName Account Name
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Resource Group Name
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

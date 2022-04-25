@@ -23,6 +23,10 @@ public final class IdentityNotificationTopicState extends com.pulumi.resources.R
     @Import(name="identity")
     private @Nullable Output<String> identity;
 
+    /**
+     * @return The identity for which the Amazon SNS topic will be set. You can specify an identity by using its name or by using its Amazon Resource Name (ARN).
+     * 
+     */
     public Optional<Output<String>> identity() {
         return Optional.ofNullable(this.identity);
     }
@@ -34,6 +38,10 @@ public final class IdentityNotificationTopicState extends com.pulumi.resources.R
     @Import(name="includeOriginalHeaders")
     private @Nullable Output<Boolean> includeOriginalHeaders;
 
+    /**
+     * @return Whether SES should include original email headers in SNS notifications of this type. *false* by default.
+     * 
+     */
     public Optional<Output<Boolean>> includeOriginalHeaders() {
         return Optional.ofNullable(this.includeOriginalHeaders);
     }
@@ -45,6 +53,10 @@ public final class IdentityNotificationTopicState extends com.pulumi.resources.R
     @Import(name="notificationType")
     private @Nullable Output<String> notificationType;
 
+    /**
+     * @return The type of notifications that will be published to the specified Amazon SNS topic. Valid Values: *Bounce*, *Complaint* or *Delivery*.
+     * 
+     */
     public Optional<Output<String>> notificationType() {
         return Optional.ofNullable(this.notificationType);
     }
@@ -56,6 +68,10 @@ public final class IdentityNotificationTopicState extends com.pulumi.resources.R
     @Import(name="topicArn")
     private @Nullable Output<String> topicArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the Amazon SNS topic. Can be set to &#34;&#34; (an empty string) to disable publishing.
+     * 
+     */
     public Optional<Output<String>> topicArn() {
         return Optional.ofNullable(this.topicArn);
     }
@@ -87,38 +103,86 @@ public final class IdentityNotificationTopicState extends com.pulumi.resources.R
             $ = new IdentityNotificationTopicState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param identity The identity for which the Amazon SNS topic will be set. You can specify an identity by using its name or by using its Amazon Resource Name (ARN).
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(@Nullable Output<String> identity) {
             $.identity = identity;
             return this;
         }
 
+        /**
+         * @param identity The identity for which the Amazon SNS topic will be set. You can specify an identity by using its name or by using its Amazon Resource Name (ARN).
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(String identity) {
             return identity(Output.of(identity));
         }
 
+        /**
+         * @param includeOriginalHeaders Whether SES should include original email headers in SNS notifications of this type. *false* by default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeOriginalHeaders(@Nullable Output<Boolean> includeOriginalHeaders) {
             $.includeOriginalHeaders = includeOriginalHeaders;
             return this;
         }
 
+        /**
+         * @param includeOriginalHeaders Whether SES should include original email headers in SNS notifications of this type. *false* by default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeOriginalHeaders(Boolean includeOriginalHeaders) {
             return includeOriginalHeaders(Output.of(includeOriginalHeaders));
         }
 
+        /**
+         * @param notificationType The type of notifications that will be published to the specified Amazon SNS topic. Valid Values: *Bounce*, *Complaint* or *Delivery*.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationType(@Nullable Output<String> notificationType) {
             $.notificationType = notificationType;
             return this;
         }
 
+        /**
+         * @param notificationType The type of notifications that will be published to the specified Amazon SNS topic. Valid Values: *Bounce*, *Complaint* or *Delivery*.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationType(String notificationType) {
             return notificationType(Output.of(notificationType));
         }
 
+        /**
+         * @param topicArn The Amazon Resource Name (ARN) of the Amazon SNS topic. Can be set to &#34;&#34; (an empty string) to disable publishing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topicArn(@Nullable Output<String> topicArn) {
             $.topicArn = topicArn;
             return this;
         }
 
+        /**
+         * @param topicArn The Amazon Resource Name (ARN) of the Amazon SNS topic. Can be set to &#34;&#34; (an empty string) to disable publishing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topicArn(String topicArn) {
             return topicArn(Output.of(topicArn));
         }

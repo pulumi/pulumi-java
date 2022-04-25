@@ -23,6 +23,10 @@ public final class PublicIpReferenceResponse extends com.pulumi.resources.Invoke
     @Import(name="sourceArmResourceId", required=true)
     private String sourceArmResourceId;
 
+    /**
+     * @return Gets the ARM resource ID of the tracked resource being referenced.
+     * 
+     */
     public String sourceArmResourceId() {
         return this.sourceArmResourceId;
     }
@@ -51,6 +55,12 @@ public final class PublicIpReferenceResponse extends com.pulumi.resources.Invoke
             $ = new PublicIpReferenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param sourceArmResourceId Gets the ARM resource ID of the tracked resource being referenced.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceArmResourceId(String sourceArmResourceId) {
             $.sourceArmResourceId = sourceArmResourceId;
             return this;

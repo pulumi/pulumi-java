@@ -24,78 +24,78 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ExecuteWranglingDataflowActivityResponse {
     /**
-     * Compute properties for data flow activity.
+     * @return Compute properties for data flow activity.
      * 
      */
     private final @Nullable ExecuteDataFlowActivityTypePropertiesResponseCompute compute;
     /**
-     * Continue on error setting used for data flow execution. Enables processing to continue if a sink fails. Type: boolean (or Expression with resultType boolean)
+     * @return Continue on error setting used for data flow execution. Enables processing to continue if a sink fails. Type: boolean (or Expression with resultType boolean)
      * 
      */
     private final @Nullable Object continueOnError;
     /**
-     * Data flow reference.
+     * @return Data flow reference.
      * 
      */
     private final DataFlowReferenceResponse dataFlow;
     /**
-     * Activity depends on condition.
+     * @return Activity depends on condition.
      * 
      */
     private final @Nullable List<ActivityDependencyResponse> dependsOn;
     /**
-     * Activity description.
+     * @return Activity description.
      * 
      */
     private final @Nullable String description;
     /**
-     * The integration runtime reference.
+     * @return The integration runtime reference.
      * 
      */
     private final @Nullable IntegrationRuntimeReferenceResponse integrationRuntime;
     /**
-     * Activity name.
+     * @return Activity name.
      * 
      */
     private final String name;
     /**
-     * Activity policy.
+     * @return Activity policy.
      * 
      */
     private final @Nullable ActivityPolicyResponse policy;
     /**
-     * List of mapping for Power Query mashup query to sink dataset(s).
+     * @return List of mapping for Power Query mashup query to sink dataset(s).
      * 
      */
     private final @Nullable List<PowerQuerySinkMappingResponse> queries;
     /**
-     * Concurrent run setting used for data flow execution. Allows sinks with the same save order to be processed concurrently. Type: boolean (or Expression with resultType boolean)
+     * @return Concurrent run setting used for data flow execution. Allows sinks with the same save order to be processed concurrently. Type: boolean (or Expression with resultType boolean)
      * 
      */
     private final @Nullable Object runConcurrently;
     /**
-     * (Deprecated. Please use Queries). List of Power Query activity sinks mapped to a queryName.
+     * @return (Deprecated. Please use Queries). List of Power Query activity sinks mapped to a queryName.
      * 
      */
     private final @Nullable Map<String,PowerQuerySinkResponse> sinks;
     /**
-     * Staging info for execute data flow activity.
+     * @return Staging info for execute data flow activity.
      * 
      */
     private final @Nullable DataFlowStagingInfoResponse staging;
     /**
-     * Trace level setting used for data flow monitoring output. Supported values are: &#39;coarse&#39;, &#39;fine&#39;, and &#39;none&#39;. Type: string (or Expression with resultType string)
+     * @return Trace level setting used for data flow monitoring output. Supported values are: &#39;coarse&#39;, &#39;fine&#39;, and &#39;none&#39;. Type: string (or Expression with resultType string)
      * 
      */
     private final @Nullable Object traceLevel;
     /**
-     * Type of activity.
+     * @return Type of activity.
      * Expected value is &#39;ExecuteWranglingDataflow&#39;.
      * 
      */
     private final String type;
     /**
-     * Activity user properties.
+     * @return Activity user properties.
      * 
      */
     private final @Nullable List<UserPropertyResponse> userProperties;
@@ -135,108 +135,108 @@ public final class ExecuteWranglingDataflowActivityResponse {
     }
 
     /**
-     * Compute properties for data flow activity.
+     * @return Compute properties for data flow activity.
      * 
-    */
+     */
     public Optional<ExecuteDataFlowActivityTypePropertiesResponseCompute> compute() {
         return Optional.ofNullable(this.compute);
     }
     /**
-     * Continue on error setting used for data flow execution. Enables processing to continue if a sink fails. Type: boolean (or Expression with resultType boolean)
+     * @return Continue on error setting used for data flow execution. Enables processing to continue if a sink fails. Type: boolean (or Expression with resultType boolean)
      * 
-    */
+     */
     public Optional<Object> continueOnError() {
         return Optional.ofNullable(this.continueOnError);
     }
     /**
-     * Data flow reference.
+     * @return Data flow reference.
      * 
-    */
+     */
     public DataFlowReferenceResponse dataFlow() {
         return this.dataFlow;
     }
     /**
-     * Activity depends on condition.
+     * @return Activity depends on condition.
      * 
-    */
+     */
     public List<ActivityDependencyResponse> dependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
-     * Activity description.
+     * @return Activity description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The integration runtime reference.
+     * @return The integration runtime reference.
      * 
-    */
+     */
     public Optional<IntegrationRuntimeReferenceResponse> integrationRuntime() {
         return Optional.ofNullable(this.integrationRuntime);
     }
     /**
-     * Activity name.
+     * @return Activity name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Activity policy.
+     * @return Activity policy.
      * 
-    */
+     */
     public Optional<ActivityPolicyResponse> policy() {
         return Optional.ofNullable(this.policy);
     }
     /**
-     * List of mapping for Power Query mashup query to sink dataset(s).
+     * @return List of mapping for Power Query mashup query to sink dataset(s).
      * 
-    */
+     */
     public List<PowerQuerySinkMappingResponse> queries() {
         return this.queries == null ? List.of() : this.queries;
     }
     /**
-     * Concurrent run setting used for data flow execution. Allows sinks with the same save order to be processed concurrently. Type: boolean (or Expression with resultType boolean)
+     * @return Concurrent run setting used for data flow execution. Allows sinks with the same save order to be processed concurrently. Type: boolean (or Expression with resultType boolean)
      * 
-    */
+     */
     public Optional<Object> runConcurrently() {
         return Optional.ofNullable(this.runConcurrently);
     }
     /**
-     * (Deprecated. Please use Queries). List of Power Query activity sinks mapped to a queryName.
+     * @return (Deprecated. Please use Queries). List of Power Query activity sinks mapped to a queryName.
      * 
-    */
+     */
     public Map<String,PowerQuerySinkResponse> sinks() {
         return this.sinks == null ? Map.of() : this.sinks;
     }
     /**
-     * Staging info for execute data flow activity.
+     * @return Staging info for execute data flow activity.
      * 
-    */
+     */
     public Optional<DataFlowStagingInfoResponse> staging() {
         return Optional.ofNullable(this.staging);
     }
     /**
-     * Trace level setting used for data flow monitoring output. Supported values are: &#39;coarse&#39;, &#39;fine&#39;, and &#39;none&#39;. Type: string (or Expression with resultType string)
+     * @return Trace level setting used for data flow monitoring output. Supported values are: &#39;coarse&#39;, &#39;fine&#39;, and &#39;none&#39;. Type: string (or Expression with resultType string)
      * 
-    */
+     */
     public Optional<Object> traceLevel() {
         return Optional.ofNullable(this.traceLevel);
     }
     /**
-     * Type of activity.
+     * @return Type of activity.
      * Expected value is &#39;ExecuteWranglingDataflow&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Activity user properties.
+     * @return Activity user properties.
      * 
-    */
+     */
     public List<UserPropertyResponse> userProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }

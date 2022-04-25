@@ -23,6 +23,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceFileGetArgs ex
     @Import(name="content")
     private @Nullable Output<String> content;
 
+    /**
+     * @return A a file with this content. The size of the content is limited to 1024 characters.
+     * 
+     */
     public Optional<Output<String>> content() {
         return Optional.ofNullable(this.content);
     }
@@ -34,6 +38,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceFileGetArgs ex
     @Import(name="file")
     private @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileGetArgs> file;
 
+    /**
+     * @return A remote or local source.
+     * 
+     */
     public Optional<Output<OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileGetArgs>> file() {
         return Optional.ofNullable(this.file);
     }
@@ -45,6 +53,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceFileGetArgs ex
     @Import(name="path", required=true)
     private Output<String> path;
 
+    /**
+     * @return Required. The absolute path of the file within the VM.
+     * 
+     */
     public Output<String> path() {
         return this.path;
     }
@@ -57,6 +69,11 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceFileGetArgs ex
     @Import(name="permissions")
     private @Nullable Output<String> permissions;
 
+    /**
+     * @return -
+     * Consists of three octal digits which represent, in order, the permissions of the owner, group, and other users for the file (similarly to the numeric mode used in the linux chmod utility). Each digit represents a three bit number with the 4 bit corresponding to the read permissions, the 2 bit corresponds to the write bit, and the one bit corresponds to the execute permission. Default behavior is 755. Below are some examples of permissions and their associated values: read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
+     * 
+     */
     public Optional<Output<String>> permissions() {
         return Optional.ofNullable(this.permissions);
     }
@@ -68,6 +85,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceFileGetArgs ex
     @Import(name="state", required=true)
     private Output<String> state;
 
+    /**
+     * @return Required. Desired state of the file. Possible values: OS_POLICY_COMPLIANCE_STATE_UNSPECIFIED, COMPLIANT, NON_COMPLIANT, UNKNOWN, NO_OS_POLICIES_APPLICABLE
+     * 
+     */
     public Output<String> state() {
         return this.state;
     }
@@ -100,47 +121,109 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceFileGetArgs ex
             $ = new OsPolicyAssignmentOsPolicyResourceGroupResourceFileGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param content A a file with this content. The size of the content is limited to 1024 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(@Nullable Output<String> content) {
             $.content = content;
             return this;
         }
 
+        /**
+         * @param content A a file with this content. The size of the content is limited to 1024 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(String content) {
             return content(Output.of(content));
         }
 
+        /**
+         * @param file A remote or local source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder file(@Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileGetArgs> file) {
             $.file = file;
             return this;
         }
 
+        /**
+         * @param file A remote or local source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder file(OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileGetArgs file) {
             return file(Output.of(file));
         }
 
+        /**
+         * @param path Required. The absolute path of the file within the VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(Output<String> path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param path Required. The absolute path of the file within the VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             return path(Output.of(path));
         }
 
+        /**
+         * @param permissions -
+         * Consists of three octal digits which represent, in order, the permissions of the owner, group, and other users for the file (similarly to the numeric mode used in the linux chmod utility). Each digit represents a three bit number with the 4 bit corresponding to the read permissions, the 2 bit corresponds to the write bit, and the one bit corresponds to the execute permission. Default behavior is 755. Below are some examples of permissions and their associated values: read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissions(@Nullable Output<String> permissions) {
             $.permissions = permissions;
             return this;
         }
 
+        /**
+         * @param permissions -
+         * Consists of three octal digits which represent, in order, the permissions of the owner, group, and other users for the file (similarly to the numeric mode used in the linux chmod utility). Each digit represents a three bit number with the 4 bit corresponding to the read permissions, the 2 bit corresponds to the write bit, and the one bit corresponds to the execute permission. Default behavior is 755. Below are some examples of permissions and their associated values: read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissions(String permissions) {
             return permissions(Output.of(permissions));
         }
 
+        /**
+         * @param state Required. Desired state of the file. Possible values: OS_POLICY_COMPLIANCE_STATE_UNSPECIFIED, COMPLIANT, NON_COMPLIANT, UNKNOWN, NO_OS_POLICIES_APPLICABLE
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(Output<String> state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param state Required. Desired state of the file. Possible values: OS_POLICY_COMPLIANCE_STATE_UNSPECIFIED, COMPLIANT, NON_COMPLIANT, UNKNOWN, NO_OS_POLICIES_APPLICABLE
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             return state(Output.of(state));
         }

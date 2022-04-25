@@ -24,6 +24,10 @@ public final class KpiThresholdsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="increasingKpi", required=true)
     private Boolean increasingKpi;
 
+    /**
+     * @return Whether or not the KPI is an increasing KPI.
+     * 
+     */
     public Boolean increasingKpi() {
         return this.increasingKpi;
     }
@@ -35,6 +39,10 @@ public final class KpiThresholdsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="lowerLimit", required=true)
     private Double lowerLimit;
 
+    /**
+     * @return The lower threshold limit.
+     * 
+     */
     public Double lowerLimit() {
         return this.lowerLimit;
     }
@@ -46,6 +54,10 @@ public final class KpiThresholdsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="upperLimit", required=true)
     private Double upperLimit;
 
+    /**
+     * @return The upper threshold limit.
+     * 
+     */
     public Double upperLimit() {
         return this.upperLimit;
     }
@@ -76,16 +88,34 @@ public final class KpiThresholdsResponse extends com.pulumi.resources.InvokeArgs
             $ = new KpiThresholdsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param increasingKpi Whether or not the KPI is an increasing KPI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder increasingKpi(Boolean increasingKpi) {
             $.increasingKpi = increasingKpi;
             return this;
         }
 
+        /**
+         * @param lowerLimit The lower threshold limit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lowerLimit(Double lowerLimit) {
             $.lowerLimit = lowerLimit;
             return this;
         }
 
+        /**
+         * @param upperLimit The upper threshold limit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder upperLimit(Double upperLimit) {
             $.upperLimit = upperLimit;
             return this;

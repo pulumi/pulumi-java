@@ -24,6 +24,10 @@ public final class PushFilterResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="branch", required=true)
     private String branch;
 
+    /**
+     * @return Regexes matching branches to build. The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax
+     * 
+     */
     public String branch() {
         return this.branch;
     }
@@ -35,6 +39,10 @@ public final class PushFilterResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="invertRegex", required=true)
     private Boolean invertRegex;
 
+    /**
+     * @return When true, only trigger a build if the revision regex does NOT match the git_ref regex.
+     * 
+     */
     public Boolean invertRegex() {
         return this.invertRegex;
     }
@@ -46,6 +54,10 @@ public final class PushFilterResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="tag", required=true)
     private String tag;
 
+    /**
+     * @return Regexes matching tags to build. The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax
+     * 
+     */
     public String tag() {
         return this.tag;
     }
@@ -76,16 +88,34 @@ public final class PushFilterResponse extends com.pulumi.resources.InvokeArgs {
             $ = new PushFilterResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param branch Regexes matching branches to build. The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax
+         * 
+         * @return builder
+         * 
+         */
         public Builder branch(String branch) {
             $.branch = branch;
             return this;
         }
 
+        /**
+         * @param invertRegex When true, only trigger a build if the revision regex does NOT match the git_ref regex.
+         * 
+         * @return builder
+         * 
+         */
         public Builder invertRegex(Boolean invertRegex) {
             $.invertRegex = invertRegex;
             return this;
         }
 
+        /**
+         * @param tag Regexes matching tags to build. The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax
+         * 
+         * @return builder
+         * 
+         */
         public Builder tag(String tag) {
             $.tag = tag;
             return this;

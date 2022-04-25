@@ -27,6 +27,10 @@ public final class MonitoringConfigArgs extends com.pulumi.resources.ResourceArg
     @Import(name="componentConfig")
     private @Nullable Output<MonitoringComponentConfigArgs> componentConfig;
 
+    /**
+     * @return Monitoring components configuration
+     * 
+     */
     public Optional<Output<MonitoringComponentConfigArgs>> componentConfig() {
         return Optional.ofNullable(this.componentConfig);
     }
@@ -38,6 +42,10 @@ public final class MonitoringConfigArgs extends com.pulumi.resources.ResourceArg
     @Import(name="managedPrometheusConfig")
     private @Nullable Output<ManagedPrometheusConfigArgs> managedPrometheusConfig;
 
+    /**
+     * @return Enable Google Cloud Managed Service for Prometheus in the cluster.
+     * 
+     */
     public Optional<Output<ManagedPrometheusConfigArgs>> managedPrometheusConfig() {
         return Optional.ofNullable(this.managedPrometheusConfig);
     }
@@ -67,20 +75,44 @@ public final class MonitoringConfigArgs extends com.pulumi.resources.ResourceArg
             $ = new MonitoringConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param componentConfig Monitoring components configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder componentConfig(@Nullable Output<MonitoringComponentConfigArgs> componentConfig) {
             $.componentConfig = componentConfig;
             return this;
         }
 
+        /**
+         * @param componentConfig Monitoring components configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder componentConfig(MonitoringComponentConfigArgs componentConfig) {
             return componentConfig(Output.of(componentConfig));
         }
 
+        /**
+         * @param managedPrometheusConfig Enable Google Cloud Managed Service for Prometheus in the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedPrometheusConfig(@Nullable Output<ManagedPrometheusConfigArgs> managedPrometheusConfig) {
             $.managedPrometheusConfig = managedPrometheusConfig;
             return this;
         }
 
+        /**
+         * @param managedPrometheusConfig Enable Google Cloud Managed Service for Prometheus in the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedPrometheusConfig(ManagedPrometheusConfigArgs managedPrometheusConfig) {
             return managedPrometheusConfig(Output.of(managedPrometheusConfig));
         }

@@ -28,6 +28,10 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="authConfig")
     private @Nullable Output<AuthConfigArgs> authConfig;
 
+    /**
+     * @return Optional. Configuration for establishing the connection&#39;s authentication with an external system.
+     * 
+     */
     public Optional<Output<AuthConfigArgs>> authConfig() {
         return Optional.ofNullable(this.authConfig);
     }
@@ -39,6 +43,10 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="configVariables")
     private @Nullable Output<List<ConfigVariableArgs>> configVariables;
 
+    /**
+     * @return Optional. Configuration for configuring the connection with an external system.
+     * 
+     */
     public Optional<Output<List<ConfigVariableArgs>>> configVariables() {
         return Optional.ofNullable(this.configVariables);
     }
@@ -57,6 +65,10 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="connectorVersion", required=true)
     private Output<String> connectorVersion;
 
+    /**
+     * @return Connector version on which the connection is created. The format is: projects/*{@literal /}locations/global/providers/*{@literal /}connectors/*{@literal /}versions/*
+     * 
+     */
     public Output<String> connectorVersion() {
         return this.connectorVersion;
     }
@@ -68,6 +80,10 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Optional. Description of the resource.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -79,6 +95,10 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return Optional. Resource labels to represent user-provided metadata. Refer to cloud documentation on labels for more details. https://cloud.google.com/compute/docs/labeling-resources
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -97,6 +117,10 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="lockConfig")
     private @Nullable Output<LockConfigArgs> lockConfig;
 
+    /**
+     * @return Optional. Configuration that indicates whether or not the Connection can be edited.
+     * 
+     */
     public Optional<Output<LockConfigArgs>> lockConfig() {
         return Optional.ofNullable(this.lockConfig);
     }
@@ -115,6 +139,10 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceAccount")
     private @Nullable Output<String> serviceAccount;
 
+    /**
+     * @return Optional. Service account needed for runtime plane to access GCP resources.
+     * 
+     */
     public Optional<Output<String>> serviceAccount() {
         return Optional.ofNullable(this.serviceAccount);
     }
@@ -126,6 +154,10 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="suspended")
     private @Nullable Output<Boolean> suspended;
 
+    /**
+     * @return Optional. Suspended indicates if a user has suspended a connection or not.
+     * 
+     */
     public Optional<Output<Boolean>> suspended() {
         return Optional.ofNullable(this.suspended);
     }
@@ -164,24 +196,54 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ConnectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authConfig Optional. Configuration for establishing the connection&#39;s authentication with an external system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authConfig(@Nullable Output<AuthConfigArgs> authConfig) {
             $.authConfig = authConfig;
             return this;
         }
 
+        /**
+         * @param authConfig Optional. Configuration for establishing the connection&#39;s authentication with an external system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authConfig(AuthConfigArgs authConfig) {
             return authConfig(Output.of(authConfig));
         }
 
+        /**
+         * @param configVariables Optional. Configuration for configuring the connection with an external system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configVariables(@Nullable Output<List<ConfigVariableArgs>> configVariables) {
             $.configVariables = configVariables;
             return this;
         }
 
+        /**
+         * @param configVariables Optional. Configuration for configuring the connection with an external system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configVariables(List<ConfigVariableArgs> configVariables) {
             return configVariables(Output.of(configVariables));
         }
 
+        /**
+         * @param configVariables Optional. Configuration for configuring the connection with an external system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configVariables(ConfigVariableArgs... configVariables) {
             return configVariables(List.of(configVariables));
         }
@@ -195,29 +257,65 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
             return connectionId(Output.of(connectionId));
         }
 
+        /**
+         * @param connectorVersion Connector version on which the connection is created. The format is: projects/*{@literal /}locations/global/providers/*{@literal /}connectors/*{@literal /}versions/*
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectorVersion(Output<String> connectorVersion) {
             $.connectorVersion = connectorVersion;
             return this;
         }
 
+        /**
+         * @param connectorVersion Connector version on which the connection is created. The format is: projects/*{@literal /}locations/global/providers/*{@literal /}connectors/*{@literal /}versions/*
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectorVersion(String connectorVersion) {
             return connectorVersion(Output.of(connectorVersion));
         }
 
+        /**
+         * @param description Optional. Description of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Optional. Description of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param labels Optional. Resource labels to represent user-provided metadata. Refer to cloud documentation on labels for more details. https://cloud.google.com/compute/docs/labeling-resources
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Optional. Resource labels to represent user-provided metadata. Refer to cloud documentation on labels for more details. https://cloud.google.com/compute/docs/labeling-resources
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
@@ -231,11 +329,23 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
             return location(Output.of(location));
         }
 
+        /**
+         * @param lockConfig Optional. Configuration that indicates whether or not the Connection can be edited.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lockConfig(@Nullable Output<LockConfigArgs> lockConfig) {
             $.lockConfig = lockConfig;
             return this;
         }
 
+        /**
+         * @param lockConfig Optional. Configuration that indicates whether or not the Connection can be edited.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lockConfig(LockConfigArgs lockConfig) {
             return lockConfig(Output.of(lockConfig));
         }
@@ -249,20 +359,44 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param serviceAccount Optional. Service account needed for runtime plane to access GCP resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
             $.serviceAccount = serviceAccount;
             return this;
         }
 
+        /**
+         * @param serviceAccount Optional. Service account needed for runtime plane to access GCP resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccount(String serviceAccount) {
             return serviceAccount(Output.of(serviceAccount));
         }
 
+        /**
+         * @param suspended Optional. Suspended indicates if a user has suspended a connection or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder suspended(@Nullable Output<Boolean> suspended) {
             $.suspended = suspended;
             return this;
         }
 
+        /**
+         * @param suspended Optional. Suspended indicates if a user has suspended a connection or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder suspended(Boolean suspended) {
             return suspended(Output.of(suspended));
         }

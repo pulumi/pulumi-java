@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class ConnectorProfileZendeskConnectorProfileProperties {
     /**
-     * The location of the Zendesk resource
+     * @return The location of the Zendesk resource
      * 
      */
     private final String instanceUrl;
@@ -21,9 +21,9 @@ public final class ConnectorProfileZendeskConnectorProfileProperties {
     }
 
     /**
-     * The location of the Zendesk resource
+     * @return The location of the Zendesk resource
      * 
-    */
+     */
     public String instanceUrl() {
         return this.instanceUrl;
     }

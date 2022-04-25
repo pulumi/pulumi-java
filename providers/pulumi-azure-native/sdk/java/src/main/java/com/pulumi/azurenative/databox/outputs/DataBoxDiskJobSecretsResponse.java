@@ -15,33 +15,33 @@ import java.util.Objects;
 @CustomType
 public final class DataBoxDiskJobSecretsResponse {
     /**
-     * Dc Access Security Code for Customer Managed Shipping
+     * @return Dc Access Security Code for Customer Managed Shipping
      * 
      */
     private final DcAccessSecurityCodeResponse dcAccessSecurityCode;
     /**
-     * Contains the list of secrets object for that device.
+     * @return Contains the list of secrets object for that device.
      * 
      */
     private final List<DiskSecretResponse> diskSecrets;
     /**
-     * Error while fetching the secrets.
+     * @return Error while fetching the secrets.
      * 
      */
     private final CloudErrorResponse error;
     /**
-     * Whether passkey was provided by user.
+     * @return Whether passkey was provided by user.
      * 
      */
     private final Boolean isPasskeyUserDefined;
     /**
-     * Used to indicate what type of job secrets object.
+     * @return Used to indicate what type of job secrets object.
      * Expected value is &#39;DataBoxDisk&#39;.
      * 
      */
     private final String jobSecretsType;
     /**
-     * PassKey for the disk Job.
+     * @return PassKey for the disk Job.
      * 
      */
     private final String passKey;
@@ -63,45 +63,45 @@ public final class DataBoxDiskJobSecretsResponse {
     }
 
     /**
-     * Dc Access Security Code for Customer Managed Shipping
+     * @return Dc Access Security Code for Customer Managed Shipping
      * 
-    */
+     */
     public DcAccessSecurityCodeResponse dcAccessSecurityCode() {
         return this.dcAccessSecurityCode;
     }
     /**
-     * Contains the list of secrets object for that device.
+     * @return Contains the list of secrets object for that device.
      * 
-    */
+     */
     public List<DiskSecretResponse> diskSecrets() {
         return this.diskSecrets;
     }
     /**
-     * Error while fetching the secrets.
+     * @return Error while fetching the secrets.
      * 
-    */
+     */
     public CloudErrorResponse error() {
         return this.error;
     }
     /**
-     * Whether passkey was provided by user.
+     * @return Whether passkey was provided by user.
      * 
-    */
+     */
     public Boolean isPasskeyUserDefined() {
         return this.isPasskeyUserDefined;
     }
     /**
-     * Used to indicate what type of job secrets object.
+     * @return Used to indicate what type of job secrets object.
      * Expected value is &#39;DataBoxDisk&#39;.
      * 
-    */
+     */
     public String jobSecretsType() {
         return this.jobSecretsType;
     }
     /**
-     * PassKey for the disk Job.
+     * @return PassKey for the disk Job.
      * 
-    */
+     */
     public String passKey() {
         return this.passKey;
     }

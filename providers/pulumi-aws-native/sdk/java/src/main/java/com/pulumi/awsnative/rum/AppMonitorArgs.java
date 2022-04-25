@@ -33,6 +33,10 @@ public final class AppMonitorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cwLogEnabled")
     private @Nullable Output<Boolean> cwLogEnabled;
 
+    /**
+     * @return Data collected by RUM is kept by RUM for 30 days and then deleted. This parameter specifies whether RUM sends a copy of this telemetry data to CWLlong in your account. This enables you to keep the telemetry data for more than 30 days, but it does incur CWLlong charges. If you omit this parameter, the default is false
+     * 
+     */
     public Optional<Output<Boolean>> cwLogEnabled() {
         return Optional.ofNullable(this.cwLogEnabled);
     }
@@ -44,6 +48,10 @@ public final class AppMonitorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="domain", required=true)
     private Output<String> domain;
 
+    /**
+     * @return The top-level internet domain name for which your application has administrative authority.
+     * 
+     */
     public Output<String> domain() {
         return this.domain;
     }
@@ -55,6 +63,10 @@ public final class AppMonitorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return A name for the app monitor
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -103,29 +115,65 @@ public final class AppMonitorArgs extends com.pulumi.resources.ResourceArgs {
             return appMonitorConfiguration(Output.of(appMonitorConfiguration));
         }
 
+        /**
+         * @param cwLogEnabled Data collected by RUM is kept by RUM for 30 days and then deleted. This parameter specifies whether RUM sends a copy of this telemetry data to CWLlong in your account. This enables you to keep the telemetry data for more than 30 days, but it does incur CWLlong charges. If you omit this parameter, the default is false
+         * 
+         * @return builder
+         * 
+         */
         public Builder cwLogEnabled(@Nullable Output<Boolean> cwLogEnabled) {
             $.cwLogEnabled = cwLogEnabled;
             return this;
         }
 
+        /**
+         * @param cwLogEnabled Data collected by RUM is kept by RUM for 30 days and then deleted. This parameter specifies whether RUM sends a copy of this telemetry data to CWLlong in your account. This enables you to keep the telemetry data for more than 30 days, but it does incur CWLlong charges. If you omit this parameter, the default is false
+         * 
+         * @return builder
+         * 
+         */
         public Builder cwLogEnabled(Boolean cwLogEnabled) {
             return cwLogEnabled(Output.of(cwLogEnabled));
         }
 
+        /**
+         * @param domain The top-level internet domain name for which your application has administrative authority.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domain(Output<String> domain) {
             $.domain = domain;
             return this;
         }
 
+        /**
+         * @param domain The top-level internet domain name for which your application has administrative authority.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domain(String domain) {
             return domain(Output.of(domain));
         }
 
+        /**
+         * @param name A name for the app monitor
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name A name for the app monitor
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

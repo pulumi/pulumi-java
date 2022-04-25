@@ -23,6 +23,10 @@ public final class MetadataExportResponse extends com.pulumi.resources.InvokeArg
     @Import(name="databaseDumpType", required=true)
     private String databaseDumpType;
 
+    /**
+     * @return The type of the database dump.
+     * 
+     */
     public String databaseDumpType() {
         return this.databaseDumpType;
     }
@@ -34,6 +38,10 @@ public final class MetadataExportResponse extends com.pulumi.resources.InvokeArg
     @Import(name="destinationGcsUri", required=true)
     private String destinationGcsUri;
 
+    /**
+     * @return A Cloud Storage URI of a folder that metadata are exported to, in the form of gs:////, where is automatically generated.
+     * 
+     */
     public String destinationGcsUri() {
         return this.destinationGcsUri;
     }
@@ -45,6 +53,10 @@ public final class MetadataExportResponse extends com.pulumi.resources.InvokeArg
     @Import(name="endTime", required=true)
     private String endTime;
 
+    /**
+     * @return The time when the export ended.
+     * 
+     */
     public String endTime() {
         return this.endTime;
     }
@@ -56,6 +68,10 @@ public final class MetadataExportResponse extends com.pulumi.resources.InvokeArg
     @Import(name="startTime", required=true)
     private String startTime;
 
+    /**
+     * @return The time when the export started.
+     * 
+     */
     public String startTime() {
         return this.startTime;
     }
@@ -67,6 +83,10 @@ public final class MetadataExportResponse extends com.pulumi.resources.InvokeArg
     @Import(name="state", required=true)
     private String state;
 
+    /**
+     * @return The current state of the export.
+     * 
+     */
     public String state() {
         return this.state;
     }
@@ -99,26 +119,56 @@ public final class MetadataExportResponse extends com.pulumi.resources.InvokeArg
             $ = new MetadataExportResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param databaseDumpType The type of the database dump.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseDumpType(String databaseDumpType) {
             $.databaseDumpType = databaseDumpType;
             return this;
         }
 
+        /**
+         * @param destinationGcsUri A Cloud Storage URI of a folder that metadata are exported to, in the form of gs:////, where is automatically generated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationGcsUri(String destinationGcsUri) {
             $.destinationGcsUri = destinationGcsUri;
             return this;
         }
 
+        /**
+         * @param endTime The time when the export ended.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTime(String endTime) {
             $.endTime = endTime;
             return this;
         }
 
+        /**
+         * @param startTime The time when the export started.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             $.startTime = startTime;
             return this;
         }
 
+        /**
+         * @param state The current state of the export.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             $.state = state;
             return this;

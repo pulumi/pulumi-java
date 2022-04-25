@@ -28,6 +28,10 @@ public final class RouterNatSubnetworkToNatArgs extends com.pulumi.resources.Res
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return URL for the subnetwork resource that will use NAT.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -39,6 +43,10 @@ public final class RouterNatSubnetworkToNatArgs extends com.pulumi.resources.Res
     @Import(name="secondaryIpRangeNames")
     private @Nullable Output<List<String>> secondaryIpRangeNames;
 
+    /**
+     * @return A list of the secondary ranges of the Subnetwork that are allowed to use NAT. This can be populated only if &#34;LIST_OF_SECONDARY_IP_RANGES&#34; is one of the values in source_ip_ranges_to_nat.
+     * 
+     */
     public Optional<Output<List<String>>> secondaryIpRangeNames() {
         return Optional.ofNullable(this.secondaryIpRangeNames);
     }
@@ -50,6 +58,10 @@ public final class RouterNatSubnetworkToNatArgs extends com.pulumi.resources.Res
     @Import(name="sourceIpRangesToNat")
     private @Nullable Output<List<RouterNatSubnetworkToNatSourceIpRangesToNatItem>> sourceIpRangesToNat;
 
+    /**
+     * @return Specify the options for NAT ranges in the Subnetwork. All options of a single value are valid except NAT_IP_RANGE_OPTION_UNSPECIFIED. The only valid option with multiple values is: [&#34;PRIMARY_IP_RANGE&#34;, &#34;LIST_OF_SECONDARY_IP_RANGES&#34;] Default: [ALL_IP_RANGES]
+     * 
+     */
     public Optional<Output<List<RouterNatSubnetworkToNatSourceIpRangesToNatItem>>> sourceIpRangesToNat() {
         return Optional.ofNullable(this.sourceIpRangesToNat);
     }
@@ -80,37 +92,85 @@ public final class RouterNatSubnetworkToNatArgs extends com.pulumi.resources.Res
             $ = new RouterNatSubnetworkToNatArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name URL for the subnetwork resource that will use NAT.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name URL for the subnetwork resource that will use NAT.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param secondaryIpRangeNames A list of the secondary ranges of the Subnetwork that are allowed to use NAT. This can be populated only if &#34;LIST_OF_SECONDARY_IP_RANGES&#34; is one of the values in source_ip_ranges_to_nat.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondaryIpRangeNames(@Nullable Output<List<String>> secondaryIpRangeNames) {
             $.secondaryIpRangeNames = secondaryIpRangeNames;
             return this;
         }
 
+        /**
+         * @param secondaryIpRangeNames A list of the secondary ranges of the Subnetwork that are allowed to use NAT. This can be populated only if &#34;LIST_OF_SECONDARY_IP_RANGES&#34; is one of the values in source_ip_ranges_to_nat.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondaryIpRangeNames(List<String> secondaryIpRangeNames) {
             return secondaryIpRangeNames(Output.of(secondaryIpRangeNames));
         }
 
+        /**
+         * @param secondaryIpRangeNames A list of the secondary ranges of the Subnetwork that are allowed to use NAT. This can be populated only if &#34;LIST_OF_SECONDARY_IP_RANGES&#34; is one of the values in source_ip_ranges_to_nat.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondaryIpRangeNames(String... secondaryIpRangeNames) {
             return secondaryIpRangeNames(List.of(secondaryIpRangeNames));
         }
 
+        /**
+         * @param sourceIpRangesToNat Specify the options for NAT ranges in the Subnetwork. All options of a single value are valid except NAT_IP_RANGE_OPTION_UNSPECIFIED. The only valid option with multiple values is: [&#34;PRIMARY_IP_RANGE&#34;, &#34;LIST_OF_SECONDARY_IP_RANGES&#34;] Default: [ALL_IP_RANGES]
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceIpRangesToNat(@Nullable Output<List<RouterNatSubnetworkToNatSourceIpRangesToNatItem>> sourceIpRangesToNat) {
             $.sourceIpRangesToNat = sourceIpRangesToNat;
             return this;
         }
 
+        /**
+         * @param sourceIpRangesToNat Specify the options for NAT ranges in the Subnetwork. All options of a single value are valid except NAT_IP_RANGE_OPTION_UNSPECIFIED. The only valid option with multiple values is: [&#34;PRIMARY_IP_RANGE&#34;, &#34;LIST_OF_SECONDARY_IP_RANGES&#34;] Default: [ALL_IP_RANGES]
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceIpRangesToNat(List<RouterNatSubnetworkToNatSourceIpRangesToNatItem> sourceIpRangesToNat) {
             return sourceIpRangesToNat(Output.of(sourceIpRangesToNat));
         }
 
+        /**
+         * @param sourceIpRangesToNat Specify the options for NAT ranges in the Subnetwork. All options of a single value are valid except NAT_IP_RANGE_OPTION_UNSPECIFIED. The only valid option with multiple values is: [&#34;PRIMARY_IP_RANGE&#34;, &#34;LIST_OF_SECONDARY_IP_RANGES&#34;] Default: [ALL_IP_RANGES]
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceIpRangesToNat(RouterNatSubnetworkToNatSourceIpRangesToNatItem... sourceIpRangesToNat) {
             return sourceIpRangesToNat(List.of(sourceIpRangesToNat));
         }

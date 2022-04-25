@@ -15,52 +15,52 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GuestConfigurationNavigationResponse {
     /**
-     * Specifies the assignment type and execution of the configuration. Possible values are Audit, DeployAndAutoCorrect, ApplyAndAutoCorrect and ApplyAndMonitor.
+     * @return Specifies the assignment type and execution of the configuration. Possible values are Audit, DeployAndAutoCorrect, ApplyAndAutoCorrect and ApplyAndMonitor.
      * 
      */
     private final @Nullable String assignmentType;
     /**
-     * The configuration parameters for the guest configuration.
+     * @return The configuration parameters for the guest configuration.
      * 
      */
     private final @Nullable List<ConfigurationParameterResponse> configurationParameter;
     /**
-     * The protected configuration parameters for the guest configuration.
+     * @return The protected configuration parameters for the guest configuration.
      * 
      */
     private final @Nullable List<ConfigurationParameterResponse> configurationProtectedParameter;
     /**
-     * The configuration setting for the guest configuration.
+     * @return The configuration setting for the guest configuration.
      * 
      */
     private final @Nullable ConfigurationSettingResponse configurationSetting;
     /**
-     * Combined hash of the guest configuration package and configuration parameters.
+     * @return Combined hash of the guest configuration package and configuration parameters.
      * 
      */
     private final @Nullable String contentHash;
     /**
-     * Specifies the content type of the configuration. Possible values could be Builtin or Custom.
+     * @return Specifies the content type of the configuration. Possible values could be Builtin or Custom.
      * 
      */
     private final String contentType;
     /**
-     * Uri of the storage where guest configuration package is uploaded.
+     * @return Uri of the storage where guest configuration package is uploaded.
      * 
      */
     private final @Nullable String contentUri;
     /**
-     * Kind of the guest configuration. For example:DSC
+     * @return Kind of the guest configuration. For example:DSC
      * 
      */
     private final @Nullable String kind;
     /**
-     * Name of the guest configuration.
+     * @return Name of the guest configuration.
      * 
      */
     private final @Nullable String name;
     /**
-     * Version of the guest configuration.
+     * @return Version of the guest configuration.
      * 
      */
     private final @Nullable String version;
@@ -90,72 +90,72 @@ public final class GuestConfigurationNavigationResponse {
     }
 
     /**
-     * Specifies the assignment type and execution of the configuration. Possible values are Audit, DeployAndAutoCorrect, ApplyAndAutoCorrect and ApplyAndMonitor.
+     * @return Specifies the assignment type and execution of the configuration. Possible values are Audit, DeployAndAutoCorrect, ApplyAndAutoCorrect and ApplyAndMonitor.
      * 
-    */
+     */
     public Optional<String> assignmentType() {
         return Optional.ofNullable(this.assignmentType);
     }
     /**
-     * The configuration parameters for the guest configuration.
+     * @return The configuration parameters for the guest configuration.
      * 
-    */
+     */
     public List<ConfigurationParameterResponse> configurationParameter() {
         return this.configurationParameter == null ? List.of() : this.configurationParameter;
     }
     /**
-     * The protected configuration parameters for the guest configuration.
+     * @return The protected configuration parameters for the guest configuration.
      * 
-    */
+     */
     public List<ConfigurationParameterResponse> configurationProtectedParameter() {
         return this.configurationProtectedParameter == null ? List.of() : this.configurationProtectedParameter;
     }
     /**
-     * The configuration setting for the guest configuration.
+     * @return The configuration setting for the guest configuration.
      * 
-    */
+     */
     public Optional<ConfigurationSettingResponse> configurationSetting() {
         return Optional.ofNullable(this.configurationSetting);
     }
     /**
-     * Combined hash of the guest configuration package and configuration parameters.
+     * @return Combined hash of the guest configuration package and configuration parameters.
      * 
-    */
+     */
     public Optional<String> contentHash() {
         return Optional.ofNullable(this.contentHash);
     }
     /**
-     * Specifies the content type of the configuration. Possible values could be Builtin or Custom.
+     * @return Specifies the content type of the configuration. Possible values could be Builtin or Custom.
      * 
-    */
+     */
     public String contentType() {
         return this.contentType;
     }
     /**
-     * Uri of the storage where guest configuration package is uploaded.
+     * @return Uri of the storage where guest configuration package is uploaded.
      * 
-    */
+     */
     public Optional<String> contentUri() {
         return Optional.ofNullable(this.contentUri);
     }
     /**
-     * Kind of the guest configuration. For example:DSC
+     * @return Kind of the guest configuration. For example:DSC
      * 
-    */
+     */
     public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
-     * Name of the guest configuration.
+     * @return Name of the guest configuration.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Version of the guest configuration.
+     * @return Version of the guest configuration.
      * 
-    */
+     */
     public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }

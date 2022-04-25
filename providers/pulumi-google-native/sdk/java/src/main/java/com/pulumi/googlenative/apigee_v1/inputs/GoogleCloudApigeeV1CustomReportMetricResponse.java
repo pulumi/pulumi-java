@@ -23,6 +23,10 @@ public final class GoogleCloudApigeeV1CustomReportMetricResponse extends com.pul
     @Import(name="function", required=true)
     private String function;
 
+    /**
+     * @return aggregate function
+     * 
+     */
     public String function() {
         return this.function;
     }
@@ -34,6 +38,10 @@ public final class GoogleCloudApigeeV1CustomReportMetricResponse extends com.pul
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return name of the metric
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -63,11 +71,23 @@ public final class GoogleCloudApigeeV1CustomReportMetricResponse extends com.pul
             $ = new GoogleCloudApigeeV1CustomReportMetricResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param function aggregate function
+         * 
+         * @return builder
+         * 
+         */
         public Builder function(String function) {
             $.function = function;
             return this;
         }
 
+        /**
+         * @param name name of the metric
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

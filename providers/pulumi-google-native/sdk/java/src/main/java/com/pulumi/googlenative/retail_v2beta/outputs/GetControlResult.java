@@ -13,32 +13,32 @@ import java.util.Objects;
 @CustomType
 public final class GetControlResult {
     /**
-     * List of serving configuration ids that that are associated with this control. Note the association is managed via the ServingConfig, this is an output only denormalizeed view. Assumed to be in the same catalog.
+     * @return List of serving configuration ids that that are associated with this control. Note the association is managed via the ServingConfig, this is an output only denormalizeed view. Assumed to be in the same catalog.
      * 
      */
     private final List<String> associatedServingConfigIds;
     /**
-     * The human readable control display name. Used in Retail UI. This field must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is thrown.
+     * @return The human readable control display name. Used in Retail UI. This field must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is thrown.
      * 
      */
     private final String displayName;
     /**
-     * A facet specification to perform faceted search.
+     * @return A facet specification to perform faceted search.
      * 
      */
     private final GoogleCloudRetailV2betaSearchRequestFacetSpecResponse facetSpec;
     /**
-     * Immutable. Fully qualified name projects/*{@literal /}locations/global/catalogs/*{@literal /}controls/*
+     * @return Immutable. Fully qualified name projects/*{@literal /}locations/global/catalogs/*{@literal /}controls/*
      * 
      */
     private final String name;
     /**
-     * A rule control - a condition-action pair. Enacts a set action when the condition is triggered. For example: Boost &#34;gShoe&#34; when query full matches &#34;Running Shoes&#34;.
+     * @return A rule control - a condition-action pair. Enacts a set action when the condition is triggered. For example: Boost &#34;gShoe&#34; when query full matches &#34;Running Shoes&#34;.
      * 
      */
     private final GoogleCloudRetailV2betaRuleResponse rule;
     /**
-     * Immutable. The solution types that the serving config is used for. Currently we support setting only one type of solution at creation time. Only `SOLUTION_TYPE_SEARCH` value is supported at the moment.
+     * @return Immutable. The solution types that the serving config is used for. Currently we support setting only one type of solution at creation time. Only `SOLUTION_TYPE_SEARCH` value is supported at the moment.
      * 
      */
     private final List<String> solutionTypes;
@@ -60,44 +60,44 @@ public final class GetControlResult {
     }
 
     /**
-     * List of serving configuration ids that that are associated with this control. Note the association is managed via the ServingConfig, this is an output only denormalizeed view. Assumed to be in the same catalog.
+     * @return List of serving configuration ids that that are associated with this control. Note the association is managed via the ServingConfig, this is an output only denormalizeed view. Assumed to be in the same catalog.
      * 
-    */
+     */
     public List<String> associatedServingConfigIds() {
         return this.associatedServingConfigIds;
     }
     /**
-     * The human readable control display name. Used in Retail UI. This field must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is thrown.
+     * @return The human readable control display name. Used in Retail UI. This field must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is thrown.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * A facet specification to perform faceted search.
+     * @return A facet specification to perform faceted search.
      * 
-    */
+     */
     public GoogleCloudRetailV2betaSearchRequestFacetSpecResponse facetSpec() {
         return this.facetSpec;
     }
     /**
-     * Immutable. Fully qualified name projects/*{@literal /}locations/global/catalogs/*{@literal /}controls/*
+     * @return Immutable. Fully qualified name projects/*{@literal /}locations/global/catalogs/*{@literal /}controls/*
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * A rule control - a condition-action pair. Enacts a set action when the condition is triggered. For example: Boost &#34;gShoe&#34; when query full matches &#34;Running Shoes&#34;.
+     * @return A rule control - a condition-action pair. Enacts a set action when the condition is triggered. For example: Boost &#34;gShoe&#34; when query full matches &#34;Running Shoes&#34;.
      * 
-    */
+     */
     public GoogleCloudRetailV2betaRuleResponse rule() {
         return this.rule;
     }
     /**
-     * Immutable. The solution types that the serving config is used for. Currently we support setting only one type of solution at creation time. Only `SOLUTION_TYPE_SEARCH` value is supported at the moment.
+     * @return Immutable. The solution types that the serving config is used for. Currently we support setting only one type of solution at creation time. Only `SOLUTION_TYPE_SEARCH` value is supported at the moment.
      * 
-    */
+     */
     public List<String> solutionTypes() {
         return this.solutionTypes;
     }

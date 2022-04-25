@@ -23,6 +23,11 @@ public final class InstanceShieldedInstanceConfigArgs extends com.pulumi.resourc
     @Import(name="enableIntegrityMonitoring")
     private @Nullable Output<Boolean> enableIntegrityMonitoring;
 
+    /**
+     * @return -- Compare the most recent boot measurements to the integrity policy baseline and return a pair of pass/fail results depending on whether they match or not. Defaults to true.
+     * **Note**: `allow_stopping_for_update` must be set to true or your instance must have a `desired_status` of `TERMINATED` in order to update this field.
+     * 
+     */
     public Optional<Output<Boolean>> enableIntegrityMonitoring() {
         return Optional.ofNullable(this.enableIntegrityMonitoring);
     }
@@ -35,6 +40,11 @@ public final class InstanceShieldedInstanceConfigArgs extends com.pulumi.resourc
     @Import(name="enableSecureBoot")
     private @Nullable Output<Boolean> enableSecureBoot;
 
+    /**
+     * @return -- Verify the digital signature of all boot components, and halt the boot process if signature verification fails. Defaults to false.
+     * **Note**: `allow_stopping_for_update` must be set to true or your instance must have a `desired_status` of `TERMINATED` in order to update this field.
+     * 
+     */
     public Optional<Output<Boolean>> enableSecureBoot() {
         return Optional.ofNullable(this.enableSecureBoot);
     }
@@ -47,6 +57,11 @@ public final class InstanceShieldedInstanceConfigArgs extends com.pulumi.resourc
     @Import(name="enableVtpm")
     private @Nullable Output<Boolean> enableVtpm;
 
+    /**
+     * @return -- Use a virtualized trusted platform module, which is a specialized computer chip you can use to encrypt objects like keys and certificates. Defaults to true.
+     * **Note**: `allow_stopping_for_update` must be set to true or your instance must have a `desired_status` of `TERMINATED` in order to update this field.
+     * 
+     */
     public Optional<Output<Boolean>> enableVtpm() {
         return Optional.ofNullable(this.enableVtpm);
     }
@@ -77,29 +92,71 @@ public final class InstanceShieldedInstanceConfigArgs extends com.pulumi.resourc
             $ = new InstanceShieldedInstanceConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enableIntegrityMonitoring -- Compare the most recent boot measurements to the integrity policy baseline and return a pair of pass/fail results depending on whether they match or not. Defaults to true.
+         * **Note**: `allow_stopping_for_update` must be set to true or your instance must have a `desired_status` of `TERMINATED` in order to update this field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableIntegrityMonitoring(@Nullable Output<Boolean> enableIntegrityMonitoring) {
             $.enableIntegrityMonitoring = enableIntegrityMonitoring;
             return this;
         }
 
+        /**
+         * @param enableIntegrityMonitoring -- Compare the most recent boot measurements to the integrity policy baseline and return a pair of pass/fail results depending on whether they match or not. Defaults to true.
+         * **Note**: `allow_stopping_for_update` must be set to true or your instance must have a `desired_status` of `TERMINATED` in order to update this field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableIntegrityMonitoring(Boolean enableIntegrityMonitoring) {
             return enableIntegrityMonitoring(Output.of(enableIntegrityMonitoring));
         }
 
+        /**
+         * @param enableSecureBoot -- Verify the digital signature of all boot components, and halt the boot process if signature verification fails. Defaults to false.
+         * **Note**: `allow_stopping_for_update` must be set to true or your instance must have a `desired_status` of `TERMINATED` in order to update this field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableSecureBoot(@Nullable Output<Boolean> enableSecureBoot) {
             $.enableSecureBoot = enableSecureBoot;
             return this;
         }
 
+        /**
+         * @param enableSecureBoot -- Verify the digital signature of all boot components, and halt the boot process if signature verification fails. Defaults to false.
+         * **Note**: `allow_stopping_for_update` must be set to true or your instance must have a `desired_status` of `TERMINATED` in order to update this field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableSecureBoot(Boolean enableSecureBoot) {
             return enableSecureBoot(Output.of(enableSecureBoot));
         }
 
+        /**
+         * @param enableVtpm -- Use a virtualized trusted platform module, which is a specialized computer chip you can use to encrypt objects like keys and certificates. Defaults to true.
+         * **Note**: `allow_stopping_for_update` must be set to true or your instance must have a `desired_status` of `TERMINATED` in order to update this field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableVtpm(@Nullable Output<Boolean> enableVtpm) {
             $.enableVtpm = enableVtpm;
             return this;
         }
 
+        /**
+         * @param enableVtpm -- Use a virtualized trusted platform module, which is a specialized computer chip you can use to encrypt objects like keys and certificates. Defaults to true.
+         * **Note**: `allow_stopping_for_update` must be set to true or your instance must have a `desired_status` of `TERMINATED` in order to update this field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableVtpm(Boolean enableVtpm) {
             return enableVtpm(Output.of(enableVtpm));
         }

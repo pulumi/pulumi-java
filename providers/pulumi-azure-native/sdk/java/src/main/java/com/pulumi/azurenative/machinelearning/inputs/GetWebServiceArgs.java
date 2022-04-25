@@ -21,6 +21,10 @@ public final class GetWebServiceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="region")
     private @Nullable String region;
 
+    /**
+     * @return The region for which encrypted credential parameters are valid.
+     * 
+     */
     public Optional<String> region() {
         return Optional.ofNullable(this.region);
     }
@@ -32,6 +36,10 @@ public final class GetWebServiceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Name of the resource group in which the web service is located.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -43,6 +51,10 @@ public final class GetWebServiceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="webServiceName", required=true)
     private String webServiceName;
 
+    /**
+     * @return The name of the web service.
+     * 
+     */
     public String webServiceName() {
         return this.webServiceName;
     }
@@ -73,16 +85,34 @@ public final class GetWebServiceArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetWebServiceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param region The region for which encrypted credential parameters are valid.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(@Nullable String region) {
             $.region = region;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group in which the web service is located.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param webServiceName The name of the web service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder webServiceName(String webServiceName) {
             $.webServiceName = webServiceName;
             return this;

@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class MultiRegionAccessPointDetailsRegion {
     /**
-     * The name of the associated bucket for the Region.
+     * @return The name of the associated bucket for the Region.
      * 
      */
     private final String bucket;
@@ -21,9 +21,9 @@ public final class MultiRegionAccessPointDetailsRegion {
     }
 
     /**
-     * The name of the associated bucket for the Region.
+     * @return The name of the associated bucket for the Region.
      * 
-    */
+     */
     public String bucket() {
         return this.bucket;
     }

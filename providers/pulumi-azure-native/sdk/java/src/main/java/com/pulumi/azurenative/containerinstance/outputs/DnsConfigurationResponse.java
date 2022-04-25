@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DnsConfigurationResponse {
     /**
-     * The DNS servers for the container group.
+     * @return The DNS servers for the container group.
      * 
      */
     private final List<String> nameServers;
     /**
-     * The DNS options for the container group.
+     * @return The DNS options for the container group.
      * 
      */
     private final @Nullable String options;
     /**
-     * The DNS search domains for hostname lookup in the container group.
+     * @return The DNS search domains for hostname lookup in the container group.
      * 
      */
     private final @Nullable String searchDomains;
@@ -39,23 +39,23 @@ public final class DnsConfigurationResponse {
     }
 
     /**
-     * The DNS servers for the container group.
+     * @return The DNS servers for the container group.
      * 
-    */
+     */
     public List<String> nameServers() {
         return this.nameServers;
     }
     /**
-     * The DNS options for the container group.
+     * @return The DNS options for the container group.
      * 
-    */
+     */
     public Optional<String> options() {
         return Optional.ofNullable(this.options);
     }
     /**
-     * The DNS search domains for hostname lookup in the container group.
+     * @return The DNS search domains for hostname lookup in the container group.
      * 
-    */
+     */
     public Optional<String> searchDomains() {
         return Optional.ofNullable(this.searchDomains);
     }

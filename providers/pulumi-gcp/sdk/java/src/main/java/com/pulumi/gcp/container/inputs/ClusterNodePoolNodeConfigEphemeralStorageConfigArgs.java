@@ -20,6 +20,10 @@ public final class ClusterNodePoolNodeConfigEphemeralStorageConfigArgs extends c
     @Import(name="localSsdCount", required=true)
     private Output<Integer> localSsdCount;
 
+    /**
+     * @return Number of local SSDs to use to back ephemeral storage. Uses NVMe interfaces. Each local SSD is 375 GB in size. If zero, it means to disable using local SSDs as ephemeral storage.
+     * 
+     */
     public Output<Integer> localSsdCount() {
         return this.localSsdCount;
     }
@@ -48,11 +52,23 @@ public final class ClusterNodePoolNodeConfigEphemeralStorageConfigArgs extends c
             $ = new ClusterNodePoolNodeConfigEphemeralStorageConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param localSsdCount Number of local SSDs to use to back ephemeral storage. Uses NVMe interfaces. Each local SSD is 375 GB in size. If zero, it means to disable using local SSDs as ephemeral storage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localSsdCount(Output<Integer> localSsdCount) {
             $.localSsdCount = localSsdCount;
             return this;
         }
 
+        /**
+         * @param localSsdCount Number of local SSDs to use to back ephemeral storage. Uses NVMe interfaces. Each local SSD is 375 GB in size. If zero, it means to disable using local SSDs as ephemeral storage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localSsdCount(Integer localSsdCount) {
             return localSsdCount(Output.of(localSsdCount));
         }

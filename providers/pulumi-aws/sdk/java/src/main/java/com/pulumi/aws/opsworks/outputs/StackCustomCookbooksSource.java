@@ -12,32 +12,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class StackCustomCookbooksSource {
     /**
-     * Password to use when authenticating to the source. The provider cannot perform drift detection of this configuration.
+     * @return Password to use when authenticating to the source. The provider cannot perform drift detection of this configuration.
      * 
      */
     private final @Nullable String password;
     /**
-     * For sources that are version-aware, the revision to use.
+     * @return For sources that are version-aware, the revision to use.
      * 
      */
     private final @Nullable String revision;
     /**
-     * SSH key to use when authenticating to the source. The provider cannot perform drift detection of this configuration.
+     * @return SSH key to use when authenticating to the source. The provider cannot perform drift detection of this configuration.
      * 
      */
     private final @Nullable String sshKey;
     /**
-     * The type of source to use. For example, &#34;archive&#34;.
+     * @return The type of source to use. For example, &#34;archive&#34;.
      * 
      */
     private final String type;
     /**
-     * The URL where the cookbooks resource can be found.
+     * @return The URL where the cookbooks resource can be found.
      * 
      */
     private final String url;
     /**
-     * Username to use when authenticating to the source.
+     * @return Username to use when authenticating to the source.
      * 
      */
     private final @Nullable String username;
@@ -59,44 +59,44 @@ public final class StackCustomCookbooksSource {
     }
 
     /**
-     * Password to use when authenticating to the source. The provider cannot perform drift detection of this configuration.
+     * @return Password to use when authenticating to the source. The provider cannot perform drift detection of this configuration.
      * 
-    */
+     */
     public Optional<String> password() {
         return Optional.ofNullable(this.password);
     }
     /**
-     * For sources that are version-aware, the revision to use.
+     * @return For sources that are version-aware, the revision to use.
      * 
-    */
+     */
     public Optional<String> revision() {
         return Optional.ofNullable(this.revision);
     }
     /**
-     * SSH key to use when authenticating to the source. The provider cannot perform drift detection of this configuration.
+     * @return SSH key to use when authenticating to the source. The provider cannot perform drift detection of this configuration.
      * 
-    */
+     */
     public Optional<String> sshKey() {
         return Optional.ofNullable(this.sshKey);
     }
     /**
-     * The type of source to use. For example, &#34;archive&#34;.
+     * @return The type of source to use. For example, &#34;archive&#34;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The URL where the cookbooks resource can be found.
+     * @return The URL where the cookbooks resource can be found.
      * 
-    */
+     */
     public String url() {
         return this.url;
     }
     /**
-     * Username to use when authenticating to the source.
+     * @return Username to use when authenticating to the source.
      * 
-    */
+     */
     public Optional<String> username() {
         return Optional.ofNullable(this.username);
     }

@@ -27,6 +27,10 @@ public final class CompatibilityResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Full error message if any compatibility issues are found
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -38,6 +42,10 @@ public final class CompatibilityResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="isCompatible")
     private @Nullable Boolean isCompatible;
 
+    /**
+     * @return Tells if product is compatible with current device
+     * 
+     */
     public Optional<Boolean> isCompatible() {
         return Optional.ofNullable(this.isCompatible);
     }
@@ -49,6 +57,10 @@ public final class CompatibilityResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="issues")
     private @Nullable List<String> issues;
 
+    /**
+     * @return List of all issues found
+     * 
+     */
     public Optional<List<String>> issues() {
         return Optional.ofNullable(this.issues);
     }
@@ -60,6 +72,10 @@ public final class CompatibilityResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="message")
     private @Nullable String message;
 
+    /**
+     * @return Short error message if any compatibility issues are found
+     * 
+     */
     public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
@@ -91,25 +107,55 @@ public final class CompatibilityResponse extends com.pulumi.resources.InvokeArgs
             $ = new CompatibilityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Full error message if any compatibility issues are found
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param isCompatible Tells if product is compatible with current device
+         * 
+         * @return builder
+         * 
+         */
         public Builder isCompatible(@Nullable Boolean isCompatible) {
             $.isCompatible = isCompatible;
             return this;
         }
 
+        /**
+         * @param issues List of all issues found
+         * 
+         * @return builder
+         * 
+         */
         public Builder issues(@Nullable List<String> issues) {
             $.issues = issues;
             return this;
         }
 
+        /**
+         * @param issues List of all issues found
+         * 
+         * @return builder
+         * 
+         */
         public Builder issues(String... issues) {
             return issues(List.of(issues));
         }
 
+        /**
+         * @param message Short error message if any compatibility issues are found
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(@Nullable String message) {
             $.message = message;
             return this;

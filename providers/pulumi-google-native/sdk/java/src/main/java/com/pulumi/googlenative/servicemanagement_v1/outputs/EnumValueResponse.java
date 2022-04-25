@@ -13,17 +13,17 @@ import java.util.Objects;
 @CustomType
 public final class EnumValueResponse {
     /**
-     * Enum value name.
+     * @return Enum value name.
      * 
      */
     private final String name;
     /**
-     * Enum value number.
+     * @return Enum value number.
      * 
      */
     private final Integer number;
     /**
-     * Protocol buffer options.
+     * @return Protocol buffer options.
      * 
      */
     private final List<OptionResponse> options;
@@ -39,23 +39,23 @@ public final class EnumValueResponse {
     }
 
     /**
-     * Enum value name.
+     * @return Enum value name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Enum value number.
+     * @return Enum value number.
      * 
-    */
+     */
     public Integer number() {
         return this.number;
     }
     /**
-     * Protocol buffer options.
+     * @return Protocol buffer options.
      * 
-    */
+     */
     public List<OptionResponse> options() {
         return this.options;
     }

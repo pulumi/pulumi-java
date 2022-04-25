@@ -28,6 +28,10 @@ public final class ActionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="compatibilityLevel")
     private @Nullable Integer compatibilityLevel;
 
+    /**
+     * @return This property is reserved for future use. An integer value showing the compatibility level, currently hard-coded to 20.
+     * 
+     */
     public Optional<Integer> compatibilityLevel() {
         return Optional.ofNullable(this.compatibilityLevel);
     }
@@ -39,6 +43,10 @@ public final class ActionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="requiresPreprocessing")
     private @Nullable Boolean requiresPreprocessing;
 
+    /**
+     * @return Value that indicates whether the rule action requires preprocessing.
+     * 
+     */
     public Optional<Boolean> requiresPreprocessing() {
         return Optional.ofNullable(this.requiresPreprocessing);
     }
@@ -50,6 +58,10 @@ public final class ActionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="sqlExpression")
     private @Nullable String sqlExpression;
 
+    /**
+     * @return SQL expression. e.g. MyProperty=&#39;ABC&#39;
+     * 
+     */
     public Optional<String> sqlExpression() {
         return Optional.ofNullable(this.sqlExpression);
     }
@@ -80,16 +92,34 @@ public final class ActionResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ActionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param compatibilityLevel This property is reserved for future use. An integer value showing the compatibility level, currently hard-coded to 20.
+         * 
+         * @return builder
+         * 
+         */
         public Builder compatibilityLevel(@Nullable Integer compatibilityLevel) {
             $.compatibilityLevel = compatibilityLevel;
             return this;
         }
 
+        /**
+         * @param requiresPreprocessing Value that indicates whether the rule action requires preprocessing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requiresPreprocessing(@Nullable Boolean requiresPreprocessing) {
             $.requiresPreprocessing = requiresPreprocessing;
             return this;
         }
 
+        /**
+         * @param sqlExpression SQL expression. e.g. MyProperty=&#39;ABC&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlExpression(@Nullable String sqlExpression) {
             $.sqlExpression = sqlExpression;
             return this;

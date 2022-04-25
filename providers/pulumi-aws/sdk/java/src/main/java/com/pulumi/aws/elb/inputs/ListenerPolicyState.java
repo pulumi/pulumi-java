@@ -24,6 +24,10 @@ public final class ListenerPolicyState extends com.pulumi.resources.ResourceArgs
     @Import(name="loadBalancerName")
     private @Nullable Output<String> loadBalancerName;
 
+    /**
+     * @return The load balancer to attach the policy to.
+     * 
+     */
     public Optional<Output<String>> loadBalancerName() {
         return Optional.ofNullable(this.loadBalancerName);
     }
@@ -35,6 +39,10 @@ public final class ListenerPolicyState extends com.pulumi.resources.ResourceArgs
     @Import(name="loadBalancerPort")
     private @Nullable Output<Integer> loadBalancerPort;
 
+    /**
+     * @return The load balancer listener port to apply the policy to.
+     * 
+     */
     public Optional<Output<Integer>> loadBalancerPort() {
         return Optional.ofNullable(this.loadBalancerPort);
     }
@@ -46,6 +54,10 @@ public final class ListenerPolicyState extends com.pulumi.resources.ResourceArgs
     @Import(name="policyNames")
     private @Nullable Output<List<String>> policyNames;
 
+    /**
+     * @return List of Policy Names to apply to the backend server.
+     * 
+     */
     public Optional<Output<List<String>>> policyNames() {
         return Optional.ofNullable(this.policyNames);
     }
@@ -76,33 +88,75 @@ public final class ListenerPolicyState extends com.pulumi.resources.ResourceArgs
             $ = new ListenerPolicyState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param loadBalancerName The load balancer to attach the policy to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancerName(@Nullable Output<String> loadBalancerName) {
             $.loadBalancerName = loadBalancerName;
             return this;
         }
 
+        /**
+         * @param loadBalancerName The load balancer to attach the policy to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancerName(String loadBalancerName) {
             return loadBalancerName(Output.of(loadBalancerName));
         }
 
+        /**
+         * @param loadBalancerPort The load balancer listener port to apply the policy to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancerPort(@Nullable Output<Integer> loadBalancerPort) {
             $.loadBalancerPort = loadBalancerPort;
             return this;
         }
 
+        /**
+         * @param loadBalancerPort The load balancer listener port to apply the policy to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancerPort(Integer loadBalancerPort) {
             return loadBalancerPort(Output.of(loadBalancerPort));
         }
 
+        /**
+         * @param policyNames List of Policy Names to apply to the backend server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyNames(@Nullable Output<List<String>> policyNames) {
             $.policyNames = policyNames;
             return this;
         }
 
+        /**
+         * @param policyNames List of Policy Names to apply to the backend server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyNames(List<String> policyNames) {
             return policyNames(Output.of(policyNames));
         }
 
+        /**
+         * @param policyNames List of Policy Names to apply to the backend server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyNames(String... policyNames) {
             return policyNames(List.of(policyNames));
         }

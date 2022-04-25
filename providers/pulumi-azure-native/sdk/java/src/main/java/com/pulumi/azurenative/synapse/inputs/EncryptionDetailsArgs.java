@@ -26,6 +26,10 @@ public final class EncryptionDetailsArgs extends com.pulumi.resources.ResourceAr
     @Import(name="cmk")
     private @Nullable Output<CustomerManagedKeyDetailsArgs> cmk;
 
+    /**
+     * @return Customer Managed Key Details
+     * 
+     */
     public Optional<Output<CustomerManagedKeyDetailsArgs>> cmk() {
         return Optional.ofNullable(this.cmk);
     }
@@ -54,11 +58,23 @@ public final class EncryptionDetailsArgs extends com.pulumi.resources.ResourceAr
             $ = new EncryptionDetailsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cmk Customer Managed Key Details
+         * 
+         * @return builder
+         * 
+         */
         public Builder cmk(@Nullable Output<CustomerManagedKeyDetailsArgs> cmk) {
             $.cmk = cmk;
             return this;
         }
 
+        /**
+         * @param cmk Customer Managed Key Details
+         * 
+         * @return builder
+         * 
+         */
         public Builder cmk(CustomerManagedKeyDetailsArgs cmk) {
             return cmk(Output.of(cmk));
         }

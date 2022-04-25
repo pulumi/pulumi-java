@@ -26,6 +26,13 @@ public final class BudgetAmountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="lastPeriodAmount")
     private @Nullable Output<Boolean> lastPeriodAmount;
 
+    /**
+     * @return Configures a budget amount that is automatically set to 100% of
+     * last period&#39;s spend.
+     * Boolean. Set value to true to use. Do not set to false, instead
+     * use the `specified_amount` block.
+     * 
+     */
     public Optional<Output<Boolean>> lastPeriodAmount() {
         return Optional.ofNullable(this.lastPeriodAmount);
     }
@@ -40,6 +47,13 @@ public final class BudgetAmountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="specifiedAmount")
     private @Nullable Output<BudgetAmountSpecifiedAmountArgs> specifiedAmount;
 
+    /**
+     * @return A specified amount to use as the budget. currencyCode is
+     * optional. If specified, it must match the currency of the
+     * billing account. The currencyCode is provided on output.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<BudgetAmountSpecifiedAmountArgs>> specifiedAmount() {
         return Optional.ofNullable(this.specifiedAmount);
     }
@@ -69,20 +83,56 @@ public final class BudgetAmountArgs extends com.pulumi.resources.ResourceArgs {
             $ = new BudgetAmountArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param lastPeriodAmount Configures a budget amount that is automatically set to 100% of
+         * last period&#39;s spend.
+         * Boolean. Set value to true to use. Do not set to false, instead
+         * use the `specified_amount` block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastPeriodAmount(@Nullable Output<Boolean> lastPeriodAmount) {
             $.lastPeriodAmount = lastPeriodAmount;
             return this;
         }
 
+        /**
+         * @param lastPeriodAmount Configures a budget amount that is automatically set to 100% of
+         * last period&#39;s spend.
+         * Boolean. Set value to true to use. Do not set to false, instead
+         * use the `specified_amount` block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastPeriodAmount(Boolean lastPeriodAmount) {
             return lastPeriodAmount(Output.of(lastPeriodAmount));
         }
 
+        /**
+         * @param specifiedAmount A specified amount to use as the budget. currencyCode is
+         * optional. If specified, it must match the currency of the
+         * billing account. The currencyCode is provided on output.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder specifiedAmount(@Nullable Output<BudgetAmountSpecifiedAmountArgs> specifiedAmount) {
             $.specifiedAmount = specifiedAmount;
             return this;
         }
 
+        /**
+         * @param specifiedAmount A specified amount to use as the budget. currencyCode is
+         * optional. If specified, it must match the currency of the
+         * billing account. The currencyCode is provided on output.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder specifiedAmount(BudgetAmountSpecifiedAmountArgs specifiedAmount) {
             return specifiedAmount(Output.of(specifiedAmount));
         }

@@ -31,6 +31,10 @@ public final class EkmConnectionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="etag")
     private @Nullable Output<String> etag;
 
+    /**
+     * @return This checksum is computed by the server based on the value of other fields, and may be sent on update requests to ensure the client has an up-to-date value before proceeding.
+     * 
+     */
     public Optional<Output<String>> etag() {
         return Optional.ofNullable(this.etag);
     }
@@ -56,6 +60,10 @@ public final class EkmConnectionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceResolvers")
     private @Nullable Output<List<ServiceResolverArgs>> serviceResolvers;
 
+    /**
+     * @return A list of ServiceResolvers where the EKM can be reached. There should be one ServiceResolver per EKM replica. Currently, only a single ServiceResolver is supported.
+     * 
+     */
     public Optional<Output<List<ServiceResolverArgs>>> serviceResolvers() {
         return Optional.ofNullable(this.serviceResolvers);
     }
@@ -97,11 +105,23 @@ public final class EkmConnectionArgs extends com.pulumi.resources.ResourceArgs {
             return ekmConnectionId(Output.of(ekmConnectionId));
         }
 
+        /**
+         * @param etag This checksum is computed by the server based on the value of other fields, and may be sent on update requests to ensure the client has an up-to-date value before proceeding.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(@Nullable Output<String> etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param etag This checksum is computed by the server based on the value of other fields, and may be sent on update requests to ensure the client has an up-to-date value before proceeding.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             return etag(Output.of(etag));
         }
@@ -124,15 +144,33 @@ public final class EkmConnectionArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param serviceResolvers A list of ServiceResolvers where the EKM can be reached. There should be one ServiceResolver per EKM replica. Currently, only a single ServiceResolver is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceResolvers(@Nullable Output<List<ServiceResolverArgs>> serviceResolvers) {
             $.serviceResolvers = serviceResolvers;
             return this;
         }
 
+        /**
+         * @param serviceResolvers A list of ServiceResolvers where the EKM can be reached. There should be one ServiceResolver per EKM replica. Currently, only a single ServiceResolver is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceResolvers(List<ServiceResolverArgs> serviceResolvers) {
             return serviceResolvers(Output.of(serviceResolvers));
         }
 
+        /**
+         * @param serviceResolvers A list of ServiceResolvers where the EKM can be reached. There should be one ServiceResolver per EKM replica. Currently, only a single ServiceResolver is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceResolvers(ServiceResolverArgs... serviceResolvers) {
             return serviceResolvers(List.of(serviceResolvers));
         }

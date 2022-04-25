@@ -29,6 +29,10 @@ public final class StaticSiteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="allowConfigFileUpdates")
     private @Nullable Output<Boolean> allowConfigFileUpdates;
 
+    /**
+     * @return &lt;code&gt;false&lt;/code&gt; if config file is locked for this static web app; otherwise, &lt;code&gt;true&lt;/code&gt;.
+     * 
+     */
     public Optional<Output<Boolean>> allowConfigFileUpdates() {
         return Optional.ofNullable(this.allowConfigFileUpdates);
     }
@@ -40,6 +44,10 @@ public final class StaticSiteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="branch")
     private @Nullable Output<String> branch;
 
+    /**
+     * @return The target branch in the repository.
+     * 
+     */
     public Optional<Output<String>> branch() {
         return Optional.ofNullable(this.branch);
     }
@@ -51,6 +59,10 @@ public final class StaticSiteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="buildProperties")
     private @Nullable Output<StaticSiteBuildPropertiesArgs> buildProperties;
 
+    /**
+     * @return Build properties to configure on the repository.
+     * 
+     */
     public Optional<Output<StaticSiteBuildPropertiesArgs>> buildProperties() {
         return Optional.ofNullable(this.buildProperties);
     }
@@ -62,6 +74,10 @@ public final class StaticSiteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="identity")
     private @Nullable Output<ManagedServiceIdentityArgs> identity;
 
+    /**
+     * @return Managed service identity.
+     * 
+     */
     public Optional<Output<ManagedServiceIdentityArgs>> identity() {
         return Optional.ofNullable(this.identity);
     }
@@ -73,6 +89,10 @@ public final class StaticSiteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kind")
     private @Nullable Output<String> kind;
 
+    /**
+     * @return Kind of resource.
+     * 
+     */
     public Optional<Output<String>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -84,6 +104,10 @@ public final class StaticSiteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource Location.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -95,6 +119,10 @@ public final class StaticSiteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the static site to create or update.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -106,6 +134,10 @@ public final class StaticSiteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="repositoryToken")
     private @Nullable Output<String> repositoryToken;
 
+    /**
+     * @return A user&#39;s github repository token. This is used to setup the Github Actions workflow file and API secrets.
+     * 
+     */
     public Optional<Output<String>> repositoryToken() {
         return Optional.ofNullable(this.repositoryToken);
     }
@@ -117,6 +149,10 @@ public final class StaticSiteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="repositoryUrl")
     private @Nullable Output<String> repositoryUrl;
 
+    /**
+     * @return URL for the repository of the static site.
+     * 
+     */
     public Optional<Output<String>> repositoryUrl() {
         return Optional.ofNullable(this.repositoryUrl);
     }
@@ -128,6 +164,10 @@ public final class StaticSiteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of the resource group to which the resource belongs.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -139,6 +179,10 @@ public final class StaticSiteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sku")
     private @Nullable Output<SkuDescriptionArgs> sku;
 
+    /**
+     * @return Description of a SKU for a scalable resource.
+     * 
+     */
     public Optional<Output<SkuDescriptionArgs>> sku() {
         return Optional.ofNullable(this.sku);
     }
@@ -150,6 +194,10 @@ public final class StaticSiteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="stagingEnvironmentPolicy")
     private @Nullable Output<StagingEnvironmentPolicy> stagingEnvironmentPolicy;
 
+    /**
+     * @return State indicating whether staging environments are allowed or not allowed for a static web app.
+     * 
+     */
     public Optional<Output<StagingEnvironmentPolicy>> stagingEnvironmentPolicy() {
         return Optional.ofNullable(this.stagingEnvironmentPolicy);
     }
@@ -161,6 +209,10 @@ public final class StaticSiteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -172,6 +224,10 @@ public final class StaticSiteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="templateProperties")
     private @Nullable Output<StaticSiteTemplateOptionsArgs> templateProperties;
 
+    /**
+     * @return Template options for generating a new repository.
+     * 
+     */
     public Optional<Output<StaticSiteTemplateOptionsArgs>> templateProperties() {
         return Optional.ofNullable(this.templateProperties);
     }
@@ -213,128 +269,296 @@ public final class StaticSiteArgs extends com.pulumi.resources.ResourceArgs {
             $ = new StaticSiteArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowConfigFileUpdates &lt;code&gt;false&lt;/code&gt; if config file is locked for this static web app; otherwise, &lt;code&gt;true&lt;/code&gt;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowConfigFileUpdates(@Nullable Output<Boolean> allowConfigFileUpdates) {
             $.allowConfigFileUpdates = allowConfigFileUpdates;
             return this;
         }
 
+        /**
+         * @param allowConfigFileUpdates &lt;code&gt;false&lt;/code&gt; if config file is locked for this static web app; otherwise, &lt;code&gt;true&lt;/code&gt;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowConfigFileUpdates(Boolean allowConfigFileUpdates) {
             return allowConfigFileUpdates(Output.of(allowConfigFileUpdates));
         }
 
+        /**
+         * @param branch The target branch in the repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder branch(@Nullable Output<String> branch) {
             $.branch = branch;
             return this;
         }
 
+        /**
+         * @param branch The target branch in the repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder branch(String branch) {
             return branch(Output.of(branch));
         }
 
+        /**
+         * @param buildProperties Build properties to configure on the repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder buildProperties(@Nullable Output<StaticSiteBuildPropertiesArgs> buildProperties) {
             $.buildProperties = buildProperties;
             return this;
         }
 
+        /**
+         * @param buildProperties Build properties to configure on the repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder buildProperties(StaticSiteBuildPropertiesArgs buildProperties) {
             return buildProperties(Output.of(buildProperties));
         }
 
+        /**
+         * @param identity Managed service identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(@Nullable Output<ManagedServiceIdentityArgs> identity) {
             $.identity = identity;
             return this;
         }
 
+        /**
+         * @param identity Managed service identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(ManagedServiceIdentityArgs identity) {
             return identity(Output.of(identity));
         }
 
+        /**
+         * @param kind Kind of resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Kind of resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param location Resource Location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource Location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param name Name of the static site to create or update.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the static site to create or update.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param repositoryToken A user&#39;s github repository token. This is used to setup the Github Actions workflow file and API secrets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repositoryToken(@Nullable Output<String> repositoryToken) {
             $.repositoryToken = repositoryToken;
             return this;
         }
 
+        /**
+         * @param repositoryToken A user&#39;s github repository token. This is used to setup the Github Actions workflow file and API secrets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repositoryToken(String repositoryToken) {
             return repositoryToken(Output.of(repositoryToken));
         }
 
+        /**
+         * @param repositoryUrl URL for the repository of the static site.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repositoryUrl(@Nullable Output<String> repositoryUrl) {
             $.repositoryUrl = repositoryUrl;
             return this;
         }
 
+        /**
+         * @param repositoryUrl URL for the repository of the static site.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repositoryUrl(String repositoryUrl) {
             return repositoryUrl(Output.of(repositoryUrl));
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group to which the resource belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group to which the resource belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param sku Description of a SKU for a scalable resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(@Nullable Output<SkuDescriptionArgs> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku Description of a SKU for a scalable resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(SkuDescriptionArgs sku) {
             return sku(Output.of(sku));
         }
 
+        /**
+         * @param stagingEnvironmentPolicy State indicating whether staging environments are allowed or not allowed for a static web app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stagingEnvironmentPolicy(@Nullable Output<StagingEnvironmentPolicy> stagingEnvironmentPolicy) {
             $.stagingEnvironmentPolicy = stagingEnvironmentPolicy;
             return this;
         }
 
+        /**
+         * @param stagingEnvironmentPolicy State indicating whether staging environments are allowed or not allowed for a static web app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stagingEnvironmentPolicy(StagingEnvironmentPolicy stagingEnvironmentPolicy) {
             return stagingEnvironmentPolicy(Output.of(stagingEnvironmentPolicy));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param templateProperties Template options for generating a new repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder templateProperties(@Nullable Output<StaticSiteTemplateOptionsArgs> templateProperties) {
             $.templateProperties = templateProperties;
             return this;
         }
 
+        /**
+         * @param templateProperties Template options for generating a new repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder templateProperties(StaticSiteTemplateOptionsArgs templateProperties) {
             return templateProperties(Output.of(templateProperties));
         }

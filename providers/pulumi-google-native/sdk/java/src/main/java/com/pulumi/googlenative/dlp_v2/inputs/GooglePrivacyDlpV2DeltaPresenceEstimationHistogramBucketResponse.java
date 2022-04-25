@@ -26,6 +26,10 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketRespo
     @Import(name="bucketSize", required=true)
     private String bucketSize;
 
+    /**
+     * @return Number of records within these probability bounds.
+     * 
+     */
     public String bucketSize() {
         return this.bucketSize;
     }
@@ -37,6 +41,10 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketRespo
     @Import(name="bucketValueCount", required=true)
     private String bucketValueCount;
 
+    /**
+     * @return Total number of distinct quasi-identifier tuple values in this bucket.
+     * 
+     */
     public String bucketValueCount() {
         return this.bucketValueCount;
     }
@@ -48,6 +56,10 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketRespo
     @Import(name="bucketValues", required=true)
     private List<GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValuesResponse> bucketValues;
 
+    /**
+     * @return Sample of quasi-identifier tuple values in this bucket. The total number of classes returned per bucket is capped at 20.
+     * 
+     */
     public List<GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValuesResponse> bucketValues() {
         return this.bucketValues;
     }
@@ -59,6 +71,10 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketRespo
     @Import(name="maxProbability", required=true)
     private Double maxProbability;
 
+    /**
+     * @return Always greater than or equal to min_probability.
+     * 
+     */
     public Double maxProbability() {
         return this.maxProbability;
     }
@@ -70,6 +86,10 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketRespo
     @Import(name="minProbability", required=true)
     private Double minProbability;
 
+    /**
+     * @return Between 0 and 1.
+     * 
+     */
     public Double minProbability() {
         return this.minProbability;
     }
@@ -102,30 +122,66 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketRespo
             $ = new GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bucketSize Number of records within these probability bounds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketSize(String bucketSize) {
             $.bucketSize = bucketSize;
             return this;
         }
 
+        /**
+         * @param bucketValueCount Total number of distinct quasi-identifier tuple values in this bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketValueCount(String bucketValueCount) {
             $.bucketValueCount = bucketValueCount;
             return this;
         }
 
+        /**
+         * @param bucketValues Sample of quasi-identifier tuple values in this bucket. The total number of classes returned per bucket is capped at 20.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketValues(List<GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValuesResponse> bucketValues) {
             $.bucketValues = bucketValues;
             return this;
         }
 
+        /**
+         * @param bucketValues Sample of quasi-identifier tuple values in this bucket. The total number of classes returned per bucket is capped at 20.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketValues(GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValuesResponse... bucketValues) {
             return bucketValues(List.of(bucketValues));
         }
 
+        /**
+         * @param maxProbability Always greater than or equal to min_probability.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxProbability(Double maxProbability) {
             $.maxProbability = maxProbability;
             return this;
         }
 
+        /**
+         * @param minProbability Between 0 and 1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minProbability(Double minProbability) {
             $.minProbability = minProbability;
             return this;

@@ -14,38 +14,38 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ContentKeyPolicyFairPlayConfigurationResponse {
     /**
-     * The key that must be used as FairPlay Application Secret key.
+     * @return The key that must be used as FairPlay Application Secret key.
      * 
      */
     private final String ask;
     /**
-     * The Base64 representation of FairPlay certificate in PKCS 12 (pfx) format (including private key).
+     * @return The Base64 representation of FairPlay certificate in PKCS 12 (pfx) format (including private key).
      * 
      */
     private final String fairPlayPfx;
     /**
-     * The password encrypting FairPlay certificate in PKCS 12 (pfx) format.
+     * @return The password encrypting FairPlay certificate in PKCS 12 (pfx) format.
      * 
      */
     private final String fairPlayPfxPassword;
     /**
-     * The discriminator for derived types.
+     * @return The discriminator for derived types.
      * Expected value is &#39;#Microsoft.Media.ContentKeyPolicyFairPlayConfiguration&#39;.
      * 
      */
     private final String odataType;
     /**
-     * Offline rental policy
+     * @return Offline rental policy
      * 
      */
     private final @Nullable ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse offlineRentalConfiguration;
     /**
-     * The rental and lease key type.
+     * @return The rental and lease key type.
      * 
      */
     private final String rentalAndLeaseKeyType;
     /**
-     * The rental duration. Must be greater than or equal to 0.
+     * @return The rental duration. Must be greater than or equal to 0.
      * 
      */
     private final Double rentalDuration;
@@ -69,52 +69,52 @@ public final class ContentKeyPolicyFairPlayConfigurationResponse {
     }
 
     /**
-     * The key that must be used as FairPlay Application Secret key.
+     * @return The key that must be used as FairPlay Application Secret key.
      * 
-    */
+     */
     public String ask() {
         return this.ask;
     }
     /**
-     * The Base64 representation of FairPlay certificate in PKCS 12 (pfx) format (including private key).
+     * @return The Base64 representation of FairPlay certificate in PKCS 12 (pfx) format (including private key).
      * 
-    */
+     */
     public String fairPlayPfx() {
         return this.fairPlayPfx;
     }
     /**
-     * The password encrypting FairPlay certificate in PKCS 12 (pfx) format.
+     * @return The password encrypting FairPlay certificate in PKCS 12 (pfx) format.
      * 
-    */
+     */
     public String fairPlayPfxPassword() {
         return this.fairPlayPfxPassword;
     }
     /**
-     * The discriminator for derived types.
+     * @return The discriminator for derived types.
      * Expected value is &#39;#Microsoft.Media.ContentKeyPolicyFairPlayConfiguration&#39;.
      * 
-    */
+     */
     public String odataType() {
         return this.odataType;
     }
     /**
-     * Offline rental policy
+     * @return Offline rental policy
      * 
-    */
+     */
     public Optional<ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse> offlineRentalConfiguration() {
         return Optional.ofNullable(this.offlineRentalConfiguration);
     }
     /**
-     * The rental and lease key type.
+     * @return The rental and lease key type.
      * 
-    */
+     */
     public String rentalAndLeaseKeyType() {
         return this.rentalAndLeaseKeyType;
     }
     /**
-     * The rental duration. Must be greater than or equal to 0.
+     * @return The rental duration. Must be greater than or equal to 0.
      * 
-    */
+     */
     public Double rentalDuration() {
         return this.rentalDuration;
     }

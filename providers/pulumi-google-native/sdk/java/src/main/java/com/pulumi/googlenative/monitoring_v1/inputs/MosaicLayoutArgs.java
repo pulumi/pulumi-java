@@ -28,6 +28,10 @@ public final class MosaicLayoutArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="columns")
     private @Nullable Output<Integer> columns;
 
+    /**
+     * @return The number of columns in the mosaic grid. The number of columns must be between 1 and 12, inclusive.
+     * 
+     */
     public Optional<Output<Integer>> columns() {
         return Optional.ofNullable(this.columns);
     }
@@ -39,6 +43,10 @@ public final class MosaicLayoutArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tiles")
     private @Nullable Output<List<TileArgs>> tiles;
 
+    /**
+     * @return The tiles to display.
+     * 
+     */
     public Optional<Output<List<TileArgs>>> tiles() {
         return Optional.ofNullable(this.tiles);
     }
@@ -68,24 +76,54 @@ public final class MosaicLayoutArgs extends com.pulumi.resources.ResourceArgs {
             $ = new MosaicLayoutArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param columns The number of columns in the mosaic grid. The number of columns must be between 1 and 12, inclusive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder columns(@Nullable Output<Integer> columns) {
             $.columns = columns;
             return this;
         }
 
+        /**
+         * @param columns The number of columns in the mosaic grid. The number of columns must be between 1 and 12, inclusive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder columns(Integer columns) {
             return columns(Output.of(columns));
         }
 
+        /**
+         * @param tiles The tiles to display.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tiles(@Nullable Output<List<TileArgs>> tiles) {
             $.tiles = tiles;
             return this;
         }
 
+        /**
+         * @param tiles The tiles to display.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tiles(List<TileArgs> tiles) {
             return tiles(Output.of(tiles));
         }
 
+        /**
+         * @param tiles The tiles to display.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tiles(TileArgs... tiles) {
             return tiles(List.of(tiles));
         }

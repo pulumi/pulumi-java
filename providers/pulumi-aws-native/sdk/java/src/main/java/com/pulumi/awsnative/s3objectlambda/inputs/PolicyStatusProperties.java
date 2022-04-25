@@ -21,6 +21,10 @@ public final class PolicyStatusProperties extends com.pulumi.resources.InvokeArg
     @Import(name="isPublic")
     private @Nullable Boolean isPublic;
 
+    /**
+     * @return Specifies whether the Object lambda Access Point Policy is Public or not. Object lambda Access Points are private by default.
+     * 
+     */
     public Optional<Boolean> isPublic() {
         return Optional.ofNullable(this.isPublic);
     }
@@ -49,6 +53,12 @@ public final class PolicyStatusProperties extends com.pulumi.resources.InvokeArg
             $ = new PolicyStatusProperties(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param isPublic Specifies whether the Object lambda Access Point Policy is Public or not. Object lambda Access Points are private by default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isPublic(@Nullable Boolean isPublic) {
             $.isPublic = isPublic;
             return this;

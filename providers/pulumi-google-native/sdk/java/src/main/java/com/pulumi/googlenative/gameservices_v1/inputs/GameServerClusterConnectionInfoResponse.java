@@ -24,6 +24,10 @@ public final class GameServerClusterConnectionInfoResponse extends com.pulumi.re
     @Import(name="gkeClusterReference", required=true)
     private GkeClusterReferenceResponse gkeClusterReference;
 
+    /**
+     * @return Reference to the GKE cluster where the game servers are installed.
+     * 
+     */
     public GkeClusterReferenceResponse gkeClusterReference() {
         return this.gkeClusterReference;
     }
@@ -35,6 +39,10 @@ public final class GameServerClusterConnectionInfoResponse extends com.pulumi.re
     @Import(name="namespace", required=true)
     private String namespace;
 
+    /**
+     * @return Namespace designated on the game server cluster where the Agones game server instances will be created. Existence of the namespace will be validated during creation.
+     * 
+     */
     public String namespace() {
         return this.namespace;
     }
@@ -64,11 +72,23 @@ public final class GameServerClusterConnectionInfoResponse extends com.pulumi.re
             $ = new GameServerClusterConnectionInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param gkeClusterReference Reference to the GKE cluster where the game servers are installed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gkeClusterReference(GkeClusterReferenceResponse gkeClusterReference) {
             $.gkeClusterReference = gkeClusterReference;
             return this;
         }
 
+        /**
+         * @param namespace Namespace designated on the game server cluster where the Agones game server instances will be created. Existence of the namespace will be validated during creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespace(String namespace) {
             $.namespace = namespace;
             return this;

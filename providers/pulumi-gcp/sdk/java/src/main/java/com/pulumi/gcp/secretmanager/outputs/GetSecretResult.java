@@ -19,7 +19,7 @@ public final class GetSecretResult {
     private final String createTime;
     private final String expireTime;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
@@ -65,9 +65,9 @@ public final class GetSecretResult {
         return this.expireTime;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

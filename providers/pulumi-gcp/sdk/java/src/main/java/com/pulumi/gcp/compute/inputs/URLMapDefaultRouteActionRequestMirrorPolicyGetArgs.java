@@ -20,6 +20,10 @@ public final class URLMapDefaultRouteActionRequestMirrorPolicyGetArgs extends co
     @Import(name="backendService", required=true)
     private Output<String> backendService;
 
+    /**
+     * @return The full or partial URL to the BackendService resource being mirrored to.
+     * 
+     */
     public Output<String> backendService() {
         return this.backendService;
     }
@@ -48,11 +52,23 @@ public final class URLMapDefaultRouteActionRequestMirrorPolicyGetArgs extends co
             $ = new URLMapDefaultRouteActionRequestMirrorPolicyGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backendService The full or partial URL to the BackendService resource being mirrored to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backendService(Output<String> backendService) {
             $.backendService = backendService;
             return this;
         }
 
+        /**
+         * @param backendService The full or partial URL to the BackendService resource being mirrored to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backendService(String backendService) {
             return backendService(Output.of(backendService));
         }

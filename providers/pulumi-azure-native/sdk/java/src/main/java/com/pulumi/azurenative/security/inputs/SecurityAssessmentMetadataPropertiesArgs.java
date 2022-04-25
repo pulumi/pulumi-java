@@ -36,6 +36,10 @@ public final class SecurityAssessmentMetadataPropertiesArgs extends com.pulumi.r
     @Import(name="assessmentType", required=true)
     private Output<Either<String,AssessmentType>> assessmentType;
 
+    /**
+     * @return BuiltIn if the assessment based on built-in Azure Policy definition, Custom if the assessment based on custom Azure Policy definition
+     * 
+     */
     public Output<Either<String,AssessmentType>> assessmentType() {
         return this.assessmentType;
     }
@@ -54,6 +58,10 @@ public final class SecurityAssessmentMetadataPropertiesArgs extends com.pulumi.r
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Human readable description of the assessment
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -65,6 +73,10 @@ public final class SecurityAssessmentMetadataPropertiesArgs extends com.pulumi.r
     @Import(name="displayName", required=true)
     private Output<String> displayName;
 
+    /**
+     * @return User friendly display name of the assessment
+     * 
+     */
     public Output<String> displayName() {
         return this.displayName;
     }
@@ -76,6 +88,10 @@ public final class SecurityAssessmentMetadataPropertiesArgs extends com.pulumi.r
     @Import(name="implementationEffort")
     private @Nullable Output<Either<String,ImplementationEffort>> implementationEffort;
 
+    /**
+     * @return The implementation effort required to remediate this assessment
+     * 
+     */
     public Optional<Output<Either<String,ImplementationEffort>>> implementationEffort() {
         return Optional.ofNullable(this.implementationEffort);
     }
@@ -87,6 +103,10 @@ public final class SecurityAssessmentMetadataPropertiesArgs extends com.pulumi.r
     @Import(name="partnerData")
     private @Nullable Output<SecurityAssessmentMetadataPartnerDataArgs> partnerData;
 
+    /**
+     * @return Describes the partner that created the assessment
+     * 
+     */
     public Optional<Output<SecurityAssessmentMetadataPartnerDataArgs>> partnerData() {
         return Optional.ofNullable(this.partnerData);
     }
@@ -98,6 +118,10 @@ public final class SecurityAssessmentMetadataPropertiesArgs extends com.pulumi.r
     @Import(name="preview")
     private @Nullable Output<Boolean> preview;
 
+    /**
+     * @return True if this assessment is in preview release status
+     * 
+     */
     public Optional<Output<Boolean>> preview() {
         return Optional.ofNullable(this.preview);
     }
@@ -109,6 +133,10 @@ public final class SecurityAssessmentMetadataPropertiesArgs extends com.pulumi.r
     @Import(name="remediationDescription")
     private @Nullable Output<String> remediationDescription;
 
+    /**
+     * @return Human readable description of what you should do to mitigate this security issue
+     * 
+     */
     public Optional<Output<String>> remediationDescription() {
         return Optional.ofNullable(this.remediationDescription);
     }
@@ -120,6 +148,10 @@ public final class SecurityAssessmentMetadataPropertiesArgs extends com.pulumi.r
     @Import(name="severity", required=true)
     private Output<Either<String,Severity>> severity;
 
+    /**
+     * @return The severity level of the assessment
+     * 
+     */
     public Output<Either<String,Severity>> severity() {
         return this.severity;
     }
@@ -138,6 +170,10 @@ public final class SecurityAssessmentMetadataPropertiesArgs extends com.pulumi.r
     @Import(name="userImpact")
     private @Nullable Output<Either<String,UserImpact>> userImpact;
 
+    /**
+     * @return The user impact of the assessment
+     * 
+     */
     public Optional<Output<Either<String,UserImpact>>> userImpact() {
         return Optional.ofNullable(this.userImpact);
     }
@@ -176,19 +212,43 @@ public final class SecurityAssessmentMetadataPropertiesArgs extends com.pulumi.r
             $ = new SecurityAssessmentMetadataPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param assessmentType BuiltIn if the assessment based on built-in Azure Policy definition, Custom if the assessment based on custom Azure Policy definition
+         * 
+         * @return builder
+         * 
+         */
         public Builder assessmentType(Output<Either<String,AssessmentType>> assessmentType) {
             $.assessmentType = assessmentType;
             return this;
         }
 
+        /**
+         * @param assessmentType BuiltIn if the assessment based on built-in Azure Policy definition, Custom if the assessment based on custom Azure Policy definition
+         * 
+         * @return builder
+         * 
+         */
         public Builder assessmentType(Either<String,AssessmentType> assessmentType) {
             return assessmentType(Output.of(assessmentType));
         }
 
+        /**
+         * @param assessmentType BuiltIn if the assessment based on built-in Azure Policy definition, Custom if the assessment based on custom Azure Policy definition
+         * 
+         * @return builder
+         * 
+         */
         public Builder assessmentType(String assessmentType) {
             return assessmentType(Either.ofLeft(assessmentType));
         }
 
+        /**
+         * @param assessmentType BuiltIn if the assessment based on built-in Azure Policy definition, Custom if the assessment based on custom Azure Policy definition
+         * 
+         * @return builder
+         * 
+         */
         public Builder assessmentType(AssessmentType assessmentType) {
             return assessmentType(Either.ofRight(assessmentType));
         }
@@ -206,81 +266,189 @@ public final class SecurityAssessmentMetadataPropertiesArgs extends com.pulumi.r
             return categories(List.of(categories));
         }
 
+        /**
+         * @param description Human readable description of the assessment
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Human readable description of the assessment
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param displayName User friendly display name of the assessment
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName User friendly display name of the assessment
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param implementationEffort The implementation effort required to remediate this assessment
+         * 
+         * @return builder
+         * 
+         */
         public Builder implementationEffort(@Nullable Output<Either<String,ImplementationEffort>> implementationEffort) {
             $.implementationEffort = implementationEffort;
             return this;
         }
 
+        /**
+         * @param implementationEffort The implementation effort required to remediate this assessment
+         * 
+         * @return builder
+         * 
+         */
         public Builder implementationEffort(Either<String,ImplementationEffort> implementationEffort) {
             return implementationEffort(Output.of(implementationEffort));
         }
 
+        /**
+         * @param implementationEffort The implementation effort required to remediate this assessment
+         * 
+         * @return builder
+         * 
+         */
         public Builder implementationEffort(String implementationEffort) {
             return implementationEffort(Either.ofLeft(implementationEffort));
         }
 
+        /**
+         * @param implementationEffort The implementation effort required to remediate this assessment
+         * 
+         * @return builder
+         * 
+         */
         public Builder implementationEffort(ImplementationEffort implementationEffort) {
             return implementationEffort(Either.ofRight(implementationEffort));
         }
 
+        /**
+         * @param partnerData Describes the partner that created the assessment
+         * 
+         * @return builder
+         * 
+         */
         public Builder partnerData(@Nullable Output<SecurityAssessmentMetadataPartnerDataArgs> partnerData) {
             $.partnerData = partnerData;
             return this;
         }
 
+        /**
+         * @param partnerData Describes the partner that created the assessment
+         * 
+         * @return builder
+         * 
+         */
         public Builder partnerData(SecurityAssessmentMetadataPartnerDataArgs partnerData) {
             return partnerData(Output.of(partnerData));
         }
 
+        /**
+         * @param preview True if this assessment is in preview release status
+         * 
+         * @return builder
+         * 
+         */
         public Builder preview(@Nullable Output<Boolean> preview) {
             $.preview = preview;
             return this;
         }
 
+        /**
+         * @param preview True if this assessment is in preview release status
+         * 
+         * @return builder
+         * 
+         */
         public Builder preview(Boolean preview) {
             return preview(Output.of(preview));
         }
 
+        /**
+         * @param remediationDescription Human readable description of what you should do to mitigate this security issue
+         * 
+         * @return builder
+         * 
+         */
         public Builder remediationDescription(@Nullable Output<String> remediationDescription) {
             $.remediationDescription = remediationDescription;
             return this;
         }
 
+        /**
+         * @param remediationDescription Human readable description of what you should do to mitigate this security issue
+         * 
+         * @return builder
+         * 
+         */
         public Builder remediationDescription(String remediationDescription) {
             return remediationDescription(Output.of(remediationDescription));
         }
 
+        /**
+         * @param severity The severity level of the assessment
+         * 
+         * @return builder
+         * 
+         */
         public Builder severity(Output<Either<String,Severity>> severity) {
             $.severity = severity;
             return this;
         }
 
+        /**
+         * @param severity The severity level of the assessment
+         * 
+         * @return builder
+         * 
+         */
         public Builder severity(Either<String,Severity> severity) {
             return severity(Output.of(severity));
         }
 
+        /**
+         * @param severity The severity level of the assessment
+         * 
+         * @return builder
+         * 
+         */
         public Builder severity(String severity) {
             return severity(Either.ofLeft(severity));
         }
 
+        /**
+         * @param severity The severity level of the assessment
+         * 
+         * @return builder
+         * 
+         */
         public Builder severity(Severity severity) {
             return severity(Either.ofRight(severity));
         }
@@ -298,19 +466,43 @@ public final class SecurityAssessmentMetadataPropertiesArgs extends com.pulumi.r
             return threats(List.of(threats));
         }
 
+        /**
+         * @param userImpact The user impact of the assessment
+         * 
+         * @return builder
+         * 
+         */
         public Builder userImpact(@Nullable Output<Either<String,UserImpact>> userImpact) {
             $.userImpact = userImpact;
             return this;
         }
 
+        /**
+         * @param userImpact The user impact of the assessment
+         * 
+         * @return builder
+         * 
+         */
         public Builder userImpact(Either<String,UserImpact> userImpact) {
             return userImpact(Output.of(userImpact));
         }
 
+        /**
+         * @param userImpact The user impact of the assessment
+         * 
+         * @return builder
+         * 
+         */
         public Builder userImpact(String userImpact) {
             return userImpact(Either.ofLeft(userImpact));
         }
 
+        /**
+         * @param userImpact The user impact of the assessment
+         * 
+         * @return builder
+         * 
+         */
         public Builder userImpact(UserImpact userImpact) {
             return userImpact(Either.ofRight(userImpact));
         }

@@ -25,6 +25,10 @@ public final class LabSupportPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="enabled")
     private @Nullable String enabled;
 
+    /**
+     * @return Is the lab support banner active/enabled at this time?
+     * 
+     */
     public Optional<String> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -36,6 +40,10 @@ public final class LabSupportPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="markdown")
     private @Nullable String markdown;
 
+    /**
+     * @return The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.
+     * 
+     */
     public Optional<String> markdown() {
         return Optional.ofNullable(this.markdown);
     }
@@ -65,11 +73,23 @@ public final class LabSupportPropertiesResponse extends com.pulumi.resources.Inv
             $ = new LabSupportPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Is the lab support banner active/enabled at this time?
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable String enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param markdown The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.
+         * 
+         * @return builder
+         * 
+         */
         public Builder markdown(@Nullable String markdown) {
             $.markdown = markdown;
             return this;

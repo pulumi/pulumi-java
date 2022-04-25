@@ -23,6 +23,10 @@ public final class ResourceRequestsResponse extends com.pulumi.resources.InvokeA
     @Import(name="cpu", required=true)
     private Double cpu;
 
+    /**
+     * @return Requested number of CPU cores. At present, only full cores are supported.
+     * 
+     */
     public Double cpu() {
         return this.cpu;
     }
@@ -34,6 +38,10 @@ public final class ResourceRequestsResponse extends com.pulumi.resources.InvokeA
     @Import(name="memoryInGB", required=true)
     private Double memoryInGB;
 
+    /**
+     * @return The memory request in GB for this container.
+     * 
+     */
     public Double memoryInGB() {
         return this.memoryInGB;
     }
@@ -63,11 +71,23 @@ public final class ResourceRequestsResponse extends com.pulumi.resources.InvokeA
             $ = new ResourceRequestsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cpu Requested number of CPU cores. At present, only full cores are supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpu(Double cpu) {
             $.cpu = cpu;
             return this;
         }
 
+        /**
+         * @param memoryInGB The memory request in GB for this container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memoryInGB(Double memoryInGB) {
             $.memoryInGB = memoryInGB;
             return this;

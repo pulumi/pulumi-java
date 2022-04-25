@@ -23,6 +23,10 @@ public final class RelatedUrlResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="label", required=true)
     private String label;
 
+    /**
+     * @return Label to describe usage of the URL.
+     * 
+     */
     public String label() {
         return this.label;
     }
@@ -34,6 +38,10 @@ public final class RelatedUrlResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="url", required=true)
     private String url;
 
+    /**
+     * @return Specific URL associated with the resource.
+     * 
+     */
     public String url() {
         return this.url;
     }
@@ -63,11 +71,23 @@ public final class RelatedUrlResponse extends com.pulumi.resources.InvokeArgs {
             $ = new RelatedUrlResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param label Label to describe usage of the URL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder label(String label) {
             $.label = label;
             return this;
         }
 
+        /**
+         * @param url Specific URL associated with the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(String url) {
             $.url = url;
             return this;

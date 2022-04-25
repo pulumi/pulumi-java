@@ -24,6 +24,10 @@ public final class StandardSchedulerSettingsResponse extends com.pulumi.resource
     @Import(name="maxInstances", required=true)
     private Integer maxInstances;
 
+    /**
+     * @return Maximum number of instances to run for this version. Set to zero to disable max_instances configuration.
+     * 
+     */
     public Integer maxInstances() {
         return this.maxInstances;
     }
@@ -35,6 +39,10 @@ public final class StandardSchedulerSettingsResponse extends com.pulumi.resource
     @Import(name="minInstances", required=true)
     private Integer minInstances;
 
+    /**
+     * @return Minimum number of instances to run for this version. Set to zero to disable min_instances configuration.
+     * 
+     */
     public Integer minInstances() {
         return this.minInstances;
     }
@@ -46,6 +54,10 @@ public final class StandardSchedulerSettingsResponse extends com.pulumi.resource
     @Import(name="targetCpuUtilization", required=true)
     private Double targetCpuUtilization;
 
+    /**
+     * @return Target CPU utilization ratio to maintain when scaling.
+     * 
+     */
     public Double targetCpuUtilization() {
         return this.targetCpuUtilization;
     }
@@ -57,6 +69,10 @@ public final class StandardSchedulerSettingsResponse extends com.pulumi.resource
     @Import(name="targetThroughputUtilization", required=true)
     private Double targetThroughputUtilization;
 
+    /**
+     * @return Target throughput utilization ratio to maintain when scaling
+     * 
+     */
     public Double targetThroughputUtilization() {
         return this.targetThroughputUtilization;
     }
@@ -88,21 +104,45 @@ public final class StandardSchedulerSettingsResponse extends com.pulumi.resource
             $ = new StandardSchedulerSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxInstances Maximum number of instances to run for this version. Set to zero to disable max_instances configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxInstances(Integer maxInstances) {
             $.maxInstances = maxInstances;
             return this;
         }
 
+        /**
+         * @param minInstances Minimum number of instances to run for this version. Set to zero to disable min_instances configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minInstances(Integer minInstances) {
             $.minInstances = minInstances;
             return this;
         }
 
+        /**
+         * @param targetCpuUtilization Target CPU utilization ratio to maintain when scaling.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetCpuUtilization(Double targetCpuUtilization) {
             $.targetCpuUtilization = targetCpuUtilization;
             return this;
         }
 
+        /**
+         * @param targetThroughputUtilization Target throughput utilization ratio to maintain when scaling
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetThroughputUtilization(Double targetThroughputUtilization) {
             $.targetThroughputUtilization = targetThroughputUtilization;
             return this;

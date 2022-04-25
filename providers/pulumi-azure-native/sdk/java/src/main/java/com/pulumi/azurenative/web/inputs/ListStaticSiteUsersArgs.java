@@ -19,6 +19,10 @@ public final class ListStaticSiteUsersArgs extends com.pulumi.resources.InvokeAr
     @Import(name="authprovider", required=true)
     private String authprovider;
 
+    /**
+     * @return The auth provider for the users.
+     * 
+     */
     public String authprovider() {
         return this.authprovider;
     }
@@ -30,6 +34,10 @@ public final class ListStaticSiteUsersArgs extends com.pulumi.resources.InvokeAr
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of the static site.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -41,6 +49,10 @@ public final class ListStaticSiteUsersArgs extends com.pulumi.resources.InvokeAr
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Name of the resource group to which the resource belongs.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class ListStaticSiteUsersArgs extends com.pulumi.resources.InvokeAr
             $ = new ListStaticSiteUsersArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authprovider The auth provider for the users.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authprovider(String authprovider) {
             $.authprovider = authprovider;
             return this;
         }
 
+        /**
+         * @param name Name of the static site.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group to which the resource belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

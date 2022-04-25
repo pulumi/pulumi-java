@@ -25,6 +25,10 @@ public final class ServiceProviderParameterResponseMetadata extends com.pulumi.r
     @Import(name="constraints")
     private @Nullable ServiceProviderParameterResponseConstraints constraints;
 
+    /**
+     * @return the constraints of the bot meta data.
+     * 
+     */
     public Optional<ServiceProviderParameterResponseConstraints> constraints() {
         return Optional.ofNullable(this.constraints);
     }
@@ -53,6 +57,12 @@ public final class ServiceProviderParameterResponseMetadata extends com.pulumi.r
             $ = new ServiceProviderParameterResponseMetadata(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param constraints the constraints of the bot meta data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder constraints(@Nullable ServiceProviderParameterResponseConstraints constraints) {
             $.constraints = constraints;
             return this;

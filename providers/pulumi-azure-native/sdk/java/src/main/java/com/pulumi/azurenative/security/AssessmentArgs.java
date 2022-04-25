@@ -30,6 +30,10 @@ public final class AssessmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="additionalData")
     private @Nullable Output<Map<String,String>> additionalData;
 
+    /**
+     * @return Additional data regarding the assessment
+     * 
+     */
     public Optional<Output<Map<String,String>>> additionalData() {
         return Optional.ofNullable(this.additionalData);
     }
@@ -41,6 +45,10 @@ public final class AssessmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="assessmentName")
     private @Nullable Output<String> assessmentName;
 
+    /**
+     * @return The Assessment Key - Unique key for the assessment type
+     * 
+     */
     public Optional<Output<String>> assessmentName() {
         return Optional.ofNullable(this.assessmentName);
     }
@@ -52,6 +60,10 @@ public final class AssessmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
     private @Nullable Output<SecurityAssessmentMetadataPropertiesArgs> metadata;
 
+    /**
+     * @return Describes properties of an assessment metadata.
+     * 
+     */
     public Optional<Output<SecurityAssessmentMetadataPropertiesArgs>> metadata() {
         return Optional.ofNullable(this.metadata);
     }
@@ -63,6 +75,10 @@ public final class AssessmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="partnersData")
     private @Nullable Output<SecurityAssessmentPartnerDataArgs> partnersData;
 
+    /**
+     * @return Data regarding 3rd party partner integration
+     * 
+     */
     public Optional<Output<SecurityAssessmentPartnerDataArgs>> partnersData() {
         return Optional.ofNullable(this.partnersData);
     }
@@ -74,6 +90,10 @@ public final class AssessmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceDetails", required=true)
     private Output<Object> resourceDetails;
 
+    /**
+     * @return Details of the resource that was assessed
+     * 
+     */
     public Output<Object> resourceDetails() {
         return this.resourceDetails;
     }
@@ -85,6 +105,10 @@ public final class AssessmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceId", required=true)
     private Output<String> resourceId;
 
+    /**
+     * @return The identifier of the resource.
+     * 
+     */
     public Output<String> resourceId() {
         return this.resourceId;
     }
@@ -96,6 +120,10 @@ public final class AssessmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="status", required=true)
     private Output<AssessmentStatusArgs> status;
 
+    /**
+     * @return The result of the assessment
+     * 
+     */
     public Output<AssessmentStatusArgs> status() {
         return this.status;
     }
@@ -130,65 +158,149 @@ public final class AssessmentArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AssessmentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param additionalData Additional data regarding the assessment
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalData(@Nullable Output<Map<String,String>> additionalData) {
             $.additionalData = additionalData;
             return this;
         }
 
+        /**
+         * @param additionalData Additional data regarding the assessment
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalData(Map<String,String> additionalData) {
             return additionalData(Output.of(additionalData));
         }
 
+        /**
+         * @param assessmentName The Assessment Key - Unique key for the assessment type
+         * 
+         * @return builder
+         * 
+         */
         public Builder assessmentName(@Nullable Output<String> assessmentName) {
             $.assessmentName = assessmentName;
             return this;
         }
 
+        /**
+         * @param assessmentName The Assessment Key - Unique key for the assessment type
+         * 
+         * @return builder
+         * 
+         */
         public Builder assessmentName(String assessmentName) {
             return assessmentName(Output.of(assessmentName));
         }
 
+        /**
+         * @param metadata Describes properties of an assessment metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(@Nullable Output<SecurityAssessmentMetadataPropertiesArgs> metadata) {
             $.metadata = metadata;
             return this;
         }
 
+        /**
+         * @param metadata Describes properties of an assessment metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(SecurityAssessmentMetadataPropertiesArgs metadata) {
             return metadata(Output.of(metadata));
         }
 
+        /**
+         * @param partnersData Data regarding 3rd party partner integration
+         * 
+         * @return builder
+         * 
+         */
         public Builder partnersData(@Nullable Output<SecurityAssessmentPartnerDataArgs> partnersData) {
             $.partnersData = partnersData;
             return this;
         }
 
+        /**
+         * @param partnersData Data regarding 3rd party partner integration
+         * 
+         * @return builder
+         * 
+         */
         public Builder partnersData(SecurityAssessmentPartnerDataArgs partnersData) {
             return partnersData(Output.of(partnersData));
         }
 
+        /**
+         * @param resourceDetails Details of the resource that was assessed
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceDetails(Output<Object> resourceDetails) {
             $.resourceDetails = resourceDetails;
             return this;
         }
 
+        /**
+         * @param resourceDetails Details of the resource that was assessed
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceDetails(Object resourceDetails) {
             return resourceDetails(Output.of(resourceDetails));
         }
 
+        /**
+         * @param resourceId The identifier of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(Output<String> resourceId) {
             $.resourceId = resourceId;
             return this;
         }
 
+        /**
+         * @param resourceId The identifier of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(String resourceId) {
             return resourceId(Output.of(resourceId));
         }
 
+        /**
+         * @param status The result of the assessment
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(Output<AssessmentStatusArgs> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status The result of the assessment
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(AssessmentStatusArgs status) {
             return status(Output.of(status));
         }

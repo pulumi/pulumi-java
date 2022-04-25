@@ -23,6 +23,10 @@ public final class DomainIndexFieldGetArgs extends com.pulumi.resources.Resource
     @Import(name="analysisScheme")
     private @Nullable Output<String> analysisScheme;
 
+    /**
+     * @return The analysis scheme you want to use for a `text` field. The analysis scheme specifies the language-specific text processing options that are used during indexing.
+     * 
+     */
     public Optional<Output<String>> analysisScheme() {
         return Optional.ofNullable(this.analysisScheme);
     }
@@ -34,6 +38,10 @@ public final class DomainIndexFieldGetArgs extends com.pulumi.resources.Resource
     @Import(name="defaultValue")
     private @Nullable Output<String> defaultValue;
 
+    /**
+     * @return The default value for the field. This value is used when no value is specified for the field in the document data.
+     * 
+     */
     public Optional<Output<String>> defaultValue() {
         return Optional.ofNullable(this.defaultValue);
     }
@@ -45,6 +53,10 @@ public final class DomainIndexFieldGetArgs extends com.pulumi.resources.Resource
     @Import(name="facet")
     private @Nullable Output<Boolean> facet;
 
+    /**
+     * @return You can get facet information by enabling this.
+     * 
+     */
     public Optional<Output<Boolean>> facet() {
         return Optional.ofNullable(this.facet);
     }
@@ -56,6 +68,10 @@ public final class DomainIndexFieldGetArgs extends com.pulumi.resources.Resource
     @Import(name="highlight")
     private @Nullable Output<Boolean> highlight;
 
+    /**
+     * @return You can highlight information.
+     * 
+     */
     public Optional<Output<Boolean>> highlight() {
         return Optional.ofNullable(this.highlight);
     }
@@ -67,6 +83,10 @@ public final class DomainIndexFieldGetArgs extends com.pulumi.resources.Resource
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return A unique name for the field. Field names must begin with a letter and be at least 3 and no more than 64 characters long. The allowed characters are: `a`-`z` (lower-case letters), `0`-`9`, and `_` (underscore). The name `score` is reserved and cannot be used as a field name.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -78,6 +98,10 @@ public final class DomainIndexFieldGetArgs extends com.pulumi.resources.Resource
     @Import(name="return")
     private @Nullable Output<Boolean> return_;
 
+    /**
+     * @return You can enable returning the value of all searchable fields.
+     * 
+     */
     public Optional<Output<Boolean>> return_() {
         return Optional.ofNullable(this.return_);
     }
@@ -89,6 +113,10 @@ public final class DomainIndexFieldGetArgs extends com.pulumi.resources.Resource
     @Import(name="search")
     private @Nullable Output<Boolean> search;
 
+    /**
+     * @return You can set whether this index should be searchable or not.
+     * 
+     */
     public Optional<Output<Boolean>> search() {
         return Optional.ofNullable(this.search);
     }
@@ -100,6 +128,10 @@ public final class DomainIndexFieldGetArgs extends com.pulumi.resources.Resource
     @Import(name="sort")
     private @Nullable Output<Boolean> sort;
 
+    /**
+     * @return You can enable the property to be sortable.
+     * 
+     */
     public Optional<Output<Boolean>> sort() {
         return Optional.ofNullable(this.sort);
     }
@@ -111,6 +143,10 @@ public final class DomainIndexFieldGetArgs extends com.pulumi.resources.Resource
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return The field type. Valid values: `date`, `date-array`, `double`, `double-array`, `int`, `int-array`, `literal`, `literal-array`, `text`, `text-array`.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -147,83 +183,191 @@ public final class DomainIndexFieldGetArgs extends com.pulumi.resources.Resource
             $ = new DomainIndexFieldGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param analysisScheme The analysis scheme you want to use for a `text` field. The analysis scheme specifies the language-specific text processing options that are used during indexing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder analysisScheme(@Nullable Output<String> analysisScheme) {
             $.analysisScheme = analysisScheme;
             return this;
         }
 
+        /**
+         * @param analysisScheme The analysis scheme you want to use for a `text` field. The analysis scheme specifies the language-specific text processing options that are used during indexing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder analysisScheme(String analysisScheme) {
             return analysisScheme(Output.of(analysisScheme));
         }
 
+        /**
+         * @param defaultValue The default value for the field. This value is used when no value is specified for the field in the document data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultValue(@Nullable Output<String> defaultValue) {
             $.defaultValue = defaultValue;
             return this;
         }
 
+        /**
+         * @param defaultValue The default value for the field. This value is used when no value is specified for the field in the document data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultValue(String defaultValue) {
             return defaultValue(Output.of(defaultValue));
         }
 
+        /**
+         * @param facet You can get facet information by enabling this.
+         * 
+         * @return builder
+         * 
+         */
         public Builder facet(@Nullable Output<Boolean> facet) {
             $.facet = facet;
             return this;
         }
 
+        /**
+         * @param facet You can get facet information by enabling this.
+         * 
+         * @return builder
+         * 
+         */
         public Builder facet(Boolean facet) {
             return facet(Output.of(facet));
         }
 
+        /**
+         * @param highlight You can highlight information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder highlight(@Nullable Output<Boolean> highlight) {
             $.highlight = highlight;
             return this;
         }
 
+        /**
+         * @param highlight You can highlight information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder highlight(Boolean highlight) {
             return highlight(Output.of(highlight));
         }
 
+        /**
+         * @param name A unique name for the field. Field names must begin with a letter and be at least 3 and no more than 64 characters long. The allowed characters are: `a`-`z` (lower-case letters), `0`-`9`, and `_` (underscore). The name `score` is reserved and cannot be used as a field name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name A unique name for the field. Field names must begin with a letter and be at least 3 and no more than 64 characters long. The allowed characters are: `a`-`z` (lower-case letters), `0`-`9`, and `_` (underscore). The name `score` is reserved and cannot be used as a field name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param return_ You can enable returning the value of all searchable fields.
+         * 
+         * @return builder
+         * 
+         */
         public Builder return_(@Nullable Output<Boolean> return_) {
             $.return_ = return_;
             return this;
         }
 
+        /**
+         * @param return_ You can enable returning the value of all searchable fields.
+         * 
+         * @return builder
+         * 
+         */
         public Builder return_(Boolean return_) {
             return return_(Output.of(return_));
         }
 
+        /**
+         * @param search You can set whether this index should be searchable or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder search(@Nullable Output<Boolean> search) {
             $.search = search;
             return this;
         }
 
+        /**
+         * @param search You can set whether this index should be searchable or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder search(Boolean search) {
             return search(Output.of(search));
         }
 
+        /**
+         * @param sort You can enable the property to be sortable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sort(@Nullable Output<Boolean> sort) {
             $.sort = sort;
             return this;
         }
 
+        /**
+         * @param sort You can enable the property to be sortable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sort(Boolean sort) {
             return sort(Output.of(sort));
         }
 
+        /**
+         * @param type The field type. Valid values: `date`, `date-array`, `double`, `double-array`, `int`, `int-array`, `literal`, `literal-array`, `text`, `text-array`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The field type. Valid values: `date`, `date-array`, `double`, `double-array`, `int`, `int-array`, `literal`, `literal-array`, `text`, `text-array`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

@@ -19,6 +19,10 @@ public final class GetActionGroupArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="actionGroupName", required=true)
     private String actionGroupName;
 
+    /**
+     * @return The name of the action group.
+     * 
+     */
     public String actionGroupName() {
         return this.actionGroupName;
     }
@@ -30,6 +34,10 @@ public final class GetActionGroupArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetActionGroupArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetActionGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actionGroupName The name of the action group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionGroupName(String actionGroupName) {
             $.actionGroupName = actionGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

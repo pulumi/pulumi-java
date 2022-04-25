@@ -12,47 +12,47 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetSqlPoolWorkloadClassifierResult {
     /**
-     * The workload classifier context.
+     * @return The workload classifier context.
      * 
      */
     private final @Nullable String context;
     /**
-     * The workload classifier end time for classification.
+     * @return The workload classifier end time for classification.
      * 
      */
     private final @Nullable String endTime;
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
      */
     private final String id;
     /**
-     * The workload classifier importance.
+     * @return The workload classifier importance.
      * 
      */
     private final @Nullable String importance;
     /**
-     * The workload classifier label.
+     * @return The workload classifier label.
      * 
      */
     private final @Nullable String label;
     /**
-     * The workload classifier member name.
+     * @return The workload classifier member name.
      * 
      */
     private final String memberName;
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
      */
     private final String name;
     /**
-     * The workload classifier start time for classification.
+     * @return The workload classifier start time for classification.
      * 
      */
     private final @Nullable String startTime;
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     private final String type;
@@ -80,65 +80,65 @@ public final class GetSqlPoolWorkloadClassifierResult {
     }
 
     /**
-     * The workload classifier context.
+     * @return The workload classifier context.
      * 
-    */
+     */
     public Optional<String> context() {
         return Optional.ofNullable(this.context);
     }
     /**
-     * The workload classifier end time for classification.
+     * @return The workload classifier end time for classification.
      * 
-    */
+     */
     public Optional<String> endTime() {
         return Optional.ofNullable(this.endTime);
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The workload classifier importance.
+     * @return The workload classifier importance.
      * 
-    */
+     */
     public Optional<String> importance() {
         return Optional.ofNullable(this.importance);
     }
     /**
-     * The workload classifier label.
+     * @return The workload classifier label.
      * 
-    */
+     */
     public Optional<String> label() {
         return Optional.ofNullable(this.label);
     }
     /**
-     * The workload classifier member name.
+     * @return The workload classifier member name.
      * 
-    */
+     */
     public String memberName() {
         return this.memberName;
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The workload classifier start time for classification.
+     * @return The workload classifier start time for classification.
      * 
-    */
+     */
     public Optional<String> startTime() {
         return Optional.ofNullable(this.startTime);
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

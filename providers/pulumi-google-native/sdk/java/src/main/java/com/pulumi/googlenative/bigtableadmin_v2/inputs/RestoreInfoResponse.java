@@ -24,6 +24,10 @@ public final class RestoreInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="backupInfo", required=true)
     private BackupInfoResponse backupInfo;
 
+    /**
+     * @return Information about the backup used to restore the table. The backup may no longer exist.
+     * 
+     */
     public BackupInfoResponse backupInfo() {
         return this.backupInfo;
     }
@@ -35,6 +39,10 @@ public final class RestoreInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="sourceType", required=true)
     private String sourceType;
 
+    /**
+     * @return The type of the restore source.
+     * 
+     */
     public String sourceType() {
         return this.sourceType;
     }
@@ -64,11 +72,23 @@ public final class RestoreInfoResponse extends com.pulumi.resources.InvokeArgs {
             $ = new RestoreInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backupInfo Information about the backup used to restore the table. The backup may no longer exist.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupInfo(BackupInfoResponse backupInfo) {
             $.backupInfo = backupInfo;
             return this;
         }
 
+        /**
+         * @param sourceType The type of the restore source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceType(String sourceType) {
             $.sourceType = sourceType;
             return this;

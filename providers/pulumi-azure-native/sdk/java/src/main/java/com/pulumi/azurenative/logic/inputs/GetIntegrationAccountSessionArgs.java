@@ -19,6 +19,10 @@ public final class GetIntegrationAccountSessionArgs extends com.pulumi.resources
     @Import(name="integrationAccountName", required=true)
     private String integrationAccountName;
 
+    /**
+     * @return The integration account name.
+     * 
+     */
     public String integrationAccountName() {
         return this.integrationAccountName;
     }
@@ -30,6 +34,10 @@ public final class GetIntegrationAccountSessionArgs extends com.pulumi.resources
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetIntegrationAccountSessionArgs extends com.pulumi.resources
     @Import(name="sessionName", required=true)
     private String sessionName;
 
+    /**
+     * @return The integration account session name.
+     * 
+     */
     public String sessionName() {
         return this.sessionName;
     }
@@ -71,16 +83,34 @@ public final class GetIntegrationAccountSessionArgs extends com.pulumi.resources
             $ = new GetIntegrationAccountSessionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param integrationAccountName The integration account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder integrationAccountName(String integrationAccountName) {
             $.integrationAccountName = integrationAccountName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param sessionName The integration account session name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sessionName(String sessionName) {
             $.sessionName = sessionName;
             return this;

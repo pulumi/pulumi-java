@@ -31,6 +31,10 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="deviceKey")
     private @Nullable Output<Integer> deviceKey;
 
+    /**
+     * @return Gets or sets the device key value.
+     * 
+     */
     public Optional<Output<Integer>> deviceKey() {
         return Optional.ofNullable(this.deviceKey);
     }
@@ -42,6 +46,10 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="ipSettings")
     private @Nullable Output<NicIPSettingsArgs> ipSettings;
 
+    /**
+     * @return Gets or sets the ipsettings.
+     * 
+     */
     public Optional<Output<NicIPSettingsArgs>> ipSettings() {
         return Optional.ofNullable(this.ipSettings);
     }
@@ -53,6 +61,10 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Gets or sets the name of the network interface.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -64,6 +76,10 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="networkId")
     private @Nullable Output<String> networkId;
 
+    /**
+     * @return Gets or sets the ARM Id of the network resource to connect the virtual machine.
+     * 
+     */
     public Optional<Output<String>> networkId() {
         return Optional.ofNullable(this.networkId);
     }
@@ -75,6 +91,10 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="nicType")
     private @Nullable Output<Either<String,NICType>> nicType;
 
+    /**
+     * @return NIC type
+     * 
+     */
     public Optional<Output<Either<String,NICType>>> nicType() {
         return Optional.ofNullable(this.nicType);
     }
@@ -86,6 +106,10 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="powerOnBoot")
     private @Nullable Output<Either<String,PowerOnBootOption>> powerOnBoot;
 
+    /**
+     * @return Gets or sets the power on boot.
+     * 
+     */
     public Optional<Output<Either<String,PowerOnBootOption>>> powerOnBoot() {
         return Optional.ofNullable(this.powerOnBoot);
     }
@@ -119,72 +143,168 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
             $ = new NetworkInterfaceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deviceKey Gets or sets the device key value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceKey(@Nullable Output<Integer> deviceKey) {
             $.deviceKey = deviceKey;
             return this;
         }
 
+        /**
+         * @param deviceKey Gets or sets the device key value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceKey(Integer deviceKey) {
             return deviceKey(Output.of(deviceKey));
         }
 
+        /**
+         * @param ipSettings Gets or sets the ipsettings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipSettings(@Nullable Output<NicIPSettingsArgs> ipSettings) {
             $.ipSettings = ipSettings;
             return this;
         }
 
+        /**
+         * @param ipSettings Gets or sets the ipsettings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipSettings(NicIPSettingsArgs ipSettings) {
             return ipSettings(Output.of(ipSettings));
         }
 
+        /**
+         * @param name Gets or sets the name of the network interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Gets or sets the name of the network interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param networkId Gets or sets the ARM Id of the network resource to connect the virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkId(@Nullable Output<String> networkId) {
             $.networkId = networkId;
             return this;
         }
 
+        /**
+         * @param networkId Gets or sets the ARM Id of the network resource to connect the virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkId(String networkId) {
             return networkId(Output.of(networkId));
         }
 
+        /**
+         * @param nicType NIC type
+         * 
+         * @return builder
+         * 
+         */
         public Builder nicType(@Nullable Output<Either<String,NICType>> nicType) {
             $.nicType = nicType;
             return this;
         }
 
+        /**
+         * @param nicType NIC type
+         * 
+         * @return builder
+         * 
+         */
         public Builder nicType(Either<String,NICType> nicType) {
             return nicType(Output.of(nicType));
         }
 
+        /**
+         * @param nicType NIC type
+         * 
+         * @return builder
+         * 
+         */
         public Builder nicType(String nicType) {
             return nicType(Either.ofLeft(nicType));
         }
 
+        /**
+         * @param nicType NIC type
+         * 
+         * @return builder
+         * 
+         */
         public Builder nicType(NICType nicType) {
             return nicType(Either.ofRight(nicType));
         }
 
+        /**
+         * @param powerOnBoot Gets or sets the power on boot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder powerOnBoot(@Nullable Output<Either<String,PowerOnBootOption>> powerOnBoot) {
             $.powerOnBoot = powerOnBoot;
             return this;
         }
 
+        /**
+         * @param powerOnBoot Gets or sets the power on boot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder powerOnBoot(Either<String,PowerOnBootOption> powerOnBoot) {
             return powerOnBoot(Output.of(powerOnBoot));
         }
 
+        /**
+         * @param powerOnBoot Gets or sets the power on boot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder powerOnBoot(String powerOnBoot) {
             return powerOnBoot(Either.ofLeft(powerOnBoot));
         }
 
+        /**
+         * @param powerOnBoot Gets or sets the power on boot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder powerOnBoot(PowerOnBootOption powerOnBoot) {
             return powerOnBoot(Either.ofRight(powerOnBoot));
         }

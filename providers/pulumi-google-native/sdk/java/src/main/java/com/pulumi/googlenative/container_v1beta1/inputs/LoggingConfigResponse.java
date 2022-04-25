@@ -23,6 +23,10 @@ public final class LoggingConfigResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="componentConfig", required=true)
     private LoggingComponentConfigResponse componentConfig;
 
+    /**
+     * @return Logging components configuration
+     * 
+     */
     public LoggingComponentConfigResponse componentConfig() {
         return this.componentConfig;
     }
@@ -51,6 +55,12 @@ public final class LoggingConfigResponse extends com.pulumi.resources.InvokeArgs
             $ = new LoggingConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param componentConfig Logging components configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder componentConfig(LoggingComponentConfigResponse componentConfig) {
             $.componentConfig = componentConfig;
             return this;

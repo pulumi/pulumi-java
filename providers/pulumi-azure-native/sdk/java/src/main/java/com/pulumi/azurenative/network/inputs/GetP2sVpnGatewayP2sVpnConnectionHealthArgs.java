@@ -19,6 +19,10 @@ public final class GetP2sVpnGatewayP2sVpnConnectionHealthArgs extends com.pulumi
     @Import(name="gatewayName", required=true)
     private String gatewayName;
 
+    /**
+     * @return The name of the P2SVpnGateway.
+     * 
+     */
     public String gatewayName() {
         return this.gatewayName;
     }
@@ -30,6 +34,10 @@ public final class GetP2sVpnGatewayP2sVpnConnectionHealthArgs extends com.pulumi
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetP2sVpnGatewayP2sVpnConnectionHealthArgs extends com.pulumi
             $ = new GetP2sVpnGatewayP2sVpnConnectionHealthArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param gatewayName The name of the P2SVpnGateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayName(String gatewayName) {
             $.gatewayName = gatewayName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

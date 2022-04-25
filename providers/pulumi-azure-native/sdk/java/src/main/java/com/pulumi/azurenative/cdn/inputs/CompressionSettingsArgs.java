@@ -28,6 +28,10 @@ public final class CompressionSettingsArgs extends com.pulumi.resources.Resource
     @Import(name="contentTypesToCompress")
     private @Nullable Output<List<String>> contentTypesToCompress;
 
+    /**
+     * @return List of content types on which compression applies. The value should be a valid MIME type.
+     * 
+     */
     public Optional<Output<List<String>>> contentTypesToCompress() {
         return Optional.ofNullable(this.contentTypesToCompress);
     }
@@ -39,6 +43,10 @@ public final class CompressionSettingsArgs extends com.pulumi.resources.Resource
     @Import(name="isCompressionEnabled")
     private @Nullable Output<Boolean> isCompressionEnabled;
 
+    /**
+     * @return Indicates whether content compression is enabled on AzureFrontDoor. Default value is false. If compression is enabled, content will be served as compressed if user requests for a compressed version. Content won&#39;t be compressed on AzureFrontDoor when requested content is smaller than 1 byte or larger than 1 MB.
+     * 
+     */
     public Optional<Output<Boolean>> isCompressionEnabled() {
         return Optional.ofNullable(this.isCompressionEnabled);
     }
@@ -68,24 +76,54 @@ public final class CompressionSettingsArgs extends com.pulumi.resources.Resource
             $ = new CompressionSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param contentTypesToCompress List of content types on which compression applies. The value should be a valid MIME type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentTypesToCompress(@Nullable Output<List<String>> contentTypesToCompress) {
             $.contentTypesToCompress = contentTypesToCompress;
             return this;
         }
 
+        /**
+         * @param contentTypesToCompress List of content types on which compression applies. The value should be a valid MIME type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentTypesToCompress(List<String> contentTypesToCompress) {
             return contentTypesToCompress(Output.of(contentTypesToCompress));
         }
 
+        /**
+         * @param contentTypesToCompress List of content types on which compression applies. The value should be a valid MIME type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentTypesToCompress(String... contentTypesToCompress) {
             return contentTypesToCompress(List.of(contentTypesToCompress));
         }
 
+        /**
+         * @param isCompressionEnabled Indicates whether content compression is enabled on AzureFrontDoor. Default value is false. If compression is enabled, content will be served as compressed if user requests for a compressed version. Content won&#39;t be compressed on AzureFrontDoor when requested content is smaller than 1 byte or larger than 1 MB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isCompressionEnabled(@Nullable Output<Boolean> isCompressionEnabled) {
             $.isCompressionEnabled = isCompressionEnabled;
             return this;
         }
 
+        /**
+         * @param isCompressionEnabled Indicates whether content compression is enabled on AzureFrontDoor. Default value is false. If compression is enabled, content will be served as compressed if user requests for a compressed version. Content won&#39;t be compressed on AzureFrontDoor when requested content is smaller than 1 byte or larger than 1 MB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isCompressionEnabled(Boolean isCompressionEnabled) {
             return isCompressionEnabled(Output.of(isCompressionEnabled));
         }

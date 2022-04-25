@@ -24,6 +24,10 @@ public final class ApplicationCustomComponent extends com.pulumi.resources.Invok
     @Import(name="componentName", required=true)
     private String componentName;
 
+    /**
+     * @return The name of the component.
+     * 
+     */
     public String componentName() {
         return this.componentName;
     }
@@ -35,6 +39,10 @@ public final class ApplicationCustomComponent extends com.pulumi.resources.Invok
     @Import(name="resourceList", required=true)
     private List<String> resourceList;
 
+    /**
+     * @return The list of resource ARNs that belong to the component.
+     * 
+     */
     public List<String> resourceList() {
         return this.resourceList;
     }
@@ -64,16 +72,34 @@ public final class ApplicationCustomComponent extends com.pulumi.resources.Invok
             $ = new ApplicationCustomComponent(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param componentName The name of the component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder componentName(String componentName) {
             $.componentName = componentName;
             return this;
         }
 
+        /**
+         * @param resourceList The list of resource ARNs that belong to the component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceList(List<String> resourceList) {
             $.resourceList = resourceList;
             return this;
         }
 
+        /**
+         * @param resourceList The list of resource ARNs that belong to the component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceList(String... resourceList) {
             return resourceList(List.of(resourceList));
         }

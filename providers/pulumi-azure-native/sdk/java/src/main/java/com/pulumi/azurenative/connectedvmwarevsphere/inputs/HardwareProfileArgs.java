@@ -26,6 +26,10 @@ public final class HardwareProfileArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="memorySizeMB")
     private @Nullable Output<Integer> memorySizeMB;
 
+    /**
+     * @return Gets or sets memory size in MBs for the vm.
+     * 
+     */
     public Optional<Output<Integer>> memorySizeMB() {
         return Optional.ofNullable(this.memorySizeMB);
     }
@@ -37,6 +41,10 @@ public final class HardwareProfileArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="numCPUs")
     private @Nullable Output<Integer> numCPUs;
 
+    /**
+     * @return Gets or sets the number of vCPUs for the vm.
+     * 
+     */
     public Optional<Output<Integer>> numCPUs() {
         return Optional.ofNullable(this.numCPUs);
     }
@@ -48,6 +56,10 @@ public final class HardwareProfileArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="numCoresPerSocket")
     private @Nullable Output<Integer> numCoresPerSocket;
 
+    /**
+     * @return Gets or sets the number of cores per socket for the vm. Defaults to 1 if unspecified.
+     * 
+     */
     public Optional<Output<Integer>> numCoresPerSocket() {
         return Optional.ofNullable(this.numCoresPerSocket);
     }
@@ -78,29 +90,65 @@ public final class HardwareProfileArgs extends com.pulumi.resources.ResourceArgs
             $ = new HardwareProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param memorySizeMB Gets or sets memory size in MBs for the vm.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memorySizeMB(@Nullable Output<Integer> memorySizeMB) {
             $.memorySizeMB = memorySizeMB;
             return this;
         }
 
+        /**
+         * @param memorySizeMB Gets or sets memory size in MBs for the vm.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memorySizeMB(Integer memorySizeMB) {
             return memorySizeMB(Output.of(memorySizeMB));
         }
 
+        /**
+         * @param numCPUs Gets or sets the number of vCPUs for the vm.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numCPUs(@Nullable Output<Integer> numCPUs) {
             $.numCPUs = numCPUs;
             return this;
         }
 
+        /**
+         * @param numCPUs Gets or sets the number of vCPUs for the vm.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numCPUs(Integer numCPUs) {
             return numCPUs(Output.of(numCPUs));
         }
 
+        /**
+         * @param numCoresPerSocket Gets or sets the number of cores per socket for the vm. Defaults to 1 if unspecified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numCoresPerSocket(@Nullable Output<Integer> numCoresPerSocket) {
             $.numCoresPerSocket = numCoresPerSocket;
             return this;
         }
 
+        /**
+         * @param numCoresPerSocket Gets or sets the number of cores per socket for the vm. Defaults to 1 if unspecified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numCoresPerSocket(Integer numCoresPerSocket) {
             return numCoresPerSocket(Output.of(numCoresPerSocket));
         }

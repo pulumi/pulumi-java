@@ -19,6 +19,10 @@ public final class GetDiskPoolArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="diskPoolName", required=true)
     private String diskPoolName;
 
+    /**
+     * @return The name of the Disk pool.
+     * 
+     */
     public String diskPoolName() {
         return this.diskPoolName;
     }
@@ -30,6 +34,10 @@ public final class GetDiskPoolArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetDiskPoolArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetDiskPoolArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param diskPoolName The name of the Disk pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskPoolName(String diskPoolName) {
             $.diskPoolName = diskPoolName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

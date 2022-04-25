@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class MetricStreamIncludeFilter {
     /**
-     * Name of the metric namespace in the filter.
+     * @return Name of the metric namespace in the filter.
      * 
      */
     private final String namespace;
@@ -21,9 +21,9 @@ public final class MetricStreamIncludeFilter {
     }
 
     /**
-     * Name of the metric namespace in the filter.
+     * @return Name of the metric namespace in the filter.
      * 
-    */
+     */
     public String namespace() {
         return this.namespace;
     }

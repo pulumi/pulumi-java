@@ -27,6 +27,10 @@ public final class GoogleCloudChannelV1PeriodArgs extends com.pulumi.resources.R
     @Import(name="duration")
     private @Nullable Output<Integer> duration;
 
+    /**
+     * @return Total duration of Period Type defined.
+     * 
+     */
     public Optional<Output<Integer>> duration() {
         return Optional.ofNullable(this.duration);
     }
@@ -38,6 +42,10 @@ public final class GoogleCloudChannelV1PeriodArgs extends com.pulumi.resources.R
     @Import(name="periodType")
     private @Nullable Output<GoogleCloudChannelV1PeriodPeriodType> periodType;
 
+    /**
+     * @return Period Type.
+     * 
+     */
     public Optional<Output<GoogleCloudChannelV1PeriodPeriodType>> periodType() {
         return Optional.ofNullable(this.periodType);
     }
@@ -67,20 +75,44 @@ public final class GoogleCloudChannelV1PeriodArgs extends com.pulumi.resources.R
             $ = new GoogleCloudChannelV1PeriodArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param duration Total duration of Period Type defined.
+         * 
+         * @return builder
+         * 
+         */
         public Builder duration(@Nullable Output<Integer> duration) {
             $.duration = duration;
             return this;
         }
 
+        /**
+         * @param duration Total duration of Period Type defined.
+         * 
+         * @return builder
+         * 
+         */
         public Builder duration(Integer duration) {
             return duration(Output.of(duration));
         }
 
+        /**
+         * @param periodType Period Type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder periodType(@Nullable Output<GoogleCloudChannelV1PeriodPeriodType> periodType) {
             $.periodType = periodType;
             return this;
         }
 
+        /**
+         * @param periodType Period Type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder periodType(GoogleCloudChannelV1PeriodPeriodType periodType) {
             return periodType(Output.of(periodType));
         }

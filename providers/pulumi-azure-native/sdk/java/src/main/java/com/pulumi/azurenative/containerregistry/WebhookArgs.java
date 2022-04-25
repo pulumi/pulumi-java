@@ -27,6 +27,10 @@ public final class WebhookArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="actions", required=true)
     private Output<List<Either<String,WebhookAction>>> actions;
 
+    /**
+     * @return The list of actions that trigger the webhook to post notifications.
+     * 
+     */
     public Output<List<Either<String,WebhookAction>>> actions() {
         return this.actions;
     }
@@ -38,6 +42,10 @@ public final class WebhookArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="customHeaders")
     private @Nullable Output<Map<String,String>> customHeaders;
 
+    /**
+     * @return Custom headers that will be added to the webhook notifications.
+     * 
+     */
     public Optional<Output<Map<String,String>>> customHeaders() {
         return Optional.ofNullable(this.customHeaders);
     }
@@ -49,6 +57,10 @@ public final class WebhookArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The location of the webhook. This cannot be changed after the resource is created.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -60,6 +72,10 @@ public final class WebhookArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="registryName", required=true)
     private Output<String> registryName;
 
+    /**
+     * @return The name of the container registry.
+     * 
+     */
     public Output<String> registryName() {
         return this.registryName;
     }
@@ -71,6 +87,10 @@ public final class WebhookArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group to which the container registry belongs.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -82,6 +102,10 @@ public final class WebhookArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scope")
     private @Nullable Output<String> scope;
 
+    /**
+     * @return The scope of repositories where the event can be triggered. For example, &#39;foo:*&#39; means events for all tags under repository &#39;foo&#39;. &#39;foo:bar&#39; means events for &#39;foo:bar&#39; only. &#39;foo&#39; is equivalent to &#39;foo:latest&#39;. Empty means all events.
+     * 
+     */
     public Optional<Output<String>> scope() {
         return Optional.ofNullable(this.scope);
     }
@@ -93,6 +117,10 @@ public final class WebhookArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceUri", required=true)
     private Output<String> serviceUri;
 
+    /**
+     * @return The service URI for the webhook to post notifications.
+     * 
+     */
     public Output<String> serviceUri() {
         return this.serviceUri;
     }
@@ -104,6 +132,10 @@ public final class WebhookArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="status")
     private @Nullable Output<Either<String,WebhookStatus>> status;
 
+    /**
+     * @return The status of the webhook at the time the operation was called.
+     * 
+     */
     public Optional<Output<Either<String,WebhookStatus>>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -115,6 +147,10 @@ public final class WebhookArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return The tags for the webhook.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -126,6 +162,10 @@ public final class WebhookArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="webhookName")
     private @Nullable Output<String> webhookName;
 
+    /**
+     * @return The name of the webhook.
+     * 
+     */
     public Optional<Output<String>> webhookName() {
         return Optional.ofNullable(this.webhookName);
     }
@@ -163,104 +203,242 @@ public final class WebhookArgs extends com.pulumi.resources.ResourceArgs {
             $ = new WebhookArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actions The list of actions that trigger the webhook to post notifications.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(Output<List<Either<String,WebhookAction>>> actions) {
             $.actions = actions;
             return this;
         }
 
+        /**
+         * @param actions The list of actions that trigger the webhook to post notifications.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(List<Either<String,WebhookAction>> actions) {
             return actions(Output.of(actions));
         }
 
+        /**
+         * @param actions The list of actions that trigger the webhook to post notifications.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(Either<String,WebhookAction>... actions) {
             return actions(List.of(actions));
         }
 
+        /**
+         * @param customHeaders Custom headers that will be added to the webhook notifications.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customHeaders(@Nullable Output<Map<String,String>> customHeaders) {
             $.customHeaders = customHeaders;
             return this;
         }
 
+        /**
+         * @param customHeaders Custom headers that will be added to the webhook notifications.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customHeaders(Map<String,String> customHeaders) {
             return customHeaders(Output.of(customHeaders));
         }
 
+        /**
+         * @param location The location of the webhook. This cannot be changed after the resource is created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The location of the webhook. This cannot be changed after the resource is created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param registryName The name of the container registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registryName(Output<String> registryName) {
             $.registryName = registryName;
             return this;
         }
 
+        /**
+         * @param registryName The name of the container registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registryName(String registryName) {
             return registryName(Output.of(registryName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group to which the container registry belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group to which the container registry belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param scope The scope of repositories where the event can be triggered. For example, &#39;foo:*&#39; means events for all tags under repository &#39;foo&#39;. &#39;foo:bar&#39; means events for &#39;foo:bar&#39; only. &#39;foo&#39; is equivalent to &#39;foo:latest&#39;. Empty means all events.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(@Nullable Output<String> scope) {
             $.scope = scope;
             return this;
         }
 
+        /**
+         * @param scope The scope of repositories where the event can be triggered. For example, &#39;foo:*&#39; means events for all tags under repository &#39;foo&#39;. &#39;foo:bar&#39; means events for &#39;foo:bar&#39; only. &#39;foo&#39; is equivalent to &#39;foo:latest&#39;. Empty means all events.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(String scope) {
             return scope(Output.of(scope));
         }
 
+        /**
+         * @param serviceUri The service URI for the webhook to post notifications.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceUri(Output<String> serviceUri) {
             $.serviceUri = serviceUri;
             return this;
         }
 
+        /**
+         * @param serviceUri The service URI for the webhook to post notifications.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceUri(String serviceUri) {
             return serviceUri(Output.of(serviceUri));
         }
 
+        /**
+         * @param status The status of the webhook at the time the operation was called.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<Either<String,WebhookStatus>> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status The status of the webhook at the time the operation was called.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(Either<String,WebhookStatus> status) {
             return status(Output.of(status));
         }
 
+        /**
+         * @param status The status of the webhook at the time the operation was called.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             return status(Either.ofLeft(status));
         }
 
+        /**
+         * @param status The status of the webhook at the time the operation was called.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(WebhookStatus status) {
             return status(Either.ofRight(status));
         }
 
+        /**
+         * @param tags The tags for the webhook.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The tags for the webhook.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param webhookName The name of the webhook.
+         * 
+         * @return builder
+         * 
+         */
         public Builder webhookName(@Nullable Output<String> webhookName) {
             $.webhookName = webhookName;
             return this;
         }
 
+        /**
+         * @param webhookName The name of the webhook.
+         * 
+         * @return builder
+         * 
+         */
         public Builder webhookName(String webhookName) {
             return webhookName(Output.of(webhookName));
         }

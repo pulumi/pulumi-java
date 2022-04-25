@@ -23,6 +23,10 @@ public final class GoogleCloudDatacatalogV1DatabaseTableSpecResponse extends com
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of this table.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -51,6 +55,12 @@ public final class GoogleCloudDatacatalogV1DatabaseTableSpecResponse extends com
             $ = new GoogleCloudDatacatalogV1DatabaseTableSpecResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type Type of this table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

@@ -23,6 +23,10 @@ public final class TimePartitioningArgs extends com.pulumi.resources.ResourceArg
     @Import(name="expirationMs")
     private @Nullable Output<String> expirationMs;
 
+    /**
+     * @return [Optional] Number of milliseconds for which to keep the storage for partitions in the table. The storage in a partition will have an expiration time of its partition time plus this value.
+     * 
+     */
     public Optional<Output<String>> expirationMs() {
         return Optional.ofNullable(this.expirationMs);
     }
@@ -34,6 +38,10 @@ public final class TimePartitioningArgs extends com.pulumi.resources.ResourceArg
     @Import(name="field")
     private @Nullable Output<String> field;
 
+    /**
+     * @return [Beta] [Optional] If not set, the table is partitioned by pseudo column, referenced via either &#39;_PARTITIONTIME&#39; as TIMESTAMP type, or &#39;_PARTITIONDATE&#39; as DATE type. If field is specified, the table is instead partitioned by this field. The field must be a top-level TIMESTAMP or DATE field. Its mode must be NULLABLE or REQUIRED.
+     * 
+     */
     public Optional<Output<String>> field() {
         return Optional.ofNullable(this.field);
     }
@@ -52,6 +60,10 @@ public final class TimePartitioningArgs extends com.pulumi.resources.ResourceArg
     @Import(name="type")
     private @Nullable Output<String> type;
 
+    /**
+     * @return [Required] The supported types are DAY, HOUR, MONTH, and YEAR, which will generate one partition per day, hour, month, and year, respectively. When the type is not specified, the default behavior is DAY.
+     * 
+     */
     public Optional<Output<String>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -83,20 +95,44 @@ public final class TimePartitioningArgs extends com.pulumi.resources.ResourceArg
             $ = new TimePartitioningArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expirationMs [Optional] Number of milliseconds for which to keep the storage for partitions in the table. The storage in a partition will have an expiration time of its partition time plus this value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expirationMs(@Nullable Output<String> expirationMs) {
             $.expirationMs = expirationMs;
             return this;
         }
 
+        /**
+         * @param expirationMs [Optional] Number of milliseconds for which to keep the storage for partitions in the table. The storage in a partition will have an expiration time of its partition time plus this value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expirationMs(String expirationMs) {
             return expirationMs(Output.of(expirationMs));
         }
 
+        /**
+         * @param field [Beta] [Optional] If not set, the table is partitioned by pseudo column, referenced via either &#39;_PARTITIONTIME&#39; as TIMESTAMP type, or &#39;_PARTITIONDATE&#39; as DATE type. If field is specified, the table is instead partitioned by this field. The field must be a top-level TIMESTAMP or DATE field. Its mode must be NULLABLE or REQUIRED.
+         * 
+         * @return builder
+         * 
+         */
         public Builder field(@Nullable Output<String> field) {
             $.field = field;
             return this;
         }
 
+        /**
+         * @param field [Beta] [Optional] If not set, the table is partitioned by pseudo column, referenced via either &#39;_PARTITIONTIME&#39; as TIMESTAMP type, or &#39;_PARTITIONDATE&#39; as DATE type. If field is specified, the table is instead partitioned by this field. The field must be a top-level TIMESTAMP or DATE field. Its mode must be NULLABLE or REQUIRED.
+         * 
+         * @return builder
+         * 
+         */
         public Builder field(String field) {
             return field(Output.of(field));
         }
@@ -110,11 +146,23 @@ public final class TimePartitioningArgs extends com.pulumi.resources.ResourceArg
             return requirePartitionFilter(Output.of(requirePartitionFilter));
         }
 
+        /**
+         * @param type [Required] The supported types are DAY, HOUR, MONTH, and YEAR, which will generate one partition per day, hour, month, and year, respectively. When the type is not specified, the default behavior is DAY.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type [Required] The supported types are DAY, HOUR, MONTH, and YEAR, which will generate one partition per day, hour, month, and year, respectively. When the type is not specified, the default behavior is DAY.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

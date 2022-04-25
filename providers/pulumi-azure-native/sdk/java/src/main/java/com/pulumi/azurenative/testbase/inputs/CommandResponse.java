@@ -27,6 +27,10 @@ public final class CommandResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="action", required=true)
     private String action;
 
+    /**
+     * @return The action of the command.
+     * 
+     */
     public String action() {
         return this.action;
     }
@@ -38,6 +42,10 @@ public final class CommandResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="alwaysRun")
     private @Nullable Boolean alwaysRun;
 
+    /**
+     * @return Specifies whether to run the command even if a previous command is failed.
+     * 
+     */
     public Optional<Boolean> alwaysRun() {
         return Optional.ofNullable(this.alwaysRun);
     }
@@ -49,6 +57,10 @@ public final class CommandResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="applyUpdateBefore")
     private @Nullable Boolean applyUpdateBefore;
 
+    /**
+     * @return Specifies whether to apply update before the command.
+     * 
+     */
     public Optional<Boolean> applyUpdateBefore() {
         return Optional.ofNullable(this.applyUpdateBefore);
     }
@@ -60,6 +72,10 @@ public final class CommandResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="content", required=true)
     private String content;
 
+    /**
+     * @return The content of the command. The content depends on source type.
+     * 
+     */
     public String content() {
         return this.content;
     }
@@ -71,6 +87,10 @@ public final class CommandResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="contentType", required=true)
     private String contentType;
 
+    /**
+     * @return The type of command content.
+     * 
+     */
     public String contentType() {
         return this.contentType;
     }
@@ -82,6 +102,10 @@ public final class CommandResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="maxRunTime")
     private @Nullable Integer maxRunTime;
 
+    /**
+     * @return Specifies the max run time of the command.
+     * 
+     */
     public Optional<Integer> maxRunTime() {
         return Optional.ofNullable(this.maxRunTime);
     }
@@ -93,6 +117,10 @@ public final class CommandResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the command.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -104,6 +132,10 @@ public final class CommandResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="restartAfter")
     private @Nullable Boolean restartAfter;
 
+    /**
+     * @return Specifies whether to restart the VM after the command executed.
+     * 
+     */
     public Optional<Boolean> restartAfter() {
         return Optional.ofNullable(this.restartAfter);
     }
@@ -115,6 +147,10 @@ public final class CommandResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="runAsInteractive")
     private @Nullable Boolean runAsInteractive;
 
+    /**
+     * @return Specifies whether to run the command in interactive mode.
+     * 
+     */
     public Optional<Boolean> runAsInteractive() {
         return Optional.ofNullable(this.runAsInteractive);
     }
@@ -126,6 +162,10 @@ public final class CommandResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="runElevated")
     private @Nullable Boolean runElevated;
 
+    /**
+     * @return Specifies whether to run the command as administrator.
+     * 
+     */
     public Optional<Boolean> runElevated() {
         return Optional.ofNullable(this.runElevated);
     }
@@ -163,51 +203,111 @@ public final class CommandResponse extends com.pulumi.resources.InvokeArgs {
             $ = new CommandResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action The action of the command.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(String action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param alwaysRun Specifies whether to run the command even if a previous command is failed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alwaysRun(@Nullable Boolean alwaysRun) {
             $.alwaysRun = alwaysRun;
             return this;
         }
 
+        /**
+         * @param applyUpdateBefore Specifies whether to apply update before the command.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applyUpdateBefore(@Nullable Boolean applyUpdateBefore) {
             $.applyUpdateBefore = applyUpdateBefore;
             return this;
         }
 
+        /**
+         * @param content The content of the command. The content depends on source type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(String content) {
             $.content = content;
             return this;
         }
 
+        /**
+         * @param contentType The type of command content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentType(String contentType) {
             $.contentType = contentType;
             return this;
         }
 
+        /**
+         * @param maxRunTime Specifies the max run time of the command.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxRunTime(@Nullable Integer maxRunTime) {
             $.maxRunTime = maxRunTime;
             return this;
         }
 
+        /**
+         * @param name The name of the command.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param restartAfter Specifies whether to restart the VM after the command executed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restartAfter(@Nullable Boolean restartAfter) {
             $.restartAfter = restartAfter;
             return this;
         }
 
+        /**
+         * @param runAsInteractive Specifies whether to run the command in interactive mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runAsInteractive(@Nullable Boolean runAsInteractive) {
             $.runAsInteractive = runAsInteractive;
             return this;
         }
 
+        /**
+         * @param runElevated Specifies whether to run the command as administrator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runElevated(@Nullable Boolean runElevated) {
             $.runElevated = runElevated;
             return this;

@@ -25,6 +25,10 @@ public final class HybridRunbookWorkerLegacyResponse extends com.pulumi.resource
     @Import(name="ip")
     private @Nullable String ip;
 
+    /**
+     * @return Gets or sets the assigned machine IP address.
+     * 
+     */
     public Optional<String> ip() {
         return Optional.ofNullable(this.ip);
     }
@@ -36,6 +40,10 @@ public final class HybridRunbookWorkerLegacyResponse extends com.pulumi.resource
     @Import(name="lastSeenDateTime")
     private @Nullable String lastSeenDateTime;
 
+    /**
+     * @return Last Heartbeat from the Worker
+     * 
+     */
     public Optional<String> lastSeenDateTime() {
         return Optional.ofNullable(this.lastSeenDateTime);
     }
@@ -47,6 +55,10 @@ public final class HybridRunbookWorkerLegacyResponse extends com.pulumi.resource
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Gets or sets the worker machine name.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -58,6 +70,10 @@ public final class HybridRunbookWorkerLegacyResponse extends com.pulumi.resource
     @Import(name="registrationTime")
     private @Nullable String registrationTime;
 
+    /**
+     * @return Gets or sets the registration time of the worker machine.
+     * 
+     */
     public Optional<String> registrationTime() {
         return Optional.ofNullable(this.registrationTime);
     }
@@ -89,21 +105,45 @@ public final class HybridRunbookWorkerLegacyResponse extends com.pulumi.resource
             $ = new HybridRunbookWorkerLegacyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ip Gets or sets the assigned machine IP address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ip(@Nullable String ip) {
             $.ip = ip;
             return this;
         }
 
+        /**
+         * @param lastSeenDateTime Last Heartbeat from the Worker
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastSeenDateTime(@Nullable String lastSeenDateTime) {
             $.lastSeenDateTime = lastSeenDateTime;
             return this;
         }
 
+        /**
+         * @param name Gets or sets the worker machine name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param registrationTime Gets or sets the registration time of the worker machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registrationTime(@Nullable String registrationTime) {
             $.registrationTime = registrationTime;
             return this;

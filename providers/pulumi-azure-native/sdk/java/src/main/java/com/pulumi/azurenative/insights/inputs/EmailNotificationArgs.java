@@ -29,6 +29,10 @@ public final class EmailNotificationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="customEmails")
     private @Nullable Output<List<String>> customEmails;
 
+    /**
+     * @return the custom e-mails list. This value can be null or empty, in which case this attribute will be ignored.
+     * 
+     */
     public Optional<Output<List<String>>> customEmails() {
         return Optional.ofNullable(this.customEmails);
     }
@@ -40,6 +44,10 @@ public final class EmailNotificationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="sendToSubscriptionAdministrator")
     private @Nullable Output<Boolean> sendToSubscriptionAdministrator;
 
+    /**
+     * @return a value indicating whether to send email to subscription administrator.
+     * 
+     */
     public Optional<Output<Boolean>> sendToSubscriptionAdministrator() {
         return Optional.ofNullable(this.sendToSubscriptionAdministrator);
     }
@@ -51,6 +59,10 @@ public final class EmailNotificationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="sendToSubscriptionCoAdministrators")
     private @Nullable Output<Boolean> sendToSubscriptionCoAdministrators;
 
+    /**
+     * @return a value indicating whether to send email to subscription co-administrators.
+     * 
+     */
     public Optional<Output<Boolean>> sendToSubscriptionCoAdministrators() {
         return Optional.ofNullable(this.sendToSubscriptionCoAdministrators);
     }
@@ -81,33 +93,75 @@ public final class EmailNotificationArgs extends com.pulumi.resources.ResourceAr
             $ = new EmailNotificationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customEmails the custom e-mails list. This value can be null or empty, in which case this attribute will be ignored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customEmails(@Nullable Output<List<String>> customEmails) {
             $.customEmails = customEmails;
             return this;
         }
 
+        /**
+         * @param customEmails the custom e-mails list. This value can be null or empty, in which case this attribute will be ignored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customEmails(List<String> customEmails) {
             return customEmails(Output.of(customEmails));
         }
 
+        /**
+         * @param customEmails the custom e-mails list. This value can be null or empty, in which case this attribute will be ignored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customEmails(String... customEmails) {
             return customEmails(List.of(customEmails));
         }
 
+        /**
+         * @param sendToSubscriptionAdministrator a value indicating whether to send email to subscription administrator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sendToSubscriptionAdministrator(@Nullable Output<Boolean> sendToSubscriptionAdministrator) {
             $.sendToSubscriptionAdministrator = sendToSubscriptionAdministrator;
             return this;
         }
 
+        /**
+         * @param sendToSubscriptionAdministrator a value indicating whether to send email to subscription administrator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sendToSubscriptionAdministrator(Boolean sendToSubscriptionAdministrator) {
             return sendToSubscriptionAdministrator(Output.of(sendToSubscriptionAdministrator));
         }
 
+        /**
+         * @param sendToSubscriptionCoAdministrators a value indicating whether to send email to subscription co-administrators.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sendToSubscriptionCoAdministrators(@Nullable Output<Boolean> sendToSubscriptionCoAdministrators) {
             $.sendToSubscriptionCoAdministrators = sendToSubscriptionCoAdministrators;
             return this;
         }
 
+        /**
+         * @param sendToSubscriptionCoAdministrators a value indicating whether to send email to subscription co-administrators.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sendToSubscriptionCoAdministrators(Boolean sendToSubscriptionCoAdministrators) {
             return sendToSubscriptionCoAdministrators(Output.of(sendToSubscriptionCoAdministrators));
         }

@@ -22,6 +22,10 @@ public final class AssociationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="licenseConfigurationArn")
     private @Nullable Output<String> licenseConfigurationArn;
 
+    /**
+     * @return ARN of the license configuration.
+     * 
+     */
     public Optional<Output<String>> licenseConfigurationArn() {
         return Optional.ofNullable(this.licenseConfigurationArn);
     }
@@ -33,6 +37,10 @@ public final class AssociationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceArn")
     private @Nullable Output<String> resourceArn;
 
+    /**
+     * @return ARN of the resource associated with the license configuration.
+     * 
+     */
     public Optional<Output<String>> resourceArn() {
         return Optional.ofNullable(this.resourceArn);
     }
@@ -62,20 +70,44 @@ public final class AssociationState extends com.pulumi.resources.ResourceArgs {
             $ = new AssociationState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param licenseConfigurationArn ARN of the license configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenseConfigurationArn(@Nullable Output<String> licenseConfigurationArn) {
             $.licenseConfigurationArn = licenseConfigurationArn;
             return this;
         }
 
+        /**
+         * @param licenseConfigurationArn ARN of the license configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenseConfigurationArn(String licenseConfigurationArn) {
             return licenseConfigurationArn(Output.of(licenseConfigurationArn));
         }
 
+        /**
+         * @param resourceArn ARN of the resource associated with the license configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceArn(@Nullable Output<String> resourceArn) {
             $.resourceArn = resourceArn;
             return this;
         }
 
+        /**
+         * @param resourceArn ARN of the resource associated with the license configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceArn(String resourceArn) {
             return resourceArn(Output.of(resourceArn));
         }

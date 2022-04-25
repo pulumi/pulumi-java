@@ -10,32 +10,32 @@ import java.util.Objects;
 @CustomType
 public final class GetAuthorizationResult {
     /**
-     * The ID of the ExpressRoute Circuit Authorization
+     * @return The ID of the ExpressRoute Circuit Authorization
      * 
      */
     private final String expressRouteAuthorizationId;
     /**
-     * The key of the ExpressRoute Circuit Authorization
+     * @return The key of the ExpressRoute Circuit Authorization
      * 
      */
     private final String expressRouteAuthorizationKey;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final String id;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * The state of the  ExpressRoute Circuit Authorization provisioning
+     * @return The state of the  ExpressRoute Circuit Authorization provisioning
      * 
      */
     private final String provisioningState;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
@@ -57,44 +57,44 @@ public final class GetAuthorizationResult {
     }
 
     /**
-     * The ID of the ExpressRoute Circuit Authorization
+     * @return The ID of the ExpressRoute Circuit Authorization
      * 
-    */
+     */
     public String expressRouteAuthorizationId() {
         return this.expressRouteAuthorizationId;
     }
     /**
-     * The key of the ExpressRoute Circuit Authorization
+     * @return The key of the ExpressRoute Circuit Authorization
      * 
-    */
+     */
     public String expressRouteAuthorizationKey() {
         return this.expressRouteAuthorizationKey;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The state of the  ExpressRoute Circuit Authorization provisioning
+     * @return The state of the  ExpressRoute Circuit Authorization provisioning
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

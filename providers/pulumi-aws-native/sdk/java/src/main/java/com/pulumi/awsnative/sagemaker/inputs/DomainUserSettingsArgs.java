@@ -30,6 +30,10 @@ public final class DomainUserSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="executionRole")
     private @Nullable Output<String> executionRole;
 
+    /**
+     * @return The user profile Amazon Resource Name (ARN).
+     * 
+     */
     public Optional<Output<String>> executionRole() {
         return Optional.ofNullable(this.executionRole);
     }
@@ -41,6 +45,10 @@ public final class DomainUserSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="jupyterServerAppSettings")
     private @Nullable Output<DomainJupyterServerAppSettingsArgs> jupyterServerAppSettings;
 
+    /**
+     * @return The Jupyter server&#39;s app settings.
+     * 
+     */
     public Optional<Output<DomainJupyterServerAppSettingsArgs>> jupyterServerAppSettings() {
         return Optional.ofNullable(this.jupyterServerAppSettings);
     }
@@ -52,6 +60,10 @@ public final class DomainUserSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="kernelGatewayAppSettings")
     private @Nullable Output<DomainKernelGatewayAppSettingsArgs> kernelGatewayAppSettings;
 
+    /**
+     * @return The kernel gateway app settings.
+     * 
+     */
     public Optional<Output<DomainKernelGatewayAppSettingsArgs>> kernelGatewayAppSettings() {
         return Optional.ofNullable(this.kernelGatewayAppSettings);
     }
@@ -63,6 +75,10 @@ public final class DomainUserSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="securityGroups")
     private @Nullable Output<List<String>> securityGroups;
 
+    /**
+     * @return The security groups for the Amazon Virtual Private Cloud (VPC) that Studio uses for communication.
+     * 
+     */
     public Optional<Output<List<String>>> securityGroups() {
         return Optional.ofNullable(this.securityGroups);
     }
@@ -74,6 +90,10 @@ public final class DomainUserSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="sharingSettings")
     private @Nullable Output<DomainSharingSettingsArgs> sharingSettings;
 
+    /**
+     * @return The sharing settings.
+     * 
+     */
     public Optional<Output<DomainSharingSettingsArgs>> sharingSettings() {
         return Optional.ofNullable(this.sharingSettings);
     }
@@ -106,51 +126,117 @@ public final class DomainUserSettingsArgs extends com.pulumi.resources.ResourceA
             $ = new DomainUserSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param executionRole The user profile Amazon Resource Name (ARN).
+         * 
+         * @return builder
+         * 
+         */
         public Builder executionRole(@Nullable Output<String> executionRole) {
             $.executionRole = executionRole;
             return this;
         }
 
+        /**
+         * @param executionRole The user profile Amazon Resource Name (ARN).
+         * 
+         * @return builder
+         * 
+         */
         public Builder executionRole(String executionRole) {
             return executionRole(Output.of(executionRole));
         }
 
+        /**
+         * @param jupyterServerAppSettings The Jupyter server&#39;s app settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jupyterServerAppSettings(@Nullable Output<DomainJupyterServerAppSettingsArgs> jupyterServerAppSettings) {
             $.jupyterServerAppSettings = jupyterServerAppSettings;
             return this;
         }
 
+        /**
+         * @param jupyterServerAppSettings The Jupyter server&#39;s app settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jupyterServerAppSettings(DomainJupyterServerAppSettingsArgs jupyterServerAppSettings) {
             return jupyterServerAppSettings(Output.of(jupyterServerAppSettings));
         }
 
+        /**
+         * @param kernelGatewayAppSettings The kernel gateway app settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kernelGatewayAppSettings(@Nullable Output<DomainKernelGatewayAppSettingsArgs> kernelGatewayAppSettings) {
             $.kernelGatewayAppSettings = kernelGatewayAppSettings;
             return this;
         }
 
+        /**
+         * @param kernelGatewayAppSettings The kernel gateway app settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kernelGatewayAppSettings(DomainKernelGatewayAppSettingsArgs kernelGatewayAppSettings) {
             return kernelGatewayAppSettings(Output.of(kernelGatewayAppSettings));
         }
 
+        /**
+         * @param securityGroups The security groups for the Amazon Virtual Private Cloud (VPC) that Studio uses for communication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroups(@Nullable Output<List<String>> securityGroups) {
             $.securityGroups = securityGroups;
             return this;
         }
 
+        /**
+         * @param securityGroups The security groups for the Amazon Virtual Private Cloud (VPC) that Studio uses for communication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroups(List<String> securityGroups) {
             return securityGroups(Output.of(securityGroups));
         }
 
+        /**
+         * @param securityGroups The security groups for the Amazon Virtual Private Cloud (VPC) that Studio uses for communication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroups(String... securityGroups) {
             return securityGroups(List.of(securityGroups));
         }
 
+        /**
+         * @param sharingSettings The sharing settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sharingSettings(@Nullable Output<DomainSharingSettingsArgs> sharingSettings) {
             $.sharingSettings = sharingSettings;
             return this;
         }
 
+        /**
+         * @param sharingSettings The sharing settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sharingSettings(DomainSharingSettingsArgs sharingSettings) {
             return sharingSettings(Output.of(sharingSettings));
         }

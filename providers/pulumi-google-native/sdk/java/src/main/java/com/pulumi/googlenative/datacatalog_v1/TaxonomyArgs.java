@@ -24,6 +24,10 @@ public final class TaxonomyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="activatedPolicyTypes")
     private @Nullable Output<List<TaxonomyActivatedPolicyTypesItem>> activatedPolicyTypes;
 
+    /**
+     * @return Optional. A list of policy types that are activated for this taxonomy. If not set, defaults to an empty list.
+     * 
+     */
     public Optional<Output<List<TaxonomyActivatedPolicyTypesItem>>> activatedPolicyTypes() {
         return Optional.ofNullable(this.activatedPolicyTypes);
     }
@@ -35,6 +39,10 @@ public final class TaxonomyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Optional. Description of this taxonomy. If not set, defaults to empty. The description must contain only Unicode characters, tabs, newlines, carriage returns, and page breaks, and be at most 2000 bytes long when encoded in UTF-8.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -46,6 +54,10 @@ public final class TaxonomyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
     private Output<String> displayName;
 
+    /**
+     * @return User-defined name of this taxonomy. The name can&#39;t start or end with spaces, must contain only Unicode letters, numbers, underscores, dashes, and spaces, and be at most 200 bytes long when encoded in UTF-8.
+     * 
+     */
     public Output<String> displayName() {
         return this.displayName;
     }
@@ -92,33 +104,75 @@ public final class TaxonomyArgs extends com.pulumi.resources.ResourceArgs {
             $ = new TaxonomyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param activatedPolicyTypes Optional. A list of policy types that are activated for this taxonomy. If not set, defaults to an empty list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder activatedPolicyTypes(@Nullable Output<List<TaxonomyActivatedPolicyTypesItem>> activatedPolicyTypes) {
             $.activatedPolicyTypes = activatedPolicyTypes;
             return this;
         }
 
+        /**
+         * @param activatedPolicyTypes Optional. A list of policy types that are activated for this taxonomy. If not set, defaults to an empty list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder activatedPolicyTypes(List<TaxonomyActivatedPolicyTypesItem> activatedPolicyTypes) {
             return activatedPolicyTypes(Output.of(activatedPolicyTypes));
         }
 
+        /**
+         * @param activatedPolicyTypes Optional. A list of policy types that are activated for this taxonomy. If not set, defaults to an empty list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder activatedPolicyTypes(TaxonomyActivatedPolicyTypesItem... activatedPolicyTypes) {
             return activatedPolicyTypes(List.of(activatedPolicyTypes));
         }
 
+        /**
+         * @param description Optional. Description of this taxonomy. If not set, defaults to empty. The description must contain only Unicode characters, tabs, newlines, carriage returns, and page breaks, and be at most 2000 bytes long when encoded in UTF-8.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Optional. Description of this taxonomy. If not set, defaults to empty. The description must contain only Unicode characters, tabs, newlines, carriage returns, and page breaks, and be at most 2000 bytes long when encoded in UTF-8.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param displayName User-defined name of this taxonomy. The name can&#39;t start or end with spaces, must contain only Unicode letters, numbers, underscores, dashes, and spaces, and be at most 200 bytes long when encoded in UTF-8.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName User-defined name of this taxonomy. The name can&#39;t start or end with spaces, must contain only Unicode letters, numbers, underscores, dashes, and spaces, and be at most 200 bytes long when encoded in UTF-8.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }

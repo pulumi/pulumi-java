@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderResponse {
     /**
-     * The discriminator for derived types.
+     * @return The discriminator for derived types.
      * Expected value is &#39;#Microsoft.Media.ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeader&#39;.
      * 
      */
@@ -22,10 +22,10 @@ public final class ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderRespon
     }
 
     /**
-     * The discriminator for derived types.
+     * @return The discriminator for derived types.
      * Expected value is &#39;#Microsoft.Media.ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeader&#39;.
      * 
-    */
+     */
     public String odataType() {
         return this.odataType;
     }

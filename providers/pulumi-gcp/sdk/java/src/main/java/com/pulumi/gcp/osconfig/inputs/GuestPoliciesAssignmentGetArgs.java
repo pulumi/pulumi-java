@@ -27,6 +27,12 @@ public final class GuestPoliciesAssignmentGetArgs extends com.pulumi.resources.R
     @Import(name="groupLabels")
     private @Nullable Output<List<GuestPoliciesAssignmentGroupLabelGetArgs>> groupLabels;
 
+    /**
+     * @return Targets instances matching at least one of these label sets. This allows an assignment to target disparate groups,
+     * for example &#34;env=prod or env=staging&#34;.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<GuestPoliciesAssignmentGroupLabelGetArgs>>> groupLabels() {
         return Optional.ofNullable(this.groupLabels);
     }
@@ -41,6 +47,13 @@ public final class GuestPoliciesAssignmentGetArgs extends com.pulumi.resources.R
     @Import(name="instanceNamePrefixes")
     private @Nullable Output<List<String>> instanceNamePrefixes;
 
+    /**
+     * @return Targets VM instances whose name starts with one of these prefixes.
+     * Like labels, this is another way to group VM instances when targeting configs,
+     * for example prefix=&#34;prod-&#34;.
+     * Only supported for project-level policies.
+     * 
+     */
     public Optional<Output<List<String>>> instanceNamePrefixes() {
         return Optional.ofNullable(this.instanceNamePrefixes);
     }
@@ -56,6 +69,14 @@ public final class GuestPoliciesAssignmentGetArgs extends com.pulumi.resources.R
     @Import(name="instances")
     private @Nullable Output<List<String>> instances;
 
+    /**
+     * @return Targets any of the instances specified. Instances are specified by their URI in the form
+     * zones/[ZONE]/instances/[INSTANCE_NAME].
+     * Instance targeting is uncommon and is supported to facilitate the management of changes
+     * by the instance or to target specific VM instances for development and testing.
+     * Only supported for project-level policies and must reference instances within this project.
+     * 
+     */
     public Optional<Output<List<String>>> instances() {
         return Optional.ofNullable(this.instances);
     }
@@ -69,6 +90,12 @@ public final class GuestPoliciesAssignmentGetArgs extends com.pulumi.resources.R
     @Import(name="osTypes")
     private @Nullable Output<List<GuestPoliciesAssignmentOsTypeGetArgs>> osTypes;
 
+    /**
+     * @return Targets VM instances matching at least one of the following OS types.
+     * VM instances must match all supplied criteria for a given OsType to be included.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<GuestPoliciesAssignmentOsTypeGetArgs>>> osTypes() {
         return Optional.ofNullable(this.osTypes);
     }
@@ -81,6 +108,11 @@ public final class GuestPoliciesAssignmentGetArgs extends com.pulumi.resources.R
     @Import(name="zones")
     private @Nullable Output<List<String>> zones;
 
+    /**
+     * @return Targets instances in any of these zones. Leave empty to target instances in any zone.
+     * Zonal targeting is uncommon and is supported to facilitate the management of changes by zone.
+     * 
+     */
     public Optional<Output<List<String>>> zones() {
         return Optional.ofNullable(this.zones);
     }
@@ -113,67 +145,193 @@ public final class GuestPoliciesAssignmentGetArgs extends com.pulumi.resources.R
             $ = new GuestPoliciesAssignmentGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param groupLabels Targets instances matching at least one of these label sets. This allows an assignment to target disparate groups,
+         * for example &#34;env=prod or env=staging&#34;.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupLabels(@Nullable Output<List<GuestPoliciesAssignmentGroupLabelGetArgs>> groupLabels) {
             $.groupLabels = groupLabels;
             return this;
         }
 
+        /**
+         * @param groupLabels Targets instances matching at least one of these label sets. This allows an assignment to target disparate groups,
+         * for example &#34;env=prod or env=staging&#34;.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupLabels(List<GuestPoliciesAssignmentGroupLabelGetArgs> groupLabels) {
             return groupLabels(Output.of(groupLabels));
         }
 
+        /**
+         * @param groupLabels Targets instances matching at least one of these label sets. This allows an assignment to target disparate groups,
+         * for example &#34;env=prod or env=staging&#34;.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupLabels(GuestPoliciesAssignmentGroupLabelGetArgs... groupLabels) {
             return groupLabels(List.of(groupLabels));
         }
 
+        /**
+         * @param instanceNamePrefixes Targets VM instances whose name starts with one of these prefixes.
+         * Like labels, this is another way to group VM instances when targeting configs,
+         * for example prefix=&#34;prod-&#34;.
+         * Only supported for project-level policies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceNamePrefixes(@Nullable Output<List<String>> instanceNamePrefixes) {
             $.instanceNamePrefixes = instanceNamePrefixes;
             return this;
         }
 
+        /**
+         * @param instanceNamePrefixes Targets VM instances whose name starts with one of these prefixes.
+         * Like labels, this is another way to group VM instances when targeting configs,
+         * for example prefix=&#34;prod-&#34;.
+         * Only supported for project-level policies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceNamePrefixes(List<String> instanceNamePrefixes) {
             return instanceNamePrefixes(Output.of(instanceNamePrefixes));
         }
 
+        /**
+         * @param instanceNamePrefixes Targets VM instances whose name starts with one of these prefixes.
+         * Like labels, this is another way to group VM instances when targeting configs,
+         * for example prefix=&#34;prod-&#34;.
+         * Only supported for project-level policies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceNamePrefixes(String... instanceNamePrefixes) {
             return instanceNamePrefixes(List.of(instanceNamePrefixes));
         }
 
+        /**
+         * @param instances Targets any of the instances specified. Instances are specified by their URI in the form
+         * zones/[ZONE]/instances/[INSTANCE_NAME].
+         * Instance targeting is uncommon and is supported to facilitate the management of changes
+         * by the instance or to target specific VM instances for development and testing.
+         * Only supported for project-level policies and must reference instances within this project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instances(@Nullable Output<List<String>> instances) {
             $.instances = instances;
             return this;
         }
 
+        /**
+         * @param instances Targets any of the instances specified. Instances are specified by their URI in the form
+         * zones/[ZONE]/instances/[INSTANCE_NAME].
+         * Instance targeting is uncommon and is supported to facilitate the management of changes
+         * by the instance or to target specific VM instances for development and testing.
+         * Only supported for project-level policies and must reference instances within this project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instances(List<String> instances) {
             return instances(Output.of(instances));
         }
 
+        /**
+         * @param instances Targets any of the instances specified. Instances are specified by their URI in the form
+         * zones/[ZONE]/instances/[INSTANCE_NAME].
+         * Instance targeting is uncommon and is supported to facilitate the management of changes
+         * by the instance or to target specific VM instances for development and testing.
+         * Only supported for project-level policies and must reference instances within this project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instances(String... instances) {
             return instances(List.of(instances));
         }
 
+        /**
+         * @param osTypes Targets VM instances matching at least one of the following OS types.
+         * VM instances must match all supplied criteria for a given OsType to be included.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osTypes(@Nullable Output<List<GuestPoliciesAssignmentOsTypeGetArgs>> osTypes) {
             $.osTypes = osTypes;
             return this;
         }
 
+        /**
+         * @param osTypes Targets VM instances matching at least one of the following OS types.
+         * VM instances must match all supplied criteria for a given OsType to be included.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osTypes(List<GuestPoliciesAssignmentOsTypeGetArgs> osTypes) {
             return osTypes(Output.of(osTypes));
         }
 
+        /**
+         * @param osTypes Targets VM instances matching at least one of the following OS types.
+         * VM instances must match all supplied criteria for a given OsType to be included.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osTypes(GuestPoliciesAssignmentOsTypeGetArgs... osTypes) {
             return osTypes(List.of(osTypes));
         }
 
+        /**
+         * @param zones Targets instances in any of these zones. Leave empty to target instances in any zone.
+         * Zonal targeting is uncommon and is supported to facilitate the management of changes by zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zones(@Nullable Output<List<String>> zones) {
             $.zones = zones;
             return this;
         }
 
+        /**
+         * @param zones Targets instances in any of these zones. Leave empty to target instances in any zone.
+         * Zonal targeting is uncommon and is supported to facilitate the management of changes by zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zones(List<String> zones) {
             return zones(Output.of(zones));
         }
 
+        /**
+         * @param zones Targets instances in any of these zones. Leave empty to target instances in any zone.
+         * Zonal targeting is uncommon and is supported to facilitate the management of changes by zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zones(String... zones) {
             return zones(List.of(zones));
         }

@@ -31,6 +31,10 @@ public final class EnumArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enumvalue")
     private @Nullable Output<List<EnumValueArgs>> enumvalue;
 
+    /**
+     * @return Enum value definitions.
+     * 
+     */
     public Optional<Output<List<EnumValueArgs>>> enumvalue() {
         return Optional.ofNullable(this.enumvalue);
     }
@@ -42,6 +46,10 @@ public final class EnumArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Enum type name.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -53,6 +61,10 @@ public final class EnumArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="options")
     private @Nullable Output<List<OptionArgs>> options;
 
+    /**
+     * @return Protocol buffer options.
+     * 
+     */
     public Optional<Output<List<OptionArgs>>> options() {
         return Optional.ofNullable(this.options);
     }
@@ -64,6 +76,10 @@ public final class EnumArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceContext")
     private @Nullable Output<SourceContextArgs> sourceContext;
 
+    /**
+     * @return The source context.
+     * 
+     */
     public Optional<Output<SourceContextArgs>> sourceContext() {
         return Optional.ofNullable(this.sourceContext);
     }
@@ -75,6 +91,10 @@ public final class EnumArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="syntax")
     private @Nullable Output<EnumSyntax> syntax;
 
+    /**
+     * @return The source syntax.
+     * 
+     */
     public Optional<Output<EnumSyntax>> syntax() {
         return Optional.ofNullable(this.syntax);
     }
@@ -107,55 +127,127 @@ public final class EnumArgs extends com.pulumi.resources.ResourceArgs {
             $ = new EnumArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enumvalue Enum value definitions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enumvalue(@Nullable Output<List<EnumValueArgs>> enumvalue) {
             $.enumvalue = enumvalue;
             return this;
         }
 
+        /**
+         * @param enumvalue Enum value definitions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enumvalue(List<EnumValueArgs> enumvalue) {
             return enumvalue(Output.of(enumvalue));
         }
 
+        /**
+         * @param enumvalue Enum value definitions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enumvalue(EnumValueArgs... enumvalue) {
             return enumvalue(List.of(enumvalue));
         }
 
+        /**
+         * @param name Enum type name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Enum type name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param options Protocol buffer options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder options(@Nullable Output<List<OptionArgs>> options) {
             $.options = options;
             return this;
         }
 
+        /**
+         * @param options Protocol buffer options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder options(List<OptionArgs> options) {
             return options(Output.of(options));
         }
 
+        /**
+         * @param options Protocol buffer options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder options(OptionArgs... options) {
             return options(List.of(options));
         }
 
+        /**
+         * @param sourceContext The source context.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceContext(@Nullable Output<SourceContextArgs> sourceContext) {
             $.sourceContext = sourceContext;
             return this;
         }
 
+        /**
+         * @param sourceContext The source context.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceContext(SourceContextArgs sourceContext) {
             return sourceContext(Output.of(sourceContext));
         }
 
+        /**
+         * @param syntax The source syntax.
+         * 
+         * @return builder
+         * 
+         */
         public Builder syntax(@Nullable Output<EnumSyntax> syntax) {
             $.syntax = syntax;
             return this;
         }
 
+        /**
+         * @param syntax The source syntax.
+         * 
+         * @return builder
+         * 
+         */
         public Builder syntax(EnumSyntax syntax) {
             return syntax(Output.of(syntax));
         }

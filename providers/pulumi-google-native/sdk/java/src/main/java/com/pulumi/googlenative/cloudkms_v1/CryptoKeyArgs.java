@@ -26,6 +26,10 @@ public final class CryptoKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cryptoKeyBackend")
     private @Nullable Output<String> cryptoKeyBackend;
 
+    /**
+     * @return Immutable. The resource name of the backend environment where the key material for all CryptoKeyVersions associated with this CryptoKey reside and where all related cryptographic operations are performed. Only applicable if CryptoKeyVersions have a ProtectionLevel of EXTERNAL_VPC, with the resource name in the format `projects/*{@literal /}locations/*{@literal /}ekmConnections/*`. Note, this list is non-exhaustive and may apply to additional ProtectionLevels in the future.
+     * 
+     */
     public Optional<Output<String>> cryptoKeyBackend() {
         return Optional.ofNullable(this.cryptoKeyBackend);
     }
@@ -44,6 +48,10 @@ public final class CryptoKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="destroyScheduledDuration")
     private @Nullable Output<String> destroyScheduledDuration;
 
+    /**
+     * @return Immutable. The period of time that versions of this key spend in the DESTROY_SCHEDULED state before transitioning to DESTROYED. If not specified at creation time, the default duration is 24 hours.
+     * 
+     */
     public Optional<Output<String>> destroyScheduledDuration() {
         return Optional.ofNullable(this.destroyScheduledDuration);
     }
@@ -55,6 +63,10 @@ public final class CryptoKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="importOnly")
     private @Nullable Output<Boolean> importOnly;
 
+    /**
+     * @return Immutable. Whether this key may contain imported versions only.
+     * 
+     */
     public Optional<Output<Boolean>> importOnly() {
         return Optional.ofNullable(this.importOnly);
     }
@@ -73,6 +85,10 @@ public final class CryptoKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return Labels with user-defined metadata. For more information, see [Labeling Keys](https://cloud.google.com/kms/docs/labeling-keys).
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -91,6 +107,10 @@ public final class CryptoKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nextRotationTime")
     private @Nullable Output<String> nextRotationTime;
 
+    /**
+     * @return At next_rotation_time, the Key Management Service will automatically: 1. Create a new version of this CryptoKey. 2. Mark the new version as primary. Key rotations performed manually via CreateCryptoKeyVersion and UpdateCryptoKeyPrimaryVersion do not affect next_rotation_time. Keys with purpose ENCRYPT_DECRYPT support automatic rotation. For other keys, this field must be omitted.
+     * 
+     */
     public Optional<Output<String>> nextRotationTime() {
         return Optional.ofNullable(this.nextRotationTime);
     }
@@ -109,6 +129,10 @@ public final class CryptoKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="purpose")
     private @Nullable Output<CryptoKeyPurpose> purpose;
 
+    /**
+     * @return Immutable. The immutable purpose of this CryptoKey.
+     * 
+     */
     public Optional<Output<CryptoKeyPurpose>> purpose() {
         return Optional.ofNullable(this.purpose);
     }
@@ -120,6 +144,10 @@ public final class CryptoKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="rotationPeriod")
     private @Nullable Output<String> rotationPeriod;
 
+    /**
+     * @return next_rotation_time will be advanced by this period when the service automatically rotates a key. Must be at least 24 hours and at most 876,000 hours. If rotation_period is set, next_rotation_time must also be set. Keys with purpose ENCRYPT_DECRYPT support automatic rotation. For other keys, this field must be omitted.
+     * 
+     */
     public Optional<Output<String>> rotationPeriod() {
         return Optional.ofNullable(this.rotationPeriod);
     }
@@ -138,6 +166,10 @@ public final class CryptoKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="versionTemplate")
     private @Nullable Output<CryptoKeyVersionTemplateArgs> versionTemplate;
 
+    /**
+     * @return A template describing settings for new CryptoKeyVersion instances. The properties of new CryptoKeyVersion instances created by either CreateCryptoKeyVersion or auto-rotation are controlled by this template.
+     * 
+     */
     public Optional<Output<CryptoKeyVersionTemplateArgs>> versionTemplate() {
         return Optional.ofNullable(this.versionTemplate);
     }
@@ -178,11 +210,23 @@ public final class CryptoKeyArgs extends com.pulumi.resources.ResourceArgs {
             $ = new CryptoKeyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cryptoKeyBackend Immutable. The resource name of the backend environment where the key material for all CryptoKeyVersions associated with this CryptoKey reside and where all related cryptographic operations are performed. Only applicable if CryptoKeyVersions have a ProtectionLevel of EXTERNAL_VPC, with the resource name in the format `projects/*{@literal /}locations/*{@literal /}ekmConnections/*`. Note, this list is non-exhaustive and may apply to additional ProtectionLevels in the future.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cryptoKeyBackend(@Nullable Output<String> cryptoKeyBackend) {
             $.cryptoKeyBackend = cryptoKeyBackend;
             return this;
         }
 
+        /**
+         * @param cryptoKeyBackend Immutable. The resource name of the backend environment where the key material for all CryptoKeyVersions associated with this CryptoKey reside and where all related cryptographic operations are performed. Only applicable if CryptoKeyVersions have a ProtectionLevel of EXTERNAL_VPC, with the resource name in the format `projects/*{@literal /}locations/*{@literal /}ekmConnections/*`. Note, this list is non-exhaustive and may apply to additional ProtectionLevels in the future.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cryptoKeyBackend(String cryptoKeyBackend) {
             return cryptoKeyBackend(Output.of(cryptoKeyBackend));
         }
@@ -196,20 +240,44 @@ public final class CryptoKeyArgs extends com.pulumi.resources.ResourceArgs {
             return cryptoKeyId(Output.of(cryptoKeyId));
         }
 
+        /**
+         * @param destroyScheduledDuration Immutable. The period of time that versions of this key spend in the DESTROY_SCHEDULED state before transitioning to DESTROYED. If not specified at creation time, the default duration is 24 hours.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destroyScheduledDuration(@Nullable Output<String> destroyScheduledDuration) {
             $.destroyScheduledDuration = destroyScheduledDuration;
             return this;
         }
 
+        /**
+         * @param destroyScheduledDuration Immutable. The period of time that versions of this key spend in the DESTROY_SCHEDULED state before transitioning to DESTROYED. If not specified at creation time, the default duration is 24 hours.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destroyScheduledDuration(String destroyScheduledDuration) {
             return destroyScheduledDuration(Output.of(destroyScheduledDuration));
         }
 
+        /**
+         * @param importOnly Immutable. Whether this key may contain imported versions only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder importOnly(@Nullable Output<Boolean> importOnly) {
             $.importOnly = importOnly;
             return this;
         }
 
+        /**
+         * @param importOnly Immutable. Whether this key may contain imported versions only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder importOnly(Boolean importOnly) {
             return importOnly(Output.of(importOnly));
         }
@@ -223,11 +291,23 @@ public final class CryptoKeyArgs extends com.pulumi.resources.ResourceArgs {
             return keyRingId(Output.of(keyRingId));
         }
 
+        /**
+         * @param labels Labels with user-defined metadata. For more information, see [Labeling Keys](https://cloud.google.com/kms/docs/labeling-keys).
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Labels with user-defined metadata. For more information, see [Labeling Keys](https://cloud.google.com/kms/docs/labeling-keys).
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
@@ -241,11 +321,23 @@ public final class CryptoKeyArgs extends com.pulumi.resources.ResourceArgs {
             return location(Output.of(location));
         }
 
+        /**
+         * @param nextRotationTime At next_rotation_time, the Key Management Service will automatically: 1. Create a new version of this CryptoKey. 2. Mark the new version as primary. Key rotations performed manually via CreateCryptoKeyVersion and UpdateCryptoKeyPrimaryVersion do not affect next_rotation_time. Keys with purpose ENCRYPT_DECRYPT support automatic rotation. For other keys, this field must be omitted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nextRotationTime(@Nullable Output<String> nextRotationTime) {
             $.nextRotationTime = nextRotationTime;
             return this;
         }
 
+        /**
+         * @param nextRotationTime At next_rotation_time, the Key Management Service will automatically: 1. Create a new version of this CryptoKey. 2. Mark the new version as primary. Key rotations performed manually via CreateCryptoKeyVersion and UpdateCryptoKeyPrimaryVersion do not affect next_rotation_time. Keys with purpose ENCRYPT_DECRYPT support automatic rotation. For other keys, this field must be omitted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nextRotationTime(String nextRotationTime) {
             return nextRotationTime(Output.of(nextRotationTime));
         }
@@ -259,20 +351,44 @@ public final class CryptoKeyArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param purpose Immutable. The immutable purpose of this CryptoKey.
+         * 
+         * @return builder
+         * 
+         */
         public Builder purpose(@Nullable Output<CryptoKeyPurpose> purpose) {
             $.purpose = purpose;
             return this;
         }
 
+        /**
+         * @param purpose Immutable. The immutable purpose of this CryptoKey.
+         * 
+         * @return builder
+         * 
+         */
         public Builder purpose(CryptoKeyPurpose purpose) {
             return purpose(Output.of(purpose));
         }
 
+        /**
+         * @param rotationPeriod next_rotation_time will be advanced by this period when the service automatically rotates a key. Must be at least 24 hours and at most 876,000 hours. If rotation_period is set, next_rotation_time must also be set. Keys with purpose ENCRYPT_DECRYPT support automatic rotation. For other keys, this field must be omitted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rotationPeriod(@Nullable Output<String> rotationPeriod) {
             $.rotationPeriod = rotationPeriod;
             return this;
         }
 
+        /**
+         * @param rotationPeriod next_rotation_time will be advanced by this period when the service automatically rotates a key. Must be at least 24 hours and at most 876,000 hours. If rotation_period is set, next_rotation_time must also be set. Keys with purpose ENCRYPT_DECRYPT support automatic rotation. For other keys, this field must be omitted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rotationPeriod(String rotationPeriod) {
             return rotationPeriod(Output.of(rotationPeriod));
         }
@@ -286,11 +402,23 @@ public final class CryptoKeyArgs extends com.pulumi.resources.ResourceArgs {
             return skipInitialVersionCreation(Output.of(skipInitialVersionCreation));
         }
 
+        /**
+         * @param versionTemplate A template describing settings for new CryptoKeyVersion instances. The properties of new CryptoKeyVersion instances created by either CreateCryptoKeyVersion or auto-rotation are controlled by this template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionTemplate(@Nullable Output<CryptoKeyVersionTemplateArgs> versionTemplate) {
             $.versionTemplate = versionTemplate;
             return this;
         }
 
+        /**
+         * @param versionTemplate A template describing settings for new CryptoKeyVersion instances. The properties of new CryptoKeyVersion instances created by either CreateCryptoKeyVersion or auto-rotation are controlled by this template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionTemplate(CryptoKeyVersionTemplateArgs versionTemplate) {
             return versionTemplate(Output.of(versionTemplate));
         }

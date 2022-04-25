@@ -23,6 +23,10 @@ public final class MemberArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accountId", required=true)
     private Output<String> accountId;
 
+    /**
+     * @return The ID of the member AWS account.
+     * 
+     */
     public Output<String> accountId() {
         return this.accountId;
     }
@@ -34,6 +38,10 @@ public final class MemberArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="email", required=true)
     private Output<String> email;
 
+    /**
+     * @return The email of the member AWS account.
+     * 
+     */
     public Output<String> email() {
         return this.email;
     }
@@ -45,6 +53,10 @@ public final class MemberArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="invite")
     private @Nullable Output<Boolean> invite;
 
+    /**
+     * @return Boolean whether to invite the account to Security Hub as a member. Defaults to `false`.
+     * 
+     */
     public Optional<Output<Boolean>> invite() {
         return Optional.ofNullable(this.invite);
     }
@@ -75,29 +87,65 @@ public final class MemberArgs extends com.pulumi.resources.ResourceArgs {
             $ = new MemberArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountId The ID of the member AWS account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountId(Output<String> accountId) {
             $.accountId = accountId;
             return this;
         }
 
+        /**
+         * @param accountId The ID of the member AWS account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountId(String accountId) {
             return accountId(Output.of(accountId));
         }
 
+        /**
+         * @param email The email of the member AWS account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder email(Output<String> email) {
             $.email = email;
             return this;
         }
 
+        /**
+         * @param email The email of the member AWS account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder email(String email) {
             return email(Output.of(email));
         }
 
+        /**
+         * @param invite Boolean whether to invite the account to Security Hub as a member. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder invite(@Nullable Output<Boolean> invite) {
             $.invite = invite;
             return this;
         }
 
+        /**
+         * @param invite Boolean whether to invite the account to Security Hub as a member. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder invite(Boolean invite) {
             return invite(Output.of(invite));
         }

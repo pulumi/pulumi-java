@@ -29,6 +29,10 @@ public final class MigrationJobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="destination", required=true)
     private Output<String> destination;
 
+    /**
+     * @return The resource name (URI) of the destination connection profile.
+     * 
+     */
     public Output<String> destination() {
         return this.destination;
     }
@@ -40,6 +44,10 @@ public final class MigrationJobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="destinationDatabase")
     private @Nullable Output<DatabaseTypeArgs> destinationDatabase;
 
+    /**
+     * @return The database engine type and provider of the destination.
+     * 
+     */
     public Optional<Output<DatabaseTypeArgs>> destinationDatabase() {
         return Optional.ofNullable(this.destinationDatabase);
     }
@@ -51,6 +59,10 @@ public final class MigrationJobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return The migration job display name.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -62,6 +74,10 @@ public final class MigrationJobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dumpPath")
     private @Nullable Output<String> dumpPath;
 
+    /**
+     * @return The path to the dump file in Google Cloud Storage, in the format: (gs://[BUCKET_NAME]/[OBJECT_NAME]).
+     * 
+     */
     public Optional<Output<String>> dumpPath() {
         return Optional.ofNullable(this.dumpPath);
     }
@@ -73,6 +89,10 @@ public final class MigrationJobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return The resource labels for migration job to use to annotate any related underlying resources such as Compute Engine VMs. An object containing a list of &#34;key&#34;: &#34;value&#34; pairs. Example: `{ &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }`.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -98,6 +118,10 @@ public final class MigrationJobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name (URI) of this migration job resource, in the form of: projects/{project}/locations/{location}/migrationJobs/{migrationJob}.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -123,6 +147,10 @@ public final class MigrationJobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="reverseSshConnectivity")
     private @Nullable Output<ReverseSshConnectivityArgs> reverseSshConnectivity;
 
+    /**
+     * @return The details needed to communicate to the source over Reverse SSH tunnel connectivity.
+     * 
+     */
     public Optional<Output<ReverseSshConnectivityArgs>> reverseSshConnectivity() {
         return Optional.ofNullable(this.reverseSshConnectivity);
     }
@@ -134,6 +162,10 @@ public final class MigrationJobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="source", required=true)
     private Output<String> source;
 
+    /**
+     * @return The resource name (URI) of the source connection profile.
+     * 
+     */
     public Output<String> source() {
         return this.source;
     }
@@ -145,6 +177,10 @@ public final class MigrationJobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceDatabase")
     private @Nullable Output<DatabaseTypeArgs> sourceDatabase;
 
+    /**
+     * @return The database engine type and provider of the source.
+     * 
+     */
     public Optional<Output<DatabaseTypeArgs>> sourceDatabase() {
         return Optional.ofNullable(this.sourceDatabase);
     }
@@ -156,6 +192,10 @@ public final class MigrationJobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="state")
     private @Nullable Output<MigrationJobState> state;
 
+    /**
+     * @return The current migration job state.
+     * 
+     */
     public Optional<Output<MigrationJobState>> state() {
         return Optional.ofNullable(this.state);
     }
@@ -167,6 +207,10 @@ public final class MigrationJobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="staticIpConnectivity")
     private @Nullable Output<StaticIpConnectivityArgs> staticIpConnectivity;
 
+    /**
+     * @return static ip connectivity data (default, no additional details needed).
+     * 
+     */
     public Optional<Output<StaticIpConnectivityArgs>> staticIpConnectivity() {
         return Optional.ofNullable(this.staticIpConnectivity);
     }
@@ -178,6 +222,10 @@ public final class MigrationJobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
     private Output<MigrationJobType> type;
 
+    /**
+     * @return The migration job type.
+     * 
+     */
     public Output<MigrationJobType> type() {
         return this.type;
     }
@@ -189,6 +237,10 @@ public final class MigrationJobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vpcPeeringConnectivity")
     private @Nullable Output<VpcPeeringConnectivityArgs> vpcPeeringConnectivity;
 
+    /**
+     * @return The details of the VPC network that the source database is located in.
+     * 
+     */
     public Optional<Output<VpcPeeringConnectivityArgs>> vpcPeeringConnectivity() {
         return Optional.ofNullable(this.vpcPeeringConnectivity);
     }
@@ -233,47 +285,107 @@ public final class MigrationJobArgs extends com.pulumi.resources.ResourceArgs {
             $ = new MigrationJobArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param destination The resource name (URI) of the destination connection profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destination(Output<String> destination) {
             $.destination = destination;
             return this;
         }
 
+        /**
+         * @param destination The resource name (URI) of the destination connection profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destination(String destination) {
             return destination(Output.of(destination));
         }
 
+        /**
+         * @param destinationDatabase The database engine type and provider of the destination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationDatabase(@Nullable Output<DatabaseTypeArgs> destinationDatabase) {
             $.destinationDatabase = destinationDatabase;
             return this;
         }
 
+        /**
+         * @param destinationDatabase The database engine type and provider of the destination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationDatabase(DatabaseTypeArgs destinationDatabase) {
             return destinationDatabase(Output.of(destinationDatabase));
         }
 
+        /**
+         * @param displayName The migration job display name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName The migration job display name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param dumpPath The path to the dump file in Google Cloud Storage, in the format: (gs://[BUCKET_NAME]/[OBJECT_NAME]).
+         * 
+         * @return builder
+         * 
+         */
         public Builder dumpPath(@Nullable Output<String> dumpPath) {
             $.dumpPath = dumpPath;
             return this;
         }
 
+        /**
+         * @param dumpPath The path to the dump file in Google Cloud Storage, in the format: (gs://[BUCKET_NAME]/[OBJECT_NAME]).
+         * 
+         * @return builder
+         * 
+         */
         public Builder dumpPath(String dumpPath) {
             return dumpPath(Output.of(dumpPath));
         }
 
+        /**
+         * @param labels The resource labels for migration job to use to annotate any related underlying resources such as Compute Engine VMs. An object containing a list of &#34;key&#34;: &#34;value&#34; pairs. Example: `{ &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels The resource labels for migration job to use to annotate any related underlying resources such as Compute Engine VMs. An object containing a list of &#34;key&#34;: &#34;value&#34; pairs. Example: `{ &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
@@ -296,11 +408,23 @@ public final class MigrationJobArgs extends com.pulumi.resources.ResourceArgs {
             return migrationJobId(Output.of(migrationJobId));
         }
 
+        /**
+         * @param name The name (URI) of this migration job resource, in the form of: projects/{project}/locations/{location}/migrationJobs/{migrationJob}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name (URI) of this migration job resource, in the form of: projects/{project}/locations/{location}/migrationJobs/{migrationJob}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -323,65 +447,149 @@ public final class MigrationJobArgs extends com.pulumi.resources.ResourceArgs {
             return requestId(Output.of(requestId));
         }
 
+        /**
+         * @param reverseSshConnectivity The details needed to communicate to the source over Reverse SSH tunnel connectivity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reverseSshConnectivity(@Nullable Output<ReverseSshConnectivityArgs> reverseSshConnectivity) {
             $.reverseSshConnectivity = reverseSshConnectivity;
             return this;
         }
 
+        /**
+         * @param reverseSshConnectivity The details needed to communicate to the source over Reverse SSH tunnel connectivity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reverseSshConnectivity(ReverseSshConnectivityArgs reverseSshConnectivity) {
             return reverseSshConnectivity(Output.of(reverseSshConnectivity));
         }
 
+        /**
+         * @param source The resource name (URI) of the source connection profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(Output<String> source) {
             $.source = source;
             return this;
         }
 
+        /**
+         * @param source The resource name (URI) of the source connection profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(String source) {
             return source(Output.of(source));
         }
 
+        /**
+         * @param sourceDatabase The database engine type and provider of the source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceDatabase(@Nullable Output<DatabaseTypeArgs> sourceDatabase) {
             $.sourceDatabase = sourceDatabase;
             return this;
         }
 
+        /**
+         * @param sourceDatabase The database engine type and provider of the source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceDatabase(DatabaseTypeArgs sourceDatabase) {
             return sourceDatabase(Output.of(sourceDatabase));
         }
 
+        /**
+         * @param state The current migration job state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable Output<MigrationJobState> state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param state The current migration job state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(MigrationJobState state) {
             return state(Output.of(state));
         }
 
+        /**
+         * @param staticIpConnectivity static ip connectivity data (default, no additional details needed).
+         * 
+         * @return builder
+         * 
+         */
         public Builder staticIpConnectivity(@Nullable Output<StaticIpConnectivityArgs> staticIpConnectivity) {
             $.staticIpConnectivity = staticIpConnectivity;
             return this;
         }
 
+        /**
+         * @param staticIpConnectivity static ip connectivity data (default, no additional details needed).
+         * 
+         * @return builder
+         * 
+         */
         public Builder staticIpConnectivity(StaticIpConnectivityArgs staticIpConnectivity) {
             return staticIpConnectivity(Output.of(staticIpConnectivity));
         }
 
+        /**
+         * @param type The migration job type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<MigrationJobType> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The migration job type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(MigrationJobType type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param vpcPeeringConnectivity The details of the VPC network that the source database is located in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcPeeringConnectivity(@Nullable Output<VpcPeeringConnectivityArgs> vpcPeeringConnectivity) {
             $.vpcPeeringConnectivity = vpcPeeringConnectivity;
             return this;
         }
 
+        /**
+         * @param vpcPeeringConnectivity The details of the VPC network that the source database is located in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcPeeringConnectivity(VpcPeeringConnectivityArgs vpcPeeringConnectivity) {
             return vpcPeeringConnectivity(Output.of(vpcPeeringConnectivity));
         }

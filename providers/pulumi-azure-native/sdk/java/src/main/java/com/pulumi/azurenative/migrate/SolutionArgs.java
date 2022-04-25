@@ -23,6 +23,10 @@ public final class SolutionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="migrateProjectName", required=true)
     private Output<String> migrateProjectName;
 
+    /**
+     * @return Name of the Azure Migrate project.
+     * 
+     */
     public Output<String> migrateProjectName() {
         return this.migrateProjectName;
     }
@@ -34,6 +38,10 @@ public final class SolutionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties")
     private @Nullable Output<SolutionPropertiesArgs> properties;
 
+    /**
+     * @return Gets or sets the properties of the solution.
+     * 
+     */
     public Optional<Output<SolutionPropertiesArgs>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -45,6 +53,10 @@ public final class SolutionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of the Azure Resource Group that migrate project is part of.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -56,6 +68,10 @@ public final class SolutionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="solutionName")
     private @Nullable Output<String> solutionName;
 
+    /**
+     * @return Unique name of a migration solution within a migrate project.
+     * 
+     */
     public Optional<Output<String>> solutionName() {
         return Optional.ofNullable(this.solutionName);
     }
@@ -87,38 +103,86 @@ public final class SolutionArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SolutionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param migrateProjectName Name of the Azure Migrate project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder migrateProjectName(Output<String> migrateProjectName) {
             $.migrateProjectName = migrateProjectName;
             return this;
         }
 
+        /**
+         * @param migrateProjectName Name of the Azure Migrate project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder migrateProjectName(String migrateProjectName) {
             return migrateProjectName(Output.of(migrateProjectName));
         }
 
+        /**
+         * @param properties Gets or sets the properties of the solution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<SolutionPropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Gets or sets the properties of the solution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(SolutionPropertiesArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroupName Name of the Azure Resource Group that migrate project is part of.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the Azure Resource Group that migrate project is part of.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param solutionName Unique name of a migration solution within a migrate project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder solutionName(@Nullable Output<String> solutionName) {
             $.solutionName = solutionName;
             return this;
         }
 
+        /**
+         * @param solutionName Unique name of a migration solution within a migrate project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder solutionName(String solutionName) {
             return solutionName(Output.of(solutionName));
         }

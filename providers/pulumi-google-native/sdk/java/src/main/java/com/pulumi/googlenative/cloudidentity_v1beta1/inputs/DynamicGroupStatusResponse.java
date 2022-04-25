@@ -23,6 +23,10 @@ public final class DynamicGroupStatusResponse extends com.pulumi.resources.Invok
     @Import(name="status", required=true)
     private String status;
 
+    /**
+     * @return Status of the dynamic group.
+     * 
+     */
     public String status() {
         return this.status;
     }
@@ -34,6 +38,10 @@ public final class DynamicGroupStatusResponse extends com.pulumi.resources.Invok
     @Import(name="statusTime", required=true)
     private String statusTime;
 
+    /**
+     * @return The latest time at which the dynamic group is guaranteed to be in the given status. If status is `UP_TO_DATE`, the latest time at which the dynamic group was confirmed to be up-to-date. If status is `UPDATING_MEMBERSHIPS`, the time at which dynamic group was created.
+     * 
+     */
     public String statusTime() {
         return this.statusTime;
     }
@@ -63,11 +71,23 @@ public final class DynamicGroupStatusResponse extends com.pulumi.resources.Invok
             $ = new DynamicGroupStatusResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param status Status of the dynamic group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param statusTime The latest time at which the dynamic group is guaranteed to be in the given status. If status is `UP_TO_DATE`, the latest time at which the dynamic group was confirmed to be up-to-date. If status is `UPDATING_MEMBERSHIPS`, the time at which dynamic group was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statusTime(String statusTime) {
             $.statusTime = statusTime;
             return this;

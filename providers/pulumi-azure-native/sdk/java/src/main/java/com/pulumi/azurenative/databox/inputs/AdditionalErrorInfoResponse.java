@@ -26,6 +26,10 @@ public final class AdditionalErrorInfoResponse extends com.pulumi.resources.Invo
     @Import(name="info")
     private @Nullable Object info;
 
+    /**
+     * @return Additional error info.
+     * 
+     */
     public Optional<Object> info() {
         return Optional.ofNullable(this.info);
     }
@@ -37,6 +41,10 @@ public final class AdditionalErrorInfoResponse extends com.pulumi.resources.Invo
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return Additional error type.
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -66,11 +74,23 @@ public final class AdditionalErrorInfoResponse extends com.pulumi.resources.Invo
             $ = new AdditionalErrorInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param info Additional error info.
+         * 
+         * @return builder
+         * 
+         */
         public Builder info(@Nullable Object info) {
             $.info = info;
             return this;
         }
 
+        /**
+         * @param type Additional error type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;

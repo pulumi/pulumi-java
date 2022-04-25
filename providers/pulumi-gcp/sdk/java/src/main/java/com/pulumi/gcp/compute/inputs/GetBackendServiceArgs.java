@@ -21,6 +21,10 @@ public final class GetBackendServiceArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the Backend Service.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -32,6 +36,10 @@ public final class GetBackendServiceArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="project")
     private @Nullable String project;
 
+    /**
+     * @return The project in which the resource belongs. If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<String> project() {
         return Optional.ofNullable(this.project);
     }
@@ -61,11 +69,23 @@ public final class GetBackendServiceArgs extends com.pulumi.resources.InvokeArgs
             $ = new GetBackendServiceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the Backend Service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param project The project in which the resource belongs. If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable String project) {
             $.project = project;
             return this;

@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudContactcenterinsightsV1PhraseMatchDataResponse {
     /**
-     * The human-readable name of the phrase matcher.
+     * @return The human-readable name of the phrase matcher.
      * 
      */
     private final String displayName;
     /**
-     * The unique identifier (the resource name) of the phrase matcher.
+     * @return The unique identifier (the resource name) of the phrase matcher.
      * 
      */
     private final String phraseMatcher;
@@ -29,16 +29,16 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchDataResponse {
     }
 
     /**
-     * The human-readable name of the phrase matcher.
+     * @return The human-readable name of the phrase matcher.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * The unique identifier (the resource name) of the phrase matcher.
+     * @return The unique identifier (the resource name) of the phrase matcher.
      * 
-    */
+     */
     public String phraseMatcher() {
         return this.phraseMatcher;
     }

@@ -13,13 +13,13 @@ import javax.annotation.Nullable;
 @CustomType
 public final class RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelay {
     /**
-     * Specifies the value of the fixed delay interval.
+     * @return Specifies the value of the fixed delay interval.
      * Structure is documented below.
      * 
      */
     private final @Nullable RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelayFixedDelay fixedDelay;
     /**
-     * The percentage of traffic (connections/operations/requests) on which delay will
+     * @return The percentage of traffic (connections/operations/requests) on which delay will
      * be introduced as part of fault injection. The value must be between 0.0 and
      * 100.0 inclusive.
      * 
@@ -35,19 +35,19 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPoli
     }
 
     /**
-     * Specifies the value of the fixed delay interval.
+     * @return Specifies the value of the fixed delay interval.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelayFixedDelay> fixedDelay() {
         return Optional.ofNullable(this.fixedDelay);
     }
     /**
-     * The percentage of traffic (connections/operations/requests) on which delay will
+     * @return The percentage of traffic (connections/operations/requests) on which delay will
      * be introduced as part of fault injection. The value must be between 0.0 and
      * 100.0 inclusive.
      * 
-    */
+     */
     public Optional<Double> percentage() {
         return Optional.ofNullable(this.percentage);
     }

@@ -25,6 +25,11 @@ public final class SecureStringResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of the secret.
+     * Expected value is &#39;SecureString&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -36,6 +41,10 @@ public final class SecureStringResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="value", required=true)
     private String value;
 
+    /**
+     * @return Value of secure string.
+     * 
+     */
     public String value() {
         return this.value;
     }
@@ -65,11 +74,24 @@ public final class SecureStringResponse extends com.pulumi.resources.InvokeArgs 
             $ = new SecureStringResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type Type of the secret.
+         * Expected value is &#39;SecureString&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param value Value of secure string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             $.value = value;
             return this;

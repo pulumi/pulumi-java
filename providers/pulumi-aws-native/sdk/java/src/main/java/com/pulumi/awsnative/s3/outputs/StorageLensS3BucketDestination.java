@@ -15,28 +15,28 @@ import javax.annotation.Nullable;
 @CustomType
 public final class StorageLensS3BucketDestination {
     /**
-     * The AWS account ID that owns the destination S3 bucket.
+     * @return The AWS account ID that owns the destination S3 bucket.
      * 
      */
     private final String accountId;
     /**
-     * The ARN of the bucket to which Amazon S3 Storage Lens exports will be placed.
+     * @return The ARN of the bucket to which Amazon S3 Storage Lens exports will be placed.
      * 
      */
     private final String arn;
     private final @Nullable StorageLensEncryption encryption;
     /**
-     * Specifies the file format to use when exporting Amazon S3 Storage Lens metrics export.
+     * @return Specifies the file format to use when exporting Amazon S3 Storage Lens metrics export.
      * 
      */
     private final StorageLensS3BucketDestinationFormat format;
     /**
-     * The version of the output schema to use when exporting Amazon S3 Storage Lens metrics.
+     * @return The version of the output schema to use when exporting Amazon S3 Storage Lens metrics.
      * 
      */
     private final StorageLensS3BucketDestinationOutputSchemaVersion outputSchemaVersion;
     /**
-     * The prefix to use for Amazon S3 Storage Lens export.
+     * @return The prefix to use for Amazon S3 Storage Lens export.
      * 
      */
     private final @Nullable String prefix;
@@ -58,16 +58,16 @@ public final class StorageLensS3BucketDestination {
     }
 
     /**
-     * The AWS account ID that owns the destination S3 bucket.
+     * @return The AWS account ID that owns the destination S3 bucket.
      * 
-    */
+     */
     public String accountId() {
         return this.accountId;
     }
     /**
-     * The ARN of the bucket to which Amazon S3 Storage Lens exports will be placed.
+     * @return The ARN of the bucket to which Amazon S3 Storage Lens exports will be placed.
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
@@ -75,23 +75,23 @@ public final class StorageLensS3BucketDestination {
         return Optional.ofNullable(this.encryption);
     }
     /**
-     * Specifies the file format to use when exporting Amazon S3 Storage Lens metrics export.
+     * @return Specifies the file format to use when exporting Amazon S3 Storage Lens metrics export.
      * 
-    */
+     */
     public StorageLensS3BucketDestinationFormat format() {
         return this.format;
     }
     /**
-     * The version of the output schema to use when exporting Amazon S3 Storage Lens metrics.
+     * @return The version of the output schema to use when exporting Amazon S3 Storage Lens metrics.
      * 
-    */
+     */
     public StorageLensS3BucketDestinationOutputSchemaVersion outputSchemaVersion() {
         return this.outputSchemaVersion;
     }
     /**
-     * The prefix to use for Amazon S3 Storage Lens export.
+     * @return The prefix to use for Amazon S3 Storage Lens export.
      * 
-    */
+     */
     public Optional<String> prefix() {
         return Optional.ofNullable(this.prefix);
     }

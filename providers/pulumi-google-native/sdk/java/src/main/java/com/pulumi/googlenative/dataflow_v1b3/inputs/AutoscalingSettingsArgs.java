@@ -27,6 +27,10 @@ public final class AutoscalingSettingsArgs extends com.pulumi.resources.Resource
     @Import(name="algorithm")
     private @Nullable Output<AutoscalingSettingsAlgorithm> algorithm;
 
+    /**
+     * @return The algorithm to use for autoscaling.
+     * 
+     */
     public Optional<Output<AutoscalingSettingsAlgorithm>> algorithm() {
         return Optional.ofNullable(this.algorithm);
     }
@@ -38,6 +42,10 @@ public final class AutoscalingSettingsArgs extends com.pulumi.resources.Resource
     @Import(name="maxNumWorkers")
     private @Nullable Output<Integer> maxNumWorkers;
 
+    /**
+     * @return The maximum number of workers to cap scaling at.
+     * 
+     */
     public Optional<Output<Integer>> maxNumWorkers() {
         return Optional.ofNullable(this.maxNumWorkers);
     }
@@ -67,20 +75,44 @@ public final class AutoscalingSettingsArgs extends com.pulumi.resources.Resource
             $ = new AutoscalingSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param algorithm The algorithm to use for autoscaling.
+         * 
+         * @return builder
+         * 
+         */
         public Builder algorithm(@Nullable Output<AutoscalingSettingsAlgorithm> algorithm) {
             $.algorithm = algorithm;
             return this;
         }
 
+        /**
+         * @param algorithm The algorithm to use for autoscaling.
+         * 
+         * @return builder
+         * 
+         */
         public Builder algorithm(AutoscalingSettingsAlgorithm algorithm) {
             return algorithm(Output.of(algorithm));
         }
 
+        /**
+         * @param maxNumWorkers The maximum number of workers to cap scaling at.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxNumWorkers(@Nullable Output<Integer> maxNumWorkers) {
             $.maxNumWorkers = maxNumWorkers;
             return this;
         }
 
+        /**
+         * @param maxNumWorkers The maximum number of workers to cap scaling at.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxNumWorkers(Integer maxNumWorkers) {
             return maxNumWorkers(Output.of(maxNumWorkers));
         }

@@ -26,6 +26,10 @@ public final class LineChannelPropertiesResponse extends com.pulumi.resources.In
     @Import(name="callbackUrl", required=true)
     private String callbackUrl;
 
+    /**
+     * @return Callback Url to enter in line registration.
+     * 
+     */
     public String callbackUrl() {
         return this.callbackUrl;
     }
@@ -37,6 +41,10 @@ public final class LineChannelPropertiesResponse extends com.pulumi.resources.In
     @Import(name="isValidated", required=true)
     private Boolean isValidated;
 
+    /**
+     * @return Whether this channel is validated for the bot
+     * 
+     */
     public Boolean isValidated() {
         return this.isValidated;
     }
@@ -48,6 +56,10 @@ public final class LineChannelPropertiesResponse extends com.pulumi.resources.In
     @Import(name="lineRegistrations", required=true)
     private List<LineRegistrationResponse> lineRegistrations;
 
+    /**
+     * @return The list of line channel registrations
+     * 
+     */
     public List<LineRegistrationResponse> lineRegistrations() {
         return this.lineRegistrations;
     }
@@ -78,21 +90,45 @@ public final class LineChannelPropertiesResponse extends com.pulumi.resources.In
             $ = new LineChannelPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param callbackUrl Callback Url to enter in line registration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder callbackUrl(String callbackUrl) {
             $.callbackUrl = callbackUrl;
             return this;
         }
 
+        /**
+         * @param isValidated Whether this channel is validated for the bot
+         * 
+         * @return builder
+         * 
+         */
         public Builder isValidated(Boolean isValidated) {
             $.isValidated = isValidated;
             return this;
         }
 
+        /**
+         * @param lineRegistrations The list of line channel registrations
+         * 
+         * @return builder
+         * 
+         */
         public Builder lineRegistrations(List<LineRegistrationResponse> lineRegistrations) {
             $.lineRegistrations = lineRegistrations;
             return this;
         }
 
+        /**
+         * @param lineRegistrations The list of line channel registrations
+         * 
+         * @return builder
+         * 
+         */
         public Builder lineRegistrations(LineRegistrationResponse... lineRegistrations) {
             return lineRegistrations(List.of(lineRegistrations));
         }

@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class AllowedKeyTypeResponse {
     /**
-     * Represents an allowed Elliptic Curve key type.
+     * @return Represents an allowed Elliptic Curve key type.
      * 
      */
     private final EcKeyTypeResponse ellipticCurve;
     /**
-     * Represents an allowed RSA key type.
+     * @return Represents an allowed RSA key type.
      * 
      */
     private final RsaKeyTypeResponse rsa;
@@ -30,16 +30,16 @@ public final class AllowedKeyTypeResponse {
     }
 
     /**
-     * Represents an allowed Elliptic Curve key type.
+     * @return Represents an allowed Elliptic Curve key type.
      * 
-    */
+     */
     public EcKeyTypeResponse ellipticCurve() {
         return this.ellipticCurve;
     }
     /**
-     * Represents an allowed RSA key type.
+     * @return Represents an allowed RSA key type.
      * 
-    */
+     */
     public RsaKeyTypeResponse rsa() {
         return this.rsa;
     }

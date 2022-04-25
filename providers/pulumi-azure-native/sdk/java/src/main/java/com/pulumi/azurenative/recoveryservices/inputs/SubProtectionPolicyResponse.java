@@ -32,6 +32,10 @@ public final class SubProtectionPolicyResponse extends com.pulumi.resources.Invo
     @Import(name="policyType")
     private @Nullable String policyType;
 
+    /**
+     * @return Type of backup policy type
+     * 
+     */
     public Optional<String> policyType() {
         return Optional.ofNullable(this.policyType);
     }
@@ -43,6 +47,10 @@ public final class SubProtectionPolicyResponse extends com.pulumi.resources.Invo
     @Import(name="retentionPolicy")
     private @Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy;
 
+    /**
+     * @return Retention policy with the details on backup copy retention ranges.
+     * 
+     */
     public Optional<Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse>> retentionPolicy() {
         return Optional.ofNullable(this.retentionPolicy);
     }
@@ -54,6 +62,10 @@ public final class SubProtectionPolicyResponse extends com.pulumi.resources.Invo
     @Import(name="schedulePolicy")
     private @Nullable Object schedulePolicy;
 
+    /**
+     * @return Backup schedule specified as part of backup policy.
+     * 
+     */
     public Optional<Object> schedulePolicy() {
         return Optional.ofNullable(this.schedulePolicy);
     }
@@ -84,24 +96,54 @@ public final class SubProtectionPolicyResponse extends com.pulumi.resources.Invo
             $ = new SubProtectionPolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param policyType Type of backup policy type
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyType(@Nullable String policyType) {
             $.policyType = policyType;
             return this;
         }
 
+        /**
+         * @param retentionPolicy Retention policy with the details on backup copy retention ranges.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionPolicy(@Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy) {
             $.retentionPolicy = retentionPolicy;
             return this;
         }
 
+        /**
+         * @param retentionPolicy Retention policy with the details on backup copy retention ranges.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionPolicy(LongTermRetentionPolicyResponse retentionPolicy) {
             return retentionPolicy(Either.ofLeft(retentionPolicy));
         }
 
+        /**
+         * @param retentionPolicy Retention policy with the details on backup copy retention ranges.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionPolicy(SimpleRetentionPolicyResponse retentionPolicy) {
             return retentionPolicy(Either.ofRight(retentionPolicy));
         }
 
+        /**
+         * @param schedulePolicy Backup schedule specified as part of backup policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedulePolicy(@Nullable Object schedulePolicy) {
             $.schedulePolicy = schedulePolicy;
             return this;

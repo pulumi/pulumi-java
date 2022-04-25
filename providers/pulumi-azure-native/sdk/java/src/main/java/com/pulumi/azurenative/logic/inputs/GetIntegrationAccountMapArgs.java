@@ -19,6 +19,10 @@ public final class GetIntegrationAccountMapArgs extends com.pulumi.resources.Inv
     @Import(name="integrationAccountName", required=true)
     private String integrationAccountName;
 
+    /**
+     * @return The integration account name.
+     * 
+     */
     public String integrationAccountName() {
         return this.integrationAccountName;
     }
@@ -30,6 +34,10 @@ public final class GetIntegrationAccountMapArgs extends com.pulumi.resources.Inv
     @Import(name="mapName", required=true)
     private String mapName;
 
+    /**
+     * @return The integration account map name.
+     * 
+     */
     public String mapName() {
         return this.mapName;
     }
@@ -41,6 +49,10 @@ public final class GetIntegrationAccountMapArgs extends com.pulumi.resources.Inv
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetIntegrationAccountMapArgs extends com.pulumi.resources.Inv
             $ = new GetIntegrationAccountMapArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param integrationAccountName The integration account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder integrationAccountName(String integrationAccountName) {
             $.integrationAccountName = integrationAccountName;
             return this;
         }
 
+        /**
+         * @param mapName The integration account map name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mapName(String mapName) {
             $.mapName = mapName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

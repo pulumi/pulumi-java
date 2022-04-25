@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class ContentKeyPolicyOpenRestrictionResponse {
     /**
-     * The discriminator for derived types.
+     * @return The discriminator for derived types.
      * Expected value is &#39;#Microsoft.Media.ContentKeyPolicyOpenRestriction&#39;.
      * 
      */
@@ -22,10 +22,10 @@ public final class ContentKeyPolicyOpenRestrictionResponse {
     }
 
     /**
-     * The discriminator for derived types.
+     * @return The discriminator for derived types.
      * Expected value is &#39;#Microsoft.Media.ContentKeyPolicyOpenRestriction&#39;.
      * 
-    */
+     */
     public String odataType() {
         return this.odataType;
     }

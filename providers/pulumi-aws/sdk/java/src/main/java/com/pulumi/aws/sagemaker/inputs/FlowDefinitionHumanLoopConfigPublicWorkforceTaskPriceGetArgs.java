@@ -22,6 +22,10 @@ public final class FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceGetArgs 
     @Import(name="amountInUsd")
     private @Nullable Output<FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountInUsdGetArgs> amountInUsd;
 
+    /**
+     * @return Defines the amount of money paid to an Amazon Mechanical Turk worker in United States dollars. See Amount In Usd details below.
+     * 
+     */
     public Optional<Output<FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountInUsdGetArgs>> amountInUsd() {
         return Optional.ofNullable(this.amountInUsd);
     }
@@ -50,11 +54,23 @@ public final class FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceGetArgs 
             $ = new FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param amountInUsd Defines the amount of money paid to an Amazon Mechanical Turk worker in United States dollars. See Amount In Usd details below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder amountInUsd(@Nullable Output<FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountInUsdGetArgs> amountInUsd) {
             $.amountInUsd = amountInUsd;
             return this;
         }
 
+        /**
+         * @param amountInUsd Defines the amount of money paid to an Amazon Mechanical Turk worker in United States dollars. See Amount In Usd details below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder amountInUsd(FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountInUsdGetArgs amountInUsd) {
             return amountInUsd(Output.of(amountInUsd));
         }

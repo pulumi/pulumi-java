@@ -29,6 +29,10 @@ public final class ContainerPartitionKeyResponse extends com.pulumi.resources.In
     @Import(name="kind")
     private @Nullable String kind;
 
+    /**
+     * @return Indicates the kind of algorithm used for partitioning. For MultiHash, multiple partition keys (upto three maximum) are supported for container create
+     * 
+     */
     public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -40,6 +44,10 @@ public final class ContainerPartitionKeyResponse extends com.pulumi.resources.In
     @Import(name="paths")
     private @Nullable List<String> paths;
 
+    /**
+     * @return List of paths using which data within the container can be partitioned
+     * 
+     */
     public Optional<List<String>> paths() {
         return Optional.ofNullable(this.paths);
     }
@@ -51,6 +59,10 @@ public final class ContainerPartitionKeyResponse extends com.pulumi.resources.In
     @Import(name="systemKey", required=true)
     private Boolean systemKey;
 
+    /**
+     * @return Indicates if the container is using a system generated partition key
+     * 
+     */
     public Boolean systemKey() {
         return this.systemKey;
     }
@@ -62,6 +74,10 @@ public final class ContainerPartitionKeyResponse extends com.pulumi.resources.In
     @Import(name="version")
     private @Nullable Integer version;
 
+    /**
+     * @return Indicates the version of the partition key definition
+     * 
+     */
     public Optional<Integer> version() {
         return Optional.ofNullable(this.version);
     }
@@ -93,25 +109,55 @@ public final class ContainerPartitionKeyResponse extends com.pulumi.resources.In
             $ = new ContainerPartitionKeyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kind Indicates the kind of algorithm used for partitioning. For MultiHash, multiple partition keys (upto three maximum) are supported for container create
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable String kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param paths List of paths using which data within the container can be partitioned
+         * 
+         * @return builder
+         * 
+         */
         public Builder paths(@Nullable List<String> paths) {
             $.paths = paths;
             return this;
         }
 
+        /**
+         * @param paths List of paths using which data within the container can be partitioned
+         * 
+         * @return builder
+         * 
+         */
         public Builder paths(String... paths) {
             return paths(List.of(paths));
         }
 
+        /**
+         * @param systemKey Indicates if the container is using a system generated partition key
+         * 
+         * @return builder
+         * 
+         */
         public Builder systemKey(Boolean systemKey) {
             $.systemKey = systemKey;
             return this;
         }
 
+        /**
+         * @param version Indicates the version of the partition key definition
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable Integer version) {
             $.version = version;
             return this;

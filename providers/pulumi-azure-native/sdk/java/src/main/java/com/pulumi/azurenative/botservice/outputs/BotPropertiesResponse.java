@@ -15,167 +15,167 @@ import javax.annotation.Nullable;
 @CustomType
 public final class BotPropertiesResponse {
     /**
-     * Contains resource all settings defined as key/value pairs.
+     * @return Contains resource all settings defined as key/value pairs.
      * 
      */
     private final @Nullable Map<String,String> allSettings;
     /**
-     * The hint (e.g. keyVault secret resourceId) on how to fetch the app secret
+     * @return The hint (e.g. keyVault secret resourceId) on how to fetch the app secret
      * 
      */
     private final @Nullable String appPasswordHint;
     /**
-     * The CMK encryption status
+     * @return The CMK encryption status
      * 
      */
     private final String cmekEncryptionStatus;
     /**
-     * The CMK Url
+     * @return The CMK Url
      * 
      */
     private final @Nullable String cmekKeyVaultUrl;
     /**
-     * Collection of channels for which the bot is configured
+     * @return Collection of channels for which the bot is configured
      * 
      */
     private final List<String> configuredChannels;
     /**
-     * The description of the bot
+     * @return The description of the bot
      * 
      */
     private final @Nullable String description;
     /**
-     * The Application Insights key
+     * @return The Application Insights key
      * 
      */
     private final @Nullable String developerAppInsightKey;
     /**
-     * The Application Insights Api Key
+     * @return The Application Insights Api Key
      * 
      */
     private final @Nullable String developerAppInsightsApiKey;
     /**
-     * The Application Insights App Id
+     * @return The Application Insights App Id
      * 
      */
     private final @Nullable String developerAppInsightsApplicationId;
     /**
-     * Opt-out of local authentication and ensure only MSI and AAD can be used exclusively for authentication.
+     * @return Opt-out of local authentication and ensure only MSI and AAD can be used exclusively for authentication.
      * 
      */
     private final @Nullable Boolean disableLocalAuth;
     /**
-     * The Name of the bot
+     * @return The Name of the bot
      * 
      */
     private final String displayName;
     /**
-     * Collection of channels for which the bot is enabled
+     * @return Collection of channels for which the bot is enabled
      * 
      */
     private final List<String> enabledChannels;
     /**
-     * The bot&#39;s endpoint
+     * @return The bot&#39;s endpoint
      * 
      */
     private final String endpoint;
     /**
-     * The bot&#39;s endpoint version
+     * @return The bot&#39;s endpoint version
      * 
      */
     private final String endpointVersion;
     /**
-     * The Icon Url of the bot
+     * @return The Icon Url of the bot
      * 
      */
     private final @Nullable String iconUrl;
     /**
-     * Whether Cmek is enabled
+     * @return Whether Cmek is enabled
      * 
      */
     private final @Nullable Boolean isCmekEnabled;
     /**
-     * Whether the bot is developerAppInsightsApiKey set
+     * @return Whether the bot is developerAppInsightsApiKey set
      * 
      */
     private final Boolean isDeveloperAppInsightsApiKeySet;
     /**
-     * Whether the bot is streaming supported
+     * @return Whether the bot is streaming supported
      * 
      */
     private final @Nullable Boolean isStreamingSupported;
     /**
-     * Collection of LUIS App Ids
+     * @return Collection of LUIS App Ids
      * 
      */
     private final @Nullable List<String> luisAppIds;
     /**
-     * The LUIS Key
+     * @return The LUIS Key
      * 
      */
     private final @Nullable String luisKey;
     /**
-     * The bot&#39;s manifest url
+     * @return The bot&#39;s manifest url
      * 
      */
     private final @Nullable String manifestUrl;
     /**
-     * Token used to migrate non Azure bot to azure subscription
+     * @return Token used to migrate non Azure bot to azure subscription
      * 
      */
     private final String migrationToken;
     /**
-     * Microsoft App Id for the bot
+     * @return Microsoft App Id for the bot
      * 
      */
     private final String msaAppId;
     /**
-     * Microsoft App Managed Identity Resource Id for the bot
+     * @return Microsoft App Managed Identity Resource Id for the bot
      * 
      */
     private final @Nullable String msaAppMSIResourceId;
     /**
-     * Microsoft App Tenant Id for the bot
+     * @return Microsoft App Tenant Id for the bot
      * 
      */
     private final @Nullable String msaAppTenantId;
     /**
-     * Microsoft App Type for the bot
+     * @return Microsoft App Type for the bot
      * 
      */
     private final @Nullable String msaAppType;
     /**
-     * The hint to browser (e.g. protocol handler) on how to open the bot for authoring
+     * @return The hint to browser (e.g. protocol handler) on how to open the bot for authoring
      * 
      */
     private final @Nullable String openWithHint;
     /**
-     * Contains resource parameters defined as key/value pairs.
+     * @return Contains resource parameters defined as key/value pairs.
      * 
      */
     private final @Nullable Map<String,String> parameters;
     /**
-     * Provisioning state of the resource
+     * @return Provisioning state of the resource
      * 
      */
     private final String provisioningState;
     /**
-     * Whether the bot is in an isolated network
+     * @return Whether the bot is in an isolated network
      * 
      */
     private final @Nullable String publicNetworkAccess;
     /**
-     * Publishing credentials of the resource
+     * @return Publishing credentials of the resource
      * 
      */
     private final @Nullable String publishingCredentials;
     /**
-     * The channel schema transformation version for the bot
+     * @return The channel schema transformation version for the bot
      * 
      */
     private final @Nullable String schemaTransformationVersion;
     /**
-     * The storage resourceId for the bot
+     * @return The storage resourceId for the bot
      * 
      */
     private final @Nullable String storageResourceId;
@@ -251,233 +251,233 @@ public final class BotPropertiesResponse {
     }
 
     /**
-     * Contains resource all settings defined as key/value pairs.
+     * @return Contains resource all settings defined as key/value pairs.
      * 
-    */
+     */
     public Map<String,String> allSettings() {
         return this.allSettings == null ? Map.of() : this.allSettings;
     }
     /**
-     * The hint (e.g. keyVault secret resourceId) on how to fetch the app secret
+     * @return The hint (e.g. keyVault secret resourceId) on how to fetch the app secret
      * 
-    */
+     */
     public Optional<String> appPasswordHint() {
         return Optional.ofNullable(this.appPasswordHint);
     }
     /**
-     * The CMK encryption status
+     * @return The CMK encryption status
      * 
-    */
+     */
     public String cmekEncryptionStatus() {
         return this.cmekEncryptionStatus;
     }
     /**
-     * The CMK Url
+     * @return The CMK Url
      * 
-    */
+     */
     public Optional<String> cmekKeyVaultUrl() {
         return Optional.ofNullable(this.cmekKeyVaultUrl);
     }
     /**
-     * Collection of channels for which the bot is configured
+     * @return Collection of channels for which the bot is configured
      * 
-    */
+     */
     public List<String> configuredChannels() {
         return this.configuredChannels;
     }
     /**
-     * The description of the bot
+     * @return The description of the bot
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The Application Insights key
+     * @return The Application Insights key
      * 
-    */
+     */
     public Optional<String> developerAppInsightKey() {
         return Optional.ofNullable(this.developerAppInsightKey);
     }
     /**
-     * The Application Insights Api Key
+     * @return The Application Insights Api Key
      * 
-    */
+     */
     public Optional<String> developerAppInsightsApiKey() {
         return Optional.ofNullable(this.developerAppInsightsApiKey);
     }
     /**
-     * The Application Insights App Id
+     * @return The Application Insights App Id
      * 
-    */
+     */
     public Optional<String> developerAppInsightsApplicationId() {
         return Optional.ofNullable(this.developerAppInsightsApplicationId);
     }
     /**
-     * Opt-out of local authentication and ensure only MSI and AAD can be used exclusively for authentication.
+     * @return Opt-out of local authentication and ensure only MSI and AAD can be used exclusively for authentication.
      * 
-    */
+     */
     public Optional<Boolean> disableLocalAuth() {
         return Optional.ofNullable(this.disableLocalAuth);
     }
     /**
-     * The Name of the bot
+     * @return The Name of the bot
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * Collection of channels for which the bot is enabled
+     * @return Collection of channels for which the bot is enabled
      * 
-    */
+     */
     public List<String> enabledChannels() {
         return this.enabledChannels;
     }
     /**
-     * The bot&#39;s endpoint
+     * @return The bot&#39;s endpoint
      * 
-    */
+     */
     public String endpoint() {
         return this.endpoint;
     }
     /**
-     * The bot&#39;s endpoint version
+     * @return The bot&#39;s endpoint version
      * 
-    */
+     */
     public String endpointVersion() {
         return this.endpointVersion;
     }
     /**
-     * The Icon Url of the bot
+     * @return The Icon Url of the bot
      * 
-    */
+     */
     public Optional<String> iconUrl() {
         return Optional.ofNullable(this.iconUrl);
     }
     /**
-     * Whether Cmek is enabled
+     * @return Whether Cmek is enabled
      * 
-    */
+     */
     public Optional<Boolean> isCmekEnabled() {
         return Optional.ofNullable(this.isCmekEnabled);
     }
     /**
-     * Whether the bot is developerAppInsightsApiKey set
+     * @return Whether the bot is developerAppInsightsApiKey set
      * 
-    */
+     */
     public Boolean isDeveloperAppInsightsApiKeySet() {
         return this.isDeveloperAppInsightsApiKeySet;
     }
     /**
-     * Whether the bot is streaming supported
+     * @return Whether the bot is streaming supported
      * 
-    */
+     */
     public Optional<Boolean> isStreamingSupported() {
         return Optional.ofNullable(this.isStreamingSupported);
     }
     /**
-     * Collection of LUIS App Ids
+     * @return Collection of LUIS App Ids
      * 
-    */
+     */
     public List<String> luisAppIds() {
         return this.luisAppIds == null ? List.of() : this.luisAppIds;
     }
     /**
-     * The LUIS Key
+     * @return The LUIS Key
      * 
-    */
+     */
     public Optional<String> luisKey() {
         return Optional.ofNullable(this.luisKey);
     }
     /**
-     * The bot&#39;s manifest url
+     * @return The bot&#39;s manifest url
      * 
-    */
+     */
     public Optional<String> manifestUrl() {
         return Optional.ofNullable(this.manifestUrl);
     }
     /**
-     * Token used to migrate non Azure bot to azure subscription
+     * @return Token used to migrate non Azure bot to azure subscription
      * 
-    */
+     */
     public String migrationToken() {
         return this.migrationToken;
     }
     /**
-     * Microsoft App Id for the bot
+     * @return Microsoft App Id for the bot
      * 
-    */
+     */
     public String msaAppId() {
         return this.msaAppId;
     }
     /**
-     * Microsoft App Managed Identity Resource Id for the bot
+     * @return Microsoft App Managed Identity Resource Id for the bot
      * 
-    */
+     */
     public Optional<String> msaAppMSIResourceId() {
         return Optional.ofNullable(this.msaAppMSIResourceId);
     }
     /**
-     * Microsoft App Tenant Id for the bot
+     * @return Microsoft App Tenant Id for the bot
      * 
-    */
+     */
     public Optional<String> msaAppTenantId() {
         return Optional.ofNullable(this.msaAppTenantId);
     }
     /**
-     * Microsoft App Type for the bot
+     * @return Microsoft App Type for the bot
      * 
-    */
+     */
     public Optional<String> msaAppType() {
         return Optional.ofNullable(this.msaAppType);
     }
     /**
-     * The hint to browser (e.g. protocol handler) on how to open the bot for authoring
+     * @return The hint to browser (e.g. protocol handler) on how to open the bot for authoring
      * 
-    */
+     */
     public Optional<String> openWithHint() {
         return Optional.ofNullable(this.openWithHint);
     }
     /**
-     * Contains resource parameters defined as key/value pairs.
+     * @return Contains resource parameters defined as key/value pairs.
      * 
-    */
+     */
     public Map<String,String> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
-     * Provisioning state of the resource
+     * @return Provisioning state of the resource
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Whether the bot is in an isolated network
+     * @return Whether the bot is in an isolated network
      * 
-    */
+     */
     public Optional<String> publicNetworkAccess() {
         return Optional.ofNullable(this.publicNetworkAccess);
     }
     /**
-     * Publishing credentials of the resource
+     * @return Publishing credentials of the resource
      * 
-    */
+     */
     public Optional<String> publishingCredentials() {
         return Optional.ofNullable(this.publishingCredentials);
     }
     /**
-     * The channel schema transformation version for the bot
+     * @return The channel schema transformation version for the bot
      * 
-    */
+     */
     public Optional<String> schemaTransformationVersion() {
         return Optional.ofNullable(this.schemaTransformationVersion);
     }
     /**
-     * The storage resourceId for the bot
+     * @return The storage resourceId for the bot
      * 
-    */
+     */
     public Optional<String> storageResourceId() {
         return Optional.ofNullable(this.storageResourceId);
     }

@@ -25,6 +25,10 @@ public final class RestorePointCollectionSourcePropertiesResponse extends com.pu
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Resource Id of the source resource used to create this restore point collection
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -36,6 +40,10 @@ public final class RestorePointCollectionSourcePropertiesResponse extends com.pu
     @Import(name="location", required=true)
     private String location;
 
+    /**
+     * @return Location of the source resource used to create this restore point collection.
+     * 
+     */
     public String location() {
         return this.location;
     }
@@ -65,11 +73,23 @@ public final class RestorePointCollectionSourcePropertiesResponse extends com.pu
             $ = new RestorePointCollectionSourcePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Resource Id of the source resource used to create this restore point collection
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param location Location of the source resource used to create this restore point collection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             $.location = location;
             return this;

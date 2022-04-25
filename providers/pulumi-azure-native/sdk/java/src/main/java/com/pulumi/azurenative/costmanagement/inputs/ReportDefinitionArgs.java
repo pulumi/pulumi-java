@@ -31,6 +31,10 @@ public final class ReportDefinitionArgs extends com.pulumi.resources.ResourceArg
     @Import(name="dataset")
     private @Nullable Output<ReportDatasetArgs> dataset;
 
+    /**
+     * @return Has definition for data in this report.
+     * 
+     */
     public Optional<Output<ReportDatasetArgs>> dataset() {
         return Optional.ofNullable(this.dataset);
     }
@@ -42,6 +46,10 @@ public final class ReportDefinitionArgs extends com.pulumi.resources.ResourceArg
     @Import(name="timePeriod")
     private @Nullable Output<ReportTimePeriodArgs> timePeriod;
 
+    /**
+     * @return Has time period for pulling data for the report.
+     * 
+     */
     public Optional<Output<ReportTimePeriodArgs>> timePeriod() {
         return Optional.ofNullable(this.timePeriod);
     }
@@ -53,6 +61,10 @@ public final class ReportDefinitionArgs extends com.pulumi.resources.ResourceArg
     @Import(name="timeframe", required=true)
     private Output<Either<String,TimeframeType>> timeframe;
 
+    /**
+     * @return The time frame for pulling data for the report. If custom, then a specific time period must be provided.
+     * 
+     */
     public Output<Either<String,TimeframeType>> timeframe() {
         return this.timeframe;
     }
@@ -64,6 +76,10 @@ public final class ReportDefinitionArgs extends com.pulumi.resources.ResourceArg
     @Import(name="type", required=true)
     private Output<Either<String,ReportType>> type;
 
+    /**
+     * @return The type of the report.
+     * 
+     */
     public Output<Either<String,ReportType>> type() {
         return this.type;
     }
@@ -95,54 +111,126 @@ public final class ReportDefinitionArgs extends com.pulumi.resources.ResourceArg
             $ = new ReportDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataset Has definition for data in this report.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataset(@Nullable Output<ReportDatasetArgs> dataset) {
             $.dataset = dataset;
             return this;
         }
 
+        /**
+         * @param dataset Has definition for data in this report.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataset(ReportDatasetArgs dataset) {
             return dataset(Output.of(dataset));
         }
 
+        /**
+         * @param timePeriod Has time period for pulling data for the report.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timePeriod(@Nullable Output<ReportTimePeriodArgs> timePeriod) {
             $.timePeriod = timePeriod;
             return this;
         }
 
+        /**
+         * @param timePeriod Has time period for pulling data for the report.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timePeriod(ReportTimePeriodArgs timePeriod) {
             return timePeriod(Output.of(timePeriod));
         }
 
+        /**
+         * @param timeframe The time frame for pulling data for the report. If custom, then a specific time period must be provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeframe(Output<Either<String,TimeframeType>> timeframe) {
             $.timeframe = timeframe;
             return this;
         }
 
+        /**
+         * @param timeframe The time frame for pulling data for the report. If custom, then a specific time period must be provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeframe(Either<String,TimeframeType> timeframe) {
             return timeframe(Output.of(timeframe));
         }
 
+        /**
+         * @param timeframe The time frame for pulling data for the report. If custom, then a specific time period must be provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeframe(String timeframe) {
             return timeframe(Either.ofLeft(timeframe));
         }
 
+        /**
+         * @param timeframe The time frame for pulling data for the report. If custom, then a specific time period must be provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeframe(TimeframeType timeframe) {
             return timeframe(Either.ofRight(timeframe));
         }
 
+        /**
+         * @param type The type of the report.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<Either<String,ReportType>> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of the report.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Either<String,ReportType> type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param type The type of the report.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Either.ofLeft(type));
         }
 
+        /**
+         * @param type The type of the report.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(ReportType type) {
             return type(Either.ofRight(type));
         }

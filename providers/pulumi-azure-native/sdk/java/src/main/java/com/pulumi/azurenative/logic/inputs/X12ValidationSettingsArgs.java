@@ -28,6 +28,10 @@ public final class X12ValidationSettingsArgs extends com.pulumi.resources.Resour
     @Import(name="allowLeadingAndTrailingSpacesAndZeroes", required=true)
     private Output<Boolean> allowLeadingAndTrailingSpacesAndZeroes;
 
+    /**
+     * @return The value indicating whether to allow leading and trailing spaces and zeroes.
+     * 
+     */
     public Output<Boolean> allowLeadingAndTrailingSpacesAndZeroes() {
         return this.allowLeadingAndTrailingSpacesAndZeroes;
     }
@@ -39,6 +43,10 @@ public final class X12ValidationSettingsArgs extends com.pulumi.resources.Resour
     @Import(name="checkDuplicateGroupControlNumber", required=true)
     private Output<Boolean> checkDuplicateGroupControlNumber;
 
+    /**
+     * @return The value indicating whether to check for duplicate group control number.
+     * 
+     */
     public Output<Boolean> checkDuplicateGroupControlNumber() {
         return this.checkDuplicateGroupControlNumber;
     }
@@ -50,6 +58,10 @@ public final class X12ValidationSettingsArgs extends com.pulumi.resources.Resour
     @Import(name="checkDuplicateInterchangeControlNumber", required=true)
     private Output<Boolean> checkDuplicateInterchangeControlNumber;
 
+    /**
+     * @return The value indicating whether to check for duplicate interchange control number.
+     * 
+     */
     public Output<Boolean> checkDuplicateInterchangeControlNumber() {
         return this.checkDuplicateInterchangeControlNumber;
     }
@@ -61,6 +73,10 @@ public final class X12ValidationSettingsArgs extends com.pulumi.resources.Resour
     @Import(name="checkDuplicateTransactionSetControlNumber", required=true)
     private Output<Boolean> checkDuplicateTransactionSetControlNumber;
 
+    /**
+     * @return The value indicating whether to check for duplicate transaction set control number.
+     * 
+     */
     public Output<Boolean> checkDuplicateTransactionSetControlNumber() {
         return this.checkDuplicateTransactionSetControlNumber;
     }
@@ -72,6 +88,10 @@ public final class X12ValidationSettingsArgs extends com.pulumi.resources.Resour
     @Import(name="interchangeControlNumberValidityDays", required=true)
     private Output<Integer> interchangeControlNumberValidityDays;
 
+    /**
+     * @return The validity period of interchange control number.
+     * 
+     */
     public Output<Integer> interchangeControlNumberValidityDays() {
         return this.interchangeControlNumberValidityDays;
     }
@@ -83,6 +103,10 @@ public final class X12ValidationSettingsArgs extends com.pulumi.resources.Resour
     @Import(name="trailingSeparatorPolicy", required=true)
     private Output<Either<String,TrailingSeparatorPolicy>> trailingSeparatorPolicy;
 
+    /**
+     * @return The trailing separator policy.
+     * 
+     */
     public Output<Either<String,TrailingSeparatorPolicy>> trailingSeparatorPolicy() {
         return this.trailingSeparatorPolicy;
     }
@@ -94,6 +118,10 @@ public final class X12ValidationSettingsArgs extends com.pulumi.resources.Resour
     @Import(name="trimLeadingAndTrailingSpacesAndZeroes", required=true)
     private Output<Boolean> trimLeadingAndTrailingSpacesAndZeroes;
 
+    /**
+     * @return The value indicating whether to trim leading and trailing spaces and zeroes.
+     * 
+     */
     public Output<Boolean> trimLeadingAndTrailingSpacesAndZeroes() {
         return this.trimLeadingAndTrailingSpacesAndZeroes;
     }
@@ -105,6 +133,10 @@ public final class X12ValidationSettingsArgs extends com.pulumi.resources.Resour
     @Import(name="validateCharacterSet", required=true)
     private Output<Boolean> validateCharacterSet;
 
+    /**
+     * @return The value indicating whether to validate character set in the message.
+     * 
+     */
     public Output<Boolean> validateCharacterSet() {
         return this.validateCharacterSet;
     }
@@ -116,6 +148,10 @@ public final class X12ValidationSettingsArgs extends com.pulumi.resources.Resour
     @Import(name="validateEDITypes", required=true)
     private Output<Boolean> validateEDITypes;
 
+    /**
+     * @return The value indicating whether to Whether to validate EDI types.
+     * 
+     */
     public Output<Boolean> validateEDITypes() {
         return this.validateEDITypes;
     }
@@ -127,6 +163,10 @@ public final class X12ValidationSettingsArgs extends com.pulumi.resources.Resour
     @Import(name="validateXSDTypes", required=true)
     private Output<Boolean> validateXSDTypes;
 
+    /**
+     * @return The value indicating whether to Whether to validate XSD types.
+     * 
+     */
     public Output<Boolean> validateXSDTypes() {
         return this.validateXSDTypes;
     }
@@ -164,100 +204,232 @@ public final class X12ValidationSettingsArgs extends com.pulumi.resources.Resour
             $ = new X12ValidationSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowLeadingAndTrailingSpacesAndZeroes The value indicating whether to allow leading and trailing spaces and zeroes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowLeadingAndTrailingSpacesAndZeroes(Output<Boolean> allowLeadingAndTrailingSpacesAndZeroes) {
             $.allowLeadingAndTrailingSpacesAndZeroes = allowLeadingAndTrailingSpacesAndZeroes;
             return this;
         }
 
+        /**
+         * @param allowLeadingAndTrailingSpacesAndZeroes The value indicating whether to allow leading and trailing spaces and zeroes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowLeadingAndTrailingSpacesAndZeroes(Boolean allowLeadingAndTrailingSpacesAndZeroes) {
             return allowLeadingAndTrailingSpacesAndZeroes(Output.of(allowLeadingAndTrailingSpacesAndZeroes));
         }
 
+        /**
+         * @param checkDuplicateGroupControlNumber The value indicating whether to check for duplicate group control number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder checkDuplicateGroupControlNumber(Output<Boolean> checkDuplicateGroupControlNumber) {
             $.checkDuplicateGroupControlNumber = checkDuplicateGroupControlNumber;
             return this;
         }
 
+        /**
+         * @param checkDuplicateGroupControlNumber The value indicating whether to check for duplicate group control number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder checkDuplicateGroupControlNumber(Boolean checkDuplicateGroupControlNumber) {
             return checkDuplicateGroupControlNumber(Output.of(checkDuplicateGroupControlNumber));
         }
 
+        /**
+         * @param checkDuplicateInterchangeControlNumber The value indicating whether to check for duplicate interchange control number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder checkDuplicateInterchangeControlNumber(Output<Boolean> checkDuplicateInterchangeControlNumber) {
             $.checkDuplicateInterchangeControlNumber = checkDuplicateInterchangeControlNumber;
             return this;
         }
 
+        /**
+         * @param checkDuplicateInterchangeControlNumber The value indicating whether to check for duplicate interchange control number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder checkDuplicateInterchangeControlNumber(Boolean checkDuplicateInterchangeControlNumber) {
             return checkDuplicateInterchangeControlNumber(Output.of(checkDuplicateInterchangeControlNumber));
         }
 
+        /**
+         * @param checkDuplicateTransactionSetControlNumber The value indicating whether to check for duplicate transaction set control number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder checkDuplicateTransactionSetControlNumber(Output<Boolean> checkDuplicateTransactionSetControlNumber) {
             $.checkDuplicateTransactionSetControlNumber = checkDuplicateTransactionSetControlNumber;
             return this;
         }
 
+        /**
+         * @param checkDuplicateTransactionSetControlNumber The value indicating whether to check for duplicate transaction set control number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder checkDuplicateTransactionSetControlNumber(Boolean checkDuplicateTransactionSetControlNumber) {
             return checkDuplicateTransactionSetControlNumber(Output.of(checkDuplicateTransactionSetControlNumber));
         }
 
+        /**
+         * @param interchangeControlNumberValidityDays The validity period of interchange control number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interchangeControlNumberValidityDays(Output<Integer> interchangeControlNumberValidityDays) {
             $.interchangeControlNumberValidityDays = interchangeControlNumberValidityDays;
             return this;
         }
 
+        /**
+         * @param interchangeControlNumberValidityDays The validity period of interchange control number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interchangeControlNumberValidityDays(Integer interchangeControlNumberValidityDays) {
             return interchangeControlNumberValidityDays(Output.of(interchangeControlNumberValidityDays));
         }
 
+        /**
+         * @param trailingSeparatorPolicy The trailing separator policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trailingSeparatorPolicy(Output<Either<String,TrailingSeparatorPolicy>> trailingSeparatorPolicy) {
             $.trailingSeparatorPolicy = trailingSeparatorPolicy;
             return this;
         }
 
+        /**
+         * @param trailingSeparatorPolicy The trailing separator policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trailingSeparatorPolicy(Either<String,TrailingSeparatorPolicy> trailingSeparatorPolicy) {
             return trailingSeparatorPolicy(Output.of(trailingSeparatorPolicy));
         }
 
+        /**
+         * @param trailingSeparatorPolicy The trailing separator policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trailingSeparatorPolicy(String trailingSeparatorPolicy) {
             return trailingSeparatorPolicy(Either.ofLeft(trailingSeparatorPolicy));
         }
 
+        /**
+         * @param trailingSeparatorPolicy The trailing separator policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trailingSeparatorPolicy(TrailingSeparatorPolicy trailingSeparatorPolicy) {
             return trailingSeparatorPolicy(Either.ofRight(trailingSeparatorPolicy));
         }
 
+        /**
+         * @param trimLeadingAndTrailingSpacesAndZeroes The value indicating whether to trim leading and trailing spaces and zeroes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trimLeadingAndTrailingSpacesAndZeroes(Output<Boolean> trimLeadingAndTrailingSpacesAndZeroes) {
             $.trimLeadingAndTrailingSpacesAndZeroes = trimLeadingAndTrailingSpacesAndZeroes;
             return this;
         }
 
+        /**
+         * @param trimLeadingAndTrailingSpacesAndZeroes The value indicating whether to trim leading and trailing spaces and zeroes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trimLeadingAndTrailingSpacesAndZeroes(Boolean trimLeadingAndTrailingSpacesAndZeroes) {
             return trimLeadingAndTrailingSpacesAndZeroes(Output.of(trimLeadingAndTrailingSpacesAndZeroes));
         }
 
+        /**
+         * @param validateCharacterSet The value indicating whether to validate character set in the message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validateCharacterSet(Output<Boolean> validateCharacterSet) {
             $.validateCharacterSet = validateCharacterSet;
             return this;
         }
 
+        /**
+         * @param validateCharacterSet The value indicating whether to validate character set in the message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validateCharacterSet(Boolean validateCharacterSet) {
             return validateCharacterSet(Output.of(validateCharacterSet));
         }
 
+        /**
+         * @param validateEDITypes The value indicating whether to Whether to validate EDI types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validateEDITypes(Output<Boolean> validateEDITypes) {
             $.validateEDITypes = validateEDITypes;
             return this;
         }
 
+        /**
+         * @param validateEDITypes The value indicating whether to Whether to validate EDI types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validateEDITypes(Boolean validateEDITypes) {
             return validateEDITypes(Output.of(validateEDITypes));
         }
 
+        /**
+         * @param validateXSDTypes The value indicating whether to Whether to validate XSD types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validateXSDTypes(Output<Boolean> validateXSDTypes) {
             $.validateXSDTypes = validateXSDTypes;
             return this;
         }
 
+        /**
+         * @param validateXSDTypes The value indicating whether to Whether to validate XSD types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validateXSDTypes(Boolean validateXSDTypes) {
             return validateXSDTypes(Output.of(validateXSDTypes));
         }

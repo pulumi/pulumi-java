@@ -14,27 +14,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ResourcePolicyRule {
     /**
-     * `apiGroups` is a list of matching API groups and may not be empty. &#34;*&#34; matches all API groups and, if present, must be the only entry. Required.
+     * @return `apiGroups` is a list of matching API groups and may not be empty. &#34;*&#34; matches all API groups and, if present, must be the only entry. Required.
      * 
      */
     private final List<String> apiGroups;
     /**
-     * `clusterScope` indicates whether to match requests that do not specify a namespace (which happens either because the resource is not namespaced or the request targets all namespaces). If this field is omitted or false then the `namespaces` field must contain a non-empty list.
+     * @return `clusterScope` indicates whether to match requests that do not specify a namespace (which happens either because the resource is not namespaced or the request targets all namespaces). If this field is omitted or false then the `namespaces` field must contain a non-empty list.
      * 
      */
     private final @Nullable Boolean clusterScope;
     /**
-     * `namespaces` is a list of target namespaces that restricts matches.  A request that specifies a target namespace matches only if either (a) this list contains that target namespace or (b) this list contains &#34;*&#34;.  Note that &#34;*&#34; matches any specified namespace but does not match a request that _does not specify_ a namespace (see the `clusterScope` field for that). This list may be empty, but only if `clusterScope` is true.
+     * @return `namespaces` is a list of target namespaces that restricts matches.  A request that specifies a target namespace matches only if either (a) this list contains that target namespace or (b) this list contains &#34;*&#34;.  Note that &#34;*&#34; matches any specified namespace but does not match a request that _does not specify_ a namespace (see the `clusterScope` field for that). This list may be empty, but only if `clusterScope` is true.
      * 
      */
     private final @Nullable List<String> namespaces;
     /**
-     * `resources` is a list of matching resources (i.e., lowercase and plural) with, if desired, subresource.  For example, [ &#34;services&#34;, &#34;nodes/status&#34; ].  This list may not be empty. &#34;*&#34; matches all resources and, if present, must be the only entry. Required.
+     * @return `resources` is a list of matching resources (i.e., lowercase and plural) with, if desired, subresource.  For example, [ &#34;services&#34;, &#34;nodes/status&#34; ].  This list may not be empty. &#34;*&#34; matches all resources and, if present, must be the only entry. Required.
      * 
      */
     private final List<String> resources;
     /**
-     * `verbs` is a list of matching verbs and may not be empty. &#34;*&#34; matches all verbs and, if present, must be the only entry. Required.
+     * @return `verbs` is a list of matching verbs and may not be empty. &#34;*&#34; matches all verbs and, if present, must be the only entry. Required.
      * 
      */
     private final List<String> verbs;
@@ -54,37 +54,37 @@ public final class ResourcePolicyRule {
     }
 
     /**
-     * `apiGroups` is a list of matching API groups and may not be empty. &#34;*&#34; matches all API groups and, if present, must be the only entry. Required.
+     * @return `apiGroups` is a list of matching API groups and may not be empty. &#34;*&#34; matches all API groups and, if present, must be the only entry. Required.
      * 
-    */
+     */
     public List<String> apiGroups() {
         return this.apiGroups;
     }
     /**
-     * `clusterScope` indicates whether to match requests that do not specify a namespace (which happens either because the resource is not namespaced or the request targets all namespaces). If this field is omitted or false then the `namespaces` field must contain a non-empty list.
+     * @return `clusterScope` indicates whether to match requests that do not specify a namespace (which happens either because the resource is not namespaced or the request targets all namespaces). If this field is omitted or false then the `namespaces` field must contain a non-empty list.
      * 
-    */
+     */
     public Optional<Boolean> clusterScope() {
         return Optional.ofNullable(this.clusterScope);
     }
     /**
-     * `namespaces` is a list of target namespaces that restricts matches.  A request that specifies a target namespace matches only if either (a) this list contains that target namespace or (b) this list contains &#34;*&#34;.  Note that &#34;*&#34; matches any specified namespace but does not match a request that _does not specify_ a namespace (see the `clusterScope` field for that). This list may be empty, but only if `clusterScope` is true.
+     * @return `namespaces` is a list of target namespaces that restricts matches.  A request that specifies a target namespace matches only if either (a) this list contains that target namespace or (b) this list contains &#34;*&#34;.  Note that &#34;*&#34; matches any specified namespace but does not match a request that _does not specify_ a namespace (see the `clusterScope` field for that). This list may be empty, but only if `clusterScope` is true.
      * 
-    */
+     */
     public List<String> namespaces() {
         return this.namespaces == null ? List.of() : this.namespaces;
     }
     /**
-     * `resources` is a list of matching resources (i.e., lowercase and plural) with, if desired, subresource.  For example, [ &#34;services&#34;, &#34;nodes/status&#34; ].  This list may not be empty. &#34;*&#34; matches all resources and, if present, must be the only entry. Required.
+     * @return `resources` is a list of matching resources (i.e., lowercase and plural) with, if desired, subresource.  For example, [ &#34;services&#34;, &#34;nodes/status&#34; ].  This list may not be empty. &#34;*&#34; matches all resources and, if present, must be the only entry. Required.
      * 
-    */
+     */
     public List<String> resources() {
         return this.resources;
     }
     /**
-     * `verbs` is a list of matching verbs and may not be empty. &#34;*&#34; matches all verbs and, if present, must be the only entry. Required.
+     * @return `verbs` is a list of matching verbs and may not be empty. &#34;*&#34; matches all verbs and, if present, must be the only entry. Required.
      * 
-    */
+     */
     public List<String> verbs() {
         return this.verbs;
     }

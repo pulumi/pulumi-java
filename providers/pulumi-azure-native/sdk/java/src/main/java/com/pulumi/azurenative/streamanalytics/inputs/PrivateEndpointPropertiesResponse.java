@@ -27,6 +27,10 @@ public final class PrivateEndpointPropertiesResponse extends com.pulumi.resource
     @Import(name="createdDate", required=true)
     private String createdDate;
 
+    /**
+     * @return The date when this private endpoint was created.
+     * 
+     */
     public String createdDate() {
         return this.createdDate;
     }
@@ -38,6 +42,10 @@ public final class PrivateEndpointPropertiesResponse extends com.pulumi.resource
     @Import(name="manualPrivateLinkServiceConnections")
     private @Nullable List<PrivateLinkServiceConnectionResponse> manualPrivateLinkServiceConnections;
 
+    /**
+     * @return A list of connections to the remote resource. Immutable after it is set.
+     * 
+     */
     public Optional<List<PrivateLinkServiceConnectionResponse>> manualPrivateLinkServiceConnections() {
         return Optional.ofNullable(this.manualPrivateLinkServiceConnections);
     }
@@ -67,16 +75,34 @@ public final class PrivateEndpointPropertiesResponse extends com.pulumi.resource
             $ = new PrivateEndpointPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param createdDate The date when this private endpoint was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdDate(String createdDate) {
             $.createdDate = createdDate;
             return this;
         }
 
+        /**
+         * @param manualPrivateLinkServiceConnections A list of connections to the remote resource. Immutable after it is set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder manualPrivateLinkServiceConnections(@Nullable List<PrivateLinkServiceConnectionResponse> manualPrivateLinkServiceConnections) {
             $.manualPrivateLinkServiceConnections = manualPrivateLinkServiceConnections;
             return this;
         }
 
+        /**
+         * @param manualPrivateLinkServiceConnections A list of connections to the remote resource. Immutable after it is set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder manualPrivateLinkServiceConnections(PrivateLinkServiceConnectionResponse... manualPrivateLinkServiceConnections) {
             return manualPrivateLinkServiceConnections(List.of(manualPrivateLinkServiceConnections));
         }

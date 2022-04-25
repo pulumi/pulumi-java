@@ -23,6 +23,10 @@ public final class DataSourceRdsParameters extends com.pulumi.resources.InvokeAr
     @Import(name="database", required=true)
     private String database;
 
+    /**
+     * @return &lt;p&gt;Database.&lt;/p&gt;
+     * 
+     */
     public String database() {
         return this.database;
     }
@@ -34,6 +38,10 @@ public final class DataSourceRdsParameters extends com.pulumi.resources.InvokeAr
     @Import(name="instanceId", required=true)
     private String instanceId;
 
+    /**
+     * @return &lt;p&gt;Instance ID.&lt;/p&gt;
+     * 
+     */
     public String instanceId() {
         return this.instanceId;
     }
@@ -63,11 +71,23 @@ public final class DataSourceRdsParameters extends com.pulumi.resources.InvokeAr
             $ = new DataSourceRdsParameters(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param database &lt;p&gt;Database.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder database(String database) {
             $.database = database;
             return this;
         }
 
+        /**
+         * @param instanceId &lt;p&gt;Instance ID.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceId(String instanceId) {
             $.instanceId = instanceId;
             return this;

@@ -26,6 +26,10 @@ public final class ChannelTypeDescriptionResponse extends com.pulumi.resources.I
     @Import(name="channelDescription")
     private @Nullable String channelDescription;
 
+    /**
+     * @return Text description for the channel
+     * 
+     */
     public Optional<String> channelDescription() {
         return Optional.ofNullable(this.channelDescription);
     }
@@ -37,6 +41,10 @@ public final class ChannelTypeDescriptionResponse extends com.pulumi.resources.I
     @Import(name="channelFunctions")
     private @Nullable List<String> channelFunctions;
 
+    /**
+     * @return All the available functions for the channel
+     * 
+     */
     public Optional<List<String>> channelFunctions() {
         return Optional.ofNullable(this.channelFunctions);
     }
@@ -48,6 +56,10 @@ public final class ChannelTypeDescriptionResponse extends com.pulumi.resources.I
     @Import(name="channelType")
     private @Nullable String channelType;
 
+    /**
+     * @return Channel type
+     * 
+     */
     public Optional<String> channelType() {
         return Optional.ofNullable(this.channelType);
     }
@@ -78,20 +90,44 @@ public final class ChannelTypeDescriptionResponse extends com.pulumi.resources.I
             $ = new ChannelTypeDescriptionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param channelDescription Text description for the channel
+         * 
+         * @return builder
+         * 
+         */
         public Builder channelDescription(@Nullable String channelDescription) {
             $.channelDescription = channelDescription;
             return this;
         }
 
+        /**
+         * @param channelFunctions All the available functions for the channel
+         * 
+         * @return builder
+         * 
+         */
         public Builder channelFunctions(@Nullable List<String> channelFunctions) {
             $.channelFunctions = channelFunctions;
             return this;
         }
 
+        /**
+         * @param channelFunctions All the available functions for the channel
+         * 
+         * @return builder
+         * 
+         */
         public Builder channelFunctions(String... channelFunctions) {
             return channelFunctions(List.of(channelFunctions));
         }
 
+        /**
+         * @param channelType Channel type
+         * 
+         * @return builder
+         * 
+         */
         public Builder channelType(@Nullable String channelType) {
             $.channelType = channelType;
             return this;

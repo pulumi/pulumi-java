@@ -29,6 +29,10 @@ public final class ImageTemplateSharedImageDistributorResponse extends com.pulum
     @Import(name="artifactTags")
     private @Nullable Map<String,String> artifactTags;
 
+    /**
+     * @return Tags that will be applied to the artifact once it has been created/updated by the distributor.
+     * 
+     */
     public Optional<Map<String,String>> artifactTags() {
         return Optional.ofNullable(this.artifactTags);
     }
@@ -40,6 +44,10 @@ public final class ImageTemplateSharedImageDistributorResponse extends com.pulum
     @Import(name="excludeFromLatest")
     private @Nullable Boolean excludeFromLatest;
 
+    /**
+     * @return Flag that indicates whether created image version should be excluded from latest. Omit to use the default (false).
+     * 
+     */
     public Optional<Boolean> excludeFromLatest() {
         return Optional.ofNullable(this.excludeFromLatest);
     }
@@ -51,6 +59,10 @@ public final class ImageTemplateSharedImageDistributorResponse extends com.pulum
     @Import(name="galleryImageId", required=true)
     private String galleryImageId;
 
+    /**
+     * @return Resource Id of the Shared Image Gallery image
+     * 
+     */
     public String galleryImageId() {
         return this.galleryImageId;
     }
@@ -62,6 +74,10 @@ public final class ImageTemplateSharedImageDistributorResponse extends com.pulum
     @Import(name="replicationRegions", required=true)
     private List<String> replicationRegions;
 
+    /**
+     * @return A list of regions that the image will be replicated to
+     * 
+     */
     public List<String> replicationRegions() {
         return this.replicationRegions;
     }
@@ -73,6 +89,10 @@ public final class ImageTemplateSharedImageDistributorResponse extends com.pulum
     @Import(name="runOutputName", required=true)
     private String runOutputName;
 
+    /**
+     * @return The name to be used for the associated RunOutput.
+     * 
+     */
     public String runOutputName() {
         return this.runOutputName;
     }
@@ -84,6 +104,10 @@ public final class ImageTemplateSharedImageDistributorResponse extends com.pulum
     @Import(name="storageAccountType")
     private @Nullable String storageAccountType;
 
+    /**
+     * @return Storage account type to be used to store the shared image. Omit to use the default (Standard_LRS).
+     * 
+     */
     public Optional<String> storageAccountType() {
         return Optional.ofNullable(this.storageAccountType);
     }
@@ -96,6 +120,11 @@ public final class ImageTemplateSharedImageDistributorResponse extends com.pulum
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of distribution.
+     * Expected value is &#39;SharedImage&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -130,40 +159,89 @@ public final class ImageTemplateSharedImageDistributorResponse extends com.pulum
             $ = new ImageTemplateSharedImageDistributorResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param artifactTags Tags that will be applied to the artifact once it has been created/updated by the distributor.
+         * 
+         * @return builder
+         * 
+         */
         public Builder artifactTags(@Nullable Map<String,String> artifactTags) {
             $.artifactTags = artifactTags;
             return this;
         }
 
+        /**
+         * @param excludeFromLatest Flag that indicates whether created image version should be excluded from latest. Omit to use the default (false).
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludeFromLatest(@Nullable Boolean excludeFromLatest) {
             $.excludeFromLatest = excludeFromLatest;
             return this;
         }
 
+        /**
+         * @param galleryImageId Resource Id of the Shared Image Gallery image
+         * 
+         * @return builder
+         * 
+         */
         public Builder galleryImageId(String galleryImageId) {
             $.galleryImageId = galleryImageId;
             return this;
         }
 
+        /**
+         * @param replicationRegions A list of regions that the image will be replicated to
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicationRegions(List<String> replicationRegions) {
             $.replicationRegions = replicationRegions;
             return this;
         }
 
+        /**
+         * @param replicationRegions A list of regions that the image will be replicated to
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicationRegions(String... replicationRegions) {
             return replicationRegions(List.of(replicationRegions));
         }
 
+        /**
+         * @param runOutputName The name to be used for the associated RunOutput.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runOutputName(String runOutputName) {
             $.runOutputName = runOutputName;
             return this;
         }
 
+        /**
+         * @param storageAccountType Storage account type to be used to store the shared image. Omit to use the default (Standard_LRS).
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountType(@Nullable String storageAccountType) {
             $.storageAccountType = storageAccountType;
             return this;
         }
 
+        /**
+         * @param type Type of distribution.
+         * Expected value is &#39;SharedImage&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

@@ -19,6 +19,10 @@ public final class GetActionRuleByNameArgs extends com.pulumi.resources.InvokeAr
     @Import(name="actionRuleName", required=true)
     private String actionRuleName;
 
+    /**
+     * @return The name of action rule that needs to be fetched
+     * 
+     */
     public String actionRuleName() {
         return this.actionRuleName;
     }
@@ -30,6 +34,10 @@ public final class GetActionRuleByNameArgs extends com.pulumi.resources.InvokeAr
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Resource group name where the resource is created.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetActionRuleByNameArgs extends com.pulumi.resources.InvokeAr
             $ = new GetActionRuleByNameArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actionRuleName The name of action rule that needs to be fetched
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionRuleName(String actionRuleName) {
             $.actionRuleName = actionRuleName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Resource group name where the resource is created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

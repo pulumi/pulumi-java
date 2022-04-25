@@ -29,6 +29,10 @@ public final class ContainerNetworkInterfaceConfigurationArgs extends com.pulumi
     @Import(name="containerNetworkInterfaces")
     private @Nullable Output<List<SubResourceArgs>> containerNetworkInterfaces;
 
+    /**
+     * @return A list of container network interfaces created from this container network interface configuration.
+     * 
+     */
     public Optional<Output<List<SubResourceArgs>>> containerNetworkInterfaces() {
         return Optional.ofNullable(this.containerNetworkInterfaces);
     }
@@ -40,6 +44,10 @@ public final class ContainerNetworkInterfaceConfigurationArgs extends com.pulumi
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -51,6 +59,10 @@ public final class ContainerNetworkInterfaceConfigurationArgs extends com.pulumi
     @Import(name="ipConfigurations")
     private @Nullable Output<List<IPConfigurationProfileArgs>> ipConfigurations;
 
+    /**
+     * @return A list of ip configurations of the container network interface configuration.
+     * 
+     */
     public Optional<Output<List<IPConfigurationProfileArgs>>> ipConfigurations() {
         return Optional.ofNullable(this.ipConfigurations);
     }
@@ -62,6 +74,10 @@ public final class ContainerNetworkInterfaceConfigurationArgs extends com.pulumi
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the resource. This name can be used to access the resource.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -93,46 +109,106 @@ public final class ContainerNetworkInterfaceConfigurationArgs extends com.pulumi
             $ = new ContainerNetworkInterfaceConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param containerNetworkInterfaces A list of container network interfaces created from this container network interface configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerNetworkInterfaces(@Nullable Output<List<SubResourceArgs>> containerNetworkInterfaces) {
             $.containerNetworkInterfaces = containerNetworkInterfaces;
             return this;
         }
 
+        /**
+         * @param containerNetworkInterfaces A list of container network interfaces created from this container network interface configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerNetworkInterfaces(List<SubResourceArgs> containerNetworkInterfaces) {
             return containerNetworkInterfaces(Output.of(containerNetworkInterfaces));
         }
 
+        /**
+         * @param containerNetworkInterfaces A list of container network interfaces created from this container network interface configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerNetworkInterfaces(SubResourceArgs... containerNetworkInterfaces) {
             return containerNetworkInterfaces(List.of(containerNetworkInterfaces));
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param ipConfigurations A list of ip configurations of the container network interface configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipConfigurations(@Nullable Output<List<IPConfigurationProfileArgs>> ipConfigurations) {
             $.ipConfigurations = ipConfigurations;
             return this;
         }
 
+        /**
+         * @param ipConfigurations A list of ip configurations of the container network interface configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipConfigurations(List<IPConfigurationProfileArgs> ipConfigurations) {
             return ipConfigurations(Output.of(ipConfigurations));
         }
 
+        /**
+         * @param ipConfigurations A list of ip configurations of the container network interface configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipConfigurations(IPConfigurationProfileArgs... ipConfigurations) {
             return ipConfigurations(List.of(ipConfigurations));
         }
 
+        /**
+         * @param name The name of the resource. This name can be used to access the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the resource. This name can be used to access the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

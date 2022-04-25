@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ObjectFieldSelector {
     /**
-     * Version of the schema the FieldPath is written in terms of, defaults to &#34;v1&#34;.
+     * @return Version of the schema the FieldPath is written in terms of, defaults to &#34;v1&#34;.
      * 
      */
     private final @Nullable String apiVersion;
     /**
-     * Path of the field to select in the specified API version.
+     * @return Path of the field to select in the specified API version.
      * 
      */
     private final String fieldPath;
@@ -31,16 +31,16 @@ public final class ObjectFieldSelector {
     }
 
     /**
-     * Version of the schema the FieldPath is written in terms of, defaults to &#34;v1&#34;.
+     * @return Version of the schema the FieldPath is written in terms of, defaults to &#34;v1&#34;.
      * 
-    */
+     */
     public Optional<String> apiVersion() {
         return Optional.ofNullable(this.apiVersion);
     }
     /**
-     * Path of the field to select in the specified API version.
+     * @return Path of the field to select in the specified API version.
      * 
-    */
+     */
     public String fieldPath() {
         return this.fieldPath;
     }

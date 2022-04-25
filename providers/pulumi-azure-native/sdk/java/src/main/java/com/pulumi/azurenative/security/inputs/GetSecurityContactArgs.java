@@ -19,6 +19,10 @@ public final class GetSecurityContactArgs extends com.pulumi.resources.InvokeArg
     @Import(name="securityContactName", required=true)
     private String securityContactName;
 
+    /**
+     * @return Name of the security contact object
+     * 
+     */
     public String securityContactName() {
         return this.securityContactName;
     }
@@ -47,6 +51,12 @@ public final class GetSecurityContactArgs extends com.pulumi.resources.InvokeArg
             $ = new GetSecurityContactArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param securityContactName Name of the security contact object
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityContactName(String securityContactName) {
             $.securityContactName = securityContactName;
             return this;

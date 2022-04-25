@@ -24,6 +24,10 @@ public final class GalleryImageIdentifierArgs extends com.pulumi.resources.Resou
     @Import(name="offer", required=true)
     private Output<String> offer;
 
+    /**
+     * @return The name of the gallery image definition offer.
+     * 
+     */
     public Output<String> offer() {
         return this.offer;
     }
@@ -35,6 +39,10 @@ public final class GalleryImageIdentifierArgs extends com.pulumi.resources.Resou
     @Import(name="publisher", required=true)
     private Output<String> publisher;
 
+    /**
+     * @return The name of the gallery image definition publisher.
+     * 
+     */
     public Output<String> publisher() {
         return this.publisher;
     }
@@ -46,6 +54,10 @@ public final class GalleryImageIdentifierArgs extends com.pulumi.resources.Resou
     @Import(name="sku", required=true)
     private Output<String> sku;
 
+    /**
+     * @return The name of the gallery image definition SKU.
+     * 
+     */
     public Output<String> sku() {
         return this.sku;
     }
@@ -76,29 +88,65 @@ public final class GalleryImageIdentifierArgs extends com.pulumi.resources.Resou
             $ = new GalleryImageIdentifierArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param offer The name of the gallery image definition offer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder offer(Output<String> offer) {
             $.offer = offer;
             return this;
         }
 
+        /**
+         * @param offer The name of the gallery image definition offer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder offer(String offer) {
             return offer(Output.of(offer));
         }
 
+        /**
+         * @param publisher The name of the gallery image definition publisher.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publisher(Output<String> publisher) {
             $.publisher = publisher;
             return this;
         }
 
+        /**
+         * @param publisher The name of the gallery image definition publisher.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publisher(String publisher) {
             return publisher(Output.of(publisher));
         }
 
+        /**
+         * @param sku The name of the gallery image definition SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(Output<String> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku The name of the gallery image definition SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(String sku) {
             return sku(Output.of(sku));
         }

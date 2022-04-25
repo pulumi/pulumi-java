@@ -25,6 +25,11 @@ public final class ApplicationUrlDispatchRulesArgs extends com.pulumi.resources.
     @Import(name="dispatchRules", required=true)
     private Output<List<ApplicationUrlDispatchRulesDispatchRuleArgs>> dispatchRules;
 
+    /**
+     * @return Rules to match an HTTP request and dispatch that request to a service.
+     * Structure is documented below.
+     * 
+     */
     public Output<List<ApplicationUrlDispatchRulesDispatchRuleArgs>> dispatchRules() {
         return this.dispatchRules;
     }
@@ -37,6 +42,11 @@ public final class ApplicationUrlDispatchRulesArgs extends com.pulumi.resources.
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -66,24 +76,59 @@ public final class ApplicationUrlDispatchRulesArgs extends com.pulumi.resources.
             $ = new ApplicationUrlDispatchRulesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dispatchRules Rules to match an HTTP request and dispatch that request to a service.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dispatchRules(Output<List<ApplicationUrlDispatchRulesDispatchRuleArgs>> dispatchRules) {
             $.dispatchRules = dispatchRules;
             return this;
         }
 
+        /**
+         * @param dispatchRules Rules to match an HTTP request and dispatch that request to a service.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dispatchRules(List<ApplicationUrlDispatchRulesDispatchRuleArgs> dispatchRules) {
             return dispatchRules(Output.of(dispatchRules));
         }
 
+        /**
+         * @param dispatchRules Rules to match an HTTP request and dispatch that request to a service.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dispatchRules(ApplicationUrlDispatchRulesDispatchRuleArgs... dispatchRules) {
             return dispatchRules(List.of(dispatchRules));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }

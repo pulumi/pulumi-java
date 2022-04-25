@@ -25,6 +25,10 @@ public final class BotAliasS3BucketLogDestination extends com.pulumi.resources.I
     @Import(name="kmsKeyArn")
     private @Nullable String kmsKeyArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of an AWS Key Management Service (KMS) key for encrypting audio log files stored in an S3 bucket.
+     * 
+     */
     public Optional<String> kmsKeyArn() {
         return Optional.ofNullable(this.kmsKeyArn);
     }
@@ -36,6 +40,10 @@ public final class BotAliasS3BucketLogDestination extends com.pulumi.resources.I
     @Import(name="logPrefix", required=true)
     private String logPrefix;
 
+    /**
+     * @return The Amazon S3 key of the deployment package.
+     * 
+     */
     public String logPrefix() {
         return this.logPrefix;
     }
@@ -47,6 +55,10 @@ public final class BotAliasS3BucketLogDestination extends com.pulumi.resources.I
     @Import(name="s3BucketArn", required=true)
     private String s3BucketArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of an Amazon S3 bucket where audio log files are stored.
+     * 
+     */
     public String s3BucketArn() {
         return this.s3BucketArn;
     }
@@ -77,16 +89,34 @@ public final class BotAliasS3BucketLogDestination extends com.pulumi.resources.I
             $ = new BotAliasS3BucketLogDestination(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kmsKeyArn The Amazon Resource Name (ARN) of an AWS Key Management Service (KMS) key for encrypting audio log files stored in an S3 bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
             $.kmsKeyArn = kmsKeyArn;
             return this;
         }
 
+        /**
+         * @param logPrefix The Amazon S3 key of the deployment package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logPrefix(String logPrefix) {
             $.logPrefix = logPrefix;
             return this;
         }
 
+        /**
+         * @param s3BucketArn The Amazon Resource Name (ARN) of an Amazon S3 bucket where audio log files are stored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3BucketArn(String s3BucketArn) {
             $.s3BucketArn = s3BucketArn;
             return this;

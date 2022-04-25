@@ -32,6 +32,12 @@ public final class DatabaseInstanceState extends com.pulumi.resources.ResourceAr
     @Import(name="clone")
     private @Nullable Output<DatabaseInstanceCloneGetArgs> clone;
 
+    /**
+     * @return The context needed to create this instance as a clone of another instance. When this field is set during
+     * resource creation, this provider will attempt to clone another instance as indicated in the context. The
+     * configuration is detailed below.
+     * 
+     */
     public Optional<Output<DatabaseInstanceCloneGetArgs>> clone_() {
         return Optional.ofNullable(this.clone);
     }
@@ -44,6 +50,11 @@ public final class DatabaseInstanceState extends com.pulumi.resources.ResourceAr
     @Import(name="connectionName")
     private @Nullable Output<String> connectionName;
 
+    /**
+     * @return The connection name of the instance to be used in
+     * connection strings. For example, when connecting with [Cloud SQL Proxy](https://cloud.google.com/sql/docs/mysql/connect-admin-proxy).
+     * 
+     */
     public Optional<Output<String>> connectionName() {
         return Optional.ofNullable(this.connectionName);
     }
@@ -63,6 +74,18 @@ public final class DatabaseInstanceState extends com.pulumi.resources.ResourceAr
     @Import(name="databaseVersion")
     private @Nullable Output<String> databaseVersion;
 
+    /**
+     * @return The MySQL, PostgreSQL or
+     * SQL Server version to use. Supported values include `MYSQL_5_6`,
+     * `MYSQL_5_7`, `MYSQL_8_0`, `POSTGRES_9_6`,`POSTGRES_10`, `POSTGRES_11`,
+     * `POSTGRES_12`, `POSTGRES_13`, `SQLSERVER_2017_STANDARD`,
+     * `SQLSERVER_2017_ENTERPRISE`, `SQLSERVER_2017_EXPRESS`, `SQLSERVER_2017_WEB`.
+     * `SQLSERVER_2019_STANDARD`, `SQLSERVER_2019_ENTERPRISE`, `SQLSERVER_2019_EXPRESS`,
+     * `SQLSERVER_2019_WEB`.
+     * [Database Version Policies](https://cloud.google.com/sql/docs/db-versions)
+     * includes an up-to-date reference of supported versions.
+     * 
+     */
     public Optional<Output<String>> databaseVersion() {
         return Optional.ofNullable(this.databaseVersion);
     }
@@ -75,6 +98,11 @@ public final class DatabaseInstanceState extends com.pulumi.resources.ResourceAr
     @Import(name="deletionProtection")
     private @Nullable Output<Boolean> deletionProtection;
 
+    /**
+     * @return Whether or not to allow he provider to destroy the instance. Unless this field is set to false
+     * in state, a `destroy` or `update` command that deletes the instance will fail.
+     * 
+     */
     public Optional<Output<Boolean>> deletionProtection() {
         return Optional.ofNullable(this.deletionProtection);
     }
@@ -93,6 +121,17 @@ public final class DatabaseInstanceState extends com.pulumi.resources.ResourceAr
     @Import(name="encryptionKeyName")
     private @Nullable Output<String> encryptionKeyName;
 
+    /**
+     * @return The full path to the encryption key used for the CMEK disk encryption.  Setting
+     * up disk encryption currently requires manual steps outside of this provider.
+     * The provided key must be in the same region as the SQL instance.  In order
+     * to use this feature, a special kind of service account must be created and
+     * granted permission on this key.  This step can currently only be done
+     * manually, please see [this step](https://cloud.google.com/sql/docs/mysql/configure-cmek#service-account).
+     * That service account needs the `Cloud KMS &gt; Cloud KMS CryptoKey Encrypter/Decrypter` role on your
+     * key - please see [this step](https://cloud.google.com/sql/docs/mysql/configure-cmek#grantkey).
+     * 
+     */
     public Optional<Output<String>> encryptionKeyName() {
         return Optional.ofNullable(this.encryptionKeyName);
     }
@@ -104,6 +143,10 @@ public final class DatabaseInstanceState extends com.pulumi.resources.ResourceAr
     @Import(name="firstIpAddress")
     private @Nullable Output<String> firstIpAddress;
 
+    /**
+     * @return The first IPv4 address of any type assigned.
+     * 
+     */
     public Optional<Output<String>> firstIpAddress() {
         return Optional.ofNullable(this.firstIpAddress);
     }
@@ -124,6 +167,12 @@ public final class DatabaseInstanceState extends com.pulumi.resources.ResourceAr
     @Import(name="masterInstanceName")
     private @Nullable Output<String> masterInstanceName;
 
+    /**
+     * @return The name of the existing instance that will
+     * act as the master in the replication setup. Note, this requires the master to
+     * have `binary_log_enabled` set, as well as existing backups.
+     * 
+     */
     public Optional<Output<String>> masterInstanceName() {
         return Optional.ofNullable(this.masterInstanceName);
     }
@@ -135,6 +184,10 @@ public final class DatabaseInstanceState extends com.pulumi.resources.ResourceAr
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return A name for this whitelist entry.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -146,6 +199,10 @@ public final class DatabaseInstanceState extends com.pulumi.resources.ResourceAr
     @Import(name="privateIpAddress")
     private @Nullable Output<String> privateIpAddress;
 
+    /**
+     * @return The first private (`PRIVATE`) IPv4 address assigned.
+     * 
+     */
     public Optional<Output<String>> privateIpAddress() {
         return Optional.ofNullable(this.privateIpAddress);
     }
@@ -157,6 +214,10 @@ public final class DatabaseInstanceState extends com.pulumi.resources.ResourceAr
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The full project ID of the source instance.`
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -168,6 +229,10 @@ public final class DatabaseInstanceState extends com.pulumi.resources.ResourceAr
     @Import(name="publicIpAddress")
     private @Nullable Output<String> publicIpAddress;
 
+    /**
+     * @return The first public (`PRIMARY`) IPv4 address assigned.
+     * 
+     */
     public Optional<Output<String>> publicIpAddress() {
         return Optional.ofNullable(this.publicIpAddress);
     }
@@ -184,6 +249,15 @@ public final class DatabaseInstanceState extends com.pulumi.resources.ResourceAr
     @Import(name="region")
     private @Nullable Output<String> region;
 
+    /**
+     * @return The region the instance will sit in. Note, Cloud SQL is not
+     * available in all regions - choose from one of the options listed [here](https://cloud.google.com/sql/docs/mysql/instance-locations).
+     * A valid region must be provided to use this resource. If a region is not provided in the resource definition,
+     * the provider region will be used instead, but this will be an apply-time error for instances if the provider
+     * region is not supported with Cloud SQL. If you choose not to provide the `region` argument for this resource,
+     * make sure you understand this.
+     * 
+     */
     public Optional<Output<String>> region() {
         return Optional.ofNullable(this.region);
     }
@@ -196,6 +270,11 @@ public final class DatabaseInstanceState extends com.pulumi.resources.ResourceAr
     @Import(name="replicaConfiguration")
     private @Nullable Output<DatabaseInstanceReplicaConfigurationGetArgs> replicaConfiguration;
 
+    /**
+     * @return The configuration for replication. The
+     * configuration is detailed below. Valid only for MySQL instances.
+     * 
+     */
     public Optional<Output<DatabaseInstanceReplicaConfigurationGetArgs>> replicaConfiguration() {
         return Optional.ofNullable(this.replicaConfiguration);
     }
@@ -210,6 +289,13 @@ public final class DatabaseInstanceState extends com.pulumi.resources.ResourceAr
     @Import(name="restoreBackupContext")
     private @Nullable Output<DatabaseInstanceRestoreBackupContextGetArgs> restoreBackupContext;
 
+    /**
+     * @return The context needed to restore the database to a backup run. This field will
+     * cause the provider to trigger the database to restore from the backup run indicated. The configuration is detailed below.
+     * **NOTE:** Restoring from a backup is an imperative action and not recommended via this provider. Adding or modifying this
+     * block during resource creation/update will trigger the restore action after the resource is created/updated.
+     * 
+     */
     public Optional<Output<DatabaseInstanceRestoreBackupContextGetArgs>> restoreBackupContext() {
         return Optional.ofNullable(this.restoreBackupContext);
     }
@@ -221,6 +307,10 @@ public final class DatabaseInstanceState extends com.pulumi.resources.ResourceAr
     @Import(name="rootPassword")
     private @Nullable Output<String> rootPassword;
 
+    /**
+     * @return Initial root password. Required for MS SQL Server, ignored by MySQL and PostgreSQL.
+     * 
+     */
     public Optional<Output<String>> rootPassword() {
         return Optional.ofNullable(this.rootPassword);
     }
@@ -232,6 +322,10 @@ public final class DatabaseInstanceState extends com.pulumi.resources.ResourceAr
     @Import(name="selfLink")
     private @Nullable Output<String> selfLink;
 
+    /**
+     * @return The URI of the created resource.
+     * 
+     */
     public Optional<Output<String>> selfLink() {
         return Optional.ofNullable(this.selfLink);
     }
@@ -251,6 +345,11 @@ public final class DatabaseInstanceState extends com.pulumi.resources.ResourceAr
     @Import(name="serviceAccountEmailAddress")
     private @Nullable Output<String> serviceAccountEmailAddress;
 
+    /**
+     * @return The service account email address assigned to the
+     * instance.
+     * 
+     */
     public Optional<Output<String>> serviceAccountEmailAddress() {
         return Optional.ofNullable(this.serviceAccountEmailAddress);
     }
@@ -263,6 +362,11 @@ public final class DatabaseInstanceState extends com.pulumi.resources.ResourceAr
     @Import(name="settings")
     private @Nullable Output<DatabaseInstanceSettingsGetArgs> settings;
 
+    /**
+     * @return The settings to use for the database. The
+     * configuration is detailed below. Required if `clone` is not set.
+     * 
+     */
     public Optional<Output<DatabaseInstanceSettingsGetArgs>> settings() {
         return Optional.ofNullable(this.settings);
     }
@@ -310,56 +414,166 @@ public final class DatabaseInstanceState extends com.pulumi.resources.ResourceAr
             $ = new DatabaseInstanceState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clone The context needed to create this instance as a clone of another instance. When this field is set during
+         * resource creation, this provider will attempt to clone another instance as indicated in the context. The
+         * configuration is detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clone_(@Nullable Output<DatabaseInstanceCloneGetArgs> clone) {
             $.clone = clone;
             return this;
         }
 
+        /**
+         * @param clone The context needed to create this instance as a clone of another instance. When this field is set during
+         * resource creation, this provider will attempt to clone another instance as indicated in the context. The
+         * configuration is detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clone_(DatabaseInstanceCloneGetArgs clone) {
             return clone_(Output.of(clone));
         }
 
+        /**
+         * @param connectionName The connection name of the instance to be used in
+         * connection strings. For example, when connecting with [Cloud SQL Proxy](https://cloud.google.com/sql/docs/mysql/connect-admin-proxy).
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionName(@Nullable Output<String> connectionName) {
             $.connectionName = connectionName;
             return this;
         }
 
+        /**
+         * @param connectionName The connection name of the instance to be used in
+         * connection strings. For example, when connecting with [Cloud SQL Proxy](https://cloud.google.com/sql/docs/mysql/connect-admin-proxy).
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionName(String connectionName) {
             return connectionName(Output.of(connectionName));
         }
 
+        /**
+         * @param databaseVersion The MySQL, PostgreSQL or
+         * SQL Server version to use. Supported values include `MYSQL_5_6`,
+         * `MYSQL_5_7`, `MYSQL_8_0`, `POSTGRES_9_6`,`POSTGRES_10`, `POSTGRES_11`,
+         * `POSTGRES_12`, `POSTGRES_13`, `SQLSERVER_2017_STANDARD`,
+         * `SQLSERVER_2017_ENTERPRISE`, `SQLSERVER_2017_EXPRESS`, `SQLSERVER_2017_WEB`.
+         * `SQLSERVER_2019_STANDARD`, `SQLSERVER_2019_ENTERPRISE`, `SQLSERVER_2019_EXPRESS`,
+         * `SQLSERVER_2019_WEB`.
+         * [Database Version Policies](https://cloud.google.com/sql/docs/db-versions)
+         * includes an up-to-date reference of supported versions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseVersion(@Nullable Output<String> databaseVersion) {
             $.databaseVersion = databaseVersion;
             return this;
         }
 
+        /**
+         * @param databaseVersion The MySQL, PostgreSQL or
+         * SQL Server version to use. Supported values include `MYSQL_5_6`,
+         * `MYSQL_5_7`, `MYSQL_8_0`, `POSTGRES_9_6`,`POSTGRES_10`, `POSTGRES_11`,
+         * `POSTGRES_12`, `POSTGRES_13`, `SQLSERVER_2017_STANDARD`,
+         * `SQLSERVER_2017_ENTERPRISE`, `SQLSERVER_2017_EXPRESS`, `SQLSERVER_2017_WEB`.
+         * `SQLSERVER_2019_STANDARD`, `SQLSERVER_2019_ENTERPRISE`, `SQLSERVER_2019_EXPRESS`,
+         * `SQLSERVER_2019_WEB`.
+         * [Database Version Policies](https://cloud.google.com/sql/docs/db-versions)
+         * includes an up-to-date reference of supported versions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseVersion(String databaseVersion) {
             return databaseVersion(Output.of(databaseVersion));
         }
 
+        /**
+         * @param deletionProtection Whether or not to allow he provider to destroy the instance. Unless this field is set to false
+         * in state, a `destroy` or `update` command that deletes the instance will fail.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deletionProtection(@Nullable Output<Boolean> deletionProtection) {
             $.deletionProtection = deletionProtection;
             return this;
         }
 
+        /**
+         * @param deletionProtection Whether or not to allow he provider to destroy the instance. Unless this field is set to false
+         * in state, a `destroy` or `update` command that deletes the instance will fail.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deletionProtection(Boolean deletionProtection) {
             return deletionProtection(Output.of(deletionProtection));
         }
 
+        /**
+         * @param encryptionKeyName The full path to the encryption key used for the CMEK disk encryption.  Setting
+         * up disk encryption currently requires manual steps outside of this provider.
+         * The provided key must be in the same region as the SQL instance.  In order
+         * to use this feature, a special kind of service account must be created and
+         * granted permission on this key.  This step can currently only be done
+         * manually, please see [this step](https://cloud.google.com/sql/docs/mysql/configure-cmek#service-account).
+         * That service account needs the `Cloud KMS &gt; Cloud KMS CryptoKey Encrypter/Decrypter` role on your
+         * key - please see [this step](https://cloud.google.com/sql/docs/mysql/configure-cmek#grantkey).
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionKeyName(@Nullable Output<String> encryptionKeyName) {
             $.encryptionKeyName = encryptionKeyName;
             return this;
         }
 
+        /**
+         * @param encryptionKeyName The full path to the encryption key used for the CMEK disk encryption.  Setting
+         * up disk encryption currently requires manual steps outside of this provider.
+         * The provided key must be in the same region as the SQL instance.  In order
+         * to use this feature, a special kind of service account must be created and
+         * granted permission on this key.  This step can currently only be done
+         * manually, please see [this step](https://cloud.google.com/sql/docs/mysql/configure-cmek#service-account).
+         * That service account needs the `Cloud KMS &gt; Cloud KMS CryptoKey Encrypter/Decrypter` role on your
+         * key - please see [this step](https://cloud.google.com/sql/docs/mysql/configure-cmek#grantkey).
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionKeyName(String encryptionKeyName) {
             return encryptionKeyName(Output.of(encryptionKeyName));
         }
 
+        /**
+         * @param firstIpAddress The first IPv4 address of any type assigned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder firstIpAddress(@Nullable Output<String> firstIpAddress) {
             $.firstIpAddress = firstIpAddress;
             return this;
         }
 
+        /**
+         * @param firstIpAddress The first IPv4 address of any type assigned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder firstIpAddress(String firstIpAddress) {
             return firstIpAddress(Output.of(firstIpAddress));
         }
@@ -377,92 +591,234 @@ public final class DatabaseInstanceState extends com.pulumi.resources.ResourceAr
             return ipAddresses(List.of(ipAddresses));
         }
 
+        /**
+         * @param masterInstanceName The name of the existing instance that will
+         * act as the master in the replication setup. Note, this requires the master to
+         * have `binary_log_enabled` set, as well as existing backups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder masterInstanceName(@Nullable Output<String> masterInstanceName) {
             $.masterInstanceName = masterInstanceName;
             return this;
         }
 
+        /**
+         * @param masterInstanceName The name of the existing instance that will
+         * act as the master in the replication setup. Note, this requires the master to
+         * have `binary_log_enabled` set, as well as existing backups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder masterInstanceName(String masterInstanceName) {
             return masterInstanceName(Output.of(masterInstanceName));
         }
 
+        /**
+         * @param name A name for this whitelist entry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name A name for this whitelist entry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param privateIpAddress The first private (`PRIVATE`) IPv4 address assigned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIpAddress(@Nullable Output<String> privateIpAddress) {
             $.privateIpAddress = privateIpAddress;
             return this;
         }
 
+        /**
+         * @param privateIpAddress The first private (`PRIVATE`) IPv4 address assigned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIpAddress(String privateIpAddress) {
             return privateIpAddress(Output.of(privateIpAddress));
         }
 
+        /**
+         * @param project The full project ID of the source instance.`
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The full project ID of the source instance.`
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param publicIpAddress The first public (`PRIMARY`) IPv4 address assigned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIpAddress(@Nullable Output<String> publicIpAddress) {
             $.publicIpAddress = publicIpAddress;
             return this;
         }
 
+        /**
+         * @param publicIpAddress The first public (`PRIMARY`) IPv4 address assigned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIpAddress(String publicIpAddress) {
             return publicIpAddress(Output.of(publicIpAddress));
         }
 
+        /**
+         * @param region The region the instance will sit in. Note, Cloud SQL is not
+         * available in all regions - choose from one of the options listed [here](https://cloud.google.com/sql/docs/mysql/instance-locations).
+         * A valid region must be provided to use this resource. If a region is not provided in the resource definition,
+         * the provider region will be used instead, but this will be an apply-time error for instances if the provider
+         * region is not supported with Cloud SQL. If you choose not to provide the `region` argument for this resource,
+         * make sure you understand this.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(@Nullable Output<String> region) {
             $.region = region;
             return this;
         }
 
+        /**
+         * @param region The region the instance will sit in. Note, Cloud SQL is not
+         * available in all regions - choose from one of the options listed [here](https://cloud.google.com/sql/docs/mysql/instance-locations).
+         * A valid region must be provided to use this resource. If a region is not provided in the resource definition,
+         * the provider region will be used instead, but this will be an apply-time error for instances if the provider
+         * region is not supported with Cloud SQL. If you choose not to provide the `region` argument for this resource,
+         * make sure you understand this.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(String region) {
             return region(Output.of(region));
         }
 
+        /**
+         * @param replicaConfiguration The configuration for replication. The
+         * configuration is detailed below. Valid only for MySQL instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicaConfiguration(@Nullable Output<DatabaseInstanceReplicaConfigurationGetArgs> replicaConfiguration) {
             $.replicaConfiguration = replicaConfiguration;
             return this;
         }
 
+        /**
+         * @param replicaConfiguration The configuration for replication. The
+         * configuration is detailed below. Valid only for MySQL instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicaConfiguration(DatabaseInstanceReplicaConfigurationGetArgs replicaConfiguration) {
             return replicaConfiguration(Output.of(replicaConfiguration));
         }
 
+        /**
+         * @param restoreBackupContext The context needed to restore the database to a backup run. This field will
+         * cause the provider to trigger the database to restore from the backup run indicated. The configuration is detailed below.
+         * **NOTE:** Restoring from a backup is an imperative action and not recommended via this provider. Adding or modifying this
+         * block during resource creation/update will trigger the restore action after the resource is created/updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restoreBackupContext(@Nullable Output<DatabaseInstanceRestoreBackupContextGetArgs> restoreBackupContext) {
             $.restoreBackupContext = restoreBackupContext;
             return this;
         }
 
+        /**
+         * @param restoreBackupContext The context needed to restore the database to a backup run. This field will
+         * cause the provider to trigger the database to restore from the backup run indicated. The configuration is detailed below.
+         * **NOTE:** Restoring from a backup is an imperative action and not recommended via this provider. Adding or modifying this
+         * block during resource creation/update will trigger the restore action after the resource is created/updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restoreBackupContext(DatabaseInstanceRestoreBackupContextGetArgs restoreBackupContext) {
             return restoreBackupContext(Output.of(restoreBackupContext));
         }
 
+        /**
+         * @param rootPassword Initial root password. Required for MS SQL Server, ignored by MySQL and PostgreSQL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rootPassword(@Nullable Output<String> rootPassword) {
             $.rootPassword = rootPassword;
             return this;
         }
 
+        /**
+         * @param rootPassword Initial root password. Required for MS SQL Server, ignored by MySQL and PostgreSQL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rootPassword(String rootPassword) {
             return rootPassword(Output.of(rootPassword));
         }
 
+        /**
+         * @param selfLink The URI of the created resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selfLink(@Nullable Output<String> selfLink) {
             $.selfLink = selfLink;
             return this;
         }
 
+        /**
+         * @param selfLink The URI of the created resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selfLink(String selfLink) {
             return selfLink(Output.of(selfLink));
         }
@@ -480,20 +836,48 @@ public final class DatabaseInstanceState extends com.pulumi.resources.ResourceAr
             return serverCaCerts(List.of(serverCaCerts));
         }
 
+        /**
+         * @param serviceAccountEmailAddress The service account email address assigned to the
+         * instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccountEmailAddress(@Nullable Output<String> serviceAccountEmailAddress) {
             $.serviceAccountEmailAddress = serviceAccountEmailAddress;
             return this;
         }
 
+        /**
+         * @param serviceAccountEmailAddress The service account email address assigned to the
+         * instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccountEmailAddress(String serviceAccountEmailAddress) {
             return serviceAccountEmailAddress(Output.of(serviceAccountEmailAddress));
         }
 
+        /**
+         * @param settings The settings to use for the database. The
+         * configuration is detailed below. Required if `clone` is not set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder settings(@Nullable Output<DatabaseInstanceSettingsGetArgs> settings) {
             $.settings = settings;
             return this;
         }
 
+        /**
+         * @param settings The settings to use for the database. The
+         * configuration is detailed below. Required if `clone` is not set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder settings(DatabaseInstanceSettingsGetArgs settings) {
             return settings(Output.of(settings));
         }

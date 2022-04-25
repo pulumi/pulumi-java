@@ -27,6 +27,10 @@ public final class PredictionDistributionDefinitionResponse extends com.pulumi.r
     @Import(name="distributions")
     private @Nullable List<PredictionDistributionDefinitionResponseDistributions> distributions;
 
+    /**
+     * @return Distributions of the prediction.
+     * 
+     */
     public Optional<List<PredictionDistributionDefinitionResponseDistributions>> distributions() {
         return Optional.ofNullable(this.distributions);
     }
@@ -38,6 +42,10 @@ public final class PredictionDistributionDefinitionResponse extends com.pulumi.r
     @Import(name="totalNegatives")
     private @Nullable Double totalNegatives;
 
+    /**
+     * @return Total negatives in the distribution.
+     * 
+     */
     public Optional<Double> totalNegatives() {
         return Optional.ofNullable(this.totalNegatives);
     }
@@ -49,6 +57,10 @@ public final class PredictionDistributionDefinitionResponse extends com.pulumi.r
     @Import(name="totalPositives")
     private @Nullable Double totalPositives;
 
+    /**
+     * @return Total positive in the distribution.
+     * 
+     */
     public Optional<Double> totalPositives() {
         return Optional.ofNullable(this.totalPositives);
     }
@@ -79,20 +91,44 @@ public final class PredictionDistributionDefinitionResponse extends com.pulumi.r
             $ = new PredictionDistributionDefinitionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param distributions Distributions of the prediction.
+         * 
+         * @return builder
+         * 
+         */
         public Builder distributions(@Nullable List<PredictionDistributionDefinitionResponseDistributions> distributions) {
             $.distributions = distributions;
             return this;
         }
 
+        /**
+         * @param distributions Distributions of the prediction.
+         * 
+         * @return builder
+         * 
+         */
         public Builder distributions(PredictionDistributionDefinitionResponseDistributions... distributions) {
             return distributions(List.of(distributions));
         }
 
+        /**
+         * @param totalNegatives Total negatives in the distribution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder totalNegatives(@Nullable Double totalNegatives) {
             $.totalNegatives = totalNegatives;
             return this;
         }
 
+        /**
+         * @param totalPositives Total positive in the distribution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder totalPositives(@Nullable Double totalPositives) {
             $.totalPositives = totalPositives;
             return this;

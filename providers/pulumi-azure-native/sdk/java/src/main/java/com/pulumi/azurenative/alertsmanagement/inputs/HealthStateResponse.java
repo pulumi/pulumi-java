@@ -24,6 +24,10 @@ public final class HealthStateResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="healthStateName", required=true)
     private String healthStateName;
 
+    /**
+     * @return Health state name
+     * 
+     */
     public String healthStateName() {
         return this.healthStateName;
     }
@@ -35,6 +39,10 @@ public final class HealthStateResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="severity", required=true)
     private Double severity;
 
+    /**
+     * @return Severity of alert fired
+     * 
+     */
     public Double severity() {
         return this.severity;
     }
@@ -64,11 +72,23 @@ public final class HealthStateResponse extends com.pulumi.resources.InvokeArgs {
             $ = new HealthStateResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param healthStateName Health state name
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthStateName(String healthStateName) {
             $.healthStateName = healthStateName;
             return this;
         }
 
+        /**
+         * @param severity Severity of alert fired
+         * 
+         * @return builder
+         * 
+         */
         public Builder severity(Double severity) {
             $.severity = severity;
             return this;

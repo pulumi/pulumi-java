@@ -12,22 +12,22 @@ import java.util.Objects;
 @CustomType
 public final class AndroidInstrumentationTestResponse {
     /**
-     * The java package for the test to be executed. Required
+     * @return The java package for the test to be executed. Required
      * 
      */
     private final String testPackageId;
     /**
-     * The InstrumentationTestRunner class. Required
+     * @return The InstrumentationTestRunner class. Required
      * 
      */
     private final String testRunnerClass;
     /**
-     * Each target must be fully qualified with the package name or class name, in one of these formats: - &#34;package package_name&#34; - &#34;class package_name.class_name&#34; - &#34;class package_name.class_name#method_name&#34; If empty, all targets in the module will be run.
+     * @return Each target must be fully qualified with the package name or class name, in one of these formats: - &#34;package package_name&#34; - &#34;class package_name.class_name&#34; - &#34;class package_name.class_name#method_name&#34; If empty, all targets in the module will be run.
      * 
      */
     private final List<String> testTargets;
     /**
-     * The flag indicates whether Android Test Orchestrator will be used to run test or not.
+     * @return The flag indicates whether Android Test Orchestrator will be used to run test or not.
      * 
      */
     private final Boolean useOrchestrator;
@@ -45,30 +45,30 @@ public final class AndroidInstrumentationTestResponse {
     }
 
     /**
-     * The java package for the test to be executed. Required
+     * @return The java package for the test to be executed. Required
      * 
-    */
+     */
     public String testPackageId() {
         return this.testPackageId;
     }
     /**
-     * The InstrumentationTestRunner class. Required
+     * @return The InstrumentationTestRunner class. Required
      * 
-    */
+     */
     public String testRunnerClass() {
         return this.testRunnerClass;
     }
     /**
-     * Each target must be fully qualified with the package name or class name, in one of these formats: - &#34;package package_name&#34; - &#34;class package_name.class_name&#34; - &#34;class package_name.class_name#method_name&#34; If empty, all targets in the module will be run.
+     * @return Each target must be fully qualified with the package name or class name, in one of these formats: - &#34;package package_name&#34; - &#34;class package_name.class_name&#34; - &#34;class package_name.class_name#method_name&#34; If empty, all targets in the module will be run.
      * 
-    */
+     */
     public List<String> testTargets() {
         return this.testTargets;
     }
     /**
-     * The flag indicates whether Android Test Orchestrator will be used to run test or not.
+     * @return The flag indicates whether Android Test Orchestrator will be used to run test or not.
      * 
-    */
+     */
     public Boolean useOrchestrator() {
         return this.useOrchestrator;
     }

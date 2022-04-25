@@ -15,7 +15,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SloWindowsBasedSli {
     /**
-     * A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+     * @return A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
      * with ValueType = BOOL. The window is good if any true values
      * appear in the window. One of `good_bad_metric_filter`,
      * `good_total_ratio_threshold`, `metric_mean_in_range`,
@@ -24,7 +24,7 @@ public final class SloWindowsBasedSli {
      */
     private final @Nullable String goodBadMetricFilter;
     /**
-     * Criterion that describes a window as good if its performance is
+     * @return Criterion that describes a window as good if its performance is
      * high enough. One of `good_bad_metric_filter`,
      * `good_total_ratio_threshold`, `metric_mean_in_range`,
      * `metric_sum_in_range` must be set for `windows_based_sli`.
@@ -33,7 +33,7 @@ public final class SloWindowsBasedSli {
      */
     private final @Nullable SloWindowsBasedSliGoodTotalRatioThreshold goodTotalRatioThreshold;
     /**
-     * Criterion that describes a window as good if the metric&#39;s value
+     * @return Criterion that describes a window as good if the metric&#39;s value
      * is in a good range, *averaged* across returned streams.
      * One of `good_bad_metric_filter`,
      * `good_total_ratio_threshold`, `metric_mean_in_range`,
@@ -45,7 +45,7 @@ public final class SloWindowsBasedSli {
      */
     private final @Nullable SloWindowsBasedSliMetricMeanInRange metricMeanInRange;
     /**
-     * Criterion that describes a window as good if the metric&#39;s value
+     * @return Criterion that describes a window as good if the metric&#39;s value
      * is in a good range, *summed* across returned streams.
      * Summed value `X` of `time_series` should satisfy
      * `range.min &lt;= X &lt;= range.max` for a good window.
@@ -57,7 +57,7 @@ public final class SloWindowsBasedSli {
      */
     private final @Nullable SloWindowsBasedSliMetricSumInRange metricSumInRange;
     /**
-     * Duration over which window quality is evaluated, given as a
+     * @return Duration over which window quality is evaluated, given as a
      * duration string &#34;{X}s&#34; representing X seconds. Must be an
      * integer fraction of a day and at least 60s.
      * 
@@ -79,29 +79,29 @@ public final class SloWindowsBasedSli {
     }
 
     /**
-     * A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+     * @return A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
      * with ValueType = BOOL. The window is good if any true values
      * appear in the window. One of `good_bad_metric_filter`,
      * `good_total_ratio_threshold`, `metric_mean_in_range`,
      * `metric_sum_in_range` must be set for `windows_based_sli`.
      * 
-    */
+     */
     public Optional<String> goodBadMetricFilter() {
         return Optional.ofNullable(this.goodBadMetricFilter);
     }
     /**
-     * Criterion that describes a window as good if its performance is
+     * @return Criterion that describes a window as good if its performance is
      * high enough. One of `good_bad_metric_filter`,
      * `good_total_ratio_threshold`, `metric_mean_in_range`,
      * `metric_sum_in_range` must be set for `windows_based_sli`.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<SloWindowsBasedSliGoodTotalRatioThreshold> goodTotalRatioThreshold() {
         return Optional.ofNullable(this.goodTotalRatioThreshold);
     }
     /**
-     * Criterion that describes a window as good if the metric&#39;s value
+     * @return Criterion that describes a window as good if the metric&#39;s value
      * is in a good range, *averaged* across returned streams.
      * One of `good_bad_metric_filter`,
      * `good_total_ratio_threshold`, `metric_mean_in_range`,
@@ -110,12 +110,12 @@ public final class SloWindowsBasedSli {
      * `range.min &lt;= X &lt;= range.max` for a good window.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<SloWindowsBasedSliMetricMeanInRange> metricMeanInRange() {
         return Optional.ofNullable(this.metricMeanInRange);
     }
     /**
-     * Criterion that describes a window as good if the metric&#39;s value
+     * @return Criterion that describes a window as good if the metric&#39;s value
      * is in a good range, *summed* across returned streams.
      * Summed value `X` of `time_series` should satisfy
      * `range.min &lt;= X &lt;= range.max` for a good window.
@@ -124,16 +124,16 @@ public final class SloWindowsBasedSli {
      * `metric_sum_in_range` must be set for `windows_based_sli`.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<SloWindowsBasedSliMetricSumInRange> metricSumInRange() {
         return Optional.ofNullable(this.metricSumInRange);
     }
     /**
-     * Duration over which window quality is evaluated, given as a
+     * @return Duration over which window quality is evaluated, given as a
      * duration string &#34;{X}s&#34; representing X seconds. Must be an
      * integer fraction of a day and at least 60s.
      * 
-    */
+     */
     public Optional<String> windowPeriod() {
         return Optional.ofNullable(this.windowPeriod);
     }

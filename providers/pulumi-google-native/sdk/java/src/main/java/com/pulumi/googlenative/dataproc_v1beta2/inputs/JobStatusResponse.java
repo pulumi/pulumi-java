@@ -23,6 +23,10 @@ public final class JobStatusResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="details", required=true)
     private String details;
 
+    /**
+     * @return Optional Job state details, such as an error description if the state is ERROR.
+     * 
+     */
     public String details() {
         return this.details;
     }
@@ -34,6 +38,10 @@ public final class JobStatusResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="state", required=true)
     private String state;
 
+    /**
+     * @return A state message specifying the overall job state.
+     * 
+     */
     public String state() {
         return this.state;
     }
@@ -45,6 +53,10 @@ public final class JobStatusResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="stateStartTime", required=true)
     private String stateStartTime;
 
+    /**
+     * @return The time when this state was entered.
+     * 
+     */
     public String stateStartTime() {
         return this.stateStartTime;
     }
@@ -56,6 +68,10 @@ public final class JobStatusResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="substate", required=true)
     private String substate;
 
+    /**
+     * @return Additional state information, which includes status reported by the agent.
+     * 
+     */
     public String substate() {
         return this.substate;
     }
@@ -87,21 +103,45 @@ public final class JobStatusResponse extends com.pulumi.resources.InvokeArgs {
             $ = new JobStatusResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param details Optional Job state details, such as an error description if the state is ERROR.
+         * 
+         * @return builder
+         * 
+         */
         public Builder details(String details) {
             $.details = details;
             return this;
         }
 
+        /**
+         * @param state A state message specifying the overall job state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param stateStartTime The time when this state was entered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stateStartTime(String stateStartTime) {
             $.stateStartTime = stateStartTime;
             return this;
         }
 
+        /**
+         * @param substate Additional state information, which includes status reported by the agent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder substate(String substate) {
             $.substate = substate;
             return this;

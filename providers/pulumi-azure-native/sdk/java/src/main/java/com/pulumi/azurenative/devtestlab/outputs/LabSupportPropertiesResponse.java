@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class LabSupportPropertiesResponse {
     /**
-     * Is the lab support banner active/enabled at this time?
+     * @return Is the lab support banner active/enabled at this time?
      * 
      */
     private final @Nullable String enabled;
     /**
-     * The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.
+     * @return The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.
      * 
      */
     private final @Nullable String markdown;
@@ -31,16 +31,16 @@ public final class LabSupportPropertiesResponse {
     }
 
     /**
-     * Is the lab support banner active/enabled at this time?
+     * @return Is the lab support banner active/enabled at this time?
      * 
-    */
+     */
     public Optional<String> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
-     * The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.
+     * @return The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.
      * 
-    */
+     */
     public Optional<String> markdown() {
         return Optional.ofNullable(this.markdown);
     }

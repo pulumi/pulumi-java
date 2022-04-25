@@ -15,27 +15,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class BackendCredentialsContractResponse {
     /**
-     * Authorization header authentication
+     * @return Authorization header authentication
      * 
      */
     private final @Nullable BackendAuthorizationHeaderCredentialsResponse authorization;
     /**
-     * List of Client Certificate Thumbprints. Will be ignored if certificatesIds are provided.
+     * @return List of Client Certificate Thumbprints. Will be ignored if certificatesIds are provided.
      * 
      */
     private final @Nullable List<String> certificate;
     /**
-     * List of Client Certificate Ids.
+     * @return List of Client Certificate Ids.
      * 
      */
     private final @Nullable List<String> certificateIds;
     /**
-     * Header Parameter description.
+     * @return Header Parameter description.
      * 
      */
     private final @Nullable Map<String,List<String>> header;
     /**
-     * Query Parameter description.
+     * @return Query Parameter description.
      * 
      */
     private final @Nullable Map<String,List<String>> query;
@@ -55,37 +55,37 @@ public final class BackendCredentialsContractResponse {
     }
 
     /**
-     * Authorization header authentication
+     * @return Authorization header authentication
      * 
-    */
+     */
     public Optional<BackendAuthorizationHeaderCredentialsResponse> authorization() {
         return Optional.ofNullable(this.authorization);
     }
     /**
-     * List of Client Certificate Thumbprints. Will be ignored if certificatesIds are provided.
+     * @return List of Client Certificate Thumbprints. Will be ignored if certificatesIds are provided.
      * 
-    */
+     */
     public List<String> certificate() {
         return this.certificate == null ? List.of() : this.certificate;
     }
     /**
-     * List of Client Certificate Ids.
+     * @return List of Client Certificate Ids.
      * 
-    */
+     */
     public List<String> certificateIds() {
         return this.certificateIds == null ? List.of() : this.certificateIds;
     }
     /**
-     * Header Parameter description.
+     * @return Header Parameter description.
      * 
-    */
+     */
     public Map<String,List<String>> header() {
         return this.header == null ? Map.of() : this.header;
     }
     /**
-     * Query Parameter description.
+     * @return Query Parameter description.
      * 
-    */
+     */
     public Map<String,List<String>> query() {
         return this.query == null ? Map.of() : this.query;
     }

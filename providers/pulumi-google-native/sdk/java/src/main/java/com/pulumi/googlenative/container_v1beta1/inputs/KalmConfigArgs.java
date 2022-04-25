@@ -26,6 +26,10 @@ public final class KalmConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return Whether KALM is enabled for this cluster.
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -54,11 +58,23 @@ public final class KalmConfigArgs extends com.pulumi.resources.ResourceArgs {
             $ = new KalmConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Whether KALM is enabled for this cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Whether KALM is enabled for this cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }

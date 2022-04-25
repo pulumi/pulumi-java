@@ -26,6 +26,10 @@ public final class IPConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="lBBackendAddressPoolIds")
     private @Nullable List<String> lBBackendAddressPoolIds;
 
+    /**
+     * @return The backend address pools associated with the IP configuration.
+     * 
+     */
     public Optional<List<String>> lBBackendAddressPoolIds() {
         return Optional.ofNullable(this.lBBackendAddressPoolIds);
     }
@@ -37,6 +41,10 @@ public final class IPConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="publicIpAddressId")
     private @Nullable String publicIpAddressId;
 
+    /**
+     * @return The Id of the public IP address associated with the IP configuration.
+     * 
+     */
     public Optional<String> publicIpAddressId() {
         return Optional.ofNullable(this.publicIpAddressId);
     }
@@ -48,6 +56,10 @@ public final class IPConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="staticIPAddress")
     private @Nullable String staticIPAddress;
 
+    /**
+     * @return The static IP address of the IP configuration.
+     * 
+     */
     public Optional<String> staticIPAddress() {
         return Optional.ofNullable(this.staticIPAddress);
     }
@@ -78,20 +90,44 @@ public final class IPConfigResponse extends com.pulumi.resources.InvokeArgs {
             $ = new IPConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param lBBackendAddressPoolIds The backend address pools associated with the IP configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lBBackendAddressPoolIds(@Nullable List<String> lBBackendAddressPoolIds) {
             $.lBBackendAddressPoolIds = lBBackendAddressPoolIds;
             return this;
         }
 
+        /**
+         * @param lBBackendAddressPoolIds The backend address pools associated with the IP configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lBBackendAddressPoolIds(String... lBBackendAddressPoolIds) {
             return lBBackendAddressPoolIds(List.of(lBBackendAddressPoolIds));
         }
 
+        /**
+         * @param publicIpAddressId The Id of the public IP address associated with the IP configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIpAddressId(@Nullable String publicIpAddressId) {
             $.publicIpAddressId = publicIpAddressId;
             return this;
         }
 
+        /**
+         * @param staticIPAddress The static IP address of the IP configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder staticIPAddress(@Nullable String staticIPAddress) {
             $.staticIPAddress = staticIPAddress;
             return this;

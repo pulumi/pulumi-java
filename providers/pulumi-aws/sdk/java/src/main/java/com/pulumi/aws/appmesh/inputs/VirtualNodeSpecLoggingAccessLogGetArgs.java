@@ -22,6 +22,10 @@ public final class VirtualNodeSpecLoggingAccessLogGetArgs extends com.pulumi.res
     @Import(name="file")
     private @Nullable Output<VirtualNodeSpecLoggingAccessLogFileGetArgs> file;
 
+    /**
+     * @return The file object to send virtual node access logs to.
+     * 
+     */
     public Optional<Output<VirtualNodeSpecLoggingAccessLogFileGetArgs>> file() {
         return Optional.ofNullable(this.file);
     }
@@ -50,11 +54,23 @@ public final class VirtualNodeSpecLoggingAccessLogGetArgs extends com.pulumi.res
             $ = new VirtualNodeSpecLoggingAccessLogGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param file The file object to send virtual node access logs to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder file(@Nullable Output<VirtualNodeSpecLoggingAccessLogFileGetArgs> file) {
             $.file = file;
             return this;
         }
 
+        /**
+         * @param file The file object to send virtual node access logs to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder file(VirtualNodeSpecLoggingAccessLogFileGetArgs file) {
             return file(Output.of(file));
         }

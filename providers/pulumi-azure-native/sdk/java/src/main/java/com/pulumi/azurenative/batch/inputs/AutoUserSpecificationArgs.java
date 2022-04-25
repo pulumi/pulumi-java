@@ -23,6 +23,10 @@ public final class AutoUserSpecificationArgs extends com.pulumi.resources.Resour
     @Import(name="elevationLevel")
     private @Nullable Output<ElevationLevel> elevationLevel;
 
+    /**
+     * @return The default value is nonAdmin.
+     * 
+     */
     public Optional<Output<ElevationLevel>> elevationLevel() {
         return Optional.ofNullable(this.elevationLevel);
     }
@@ -34,6 +38,10 @@ public final class AutoUserSpecificationArgs extends com.pulumi.resources.Resour
     @Import(name="scope")
     private @Nullable Output<AutoUserScope> scope;
 
+    /**
+     * @return The default value is Pool. If the pool is running Windows a value of Task should be specified if stricter isolation between tasks is required. For example, if the task mutates the registry in a way which could impact other tasks, or if certificates have been specified on the pool which should not be accessible by normal tasks but should be accessible by start tasks.
+     * 
+     */
     public Optional<Output<AutoUserScope>> scope() {
         return Optional.ofNullable(this.scope);
     }
@@ -63,20 +71,44 @@ public final class AutoUserSpecificationArgs extends com.pulumi.resources.Resour
             $ = new AutoUserSpecificationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param elevationLevel The default value is nonAdmin.
+         * 
+         * @return builder
+         * 
+         */
         public Builder elevationLevel(@Nullable Output<ElevationLevel> elevationLevel) {
             $.elevationLevel = elevationLevel;
             return this;
         }
 
+        /**
+         * @param elevationLevel The default value is nonAdmin.
+         * 
+         * @return builder
+         * 
+         */
         public Builder elevationLevel(ElevationLevel elevationLevel) {
             return elevationLevel(Output.of(elevationLevel));
         }
 
+        /**
+         * @param scope The default value is Pool. If the pool is running Windows a value of Task should be specified if stricter isolation between tasks is required. For example, if the task mutates the registry in a way which could impact other tasks, or if certificates have been specified on the pool which should not be accessible by normal tasks but should be accessible by start tasks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(@Nullable Output<AutoUserScope> scope) {
             $.scope = scope;
             return this;
         }
 
+        /**
+         * @param scope The default value is Pool. If the pool is running Windows a value of Task should be specified if stricter isolation between tasks is required. For example, if the task mutates the registry in a way which could impact other tasks, or if certificates have been specified on the pool which should not be accessible by normal tasks but should be accessible by start tasks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(AutoUserScope scope) {
             return scope(Output.of(scope));
         }

@@ -25,6 +25,10 @@ public final class GooglePrivacyDlpV2ConditionResponse extends com.pulumi.resour
     @Import(name="field", required=true)
     private GooglePrivacyDlpV2FieldIdResponse field;
 
+    /**
+     * @return Field within the record this condition is evaluated against.
+     * 
+     */
     public GooglePrivacyDlpV2FieldIdResponse field() {
         return this.field;
     }
@@ -36,6 +40,10 @@ public final class GooglePrivacyDlpV2ConditionResponse extends com.pulumi.resour
     @Import(name="operator", required=true)
     private String operator;
 
+    /**
+     * @return Operator used to compare the field or infoType to the value.
+     * 
+     */
     public String operator() {
         return this.operator;
     }
@@ -47,6 +55,10 @@ public final class GooglePrivacyDlpV2ConditionResponse extends com.pulumi.resour
     @Import(name="value", required=true)
     private GooglePrivacyDlpV2ValueResponse value;
 
+    /**
+     * @return Value to compare against. [Mandatory, except for `EXISTS` tests.]
+     * 
+     */
     public GooglePrivacyDlpV2ValueResponse value() {
         return this.value;
     }
@@ -77,16 +89,34 @@ public final class GooglePrivacyDlpV2ConditionResponse extends com.pulumi.resour
             $ = new GooglePrivacyDlpV2ConditionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param field Field within the record this condition is evaluated against.
+         * 
+         * @return builder
+         * 
+         */
         public Builder field(GooglePrivacyDlpV2FieldIdResponse field) {
             $.field = field;
             return this;
         }
 
+        /**
+         * @param operator Operator used to compare the field or infoType to the value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(String operator) {
             $.operator = operator;
             return this;
         }
 
+        /**
+         * @param value Value to compare against. [Mandatory, except for `EXISTS` tests.]
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(GooglePrivacyDlpV2ValueResponse value) {
             $.value = value;
             return this;

@@ -32,6 +32,10 @@ public final class CertificateReferenceArgs extends com.pulumi.resources.Resourc
     @Import(name="storeLocation")
     private @Nullable Output<CertificateStoreLocation> storeLocation;
 
+    /**
+     * @return The default value is currentUser. This property is applicable only for pools configured with Windows nodes (that is, created with cloudServiceConfiguration, or with virtualMachineConfiguration using a Windows image reference). For Linux compute nodes, the certificates are stored in a directory inside the task working directory and an environment variable AZ_BATCH_CERTIFICATES_DIR is supplied to the task to query for this location. For certificates with visibility of &#39;remoteUser&#39;, a &#39;certs&#39; directory is created in the user&#39;s home directory (e.g., /home/{user-name}/certs) and certificates are placed in that directory.
+     * 
+     */
     public Optional<Output<CertificateStoreLocation>> storeLocation() {
         return Optional.ofNullable(this.storeLocation);
     }
@@ -43,6 +47,10 @@ public final class CertificateReferenceArgs extends com.pulumi.resources.Resourc
     @Import(name="storeName")
     private @Nullable Output<String> storeName;
 
+    /**
+     * @return This property is applicable only for pools configured with Windows nodes (that is, created with cloudServiceConfiguration, or with virtualMachineConfiguration using a Windows image reference). Common store names include: My, Root, CA, Trust, Disallowed, TrustedPeople, TrustedPublisher, AuthRoot, AddressBook, but any custom store name can also be used. The default value is My.
+     * 
+     */
     public Optional<Output<String>> storeName() {
         return Optional.ofNullable(this.storeName);
     }
@@ -90,20 +98,44 @@ public final class CertificateReferenceArgs extends com.pulumi.resources.Resourc
             return id(Output.of(id));
         }
 
+        /**
+         * @param storeLocation The default value is currentUser. This property is applicable only for pools configured with Windows nodes (that is, created with cloudServiceConfiguration, or with virtualMachineConfiguration using a Windows image reference). For Linux compute nodes, the certificates are stored in a directory inside the task working directory and an environment variable AZ_BATCH_CERTIFICATES_DIR is supplied to the task to query for this location. For certificates with visibility of &#39;remoteUser&#39;, a &#39;certs&#39; directory is created in the user&#39;s home directory (e.g., /home/{user-name}/certs) and certificates are placed in that directory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storeLocation(@Nullable Output<CertificateStoreLocation> storeLocation) {
             $.storeLocation = storeLocation;
             return this;
         }
 
+        /**
+         * @param storeLocation The default value is currentUser. This property is applicable only for pools configured with Windows nodes (that is, created with cloudServiceConfiguration, or with virtualMachineConfiguration using a Windows image reference). For Linux compute nodes, the certificates are stored in a directory inside the task working directory and an environment variable AZ_BATCH_CERTIFICATES_DIR is supplied to the task to query for this location. For certificates with visibility of &#39;remoteUser&#39;, a &#39;certs&#39; directory is created in the user&#39;s home directory (e.g., /home/{user-name}/certs) and certificates are placed in that directory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storeLocation(CertificateStoreLocation storeLocation) {
             return storeLocation(Output.of(storeLocation));
         }
 
+        /**
+         * @param storeName This property is applicable only for pools configured with Windows nodes (that is, created with cloudServiceConfiguration, or with virtualMachineConfiguration using a Windows image reference). Common store names include: My, Root, CA, Trust, Disallowed, TrustedPeople, TrustedPublisher, AuthRoot, AddressBook, but any custom store name can also be used. The default value is My.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storeName(@Nullable Output<String> storeName) {
             $.storeName = storeName;
             return this;
         }
 
+        /**
+         * @param storeName This property is applicable only for pools configured with Windows nodes (that is, created with cloudServiceConfiguration, or with virtualMachineConfiguration using a Windows image reference). Common store names include: My, Root, CA, Trust, Disallowed, TrustedPeople, TrustedPublisher, AuthRoot, AddressBook, but any custom store name can also be used. The default value is My.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storeName(String storeName) {
             return storeName(Output.of(storeName));
         }

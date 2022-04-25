@@ -24,6 +24,10 @@ public final class GoogleCloudRunOpV2TrafficTargetStatusResponse extends com.pul
     @Import(name="percent", required=true)
     private Integer percent;
 
+    /**
+     * @return Specifies percent of the traffic to this Revision.
+     * 
+     */
     public Integer percent() {
         return this.percent;
     }
@@ -35,6 +39,10 @@ public final class GoogleCloudRunOpV2TrafficTargetStatusResponse extends com.pul
     @Import(name="revision", required=true)
     private String revision;
 
+    /**
+     * @return Revision to which this traffic is sent.
+     * 
+     */
     public String revision() {
         return this.revision;
     }
@@ -46,6 +54,10 @@ public final class GoogleCloudRunOpV2TrafficTargetStatusResponse extends com.pul
     @Import(name="tag", required=true)
     private String tag;
 
+    /**
+     * @return Indicates the string used in the URI to exclusively reference this target.
+     * 
+     */
     public String tag() {
         return this.tag;
     }
@@ -57,6 +69,10 @@ public final class GoogleCloudRunOpV2TrafficTargetStatusResponse extends com.pul
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The allocation type for this traffic target.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -68,6 +84,10 @@ public final class GoogleCloudRunOpV2TrafficTargetStatusResponse extends com.pul
     @Import(name="uri", required=true)
     private String uri;
 
+    /**
+     * @return Displays the target URI.
+     * 
+     */
     public String uri() {
         return this.uri;
     }
@@ -100,26 +120,56 @@ public final class GoogleCloudRunOpV2TrafficTargetStatusResponse extends com.pul
             $ = new GoogleCloudRunOpV2TrafficTargetStatusResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param percent Specifies percent of the traffic to this Revision.
+         * 
+         * @return builder
+         * 
+         */
         public Builder percent(Integer percent) {
             $.percent = percent;
             return this;
         }
 
+        /**
+         * @param revision Revision to which this traffic is sent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder revision(String revision) {
             $.revision = revision;
             return this;
         }
 
+        /**
+         * @param tag Indicates the string used in the URI to exclusively reference this target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tag(String tag) {
             $.tag = tag;
             return this;
         }
 
+        /**
+         * @param type The allocation type for this traffic target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param uri Displays the target URI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(String uri) {
             $.uri = uri;
             return this;

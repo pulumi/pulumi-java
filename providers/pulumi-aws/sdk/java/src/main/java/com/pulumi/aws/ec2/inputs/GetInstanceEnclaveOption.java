@@ -19,6 +19,10 @@ public final class GetInstanceEnclaveOption extends com.pulumi.resources.InvokeA
     @Import(name="enabled", required=true)
     private Boolean enabled;
 
+    /**
+     * @return Whether Nitro Enclaves are enabled.
+     * 
+     */
     public Boolean enabled() {
         return this.enabled;
     }
@@ -47,6 +51,12 @@ public final class GetInstanceEnclaveOption extends com.pulumi.resources.InvokeA
             $ = new GetInstanceEnclaveOption(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Whether Nitro Enclaves are enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             $.enabled = enabled;
             return this;

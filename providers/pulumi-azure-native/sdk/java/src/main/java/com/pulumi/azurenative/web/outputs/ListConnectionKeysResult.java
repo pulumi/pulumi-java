@@ -14,12 +14,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ListConnectionKeysResult {
     /**
-     * Connection Key
+     * @return Connection Key
      * 
      */
     private final @Nullable String connectionKey;
     /**
-     * Tokens/Claim
+     * @return Tokens/Claim
      * 
      */
     private final @Nullable Map<String,Object> parameterValues;
@@ -33,16 +33,16 @@ public final class ListConnectionKeysResult {
     }
 
     /**
-     * Connection Key
+     * @return Connection Key
      * 
-    */
+     */
     public Optional<String> connectionKey() {
         return Optional.ofNullable(this.connectionKey);
     }
     /**
-     * Tokens/Claim
+     * @return Tokens/Claim
      * 
-    */
+     */
     public Map<String,Object> parameterValues() {
         return this.parameterValues == null ? Map.of() : this.parameterValues;
     }

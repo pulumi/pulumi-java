@@ -29,6 +29,10 @@ public final class VirtualNetworkRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="action")
     private @Nullable Output<Either<String,Action>> action;
 
+    /**
+     * @return The action of virtual network rule.
+     * 
+     */
     public Optional<Output<Either<String,Action>>> action() {
         return Optional.ofNullable(this.action);
     }
@@ -40,6 +44,10 @@ public final class VirtualNetworkRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="virtualNetworkResourceId", required=true)
     private Output<String> virtualNetworkResourceId;
 
+    /**
+     * @return Resource ID of a subnet, for example: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{vnetName}/subnets/{subnetName}.
+     * 
+     */
     public Output<String> virtualNetworkResourceId() {
         return this.virtualNetworkResourceId;
     }
@@ -69,28 +77,64 @@ public final class VirtualNetworkRuleArgs extends com.pulumi.resources.ResourceA
             $ = new VirtualNetworkRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action The action of virtual network rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(@Nullable Output<Either<String,Action>> action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param action The action of virtual network rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(Either<String,Action> action) {
             return action(Output.of(action));
         }
 
+        /**
+         * @param action The action of virtual network rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(String action) {
             return action(Either.ofLeft(action));
         }
 
+        /**
+         * @param action The action of virtual network rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(Action action) {
             return action(Either.ofRight(action));
         }
 
+        /**
+         * @param virtualNetworkResourceId Resource ID of a subnet, for example: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{vnetName}/subnets/{subnetName}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetworkResourceId(Output<String> virtualNetworkResourceId) {
             $.virtualNetworkResourceId = virtualNetworkResourceId;
             return this;
         }
 
+        /**
+         * @param virtualNetworkResourceId Resource ID of a subnet, for example: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{vnetName}/subnets/{subnetName}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetworkResourceId(String virtualNetworkResourceId) {
             return virtualNetworkResourceId(Output.of(virtualNetworkResourceId));
         }

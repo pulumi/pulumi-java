@@ -17,51 +17,51 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ProjectSource {
     /**
-     * Configuration block with the authorization settings for AWS CodeBuild to access the source code to be built. This information is for the AWS CodeBuild console&#39;s use only. Use the `aws.codebuild.SourceCredential` resource instead. Auth blocks are documented below.
+     * @return Configuration block with the authorization settings for AWS CodeBuild to access the source code to be built. This information is for the AWS CodeBuild console&#39;s use only. Use the `aws.codebuild.SourceCredential` resource instead. Auth blocks are documented below.
      * 
      * @deprecated
      * Use the aws_codebuild_source_credential resource instead
      * 
      */
-        @Deprecated /* Use the aws_codebuild_source_credential resource instead */
+    @Deprecated /* Use the aws_codebuild_source_credential resource instead */
     private final @Nullable ProjectSourceAuth auth;
     /**
-     * Contains information that defines how the build project reports the build status to the source provider. This option is only used when the source provider is `GITHUB`, `GITHUB_ENTERPRISE`, or `BITBUCKET`.
+     * @return Contains information that defines how the build project reports the build status to the source provider. This option is only used when the source provider is `GITHUB`, `GITHUB_ENTERPRISE`, or `BITBUCKET`.
      * 
      */
     private final @Nullable ProjectSourceBuildStatusConfig buildStatusConfig;
     /**
-     * Build specification to use for this build project&#39;s related builds. This must be set when `type` is `NO_SOURCE`.
+     * @return Build specification to use for this build project&#39;s related builds. This must be set when `type` is `NO_SOURCE`.
      * 
      */
     private final @Nullable String buildspec;
     /**
-     * Truncate git history to this many commits. Use `0` for a `Full` checkout which you need to run commands like `git branch --show-current`. See [AWS CodePipeline User Guide: Tutorial: Use full clone with a GitHub pipeline source](https://docs.aws.amazon.com/codepipeline/latest/userguide/tutorials-github-gitclone.html) for details.
+     * @return Truncate git history to this many commits. Use `0` for a `Full` checkout which you need to run commands like `git branch --show-current`. See [AWS CodePipeline User Guide: Tutorial: Use full clone with a GitHub pipeline source](https://docs.aws.amazon.com/codepipeline/latest/userguide/tutorials-github-gitclone.html) for details.
      * 
      */
     private final @Nullable Integer gitCloneDepth;
     /**
-     * Configuration block. Detailed below.
+     * @return Configuration block. Detailed below.
      * 
      */
     private final @Nullable ProjectSourceGitSubmodulesConfig gitSubmodulesConfig;
     /**
-     * Ignore SSL warnings when connecting to source control.
+     * @return Ignore SSL warnings when connecting to source control.
      * 
      */
     private final @Nullable Boolean insecureSsl;
     /**
-     * Location of the source code from git or s3.
+     * @return Location of the source code from git or s3.
      * 
      */
     private final @Nullable String location;
     /**
-     * Whether to report the status of a build&#39;s start and finish to your source provider. This option is only valid when the `type` is `BITBUCKET` or `GITHUB`.
+     * @return Whether to report the status of a build&#39;s start and finish to your source provider. This option is only valid when the `type` is `BITBUCKET` or `GITHUB`.
      * 
      */
     private final @Nullable Boolean reportBuildStatus;
     /**
-     * Type of repository that contains the source code to be built. Valid values: `CODECOMMIT`, `CODEPIPELINE`, `GITHUB`, `GITHUB_ENTERPRISE`, `BITBUCKET`, `S3`, `NO_SOURCE`.
+     * @return Type of repository that contains the source code to be built. Valid values: `CODECOMMIT`, `CODEPIPELINE`, `GITHUB`, `GITHUB_ENTERPRISE`, `BITBUCKET`, `S3`, `NO_SOURCE`.
      * 
      */
     private final String type;
@@ -89,69 +89,69 @@ public final class ProjectSource {
     }
 
     /**
-     * Configuration block with the authorization settings for AWS CodeBuild to access the source code to be built. This information is for the AWS CodeBuild console&#39;s use only. Use the `aws.codebuild.SourceCredential` resource instead. Auth blocks are documented below.
+     * @return Configuration block with the authorization settings for AWS CodeBuild to access the source code to be built. This information is for the AWS CodeBuild console&#39;s use only. Use the `aws.codebuild.SourceCredential` resource instead. Auth blocks are documented below.
      * 
      * @deprecated
      * Use the aws_codebuild_source_credential resource instead
      * 
-    */
+     */
     @Deprecated /* Use the aws_codebuild_source_credential resource instead */
     public Optional<ProjectSourceAuth> auth() {
         return Optional.ofNullable(this.auth);
     }
     /**
-     * Contains information that defines how the build project reports the build status to the source provider. This option is only used when the source provider is `GITHUB`, `GITHUB_ENTERPRISE`, or `BITBUCKET`.
+     * @return Contains information that defines how the build project reports the build status to the source provider. This option is only used when the source provider is `GITHUB`, `GITHUB_ENTERPRISE`, or `BITBUCKET`.
      * 
-    */
+     */
     public Optional<ProjectSourceBuildStatusConfig> buildStatusConfig() {
         return Optional.ofNullable(this.buildStatusConfig);
     }
     /**
-     * Build specification to use for this build project&#39;s related builds. This must be set when `type` is `NO_SOURCE`.
+     * @return Build specification to use for this build project&#39;s related builds. This must be set when `type` is `NO_SOURCE`.
      * 
-    */
+     */
     public Optional<String> buildspec() {
         return Optional.ofNullable(this.buildspec);
     }
     /**
-     * Truncate git history to this many commits. Use `0` for a `Full` checkout which you need to run commands like `git branch --show-current`. See [AWS CodePipeline User Guide: Tutorial: Use full clone with a GitHub pipeline source](https://docs.aws.amazon.com/codepipeline/latest/userguide/tutorials-github-gitclone.html) for details.
+     * @return Truncate git history to this many commits. Use `0` for a `Full` checkout which you need to run commands like `git branch --show-current`. See [AWS CodePipeline User Guide: Tutorial: Use full clone with a GitHub pipeline source](https://docs.aws.amazon.com/codepipeline/latest/userguide/tutorials-github-gitclone.html) for details.
      * 
-    */
+     */
     public Optional<Integer> gitCloneDepth() {
         return Optional.ofNullable(this.gitCloneDepth);
     }
     /**
-     * Configuration block. Detailed below.
+     * @return Configuration block. Detailed below.
      * 
-    */
+     */
     public Optional<ProjectSourceGitSubmodulesConfig> gitSubmodulesConfig() {
         return Optional.ofNullable(this.gitSubmodulesConfig);
     }
     /**
-     * Ignore SSL warnings when connecting to source control.
+     * @return Ignore SSL warnings when connecting to source control.
      * 
-    */
+     */
     public Optional<Boolean> insecureSsl() {
         return Optional.ofNullable(this.insecureSsl);
     }
     /**
-     * Location of the source code from git or s3.
+     * @return Location of the source code from git or s3.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * Whether to report the status of a build&#39;s start and finish to your source provider. This option is only valid when the `type` is `BITBUCKET` or `GITHUB`.
+     * @return Whether to report the status of a build&#39;s start and finish to your source provider. This option is only valid when the `type` is `BITBUCKET` or `GITHUB`.
      * 
-    */
+     */
     public Optional<Boolean> reportBuildStatus() {
         return Optional.ofNullable(this.reportBuildStatus);
     }
     /**
-     * Type of repository that contains the source code to be built. Valid values: `CODECOMMIT`, `CODEPIPELINE`, `GITHUB`, `GITHUB_ENTERPRISE`, `BITBUCKET`, `S3`, `NO_SOURCE`.
+     * @return Type of repository that contains the source code to be built. Valid values: `CODECOMMIT`, `CODEPIPELINE`, `GITHUB`, `GITHUB_ENTERPRISE`, `BITBUCKET`, `S3`, `NO_SOURCE`.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

@@ -26,6 +26,11 @@ public final class WebAnonymousAuthenticationResponse extends com.pulumi.resourc
     @Import(name="authenticationType", required=true)
     private String authenticationType;
 
+    /**
+     * @return Type of authentication used to connect to the web table source.
+     * Expected value is &#39;Anonymous&#39;.
+     * 
+     */
     public String authenticationType() {
         return this.authenticationType;
     }
@@ -37,6 +42,10 @@ public final class WebAnonymousAuthenticationResponse extends com.pulumi.resourc
     @Import(name="url", required=true)
     private Object url;
 
+    /**
+     * @return The URL of the web service endpoint, e.g. http://www.microsoft.com . Type: string (or Expression with resultType string).
+     * 
+     */
     public Object url() {
         return this.url;
     }
@@ -66,11 +75,24 @@ public final class WebAnonymousAuthenticationResponse extends com.pulumi.resourc
             $ = new WebAnonymousAuthenticationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authenticationType Type of authentication used to connect to the web table source.
+         * Expected value is &#39;Anonymous&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationType(String authenticationType) {
             $.authenticationType = authenticationType;
             return this;
         }
 
+        /**
+         * @param url The URL of the web service endpoint, e.g. http://www.microsoft.com . Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(Object url) {
             $.url = url;
             return this;

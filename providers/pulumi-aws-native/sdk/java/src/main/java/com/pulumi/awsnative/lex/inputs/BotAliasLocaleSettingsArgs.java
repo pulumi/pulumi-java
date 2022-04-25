@@ -34,6 +34,10 @@ public final class BotAliasLocaleSettingsArgs extends com.pulumi.resources.Resou
     @Import(name="enabled", required=true)
     private Output<Boolean> enabled;
 
+    /**
+     * @return Whether the Lambda code hook is enabled
+     * 
+     */
     public Output<Boolean> enabled() {
         return this.enabled;
     }
@@ -72,11 +76,23 @@ public final class BotAliasLocaleSettingsArgs extends com.pulumi.resources.Resou
             return codeHookSpecification(Output.of(codeHookSpecification));
         }
 
+        /**
+         * @param enabled Whether the Lambda code hook is enabled
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Whether the Lambda code hook is enabled
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }

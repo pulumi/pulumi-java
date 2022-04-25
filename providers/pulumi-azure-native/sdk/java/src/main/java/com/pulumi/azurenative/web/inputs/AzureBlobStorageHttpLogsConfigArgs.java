@@ -28,6 +28,10 @@ public final class AzureBlobStorageHttpLogsConfigArgs extends com.pulumi.resourc
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return True if configuration is enabled, false if it is disabled and null if configuration is not set.
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -41,6 +45,12 @@ public final class AzureBlobStorageHttpLogsConfigArgs extends com.pulumi.resourc
     @Import(name="retentionInDays")
     private @Nullable Output<Integer> retentionInDays;
 
+    /**
+     * @return Retention in days.
+     * Remove blobs older than X days.
+     * 0 or lower means no retention.
+     * 
+     */
     public Optional<Output<Integer>> retentionInDays() {
         return Optional.ofNullable(this.retentionInDays);
     }
@@ -52,6 +62,10 @@ public final class AzureBlobStorageHttpLogsConfigArgs extends com.pulumi.resourc
     @Import(name="sasUrl")
     private @Nullable Output<String> sasUrl;
 
+    /**
+     * @return SAS url to a azure blob container with read/write/list/delete permissions.
+     * 
+     */
     public Optional<Output<String>> sasUrl() {
         return Optional.ofNullable(this.sasUrl);
     }
@@ -82,29 +96,69 @@ public final class AzureBlobStorageHttpLogsConfigArgs extends com.pulumi.resourc
             $ = new AzureBlobStorageHttpLogsConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled True if configuration is enabled, false if it is disabled and null if configuration is not set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled True if configuration is enabled, false if it is disabled and null if configuration is not set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param retentionInDays Retention in days.
+         * Remove blobs older than X days.
+         * 0 or lower means no retention.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionInDays(@Nullable Output<Integer> retentionInDays) {
             $.retentionInDays = retentionInDays;
             return this;
         }
 
+        /**
+         * @param retentionInDays Retention in days.
+         * Remove blobs older than X days.
+         * 0 or lower means no retention.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionInDays(Integer retentionInDays) {
             return retentionInDays(Output.of(retentionInDays));
         }
 
+        /**
+         * @param sasUrl SAS url to a azure blob container with read/write/list/delete permissions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sasUrl(@Nullable Output<String> sasUrl) {
             $.sasUrl = sasUrl;
             return this;
         }
 
+        /**
+         * @param sasUrl SAS url to a azure blob container with read/write/list/delete permissions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sasUrl(String sasUrl) {
             return sasUrl(Output.of(sasUrl));
         }

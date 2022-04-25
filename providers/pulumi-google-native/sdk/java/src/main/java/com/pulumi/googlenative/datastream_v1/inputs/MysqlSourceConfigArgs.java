@@ -26,6 +26,10 @@ public final class MysqlSourceConfigArgs extends com.pulumi.resources.ResourceAr
     @Import(name="excludeObjects")
     private @Nullable Output<MysqlRdbmsArgs> excludeObjects;
 
+    /**
+     * @return MySQL objects to exclude from the stream.
+     * 
+     */
     public Optional<Output<MysqlRdbmsArgs>> excludeObjects() {
         return Optional.ofNullable(this.excludeObjects);
     }
@@ -37,6 +41,10 @@ public final class MysqlSourceConfigArgs extends com.pulumi.resources.ResourceAr
     @Import(name="includeObjects")
     private @Nullable Output<MysqlRdbmsArgs> includeObjects;
 
+    /**
+     * @return MySQL objects to retrieve from the source.
+     * 
+     */
     public Optional<Output<MysqlRdbmsArgs>> includeObjects() {
         return Optional.ofNullable(this.includeObjects);
     }
@@ -66,20 +74,44 @@ public final class MysqlSourceConfigArgs extends com.pulumi.resources.ResourceAr
             $ = new MysqlSourceConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param excludeObjects MySQL objects to exclude from the stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludeObjects(@Nullable Output<MysqlRdbmsArgs> excludeObjects) {
             $.excludeObjects = excludeObjects;
             return this;
         }
 
+        /**
+         * @param excludeObjects MySQL objects to exclude from the stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludeObjects(MysqlRdbmsArgs excludeObjects) {
             return excludeObjects(Output.of(excludeObjects));
         }
 
+        /**
+         * @param includeObjects MySQL objects to retrieve from the source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeObjects(@Nullable Output<MysqlRdbmsArgs> includeObjects) {
             $.includeObjects = includeObjects;
             return this;
         }
 
+        /**
+         * @param includeObjects MySQL objects to retrieve from the source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeObjects(MysqlRdbmsArgs includeObjects) {
             return includeObjects(Output.of(includeObjects));
         }

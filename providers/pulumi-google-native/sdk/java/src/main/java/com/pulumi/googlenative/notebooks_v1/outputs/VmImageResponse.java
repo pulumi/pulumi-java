@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class VmImageResponse {
     /**
-     * Use this VM image family to find the image; the newest image in this family will be used.
+     * @return Use this VM image family to find the image; the newest image in this family will be used.
      * 
      */
     private final String imageFamily;
     /**
-     * Use VM image name to find the image.
+     * @return Use VM image name to find the image.
      * 
      */
     private final String imageName;
     /**
-     * The name of the Google Cloud project that this VM image belongs to. Format: `projects/{project_id}`
+     * @return The name of the Google Cloud project that this VM image belongs to. Format: `projects/{project_id}`
      * 
      */
     private final String project;
@@ -36,23 +36,23 @@ public final class VmImageResponse {
     }
 
     /**
-     * Use this VM image family to find the image; the newest image in this family will be used.
+     * @return Use this VM image family to find the image; the newest image in this family will be used.
      * 
-    */
+     */
     public String imageFamily() {
         return this.imageFamily;
     }
     /**
-     * Use VM image name to find the image.
+     * @return Use VM image name to find the image.
      * 
-    */
+     */
     public String imageName() {
         return this.imageName;
     }
     /**
-     * The name of the Google Cloud project that this VM image belongs to. Format: `projects/{project_id}`
+     * @return The name of the Google Cloud project that this VM image belongs to. Format: `projects/{project_id}`
      * 
-    */
+     */
     public String project() {
         return this.project;
     }

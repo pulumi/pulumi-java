@@ -24,6 +24,10 @@ public final class PatchInstanceFilterGroupLabelResponse extends com.pulumi.reso
     @Import(name="labels", required=true)
     private Map<String,String> labels;
 
+    /**
+     * @return Compute Engine instance labels that must be present for a VM instance to be targeted by this filter.
+     * 
+     */
     public Map<String,String> labels() {
         return this.labels;
     }
@@ -52,6 +56,12 @@ public final class PatchInstanceFilterGroupLabelResponse extends com.pulumi.reso
             $ = new PatchInstanceFilterGroupLabelResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param labels Compute Engine instance labels that must be present for a VM instance to be targeted by this filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             $.labels = labels;
             return this;

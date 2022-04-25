@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class InstanceVmImage {
     /**
-     * Use this VM image family to find the image; the newest image in this family will be used.
+     * @return Use this VM image family to find the image; the newest image in this family will be used.
      * 
      */
     private final @Nullable String imageFamily;
     /**
-     * Use VM image name to find the image.
+     * @return Use VM image name to find the image.
      * 
      */
     private final @Nullable String imageName;
     /**
-     * The name of the Google Cloud project that this VM image belongs to.
+     * @return The name of the Google Cloud project that this VM image belongs to.
      * Format: projects/{project_id}
      * 
      */
@@ -39,24 +39,24 @@ public final class InstanceVmImage {
     }
 
     /**
-     * Use this VM image family to find the image; the newest image in this family will be used.
+     * @return Use this VM image family to find the image; the newest image in this family will be used.
      * 
-    */
+     */
     public Optional<String> imageFamily() {
         return Optional.ofNullable(this.imageFamily);
     }
     /**
-     * Use VM image name to find the image.
+     * @return Use VM image name to find the image.
      * 
-    */
+     */
     public Optional<String> imageName() {
         return Optional.ofNullable(this.imageName);
     }
     /**
-     * The name of the Google Cloud project that this VM image belongs to.
+     * @return The name of the Google Cloud project that this VM image belongs to.
      * Format: projects/{project_id}
      * 
-    */
+     */
     public String project() {
         return this.project;
     }

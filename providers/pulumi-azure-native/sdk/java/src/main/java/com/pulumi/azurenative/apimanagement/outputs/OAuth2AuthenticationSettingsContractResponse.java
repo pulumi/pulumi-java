@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class OAuth2AuthenticationSettingsContractResponse {
     /**
-     * OAuth authorization server identifier.
+     * @return OAuth authorization server identifier.
      * 
      */
     private final @Nullable String authorizationServerId;
     /**
-     * operations scope.
+     * @return operations scope.
      * 
      */
     private final @Nullable String scope;
@@ -31,16 +31,16 @@ public final class OAuth2AuthenticationSettingsContractResponse {
     }
 
     /**
-     * OAuth authorization server identifier.
+     * @return OAuth authorization server identifier.
      * 
-    */
+     */
     public Optional<String> authorizationServerId() {
         return Optional.ofNullable(this.authorizationServerId);
     }
     /**
-     * operations scope.
+     * @return operations scope.
      * 
-    */
+     */
     public Optional<String> scope() {
         return Optional.ofNullable(this.scope);
     }

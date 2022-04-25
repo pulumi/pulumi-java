@@ -26,6 +26,10 @@ public final class GoogleCloudChannelV1CommitmentSettingsArgs extends com.pulumi
     @Import(name="renewalSettings")
     private @Nullable Output<GoogleCloudChannelV1RenewalSettingsArgs> renewalSettings;
 
+    /**
+     * @return Optional. Renewal settings applicable for a commitment-based Offer.
+     * 
+     */
     public Optional<Output<GoogleCloudChannelV1RenewalSettingsArgs>> renewalSettings() {
         return Optional.ofNullable(this.renewalSettings);
     }
@@ -54,11 +58,23 @@ public final class GoogleCloudChannelV1CommitmentSettingsArgs extends com.pulumi
             $ = new GoogleCloudChannelV1CommitmentSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param renewalSettings Optional. Renewal settings applicable for a commitment-based Offer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder renewalSettings(@Nullable Output<GoogleCloudChannelV1RenewalSettingsArgs> renewalSettings) {
             $.renewalSettings = renewalSettings;
             return this;
         }
 
+        /**
+         * @param renewalSettings Optional. Renewal settings applicable for a commitment-based Offer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder renewalSettings(GoogleCloudChannelV1RenewalSettingsArgs renewalSettings) {
             return renewalSettings(Output.of(renewalSettings));
         }

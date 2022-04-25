@@ -32,6 +32,10 @@ public final class ApplicationPropertiesArgs extends com.pulumi.resources.Resour
     @Import(name="applicationType")
     private @Nullable Output<String> applicationType;
 
+    /**
+     * @return The application type.
+     * 
+     */
     public Optional<Output<String>> applicationType() {
         return Optional.ofNullable(this.applicationType);
     }
@@ -43,6 +47,10 @@ public final class ApplicationPropertiesArgs extends com.pulumi.resources.Resour
     @Import(name="computeProfile")
     private @Nullable Output<ComputeProfileArgs> computeProfile;
 
+    /**
+     * @return The list of roles in the cluster.
+     * 
+     */
     public Optional<Output<ComputeProfileArgs>> computeProfile() {
         return Optional.ofNullable(this.computeProfile);
     }
@@ -54,6 +62,10 @@ public final class ApplicationPropertiesArgs extends com.pulumi.resources.Resour
     @Import(name="errors")
     private @Nullable Output<List<ErrorsArgs>> errors;
 
+    /**
+     * @return The list of errors.
+     * 
+     */
     public Optional<Output<List<ErrorsArgs>>> errors() {
         return Optional.ofNullable(this.errors);
     }
@@ -65,6 +77,10 @@ public final class ApplicationPropertiesArgs extends com.pulumi.resources.Resour
     @Import(name="httpsEndpoints")
     private @Nullable Output<List<ApplicationGetHttpsEndpointArgs>> httpsEndpoints;
 
+    /**
+     * @return The list of application HTTPS endpoints.
+     * 
+     */
     public Optional<Output<List<ApplicationGetHttpsEndpointArgs>>> httpsEndpoints() {
         return Optional.ofNullable(this.httpsEndpoints);
     }
@@ -76,6 +92,10 @@ public final class ApplicationPropertiesArgs extends com.pulumi.resources.Resour
     @Import(name="installScriptActions")
     private @Nullable Output<List<RuntimeScriptActionArgs>> installScriptActions;
 
+    /**
+     * @return The list of install script actions.
+     * 
+     */
     public Optional<Output<List<RuntimeScriptActionArgs>>> installScriptActions() {
         return Optional.ofNullable(this.installScriptActions);
     }
@@ -87,6 +107,10 @@ public final class ApplicationPropertiesArgs extends com.pulumi.resources.Resour
     @Import(name="sshEndpoints")
     private @Nullable Output<List<ApplicationGetEndpointArgs>> sshEndpoints;
 
+    /**
+     * @return The list of application SSH endpoints.
+     * 
+     */
     public Optional<Output<List<ApplicationGetEndpointArgs>>> sshEndpoints() {
         return Optional.ofNullable(this.sshEndpoints);
     }
@@ -98,6 +122,10 @@ public final class ApplicationPropertiesArgs extends com.pulumi.resources.Resour
     @Import(name="uninstallScriptActions")
     private @Nullable Output<List<RuntimeScriptActionArgs>> uninstallScriptActions;
 
+    /**
+     * @return The list of uninstall script actions.
+     * 
+     */
     public Optional<Output<List<RuntimeScriptActionArgs>>> uninstallScriptActions() {
         return Optional.ofNullable(this.uninstallScriptActions);
     }
@@ -132,85 +160,199 @@ public final class ApplicationPropertiesArgs extends com.pulumi.resources.Resour
             $ = new ApplicationPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param applicationType The application type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationType(@Nullable Output<String> applicationType) {
             $.applicationType = applicationType;
             return this;
         }
 
+        /**
+         * @param applicationType The application type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationType(String applicationType) {
             return applicationType(Output.of(applicationType));
         }
 
+        /**
+         * @param computeProfile The list of roles in the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder computeProfile(@Nullable Output<ComputeProfileArgs> computeProfile) {
             $.computeProfile = computeProfile;
             return this;
         }
 
+        /**
+         * @param computeProfile The list of roles in the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder computeProfile(ComputeProfileArgs computeProfile) {
             return computeProfile(Output.of(computeProfile));
         }
 
+        /**
+         * @param errors The list of errors.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errors(@Nullable Output<List<ErrorsArgs>> errors) {
             $.errors = errors;
             return this;
         }
 
+        /**
+         * @param errors The list of errors.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errors(List<ErrorsArgs> errors) {
             return errors(Output.of(errors));
         }
 
+        /**
+         * @param errors The list of errors.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errors(ErrorsArgs... errors) {
             return errors(List.of(errors));
         }
 
+        /**
+         * @param httpsEndpoints The list of application HTTPS endpoints.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpsEndpoints(@Nullable Output<List<ApplicationGetHttpsEndpointArgs>> httpsEndpoints) {
             $.httpsEndpoints = httpsEndpoints;
             return this;
         }
 
+        /**
+         * @param httpsEndpoints The list of application HTTPS endpoints.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpsEndpoints(List<ApplicationGetHttpsEndpointArgs> httpsEndpoints) {
             return httpsEndpoints(Output.of(httpsEndpoints));
         }
 
+        /**
+         * @param httpsEndpoints The list of application HTTPS endpoints.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpsEndpoints(ApplicationGetHttpsEndpointArgs... httpsEndpoints) {
             return httpsEndpoints(List.of(httpsEndpoints));
         }
 
+        /**
+         * @param installScriptActions The list of install script actions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder installScriptActions(@Nullable Output<List<RuntimeScriptActionArgs>> installScriptActions) {
             $.installScriptActions = installScriptActions;
             return this;
         }
 
+        /**
+         * @param installScriptActions The list of install script actions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder installScriptActions(List<RuntimeScriptActionArgs> installScriptActions) {
             return installScriptActions(Output.of(installScriptActions));
         }
 
+        /**
+         * @param installScriptActions The list of install script actions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder installScriptActions(RuntimeScriptActionArgs... installScriptActions) {
             return installScriptActions(List.of(installScriptActions));
         }
 
+        /**
+         * @param sshEndpoints The list of application SSH endpoints.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sshEndpoints(@Nullable Output<List<ApplicationGetEndpointArgs>> sshEndpoints) {
             $.sshEndpoints = sshEndpoints;
             return this;
         }
 
+        /**
+         * @param sshEndpoints The list of application SSH endpoints.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sshEndpoints(List<ApplicationGetEndpointArgs> sshEndpoints) {
             return sshEndpoints(Output.of(sshEndpoints));
         }
 
+        /**
+         * @param sshEndpoints The list of application SSH endpoints.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sshEndpoints(ApplicationGetEndpointArgs... sshEndpoints) {
             return sshEndpoints(List.of(sshEndpoints));
         }
 
+        /**
+         * @param uninstallScriptActions The list of uninstall script actions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uninstallScriptActions(@Nullable Output<List<RuntimeScriptActionArgs>> uninstallScriptActions) {
             $.uninstallScriptActions = uninstallScriptActions;
             return this;
         }
 
+        /**
+         * @param uninstallScriptActions The list of uninstall script actions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uninstallScriptActions(List<RuntimeScriptActionArgs> uninstallScriptActions) {
             return uninstallScriptActions(Output.of(uninstallScriptActions));
         }
 
+        /**
+         * @param uninstallScriptActions The list of uninstall script actions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uninstallScriptActions(RuntimeScriptActionArgs... uninstallScriptActions) {
             return uninstallScriptActions(List.of(uninstallScriptActions));
         }

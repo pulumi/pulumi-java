@@ -12,13 +12,13 @@ import javax.annotation.Nullable;
 @CustomType
 public final class InstanceTemplateNetworkInterfaceAccessConfig {
     /**
-     * The IP address that will be 1:1 mapped to the instance&#39;s
+     * @return The IP address that will be 1:1 mapped to the instance&#39;s
      * network ip. If not given, one will be generated.
      * 
      */
     private final @Nullable String natIp;
     /**
-     * The service-level to be provided for IPv6 traffic when the
+     * @return The service-level to be provided for IPv6 traffic when the
      * subnet has an external subnet. Only PREMIUM tier is valid for IPv6.
      * 
      */
@@ -36,18 +36,18 @@ public final class InstanceTemplateNetworkInterfaceAccessConfig {
     }
 
     /**
-     * The IP address that will be 1:1 mapped to the instance&#39;s
+     * @return The IP address that will be 1:1 mapped to the instance&#39;s
      * network ip. If not given, one will be generated.
      * 
-    */
+     */
     public Optional<String> natIp() {
         return Optional.ofNullable(this.natIp);
     }
     /**
-     * The service-level to be provided for IPv6 traffic when the
+     * @return The service-level to be provided for IPv6 traffic when the
      * subnet has an external subnet. Only PREMIUM tier is valid for IPv6.
      * 
-    */
+     */
     public Optional<String> networkTier() {
         return Optional.ofNullable(this.networkTier);
     }

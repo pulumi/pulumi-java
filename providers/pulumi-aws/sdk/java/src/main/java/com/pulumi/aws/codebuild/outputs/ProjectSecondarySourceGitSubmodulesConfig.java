@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class ProjectSecondarySourceGitSubmodulesConfig {
     /**
-     * Whether to fetch Git submodules for the AWS CodeBuild build project.
+     * @return Whether to fetch Git submodules for the AWS CodeBuild build project.
      * 
      */
     private final Boolean fetchSubmodules;
@@ -21,9 +21,9 @@ public final class ProjectSecondarySourceGitSubmodulesConfig {
     }
 
     /**
-     * Whether to fetch Git submodules for the AWS CodeBuild build project.
+     * @return Whether to fetch Git submodules for the AWS CodeBuild build project.
      * 
-    */
+     */
     public Boolean fetchSubmodules() {
         return this.fetchSubmodules;
     }

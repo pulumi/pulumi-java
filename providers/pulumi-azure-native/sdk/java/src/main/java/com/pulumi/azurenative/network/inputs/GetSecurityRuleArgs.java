@@ -19,6 +19,10 @@ public final class GetSecurityRuleArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="networkSecurityGroupName", required=true)
     private String networkSecurityGroupName;
 
+    /**
+     * @return The name of the network security group.
+     * 
+     */
     public String networkSecurityGroupName() {
         return this.networkSecurityGroupName;
     }
@@ -30,6 +34,10 @@ public final class GetSecurityRuleArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetSecurityRuleArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="securityRuleName", required=true)
     private String securityRuleName;
 
+    /**
+     * @return The name of the security rule.
+     * 
+     */
     public String securityRuleName() {
         return this.securityRuleName;
     }
@@ -71,16 +83,34 @@ public final class GetSecurityRuleArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetSecurityRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param networkSecurityGroupName The name of the network security group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkSecurityGroupName(String networkSecurityGroupName) {
             $.networkSecurityGroupName = networkSecurityGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param securityRuleName The name of the security rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityRuleName(String securityRuleName) {
             $.securityRuleName = securityRuleName;
             return this;

@@ -26,6 +26,10 @@ public final class CognitiveServicesAccountApiPropertiesResponse extends com.pul
     @Import(name="aadClientId")
     private @Nullable String aadClientId;
 
+    /**
+     * @return (Metrics Advisor Only) The Azure AD Client Id (Application Id).
+     * 
+     */
     public Optional<String> aadClientId() {
         return Optional.ofNullable(this.aadClientId);
     }
@@ -37,6 +41,10 @@ public final class CognitiveServicesAccountApiPropertiesResponse extends com.pul
     @Import(name="aadTenantId")
     private @Nullable String aadTenantId;
 
+    /**
+     * @return (Metrics Advisor Only) The Azure AD Tenant Id.
+     * 
+     */
     public Optional<String> aadTenantId() {
         return Optional.ofNullable(this.aadTenantId);
     }
@@ -48,6 +56,10 @@ public final class CognitiveServicesAccountApiPropertiesResponse extends com.pul
     @Import(name="eventHubConnectionString")
     private @Nullable String eventHubConnectionString;
 
+    /**
+     * @return (Personalization Only) The flag to enable statistics of Bing Search.
+     * 
+     */
     public Optional<String> eventHubConnectionString() {
         return Optional.ofNullable(this.eventHubConnectionString);
     }
@@ -59,6 +71,10 @@ public final class CognitiveServicesAccountApiPropertiesResponse extends com.pul
     @Import(name="qnaAzureSearchEndpointId")
     private @Nullable String qnaAzureSearchEndpointId;
 
+    /**
+     * @return (QnAMaker Only) The Azure Search endpoint id of QnAMaker.
+     * 
+     */
     public Optional<String> qnaAzureSearchEndpointId() {
         return Optional.ofNullable(this.qnaAzureSearchEndpointId);
     }
@@ -70,6 +86,10 @@ public final class CognitiveServicesAccountApiPropertiesResponse extends com.pul
     @Import(name="qnaAzureSearchEndpointKey")
     private @Nullable String qnaAzureSearchEndpointKey;
 
+    /**
+     * @return (QnAMaker Only) The Azure Search endpoint key of QnAMaker.
+     * 
+     */
     public Optional<String> qnaAzureSearchEndpointKey() {
         return Optional.ofNullable(this.qnaAzureSearchEndpointKey);
     }
@@ -81,6 +101,10 @@ public final class CognitiveServicesAccountApiPropertiesResponse extends com.pul
     @Import(name="qnaRuntimeEndpoint")
     private @Nullable String qnaRuntimeEndpoint;
 
+    /**
+     * @return (QnAMaker Only) The runtime endpoint of QnAMaker.
+     * 
+     */
     public Optional<String> qnaRuntimeEndpoint() {
         return Optional.ofNullable(this.qnaRuntimeEndpoint);
     }
@@ -92,6 +116,10 @@ public final class CognitiveServicesAccountApiPropertiesResponse extends com.pul
     @Import(name="statisticsEnabled")
     private @Nullable Boolean statisticsEnabled;
 
+    /**
+     * @return (Bing Search Only) The flag to enable statistics of Bing Search.
+     * 
+     */
     public Optional<Boolean> statisticsEnabled() {
         return Optional.ofNullable(this.statisticsEnabled);
     }
@@ -103,6 +131,10 @@ public final class CognitiveServicesAccountApiPropertiesResponse extends com.pul
     @Import(name="storageAccountConnectionString")
     private @Nullable String storageAccountConnectionString;
 
+    /**
+     * @return (Personalization Only) The storage account connection string.
+     * 
+     */
     public Optional<String> storageAccountConnectionString() {
         return Optional.ofNullable(this.storageAccountConnectionString);
     }
@@ -114,6 +146,10 @@ public final class CognitiveServicesAccountApiPropertiesResponse extends com.pul
     @Import(name="superUser")
     private @Nullable String superUser;
 
+    /**
+     * @return (Metrics Advisor Only) The super user of Metrics Advisor.
+     * 
+     */
     public Optional<String> superUser() {
         return Optional.ofNullable(this.superUser);
     }
@@ -125,6 +161,10 @@ public final class CognitiveServicesAccountApiPropertiesResponse extends com.pul
     @Import(name="websiteName")
     private @Nullable String websiteName;
 
+    /**
+     * @return (Metrics Advisor Only) The website name of Metrics Advisor.
+     * 
+     */
     public Optional<String> websiteName() {
         return Optional.ofNullable(this.websiteName);
     }
@@ -162,51 +202,111 @@ public final class CognitiveServicesAccountApiPropertiesResponse extends com.pul
             $ = new CognitiveServicesAccountApiPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param aadClientId (Metrics Advisor Only) The Azure AD Client Id (Application Id).
+         * 
+         * @return builder
+         * 
+         */
         public Builder aadClientId(@Nullable String aadClientId) {
             $.aadClientId = aadClientId;
             return this;
         }
 
+        /**
+         * @param aadTenantId (Metrics Advisor Only) The Azure AD Tenant Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aadTenantId(@Nullable String aadTenantId) {
             $.aadTenantId = aadTenantId;
             return this;
         }
 
+        /**
+         * @param eventHubConnectionString (Personalization Only) The flag to enable statistics of Bing Search.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventHubConnectionString(@Nullable String eventHubConnectionString) {
             $.eventHubConnectionString = eventHubConnectionString;
             return this;
         }
 
+        /**
+         * @param qnaAzureSearchEndpointId (QnAMaker Only) The Azure Search endpoint id of QnAMaker.
+         * 
+         * @return builder
+         * 
+         */
         public Builder qnaAzureSearchEndpointId(@Nullable String qnaAzureSearchEndpointId) {
             $.qnaAzureSearchEndpointId = qnaAzureSearchEndpointId;
             return this;
         }
 
+        /**
+         * @param qnaAzureSearchEndpointKey (QnAMaker Only) The Azure Search endpoint key of QnAMaker.
+         * 
+         * @return builder
+         * 
+         */
         public Builder qnaAzureSearchEndpointKey(@Nullable String qnaAzureSearchEndpointKey) {
             $.qnaAzureSearchEndpointKey = qnaAzureSearchEndpointKey;
             return this;
         }
 
+        /**
+         * @param qnaRuntimeEndpoint (QnAMaker Only) The runtime endpoint of QnAMaker.
+         * 
+         * @return builder
+         * 
+         */
         public Builder qnaRuntimeEndpoint(@Nullable String qnaRuntimeEndpoint) {
             $.qnaRuntimeEndpoint = qnaRuntimeEndpoint;
             return this;
         }
 
+        /**
+         * @param statisticsEnabled (Bing Search Only) The flag to enable statistics of Bing Search.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statisticsEnabled(@Nullable Boolean statisticsEnabled) {
             $.statisticsEnabled = statisticsEnabled;
             return this;
         }
 
+        /**
+         * @param storageAccountConnectionString (Personalization Only) The storage account connection string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountConnectionString(@Nullable String storageAccountConnectionString) {
             $.storageAccountConnectionString = storageAccountConnectionString;
             return this;
         }
 
+        /**
+         * @param superUser (Metrics Advisor Only) The super user of Metrics Advisor.
+         * 
+         * @return builder
+         * 
+         */
         public Builder superUser(@Nullable String superUser) {
             $.superUser = superUser;
             return this;
         }
 
+        /**
+         * @param websiteName (Metrics Advisor Only) The website name of Metrics Advisor.
+         * 
+         * @return builder
+         * 
+         */
         public Builder websiteName(@Nullable String websiteName) {
             $.websiteName = websiteName;
             return this;

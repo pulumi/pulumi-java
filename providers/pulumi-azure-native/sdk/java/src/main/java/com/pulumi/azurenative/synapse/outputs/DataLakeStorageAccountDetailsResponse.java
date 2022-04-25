@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DataLakeStorageAccountDetailsResponse {
     /**
-     * Account URL
+     * @return Account URL
      * 
      */
     private final @Nullable String accountUrl;
     /**
-     * Filesystem name
+     * @return Filesystem name
      * 
      */
     private final @Nullable String filesystem;
@@ -31,16 +31,16 @@ public final class DataLakeStorageAccountDetailsResponse {
     }
 
     /**
-     * Account URL
+     * @return Account URL
      * 
-    */
+     */
     public Optional<String> accountUrl() {
         return Optional.ofNullable(this.accountUrl);
     }
     /**
-     * Filesystem name
+     * @return Filesystem name
      * 
-    */
+     */
     public Optional<String> filesystem() {
         return Optional.ofNullable(this.filesystem);
     }

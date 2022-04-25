@@ -21,6 +21,10 @@ public final class AssetModelTransform extends com.pulumi.resources.InvokeArgs {
     @Import(name="expression", required=true)
     private String expression;
 
+    /**
+     * @return The mathematical expression that defines the transformation function. You can specify up to 10 functions per expression.
+     * 
+     */
     public String expression() {
         return this.expression;
     }
@@ -32,6 +36,10 @@ public final class AssetModelTransform extends com.pulumi.resources.InvokeArgs {
     @Import(name="variables", required=true)
     private List<AssetModelExpressionVariable> variables;
 
+    /**
+     * @return The list of variables used in the expression.
+     * 
+     */
     public List<AssetModelExpressionVariable> variables() {
         return this.variables;
     }
@@ -61,16 +69,34 @@ public final class AssetModelTransform extends com.pulumi.resources.InvokeArgs {
             $ = new AssetModelTransform(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expression The mathematical expression that defines the transformation function. You can specify up to 10 functions per expression.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expression(String expression) {
             $.expression = expression;
             return this;
         }
 
+        /**
+         * @param variables The list of variables used in the expression.
+         * 
+         * @return builder
+         * 
+         */
         public Builder variables(List<AssetModelExpressionVariable> variables) {
             $.variables = variables;
             return this;
         }
 
+        /**
+         * @param variables The list of variables used in the expression.
+         * 
+         * @return builder
+         * 
+         */
         public Builder variables(AssetModelExpressionVariable... variables) {
             return variables(List.of(variables));
         }

@@ -23,6 +23,10 @@ public final class SoftwareRecipeArtifactGcsResponse extends com.pulumi.resource
     @Import(name="bucket", required=true)
     private String bucket;
 
+    /**
+     * @return Bucket of the Google Cloud Storage object. Given an example URL: `https://storage.googleapis.com/my-bucket/foo/bar#1234567` this value would be `my-bucket`.
+     * 
+     */
     public String bucket() {
         return this.bucket;
     }
@@ -34,6 +38,10 @@ public final class SoftwareRecipeArtifactGcsResponse extends com.pulumi.resource
     @Import(name="generation", required=true)
     private String generation;
 
+    /**
+     * @return Must be provided if allow_insecure is false. Generation number of the Google Cloud Storage object. `https://storage.googleapis.com/my-bucket/foo/bar#1234567` this value would be `1234567`.
+     * 
+     */
     public String generation() {
         return this.generation;
     }
@@ -45,6 +53,10 @@ public final class SoftwareRecipeArtifactGcsResponse extends com.pulumi.resource
     @Import(name="object", required=true)
     private String object;
 
+    /**
+     * @return Name of the Google Cloud Storage object. As specified [here] (https://cloud.google.com/storage/docs/naming#objectnames) Given an example URL: `https://storage.googleapis.com/my-bucket/foo/bar#1234567` this value would be `foo/bar`.
+     * 
+     */
     public String object() {
         return this.object;
     }
@@ -75,16 +87,34 @@ public final class SoftwareRecipeArtifactGcsResponse extends com.pulumi.resource
             $ = new SoftwareRecipeArtifactGcsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bucket Bucket of the Google Cloud Storage object. Given an example URL: `https://storage.googleapis.com/my-bucket/foo/bar#1234567` this value would be `my-bucket`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucket(String bucket) {
             $.bucket = bucket;
             return this;
         }
 
+        /**
+         * @param generation Must be provided if allow_insecure is false. Generation number of the Google Cloud Storage object. `https://storage.googleapis.com/my-bucket/foo/bar#1234567` this value would be `1234567`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder generation(String generation) {
             $.generation = generation;
             return this;
         }
 
+        /**
+         * @param object Name of the Google Cloud Storage object. As specified [here] (https://cloud.google.com/storage/docs/naming#objectnames) Given an example URL: `https://storage.googleapis.com/my-bucket/foo/bar#1234567` this value would be `foo/bar`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder object(String object) {
             $.object = object;
             return this;

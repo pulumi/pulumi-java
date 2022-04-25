@@ -23,6 +23,10 @@ public final class ToolResultsExecutionResponse extends com.pulumi.resources.Inv
     @Import(name="executionId", required=true)
     private String executionId;
 
+    /**
+     * @return A tool results execution ID.
+     * 
+     */
     public String executionId() {
         return this.executionId;
     }
@@ -34,6 +38,10 @@ public final class ToolResultsExecutionResponse extends com.pulumi.resources.Inv
     @Import(name="historyId", required=true)
     private String historyId;
 
+    /**
+     * @return A tool results history ID.
+     * 
+     */
     public String historyId() {
         return this.historyId;
     }
@@ -45,6 +53,10 @@ public final class ToolResultsExecutionResponse extends com.pulumi.resources.Inv
     @Import(name="project", required=true)
     private String project;
 
+    /**
+     * @return The cloud project that owns the tool results execution.
+     * 
+     */
     public String project() {
         return this.project;
     }
@@ -75,16 +87,34 @@ public final class ToolResultsExecutionResponse extends com.pulumi.resources.Inv
             $ = new ToolResultsExecutionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param executionId A tool results execution ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder executionId(String executionId) {
             $.executionId = executionId;
             return this;
         }
 
+        /**
+         * @param historyId A tool results history ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder historyId(String historyId) {
             $.historyId = historyId;
             return this;
         }
 
+        /**
+         * @param project The cloud project that owns the tool results execution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             $.project = project;
             return this;

@@ -25,6 +25,10 @@ public final class RepositoryRefDefinitionResponse extends com.pulumi.resources.
     @Import(name="branch")
     private @Nullable String branch;
 
+    /**
+     * @return The git repository branch name to checkout.
+     * 
+     */
     public Optional<String> branch() {
         return Optional.ofNullable(this.branch);
     }
@@ -36,6 +40,10 @@ public final class RepositoryRefDefinitionResponse extends com.pulumi.resources.
     @Import(name="commit")
     private @Nullable String commit;
 
+    /**
+     * @return The commit SHA to checkout. This value must be combined with the branch name to be valid. This takes precedence over semver.
+     * 
+     */
     public Optional<String> commit() {
         return Optional.ofNullable(this.commit);
     }
@@ -47,6 +55,10 @@ public final class RepositoryRefDefinitionResponse extends com.pulumi.resources.
     @Import(name="semver")
     private @Nullable String semver;
 
+    /**
+     * @return The semver range used to match against git repository tags. This takes precedence over tag.
+     * 
+     */
     public Optional<String> semver() {
         return Optional.ofNullable(this.semver);
     }
@@ -58,6 +70,10 @@ public final class RepositoryRefDefinitionResponse extends com.pulumi.resources.
     @Import(name="tag")
     private @Nullable String tag;
 
+    /**
+     * @return The git repository tag name to checkout. This takes precedence over branch.
+     * 
+     */
     public Optional<String> tag() {
         return Optional.ofNullable(this.tag);
     }
@@ -89,21 +105,45 @@ public final class RepositoryRefDefinitionResponse extends com.pulumi.resources.
             $ = new RepositoryRefDefinitionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param branch The git repository branch name to checkout.
+         * 
+         * @return builder
+         * 
+         */
         public Builder branch(@Nullable String branch) {
             $.branch = branch;
             return this;
         }
 
+        /**
+         * @param commit The commit SHA to checkout. This value must be combined with the branch name to be valid. This takes precedence over semver.
+         * 
+         * @return builder
+         * 
+         */
         public Builder commit(@Nullable String commit) {
             $.commit = commit;
             return this;
         }
 
+        /**
+         * @param semver The semver range used to match against git repository tags. This takes precedence over tag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder semver(@Nullable String semver) {
             $.semver = semver;
             return this;
         }
 
+        /**
+         * @param tag The git repository tag name to checkout. This takes precedence over branch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tag(@Nullable String tag) {
             $.tag = tag;
             return this;

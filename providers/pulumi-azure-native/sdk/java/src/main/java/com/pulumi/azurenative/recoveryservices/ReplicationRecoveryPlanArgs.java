@@ -23,6 +23,10 @@ public final class ReplicationRecoveryPlanArgs extends com.pulumi.resources.Reso
     @Import(name="properties", required=true)
     private Output<CreateRecoveryPlanInputPropertiesArgs> properties;
 
+    /**
+     * @return Recovery plan creation properties.
+     * 
+     */
     public Output<CreateRecoveryPlanInputPropertiesArgs> properties() {
         return this.properties;
     }
@@ -34,6 +38,10 @@ public final class ReplicationRecoveryPlanArgs extends com.pulumi.resources.Reso
     @Import(name="recoveryPlanName")
     private @Nullable Output<String> recoveryPlanName;
 
+    /**
+     * @return Recovery plan name.
+     * 
+     */
     public Optional<Output<String>> recoveryPlanName() {
         return Optional.ofNullable(this.recoveryPlanName);
     }
@@ -45,6 +53,10 @@ public final class ReplicationRecoveryPlanArgs extends com.pulumi.resources.Reso
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group where the recovery services vault is present.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -56,6 +68,10 @@ public final class ReplicationRecoveryPlanArgs extends com.pulumi.resources.Reso
     @Import(name="resourceName", required=true)
     private Output<String> resourceName;
 
+    /**
+     * @return The name of the recovery services vault.
+     * 
+     */
     public Output<String> resourceName() {
         return this.resourceName;
     }
@@ -87,38 +103,86 @@ public final class ReplicationRecoveryPlanArgs extends com.pulumi.resources.Reso
             $ = new ReplicationRecoveryPlanArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param properties Recovery plan creation properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Output<CreateRecoveryPlanInputPropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Recovery plan creation properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(CreateRecoveryPlanInputPropertiesArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param recoveryPlanName Recovery plan name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryPlanName(@Nullable Output<String> recoveryPlanName) {
             $.recoveryPlanName = recoveryPlanName;
             return this;
         }
 
+        /**
+         * @param recoveryPlanName Recovery plan name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryPlanName(String recoveryPlanName) {
             return recoveryPlanName(Output.of(recoveryPlanName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group where the recovery services vault is present.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group where the recovery services vault is present.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param resourceName The name of the recovery services vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(Output<String> resourceName) {
             $.resourceName = resourceName;
             return this;
         }
 
+        /**
+         * @param resourceName The name of the recovery services vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(String resourceName) {
             return resourceName(Output.of(resourceName));
         }

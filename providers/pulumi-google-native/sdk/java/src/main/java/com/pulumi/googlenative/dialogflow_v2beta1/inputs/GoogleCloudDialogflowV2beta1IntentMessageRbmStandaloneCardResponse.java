@@ -24,6 +24,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardRes
     @Import(name="cardContent", required=true)
     private GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse cardContent;
 
+    /**
+     * @return Card content.
+     * 
+     */
     public GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse cardContent() {
         return this.cardContent;
     }
@@ -35,6 +39,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardRes
     @Import(name="cardOrientation", required=true)
     private String cardOrientation;
 
+    /**
+     * @return Orientation of the card.
+     * 
+     */
     public String cardOrientation() {
         return this.cardOrientation;
     }
@@ -46,6 +54,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardRes
     @Import(name="thumbnailImageAlignment", required=true)
     private String thumbnailImageAlignment;
 
+    /**
+     * @return Required if orientation is horizontal. Image preview alignment for standalone cards with horizontal layout.
+     * 
+     */
     public String thumbnailImageAlignment() {
         return this.thumbnailImageAlignment;
     }
@@ -76,16 +88,34 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardRes
             $ = new GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cardContent Card content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cardContent(GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse cardContent) {
             $.cardContent = cardContent;
             return this;
         }
 
+        /**
+         * @param cardOrientation Orientation of the card.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cardOrientation(String cardOrientation) {
             $.cardOrientation = cardOrientation;
             return this;
         }
 
+        /**
+         * @param thumbnailImageAlignment Required if orientation is horizontal. Image preview alignment for standalone cards with horizontal layout.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thumbnailImageAlignment(String thumbnailImageAlignment) {
             $.thumbnailImageAlignment = thumbnailImageAlignment;
             return this;

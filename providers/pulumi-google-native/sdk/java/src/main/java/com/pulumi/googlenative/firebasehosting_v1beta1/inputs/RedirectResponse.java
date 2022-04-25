@@ -24,6 +24,10 @@ public final class RedirectResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="glob", required=true)
     private String glob;
 
+    /**
+     * @return The user-supplied [glob](https://firebase.google.com/docs/hosting/full-config#glob_pattern_matching) to match against the request URL path.
+     * 
+     */
     public String glob() {
         return this.glob;
     }
@@ -35,6 +39,10 @@ public final class RedirectResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="location", required=true)
     private String location;
 
+    /**
+     * @return The value to put in the HTTP location header of the response. The location can contain capture group values from the pattern using a `:` prefix to identify the segment and an optional `*` to capture the rest of the URL. For example: &#34;glob&#34;: &#34;/:capture*&#34;, &#34;statusCode&#34;: 301, &#34;location&#34;: &#34;https://example.com/foo/:capture&#34;
+     * 
+     */
     public String location() {
         return this.location;
     }
@@ -46,6 +54,10 @@ public final class RedirectResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="regex", required=true)
     private String regex;
 
+    /**
+     * @return The user-supplied RE2 regular expression to match against the request URL path.
+     * 
+     */
     public String regex() {
         return this.regex;
     }
@@ -57,6 +69,10 @@ public final class RedirectResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="statusCode", required=true)
     private Integer statusCode;
 
+    /**
+     * @return The status HTTP code to return in the response. It must be a valid 3xx status code.
+     * 
+     */
     public Integer statusCode() {
         return this.statusCode;
     }
@@ -88,21 +104,45 @@ public final class RedirectResponse extends com.pulumi.resources.InvokeArgs {
             $ = new RedirectResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param glob The user-supplied [glob](https://firebase.google.com/docs/hosting/full-config#glob_pattern_matching) to match against the request URL path.
+         * 
+         * @return builder
+         * 
+         */
         public Builder glob(String glob) {
             $.glob = glob;
             return this;
         }
 
+        /**
+         * @param location The value to put in the HTTP location header of the response. The location can contain capture group values from the pattern using a `:` prefix to identify the segment and an optional `*` to capture the rest of the URL. For example: &#34;glob&#34;: &#34;/:capture*&#34;, &#34;statusCode&#34;: 301, &#34;location&#34;: &#34;https://example.com/foo/:capture&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param regex The user-supplied RE2 regular expression to match against the request URL path.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regex(String regex) {
             $.regex = regex;
             return this;
         }
 
+        /**
+         * @param statusCode The status HTTP code to return in the response. It must be a valid 3xx status code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statusCode(Integer statusCode) {
             $.statusCode = statusCode;
             return this;

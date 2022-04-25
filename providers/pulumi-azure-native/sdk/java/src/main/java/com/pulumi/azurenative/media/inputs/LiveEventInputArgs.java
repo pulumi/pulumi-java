@@ -31,6 +31,10 @@ public final class LiveEventInputArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="accessControl")
     private @Nullable Output<LiveEventInputAccessControlArgs> accessControl;
 
+    /**
+     * @return Access control for live event input.
+     * 
+     */
     public Optional<Output<LiveEventInputAccessControlArgs>> accessControl() {
         return Optional.ofNullable(this.accessControl);
     }
@@ -42,6 +46,10 @@ public final class LiveEventInputArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="accessToken")
     private @Nullable Output<String> accessToken;
 
+    /**
+     * @return A UUID in string form to uniquely identify the stream. This can be specified at creation time but cannot be updated. If omitted, the service will generate a unique value.
+     * 
+     */
     public Optional<Output<String>> accessToken() {
         return Optional.ofNullable(this.accessToken);
     }
@@ -53,6 +61,10 @@ public final class LiveEventInputArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="endpoints")
     private @Nullable Output<List<LiveEventEndpointArgs>> endpoints;
 
+    /**
+     * @return The input endpoints for the live event.
+     * 
+     */
     public Optional<Output<List<LiveEventEndpointArgs>>> endpoints() {
         return Optional.ofNullable(this.endpoints);
     }
@@ -64,6 +76,10 @@ public final class LiveEventInputArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="keyFrameIntervalDuration")
     private @Nullable Output<String> keyFrameIntervalDuration;
 
+    /**
+     * @return ISO 8601 time duration of the key frame interval duration of the input. This value sets the EXT-X-TARGETDURATION property in the HLS output. For example, use PT2S to indicate 2 seconds. Leave the value empty for encoding live events.
+     * 
+     */
     public Optional<Output<String>> keyFrameIntervalDuration() {
         return Optional.ofNullable(this.keyFrameIntervalDuration);
     }
@@ -75,6 +91,10 @@ public final class LiveEventInputArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="streamingProtocol", required=true)
     private Output<Either<String,LiveEventInputProtocol>> streamingProtocol;
 
+    /**
+     * @return The input protocol for the live event. This is specified at creation time and cannot be updated.
+     * 
+     */
     public Output<Either<String,LiveEventInputProtocol>> streamingProtocol() {
         return this.streamingProtocol;
     }
@@ -107,59 +127,137 @@ public final class LiveEventInputArgs extends com.pulumi.resources.ResourceArgs 
             $ = new LiveEventInputArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessControl Access control for live event input.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessControl(@Nullable Output<LiveEventInputAccessControlArgs> accessControl) {
             $.accessControl = accessControl;
             return this;
         }
 
+        /**
+         * @param accessControl Access control for live event input.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessControl(LiveEventInputAccessControlArgs accessControl) {
             return accessControl(Output.of(accessControl));
         }
 
+        /**
+         * @param accessToken A UUID in string form to uniquely identify the stream. This can be specified at creation time but cannot be updated. If omitted, the service will generate a unique value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessToken(@Nullable Output<String> accessToken) {
             $.accessToken = accessToken;
             return this;
         }
 
+        /**
+         * @param accessToken A UUID in string form to uniquely identify the stream. This can be specified at creation time but cannot be updated. If omitted, the service will generate a unique value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessToken(String accessToken) {
             return accessToken(Output.of(accessToken));
         }
 
+        /**
+         * @param endpoints The input endpoints for the live event.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoints(@Nullable Output<List<LiveEventEndpointArgs>> endpoints) {
             $.endpoints = endpoints;
             return this;
         }
 
+        /**
+         * @param endpoints The input endpoints for the live event.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoints(List<LiveEventEndpointArgs> endpoints) {
             return endpoints(Output.of(endpoints));
         }
 
+        /**
+         * @param endpoints The input endpoints for the live event.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoints(LiveEventEndpointArgs... endpoints) {
             return endpoints(List.of(endpoints));
         }
 
+        /**
+         * @param keyFrameIntervalDuration ISO 8601 time duration of the key frame interval duration of the input. This value sets the EXT-X-TARGETDURATION property in the HLS output. For example, use PT2S to indicate 2 seconds. Leave the value empty for encoding live events.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyFrameIntervalDuration(@Nullable Output<String> keyFrameIntervalDuration) {
             $.keyFrameIntervalDuration = keyFrameIntervalDuration;
             return this;
         }
 
+        /**
+         * @param keyFrameIntervalDuration ISO 8601 time duration of the key frame interval duration of the input. This value sets the EXT-X-TARGETDURATION property in the HLS output. For example, use PT2S to indicate 2 seconds. Leave the value empty for encoding live events.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyFrameIntervalDuration(String keyFrameIntervalDuration) {
             return keyFrameIntervalDuration(Output.of(keyFrameIntervalDuration));
         }
 
+        /**
+         * @param streamingProtocol The input protocol for the live event. This is specified at creation time and cannot be updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streamingProtocol(Output<Either<String,LiveEventInputProtocol>> streamingProtocol) {
             $.streamingProtocol = streamingProtocol;
             return this;
         }
 
+        /**
+         * @param streamingProtocol The input protocol for the live event. This is specified at creation time and cannot be updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streamingProtocol(Either<String,LiveEventInputProtocol> streamingProtocol) {
             return streamingProtocol(Output.of(streamingProtocol));
         }
 
+        /**
+         * @param streamingProtocol The input protocol for the live event. This is specified at creation time and cannot be updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streamingProtocol(String streamingProtocol) {
             return streamingProtocol(Either.ofLeft(streamingProtocol));
         }
 
+        /**
+         * @param streamingProtocol The input protocol for the live event. This is specified at creation time and cannot be updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streamingProtocol(LiveEventInputProtocol streamingProtocol) {
             return streamingProtocol(Either.ofRight(streamingProtocol));
         }

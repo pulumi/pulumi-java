@@ -15,37 +15,37 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetDashboardResult {
     /**
-     * Resource Id
+     * @return Resource Id
      * 
      */
     private final String id;
     /**
-     * The dashboard lenses.
+     * @return The dashboard lenses.
      * 
      */
     private final @Nullable List<DashboardLensResponse> lenses;
     /**
-     * Resource location
+     * @return Resource location
      * 
      */
     private final String location;
     /**
-     * The dashboard metadata.
+     * @return The dashboard metadata.
      * 
      */
     private final @Nullable Map<String,Object> metadata;
     /**
-     * Resource name
+     * @return Resource name
      * 
      */
     private final String name;
     /**
-     * Resource tags
+     * @return Resource tags
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Resource type
+     * @return Resource type
      * 
      */
     private final String type;
@@ -69,51 +69,51 @@ public final class GetDashboardResult {
     }
 
     /**
-     * Resource Id
+     * @return Resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The dashboard lenses.
+     * @return The dashboard lenses.
      * 
-    */
+     */
     public List<DashboardLensResponse> lenses() {
         return this.lenses == null ? List.of() : this.lenses;
     }
     /**
-     * Resource location
+     * @return Resource location
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * The dashboard metadata.
+     * @return The dashboard metadata.
      * 
-    */
+     */
     public Map<String,Object> metadata() {
         return this.metadata == null ? Map.of() : this.metadata;
     }
     /**
-     * Resource name
+     * @return Resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Resource tags
+     * @return Resource tags
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type
+     * @return Resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

@@ -12,13 +12,13 @@ import java.util.Objects;
 @CustomType
 public final class EdgeCacheServiceRouting {
     /**
-     * The list of hostRules to match against. These rules define which hostnames the EdgeCacheService will match against, and which route configurations apply.
+     * @return The list of hostRules to match against. These rules define which hostnames the EdgeCacheService will match against, and which route configurations apply.
      * Structure is documented below.
      * 
      */
     private final List<EdgeCacheServiceRoutingHostRule> hostRules;
     /**
-     * The name of the pathMatcher associated with this hostRule.
+     * @return The name of the pathMatcher associated with this hostRule.
      * 
      */
     private final List<EdgeCacheServiceRoutingPathMatcher> pathMatchers;
@@ -32,17 +32,17 @@ public final class EdgeCacheServiceRouting {
     }
 
     /**
-     * The list of hostRules to match against. These rules define which hostnames the EdgeCacheService will match against, and which route configurations apply.
+     * @return The list of hostRules to match against. These rules define which hostnames the EdgeCacheService will match against, and which route configurations apply.
      * Structure is documented below.
      * 
-    */
+     */
     public List<EdgeCacheServiceRoutingHostRule> hostRules() {
         return this.hostRules;
     }
     /**
-     * The name of the pathMatcher associated with this hostRule.
+     * @return The name of the pathMatcher associated with this hostRule.
      * 
-    */
+     */
     public List<EdgeCacheServiceRoutingPathMatcher> pathMatchers() {
         return this.pathMatchers;
     }

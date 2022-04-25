@@ -21,6 +21,10 @@ public final class IntentFollowUpPromptGetArgs extends com.pulumi.resources.Reso
     @Import(name="prompt", required=true)
     private Output<IntentFollowUpPromptPromptGetArgs> prompt;
 
+    /**
+     * @return Prompts for information from the user. Attributes are documented under prompt.
+     * 
+     */
     public Output<IntentFollowUpPromptPromptGetArgs> prompt() {
         return this.prompt;
     }
@@ -34,6 +38,12 @@ public final class IntentFollowUpPromptGetArgs extends com.pulumi.resources.Reso
     @Import(name="rejectionStatement", required=true)
     private Output<IntentFollowUpPromptRejectionStatementGetArgs> rejectionStatement;
 
+    /**
+     * @return If the user answers &#34;no&#34; to the question defined in the prompt field,
+     * Amazon Lex responds with this statement to acknowledge that the intent was canceled. Attributes are
+     * documented below under statement.
+     * 
+     */
     public Output<IntentFollowUpPromptRejectionStatementGetArgs> rejectionStatement() {
         return this.rejectionStatement;
     }
@@ -63,20 +73,48 @@ public final class IntentFollowUpPromptGetArgs extends com.pulumi.resources.Reso
             $ = new IntentFollowUpPromptGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param prompt Prompts for information from the user. Attributes are documented under prompt.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prompt(Output<IntentFollowUpPromptPromptGetArgs> prompt) {
             $.prompt = prompt;
             return this;
         }
 
+        /**
+         * @param prompt Prompts for information from the user. Attributes are documented under prompt.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prompt(IntentFollowUpPromptPromptGetArgs prompt) {
             return prompt(Output.of(prompt));
         }
 
+        /**
+         * @param rejectionStatement If the user answers &#34;no&#34; to the question defined in the prompt field,
+         * Amazon Lex responds with this statement to acknowledge that the intent was canceled. Attributes are
+         * documented below under statement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rejectionStatement(Output<IntentFollowUpPromptRejectionStatementGetArgs> rejectionStatement) {
             $.rejectionStatement = rejectionStatement;
             return this;
         }
 
+        /**
+         * @param rejectionStatement If the user answers &#34;no&#34; to the question defined in the prompt field,
+         * Amazon Lex responds with this statement to acknowledge that the intent was canceled. Attributes are
+         * documented below under statement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rejectionStatement(IntentFollowUpPromptRejectionStatementGetArgs rejectionStatement) {
             return rejectionStatement(Output.of(rejectionStatement));
         }

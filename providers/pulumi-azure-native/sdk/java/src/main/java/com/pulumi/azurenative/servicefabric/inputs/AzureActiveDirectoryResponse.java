@@ -25,6 +25,10 @@ public final class AzureActiveDirectoryResponse extends com.pulumi.resources.Inv
     @Import(name="clientApplication")
     private @Nullable String clientApplication;
 
+    /**
+     * @return Azure active directory client application id.
+     * 
+     */
     public Optional<String> clientApplication() {
         return Optional.ofNullable(this.clientApplication);
     }
@@ -36,6 +40,10 @@ public final class AzureActiveDirectoryResponse extends com.pulumi.resources.Inv
     @Import(name="clusterApplication")
     private @Nullable String clusterApplication;
 
+    /**
+     * @return Azure active directory cluster application id.
+     * 
+     */
     public Optional<String> clusterApplication() {
         return Optional.ofNullable(this.clusterApplication);
     }
@@ -47,6 +55,10 @@ public final class AzureActiveDirectoryResponse extends com.pulumi.resources.Inv
     @Import(name="tenantId")
     private @Nullable String tenantId;
 
+    /**
+     * @return Azure active directory tenant id.
+     * 
+     */
     public Optional<String> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
@@ -77,16 +89,34 @@ public final class AzureActiveDirectoryResponse extends com.pulumi.resources.Inv
             $ = new AzureActiveDirectoryResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientApplication Azure active directory client application id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientApplication(@Nullable String clientApplication) {
             $.clientApplication = clientApplication;
             return this;
         }
 
+        /**
+         * @param clusterApplication Azure active directory cluster application id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterApplication(@Nullable String clusterApplication) {
             $.clusterApplication = clusterApplication;
             return this;
         }
 
+        /**
+         * @param tenantId Azure active directory tenant id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(@Nullable String tenantId) {
             $.tenantId = tenantId;
             return this;

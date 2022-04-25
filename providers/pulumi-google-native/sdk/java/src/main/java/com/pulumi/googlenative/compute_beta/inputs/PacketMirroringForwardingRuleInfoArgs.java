@@ -22,6 +22,10 @@ public final class PacketMirroringForwardingRuleInfoArgs extends com.pulumi.reso
     @Import(name="url")
     private @Nullable Output<String> url;
 
+    /**
+     * @return Resource URL to the forwarding rule representing the ILB configured as destination of the mirrored traffic.
+     * 
+     */
     public Optional<Output<String>> url() {
         return Optional.ofNullable(this.url);
     }
@@ -50,11 +54,23 @@ public final class PacketMirroringForwardingRuleInfoArgs extends com.pulumi.reso
             $ = new PacketMirroringForwardingRuleInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param url Resource URL to the forwarding rule representing the ILB configured as destination of the mirrored traffic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(@Nullable Output<String> url) {
             $.url = url;
             return this;
         }
 
+        /**
+         * @param url Resource URL to the forwarding rule representing the ILB configured as destination of the mirrored traffic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(String url) {
             return url(Output.of(url));
         }

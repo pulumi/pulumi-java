@@ -12,43 +12,43 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetStaticSiteCustomDomainResult {
     /**
-     * The date and time on which the custom domain was created for the static site.
+     * @return The date and time on which the custom domain was created for the static site.
      * 
      */
     private final String createdOn;
     /**
-     * The domain name for the static site custom domain.
+     * @return The domain name for the static site custom domain.
      * 
      */
     private final String domainName;
     private final String errorMessage;
     /**
-     * Resource Id.
+     * @return Resource Id.
      * 
      */
     private final String id;
     /**
-     * Kind of resource.
+     * @return Kind of resource.
      * 
      */
     private final @Nullable String kind;
     /**
-     * Resource Name.
+     * @return Resource Name.
      * 
      */
     private final String name;
     /**
-     * The status of the custom domain
+     * @return The status of the custom domain
      * 
      */
     private final String status;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
     /**
-     * The TXT record validation token
+     * @return The TXT record validation token
      * 
      */
     private final String validationToken;
@@ -76,16 +76,16 @@ public final class GetStaticSiteCustomDomainResult {
     }
 
     /**
-     * The date and time on which the custom domain was created for the static site.
+     * @return The date and time on which the custom domain was created for the static site.
      * 
-    */
+     */
     public String createdOn() {
         return this.createdOn;
     }
     /**
-     * The domain name for the static site custom domain.
+     * @return The domain name for the static site custom domain.
      * 
-    */
+     */
     public String domainName() {
         return this.domainName;
     }
@@ -93,44 +93,44 @@ public final class GetStaticSiteCustomDomainResult {
         return this.errorMessage;
     }
     /**
-     * Resource Id.
+     * @return Resource Id.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Kind of resource.
+     * @return Kind of resource.
      * 
-    */
+     */
     public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
-     * Resource Name.
+     * @return Resource Name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The status of the custom domain
+     * @return The status of the custom domain
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The TXT record validation token
+     * @return The TXT record validation token
      * 
-    */
+     */
     public String validationToken() {
         return this.validationToken;
     }

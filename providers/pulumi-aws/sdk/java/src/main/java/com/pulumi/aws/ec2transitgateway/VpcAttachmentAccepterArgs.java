@@ -24,6 +24,10 @@ public final class VpcAttachmentAccepterArgs extends com.pulumi.resources.Resour
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Key-value tags for the EC2 Transit Gateway VPC Attachment. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -35,6 +39,10 @@ public final class VpcAttachmentAccepterArgs extends com.pulumi.resources.Resour
     @Import(name="transitGatewayAttachmentId", required=true)
     private Output<String> transitGatewayAttachmentId;
 
+    /**
+     * @return The ID of the EC2 Transit Gateway Attachment to manage.
+     * 
+     */
     public Output<String> transitGatewayAttachmentId() {
         return this.transitGatewayAttachmentId;
     }
@@ -46,6 +54,10 @@ public final class VpcAttachmentAccepterArgs extends com.pulumi.resources.Resour
     @Import(name="transitGatewayDefaultRouteTableAssociation")
     private @Nullable Output<Boolean> transitGatewayDefaultRouteTableAssociation;
 
+    /**
+     * @return Boolean whether the VPC Attachment should be associated with the EC2 Transit Gateway association default route table. Default value: `true`.
+     * 
+     */
     public Optional<Output<Boolean>> transitGatewayDefaultRouteTableAssociation() {
         return Optional.ofNullable(this.transitGatewayDefaultRouteTableAssociation);
     }
@@ -57,6 +69,10 @@ public final class VpcAttachmentAccepterArgs extends com.pulumi.resources.Resour
     @Import(name="transitGatewayDefaultRouteTablePropagation")
     private @Nullable Output<Boolean> transitGatewayDefaultRouteTablePropagation;
 
+    /**
+     * @return Boolean whether the VPC Attachment should propagate routes with the EC2 Transit Gateway propagation default route table. Default value: `true`.
+     * 
+     */
     public Optional<Output<Boolean>> transitGatewayDefaultRouteTablePropagation() {
         return Optional.ofNullable(this.transitGatewayDefaultRouteTablePropagation);
     }
@@ -88,38 +104,86 @@ public final class VpcAttachmentAccepterArgs extends com.pulumi.resources.Resour
             $ = new VpcAttachmentAccepterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param tags Key-value tags for the EC2 Transit Gateway VPC Attachment. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Key-value tags for the EC2 Transit Gateway VPC Attachment. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param transitGatewayAttachmentId The ID of the EC2 Transit Gateway Attachment to manage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transitGatewayAttachmentId(Output<String> transitGatewayAttachmentId) {
             $.transitGatewayAttachmentId = transitGatewayAttachmentId;
             return this;
         }
 
+        /**
+         * @param transitGatewayAttachmentId The ID of the EC2 Transit Gateway Attachment to manage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transitGatewayAttachmentId(String transitGatewayAttachmentId) {
             return transitGatewayAttachmentId(Output.of(transitGatewayAttachmentId));
         }
 
+        /**
+         * @param transitGatewayDefaultRouteTableAssociation Boolean whether the VPC Attachment should be associated with the EC2 Transit Gateway association default route table. Default value: `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transitGatewayDefaultRouteTableAssociation(@Nullable Output<Boolean> transitGatewayDefaultRouteTableAssociation) {
             $.transitGatewayDefaultRouteTableAssociation = transitGatewayDefaultRouteTableAssociation;
             return this;
         }
 
+        /**
+         * @param transitGatewayDefaultRouteTableAssociation Boolean whether the VPC Attachment should be associated with the EC2 Transit Gateway association default route table. Default value: `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transitGatewayDefaultRouteTableAssociation(Boolean transitGatewayDefaultRouteTableAssociation) {
             return transitGatewayDefaultRouteTableAssociation(Output.of(transitGatewayDefaultRouteTableAssociation));
         }
 
+        /**
+         * @param transitGatewayDefaultRouteTablePropagation Boolean whether the VPC Attachment should propagate routes with the EC2 Transit Gateway propagation default route table. Default value: `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transitGatewayDefaultRouteTablePropagation(@Nullable Output<Boolean> transitGatewayDefaultRouteTablePropagation) {
             $.transitGatewayDefaultRouteTablePropagation = transitGatewayDefaultRouteTablePropagation;
             return this;
         }
 
+        /**
+         * @param transitGatewayDefaultRouteTablePropagation Boolean whether the VPC Attachment should propagate routes with the EC2 Transit Gateway propagation default route table. Default value: `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transitGatewayDefaultRouteTablePropagation(Boolean transitGatewayDefaultRouteTablePropagation) {
             return transitGatewayDefaultRouteTablePropagation(Output.of(transitGatewayDefaultRouteTablePropagation));
         }

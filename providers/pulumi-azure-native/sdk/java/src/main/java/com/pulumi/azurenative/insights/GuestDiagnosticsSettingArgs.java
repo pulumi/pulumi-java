@@ -25,6 +25,10 @@ public final class GuestDiagnosticsSettingArgs extends com.pulumi.resources.Reso
     @Import(name="dataSources")
     private @Nullable Output<List<DataSourceArgs>> dataSources;
 
+    /**
+     * @return the array of data source object which are configured to collect and send data
+     * 
+     */
     public Optional<Output<List<DataSourceArgs>>> dataSources() {
         return Optional.ofNullable(this.dataSources);
     }
@@ -36,6 +40,10 @@ public final class GuestDiagnosticsSettingArgs extends com.pulumi.resources.Reso
     @Import(name="diagnosticSettingsName")
     private @Nullable Output<String> diagnosticSettingsName;
 
+    /**
+     * @return The name of the diagnostic setting.
+     * 
+     */
     public Optional<Output<String>> diagnosticSettingsName() {
         return Optional.ofNullable(this.diagnosticSettingsName);
     }
@@ -47,6 +55,10 @@ public final class GuestDiagnosticsSettingArgs extends com.pulumi.resources.Reso
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -58,6 +70,10 @@ public final class GuestDiagnosticsSettingArgs extends com.pulumi.resources.Reso
     @Import(name="osType")
     private @Nullable Output<String> osType;
 
+    /**
+     * @return Operating system type for the configuration
+     * 
+     */
     public Optional<Output<String>> osType() {
         return Optional.ofNullable(this.osType);
     }
@@ -76,6 +92,10 @@ public final class GuestDiagnosticsSettingArgs extends com.pulumi.resources.Reso
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -87,6 +107,10 @@ public final class GuestDiagnosticsSettingArgs extends com.pulumi.resources.Reso
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -121,42 +145,96 @@ public final class GuestDiagnosticsSettingArgs extends com.pulumi.resources.Reso
             $ = new GuestDiagnosticsSettingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataSources the array of data source object which are configured to collect and send data
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSources(@Nullable Output<List<DataSourceArgs>> dataSources) {
             $.dataSources = dataSources;
             return this;
         }
 
+        /**
+         * @param dataSources the array of data source object which are configured to collect and send data
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSources(List<DataSourceArgs> dataSources) {
             return dataSources(Output.of(dataSources));
         }
 
+        /**
+         * @param dataSources the array of data source object which are configured to collect and send data
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSources(DataSourceArgs... dataSources) {
             return dataSources(List.of(dataSources));
         }
 
+        /**
+         * @param diagnosticSettingsName The name of the diagnostic setting.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diagnosticSettingsName(@Nullable Output<String> diagnosticSettingsName) {
             $.diagnosticSettingsName = diagnosticSettingsName;
             return this;
         }
 
+        /**
+         * @param diagnosticSettingsName The name of the diagnostic setting.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diagnosticSettingsName(String diagnosticSettingsName) {
             return diagnosticSettingsName(Output.of(diagnosticSettingsName));
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param osType Operating system type for the configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder osType(@Nullable Output<String> osType) {
             $.osType = osType;
             return this;
         }
 
+        /**
+         * @param osType Operating system type for the configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder osType(String osType) {
             return osType(Output.of(osType));
         }
@@ -170,20 +248,44 @@ public final class GuestDiagnosticsSettingArgs extends com.pulumi.resources.Reso
             return proxySetting(Output.of(proxySetting));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

@@ -37,6 +37,10 @@ public final class EdifactProtocolSettingsArgs extends com.pulumi.resources.Reso
     @Import(name="acknowledgementSettings", required=true)
     private Output<EdifactAcknowledgementSettingsArgs> acknowledgementSettings;
 
+    /**
+     * @return The EDIFACT acknowledgement settings.
+     * 
+     */
     public Output<EdifactAcknowledgementSettingsArgs> acknowledgementSettings() {
         return this.acknowledgementSettings;
     }
@@ -48,6 +52,10 @@ public final class EdifactProtocolSettingsArgs extends com.pulumi.resources.Reso
     @Import(name="edifactDelimiterOverrides")
     private @Nullable Output<List<EdifactDelimiterOverrideArgs>> edifactDelimiterOverrides;
 
+    /**
+     * @return The EDIFACT delimiter override settings.
+     * 
+     */
     public Optional<Output<List<EdifactDelimiterOverrideArgs>>> edifactDelimiterOverrides() {
         return Optional.ofNullable(this.edifactDelimiterOverrides);
     }
@@ -59,6 +67,10 @@ public final class EdifactProtocolSettingsArgs extends com.pulumi.resources.Reso
     @Import(name="envelopeOverrides")
     private @Nullable Output<List<EdifactEnvelopeOverrideArgs>> envelopeOverrides;
 
+    /**
+     * @return The EDIFACT envelope override settings.
+     * 
+     */
     public Optional<Output<List<EdifactEnvelopeOverrideArgs>>> envelopeOverrides() {
         return Optional.ofNullable(this.envelopeOverrides);
     }
@@ -70,6 +82,10 @@ public final class EdifactProtocolSettingsArgs extends com.pulumi.resources.Reso
     @Import(name="envelopeSettings", required=true)
     private Output<EdifactEnvelopeSettingsArgs> envelopeSettings;
 
+    /**
+     * @return The EDIFACT envelope settings.
+     * 
+     */
     public Output<EdifactEnvelopeSettingsArgs> envelopeSettings() {
         return this.envelopeSettings;
     }
@@ -81,6 +97,10 @@ public final class EdifactProtocolSettingsArgs extends com.pulumi.resources.Reso
     @Import(name="framingSettings", required=true)
     private Output<EdifactFramingSettingsArgs> framingSettings;
 
+    /**
+     * @return The EDIFACT framing settings.
+     * 
+     */
     public Output<EdifactFramingSettingsArgs> framingSettings() {
         return this.framingSettings;
     }
@@ -92,6 +112,10 @@ public final class EdifactProtocolSettingsArgs extends com.pulumi.resources.Reso
     @Import(name="messageFilter", required=true)
     private Output<EdifactMessageFilterArgs> messageFilter;
 
+    /**
+     * @return The EDIFACT message filter.
+     * 
+     */
     public Output<EdifactMessageFilterArgs> messageFilter() {
         return this.messageFilter;
     }
@@ -103,6 +127,10 @@ public final class EdifactProtocolSettingsArgs extends com.pulumi.resources.Reso
     @Import(name="messageFilterList")
     private @Nullable Output<List<EdifactMessageIdentifierArgs>> messageFilterList;
 
+    /**
+     * @return The EDIFACT message filter list.
+     * 
+     */
     public Optional<Output<List<EdifactMessageIdentifierArgs>>> messageFilterList() {
         return Optional.ofNullable(this.messageFilterList);
     }
@@ -114,6 +142,10 @@ public final class EdifactProtocolSettingsArgs extends com.pulumi.resources.Reso
     @Import(name="processingSettings", required=true)
     private Output<EdifactProcessingSettingsArgs> processingSettings;
 
+    /**
+     * @return The EDIFACT processing Settings.
+     * 
+     */
     public Output<EdifactProcessingSettingsArgs> processingSettings() {
         return this.processingSettings;
     }
@@ -125,6 +157,10 @@ public final class EdifactProtocolSettingsArgs extends com.pulumi.resources.Reso
     @Import(name="schemaReferences", required=true)
     private Output<List<EdifactSchemaReferenceArgs>> schemaReferences;
 
+    /**
+     * @return The EDIFACT schema references.
+     * 
+     */
     public Output<List<EdifactSchemaReferenceArgs>> schemaReferences() {
         return this.schemaReferences;
     }
@@ -136,6 +172,10 @@ public final class EdifactProtocolSettingsArgs extends com.pulumi.resources.Reso
     @Import(name="validationOverrides")
     private @Nullable Output<List<EdifactValidationOverrideArgs>> validationOverrides;
 
+    /**
+     * @return The EDIFACT validation override settings.
+     * 
+     */
     public Optional<Output<List<EdifactValidationOverrideArgs>>> validationOverrides() {
         return Optional.ofNullable(this.validationOverrides);
     }
@@ -147,6 +187,10 @@ public final class EdifactProtocolSettingsArgs extends com.pulumi.resources.Reso
     @Import(name="validationSettings", required=true)
     private Output<EdifactValidationSettingsArgs> validationSettings;
 
+    /**
+     * @return The EDIFACT validation settings.
+     * 
+     */
     public Output<EdifactValidationSettingsArgs> validationSettings() {
         return this.validationSettings;
     }
@@ -185,121 +229,283 @@ public final class EdifactProtocolSettingsArgs extends com.pulumi.resources.Reso
             $ = new EdifactProtocolSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param acknowledgementSettings The EDIFACT acknowledgement settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acknowledgementSettings(Output<EdifactAcknowledgementSettingsArgs> acknowledgementSettings) {
             $.acknowledgementSettings = acknowledgementSettings;
             return this;
         }
 
+        /**
+         * @param acknowledgementSettings The EDIFACT acknowledgement settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acknowledgementSettings(EdifactAcknowledgementSettingsArgs acknowledgementSettings) {
             return acknowledgementSettings(Output.of(acknowledgementSettings));
         }
 
+        /**
+         * @param edifactDelimiterOverrides The EDIFACT delimiter override settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder edifactDelimiterOverrides(@Nullable Output<List<EdifactDelimiterOverrideArgs>> edifactDelimiterOverrides) {
             $.edifactDelimiterOverrides = edifactDelimiterOverrides;
             return this;
         }
 
+        /**
+         * @param edifactDelimiterOverrides The EDIFACT delimiter override settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder edifactDelimiterOverrides(List<EdifactDelimiterOverrideArgs> edifactDelimiterOverrides) {
             return edifactDelimiterOverrides(Output.of(edifactDelimiterOverrides));
         }
 
+        /**
+         * @param edifactDelimiterOverrides The EDIFACT delimiter override settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder edifactDelimiterOverrides(EdifactDelimiterOverrideArgs... edifactDelimiterOverrides) {
             return edifactDelimiterOverrides(List.of(edifactDelimiterOverrides));
         }
 
+        /**
+         * @param envelopeOverrides The EDIFACT envelope override settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder envelopeOverrides(@Nullable Output<List<EdifactEnvelopeOverrideArgs>> envelopeOverrides) {
             $.envelopeOverrides = envelopeOverrides;
             return this;
         }
 
+        /**
+         * @param envelopeOverrides The EDIFACT envelope override settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder envelopeOverrides(List<EdifactEnvelopeOverrideArgs> envelopeOverrides) {
             return envelopeOverrides(Output.of(envelopeOverrides));
         }
 
+        /**
+         * @param envelopeOverrides The EDIFACT envelope override settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder envelopeOverrides(EdifactEnvelopeOverrideArgs... envelopeOverrides) {
             return envelopeOverrides(List.of(envelopeOverrides));
         }
 
+        /**
+         * @param envelopeSettings The EDIFACT envelope settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder envelopeSettings(Output<EdifactEnvelopeSettingsArgs> envelopeSettings) {
             $.envelopeSettings = envelopeSettings;
             return this;
         }
 
+        /**
+         * @param envelopeSettings The EDIFACT envelope settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder envelopeSettings(EdifactEnvelopeSettingsArgs envelopeSettings) {
             return envelopeSettings(Output.of(envelopeSettings));
         }
 
+        /**
+         * @param framingSettings The EDIFACT framing settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder framingSettings(Output<EdifactFramingSettingsArgs> framingSettings) {
             $.framingSettings = framingSettings;
             return this;
         }
 
+        /**
+         * @param framingSettings The EDIFACT framing settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder framingSettings(EdifactFramingSettingsArgs framingSettings) {
             return framingSettings(Output.of(framingSettings));
         }
 
+        /**
+         * @param messageFilter The EDIFACT message filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageFilter(Output<EdifactMessageFilterArgs> messageFilter) {
             $.messageFilter = messageFilter;
             return this;
         }
 
+        /**
+         * @param messageFilter The EDIFACT message filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageFilter(EdifactMessageFilterArgs messageFilter) {
             return messageFilter(Output.of(messageFilter));
         }
 
+        /**
+         * @param messageFilterList The EDIFACT message filter list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageFilterList(@Nullable Output<List<EdifactMessageIdentifierArgs>> messageFilterList) {
             $.messageFilterList = messageFilterList;
             return this;
         }
 
+        /**
+         * @param messageFilterList The EDIFACT message filter list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageFilterList(List<EdifactMessageIdentifierArgs> messageFilterList) {
             return messageFilterList(Output.of(messageFilterList));
         }
 
+        /**
+         * @param messageFilterList The EDIFACT message filter list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageFilterList(EdifactMessageIdentifierArgs... messageFilterList) {
             return messageFilterList(List.of(messageFilterList));
         }
 
+        /**
+         * @param processingSettings The EDIFACT processing Settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder processingSettings(Output<EdifactProcessingSettingsArgs> processingSettings) {
             $.processingSettings = processingSettings;
             return this;
         }
 
+        /**
+         * @param processingSettings The EDIFACT processing Settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder processingSettings(EdifactProcessingSettingsArgs processingSettings) {
             return processingSettings(Output.of(processingSettings));
         }
 
+        /**
+         * @param schemaReferences The EDIFACT schema references.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaReferences(Output<List<EdifactSchemaReferenceArgs>> schemaReferences) {
             $.schemaReferences = schemaReferences;
             return this;
         }
 
+        /**
+         * @param schemaReferences The EDIFACT schema references.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaReferences(List<EdifactSchemaReferenceArgs> schemaReferences) {
             return schemaReferences(Output.of(schemaReferences));
         }
 
+        /**
+         * @param schemaReferences The EDIFACT schema references.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaReferences(EdifactSchemaReferenceArgs... schemaReferences) {
             return schemaReferences(List.of(schemaReferences));
         }
 
+        /**
+         * @param validationOverrides The EDIFACT validation override settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validationOverrides(@Nullable Output<List<EdifactValidationOverrideArgs>> validationOverrides) {
             $.validationOverrides = validationOverrides;
             return this;
         }
 
+        /**
+         * @param validationOverrides The EDIFACT validation override settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validationOverrides(List<EdifactValidationOverrideArgs> validationOverrides) {
             return validationOverrides(Output.of(validationOverrides));
         }
 
+        /**
+         * @param validationOverrides The EDIFACT validation override settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validationOverrides(EdifactValidationOverrideArgs... validationOverrides) {
             return validationOverrides(List.of(validationOverrides));
         }
 
+        /**
+         * @param validationSettings The EDIFACT validation settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validationSettings(Output<EdifactValidationSettingsArgs> validationSettings) {
             $.validationSettings = validationSettings;
             return this;
         }
 
+        /**
+         * @param validationSettings The EDIFACT validation settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validationSettings(EdifactValidationSettingsArgs validationSettings) {
             return validationSettings(Output.of(validationSettings));
         }

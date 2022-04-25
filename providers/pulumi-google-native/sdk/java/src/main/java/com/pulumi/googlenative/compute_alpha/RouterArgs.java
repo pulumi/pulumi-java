@@ -29,6 +29,10 @@ public final class RouterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="bgp")
     private @Nullable Output<RouterBgpArgs> bgp;
 
+    /**
+     * @return BGP information specific to this router.
+     * 
+     */
     public Optional<Output<RouterBgpArgs>> bgp() {
         return Optional.ofNullable(this.bgp);
     }
@@ -40,6 +44,10 @@ public final class RouterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="bgpPeers")
     private @Nullable Output<List<RouterBgpPeerArgs>> bgpPeers;
 
+    /**
+     * @return BGP information that must be configured into the routing stack to establish BGP peering. This information must specify the peer ASN and either the interface name, IP address, or peer IP address. Please refer to RFC4273.
+     * 
+     */
     public Optional<Output<List<RouterBgpPeerArgs>>> bgpPeers() {
         return Optional.ofNullable(this.bgpPeers);
     }
@@ -51,6 +59,10 @@ public final class RouterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return An optional description of this resource. Provide this property when you create the resource.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -62,6 +74,10 @@ public final class RouterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="encryptedInterconnectRouter")
     private @Nullable Output<Boolean> encryptedInterconnectRouter;
 
+    /**
+     * @return Indicates if a router is dedicated for use with encrypted VLAN attachments (interconnectAttachments). Not currently available publicly.
+     * 
+     */
     public Optional<Output<Boolean>> encryptedInterconnectRouter() {
         return Optional.ofNullable(this.encryptedInterconnectRouter);
     }
@@ -73,6 +89,10 @@ public final class RouterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="interfaces")
     private @Nullable Output<List<RouterInterfaceArgs>> interfaces;
 
+    /**
+     * @return Router interfaces. Each interface requires either one linked resource, (for example, linkedVpnTunnel), or IP address and IP address range (for example, ipRange), or both.
+     * 
+     */
     public Optional<Output<List<RouterInterfaceArgs>>> interfaces() {
         return Optional.ofNullable(this.interfaces);
     }
@@ -84,6 +104,10 @@ public final class RouterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="md5AuthenticationKeys")
     private @Nullable Output<List<RouterMd5AuthenticationKeyArgs>> md5AuthenticationKeys;
 
+    /**
+     * @return Keys used for MD5 authentication.
+     * 
+     */
     public Optional<Output<List<RouterMd5AuthenticationKeyArgs>>> md5AuthenticationKeys() {
         return Optional.ofNullable(this.md5AuthenticationKeys);
     }
@@ -95,6 +119,10 @@ public final class RouterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -106,6 +134,10 @@ public final class RouterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nats")
     private @Nullable Output<List<RouterNatArgs>> nats;
 
+    /**
+     * @return A list of NAT services created in this router.
+     * 
+     */
     public Optional<Output<List<RouterNatArgs>>> nats() {
         return Optional.ofNullable(this.nats);
     }
@@ -117,6 +149,10 @@ public final class RouterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="network")
     private @Nullable Output<String> network;
 
+    /**
+     * @return URI of the network to which this router belongs.
+     * 
+     */
     public Optional<Output<String>> network() {
         return Optional.ofNullable(this.network);
     }
@@ -177,99 +213,231 @@ public final class RouterArgs extends com.pulumi.resources.ResourceArgs {
             $ = new RouterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bgp BGP information specific to this router.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bgp(@Nullable Output<RouterBgpArgs> bgp) {
             $.bgp = bgp;
             return this;
         }
 
+        /**
+         * @param bgp BGP information specific to this router.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bgp(RouterBgpArgs bgp) {
             return bgp(Output.of(bgp));
         }
 
+        /**
+         * @param bgpPeers BGP information that must be configured into the routing stack to establish BGP peering. This information must specify the peer ASN and either the interface name, IP address, or peer IP address. Please refer to RFC4273.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bgpPeers(@Nullable Output<List<RouterBgpPeerArgs>> bgpPeers) {
             $.bgpPeers = bgpPeers;
             return this;
         }
 
+        /**
+         * @param bgpPeers BGP information that must be configured into the routing stack to establish BGP peering. This information must specify the peer ASN and either the interface name, IP address, or peer IP address. Please refer to RFC4273.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bgpPeers(List<RouterBgpPeerArgs> bgpPeers) {
             return bgpPeers(Output.of(bgpPeers));
         }
 
+        /**
+         * @param bgpPeers BGP information that must be configured into the routing stack to establish BGP peering. This information must specify the peer ASN and either the interface name, IP address, or peer IP address. Please refer to RFC4273.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bgpPeers(RouterBgpPeerArgs... bgpPeers) {
             return bgpPeers(List.of(bgpPeers));
         }
 
+        /**
+         * @param description An optional description of this resource. Provide this property when you create the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description An optional description of this resource. Provide this property when you create the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param encryptedInterconnectRouter Indicates if a router is dedicated for use with encrypted VLAN attachments (interconnectAttachments). Not currently available publicly.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptedInterconnectRouter(@Nullable Output<Boolean> encryptedInterconnectRouter) {
             $.encryptedInterconnectRouter = encryptedInterconnectRouter;
             return this;
         }
 
+        /**
+         * @param encryptedInterconnectRouter Indicates if a router is dedicated for use with encrypted VLAN attachments (interconnectAttachments). Not currently available publicly.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptedInterconnectRouter(Boolean encryptedInterconnectRouter) {
             return encryptedInterconnectRouter(Output.of(encryptedInterconnectRouter));
         }
 
+        /**
+         * @param interfaces Router interfaces. Each interface requires either one linked resource, (for example, linkedVpnTunnel), or IP address and IP address range (for example, ipRange), or both.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interfaces(@Nullable Output<List<RouterInterfaceArgs>> interfaces) {
             $.interfaces = interfaces;
             return this;
         }
 
+        /**
+         * @param interfaces Router interfaces. Each interface requires either one linked resource, (for example, linkedVpnTunnel), or IP address and IP address range (for example, ipRange), or both.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interfaces(List<RouterInterfaceArgs> interfaces) {
             return interfaces(Output.of(interfaces));
         }
 
+        /**
+         * @param interfaces Router interfaces. Each interface requires either one linked resource, (for example, linkedVpnTunnel), or IP address and IP address range (for example, ipRange), or both.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interfaces(RouterInterfaceArgs... interfaces) {
             return interfaces(List.of(interfaces));
         }
 
+        /**
+         * @param md5AuthenticationKeys Keys used for MD5 authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder md5AuthenticationKeys(@Nullable Output<List<RouterMd5AuthenticationKeyArgs>> md5AuthenticationKeys) {
             $.md5AuthenticationKeys = md5AuthenticationKeys;
             return this;
         }
 
+        /**
+         * @param md5AuthenticationKeys Keys used for MD5 authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder md5AuthenticationKeys(List<RouterMd5AuthenticationKeyArgs> md5AuthenticationKeys) {
             return md5AuthenticationKeys(Output.of(md5AuthenticationKeys));
         }
 
+        /**
+         * @param md5AuthenticationKeys Keys used for MD5 authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder md5AuthenticationKeys(RouterMd5AuthenticationKeyArgs... md5AuthenticationKeys) {
             return md5AuthenticationKeys(List.of(md5AuthenticationKeys));
         }
 
+        /**
+         * @param name Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param nats A list of NAT services created in this router.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nats(@Nullable Output<List<RouterNatArgs>> nats) {
             $.nats = nats;
             return this;
         }
 
+        /**
+         * @param nats A list of NAT services created in this router.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nats(List<RouterNatArgs> nats) {
             return nats(Output.of(nats));
         }
 
+        /**
+         * @param nats A list of NAT services created in this router.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nats(RouterNatArgs... nats) {
             return nats(List.of(nats));
         }
 
+        /**
+         * @param network URI of the network to which this router belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(@Nullable Output<String> network) {
             $.network = network;
             return this;
         }
 
+        /**
+         * @param network URI of the network to which this router belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(String network) {
             return network(Output.of(network));
         }

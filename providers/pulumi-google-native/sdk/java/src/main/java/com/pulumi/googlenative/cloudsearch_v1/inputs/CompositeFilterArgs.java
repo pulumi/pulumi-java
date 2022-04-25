@@ -24,6 +24,10 @@ public final class CompositeFilterArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="logicOperator")
     private @Nullable Output<CompositeFilterLogicOperator> logicOperator;
 
+    /**
+     * @return The logic operator of the sub filter.
+     * 
+     */
     public Optional<Output<CompositeFilterLogicOperator>> logicOperator() {
         return Optional.ofNullable(this.logicOperator);
     }
@@ -35,6 +39,10 @@ public final class CompositeFilterArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="subFilters")
     private @Nullable Output<List<FilterArgs>> subFilters;
 
+    /**
+     * @return Sub filters.
+     * 
+     */
     public Optional<Output<List<FilterArgs>>> subFilters() {
         return Optional.ofNullable(this.subFilters);
     }
@@ -64,24 +72,54 @@ public final class CompositeFilterArgs extends com.pulumi.resources.ResourceArgs
             $ = new CompositeFilterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param logicOperator The logic operator of the sub filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logicOperator(@Nullable Output<CompositeFilterLogicOperator> logicOperator) {
             $.logicOperator = logicOperator;
             return this;
         }
 
+        /**
+         * @param logicOperator The logic operator of the sub filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logicOperator(CompositeFilterLogicOperator logicOperator) {
             return logicOperator(Output.of(logicOperator));
         }
 
+        /**
+         * @param subFilters Sub filters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subFilters(@Nullable Output<List<FilterArgs>> subFilters) {
             $.subFilters = subFilters;
             return this;
         }
 
+        /**
+         * @param subFilters Sub filters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subFilters(List<FilterArgs> subFilters) {
             return subFilters(Output.of(subFilters));
         }
 
+        /**
+         * @param subFilters Sub filters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subFilters(FilterArgs... subFilters) {
             return subFilters(List.of(subFilters));
         }

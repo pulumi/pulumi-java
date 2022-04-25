@@ -26,6 +26,10 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemExact
     @Import(name="displayPrice")
     private @Nullable Output<Double> displayPrice;
 
+    /**
+     * @return Optional. Display price of the product.
+     * 
+     */
     public Optional<Output<Double>> displayPrice() {
         return Optional.ofNullable(this.displayPrice);
     }
@@ -37,6 +41,10 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemExact
     @Import(name="originalPrice")
     private @Nullable Output<Double> originalPrice;
 
+    /**
+     * @return Optional. Price of the product without any discount. If zero, by default set to be the &#39;displayPrice&#39;.
+     * 
+     */
     public Optional<Output<Double>> originalPrice() {
         return Optional.ofNullable(this.originalPrice);
     }
@@ -66,20 +74,44 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemExact
             $ = new GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayPrice Optional. Display price of the product.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayPrice(@Nullable Output<Double> displayPrice) {
             $.displayPrice = displayPrice;
             return this;
         }
 
+        /**
+         * @param displayPrice Optional. Display price of the product.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayPrice(Double displayPrice) {
             return displayPrice(Output.of(displayPrice));
         }
 
+        /**
+         * @param originalPrice Optional. Price of the product without any discount. If zero, by default set to be the &#39;displayPrice&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder originalPrice(@Nullable Output<Double> originalPrice) {
             $.originalPrice = originalPrice;
             return this;
         }
 
+        /**
+         * @param originalPrice Optional. Price of the product without any discount. If zero, by default set to be the &#39;displayPrice&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder originalPrice(Double originalPrice) {
             return originalPrice(Output.of(originalPrice));
         }

@@ -27,6 +27,10 @@ public final class DatabaseRelationalDatabaseParameterArgs extends com.pulumi.re
     @Import(name="allowedValues")
     private @Nullable Output<String> allowedValues;
 
+    /**
+     * @return Specifies the valid range of values for the parameter.
+     * 
+     */
     public Optional<Output<String>> allowedValues() {
         return Optional.ofNullable(this.allowedValues);
     }
@@ -38,6 +42,10 @@ public final class DatabaseRelationalDatabaseParameterArgs extends com.pulumi.re
     @Import(name="applyMethod")
     private @Nullable Output<String> applyMethod;
 
+    /**
+     * @return Indicates when parameter updates are applied. Can be immediate or pending-reboot.
+     * 
+     */
     public Optional<Output<String>> applyMethod() {
         return Optional.ofNullable(this.applyMethod);
     }
@@ -49,6 +57,10 @@ public final class DatabaseRelationalDatabaseParameterArgs extends com.pulumi.re
     @Import(name="applyType")
     private @Nullable Output<String> applyType;
 
+    /**
+     * @return Specifies the engine-specific parameter type.
+     * 
+     */
     public Optional<Output<String>> applyType() {
         return Optional.ofNullable(this.applyType);
     }
@@ -60,6 +72,10 @@ public final class DatabaseRelationalDatabaseParameterArgs extends com.pulumi.re
     @Import(name="dataType")
     private @Nullable Output<String> dataType;
 
+    /**
+     * @return Specifies the valid data type for the parameter.
+     * 
+     */
     public Optional<Output<String>> dataType() {
         return Optional.ofNullable(this.dataType);
     }
@@ -71,6 +87,10 @@ public final class DatabaseRelationalDatabaseParameterArgs extends com.pulumi.re
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Provides a description of the parameter.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -82,6 +102,10 @@ public final class DatabaseRelationalDatabaseParameterArgs extends com.pulumi.re
     @Import(name="isModifiable")
     private @Nullable Output<Boolean> isModifiable;
 
+    /**
+     * @return A Boolean value indicating whether the parameter can be modified.
+     * 
+     */
     public Optional<Output<Boolean>> isModifiable() {
         return Optional.ofNullable(this.isModifiable);
     }
@@ -93,6 +117,10 @@ public final class DatabaseRelationalDatabaseParameterArgs extends com.pulumi.re
     @Import(name="parameterName")
     private @Nullable Output<String> parameterName;
 
+    /**
+     * @return Specifies the name of the parameter.
+     * 
+     */
     public Optional<Output<String>> parameterName() {
         return Optional.ofNullable(this.parameterName);
     }
@@ -104,6 +132,10 @@ public final class DatabaseRelationalDatabaseParameterArgs extends com.pulumi.re
     @Import(name="parameterValue")
     private @Nullable Output<String> parameterValue;
 
+    /**
+     * @return Specifies the value of the parameter.
+     * 
+     */
     public Optional<Output<String>> parameterValue() {
         return Optional.ofNullable(this.parameterValue);
     }
@@ -139,74 +171,170 @@ public final class DatabaseRelationalDatabaseParameterArgs extends com.pulumi.re
             $ = new DatabaseRelationalDatabaseParameterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowedValues Specifies the valid range of values for the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedValues(@Nullable Output<String> allowedValues) {
             $.allowedValues = allowedValues;
             return this;
         }
 
+        /**
+         * @param allowedValues Specifies the valid range of values for the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedValues(String allowedValues) {
             return allowedValues(Output.of(allowedValues));
         }
 
+        /**
+         * @param applyMethod Indicates when parameter updates are applied. Can be immediate or pending-reboot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applyMethod(@Nullable Output<String> applyMethod) {
             $.applyMethod = applyMethod;
             return this;
         }
 
+        /**
+         * @param applyMethod Indicates when parameter updates are applied. Can be immediate or pending-reboot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applyMethod(String applyMethod) {
             return applyMethod(Output.of(applyMethod));
         }
 
+        /**
+         * @param applyType Specifies the engine-specific parameter type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applyType(@Nullable Output<String> applyType) {
             $.applyType = applyType;
             return this;
         }
 
+        /**
+         * @param applyType Specifies the engine-specific parameter type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applyType(String applyType) {
             return applyType(Output.of(applyType));
         }
 
+        /**
+         * @param dataType Specifies the valid data type for the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataType(@Nullable Output<String> dataType) {
             $.dataType = dataType;
             return this;
         }
 
+        /**
+         * @param dataType Specifies the valid data type for the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataType(String dataType) {
             return dataType(Output.of(dataType));
         }
 
+        /**
+         * @param description Provides a description of the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Provides a description of the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param isModifiable A Boolean value indicating whether the parameter can be modified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isModifiable(@Nullable Output<Boolean> isModifiable) {
             $.isModifiable = isModifiable;
             return this;
         }
 
+        /**
+         * @param isModifiable A Boolean value indicating whether the parameter can be modified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isModifiable(Boolean isModifiable) {
             return isModifiable(Output.of(isModifiable));
         }
 
+        /**
+         * @param parameterName Specifies the name of the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameterName(@Nullable Output<String> parameterName) {
             $.parameterName = parameterName;
             return this;
         }
 
+        /**
+         * @param parameterName Specifies the name of the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameterName(String parameterName) {
             return parameterName(Output.of(parameterName));
         }
 
+        /**
+         * @param parameterValue Specifies the value of the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameterValue(@Nullable Output<String> parameterValue) {
             $.parameterValue = parameterValue;
             return this;
         }
 
+        /**
+         * @param parameterValue Specifies the value of the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameterValue(String parameterValue) {
             return parameterValue(Output.of(parameterValue));
         }

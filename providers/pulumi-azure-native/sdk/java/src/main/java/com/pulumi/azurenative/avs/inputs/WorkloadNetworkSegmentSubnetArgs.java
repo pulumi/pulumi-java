@@ -27,6 +27,10 @@ public final class WorkloadNetworkSegmentSubnetArgs extends com.pulumi.resources
     @Import(name="dhcpRanges")
     private @Nullable Output<List<String>> dhcpRanges;
 
+    /**
+     * @return DHCP Range assigned for subnet.
+     * 
+     */
     public Optional<Output<List<String>>> dhcpRanges() {
         return Optional.ofNullable(this.dhcpRanges);
     }
@@ -38,6 +42,10 @@ public final class WorkloadNetworkSegmentSubnetArgs extends com.pulumi.resources
     @Import(name="gatewayAddress")
     private @Nullable Output<String> gatewayAddress;
 
+    /**
+     * @return Gateway address.
+     * 
+     */
     public Optional<Output<String>> gatewayAddress() {
         return Optional.ofNullable(this.gatewayAddress);
     }
@@ -67,24 +75,54 @@ public final class WorkloadNetworkSegmentSubnetArgs extends com.pulumi.resources
             $ = new WorkloadNetworkSegmentSubnetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dhcpRanges DHCP Range assigned for subnet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dhcpRanges(@Nullable Output<List<String>> dhcpRanges) {
             $.dhcpRanges = dhcpRanges;
             return this;
         }
 
+        /**
+         * @param dhcpRanges DHCP Range assigned for subnet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dhcpRanges(List<String> dhcpRanges) {
             return dhcpRanges(Output.of(dhcpRanges));
         }
 
+        /**
+         * @param dhcpRanges DHCP Range assigned for subnet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dhcpRanges(String... dhcpRanges) {
             return dhcpRanges(List.of(dhcpRanges));
         }
 
+        /**
+         * @param gatewayAddress Gateway address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayAddress(@Nullable Output<String> gatewayAddress) {
             $.gatewayAddress = gatewayAddress;
             return this;
         }
 
+        /**
+         * @param gatewayAddress Gateway address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayAddress(String gatewayAddress) {
             return gatewayAddress(Output.of(gatewayAddress));
         }

@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class FieldDefinitionResponse {
     /**
-     * Gets or sets the isEncrypted flag of the connection field definition.
+     * @return Gets or sets the isEncrypted flag of the connection field definition.
      * 
      */
     private final @Nullable Boolean isEncrypted;
     /**
-     * Gets or sets the isOptional flag of the connection field definition.
+     * @return Gets or sets the isOptional flag of the connection field definition.
      * 
      */
     private final @Nullable Boolean isOptional;
     /**
-     * Gets or sets the type of the connection field definition.
+     * @return Gets or sets the type of the connection field definition.
      * 
      */
     private final String type;
@@ -39,23 +39,23 @@ public final class FieldDefinitionResponse {
     }
 
     /**
-     * Gets or sets the isEncrypted flag of the connection field definition.
+     * @return Gets or sets the isEncrypted flag of the connection field definition.
      * 
-    */
+     */
     public Optional<Boolean> isEncrypted() {
         return Optional.ofNullable(this.isEncrypted);
     }
     /**
-     * Gets or sets the isOptional flag of the connection field definition.
+     * @return Gets or sets the isOptional flag of the connection field definition.
      * 
-    */
+     */
     public Optional<Boolean> isOptional() {
         return Optional.ofNullable(this.isOptional);
     }
     /**
-     * Gets or sets the type of the connection field definition.
+     * @return Gets or sets the type of the connection field definition.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

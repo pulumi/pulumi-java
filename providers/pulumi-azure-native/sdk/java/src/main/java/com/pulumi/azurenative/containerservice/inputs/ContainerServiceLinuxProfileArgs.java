@@ -25,6 +25,10 @@ public final class ContainerServiceLinuxProfileArgs extends com.pulumi.resources
     @Import(name="adminUsername", required=true)
     private Output<String> adminUsername;
 
+    /**
+     * @return The administrator username to use for Linux VMs.
+     * 
+     */
     public Output<String> adminUsername() {
         return this.adminUsername;
     }
@@ -36,6 +40,10 @@ public final class ContainerServiceLinuxProfileArgs extends com.pulumi.resources
     @Import(name="ssh", required=true)
     private Output<ContainerServiceSshConfigurationArgs> ssh;
 
+    /**
+     * @return SSH configuration for Linux-based VMs running on Azure.
+     * 
+     */
     public Output<ContainerServiceSshConfigurationArgs> ssh() {
         return this.ssh;
     }
@@ -65,20 +73,44 @@ public final class ContainerServiceLinuxProfileArgs extends com.pulumi.resources
             $ = new ContainerServiceLinuxProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param adminUsername The administrator username to use for Linux VMs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder adminUsername(Output<String> adminUsername) {
             $.adminUsername = adminUsername;
             return this;
         }
 
+        /**
+         * @param adminUsername The administrator username to use for Linux VMs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder adminUsername(String adminUsername) {
             return adminUsername(Output.of(adminUsername));
         }
 
+        /**
+         * @param ssh SSH configuration for Linux-based VMs running on Azure.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ssh(Output<ContainerServiceSshConfigurationArgs> ssh) {
             $.ssh = ssh;
             return this;
         }
 
+        /**
+         * @param ssh SSH configuration for Linux-based VMs running on Azure.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ssh(ContainerServiceSshConfigurationArgs ssh) {
             return ssh(Output.of(ssh));
         }

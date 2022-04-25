@@ -24,6 +24,10 @@ public final class ServicePrincipalPropertiesArgs extends com.pulumi.resources.R
     @Import(name="clientId", required=true)
     private Output<String> clientId;
 
+    /**
+     * @return The service principal client ID
+     * 
+     */
     public Output<String> clientId() {
         return this.clientId;
     }
@@ -35,6 +39,10 @@ public final class ServicePrincipalPropertiesArgs extends com.pulumi.resources.R
     @Import(name="secret", required=true)
     private Output<String> secret;
 
+    /**
+     * @return The service principal secret. This is not returned in response of GET/PUT on the resource. To see this please call listKeys.
+     * 
+     */
     public Output<String> secret() {
         return this.secret;
     }
@@ -64,20 +72,44 @@ public final class ServicePrincipalPropertiesArgs extends com.pulumi.resources.R
             $ = new ServicePrincipalPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientId The service principal client ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(Output<String> clientId) {
             $.clientId = clientId;
             return this;
         }
 
+        /**
+         * @param clientId The service principal client ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(String clientId) {
             return clientId(Output.of(clientId));
         }
 
+        /**
+         * @param secret The service principal secret. This is not returned in response of GET/PUT on the resource. To see this please call listKeys.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secret(Output<String> secret) {
             $.secret = secret;
             return this;
         }
 
+        /**
+         * @param secret The service principal secret. This is not returned in response of GET/PUT on the resource. To see this please call listKeys.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secret(String secret) {
             return secret(Output.of(secret));
         }

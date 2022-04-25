@@ -26,6 +26,10 @@ public final class MethodResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The simple name of this method.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -37,6 +41,10 @@ public final class MethodResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="options", required=true)
     private List<OptionResponse> options;
 
+    /**
+     * @return Any metadata attached to the method.
+     * 
+     */
     public List<OptionResponse> options() {
         return this.options;
     }
@@ -48,6 +56,10 @@ public final class MethodResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="requestStreaming", required=true)
     private Boolean requestStreaming;
 
+    /**
+     * @return If true, the request is streamed.
+     * 
+     */
     public Boolean requestStreaming() {
         return this.requestStreaming;
     }
@@ -59,6 +71,10 @@ public final class MethodResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="requestTypeUrl", required=true)
     private String requestTypeUrl;
 
+    /**
+     * @return A URL of the input message type.
+     * 
+     */
     public String requestTypeUrl() {
         return this.requestTypeUrl;
     }
@@ -70,6 +86,10 @@ public final class MethodResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="responseStreaming", required=true)
     private Boolean responseStreaming;
 
+    /**
+     * @return If true, the response is streamed.
+     * 
+     */
     public Boolean responseStreaming() {
         return this.responseStreaming;
     }
@@ -81,6 +101,10 @@ public final class MethodResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="responseTypeUrl", required=true)
     private String responseTypeUrl;
 
+    /**
+     * @return The URL of the output message type.
+     * 
+     */
     public String responseTypeUrl() {
         return this.responseTypeUrl;
     }
@@ -92,6 +116,10 @@ public final class MethodResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="syntax", required=true)
     private String syntax;
 
+    /**
+     * @return The source syntax of this method.
+     * 
+     */
     public String syntax() {
         return this.syntax;
     }
@@ -126,40 +154,88 @@ public final class MethodResponse extends com.pulumi.resources.InvokeArgs {
             $ = new MethodResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The simple name of this method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param options Any metadata attached to the method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder options(List<OptionResponse> options) {
             $.options = options;
             return this;
         }
 
+        /**
+         * @param options Any metadata attached to the method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder options(OptionResponse... options) {
             return options(List.of(options));
         }
 
+        /**
+         * @param requestStreaming If true, the request is streamed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestStreaming(Boolean requestStreaming) {
             $.requestStreaming = requestStreaming;
             return this;
         }
 
+        /**
+         * @param requestTypeUrl A URL of the input message type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestTypeUrl(String requestTypeUrl) {
             $.requestTypeUrl = requestTypeUrl;
             return this;
         }
 
+        /**
+         * @param responseStreaming If true, the response is streamed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder responseStreaming(Boolean responseStreaming) {
             $.responseStreaming = responseStreaming;
             return this;
         }
 
+        /**
+         * @param responseTypeUrl The URL of the output message type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder responseTypeUrl(String responseTypeUrl) {
             $.responseTypeUrl = responseTypeUrl;
             return this;
         }
 
+        /**
+         * @param syntax The source syntax of this method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder syntax(String syntax) {
             $.syntax = syntax;
             return this;

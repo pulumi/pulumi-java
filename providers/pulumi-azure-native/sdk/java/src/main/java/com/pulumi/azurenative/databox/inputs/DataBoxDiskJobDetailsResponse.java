@@ -42,6 +42,10 @@ public final class DataBoxDiskJobDetailsResponse extends com.pulumi.resources.In
     @Import(name="chainOfCustodySasKey", required=true)
     private String chainOfCustodySasKey;
 
+    /**
+     * @return Shared access key to download the chain of custody logs
+     * 
+     */
     public String chainOfCustodySasKey() {
         return this.chainOfCustodySasKey;
     }
@@ -53,6 +57,10 @@ public final class DataBoxDiskJobDetailsResponse extends com.pulumi.resources.In
     @Import(name="contactDetails", required=true)
     private ContactDetailsResponse contactDetails;
 
+    /**
+     * @return Contact details for notification and shipping.
+     * 
+     */
     public ContactDetailsResponse contactDetails() {
         return this.contactDetails;
     }
@@ -64,6 +72,10 @@ public final class DataBoxDiskJobDetailsResponse extends com.pulumi.resources.In
     @Import(name="copyLogDetails", required=true)
     private List<Object> copyLogDetails;
 
+    /**
+     * @return List of copy log details.
+     * 
+     */
     public List<Object> copyLogDetails() {
         return this.copyLogDetails;
     }
@@ -75,6 +87,10 @@ public final class DataBoxDiskJobDetailsResponse extends com.pulumi.resources.In
     @Import(name="copyProgress", required=true)
     private List<DataBoxDiskCopyProgressResponse> copyProgress;
 
+    /**
+     * @return Copy progress per disk.
+     * 
+     */
     public List<DataBoxDiskCopyProgressResponse> copyProgress() {
         return this.copyProgress;
     }
@@ -86,6 +102,10 @@ public final class DataBoxDiskJobDetailsResponse extends com.pulumi.resources.In
     @Import(name="dataExportDetails")
     private @Nullable List<DataExportDetailsResponse> dataExportDetails;
 
+    /**
+     * @return Details of the data to be exported from azure.
+     * 
+     */
     public Optional<List<DataExportDetailsResponse>> dataExportDetails() {
         return Optional.ofNullable(this.dataExportDetails);
     }
@@ -97,6 +117,10 @@ public final class DataBoxDiskJobDetailsResponse extends com.pulumi.resources.In
     @Import(name="dataImportDetails")
     private @Nullable List<DataImportDetailsResponse> dataImportDetails;
 
+    /**
+     * @return Details of the data to be imported into azure.
+     * 
+     */
     public Optional<List<DataImportDetailsResponse>> dataImportDetails() {
         return Optional.ofNullable(this.dataImportDetails);
     }
@@ -108,6 +132,10 @@ public final class DataBoxDiskJobDetailsResponse extends com.pulumi.resources.In
     @Import(name="deliveryPackage", required=true)
     private PackageShippingDetailsResponse deliveryPackage;
 
+    /**
+     * @return Delivery package shipping details.
+     * 
+     */
     public PackageShippingDetailsResponse deliveryPackage() {
         return this.deliveryPackage;
     }
@@ -119,6 +147,10 @@ public final class DataBoxDiskJobDetailsResponse extends com.pulumi.resources.In
     @Import(name="disksAndSizeDetails", required=true)
     private Map<String,Integer> disksAndSizeDetails;
 
+    /**
+     * @return Contains the map of disk serial number to the disk size being used for the job. Is returned only after the disks are shipped to the customer.
+     * 
+     */
     public Map<String,Integer> disksAndSizeDetails() {
         return this.disksAndSizeDetails;
     }
@@ -130,6 +162,10 @@ public final class DataBoxDiskJobDetailsResponse extends com.pulumi.resources.In
     @Import(name="expectedDataSizeInTeraBytes")
     private @Nullable Integer expectedDataSizeInTeraBytes;
 
+    /**
+     * @return The expected size of the data, which needs to be transferred in this job, in terabytes.
+     * 
+     */
     public Optional<Integer> expectedDataSizeInTeraBytes() {
         return Optional.ofNullable(this.expectedDataSizeInTeraBytes);
     }
@@ -142,6 +178,11 @@ public final class DataBoxDiskJobDetailsResponse extends com.pulumi.resources.In
     @Import(name="jobDetailsType", required=true)
     private String jobDetailsType;
 
+    /**
+     * @return Indicates the type of job details.
+     * Expected value is &#39;DataBoxDisk&#39;.
+     * 
+     */
     public String jobDetailsType() {
         return this.jobDetailsType;
     }
@@ -153,6 +194,10 @@ public final class DataBoxDiskJobDetailsResponse extends com.pulumi.resources.In
     @Import(name="jobStages", required=true)
     private List<JobStagesResponse> jobStages;
 
+    /**
+     * @return List of stages that run in the job.
+     * 
+     */
     public List<JobStagesResponse> jobStages() {
         return this.jobStages;
     }
@@ -164,6 +209,10 @@ public final class DataBoxDiskJobDetailsResponse extends com.pulumi.resources.In
     @Import(name="keyEncryptionKey")
     private @Nullable KeyEncryptionKeyResponse keyEncryptionKey;
 
+    /**
+     * @return Details about which key encryption type is being used.
+     * 
+     */
     public Optional<KeyEncryptionKeyResponse> keyEncryptionKey() {
         return Optional.ofNullable(this.keyEncryptionKey);
     }
@@ -175,6 +224,10 @@ public final class DataBoxDiskJobDetailsResponse extends com.pulumi.resources.In
     @Import(name="passkey")
     private @Nullable String passkey;
 
+    /**
+     * @return User entered passkey for DataBox Disk job.
+     * 
+     */
     public Optional<String> passkey() {
         return Optional.ofNullable(this.passkey);
     }
@@ -186,6 +239,10 @@ public final class DataBoxDiskJobDetailsResponse extends com.pulumi.resources.In
     @Import(name="preferences")
     private @Nullable PreferencesResponse preferences;
 
+    /**
+     * @return Preferences for the order.
+     * 
+     */
     public Optional<PreferencesResponse> preferences() {
         return Optional.ofNullable(this.preferences);
     }
@@ -197,6 +254,10 @@ public final class DataBoxDiskJobDetailsResponse extends com.pulumi.resources.In
     @Import(name="preferredDisks")
     private @Nullable Map<String,Integer> preferredDisks;
 
+    /**
+     * @return User preference on what size disks are needed for the job. The map is from the disk size in TB to the count. Eg. {2,5} means 5 disks of 2 TB size. Key is string but will be checked against an int.
+     * 
+     */
     public Optional<Map<String,Integer>> preferredDisks() {
         return Optional.ofNullable(this.preferredDisks);
     }
@@ -208,6 +269,10 @@ public final class DataBoxDiskJobDetailsResponse extends com.pulumi.resources.In
     @Import(name="returnPackage", required=true)
     private PackageShippingDetailsResponse returnPackage;
 
+    /**
+     * @return Return package shipping details.
+     * 
+     */
     public PackageShippingDetailsResponse returnPackage() {
         return this.returnPackage;
     }
@@ -219,6 +284,10 @@ public final class DataBoxDiskJobDetailsResponse extends com.pulumi.resources.In
     @Import(name="reverseShipmentLabelSasKey", required=true)
     private String reverseShipmentLabelSasKey;
 
+    /**
+     * @return Shared access key to download the return shipment label
+     * 
+     */
     public String reverseShipmentLabelSasKey() {
         return this.reverseShipmentLabelSasKey;
     }
@@ -230,6 +299,10 @@ public final class DataBoxDiskJobDetailsResponse extends com.pulumi.resources.In
     @Import(name="shippingAddress")
     private @Nullable ShippingAddressResponse shippingAddress;
 
+    /**
+     * @return Shipping address of the customer.
+     * 
+     */
     public Optional<ShippingAddressResponse> shippingAddress() {
         return Optional.ofNullable(this.shippingAddress);
     }
@@ -275,111 +348,250 @@ public final class DataBoxDiskJobDetailsResponse extends com.pulumi.resources.In
             $ = new DataBoxDiskJobDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param chainOfCustodySasKey Shared access key to download the chain of custody logs
+         * 
+         * @return builder
+         * 
+         */
         public Builder chainOfCustodySasKey(String chainOfCustodySasKey) {
             $.chainOfCustodySasKey = chainOfCustodySasKey;
             return this;
         }
 
+        /**
+         * @param contactDetails Contact details for notification and shipping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contactDetails(ContactDetailsResponse contactDetails) {
             $.contactDetails = contactDetails;
             return this;
         }
 
+        /**
+         * @param copyLogDetails List of copy log details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder copyLogDetails(List<Object> copyLogDetails) {
             $.copyLogDetails = copyLogDetails;
             return this;
         }
 
+        /**
+         * @param copyLogDetails List of copy log details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder copyLogDetails(Object... copyLogDetails) {
             return copyLogDetails(List.of(copyLogDetails));
         }
 
+        /**
+         * @param copyProgress Copy progress per disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder copyProgress(List<DataBoxDiskCopyProgressResponse> copyProgress) {
             $.copyProgress = copyProgress;
             return this;
         }
 
+        /**
+         * @param copyProgress Copy progress per disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder copyProgress(DataBoxDiskCopyProgressResponse... copyProgress) {
             return copyProgress(List.of(copyProgress));
         }
 
+        /**
+         * @param dataExportDetails Details of the data to be exported from azure.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataExportDetails(@Nullable List<DataExportDetailsResponse> dataExportDetails) {
             $.dataExportDetails = dataExportDetails;
             return this;
         }
 
+        /**
+         * @param dataExportDetails Details of the data to be exported from azure.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataExportDetails(DataExportDetailsResponse... dataExportDetails) {
             return dataExportDetails(List.of(dataExportDetails));
         }
 
+        /**
+         * @param dataImportDetails Details of the data to be imported into azure.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataImportDetails(@Nullable List<DataImportDetailsResponse> dataImportDetails) {
             $.dataImportDetails = dataImportDetails;
             return this;
         }
 
+        /**
+         * @param dataImportDetails Details of the data to be imported into azure.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataImportDetails(DataImportDetailsResponse... dataImportDetails) {
             return dataImportDetails(List.of(dataImportDetails));
         }
 
+        /**
+         * @param deliveryPackage Delivery package shipping details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deliveryPackage(PackageShippingDetailsResponse deliveryPackage) {
             $.deliveryPackage = deliveryPackage;
             return this;
         }
 
+        /**
+         * @param disksAndSizeDetails Contains the map of disk serial number to the disk size being used for the job. Is returned only after the disks are shipped to the customer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disksAndSizeDetails(Map<String,Integer> disksAndSizeDetails) {
             $.disksAndSizeDetails = disksAndSizeDetails;
             return this;
         }
 
+        /**
+         * @param expectedDataSizeInTeraBytes The expected size of the data, which needs to be transferred in this job, in terabytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expectedDataSizeInTeraBytes(@Nullable Integer expectedDataSizeInTeraBytes) {
             $.expectedDataSizeInTeraBytes = expectedDataSizeInTeraBytes;
             return this;
         }
 
+        /**
+         * @param jobDetailsType Indicates the type of job details.
+         * Expected value is &#39;DataBoxDisk&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobDetailsType(String jobDetailsType) {
             $.jobDetailsType = jobDetailsType;
             return this;
         }
 
+        /**
+         * @param jobStages List of stages that run in the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobStages(List<JobStagesResponse> jobStages) {
             $.jobStages = jobStages;
             return this;
         }
 
+        /**
+         * @param jobStages List of stages that run in the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobStages(JobStagesResponse... jobStages) {
             return jobStages(List.of(jobStages));
         }
 
+        /**
+         * @param keyEncryptionKey Details about which key encryption type is being used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyEncryptionKey(@Nullable KeyEncryptionKeyResponse keyEncryptionKey) {
             $.keyEncryptionKey = keyEncryptionKey;
             return this;
         }
 
+        /**
+         * @param passkey User entered passkey for DataBox Disk job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder passkey(@Nullable String passkey) {
             $.passkey = passkey;
             return this;
         }
 
+        /**
+         * @param preferences Preferences for the order.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preferences(@Nullable PreferencesResponse preferences) {
             $.preferences = preferences;
             return this;
         }
 
+        /**
+         * @param preferredDisks User preference on what size disks are needed for the job. The map is from the disk size in TB to the count. Eg. {2,5} means 5 disks of 2 TB size. Key is string but will be checked against an int.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preferredDisks(@Nullable Map<String,Integer> preferredDisks) {
             $.preferredDisks = preferredDisks;
             return this;
         }
 
+        /**
+         * @param returnPackage Return package shipping details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder returnPackage(PackageShippingDetailsResponse returnPackage) {
             $.returnPackage = returnPackage;
             return this;
         }
 
+        /**
+         * @param reverseShipmentLabelSasKey Shared access key to download the return shipment label
+         * 
+         * @return builder
+         * 
+         */
         public Builder reverseShipmentLabelSasKey(String reverseShipmentLabelSasKey) {
             $.reverseShipmentLabelSasKey = reverseShipmentLabelSasKey;
             return this;
         }
 
+        /**
+         * @param shippingAddress Shipping address of the customer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shippingAddress(@Nullable ShippingAddressResponse shippingAddress) {
             $.shippingAddress = shippingAddress;
             return this;

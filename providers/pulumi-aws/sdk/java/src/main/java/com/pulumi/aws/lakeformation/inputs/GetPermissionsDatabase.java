@@ -19,6 +19,10 @@ public final class GetPermissionsDatabase extends com.pulumi.resources.InvokeArg
     @Import(name="catalogId", required=true)
     private String catalogId;
 
+    /**
+     * @return Identifier for the Data Catalog. By default, it is the account ID of the caller.
+     * 
+     */
     public String catalogId() {
         return this.catalogId;
     }
@@ -30,6 +34,10 @@ public final class GetPermissionsDatabase extends com.pulumi.resources.InvokeArg
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of the table resource.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -59,11 +67,23 @@ public final class GetPermissionsDatabase extends com.pulumi.resources.InvokeArg
             $ = new GetPermissionsDatabase(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param catalogId Identifier for the Data Catalog. By default, it is the account ID of the caller.
+         * 
+         * @return builder
+         * 
+         */
         public Builder catalogId(String catalogId) {
             $.catalogId = catalogId;
             return this;
         }
 
+        /**
+         * @param name Name of the table resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

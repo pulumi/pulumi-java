@@ -11,17 +11,17 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudDatalabelingV1beta1ImageClassificationConfigResponse {
     /**
-     * Optional. If allow_multi_label is true, contributors are able to choose multiple labels for one image.
+     * @return Optional. If allow_multi_label is true, contributors are able to choose multiple labels for one image.
      * 
      */
     private final Boolean allowMultiLabel;
     /**
-     * Annotation spec set resource name.
+     * @return Annotation spec set resource name.
      * 
      */
     private final String annotationSpecSet;
     /**
-     * Optional. The type of how to aggregate answers.
+     * @return Optional. The type of how to aggregate answers.
      * 
      */
     private final String answerAggregationType;
@@ -37,23 +37,23 @@ public final class GoogleCloudDatalabelingV1beta1ImageClassificationConfigRespon
     }
 
     /**
-     * Optional. If allow_multi_label is true, contributors are able to choose multiple labels for one image.
+     * @return Optional. If allow_multi_label is true, contributors are able to choose multiple labels for one image.
      * 
-    */
+     */
     public Boolean allowMultiLabel() {
         return this.allowMultiLabel;
     }
     /**
-     * Annotation spec set resource name.
+     * @return Annotation spec set resource name.
      * 
-    */
+     */
     public String annotationSpecSet() {
         return this.annotationSpecSet;
     }
     /**
-     * Optional. The type of how to aggregate answers.
+     * @return Optional. The type of how to aggregate answers.
      * 
-    */
+     */
     public String answerAggregationType() {
         return this.answerAggregationType;
     }

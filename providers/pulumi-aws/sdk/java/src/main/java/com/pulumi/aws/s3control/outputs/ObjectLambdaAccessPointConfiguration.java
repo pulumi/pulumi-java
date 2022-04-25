@@ -15,22 +15,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ObjectLambdaAccessPointConfiguration {
     /**
-     * Allowed features. Valid values: `GetObject-Range`, `GetObject-PartNumber`.
+     * @return Allowed features. Valid values: `GetObject-Range`, `GetObject-PartNumber`.
      * 
      */
     private final @Nullable List<String> allowedFeatures;
     /**
-     * Whether or not the CloudWatch metrics configuration is enabled.
+     * @return Whether or not the CloudWatch metrics configuration is enabled.
      * 
      */
     private final @Nullable Boolean cloudWatchMetricsEnabled;
     /**
-     * Standard access point associated with the Object Lambda Access Point.
+     * @return Standard access point associated with the Object Lambda Access Point.
      * 
      */
     private final String supportingAccessPoint;
     /**
-     * List of transformation configurations for the Object Lambda Access Point. See Transformation Configuration below for more details.
+     * @return List of transformation configurations for the Object Lambda Access Point. See Transformation Configuration below for more details.
      * 
      */
     private final List<ObjectLambdaAccessPointConfigurationTransformationConfiguration> transformationConfigurations;
@@ -48,30 +48,30 @@ public final class ObjectLambdaAccessPointConfiguration {
     }
 
     /**
-     * Allowed features. Valid values: `GetObject-Range`, `GetObject-PartNumber`.
+     * @return Allowed features. Valid values: `GetObject-Range`, `GetObject-PartNumber`.
      * 
-    */
+     */
     public List<String> allowedFeatures() {
         return this.allowedFeatures == null ? List.of() : this.allowedFeatures;
     }
     /**
-     * Whether or not the CloudWatch metrics configuration is enabled.
+     * @return Whether or not the CloudWatch metrics configuration is enabled.
      * 
-    */
+     */
     public Optional<Boolean> cloudWatchMetricsEnabled() {
         return Optional.ofNullable(this.cloudWatchMetricsEnabled);
     }
     /**
-     * Standard access point associated with the Object Lambda Access Point.
+     * @return Standard access point associated with the Object Lambda Access Point.
      * 
-    */
+     */
     public String supportingAccessPoint() {
         return this.supportingAccessPoint;
     }
     /**
-     * List of transformation configurations for the Object Lambda Access Point. See Transformation Configuration below for more details.
+     * @return List of transformation configurations for the Object Lambda Access Point. See Transformation Configuration below for more details.
      * 
-    */
+     */
     public List<ObjectLambdaAccessPointConfigurationTransformationConfiguration> transformationConfigurations() {
         return this.transformationConfigurations;
     }

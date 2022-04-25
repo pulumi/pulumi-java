@@ -31,6 +31,10 @@ public final class ValidationActivityResponse extends com.pulumi.resources.Invok
     @Import(name="childItems")
     private @Nullable Object childItems;
 
+    /**
+     * @return Can be used if dataset points to a folder. If set to true, the folder must have at least one file. If set to false, the folder must be empty. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Object> childItems() {
         return Optional.ofNullable(this.childItems);
     }
@@ -42,6 +46,10 @@ public final class ValidationActivityResponse extends com.pulumi.resources.Invok
     @Import(name="dataset", required=true)
     private DatasetReferenceResponse dataset;
 
+    /**
+     * @return Validation activity dataset reference.
+     * 
+     */
     public DatasetReferenceResponse dataset() {
         return this.dataset;
     }
@@ -53,6 +61,10 @@ public final class ValidationActivityResponse extends com.pulumi.resources.Invok
     @Import(name="dependsOn")
     private @Nullable List<ActivityDependencyResponse> dependsOn;
 
+    /**
+     * @return Activity depends on condition.
+     * 
+     */
     public Optional<List<ActivityDependencyResponse>> dependsOn() {
         return Optional.ofNullable(this.dependsOn);
     }
@@ -64,6 +76,10 @@ public final class ValidationActivityResponse extends com.pulumi.resources.Invok
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Activity description.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -75,6 +91,10 @@ public final class ValidationActivityResponse extends com.pulumi.resources.Invok
     @Import(name="minimumSize")
     private @Nullable Object minimumSize;
 
+    /**
+     * @return Can be used if dataset points to a file. The file must be greater than or equal in size to the value specified. Type: integer (or Expression with resultType integer).
+     * 
+     */
     public Optional<Object> minimumSize() {
         return Optional.ofNullable(this.minimumSize);
     }
@@ -86,6 +106,10 @@ public final class ValidationActivityResponse extends com.pulumi.resources.Invok
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Activity name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -97,6 +121,10 @@ public final class ValidationActivityResponse extends com.pulumi.resources.Invok
     @Import(name="sleep")
     private @Nullable Object sleep;
 
+    /**
+     * @return A delay in seconds between validation attempts. If no value is specified, 10 seconds will be used as the default. Type: integer (or Expression with resultType integer).
+     * 
+     */
     public Optional<Object> sleep() {
         return Optional.ofNullable(this.sleep);
     }
@@ -108,6 +136,10 @@ public final class ValidationActivityResponse extends com.pulumi.resources.Invok
     @Import(name="timeout")
     private @Nullable Object timeout;
 
+    /**
+     * @return Specifies the timeout for the activity to run. If there is no value specified, it takes the value of TimeSpan.FromDays(7) which is 1 week as default. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * 
+     */
     public Optional<Object> timeout() {
         return Optional.ofNullable(this.timeout);
     }
@@ -120,6 +152,11 @@ public final class ValidationActivityResponse extends com.pulumi.resources.Invok
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of activity.
+     * Expected value is &#39;Validation&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -131,6 +168,10 @@ public final class ValidationActivityResponse extends com.pulumi.resources.Invok
     @Import(name="userProperties")
     private @Nullable List<UserPropertyResponse> userProperties;
 
+    /**
+     * @return Activity user properties.
+     * 
+     */
     public Optional<List<UserPropertyResponse>> userProperties() {
         return Optional.ofNullable(this.userProperties);
     }
@@ -168,60 +209,133 @@ public final class ValidationActivityResponse extends com.pulumi.resources.Invok
             $ = new ValidationActivityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param childItems Can be used if dataset points to a folder. If set to true, the folder must have at least one file. If set to false, the folder must be empty. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder childItems(@Nullable Object childItems) {
             $.childItems = childItems;
             return this;
         }
 
+        /**
+         * @param dataset Validation activity dataset reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataset(DatasetReferenceResponse dataset) {
             $.dataset = dataset;
             return this;
         }
 
+        /**
+         * @param dependsOn Activity depends on condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
             $.dependsOn = dependsOn;
             return this;
         }
 
+        /**
+         * @param dependsOn Activity depends on condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(ActivityDependencyResponse... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
 
+        /**
+         * @param description Activity description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param minimumSize Can be used if dataset points to a file. The file must be greater than or equal in size to the value specified. Type: integer (or Expression with resultType integer).
+         * 
+         * @return builder
+         * 
+         */
         public Builder minimumSize(@Nullable Object minimumSize) {
             $.minimumSize = minimumSize;
             return this;
         }
 
+        /**
+         * @param name Activity name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param sleep A delay in seconds between validation attempts. If no value is specified, 10 seconds will be used as the default. Type: integer (or Expression with resultType integer).
+         * 
+         * @return builder
+         * 
+         */
         public Builder sleep(@Nullable Object sleep) {
             $.sleep = sleep;
             return this;
         }
 
+        /**
+         * @param timeout Specifies the timeout for the activity to run. If there is no value specified, it takes the value of TimeSpan.FromDays(7) which is 1 week as default. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeout(@Nullable Object timeout) {
             $.timeout = timeout;
             return this;
         }
 
+        /**
+         * @param type Type of activity.
+         * Expected value is &#39;Validation&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param userProperties Activity user properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
             $.userProperties = userProperties;
             return this;
         }
 
+        /**
+         * @param userProperties Activity user properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProperties(UserPropertyResponse... userProperties) {
             return userProperties(List.of(userProperties));
         }

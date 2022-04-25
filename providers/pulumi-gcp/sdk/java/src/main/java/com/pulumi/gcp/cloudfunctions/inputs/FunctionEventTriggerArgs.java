@@ -25,6 +25,12 @@ public final class FunctionEventTriggerArgs extends com.pulumi.resources.Resourc
     @Import(name="eventType", required=true)
     private Output<String> eventType;
 
+    /**
+     * @return The type of event to observe. For example: `&#34;google.storage.object.finalize&#34;`.
+     * See the documentation on [calling Cloud Functions](https://cloud.google.com/functions/docs/calling/) for a
+     * full reference of accepted triggers.
+     * 
+     */
     public Output<String> eventType() {
         return this.eventType;
     }
@@ -36,6 +42,10 @@ public final class FunctionEventTriggerArgs extends com.pulumi.resources.Resourc
     @Import(name="failurePolicy")
     private @Nullable Output<FunctionEventTriggerFailurePolicyArgs> failurePolicy;
 
+    /**
+     * @return Specifies policy for failed executions. Structure is documented below.
+     * 
+     */
     public Optional<Output<FunctionEventTriggerFailurePolicyArgs>> failurePolicy() {
         return Optional.ofNullable(this.failurePolicy);
     }
@@ -48,6 +58,11 @@ public final class FunctionEventTriggerArgs extends com.pulumi.resources.Resourc
     @Import(name="resource", required=true)
     private Output<String> resource;
 
+    /**
+     * @return Required. The name or partial URI of the resource from
+     * which to observe events. For example, `&#34;myBucket&#34;` or `&#34;projects/my-project/topics/my-topic&#34;`
+     * 
+     */
     public Output<String> resource() {
         return this.resource;
     }
@@ -78,29 +93,71 @@ public final class FunctionEventTriggerArgs extends com.pulumi.resources.Resourc
             $ = new FunctionEventTriggerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param eventType The type of event to observe. For example: `&#34;google.storage.object.finalize&#34;`.
+         * See the documentation on [calling Cloud Functions](https://cloud.google.com/functions/docs/calling/) for a
+         * full reference of accepted triggers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventType(Output<String> eventType) {
             $.eventType = eventType;
             return this;
         }
 
+        /**
+         * @param eventType The type of event to observe. For example: `&#34;google.storage.object.finalize&#34;`.
+         * See the documentation on [calling Cloud Functions](https://cloud.google.com/functions/docs/calling/) for a
+         * full reference of accepted triggers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventType(String eventType) {
             return eventType(Output.of(eventType));
         }
 
+        /**
+         * @param failurePolicy Specifies policy for failed executions. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failurePolicy(@Nullable Output<FunctionEventTriggerFailurePolicyArgs> failurePolicy) {
             $.failurePolicy = failurePolicy;
             return this;
         }
 
+        /**
+         * @param failurePolicy Specifies policy for failed executions. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failurePolicy(FunctionEventTriggerFailurePolicyArgs failurePolicy) {
             return failurePolicy(Output.of(failurePolicy));
         }
 
+        /**
+         * @param resource Required. The name or partial URI of the resource from
+         * which to observe events. For example, `&#34;myBucket&#34;` or `&#34;projects/my-project/topics/my-topic&#34;`
+         * 
+         * @return builder
+         * 
+         */
         public Builder resource(Output<String> resource) {
             $.resource = resource;
             return this;
         }
 
+        /**
+         * @param resource Required. The name or partial URI of the resource from
+         * which to observe events. For example, `&#34;myBucket&#34;` or `&#34;projects/my-project/topics/my-topic&#34;`
+         * 
+         * @return builder
+         * 
+         */
         public Builder resource(String resource) {
             return resource(Output.of(resource));
         }

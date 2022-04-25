@@ -27,6 +27,10 @@ public final class ExpressRouteCircuitServiceProviderPropertiesArgs extends com.
     @Import(name="bandwidthInMbps")
     private @Nullable Output<Integer> bandwidthInMbps;
 
+    /**
+     * @return The BandwidthInMbps.
+     * 
+     */
     public Optional<Output<Integer>> bandwidthInMbps() {
         return Optional.ofNullable(this.bandwidthInMbps);
     }
@@ -38,6 +42,10 @@ public final class ExpressRouteCircuitServiceProviderPropertiesArgs extends com.
     @Import(name="peeringLocation")
     private @Nullable Output<String> peeringLocation;
 
+    /**
+     * @return The peering location.
+     * 
+     */
     public Optional<Output<String>> peeringLocation() {
         return Optional.ofNullable(this.peeringLocation);
     }
@@ -49,6 +57,10 @@ public final class ExpressRouteCircuitServiceProviderPropertiesArgs extends com.
     @Import(name="serviceProviderName")
     private @Nullable Output<String> serviceProviderName;
 
+    /**
+     * @return The serviceProviderName.
+     * 
+     */
     public Optional<Output<String>> serviceProviderName() {
         return Optional.ofNullable(this.serviceProviderName);
     }
@@ -79,29 +91,65 @@ public final class ExpressRouteCircuitServiceProviderPropertiesArgs extends com.
             $ = new ExpressRouteCircuitServiceProviderPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bandwidthInMbps The BandwidthInMbps.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bandwidthInMbps(@Nullable Output<Integer> bandwidthInMbps) {
             $.bandwidthInMbps = bandwidthInMbps;
             return this;
         }
 
+        /**
+         * @param bandwidthInMbps The BandwidthInMbps.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bandwidthInMbps(Integer bandwidthInMbps) {
             return bandwidthInMbps(Output.of(bandwidthInMbps));
         }
 
+        /**
+         * @param peeringLocation The peering location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peeringLocation(@Nullable Output<String> peeringLocation) {
             $.peeringLocation = peeringLocation;
             return this;
         }
 
+        /**
+         * @param peeringLocation The peering location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peeringLocation(String peeringLocation) {
             return peeringLocation(Output.of(peeringLocation));
         }
 
+        /**
+         * @param serviceProviderName The serviceProviderName.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceProviderName(@Nullable Output<String> serviceProviderName) {
             $.serviceProviderName = serviceProviderName;
             return this;
         }
 
+        /**
+         * @param serviceProviderName The serviceProviderName.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceProviderName(String serviceProviderName) {
             return serviceProviderName(Output.of(serviceProviderName));
         }

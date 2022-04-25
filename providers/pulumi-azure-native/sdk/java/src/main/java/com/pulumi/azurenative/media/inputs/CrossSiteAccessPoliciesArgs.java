@@ -26,6 +26,10 @@ public final class CrossSiteAccessPoliciesArgs extends com.pulumi.resources.Reso
     @Import(name="clientAccessPolicy")
     private @Nullable Output<String> clientAccessPolicy;
 
+    /**
+     * @return The content of clientaccesspolicy.xml used by Silverlight.
+     * 
+     */
     public Optional<Output<String>> clientAccessPolicy() {
         return Optional.ofNullable(this.clientAccessPolicy);
     }
@@ -37,6 +41,10 @@ public final class CrossSiteAccessPoliciesArgs extends com.pulumi.resources.Reso
     @Import(name="crossDomainPolicy")
     private @Nullable Output<String> crossDomainPolicy;
 
+    /**
+     * @return The content of crossdomain.xml used by Silverlight.
+     * 
+     */
     public Optional<Output<String>> crossDomainPolicy() {
         return Optional.ofNullable(this.crossDomainPolicy);
     }
@@ -66,20 +74,44 @@ public final class CrossSiteAccessPoliciesArgs extends com.pulumi.resources.Reso
             $ = new CrossSiteAccessPoliciesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientAccessPolicy The content of clientaccesspolicy.xml used by Silverlight.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientAccessPolicy(@Nullable Output<String> clientAccessPolicy) {
             $.clientAccessPolicy = clientAccessPolicy;
             return this;
         }
 
+        /**
+         * @param clientAccessPolicy The content of clientaccesspolicy.xml used by Silverlight.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientAccessPolicy(String clientAccessPolicy) {
             return clientAccessPolicy(Output.of(clientAccessPolicy));
         }
 
+        /**
+         * @param crossDomainPolicy The content of crossdomain.xml used by Silverlight.
+         * 
+         * @return builder
+         * 
+         */
         public Builder crossDomainPolicy(@Nullable Output<String> crossDomainPolicy) {
             $.crossDomainPolicy = crossDomainPolicy;
             return this;
         }
 
+        /**
+         * @param crossDomainPolicy The content of crossdomain.xml used by Silverlight.
+         * 
+         * @return builder
+         * 
+         */
         public Builder crossDomainPolicy(String crossDomainPolicy) {
             return crossDomainPolicy(Output.of(crossDomainPolicy));
         }

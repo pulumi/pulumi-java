@@ -26,6 +26,10 @@ public final class TransportArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="pubsub")
     private @Nullable Output<PubsubArgs> pubsub;
 
+    /**
+     * @return The Pub/Sub topic and subscription used by Eventarc as a transport intermediary.
+     * 
+     */
     public Optional<Output<PubsubArgs>> pubsub() {
         return Optional.ofNullable(this.pubsub);
     }
@@ -54,11 +58,23 @@ public final class TransportArgs extends com.pulumi.resources.ResourceArgs {
             $ = new TransportArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param pubsub The Pub/Sub topic and subscription used by Eventarc as a transport intermediary.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pubsub(@Nullable Output<PubsubArgs> pubsub) {
             $.pubsub = pubsub;
             return this;
         }
 
+        /**
+         * @param pubsub The Pub/Sub topic and subscription used by Eventarc as a transport intermediary.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pubsub(PubsubArgs pubsub) {
             return pubsub(Output.of(pubsub));
         }

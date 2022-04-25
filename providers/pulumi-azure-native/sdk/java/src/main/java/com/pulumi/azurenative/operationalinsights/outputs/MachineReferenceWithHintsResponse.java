@@ -10,33 +10,33 @@ import java.util.Objects;
 @CustomType
 public final class MachineReferenceWithHintsResponse {
     /**
-     * Last known display name.
+     * @return Last known display name.
      * 
      */
     private final String displayNameHint;
     /**
-     * Resource URI.
+     * @return Resource URI.
      * 
      */
     private final String id;
     /**
-     * Specifies the sub-class of the reference.
+     * @return Specifies the sub-class of the reference.
      * Expected value is &#39;ref:machinewithhints&#39;.
      * 
      */
     private final String kind;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * Last known operating system family.
+     * @return Last known operating system family.
      * 
      */
     private final String osFamilyHint;
     /**
-     * Resource type qualifier.
+     * @return Resource type qualifier.
      * 
      */
     private final String type;
@@ -58,45 +58,45 @@ public final class MachineReferenceWithHintsResponse {
     }
 
     /**
-     * Last known display name.
+     * @return Last known display name.
      * 
-    */
+     */
     public String displayNameHint() {
         return this.displayNameHint;
     }
     /**
-     * Resource URI.
+     * @return Resource URI.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Specifies the sub-class of the reference.
+     * @return Specifies the sub-class of the reference.
      * Expected value is &#39;ref:machinewithhints&#39;.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Last known operating system family.
+     * @return Last known operating system family.
      * 
-    */
+     */
     public String osFamilyHint() {
         return this.osFamilyHint;
     }
     /**
-     * Resource type qualifier.
+     * @return Resource type qualifier.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

@@ -26,6 +26,10 @@ public final class DiskEncryptionConfigurationResponse extends com.pulumi.resour
     @Import(name="targets")
     private @Nullable List<String> targets;
 
+    /**
+     * @return On Linux pool, only &#34;TemporaryDisk&#34; is supported; on Windows pool, &#34;OsDisk&#34; and &#34;TemporaryDisk&#34; must be specified.
+     * 
+     */
     public Optional<List<String>> targets() {
         return Optional.ofNullable(this.targets);
     }
@@ -54,11 +58,23 @@ public final class DiskEncryptionConfigurationResponse extends com.pulumi.resour
             $ = new DiskEncryptionConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param targets On Linux pool, only &#34;TemporaryDisk&#34; is supported; on Windows pool, &#34;OsDisk&#34; and &#34;TemporaryDisk&#34; must be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targets(@Nullable List<String> targets) {
             $.targets = targets;
             return this;
         }
 
+        /**
+         * @param targets On Linux pool, only &#34;TemporaryDisk&#34; is supported; on Windows pool, &#34;OsDisk&#34; and &#34;TemporaryDisk&#34; must be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targets(String... targets) {
             return targets(List.of(targets));
         }

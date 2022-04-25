@@ -25,6 +25,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardRe
     @Import(name="imageDisplayOptions", required=true)
     private String imageDisplayOptions;
 
+    /**
+     * @return Optional. Settings for displaying the image. Applies to every image in items.
+     * 
+     */
     public String imageDisplayOptions() {
         return this.imageDisplayOptions;
     }
@@ -36,6 +40,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardRe
     @Import(name="items", required=true)
     private List<GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemResponse> items;
 
+    /**
+     * @return List of items in the Browse Carousel Card. Minimum of two items, maximum of ten.
+     * 
+     */
     public List<GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemResponse> items() {
         return this.items;
     }
@@ -65,16 +73,34 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardRe
             $ = new GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param imageDisplayOptions Optional. Settings for displaying the image. Applies to every image in items.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageDisplayOptions(String imageDisplayOptions) {
             $.imageDisplayOptions = imageDisplayOptions;
             return this;
         }
 
+        /**
+         * @param items List of items in the Browse Carousel Card. Minimum of two items, maximum of ten.
+         * 
+         * @return builder
+         * 
+         */
         public Builder items(List<GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemResponse> items) {
             $.items = items;
             return this;
         }
 
+        /**
+         * @param items List of items in the Browse Carousel Card. Minimum of two items, maximum of ten.
+         * 
+         * @return builder
+         * 
+         */
         public Builder items(GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemResponse... items) {
             return items(List.of(items));
         }

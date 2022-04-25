@@ -26,6 +26,10 @@ public final class ReportableExceptionResponse extends com.pulumi.resources.Invo
     @Import(name="actionableMessage")
     private @Nullable String actionableMessage;
 
+    /**
+     * @return Actionable steps for this exception
+     * 
+     */
     public Optional<String> actionableMessage() {
         return Optional.ofNullable(this.actionableMessage);
     }
@@ -37,6 +41,10 @@ public final class ReportableExceptionResponse extends com.pulumi.resources.Invo
     @Import(name="filePath", required=true)
     private String filePath;
 
+    /**
+     * @return The path to the file where exception occurred
+     * 
+     */
     public String filePath() {
         return this.filePath;
     }
@@ -48,6 +56,10 @@ public final class ReportableExceptionResponse extends com.pulumi.resources.Invo
     @Import(name="hResult", required=true)
     private Integer hResult;
 
+    /**
+     * @return Coded numerical value that is assigned to a specific exception
+     * 
+     */
     public Integer hResult() {
         return this.hResult;
     }
@@ -59,6 +71,10 @@ public final class ReportableExceptionResponse extends com.pulumi.resources.Invo
     @Import(name="lineNumber", required=true)
     private String lineNumber;
 
+    /**
+     * @return The line number where exception occurred
+     * 
+     */
     public String lineNumber() {
         return this.lineNumber;
     }
@@ -70,6 +86,10 @@ public final class ReportableExceptionResponse extends com.pulumi.resources.Invo
     @Import(name="message", required=true)
     private String message;
 
+    /**
+     * @return Error message
+     * 
+     */
     public String message() {
         return this.message;
     }
@@ -81,6 +101,10 @@ public final class ReportableExceptionResponse extends com.pulumi.resources.Invo
     @Import(name="stackTrace", required=true)
     private String stackTrace;
 
+    /**
+     * @return Stack trace
+     * 
+     */
     public String stackTrace() {
         return this.stackTrace;
     }
@@ -114,31 +138,67 @@ public final class ReportableExceptionResponse extends com.pulumi.resources.Invo
             $ = new ReportableExceptionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actionableMessage Actionable steps for this exception
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionableMessage(@Nullable String actionableMessage) {
             $.actionableMessage = actionableMessage;
             return this;
         }
 
+        /**
+         * @param filePath The path to the file where exception occurred
+         * 
+         * @return builder
+         * 
+         */
         public Builder filePath(String filePath) {
             $.filePath = filePath;
             return this;
         }
 
+        /**
+         * @param hResult Coded numerical value that is assigned to a specific exception
+         * 
+         * @return builder
+         * 
+         */
         public Builder hResult(Integer hResult) {
             $.hResult = hResult;
             return this;
         }
 
+        /**
+         * @param lineNumber The line number where exception occurred
+         * 
+         * @return builder
+         * 
+         */
         public Builder lineNumber(String lineNumber) {
             $.lineNumber = lineNumber;
             return this;
         }
 
+        /**
+         * @param message Error message
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(String message) {
             $.message = message;
             return this;
         }
 
+        /**
+         * @param stackTrace Stack trace
+         * 
+         * @return builder
+         * 
+         */
         public Builder stackTrace(String stackTrace) {
             $.stackTrace = stackTrace;
             return this;

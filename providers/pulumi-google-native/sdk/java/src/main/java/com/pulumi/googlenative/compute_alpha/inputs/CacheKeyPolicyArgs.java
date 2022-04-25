@@ -28,6 +28,10 @@ public final class CacheKeyPolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="includeHost")
     private @Nullable Output<Boolean> includeHost;
 
+    /**
+     * @return If true, requests to different hosts will be cached separately.
+     * 
+     */
     public Optional<Output<Boolean>> includeHost() {
         return Optional.ofNullable(this.includeHost);
     }
@@ -39,6 +43,10 @@ public final class CacheKeyPolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="includeHttpHeaders")
     private @Nullable Output<List<String>> includeHttpHeaders;
 
+    /**
+     * @return Allows HTTP request headers (by name) to be used in the cache key.
+     * 
+     */
     public Optional<Output<List<String>>> includeHttpHeaders() {
         return Optional.ofNullable(this.includeHttpHeaders);
     }
@@ -50,6 +58,10 @@ public final class CacheKeyPolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="includeNamedCookies")
     private @Nullable Output<List<String>> includeNamedCookies;
 
+    /**
+     * @return Allows HTTP cookies (by name) to be used in the cache key. The name=value pair will be used in the cache key Cloud CDN generates.
+     * 
+     */
     public Optional<Output<List<String>>> includeNamedCookies() {
         return Optional.ofNullable(this.includeNamedCookies);
     }
@@ -61,6 +73,10 @@ public final class CacheKeyPolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="includeProtocol")
     private @Nullable Output<Boolean> includeProtocol;
 
+    /**
+     * @return If true, http and https requests will be cached separately.
+     * 
+     */
     public Optional<Output<Boolean>> includeProtocol() {
         return Optional.ofNullable(this.includeProtocol);
     }
@@ -72,6 +88,10 @@ public final class CacheKeyPolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="includeQueryString")
     private @Nullable Output<Boolean> includeQueryString;
 
+    /**
+     * @return If true, include query string parameters in the cache key according to query_string_whitelist and query_string_blacklist. If neither is set, the entire query string will be included. If false, the query string will be excluded from the cache key entirely.
+     * 
+     */
     public Optional<Output<Boolean>> includeQueryString() {
         return Optional.ofNullable(this.includeQueryString);
     }
@@ -83,6 +103,10 @@ public final class CacheKeyPolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="queryStringBlacklist")
     private @Nullable Output<List<String>> queryStringBlacklist;
 
+    /**
+     * @return Names of query string parameters to exclude in cache keys. All other parameters will be included. Either specify query_string_whitelist or query_string_blacklist, not both. &#39;&amp;&#39; and &#39;=&#39; will be percent encoded and not treated as delimiters.
+     * 
+     */
     public Optional<Output<List<String>>> queryStringBlacklist() {
         return Optional.ofNullable(this.queryStringBlacklist);
     }
@@ -94,6 +118,10 @@ public final class CacheKeyPolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="queryStringWhitelist")
     private @Nullable Output<List<String>> queryStringWhitelist;
 
+    /**
+     * @return Names of query string parameters to include in cache keys. All other parameters will be excluded. Either specify query_string_whitelist or query_string_blacklist, not both. &#39;&amp;&#39; and &#39;=&#39; will be percent encoded and not treated as delimiters.
+     * 
+     */
     public Optional<Output<List<String>>> queryStringWhitelist() {
         return Optional.ofNullable(this.queryStringWhitelist);
     }
@@ -128,81 +156,189 @@ public final class CacheKeyPolicyArgs extends com.pulumi.resources.ResourceArgs 
             $ = new CacheKeyPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param includeHost If true, requests to different hosts will be cached separately.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeHost(@Nullable Output<Boolean> includeHost) {
             $.includeHost = includeHost;
             return this;
         }
 
+        /**
+         * @param includeHost If true, requests to different hosts will be cached separately.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeHost(Boolean includeHost) {
             return includeHost(Output.of(includeHost));
         }
 
+        /**
+         * @param includeHttpHeaders Allows HTTP request headers (by name) to be used in the cache key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeHttpHeaders(@Nullable Output<List<String>> includeHttpHeaders) {
             $.includeHttpHeaders = includeHttpHeaders;
             return this;
         }
 
+        /**
+         * @param includeHttpHeaders Allows HTTP request headers (by name) to be used in the cache key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeHttpHeaders(List<String> includeHttpHeaders) {
             return includeHttpHeaders(Output.of(includeHttpHeaders));
         }
 
+        /**
+         * @param includeHttpHeaders Allows HTTP request headers (by name) to be used in the cache key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeHttpHeaders(String... includeHttpHeaders) {
             return includeHttpHeaders(List.of(includeHttpHeaders));
         }
 
+        /**
+         * @param includeNamedCookies Allows HTTP cookies (by name) to be used in the cache key. The name=value pair will be used in the cache key Cloud CDN generates.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeNamedCookies(@Nullable Output<List<String>> includeNamedCookies) {
             $.includeNamedCookies = includeNamedCookies;
             return this;
         }
 
+        /**
+         * @param includeNamedCookies Allows HTTP cookies (by name) to be used in the cache key. The name=value pair will be used in the cache key Cloud CDN generates.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeNamedCookies(List<String> includeNamedCookies) {
             return includeNamedCookies(Output.of(includeNamedCookies));
         }
 
+        /**
+         * @param includeNamedCookies Allows HTTP cookies (by name) to be used in the cache key. The name=value pair will be used in the cache key Cloud CDN generates.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeNamedCookies(String... includeNamedCookies) {
             return includeNamedCookies(List.of(includeNamedCookies));
         }
 
+        /**
+         * @param includeProtocol If true, http and https requests will be cached separately.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeProtocol(@Nullable Output<Boolean> includeProtocol) {
             $.includeProtocol = includeProtocol;
             return this;
         }
 
+        /**
+         * @param includeProtocol If true, http and https requests will be cached separately.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeProtocol(Boolean includeProtocol) {
             return includeProtocol(Output.of(includeProtocol));
         }
 
+        /**
+         * @param includeQueryString If true, include query string parameters in the cache key according to query_string_whitelist and query_string_blacklist. If neither is set, the entire query string will be included. If false, the query string will be excluded from the cache key entirely.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeQueryString(@Nullable Output<Boolean> includeQueryString) {
             $.includeQueryString = includeQueryString;
             return this;
         }
 
+        /**
+         * @param includeQueryString If true, include query string parameters in the cache key according to query_string_whitelist and query_string_blacklist. If neither is set, the entire query string will be included. If false, the query string will be excluded from the cache key entirely.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeQueryString(Boolean includeQueryString) {
             return includeQueryString(Output.of(includeQueryString));
         }
 
+        /**
+         * @param queryStringBlacklist Names of query string parameters to exclude in cache keys. All other parameters will be included. Either specify query_string_whitelist or query_string_blacklist, not both. &#39;&amp;&#39; and &#39;=&#39; will be percent encoded and not treated as delimiters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryStringBlacklist(@Nullable Output<List<String>> queryStringBlacklist) {
             $.queryStringBlacklist = queryStringBlacklist;
             return this;
         }
 
+        /**
+         * @param queryStringBlacklist Names of query string parameters to exclude in cache keys. All other parameters will be included. Either specify query_string_whitelist or query_string_blacklist, not both. &#39;&amp;&#39; and &#39;=&#39; will be percent encoded and not treated as delimiters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryStringBlacklist(List<String> queryStringBlacklist) {
             return queryStringBlacklist(Output.of(queryStringBlacklist));
         }
 
+        /**
+         * @param queryStringBlacklist Names of query string parameters to exclude in cache keys. All other parameters will be included. Either specify query_string_whitelist or query_string_blacklist, not both. &#39;&amp;&#39; and &#39;=&#39; will be percent encoded and not treated as delimiters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryStringBlacklist(String... queryStringBlacklist) {
             return queryStringBlacklist(List.of(queryStringBlacklist));
         }
 
+        /**
+         * @param queryStringWhitelist Names of query string parameters to include in cache keys. All other parameters will be excluded. Either specify query_string_whitelist or query_string_blacklist, not both. &#39;&amp;&#39; and &#39;=&#39; will be percent encoded and not treated as delimiters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryStringWhitelist(@Nullable Output<List<String>> queryStringWhitelist) {
             $.queryStringWhitelist = queryStringWhitelist;
             return this;
         }
 
+        /**
+         * @param queryStringWhitelist Names of query string parameters to include in cache keys. All other parameters will be excluded. Either specify query_string_whitelist or query_string_blacklist, not both. &#39;&amp;&#39; and &#39;=&#39; will be percent encoded and not treated as delimiters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryStringWhitelist(List<String> queryStringWhitelist) {
             return queryStringWhitelist(Output.of(queryStringWhitelist));
         }
 
+        /**
+         * @param queryStringWhitelist Names of query string parameters to include in cache keys. All other parameters will be excluded. Either specify query_string_whitelist or query_string_blacklist, not both. &#39;&amp;&#39; and &#39;=&#39; will be percent encoded and not treated as delimiters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryStringWhitelist(String... queryStringWhitelist) {
             return queryStringWhitelist(List.of(queryStringWhitelist));
         }

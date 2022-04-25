@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class LocalObjectReferenceResponse {
     /**
-     * (Optional) Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
+     * @return (Optional) Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
      * 
      */
     private final String name;
@@ -21,9 +21,9 @@ public final class LocalObjectReferenceResponse {
     }
 
     /**
-     * (Optional) Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
+     * @return (Optional) Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

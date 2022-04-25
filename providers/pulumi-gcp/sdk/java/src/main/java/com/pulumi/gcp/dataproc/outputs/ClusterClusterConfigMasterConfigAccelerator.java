@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class ClusterClusterConfigMasterConfigAccelerator {
     /**
-     * The number of the accelerator cards of this type exposed to this instance. Often restricted to one of `1`, `2`, `4`, or `8`.
+     * @return The number of the accelerator cards of this type exposed to this instance. Often restricted to one of `1`, `2`, `4`, or `8`.
      * 
      */
     private final Integer acceleratorCount;
     /**
-     * The short name of the accelerator type to expose to this instance. For example, `nvidia-tesla-k80`.
+     * @return The short name of the accelerator type to expose to this instance. For example, `nvidia-tesla-k80`.
      * 
      */
     private final String acceleratorType;
@@ -30,16 +30,16 @@ public final class ClusterClusterConfigMasterConfigAccelerator {
     }
 
     /**
-     * The number of the accelerator cards of this type exposed to this instance. Often restricted to one of `1`, `2`, `4`, or `8`.
+     * @return The number of the accelerator cards of this type exposed to this instance. Often restricted to one of `1`, `2`, `4`, or `8`.
      * 
-    */
+     */
     public Integer acceleratorCount() {
         return this.acceleratorCount;
     }
     /**
-     * The short name of the accelerator type to expose to this instance. For example, `nvidia-tesla-k80`.
+     * @return The short name of the accelerator type to expose to this instance. For example, `nvidia-tesla-k80`.
      * 
-    */
+     */
     public String acceleratorType() {
         return this.acceleratorType;
     }

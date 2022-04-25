@@ -26,6 +26,10 @@ public final class GuestOSNICCustomizationResponse extends com.pulumi.resources.
     @Import(name="allocation")
     private @Nullable String allocation;
 
+    /**
+     * @return IP address allocation method
+     * 
+     */
     public Optional<String> allocation() {
         return Optional.ofNullable(this.allocation);
     }
@@ -37,6 +41,10 @@ public final class GuestOSNICCustomizationResponse extends com.pulumi.resources.
     @Import(name="dnsServers")
     private @Nullable List<String> dnsServers;
 
+    /**
+     * @return List of dns servers to use
+     * 
+     */
     public Optional<List<String>> dnsServers() {
         return Optional.ofNullable(this.dnsServers);
     }
@@ -48,6 +56,10 @@ public final class GuestOSNICCustomizationResponse extends com.pulumi.resources.
     @Import(name="gateway")
     private @Nullable List<String> gateway;
 
+    /**
+     * @return Gateway addresses assigned to nic
+     * 
+     */
     public Optional<List<String>> gateway() {
         return Optional.ofNullable(this.gateway);
     }
@@ -59,6 +71,10 @@ public final class GuestOSNICCustomizationResponse extends com.pulumi.resources.
     @Import(name="ipAddress")
     private @Nullable String ipAddress;
 
+    /**
+     * @return Static ip address for nic
+     * 
+     */
     public Optional<String> ipAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
@@ -70,6 +86,10 @@ public final class GuestOSNICCustomizationResponse extends com.pulumi.resources.
     @Import(name="mask")
     private @Nullable String mask;
 
+    /**
+     * @return Network mask for nic
+     * 
+     */
     public Optional<String> mask() {
         return Optional.ofNullable(this.mask);
     }
@@ -81,6 +101,10 @@ public final class GuestOSNICCustomizationResponse extends com.pulumi.resources.
     @Import(name="primaryWinsServer")
     private @Nullable String primaryWinsServer;
 
+    /**
+     * @return primary WINS server for Windows
+     * 
+     */
     public Optional<String> primaryWinsServer() {
         return Optional.ofNullable(this.primaryWinsServer);
     }
@@ -92,6 +116,10 @@ public final class GuestOSNICCustomizationResponse extends com.pulumi.resources.
     @Import(name="secondaryWinsServer")
     private @Nullable String secondaryWinsServer;
 
+    /**
+     * @return secondary WINS server for Windows
+     * 
+     */
     public Optional<String> secondaryWinsServer() {
         return Optional.ofNullable(this.secondaryWinsServer);
     }
@@ -126,44 +154,98 @@ public final class GuestOSNICCustomizationResponse extends com.pulumi.resources.
             $ = new GuestOSNICCustomizationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allocation IP address allocation method
+         * 
+         * @return builder
+         * 
+         */
         public Builder allocation(@Nullable String allocation) {
             $.allocation = allocation;
             return this;
         }
 
+        /**
+         * @param dnsServers List of dns servers to use
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsServers(@Nullable List<String> dnsServers) {
             $.dnsServers = dnsServers;
             return this;
         }
 
+        /**
+         * @param dnsServers List of dns servers to use
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsServers(String... dnsServers) {
             return dnsServers(List.of(dnsServers));
         }
 
+        /**
+         * @param gateway Gateway addresses assigned to nic
+         * 
+         * @return builder
+         * 
+         */
         public Builder gateway(@Nullable List<String> gateway) {
             $.gateway = gateway;
             return this;
         }
 
+        /**
+         * @param gateway Gateway addresses assigned to nic
+         * 
+         * @return builder
+         * 
+         */
         public Builder gateway(String... gateway) {
             return gateway(List.of(gateway));
         }
 
+        /**
+         * @param ipAddress Static ip address for nic
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddress(@Nullable String ipAddress) {
             $.ipAddress = ipAddress;
             return this;
         }
 
+        /**
+         * @param mask Network mask for nic
+         * 
+         * @return builder
+         * 
+         */
         public Builder mask(@Nullable String mask) {
             $.mask = mask;
             return this;
         }
 
+        /**
+         * @param primaryWinsServer primary WINS server for Windows
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryWinsServer(@Nullable String primaryWinsServer) {
             $.primaryWinsServer = primaryWinsServer;
             return this;
         }
 
+        /**
+         * @param secondaryWinsServer secondary WINS server for Windows
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondaryWinsServer(@Nullable String secondaryWinsServer) {
             $.secondaryWinsServer = secondaryWinsServer;
             return this;

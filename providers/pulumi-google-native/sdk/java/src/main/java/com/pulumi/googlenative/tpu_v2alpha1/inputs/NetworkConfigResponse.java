@@ -24,6 +24,10 @@ public final class NetworkConfigResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="canIpForward", required=true)
     private Boolean canIpForward;
 
+    /**
+     * @return Allows the TPU node to send and receive packets with non-matching destination or source IPs. This is required if you plan to use the TPU workers to forward routes.
+     * 
+     */
     public Boolean canIpForward() {
         return this.canIpForward;
     }
@@ -35,6 +39,10 @@ public final class NetworkConfigResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="enableExternalIps", required=true)
     private Boolean enableExternalIps;
 
+    /**
+     * @return Indicates that external IP addresses would be associated with the TPU workers. If set to false, the specified subnetwork or network should have Private Google Access enabled.
+     * 
+     */
     public Boolean enableExternalIps() {
         return this.enableExternalIps;
     }
@@ -46,6 +54,10 @@ public final class NetworkConfigResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="network", required=true)
     private String network;
 
+    /**
+     * @return The name of the network for the TPU node. It must be a preexisting Google Compute Engine network. If none is provided, &#34;default&#34; will be used.
+     * 
+     */
     public String network() {
         return this.network;
     }
@@ -57,6 +69,10 @@ public final class NetworkConfigResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="subnetwork", required=true)
     private String subnetwork;
 
+    /**
+     * @return The name of the subnetwork for the TPU node. It must be a preexisting Google Compute Engine subnetwork. If none is provided, &#34;default&#34; will be used.
+     * 
+     */
     public String subnetwork() {
         return this.subnetwork;
     }
@@ -88,21 +104,45 @@ public final class NetworkConfigResponse extends com.pulumi.resources.InvokeArgs
             $ = new NetworkConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param canIpForward Allows the TPU node to send and receive packets with non-matching destination or source IPs. This is required if you plan to use the TPU workers to forward routes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder canIpForward(Boolean canIpForward) {
             $.canIpForward = canIpForward;
             return this;
         }
 
+        /**
+         * @param enableExternalIps Indicates that external IP addresses would be associated with the TPU workers. If set to false, the specified subnetwork or network should have Private Google Access enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableExternalIps(Boolean enableExternalIps) {
             $.enableExternalIps = enableExternalIps;
             return this;
         }
 
+        /**
+         * @param network The name of the network for the TPU node. It must be a preexisting Google Compute Engine network. If none is provided, &#34;default&#34; will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(String network) {
             $.network = network;
             return this;
         }
 
+        /**
+         * @param subnetwork The name of the subnetwork for the TPU node. It must be a preexisting Google Compute Engine subnetwork. If none is provided, &#34;default&#34; will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetwork(String subnetwork) {
             $.subnetwork = subnetwork;
             return this;

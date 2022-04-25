@@ -12,32 +12,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class OrganizationResourcePropertiesResponseOfferDetail {
     /**
-     * Offer Id
+     * @return Offer Id
      * 
      */
     private final @Nullable String id;
     /**
-     * Offer Plan Id
+     * @return Offer Plan Id
      * 
      */
     private final @Nullable String planId;
     /**
-     * Offer Plan Name
+     * @return Offer Plan Name
      * 
      */
     private final @Nullable String planName;
     /**
-     * Publisher Id
+     * @return Publisher Id
      * 
      */
     private final @Nullable String publisherId;
     /**
-     * SaaS Offer Status
+     * @return SaaS Offer Status
      * 
      */
     private final String status;
     /**
-     * Offer Plan Term unit
+     * @return Offer Plan Term unit
      * 
      */
     private final @Nullable String termUnit;
@@ -59,44 +59,44 @@ public final class OrganizationResourcePropertiesResponseOfferDetail {
     }
 
     /**
-     * Offer Id
+     * @return Offer Id
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * Offer Plan Id
+     * @return Offer Plan Id
      * 
-    */
+     */
     public Optional<String> planId() {
         return Optional.ofNullable(this.planId);
     }
     /**
-     * Offer Plan Name
+     * @return Offer Plan Name
      * 
-    */
+     */
     public Optional<String> planName() {
         return Optional.ofNullable(this.planName);
     }
     /**
-     * Publisher Id
+     * @return Publisher Id
      * 
-    */
+     */
     public Optional<String> publisherId() {
         return Optional.ofNullable(this.publisherId);
     }
     /**
-     * SaaS Offer Status
+     * @return SaaS Offer Status
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * Offer Plan Term unit
+     * @return Offer Plan Term unit
      * 
-    */
+     */
     public Optional<String> termUnit() {
         return Optional.ofNullable(this.termUnit);
     }

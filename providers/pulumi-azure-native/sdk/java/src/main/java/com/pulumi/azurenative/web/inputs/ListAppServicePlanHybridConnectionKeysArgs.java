@@ -19,6 +19,10 @@ public final class ListAppServicePlanHybridConnectionKeysArgs extends com.pulumi
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of the App Service plan.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -30,6 +34,10 @@ public final class ListAppServicePlanHybridConnectionKeysArgs extends com.pulumi
     @Import(name="namespaceName", required=true)
     private String namespaceName;
 
+    /**
+     * @return The name of the Service Bus namespace.
+     * 
+     */
     public String namespaceName() {
         return this.namespaceName;
     }
@@ -41,6 +49,10 @@ public final class ListAppServicePlanHybridConnectionKeysArgs extends com.pulumi
     @Import(name="relayName", required=true)
     private String relayName;
 
+    /**
+     * @return The name of the Service Bus relay.
+     * 
+     */
     public String relayName() {
         return this.relayName;
     }
@@ -52,6 +64,10 @@ public final class ListAppServicePlanHybridConnectionKeysArgs extends com.pulumi
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Name of the resource group to which the resource belongs.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -83,21 +99,45 @@ public final class ListAppServicePlanHybridConnectionKeysArgs extends com.pulumi
             $ = new ListAppServicePlanHybridConnectionKeysArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name of the App Service plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param namespaceName The name of the Service Bus namespace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespaceName(String namespaceName) {
             $.namespaceName = namespaceName;
             return this;
         }
 
+        /**
+         * @param relayName The name of the Service Bus relay.
+         * 
+         * @return builder
+         * 
+         */
         public Builder relayName(String relayName) {
             $.relayName = relayName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group to which the resource belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

@@ -22,6 +22,10 @@ public final class GetBrokerArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="brokerId")
     private @Nullable String brokerId;
 
+    /**
+     * @return The unique id of the mq broker.
+     * 
+     */
     public Optional<String> brokerId() {
         return Optional.ofNullable(this.brokerId);
     }
@@ -33,6 +37,10 @@ public final class GetBrokerArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="brokerName")
     private @Nullable String brokerName;
 
+    /**
+     * @return The unique name of the mq broker.
+     * 
+     */
     public Optional<String> brokerName() {
         return Optional.ofNullable(this.brokerName);
     }
@@ -70,11 +78,23 @@ public final class GetBrokerArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetBrokerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param brokerId The unique id of the mq broker.
+         * 
+         * @return builder
+         * 
+         */
         public Builder brokerId(@Nullable String brokerId) {
             $.brokerId = brokerId;
             return this;
         }
 
+        /**
+         * @param brokerName The unique name of the mq broker.
+         * 
+         * @return builder
+         * 
+         */
         public Builder brokerName(@Nullable String brokerName) {
             $.brokerName = brokerName;
             return this;

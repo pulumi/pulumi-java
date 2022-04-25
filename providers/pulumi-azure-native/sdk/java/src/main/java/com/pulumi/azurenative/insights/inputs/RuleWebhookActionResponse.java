@@ -28,6 +28,11 @@ public final class RuleWebhookActionResponse extends com.pulumi.resources.Invoke
     @Import(name="odataType", required=true)
     private String odataType;
 
+    /**
+     * @return specifies the type of the action. There are two types of actions: RuleEmailAction and RuleWebhookAction.
+     * Expected value is &#39;Microsoft.Azure.Management.Insights.Models.RuleWebhookAction&#39;.
+     * 
+     */
     public String odataType() {
         return this.odataType;
     }
@@ -39,6 +44,10 @@ public final class RuleWebhookActionResponse extends com.pulumi.resources.Invoke
     @Import(name="properties")
     private @Nullable Map<String,String> properties;
 
+    /**
+     * @return the dictionary of custom properties to include with the post operation. These data are appended to the webhook payload.
+     * 
+     */
     public Optional<Map<String,String>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -50,6 +59,10 @@ public final class RuleWebhookActionResponse extends com.pulumi.resources.Invoke
     @Import(name="serviceUri")
     private @Nullable String serviceUri;
 
+    /**
+     * @return the service uri to Post the notification when the alert activates or resolves.
+     * 
+     */
     public Optional<String> serviceUri() {
         return Optional.ofNullable(this.serviceUri);
     }
@@ -80,16 +93,35 @@ public final class RuleWebhookActionResponse extends com.pulumi.resources.Invoke
             $ = new RuleWebhookActionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param odataType specifies the type of the action. There are two types of actions: RuleEmailAction and RuleWebhookAction.
+         * Expected value is &#39;Microsoft.Azure.Management.Insights.Models.RuleWebhookAction&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(String odataType) {
             $.odataType = odataType;
             return this;
         }
 
+        /**
+         * @param properties the dictionary of custom properties to include with the post operation. These data are appended to the webhook payload.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Map<String,String> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param serviceUri the service uri to Post the notification when the alert activates or resolves.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceUri(@Nullable String serviceUri) {
             $.serviceUri = serviceUri;
             return this;

@@ -21,6 +21,10 @@ public final class FlexibleAppVersionResourcesVolumeArgs extends com.pulumi.reso
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -32,6 +36,10 @@ public final class FlexibleAppVersionResourcesVolumeArgs extends com.pulumi.reso
     @Import(name="sizeGb", required=true)
     private Output<Integer> sizeGb;
 
+    /**
+     * @return Volume size in gigabytes.
+     * 
+     */
     public Output<Integer> sizeGb() {
         return this.sizeGb;
     }
@@ -43,6 +51,10 @@ public final class FlexibleAppVersionResourcesVolumeArgs extends com.pulumi.reso
     @Import(name="volumeType", required=true)
     private Output<String> volumeType;
 
+    /**
+     * @return Underlying volume type, e.g. &#39;tmpfs&#39;.
+     * 
+     */
     public Output<String> volumeType() {
         return this.volumeType;
     }
@@ -73,29 +85,65 @@ public final class FlexibleAppVersionResourcesVolumeArgs extends com.pulumi.reso
             $ = new FlexibleAppVersionResourcesVolumeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param sizeGb Volume size in gigabytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sizeGb(Output<Integer> sizeGb) {
             $.sizeGb = sizeGb;
             return this;
         }
 
+        /**
+         * @param sizeGb Volume size in gigabytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sizeGb(Integer sizeGb) {
             return sizeGb(Output.of(sizeGb));
         }
 
+        /**
+         * @param volumeType Underlying volume type, e.g. &#39;tmpfs&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeType(Output<String> volumeType) {
             $.volumeType = volumeType;
             return this;
         }
 
+        /**
+         * @param volumeType Underlying volume type, e.g. &#39;tmpfs&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeType(String volumeType) {
             return volumeType(Output.of(volumeType));
         }

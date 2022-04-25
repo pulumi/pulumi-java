@@ -19,6 +19,10 @@ public final class GetVirtualNetworkGatewayConnectionArgs extends com.pulumi.res
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -30,6 +34,10 @@ public final class GetVirtualNetworkGatewayConnectionArgs extends com.pulumi.res
     @Import(name="virtualNetworkGatewayConnectionName", required=true)
     private String virtualNetworkGatewayConnectionName;
 
+    /**
+     * @return The name of the virtual network gateway connection.
+     * 
+     */
     public String virtualNetworkGatewayConnectionName() {
         return this.virtualNetworkGatewayConnectionName;
     }
@@ -59,11 +67,23 @@ public final class GetVirtualNetworkGatewayConnectionArgs extends com.pulumi.res
             $ = new GetVirtualNetworkGatewayConnectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param virtualNetworkGatewayConnectionName The name of the virtual network gateway connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetworkGatewayConnectionName(String virtualNetworkGatewayConnectionName) {
             $.virtualNetworkGatewayConnectionName = virtualNetworkGatewayConnectionName;
             return this;

@@ -16,17 +16,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DashboardLensResponse {
     /**
-     * The dashboard len&#39;s metadata.
+     * @return The dashboard len&#39;s metadata.
      * 
      */
     private final @Nullable Map<String,Object> metadata;
     /**
-     * The lens order.
+     * @return The lens order.
      * 
      */
     private final Integer order;
     /**
-     * The dashboard parts.
+     * @return The dashboard parts.
      * 
      */
     private final List<DashboardPartsResponse> parts;
@@ -42,23 +42,23 @@ public final class DashboardLensResponse {
     }
 
     /**
-     * The dashboard len&#39;s metadata.
+     * @return The dashboard len&#39;s metadata.
      * 
-    */
+     */
     public Map<String,Object> metadata() {
         return this.metadata == null ? Map.of() : this.metadata;
     }
     /**
-     * The lens order.
+     * @return The lens order.
      * 
-    */
+     */
     public Integer order() {
         return this.order;
     }
     /**
-     * The dashboard parts.
+     * @return The dashboard parts.
      * 
-    */
+     */
     public List<DashboardPartsResponse> parts() {
         return this.parts;
     }

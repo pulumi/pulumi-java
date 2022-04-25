@@ -27,6 +27,10 @@ public final class SqlConnectionInfoResponse extends com.pulumi.resources.Invoke
     @Import(name="additionalSettings")
     private @Nullable String additionalSettings;
 
+    /**
+     * @return Additional connection settings
+     * 
+     */
     public Optional<String> additionalSettings() {
         return Optional.ofNullable(this.additionalSettings);
     }
@@ -38,6 +42,10 @@ public final class SqlConnectionInfoResponse extends com.pulumi.resources.Invoke
     @Import(name="authentication")
     private @Nullable String authentication;
 
+    /**
+     * @return Authentication type to use for connection
+     * 
+     */
     public Optional<String> authentication() {
         return Optional.ofNullable(this.authentication);
     }
@@ -49,6 +57,10 @@ public final class SqlConnectionInfoResponse extends com.pulumi.resources.Invoke
     @Import(name="dataSource", required=true)
     private String dataSource;
 
+    /**
+     * @return Data source in the format Protocol:MachineName\SQLServerInstanceName,PortNumber
+     * 
+     */
     public String dataSource() {
         return this.dataSource;
     }
@@ -60,6 +72,10 @@ public final class SqlConnectionInfoResponse extends com.pulumi.resources.Invoke
     @Import(name="encryptConnection")
     private @Nullable Boolean encryptConnection;
 
+    /**
+     * @return Whether to encrypt the connection
+     * 
+     */
     public Optional<Boolean> encryptConnection() {
         return Optional.ofNullable(this.encryptConnection);
     }
@@ -71,6 +87,10 @@ public final class SqlConnectionInfoResponse extends com.pulumi.resources.Invoke
     @Import(name="password")
     private @Nullable String password;
 
+    /**
+     * @return Password credential.
+     * 
+     */
     public Optional<String> password() {
         return Optional.ofNullable(this.password);
     }
@@ -82,6 +102,10 @@ public final class SqlConnectionInfoResponse extends com.pulumi.resources.Invoke
     @Import(name="platform")
     private @Nullable String platform;
 
+    /**
+     * @return Server platform type for connection
+     * 
+     */
     public Optional<String> platform() {
         return Optional.ofNullable(this.platform);
     }
@@ -93,6 +117,10 @@ public final class SqlConnectionInfoResponse extends com.pulumi.resources.Invoke
     @Import(name="trustServerCertificate")
     private @Nullable Boolean trustServerCertificate;
 
+    /**
+     * @return Whether to trust the server certificate
+     * 
+     */
     public Optional<Boolean> trustServerCertificate() {
         return Optional.ofNullable(this.trustServerCertificate);
     }
@@ -105,6 +133,11 @@ public final class SqlConnectionInfoResponse extends com.pulumi.resources.Invoke
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of connection info
+     * Expected value is &#39;SqlConnectionInfo&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -116,6 +149,10 @@ public final class SqlConnectionInfoResponse extends com.pulumi.resources.Invoke
     @Import(name="userName")
     private @Nullable String userName;
 
+    /**
+     * @return User name
+     * 
+     */
     public Optional<String> userName() {
         return Optional.ofNullable(this.userName);
     }
@@ -152,46 +189,101 @@ public final class SqlConnectionInfoResponse extends com.pulumi.resources.Invoke
             $ = new SqlConnectionInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param additionalSettings Additional connection settings
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalSettings(@Nullable String additionalSettings) {
             $.additionalSettings = additionalSettings;
             return this;
         }
 
+        /**
+         * @param authentication Authentication type to use for connection
+         * 
+         * @return builder
+         * 
+         */
         public Builder authentication(@Nullable String authentication) {
             $.authentication = authentication;
             return this;
         }
 
+        /**
+         * @param dataSource Data source in the format Protocol:MachineName\SQLServerInstanceName,PortNumber
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSource(String dataSource) {
             $.dataSource = dataSource;
             return this;
         }
 
+        /**
+         * @param encryptConnection Whether to encrypt the connection
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptConnection(@Nullable Boolean encryptConnection) {
             $.encryptConnection = encryptConnection;
             return this;
         }
 
+        /**
+         * @param password Password credential.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(@Nullable String password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param platform Server platform type for connection
+         * 
+         * @return builder
+         * 
+         */
         public Builder platform(@Nullable String platform) {
             $.platform = platform;
             return this;
         }
 
+        /**
+         * @param trustServerCertificate Whether to trust the server certificate
+         * 
+         * @return builder
+         * 
+         */
         public Builder trustServerCertificate(@Nullable Boolean trustServerCertificate) {
             $.trustServerCertificate = trustServerCertificate;
             return this;
         }
 
+        /**
+         * @param type Type of connection info
+         * Expected value is &#39;SqlConnectionInfo&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param userName User name
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(@Nullable String userName) {
             $.userName = userName;
             return this;

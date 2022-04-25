@@ -27,6 +27,10 @@ public final class TransformationArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Resource name
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -38,6 +42,10 @@ public final class TransformationArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="query")
     private @Nullable Output<String> query;
 
+    /**
+     * @return Specifies the query that will be run in the streaming job. You can learn more about the Stream Analytics Query Language (SAQL) here: https://msdn.microsoft.com/library/azure/dn834998 . Required on PUT (CreateOrReplace) requests.
+     * 
+     */
     public Optional<Output<String>> query() {
         return Optional.ofNullable(this.query);
     }
@@ -49,6 +57,10 @@ public final class TransformationArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="streamingUnits")
     private @Nullable Output<Integer> streamingUnits;
 
+    /**
+     * @return Specifies the number of streaming units that the streaming job uses.
+     * 
+     */
     public Optional<Output<Integer>> streamingUnits() {
         return Optional.ofNullable(this.streamingUnits);
     }
@@ -79,29 +91,65 @@ public final class TransformationArgs extends com.pulumi.resources.ResourceArgs 
             $ = new TransformationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Resource name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Resource name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param query Specifies the query that will be run in the streaming job. You can learn more about the Stream Analytics Query Language (SAQL) here: https://msdn.microsoft.com/library/azure/dn834998 . Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder query(@Nullable Output<String> query) {
             $.query = query;
             return this;
         }
 
+        /**
+         * @param query Specifies the query that will be run in the streaming job. You can learn more about the Stream Analytics Query Language (SAQL) here: https://msdn.microsoft.com/library/azure/dn834998 . Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder query(String query) {
             return query(Output.of(query));
         }
 
+        /**
+         * @param streamingUnits Specifies the number of streaming units that the streaming job uses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streamingUnits(@Nullable Output<Integer> streamingUnits) {
             $.streamingUnits = streamingUnits;
             return this;
         }
 
+        /**
+         * @param streamingUnits Specifies the number of streaming units that the streaming job uses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streamingUnits(Integer streamingUnits) {
             return streamingUnits(Output.of(streamingUnits));
         }

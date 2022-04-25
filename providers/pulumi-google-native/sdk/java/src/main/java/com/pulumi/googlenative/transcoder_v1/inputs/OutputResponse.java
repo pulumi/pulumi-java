@@ -23,6 +23,10 @@ public final class OutputResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="uri", required=true)
     private String uri;
 
+    /**
+     * @return URI for the output file(s). For example, `gs://my-bucket/outputs/`. If empty the value is populated from `Job.output_uri`.
+     * 
+     */
     public String uri() {
         return this.uri;
     }
@@ -51,6 +55,12 @@ public final class OutputResponse extends com.pulumi.resources.InvokeArgs {
             $ = new OutputResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param uri URI for the output file(s). For example, `gs://my-bucket/outputs/`. If empty the value is populated from `Job.output_uri`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(String uri) {
             $.uri = uri;
             return this;

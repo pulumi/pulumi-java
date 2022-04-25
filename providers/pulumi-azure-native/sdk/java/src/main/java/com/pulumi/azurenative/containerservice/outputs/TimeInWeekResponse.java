@@ -14,12 +14,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class TimeInWeekResponse {
     /**
-     * A day in a week.
+     * @return A day in a week.
      * 
      */
     private final @Nullable String day;
     /**
-     * hour slots in a day.
+     * @return hour slots in a day.
      * 
      */
     private final @Nullable List<Integer> hourSlots;
@@ -33,16 +33,16 @@ public final class TimeInWeekResponse {
     }
 
     /**
-     * A day in a week.
+     * @return A day in a week.
      * 
-    */
+     */
     public Optional<String> day() {
         return Optional.ofNullable(this.day);
     }
     /**
-     * hour slots in a day.
+     * @return hour slots in a day.
      * 
-    */
+     */
     public List<Integer> hourSlots() {
         return this.hourSlots == null ? List.of() : this.hourSlots;
     }

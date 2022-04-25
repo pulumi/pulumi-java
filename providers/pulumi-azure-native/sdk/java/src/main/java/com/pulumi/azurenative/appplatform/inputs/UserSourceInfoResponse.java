@@ -26,6 +26,11 @@ public final class UserSourceInfoResponse extends com.pulumi.resources.InvokeArg
     @Import(name="artifactSelector")
     private @Nullable String artifactSelector;
 
+    /**
+     * @return Selector for the artifact to be used for the deployment for multi-module projects. This should be
+     * the relative path to the target module/project.
+     * 
+     */
     public Optional<String> artifactSelector() {
         return Optional.ofNullable(this.artifactSelector);
     }
@@ -37,6 +42,10 @@ public final class UserSourceInfoResponse extends com.pulumi.resources.InvokeArg
     @Import(name="relativePath")
     private @Nullable String relativePath;
 
+    /**
+     * @return Relative path of the storage which stores the source
+     * 
+     */
     public Optional<String> relativePath() {
         return Optional.ofNullable(this.relativePath);
     }
@@ -48,6 +57,10 @@ public final class UserSourceInfoResponse extends com.pulumi.resources.InvokeArg
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return Type of the source uploaded
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -59,6 +72,10 @@ public final class UserSourceInfoResponse extends com.pulumi.resources.InvokeArg
     @Import(name="version")
     private @Nullable String version;
 
+    /**
+     * @return Version of the source
+     * 
+     */
     public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }
@@ -90,21 +107,46 @@ public final class UserSourceInfoResponse extends com.pulumi.resources.InvokeArg
             $ = new UserSourceInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param artifactSelector Selector for the artifact to be used for the deployment for multi-module projects. This should be
+         * the relative path to the target module/project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder artifactSelector(@Nullable String artifactSelector) {
             $.artifactSelector = artifactSelector;
             return this;
         }
 
+        /**
+         * @param relativePath Relative path of the storage which stores the source
+         * 
+         * @return builder
+         * 
+         */
         public Builder relativePath(@Nullable String relativePath) {
             $.relativePath = relativePath;
             return this;
         }
 
+        /**
+         * @param type Type of the source uploaded
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param version Version of the source
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable String version) {
             $.version = version;
             return this;

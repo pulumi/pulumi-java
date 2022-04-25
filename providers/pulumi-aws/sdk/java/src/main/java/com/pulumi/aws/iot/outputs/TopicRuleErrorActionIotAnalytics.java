@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class TopicRuleErrorActionIotAnalytics {
     /**
-     * Name of AWS IOT Analytics channel.
+     * @return Name of AWS IOT Analytics channel.
      * 
      */
     private final String channelName;
     /**
-     * The ARN of the IAM role that grants access.
+     * @return The ARN of the IAM role that grants access.
      * 
      */
     private final String roleArn;
@@ -29,16 +29,16 @@ public final class TopicRuleErrorActionIotAnalytics {
     }
 
     /**
-     * Name of AWS IOT Analytics channel.
+     * @return Name of AWS IOT Analytics channel.
      * 
-    */
+     */
     public String channelName() {
         return this.channelName;
     }
     /**
-     * The ARN of the IAM role that grants access.
+     * @return The ARN of the IAM role that grants access.
      * 
-    */
+     */
     public String roleArn() {
         return this.roleArn;
     }

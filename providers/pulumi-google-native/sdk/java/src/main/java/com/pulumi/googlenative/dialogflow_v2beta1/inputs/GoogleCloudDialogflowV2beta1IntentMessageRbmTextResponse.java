@@ -25,6 +25,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmTextResponse exte
     @Import(name="rbmSuggestion", required=true)
     private List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse> rbmSuggestion;
 
+    /**
+     * @return Optional. One or more suggestions to show to the user.
+     * 
+     */
     public List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse> rbmSuggestion() {
         return this.rbmSuggestion;
     }
@@ -36,6 +40,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmTextResponse exte
     @Import(name="text", required=true)
     private String text;
 
+    /**
+     * @return Text sent and displayed to the user.
+     * 
+     */
     public String text() {
         return this.text;
     }
@@ -65,15 +73,33 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmTextResponse exte
             $ = new GoogleCloudDialogflowV2beta1IntentMessageRbmTextResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param rbmSuggestion Optional. One or more suggestions to show to the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rbmSuggestion(List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse> rbmSuggestion) {
             $.rbmSuggestion = rbmSuggestion;
             return this;
         }
 
+        /**
+         * @param rbmSuggestion Optional. One or more suggestions to show to the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rbmSuggestion(GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse... rbmSuggestion) {
             return rbmSuggestion(List.of(rbmSuggestion));
         }
 
+        /**
+         * @param text Text sent and displayed to the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder text(String text) {
             $.text = text;
             return this;

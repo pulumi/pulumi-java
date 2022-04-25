@@ -26,6 +26,10 @@ public final class VirtualDirectoryArgs extends com.pulumi.resources.ResourceArg
     @Import(name="physicalPath")
     private @Nullable Output<String> physicalPath;
 
+    /**
+     * @return Physical path.
+     * 
+     */
     public Optional<Output<String>> physicalPath() {
         return Optional.ofNullable(this.physicalPath);
     }
@@ -37,6 +41,10 @@ public final class VirtualDirectoryArgs extends com.pulumi.resources.ResourceArg
     @Import(name="virtualPath")
     private @Nullable Output<String> virtualPath;
 
+    /**
+     * @return Path to virtual application.
+     * 
+     */
     public Optional<Output<String>> virtualPath() {
         return Optional.ofNullable(this.virtualPath);
     }
@@ -66,20 +74,44 @@ public final class VirtualDirectoryArgs extends com.pulumi.resources.ResourceArg
             $ = new VirtualDirectoryArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param physicalPath Physical path.
+         * 
+         * @return builder
+         * 
+         */
         public Builder physicalPath(@Nullable Output<String> physicalPath) {
             $.physicalPath = physicalPath;
             return this;
         }
 
+        /**
+         * @param physicalPath Physical path.
+         * 
+         * @return builder
+         * 
+         */
         public Builder physicalPath(String physicalPath) {
             return physicalPath(Output.of(physicalPath));
         }
 
+        /**
+         * @param virtualPath Path to virtual application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualPath(@Nullable Output<String> virtualPath) {
             $.virtualPath = virtualPath;
             return this;
         }
 
+        /**
+         * @param virtualPath Path to virtual application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualPath(String virtualPath) {
             return virtualPath(Output.of(virtualPath));
         }

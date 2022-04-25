@@ -25,6 +25,10 @@ public final class UploadWatermarkResponse extends com.pulumi.resources.InvokeAr
     @Import(name="logs")
     private @Nullable String logs;
 
+    /**
+     * @return Last uploaded date for logs from kubernetes cluster. Defaults to current date time
+     * 
+     */
     public Optional<String> logs() {
         return Optional.ofNullable(this.logs);
     }
@@ -36,6 +40,10 @@ public final class UploadWatermarkResponse extends com.pulumi.resources.InvokeAr
     @Import(name="metrics")
     private @Nullable String metrics;
 
+    /**
+     * @return Last uploaded date for metrics from kubernetes cluster. Defaults to current date time
+     * 
+     */
     public Optional<String> metrics() {
         return Optional.ofNullable(this.metrics);
     }
@@ -47,6 +55,10 @@ public final class UploadWatermarkResponse extends com.pulumi.resources.InvokeAr
     @Import(name="usages")
     private @Nullable String usages;
 
+    /**
+     * @return Last uploaded date for usages from kubernetes cluster. Defaults to current date time
+     * 
+     */
     public Optional<String> usages() {
         return Optional.ofNullable(this.usages);
     }
@@ -77,16 +89,34 @@ public final class UploadWatermarkResponse extends com.pulumi.resources.InvokeAr
             $ = new UploadWatermarkResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param logs Last uploaded date for logs from kubernetes cluster. Defaults to current date time
+         * 
+         * @return builder
+         * 
+         */
         public Builder logs(@Nullable String logs) {
             $.logs = logs;
             return this;
         }
 
+        /**
+         * @param metrics Last uploaded date for metrics from kubernetes cluster. Defaults to current date time
+         * 
+         * @return builder
+         * 
+         */
         public Builder metrics(@Nullable String metrics) {
             $.metrics = metrics;
             return this;
         }
 
+        /**
+         * @param usages Last uploaded date for usages from kubernetes cluster. Defaults to current date time
+         * 
+         * @return builder
+         * 
+         */
         public Builder usages(@Nullable String usages) {
             $.usages = usages;
             return this;

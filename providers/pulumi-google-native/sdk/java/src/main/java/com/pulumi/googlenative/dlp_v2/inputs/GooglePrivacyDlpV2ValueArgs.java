@@ -31,6 +31,10 @@ public final class GooglePrivacyDlpV2ValueArgs extends com.pulumi.resources.Reso
     @Import(name="booleanValue")
     private @Nullable Output<Boolean> booleanValue;
 
+    /**
+     * @return boolean
+     * 
+     */
     public Optional<Output<Boolean>> booleanValue() {
         return Optional.ofNullable(this.booleanValue);
     }
@@ -42,6 +46,10 @@ public final class GooglePrivacyDlpV2ValueArgs extends com.pulumi.resources.Reso
     @Import(name="dateValue")
     private @Nullable Output<GoogleTypeDateArgs> dateValue;
 
+    /**
+     * @return date
+     * 
+     */
     public Optional<Output<GoogleTypeDateArgs>> dateValue() {
         return Optional.ofNullable(this.dateValue);
     }
@@ -53,6 +61,10 @@ public final class GooglePrivacyDlpV2ValueArgs extends com.pulumi.resources.Reso
     @Import(name="dayOfWeekValue")
     private @Nullable Output<GooglePrivacyDlpV2ValueDayOfWeekValue> dayOfWeekValue;
 
+    /**
+     * @return day of week
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2ValueDayOfWeekValue>> dayOfWeekValue() {
         return Optional.ofNullable(this.dayOfWeekValue);
     }
@@ -64,6 +76,10 @@ public final class GooglePrivacyDlpV2ValueArgs extends com.pulumi.resources.Reso
     @Import(name="floatValue")
     private @Nullable Output<Double> floatValue;
 
+    /**
+     * @return float
+     * 
+     */
     public Optional<Output<Double>> floatValue() {
         return Optional.ofNullable(this.floatValue);
     }
@@ -75,6 +91,10 @@ public final class GooglePrivacyDlpV2ValueArgs extends com.pulumi.resources.Reso
     @Import(name="integerValue")
     private @Nullable Output<String> integerValue;
 
+    /**
+     * @return integer
+     * 
+     */
     public Optional<Output<String>> integerValue() {
         return Optional.ofNullable(this.integerValue);
     }
@@ -86,6 +106,10 @@ public final class GooglePrivacyDlpV2ValueArgs extends com.pulumi.resources.Reso
     @Import(name="stringValue")
     private @Nullable Output<String> stringValue;
 
+    /**
+     * @return string
+     * 
+     */
     public Optional<Output<String>> stringValue() {
         return Optional.ofNullable(this.stringValue);
     }
@@ -97,6 +121,10 @@ public final class GooglePrivacyDlpV2ValueArgs extends com.pulumi.resources.Reso
     @Import(name="timeValue")
     private @Nullable Output<GoogleTypeTimeOfDayArgs> timeValue;
 
+    /**
+     * @return time of day
+     * 
+     */
     public Optional<Output<GoogleTypeTimeOfDayArgs>> timeValue() {
         return Optional.ofNullable(this.timeValue);
     }
@@ -108,6 +136,10 @@ public final class GooglePrivacyDlpV2ValueArgs extends com.pulumi.resources.Reso
     @Import(name="timestampValue")
     private @Nullable Output<String> timestampValue;
 
+    /**
+     * @return timestamp
+     * 
+     */
     public Optional<Output<String>> timestampValue() {
         return Optional.ofNullable(this.timestampValue);
     }
@@ -143,74 +175,170 @@ public final class GooglePrivacyDlpV2ValueArgs extends com.pulumi.resources.Reso
             $ = new GooglePrivacyDlpV2ValueArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param booleanValue boolean
+         * 
+         * @return builder
+         * 
+         */
         public Builder booleanValue(@Nullable Output<Boolean> booleanValue) {
             $.booleanValue = booleanValue;
             return this;
         }
 
+        /**
+         * @param booleanValue boolean
+         * 
+         * @return builder
+         * 
+         */
         public Builder booleanValue(Boolean booleanValue) {
             return booleanValue(Output.of(booleanValue));
         }
 
+        /**
+         * @param dateValue date
+         * 
+         * @return builder
+         * 
+         */
         public Builder dateValue(@Nullable Output<GoogleTypeDateArgs> dateValue) {
             $.dateValue = dateValue;
             return this;
         }
 
+        /**
+         * @param dateValue date
+         * 
+         * @return builder
+         * 
+         */
         public Builder dateValue(GoogleTypeDateArgs dateValue) {
             return dateValue(Output.of(dateValue));
         }
 
+        /**
+         * @param dayOfWeekValue day of week
+         * 
+         * @return builder
+         * 
+         */
         public Builder dayOfWeekValue(@Nullable Output<GooglePrivacyDlpV2ValueDayOfWeekValue> dayOfWeekValue) {
             $.dayOfWeekValue = dayOfWeekValue;
             return this;
         }
 
+        /**
+         * @param dayOfWeekValue day of week
+         * 
+         * @return builder
+         * 
+         */
         public Builder dayOfWeekValue(GooglePrivacyDlpV2ValueDayOfWeekValue dayOfWeekValue) {
             return dayOfWeekValue(Output.of(dayOfWeekValue));
         }
 
+        /**
+         * @param floatValue float
+         * 
+         * @return builder
+         * 
+         */
         public Builder floatValue(@Nullable Output<Double> floatValue) {
             $.floatValue = floatValue;
             return this;
         }
 
+        /**
+         * @param floatValue float
+         * 
+         * @return builder
+         * 
+         */
         public Builder floatValue(Double floatValue) {
             return floatValue(Output.of(floatValue));
         }
 
+        /**
+         * @param integerValue integer
+         * 
+         * @return builder
+         * 
+         */
         public Builder integerValue(@Nullable Output<String> integerValue) {
             $.integerValue = integerValue;
             return this;
         }
 
+        /**
+         * @param integerValue integer
+         * 
+         * @return builder
+         * 
+         */
         public Builder integerValue(String integerValue) {
             return integerValue(Output.of(integerValue));
         }
 
+        /**
+         * @param stringValue string
+         * 
+         * @return builder
+         * 
+         */
         public Builder stringValue(@Nullable Output<String> stringValue) {
             $.stringValue = stringValue;
             return this;
         }
 
+        /**
+         * @param stringValue string
+         * 
+         * @return builder
+         * 
+         */
         public Builder stringValue(String stringValue) {
             return stringValue(Output.of(stringValue));
         }
 
+        /**
+         * @param timeValue time of day
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeValue(@Nullable Output<GoogleTypeTimeOfDayArgs> timeValue) {
             $.timeValue = timeValue;
             return this;
         }
 
+        /**
+         * @param timeValue time of day
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeValue(GoogleTypeTimeOfDayArgs timeValue) {
             return timeValue(Output.of(timeValue));
         }
 
+        /**
+         * @param timestampValue timestamp
+         * 
+         * @return builder
+         * 
+         */
         public Builder timestampValue(@Nullable Output<String> timestampValue) {
             $.timestampValue = timestampValue;
             return this;
         }
 
+        /**
+         * @param timestampValue timestamp
+         * 
+         * @return builder
+         * 
+         */
         public Builder timestampValue(String timestampValue) {
             return timestampValue(Output.of(timestampValue));
         }

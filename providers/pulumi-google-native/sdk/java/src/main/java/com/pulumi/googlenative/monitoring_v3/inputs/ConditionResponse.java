@@ -27,6 +27,10 @@ public final class ConditionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="conditionAbsent", required=true)
     private MetricAbsenceResponse conditionAbsent;
 
+    /**
+     * @return A condition that checks that a time series continues to receive new data points.
+     * 
+     */
     public MetricAbsenceResponse conditionAbsent() {
         return this.conditionAbsent;
     }
@@ -38,6 +42,10 @@ public final class ConditionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="conditionMatchedLog", required=true)
     private LogMatchResponse conditionMatchedLog;
 
+    /**
+     * @return A condition that checks for log messages matching given constraints. If set, no other conditions can be present.
+     * 
+     */
     public LogMatchResponse conditionMatchedLog() {
         return this.conditionMatchedLog;
     }
@@ -49,6 +57,10 @@ public final class ConditionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="conditionMonitoringQueryLanguage", required=true)
     private MonitoringQueryLanguageConditionResponse conditionMonitoringQueryLanguage;
 
+    /**
+     * @return A condition that uses the Monitoring Query Language to define alerts.
+     * 
+     */
     public MonitoringQueryLanguageConditionResponse conditionMonitoringQueryLanguage() {
         return this.conditionMonitoringQueryLanguage;
     }
@@ -60,6 +72,10 @@ public final class ConditionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="conditionThreshold", required=true)
     private MetricThresholdResponse conditionThreshold;
 
+    /**
+     * @return A condition that compares a time series against a threshold.
+     * 
+     */
     public MetricThresholdResponse conditionThreshold() {
         return this.conditionThreshold;
     }
@@ -71,6 +87,10 @@ public final class ConditionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="displayName", required=true)
     private String displayName;
 
+    /**
+     * @return A short name or phrase used to identify the condition in dashboards, notifications, and incidents. To avoid confusion, don&#39;t use the same display name for multiple conditions in the same policy.
+     * 
+     */
     public String displayName() {
         return this.displayName;
     }
@@ -82,6 +102,10 @@ public final class ConditionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Required if the condition exists. The unique resource name for this condition. Its format is: projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[POLICY_ID]/conditions/[CONDITION_ID] [CONDITION_ID] is assigned by Stackdriver Monitoring when the condition is created as part of a new or updated alerting policy.When calling the alertPolicies.create method, do not include the name field in the conditions of the requested alerting policy. Stackdriver Monitoring creates the condition identifiers and includes them in the new policy.When calling the alertPolicies.update method to update a policy, including a condition name causes the existing condition to be updated. Conditions without names are added to the updated policy. Existing conditions are deleted if they are not updated.Best practice is to preserve [CONDITION_ID] if you make only small changes, such as those to condition thresholds, durations, or trigger values. Otherwise, treat the change as a new condition and let the existing condition be deleted.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -115,31 +139,67 @@ public final class ConditionResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ConditionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param conditionAbsent A condition that checks that a time series continues to receive new data points.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditionAbsent(MetricAbsenceResponse conditionAbsent) {
             $.conditionAbsent = conditionAbsent;
             return this;
         }
 
+        /**
+         * @param conditionMatchedLog A condition that checks for log messages matching given constraints. If set, no other conditions can be present.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditionMatchedLog(LogMatchResponse conditionMatchedLog) {
             $.conditionMatchedLog = conditionMatchedLog;
             return this;
         }
 
+        /**
+         * @param conditionMonitoringQueryLanguage A condition that uses the Monitoring Query Language to define alerts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditionMonitoringQueryLanguage(MonitoringQueryLanguageConditionResponse conditionMonitoringQueryLanguage) {
             $.conditionMonitoringQueryLanguage = conditionMonitoringQueryLanguage;
             return this;
         }
 
+        /**
+         * @param conditionThreshold A condition that compares a time series against a threshold.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditionThreshold(MetricThresholdResponse conditionThreshold) {
             $.conditionThreshold = conditionThreshold;
             return this;
         }
 
+        /**
+         * @param displayName A short name or phrase used to identify the condition in dashboards, notifications, and incidents. To avoid confusion, don&#39;t use the same display name for multiple conditions in the same policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param name Required if the condition exists. The unique resource name for this condition. Its format is: projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[POLICY_ID]/conditions/[CONDITION_ID] [CONDITION_ID] is assigned by Stackdriver Monitoring when the condition is created as part of a new or updated alerting policy.When calling the alertPolicies.create method, do not include the name field in the conditions of the requested alerting policy. Stackdriver Monitoring creates the condition identifiers and includes them in the new policy.When calling the alertPolicies.update method to update a policy, including a condition name causes the existing condition to be updated. Conditions without names are added to the updated policy. Existing conditions are deleted if they are not updated.Best practice is to preserve [CONDITION_ID] if you make only small changes, such as those to condition thresholds, durations, or trigger values. Otherwise, treat the change as a new condition and let the existing condition be deleted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

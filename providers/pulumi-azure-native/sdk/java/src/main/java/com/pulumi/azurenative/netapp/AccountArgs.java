@@ -26,6 +26,10 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accountName")
     private @Nullable Output<String> accountName;
 
+    /**
+     * @return The name of the NetApp account
+     * 
+     */
     public Optional<Output<String>> accountName() {
         return Optional.ofNullable(this.accountName);
     }
@@ -37,6 +41,10 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="activeDirectories")
     private @Nullable Output<List<ActiveDirectoryArgs>> activeDirectories;
 
+    /**
+     * @return Active Directories
+     * 
+     */
     public Optional<Output<List<ActiveDirectoryArgs>>> activeDirectories() {
         return Optional.ofNullable(this.activeDirectories);
     }
@@ -48,6 +56,10 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="encryption")
     private @Nullable Output<AccountEncryptionArgs> encryption;
 
+    /**
+     * @return Encryption settings
+     * 
+     */
     public Optional<Output<AccountEncryptionArgs>> encryption() {
         return Optional.ofNullable(this.encryption);
     }
@@ -59,6 +71,10 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -70,6 +86,10 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -81,6 +101,10 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -114,60 +138,138 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AccountArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The name of the NetApp account
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(@Nullable Output<String> accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param accountName The name of the NetApp account
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             return accountName(Output.of(accountName));
         }
 
+        /**
+         * @param activeDirectories Active Directories
+         * 
+         * @return builder
+         * 
+         */
         public Builder activeDirectories(@Nullable Output<List<ActiveDirectoryArgs>> activeDirectories) {
             $.activeDirectories = activeDirectories;
             return this;
         }
 
+        /**
+         * @param activeDirectories Active Directories
+         * 
+         * @return builder
+         * 
+         */
         public Builder activeDirectories(List<ActiveDirectoryArgs> activeDirectories) {
             return activeDirectories(Output.of(activeDirectories));
         }
 
+        /**
+         * @param activeDirectories Active Directories
+         * 
+         * @return builder
+         * 
+         */
         public Builder activeDirectories(ActiveDirectoryArgs... activeDirectories) {
             return activeDirectories(List.of(activeDirectories));
         }
 
+        /**
+         * @param encryption Encryption settings
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryption(@Nullable Output<AccountEncryptionArgs> encryption) {
             $.encryption = encryption;
             return this;
         }
 
+        /**
+         * @param encryption Encryption settings
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryption(AccountEncryptionArgs encryption) {
             return encryption(Output.of(encryption));
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

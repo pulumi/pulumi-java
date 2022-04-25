@@ -26,6 +26,10 @@ public final class EnumValueResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Enum value name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -37,6 +41,10 @@ public final class EnumValueResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="number", required=true)
     private Integer number;
 
+    /**
+     * @return Enum value number.
+     * 
+     */
     public Integer number() {
         return this.number;
     }
@@ -48,6 +56,10 @@ public final class EnumValueResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="options", required=true)
     private List<OptionResponse> options;
 
+    /**
+     * @return Protocol buffer options.
+     * 
+     */
     public List<OptionResponse> options() {
         return this.options;
     }
@@ -78,21 +90,45 @@ public final class EnumValueResponse extends com.pulumi.resources.InvokeArgs {
             $ = new EnumValueResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Enum value name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param number Enum value number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder number(Integer number) {
             $.number = number;
             return this;
         }
 
+        /**
+         * @param options Protocol buffer options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder options(List<OptionResponse> options) {
             $.options = options;
             return this;
         }
 
+        /**
+         * @param options Protocol buffer options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder options(OptionResponse... options) {
             return options(List.of(options));
         }

@@ -15,7 +15,7 @@ import javax.annotation.Nullable;
 public final class GetHcVpnGatewayResult {
     private final String description;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
@@ -50,9 +50,9 @@ public final class GetHcVpnGatewayResult {
         return this.description;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

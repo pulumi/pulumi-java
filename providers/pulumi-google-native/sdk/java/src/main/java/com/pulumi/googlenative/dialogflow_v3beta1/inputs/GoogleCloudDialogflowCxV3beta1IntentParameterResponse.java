@@ -24,6 +24,10 @@ public final class GoogleCloudDialogflowCxV3beta1IntentParameterResponse extends
     @Import(name="entityType", required=true)
     private String entityType;
 
+    /**
+     * @return The entity type of the parameter. Format: `projects/-/locations/-/agents/-/entityTypes/` for system entity types (for example, `projects/-/locations/-/agents/-/entityTypes/sys.date`), or `projects//locations//agents//entityTypes/` for developer entity types.
+     * 
+     */
     public String entityType() {
         return this.entityType;
     }
@@ -35,6 +39,10 @@ public final class GoogleCloudDialogflowCxV3beta1IntentParameterResponse extends
     @Import(name="isList", required=true)
     private Boolean isList;
 
+    /**
+     * @return Indicates whether the parameter represents a list of values.
+     * 
+     */
     public Boolean isList() {
         return this.isList;
     }
@@ -46,6 +54,10 @@ public final class GoogleCloudDialogflowCxV3beta1IntentParameterResponse extends
     @Import(name="redact", required=true)
     private Boolean redact;
 
+    /**
+     * @return Indicates whether the parameter content should be redacted in log. If redaction is enabled, the parameter content will be replaced by parameter name during logging. Note: the parameter content is subject to redaction if either parameter level redaction or entity type level redaction is enabled.
+     * 
+     */
     public Boolean redact() {
         return this.redact;
     }
@@ -76,16 +88,34 @@ public final class GoogleCloudDialogflowCxV3beta1IntentParameterResponse extends
             $ = new GoogleCloudDialogflowCxV3beta1IntentParameterResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param entityType The entity type of the parameter. Format: `projects/-/locations/-/agents/-/entityTypes/` for system entity types (for example, `projects/-/locations/-/agents/-/entityTypes/sys.date`), or `projects//locations//agents//entityTypes/` for developer entity types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entityType(String entityType) {
             $.entityType = entityType;
             return this;
         }
 
+        /**
+         * @param isList Indicates whether the parameter represents a list of values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isList(Boolean isList) {
             $.isList = isList;
             return this;
         }
 
+        /**
+         * @param redact Indicates whether the parameter content should be redacted in log. If redaction is enabled, the parameter content will be replaced by parameter name during logging. Note: the parameter content is subject to redaction if either parameter level redaction or entity type level redaction is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder redact(Boolean redact) {
             $.redact = redact;
             return this;

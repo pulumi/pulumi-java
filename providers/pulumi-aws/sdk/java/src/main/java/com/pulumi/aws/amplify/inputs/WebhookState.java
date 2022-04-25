@@ -22,6 +22,10 @@ public final class WebhookState extends com.pulumi.resources.ResourceArgs {
     @Import(name="appId")
     private @Nullable Output<String> appId;
 
+    /**
+     * @return The unique ID for an Amplify app.
+     * 
+     */
     public Optional<Output<String>> appId() {
         return Optional.ofNullable(this.appId);
     }
@@ -33,6 +37,10 @@ public final class WebhookState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) for the webhook.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -44,6 +52,10 @@ public final class WebhookState extends com.pulumi.resources.ResourceArgs {
     @Import(name="branchName")
     private @Nullable Output<String> branchName;
 
+    /**
+     * @return The name for a branch that is part of the Amplify app.
+     * 
+     */
     public Optional<Output<String>> branchName() {
         return Optional.ofNullable(this.branchName);
     }
@@ -55,6 +67,10 @@ public final class WebhookState extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description for a webhook.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -66,6 +82,10 @@ public final class WebhookState extends com.pulumi.resources.ResourceArgs {
     @Import(name="url")
     private @Nullable Output<String> url;
 
+    /**
+     * @return The URL of the webhook.
+     * 
+     */
     public Optional<Output<String>> url() {
         return Optional.ofNullable(this.url);
     }
@@ -98,47 +118,107 @@ public final class WebhookState extends com.pulumi.resources.ResourceArgs {
             $ = new WebhookState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param appId The unique ID for an Amplify app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appId(@Nullable Output<String> appId) {
             $.appId = appId;
             return this;
         }
 
+        /**
+         * @param appId The unique ID for an Amplify app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appId(String appId) {
             return appId(Output.of(appId));
         }
 
+        /**
+         * @param arn The Amazon Resource Name (ARN) for the webhook.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn The Amazon Resource Name (ARN) for the webhook.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param branchName The name for a branch that is part of the Amplify app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder branchName(@Nullable Output<String> branchName) {
             $.branchName = branchName;
             return this;
         }
 
+        /**
+         * @param branchName The name for a branch that is part of the Amplify app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder branchName(String branchName) {
             return branchName(Output.of(branchName));
         }
 
+        /**
+         * @param description The description for a webhook.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description for a webhook.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param url The URL of the webhook.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(@Nullable Output<String> url) {
             $.url = url;
             return this;
         }
 
+        /**
+         * @param url The URL of the webhook.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(String url) {
             return url(Output.of(url));
         }

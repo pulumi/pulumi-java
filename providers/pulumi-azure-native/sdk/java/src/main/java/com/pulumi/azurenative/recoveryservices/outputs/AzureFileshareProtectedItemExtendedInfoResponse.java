@@ -13,27 +13,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AzureFileshareProtectedItemExtendedInfoResponse {
     /**
-     * The oldest backup copy available for this item in the service.
+     * @return The oldest backup copy available for this item in the service.
      * 
      */
     private final @Nullable String oldestRecoveryPoint;
     /**
-     * Indicates consistency of policy object and policy applied to this backup item.
+     * @return Indicates consistency of policy object and policy applied to this backup item.
      * 
      */
     private final @Nullable String policyState;
     /**
-     * Number of available backup copies associated with this backup item.
+     * @return Number of available backup copies associated with this backup item.
      * 
      */
     private final @Nullable Integer recoveryPointCount;
     /**
-     * Indicates the state of this resource. Possible values are from enum ResourceState {Invalid, Active, SoftDeleted, Deleted}
+     * @return Indicates the state of this resource. Possible values are from enum ResourceState {Invalid, Active, SoftDeleted, Deleted}
      * 
      */
     private final String resourceState;
     /**
-     * The resource state sync time for this backup item.
+     * @return The resource state sync time for this backup item.
      * 
      */
     private final String resourceStateSyncTime;
@@ -53,37 +53,37 @@ public final class AzureFileshareProtectedItemExtendedInfoResponse {
     }
 
     /**
-     * The oldest backup copy available for this item in the service.
+     * @return The oldest backup copy available for this item in the service.
      * 
-    */
+     */
     public Optional<String> oldestRecoveryPoint() {
         return Optional.ofNullable(this.oldestRecoveryPoint);
     }
     /**
-     * Indicates consistency of policy object and policy applied to this backup item.
+     * @return Indicates consistency of policy object and policy applied to this backup item.
      * 
-    */
+     */
     public Optional<String> policyState() {
         return Optional.ofNullable(this.policyState);
     }
     /**
-     * Number of available backup copies associated with this backup item.
+     * @return Number of available backup copies associated with this backup item.
      * 
-    */
+     */
     public Optional<Integer> recoveryPointCount() {
         return Optional.ofNullable(this.recoveryPointCount);
     }
     /**
-     * Indicates the state of this resource. Possible values are from enum ResourceState {Invalid, Active, SoftDeleted, Deleted}
+     * @return Indicates the state of this resource. Possible values are from enum ResourceState {Invalid, Active, SoftDeleted, Deleted}
      * 
-    */
+     */
     public String resourceState() {
         return this.resourceState;
     }
     /**
-     * The resource state sync time for this backup item.
+     * @return The resource state sync time for this backup item.
      * 
-    */
+     */
     public String resourceStateSyncTime() {
         return this.resourceStateSyncTime;
     }

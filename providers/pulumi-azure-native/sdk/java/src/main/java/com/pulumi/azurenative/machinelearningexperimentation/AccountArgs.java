@@ -24,6 +24,10 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accountName")
     private @Nullable Output<String> accountName;
 
+    /**
+     * @return The name of the machine learning team account.
+     * 
+     */
     public Optional<Output<String>> accountName() {
         return Optional.ofNullable(this.accountName);
     }
@@ -35,6 +39,10 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description of this workspace.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -46,6 +54,10 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="friendlyName")
     private @Nullable Output<String> friendlyName;
 
+    /**
+     * @return The friendly name for this workspace. This will be the workspace name in the arm id when the workspace object gets created
+     * 
+     */
     public Optional<Output<String>> friendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
@@ -57,6 +69,10 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="keyVaultId", required=true)
     private Output<String> keyVaultId;
 
+    /**
+     * @return The fully qualified arm id of the user key vault.
+     * 
+     */
     public Output<String> keyVaultId() {
         return this.keyVaultId;
     }
@@ -68,6 +84,10 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The location of the resource. This cannot be changed after the resource is created.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -79,6 +99,10 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group to which the machine learning team account belongs.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -90,6 +114,10 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="seats")
     private @Nullable Output<String> seats;
 
+    /**
+     * @return The no of users/seats who can access this team account. This property defines the charge on the team account.
+     * 
+     */
     public Optional<Output<String>> seats() {
         return Optional.ofNullable(this.seats);
     }
@@ -101,6 +129,10 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="storageAccount", required=true)
     private Output<StorageAccountPropertiesArgs> storageAccount;
 
+    /**
+     * @return The properties of the storage account for the machine learning team account.
+     * 
+     */
     public Output<StorageAccountPropertiesArgs> storageAccount() {
         return this.storageAccount;
     }
@@ -112,6 +144,10 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return The tags of the resource.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -123,6 +159,10 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vsoAccountId", required=true)
     private Output<String> vsoAccountId;
 
+    /**
+     * @return The fully qualified arm id of the vso account to be used for this team account.
+     * 
+     */
     public Output<String> vsoAccountId() {
         return this.vsoAccountId;
     }
@@ -160,92 +200,212 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AccountArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The name of the machine learning team account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(@Nullable Output<String> accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param accountName The name of the machine learning team account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             return accountName(Output.of(accountName));
         }
 
+        /**
+         * @param description The description of this workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description of this workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param friendlyName The friendly name for this workspace. This will be the workspace name in the arm id when the workspace object gets created
+         * 
+         * @return builder
+         * 
+         */
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
             $.friendlyName = friendlyName;
             return this;
         }
 
+        /**
+         * @param friendlyName The friendly name for this workspace. This will be the workspace name in the arm id when the workspace object gets created
+         * 
+         * @return builder
+         * 
+         */
         public Builder friendlyName(String friendlyName) {
             return friendlyName(Output.of(friendlyName));
         }
 
+        /**
+         * @param keyVaultId The fully qualified arm id of the user key vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultId(Output<String> keyVaultId) {
             $.keyVaultId = keyVaultId;
             return this;
         }
 
+        /**
+         * @param keyVaultId The fully qualified arm id of the user key vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultId(String keyVaultId) {
             return keyVaultId(Output.of(keyVaultId));
         }
 
+        /**
+         * @param location The location of the resource. This cannot be changed after the resource is created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The location of the resource. This cannot be changed after the resource is created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group to which the machine learning team account belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group to which the machine learning team account belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param seats The no of users/seats who can access this team account. This property defines the charge on the team account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder seats(@Nullable Output<String> seats) {
             $.seats = seats;
             return this;
         }
 
+        /**
+         * @param seats The no of users/seats who can access this team account. This property defines the charge on the team account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder seats(String seats) {
             return seats(Output.of(seats));
         }
 
+        /**
+         * @param storageAccount The properties of the storage account for the machine learning team account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccount(Output<StorageAccountPropertiesArgs> storageAccount) {
             $.storageAccount = storageAccount;
             return this;
         }
 
+        /**
+         * @param storageAccount The properties of the storage account for the machine learning team account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccount(StorageAccountPropertiesArgs storageAccount) {
             return storageAccount(Output.of(storageAccount));
         }
 
+        /**
+         * @param tags The tags of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The tags of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param vsoAccountId The fully qualified arm id of the vso account to be used for this team account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vsoAccountId(Output<String> vsoAccountId) {
             $.vsoAccountId = vsoAccountId;
             return this;
         }
 
+        /**
+         * @param vsoAccountId The fully qualified arm id of the vso account to be used for this team account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vsoAccountId(String vsoAccountId) {
             return vsoAccountId(Output.of(vsoAccountId));
         }

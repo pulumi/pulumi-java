@@ -26,6 +26,10 @@ public final class BasicSliResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="availability", required=true)
     private AvailabilityCriteriaResponse availability;
 
+    /**
+     * @return Good service is defined to be the count of requests made to this service that return successfully.
+     * 
+     */
     public AvailabilityCriteriaResponse availability() {
         return this.availability;
     }
@@ -37,6 +41,10 @@ public final class BasicSliResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="latency", required=true)
     private LatencyCriteriaResponse latency;
 
+    /**
+     * @return Good service is defined to be the count of requests made to this service that are fast enough with respect to latency.threshold.
+     * 
+     */
     public LatencyCriteriaResponse latency() {
         return this.latency;
     }
@@ -48,6 +56,10 @@ public final class BasicSliResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="location", required=true)
     private List<String> location;
 
+    /**
+     * @return OPTIONAL: The set of locations to which this SLI is relevant. Telemetry from other locations will not be used to calculate performance for this SLI. If omitted, this SLI applies to all locations in which the Service has activity. For service types that don&#39;t support breaking down by location, setting this field will result in an error.
+     * 
+     */
     public List<String> location() {
         return this.location;
     }
@@ -59,6 +71,10 @@ public final class BasicSliResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="method", required=true)
     private List<String> method;
 
+    /**
+     * @return OPTIONAL: The set of RPCs to which this SLI is relevant. Telemetry from other methods will not be used to calculate performance for this SLI. If omitted, this SLI applies to all the Service&#39;s methods. For service types that don&#39;t support breaking down by method, setting this field will result in an error.
+     * 
+     */
     public List<String> method() {
         return this.method;
     }
@@ -70,6 +86,10 @@ public final class BasicSliResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="version", required=true)
     private List<String> version;
 
+    /**
+     * @return OPTIONAL: The set of API versions to which this SLI is relevant. Telemetry from other API versions will not be used to calculate performance for this SLI. If omitted, this SLI applies to all API versions. For service types that don&#39;t support breaking down by version, setting this field will result in an error.
+     * 
+     */
     public List<String> version() {
         return this.version;
     }
@@ -102,39 +122,87 @@ public final class BasicSliResponse extends com.pulumi.resources.InvokeArgs {
             $ = new BasicSliResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param availability Good service is defined to be the count of requests made to this service that return successfully.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availability(AvailabilityCriteriaResponse availability) {
             $.availability = availability;
             return this;
         }
 
+        /**
+         * @param latency Good service is defined to be the count of requests made to this service that are fast enough with respect to latency.threshold.
+         * 
+         * @return builder
+         * 
+         */
         public Builder latency(LatencyCriteriaResponse latency) {
             $.latency = latency;
             return this;
         }
 
+        /**
+         * @param location OPTIONAL: The set of locations to which this SLI is relevant. Telemetry from other locations will not be used to calculate performance for this SLI. If omitted, this SLI applies to all locations in which the Service has activity. For service types that don&#39;t support breaking down by location, setting this field will result in an error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(List<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location OPTIONAL: The set of locations to which this SLI is relevant. Telemetry from other locations will not be used to calculate performance for this SLI. If omitted, this SLI applies to all locations in which the Service has activity. For service types that don&#39;t support breaking down by location, setting this field will result in an error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String... location) {
             return location(List.of(location));
         }
 
+        /**
+         * @param method OPTIONAL: The set of RPCs to which this SLI is relevant. Telemetry from other methods will not be used to calculate performance for this SLI. If omitted, this SLI applies to all the Service&#39;s methods. For service types that don&#39;t support breaking down by method, setting this field will result in an error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder method(List<String> method) {
             $.method = method;
             return this;
         }
 
+        /**
+         * @param method OPTIONAL: The set of RPCs to which this SLI is relevant. Telemetry from other methods will not be used to calculate performance for this SLI. If omitted, this SLI applies to all the Service&#39;s methods. For service types that don&#39;t support breaking down by method, setting this field will result in an error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder method(String... method) {
             return method(List.of(method));
         }
 
+        /**
+         * @param version OPTIONAL: The set of API versions to which this SLI is relevant. Telemetry from other API versions will not be used to calculate performance for this SLI. If omitted, this SLI applies to all API versions. For service types that don&#39;t support breaking down by version, setting this field will result in an error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(List<String> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version OPTIONAL: The set of API versions to which this SLI is relevant. Telemetry from other API versions will not be used to calculate performance for this SLI. If omitted, this SLI applies to all API versions. For service types that don&#39;t support breaking down by version, setting this field will result in an error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String... version) {
             return version(List.of(version));
         }

@@ -19,6 +19,10 @@ public final class GetConnectedRegistryArgs extends com.pulumi.resources.InvokeA
     @Import(name="connectedRegistryName", required=true)
     private String connectedRegistryName;
 
+    /**
+     * @return The name of the connected registry.
+     * 
+     */
     public String connectedRegistryName() {
         return this.connectedRegistryName;
     }
@@ -30,6 +34,10 @@ public final class GetConnectedRegistryArgs extends com.pulumi.resources.InvokeA
     @Import(name="registryName", required=true)
     private String registryName;
 
+    /**
+     * @return The name of the container registry.
+     * 
+     */
     public String registryName() {
         return this.registryName;
     }
@@ -41,6 +49,10 @@ public final class GetConnectedRegistryArgs extends com.pulumi.resources.InvokeA
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group to which the container registry belongs.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetConnectedRegistryArgs extends com.pulumi.resources.InvokeA
             $ = new GetConnectedRegistryArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param connectedRegistryName The name of the connected registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectedRegistryName(String connectedRegistryName) {
             $.connectedRegistryName = connectedRegistryName;
             return this;
         }
 
+        /**
+         * @param registryName The name of the container registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registryName(String registryName) {
             $.registryName = registryName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group to which the container registry belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

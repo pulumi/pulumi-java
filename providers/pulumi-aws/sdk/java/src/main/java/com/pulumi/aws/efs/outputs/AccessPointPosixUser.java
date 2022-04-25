@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AccessPointPosixUser {
     /**
-     * POSIX group ID used for all file system operations using this access point.
+     * @return POSIX group ID used for all file system operations using this access point.
      * 
      */
     private final Integer gid;
     /**
-     * Secondary POSIX group IDs used for all file system operations using this access point.
+     * @return Secondary POSIX group IDs used for all file system operations using this access point.
      * 
      */
     private final @Nullable List<Integer> secondaryGids;
     /**
-     * POSIX user ID used for all file system operations using this access point.
+     * @return POSIX user ID used for all file system operations using this access point.
      * 
      */
     private final Integer uid;
@@ -38,23 +38,23 @@ public final class AccessPointPosixUser {
     }
 
     /**
-     * POSIX group ID used for all file system operations using this access point.
+     * @return POSIX group ID used for all file system operations using this access point.
      * 
-    */
+     */
     public Integer gid() {
         return this.gid;
     }
     /**
-     * Secondary POSIX group IDs used for all file system operations using this access point.
+     * @return Secondary POSIX group IDs used for all file system operations using this access point.
      * 
-    */
+     */
     public List<Integer> secondaryGids() {
         return this.secondaryGids == null ? List.of() : this.secondaryGids;
     }
     /**
-     * POSIX user ID used for all file system operations using this access point.
+     * @return POSIX user ID used for all file system operations using this access point.
      * 
-    */
+     */
     public Integer uid() {
         return this.uid;
     }

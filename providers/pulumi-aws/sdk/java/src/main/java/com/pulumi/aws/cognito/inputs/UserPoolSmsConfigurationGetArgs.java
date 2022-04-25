@@ -20,6 +20,10 @@ public final class UserPoolSmsConfigurationGetArgs extends com.pulumi.resources.
     @Import(name="externalId", required=true)
     private Output<String> externalId;
 
+    /**
+     * @return External ID used in IAM role trust relationships. For more information about using external IDs, see [How to Use an External ID When Granting Access to Your AWS Resources to a Third Party](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user_externalid.html).
+     * 
+     */
     public Output<String> externalId() {
         return this.externalId;
     }
@@ -31,6 +35,10 @@ public final class UserPoolSmsConfigurationGetArgs extends com.pulumi.resources.
     @Import(name="snsCallerArn", required=true)
     private Output<String> snsCallerArn;
 
+    /**
+     * @return ARN of the Amazon SNS caller. This is usually the IAM role that you&#39;ve given Cognito permission to assume.
+     * 
+     */
     public Output<String> snsCallerArn() {
         return this.snsCallerArn;
     }
@@ -60,20 +68,44 @@ public final class UserPoolSmsConfigurationGetArgs extends com.pulumi.resources.
             $ = new UserPoolSmsConfigurationGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param externalId External ID used in IAM role trust relationships. For more information about using external IDs, see [How to Use an External ID When Granting Access to Your AWS Resources to a Third Party](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user_externalid.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder externalId(Output<String> externalId) {
             $.externalId = externalId;
             return this;
         }
 
+        /**
+         * @param externalId External ID used in IAM role trust relationships. For more information about using external IDs, see [How to Use an External ID When Granting Access to Your AWS Resources to a Third Party](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user_externalid.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder externalId(String externalId) {
             return externalId(Output.of(externalId));
         }
 
+        /**
+         * @param snsCallerArn ARN of the Amazon SNS caller. This is usually the IAM role that you&#39;ve given Cognito permission to assume.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snsCallerArn(Output<String> snsCallerArn) {
             $.snsCallerArn = snsCallerArn;
             return this;
         }
 
+        /**
+         * @param snsCallerArn ARN of the Amazon SNS caller. This is usually the IAM role that you&#39;ve given Cognito permission to assume.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snsCallerArn(String snsCallerArn) {
             return snsCallerArn(Output.of(snsCallerArn));
         }

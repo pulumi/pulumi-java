@@ -27,6 +27,10 @@ public final class InstanceAttemptResultArgs extends com.pulumi.resources.Resour
     @Import(name="exitCode")
     private @Nullable Output<Integer> exitCode;
 
+    /**
+     * @return Optional. The exit code of this attempt. This may be unset if the container was unable to exit cleanly with a code due to some other failure. See status field for possible failure details.
+     * 
+     */
     public Optional<Output<Integer>> exitCode() {
         return Optional.ofNullable(this.exitCode);
     }
@@ -38,6 +42,10 @@ public final class InstanceAttemptResultArgs extends com.pulumi.resources.Resour
     @Import(name="status")
     private @Nullable Output<GoogleRpcStatusArgs> status;
 
+    /**
+     * @return Optional. The status of this attempt. If the status code is OK, then the attempt succeeded.
+     * 
+     */
     public Optional<Output<GoogleRpcStatusArgs>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -67,20 +75,44 @@ public final class InstanceAttemptResultArgs extends com.pulumi.resources.Resour
             $ = new InstanceAttemptResultArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param exitCode Optional. The exit code of this attempt. This may be unset if the container was unable to exit cleanly with a code due to some other failure. See status field for possible failure details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exitCode(@Nullable Output<Integer> exitCode) {
             $.exitCode = exitCode;
             return this;
         }
 
+        /**
+         * @param exitCode Optional. The exit code of this attempt. This may be unset if the container was unable to exit cleanly with a code due to some other failure. See status field for possible failure details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exitCode(Integer exitCode) {
             return exitCode(Output.of(exitCode));
         }
 
+        /**
+         * @param status Optional. The status of this attempt. If the status code is OK, then the attempt succeeded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<GoogleRpcStatusArgs> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status Optional. The status of this attempt. If the status code is OK, then the attempt succeeded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(GoogleRpcStatusArgs status) {
             return status(Output.of(status));
         }

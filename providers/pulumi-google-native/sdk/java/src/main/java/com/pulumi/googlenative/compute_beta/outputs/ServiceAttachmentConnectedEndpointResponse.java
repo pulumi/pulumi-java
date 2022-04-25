@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class ServiceAttachmentConnectedEndpointResponse {
     /**
-     * The url of a connected endpoint.
+     * @return The url of a connected endpoint.
      * 
      */
     private final String endpoint;
     /**
-     * The PSC connection id of the connected endpoint.
+     * @return The PSC connection id of the connected endpoint.
      * 
      */
     private final String pscConnectionId;
     /**
-     * The status of a connected endpoint to this service attachment.
+     * @return The status of a connected endpoint to this service attachment.
      * 
      */
     private final String status;
@@ -36,23 +36,23 @@ public final class ServiceAttachmentConnectedEndpointResponse {
     }
 
     /**
-     * The url of a connected endpoint.
+     * @return The url of a connected endpoint.
      * 
-    */
+     */
     public String endpoint() {
         return this.endpoint;
     }
     /**
-     * The PSC connection id of the connected endpoint.
+     * @return The PSC connection id of the connected endpoint.
      * 
-    */
+     */
     public String pscConnectionId() {
         return this.pscConnectionId;
     }
     /**
-     * The status of a connected endpoint to this service attachment.
+     * @return The status of a connected endpoint to this service attachment.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }

@@ -27,6 +27,10 @@ public final class CloudServiceRoleProfileArgs extends com.pulumi.resources.Reso
     @Import(name="roles")
     private @Nullable Output<List<CloudServiceRoleProfilePropertiesArgs>> roles;
 
+    /**
+     * @return List of roles for the cloud service.
+     * 
+     */
     public Optional<Output<List<CloudServiceRoleProfilePropertiesArgs>>> roles() {
         return Optional.ofNullable(this.roles);
     }
@@ -55,15 +59,33 @@ public final class CloudServiceRoleProfileArgs extends com.pulumi.resources.Reso
             $ = new CloudServiceRoleProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param roles List of roles for the cloud service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roles(@Nullable Output<List<CloudServiceRoleProfilePropertiesArgs>> roles) {
             $.roles = roles;
             return this;
         }
 
+        /**
+         * @param roles List of roles for the cloud service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roles(List<CloudServiceRoleProfilePropertiesArgs> roles) {
             return roles(Output.of(roles));
         }
 
+        /**
+         * @param roles List of roles for the cloud service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roles(CloudServiceRoleProfilePropertiesArgs... roles) {
             return roles(List.of(roles));
         }

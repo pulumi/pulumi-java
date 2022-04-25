@@ -25,6 +25,10 @@ public final class GalleryImageReferenceResponse extends com.pulumi.resources.In
     @Import(name="offer")
     private @Nullable String offer;
 
+    /**
+     * @return The offer of the gallery image.
+     * 
+     */
     public Optional<String> offer() {
         return Optional.ofNullable(this.offer);
     }
@@ -36,6 +40,10 @@ public final class GalleryImageReferenceResponse extends com.pulumi.resources.In
     @Import(name="osType")
     private @Nullable String osType;
 
+    /**
+     * @return The OS type of the gallery image.
+     * 
+     */
     public Optional<String> osType() {
         return Optional.ofNullable(this.osType);
     }
@@ -47,6 +55,10 @@ public final class GalleryImageReferenceResponse extends com.pulumi.resources.In
     @Import(name="publisher")
     private @Nullable String publisher;
 
+    /**
+     * @return The publisher of the gallery image.
+     * 
+     */
     public Optional<String> publisher() {
         return Optional.ofNullable(this.publisher);
     }
@@ -58,6 +70,10 @@ public final class GalleryImageReferenceResponse extends com.pulumi.resources.In
     @Import(name="sku")
     private @Nullable String sku;
 
+    /**
+     * @return The SKU of the gallery image.
+     * 
+     */
     public Optional<String> sku() {
         return Optional.ofNullable(this.sku);
     }
@@ -69,6 +85,10 @@ public final class GalleryImageReferenceResponse extends com.pulumi.resources.In
     @Import(name="version")
     private @Nullable String version;
 
+    /**
+     * @return The version of the gallery image.
+     * 
+     */
     public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }
@@ -101,26 +121,56 @@ public final class GalleryImageReferenceResponse extends com.pulumi.resources.In
             $ = new GalleryImageReferenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param offer The offer of the gallery image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder offer(@Nullable String offer) {
             $.offer = offer;
             return this;
         }
 
+        /**
+         * @param osType The OS type of the gallery image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osType(@Nullable String osType) {
             $.osType = osType;
             return this;
         }
 
+        /**
+         * @param publisher The publisher of the gallery image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publisher(@Nullable String publisher) {
             $.publisher = publisher;
             return this;
         }
 
+        /**
+         * @param sku The SKU of the gallery image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(@Nullable String sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param version The version of the gallery image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable String version) {
             $.version = version;
             return this;

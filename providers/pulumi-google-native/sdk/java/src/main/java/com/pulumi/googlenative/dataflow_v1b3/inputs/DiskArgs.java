@@ -27,6 +27,10 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="diskType")
     private @Nullable Output<String> diskType;
 
+    /**
+     * @return Disk storage type, as defined by Google Compute Engine. This must be a disk type appropriate to the project and zone in which the workers will run. If unknown or unspecified, the service will attempt to choose a reasonable default. For example, the standard persistent disk type is a resource name typically ending in &#34;pd-standard&#34;. If SSD persistent disks are available, the resource name typically ends with &#34;pd-ssd&#34;. The actual valid values are defined the Google Compute Engine API, not by the Cloud Dataflow API; consult the Google Compute Engine documentation for more information about determining the set of available disk types for a particular project and zone. Google Compute Engine Disk types are local to a particular project in a particular zone, and so the resource name will typically look something like this: compute.googleapis.com/projects/project-id/zones/zone/diskTypes/pd-standard
+     * 
+     */
     public Optional<Output<String>> diskType() {
         return Optional.ofNullable(this.diskType);
     }
@@ -38,6 +42,10 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="mountPoint")
     private @Nullable Output<String> mountPoint;
 
+    /**
+     * @return Directory in a VM where disk is mounted.
+     * 
+     */
     public Optional<Output<String>> mountPoint() {
         return Optional.ofNullable(this.mountPoint);
     }
@@ -49,6 +57,10 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sizeGb")
     private @Nullable Output<Integer> sizeGb;
 
+    /**
+     * @return Size of disk in GB. If zero or unspecified, the service will attempt to choose a reasonable default.
+     * 
+     */
     public Optional<Output<Integer>> sizeGb() {
         return Optional.ofNullable(this.sizeGb);
     }
@@ -79,29 +91,65 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DiskArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param diskType Disk storage type, as defined by Google Compute Engine. This must be a disk type appropriate to the project and zone in which the workers will run. If unknown or unspecified, the service will attempt to choose a reasonable default. For example, the standard persistent disk type is a resource name typically ending in &#34;pd-standard&#34;. If SSD persistent disks are available, the resource name typically ends with &#34;pd-ssd&#34;. The actual valid values are defined the Google Compute Engine API, not by the Cloud Dataflow API; consult the Google Compute Engine documentation for more information about determining the set of available disk types for a particular project and zone. Google Compute Engine Disk types are local to a particular project in a particular zone, and so the resource name will typically look something like this: compute.googleapis.com/projects/project-id/zones/zone/diskTypes/pd-standard
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskType(@Nullable Output<String> diskType) {
             $.diskType = diskType;
             return this;
         }
 
+        /**
+         * @param diskType Disk storage type, as defined by Google Compute Engine. This must be a disk type appropriate to the project and zone in which the workers will run. If unknown or unspecified, the service will attempt to choose a reasonable default. For example, the standard persistent disk type is a resource name typically ending in &#34;pd-standard&#34;. If SSD persistent disks are available, the resource name typically ends with &#34;pd-ssd&#34;. The actual valid values are defined the Google Compute Engine API, not by the Cloud Dataflow API; consult the Google Compute Engine documentation for more information about determining the set of available disk types for a particular project and zone. Google Compute Engine Disk types are local to a particular project in a particular zone, and so the resource name will typically look something like this: compute.googleapis.com/projects/project-id/zones/zone/diskTypes/pd-standard
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskType(String diskType) {
             return diskType(Output.of(diskType));
         }
 
+        /**
+         * @param mountPoint Directory in a VM where disk is mounted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mountPoint(@Nullable Output<String> mountPoint) {
             $.mountPoint = mountPoint;
             return this;
         }
 
+        /**
+         * @param mountPoint Directory in a VM where disk is mounted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mountPoint(String mountPoint) {
             return mountPoint(Output.of(mountPoint));
         }
 
+        /**
+         * @param sizeGb Size of disk in GB. If zero or unspecified, the service will attempt to choose a reasonable default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sizeGb(@Nullable Output<Integer> sizeGb) {
             $.sizeGb = sizeGb;
             return this;
         }
 
+        /**
+         * @param sizeGb Size of disk in GB. If zero or unspecified, the service will attempt to choose a reasonable default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sizeGb(Integer sizeGb) {
             return sizeGb(Output.of(sizeGb));
         }

@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DataPathAssetReferenceResponse {
     /**
-     * ARM resource ID of the datastore where the asset is located.
+     * @return ARM resource ID of the datastore where the asset is located.
      * 
      */
     private final @Nullable String datastoreId;
     /**
-     * The path of the file/directory in the datastore.
+     * @return The path of the file/directory in the datastore.
      * 
      */
     private final @Nullable String path;
     /**
-     * Enum to determine which reference method to use for an asset.
+     * @return Enum to determine which reference method to use for an asset.
      * Expected value is &#39;DataPath&#39;.
      * 
      */
@@ -39,24 +39,24 @@ public final class DataPathAssetReferenceResponse {
     }
 
     /**
-     * ARM resource ID of the datastore where the asset is located.
+     * @return ARM resource ID of the datastore where the asset is located.
      * 
-    */
+     */
     public Optional<String> datastoreId() {
         return Optional.ofNullable(this.datastoreId);
     }
     /**
-     * The path of the file/directory in the datastore.
+     * @return The path of the file/directory in the datastore.
      * 
-    */
+     */
     public Optional<String> path() {
         return Optional.ofNullable(this.path);
     }
     /**
-     * Enum to determine which reference method to use for an asset.
+     * @return Enum to determine which reference method to use for an asset.
      * Expected value is &#39;DataPath&#39;.
      * 
-    */
+     */
     public String referenceType() {
         return this.referenceType;
     }

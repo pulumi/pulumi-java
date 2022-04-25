@@ -27,6 +27,10 @@ public final class OptionsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="asyncOptions", required=true)
     private List<AsyncOptionsResponse> asyncOptions;
 
+    /**
+     * @return Options regarding how to thread async requests.
+     * 
+     */
     public List<AsyncOptionsResponse> asyncOptions() {
         return this.asyncOptions;
     }
@@ -38,6 +42,10 @@ public final class OptionsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="inputMappings", required=true)
     private List<InputMappingResponse> inputMappings;
 
+    /**
+     * @return The mappings that apply for requests.
+     * 
+     */
     public List<InputMappingResponse> inputMappings() {
         return this.inputMappings;
     }
@@ -49,6 +57,10 @@ public final class OptionsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="validationOptions", required=true)
     private ValidationOptionsResponse validationOptions;
 
+    /**
+     * @return Options for how to validate and process properties on a resource.
+     * 
+     */
     public ValidationOptionsResponse validationOptions() {
         return this.validationOptions;
     }
@@ -60,6 +72,10 @@ public final class OptionsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="virtualProperties", required=true)
     private String virtualProperties;
 
+    /**
+     * @return Additional properties block described as a jsonSchema, these properties will never be part of the json payload, but they can be consumed by InputMappings, this must be a valid json schema draft-04. The properties specified here will be decouple in a different section. This schema will be merged to the schema validation, and properties here will be extracted From the payload and consumed explicitly by InputMappings. ex: field1: type: string field2: type: number
+     * 
+     */
     public String virtualProperties() {
         return this.virtualProperties;
     }
@@ -91,29 +107,65 @@ public final class OptionsResponse extends com.pulumi.resources.InvokeArgs {
             $ = new OptionsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param asyncOptions Options regarding how to thread async requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder asyncOptions(List<AsyncOptionsResponse> asyncOptions) {
             $.asyncOptions = asyncOptions;
             return this;
         }
 
+        /**
+         * @param asyncOptions Options regarding how to thread async requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder asyncOptions(AsyncOptionsResponse... asyncOptions) {
             return asyncOptions(List.of(asyncOptions));
         }
 
+        /**
+         * @param inputMappings The mappings that apply for requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputMappings(List<InputMappingResponse> inputMappings) {
             $.inputMappings = inputMappings;
             return this;
         }
 
+        /**
+         * @param inputMappings The mappings that apply for requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputMappings(InputMappingResponse... inputMappings) {
             return inputMappings(List.of(inputMappings));
         }
 
+        /**
+         * @param validationOptions Options for how to validate and process properties on a resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validationOptions(ValidationOptionsResponse validationOptions) {
             $.validationOptions = validationOptions;
             return this;
         }
 
+        /**
+         * @param virtualProperties Additional properties block described as a jsonSchema, these properties will never be part of the json payload, but they can be consumed by InputMappings, this must be a valid json schema draft-04. The properties specified here will be decouple in a different section. This schema will be merged to the schema validation, and properties here will be extracted From the payload and consumed explicitly by InputMappings. ex: field1: type: string field2: type: number
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualProperties(String virtualProperties) {
             $.virtualProperties = virtualProperties;
             return this;

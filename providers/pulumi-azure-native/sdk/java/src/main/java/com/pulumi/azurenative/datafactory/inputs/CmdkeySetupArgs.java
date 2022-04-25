@@ -29,6 +29,10 @@ public final class CmdkeySetupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="password", required=true)
     private Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
+    /**
+     * @return The password of data source access.
+     * 
+     */
     public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password() {
         return this.password;
     }
@@ -40,6 +44,10 @@ public final class CmdkeySetupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="targetName", required=true)
     private Output<Object> targetName;
 
+    /**
+     * @return The server name of data source access.
+     * 
+     */
     public Output<Object> targetName() {
         return this.targetName;
     }
@@ -52,6 +60,11 @@ public final class CmdkeySetupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return The type of custom setup.
+     * Expected value is &#39;CmdkeySetup&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -63,6 +76,10 @@ public final class CmdkeySetupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="userName", required=true)
     private Output<Object> userName;
 
+    /**
+     * @return The user name of data source access.
+     * 
+     */
     public Output<Object> userName() {
         return this.userName;
     }
@@ -94,46 +111,108 @@ public final class CmdkeySetupArgs extends com.pulumi.resources.ResourceArgs {
             $ = new CmdkeySetupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param password The password of data source access.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param password The password of data source access.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
             return password(Output.of(password));
         }
 
+        /**
+         * @param password The password of data source access.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(AzureKeyVaultSecretReferenceArgs password) {
             return password(Either.ofLeft(password));
         }
 
+        /**
+         * @param password The password of data source access.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(SecureStringArgs password) {
             return password(Either.ofRight(password));
         }
 
+        /**
+         * @param targetName The server name of data source access.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetName(Output<Object> targetName) {
             $.targetName = targetName;
             return this;
         }
 
+        /**
+         * @param targetName The server name of data source access.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetName(Object targetName) {
             return targetName(Output.of(targetName));
         }
 
+        /**
+         * @param type The type of custom setup.
+         * Expected value is &#39;CmdkeySetup&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of custom setup.
+         * Expected value is &#39;CmdkeySetup&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param userName The user name of data source access.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(Output<Object> userName) {
             $.userName = userName;
             return this;
         }
 
+        /**
+         * @param userName The user name of data source access.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(Object userName) {
             return userName(Output.of(userName));
         }

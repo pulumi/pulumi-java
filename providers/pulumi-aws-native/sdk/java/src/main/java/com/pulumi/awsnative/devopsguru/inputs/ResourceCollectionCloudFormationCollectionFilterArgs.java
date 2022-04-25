@@ -27,6 +27,10 @@ public final class ResourceCollectionCloudFormationCollectionFilterArgs extends 
     @Import(name="stackNames")
     private @Nullable Output<List<String>> stackNames;
 
+    /**
+     * @return An array of CloudFormation stack names.
+     * 
+     */
     public Optional<Output<List<String>>> stackNames() {
         return Optional.ofNullable(this.stackNames);
     }
@@ -55,15 +59,33 @@ public final class ResourceCollectionCloudFormationCollectionFilterArgs extends 
             $ = new ResourceCollectionCloudFormationCollectionFilterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param stackNames An array of CloudFormation stack names.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stackNames(@Nullable Output<List<String>> stackNames) {
             $.stackNames = stackNames;
             return this;
         }
 
+        /**
+         * @param stackNames An array of CloudFormation stack names.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stackNames(List<String> stackNames) {
             return stackNames(Output.of(stackNames));
         }
 
+        /**
+         * @param stackNames An array of CloudFormation stack names.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stackNames(String... stackNames) {
             return stackNames(List.of(stackNames));
         }

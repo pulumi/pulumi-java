@@ -24,6 +24,10 @@ public final class LocalGatewayRouteTableVPCAssociationArgs extends com.pulumi.r
     @Import(name="localGatewayRouteTableId", required=true)
     private Output<String> localGatewayRouteTableId;
 
+    /**
+     * @return The ID of the local gateway route table.
+     * 
+     */
     public Output<String> localGatewayRouteTableId() {
         return this.localGatewayRouteTableId;
     }
@@ -35,6 +39,10 @@ public final class LocalGatewayRouteTableVPCAssociationArgs extends com.pulumi.r
     @Import(name="tags")
     private @Nullable Output<List<LocalGatewayRouteTableVPCAssociationTagArgs>> tags;
 
+    /**
+     * @return The tags for the association.
+     * 
+     */
     public Optional<Output<List<LocalGatewayRouteTableVPCAssociationTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -46,6 +54,10 @@ public final class LocalGatewayRouteTableVPCAssociationArgs extends com.pulumi.r
     @Import(name="vpcId", required=true)
     private Output<String> vpcId;
 
+    /**
+     * @return The ID of the VPC.
+     * 
+     */
     public Output<String> vpcId() {
         return this.vpcId;
     }
@@ -76,33 +88,75 @@ public final class LocalGatewayRouteTableVPCAssociationArgs extends com.pulumi.r
             $ = new LocalGatewayRouteTableVPCAssociationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param localGatewayRouteTableId The ID of the local gateway route table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localGatewayRouteTableId(Output<String> localGatewayRouteTableId) {
             $.localGatewayRouteTableId = localGatewayRouteTableId;
             return this;
         }
 
+        /**
+         * @param localGatewayRouteTableId The ID of the local gateway route table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localGatewayRouteTableId(String localGatewayRouteTableId) {
             return localGatewayRouteTableId(Output.of(localGatewayRouteTableId));
         }
 
+        /**
+         * @param tags The tags for the association.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<LocalGatewayRouteTableVPCAssociationTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The tags for the association.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<LocalGatewayRouteTableVPCAssociationTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags The tags for the association.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(LocalGatewayRouteTableVPCAssociationTagArgs... tags) {
             return tags(List.of(tags));
         }
 
+        /**
+         * @param vpcId The ID of the VPC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcId(Output<String> vpcId) {
             $.vpcId = vpcId;
             return this;
         }
 
+        /**
+         * @param vpcId The ID of the VPC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcId(String vpcId) {
             return vpcId(Output.of(vpcId));
         }

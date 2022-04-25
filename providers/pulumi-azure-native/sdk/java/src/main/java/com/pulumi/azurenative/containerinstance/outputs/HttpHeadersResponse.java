@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class HttpHeadersResponse {
     /**
-     * The header name.
+     * @return The header name.
      * 
      */
     private final @Nullable String name;
     /**
-     * The header value.
+     * @return The header value.
      * 
      */
     private final @Nullable String value;
@@ -31,16 +31,16 @@ public final class HttpHeadersResponse {
     }
 
     /**
-     * The header name.
+     * @return The header name.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The header value.
+     * @return The header value.
      * 
-    */
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }

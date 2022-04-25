@@ -42,6 +42,10 @@ public final class MonitoringScheduleMonitoringJobDefinitionArgs extends com.pul
     @Import(name="environment")
     private @Nullable Output<Object> environment;
 
+    /**
+     * @return Sets the environment variables in the Docker container
+     * 
+     */
     public Optional<Output<Object>> environment() {
         return Optional.ofNullable(this.environment);
     }
@@ -88,6 +92,10 @@ public final class MonitoringScheduleMonitoringJobDefinitionArgs extends com.pul
     @Import(name="roleArn", required=true)
     private Output<String> roleArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of an IAM role that Amazon SageMaker can assume to perform tasks on your behalf.
+     * 
+     */
     public Output<String> roleArn() {
         return this.roleArn;
     }
@@ -140,11 +148,23 @@ public final class MonitoringScheduleMonitoringJobDefinitionArgs extends com.pul
             return baselineConfig(Output.of(baselineConfig));
         }
 
+        /**
+         * @param environment Sets the environment variables in the Docker container
+         * 
+         * @return builder
+         * 
+         */
         public Builder environment(@Nullable Output<Object> environment) {
             $.environment = environment;
             return this;
         }
 
+        /**
+         * @param environment Sets the environment variables in the Docker container
+         * 
+         * @return builder
+         * 
+         */
         public Builder environment(Object environment) {
             return environment(Output.of(environment));
         }
@@ -198,11 +218,23 @@ public final class MonitoringScheduleMonitoringJobDefinitionArgs extends com.pul
             return networkConfig(Output.of(networkConfig));
         }
 
+        /**
+         * @param roleArn The Amazon Resource Name (ARN) of an IAM role that Amazon SageMaker can assume to perform tasks on your behalf.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(Output<String> roleArn) {
             $.roleArn = roleArn;
             return this;
         }
 
+        /**
+         * @param roleArn The Amazon Resource Name (ARN) of an IAM role that Amazon SageMaker can assume to perform tasks on your behalf.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(String roleArn) {
             return roleArn(Output.of(roleArn));
         }

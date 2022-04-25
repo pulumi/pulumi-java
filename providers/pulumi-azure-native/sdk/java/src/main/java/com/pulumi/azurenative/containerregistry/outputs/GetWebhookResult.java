@@ -14,47 +14,47 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetWebhookResult {
     /**
-     * The list of actions that trigger the webhook to post notifications.
+     * @return The list of actions that trigger the webhook to post notifications.
      * 
      */
     private final List<String> actions;
     /**
-     * The resource ID.
+     * @return The resource ID.
      * 
      */
     private final String id;
     /**
-     * The location of the resource. This cannot be changed after the resource is created.
+     * @return The location of the resource. This cannot be changed after the resource is created.
      * 
      */
     private final String location;
     /**
-     * The name of the resource.
+     * @return The name of the resource.
      * 
      */
     private final String name;
     /**
-     * The provisioning state of the webhook at the time the operation was called.
+     * @return The provisioning state of the webhook at the time the operation was called.
      * 
      */
     private final String provisioningState;
     /**
-     * The scope of repositories where the event can be triggered. For example, &#39;foo:*&#39; means events for all tags under repository &#39;foo&#39;. &#39;foo:bar&#39; means events for &#39;foo:bar&#39; only. &#39;foo&#39; is equivalent to &#39;foo:latest&#39;. Empty means all events.
+     * @return The scope of repositories where the event can be triggered. For example, &#39;foo:*&#39; means events for all tags under repository &#39;foo&#39;. &#39;foo:bar&#39; means events for &#39;foo:bar&#39; only. &#39;foo&#39; is equivalent to &#39;foo:latest&#39;. Empty means all events.
      * 
      */
     private final @Nullable String scope;
     /**
-     * The status of the webhook at the time the operation was called.
+     * @return The status of the webhook at the time the operation was called.
      * 
      */
     private final @Nullable String status;
     /**
-     * The tags of the resource.
+     * @return The tags of the resource.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
      */
     private final String type;
@@ -82,65 +82,65 @@ public final class GetWebhookResult {
     }
 
     /**
-     * The list of actions that trigger the webhook to post notifications.
+     * @return The list of actions that trigger the webhook to post notifications.
      * 
-    */
+     */
     public List<String> actions() {
         return this.actions;
     }
     /**
-     * The resource ID.
+     * @return The resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The location of the resource. This cannot be changed after the resource is created.
+     * @return The location of the resource. This cannot be changed after the resource is created.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * The name of the resource.
+     * @return The name of the resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The provisioning state of the webhook at the time the operation was called.
+     * @return The provisioning state of the webhook at the time the operation was called.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The scope of repositories where the event can be triggered. For example, &#39;foo:*&#39; means events for all tags under repository &#39;foo&#39;. &#39;foo:bar&#39; means events for &#39;foo:bar&#39; only. &#39;foo&#39; is equivalent to &#39;foo:latest&#39;. Empty means all events.
+     * @return The scope of repositories where the event can be triggered. For example, &#39;foo:*&#39; means events for all tags under repository &#39;foo&#39;. &#39;foo:bar&#39; means events for &#39;foo:bar&#39; only. &#39;foo&#39; is equivalent to &#39;foo:latest&#39;. Empty means all events.
      * 
-    */
+     */
     public Optional<String> scope() {
         return Optional.ofNullable(this.scope);
     }
     /**
-     * The status of the webhook at the time the operation was called.
+     * @return The status of the webhook at the time the operation was called.
      * 
-    */
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
     /**
-     * The tags of the resource.
+     * @return The tags of the resource.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

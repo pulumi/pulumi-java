@@ -23,6 +23,10 @@ public final class TriggerGithubPushArgs extends com.pulumi.resources.ResourceAr
     @Import(name="branch")
     private @Nullable Output<String> branch;
 
+    /**
+     * @return Regex of branches to match.  Specify only one of branch or tag.
+     * 
+     */
     public Optional<Output<String>> branch() {
         return Optional.ofNullable(this.branch);
     }
@@ -34,6 +38,10 @@ public final class TriggerGithubPushArgs extends com.pulumi.resources.ResourceAr
     @Import(name="invertRegex")
     private @Nullable Output<Boolean> invertRegex;
 
+    /**
+     * @return Only trigger a build if the revision regex does NOT match the revision regex.
+     * 
+     */
     public Optional<Output<Boolean>> invertRegex() {
         return Optional.ofNullable(this.invertRegex);
     }
@@ -45,6 +53,10 @@ public final class TriggerGithubPushArgs extends com.pulumi.resources.ResourceAr
     @Import(name="tag")
     private @Nullable Output<String> tag;
 
+    /**
+     * @return Regex of tags to match.  Specify only one of branch or tag.
+     * 
+     */
     public Optional<Output<String>> tag() {
         return Optional.ofNullable(this.tag);
     }
@@ -75,29 +87,65 @@ public final class TriggerGithubPushArgs extends com.pulumi.resources.ResourceAr
             $ = new TriggerGithubPushArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param branch Regex of branches to match.  Specify only one of branch or tag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder branch(@Nullable Output<String> branch) {
             $.branch = branch;
             return this;
         }
 
+        /**
+         * @param branch Regex of branches to match.  Specify only one of branch or tag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder branch(String branch) {
             return branch(Output.of(branch));
         }
 
+        /**
+         * @param invertRegex Only trigger a build if the revision regex does NOT match the revision regex.
+         * 
+         * @return builder
+         * 
+         */
         public Builder invertRegex(@Nullable Output<Boolean> invertRegex) {
             $.invertRegex = invertRegex;
             return this;
         }
 
+        /**
+         * @param invertRegex Only trigger a build if the revision regex does NOT match the revision regex.
+         * 
+         * @return builder
+         * 
+         */
         public Builder invertRegex(Boolean invertRegex) {
             return invertRegex(Output.of(invertRegex));
         }
 
+        /**
+         * @param tag Regex of tags to match.  Specify only one of branch or tag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tag(@Nullable Output<String> tag) {
             $.tag = tag;
             return this;
         }
 
+        /**
+         * @param tag Regex of tags to match.  Specify only one of branch or tag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tag(String tag) {
             return tag(Output.of(tag));
         }

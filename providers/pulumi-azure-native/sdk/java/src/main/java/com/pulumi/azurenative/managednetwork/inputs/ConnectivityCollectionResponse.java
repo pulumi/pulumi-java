@@ -25,6 +25,10 @@ public final class ConnectivityCollectionResponse extends com.pulumi.resources.I
     @Import(name="groups", required=true)
     private List<ManagedNetworkGroupResponse> groups;
 
+    /**
+     * @return The collection of connectivity related Managed Network Groups within the Managed Network
+     * 
+     */
     public List<ManagedNetworkGroupResponse> groups() {
         return this.groups;
     }
@@ -36,6 +40,10 @@ public final class ConnectivityCollectionResponse extends com.pulumi.resources.I
     @Import(name="peerings", required=true)
     private List<ManagedNetworkPeeringPolicyResponse> peerings;
 
+    /**
+     * @return The collection of Managed Network Peering Policies within the Managed Network
+     * 
+     */
     public List<ManagedNetworkPeeringPolicyResponse> peerings() {
         return this.peerings;
     }
@@ -65,20 +73,44 @@ public final class ConnectivityCollectionResponse extends com.pulumi.resources.I
             $ = new ConnectivityCollectionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param groups The collection of connectivity related Managed Network Groups within the Managed Network
+         * 
+         * @return builder
+         * 
+         */
         public Builder groups(List<ManagedNetworkGroupResponse> groups) {
             $.groups = groups;
             return this;
         }
 
+        /**
+         * @param groups The collection of connectivity related Managed Network Groups within the Managed Network
+         * 
+         * @return builder
+         * 
+         */
         public Builder groups(ManagedNetworkGroupResponse... groups) {
             return groups(List.of(groups));
         }
 
+        /**
+         * @param peerings The collection of Managed Network Peering Policies within the Managed Network
+         * 
+         * @return builder
+         * 
+         */
         public Builder peerings(List<ManagedNetworkPeeringPolicyResponse> peerings) {
             $.peerings = peerings;
             return this;
         }
 
+        /**
+         * @param peerings The collection of Managed Network Peering Policies within the Managed Network
+         * 
+         * @return builder
+         * 
+         */
         public Builder peerings(ManagedNetworkPeeringPolicyResponse... peerings) {
             return peerings(List.of(peerings));
         }

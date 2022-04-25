@@ -28,6 +28,10 @@ public final class BotImageResponseCardArgs extends com.pulumi.resources.Resourc
     @Import(name="buttons")
     private @Nullable Output<List<BotButtonArgs>> buttons;
 
+    /**
+     * @return A list of buttons that should be displayed on the response card.
+     * 
+     */
     public Optional<Output<List<BotButtonArgs>>> buttons() {
         return Optional.ofNullable(this.buttons);
     }
@@ -39,6 +43,10 @@ public final class BotImageResponseCardArgs extends com.pulumi.resources.Resourc
     @Import(name="imageUrl")
     private @Nullable Output<String> imageUrl;
 
+    /**
+     * @return The URL of an image to display on the response card.
+     * 
+     */
     public Optional<Output<String>> imageUrl() {
         return Optional.ofNullable(this.imageUrl);
     }
@@ -50,6 +58,10 @@ public final class BotImageResponseCardArgs extends com.pulumi.resources.Resourc
     @Import(name="subtitle")
     private @Nullable Output<String> subtitle;
 
+    /**
+     * @return The subtitle to display on the response card.
+     * 
+     */
     public Optional<Output<String>> subtitle() {
         return Optional.ofNullable(this.subtitle);
     }
@@ -61,6 +73,10 @@ public final class BotImageResponseCardArgs extends com.pulumi.resources.Resourc
     @Import(name="title", required=true)
     private Output<String> title;
 
+    /**
+     * @return The title to display on the response card.
+     * 
+     */
     public Output<String> title() {
         return this.title;
     }
@@ -92,42 +108,96 @@ public final class BotImageResponseCardArgs extends com.pulumi.resources.Resourc
             $ = new BotImageResponseCardArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param buttons A list of buttons that should be displayed on the response card.
+         * 
+         * @return builder
+         * 
+         */
         public Builder buttons(@Nullable Output<List<BotButtonArgs>> buttons) {
             $.buttons = buttons;
             return this;
         }
 
+        /**
+         * @param buttons A list of buttons that should be displayed on the response card.
+         * 
+         * @return builder
+         * 
+         */
         public Builder buttons(List<BotButtonArgs> buttons) {
             return buttons(Output.of(buttons));
         }
 
+        /**
+         * @param buttons A list of buttons that should be displayed on the response card.
+         * 
+         * @return builder
+         * 
+         */
         public Builder buttons(BotButtonArgs... buttons) {
             return buttons(List.of(buttons));
         }
 
+        /**
+         * @param imageUrl The URL of an image to display on the response card.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageUrl(@Nullable Output<String> imageUrl) {
             $.imageUrl = imageUrl;
             return this;
         }
 
+        /**
+         * @param imageUrl The URL of an image to display on the response card.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageUrl(String imageUrl) {
             return imageUrl(Output.of(imageUrl));
         }
 
+        /**
+         * @param subtitle The subtitle to display on the response card.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subtitle(@Nullable Output<String> subtitle) {
             $.subtitle = subtitle;
             return this;
         }
 
+        /**
+         * @param subtitle The subtitle to display on the response card.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subtitle(String subtitle) {
             return subtitle(Output.of(subtitle));
         }
 
+        /**
+         * @param title The title to display on the response card.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(Output<String> title) {
             $.title = title;
             return this;
         }
 
+        /**
+         * @param title The title to display on the response card.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(String title) {
             return title(Output.of(title));
         }

@@ -33,6 +33,10 @@ public final class EntitlementArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="associationInfo")
     private @Nullable Output<GoogleCloudChannelV1AssociationInfoArgs> associationInfo;
 
+    /**
+     * @return Association information to other entitlements.
+     * 
+     */
     public Optional<Output<GoogleCloudChannelV1AssociationInfoArgs>> associationInfo() {
         return Optional.ofNullable(this.associationInfo);
     }
@@ -44,6 +48,10 @@ public final class EntitlementArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="commitmentSettings")
     private @Nullable Output<GoogleCloudChannelV1CommitmentSettingsArgs> commitmentSettings;
 
+    /**
+     * @return Commitment settings for a commitment-based Offer. Required for commitment based offers.
+     * 
+     */
     public Optional<Output<GoogleCloudChannelV1CommitmentSettingsArgs>> commitmentSettings() {
         return Optional.ofNullable(this.commitmentSettings);
     }
@@ -62,6 +70,10 @@ public final class EntitlementArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="offer", required=true)
     private Output<String> offer;
 
+    /**
+     * @return The offer resource name for which the entitlement is to be created. Takes the form: accounts/{account_id}/offers/{offer_id}.
+     * 
+     */
     public Output<String> offer() {
         return this.offer;
     }
@@ -73,6 +85,10 @@ public final class EntitlementArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="parameters")
     private @Nullable Output<List<GoogleCloudChannelV1ParameterArgs>> parameters;
 
+    /**
+     * @return Extended entitlement parameters. When creating an entitlement, valid parameter names and values are defined in the Offer.parameter_definitions. The response may include the following output-only Parameters: - assigned_units: The number of licenses assigned to users. - max_units: The maximum assignable units for a flexible offer. - num_units: The total commitment for commitment-based offers.
+     * 
+     */
     public Optional<Output<List<GoogleCloudChannelV1ParameterArgs>>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -84,6 +100,10 @@ public final class EntitlementArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="purchaseOrderId")
     private @Nullable Output<String> purchaseOrderId;
 
+    /**
+     * @return Optional. This purchase order (PO) information is for resellers to use for their company tracking usage. If a purchaseOrderId value is given, it appears in the API responses and shows up in the invoice. The property accepts up to 80 plain text characters.
+     * 
+     */
     public Optional<Output<String>> purchaseOrderId() {
         return Optional.ofNullable(this.purchaseOrderId);
     }
@@ -95,6 +115,10 @@ public final class EntitlementArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="requestId")
     private @Nullable Output<String> requestId;
 
+    /**
+     * @return Optional. You can specify an optional unique request ID, and if you need to retry your request, the server will know to ignore the request if it&#39;s complete. For example, you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if it received the original operation with the same request ID. If it did, it will ignore the second request. The request ID must be a valid [UUID](https://tools.ietf.org/html/rfc4122) with the exception that zero UUID is not supported (`00000000-0000-0000-0000-000000000000`).
+     * 
+     */
     public Optional<Output<String>> requestId() {
         return Optional.ofNullable(this.requestId);
     }
@@ -139,20 +163,44 @@ public final class EntitlementArgs extends com.pulumi.resources.ResourceArgs {
             return accountId(Output.of(accountId));
         }
 
+        /**
+         * @param associationInfo Association information to other entitlements.
+         * 
+         * @return builder
+         * 
+         */
         public Builder associationInfo(@Nullable Output<GoogleCloudChannelV1AssociationInfoArgs> associationInfo) {
             $.associationInfo = associationInfo;
             return this;
         }
 
+        /**
+         * @param associationInfo Association information to other entitlements.
+         * 
+         * @return builder
+         * 
+         */
         public Builder associationInfo(GoogleCloudChannelV1AssociationInfoArgs associationInfo) {
             return associationInfo(Output.of(associationInfo));
         }
 
+        /**
+         * @param commitmentSettings Commitment settings for a commitment-based Offer. Required for commitment based offers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder commitmentSettings(@Nullable Output<GoogleCloudChannelV1CommitmentSettingsArgs> commitmentSettings) {
             $.commitmentSettings = commitmentSettings;
             return this;
         }
 
+        /**
+         * @param commitmentSettings Commitment settings for a commitment-based Offer. Required for commitment based offers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder commitmentSettings(GoogleCloudChannelV1CommitmentSettingsArgs commitmentSettings) {
             return commitmentSettings(Output.of(commitmentSettings));
         }
@@ -166,42 +214,96 @@ public final class EntitlementArgs extends com.pulumi.resources.ResourceArgs {
             return customerId(Output.of(customerId));
         }
 
+        /**
+         * @param offer The offer resource name for which the entitlement is to be created. Takes the form: accounts/{account_id}/offers/{offer_id}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder offer(Output<String> offer) {
             $.offer = offer;
             return this;
         }
 
+        /**
+         * @param offer The offer resource name for which the entitlement is to be created. Takes the form: accounts/{account_id}/offers/{offer_id}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder offer(String offer) {
             return offer(Output.of(offer));
         }
 
+        /**
+         * @param parameters Extended entitlement parameters. When creating an entitlement, valid parameter names and values are defined in the Offer.parameter_definitions. The response may include the following output-only Parameters: - assigned_units: The number of licenses assigned to users. - max_units: The maximum assignable units for a flexible offer. - num_units: The total commitment for commitment-based offers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Output<List<GoogleCloudChannelV1ParameterArgs>> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters Extended entitlement parameters. When creating an entitlement, valid parameter names and values are defined in the Offer.parameter_definitions. The response may include the following output-only Parameters: - assigned_units: The number of licenses assigned to users. - max_units: The maximum assignable units for a flexible offer. - num_units: The total commitment for commitment-based offers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(List<GoogleCloudChannelV1ParameterArgs> parameters) {
             return parameters(Output.of(parameters));
         }
 
+        /**
+         * @param parameters Extended entitlement parameters. When creating an entitlement, valid parameter names and values are defined in the Offer.parameter_definitions. The response may include the following output-only Parameters: - assigned_units: The number of licenses assigned to users. - max_units: The maximum assignable units for a flexible offer. - num_units: The total commitment for commitment-based offers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(GoogleCloudChannelV1ParameterArgs... parameters) {
             return parameters(List.of(parameters));
         }
 
+        /**
+         * @param purchaseOrderId Optional. This purchase order (PO) information is for resellers to use for their company tracking usage. If a purchaseOrderId value is given, it appears in the API responses and shows up in the invoice. The property accepts up to 80 plain text characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder purchaseOrderId(@Nullable Output<String> purchaseOrderId) {
             $.purchaseOrderId = purchaseOrderId;
             return this;
         }
 
+        /**
+         * @param purchaseOrderId Optional. This purchase order (PO) information is for resellers to use for their company tracking usage. If a purchaseOrderId value is given, it appears in the API responses and shows up in the invoice. The property accepts up to 80 plain text characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder purchaseOrderId(String purchaseOrderId) {
             return purchaseOrderId(Output.of(purchaseOrderId));
         }
 
+        /**
+         * @param requestId Optional. You can specify an optional unique request ID, and if you need to retry your request, the server will know to ignore the request if it&#39;s complete. For example, you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if it received the original operation with the same request ID. If it did, it will ignore the second request. The request ID must be a valid [UUID](https://tools.ietf.org/html/rfc4122) with the exception that zero UUID is not supported (`00000000-0000-0000-0000-000000000000`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestId(@Nullable Output<String> requestId) {
             $.requestId = requestId;
             return this;
         }
 
+        /**
+         * @param requestId Optional. You can specify an optional unique request ID, and if you need to retry your request, the server will know to ignore the request if it&#39;s complete. For example, you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if it received the original operation with the same request ID. If it did, it will ignore the second request. The request ID must be a valid [UUID](https://tools.ietf.org/html/rfc4122) with the exception that zero UUID is not supported (`00000000-0000-0000-0000-000000000000`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestId(String requestId) {
             return requestId(Output.of(requestId));
         }

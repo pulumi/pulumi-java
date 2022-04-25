@@ -24,6 +24,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiArgs ext
     @Import(name="properties")
     private @Nullable Output<List<String>> properties;
 
+    /**
+     * @return Additional properties to use during installation. This should be in the format of Property=Setting. Appended to the defaults of `ACTION=INSTALL REBOOT=ReallySuppress`.
+     * 
+     */
     public Optional<Output<List<String>>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -35,6 +39,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiArgs ext
     @Import(name="source", required=true)
     private Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceArgs> source;
 
+    /**
+     * @return Required. An rpm package.
+     * 
+     */
     public Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceArgs> source() {
         return this.source;
     }
@@ -64,24 +72,54 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiArgs ext
             $ = new OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param properties Additional properties to use during installation. This should be in the format of Property=Setting. Appended to the defaults of `ACTION=INSTALL REBOOT=ReallySuppress`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<List<String>> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Additional properties to use during installation. This should be in the format of Property=Setting. Appended to the defaults of `ACTION=INSTALL REBOOT=ReallySuppress`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(List<String> properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param properties Additional properties to use during installation. This should be in the format of Property=Setting. Appended to the defaults of `ACTION=INSTALL REBOOT=ReallySuppress`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(String... properties) {
             return properties(List.of(properties));
         }
 
+        /**
+         * @param source Required. An rpm package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceArgs> source) {
             $.source = source;
             return this;
         }
 
+        /**
+         * @param source Required. An rpm package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceArgs source) {
             return source(Output.of(source));
         }

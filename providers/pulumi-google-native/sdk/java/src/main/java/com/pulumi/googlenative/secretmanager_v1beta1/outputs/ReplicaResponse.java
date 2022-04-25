@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class ReplicaResponse {
     /**
-     * The canonical IDs of the location to replicate data. For example: `&#34;us-east1&#34;`.
+     * @return The canonical IDs of the location to replicate data. For example: `&#34;us-east1&#34;`.
      * 
      */
     private final String location;
@@ -21,9 +21,9 @@ public final class ReplicaResponse {
     }
 
     /**
-     * The canonical IDs of the location to replicate data. For example: `&#34;us-east1&#34;`.
+     * @return The canonical IDs of the location to replicate data. For example: `&#34;us-east1&#34;`.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }

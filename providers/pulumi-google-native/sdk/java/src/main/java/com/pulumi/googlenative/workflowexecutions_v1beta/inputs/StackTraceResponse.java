@@ -24,6 +24,10 @@ public final class StackTraceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="elements", required=true)
     private List<StackTraceElementResponse> elements;
 
+    /**
+     * @return An array of stack elements.
+     * 
+     */
     public List<StackTraceElementResponse> elements() {
         return this.elements;
     }
@@ -52,11 +56,23 @@ public final class StackTraceResponse extends com.pulumi.resources.InvokeArgs {
             $ = new StackTraceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param elements An array of stack elements.
+         * 
+         * @return builder
+         * 
+         */
         public Builder elements(List<StackTraceElementResponse> elements) {
             $.elements = elements;
             return this;
         }
 
+        /**
+         * @param elements An array of stack elements.
+         * 
+         * @return builder
+         * 
+         */
         public Builder elements(StackTraceElementResponse... elements) {
             return elements(List.of(elements));
         }

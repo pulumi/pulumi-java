@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class BackendServiceLogConfig {
     /**
-     * Whether to enable logging for the load balancer traffic served by this backend service.
+     * @return Whether to enable logging for the load balancer traffic served by this backend service.
      * 
      */
     private final @Nullable Boolean enable;
     /**
-     * This field can only be specified if logging is enabled for this backend service. The value of
+     * @return This field can only be specified if logging is enabled for this backend service. The value of
      * the field must be in [0, 1]. This configures the sampling rate of requests to the load balancer
      * where 1.0 means all logged requests are reported and 0.0 means no logged requests are reported.
      * The default value is 1.0.
@@ -35,19 +35,19 @@ public final class BackendServiceLogConfig {
     }
 
     /**
-     * Whether to enable logging for the load balancer traffic served by this backend service.
+     * @return Whether to enable logging for the load balancer traffic served by this backend service.
      * 
-    */
+     */
     public Optional<Boolean> enable() {
         return Optional.ofNullable(this.enable);
     }
     /**
-     * This field can only be specified if logging is enabled for this backend service. The value of
+     * @return This field can only be specified if logging is enabled for this backend service. The value of
      * the field must be in [0, 1]. This configures the sampling rate of requests to the load balancer
      * where 1.0 means all logged requests are reported and 0.0 means no logged requests are reported.
      * The default value is 1.0.
      * 
-    */
+     */
     public Optional<Double> sampleRate() {
         return Optional.ofNullable(this.sampleRate);
     }

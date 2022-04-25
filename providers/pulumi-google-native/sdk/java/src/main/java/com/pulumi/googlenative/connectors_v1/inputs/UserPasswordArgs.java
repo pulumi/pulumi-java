@@ -27,6 +27,10 @@ public final class UserPasswordArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="password")
     private @Nullable Output<SecretArgs> password;
 
+    /**
+     * @return Secret version reference containing the password.
+     * 
+     */
     public Optional<Output<SecretArgs>> password() {
         return Optional.ofNullable(this.password);
     }
@@ -38,6 +42,10 @@ public final class UserPasswordArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="username")
     private @Nullable Output<String> username;
 
+    /**
+     * @return Username.
+     * 
+     */
     public Optional<Output<String>> username() {
         return Optional.ofNullable(this.username);
     }
@@ -67,20 +75,44 @@ public final class UserPasswordArgs extends com.pulumi.resources.ResourceArgs {
             $ = new UserPasswordArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param password Secret version reference containing the password.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(@Nullable Output<SecretArgs> password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param password Secret version reference containing the password.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(SecretArgs password) {
             return password(Output.of(password));
         }
 
+        /**
+         * @param username Username.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(@Nullable Output<String> username) {
             $.username = username;
             return this;
         }
 
+        /**
+         * @param username Username.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(String username) {
             return username(Output.of(username));
         }

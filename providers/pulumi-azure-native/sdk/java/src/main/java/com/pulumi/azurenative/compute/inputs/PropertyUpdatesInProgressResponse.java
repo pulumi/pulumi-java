@@ -25,6 +25,10 @@ public final class PropertyUpdatesInProgressResponse extends com.pulumi.resource
     @Import(name="targetTier")
     private @Nullable String targetTier;
 
+    /**
+     * @return The target performance tier of the disk if a tier change operation is in progress.
+     * 
+     */
     public Optional<String> targetTier() {
         return Optional.ofNullable(this.targetTier);
     }
@@ -53,6 +57,12 @@ public final class PropertyUpdatesInProgressResponse extends com.pulumi.resource
             $ = new PropertyUpdatesInProgressResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param targetTier The target performance tier of the disk if a tier change operation is in progress.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetTier(@Nullable String targetTier) {
             $.targetTier = targetTier;
             return this;

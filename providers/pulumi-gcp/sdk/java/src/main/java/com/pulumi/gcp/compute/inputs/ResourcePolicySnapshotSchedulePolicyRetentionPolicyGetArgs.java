@@ -23,6 +23,10 @@ public final class ResourcePolicySnapshotSchedulePolicyRetentionPolicyGetArgs ex
     @Import(name="maxRetentionDays", required=true)
     private Output<Integer> maxRetentionDays;
 
+    /**
+     * @return Maximum age of the snapshot that is allowed to be kept.
+     * 
+     */
     public Output<Integer> maxRetentionDays() {
         return this.maxRetentionDays;
     }
@@ -37,6 +41,13 @@ public final class ResourcePolicySnapshotSchedulePolicyRetentionPolicyGetArgs ex
     @Import(name="onSourceDiskDelete")
     private @Nullable Output<String> onSourceDiskDelete;
 
+    /**
+     * @return Specifies the behavior to apply to scheduled snapshots when
+     * the source disk is deleted.
+     * Default value is `KEEP_AUTO_SNAPSHOTS`.
+     * Possible values are `KEEP_AUTO_SNAPSHOTS` and `APPLY_RETENTION_POLICY`.
+     * 
+     */
     public Optional<Output<String>> onSourceDiskDelete() {
         return Optional.ofNullable(this.onSourceDiskDelete);
     }
@@ -66,20 +77,50 @@ public final class ResourcePolicySnapshotSchedulePolicyRetentionPolicyGetArgs ex
             $ = new ResourcePolicySnapshotSchedulePolicyRetentionPolicyGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxRetentionDays Maximum age of the snapshot that is allowed to be kept.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxRetentionDays(Output<Integer> maxRetentionDays) {
             $.maxRetentionDays = maxRetentionDays;
             return this;
         }
 
+        /**
+         * @param maxRetentionDays Maximum age of the snapshot that is allowed to be kept.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxRetentionDays(Integer maxRetentionDays) {
             return maxRetentionDays(Output.of(maxRetentionDays));
         }
 
+        /**
+         * @param onSourceDiskDelete Specifies the behavior to apply to scheduled snapshots when
+         * the source disk is deleted.
+         * Default value is `KEEP_AUTO_SNAPSHOTS`.
+         * Possible values are `KEEP_AUTO_SNAPSHOTS` and `APPLY_RETENTION_POLICY`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder onSourceDiskDelete(@Nullable Output<String> onSourceDiskDelete) {
             $.onSourceDiskDelete = onSourceDiskDelete;
             return this;
         }
 
+        /**
+         * @param onSourceDiskDelete Specifies the behavior to apply to scheduled snapshots when
+         * the source disk is deleted.
+         * Default value is `KEEP_AUTO_SNAPSHOTS`.
+         * Possible values are `KEEP_AUTO_SNAPSHOTS` and `APPLY_RETENTION_POLICY`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder onSourceDiskDelete(String onSourceDiskDelete) {
             return onSourceDiskDelete(Output.of(onSourceDiskDelete));
         }

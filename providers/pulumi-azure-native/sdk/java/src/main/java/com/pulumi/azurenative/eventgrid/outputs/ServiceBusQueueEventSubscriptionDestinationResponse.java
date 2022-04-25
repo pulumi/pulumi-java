@@ -12,13 +12,13 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ServiceBusQueueEventSubscriptionDestinationResponse {
     /**
-     * Type of the endpoint for the event subscription destination.
+     * @return Type of the endpoint for the event subscription destination.
      * Expected value is &#39;ServiceBusQueue&#39;.
      * 
      */
     private final String endpointType;
     /**
-     * The Azure Resource Id that represents the endpoint of the Service Bus destination of an event subscription.
+     * @return The Azure Resource Id that represents the endpoint of the Service Bus destination of an event subscription.
      * 
      */
     private final @Nullable String resourceId;
@@ -32,17 +32,17 @@ public final class ServiceBusQueueEventSubscriptionDestinationResponse {
     }
 
     /**
-     * Type of the endpoint for the event subscription destination.
+     * @return Type of the endpoint for the event subscription destination.
      * Expected value is &#39;ServiceBusQueue&#39;.
      * 
-    */
+     */
     public String endpointType() {
         return this.endpointType;
     }
     /**
-     * The Azure Resource Id that represents the endpoint of the Service Bus destination of an event subscription.
+     * @return The Azure Resource Id that represents the endpoint of the Service Bus destination of an event subscription.
      * 
-    */
+     */
     public Optional<String> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }

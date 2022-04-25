@@ -28,6 +28,10 @@ public final class FirewallPolicyLogAnalyticsResourcesArgs extends com.pulumi.re
     @Import(name="defaultWorkspaceId")
     private @Nullable Output<SubResourceArgs> defaultWorkspaceId;
 
+    /**
+     * @return The default workspace Id for Firewall Policy Insights.
+     * 
+     */
     public Optional<Output<SubResourceArgs>> defaultWorkspaceId() {
         return Optional.ofNullable(this.defaultWorkspaceId);
     }
@@ -39,6 +43,10 @@ public final class FirewallPolicyLogAnalyticsResourcesArgs extends com.pulumi.re
     @Import(name="workspaces")
     private @Nullable Output<List<FirewallPolicyLogAnalyticsWorkspaceArgs>> workspaces;
 
+    /**
+     * @return List of workspaces for Firewall Policy Insights.
+     * 
+     */
     public Optional<Output<List<FirewallPolicyLogAnalyticsWorkspaceArgs>>> workspaces() {
         return Optional.ofNullable(this.workspaces);
     }
@@ -68,24 +76,54 @@ public final class FirewallPolicyLogAnalyticsResourcesArgs extends com.pulumi.re
             $ = new FirewallPolicyLogAnalyticsResourcesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param defaultWorkspaceId The default workspace Id for Firewall Policy Insights.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultWorkspaceId(@Nullable Output<SubResourceArgs> defaultWorkspaceId) {
             $.defaultWorkspaceId = defaultWorkspaceId;
             return this;
         }
 
+        /**
+         * @param defaultWorkspaceId The default workspace Id for Firewall Policy Insights.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultWorkspaceId(SubResourceArgs defaultWorkspaceId) {
             return defaultWorkspaceId(Output.of(defaultWorkspaceId));
         }
 
+        /**
+         * @param workspaces List of workspaces for Firewall Policy Insights.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaces(@Nullable Output<List<FirewallPolicyLogAnalyticsWorkspaceArgs>> workspaces) {
             $.workspaces = workspaces;
             return this;
         }
 
+        /**
+         * @param workspaces List of workspaces for Firewall Policy Insights.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaces(List<FirewallPolicyLogAnalyticsWorkspaceArgs> workspaces) {
             return workspaces(Output.of(workspaces));
         }
 
+        /**
+         * @param workspaces List of workspaces for Firewall Policy Insights.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaces(FirewallPolicyLogAnalyticsWorkspaceArgs... workspaces) {
             return workspaces(List.of(workspaces));
         }

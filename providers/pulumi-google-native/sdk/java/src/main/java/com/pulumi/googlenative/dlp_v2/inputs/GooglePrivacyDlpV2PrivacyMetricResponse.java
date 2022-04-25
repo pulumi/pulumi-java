@@ -28,6 +28,10 @@ public final class GooglePrivacyDlpV2PrivacyMetricResponse extends com.pulumi.re
     @Import(name="categoricalStatsConfig", required=true)
     private GooglePrivacyDlpV2CategoricalStatsConfigResponse categoricalStatsConfig;
 
+    /**
+     * @return Categorical stats
+     * 
+     */
     public GooglePrivacyDlpV2CategoricalStatsConfigResponse categoricalStatsConfig() {
         return this.categoricalStatsConfig;
     }
@@ -39,6 +43,10 @@ public final class GooglePrivacyDlpV2PrivacyMetricResponse extends com.pulumi.re
     @Import(name="deltaPresenceEstimationConfig", required=true)
     private GooglePrivacyDlpV2DeltaPresenceEstimationConfigResponse deltaPresenceEstimationConfig;
 
+    /**
+     * @return delta-presence
+     * 
+     */
     public GooglePrivacyDlpV2DeltaPresenceEstimationConfigResponse deltaPresenceEstimationConfig() {
         return this.deltaPresenceEstimationConfig;
     }
@@ -50,6 +58,10 @@ public final class GooglePrivacyDlpV2PrivacyMetricResponse extends com.pulumi.re
     @Import(name="kAnonymityConfig", required=true)
     private GooglePrivacyDlpV2KAnonymityConfigResponse kAnonymityConfig;
 
+    /**
+     * @return K-anonymity
+     * 
+     */
     public GooglePrivacyDlpV2KAnonymityConfigResponse kAnonymityConfig() {
         return this.kAnonymityConfig;
     }
@@ -61,6 +73,10 @@ public final class GooglePrivacyDlpV2PrivacyMetricResponse extends com.pulumi.re
     @Import(name="kMapEstimationConfig", required=true)
     private GooglePrivacyDlpV2KMapEstimationConfigResponse kMapEstimationConfig;
 
+    /**
+     * @return k-map
+     * 
+     */
     public GooglePrivacyDlpV2KMapEstimationConfigResponse kMapEstimationConfig() {
         return this.kMapEstimationConfig;
     }
@@ -72,6 +88,10 @@ public final class GooglePrivacyDlpV2PrivacyMetricResponse extends com.pulumi.re
     @Import(name="lDiversityConfig", required=true)
     private GooglePrivacyDlpV2LDiversityConfigResponse lDiversityConfig;
 
+    /**
+     * @return l-diversity
+     * 
+     */
     public GooglePrivacyDlpV2LDiversityConfigResponse lDiversityConfig() {
         return this.lDiversityConfig;
     }
@@ -83,6 +103,10 @@ public final class GooglePrivacyDlpV2PrivacyMetricResponse extends com.pulumi.re
     @Import(name="numericalStatsConfig", required=true)
     private GooglePrivacyDlpV2NumericalStatsConfigResponse numericalStatsConfig;
 
+    /**
+     * @return Numerical stats
+     * 
+     */
     public GooglePrivacyDlpV2NumericalStatsConfigResponse numericalStatsConfig() {
         return this.numericalStatsConfig;
     }
@@ -116,31 +140,67 @@ public final class GooglePrivacyDlpV2PrivacyMetricResponse extends com.pulumi.re
             $ = new GooglePrivacyDlpV2PrivacyMetricResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param categoricalStatsConfig Categorical stats
+         * 
+         * @return builder
+         * 
+         */
         public Builder categoricalStatsConfig(GooglePrivacyDlpV2CategoricalStatsConfigResponse categoricalStatsConfig) {
             $.categoricalStatsConfig = categoricalStatsConfig;
             return this;
         }
 
+        /**
+         * @param deltaPresenceEstimationConfig delta-presence
+         * 
+         * @return builder
+         * 
+         */
         public Builder deltaPresenceEstimationConfig(GooglePrivacyDlpV2DeltaPresenceEstimationConfigResponse deltaPresenceEstimationConfig) {
             $.deltaPresenceEstimationConfig = deltaPresenceEstimationConfig;
             return this;
         }
 
+        /**
+         * @param kAnonymityConfig K-anonymity
+         * 
+         * @return builder
+         * 
+         */
         public Builder kAnonymityConfig(GooglePrivacyDlpV2KAnonymityConfigResponse kAnonymityConfig) {
             $.kAnonymityConfig = kAnonymityConfig;
             return this;
         }
 
+        /**
+         * @param kMapEstimationConfig k-map
+         * 
+         * @return builder
+         * 
+         */
         public Builder kMapEstimationConfig(GooglePrivacyDlpV2KMapEstimationConfigResponse kMapEstimationConfig) {
             $.kMapEstimationConfig = kMapEstimationConfig;
             return this;
         }
 
+        /**
+         * @param lDiversityConfig l-diversity
+         * 
+         * @return builder
+         * 
+         */
         public Builder lDiversityConfig(GooglePrivacyDlpV2LDiversityConfigResponse lDiversityConfig) {
             $.lDiversityConfig = lDiversityConfig;
             return this;
         }
 
+        /**
+         * @param numericalStatsConfig Numerical stats
+         * 
+         * @return builder
+         * 
+         */
         public Builder numericalStatsConfig(GooglePrivacyDlpV2NumericalStatsConfigResponse numericalStatsConfig) {
             $.numericalStatsConfig = numericalStatsConfig;
             return this;

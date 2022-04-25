@@ -28,6 +28,10 @@ public final class VendorSkusArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deploymentMode")
     private @Nullable Output<Either<String,SkuDeploymentMode>> deploymentMode;
 
+    /**
+     * @return The sku deployment mode.
+     * 
+     */
     public Optional<Output<Either<String,SkuDeploymentMode>>> deploymentMode() {
         return Optional.ofNullable(this.deploymentMode);
     }
@@ -39,6 +43,10 @@ public final class VendorSkusArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="managedApplicationParameters")
     private @Nullable Output<Object> managedApplicationParameters;
 
+    /**
+     * @return The parameters for the managed application to be supplied by the vendor.
+     * 
+     */
     public Optional<Output<Object>> managedApplicationParameters() {
         return Optional.ofNullable(this.managedApplicationParameters);
     }
@@ -50,6 +58,10 @@ public final class VendorSkusArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="managedApplicationTemplate")
     private @Nullable Output<Object> managedApplicationTemplate;
 
+    /**
+     * @return The template for the managed application deployment.
+     * 
+     */
     public Optional<Output<Object>> managedApplicationTemplate() {
         return Optional.ofNullable(this.managedApplicationTemplate);
     }
@@ -61,6 +73,10 @@ public final class VendorSkusArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="networkFunctionTemplate")
     private @Nullable Output<NetworkFunctionTemplateArgs> networkFunctionTemplate;
 
+    /**
+     * @return The template definition of the network function.
+     * 
+     */
     public Optional<Output<NetworkFunctionTemplateArgs>> networkFunctionTemplate() {
         return Optional.ofNullable(this.networkFunctionTemplate);
     }
@@ -72,6 +88,10 @@ public final class VendorSkusArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="preview")
     private @Nullable Output<Boolean> preview;
 
+    /**
+     * @return Indicates if the vendor sku is in preview mode.
+     * 
+     */
     public Optional<Output<Boolean>> preview() {
         return Optional.ofNullable(this.preview);
     }
@@ -83,6 +103,10 @@ public final class VendorSkusArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="skuName")
     private @Nullable Output<String> skuName;
 
+    /**
+     * @return The name of the sku.
+     * 
+     */
     public Optional<Output<String>> skuName() {
         return Optional.ofNullable(this.skuName);
     }
@@ -94,6 +118,10 @@ public final class VendorSkusArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="skuType")
     private @Nullable Output<Either<String,SkuType>> skuType;
 
+    /**
+     * @return The sku type.
+     * 
+     */
     public Optional<Output<Either<String,SkuType>>> skuType() {
         return Optional.ofNullable(this.skuType);
     }
@@ -105,6 +133,10 @@ public final class VendorSkusArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vendorName", required=true)
     private Output<String> vendorName;
 
+    /**
+     * @return The name of the vendor.
+     * 
+     */
     public Output<String> vendorName() {
         return this.vendorName;
     }
@@ -140,90 +172,210 @@ public final class VendorSkusArgs extends com.pulumi.resources.ResourceArgs {
             $ = new VendorSkusArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deploymentMode The sku deployment mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentMode(@Nullable Output<Either<String,SkuDeploymentMode>> deploymentMode) {
             $.deploymentMode = deploymentMode;
             return this;
         }
 
+        /**
+         * @param deploymentMode The sku deployment mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentMode(Either<String,SkuDeploymentMode> deploymentMode) {
             return deploymentMode(Output.of(deploymentMode));
         }
 
+        /**
+         * @param deploymentMode The sku deployment mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentMode(String deploymentMode) {
             return deploymentMode(Either.ofLeft(deploymentMode));
         }
 
+        /**
+         * @param deploymentMode The sku deployment mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentMode(SkuDeploymentMode deploymentMode) {
             return deploymentMode(Either.ofRight(deploymentMode));
         }
 
+        /**
+         * @param managedApplicationParameters The parameters for the managed application to be supplied by the vendor.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedApplicationParameters(@Nullable Output<Object> managedApplicationParameters) {
             $.managedApplicationParameters = managedApplicationParameters;
             return this;
         }
 
+        /**
+         * @param managedApplicationParameters The parameters for the managed application to be supplied by the vendor.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedApplicationParameters(Object managedApplicationParameters) {
             return managedApplicationParameters(Output.of(managedApplicationParameters));
         }
 
+        /**
+         * @param managedApplicationTemplate The template for the managed application deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedApplicationTemplate(@Nullable Output<Object> managedApplicationTemplate) {
             $.managedApplicationTemplate = managedApplicationTemplate;
             return this;
         }
 
+        /**
+         * @param managedApplicationTemplate The template for the managed application deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedApplicationTemplate(Object managedApplicationTemplate) {
             return managedApplicationTemplate(Output.of(managedApplicationTemplate));
         }
 
+        /**
+         * @param networkFunctionTemplate The template definition of the network function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkFunctionTemplate(@Nullable Output<NetworkFunctionTemplateArgs> networkFunctionTemplate) {
             $.networkFunctionTemplate = networkFunctionTemplate;
             return this;
         }
 
+        /**
+         * @param networkFunctionTemplate The template definition of the network function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkFunctionTemplate(NetworkFunctionTemplateArgs networkFunctionTemplate) {
             return networkFunctionTemplate(Output.of(networkFunctionTemplate));
         }
 
+        /**
+         * @param preview Indicates if the vendor sku is in preview mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preview(@Nullable Output<Boolean> preview) {
             $.preview = preview;
             return this;
         }
 
+        /**
+         * @param preview Indicates if the vendor sku is in preview mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preview(Boolean preview) {
             return preview(Output.of(preview));
         }
 
+        /**
+         * @param skuName The name of the sku.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skuName(@Nullable Output<String> skuName) {
             $.skuName = skuName;
             return this;
         }
 
+        /**
+         * @param skuName The name of the sku.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skuName(String skuName) {
             return skuName(Output.of(skuName));
         }
 
+        /**
+         * @param skuType The sku type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skuType(@Nullable Output<Either<String,SkuType>> skuType) {
             $.skuType = skuType;
             return this;
         }
 
+        /**
+         * @param skuType The sku type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skuType(Either<String,SkuType> skuType) {
             return skuType(Output.of(skuType));
         }
 
+        /**
+         * @param skuType The sku type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skuType(String skuType) {
             return skuType(Either.ofLeft(skuType));
         }
 
+        /**
+         * @param skuType The sku type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skuType(SkuType skuType) {
             return skuType(Either.ofRight(skuType));
         }
 
+        /**
+         * @param vendorName The name of the vendor.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vendorName(Output<String> vendorName) {
             $.vendorName = vendorName;
             return this;
         }
 
+        /**
+         * @param vendorName The name of the vendor.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vendorName(String vendorName) {
             return vendorName(Output.of(vendorName));
         }

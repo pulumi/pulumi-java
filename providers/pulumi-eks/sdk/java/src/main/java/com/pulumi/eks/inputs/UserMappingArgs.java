@@ -25,6 +25,10 @@ public final class UserMappingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="groups", required=true)
     private Output<List<String>> groups;
 
+    /**
+     * @return A list of groups within Kubernetes to which the user is mapped to.
+     * 
+     */
     public Output<List<String>> groups() {
         return this.groups;
     }
@@ -36,6 +40,10 @@ public final class UserMappingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="userArn", required=true)
     private Output<String> userArn;
 
+    /**
+     * @return The ARN of the IAM user to add.
+     * 
+     */
     public Output<String> userArn() {
         return this.userArn;
     }
@@ -47,6 +55,10 @@ public final class UserMappingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="username", required=true)
     private Output<String> username;
 
+    /**
+     * @return The user name within Kubernetes to map to the IAM user. By default, the user name is the ARN of the IAM user.
+     * 
+     */
     public Output<String> username() {
         return this.username;
     }
@@ -77,33 +89,75 @@ public final class UserMappingArgs extends com.pulumi.resources.ResourceArgs {
             $ = new UserMappingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param groups A list of groups within Kubernetes to which the user is mapped to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groups(Output<List<String>> groups) {
             $.groups = groups;
             return this;
         }
 
+        /**
+         * @param groups A list of groups within Kubernetes to which the user is mapped to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groups(List<String> groups) {
             return groups(Output.of(groups));
         }
 
+        /**
+         * @param groups A list of groups within Kubernetes to which the user is mapped to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groups(String... groups) {
             return groups(List.of(groups));
         }
 
+        /**
+         * @param userArn The ARN of the IAM user to add.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userArn(Output<String> userArn) {
             $.userArn = userArn;
             return this;
         }
 
+        /**
+         * @param userArn The ARN of the IAM user to add.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userArn(String userArn) {
             return userArn(Output.of(userArn));
         }
 
+        /**
+         * @param username The user name within Kubernetes to map to the IAM user. By default, the user name is the ARN of the IAM user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(Output<String> username) {
             $.username = username;
             return this;
         }
 
+        /**
+         * @param username The user name within Kubernetes to map to the IAM user. By default, the user name is the ARN of the IAM user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(String username) {
             return username(Output.of(username));
         }

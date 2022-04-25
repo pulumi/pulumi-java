@@ -25,6 +25,10 @@ public final class UserOwnedStorageResponse extends com.pulumi.resources.InvokeA
     @Import(name="resourceId")
     private @Nullable String resourceId;
 
+    /**
+     * @return Full resource id of a Microsoft.Storage resource.
+     * 
+     */
     public Optional<String> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
@@ -53,6 +57,12 @@ public final class UserOwnedStorageResponse extends com.pulumi.resources.InvokeA
             $ = new UserOwnedStorageResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceId Full resource id of a Microsoft.Storage resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(@Nullable String resourceId) {
             $.resourceId = resourceId;
             return this;

@@ -30,6 +30,10 @@ public final class PeeringSkuArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="family")
     private @Nullable Output<Either<String,Family>> family;
 
+    /**
+     * @return The family of the peering SKU.
+     * 
+     */
     public Optional<Output<Either<String,Family>>> family() {
         return Optional.ofNullable(this.family);
     }
@@ -41,6 +45,10 @@ public final class PeeringSkuArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the peering SKU.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -52,6 +60,10 @@ public final class PeeringSkuArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="size")
     private @Nullable Output<Either<String,Size>> size;
 
+    /**
+     * @return The size of the peering SKU.
+     * 
+     */
     public Optional<Output<Either<String,Size>>> size() {
         return Optional.ofNullable(this.size);
     }
@@ -63,6 +75,10 @@ public final class PeeringSkuArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tier")
     private @Nullable Output<Either<String,Tier>> tier;
 
+    /**
+     * @return The tier of the peering SKU.
+     * 
+     */
     public Optional<Output<Either<String,Tier>>> tier() {
         return Optional.ofNullable(this.tier);
     }
@@ -94,62 +110,146 @@ public final class PeeringSkuArgs extends com.pulumi.resources.ResourceArgs {
             $ = new PeeringSkuArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param family The family of the peering SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder family(@Nullable Output<Either<String,Family>> family) {
             $.family = family;
             return this;
         }
 
+        /**
+         * @param family The family of the peering SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder family(Either<String,Family> family) {
             return family(Output.of(family));
         }
 
+        /**
+         * @param family The family of the peering SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder family(String family) {
             return family(Either.ofLeft(family));
         }
 
+        /**
+         * @param family The family of the peering SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder family(Family family) {
             return family(Either.ofRight(family));
         }
 
+        /**
+         * @param name The name of the peering SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the peering SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param size The size of the peering SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder size(@Nullable Output<Either<String,Size>> size) {
             $.size = size;
             return this;
         }
 
+        /**
+         * @param size The size of the peering SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder size(Either<String,Size> size) {
             return size(Output.of(size));
         }
 
+        /**
+         * @param size The size of the peering SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder size(String size) {
             return size(Either.ofLeft(size));
         }
 
+        /**
+         * @param size The size of the peering SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder size(Size size) {
             return size(Either.ofRight(size));
         }
 
+        /**
+         * @param tier The tier of the peering SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(@Nullable Output<Either<String,Tier>> tier) {
             $.tier = tier;
             return this;
         }
 
+        /**
+         * @param tier The tier of the peering SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(Either<String,Tier> tier) {
             return tier(Output.of(tier));
         }
 
+        /**
+         * @param tier The tier of the peering SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(String tier) {
             return tier(Either.ofLeft(tier));
         }
 
+        /**
+         * @param tier The tier of the peering SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(Tier tier) {
             return tier(Either.ofRight(tier));
         }

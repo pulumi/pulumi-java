@@ -27,6 +27,10 @@ public final class UpgradePolicyResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="automaticOSUpgradePolicy")
     private @Nullable AutomaticOSUpgradePolicyResponse automaticOSUpgradePolicy;
 
+    /**
+     * @return Configuration parameters used for performing automatic OS Upgrade.
+     * 
+     */
     public Optional<AutomaticOSUpgradePolicyResponse> automaticOSUpgradePolicy() {
         return Optional.ofNullable(this.automaticOSUpgradePolicy);
     }
@@ -38,6 +42,10 @@ public final class UpgradePolicyResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="mode")
     private @Nullable String mode;
 
+    /**
+     * @return Specifies the mode of an upgrade to virtual machines in the scale set.&lt;br /&gt;&lt;br /&gt; Possible values are:&lt;br /&gt;&lt;br /&gt; **Manual** - You  control the application of updates to virtual machines in the scale set. You do this by using the manualUpgrade action.&lt;br /&gt;&lt;br /&gt; **Automatic** - All virtual machines in the scale set are  automatically updated at the same time.
+     * 
+     */
     public Optional<String> mode() {
         return Optional.ofNullable(this.mode);
     }
@@ -49,6 +57,10 @@ public final class UpgradePolicyResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="rollingUpgradePolicy")
     private @Nullable RollingUpgradePolicyResponse rollingUpgradePolicy;
 
+    /**
+     * @return The configuration parameters used while performing a rolling upgrade.
+     * 
+     */
     public Optional<RollingUpgradePolicyResponse> rollingUpgradePolicy() {
         return Optional.ofNullable(this.rollingUpgradePolicy);
     }
@@ -79,16 +91,34 @@ public final class UpgradePolicyResponse extends com.pulumi.resources.InvokeArgs
             $ = new UpgradePolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param automaticOSUpgradePolicy Configuration parameters used for performing automatic OS Upgrade.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automaticOSUpgradePolicy(@Nullable AutomaticOSUpgradePolicyResponse automaticOSUpgradePolicy) {
             $.automaticOSUpgradePolicy = automaticOSUpgradePolicy;
             return this;
         }
 
+        /**
+         * @param mode Specifies the mode of an upgrade to virtual machines in the scale set.&lt;br /&gt;&lt;br /&gt; Possible values are:&lt;br /&gt;&lt;br /&gt; **Manual** - You  control the application of updates to virtual machines in the scale set. You do this by using the manualUpgrade action.&lt;br /&gt;&lt;br /&gt; **Automatic** - All virtual machines in the scale set are  automatically updated at the same time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(@Nullable String mode) {
             $.mode = mode;
             return this;
         }
 
+        /**
+         * @param rollingUpgradePolicy The configuration parameters used while performing a rolling upgrade.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rollingUpgradePolicy(@Nullable RollingUpgradePolicyResponse rollingUpgradePolicy) {
             $.rollingUpgradePolicy = rollingUpgradePolicy;
             return this;

@@ -19,6 +19,10 @@ public final class GetEndpointAuthorizationArgs extends com.pulumi.resources.Inv
     @Import(name="account", required=true)
     private String account;
 
+    /**
+     * @return The target AWS account ID to grant or revoke access for.
+     * 
+     */
     public String account() {
         return this.account;
     }
@@ -30,6 +34,10 @@ public final class GetEndpointAuthorizationArgs extends com.pulumi.resources.Inv
     @Import(name="clusterIdentifier", required=true)
     private String clusterIdentifier;
 
+    /**
+     * @return The cluster identifier.
+     * 
+     */
     public String clusterIdentifier() {
         return this.clusterIdentifier;
     }
@@ -59,11 +67,23 @@ public final class GetEndpointAuthorizationArgs extends com.pulumi.resources.Inv
             $ = new GetEndpointAuthorizationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param account The target AWS account ID to grant or revoke access for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder account(String account) {
             $.account = account;
             return this;
         }
 
+        /**
+         * @param clusterIdentifier The cluster identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterIdentifier(String clusterIdentifier) {
             $.clusterIdentifier = clusterIdentifier;
             return this;

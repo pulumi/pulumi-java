@@ -14,27 +14,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class VirtualMachineExtensionInstanceViewResponse {
     /**
-     * The virtual machine extension name.
+     * @return The virtual machine extension name.
      * 
      */
     private final @Nullable String name;
     /**
-     * The resource status information.
+     * @return The resource status information.
      * 
      */
     private final @Nullable List<InstanceViewStatusResponse> statuses;
     /**
-     * The resource status information.
+     * @return The resource status information.
      * 
      */
     private final @Nullable List<InstanceViewStatusResponse> substatuses;
     /**
-     * Specifies the type of the extension; an example is &#34;CustomScriptExtension&#34;.
+     * @return Specifies the type of the extension; an example is &#34;CustomScriptExtension&#34;.
      * 
      */
     private final @Nullable String type;
     /**
-     * Specifies the version of the script handler.
+     * @return Specifies the version of the script handler.
      * 
      */
     private final @Nullable String typeHandlerVersion;
@@ -54,37 +54,37 @@ public final class VirtualMachineExtensionInstanceViewResponse {
     }
 
     /**
-     * The virtual machine extension name.
+     * @return The virtual machine extension name.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The resource status information.
+     * @return The resource status information.
      * 
-    */
+     */
     public List<InstanceViewStatusResponse> statuses() {
         return this.statuses == null ? List.of() : this.statuses;
     }
     /**
-     * The resource status information.
+     * @return The resource status information.
      * 
-    */
+     */
     public List<InstanceViewStatusResponse> substatuses() {
         return this.substatuses == null ? List.of() : this.substatuses;
     }
     /**
-     * Specifies the type of the extension; an example is &#34;CustomScriptExtension&#34;.
+     * @return Specifies the type of the extension; an example is &#34;CustomScriptExtension&#34;.
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
     /**
-     * Specifies the version of the script handler.
+     * @return Specifies the version of the script handler.
      * 
-    */
+     */
     public Optional<String> typeHandlerVersion() {
         return Optional.ofNullable(this.typeHandlerVersion);
     }

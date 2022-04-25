@@ -35,6 +35,10 @@ public final class HDInsightLinkedServiceResponse extends com.pulumi.resources.I
     @Import(name="annotations")
     private @Nullable List<Object> annotations;
 
+    /**
+     * @return List of tags that can be used for describing the linked service.
+     * 
+     */
     public Optional<List<Object>> annotations() {
         return Optional.ofNullable(this.annotations);
     }
@@ -46,6 +50,10 @@ public final class HDInsightLinkedServiceResponse extends com.pulumi.resources.I
     @Import(name="clusterUri", required=true)
     private Object clusterUri;
 
+    /**
+     * @return HDInsight cluster URI. Type: string (or Expression with resultType string).
+     * 
+     */
     public Object clusterUri() {
         return this.clusterUri;
     }
@@ -57,6 +65,10 @@ public final class HDInsightLinkedServiceResponse extends com.pulumi.resources.I
     @Import(name="connectVia")
     private @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
+    /**
+     * @return The integration runtime reference.
+     * 
+     */
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
@@ -68,6 +80,10 @@ public final class HDInsightLinkedServiceResponse extends com.pulumi.resources.I
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Linked service description.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -79,6 +95,10 @@ public final class HDInsightLinkedServiceResponse extends com.pulumi.resources.I
     @Import(name="encryptedCredential")
     private @Nullable Object encryptedCredential;
 
+    /**
+     * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> encryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
@@ -90,6 +110,10 @@ public final class HDInsightLinkedServiceResponse extends com.pulumi.resources.I
     @Import(name="fileSystem")
     private @Nullable Object fileSystem;
 
+    /**
+     * @return Specify the FileSystem if the main storage for the HDInsight is ADLS Gen2. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> fileSystem() {
         return Optional.ofNullable(this.fileSystem);
     }
@@ -101,6 +125,10 @@ public final class HDInsightLinkedServiceResponse extends com.pulumi.resources.I
     @Import(name="hcatalogLinkedServiceName")
     private @Nullable LinkedServiceReferenceResponse hcatalogLinkedServiceName;
 
+    /**
+     * @return A reference to the Azure SQL linked service that points to the HCatalog database.
+     * 
+     */
     public Optional<LinkedServiceReferenceResponse> hcatalogLinkedServiceName() {
         return Optional.ofNullable(this.hcatalogLinkedServiceName);
     }
@@ -112,6 +140,10 @@ public final class HDInsightLinkedServiceResponse extends com.pulumi.resources.I
     @Import(name="isEspEnabled")
     private @Nullable Object isEspEnabled;
 
+    /**
+     * @return Specify if the HDInsight is created with ESP (Enterprise Security Package). Type: Boolean.
+     * 
+     */
     public Optional<Object> isEspEnabled() {
         return Optional.ofNullable(this.isEspEnabled);
     }
@@ -123,6 +155,10 @@ public final class HDInsightLinkedServiceResponse extends com.pulumi.resources.I
     @Import(name="linkedServiceName")
     private @Nullable LinkedServiceReferenceResponse linkedServiceName;
 
+    /**
+     * @return The Azure Storage linked service reference.
+     * 
+     */
     public Optional<LinkedServiceReferenceResponse> linkedServiceName() {
         return Optional.ofNullable(this.linkedServiceName);
     }
@@ -134,6 +170,10 @@ public final class HDInsightLinkedServiceResponse extends com.pulumi.resources.I
     @Import(name="parameters")
     private @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
+    /**
+     * @return Parameters for linked service.
+     * 
+     */
     public Optional<Map<String,ParameterSpecificationResponse>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -145,6 +185,10 @@ public final class HDInsightLinkedServiceResponse extends com.pulumi.resources.I
     @Import(name="password")
     private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
+    /**
+     * @return HDInsight cluster password.
+     * 
+     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> password() {
         return Optional.ofNullable(this.password);
     }
@@ -157,6 +201,11 @@ public final class HDInsightLinkedServiceResponse extends com.pulumi.resources.I
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of linked service.
+     * Expected value is &#39;HDInsight&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -168,6 +217,10 @@ public final class HDInsightLinkedServiceResponse extends com.pulumi.resources.I
     @Import(name="userName")
     private @Nullable Object userName;
 
+    /**
+     * @return HDInsight cluster user name. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> userName() {
         return Optional.ofNullable(this.userName);
     }
@@ -208,78 +261,175 @@ public final class HDInsightLinkedServiceResponse extends com.pulumi.resources.I
             $ = new HDInsightLinkedServiceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(@Nullable List<Object> annotations) {
             $.annotations = annotations;
             return this;
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
 
+        /**
+         * @param clusterUri HDInsight cluster URI. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterUri(Object clusterUri) {
             $.clusterUri = clusterUri;
             return this;
         }
 
+        /**
+         * @param connectVia The integration runtime reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
             $.connectVia = connectVia;
             return this;
         }
 
+        /**
+         * @param description Linked service description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param encryptedCredential The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             $.encryptedCredential = encryptedCredential;
             return this;
         }
 
+        /**
+         * @param fileSystem Specify the FileSystem if the main storage for the HDInsight is ADLS Gen2. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileSystem(@Nullable Object fileSystem) {
             $.fileSystem = fileSystem;
             return this;
         }
 
+        /**
+         * @param hcatalogLinkedServiceName A reference to the Azure SQL linked service that points to the HCatalog database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hcatalogLinkedServiceName(@Nullable LinkedServiceReferenceResponse hcatalogLinkedServiceName) {
             $.hcatalogLinkedServiceName = hcatalogLinkedServiceName;
             return this;
         }
 
+        /**
+         * @param isEspEnabled Specify if the HDInsight is created with ESP (Enterprise Security Package). Type: Boolean.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEspEnabled(@Nullable Object isEspEnabled) {
             $.isEspEnabled = isEspEnabled;
             return this;
         }
 
+        /**
+         * @param linkedServiceName The Azure Storage linked service reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedServiceName(@Nullable LinkedServiceReferenceResponse linkedServiceName) {
             $.linkedServiceName = linkedServiceName;
             return this;
         }
 
+        /**
+         * @param parameters Parameters for linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param password HDInsight cluster password.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param password HDInsight cluster password.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(AzureKeyVaultSecretReferenceResponse password) {
             return password(Either.ofLeft(password));
         }
 
+        /**
+         * @param password HDInsight cluster password.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(SecureStringResponse password) {
             return password(Either.ofRight(password));
         }
 
+        /**
+         * @param type Type of linked service.
+         * Expected value is &#39;HDInsight&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param userName HDInsight cluster user name. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(@Nullable Object userName) {
             $.userName = userName;
             return this;

@@ -17,22 +17,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SqlAlwaysEncryptedPropertiesResponse {
     /**
-     * Sql always encrypted AKV authentication type. Type: string (or Expression with resultType string).
+     * @return Sql always encrypted AKV authentication type. Type: string (or Expression with resultType string).
      * 
      */
     private final String alwaysEncryptedAkvAuthType;
     /**
-     * The credential reference containing authentication information.
+     * @return The credential reference containing authentication information.
      * 
      */
     private final @Nullable CredentialReferenceResponse credential;
     /**
-     * The client ID of the application in Azure Active Directory used for Azure Key Vault authentication. Type: string (or Expression with resultType string).
+     * @return The client ID of the application in Azure Active Directory used for Azure Key Vault authentication. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object servicePrincipalId;
     /**
-     * The key of the service principal used to authenticate against Azure Key Vault.
+     * @return The key of the service principal used to authenticate against Azure Key Vault.
      * 
      */
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
@@ -50,30 +50,30 @@ public final class SqlAlwaysEncryptedPropertiesResponse {
     }
 
     /**
-     * Sql always encrypted AKV authentication type. Type: string (or Expression with resultType string).
+     * @return Sql always encrypted AKV authentication type. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public String alwaysEncryptedAkvAuthType() {
         return this.alwaysEncryptedAkvAuthType;
     }
     /**
-     * The credential reference containing authentication information.
+     * @return The credential reference containing authentication information.
      * 
-    */
+     */
     public Optional<CredentialReferenceResponse> credential() {
         return Optional.ofNullable(this.credential);
     }
     /**
-     * The client ID of the application in Azure Active Directory used for Azure Key Vault authentication. Type: string (or Expression with resultType string).
+     * @return The client ID of the application in Azure Active Directory used for Azure Key Vault authentication. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> servicePrincipalId() {
         return Optional.ofNullable(this.servicePrincipalId);
     }
     /**
-     * The key of the service principal used to authenticate against Azure Key Vault.
+     * @return The key of the service principal used to authenticate against Azure Key Vault.
      * 
-    */
+     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> servicePrincipalKey() {
         return Optional.ofNullable(this.servicePrincipalKey);
     }

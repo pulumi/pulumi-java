@@ -25,6 +25,10 @@ public final class CnameRecordResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="cname")
     private @Nullable String cname;
 
+    /**
+     * @return The canonical name for this CNAME record.
+     * 
+     */
     public Optional<String> cname() {
         return Optional.ofNullable(this.cname);
     }
@@ -53,6 +57,12 @@ public final class CnameRecordResponse extends com.pulumi.resources.InvokeArgs {
             $ = new CnameRecordResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cname The canonical name for this CNAME record.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cname(@Nullable String cname) {
             $.cname = cname;
             return this;

@@ -13,22 +13,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ConfigurationProfilePreferenceVmBackupResponse {
     /**
-     * Instant RP retention policy range in days
+     * @return Instant RP retention policy range in days
      * 
      */
     private final @Nullable Integer instantRpRetentionRangeInDays;
     /**
-     * Retention policy with the details on backup copy retention ranges.
+     * @return Retention policy with the details on backup copy retention ranges.
      * 
      */
     private final @Nullable String retentionPolicy;
     /**
-     * Backup schedule specified as part of backup policy.
+     * @return Backup schedule specified as part of backup policy.
      * 
      */
     private final @Nullable String schedulePolicy;
     /**
-     * TimeZone optional input as string. For example: Pacific Standard Time
+     * @return TimeZone optional input as string. For example: Pacific Standard Time
      * 
      */
     private final @Nullable String timeZone;
@@ -46,30 +46,30 @@ public final class ConfigurationProfilePreferenceVmBackupResponse {
     }
 
     /**
-     * Instant RP retention policy range in days
+     * @return Instant RP retention policy range in days
      * 
-    */
+     */
     public Optional<Integer> instantRpRetentionRangeInDays() {
         return Optional.ofNullable(this.instantRpRetentionRangeInDays);
     }
     /**
-     * Retention policy with the details on backup copy retention ranges.
+     * @return Retention policy with the details on backup copy retention ranges.
      * 
-    */
+     */
     public Optional<String> retentionPolicy() {
         return Optional.ofNullable(this.retentionPolicy);
     }
     /**
-     * Backup schedule specified as part of backup policy.
+     * @return Backup schedule specified as part of backup policy.
      * 
-    */
+     */
     public Optional<String> schedulePolicy() {
         return Optional.ofNullable(this.schedulePolicy);
     }
     /**
-     * TimeZone optional input as string. For example: Pacific Standard Time
+     * @return TimeZone optional input as string. For example: Pacific Standard Time
      * 
-    */
+     */
     public Optional<String> timeZone() {
         return Optional.ofNullable(this.timeZone);
     }

@@ -27,6 +27,10 @@ public final class CustomErrorRuleArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="isErrorType")
     private @Nullable Output<Boolean> isErrorType;
 
+    /**
+     * @return Mark this message as possible payload in error response. Otherwise, objects of this type will be filtered when they appear in error payload.
+     * 
+     */
     public Optional<Output<Boolean>> isErrorType() {
         return Optional.ofNullable(this.isErrorType);
     }
@@ -38,6 +42,10 @@ public final class CustomErrorRuleArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="selector")
     private @Nullable Output<String> selector;
 
+    /**
+     * @return Selects messages to which this rule applies. Refer to selector for syntax details.
+     * 
+     */
     public Optional<Output<String>> selector() {
         return Optional.ofNullable(this.selector);
     }
@@ -67,20 +75,44 @@ public final class CustomErrorRuleArgs extends com.pulumi.resources.ResourceArgs
             $ = new CustomErrorRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param isErrorType Mark this message as possible payload in error response. Otherwise, objects of this type will be filtered when they appear in error payload.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isErrorType(@Nullable Output<Boolean> isErrorType) {
             $.isErrorType = isErrorType;
             return this;
         }
 
+        /**
+         * @param isErrorType Mark this message as possible payload in error response. Otherwise, objects of this type will be filtered when they appear in error payload.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isErrorType(Boolean isErrorType) {
             return isErrorType(Output.of(isErrorType));
         }
 
+        /**
+         * @param selector Selects messages to which this rule applies. Refer to selector for syntax details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selector(@Nullable Output<String> selector) {
             $.selector = selector;
             return this;
         }
 
+        /**
+         * @param selector Selects messages to which this rule applies. Refer to selector for syntax details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selector(String selector) {
             return selector(Output.of(selector));
         }

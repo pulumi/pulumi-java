@@ -27,6 +27,10 @@ public final class AutomationRuleModifyPropertiesActionArgs extends com.pulumi.r
     @Import(name="actionConfiguration", required=true)
     private Output<AutomationRuleModifyPropertiesActionActionConfigurationArgs> actionConfiguration;
 
+    /**
+     * @return The configuration of the modify properties automation rule action
+     * 
+     */
     public Output<AutomationRuleModifyPropertiesActionActionConfigurationArgs> actionConfiguration() {
         return this.actionConfiguration;
     }
@@ -39,6 +43,11 @@ public final class AutomationRuleModifyPropertiesActionArgs extends com.pulumi.r
     @Import(name="actionType", required=true)
     private Output<String> actionType;
 
+    /**
+     * @return The type of the automation rule action
+     * Expected value is &#39;ModifyProperties&#39;.
+     * 
+     */
     public Output<String> actionType() {
         return this.actionType;
     }
@@ -50,6 +59,10 @@ public final class AutomationRuleModifyPropertiesActionArgs extends com.pulumi.r
     @Import(name="order", required=true)
     private Output<Integer> order;
 
+    /**
+     * @return The order of execution of the automation rule action
+     * 
+     */
     public Output<Integer> order() {
         return this.order;
     }
@@ -80,29 +93,67 @@ public final class AutomationRuleModifyPropertiesActionArgs extends com.pulumi.r
             $ = new AutomationRuleModifyPropertiesActionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actionConfiguration The configuration of the modify properties automation rule action
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionConfiguration(Output<AutomationRuleModifyPropertiesActionActionConfigurationArgs> actionConfiguration) {
             $.actionConfiguration = actionConfiguration;
             return this;
         }
 
+        /**
+         * @param actionConfiguration The configuration of the modify properties automation rule action
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionConfiguration(AutomationRuleModifyPropertiesActionActionConfigurationArgs actionConfiguration) {
             return actionConfiguration(Output.of(actionConfiguration));
         }
 
+        /**
+         * @param actionType The type of the automation rule action
+         * Expected value is &#39;ModifyProperties&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionType(Output<String> actionType) {
             $.actionType = actionType;
             return this;
         }
 
+        /**
+         * @param actionType The type of the automation rule action
+         * Expected value is &#39;ModifyProperties&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionType(String actionType) {
             return actionType(Output.of(actionType));
         }
 
+        /**
+         * @param order The order of execution of the automation rule action
+         * 
+         * @return builder
+         * 
+         */
         public Builder order(Output<Integer> order) {
             $.order = order;
             return this;
         }
 
+        /**
+         * @param order The order of execution of the automation rule action
+         * 
+         * @return builder
+         * 
+         */
         public Builder order(Integer order) {
             return order(Output.of(order));
         }

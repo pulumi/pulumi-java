@@ -20,6 +20,10 @@ public final class RuleGroupRuleStatementOrStatementStatementNotStatementStateme
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The name of the query header to inspect. This setting must be provided as lower case characters.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -48,11 +52,23 @@ public final class RuleGroupRuleStatementOrStatementStatementNotStatementStateme
             $ = new RuleGroupRuleStatementOrStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgumentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the query header to inspect. This setting must be provided as lower case characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the query header to inspect. This setting must be provided as lower case characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

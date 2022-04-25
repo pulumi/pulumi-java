@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class VirtualRouterSpec {
     /**
-     * The listeners that the virtual router is expected to receive inbound traffic from.
+     * @return The listeners that the virtual router is expected to receive inbound traffic from.
      * Currently only one listener is supported per virtual router.
      * 
      */
@@ -22,10 +22,10 @@ public final class VirtualRouterSpec {
     }
 
     /**
-     * The listeners that the virtual router is expected to receive inbound traffic from.
+     * @return The listeners that the virtual router is expected to receive inbound traffic from.
      * Currently only one listener is supported per virtual router.
      * 
-    */
+     */
     public VirtualRouterSpecListener listener() {
         return this.listener;
     }

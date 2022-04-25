@@ -25,6 +25,10 @@ public final class GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsResponse ex
     @Import(name="allowAllPackageNames", required=true)
     private Boolean allowAllPackageNames;
 
+    /**
+     * @return If set to true, allowed_package_names are not enforced.
+     * 
+     */
     public Boolean allowAllPackageNames() {
         return this.allowAllPackageNames;
     }
@@ -36,6 +40,10 @@ public final class GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsResponse ex
     @Import(name="allowedPackageNames", required=true)
     private List<String> allowedPackageNames;
 
+    /**
+     * @return Android package names of apps allowed to use the key. Example: &#39;com.companyname.appname&#39;
+     * 
+     */
     public List<String> allowedPackageNames() {
         return this.allowedPackageNames;
     }
@@ -65,16 +73,34 @@ public final class GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsResponse ex
             $ = new GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowAllPackageNames If set to true, allowed_package_names are not enforced.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowAllPackageNames(Boolean allowAllPackageNames) {
             $.allowAllPackageNames = allowAllPackageNames;
             return this;
         }
 
+        /**
+         * @param allowedPackageNames Android package names of apps allowed to use the key. Example: &#39;com.companyname.appname&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedPackageNames(List<String> allowedPackageNames) {
             $.allowedPackageNames = allowedPackageNames;
             return this;
         }
 
+        /**
+         * @param allowedPackageNames Android package names of apps allowed to use the key. Example: &#39;com.companyname.appname&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedPackageNames(String... allowedPackageNames) {
             return allowedPackageNames(List.of(allowedPackageNames));
         }

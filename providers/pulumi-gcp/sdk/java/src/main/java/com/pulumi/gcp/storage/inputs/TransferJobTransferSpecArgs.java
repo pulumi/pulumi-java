@@ -28,6 +28,10 @@ public final class TransferJobTransferSpecArgs extends com.pulumi.resources.Reso
     @Import(name="awsS3DataSource")
     private @Nullable Output<TransferJobTransferSpecAwsS3DataSourceArgs> awsS3DataSource;
 
+    /**
+     * @return An AWS S3 data source. Structure documented below.
+     * 
+     */
     public Optional<Output<TransferJobTransferSpecAwsS3DataSourceArgs>> awsS3DataSource() {
         return Optional.ofNullable(this.awsS3DataSource);
     }
@@ -39,6 +43,10 @@ public final class TransferJobTransferSpecArgs extends com.pulumi.resources.Reso
     @Import(name="azureBlobStorageDataSource")
     private @Nullable Output<TransferJobTransferSpecAzureBlobStorageDataSourceArgs> azureBlobStorageDataSource;
 
+    /**
+     * @return An Azure Blob Storage data source. Structure documented below.
+     * 
+     */
     public Optional<Output<TransferJobTransferSpecAzureBlobStorageDataSourceArgs>> azureBlobStorageDataSource() {
         return Optional.ofNullable(this.azureBlobStorageDataSource);
     }
@@ -50,6 +58,10 @@ public final class TransferJobTransferSpecArgs extends com.pulumi.resources.Reso
     @Import(name="gcsDataSink")
     private @Nullable Output<TransferJobTransferSpecGcsDataSinkArgs> gcsDataSink;
 
+    /**
+     * @return A Google Cloud Storage data sink. Structure documented below.
+     * 
+     */
     public Optional<Output<TransferJobTransferSpecGcsDataSinkArgs>> gcsDataSink() {
         return Optional.ofNullable(this.gcsDataSink);
     }
@@ -61,6 +73,10 @@ public final class TransferJobTransferSpecArgs extends com.pulumi.resources.Reso
     @Import(name="gcsDataSource")
     private @Nullable Output<TransferJobTransferSpecGcsDataSourceArgs> gcsDataSource;
 
+    /**
+     * @return A Google Cloud Storage data source. Structure documented below.
+     * 
+     */
     public Optional<Output<TransferJobTransferSpecGcsDataSourceArgs>> gcsDataSource() {
         return Optional.ofNullable(this.gcsDataSource);
     }
@@ -72,6 +88,10 @@ public final class TransferJobTransferSpecArgs extends com.pulumi.resources.Reso
     @Import(name="httpDataSource")
     private @Nullable Output<TransferJobTransferSpecHttpDataSourceArgs> httpDataSource;
 
+    /**
+     * @return A HTTP URL data source. Structure documented below.
+     * 
+     */
     public Optional<Output<TransferJobTransferSpecHttpDataSourceArgs>> httpDataSource() {
         return Optional.ofNullable(this.httpDataSource);
     }
@@ -83,6 +103,10 @@ public final class TransferJobTransferSpecArgs extends com.pulumi.resources.Reso
     @Import(name="objectConditions")
     private @Nullable Output<TransferJobTransferSpecObjectConditionsArgs> objectConditions;
 
+    /**
+     * @return Only objects that satisfy these object conditions are included in the set of data source and data sink objects. Object conditions based on objects&#39; `last_modification_time` do not exclude objects in a data sink. Structure documented below.
+     * 
+     */
     public Optional<Output<TransferJobTransferSpecObjectConditionsArgs>> objectConditions() {
         return Optional.ofNullable(this.objectConditions);
     }
@@ -94,6 +118,10 @@ public final class TransferJobTransferSpecArgs extends com.pulumi.resources.Reso
     @Import(name="transferOptions")
     private @Nullable Output<TransferJobTransferSpecTransferOptionsArgs> transferOptions;
 
+    /**
+     * @return Characteristics of how to treat files from datasource and sink during job. If the option `delete_objects_unique_in_sink` is true, object conditions based on objects&#39; `last_modification_time` are ignored and do not exclude objects in a data source or a data sink. Structure documented below.
+     * 
+     */
     public Optional<Output<TransferJobTransferSpecTransferOptionsArgs>> transferOptions() {
         return Optional.ofNullable(this.transferOptions);
     }
@@ -128,65 +156,149 @@ public final class TransferJobTransferSpecArgs extends com.pulumi.resources.Reso
             $ = new TransferJobTransferSpecArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param awsS3DataSource An AWS S3 data source. Structure documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder awsS3DataSource(@Nullable Output<TransferJobTransferSpecAwsS3DataSourceArgs> awsS3DataSource) {
             $.awsS3DataSource = awsS3DataSource;
             return this;
         }
 
+        /**
+         * @param awsS3DataSource An AWS S3 data source. Structure documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder awsS3DataSource(TransferJobTransferSpecAwsS3DataSourceArgs awsS3DataSource) {
             return awsS3DataSource(Output.of(awsS3DataSource));
         }
 
+        /**
+         * @param azureBlobStorageDataSource An Azure Blob Storage data source. Structure documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureBlobStorageDataSource(@Nullable Output<TransferJobTransferSpecAzureBlobStorageDataSourceArgs> azureBlobStorageDataSource) {
             $.azureBlobStorageDataSource = azureBlobStorageDataSource;
             return this;
         }
 
+        /**
+         * @param azureBlobStorageDataSource An Azure Blob Storage data source. Structure documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureBlobStorageDataSource(TransferJobTransferSpecAzureBlobStorageDataSourceArgs azureBlobStorageDataSource) {
             return azureBlobStorageDataSource(Output.of(azureBlobStorageDataSource));
         }
 
+        /**
+         * @param gcsDataSink A Google Cloud Storage data sink. Structure documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gcsDataSink(@Nullable Output<TransferJobTransferSpecGcsDataSinkArgs> gcsDataSink) {
             $.gcsDataSink = gcsDataSink;
             return this;
         }
 
+        /**
+         * @param gcsDataSink A Google Cloud Storage data sink. Structure documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gcsDataSink(TransferJobTransferSpecGcsDataSinkArgs gcsDataSink) {
             return gcsDataSink(Output.of(gcsDataSink));
         }
 
+        /**
+         * @param gcsDataSource A Google Cloud Storage data source. Structure documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gcsDataSource(@Nullable Output<TransferJobTransferSpecGcsDataSourceArgs> gcsDataSource) {
             $.gcsDataSource = gcsDataSource;
             return this;
         }
 
+        /**
+         * @param gcsDataSource A Google Cloud Storage data source. Structure documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gcsDataSource(TransferJobTransferSpecGcsDataSourceArgs gcsDataSource) {
             return gcsDataSource(Output.of(gcsDataSource));
         }
 
+        /**
+         * @param httpDataSource A HTTP URL data source. Structure documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpDataSource(@Nullable Output<TransferJobTransferSpecHttpDataSourceArgs> httpDataSource) {
             $.httpDataSource = httpDataSource;
             return this;
         }
 
+        /**
+         * @param httpDataSource A HTTP URL data source. Structure documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpDataSource(TransferJobTransferSpecHttpDataSourceArgs httpDataSource) {
             return httpDataSource(Output.of(httpDataSource));
         }
 
+        /**
+         * @param objectConditions Only objects that satisfy these object conditions are included in the set of data source and data sink objects. Object conditions based on objects&#39; `last_modification_time` do not exclude objects in a data sink. Structure documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectConditions(@Nullable Output<TransferJobTransferSpecObjectConditionsArgs> objectConditions) {
             $.objectConditions = objectConditions;
             return this;
         }
 
+        /**
+         * @param objectConditions Only objects that satisfy these object conditions are included in the set of data source and data sink objects. Object conditions based on objects&#39; `last_modification_time` do not exclude objects in a data sink. Structure documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectConditions(TransferJobTransferSpecObjectConditionsArgs objectConditions) {
             return objectConditions(Output.of(objectConditions));
         }
 
+        /**
+         * @param transferOptions Characteristics of how to treat files from datasource and sink during job. If the option `delete_objects_unique_in_sink` is true, object conditions based on objects&#39; `last_modification_time` are ignored and do not exclude objects in a data source or a data sink. Structure documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transferOptions(@Nullable Output<TransferJobTransferSpecTransferOptionsArgs> transferOptions) {
             $.transferOptions = transferOptions;
             return this;
         }
 
+        /**
+         * @param transferOptions Characteristics of how to treat files from datasource and sink during job. If the option `delete_objects_unique_in_sink` is true, object conditions based on objects&#39; `last_modification_time` are ignored and do not exclude objects in a data source or a data sink. Structure documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transferOptions(TransferJobTransferSpecTransferOptionsArgs transferOptions) {
             return transferOptions(Output.of(transferOptions));
         }

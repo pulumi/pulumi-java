@@ -23,6 +23,10 @@ public final class MitigationActionPublishFindingToSnsParams extends com.pulumi.
     @Import(name="topicArn", required=true)
     private String topicArn;
 
+    /**
+     * @return The ARN of the topic to which you want to publish the findings.
+     * 
+     */
     public String topicArn() {
         return this.topicArn;
     }
@@ -51,6 +55,12 @@ public final class MitigationActionPublishFindingToSnsParams extends com.pulumi.
             $ = new MitigationActionPublishFindingToSnsParams(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param topicArn The ARN of the topic to which you want to publish the findings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topicArn(String topicArn) {
             $.topicArn = topicArn;
             return this;

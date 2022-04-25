@@ -20,6 +20,10 @@ public final class JobStatistics4Response extends com.pulumi.resources.InvokeArg
     @Import(name="destinationUriFileCounts", required=true)
     private List<String> destinationUriFileCounts;
 
+    /**
+     * @return Number of files per destination URI or URI pattern specified in the extract configuration. These values will be in the same order as the URIs specified in the &#39;destinationUris&#39; field.
+     * 
+     */
     public List<String> destinationUriFileCounts() {
         return this.destinationUriFileCounts;
     }
@@ -31,6 +35,10 @@ public final class JobStatistics4Response extends com.pulumi.resources.InvokeArg
     @Import(name="inputBytes", required=true)
     private String inputBytes;
 
+    /**
+     * @return Number of user bytes extracted into the result. This is the byte count as computed by BigQuery for billing purposes.
+     * 
+     */
     public String inputBytes() {
         return this.inputBytes;
     }
@@ -60,15 +68,33 @@ public final class JobStatistics4Response extends com.pulumi.resources.InvokeArg
             $ = new JobStatistics4Response(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param destinationUriFileCounts Number of files per destination URI or URI pattern specified in the extract configuration. These values will be in the same order as the URIs specified in the &#39;destinationUris&#39; field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationUriFileCounts(List<String> destinationUriFileCounts) {
             $.destinationUriFileCounts = destinationUriFileCounts;
             return this;
         }
 
+        /**
+         * @param destinationUriFileCounts Number of files per destination URI or URI pattern specified in the extract configuration. These values will be in the same order as the URIs specified in the &#39;destinationUris&#39; field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationUriFileCounts(String... destinationUriFileCounts) {
             return destinationUriFileCounts(List.of(destinationUriFileCounts));
         }
 
+        /**
+         * @param inputBytes Number of user bytes extracted into the result. This is the byte count as computed by BigQuery for billing purposes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputBytes(String inputBytes) {
             $.inputBytes = inputBytes;
             return this;

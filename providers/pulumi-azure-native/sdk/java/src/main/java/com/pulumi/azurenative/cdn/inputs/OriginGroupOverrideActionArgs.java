@@ -27,6 +27,11 @@ public final class OriginGroupOverrideActionArgs extends com.pulumi.resources.Re
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The name of the action for the delivery rule.
+     * Expected value is &#39;OriginGroupOverride&#39;.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -38,6 +43,10 @@ public final class OriginGroupOverrideActionArgs extends com.pulumi.resources.Re
     @Import(name="parameters", required=true)
     private Output<OriginGroupOverrideActionParametersArgs> parameters;
 
+    /**
+     * @return Defines the parameters for the action.
+     * 
+     */
     public Output<OriginGroupOverrideActionParametersArgs> parameters() {
         return this.parameters;
     }
@@ -67,20 +76,46 @@ public final class OriginGroupOverrideActionArgs extends com.pulumi.resources.Re
             $ = new OriginGroupOverrideActionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the action for the delivery rule.
+         * Expected value is &#39;OriginGroupOverride&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the action for the delivery rule.
+         * Expected value is &#39;OriginGroupOverride&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param parameters Defines the parameters for the action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(Output<OriginGroupOverrideActionParametersArgs> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters Defines the parameters for the action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(OriginGroupOverrideActionParametersArgs parameters) {
             return parameters(Output.of(parameters));
         }

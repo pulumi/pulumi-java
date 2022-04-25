@@ -12,12 +12,12 @@ import java.util.Objects;
 @CustomType
 public final class AssetModelTransform {
     /**
-     * The mathematical expression that defines the transformation function. You can specify up to 10 functions per expression.
+     * @return The mathematical expression that defines the transformation function. You can specify up to 10 functions per expression.
      * 
      */
     private final String expression;
     /**
-     * The list of variables used in the expression.
+     * @return The list of variables used in the expression.
      * 
      */
     private final List<AssetModelExpressionVariable> variables;
@@ -31,16 +31,16 @@ public final class AssetModelTransform {
     }
 
     /**
-     * The mathematical expression that defines the transformation function. You can specify up to 10 functions per expression.
+     * @return The mathematical expression that defines the transformation function. You can specify up to 10 functions per expression.
      * 
-    */
+     */
     public String expression() {
         return this.expression;
     }
     /**
-     * The list of variables used in the expression.
+     * @return The list of variables used in the expression.
      * 
-    */
+     */
     public List<AssetModelExpressionVariable> variables() {
         return this.variables;
     }

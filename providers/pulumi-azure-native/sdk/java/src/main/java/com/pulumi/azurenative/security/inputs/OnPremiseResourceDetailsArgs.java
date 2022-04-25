@@ -25,6 +25,10 @@ public final class OnPremiseResourceDetailsArgs extends com.pulumi.resources.Res
     @Import(name="machineName", required=true)
     private Output<String> machineName;
 
+    /**
+     * @return The name of the machine
+     * 
+     */
     public Output<String> machineName() {
         return this.machineName;
     }
@@ -37,6 +41,11 @@ public final class OnPremiseResourceDetailsArgs extends com.pulumi.resources.Res
     @Import(name="source", required=true)
     private Output<String> source;
 
+    /**
+     * @return The platform where the assessed resource resides
+     * Expected value is &#39;OnPremise&#39;.
+     * 
+     */
     public Output<String> source() {
         return this.source;
     }
@@ -48,6 +57,10 @@ public final class OnPremiseResourceDetailsArgs extends com.pulumi.resources.Res
     @Import(name="sourceComputerId", required=true)
     private Output<String> sourceComputerId;
 
+    /**
+     * @return The oms agent Id installed on the machine
+     * 
+     */
     public Output<String> sourceComputerId() {
         return this.sourceComputerId;
     }
@@ -59,6 +72,10 @@ public final class OnPremiseResourceDetailsArgs extends com.pulumi.resources.Res
     @Import(name="vmuuid", required=true)
     private Output<String> vmuuid;
 
+    /**
+     * @return The unique Id of the machine
+     * 
+     */
     public Output<String> vmuuid() {
         return this.vmuuid;
     }
@@ -70,6 +87,10 @@ public final class OnPremiseResourceDetailsArgs extends com.pulumi.resources.Res
     @Import(name="workspaceId", required=true)
     private Output<String> workspaceId;
 
+    /**
+     * @return Azure resource Id of the workspace the machine is attached to
+     * 
+     */
     public Output<String> workspaceId() {
         return this.workspaceId;
     }
@@ -102,47 +123,109 @@ public final class OnPremiseResourceDetailsArgs extends com.pulumi.resources.Res
             $ = new OnPremiseResourceDetailsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param machineName The name of the machine
+         * 
+         * @return builder
+         * 
+         */
         public Builder machineName(Output<String> machineName) {
             $.machineName = machineName;
             return this;
         }
 
+        /**
+         * @param machineName The name of the machine
+         * 
+         * @return builder
+         * 
+         */
         public Builder machineName(String machineName) {
             return machineName(Output.of(machineName));
         }
 
+        /**
+         * @param source The platform where the assessed resource resides
+         * Expected value is &#39;OnPremise&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(Output<String> source) {
             $.source = source;
             return this;
         }
 
+        /**
+         * @param source The platform where the assessed resource resides
+         * Expected value is &#39;OnPremise&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(String source) {
             return source(Output.of(source));
         }
 
+        /**
+         * @param sourceComputerId The oms agent Id installed on the machine
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceComputerId(Output<String> sourceComputerId) {
             $.sourceComputerId = sourceComputerId;
             return this;
         }
 
+        /**
+         * @param sourceComputerId The oms agent Id installed on the machine
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceComputerId(String sourceComputerId) {
             return sourceComputerId(Output.of(sourceComputerId));
         }
 
+        /**
+         * @param vmuuid The unique Id of the machine
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmuuid(Output<String> vmuuid) {
             $.vmuuid = vmuuid;
             return this;
         }
 
+        /**
+         * @param vmuuid The unique Id of the machine
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmuuid(String vmuuid) {
             return vmuuid(Output.of(vmuuid));
         }
 
+        /**
+         * @param workspaceId Azure resource Id of the workspace the machine is attached to
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceId(Output<String> workspaceId) {
             $.workspaceId = workspaceId;
             return this;
         }
 
+        /**
+         * @param workspaceId Azure resource Id of the workspace the machine is attached to
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceId(String workspaceId) {
             return workspaceId(Output.of(workspaceId));
         }

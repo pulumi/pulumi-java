@@ -18,57 +18,57 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetEnterprisePolicyResult {
     /**
-     * The encryption settings for a configuration store.
+     * @return The encryption settings for a configuration store.
      * 
      */
     private final @Nullable PropertiesResponseEncryption encryption;
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
      */
     private final String id;
     /**
-     * The identity of the EnterprisePolicy.
+     * @return The identity of the EnterprisePolicy.
      * 
      */
     private final @Nullable EnterprisePolicyIdentityResponse identity;
     /**
-     * The kind (type) of Enterprise Policy.
+     * @return The kind (type) of Enterprise Policy.
      * 
      */
     private final String kind;
     /**
-     * The geo-location where the resource lives
+     * @return The geo-location where the resource lives
      * 
      */
     private final String location;
     /**
-     * Settings concerning lockbox.
+     * @return Settings concerning lockbox.
      * 
      */
     private final @Nullable PropertiesResponseLockbox lockbox;
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
      */
     private final String name;
     /**
-     * Settings concerning network injection.
+     * @return Settings concerning network injection.
      * 
      */
     private final @Nullable PropertiesResponseNetworkInjection networkInjection;
     /**
-     * Metadata pertaining to creation and last modification of the resource.
+     * @return Metadata pertaining to creation and last modification of the resource.
      * 
      */
     private final SystemDataResponse systemData;
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     private final String type;
@@ -100,79 +100,79 @@ public final class GetEnterprisePolicyResult {
     }
 
     /**
-     * The encryption settings for a configuration store.
+     * @return The encryption settings for a configuration store.
      * 
-    */
+     */
     public Optional<PropertiesResponseEncryption> encryption() {
         return Optional.ofNullable(this.encryption);
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The identity of the EnterprisePolicy.
+     * @return The identity of the EnterprisePolicy.
      * 
-    */
+     */
     public Optional<EnterprisePolicyIdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
-     * The kind (type) of Enterprise Policy.
+     * @return The kind (type) of Enterprise Policy.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * The geo-location where the resource lives
+     * @return The geo-location where the resource lives
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Settings concerning lockbox.
+     * @return Settings concerning lockbox.
      * 
-    */
+     */
     public Optional<PropertiesResponseLockbox> lockbox() {
         return Optional.ofNullable(this.lockbox);
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Settings concerning network injection.
+     * @return Settings concerning network injection.
      * 
-    */
+     */
     public Optional<PropertiesResponseNetworkInjection> networkInjection() {
         return Optional.ofNullable(this.networkInjection);
     }
     /**
-     * Metadata pertaining to creation and last modification of the resource.
+     * @return Metadata pertaining to creation and last modification of the resource.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

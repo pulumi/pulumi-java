@@ -28,6 +28,10 @@ public final class ServicesResourceIdentityArgs extends com.pulumi.resources.Res
     @Import(name="type")
     private @Nullable Output<Either<String,ManagedServiceIdentityType>> type;
 
+    /**
+     * @return Type of identity being specified, currently SystemAssigned and None are allowed.
+     * 
+     */
     public Optional<Output<Either<String,ManagedServiceIdentityType>>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -56,19 +60,43 @@ public final class ServicesResourceIdentityArgs extends com.pulumi.resources.Res
             $ = new ServicesResourceIdentityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type Type of identity being specified, currently SystemAssigned and None are allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<Either<String,ManagedServiceIdentityType>> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of identity being specified, currently SystemAssigned and None are allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Either<String,ManagedServiceIdentityType> type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param type Type of identity being specified, currently SystemAssigned and None are allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Either.ofLeft(type));
         }
 
+        /**
+         * @param type Type of identity being specified, currently SystemAssigned and None are allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(ManagedServiceIdentityType type) {
             return type(Either.ofRight(type));
         }

@@ -29,6 +29,10 @@ public final class NumberNotInRangeAdvancedFilterArgs extends com.pulumi.resourc
     @Import(name="key")
     private @Nullable Output<String> key;
 
+    /**
+     * @return The field/property in the event based on which you want to filter.
+     * 
+     */
     public Optional<Output<String>> key() {
         return Optional.ofNullable(this.key);
     }
@@ -41,6 +45,11 @@ public final class NumberNotInRangeAdvancedFilterArgs extends com.pulumi.resourc
     @Import(name="operatorType", required=true)
     private Output<String> operatorType;
 
+    /**
+     * @return The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
+     * Expected value is &#39;NumberNotInRange&#39;.
+     * 
+     */
     public Output<String> operatorType() {
         return this.operatorType;
     }
@@ -52,6 +61,10 @@ public final class NumberNotInRangeAdvancedFilterArgs extends com.pulumi.resourc
     @Import(name="values")
     private @Nullable Output<List<List<Double>>> values;
 
+    /**
+     * @return The set of filter values.
+     * 
+     */
     public Optional<Output<List<List<Double>>>> values() {
         return Optional.ofNullable(this.values);
     }
@@ -82,33 +95,77 @@ public final class NumberNotInRangeAdvancedFilterArgs extends com.pulumi.resourc
             $ = new NumberNotInRangeAdvancedFilterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param key The field/property in the event based on which you want to filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(@Nullable Output<String> key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param key The field/property in the event based on which you want to filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             return key(Output.of(key));
         }
 
+        /**
+         * @param operatorType The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
+         * Expected value is &#39;NumberNotInRange&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operatorType(Output<String> operatorType) {
             $.operatorType = operatorType;
             return this;
         }
 
+        /**
+         * @param operatorType The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
+         * Expected value is &#39;NumberNotInRange&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operatorType(String operatorType) {
             return operatorType(Output.of(operatorType));
         }
 
+        /**
+         * @param values The set of filter values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(@Nullable Output<List<List<Double>>> values) {
             $.values = values;
             return this;
         }
 
+        /**
+         * @param values The set of filter values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(List<List<Double>> values) {
             return values(Output.of(values));
         }
 
+        /**
+         * @param values The set of filter values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(List<Double>... values) {
             return values(List.of(values));
         }

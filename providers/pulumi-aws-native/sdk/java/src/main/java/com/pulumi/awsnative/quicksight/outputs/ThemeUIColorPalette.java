@@ -12,91 +12,91 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ThemeUIColorPalette {
     /**
-     * &lt;p&gt;This color is that applies to selected states and buttons.&lt;/p&gt;
+     * @return &lt;p&gt;This color is that applies to selected states and buttons.&lt;/p&gt;
      * 
      */
     private final @Nullable String accent;
     /**
-     * &lt;p&gt;The foreground color that applies to any text or other elements that appear over the
+     * @return &lt;p&gt;The foreground color that applies to any text or other elements that appear over the
      *             accent color.&lt;/p&gt;
      * 
      */
     private final @Nullable String accentForeground;
     /**
-     * &lt;p&gt;The color that applies to error messages.&lt;/p&gt;
+     * @return &lt;p&gt;The color that applies to error messages.&lt;/p&gt;
      * 
      */
     private final @Nullable String danger;
     /**
-     * &lt;p&gt;The foreground color that applies to any text or other elements that appear over the
+     * @return &lt;p&gt;The foreground color that applies to any text or other elements that appear over the
      *             error color.&lt;/p&gt;
      * 
      */
     private final @Nullable String dangerForeground;
     /**
-     * &lt;p&gt;The color that applies to the names of fields that are identified as
+     * @return &lt;p&gt;The color that applies to the names of fields that are identified as
      *             dimensions.&lt;/p&gt;
      * 
      */
     private final @Nullable String dimension;
     /**
-     * &lt;p&gt;The foreground color that applies to any text or other elements that appear over the
+     * @return &lt;p&gt;The foreground color that applies to any text or other elements that appear over the
      *             dimension color.&lt;/p&gt;
      * 
      */
     private final @Nullable String dimensionForeground;
     /**
-     * &lt;p&gt;The color that applies to the names of fields that are identified as measures.&lt;/p&gt;
+     * @return &lt;p&gt;The color that applies to the names of fields that are identified as measures.&lt;/p&gt;
      * 
      */
     private final @Nullable String measure;
     /**
-     * &lt;p&gt;The foreground color that applies to any text or other elements that appear over the
+     * @return &lt;p&gt;The foreground color that applies to any text or other elements that appear over the
      *             measure color.&lt;/p&gt;
      * 
      */
     private final @Nullable String measureForeground;
     /**
-     * &lt;p&gt;The background color that applies to visuals and other high emphasis UI.&lt;/p&gt;
+     * @return &lt;p&gt;The background color that applies to visuals and other high emphasis UI.&lt;/p&gt;
      * 
      */
     private final @Nullable String primaryBackground;
     /**
-     * &lt;p&gt;The color of text and other foreground elements that appear over the primary
+     * @return &lt;p&gt;The color of text and other foreground elements that appear over the primary
      *             background regions, such as grid lines, borders, table banding, icons, and so on.&lt;/p&gt;
      * 
      */
     private final @Nullable String primaryForeground;
     /**
-     * &lt;p&gt;The background color that applies to the sheet background and sheet controls.&lt;/p&gt;
+     * @return &lt;p&gt;The background color that applies to the sheet background and sheet controls.&lt;/p&gt;
      * 
      */
     private final @Nullable String secondaryBackground;
     /**
-     * &lt;p&gt;The foreground color that applies to any sheet title, sheet control text, or UI that
+     * @return &lt;p&gt;The foreground color that applies to any sheet title, sheet control text, or UI that
      *             appears over the secondary background.&lt;/p&gt;
      * 
      */
     private final @Nullable String secondaryForeground;
     /**
-     * &lt;p&gt;The color that applies to success messages, for example the check mark for a
+     * @return &lt;p&gt;The color that applies to success messages, for example the check mark for a
      *             successful download.&lt;/p&gt;
      * 
      */
     private final @Nullable String success;
     /**
-     * &lt;p&gt;The foreground color that applies to any text or other elements that appear over the
+     * @return &lt;p&gt;The foreground color that applies to any text or other elements that appear over the
      *             success color.&lt;/p&gt;
      * 
      */
     private final @Nullable String successForeground;
     /**
-     * &lt;p&gt;This color that applies to warning and informational messages.&lt;/p&gt;
+     * @return &lt;p&gt;This color that applies to warning and informational messages.&lt;/p&gt;
      * 
      */
     private final @Nullable String warning;
     /**
-     * &lt;p&gt;The foreground color that applies to any text or other elements that appear over the
+     * @return &lt;p&gt;The foreground color that applies to any text or other elements that appear over the
      *             warning color.&lt;/p&gt;
      * 
      */
@@ -139,124 +139,124 @@ public final class ThemeUIColorPalette {
     }
 
     /**
-     * &lt;p&gt;This color is that applies to selected states and buttons.&lt;/p&gt;
+     * @return &lt;p&gt;This color is that applies to selected states and buttons.&lt;/p&gt;
      * 
-    */
+     */
     public Optional<String> accent() {
         return Optional.ofNullable(this.accent);
     }
     /**
-     * &lt;p&gt;The foreground color that applies to any text or other elements that appear over the
+     * @return &lt;p&gt;The foreground color that applies to any text or other elements that appear over the
      *             accent color.&lt;/p&gt;
      * 
-    */
+     */
     public Optional<String> accentForeground() {
         return Optional.ofNullable(this.accentForeground);
     }
     /**
-     * &lt;p&gt;The color that applies to error messages.&lt;/p&gt;
+     * @return &lt;p&gt;The color that applies to error messages.&lt;/p&gt;
      * 
-    */
+     */
     public Optional<String> danger() {
         return Optional.ofNullable(this.danger);
     }
     /**
-     * &lt;p&gt;The foreground color that applies to any text or other elements that appear over the
+     * @return &lt;p&gt;The foreground color that applies to any text or other elements that appear over the
      *             error color.&lt;/p&gt;
      * 
-    */
+     */
     public Optional<String> dangerForeground() {
         return Optional.ofNullable(this.dangerForeground);
     }
     /**
-     * &lt;p&gt;The color that applies to the names of fields that are identified as
+     * @return &lt;p&gt;The color that applies to the names of fields that are identified as
      *             dimensions.&lt;/p&gt;
      * 
-    */
+     */
     public Optional<String> dimension() {
         return Optional.ofNullable(this.dimension);
     }
     /**
-     * &lt;p&gt;The foreground color that applies to any text or other elements that appear over the
+     * @return &lt;p&gt;The foreground color that applies to any text or other elements that appear over the
      *             dimension color.&lt;/p&gt;
      * 
-    */
+     */
     public Optional<String> dimensionForeground() {
         return Optional.ofNullable(this.dimensionForeground);
     }
     /**
-     * &lt;p&gt;The color that applies to the names of fields that are identified as measures.&lt;/p&gt;
+     * @return &lt;p&gt;The color that applies to the names of fields that are identified as measures.&lt;/p&gt;
      * 
-    */
+     */
     public Optional<String> measure() {
         return Optional.ofNullable(this.measure);
     }
     /**
-     * &lt;p&gt;The foreground color that applies to any text or other elements that appear over the
+     * @return &lt;p&gt;The foreground color that applies to any text or other elements that appear over the
      *             measure color.&lt;/p&gt;
      * 
-    */
+     */
     public Optional<String> measureForeground() {
         return Optional.ofNullable(this.measureForeground);
     }
     /**
-     * &lt;p&gt;The background color that applies to visuals and other high emphasis UI.&lt;/p&gt;
+     * @return &lt;p&gt;The background color that applies to visuals and other high emphasis UI.&lt;/p&gt;
      * 
-    */
+     */
     public Optional<String> primaryBackground() {
         return Optional.ofNullable(this.primaryBackground);
     }
     /**
-     * &lt;p&gt;The color of text and other foreground elements that appear over the primary
+     * @return &lt;p&gt;The color of text and other foreground elements that appear over the primary
      *             background regions, such as grid lines, borders, table banding, icons, and so on.&lt;/p&gt;
      * 
-    */
+     */
     public Optional<String> primaryForeground() {
         return Optional.ofNullable(this.primaryForeground);
     }
     /**
-     * &lt;p&gt;The background color that applies to the sheet background and sheet controls.&lt;/p&gt;
+     * @return &lt;p&gt;The background color that applies to the sheet background and sheet controls.&lt;/p&gt;
      * 
-    */
+     */
     public Optional<String> secondaryBackground() {
         return Optional.ofNullable(this.secondaryBackground);
     }
     /**
-     * &lt;p&gt;The foreground color that applies to any sheet title, sheet control text, or UI that
+     * @return &lt;p&gt;The foreground color that applies to any sheet title, sheet control text, or UI that
      *             appears over the secondary background.&lt;/p&gt;
      * 
-    */
+     */
     public Optional<String> secondaryForeground() {
         return Optional.ofNullable(this.secondaryForeground);
     }
     /**
-     * &lt;p&gt;The color that applies to success messages, for example the check mark for a
+     * @return &lt;p&gt;The color that applies to success messages, for example the check mark for a
      *             successful download.&lt;/p&gt;
      * 
-    */
+     */
     public Optional<String> success() {
         return Optional.ofNullable(this.success);
     }
     /**
-     * &lt;p&gt;The foreground color that applies to any text or other elements that appear over the
+     * @return &lt;p&gt;The foreground color that applies to any text or other elements that appear over the
      *             success color.&lt;/p&gt;
      * 
-    */
+     */
     public Optional<String> successForeground() {
         return Optional.ofNullable(this.successForeground);
     }
     /**
-     * &lt;p&gt;This color that applies to warning and informational messages.&lt;/p&gt;
+     * @return &lt;p&gt;This color that applies to warning and informational messages.&lt;/p&gt;
      * 
-    */
+     */
     public Optional<String> warning() {
         return Optional.ofNullable(this.warning);
     }
     /**
-     * &lt;p&gt;The foreground color that applies to any text or other elements that appear over the
+     * @return &lt;p&gt;The foreground color that applies to any text or other elements that appear over the
      *             warning color.&lt;/p&gt;
      * 
-    */
+     */
     public Optional<String> warningForeground() {
         return Optional.ofNullable(this.warningForeground);
     }

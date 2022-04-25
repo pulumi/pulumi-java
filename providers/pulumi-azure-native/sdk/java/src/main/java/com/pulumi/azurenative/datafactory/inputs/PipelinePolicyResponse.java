@@ -25,6 +25,10 @@ public final class PipelinePolicyResponse extends com.pulumi.resources.InvokeArg
     @Import(name="elapsedTimeMetric")
     private @Nullable PipelineElapsedTimeMetricPolicyResponse elapsedTimeMetric;
 
+    /**
+     * @return Pipeline ElapsedTime Metric Policy.
+     * 
+     */
     public Optional<PipelineElapsedTimeMetricPolicyResponse> elapsedTimeMetric() {
         return Optional.ofNullable(this.elapsedTimeMetric);
     }
@@ -53,6 +57,12 @@ public final class PipelinePolicyResponse extends com.pulumi.resources.InvokeArg
             $ = new PipelinePolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param elapsedTimeMetric Pipeline ElapsedTime Metric Policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder elapsedTimeMetric(@Nullable PipelineElapsedTimeMetricPolicyResponse elapsedTimeMetric) {
             $.elapsedTimeMetric = elapsedTimeMetric;
             return this;

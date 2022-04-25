@@ -27,6 +27,10 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="assumeRolePolicyDocument", required=true)
     private Output<Object> assumeRolePolicyDocument;
 
+    /**
+     * @return The trust policy that is associated with this role.
+     * 
+     */
     public Output<Object> assumeRolePolicyDocument() {
         return this.assumeRolePolicyDocument;
     }
@@ -38,6 +42,10 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A description of the role that you provide.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -49,6 +57,10 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="managedPolicyArns")
     private @Nullable Output<List<String>> managedPolicyArns;
 
+    /**
+     * @return A list of Amazon Resource Names (ARNs) of the IAM managed policies that you want to attach to the role.
+     * 
+     */
     public Optional<Output<List<String>>> managedPolicyArns() {
         return Optional.ofNullable(this.managedPolicyArns);
     }
@@ -60,6 +72,10 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxSessionDuration")
     private @Nullable Output<Integer> maxSessionDuration;
 
+    /**
+     * @return The maximum session duration (in seconds) that you want to set for the specified role. If you do not specify a value for this setting, the default maximum of one hour is applied. This setting can have a value from 1 hour to 12 hours.
+     * 
+     */
     public Optional<Output<Integer>> maxSessionDuration() {
         return Optional.ofNullable(this.maxSessionDuration);
     }
@@ -71,6 +87,10 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="path")
     private @Nullable Output<String> path;
 
+    /**
+     * @return The path to the role.
+     * 
+     */
     public Optional<Output<String>> path() {
         return Optional.ofNullable(this.path);
     }
@@ -82,6 +102,10 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="permissionsBoundary")
     private @Nullable Output<String> permissionsBoundary;
 
+    /**
+     * @return The ARN of the policy used to set the permissions boundary for the role.
+     * 
+     */
     public Optional<Output<String>> permissionsBoundary() {
         return Optional.ofNullable(this.permissionsBoundary);
     }
@@ -93,6 +117,10 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="policies")
     private @Nullable Output<List<RolePolicyArgs>> policies;
 
+    /**
+     * @return Adds or updates an inline policy document that is embedded in the specified IAM role.
+     * 
+     */
     public Optional<Output<List<RolePolicyArgs>>> policies() {
         return Optional.ofNullable(this.policies);
     }
@@ -104,6 +132,10 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="roleName")
     private @Nullable Output<String> roleName;
 
+    /**
+     * @return A name for the IAM role, up to 64 characters in length.
+     * 
+     */
     public Optional<Output<String>> roleName() {
         return Optional.ofNullable(this.roleName);
     }
@@ -115,6 +147,10 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<RoleTagArgs>> tags;
 
+    /**
+     * @return A list of tags that are attached to the role.
+     * 
+     */
     public Optional<Output<List<RoleTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -151,95 +187,221 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
             $ = new RoleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param assumeRolePolicyDocument The trust policy that is associated with this role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assumeRolePolicyDocument(Output<Object> assumeRolePolicyDocument) {
             $.assumeRolePolicyDocument = assumeRolePolicyDocument;
             return this;
         }
 
+        /**
+         * @param assumeRolePolicyDocument The trust policy that is associated with this role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assumeRolePolicyDocument(Object assumeRolePolicyDocument) {
             return assumeRolePolicyDocument(Output.of(assumeRolePolicyDocument));
         }
 
+        /**
+         * @param description A description of the role that you provide.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A description of the role that you provide.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param managedPolicyArns A list of Amazon Resource Names (ARNs) of the IAM managed policies that you want to attach to the role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedPolicyArns(@Nullable Output<List<String>> managedPolicyArns) {
             $.managedPolicyArns = managedPolicyArns;
             return this;
         }
 
+        /**
+         * @param managedPolicyArns A list of Amazon Resource Names (ARNs) of the IAM managed policies that you want to attach to the role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedPolicyArns(List<String> managedPolicyArns) {
             return managedPolicyArns(Output.of(managedPolicyArns));
         }
 
+        /**
+         * @param managedPolicyArns A list of Amazon Resource Names (ARNs) of the IAM managed policies that you want to attach to the role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedPolicyArns(String... managedPolicyArns) {
             return managedPolicyArns(List.of(managedPolicyArns));
         }
 
+        /**
+         * @param maxSessionDuration The maximum session duration (in seconds) that you want to set for the specified role. If you do not specify a value for this setting, the default maximum of one hour is applied. This setting can have a value from 1 hour to 12 hours.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxSessionDuration(@Nullable Output<Integer> maxSessionDuration) {
             $.maxSessionDuration = maxSessionDuration;
             return this;
         }
 
+        /**
+         * @param maxSessionDuration The maximum session duration (in seconds) that you want to set for the specified role. If you do not specify a value for this setting, the default maximum of one hour is applied. This setting can have a value from 1 hour to 12 hours.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxSessionDuration(Integer maxSessionDuration) {
             return maxSessionDuration(Output.of(maxSessionDuration));
         }
 
+        /**
+         * @param path The path to the role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(@Nullable Output<String> path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param path The path to the role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             return path(Output.of(path));
         }
 
+        /**
+         * @param permissionsBoundary The ARN of the policy used to set the permissions boundary for the role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissionsBoundary(@Nullable Output<String> permissionsBoundary) {
             $.permissionsBoundary = permissionsBoundary;
             return this;
         }
 
+        /**
+         * @param permissionsBoundary The ARN of the policy used to set the permissions boundary for the role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissionsBoundary(String permissionsBoundary) {
             return permissionsBoundary(Output.of(permissionsBoundary));
         }
 
+        /**
+         * @param policies Adds or updates an inline policy document that is embedded in the specified IAM role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policies(@Nullable Output<List<RolePolicyArgs>> policies) {
             $.policies = policies;
             return this;
         }
 
+        /**
+         * @param policies Adds or updates an inline policy document that is embedded in the specified IAM role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policies(List<RolePolicyArgs> policies) {
             return policies(Output.of(policies));
         }
 
+        /**
+         * @param policies Adds or updates an inline policy document that is embedded in the specified IAM role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policies(RolePolicyArgs... policies) {
             return policies(List.of(policies));
         }
 
+        /**
+         * @param roleName A name for the IAM role, up to 64 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleName(@Nullable Output<String> roleName) {
             $.roleName = roleName;
             return this;
         }
 
+        /**
+         * @param roleName A name for the IAM role, up to 64 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleName(String roleName) {
             return roleName(Output.of(roleName));
         }
 
+        /**
+         * @param tags A list of tags that are attached to the role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<RoleTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A list of tags that are attached to the role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<RoleTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags A list of tags that are attached to the role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(RoleTagArgs... tags) {
             return tags(List.of(tags));
         }

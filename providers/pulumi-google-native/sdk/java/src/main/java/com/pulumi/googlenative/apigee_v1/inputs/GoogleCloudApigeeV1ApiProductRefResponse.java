@@ -19,6 +19,10 @@ public final class GoogleCloudApigeeV1ApiProductRefResponse extends com.pulumi.r
     @Import(name="apiproduct", required=true)
     private String apiproduct;
 
+    /**
+     * @return Name of the API product.
+     * 
+     */
     public String apiproduct() {
         return this.apiproduct;
     }
@@ -30,6 +34,10 @@ public final class GoogleCloudApigeeV1ApiProductRefResponse extends com.pulumi.r
     @Import(name="status", required=true)
     private String status;
 
+    /**
+     * @return Status of the API product. Valid values are `approved` or `revoked`.
+     * 
+     */
     public String status() {
         return this.status;
     }
@@ -59,11 +67,23 @@ public final class GoogleCloudApigeeV1ApiProductRefResponse extends com.pulumi.r
             $ = new GoogleCloudApigeeV1ApiProductRefResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiproduct Name of the API product.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiproduct(String apiproduct) {
             $.apiproduct = apiproduct;
             return this;
         }
 
+        /**
+         * @param status Status of the API product. Valid values are `approved` or `revoked`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             $.status = status;
             return this;

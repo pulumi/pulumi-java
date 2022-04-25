@@ -24,6 +24,10 @@ public final class EventResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="count", required=true)
     private Integer count;
 
+    /**
+     * @return The count of the event.
+     * 
+     */
     public Integer count() {
         return this.count;
     }
@@ -35,6 +39,10 @@ public final class EventResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="firstTimestamp", required=true)
     private String firstTimestamp;
 
+    /**
+     * @return The date-time of the earliest logged event.
+     * 
+     */
     public String firstTimestamp() {
         return this.firstTimestamp;
     }
@@ -46,6 +54,10 @@ public final class EventResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="lastTimestamp", required=true)
     private String lastTimestamp;
 
+    /**
+     * @return The date-time of the latest logged event.
+     * 
+     */
     public String lastTimestamp() {
         return this.lastTimestamp;
     }
@@ -57,6 +69,10 @@ public final class EventResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="message", required=true)
     private String message;
 
+    /**
+     * @return The event message.
+     * 
+     */
     public String message() {
         return this.message;
     }
@@ -68,6 +84,10 @@ public final class EventResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The event name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -79,6 +99,10 @@ public final class EventResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The event type.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -112,31 +136,67 @@ public final class EventResponse extends com.pulumi.resources.InvokeArgs {
             $ = new EventResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param count The count of the event.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(Integer count) {
             $.count = count;
             return this;
         }
 
+        /**
+         * @param firstTimestamp The date-time of the earliest logged event.
+         * 
+         * @return builder
+         * 
+         */
         public Builder firstTimestamp(String firstTimestamp) {
             $.firstTimestamp = firstTimestamp;
             return this;
         }
 
+        /**
+         * @param lastTimestamp The date-time of the latest logged event.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastTimestamp(String lastTimestamp) {
             $.lastTimestamp = lastTimestamp;
             return this;
         }
 
+        /**
+         * @param message The event message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(String message) {
             $.message = message;
             return this;
         }
 
+        /**
+         * @param name The event name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param type The event type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

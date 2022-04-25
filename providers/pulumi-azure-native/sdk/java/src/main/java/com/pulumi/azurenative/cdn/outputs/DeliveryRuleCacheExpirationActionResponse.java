@@ -11,13 +11,13 @@ import java.util.Objects;
 @CustomType
 public final class DeliveryRuleCacheExpirationActionResponse {
     /**
-     * The name of the action for the delivery rule.
+     * @return The name of the action for the delivery rule.
      * Expected value is &#39;CacheExpiration&#39;.
      * 
      */
     private final String name;
     /**
-     * Defines the parameters for the action.
+     * @return Defines the parameters for the action.
      * 
      */
     private final CacheExpirationActionParametersResponse parameters;
@@ -31,17 +31,17 @@ public final class DeliveryRuleCacheExpirationActionResponse {
     }
 
     /**
-     * The name of the action for the delivery rule.
+     * @return The name of the action for the delivery rule.
      * Expected value is &#39;CacheExpiration&#39;.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Defines the parameters for the action.
+     * @return Defines the parameters for the action.
      * 
-    */
+     */
     public CacheExpirationActionParametersResponse parameters() {
         return this.parameters;
     }

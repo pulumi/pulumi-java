@@ -27,6 +27,10 @@ public final class TwitterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return &lt;code&gt;false&lt;/code&gt; if the Twitter provider should not be enabled despite the set registration; otherwise, &lt;code&gt;true&lt;/code&gt;.
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -38,6 +42,10 @@ public final class TwitterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="registration")
     private @Nullable Output<TwitterRegistrationArgs> registration;
 
+    /**
+     * @return The configuration settings of the app registration for the Twitter provider.
+     * 
+     */
     public Optional<Output<TwitterRegistrationArgs>> registration() {
         return Optional.ofNullable(this.registration);
     }
@@ -67,20 +75,44 @@ public final class TwitterArgs extends com.pulumi.resources.ResourceArgs {
             $ = new TwitterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled &lt;code&gt;false&lt;/code&gt; if the Twitter provider should not be enabled despite the set registration; otherwise, &lt;code&gt;true&lt;/code&gt;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled &lt;code&gt;false&lt;/code&gt; if the Twitter provider should not be enabled despite the set registration; otherwise, &lt;code&gt;true&lt;/code&gt;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param registration The configuration settings of the app registration for the Twitter provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registration(@Nullable Output<TwitterRegistrationArgs> registration) {
             $.registration = registration;
             return this;
         }
 
+        /**
+         * @param registration The configuration settings of the app registration for the Twitter provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registration(TwitterRegistrationArgs registration) {
             return registration(Output.of(registration));
         }

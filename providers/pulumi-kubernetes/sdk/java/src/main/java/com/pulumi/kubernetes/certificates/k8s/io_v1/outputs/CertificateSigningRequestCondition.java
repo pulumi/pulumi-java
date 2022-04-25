@@ -12,32 +12,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CertificateSigningRequestCondition {
     /**
-     * lastTransitionTime is the time the condition last transitioned from one status to another. If unset, when a new condition type is added or an existing condition&#39;s status is changed, the server defaults this to the current time.
+     * @return lastTransitionTime is the time the condition last transitioned from one status to another. If unset, when a new condition type is added or an existing condition&#39;s status is changed, the server defaults this to the current time.
      * 
      */
     private final @Nullable String lastTransitionTime;
     /**
-     * lastUpdateTime is the time of the last update to this condition
+     * @return lastUpdateTime is the time of the last update to this condition
      * 
      */
     private final @Nullable String lastUpdateTime;
     /**
-     * message contains a human readable message with details about the request state
+     * @return message contains a human readable message with details about the request state
      * 
      */
     private final @Nullable String message;
     /**
-     * reason indicates a brief reason for the request state
+     * @return reason indicates a brief reason for the request state
      * 
      */
     private final @Nullable String reason;
     /**
-     * status of the condition, one of True, False, Unknown. Approved, Denied, and Failed conditions may not be &#34;False&#34; or &#34;Unknown&#34;.
+     * @return status of the condition, one of True, False, Unknown. Approved, Denied, and Failed conditions may not be &#34;False&#34; or &#34;Unknown&#34;.
      * 
      */
     private final String status;
     /**
-     * type of the condition. Known conditions are &#34;Approved&#34;, &#34;Denied&#34;, and &#34;Failed&#34;.
+     * @return type of the condition. Known conditions are &#34;Approved&#34;, &#34;Denied&#34;, and &#34;Failed&#34;.
      * 
      * An &#34;Approved&#34; condition is added via the /approval subresource, indicating the request was approved and should be issued by the signer.
      * 
@@ -74,42 +74,42 @@ public final class CertificateSigningRequestCondition {
     }
 
     /**
-     * lastTransitionTime is the time the condition last transitioned from one status to another. If unset, when a new condition type is added or an existing condition&#39;s status is changed, the server defaults this to the current time.
+     * @return lastTransitionTime is the time the condition last transitioned from one status to another. If unset, when a new condition type is added or an existing condition&#39;s status is changed, the server defaults this to the current time.
      * 
-    */
+     */
     public Optional<String> lastTransitionTime() {
         return Optional.ofNullable(this.lastTransitionTime);
     }
     /**
-     * lastUpdateTime is the time of the last update to this condition
+     * @return lastUpdateTime is the time of the last update to this condition
      * 
-    */
+     */
     public Optional<String> lastUpdateTime() {
         return Optional.ofNullable(this.lastUpdateTime);
     }
     /**
-     * message contains a human readable message with details about the request state
+     * @return message contains a human readable message with details about the request state
      * 
-    */
+     */
     public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
     /**
-     * reason indicates a brief reason for the request state
+     * @return reason indicates a brief reason for the request state
      * 
-    */
+     */
     public Optional<String> reason() {
         return Optional.ofNullable(this.reason);
     }
     /**
-     * status of the condition, one of True, False, Unknown. Approved, Denied, and Failed conditions may not be &#34;False&#34; or &#34;Unknown&#34;.
+     * @return status of the condition, one of True, False, Unknown. Approved, Denied, and Failed conditions may not be &#34;False&#34; or &#34;Unknown&#34;.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * type of the condition. Known conditions are &#34;Approved&#34;, &#34;Denied&#34;, and &#34;Failed&#34;.
+     * @return type of the condition. Known conditions are &#34;Approved&#34;, &#34;Denied&#34;, and &#34;Failed&#34;.
      * 
      * An &#34;Approved&#34; condition is added via the /approval subresource, indicating the request was approved and should be issued by the signer.
      * 
@@ -126,7 +126,7 @@ public final class CertificateSigningRequestCondition {
      *  - `&#34;Denied&#34;` Denied indicates the request was denied and should not be issued by the signer.
      *  - `&#34;Failed&#34;` Failed indicates the signer failed to issue the certificate.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

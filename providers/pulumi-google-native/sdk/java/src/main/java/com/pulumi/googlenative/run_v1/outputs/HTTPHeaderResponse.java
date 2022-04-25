@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class HTTPHeaderResponse {
     /**
-     * The header field name
+     * @return The header field name
      * 
      */
     private final String name;
     /**
-     * The header field value
+     * @return The header field value
      * 
      */
     private final String value;
@@ -29,16 +29,16 @@ public final class HTTPHeaderResponse {
     }
 
     /**
-     * The header field name
+     * @return The header field name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The header field value
+     * @return The header field value
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

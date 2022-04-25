@@ -26,6 +26,10 @@ public final class VirtualNICArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return Whether gVNIC features are enabled in the node pool.
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -54,11 +58,23 @@ public final class VirtualNICArgs extends com.pulumi.resources.ResourceArgs {
             $ = new VirtualNICArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Whether gVNIC features are enabled in the node pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Whether gVNIC features are enabled in the node pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }

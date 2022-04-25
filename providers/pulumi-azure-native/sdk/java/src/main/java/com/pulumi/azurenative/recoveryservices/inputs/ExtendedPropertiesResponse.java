@@ -25,6 +25,10 @@ public final class ExtendedPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="diskExclusionProperties")
     private @Nullable DiskExclusionPropertiesResponse diskExclusionProperties;
 
+    /**
+     * @return Extended Properties for Disk Exclusion.
+     * 
+     */
     public Optional<DiskExclusionPropertiesResponse> diskExclusionProperties() {
         return Optional.ofNullable(this.diskExclusionProperties);
     }
@@ -53,6 +57,12 @@ public final class ExtendedPropertiesResponse extends com.pulumi.resources.Invok
             $ = new ExtendedPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param diskExclusionProperties Extended Properties for Disk Exclusion.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskExclusionProperties(@Nullable DiskExclusionPropertiesResponse diskExclusionProperties) {
             $.diskExclusionProperties = diskExclusionProperties;
             return this;

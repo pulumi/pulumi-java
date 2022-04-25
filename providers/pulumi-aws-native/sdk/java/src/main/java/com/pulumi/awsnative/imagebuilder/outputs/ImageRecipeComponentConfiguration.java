@@ -14,12 +14,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ImageRecipeComponentConfiguration {
     /**
-     * The Amazon Resource Name (ARN) of the component.
+     * @return The Amazon Resource Name (ARN) of the component.
      * 
      */
     private final @Nullable String componentArn;
     /**
-     * A group of parameter settings that are used to configure the component for a specific recipe.
+     * @return A group of parameter settings that are used to configure the component for a specific recipe.
      * 
      */
     private final @Nullable List<ImageRecipeComponentParameter> parameters;
@@ -33,16 +33,16 @@ public final class ImageRecipeComponentConfiguration {
     }
 
     /**
-     * The Amazon Resource Name (ARN) of the component.
+     * @return The Amazon Resource Name (ARN) of the component.
      * 
-    */
+     */
     public Optional<String> componentArn() {
         return Optional.ofNullable(this.componentArn);
     }
     /**
-     * A group of parameter settings that are used to configure the component for a specific recipe.
+     * @return A group of parameter settings that are used to configure the component for a specific recipe.
      * 
-    */
+     */
     public List<ImageRecipeComponentParameter> parameters() {
         return this.parameters == null ? List.of() : this.parameters;
     }

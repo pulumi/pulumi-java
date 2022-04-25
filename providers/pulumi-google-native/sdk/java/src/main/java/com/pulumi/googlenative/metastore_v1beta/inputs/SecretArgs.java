@@ -26,6 +26,10 @@ public final class SecretArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cloudSecret")
     private @Nullable Output<String> cloudSecret;
 
+    /**
+     * @return The relative resource name of a Secret Manager secret version, in the following form:projects/{project_number}/secrets/{secret_id}/versions/{version_id}.
+     * 
+     */
     public Optional<Output<String>> cloudSecret() {
         return Optional.ofNullable(this.cloudSecret);
     }
@@ -54,11 +58,23 @@ public final class SecretArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SecretArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cloudSecret The relative resource name of a Secret Manager secret version, in the following form:projects/{project_number}/secrets/{secret_id}/versions/{version_id}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudSecret(@Nullable Output<String> cloudSecret) {
             $.cloudSecret = cloudSecret;
             return this;
         }
 
+        /**
+         * @param cloudSecret The relative resource name of a Secret Manager secret version, in the following form:projects/{project_number}/secrets/{secret_id}/versions/{version_id}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudSecret(String cloudSecret) {
             return cloudSecret(Output.of(cloudSecret));
         }

@@ -36,6 +36,10 @@ public final class AzureFunctionLinkedServiceArgs extends com.pulumi.resources.R
     @Import(name="annotations")
     private @Nullable Output<List<Object>> annotations;
 
+    /**
+     * @return List of tags that can be used for describing the linked service.
+     * 
+     */
     public Optional<Output<List<Object>>> annotations() {
         return Optional.ofNullable(this.annotations);
     }
@@ -47,6 +51,10 @@ public final class AzureFunctionLinkedServiceArgs extends com.pulumi.resources.R
     @Import(name="authentication")
     private @Nullable Output<Object> authentication;
 
+    /**
+     * @return Type of authentication (Required to specify MSI) used to connect to AzureFunction. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> authentication() {
         return Optional.ofNullable(this.authentication);
     }
@@ -58,6 +66,10 @@ public final class AzureFunctionLinkedServiceArgs extends com.pulumi.resources.R
     @Import(name="connectVia")
     private @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
+    /**
+     * @return The integration runtime reference.
+     * 
+     */
     public Optional<Output<IntegrationRuntimeReferenceArgs>> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
@@ -69,6 +81,10 @@ public final class AzureFunctionLinkedServiceArgs extends com.pulumi.resources.R
     @Import(name="credential")
     private @Nullable Output<CredentialReferenceArgs> credential;
 
+    /**
+     * @return The credential reference containing authentication information.
+     * 
+     */
     public Optional<Output<CredentialReferenceArgs>> credential() {
         return Optional.ofNullable(this.credential);
     }
@@ -80,6 +96,10 @@ public final class AzureFunctionLinkedServiceArgs extends com.pulumi.resources.R
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Linked service description.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -91,6 +111,10 @@ public final class AzureFunctionLinkedServiceArgs extends com.pulumi.resources.R
     @Import(name="encryptedCredential")
     private @Nullable Output<Object> encryptedCredential;
 
+    /**
+     * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> encryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
@@ -102,6 +126,10 @@ public final class AzureFunctionLinkedServiceArgs extends com.pulumi.resources.R
     @Import(name="functionAppUrl", required=true)
     private Output<Object> functionAppUrl;
 
+    /**
+     * @return The endpoint of the Azure Function App. URL will be in the format https://&lt;accountName&gt;.azurewebsites.net.
+     * 
+     */
     public Output<Object> functionAppUrl() {
         return this.functionAppUrl;
     }
@@ -113,6 +141,10 @@ public final class AzureFunctionLinkedServiceArgs extends com.pulumi.resources.R
     @Import(name="functionKey")
     private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> functionKey;
 
+    /**
+     * @return Function or Host key for Azure Function App.
+     * 
+     */
     public Optional<Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>>> functionKey() {
         return Optional.ofNullable(this.functionKey);
     }
@@ -124,6 +156,10 @@ public final class AzureFunctionLinkedServiceArgs extends com.pulumi.resources.R
     @Import(name="parameters")
     private @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
+    /**
+     * @return Parameters for linked service.
+     * 
+     */
     public Optional<Output<Map<String,ParameterSpecificationArgs>>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -135,6 +171,10 @@ public final class AzureFunctionLinkedServiceArgs extends com.pulumi.resources.R
     @Import(name="resourceId")
     private @Nullable Output<Object> resourceId;
 
+    /**
+     * @return Allowed token audiences for azure function.
+     * 
+     */
     public Optional<Output<Object>> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
@@ -147,6 +187,11 @@ public final class AzureFunctionLinkedServiceArgs extends com.pulumi.resources.R
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Type of linked service.
+     * Expected value is &#39;AzureFunction&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -185,113 +230,265 @@ public final class AzureFunctionLinkedServiceArgs extends com.pulumi.resources.R
             $ = new AzureFunctionLinkedServiceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(@Nullable Output<List<Object>> annotations) {
             $.annotations = annotations;
             return this;
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(List<Object> annotations) {
             return annotations(Output.of(annotations));
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
 
+        /**
+         * @param authentication Type of authentication (Required to specify MSI) used to connect to AzureFunction. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder authentication(@Nullable Output<Object> authentication) {
             $.authentication = authentication;
             return this;
         }
 
+        /**
+         * @param authentication Type of authentication (Required to specify MSI) used to connect to AzureFunction. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder authentication(Object authentication) {
             return authentication(Output.of(authentication));
         }
 
+        /**
+         * @param connectVia The integration runtime reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
             $.connectVia = connectVia;
             return this;
         }
 
+        /**
+         * @param connectVia The integration runtime reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectVia(IntegrationRuntimeReferenceArgs connectVia) {
             return connectVia(Output.of(connectVia));
         }
 
+        /**
+         * @param credential The credential reference containing authentication information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder credential(@Nullable Output<CredentialReferenceArgs> credential) {
             $.credential = credential;
             return this;
         }
 
+        /**
+         * @param credential The credential reference containing authentication information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder credential(CredentialReferenceArgs credential) {
             return credential(Output.of(credential));
         }
 
+        /**
+         * @param description Linked service description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Linked service description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param encryptedCredential The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
             $.encryptedCredential = encryptedCredential;
             return this;
         }
 
+        /**
+         * @param encryptedCredential The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptedCredential(Object encryptedCredential) {
             return encryptedCredential(Output.of(encryptedCredential));
         }
 
+        /**
+         * @param functionAppUrl The endpoint of the Azure Function App. URL will be in the format https://&lt;accountName&gt;.azurewebsites.net.
+         * 
+         * @return builder
+         * 
+         */
         public Builder functionAppUrl(Output<Object> functionAppUrl) {
             $.functionAppUrl = functionAppUrl;
             return this;
         }
 
+        /**
+         * @param functionAppUrl The endpoint of the Azure Function App. URL will be in the format https://&lt;accountName&gt;.azurewebsites.net.
+         * 
+         * @return builder
+         * 
+         */
         public Builder functionAppUrl(Object functionAppUrl) {
             return functionAppUrl(Output.of(functionAppUrl));
         }
 
+        /**
+         * @param functionKey Function or Host key for Azure Function App.
+         * 
+         * @return builder
+         * 
+         */
         public Builder functionKey(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> functionKey) {
             $.functionKey = functionKey;
             return this;
         }
 
+        /**
+         * @param functionKey Function or Host key for Azure Function App.
+         * 
+         * @return builder
+         * 
+         */
         public Builder functionKey(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> functionKey) {
             return functionKey(Output.of(functionKey));
         }
 
+        /**
+         * @param functionKey Function or Host key for Azure Function App.
+         * 
+         * @return builder
+         * 
+         */
         public Builder functionKey(AzureKeyVaultSecretReferenceArgs functionKey) {
             return functionKey(Either.ofLeft(functionKey));
         }
 
+        /**
+         * @param functionKey Function or Host key for Azure Function App.
+         * 
+         * @return builder
+         * 
+         */
         public Builder functionKey(SecureStringArgs functionKey) {
             return functionKey(Either.ofRight(functionKey));
         }
 
+        /**
+         * @param parameters Parameters for linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters Parameters for linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(Map<String,ParameterSpecificationArgs> parameters) {
             return parameters(Output.of(parameters));
         }
 
+        /**
+         * @param resourceId Allowed token audiences for azure function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(@Nullable Output<Object> resourceId) {
             $.resourceId = resourceId;
             return this;
         }
 
+        /**
+         * @param resourceId Allowed token audiences for azure function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(Object resourceId) {
             return resourceId(Output.of(resourceId));
         }
 
+        /**
+         * @param type Type of linked service.
+         * Expected value is &#39;AzureFunction&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of linked service.
+         * Expected value is &#39;AzureFunction&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

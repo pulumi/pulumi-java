@@ -18,47 +18,47 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ProviderResourceTypeResponse {
     /**
-     * The aliases that are supported by this resource type.
+     * @return The aliases that are supported by this resource type.
      * 
      */
     private final @Nullable List<AliasResponse> aliases;
     /**
-     * The API profiles for the resource provider.
+     * @return The API profiles for the resource provider.
      * 
      */
     private final List<ApiProfileResponse> apiProfiles;
     /**
-     * The API version.
+     * @return The API version.
      * 
      */
     private final @Nullable List<String> apiVersions;
     /**
-     * The additional capabilities offered by this resource type.
+     * @return The additional capabilities offered by this resource type.
      * 
      */
     private final @Nullable String capabilities;
     /**
-     * The default API version.
+     * @return The default API version.
      * 
      */
     private final String defaultApiVersion;
     /**
-     * The location mappings that are supported by this resource type.
+     * @return The location mappings that are supported by this resource type.
      * 
      */
     private final @Nullable List<ProviderExtendedLocationResponse> locationMappings;
     /**
-     * The collection of locations where this resource type can be created.
+     * @return The collection of locations where this resource type can be created.
      * 
      */
     private final @Nullable List<String> locations;
     /**
-     * The properties.
+     * @return The properties.
      * 
      */
     private final @Nullable Map<String,String> properties;
     /**
-     * The resource type.
+     * @return The resource type.
      * 
      */
     private final @Nullable String resourceType;
@@ -89,65 +89,65 @@ public final class ProviderResourceTypeResponse {
     }
 
     /**
-     * The aliases that are supported by this resource type.
+     * @return The aliases that are supported by this resource type.
      * 
-    */
+     */
     public List<AliasResponse> aliases() {
         return this.aliases == null ? List.of() : this.aliases;
     }
     /**
-     * The API profiles for the resource provider.
+     * @return The API profiles for the resource provider.
      * 
-    */
+     */
     public List<ApiProfileResponse> apiProfiles() {
         return this.apiProfiles;
     }
     /**
-     * The API version.
+     * @return The API version.
      * 
-    */
+     */
     public List<String> apiVersions() {
         return this.apiVersions == null ? List.of() : this.apiVersions;
     }
     /**
-     * The additional capabilities offered by this resource type.
+     * @return The additional capabilities offered by this resource type.
      * 
-    */
+     */
     public Optional<String> capabilities() {
         return Optional.ofNullable(this.capabilities);
     }
     /**
-     * The default API version.
+     * @return The default API version.
      * 
-    */
+     */
     public String defaultApiVersion() {
         return this.defaultApiVersion;
     }
     /**
-     * The location mappings that are supported by this resource type.
+     * @return The location mappings that are supported by this resource type.
      * 
-    */
+     */
     public List<ProviderExtendedLocationResponse> locationMappings() {
         return this.locationMappings == null ? List.of() : this.locationMappings;
     }
     /**
-     * The collection of locations where this resource type can be created.
+     * @return The collection of locations where this resource type can be created.
      * 
-    */
+     */
     public List<String> locations() {
         return this.locations == null ? List.of() : this.locations;
     }
     /**
-     * The properties.
+     * @return The properties.
      * 
-    */
+     */
     public Map<String,String> properties() {
         return this.properties == null ? Map.of() : this.properties;
     }
     /**
-     * The resource type.
+     * @return The resource type.
      * 
-    */
+     */
     public Optional<String> resourceType() {
         return Optional.ofNullable(this.resourceType);
     }

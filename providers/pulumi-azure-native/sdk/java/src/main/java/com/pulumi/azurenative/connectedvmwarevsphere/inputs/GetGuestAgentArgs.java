@@ -19,6 +19,10 @@ public final class GetGuestAgentArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of the GuestAgent.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -30,6 +34,10 @@ public final class GetGuestAgentArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The Resource Group Name.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetGuestAgentArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="virtualMachineName", required=true)
     private String virtualMachineName;
 
+    /**
+     * @return Name of the vm.
+     * 
+     */
     public String virtualMachineName() {
         return this.virtualMachineName;
     }
@@ -71,16 +83,34 @@ public final class GetGuestAgentArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetGuestAgentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name of the GuestAgent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The Resource Group Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param virtualMachineName Name of the vm.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualMachineName(String virtualMachineName) {
             $.virtualMachineName = virtualMachineName;
             return this;

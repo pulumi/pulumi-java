@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class FlexibleAppVersionHandlerScript {
     /**
-     * Path to the script from the application root directory.
+     * @return Path to the script from the application root directory.
      * 
      */
     private final String scriptPath;
@@ -21,9 +21,9 @@ public final class FlexibleAppVersionHandlerScript {
     }
 
     /**
-     * Path to the script from the application root directory.
+     * @return Path to the script from the application root directory.
      * 
-    */
+     */
     public String scriptPath() {
         return this.scriptPath;
     }

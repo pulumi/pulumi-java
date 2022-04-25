@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class CompensationRangeResponse {
     /**
-     * Optional. The maximum amount of compensation. If left empty, the value is set to a maximal compensation value and the currency code is set to match the currency code of min_compensation.
+     * @return Optional. The maximum amount of compensation. If left empty, the value is set to a maximal compensation value and the currency code is set to match the currency code of min_compensation.
      * 
      */
     private final MoneyResponse maxCompensation;
     /**
-     * Optional. The minimum amount of compensation. If left empty, the value is set to zero and the currency code is set to match the currency code of max_compensation.
+     * @return Optional. The minimum amount of compensation. If left empty, the value is set to zero and the currency code is set to match the currency code of max_compensation.
      * 
      */
     private final MoneyResponse minCompensation;
@@ -29,16 +29,16 @@ public final class CompensationRangeResponse {
     }
 
     /**
-     * Optional. The maximum amount of compensation. If left empty, the value is set to a maximal compensation value and the currency code is set to match the currency code of min_compensation.
+     * @return Optional. The maximum amount of compensation. If left empty, the value is set to a maximal compensation value and the currency code is set to match the currency code of min_compensation.
      * 
-    */
+     */
     public MoneyResponse maxCompensation() {
         return this.maxCompensation;
     }
     /**
-     * Optional. The minimum amount of compensation. If left empty, the value is set to zero and the currency code is set to match the currency code of max_compensation.
+     * @return Optional. The minimum amount of compensation. If left empty, the value is set to zero and the currency code is set to match the currency code of max_compensation.
      * 
-    */
+     */
     public MoneyResponse minCompensation() {
         return this.minCompensation;
     }

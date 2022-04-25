@@ -28,6 +28,15 @@ public final class QueueRateLimitsGetArgs extends com.pulumi.resources.ResourceA
     @Import(name="maxBurstSize")
     private @Nullable Output<Integer> maxBurstSize;
 
+    /**
+     * @return -
+     * The max burst size.
+     * Max burst size limits how fast tasks in queue are processed when many tasks are
+     * in the queue and the rate is high. This field allows the queue to have a high
+     * rate so processing starts shortly after a task is enqueued, but still limits
+     * resource usage when many tasks are enqueued in a short period of time.
+     * 
+     */
     public Optional<Output<Integer>> maxBurstSize() {
         return Optional.ofNullable(this.maxBurstSize);
     }
@@ -42,6 +51,13 @@ public final class QueueRateLimitsGetArgs extends com.pulumi.resources.ResourceA
     @Import(name="maxConcurrentDispatches")
     private @Nullable Output<Integer> maxConcurrentDispatches;
 
+    /**
+     * @return The maximum number of concurrent tasks that Cloud Tasks allows to
+     * be dispatched for this queue. After this threshold has been
+     * reached, Cloud Tasks stops dispatching tasks until the number of
+     * concurrent requests decreases.
+     * 
+     */
     public Optional<Output<Integer>> maxConcurrentDispatches() {
         return Optional.ofNullable(this.maxConcurrentDispatches);
     }
@@ -54,6 +70,11 @@ public final class QueueRateLimitsGetArgs extends com.pulumi.resources.ResourceA
     @Import(name="maxDispatchesPerSecond")
     private @Nullable Output<Double> maxDispatchesPerSecond;
 
+    /**
+     * @return The maximum rate at which tasks are dispatched from this queue.
+     * If unspecified when the queue is created, Cloud Tasks will pick the default.
+     * 
+     */
     public Optional<Output<Double>> maxDispatchesPerSecond() {
         return Optional.ofNullable(this.maxDispatchesPerSecond);
     }
@@ -84,29 +105,83 @@ public final class QueueRateLimitsGetArgs extends com.pulumi.resources.ResourceA
             $ = new QueueRateLimitsGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxBurstSize -
+         * The max burst size.
+         * Max burst size limits how fast tasks in queue are processed when many tasks are
+         * in the queue and the rate is high. This field allows the queue to have a high
+         * rate so processing starts shortly after a task is enqueued, but still limits
+         * resource usage when many tasks are enqueued in a short period of time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxBurstSize(@Nullable Output<Integer> maxBurstSize) {
             $.maxBurstSize = maxBurstSize;
             return this;
         }
 
+        /**
+         * @param maxBurstSize -
+         * The max burst size.
+         * Max burst size limits how fast tasks in queue are processed when many tasks are
+         * in the queue and the rate is high. This field allows the queue to have a high
+         * rate so processing starts shortly after a task is enqueued, but still limits
+         * resource usage when many tasks are enqueued in a short period of time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxBurstSize(Integer maxBurstSize) {
             return maxBurstSize(Output.of(maxBurstSize));
         }
 
+        /**
+         * @param maxConcurrentDispatches The maximum number of concurrent tasks that Cloud Tasks allows to
+         * be dispatched for this queue. After this threshold has been
+         * reached, Cloud Tasks stops dispatching tasks until the number of
+         * concurrent requests decreases.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxConcurrentDispatches(@Nullable Output<Integer> maxConcurrentDispatches) {
             $.maxConcurrentDispatches = maxConcurrentDispatches;
             return this;
         }
 
+        /**
+         * @param maxConcurrentDispatches The maximum number of concurrent tasks that Cloud Tasks allows to
+         * be dispatched for this queue. After this threshold has been
+         * reached, Cloud Tasks stops dispatching tasks until the number of
+         * concurrent requests decreases.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxConcurrentDispatches(Integer maxConcurrentDispatches) {
             return maxConcurrentDispatches(Output.of(maxConcurrentDispatches));
         }
 
+        /**
+         * @param maxDispatchesPerSecond The maximum rate at which tasks are dispatched from this queue.
+         * If unspecified when the queue is created, Cloud Tasks will pick the default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxDispatchesPerSecond(@Nullable Output<Double> maxDispatchesPerSecond) {
             $.maxDispatchesPerSecond = maxDispatchesPerSecond;
             return this;
         }
 
+        /**
+         * @param maxDispatchesPerSecond The maximum rate at which tasks are dispatched from this queue.
+         * If unspecified when the queue is created, Cloud Tasks will pick the default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxDispatchesPerSecond(Double maxDispatchesPerSecond) {
             return maxDispatchesPerSecond(Output.of(maxDispatchesPerSecond));
         }

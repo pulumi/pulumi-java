@@ -24,6 +24,10 @@ public final class ImageTemplateSharedImageVersionSourceResponse extends com.pul
     @Import(name="imageVersionId", required=true)
     private String imageVersionId;
 
+    /**
+     * @return ARM resource id of the image version in the shared image gallery
+     * 
+     */
     public String imageVersionId() {
         return this.imageVersionId;
     }
@@ -36,6 +40,11 @@ public final class ImageTemplateSharedImageVersionSourceResponse extends com.pul
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Specifies the type of source image you want to start with.
+     * Expected value is &#39;SharedImageVersion&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -65,11 +74,24 @@ public final class ImageTemplateSharedImageVersionSourceResponse extends com.pul
             $ = new ImageTemplateSharedImageVersionSourceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param imageVersionId ARM resource id of the image version in the shared image gallery
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageVersionId(String imageVersionId) {
             $.imageVersionId = imageVersionId;
             return this;
         }
 
+        /**
+         * @param type Specifies the type of source image you want to start with.
+         * Expected value is &#39;SharedImageVersion&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

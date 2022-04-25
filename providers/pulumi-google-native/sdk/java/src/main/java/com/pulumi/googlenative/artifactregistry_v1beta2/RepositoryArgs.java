@@ -25,6 +25,10 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="createTime")
     private @Nullable Output<String> createTime;
 
+    /**
+     * @return The time when the repository was created.
+     * 
+     */
     public Optional<Output<String>> createTime() {
         return Optional.ofNullable(this.createTime);
     }
@@ -36,6 +40,10 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The user-provided description of the repository.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -47,6 +55,10 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="format")
     private @Nullable Output<RepositoryFormat> format;
 
+    /**
+     * @return The format of packages that are stored in the repository.
+     * 
+     */
     public Optional<Output<RepositoryFormat>> format() {
         return Optional.ofNullable(this.format);
     }
@@ -58,6 +70,10 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kmsKeyName")
     private @Nullable Output<String> kmsKeyName;
 
+    /**
+     * @return The Cloud KMS resource name of the customer managed encryption key that’s used to encrypt the contents of the Repository. Has the form: `projects/my-project/locations/my-region/keyRings/my-kr/cryptoKeys/my-key`. This value may not be changed after the Repository has been created.
+     * 
+     */
     public Optional<Output<String>> kmsKeyName() {
         return Optional.ofNullable(this.kmsKeyName);
     }
@@ -69,6 +85,10 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return Labels with user-defined metadata. This field may contain up to 64 entries. Label keys and values may be no longer than 63 characters. Label keys must begin with a lowercase letter and may only contain lowercase letters, numeric characters, underscores, and dashes.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -87,6 +107,10 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="mavenConfig")
     private @Nullable Output<MavenRepositoryConfigArgs> mavenConfig;
 
+    /**
+     * @return Maven repository config contains repository level configuration for the repositories of maven type.
+     * 
+     */
     public Optional<Output<MavenRepositoryConfigArgs>> mavenConfig() {
         return Optional.ofNullable(this.mavenConfig);
     }
@@ -98,6 +122,10 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the repository, for example: &#34;projects/p1/locations/us-central1/repositories/repo1&#34;.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -123,6 +151,10 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="updateTime")
     private @Nullable Output<String> updateTime;
 
+    /**
+     * @return The time when the repository was last updated.
+     * 
+     */
     public Optional<Output<String>> updateTime() {
         return Optional.ofNullable(this.updateTime);
     }
@@ -161,47 +193,107 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
             $ = new RepositoryArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param createTime The time when the repository was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTime(@Nullable Output<String> createTime) {
             $.createTime = createTime;
             return this;
         }
 
+        /**
+         * @param createTime The time when the repository was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTime(String createTime) {
             return createTime(Output.of(createTime));
         }
 
+        /**
+         * @param description The user-provided description of the repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The user-provided description of the repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param format The format of packages that are stored in the repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder format(@Nullable Output<RepositoryFormat> format) {
             $.format = format;
             return this;
         }
 
+        /**
+         * @param format The format of packages that are stored in the repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder format(RepositoryFormat format) {
             return format(Output.of(format));
         }
 
+        /**
+         * @param kmsKeyName The Cloud KMS resource name of the customer managed encryption key that’s used to encrypt the contents of the Repository. Has the form: `projects/my-project/locations/my-region/keyRings/my-kr/cryptoKeys/my-key`. This value may not be changed after the Repository has been created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyName(@Nullable Output<String> kmsKeyName) {
             $.kmsKeyName = kmsKeyName;
             return this;
         }
 
+        /**
+         * @param kmsKeyName The Cloud KMS resource name of the customer managed encryption key that’s used to encrypt the contents of the Repository. Has the form: `projects/my-project/locations/my-region/keyRings/my-kr/cryptoKeys/my-key`. This value may not be changed after the Repository has been created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyName(String kmsKeyName) {
             return kmsKeyName(Output.of(kmsKeyName));
         }
 
+        /**
+         * @param labels Labels with user-defined metadata. This field may contain up to 64 entries. Label keys and values may be no longer than 63 characters. Label keys must begin with a lowercase letter and may only contain lowercase letters, numeric characters, underscores, and dashes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Labels with user-defined metadata. This field may contain up to 64 entries. Label keys and values may be no longer than 63 characters. Label keys must begin with a lowercase letter and may only contain lowercase letters, numeric characters, underscores, and dashes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
@@ -215,20 +307,44 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
             return location(Output.of(location));
         }
 
+        /**
+         * @param mavenConfig Maven repository config contains repository level configuration for the repositories of maven type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mavenConfig(@Nullable Output<MavenRepositoryConfigArgs> mavenConfig) {
             $.mavenConfig = mavenConfig;
             return this;
         }
 
+        /**
+         * @param mavenConfig Maven repository config contains repository level configuration for the repositories of maven type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mavenConfig(MavenRepositoryConfigArgs mavenConfig) {
             return mavenConfig(Output.of(mavenConfig));
         }
 
+        /**
+         * @param name The name of the repository, for example: &#34;projects/p1/locations/us-central1/repositories/repo1&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the repository, for example: &#34;projects/p1/locations/us-central1/repositories/repo1&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -251,11 +367,23 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
             return repositoryId(Output.of(repositoryId));
         }
 
+        /**
+         * @param updateTime The time when the repository was last updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateTime(@Nullable Output<String> updateTime) {
             $.updateTime = updateTime;
             return this;
         }
 
+        /**
+         * @param updateTime The time when the repository was last updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateTime(String updateTime) {
             return updateTime(Output.of(updateTime));
         }

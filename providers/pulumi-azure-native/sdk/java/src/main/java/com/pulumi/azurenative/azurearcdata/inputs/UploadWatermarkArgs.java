@@ -26,6 +26,10 @@ public final class UploadWatermarkArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="logs")
     private @Nullable Output<String> logs;
 
+    /**
+     * @return Last uploaded date for logs from kubernetes cluster. Defaults to current date time
+     * 
+     */
     public Optional<Output<String>> logs() {
         return Optional.ofNullable(this.logs);
     }
@@ -37,6 +41,10 @@ public final class UploadWatermarkArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="metrics")
     private @Nullable Output<String> metrics;
 
+    /**
+     * @return Last uploaded date for metrics from kubernetes cluster. Defaults to current date time
+     * 
+     */
     public Optional<Output<String>> metrics() {
         return Optional.ofNullable(this.metrics);
     }
@@ -48,6 +56,10 @@ public final class UploadWatermarkArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="usages")
     private @Nullable Output<String> usages;
 
+    /**
+     * @return Last uploaded date for usages from kubernetes cluster. Defaults to current date time
+     * 
+     */
     public Optional<Output<String>> usages() {
         return Optional.ofNullable(this.usages);
     }
@@ -78,29 +90,65 @@ public final class UploadWatermarkArgs extends com.pulumi.resources.ResourceArgs
             $ = new UploadWatermarkArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param logs Last uploaded date for logs from kubernetes cluster. Defaults to current date time
+         * 
+         * @return builder
+         * 
+         */
         public Builder logs(@Nullable Output<String> logs) {
             $.logs = logs;
             return this;
         }
 
+        /**
+         * @param logs Last uploaded date for logs from kubernetes cluster. Defaults to current date time
+         * 
+         * @return builder
+         * 
+         */
         public Builder logs(String logs) {
             return logs(Output.of(logs));
         }
 
+        /**
+         * @param metrics Last uploaded date for metrics from kubernetes cluster. Defaults to current date time
+         * 
+         * @return builder
+         * 
+         */
         public Builder metrics(@Nullable Output<String> metrics) {
             $.metrics = metrics;
             return this;
         }
 
+        /**
+         * @param metrics Last uploaded date for metrics from kubernetes cluster. Defaults to current date time
+         * 
+         * @return builder
+         * 
+         */
         public Builder metrics(String metrics) {
             return metrics(Output.of(metrics));
         }
 
+        /**
+         * @param usages Last uploaded date for usages from kubernetes cluster. Defaults to current date time
+         * 
+         * @return builder
+         * 
+         */
         public Builder usages(@Nullable Output<String> usages) {
             $.usages = usages;
             return this;
         }
 
+        /**
+         * @param usages Last uploaded date for usages from kubernetes cluster. Defaults to current date time
+         * 
+         * @return builder
+         * 
+         */
         public Builder usages(String usages) {
             return usages(Output.of(usages));
         }

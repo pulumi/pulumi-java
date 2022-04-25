@@ -24,6 +24,10 @@ public final class PubsubTargetResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="attributes", required=true)
     private Map<String,String> attributes;
 
+    /**
+     * @return Attributes for PubsubMessage. Pubsub message must contain either non-empty data, or at least one attribute.
+     * 
+     */
     public Map<String,String> attributes() {
         return this.attributes;
     }
@@ -35,6 +39,10 @@ public final class PubsubTargetResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="data", required=true)
     private String data;
 
+    /**
+     * @return The message payload for PubsubMessage. Pubsub message must contain either non-empty data, or at least one attribute.
+     * 
+     */
     public String data() {
         return this.data;
     }
@@ -46,6 +54,10 @@ public final class PubsubTargetResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="topicName", required=true)
     private String topicName;
 
+    /**
+     * @return The name of the Cloud Pub/Sub topic to which messages will be published when a job is delivered. The topic name must be in the same format as required by PubSub&#39;s [PublishRequest.name](https://cloud.google.com/pubsub/docs/reference/rpc/google.pubsub.v1#publishrequest), for example `projects/PROJECT_ID/topics/TOPIC_ID`. The topic must be in the same project as the Cloud Scheduler job.
+     * 
+     */
     public String topicName() {
         return this.topicName;
     }
@@ -76,16 +88,34 @@ public final class PubsubTargetResponse extends com.pulumi.resources.InvokeArgs 
             $ = new PubsubTargetResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param attributes Attributes for PubsubMessage. Pubsub message must contain either non-empty data, or at least one attribute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attributes(Map<String,String> attributes) {
             $.attributes = attributes;
             return this;
         }
 
+        /**
+         * @param data The message payload for PubsubMessage. Pubsub message must contain either non-empty data, or at least one attribute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder data(String data) {
             $.data = data;
             return this;
         }
 
+        /**
+         * @param topicName The name of the Cloud Pub/Sub topic to which messages will be published when a job is delivered. The topic name must be in the same format as required by PubSub&#39;s [PublishRequest.name](https://cloud.google.com/pubsub/docs/reference/rpc/google.pubsub.v1#publishrequest), for example `projects/PROJECT_ID/topics/TOPIC_ID`. The topic must be in the same project as the Cloud Scheduler job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topicName(String topicName) {
             $.topicName = topicName;
             return this;

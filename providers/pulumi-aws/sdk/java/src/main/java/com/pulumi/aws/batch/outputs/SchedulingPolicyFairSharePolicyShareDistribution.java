@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SchedulingPolicyFairSharePolicyShareDistribution {
     /**
-     * A fair share identifier or fair share identifier prefix. For more information, see [ShareAttributes](https://docs.aws.amazon.com/batch/latest/APIReference/API_ShareAttributes.html).
+     * @return A fair share identifier or fair share identifier prefix. For more information, see [ShareAttributes](https://docs.aws.amazon.com/batch/latest/APIReference/API_ShareAttributes.html).
      * 
      */
     private final String shareIdentifier;
     /**
-     * The weight factor for the fair share identifier. For more information, see [ShareAttributes](https://docs.aws.amazon.com/batch/latest/APIReference/API_ShareAttributes.html).
+     * @return The weight factor for the fair share identifier. For more information, see [ShareAttributes](https://docs.aws.amazon.com/batch/latest/APIReference/API_ShareAttributes.html).
      * 
      */
     private final @Nullable Double weightFactor;
@@ -32,16 +32,16 @@ public final class SchedulingPolicyFairSharePolicyShareDistribution {
     }
 
     /**
-     * A fair share identifier or fair share identifier prefix. For more information, see [ShareAttributes](https://docs.aws.amazon.com/batch/latest/APIReference/API_ShareAttributes.html).
+     * @return A fair share identifier or fair share identifier prefix. For more information, see [ShareAttributes](https://docs.aws.amazon.com/batch/latest/APIReference/API_ShareAttributes.html).
      * 
-    */
+     */
     public String shareIdentifier() {
         return this.shareIdentifier;
     }
     /**
-     * The weight factor for the fair share identifier. For more information, see [ShareAttributes](https://docs.aws.amazon.com/batch/latest/APIReference/API_ShareAttributes.html).
+     * @return The weight factor for the fair share identifier. For more information, see [ShareAttributes](https://docs.aws.amazon.com/batch/latest/APIReference/API_ShareAttributes.html).
      * 
-    */
+     */
     public Optional<Double> weightFactor() {
         return Optional.ofNullable(this.weightFactor);
     }

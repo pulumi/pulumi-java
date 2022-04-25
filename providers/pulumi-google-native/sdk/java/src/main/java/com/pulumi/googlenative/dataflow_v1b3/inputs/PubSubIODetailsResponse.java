@@ -23,6 +23,10 @@ public final class PubSubIODetailsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="subscription", required=true)
     private String subscription;
 
+    /**
+     * @return Subscription used in the connection.
+     * 
+     */
     public String subscription() {
         return this.subscription;
     }
@@ -34,6 +38,10 @@ public final class PubSubIODetailsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="topic", required=true)
     private String topic;
 
+    /**
+     * @return Topic accessed in the connection.
+     * 
+     */
     public String topic() {
         return this.topic;
     }
@@ -63,11 +71,23 @@ public final class PubSubIODetailsResponse extends com.pulumi.resources.InvokeAr
             $ = new PubSubIODetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param subscription Subscription used in the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscription(String subscription) {
             $.subscription = subscription;
             return this;
         }
 
+        /**
+         * @param topic Topic accessed in the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topic(String topic) {
             $.topic = topic;
             return this;

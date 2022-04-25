@@ -26,6 +26,10 @@ public final class InboundNatPoolArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="backendPort", required=true)
     private Output<Integer> backendPort;
 
+    /**
+     * @return This must be unique within a Batch pool. Acceptable values are between 1 and 65535 except for 22, 3389, 29876 and 29877 as these are reserved. If any reserved values are provided the request fails with HTTP status code 400.
+     * 
+     */
     public Output<Integer> backendPort() {
         return this.backendPort;
     }
@@ -37,6 +41,10 @@ public final class InboundNatPoolArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="frontendPortRangeEnd", required=true)
     private Output<Integer> frontendPortRangeEnd;
 
+    /**
+     * @return Acceptable values range between 1 and 65534 except ports from 50000 to 55000 which are reserved by the Batch service. All ranges within a pool must be distinct and cannot overlap. If any reserved or overlapping values are provided the request fails with HTTP status code 400.
+     * 
+     */
     public Output<Integer> frontendPortRangeEnd() {
         return this.frontendPortRangeEnd;
     }
@@ -48,6 +56,10 @@ public final class InboundNatPoolArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="frontendPortRangeStart", required=true)
     private Output<Integer> frontendPortRangeStart;
 
+    /**
+     * @return Acceptable values range between 1 and 65534 except ports from 50000 to 55000 which are reserved. All ranges within a pool must be distinct and cannot overlap. If any reserved or overlapping values are provided the request fails with HTTP status code 400.
+     * 
+     */
     public Output<Integer> frontendPortRangeStart() {
         return this.frontendPortRangeStart;
     }
@@ -59,6 +71,10 @@ public final class InboundNatPoolArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The name must be unique within a Batch pool, can contain letters, numbers, underscores, periods, and hyphens. Names must start with a letter or number, must end with a letter, number, or underscore, and cannot exceed 77 characters.  If any invalid values are provided the request fails with HTTP status code 400.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -70,6 +86,10 @@ public final class InboundNatPoolArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="networkSecurityGroupRules")
     private @Nullable Output<List<NetworkSecurityGroupRuleArgs>> networkSecurityGroupRules;
 
+    /**
+     * @return The maximum number of rules that can be specified across all the endpoints on a Batch pool is 25. If no network security group rules are specified, a default rule will be created to allow inbound access to the specified backendPort. If the maximum number of network security group rules is exceeded the request fails with HTTP status code 400.
+     * 
+     */
     public Optional<Output<List<NetworkSecurityGroupRuleArgs>>> networkSecurityGroupRules() {
         return Optional.ofNullable(this.networkSecurityGroupRules);
     }
@@ -110,51 +130,117 @@ public final class InboundNatPoolArgs extends com.pulumi.resources.ResourceArgs 
             $ = new InboundNatPoolArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backendPort This must be unique within a Batch pool. Acceptable values are between 1 and 65535 except for 22, 3389, 29876 and 29877 as these are reserved. If any reserved values are provided the request fails with HTTP status code 400.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backendPort(Output<Integer> backendPort) {
             $.backendPort = backendPort;
             return this;
         }
 
+        /**
+         * @param backendPort This must be unique within a Batch pool. Acceptable values are between 1 and 65535 except for 22, 3389, 29876 and 29877 as these are reserved. If any reserved values are provided the request fails with HTTP status code 400.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backendPort(Integer backendPort) {
             return backendPort(Output.of(backendPort));
         }
 
+        /**
+         * @param frontendPortRangeEnd Acceptable values range between 1 and 65534 except ports from 50000 to 55000 which are reserved by the Batch service. All ranges within a pool must be distinct and cannot overlap. If any reserved or overlapping values are provided the request fails with HTTP status code 400.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frontendPortRangeEnd(Output<Integer> frontendPortRangeEnd) {
             $.frontendPortRangeEnd = frontendPortRangeEnd;
             return this;
         }
 
+        /**
+         * @param frontendPortRangeEnd Acceptable values range between 1 and 65534 except ports from 50000 to 55000 which are reserved by the Batch service. All ranges within a pool must be distinct and cannot overlap. If any reserved or overlapping values are provided the request fails with HTTP status code 400.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frontendPortRangeEnd(Integer frontendPortRangeEnd) {
             return frontendPortRangeEnd(Output.of(frontendPortRangeEnd));
         }
 
+        /**
+         * @param frontendPortRangeStart Acceptable values range between 1 and 65534 except ports from 50000 to 55000 which are reserved. All ranges within a pool must be distinct and cannot overlap. If any reserved or overlapping values are provided the request fails with HTTP status code 400.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frontendPortRangeStart(Output<Integer> frontendPortRangeStart) {
             $.frontendPortRangeStart = frontendPortRangeStart;
             return this;
         }
 
+        /**
+         * @param frontendPortRangeStart Acceptable values range between 1 and 65534 except ports from 50000 to 55000 which are reserved. All ranges within a pool must be distinct and cannot overlap. If any reserved or overlapping values are provided the request fails with HTTP status code 400.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frontendPortRangeStart(Integer frontendPortRangeStart) {
             return frontendPortRangeStart(Output.of(frontendPortRangeStart));
         }
 
+        /**
+         * @param name The name must be unique within a Batch pool, can contain letters, numbers, underscores, periods, and hyphens. Names must start with a letter or number, must end with a letter, number, or underscore, and cannot exceed 77 characters.  If any invalid values are provided the request fails with HTTP status code 400.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name must be unique within a Batch pool, can contain letters, numbers, underscores, periods, and hyphens. Names must start with a letter or number, must end with a letter, number, or underscore, and cannot exceed 77 characters.  If any invalid values are provided the request fails with HTTP status code 400.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param networkSecurityGroupRules The maximum number of rules that can be specified across all the endpoints on a Batch pool is 25. If no network security group rules are specified, a default rule will be created to allow inbound access to the specified backendPort. If the maximum number of network security group rules is exceeded the request fails with HTTP status code 400.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkSecurityGroupRules(@Nullable Output<List<NetworkSecurityGroupRuleArgs>> networkSecurityGroupRules) {
             $.networkSecurityGroupRules = networkSecurityGroupRules;
             return this;
         }
 
+        /**
+         * @param networkSecurityGroupRules The maximum number of rules that can be specified across all the endpoints on a Batch pool is 25. If no network security group rules are specified, a default rule will be created to allow inbound access to the specified backendPort. If the maximum number of network security group rules is exceeded the request fails with HTTP status code 400.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkSecurityGroupRules(List<NetworkSecurityGroupRuleArgs> networkSecurityGroupRules) {
             return networkSecurityGroupRules(Output.of(networkSecurityGroupRules));
         }
 
+        /**
+         * @param networkSecurityGroupRules The maximum number of rules that can be specified across all the endpoints on a Batch pool is 25. If no network security group rules are specified, a default rule will be created to allow inbound access to the specified backendPort. If the maximum number of network security group rules is exceeded the request fails with HTTP status code 400.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkSecurityGroupRules(NetworkSecurityGroupRuleArgs... networkSecurityGroupRules) {
             return networkSecurityGroupRules(List.of(networkSecurityGroupRules));
         }

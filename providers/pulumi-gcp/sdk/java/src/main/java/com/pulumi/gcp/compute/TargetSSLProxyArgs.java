@@ -23,6 +23,10 @@ public final class TargetSSLProxyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="backendService", required=true)
     private Output<String> backendService;
 
+    /**
+     * @return A reference to the BackendService resource.
+     * 
+     */
     public Output<String> backendService() {
         return this.backendService;
     }
@@ -34,6 +38,10 @@ public final class TargetSSLProxyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return An optional description of this resource.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -51,6 +59,16 @@ public final class TargetSSLProxyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the resource. Provided by the client when the resource is
+     * created. The name must be 1-63 characters long, and comply with
+     * RFC1035. Specifically, the name must be 1-63 characters long and match
+     * the regular expression `a-z?` which means the
+     * first character must be a lowercase letter, and all following
+     * characters must be a dash, lowercase letter, or digit, except the last
+     * character, which cannot be a dash.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -63,6 +81,11 @@ public final class TargetSSLProxyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -77,6 +100,13 @@ public final class TargetSSLProxyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="proxyHeader")
     private @Nullable Output<String> proxyHeader;
 
+    /**
+     * @return Specifies the type of proxy header to append before sending data to
+     * the backend.
+     * Default value is `NONE`.
+     * Possible values are `NONE` and `PROXY_V1`.
+     * 
+     */
     public Optional<Output<String>> proxyHeader() {
         return Optional.ofNullable(this.proxyHeader);
     }
@@ -90,6 +120,12 @@ public final class TargetSSLProxyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="sslCertificates", required=true)
     private Output<List<String>> sslCertificates;
 
+    /**
+     * @return A list of SslCertificate resources that are used to authenticate
+     * connections between users and the load balancer. At least one
+     * SSL certificate must be specified.
+     * 
+     */
     public Output<List<String>> sslCertificates() {
         return this.sslCertificates;
     }
@@ -103,6 +139,12 @@ public final class TargetSSLProxyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="sslPolicy")
     private @Nullable Output<String> sslPolicy;
 
+    /**
+     * @return A reference to the SslPolicy resource that will be associated with
+     * the TargetSslProxy resource. If not set, the TargetSslProxy
+     * resource will not have any SSL policy configured.
+     * 
+     */
     public Optional<Output<String>> sslPolicy() {
         return Optional.ofNullable(this.sslPolicy);
     }
@@ -137,69 +179,189 @@ public final class TargetSSLProxyArgs extends com.pulumi.resources.ResourceArgs 
             $ = new TargetSSLProxyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backendService A reference to the BackendService resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backendService(Output<String> backendService) {
             $.backendService = backendService;
             return this;
         }
 
+        /**
+         * @param backendService A reference to the BackendService resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backendService(String backendService) {
             return backendService(Output.of(backendService));
         }
 
+        /**
+         * @param description An optional description of this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description An optional description of this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param name Name of the resource. Provided by the client when the resource is
+         * created. The name must be 1-63 characters long, and comply with
+         * RFC1035. Specifically, the name must be 1-63 characters long and match
+         * the regular expression `a-z?` which means the
+         * first character must be a lowercase letter, and all following
+         * characters must be a dash, lowercase letter, or digit, except the last
+         * character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the resource. Provided by the client when the resource is
+         * created. The name must be 1-63 characters long, and comply with
+         * RFC1035. Specifically, the name must be 1-63 characters long and match
+         * the regular expression `a-z?` which means the
+         * first character must be a lowercase letter, and all following
+         * characters must be a dash, lowercase letter, or digit, except the last
+         * character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param proxyHeader Specifies the type of proxy header to append before sending data to
+         * the backend.
+         * Default value is `NONE`.
+         * Possible values are `NONE` and `PROXY_V1`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder proxyHeader(@Nullable Output<String> proxyHeader) {
             $.proxyHeader = proxyHeader;
             return this;
         }
 
+        /**
+         * @param proxyHeader Specifies the type of proxy header to append before sending data to
+         * the backend.
+         * Default value is `NONE`.
+         * Possible values are `NONE` and `PROXY_V1`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder proxyHeader(String proxyHeader) {
             return proxyHeader(Output.of(proxyHeader));
         }
 
+        /**
+         * @param sslCertificates A list of SslCertificate resources that are used to authenticate
+         * connections between users and the load balancer. At least one
+         * SSL certificate must be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sslCertificates(Output<List<String>> sslCertificates) {
             $.sslCertificates = sslCertificates;
             return this;
         }
 
+        /**
+         * @param sslCertificates A list of SslCertificate resources that are used to authenticate
+         * connections between users and the load balancer. At least one
+         * SSL certificate must be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sslCertificates(List<String> sslCertificates) {
             return sslCertificates(Output.of(sslCertificates));
         }
 
+        /**
+         * @param sslCertificates A list of SslCertificate resources that are used to authenticate
+         * connections between users and the load balancer. At least one
+         * SSL certificate must be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sslCertificates(String... sslCertificates) {
             return sslCertificates(List.of(sslCertificates));
         }
 
+        /**
+         * @param sslPolicy A reference to the SslPolicy resource that will be associated with
+         * the TargetSslProxy resource. If not set, the TargetSslProxy
+         * resource will not have any SSL policy configured.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sslPolicy(@Nullable Output<String> sslPolicy) {
             $.sslPolicy = sslPolicy;
             return this;
         }
 
+        /**
+         * @param sslPolicy A reference to the SslPolicy resource that will be associated with
+         * the TargetSslProxy resource. If not set, the TargetSslProxy
+         * resource will not have any SSL policy configured.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sslPolicy(String sslPolicy) {
             return sslPolicy(Output.of(sslPolicy));
         }

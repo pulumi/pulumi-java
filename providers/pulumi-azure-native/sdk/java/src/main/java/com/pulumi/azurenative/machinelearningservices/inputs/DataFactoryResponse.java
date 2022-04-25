@@ -29,6 +29,10 @@ public final class DataFactoryResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="computeLocation")
     private @Nullable String computeLocation;
 
+    /**
+     * @return Location for the underlying compute
+     * 
+     */
     public Optional<String> computeLocation() {
         return Optional.ofNullable(this.computeLocation);
     }
@@ -41,6 +45,11 @@ public final class DataFactoryResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="computeType", required=true)
     private String computeType;
 
+    /**
+     * @return The type of compute
+     * Expected value is &#39;DataFactory&#39;.
+     * 
+     */
     public String computeType() {
         return this.computeType;
     }
@@ -52,6 +61,10 @@ public final class DataFactoryResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return The description of the Machine Learning compute.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -63,6 +76,10 @@ public final class DataFactoryResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="isAttachedCompute", required=true)
     private Boolean isAttachedCompute;
 
+    /**
+     * @return Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.
+     * 
+     */
     public Boolean isAttachedCompute() {
         return this.isAttachedCompute;
     }
@@ -74,6 +91,10 @@ public final class DataFactoryResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="provisioningErrors", required=true)
     private List<MachineLearningServiceErrorResponse> provisioningErrors;
 
+    /**
+     * @return Errors during provisioning
+     * 
+     */
     public List<MachineLearningServiceErrorResponse> provisioningErrors() {
         return this.provisioningErrors;
     }
@@ -85,6 +106,10 @@ public final class DataFactoryResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -96,6 +121,10 @@ public final class DataFactoryResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceId")
     private @Nullable String resourceId;
 
+    /**
+     * @return ARM resource id of the underlying compute
+     * 
+     */
     public Optional<String> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
@@ -130,40 +159,89 @@ public final class DataFactoryResponse extends com.pulumi.resources.InvokeArgs {
             $ = new DataFactoryResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param computeLocation Location for the underlying compute
+         * 
+         * @return builder
+         * 
+         */
         public Builder computeLocation(@Nullable String computeLocation) {
             $.computeLocation = computeLocation;
             return this;
         }
 
+        /**
+         * @param computeType The type of compute
+         * Expected value is &#39;DataFactory&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder computeType(String computeType) {
             $.computeType = computeType;
             return this;
         }
 
+        /**
+         * @param description The description of the Machine Learning compute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param isAttachedCompute Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isAttachedCompute(Boolean isAttachedCompute) {
             $.isAttachedCompute = isAttachedCompute;
             return this;
         }
 
+        /**
+         * @param provisioningErrors Errors during provisioning
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningErrors(List<MachineLearningServiceErrorResponse> provisioningErrors) {
             $.provisioningErrors = provisioningErrors;
             return this;
         }
 
+        /**
+         * @param provisioningErrors Errors during provisioning
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningErrors(MachineLearningServiceErrorResponse... provisioningErrors) {
             return provisioningErrors(List.of(provisioningErrors));
         }
 
+        /**
+         * @param provisioningState The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param resourceId ARM resource id of the underlying compute
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(@Nullable String resourceId) {
             $.resourceId = resourceId;
             return this;

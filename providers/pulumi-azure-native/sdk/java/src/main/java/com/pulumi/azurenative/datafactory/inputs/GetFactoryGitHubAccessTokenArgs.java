@@ -22,6 +22,10 @@ public final class GetFactoryGitHubAccessTokenArgs extends com.pulumi.resources.
     @Import(name="factoryName", required=true)
     private String factoryName;
 
+    /**
+     * @return The factory name.
+     * 
+     */
     public String factoryName() {
         return this.factoryName;
     }
@@ -33,6 +37,10 @@ public final class GetFactoryGitHubAccessTokenArgs extends com.pulumi.resources.
     @Import(name="gitHubAccessCode", required=true)
     private String gitHubAccessCode;
 
+    /**
+     * @return GitHub access code.
+     * 
+     */
     public String gitHubAccessCode() {
         return this.gitHubAccessCode;
     }
@@ -44,6 +52,10 @@ public final class GetFactoryGitHubAccessTokenArgs extends com.pulumi.resources.
     @Import(name="gitHubAccessTokenBaseUrl", required=true)
     private String gitHubAccessTokenBaseUrl;
 
+    /**
+     * @return GitHub access token base URL.
+     * 
+     */
     public String gitHubAccessTokenBaseUrl() {
         return this.gitHubAccessTokenBaseUrl;
     }
@@ -55,6 +67,10 @@ public final class GetFactoryGitHubAccessTokenArgs extends com.pulumi.resources.
     @Import(name="gitHubClientId")
     private @Nullable String gitHubClientId;
 
+    /**
+     * @return GitHub application client ID.
+     * 
+     */
     public Optional<String> gitHubClientId() {
         return Optional.ofNullable(this.gitHubClientId);
     }
@@ -66,6 +82,10 @@ public final class GetFactoryGitHubAccessTokenArgs extends com.pulumi.resources.
     @Import(name="gitHubClientSecret")
     private @Nullable GitHubClientSecret gitHubClientSecret;
 
+    /**
+     * @return GitHub bring your own app client secret information.
+     * 
+     */
     public Optional<GitHubClientSecret> gitHubClientSecret() {
         return Optional.ofNullable(this.gitHubClientSecret);
     }
@@ -77,6 +97,10 @@ public final class GetFactoryGitHubAccessTokenArgs extends com.pulumi.resources.
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -110,31 +134,67 @@ public final class GetFactoryGitHubAccessTokenArgs extends com.pulumi.resources.
             $ = new GetFactoryGitHubAccessTokenArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param factoryName The factory name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder factoryName(String factoryName) {
             $.factoryName = factoryName;
             return this;
         }
 
+        /**
+         * @param gitHubAccessCode GitHub access code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gitHubAccessCode(String gitHubAccessCode) {
             $.gitHubAccessCode = gitHubAccessCode;
             return this;
         }
 
+        /**
+         * @param gitHubAccessTokenBaseUrl GitHub access token base URL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gitHubAccessTokenBaseUrl(String gitHubAccessTokenBaseUrl) {
             $.gitHubAccessTokenBaseUrl = gitHubAccessTokenBaseUrl;
             return this;
         }
 
+        /**
+         * @param gitHubClientId GitHub application client ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gitHubClientId(@Nullable String gitHubClientId) {
             $.gitHubClientId = gitHubClientId;
             return this;
         }
 
+        /**
+         * @param gitHubClientSecret GitHub bring your own app client secret information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gitHubClientSecret(@Nullable GitHubClientSecret gitHubClientSecret) {
             $.gitHubClientSecret = gitHubClientSecret;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

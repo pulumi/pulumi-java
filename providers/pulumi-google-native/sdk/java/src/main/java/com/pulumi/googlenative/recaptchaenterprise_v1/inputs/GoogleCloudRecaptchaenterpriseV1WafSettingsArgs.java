@@ -25,6 +25,10 @@ public final class GoogleCloudRecaptchaenterpriseV1WafSettingsArgs extends com.p
     @Import(name="wafFeature", required=true)
     private Output<GoogleCloudRecaptchaenterpriseV1WafSettingsWafFeature> wafFeature;
 
+    /**
+     * @return The WAF feature for which this key is enabled.
+     * 
+     */
     public Output<GoogleCloudRecaptchaenterpriseV1WafSettingsWafFeature> wafFeature() {
         return this.wafFeature;
     }
@@ -36,6 +40,10 @@ public final class GoogleCloudRecaptchaenterpriseV1WafSettingsArgs extends com.p
     @Import(name="wafService", required=true)
     private Output<GoogleCloudRecaptchaenterpriseV1WafSettingsWafService> wafService;
 
+    /**
+     * @return The WAF service that uses this key.
+     * 
+     */
     public Output<GoogleCloudRecaptchaenterpriseV1WafSettingsWafService> wafService() {
         return this.wafService;
     }
@@ -65,20 +73,44 @@ public final class GoogleCloudRecaptchaenterpriseV1WafSettingsArgs extends com.p
             $ = new GoogleCloudRecaptchaenterpriseV1WafSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param wafFeature The WAF feature for which this key is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder wafFeature(Output<GoogleCloudRecaptchaenterpriseV1WafSettingsWafFeature> wafFeature) {
             $.wafFeature = wafFeature;
             return this;
         }
 
+        /**
+         * @param wafFeature The WAF feature for which this key is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder wafFeature(GoogleCloudRecaptchaenterpriseV1WafSettingsWafFeature wafFeature) {
             return wafFeature(Output.of(wafFeature));
         }
 
+        /**
+         * @param wafService The WAF service that uses this key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder wafService(Output<GoogleCloudRecaptchaenterpriseV1WafSettingsWafService> wafService) {
             $.wafService = wafService;
             return this;
         }
 
+        /**
+         * @param wafService The WAF service that uses this key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder wafService(GoogleCloudRecaptchaenterpriseV1WafSettingsWafService wafService) {
             return wafService(Output.of(wafService));
         }

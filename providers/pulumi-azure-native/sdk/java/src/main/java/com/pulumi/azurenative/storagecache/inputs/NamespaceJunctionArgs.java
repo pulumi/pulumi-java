@@ -27,6 +27,10 @@ public final class NamespaceJunctionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="namespacePath")
     private @Nullable Output<String> namespacePath;
 
+    /**
+     * @return Namespace path on a Cache for a Storage Target.
+     * 
+     */
     public Optional<Output<String>> namespacePath() {
         return Optional.ofNullable(this.namespacePath);
     }
@@ -38,6 +42,10 @@ public final class NamespaceJunctionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="nfsAccessPolicy")
     private @Nullable Output<String> nfsAccessPolicy;
 
+    /**
+     * @return Name of the access policy applied to this junction.
+     * 
+     */
     public Optional<Output<String>> nfsAccessPolicy() {
         return Optional.ofNullable(this.nfsAccessPolicy);
     }
@@ -49,6 +57,10 @@ public final class NamespaceJunctionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="nfsExport")
     private @Nullable Output<String> nfsExport;
 
+    /**
+     * @return NFS export where targetPath exists.
+     * 
+     */
     public Optional<Output<String>> nfsExport() {
         return Optional.ofNullable(this.nfsExport);
     }
@@ -60,6 +72,10 @@ public final class NamespaceJunctionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="targetPath")
     private @Nullable Output<String> targetPath;
 
+    /**
+     * @return Path in Storage Target to which namespacePath points.
+     * 
+     */
     public Optional<Output<String>> targetPath() {
         return Optional.ofNullable(this.targetPath);
     }
@@ -91,38 +107,86 @@ public final class NamespaceJunctionArgs extends com.pulumi.resources.ResourceAr
             $ = new NamespaceJunctionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param namespacePath Namespace path on a Cache for a Storage Target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespacePath(@Nullable Output<String> namespacePath) {
             $.namespacePath = namespacePath;
             return this;
         }
 
+        /**
+         * @param namespacePath Namespace path on a Cache for a Storage Target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespacePath(String namespacePath) {
             return namespacePath(Output.of(namespacePath));
         }
 
+        /**
+         * @param nfsAccessPolicy Name of the access policy applied to this junction.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nfsAccessPolicy(@Nullable Output<String> nfsAccessPolicy) {
             $.nfsAccessPolicy = nfsAccessPolicy;
             return this;
         }
 
+        /**
+         * @param nfsAccessPolicy Name of the access policy applied to this junction.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nfsAccessPolicy(String nfsAccessPolicy) {
             return nfsAccessPolicy(Output.of(nfsAccessPolicy));
         }
 
+        /**
+         * @param nfsExport NFS export where targetPath exists.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nfsExport(@Nullable Output<String> nfsExport) {
             $.nfsExport = nfsExport;
             return this;
         }
 
+        /**
+         * @param nfsExport NFS export where targetPath exists.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nfsExport(String nfsExport) {
             return nfsExport(Output.of(nfsExport));
         }
 
+        /**
+         * @param targetPath Path in Storage Target to which namespacePath points.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetPath(@Nullable Output<String> targetPath) {
             $.targetPath = targetPath;
             return this;
         }
 
+        /**
+         * @param targetPath Path in Storage Target to which namespacePath points.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetPath(String targetPath) {
             return targetPath(Output.of(targetPath));
         }

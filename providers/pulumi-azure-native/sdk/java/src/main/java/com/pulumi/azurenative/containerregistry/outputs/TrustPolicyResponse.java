@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class TrustPolicyResponse {
     /**
-     * The value that indicates whether the policy is enabled or not.
+     * @return The value that indicates whether the policy is enabled or not.
      * 
      */
     private final @Nullable String status;
     /**
-     * The type of trust policy.
+     * @return The type of trust policy.
      * 
      */
     private final @Nullable String type;
@@ -31,16 +31,16 @@ public final class TrustPolicyResponse {
     }
 
     /**
-     * The value that indicates whether the policy is enabled or not.
+     * @return The value that indicates whether the policy is enabled or not.
      * 
-    */
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
     /**
-     * The type of trust policy.
+     * @return The type of trust policy.
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }

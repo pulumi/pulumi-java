@@ -23,6 +23,10 @@ public final class ProvisionedProductProvisioningParameterArgs extends com.pulum
     @Import(name="key", required=true)
     private Output<String> key;
 
+    /**
+     * @return Parameter key.
+     * 
+     */
     public Output<String> key() {
         return this.key;
     }
@@ -34,6 +38,10 @@ public final class ProvisionedProductProvisioningParameterArgs extends com.pulum
     @Import(name="usePreviousValue")
     private @Nullable Output<Boolean> usePreviousValue;
 
+    /**
+     * @return Whether to ignore `value` and keep the previous parameter value. Ignored when initially provisioning a product.
+     * 
+     */
     public Optional<Output<Boolean>> usePreviousValue() {
         return Optional.ofNullable(this.usePreviousValue);
     }
@@ -45,6 +53,10 @@ public final class ProvisionedProductProvisioningParameterArgs extends com.pulum
     @Import(name="value")
     private @Nullable Output<String> value;
 
+    /**
+     * @return Parameter value.
+     * 
+     */
     public Optional<Output<String>> value() {
         return Optional.ofNullable(this.value);
     }
@@ -75,29 +87,65 @@ public final class ProvisionedProductProvisioningParameterArgs extends com.pulum
             $ = new ProvisionedProductProvisioningParameterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param key Parameter key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(Output<String> key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param key Parameter key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             return key(Output.of(key));
         }
 
+        /**
+         * @param usePreviousValue Whether to ignore `value` and keep the previous parameter value. Ignored when initially provisioning a product.
+         * 
+         * @return builder
+         * 
+         */
         public Builder usePreviousValue(@Nullable Output<Boolean> usePreviousValue) {
             $.usePreviousValue = usePreviousValue;
             return this;
         }
 
+        /**
+         * @param usePreviousValue Whether to ignore `value` and keep the previous parameter value. Ignored when initially provisioning a product.
+         * 
+         * @return builder
+         * 
+         */
         public Builder usePreviousValue(Boolean usePreviousValue) {
             return usePreviousValue(Output.of(usePreviousValue));
         }
 
+        /**
+         * @param value Parameter value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value Parameter value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

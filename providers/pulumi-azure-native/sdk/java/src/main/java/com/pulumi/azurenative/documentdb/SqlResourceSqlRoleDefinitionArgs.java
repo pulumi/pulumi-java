@@ -25,6 +25,10 @@ public final class SqlResourceSqlRoleDefinitionArgs extends com.pulumi.resources
     @Import(name="accountName", required=true)
     private Output<String> accountName;
 
+    /**
+     * @return Cosmos DB database account name.
+     * 
+     */
     public Output<String> accountName() {
         return this.accountName;
     }
@@ -36,6 +40,10 @@ public final class SqlResourceSqlRoleDefinitionArgs extends com.pulumi.resources
     @Import(name="assignableScopes")
     private @Nullable Output<List<String>> assignableScopes;
 
+    /**
+     * @return A set of fully qualified Scopes at or below which Role Assignments may be created using this Role Definition. This will allow application of this Role Definition on the entire database account or any underlying Database / Collection. Must have at least one element. Scopes higher than Database account are not enforceable as assignable Scopes. Note that resources referenced in assignable Scopes need not exist.
+     * 
+     */
     public Optional<Output<List<String>>> assignableScopes() {
         return Optional.ofNullable(this.assignableScopes);
     }
@@ -47,6 +55,10 @@ public final class SqlResourceSqlRoleDefinitionArgs extends com.pulumi.resources
     @Import(name="permissions")
     private @Nullable Output<List<PermissionArgs>> permissions;
 
+    /**
+     * @return The set of operations allowed through this Role Definition.
+     * 
+     */
     public Optional<Output<List<PermissionArgs>>> permissions() {
         return Optional.ofNullable(this.permissions);
     }
@@ -58,6 +70,10 @@ public final class SqlResourceSqlRoleDefinitionArgs extends com.pulumi.resources
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -69,6 +85,10 @@ public final class SqlResourceSqlRoleDefinitionArgs extends com.pulumi.resources
     @Import(name="roleDefinitionId")
     private @Nullable Output<String> roleDefinitionId;
 
+    /**
+     * @return The GUID for the Role Definition.
+     * 
+     */
     public Optional<Output<String>> roleDefinitionId() {
         return Optional.ofNullable(this.roleDefinitionId);
     }
@@ -80,6 +100,10 @@ public final class SqlResourceSqlRoleDefinitionArgs extends com.pulumi.resources
     @Import(name="roleName")
     private @Nullable Output<String> roleName;
 
+    /**
+     * @return A user-friendly name for the Role Definition. Must be unique for the database account.
+     * 
+     */
     public Optional<Output<String>> roleName() {
         return Optional.ofNullable(this.roleName);
     }
@@ -91,6 +115,10 @@ public final class SqlResourceSqlRoleDefinitionArgs extends com.pulumi.resources
     @Import(name="type")
     private @Nullable Output<RoleDefinitionType> type;
 
+    /**
+     * @return Indicates whether the Role Definition was built-in or user created.
+     * 
+     */
     public Optional<Output<RoleDefinitionType>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -125,73 +153,169 @@ public final class SqlResourceSqlRoleDefinitionArgs extends com.pulumi.resources
             $ = new SqlResourceSqlRoleDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName Cosmos DB database account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param accountName Cosmos DB database account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             return accountName(Output.of(accountName));
         }
 
+        /**
+         * @param assignableScopes A set of fully qualified Scopes at or below which Role Assignments may be created using this Role Definition. This will allow application of this Role Definition on the entire database account or any underlying Database / Collection. Must have at least one element. Scopes higher than Database account are not enforceable as assignable Scopes. Note that resources referenced in assignable Scopes need not exist.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assignableScopes(@Nullable Output<List<String>> assignableScopes) {
             $.assignableScopes = assignableScopes;
             return this;
         }
 
+        /**
+         * @param assignableScopes A set of fully qualified Scopes at or below which Role Assignments may be created using this Role Definition. This will allow application of this Role Definition on the entire database account or any underlying Database / Collection. Must have at least one element. Scopes higher than Database account are not enforceable as assignable Scopes. Note that resources referenced in assignable Scopes need not exist.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assignableScopes(List<String> assignableScopes) {
             return assignableScopes(Output.of(assignableScopes));
         }
 
+        /**
+         * @param assignableScopes A set of fully qualified Scopes at or below which Role Assignments may be created using this Role Definition. This will allow application of this Role Definition on the entire database account or any underlying Database / Collection. Must have at least one element. Scopes higher than Database account are not enforceable as assignable Scopes. Note that resources referenced in assignable Scopes need not exist.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assignableScopes(String... assignableScopes) {
             return assignableScopes(List.of(assignableScopes));
         }
 
+        /**
+         * @param permissions The set of operations allowed through this Role Definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissions(@Nullable Output<List<PermissionArgs>> permissions) {
             $.permissions = permissions;
             return this;
         }
 
+        /**
+         * @param permissions The set of operations allowed through this Role Definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissions(List<PermissionArgs> permissions) {
             return permissions(Output.of(permissions));
         }
 
+        /**
+         * @param permissions The set of operations allowed through this Role Definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissions(PermissionArgs... permissions) {
             return permissions(List.of(permissions));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param roleDefinitionId The GUID for the Role Definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleDefinitionId(@Nullable Output<String> roleDefinitionId) {
             $.roleDefinitionId = roleDefinitionId;
             return this;
         }
 
+        /**
+         * @param roleDefinitionId The GUID for the Role Definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleDefinitionId(String roleDefinitionId) {
             return roleDefinitionId(Output.of(roleDefinitionId));
         }
 
+        /**
+         * @param roleName A user-friendly name for the Role Definition. Must be unique for the database account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleName(@Nullable Output<String> roleName) {
             $.roleName = roleName;
             return this;
         }
 
+        /**
+         * @param roleName A user-friendly name for the Role Definition. Must be unique for the database account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleName(String roleName) {
             return roleName(Output.of(roleName));
         }
 
+        /**
+         * @param type Indicates whether the Role Definition was built-in or user created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<RoleDefinitionType> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Indicates whether the Role Definition was built-in or user created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(RoleDefinitionType type) {
             return type(Output.of(type));
         }

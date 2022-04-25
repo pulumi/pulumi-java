@@ -26,6 +26,10 @@ public final class FilterItems extends com.pulumi.resources.InvokeArgs {
     @Import(name="field")
     private @Nullable String field;
 
+    /**
+     * @return The name of the field we would like to filter
+     * 
+     */
     public Optional<String> field() {
         return Optional.ofNullable(this.field);
     }
@@ -37,6 +41,10 @@ public final class FilterItems extends com.pulumi.resources.InvokeArgs {
     @Import(name="values")
     private @Nullable List<String> values;
 
+    /**
+     * @return List of values to filter the current field by
+     * 
+     */
     public Optional<List<String>> values() {
         return Optional.ofNullable(this.values);
     }
@@ -66,16 +74,34 @@ public final class FilterItems extends com.pulumi.resources.InvokeArgs {
             $ = new FilterItems(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param field The name of the field we would like to filter
+         * 
+         * @return builder
+         * 
+         */
         public Builder field(@Nullable String field) {
             $.field = field;
             return this;
         }
 
+        /**
+         * @param values List of values to filter the current field by
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(@Nullable List<String> values) {
             $.values = values;
             return this;
         }
 
+        /**
+         * @param values List of values to filter the current field by
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(String... values) {
             return values(List.of(values));
         }

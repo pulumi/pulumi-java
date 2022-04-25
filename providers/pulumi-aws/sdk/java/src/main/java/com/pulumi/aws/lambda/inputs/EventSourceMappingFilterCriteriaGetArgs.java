@@ -23,6 +23,10 @@ public final class EventSourceMappingFilterCriteriaGetArgs extends com.pulumi.re
     @Import(name="filters")
     private @Nullable Output<List<EventSourceMappingFilterCriteriaFilterGetArgs>> filters;
 
+    /**
+     * @return A set of up to 5 filter. If an event satisfies at least one, Lambda sends the event to the function or adds it to the next batch. Detailed below.
+     * 
+     */
     public Optional<Output<List<EventSourceMappingFilterCriteriaFilterGetArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
@@ -51,15 +55,33 @@ public final class EventSourceMappingFilterCriteriaGetArgs extends com.pulumi.re
             $ = new EventSourceMappingFilterCriteriaGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param filters A set of up to 5 filter. If an event satisfies at least one, Lambda sends the event to the function or adds it to the next batch. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(@Nullable Output<List<EventSourceMappingFilterCriteriaFilterGetArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
+        /**
+         * @param filters A set of up to 5 filter. If an event satisfies at least one, Lambda sends the event to the function or adds it to the next batch. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(List<EventSourceMappingFilterCriteriaFilterGetArgs> filters) {
             return filters(Output.of(filters));
         }
 
+        /**
+         * @param filters A set of up to 5 filter. If an event satisfies at least one, Lambda sends the event to the function or adds it to the next batch. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(EventSourceMappingFilterCriteriaFilterGetArgs... filters) {
             return filters(List.of(filters));
         }

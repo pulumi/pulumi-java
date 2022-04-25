@@ -28,6 +28,10 @@ public final class ParameterDeclarationArgs extends com.pulumi.resources.Resourc
     @Import(name="default")
     private @Nullable Output<String> default_;
 
+    /**
+     * @return The default value for the parameter to be used if the pipeline does not specify a value.
+     * 
+     */
     public Optional<Output<String>> default_() {
         return Optional.ofNullable(this.default_);
     }
@@ -39,6 +43,10 @@ public final class ParameterDeclarationArgs extends com.pulumi.resources.Resourc
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description of the parameter.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -50,6 +58,10 @@ public final class ParameterDeclarationArgs extends com.pulumi.resources.Resourc
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Name of the parameter.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -61,6 +73,10 @@ public final class ParameterDeclarationArgs extends com.pulumi.resources.Resourc
     @Import(name="type", required=true)
     private Output<Either<String,ParameterType>> type;
 
+    /**
+     * @return Type of the parameter.
+     * 
+     */
     public Output<Either<String,ParameterType>> type() {
         return this.type;
     }
@@ -92,46 +108,106 @@ public final class ParameterDeclarationArgs extends com.pulumi.resources.Resourc
             $ = new ParameterDeclarationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param default_ The default value for the parameter to be used if the pipeline does not specify a value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder default_(@Nullable Output<String> default_) {
             $.default_ = default_;
             return this;
         }
 
+        /**
+         * @param default_ The default value for the parameter to be used if the pipeline does not specify a value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder default_(String default_) {
             return default_(Output.of(default_));
         }
 
+        /**
+         * @param description Description of the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description of the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param name Name of the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param type Type of the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<Either<String,ParameterType>> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Either<String,ParameterType> type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param type Type of the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Either.ofLeft(type));
         }
 
+        /**
+         * @param type Type of the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(ParameterType type) {
             return type(Either.ofRight(type));
         }

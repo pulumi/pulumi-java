@@ -37,6 +37,11 @@ public final class InstanceNetworkInterfaceIpv6AccessConfigArgs extends com.pulu
     @Import(name="networkTier", required=true)
     private Output<String> networkTier;
 
+    /**
+     * @return The service-level to be provided for IPv6 traffic when the
+     * subnet has an external subnet. Only PREMIUM tier is valid for IPv6.
+     * 
+     */
     public Output<String> networkTier() {
         return this.networkTier;
     }
@@ -49,6 +54,11 @@ public final class InstanceNetworkInterfaceIpv6AccessConfigArgs extends com.pulu
     @Import(name="publicPtrDomainName")
     private @Nullable Output<String> publicPtrDomainName;
 
+    /**
+     * @return The domain name to be used when creating DNSv6
+     * records for the external IPv6 ranges..
+     * 
+     */
     public Optional<Output<String>> publicPtrDomainName() {
         return Optional.ofNullable(this.publicPtrDomainName);
     }
@@ -98,20 +108,48 @@ public final class InstanceNetworkInterfaceIpv6AccessConfigArgs extends com.pulu
             return externalIpv6PrefixLength(Output.of(externalIpv6PrefixLength));
         }
 
+        /**
+         * @param networkTier The service-level to be provided for IPv6 traffic when the
+         * subnet has an external subnet. Only PREMIUM tier is valid for IPv6.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkTier(Output<String> networkTier) {
             $.networkTier = networkTier;
             return this;
         }
 
+        /**
+         * @param networkTier The service-level to be provided for IPv6 traffic when the
+         * subnet has an external subnet. Only PREMIUM tier is valid for IPv6.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkTier(String networkTier) {
             return networkTier(Output.of(networkTier));
         }
 
+        /**
+         * @param publicPtrDomainName The domain name to be used when creating DNSv6
+         * records for the external IPv6 ranges..
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicPtrDomainName(@Nullable Output<String> publicPtrDomainName) {
             $.publicPtrDomainName = publicPtrDomainName;
             return this;
         }
 
+        /**
+         * @param publicPtrDomainName The domain name to be used when creating DNSv6
+         * records for the external IPv6 ranges..
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicPtrDomainName(String publicPtrDomainName) {
             return publicPtrDomainName(Output.of(publicPtrDomainName));
         }

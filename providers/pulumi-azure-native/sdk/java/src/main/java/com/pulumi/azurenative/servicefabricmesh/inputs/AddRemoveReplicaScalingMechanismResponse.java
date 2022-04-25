@@ -26,6 +26,11 @@ public final class AddRemoveReplicaScalingMechanismResponse extends com.pulumi.r
     @Import(name="kind", required=true)
     private String kind;
 
+    /**
+     * @return Enumerates the mechanisms for auto scaling.
+     * Expected value is &#39;AddRemoveReplica&#39;.
+     * 
+     */
     public String kind() {
         return this.kind;
     }
@@ -37,6 +42,10 @@ public final class AddRemoveReplicaScalingMechanismResponse extends com.pulumi.r
     @Import(name="maxCount", required=true)
     private Integer maxCount;
 
+    /**
+     * @return Maximum number of containers (scale up won&#39;t be performed above this number).
+     * 
+     */
     public Integer maxCount() {
         return this.maxCount;
     }
@@ -48,6 +57,10 @@ public final class AddRemoveReplicaScalingMechanismResponse extends com.pulumi.r
     @Import(name="minCount", required=true)
     private Integer minCount;
 
+    /**
+     * @return Minimum number of containers (scale down won&#39;t be performed below this number).
+     * 
+     */
     public Integer minCount() {
         return this.minCount;
     }
@@ -59,6 +72,10 @@ public final class AddRemoveReplicaScalingMechanismResponse extends com.pulumi.r
     @Import(name="scaleIncrement", required=true)
     private Integer scaleIncrement;
 
+    /**
+     * @return Each time auto scaling is performed, this number of containers will be added or removed.
+     * 
+     */
     public Integer scaleIncrement() {
         return this.scaleIncrement;
     }
@@ -90,21 +107,46 @@ public final class AddRemoveReplicaScalingMechanismResponse extends com.pulumi.r
             $ = new AddRemoveReplicaScalingMechanismResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kind Enumerates the mechanisms for auto scaling.
+         * Expected value is &#39;AddRemoveReplica&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param maxCount Maximum number of containers (scale up won&#39;t be performed above this number).
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxCount(Integer maxCount) {
             $.maxCount = maxCount;
             return this;
         }
 
+        /**
+         * @param minCount Minimum number of containers (scale down won&#39;t be performed below this number).
+         * 
+         * @return builder
+         * 
+         */
         public Builder minCount(Integer minCount) {
             $.minCount = minCount;
             return this;
         }
 
+        /**
+         * @param scaleIncrement Each time auto scaling is performed, this number of containers will be added or removed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scaleIncrement(Integer scaleIncrement) {
             $.scaleIncrement = scaleIncrement;
             return this;

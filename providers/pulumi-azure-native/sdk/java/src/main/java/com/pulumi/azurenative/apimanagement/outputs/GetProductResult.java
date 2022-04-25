@@ -14,52 +14,52 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetProductResult {
     /**
-     * whether subscription approval is required. If false, new subscriptions will be approved automatically enabling developers to call the product’s APIs immediately after subscribing. If true, administrators must manually approve the subscription before the developer can any of the product’s APIs. Can be present only if subscriptionRequired property is present and has a value of false.
+     * @return whether subscription approval is required. If false, new subscriptions will be approved automatically enabling developers to call the product’s APIs immediately after subscribing. If true, administrators must manually approve the subscription before the developer can any of the product’s APIs. Can be present only if subscriptionRequired property is present and has a value of false.
      * 
      */
     private final @Nullable Boolean approvalRequired;
     /**
-     * Product description. May include HTML formatting tags.
+     * @return Product description. May include HTML formatting tags.
      * 
      */
     private final @Nullable String description;
     /**
-     * Product name.
+     * @return Product name.
      * 
      */
     private final String displayName;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final String id;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * whether product is published or not. Published products are discoverable by users of developer portal. Non published products are visible only to administrators. Default state of Product is notPublished.
+     * @return whether product is published or not. Published products are discoverable by users of developer portal. Non published products are visible only to administrators. Default state of Product is notPublished.
      * 
      */
     private final @Nullable String state;
     /**
-     * Whether a product subscription is required for accessing APIs included in this product. If true, the product is referred to as &#34;protected&#34; and a valid subscription key is required for a request to an API included in the product to succeed. If false, the product is referred to as &#34;open&#34; and requests to an API included in the product can be made without a subscription key. If property is omitted when creating a new product it&#39;s value is assumed to be true.
+     * @return Whether a product subscription is required for accessing APIs included in this product. If true, the product is referred to as &#34;protected&#34; and a valid subscription key is required for a request to an API included in the product to succeed. If false, the product is referred to as &#34;open&#34; and requests to an API included in the product can be made without a subscription key. If property is omitted when creating a new product it&#39;s value is assumed to be true.
      * 
      */
     private final @Nullable Boolean subscriptionRequired;
     /**
-     * Whether the number of subscriptions a user can have to this product at the same time. Set to null or omit to allow unlimited per user subscriptions. Can be present only if subscriptionRequired property is present and has a value of false.
+     * @return Whether the number of subscriptions a user can have to this product at the same time. Set to null or omit to allow unlimited per user subscriptions. Can be present only if subscriptionRequired property is present and has a value of false.
      * 
      */
     private final @Nullable Integer subscriptionsLimit;
     /**
-     * Product terms of use. Developers trying to subscribe to the product will be presented and required to accept these terms before they can complete the subscription process.
+     * @return Product terms of use. Developers trying to subscribe to the product will be presented and required to accept these terms before they can complete the subscription process.
      * 
      */
     private final @Nullable String terms;
     /**
-     * Resource type for API Management resource.
+     * @return Resource type for API Management resource.
      * 
      */
     private final String type;
@@ -89,72 +89,72 @@ public final class GetProductResult {
     }
 
     /**
-     * whether subscription approval is required. If false, new subscriptions will be approved automatically enabling developers to call the product’s APIs immediately after subscribing. If true, administrators must manually approve the subscription before the developer can any of the product’s APIs. Can be present only if subscriptionRequired property is present and has a value of false.
+     * @return whether subscription approval is required. If false, new subscriptions will be approved automatically enabling developers to call the product’s APIs immediately after subscribing. If true, administrators must manually approve the subscription before the developer can any of the product’s APIs. Can be present only if subscriptionRequired property is present and has a value of false.
      * 
-    */
+     */
     public Optional<Boolean> approvalRequired() {
         return Optional.ofNullable(this.approvalRequired);
     }
     /**
-     * Product description. May include HTML formatting tags.
+     * @return Product description. May include HTML formatting tags.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Product name.
+     * @return Product name.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * whether product is published or not. Published products are discoverable by users of developer portal. Non published products are visible only to administrators. Default state of Product is notPublished.
+     * @return whether product is published or not. Published products are discoverable by users of developer portal. Non published products are visible only to administrators. Default state of Product is notPublished.
      * 
-    */
+     */
     public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
     /**
-     * Whether a product subscription is required for accessing APIs included in this product. If true, the product is referred to as &#34;protected&#34; and a valid subscription key is required for a request to an API included in the product to succeed. If false, the product is referred to as &#34;open&#34; and requests to an API included in the product can be made without a subscription key. If property is omitted when creating a new product it&#39;s value is assumed to be true.
+     * @return Whether a product subscription is required for accessing APIs included in this product. If true, the product is referred to as &#34;protected&#34; and a valid subscription key is required for a request to an API included in the product to succeed. If false, the product is referred to as &#34;open&#34; and requests to an API included in the product can be made without a subscription key. If property is omitted when creating a new product it&#39;s value is assumed to be true.
      * 
-    */
+     */
     public Optional<Boolean> subscriptionRequired() {
         return Optional.ofNullable(this.subscriptionRequired);
     }
     /**
-     * Whether the number of subscriptions a user can have to this product at the same time. Set to null or omit to allow unlimited per user subscriptions. Can be present only if subscriptionRequired property is present and has a value of false.
+     * @return Whether the number of subscriptions a user can have to this product at the same time. Set to null or omit to allow unlimited per user subscriptions. Can be present only if subscriptionRequired property is present and has a value of false.
      * 
-    */
+     */
     public Optional<Integer> subscriptionsLimit() {
         return Optional.ofNullable(this.subscriptionsLimit);
     }
     /**
-     * Product terms of use. Developers trying to subscribe to the product will be presented and required to accept these terms before they can complete the subscription process.
+     * @return Product terms of use. Developers trying to subscribe to the product will be presented and required to accept these terms before they can complete the subscription process.
      * 
-    */
+     */
     public Optional<String> terms() {
         return Optional.ofNullable(this.terms);
     }
     /**
-     * Resource type for API Management resource.
+     * @return Resource type for API Management resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

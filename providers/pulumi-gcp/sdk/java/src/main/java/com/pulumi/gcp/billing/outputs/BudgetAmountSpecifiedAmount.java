@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class BudgetAmountSpecifiedAmount {
     /**
-     * The 3-letter currency code defined in ISO 4217.
+     * @return The 3-letter currency code defined in ISO 4217.
      * 
      */
     private final @Nullable String currencyCode;
     /**
-     * Number of nano (10^-9) units of the amount.
+     * @return Number of nano (10^-9) units of the amount.
      * The value must be between -999,999,999 and +999,999,999
      * inclusive. If units is positive, nanos must be positive or
      * zero. If units is zero, nanos can be positive, zero, or
@@ -29,7 +29,7 @@ public final class BudgetAmountSpecifiedAmount {
      */
     private final @Nullable Integer nanos;
     /**
-     * The whole units of the amount. For example if currencyCode
+     * @return The whole units of the amount. For example if currencyCode
      * is &#34;USD&#34;, then 1 unit is one US dollar.
      * 
      */
@@ -46,14 +46,14 @@ public final class BudgetAmountSpecifiedAmount {
     }
 
     /**
-     * The 3-letter currency code defined in ISO 4217.
+     * @return The 3-letter currency code defined in ISO 4217.
      * 
-    */
+     */
     public Optional<String> currencyCode() {
         return Optional.ofNullable(this.currencyCode);
     }
     /**
-     * Number of nano (10^-9) units of the amount.
+     * @return Number of nano (10^-9) units of the amount.
      * The value must be between -999,999,999 and +999,999,999
      * inclusive. If units is positive, nanos must be positive or
      * zero. If units is zero, nanos can be positive, zero, or
@@ -61,15 +61,15 @@ public final class BudgetAmountSpecifiedAmount {
      * zero. For example $-1.75 is represented as units=-1 and
      * nanos=-750,000,000.
      * 
-    */
+     */
     public Optional<Integer> nanos() {
         return Optional.ofNullable(this.nanos);
     }
     /**
-     * The whole units of the amount. For example if currencyCode
+     * @return The whole units of the amount. For example if currencyCode
      * is &#34;USD&#34;, then 1 unit is one US dollar.
      * 
-    */
+     */
     public Optional<String> units() {
         return Optional.ofNullable(this.units);
     }

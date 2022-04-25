@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetCustomDataIdentifierResult {
     /**
-     * Custom data identifier ARN.
+     * @return Custom data identifier ARN.
      * 
      */
     private final @Nullable String arn;
     /**
-     * Custom data identifier ID.
+     * @return Custom data identifier ID.
      * 
      */
     private final @Nullable String id;
@@ -31,16 +31,16 @@ public final class GetCustomDataIdentifierResult {
     }
 
     /**
-     * Custom data identifier ARN.
+     * @return Custom data identifier ARN.
      * 
-    */
+     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * Custom data identifier ID.
+     * @return Custom data identifier ID.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }

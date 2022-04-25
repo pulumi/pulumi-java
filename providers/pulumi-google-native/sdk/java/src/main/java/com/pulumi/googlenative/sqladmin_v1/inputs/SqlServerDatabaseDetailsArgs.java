@@ -27,6 +27,10 @@ public final class SqlServerDatabaseDetailsArgs extends com.pulumi.resources.Res
     @Import(name="compatibilityLevel")
     private @Nullable Output<Integer> compatibilityLevel;
 
+    /**
+     * @return The version of SQL Server with which the database is to be made compatible
+     * 
+     */
     public Optional<Output<Integer>> compatibilityLevel() {
         return Optional.ofNullable(this.compatibilityLevel);
     }
@@ -38,6 +42,10 @@ public final class SqlServerDatabaseDetailsArgs extends com.pulumi.resources.Res
     @Import(name="recoveryModel")
     private @Nullable Output<String> recoveryModel;
 
+    /**
+     * @return The recovery model of a SQL Server database
+     * 
+     */
     public Optional<Output<String>> recoveryModel() {
         return Optional.ofNullable(this.recoveryModel);
     }
@@ -67,20 +75,44 @@ public final class SqlServerDatabaseDetailsArgs extends com.pulumi.resources.Res
             $ = new SqlServerDatabaseDetailsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param compatibilityLevel The version of SQL Server with which the database is to be made compatible
+         * 
+         * @return builder
+         * 
+         */
         public Builder compatibilityLevel(@Nullable Output<Integer> compatibilityLevel) {
             $.compatibilityLevel = compatibilityLevel;
             return this;
         }
 
+        /**
+         * @param compatibilityLevel The version of SQL Server with which the database is to be made compatible
+         * 
+         * @return builder
+         * 
+         */
         public Builder compatibilityLevel(Integer compatibilityLevel) {
             return compatibilityLevel(Output.of(compatibilityLevel));
         }
 
+        /**
+         * @param recoveryModel The recovery model of a SQL Server database
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryModel(@Nullable Output<String> recoveryModel) {
             $.recoveryModel = recoveryModel;
             return this;
         }
 
+        /**
+         * @param recoveryModel The recovery model of a SQL Server database
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryModel(String recoveryModel) {
             return recoveryModel(Output.of(recoveryModel));
         }

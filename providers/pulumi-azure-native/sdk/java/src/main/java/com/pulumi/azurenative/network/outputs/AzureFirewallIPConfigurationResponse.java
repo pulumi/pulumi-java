@@ -13,42 +13,42 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AzureFirewallIPConfigurationResponse {
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
     private final String etag;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final @Nullable String id;
     /**
-     * Name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * @return Name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
     private final @Nullable String name;
     /**
-     * The Firewall Internal Load Balancer IP to be used as the next hop in User Defined Routes.
+     * @return The Firewall Internal Load Balancer IP to be used as the next hop in User Defined Routes.
      * 
      */
     private final String privateIPAddress;
     /**
-     * The provisioning state of the Azure firewall IP configuration resource.
+     * @return The provisioning state of the Azure firewall IP configuration resource.
      * 
      */
     private final String provisioningState;
     /**
-     * Reference to the PublicIP resource. This field is a mandatory input if subnet is not null.
+     * @return Reference to the PublicIP resource. This field is a mandatory input if subnet is not null.
      * 
      */
     private final @Nullable SubResourceResponse publicIPAddress;
     /**
-     * Reference to the subnet resource. This resource must be named &#39;AzureFirewallSubnet&#39; or &#39;AzureFirewallManagementSubnet&#39;.
+     * @return Reference to the subnet resource. This resource must be named &#39;AzureFirewallSubnet&#39; or &#39;AzureFirewallManagementSubnet&#39;.
      * 
      */
     private final @Nullable SubResourceResponse subnet;
     /**
-     * Type of the resource.
+     * @return Type of the resource.
      * 
      */
     private final String type;
@@ -74,58 +74,58 @@ public final class AzureFirewallIPConfigurationResponse {
     }
 
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * Name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * @return Name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The Firewall Internal Load Balancer IP to be used as the next hop in User Defined Routes.
+     * @return The Firewall Internal Load Balancer IP to be used as the next hop in User Defined Routes.
      * 
-    */
+     */
     public String privateIPAddress() {
         return this.privateIPAddress;
     }
     /**
-     * The provisioning state of the Azure firewall IP configuration resource.
+     * @return The provisioning state of the Azure firewall IP configuration resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Reference to the PublicIP resource. This field is a mandatory input if subnet is not null.
+     * @return Reference to the PublicIP resource. This field is a mandatory input if subnet is not null.
      * 
-    */
+     */
     public Optional<SubResourceResponse> publicIPAddress() {
         return Optional.ofNullable(this.publicIPAddress);
     }
     /**
-     * Reference to the subnet resource. This resource must be named &#39;AzureFirewallSubnet&#39; or &#39;AzureFirewallManagementSubnet&#39;.
+     * @return Reference to the subnet resource. This resource must be named &#39;AzureFirewallSubnet&#39; or &#39;AzureFirewallManagementSubnet&#39;.
      * 
-    */
+     */
     public Optional<SubResourceResponse> subnet() {
         return Optional.ofNullable(this.subnet);
     }
     /**
-     * Type of the resource.
+     * @return Type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

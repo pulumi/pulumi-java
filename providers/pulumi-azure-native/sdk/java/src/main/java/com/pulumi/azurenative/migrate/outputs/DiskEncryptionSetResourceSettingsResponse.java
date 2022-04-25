@@ -10,13 +10,13 @@ import java.util.Objects;
 @CustomType
 public final class DiskEncryptionSetResourceSettingsResponse {
     /**
-     * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
+     * @return The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
      * Expected value is &#39;Microsoft.Compute/diskEncryptionSets&#39;.
      * 
      */
     private final String resourceType;
     /**
-     * Gets or sets the target Resource name.
+     * @return Gets or sets the target Resource name.
      * 
      */
     private final String targetResourceName;
@@ -30,17 +30,17 @@ public final class DiskEncryptionSetResourceSettingsResponse {
     }
 
     /**
-     * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
+     * @return The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
      * Expected value is &#39;Microsoft.Compute/diskEncryptionSets&#39;.
      * 
-    */
+     */
     public String resourceType() {
         return this.resourceType;
     }
     /**
-     * Gets or sets the target Resource name.
+     * @return Gets or sets the target Resource name.
      * 
-    */
+     */
     public String targetResourceName() {
         return this.targetResourceName;
     }

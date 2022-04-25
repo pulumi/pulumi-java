@@ -28,6 +28,10 @@ public final class ApplicationManagementPolicyArgs extends com.pulumi.resources.
     @Import(name="mode")
     private @Nullable Output<Either<String,ApplicationManagementMode>> mode;
 
+    /**
+     * @return The managed application management mode.
+     * 
+     */
     public Optional<Output<Either<String,ApplicationManagementMode>>> mode() {
         return Optional.ofNullable(this.mode);
     }
@@ -56,19 +60,43 @@ public final class ApplicationManagementPolicyArgs extends com.pulumi.resources.
             $ = new ApplicationManagementPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param mode The managed application management mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(@Nullable Output<Either<String,ApplicationManagementMode>> mode) {
             $.mode = mode;
             return this;
         }
 
+        /**
+         * @param mode The managed application management mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(Either<String,ApplicationManagementMode> mode) {
             return mode(Output.of(mode));
         }
 
+        /**
+         * @param mode The managed application management mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(String mode) {
             return mode(Either.ofLeft(mode));
         }
 
+        /**
+         * @param mode The managed application management mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(ApplicationManagementMode mode) {
             return mode(Either.ofRight(mode));
         }

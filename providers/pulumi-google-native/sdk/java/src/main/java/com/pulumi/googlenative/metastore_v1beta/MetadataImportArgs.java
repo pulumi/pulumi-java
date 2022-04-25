@@ -23,6 +23,10 @@ public final class MetadataImportArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="databaseDump")
     private @Nullable Output<DatabaseDumpArgs> databaseDump;
 
+    /**
+     * @return Immutable. A database dump from a pre-existing metastore&#39;s database.
+     * 
+     */
     public Optional<Output<DatabaseDumpArgs>> databaseDump() {
         return Optional.ofNullable(this.databaseDump);
     }
@@ -34,6 +38,10 @@ public final class MetadataImportArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description of the metadata import.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -59,6 +67,10 @@ public final class MetadataImportArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Immutable. The relative resource name of the metadata import, of the form:projects/{project_number}/locations/{location_id}/services/{service_id}/metadataImports/{metadata_import_id}.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -115,20 +127,44 @@ public final class MetadataImportArgs extends com.pulumi.resources.ResourceArgs 
             $ = new MetadataImportArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param databaseDump Immutable. A database dump from a pre-existing metastore&#39;s database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseDump(@Nullable Output<DatabaseDumpArgs> databaseDump) {
             $.databaseDump = databaseDump;
             return this;
         }
 
+        /**
+         * @param databaseDump Immutable. A database dump from a pre-existing metastore&#39;s database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseDump(DatabaseDumpArgs databaseDump) {
             return databaseDump(Output.of(databaseDump));
         }
 
+        /**
+         * @param description The description of the metadata import.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description of the metadata import.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
@@ -151,11 +187,23 @@ public final class MetadataImportArgs extends com.pulumi.resources.ResourceArgs 
             return metadataImportId(Output.of(metadataImportId));
         }
 
+        /**
+         * @param name Immutable. The relative resource name of the metadata import, of the form:projects/{project_number}/locations/{location_id}/services/{service_id}/metadataImports/{metadata_import_id}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Immutable. The relative resource name of the metadata import, of the form:projects/{project_number}/locations/{location_id}/services/{service_id}/metadataImports/{metadata_import_id}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

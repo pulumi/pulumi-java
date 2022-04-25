@@ -31,6 +31,10 @@ public final class GameServerGroupArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="autoScalingPolicy")
     private @Nullable Output<GameServerGroupAutoScalingPolicyArgs> autoScalingPolicy;
 
+    /**
+     * @return Configuration settings to define a scaling policy for the Auto Scaling group that is optimized for game hosting
+     * 
+     */
     public Optional<Output<GameServerGroupAutoScalingPolicyArgs>> autoScalingPolicy() {
         return Optional.ofNullable(this.autoScalingPolicy);
     }
@@ -42,6 +46,10 @@ public final class GameServerGroupArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="balancingStrategy")
     private @Nullable Output<GameServerGroupBalancingStrategy> balancingStrategy;
 
+    /**
+     * @return The fallback balancing method to use for the game server group when Spot Instances in a Region become unavailable or are not viable for game hosting.
+     * 
+     */
     public Optional<Output<GameServerGroupBalancingStrategy>> balancingStrategy() {
         return Optional.ofNullable(this.balancingStrategy);
     }
@@ -53,6 +61,10 @@ public final class GameServerGroupArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="deleteOption")
     private @Nullable Output<GameServerGroupDeleteOption> deleteOption;
 
+    /**
+     * @return The type of delete to perform.
+     * 
+     */
     public Optional<Output<GameServerGroupDeleteOption>> deleteOption() {
         return Optional.ofNullable(this.deleteOption);
     }
@@ -64,6 +76,10 @@ public final class GameServerGroupArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="gameServerGroupName")
     private @Nullable Output<String> gameServerGroupName;
 
+    /**
+     * @return An identifier for the new game server group.
+     * 
+     */
     public Optional<Output<String>> gameServerGroupName() {
         return Optional.ofNullable(this.gameServerGroupName);
     }
@@ -75,6 +91,10 @@ public final class GameServerGroupArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="gameServerProtectionPolicy")
     private @Nullable Output<GameServerGroupGameServerProtectionPolicy> gameServerProtectionPolicy;
 
+    /**
+     * @return A flag that indicates whether instances in the game server group are protected from early termination.
+     * 
+     */
     public Optional<Output<GameServerGroupGameServerProtectionPolicy>> gameServerProtectionPolicy() {
         return Optional.ofNullable(this.gameServerProtectionPolicy);
     }
@@ -86,6 +106,10 @@ public final class GameServerGroupArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="instanceDefinitions", required=true)
     private Output<List<GameServerGroupInstanceDefinitionArgs>> instanceDefinitions;
 
+    /**
+     * @return A set of EC2 instance types to use when creating instances in the group.
+     * 
+     */
     public Output<List<GameServerGroupInstanceDefinitionArgs>> instanceDefinitions() {
         return this.instanceDefinitions;
     }
@@ -97,6 +121,10 @@ public final class GameServerGroupArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="launchTemplate", required=true)
     private Output<GameServerGroupLaunchTemplateArgs> launchTemplate;
 
+    /**
+     * @return The EC2 launch template that contains configuration settings and game server code to be deployed to all instances in the game server group.
+     * 
+     */
     public Output<GameServerGroupLaunchTemplateArgs> launchTemplate() {
         return this.launchTemplate;
     }
@@ -108,6 +136,10 @@ public final class GameServerGroupArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="maxSize")
     private @Nullable Output<Double> maxSize;
 
+    /**
+     * @return The maximum number of instances allowed in the EC2 Auto Scaling group.
+     * 
+     */
     public Optional<Output<Double>> maxSize() {
         return Optional.ofNullable(this.maxSize);
     }
@@ -119,6 +151,10 @@ public final class GameServerGroupArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="minSize")
     private @Nullable Output<Double> minSize;
 
+    /**
+     * @return The minimum number of instances allowed in the EC2 Auto Scaling group.
+     * 
+     */
     public Optional<Output<Double>> minSize() {
         return Optional.ofNullable(this.minSize);
     }
@@ -130,6 +166,10 @@ public final class GameServerGroupArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="roleArn", required=true)
     private Output<String> roleArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) for an IAM role that allows Amazon GameLift to access your EC2 Auto Scaling groups.
+     * 
+     */
     public Output<String> roleArn() {
         return this.roleArn;
     }
@@ -141,6 +181,10 @@ public final class GameServerGroupArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="tags")
     private @Nullable Output<List<GameServerGroupTagArgs>> tags;
 
+    /**
+     * @return A list of labels to assign to the new game server group resource.
+     * 
+     */
     public Optional<Output<List<GameServerGroupTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -152,6 +196,10 @@ public final class GameServerGroupArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="vpcSubnets")
     private @Nullable Output<List<String>> vpcSubnets;
 
+    /**
+     * @return A list of virtual private cloud (VPC) subnets to use with instances in the game server group.
+     * 
+     */
     public Optional<Output<List<String>>> vpcSubnets() {
         return Optional.ofNullable(this.vpcSubnets);
     }
@@ -191,122 +239,284 @@ public final class GameServerGroupArgs extends com.pulumi.resources.ResourceArgs
             $ = new GameServerGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoScalingPolicy Configuration settings to define a scaling policy for the Auto Scaling group that is optimized for game hosting
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoScalingPolicy(@Nullable Output<GameServerGroupAutoScalingPolicyArgs> autoScalingPolicy) {
             $.autoScalingPolicy = autoScalingPolicy;
             return this;
         }
 
+        /**
+         * @param autoScalingPolicy Configuration settings to define a scaling policy for the Auto Scaling group that is optimized for game hosting
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoScalingPolicy(GameServerGroupAutoScalingPolicyArgs autoScalingPolicy) {
             return autoScalingPolicy(Output.of(autoScalingPolicy));
         }
 
+        /**
+         * @param balancingStrategy The fallback balancing method to use for the game server group when Spot Instances in a Region become unavailable or are not viable for game hosting.
+         * 
+         * @return builder
+         * 
+         */
         public Builder balancingStrategy(@Nullable Output<GameServerGroupBalancingStrategy> balancingStrategy) {
             $.balancingStrategy = balancingStrategy;
             return this;
         }
 
+        /**
+         * @param balancingStrategy The fallback balancing method to use for the game server group when Spot Instances in a Region become unavailable or are not viable for game hosting.
+         * 
+         * @return builder
+         * 
+         */
         public Builder balancingStrategy(GameServerGroupBalancingStrategy balancingStrategy) {
             return balancingStrategy(Output.of(balancingStrategy));
         }
 
+        /**
+         * @param deleteOption The type of delete to perform.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deleteOption(@Nullable Output<GameServerGroupDeleteOption> deleteOption) {
             $.deleteOption = deleteOption;
             return this;
         }
 
+        /**
+         * @param deleteOption The type of delete to perform.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deleteOption(GameServerGroupDeleteOption deleteOption) {
             return deleteOption(Output.of(deleteOption));
         }
 
+        /**
+         * @param gameServerGroupName An identifier for the new game server group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gameServerGroupName(@Nullable Output<String> gameServerGroupName) {
             $.gameServerGroupName = gameServerGroupName;
             return this;
         }
 
+        /**
+         * @param gameServerGroupName An identifier for the new game server group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gameServerGroupName(String gameServerGroupName) {
             return gameServerGroupName(Output.of(gameServerGroupName));
         }
 
+        /**
+         * @param gameServerProtectionPolicy A flag that indicates whether instances in the game server group are protected from early termination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gameServerProtectionPolicy(@Nullable Output<GameServerGroupGameServerProtectionPolicy> gameServerProtectionPolicy) {
             $.gameServerProtectionPolicy = gameServerProtectionPolicy;
             return this;
         }
 
+        /**
+         * @param gameServerProtectionPolicy A flag that indicates whether instances in the game server group are protected from early termination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gameServerProtectionPolicy(GameServerGroupGameServerProtectionPolicy gameServerProtectionPolicy) {
             return gameServerProtectionPolicy(Output.of(gameServerProtectionPolicy));
         }
 
+        /**
+         * @param instanceDefinitions A set of EC2 instance types to use when creating instances in the group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceDefinitions(Output<List<GameServerGroupInstanceDefinitionArgs>> instanceDefinitions) {
             $.instanceDefinitions = instanceDefinitions;
             return this;
         }
 
+        /**
+         * @param instanceDefinitions A set of EC2 instance types to use when creating instances in the group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceDefinitions(List<GameServerGroupInstanceDefinitionArgs> instanceDefinitions) {
             return instanceDefinitions(Output.of(instanceDefinitions));
         }
 
+        /**
+         * @param instanceDefinitions A set of EC2 instance types to use when creating instances in the group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceDefinitions(GameServerGroupInstanceDefinitionArgs... instanceDefinitions) {
             return instanceDefinitions(List.of(instanceDefinitions));
         }
 
+        /**
+         * @param launchTemplate The EC2 launch template that contains configuration settings and game server code to be deployed to all instances in the game server group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder launchTemplate(Output<GameServerGroupLaunchTemplateArgs> launchTemplate) {
             $.launchTemplate = launchTemplate;
             return this;
         }
 
+        /**
+         * @param launchTemplate The EC2 launch template that contains configuration settings and game server code to be deployed to all instances in the game server group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder launchTemplate(GameServerGroupLaunchTemplateArgs launchTemplate) {
             return launchTemplate(Output.of(launchTemplate));
         }
 
+        /**
+         * @param maxSize The maximum number of instances allowed in the EC2 Auto Scaling group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxSize(@Nullable Output<Double> maxSize) {
             $.maxSize = maxSize;
             return this;
         }
 
+        /**
+         * @param maxSize The maximum number of instances allowed in the EC2 Auto Scaling group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxSize(Double maxSize) {
             return maxSize(Output.of(maxSize));
         }
 
+        /**
+         * @param minSize The minimum number of instances allowed in the EC2 Auto Scaling group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minSize(@Nullable Output<Double> minSize) {
             $.minSize = minSize;
             return this;
         }
 
+        /**
+         * @param minSize The minimum number of instances allowed in the EC2 Auto Scaling group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minSize(Double minSize) {
             return minSize(Output.of(minSize));
         }
 
+        /**
+         * @param roleArn The Amazon Resource Name (ARN) for an IAM role that allows Amazon GameLift to access your EC2 Auto Scaling groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(Output<String> roleArn) {
             $.roleArn = roleArn;
             return this;
         }
 
+        /**
+         * @param roleArn The Amazon Resource Name (ARN) for an IAM role that allows Amazon GameLift to access your EC2 Auto Scaling groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(String roleArn) {
             return roleArn(Output.of(roleArn));
         }
 
+        /**
+         * @param tags A list of labels to assign to the new game server group resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<GameServerGroupTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A list of labels to assign to the new game server group resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<GameServerGroupTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags A list of labels to assign to the new game server group resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(GameServerGroupTagArgs... tags) {
             return tags(List.of(tags));
         }
 
+        /**
+         * @param vpcSubnets A list of virtual private cloud (VPC) subnets to use with instances in the game server group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcSubnets(@Nullable Output<List<String>> vpcSubnets) {
             $.vpcSubnets = vpcSubnets;
             return this;
         }
 
+        /**
+         * @param vpcSubnets A list of virtual private cloud (VPC) subnets to use with instances in the game server group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcSubnets(List<String> vpcSubnets) {
             return vpcSubnets(Output.of(vpcSubnets));
         }
 
+        /**
+         * @param vpcSubnets A list of virtual private cloud (VPC) subnets to use with instances in the game server group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcSubnets(String... vpcSubnets) {
             return vpcSubnets(List.of(vpcSubnets));
         }

@@ -24,6 +24,10 @@ public final class ResourceSelectorArgs extends com.pulumi.resources.ResourceArg
     @Import(name="fullResourceName", required=true)
     private Output<String> fullResourceName;
 
+    /**
+     * @return The [full resource name] (https://cloud.google.com/asset-inventory/docs/resource-name-format) of a resource of [supported resource types](https://cloud.google.com/asset-inventory/docs/supported-asset-types#analyzable_asset_types).
+     * 
+     */
     public Output<String> fullResourceName() {
         return this.fullResourceName;
     }
@@ -52,11 +56,23 @@ public final class ResourceSelectorArgs extends com.pulumi.resources.ResourceArg
             $ = new ResourceSelectorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fullResourceName The [full resource name] (https://cloud.google.com/asset-inventory/docs/resource-name-format) of a resource of [supported resource types](https://cloud.google.com/asset-inventory/docs/supported-asset-types#analyzable_asset_types).
+         * 
+         * @return builder
+         * 
+         */
         public Builder fullResourceName(Output<String> fullResourceName) {
             $.fullResourceName = fullResourceName;
             return this;
         }
 
+        /**
+         * @param fullResourceName The [full resource name] (https://cloud.google.com/asset-inventory/docs/resource-name-format) of a resource of [supported resource types](https://cloud.google.com/asset-inventory/docs/supported-asset-types#analyzable_asset_types).
+         * 
+         * @return builder
+         * 
+         */
         public Builder fullResourceName(String fullResourceName) {
             return fullResourceName(Output.of(fullResourceName));
         }

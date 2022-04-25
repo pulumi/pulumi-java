@@ -27,6 +27,10 @@ public final class EncryptionSettingsElementArgs extends com.pulumi.resources.Re
     @Import(name="diskEncryptionKey")
     private @Nullable Output<KeyVaultAndSecretReferenceArgs> diskEncryptionKey;
 
+    /**
+     * @return Key Vault Secret Url and vault id of the disk encryption key
+     * 
+     */
     public Optional<Output<KeyVaultAndSecretReferenceArgs>> diskEncryptionKey() {
         return Optional.ofNullable(this.diskEncryptionKey);
     }
@@ -38,6 +42,10 @@ public final class EncryptionSettingsElementArgs extends com.pulumi.resources.Re
     @Import(name="keyEncryptionKey")
     private @Nullable Output<KeyVaultAndKeyReferenceArgs> keyEncryptionKey;
 
+    /**
+     * @return Key Vault Key Url and vault id of the key encryption key. KeyEncryptionKey is optional and when provided is used to unwrap the disk encryption key.
+     * 
+     */
     public Optional<Output<KeyVaultAndKeyReferenceArgs>> keyEncryptionKey() {
         return Optional.ofNullable(this.keyEncryptionKey);
     }
@@ -67,20 +75,44 @@ public final class EncryptionSettingsElementArgs extends com.pulumi.resources.Re
             $ = new EncryptionSettingsElementArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param diskEncryptionKey Key Vault Secret Url and vault id of the disk encryption key
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskEncryptionKey(@Nullable Output<KeyVaultAndSecretReferenceArgs> diskEncryptionKey) {
             $.diskEncryptionKey = diskEncryptionKey;
             return this;
         }
 
+        /**
+         * @param diskEncryptionKey Key Vault Secret Url and vault id of the disk encryption key
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskEncryptionKey(KeyVaultAndSecretReferenceArgs diskEncryptionKey) {
             return diskEncryptionKey(Output.of(diskEncryptionKey));
         }
 
+        /**
+         * @param keyEncryptionKey Key Vault Key Url and vault id of the key encryption key. KeyEncryptionKey is optional and when provided is used to unwrap the disk encryption key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyEncryptionKey(@Nullable Output<KeyVaultAndKeyReferenceArgs> keyEncryptionKey) {
             $.keyEncryptionKey = keyEncryptionKey;
             return this;
         }
 
+        /**
+         * @param keyEncryptionKey Key Vault Key Url and vault id of the key encryption key. KeyEncryptionKey is optional and when provided is used to unwrap the disk encryption key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyEncryptionKey(KeyVaultAndKeyReferenceArgs keyEncryptionKey) {
             return keyEncryptionKey(Output.of(keyEncryptionKey));
         }

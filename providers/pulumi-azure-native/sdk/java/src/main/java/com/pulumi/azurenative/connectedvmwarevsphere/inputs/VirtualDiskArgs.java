@@ -30,6 +30,10 @@ public final class VirtualDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="controllerKey")
     private @Nullable Output<Integer> controllerKey;
 
+    /**
+     * @return Gets or sets the controller id.
+     * 
+     */
     public Optional<Output<Integer>> controllerKey() {
         return Optional.ofNullable(this.controllerKey);
     }
@@ -41,6 +45,10 @@ public final class VirtualDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deviceKey")
     private @Nullable Output<Integer> deviceKey;
 
+    /**
+     * @return Gets or sets the device key value.
+     * 
+     */
     public Optional<Output<Integer>> deviceKey() {
         return Optional.ofNullable(this.deviceKey);
     }
@@ -52,6 +60,10 @@ public final class VirtualDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deviceName")
     private @Nullable Output<String> deviceName;
 
+    /**
+     * @return Gets or sets the device name.
+     * 
+     */
     public Optional<Output<String>> deviceName() {
         return Optional.ofNullable(this.deviceName);
     }
@@ -63,6 +75,10 @@ public final class VirtualDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="diskMode")
     private @Nullable Output<Either<String,DiskMode>> diskMode;
 
+    /**
+     * @return Gets or sets the disk mode.
+     * 
+     */
     public Optional<Output<Either<String,DiskMode>>> diskMode() {
         return Optional.ofNullable(this.diskMode);
     }
@@ -74,6 +90,10 @@ public final class VirtualDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="diskSizeGB")
     private @Nullable Output<Integer> diskSizeGB;
 
+    /**
+     * @return Gets or sets the disk total size.
+     * 
+     */
     public Optional<Output<Integer>> diskSizeGB() {
         return Optional.ofNullable(this.diskSizeGB);
     }
@@ -85,6 +105,10 @@ public final class VirtualDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="diskType")
     private @Nullable Output<Either<String,DiskType>> diskType;
 
+    /**
+     * @return Gets or sets the disk backing type.
+     * 
+     */
     public Optional<Output<Either<String,DiskType>>> diskType() {
         return Optional.ofNullable(this.diskType);
     }
@@ -96,6 +120,10 @@ public final class VirtualDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Gets or sets the name of the virtual disk.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -107,6 +135,10 @@ public final class VirtualDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="unitNumber")
     private @Nullable Output<Integer> unitNumber;
 
+    /**
+     * @return Gets or sets the unit number of the disk on the controller.
+     * 
+     */
     public Optional<Output<Integer>> unitNumber() {
         return Optional.ofNullable(this.unitNumber);
     }
@@ -142,90 +174,210 @@ public final class VirtualDiskArgs extends com.pulumi.resources.ResourceArgs {
             $ = new VirtualDiskArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param controllerKey Gets or sets the controller id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder controllerKey(@Nullable Output<Integer> controllerKey) {
             $.controllerKey = controllerKey;
             return this;
         }
 
+        /**
+         * @param controllerKey Gets or sets the controller id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder controllerKey(Integer controllerKey) {
             return controllerKey(Output.of(controllerKey));
         }
 
+        /**
+         * @param deviceKey Gets or sets the device key value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceKey(@Nullable Output<Integer> deviceKey) {
             $.deviceKey = deviceKey;
             return this;
         }
 
+        /**
+         * @param deviceKey Gets or sets the device key value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceKey(Integer deviceKey) {
             return deviceKey(Output.of(deviceKey));
         }
 
+        /**
+         * @param deviceName Gets or sets the device name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(@Nullable Output<String> deviceName) {
             $.deviceName = deviceName;
             return this;
         }
 
+        /**
+         * @param deviceName Gets or sets the device name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(String deviceName) {
             return deviceName(Output.of(deviceName));
         }
 
+        /**
+         * @param diskMode Gets or sets the disk mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskMode(@Nullable Output<Either<String,DiskMode>> diskMode) {
             $.diskMode = diskMode;
             return this;
         }
 
+        /**
+         * @param diskMode Gets or sets the disk mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskMode(Either<String,DiskMode> diskMode) {
             return diskMode(Output.of(diskMode));
         }
 
+        /**
+         * @param diskMode Gets or sets the disk mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskMode(String diskMode) {
             return diskMode(Either.ofLeft(diskMode));
         }
 
+        /**
+         * @param diskMode Gets or sets the disk mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskMode(DiskMode diskMode) {
             return diskMode(Either.ofRight(diskMode));
         }
 
+        /**
+         * @param diskSizeGB Gets or sets the disk total size.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskSizeGB(@Nullable Output<Integer> diskSizeGB) {
             $.diskSizeGB = diskSizeGB;
             return this;
         }
 
+        /**
+         * @param diskSizeGB Gets or sets the disk total size.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskSizeGB(Integer diskSizeGB) {
             return diskSizeGB(Output.of(diskSizeGB));
         }
 
+        /**
+         * @param diskType Gets or sets the disk backing type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskType(@Nullable Output<Either<String,DiskType>> diskType) {
             $.diskType = diskType;
             return this;
         }
 
+        /**
+         * @param diskType Gets or sets the disk backing type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskType(Either<String,DiskType> diskType) {
             return diskType(Output.of(diskType));
         }
 
+        /**
+         * @param diskType Gets or sets the disk backing type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskType(String diskType) {
             return diskType(Either.ofLeft(diskType));
         }
 
+        /**
+         * @param diskType Gets or sets the disk backing type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskType(DiskType diskType) {
             return diskType(Either.ofRight(diskType));
         }
 
+        /**
+         * @param name Gets or sets the name of the virtual disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Gets or sets the name of the virtual disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param unitNumber Gets or sets the unit number of the disk on the controller.
+         * 
+         * @return builder
+         * 
+         */
         public Builder unitNumber(@Nullable Output<Integer> unitNumber) {
             $.unitNumber = unitNumber;
             return this;
         }
 
+        /**
+         * @param unitNumber Gets or sets the unit number of the disk on the controller.
+         * 
+         * @return builder
+         * 
+         */
         public Builder unitNumber(Integer unitNumber) {
             return unitNumber(Output.of(unitNumber));
         }

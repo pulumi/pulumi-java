@@ -24,6 +24,10 @@ public final class ContentKeyPolicyArgs extends com.pulumi.resources.ResourceArg
     @Import(name="accountName", required=true)
     private Output<String> accountName;
 
+    /**
+     * @return The Media Services account name.
+     * 
+     */
     public Output<String> accountName() {
         return this.accountName;
     }
@@ -35,6 +39,10 @@ public final class ContentKeyPolicyArgs extends com.pulumi.resources.ResourceArg
     @Import(name="contentKeyPolicyName")
     private @Nullable Output<String> contentKeyPolicyName;
 
+    /**
+     * @return The Content Key Policy name.
+     * 
+     */
     public Optional<Output<String>> contentKeyPolicyName() {
         return Optional.ofNullable(this.contentKeyPolicyName);
     }
@@ -46,6 +54,10 @@ public final class ContentKeyPolicyArgs extends com.pulumi.resources.ResourceArg
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A description for the Policy.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -57,6 +69,10 @@ public final class ContentKeyPolicyArgs extends com.pulumi.resources.ResourceArg
     @Import(name="options", required=true)
     private Output<List<ContentKeyPolicyOptionArgs>> options;
 
+    /**
+     * @return The Key Policy options.
+     * 
+     */
     public Output<List<ContentKeyPolicyOptionArgs>> options() {
         return this.options;
     }
@@ -68,6 +84,10 @@ public final class ContentKeyPolicyArgs extends com.pulumi.resources.ResourceArg
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group within the Azure subscription.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -100,51 +120,117 @@ public final class ContentKeyPolicyArgs extends com.pulumi.resources.ResourceArg
             $ = new ContentKeyPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The Media Services account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param accountName The Media Services account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             return accountName(Output.of(accountName));
         }
 
+        /**
+         * @param contentKeyPolicyName The Content Key Policy name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentKeyPolicyName(@Nullable Output<String> contentKeyPolicyName) {
             $.contentKeyPolicyName = contentKeyPolicyName;
             return this;
         }
 
+        /**
+         * @param contentKeyPolicyName The Content Key Policy name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentKeyPolicyName(String contentKeyPolicyName) {
             return contentKeyPolicyName(Output.of(contentKeyPolicyName));
         }
 
+        /**
+         * @param description A description for the Policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A description for the Policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param options The Key Policy options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder options(Output<List<ContentKeyPolicyOptionArgs>> options) {
             $.options = options;
             return this;
         }
 
+        /**
+         * @param options The Key Policy options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder options(List<ContentKeyPolicyOptionArgs> options) {
             return options(Output.of(options));
         }
 
+        /**
+         * @param options The Key Policy options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder options(ContentKeyPolicyOptionArgs... options) {
             return options(List.of(options));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }

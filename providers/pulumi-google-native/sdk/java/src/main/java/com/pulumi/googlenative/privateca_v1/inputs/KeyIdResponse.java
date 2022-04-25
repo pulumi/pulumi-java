@@ -23,6 +23,10 @@ public final class KeyIdResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="keyId", required=true)
     private String keyId;
 
+    /**
+     * @return Optional. The value of this KeyId encoded in lowercase hexadecimal. This is most likely the 160 bit SHA-1 hash of the public key.
+     * 
+     */
     public String keyId() {
         return this.keyId;
     }
@@ -51,6 +55,12 @@ public final class KeyIdResponse extends com.pulumi.resources.InvokeArgs {
             $ = new KeyIdResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyId Optional. The value of this KeyId encoded in lowercase hexadecimal. This is most likely the 160 bit SHA-1 hash of the public key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyId(String keyId) {
             $.keyId = keyId;
             return this;

@@ -24,6 +24,10 @@ public final class ShardingOptionResponse extends com.pulumi.resources.InvokeArg
     @Import(name="manualSharding", required=true)
     private ManualShardingResponse manualSharding;
 
+    /**
+     * @return Shards test cases into the specified groups of packages, classes, and/or methods.
+     * 
+     */
     public ManualShardingResponse manualSharding() {
         return this.manualSharding;
     }
@@ -35,6 +39,10 @@ public final class ShardingOptionResponse extends com.pulumi.resources.InvokeArg
     @Import(name="uniformSharding", required=true)
     private UniformShardingResponse uniformSharding;
 
+    /**
+     * @return Uniformly shards test cases given a total number of shards.
+     * 
+     */
     public UniformShardingResponse uniformSharding() {
         return this.uniformSharding;
     }
@@ -64,11 +72,23 @@ public final class ShardingOptionResponse extends com.pulumi.resources.InvokeArg
             $ = new ShardingOptionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param manualSharding Shards test cases into the specified groups of packages, classes, and/or methods.
+         * 
+         * @return builder
+         * 
+         */
         public Builder manualSharding(ManualShardingResponse manualSharding) {
             $.manualSharding = manualSharding;
             return this;
         }
 
+        /**
+         * @param uniformSharding Uniformly shards test cases given a total number of shards.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uniformSharding(UniformShardingResponse uniformSharding) {
             $.uniformSharding = uniformSharding;
             return this;

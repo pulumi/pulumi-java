@@ -19,6 +19,10 @@ public final class GetCellArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="cellName", required=true)
     private String cellName;
 
+    /**
+     * @return The name of the cell to create.
+     * 
+     */
     public String cellName() {
         return this.cellName;
     }
@@ -47,6 +51,12 @@ public final class GetCellArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetCellArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cellName The name of the cell to create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cellName(String cellName) {
             $.cellName = cellName;
             return this;

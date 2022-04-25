@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class NamespacedGkeDeploymentTargetResponse {
     /**
-     * Optional. A namespace within the GKE cluster to deploy into.
+     * @return Optional. A namespace within the GKE cluster to deploy into.
      * 
      */
     private final String clusterNamespace;
     /**
-     * Optional. The target GKE cluster to deploy to. Format: &#39;projects/{project}/locations/{location}/clusters/{cluster_id}&#39;
+     * @return Optional. The target GKE cluster to deploy to. Format: &#39;projects/{project}/locations/{location}/clusters/{cluster_id}&#39;
      * 
      */
     private final String targetGkeCluster;
@@ -29,16 +29,16 @@ public final class NamespacedGkeDeploymentTargetResponse {
     }
 
     /**
-     * Optional. A namespace within the GKE cluster to deploy into.
+     * @return Optional. A namespace within the GKE cluster to deploy into.
      * 
-    */
+     */
     public String clusterNamespace() {
         return this.clusterNamespace;
     }
     /**
-     * Optional. The target GKE cluster to deploy to. Format: &#39;projects/{project}/locations/{location}/clusters/{cluster_id}&#39;
+     * @return Optional. The target GKE cluster to deploy to. Format: &#39;projects/{project}/locations/{location}/clusters/{cluster_id}&#39;
      * 
-    */
+     */
     public String targetGkeCluster() {
         return this.targetGkeCluster;
     }

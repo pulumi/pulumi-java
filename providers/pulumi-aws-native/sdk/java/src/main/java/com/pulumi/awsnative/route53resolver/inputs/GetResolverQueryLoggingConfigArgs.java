@@ -19,6 +19,10 @@ public final class GetResolverQueryLoggingConfigArgs extends com.pulumi.resource
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return ResourceId
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -47,6 +51,12 @@ public final class GetResolverQueryLoggingConfigArgs extends com.pulumi.resource
             $ = new GetResolverQueryLoggingConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id ResourceId
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;

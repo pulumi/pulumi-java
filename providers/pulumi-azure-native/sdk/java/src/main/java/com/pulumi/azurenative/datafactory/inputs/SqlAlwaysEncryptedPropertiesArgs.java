@@ -32,6 +32,10 @@ public final class SqlAlwaysEncryptedPropertiesArgs extends com.pulumi.resources
     @Import(name="alwaysEncryptedAkvAuthType", required=true)
     private Output<Either<String,SqlAlwaysEncryptedAkvAuthType>> alwaysEncryptedAkvAuthType;
 
+    /**
+     * @return Sql always encrypted AKV authentication type. Type: string (or Expression with resultType string).
+     * 
+     */
     public Output<Either<String,SqlAlwaysEncryptedAkvAuthType>> alwaysEncryptedAkvAuthType() {
         return this.alwaysEncryptedAkvAuthType;
     }
@@ -43,6 +47,10 @@ public final class SqlAlwaysEncryptedPropertiesArgs extends com.pulumi.resources
     @Import(name="credential")
     private @Nullable Output<CredentialReferenceArgs> credential;
 
+    /**
+     * @return The credential reference containing authentication information.
+     * 
+     */
     public Optional<Output<CredentialReferenceArgs>> credential() {
         return Optional.ofNullable(this.credential);
     }
@@ -54,6 +62,10 @@ public final class SqlAlwaysEncryptedPropertiesArgs extends com.pulumi.resources
     @Import(name="servicePrincipalId")
     private @Nullable Output<Object> servicePrincipalId;
 
+    /**
+     * @return The client ID of the application in Azure Active Directory used for Azure Key Vault authentication. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> servicePrincipalId() {
         return Optional.ofNullable(this.servicePrincipalId);
     }
@@ -65,6 +77,10 @@ public final class SqlAlwaysEncryptedPropertiesArgs extends com.pulumi.resources
     @Import(name="servicePrincipalKey")
     private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey;
 
+    /**
+     * @return The key of the service principal used to authenticate against Azure Key Vault.
+     * 
+     */
     public Optional<Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>>> servicePrincipalKey() {
         return Optional.ofNullable(this.servicePrincipalKey);
     }
@@ -96,54 +112,126 @@ public final class SqlAlwaysEncryptedPropertiesArgs extends com.pulumi.resources
             $ = new SqlAlwaysEncryptedPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param alwaysEncryptedAkvAuthType Sql always encrypted AKV authentication type. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder alwaysEncryptedAkvAuthType(Output<Either<String,SqlAlwaysEncryptedAkvAuthType>> alwaysEncryptedAkvAuthType) {
             $.alwaysEncryptedAkvAuthType = alwaysEncryptedAkvAuthType;
             return this;
         }
 
+        /**
+         * @param alwaysEncryptedAkvAuthType Sql always encrypted AKV authentication type. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder alwaysEncryptedAkvAuthType(Either<String,SqlAlwaysEncryptedAkvAuthType> alwaysEncryptedAkvAuthType) {
             return alwaysEncryptedAkvAuthType(Output.of(alwaysEncryptedAkvAuthType));
         }
 
+        /**
+         * @param alwaysEncryptedAkvAuthType Sql always encrypted AKV authentication type. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder alwaysEncryptedAkvAuthType(String alwaysEncryptedAkvAuthType) {
             return alwaysEncryptedAkvAuthType(Either.ofLeft(alwaysEncryptedAkvAuthType));
         }
 
+        /**
+         * @param alwaysEncryptedAkvAuthType Sql always encrypted AKV authentication type. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder alwaysEncryptedAkvAuthType(SqlAlwaysEncryptedAkvAuthType alwaysEncryptedAkvAuthType) {
             return alwaysEncryptedAkvAuthType(Either.ofRight(alwaysEncryptedAkvAuthType));
         }
 
+        /**
+         * @param credential The credential reference containing authentication information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder credential(@Nullable Output<CredentialReferenceArgs> credential) {
             $.credential = credential;
             return this;
         }
 
+        /**
+         * @param credential The credential reference containing authentication information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder credential(CredentialReferenceArgs credential) {
             return credential(Output.of(credential));
         }
 
+        /**
+         * @param servicePrincipalId The client ID of the application in Azure Active Directory used for Azure Key Vault authentication. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipalId(@Nullable Output<Object> servicePrincipalId) {
             $.servicePrincipalId = servicePrincipalId;
             return this;
         }
 
+        /**
+         * @param servicePrincipalId The client ID of the application in Azure Active Directory used for Azure Key Vault authentication. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipalId(Object servicePrincipalId) {
             return servicePrincipalId(Output.of(servicePrincipalId));
         }
 
+        /**
+         * @param servicePrincipalKey The key of the service principal used to authenticate against Azure Key Vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipalKey(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey) {
             $.servicePrincipalKey = servicePrincipalKey;
             return this;
         }
 
+        /**
+         * @param servicePrincipalKey The key of the service principal used to authenticate against Azure Key Vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipalKey(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> servicePrincipalKey) {
             return servicePrincipalKey(Output.of(servicePrincipalKey));
         }
 
+        /**
+         * @param servicePrincipalKey The key of the service principal used to authenticate against Azure Key Vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipalKey(AzureKeyVaultSecretReferenceArgs servicePrincipalKey) {
             return servicePrincipalKey(Either.ofLeft(servicePrincipalKey));
         }
 
+        /**
+         * @param servicePrincipalKey The key of the service principal used to authenticate against Azure Key Vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipalKey(SecureStringArgs servicePrincipalKey) {
             return servicePrincipalKey(Either.ofRight(servicePrincipalKey));
         }

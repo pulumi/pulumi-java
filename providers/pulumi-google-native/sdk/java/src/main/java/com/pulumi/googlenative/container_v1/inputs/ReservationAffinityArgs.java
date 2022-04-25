@@ -28,6 +28,10 @@ public final class ReservationAffinityArgs extends com.pulumi.resources.Resource
     @Import(name="consumeReservationType")
     private @Nullable Output<ReservationAffinityConsumeReservationType> consumeReservationType;
 
+    /**
+     * @return Corresponds to the type of reservation consumption.
+     * 
+     */
     public Optional<Output<ReservationAffinityConsumeReservationType>> consumeReservationType() {
         return Optional.ofNullable(this.consumeReservationType);
     }
@@ -39,6 +43,10 @@ public final class ReservationAffinityArgs extends com.pulumi.resources.Resource
     @Import(name="key")
     private @Nullable Output<String> key;
 
+    /**
+     * @return Corresponds to the label key of a reservation resource. To target a SPECIFIC_RESERVATION by name, specify &#34;googleapis.com/reservation-name&#34; as the key and specify the name of your reservation as its value.
+     * 
+     */
     public Optional<Output<String>> key() {
         return Optional.ofNullable(this.key);
     }
@@ -50,6 +58,10 @@ public final class ReservationAffinityArgs extends com.pulumi.resources.Resource
     @Import(name="values")
     private @Nullable Output<List<String>> values;
 
+    /**
+     * @return Corresponds to the label value(s) of reservation resource(s).
+     * 
+     */
     public Optional<Output<List<String>>> values() {
         return Optional.ofNullable(this.values);
     }
@@ -80,33 +92,75 @@ public final class ReservationAffinityArgs extends com.pulumi.resources.Resource
             $ = new ReservationAffinityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param consumeReservationType Corresponds to the type of reservation consumption.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consumeReservationType(@Nullable Output<ReservationAffinityConsumeReservationType> consumeReservationType) {
             $.consumeReservationType = consumeReservationType;
             return this;
         }
 
+        /**
+         * @param consumeReservationType Corresponds to the type of reservation consumption.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consumeReservationType(ReservationAffinityConsumeReservationType consumeReservationType) {
             return consumeReservationType(Output.of(consumeReservationType));
         }
 
+        /**
+         * @param key Corresponds to the label key of a reservation resource. To target a SPECIFIC_RESERVATION by name, specify &#34;googleapis.com/reservation-name&#34; as the key and specify the name of your reservation as its value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(@Nullable Output<String> key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param key Corresponds to the label key of a reservation resource. To target a SPECIFIC_RESERVATION by name, specify &#34;googleapis.com/reservation-name&#34; as the key and specify the name of your reservation as its value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             return key(Output.of(key));
         }
 
+        /**
+         * @param values Corresponds to the label value(s) of reservation resource(s).
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(@Nullable Output<List<String>> values) {
             $.values = values;
             return this;
         }
 
+        /**
+         * @param values Corresponds to the label value(s) of reservation resource(s).
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(List<String> values) {
             return values(Output.of(values));
         }
 
+        /**
+         * @param values Corresponds to the label value(s) of reservation resource(s).
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(String... values) {
             return values(List.of(values));
         }

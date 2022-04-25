@@ -26,6 +26,10 @@ public final class ScopeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="scopeType")
     private @Nullable String scopeType;
 
+    /**
+     * @return type of target scope
+     * 
+     */
     public Optional<String> scopeType() {
         return Optional.ofNullable(this.scopeType);
     }
@@ -37,6 +41,10 @@ public final class ScopeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="values")
     private @Nullable List<String> values;
 
+    /**
+     * @return list of ARM IDs of the given scope type which will be the target of the given action rule.
+     * 
+     */
     public Optional<List<String>> values() {
         return Optional.ofNullable(this.values);
     }
@@ -66,16 +74,34 @@ public final class ScopeResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ScopeResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param scopeType type of target scope
+         * 
+         * @return builder
+         * 
+         */
         public Builder scopeType(@Nullable String scopeType) {
             $.scopeType = scopeType;
             return this;
         }
 
+        /**
+         * @param values list of ARM IDs of the given scope type which will be the target of the given action rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(@Nullable List<String> values) {
             $.values = values;
             return this;
         }
 
+        /**
+         * @param values list of ARM IDs of the given scope type which will be the target of the given action rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(String... values) {
             return values(List.of(values));
         }

@@ -14,37 +14,37 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetPropertyResult {
     /**
-     * Unique name of Property. It may contain only letters, digits, period, dash, and underscore characters.
+     * @return Unique name of Property. It may contain only letters, digits, period, dash, and underscore characters.
      * 
      */
     private final String displayName;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final String id;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * Determines whether the value is a secret and should be encrypted or not. Default value is false.
+     * @return Determines whether the value is a secret and should be encrypted or not. Default value is false.
      * 
      */
     private final @Nullable Boolean secret;
     /**
-     * Optional tags that when provided can be used to filter the property list.
+     * @return Optional tags that when provided can be used to filter the property list.
      * 
      */
     private final @Nullable List<String> tags;
     /**
-     * Resource type for API Management resource.
+     * @return Resource type for API Management resource.
      * 
      */
     private final String type;
     /**
-     * Value of the property. Can contain policy expressions. It may not be empty or consist only of whitespace.
+     * @return Value of the property. Can contain policy expressions. It may not be empty or consist only of whitespace.
      * 
      */
     private final String value;
@@ -68,51 +68,51 @@ public final class GetPropertyResult {
     }
 
     /**
-     * Unique name of Property. It may contain only letters, digits, period, dash, and underscore characters.
+     * @return Unique name of Property. It may contain only letters, digits, period, dash, and underscore characters.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Determines whether the value is a secret and should be encrypted or not. Default value is false.
+     * @return Determines whether the value is a secret and should be encrypted or not. Default value is false.
      * 
-    */
+     */
     public Optional<Boolean> secret() {
         return Optional.ofNullable(this.secret);
     }
     /**
-     * Optional tags that when provided can be used to filter the property list.
+     * @return Optional tags that when provided can be used to filter the property list.
      * 
-    */
+     */
     public List<String> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
-     * Resource type for API Management resource.
+     * @return Resource type for API Management resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Value of the property. Can contain policy expressions. It may not be empty or consist only of whitespace.
+     * @return Value of the property. Can contain policy expressions. It may not be empty or consist only of whitespace.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

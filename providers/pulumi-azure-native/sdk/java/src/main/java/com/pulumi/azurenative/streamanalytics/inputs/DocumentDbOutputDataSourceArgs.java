@@ -27,6 +27,10 @@ public final class DocumentDbOutputDataSourceArgs extends com.pulumi.resources.R
     @Import(name="accountId")
     private @Nullable Output<String> accountId;
 
+    /**
+     * @return The DocumentDB account name or ID. Required on PUT (CreateOrReplace) requests.
+     * 
+     */
     public Optional<Output<String>> accountId() {
         return Optional.ofNullable(this.accountId);
     }
@@ -38,6 +42,10 @@ public final class DocumentDbOutputDataSourceArgs extends com.pulumi.resources.R
     @Import(name="accountKey")
     private @Nullable Output<String> accountKey;
 
+    /**
+     * @return The account key for the DocumentDB account. Required on PUT (CreateOrReplace) requests.
+     * 
+     */
     public Optional<Output<String>> accountKey() {
         return Optional.ofNullable(this.accountKey);
     }
@@ -49,6 +57,10 @@ public final class DocumentDbOutputDataSourceArgs extends com.pulumi.resources.R
     @Import(name="collectionNamePattern")
     private @Nullable Output<String> collectionNamePattern;
 
+    /**
+     * @return The collection name pattern for the collections to be used. The collection name format can be constructed using the optional {partition} token, where partitions start from 0. See the DocumentDB section of https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for more information. Required on PUT (CreateOrReplace) requests.
+     * 
+     */
     public Optional<Output<String>> collectionNamePattern() {
         return Optional.ofNullable(this.collectionNamePattern);
     }
@@ -60,6 +72,10 @@ public final class DocumentDbOutputDataSourceArgs extends com.pulumi.resources.R
     @Import(name="database")
     private @Nullable Output<String> database;
 
+    /**
+     * @return The name of the DocumentDB database. Required on PUT (CreateOrReplace) requests.
+     * 
+     */
     public Optional<Output<String>> database() {
         return Optional.ofNullable(this.database);
     }
@@ -71,6 +87,10 @@ public final class DocumentDbOutputDataSourceArgs extends com.pulumi.resources.R
     @Import(name="documentId")
     private @Nullable Output<String> documentId;
 
+    /**
+     * @return The name of the field in output events used to specify the primary key which insert or update operations are based on.
+     * 
+     */
     public Optional<Output<String>> documentId() {
         return Optional.ofNullable(this.documentId);
     }
@@ -82,6 +102,10 @@ public final class DocumentDbOutputDataSourceArgs extends com.pulumi.resources.R
     @Import(name="partitionKey")
     private @Nullable Output<String> partitionKey;
 
+    /**
+     * @return The name of the field in output events used to specify the key for partitioning output across collections. If &#39;collectionNamePattern&#39; contains the {partition} token, this property is required to be specified.
+     * 
+     */
     public Optional<Output<String>> partitionKey() {
         return Optional.ofNullable(this.partitionKey);
     }
@@ -94,6 +118,11 @@ public final class DocumentDbOutputDataSourceArgs extends com.pulumi.resources.R
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
+     * Expected value is &#39;Microsoft.Storage/DocumentDB&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -128,65 +157,151 @@ public final class DocumentDbOutputDataSourceArgs extends com.pulumi.resources.R
             $ = new DocumentDbOutputDataSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountId The DocumentDB account name or ID. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountId(@Nullable Output<String> accountId) {
             $.accountId = accountId;
             return this;
         }
 
+        /**
+         * @param accountId The DocumentDB account name or ID. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountId(String accountId) {
             return accountId(Output.of(accountId));
         }
 
+        /**
+         * @param accountKey The account key for the DocumentDB account. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountKey(@Nullable Output<String> accountKey) {
             $.accountKey = accountKey;
             return this;
         }
 
+        /**
+         * @param accountKey The account key for the DocumentDB account. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountKey(String accountKey) {
             return accountKey(Output.of(accountKey));
         }
 
+        /**
+         * @param collectionNamePattern The collection name pattern for the collections to be used. The collection name format can be constructed using the optional {partition} token, where partitions start from 0. See the DocumentDB section of https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for more information. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder collectionNamePattern(@Nullable Output<String> collectionNamePattern) {
             $.collectionNamePattern = collectionNamePattern;
             return this;
         }
 
+        /**
+         * @param collectionNamePattern The collection name pattern for the collections to be used. The collection name format can be constructed using the optional {partition} token, where partitions start from 0. See the DocumentDB section of https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for more information. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder collectionNamePattern(String collectionNamePattern) {
             return collectionNamePattern(Output.of(collectionNamePattern));
         }
 
+        /**
+         * @param database The name of the DocumentDB database. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder database(@Nullable Output<String> database) {
             $.database = database;
             return this;
         }
 
+        /**
+         * @param database The name of the DocumentDB database. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder database(String database) {
             return database(Output.of(database));
         }
 
+        /**
+         * @param documentId The name of the field in output events used to specify the primary key which insert or update operations are based on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder documentId(@Nullable Output<String> documentId) {
             $.documentId = documentId;
             return this;
         }
 
+        /**
+         * @param documentId The name of the field in output events used to specify the primary key which insert or update operations are based on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder documentId(String documentId) {
             return documentId(Output.of(documentId));
         }
 
+        /**
+         * @param partitionKey The name of the field in output events used to specify the key for partitioning output across collections. If &#39;collectionNamePattern&#39; contains the {partition} token, this property is required to be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionKey(@Nullable Output<String> partitionKey) {
             $.partitionKey = partitionKey;
             return this;
         }
 
+        /**
+         * @param partitionKey The name of the field in output events used to specify the key for partitioning output across collections. If &#39;collectionNamePattern&#39; contains the {partition} token, this property is required to be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionKey(String partitionKey) {
             return partitionKey(Output.of(partitionKey));
         }
 
+        /**
+         * @param type Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
+         * Expected value is &#39;Microsoft.Storage/DocumentDB&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
+         * Expected value is &#39;Microsoft.Storage/DocumentDB&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

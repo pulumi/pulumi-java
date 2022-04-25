@@ -16,49 +16,49 @@ import javax.annotation.Nullable;
 @CustomType
 public final class InstanceTemplateDisk {
     /**
-     * Whether or not the disk should be auto-deleted.
+     * @return Whether or not the disk should be auto-deleted.
      * This defaults to true.
      * 
      */
     private final @Nullable Boolean autoDelete;
     /**
-     * Indicates that this is a boot disk.
+     * @return Indicates that this is a boot disk.
      * 
      */
     private final @Nullable Boolean boot;
     /**
-     * A unique device name that is reflected into the
+     * @return A unique device name that is reflected into the
      * /dev/  tree of a Linux operating system running within the instance. If not
      * specified, the server chooses a default device name to apply to this disk.
      * 
      */
     private final @Nullable String deviceName;
     /**
-     * Encrypts or decrypts a disk using a customer-supplied encryption key.
+     * @return Encrypts or decrypts a disk using a customer-supplied encryption key.
      * 
      */
     private final @Nullable InstanceTemplateDiskDiskEncryptionKey diskEncryptionKey;
     /**
-     * Name of the disk. When not provided, this defaults
+     * @return Name of the disk. When not provided, this defaults
      * to the name of the instance.
      * 
      */
     private final @Nullable String diskName;
     /**
-     * The size of the image in gigabytes. If not
+     * @return The size of the image in gigabytes. If not
      * specified, it will inherit the size of its base image. For SCRATCH disks,
      * the size must be exactly 375GB.
      * 
      */
     private final @Nullable Integer diskSizeGb;
     /**
-     * The GCE disk type. Can be either `&#34;pd-ssd&#34;`,
+     * @return The GCE disk type. Can be either `&#34;pd-ssd&#34;`,
      * `&#34;local-ssd&#34;`, `&#34;pd-balanced&#34;` or `&#34;pd-standard&#34;`.
      * 
      */
     private final @Nullable String diskType;
     /**
-     * Specifies the disk interface to use for attaching this disk,
+     * @return Specifies the disk interface to use for attaching this disk,
      * which is either SCSI or NVME. The default is SCSI. Persistent disks must always use SCSI
      * and the request will fail if you attempt to attach a persistent disk in any other format
      * than SCSI. Local SSDs can use either NVME or SCSI.
@@ -66,32 +66,32 @@ public final class InstanceTemplateDisk {
      */
     private final @Nullable String interface_;
     /**
-     * A set of ket/value label pairs to assign to disk created from
+     * @return A set of ket/value label pairs to assign to disk created from
      * this template
      * 
      */
     private final @Nullable Map<String,String> labels;
     /**
-     * The mode in which to attach this disk, either READ_WRITE
+     * @return The mode in which to attach this disk, either READ_WRITE
      * or READ_ONLY. If you are attaching or creating a boot disk, this must
      * read-write mode.
      * 
      */
     private final @Nullable String mode;
     /**
-     * -- A list (short name or id) of resource policies to attach to this disk for automatic snapshot creations. Currently a max of 1 resource policy is supported.
+     * @return -- A list (short name or id) of resource policies to attach to this disk for automatic snapshot creations. Currently a max of 1 resource policy is supported.
      * 
      */
     private final @Nullable String resourcePolicies;
     /**
-     * The name (**not self_link**)
+     * @return The name (**not self_link**)
      * of the disk (such as those managed by `gcp.compute.Disk`) to attach.
      * &gt; **Note:** Either `source` or `source_image` is **required** in a disk block unless the disk type is `local-ssd`. Check the API [docs](https://cloud.google.com/compute/docs/reference/rest/v1/instanceTemplates/insert) for details.
      * 
      */
     private final @Nullable String source;
     /**
-     * The image from which to
+     * @return The image from which to
      * initialize this disk. This can be one of: the image&#39;s `self_link`,
      * `projects/{project}/global/images/{image}`,
      * `projects/{project}/global/images/family/{family}`, `global/images/{image}`,
@@ -102,7 +102,7 @@ public final class InstanceTemplateDisk {
      */
     private final @Nullable String sourceImage;
     /**
-     * The type of reservation from which this instance can consume resources.
+     * @return The type of reservation from which this instance can consume resources.
      * 
      */
     private final @Nullable String type;
@@ -140,106 +140,106 @@ public final class InstanceTemplateDisk {
     }
 
     /**
-     * Whether or not the disk should be auto-deleted.
+     * @return Whether or not the disk should be auto-deleted.
      * This defaults to true.
      * 
-    */
+     */
     public Optional<Boolean> autoDelete() {
         return Optional.ofNullable(this.autoDelete);
     }
     /**
-     * Indicates that this is a boot disk.
+     * @return Indicates that this is a boot disk.
      * 
-    */
+     */
     public Optional<Boolean> boot() {
         return Optional.ofNullable(this.boot);
     }
     /**
-     * A unique device name that is reflected into the
+     * @return A unique device name that is reflected into the
      * /dev/  tree of a Linux operating system running within the instance. If not
      * specified, the server chooses a default device name to apply to this disk.
      * 
-    */
+     */
     public Optional<String> deviceName() {
         return Optional.ofNullable(this.deviceName);
     }
     /**
-     * Encrypts or decrypts a disk using a customer-supplied encryption key.
+     * @return Encrypts or decrypts a disk using a customer-supplied encryption key.
      * 
-    */
+     */
     public Optional<InstanceTemplateDiskDiskEncryptionKey> diskEncryptionKey() {
         return Optional.ofNullable(this.diskEncryptionKey);
     }
     /**
-     * Name of the disk. When not provided, this defaults
+     * @return Name of the disk. When not provided, this defaults
      * to the name of the instance.
      * 
-    */
+     */
     public Optional<String> diskName() {
         return Optional.ofNullable(this.diskName);
     }
     /**
-     * The size of the image in gigabytes. If not
+     * @return The size of the image in gigabytes. If not
      * specified, it will inherit the size of its base image. For SCRATCH disks,
      * the size must be exactly 375GB.
      * 
-    */
+     */
     public Optional<Integer> diskSizeGb() {
         return Optional.ofNullable(this.diskSizeGb);
     }
     /**
-     * The GCE disk type. Can be either `&#34;pd-ssd&#34;`,
+     * @return The GCE disk type. Can be either `&#34;pd-ssd&#34;`,
      * `&#34;local-ssd&#34;`, `&#34;pd-balanced&#34;` or `&#34;pd-standard&#34;`.
      * 
-    */
+     */
     public Optional<String> diskType() {
         return Optional.ofNullable(this.diskType);
     }
     /**
-     * Specifies the disk interface to use for attaching this disk,
+     * @return Specifies the disk interface to use for attaching this disk,
      * which is either SCSI or NVME. The default is SCSI. Persistent disks must always use SCSI
      * and the request will fail if you attempt to attach a persistent disk in any other format
      * than SCSI. Local SSDs can use either NVME or SCSI.
      * 
-    */
+     */
     public Optional<String> interface_() {
         return Optional.ofNullable(this.interface_);
     }
     /**
-     * A set of ket/value label pairs to assign to disk created from
+     * @return A set of ket/value label pairs to assign to disk created from
      * this template
      * 
-    */
+     */
     public Map<String,String> labels() {
         return this.labels == null ? Map.of() : this.labels;
     }
     /**
-     * The mode in which to attach this disk, either READ_WRITE
+     * @return The mode in which to attach this disk, either READ_WRITE
      * or READ_ONLY. If you are attaching or creating a boot disk, this must
      * read-write mode.
      * 
-    */
+     */
     public Optional<String> mode() {
         return Optional.ofNullable(this.mode);
     }
     /**
-     * -- A list (short name or id) of resource policies to attach to this disk for automatic snapshot creations. Currently a max of 1 resource policy is supported.
+     * @return -- A list (short name or id) of resource policies to attach to this disk for automatic snapshot creations. Currently a max of 1 resource policy is supported.
      * 
-    */
+     */
     public Optional<String> resourcePolicies() {
         return Optional.ofNullable(this.resourcePolicies);
     }
     /**
-     * The name (**not self_link**)
+     * @return The name (**not self_link**)
      * of the disk (such as those managed by `gcp.compute.Disk`) to attach.
      * &gt; **Note:** Either `source` or `source_image` is **required** in a disk block unless the disk type is `local-ssd`. Check the API [docs](https://cloud.google.com/compute/docs/reference/rest/v1/instanceTemplates/insert) for details.
      * 
-    */
+     */
     public Optional<String> source() {
         return Optional.ofNullable(this.source);
     }
     /**
-     * The image from which to
+     * @return The image from which to
      * initialize this disk. This can be one of: the image&#39;s `self_link`,
      * `projects/{project}/global/images/{image}`,
      * `projects/{project}/global/images/family/{family}`, `global/images/{image}`,
@@ -247,14 +247,14 @@ public final class InstanceTemplateDisk {
      * `{project}/{image}`, `{family}`, or `{image}`.
      * &gt; **Note:** Either `source` or `source_image` is **required** in a disk block unless the disk type is `local-ssd`. Check the API [docs](https://cloud.google.com/compute/docs/reference/rest/v1/instanceTemplates/insert) for details.
      * 
-    */
+     */
     public Optional<String> sourceImage() {
         return Optional.ofNullable(this.sourceImage);
     }
     /**
-     * The type of reservation from which this instance can consume resources.
+     * @return The type of reservation from which this instance can consume resources.
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }

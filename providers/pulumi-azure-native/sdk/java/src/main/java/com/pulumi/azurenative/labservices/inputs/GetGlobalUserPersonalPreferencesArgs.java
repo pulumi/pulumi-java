@@ -23,6 +23,10 @@ public final class GetGlobalUserPersonalPreferencesArgs extends com.pulumi.resou
     @Import(name="addRemove")
     private @Nullable Either<String,AddRemove> addRemove;
 
+    /**
+     * @return Enum indicating if user is adding or removing a favorite lab
+     * 
+     */
     public Optional<Either<String,AddRemove>> addRemove() {
         return Optional.ofNullable(this.addRemove);
     }
@@ -34,6 +38,10 @@ public final class GetGlobalUserPersonalPreferencesArgs extends com.pulumi.resou
     @Import(name="labAccountResourceId")
     private @Nullable String labAccountResourceId;
 
+    /**
+     * @return Resource Id of the lab account
+     * 
+     */
     public Optional<String> labAccountResourceId() {
         return Optional.ofNullable(this.labAccountResourceId);
     }
@@ -45,6 +53,10 @@ public final class GetGlobalUserPersonalPreferencesArgs extends com.pulumi.resou
     @Import(name="labResourceId")
     private @Nullable String labResourceId;
 
+    /**
+     * @return Resource Id of the lab to add/remove from the favorites list
+     * 
+     */
     public Optional<String> labResourceId() {
         return Optional.ofNullable(this.labResourceId);
     }
@@ -56,6 +68,10 @@ public final class GetGlobalUserPersonalPreferencesArgs extends com.pulumi.resou
     @Import(name="userName", required=true)
     private String userName;
 
+    /**
+     * @return The name of the user.
+     * 
+     */
     public String userName() {
         return this.userName;
     }
@@ -87,29 +103,65 @@ public final class GetGlobalUserPersonalPreferencesArgs extends com.pulumi.resou
             $ = new GetGlobalUserPersonalPreferencesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param addRemove Enum indicating if user is adding or removing a favorite lab
+         * 
+         * @return builder
+         * 
+         */
         public Builder addRemove(@Nullable Either<String,AddRemove> addRemove) {
             $.addRemove = addRemove;
             return this;
         }
 
+        /**
+         * @param addRemove Enum indicating if user is adding or removing a favorite lab
+         * 
+         * @return builder
+         * 
+         */
         public Builder addRemove(String addRemove) {
             return addRemove(Either.ofLeft(addRemove));
         }
 
+        /**
+         * @param addRemove Enum indicating if user is adding or removing a favorite lab
+         * 
+         * @return builder
+         * 
+         */
         public Builder addRemove(AddRemove addRemove) {
             return addRemove(Either.ofRight(addRemove));
         }
 
+        /**
+         * @param labAccountResourceId Resource Id of the lab account
+         * 
+         * @return builder
+         * 
+         */
         public Builder labAccountResourceId(@Nullable String labAccountResourceId) {
             $.labAccountResourceId = labAccountResourceId;
             return this;
         }
 
+        /**
+         * @param labResourceId Resource Id of the lab to add/remove from the favorites list
+         * 
+         * @return builder
+         * 
+         */
         public Builder labResourceId(@Nullable String labResourceId) {
             $.labResourceId = labResourceId;
             return this;
         }
 
+        /**
+         * @param userName The name of the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(String userName) {
             $.userName = userName;
             return this;

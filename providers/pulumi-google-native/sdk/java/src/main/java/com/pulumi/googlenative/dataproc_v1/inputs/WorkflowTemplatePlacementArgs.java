@@ -27,6 +27,10 @@ public final class WorkflowTemplatePlacementArgs extends com.pulumi.resources.Re
     @Import(name="clusterSelector")
     private @Nullable Output<ClusterSelectorArgs> clusterSelector;
 
+    /**
+     * @return Optional. A selector that chooses target cluster for jobs based on metadata.The selector is evaluated at the time each job is submitted.
+     * 
+     */
     public Optional<Output<ClusterSelectorArgs>> clusterSelector() {
         return Optional.ofNullable(this.clusterSelector);
     }
@@ -38,6 +42,10 @@ public final class WorkflowTemplatePlacementArgs extends com.pulumi.resources.Re
     @Import(name="managedCluster")
     private @Nullable Output<ManagedClusterArgs> managedCluster;
 
+    /**
+     * @return A cluster that is managed by the workflow.
+     * 
+     */
     public Optional<Output<ManagedClusterArgs>> managedCluster() {
         return Optional.ofNullable(this.managedCluster);
     }
@@ -67,20 +75,44 @@ public final class WorkflowTemplatePlacementArgs extends com.pulumi.resources.Re
             $ = new WorkflowTemplatePlacementArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clusterSelector Optional. A selector that chooses target cluster for jobs based on metadata.The selector is evaluated at the time each job is submitted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterSelector(@Nullable Output<ClusterSelectorArgs> clusterSelector) {
             $.clusterSelector = clusterSelector;
             return this;
         }
 
+        /**
+         * @param clusterSelector Optional. A selector that chooses target cluster for jobs based on metadata.The selector is evaluated at the time each job is submitted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterSelector(ClusterSelectorArgs clusterSelector) {
             return clusterSelector(Output.of(clusterSelector));
         }
 
+        /**
+         * @param managedCluster A cluster that is managed by the workflow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedCluster(@Nullable Output<ManagedClusterArgs> managedCluster) {
             $.managedCluster = managedCluster;
             return this;
         }
 
+        /**
+         * @param managedCluster A cluster that is managed by the workflow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedCluster(ManagedClusterArgs managedCluster) {
             return managedCluster(Output.of(managedCluster));
         }

@@ -25,6 +25,10 @@ public final class ThemeMarginStyle extends com.pulumi.resources.InvokeArgs {
     @Import(name="show")
     private @Nullable Boolean show;
 
+    /**
+     * @return &lt;p&gt;This Boolean value controls whether to display sheet margins.&lt;/p&gt;
+     * 
+     */
     public Optional<Boolean> show() {
         return Optional.ofNullable(this.show);
     }
@@ -53,6 +57,12 @@ public final class ThemeMarginStyle extends com.pulumi.resources.InvokeArgs {
             $ = new ThemeMarginStyle(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param show &lt;p&gt;This Boolean value controls whether to display sheet margins.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder show(@Nullable Boolean show) {
             $.show = show;
             return this;

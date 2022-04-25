@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class TaskFilterRule {
     /**
-     * The type of filter rule to apply. AWS DataSync only supports the SIMPLE_PATTERN rule type.
+     * @return The type of filter rule to apply. AWS DataSync only supports the SIMPLE_PATTERN rule type.
      * 
      */
     private final @Nullable TaskFilterRuleFilterType filterType;
     /**
-     * A single filter string that consists of the patterns to include or exclude. The patterns are delimited by &#34;|&#34;.
+     * @return A single filter string that consists of the patterns to include or exclude. The patterns are delimited by &#34;|&#34;.
      * 
      */
     private final @Nullable String value;
@@ -32,16 +32,16 @@ public final class TaskFilterRule {
     }
 
     /**
-     * The type of filter rule to apply. AWS DataSync only supports the SIMPLE_PATTERN rule type.
+     * @return The type of filter rule to apply. AWS DataSync only supports the SIMPLE_PATTERN rule type.
      * 
-    */
+     */
     public Optional<TaskFilterRuleFilterType> filterType() {
         return Optional.ofNullable(this.filterType);
     }
     /**
-     * A single filter string that consists of the patterns to include or exclude. The patterns are delimited by &#34;|&#34;.
+     * @return A single filter string that consists of the patterns to include or exclude. The patterns are delimited by &#34;|&#34;.
      * 
-    */
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }

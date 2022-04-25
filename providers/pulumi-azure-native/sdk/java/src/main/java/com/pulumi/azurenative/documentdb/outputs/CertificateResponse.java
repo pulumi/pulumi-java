@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CertificateResponse {
     /**
-     * PEM formatted public key.
+     * @return PEM formatted public key.
      * 
      */
     private final @Nullable String pem;
@@ -23,9 +23,9 @@ public final class CertificateResponse {
     }
 
     /**
-     * PEM formatted public key.
+     * @return PEM formatted public key.
      * 
-    */
+     */
     public Optional<String> pem() {
         return Optional.ofNullable(this.pem);
     }

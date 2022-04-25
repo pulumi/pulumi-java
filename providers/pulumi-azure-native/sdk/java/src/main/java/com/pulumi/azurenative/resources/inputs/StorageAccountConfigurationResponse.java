@@ -25,6 +25,10 @@ public final class StorageAccountConfigurationResponse extends com.pulumi.resour
     @Import(name="storageAccountKey")
     private @Nullable String storageAccountKey;
 
+    /**
+     * @return The storage account access key.
+     * 
+     */
     public Optional<String> storageAccountKey() {
         return Optional.ofNullable(this.storageAccountKey);
     }
@@ -36,6 +40,10 @@ public final class StorageAccountConfigurationResponse extends com.pulumi.resour
     @Import(name="storageAccountName")
     private @Nullable String storageAccountName;
 
+    /**
+     * @return The storage account name.
+     * 
+     */
     public Optional<String> storageAccountName() {
         return Optional.ofNullable(this.storageAccountName);
     }
@@ -65,11 +73,23 @@ public final class StorageAccountConfigurationResponse extends com.pulumi.resour
             $ = new StorageAccountConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param storageAccountKey The storage account access key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountKey(@Nullable String storageAccountKey) {
             $.storageAccountKey = storageAccountKey;
             return this;
         }
 
+        /**
+         * @param storageAccountName The storage account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountName(@Nullable String storageAccountName) {
             $.storageAccountName = storageAccountName;
             return this;

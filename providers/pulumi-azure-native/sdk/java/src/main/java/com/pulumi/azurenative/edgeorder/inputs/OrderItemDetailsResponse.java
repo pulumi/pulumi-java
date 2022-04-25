@@ -33,6 +33,10 @@ public final class OrderItemDetailsResponse extends com.pulumi.resources.InvokeA
     @Import(name="cancellationReason", required=true)
     private String cancellationReason;
 
+    /**
+     * @return Cancellation reason.
+     * 
+     */
     public String cancellationReason() {
         return this.cancellationReason;
     }
@@ -44,6 +48,10 @@ public final class OrderItemDetailsResponse extends com.pulumi.resources.InvokeA
     @Import(name="cancellationStatus", required=true)
     private String cancellationStatus;
 
+    /**
+     * @return Describes whether the order item is cancellable or not.
+     * 
+     */
     public String cancellationStatus() {
         return this.cancellationStatus;
     }
@@ -55,6 +63,10 @@ public final class OrderItemDetailsResponse extends com.pulumi.resources.InvokeA
     @Import(name="currentStage", required=true)
     private StageDetailsResponse currentStage;
 
+    /**
+     * @return Current Order item Status
+     * 
+     */
     public StageDetailsResponse currentStage() {
         return this.currentStage;
     }
@@ -66,6 +78,10 @@ public final class OrderItemDetailsResponse extends com.pulumi.resources.InvokeA
     @Import(name="deletionStatus", required=true)
     private String deletionStatus;
 
+    /**
+     * @return Describes whether the order item is deletable or not.
+     * 
+     */
     public String deletionStatus() {
         return this.deletionStatus;
     }
@@ -77,6 +93,10 @@ public final class OrderItemDetailsResponse extends com.pulumi.resources.InvokeA
     @Import(name="error", required=true)
     private ErrorDetailResponse error;
 
+    /**
+     * @return Top level error for the job.
+     * 
+     */
     public ErrorDetailResponse error() {
         return this.error;
     }
@@ -88,6 +108,10 @@ public final class OrderItemDetailsResponse extends com.pulumi.resources.InvokeA
     @Import(name="forwardShippingDetails", required=true)
     private ForwardShippingDetailsResponse forwardShippingDetails;
 
+    /**
+     * @return Forward Package Shipping details
+     * 
+     */
     public ForwardShippingDetailsResponse forwardShippingDetails() {
         return this.forwardShippingDetails;
     }
@@ -99,6 +123,10 @@ public final class OrderItemDetailsResponse extends com.pulumi.resources.InvokeA
     @Import(name="managementRpDetails", required=true)
     private ResourceProviderDetailsResponse managementRpDetails;
 
+    /**
+     * @return Parent RP details - this returns only the first or default parent RP from the entire list
+     * 
+     */
     public ResourceProviderDetailsResponse managementRpDetails() {
         return this.managementRpDetails;
     }
@@ -110,6 +138,10 @@ public final class OrderItemDetailsResponse extends com.pulumi.resources.InvokeA
     @Import(name="managementRpDetailsList", required=true)
     private List<ResourceProviderDetailsResponse> managementRpDetailsList;
 
+    /**
+     * @return List of parent RP details supported for configuration.
+     * 
+     */
     public List<ResourceProviderDetailsResponse> managementRpDetailsList() {
         return this.managementRpDetailsList;
     }
@@ -121,6 +153,10 @@ public final class OrderItemDetailsResponse extends com.pulumi.resources.InvokeA
     @Import(name="notificationEmailList")
     private @Nullable List<String> notificationEmailList;
 
+    /**
+     * @return Additional notification email list
+     * 
+     */
     public Optional<List<String>> notificationEmailList() {
         return Optional.ofNullable(this.notificationEmailList);
     }
@@ -132,6 +168,10 @@ public final class OrderItemDetailsResponse extends com.pulumi.resources.InvokeA
     @Import(name="orderItemStageHistory", required=true)
     private List<StageDetailsResponse> orderItemStageHistory;
 
+    /**
+     * @return Order item status history
+     * 
+     */
     public List<StageDetailsResponse> orderItemStageHistory() {
         return this.orderItemStageHistory;
     }
@@ -143,6 +183,10 @@ public final class OrderItemDetailsResponse extends com.pulumi.resources.InvokeA
     @Import(name="orderItemType", required=true)
     private String orderItemType;
 
+    /**
+     * @return Order item type.
+     * 
+     */
     public String orderItemType() {
         return this.orderItemType;
     }
@@ -154,6 +198,10 @@ public final class OrderItemDetailsResponse extends com.pulumi.resources.InvokeA
     @Import(name="preferences")
     private @Nullable PreferencesResponse preferences;
 
+    /**
+     * @return Customer notification Preferences
+     * 
+     */
     public Optional<PreferencesResponse> preferences() {
         return Optional.ofNullable(this.preferences);
     }
@@ -165,6 +213,10 @@ public final class OrderItemDetailsResponse extends com.pulumi.resources.InvokeA
     @Import(name="productDetails", required=true)
     private ProductDetailsResponse productDetails;
 
+    /**
+     * @return Unique identifier for configuration.
+     * 
+     */
     public ProductDetailsResponse productDetails() {
         return this.productDetails;
     }
@@ -176,6 +228,10 @@ public final class OrderItemDetailsResponse extends com.pulumi.resources.InvokeA
     @Import(name="returnReason", required=true)
     private String returnReason;
 
+    /**
+     * @return Return reason.
+     * 
+     */
     public String returnReason() {
         return this.returnReason;
     }
@@ -187,6 +243,10 @@ public final class OrderItemDetailsResponse extends com.pulumi.resources.InvokeA
     @Import(name="returnStatus", required=true)
     private String returnStatus;
 
+    /**
+     * @return Describes whether the order item is returnable or not.
+     * 
+     */
     public String returnStatus() {
         return this.returnStatus;
     }
@@ -198,6 +258,10 @@ public final class OrderItemDetailsResponse extends com.pulumi.resources.InvokeA
     @Import(name="reverseShippingDetails", required=true)
     private ReverseShippingDetailsResponse reverseShippingDetails;
 
+    /**
+     * @return Reverse Package Shipping details
+     * 
+     */
     public ReverseShippingDetailsResponse reverseShippingDetails() {
         return this.reverseShippingDetails;
     }
@@ -241,93 +305,207 @@ public final class OrderItemDetailsResponse extends com.pulumi.resources.InvokeA
             $ = new OrderItemDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cancellationReason Cancellation reason.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cancellationReason(String cancellationReason) {
             $.cancellationReason = cancellationReason;
             return this;
         }
 
+        /**
+         * @param cancellationStatus Describes whether the order item is cancellable or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cancellationStatus(String cancellationStatus) {
             $.cancellationStatus = cancellationStatus;
             return this;
         }
 
+        /**
+         * @param currentStage Current Order item Status
+         * 
+         * @return builder
+         * 
+         */
         public Builder currentStage(StageDetailsResponse currentStage) {
             $.currentStage = currentStage;
             return this;
         }
 
+        /**
+         * @param deletionStatus Describes whether the order item is deletable or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deletionStatus(String deletionStatus) {
             $.deletionStatus = deletionStatus;
             return this;
         }
 
+        /**
+         * @param error Top level error for the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder error(ErrorDetailResponse error) {
             $.error = error;
             return this;
         }
 
+        /**
+         * @param forwardShippingDetails Forward Package Shipping details
+         * 
+         * @return builder
+         * 
+         */
         public Builder forwardShippingDetails(ForwardShippingDetailsResponse forwardShippingDetails) {
             $.forwardShippingDetails = forwardShippingDetails;
             return this;
         }
 
+        /**
+         * @param managementRpDetails Parent RP details - this returns only the first or default parent RP from the entire list
+         * 
+         * @return builder
+         * 
+         */
         public Builder managementRpDetails(ResourceProviderDetailsResponse managementRpDetails) {
             $.managementRpDetails = managementRpDetails;
             return this;
         }
 
+        /**
+         * @param managementRpDetailsList List of parent RP details supported for configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managementRpDetailsList(List<ResourceProviderDetailsResponse> managementRpDetailsList) {
             $.managementRpDetailsList = managementRpDetailsList;
             return this;
         }
 
+        /**
+         * @param managementRpDetailsList List of parent RP details supported for configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managementRpDetailsList(ResourceProviderDetailsResponse... managementRpDetailsList) {
             return managementRpDetailsList(List.of(managementRpDetailsList));
         }
 
+        /**
+         * @param notificationEmailList Additional notification email list
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationEmailList(@Nullable List<String> notificationEmailList) {
             $.notificationEmailList = notificationEmailList;
             return this;
         }
 
+        /**
+         * @param notificationEmailList Additional notification email list
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationEmailList(String... notificationEmailList) {
             return notificationEmailList(List.of(notificationEmailList));
         }
 
+        /**
+         * @param orderItemStageHistory Order item status history
+         * 
+         * @return builder
+         * 
+         */
         public Builder orderItemStageHistory(List<StageDetailsResponse> orderItemStageHistory) {
             $.orderItemStageHistory = orderItemStageHistory;
             return this;
         }
 
+        /**
+         * @param orderItemStageHistory Order item status history
+         * 
+         * @return builder
+         * 
+         */
         public Builder orderItemStageHistory(StageDetailsResponse... orderItemStageHistory) {
             return orderItemStageHistory(List.of(orderItemStageHistory));
         }
 
+        /**
+         * @param orderItemType Order item type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder orderItemType(String orderItemType) {
             $.orderItemType = orderItemType;
             return this;
         }
 
+        /**
+         * @param preferences Customer notification Preferences
+         * 
+         * @return builder
+         * 
+         */
         public Builder preferences(@Nullable PreferencesResponse preferences) {
             $.preferences = preferences;
             return this;
         }
 
+        /**
+         * @param productDetails Unique identifier for configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder productDetails(ProductDetailsResponse productDetails) {
             $.productDetails = productDetails;
             return this;
         }
 
+        /**
+         * @param returnReason Return reason.
+         * 
+         * @return builder
+         * 
+         */
         public Builder returnReason(String returnReason) {
             $.returnReason = returnReason;
             return this;
         }
 
+        /**
+         * @param returnStatus Describes whether the order item is returnable or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder returnStatus(String returnStatus) {
             $.returnStatus = returnStatus;
             return this;
         }
 
+        /**
+         * @param reverseShippingDetails Reverse Package Shipping details
+         * 
+         * @return builder
+         * 
+         */
         public Builder reverseShippingDetails(ReverseShippingDetailsResponse reverseShippingDetails) {
             $.reverseShippingDetails = reverseShippingDetails;
             return this;

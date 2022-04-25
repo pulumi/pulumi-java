@@ -21,6 +21,10 @@ public final class GetIntegrationRuntimeObjectMetadatumArgs extends com.pulumi.r
     @Import(name="factoryName", required=true)
     private String factoryName;
 
+    /**
+     * @return The factory name.
+     * 
+     */
     public String factoryName() {
         return this.factoryName;
     }
@@ -32,6 +36,10 @@ public final class GetIntegrationRuntimeObjectMetadatumArgs extends com.pulumi.r
     @Import(name="integrationRuntimeName", required=true)
     private String integrationRuntimeName;
 
+    /**
+     * @return The integration runtime name.
+     * 
+     */
     public String integrationRuntimeName() {
         return this.integrationRuntimeName;
     }
@@ -43,6 +51,10 @@ public final class GetIntegrationRuntimeObjectMetadatumArgs extends com.pulumi.r
     @Import(name="metadataPath")
     private @Nullable String metadataPath;
 
+    /**
+     * @return Metadata path.
+     * 
+     */
     public Optional<String> metadataPath() {
         return Optional.ofNullable(this.metadataPath);
     }
@@ -54,6 +66,10 @@ public final class GetIntegrationRuntimeObjectMetadatumArgs extends com.pulumi.r
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -85,21 +101,45 @@ public final class GetIntegrationRuntimeObjectMetadatumArgs extends com.pulumi.r
             $ = new GetIntegrationRuntimeObjectMetadatumArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param factoryName The factory name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder factoryName(String factoryName) {
             $.factoryName = factoryName;
             return this;
         }
 
+        /**
+         * @param integrationRuntimeName The integration runtime name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder integrationRuntimeName(String integrationRuntimeName) {
             $.integrationRuntimeName = integrationRuntimeName;
             return this;
         }
 
+        /**
+         * @param metadataPath Metadata path.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadataPath(@Nullable String metadataPath) {
             $.metadataPath = metadataPath;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

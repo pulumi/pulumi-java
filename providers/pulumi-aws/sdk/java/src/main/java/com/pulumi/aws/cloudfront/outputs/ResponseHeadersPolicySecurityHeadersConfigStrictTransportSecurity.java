@@ -13,22 +13,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurity {
     /**
-     * A number that CloudFront uses as the value for the `max-age` directive in the `Strict-Transport-Security` HTTP response header.
+     * @return A number that CloudFront uses as the value for the `max-age` directive in the `Strict-Transport-Security` HTTP response header.
      * 
      */
     private final Integer accessControlMaxAgeSec;
     /**
-     * A Boolean value that determines whether CloudFront includes the `includeSubDomains` directive in the `Strict-Transport-Security` HTTP response header.
+     * @return A Boolean value that determines whether CloudFront includes the `includeSubDomains` directive in the `Strict-Transport-Security` HTTP response header.
      * 
      */
     private final @Nullable Boolean includeSubdomains;
     /**
-     * A Boolean value that determines whether CloudFront overrides the `X-XSS-Protection` HTTP response header received from the origin with the one specified in this response headers policy.
+     * @return A Boolean value that determines whether CloudFront overrides the `X-XSS-Protection` HTTP response header received from the origin with the one specified in this response headers policy.
      * 
      */
     private final Boolean override;
     /**
-     * A Boolean value that determines whether CloudFront includes the `preload` directive in the `Strict-Transport-Security` HTTP response header.
+     * @return A Boolean value that determines whether CloudFront includes the `preload` directive in the `Strict-Transport-Security` HTTP response header.
      * 
      */
     private final @Nullable Boolean preload;
@@ -46,30 +46,30 @@ public final class ResponseHeadersPolicySecurityHeadersConfigStrictTransportSecu
     }
 
     /**
-     * A number that CloudFront uses as the value for the `max-age` directive in the `Strict-Transport-Security` HTTP response header.
+     * @return A number that CloudFront uses as the value for the `max-age` directive in the `Strict-Transport-Security` HTTP response header.
      * 
-    */
+     */
     public Integer accessControlMaxAgeSec() {
         return this.accessControlMaxAgeSec;
     }
     /**
-     * A Boolean value that determines whether CloudFront includes the `includeSubDomains` directive in the `Strict-Transport-Security` HTTP response header.
+     * @return A Boolean value that determines whether CloudFront includes the `includeSubDomains` directive in the `Strict-Transport-Security` HTTP response header.
      * 
-    */
+     */
     public Optional<Boolean> includeSubdomains() {
         return Optional.ofNullable(this.includeSubdomains);
     }
     /**
-     * A Boolean value that determines whether CloudFront overrides the `X-XSS-Protection` HTTP response header received from the origin with the one specified in this response headers policy.
+     * @return A Boolean value that determines whether CloudFront overrides the `X-XSS-Protection` HTTP response header received from the origin with the one specified in this response headers policy.
      * 
-    */
+     */
     public Boolean override() {
         return this.override;
     }
     /**
-     * A Boolean value that determines whether CloudFront includes the `preload` directive in the `Strict-Transport-Security` HTTP response header.
+     * @return A Boolean value that determines whether CloudFront includes the `preload` directive in the `Strict-Transport-Security` HTTP response header.
      * 
-    */
+     */
     public Optional<Boolean> preload() {
         return Optional.ofNullable(this.preload);
     }

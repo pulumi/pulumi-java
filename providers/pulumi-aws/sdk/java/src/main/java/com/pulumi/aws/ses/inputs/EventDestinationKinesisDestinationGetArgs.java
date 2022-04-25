@@ -20,6 +20,10 @@ public final class EventDestinationKinesisDestinationGetArgs extends com.pulumi.
     @Import(name="roleArn", required=true)
     private Output<String> roleArn;
 
+    /**
+     * @return The ARN of the role that has permissions to access the Kinesis Stream
+     * 
+     */
     public Output<String> roleArn() {
         return this.roleArn;
     }
@@ -31,6 +35,10 @@ public final class EventDestinationKinesisDestinationGetArgs extends com.pulumi.
     @Import(name="streamArn", required=true)
     private Output<String> streamArn;
 
+    /**
+     * @return The ARN of the Kinesis Stream
+     * 
+     */
     public Output<String> streamArn() {
         return this.streamArn;
     }
@@ -60,20 +68,44 @@ public final class EventDestinationKinesisDestinationGetArgs extends com.pulumi.
             $ = new EventDestinationKinesisDestinationGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param roleArn The ARN of the role that has permissions to access the Kinesis Stream
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(Output<String> roleArn) {
             $.roleArn = roleArn;
             return this;
         }
 
+        /**
+         * @param roleArn The ARN of the role that has permissions to access the Kinesis Stream
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(String roleArn) {
             return roleArn(Output.of(roleArn));
         }
 
+        /**
+         * @param streamArn The ARN of the Kinesis Stream
+         * 
+         * @return builder
+         * 
+         */
         public Builder streamArn(Output<String> streamArn) {
             $.streamArn = streamArn;
             return this;
         }
 
+        /**
+         * @param streamArn The ARN of the Kinesis Stream
+         * 
+         * @return builder
+         * 
+         */
         public Builder streamArn(String streamArn) {
             return streamArn(Output.of(streamArn));
         }

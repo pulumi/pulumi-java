@@ -22,6 +22,10 @@ public final class AccessPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accessPolicyIdentity", required=true)
     private Output<AccessPolicyIdentityArgs> accessPolicyIdentity;
 
+    /**
+     * @return The identity for this access policy. Choose either a user or a group but not both.
+     * 
+     */
     public Output<AccessPolicyIdentityArgs> accessPolicyIdentity() {
         return this.accessPolicyIdentity;
     }
@@ -33,6 +37,10 @@ public final class AccessPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accessPolicyPermission", required=true)
     private Output<String> accessPolicyPermission;
 
+    /**
+     * @return The permission level for this access policy. Valid values are ADMINISTRATOR or VIEWER.
+     * 
+     */
     public Output<String> accessPolicyPermission() {
         return this.accessPolicyPermission;
     }
@@ -44,6 +52,10 @@ public final class AccessPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accessPolicyResource", required=true)
     private Output<AccessPolicyResourceArgs> accessPolicyResource;
 
+    /**
+     * @return The AWS IoT SiteWise Monitor resource for this access policy. Choose either portal or project but not both.
+     * 
+     */
     public Output<AccessPolicyResourceArgs> accessPolicyResource() {
         return this.accessPolicyResource;
     }
@@ -74,29 +86,65 @@ public final class AccessPolicyArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AccessPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessPolicyIdentity The identity for this access policy. Choose either a user or a group but not both.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessPolicyIdentity(Output<AccessPolicyIdentityArgs> accessPolicyIdentity) {
             $.accessPolicyIdentity = accessPolicyIdentity;
             return this;
         }
 
+        /**
+         * @param accessPolicyIdentity The identity for this access policy. Choose either a user or a group but not both.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessPolicyIdentity(AccessPolicyIdentityArgs accessPolicyIdentity) {
             return accessPolicyIdentity(Output.of(accessPolicyIdentity));
         }
 
+        /**
+         * @param accessPolicyPermission The permission level for this access policy. Valid values are ADMINISTRATOR or VIEWER.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessPolicyPermission(Output<String> accessPolicyPermission) {
             $.accessPolicyPermission = accessPolicyPermission;
             return this;
         }
 
+        /**
+         * @param accessPolicyPermission The permission level for this access policy. Valid values are ADMINISTRATOR or VIEWER.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessPolicyPermission(String accessPolicyPermission) {
             return accessPolicyPermission(Output.of(accessPolicyPermission));
         }
 
+        /**
+         * @param accessPolicyResource The AWS IoT SiteWise Monitor resource for this access policy. Choose either portal or project but not both.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessPolicyResource(Output<AccessPolicyResourceArgs> accessPolicyResource) {
             $.accessPolicyResource = accessPolicyResource;
             return this;
         }
 
+        /**
+         * @param accessPolicyResource The AWS IoT SiteWise Monitor resource for this access policy. Choose either portal or project but not both.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessPolicyResource(AccessPolicyResourceArgs accessPolicyResource) {
             return accessPolicyResource(Output.of(accessPolicyResource));
         }

@@ -23,6 +23,10 @@ public final class X12AgreementContentResponse extends com.pulumi.resources.Invo
     @Import(name="receiveAgreement", required=true)
     private X12OneWayAgreementResponse receiveAgreement;
 
+    /**
+     * @return The X12 one-way receive agreement.
+     * 
+     */
     public X12OneWayAgreementResponse receiveAgreement() {
         return this.receiveAgreement;
     }
@@ -34,6 +38,10 @@ public final class X12AgreementContentResponse extends com.pulumi.resources.Invo
     @Import(name="sendAgreement", required=true)
     private X12OneWayAgreementResponse sendAgreement;
 
+    /**
+     * @return The X12 one-way send agreement.
+     * 
+     */
     public X12OneWayAgreementResponse sendAgreement() {
         return this.sendAgreement;
     }
@@ -63,11 +71,23 @@ public final class X12AgreementContentResponse extends com.pulumi.resources.Invo
             $ = new X12AgreementContentResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param receiveAgreement The X12 one-way receive agreement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder receiveAgreement(X12OneWayAgreementResponse receiveAgreement) {
             $.receiveAgreement = receiveAgreement;
             return this;
         }
 
+        /**
+         * @param sendAgreement The X12 one-way send agreement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sendAgreement(X12OneWayAgreementResponse sendAgreement) {
             $.sendAgreement = sendAgreement;
             return this;

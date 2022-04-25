@@ -26,6 +26,10 @@ public final class SharedPublicIpAddressConfigurationResponse extends com.pulumi
     @Import(name="inboundNatRules")
     private @Nullable List<InboundNatRuleResponse> inboundNatRules;
 
+    /**
+     * @return The incoming NAT rules
+     * 
+     */
     public Optional<List<InboundNatRuleResponse>> inboundNatRules() {
         return Optional.ofNullable(this.inboundNatRules);
     }
@@ -54,11 +58,23 @@ public final class SharedPublicIpAddressConfigurationResponse extends com.pulumi
             $ = new SharedPublicIpAddressConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param inboundNatRules The incoming NAT rules
+         * 
+         * @return builder
+         * 
+         */
         public Builder inboundNatRules(@Nullable List<InboundNatRuleResponse> inboundNatRules) {
             $.inboundNatRules = inboundNatRules;
             return this;
         }
 
+        /**
+         * @param inboundNatRules The incoming NAT rules
+         * 
+         * @return builder
+         * 
+         */
         public Builder inboundNatRules(InboundNatRuleResponse... inboundNatRules) {
             return inboundNatRules(List.of(inboundNatRules));
         }

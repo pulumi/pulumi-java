@@ -28,6 +28,10 @@ public final class TimelineResultsMetadataResponse extends com.pulumi.resources.
     @Import(name="aggregations", required=true)
     private List<TimelineAggregationResponse> aggregations;
 
+    /**
+     * @return timeline aggregation per kind
+     * 
+     */
     public List<TimelineAggregationResponse> aggregations() {
         return this.aggregations;
     }
@@ -39,6 +43,10 @@ public final class TimelineResultsMetadataResponse extends com.pulumi.resources.
     @Import(name="errors")
     private @Nullable List<TimelineErrorResponse> errors;
 
+    /**
+     * @return information about the failure queries
+     * 
+     */
     public Optional<List<TimelineErrorResponse>> errors() {
         return Optional.ofNullable(this.errors);
     }
@@ -50,6 +58,10 @@ public final class TimelineResultsMetadataResponse extends com.pulumi.resources.
     @Import(name="totalCount", required=true)
     private Integer totalCount;
 
+    /**
+     * @return the total items found for the timeline request
+     * 
+     */
     public Integer totalCount() {
         return this.totalCount;
     }
@@ -80,24 +92,54 @@ public final class TimelineResultsMetadataResponse extends com.pulumi.resources.
             $ = new TimelineResultsMetadataResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param aggregations timeline aggregation per kind
+         * 
+         * @return builder
+         * 
+         */
         public Builder aggregations(List<TimelineAggregationResponse> aggregations) {
             $.aggregations = aggregations;
             return this;
         }
 
+        /**
+         * @param aggregations timeline aggregation per kind
+         * 
+         * @return builder
+         * 
+         */
         public Builder aggregations(TimelineAggregationResponse... aggregations) {
             return aggregations(List.of(aggregations));
         }
 
+        /**
+         * @param errors information about the failure queries
+         * 
+         * @return builder
+         * 
+         */
         public Builder errors(@Nullable List<TimelineErrorResponse> errors) {
             $.errors = errors;
             return this;
         }
 
+        /**
+         * @param errors information about the failure queries
+         * 
+         * @return builder
+         * 
+         */
         public Builder errors(TimelineErrorResponse... errors) {
             return errors(List.of(errors));
         }
 
+        /**
+         * @param totalCount the total items found for the timeline request
+         * 
+         * @return builder
+         * 
+         */
         public Builder totalCount(Integer totalCount) {
             $.totalCount = totalCount;
             return this;

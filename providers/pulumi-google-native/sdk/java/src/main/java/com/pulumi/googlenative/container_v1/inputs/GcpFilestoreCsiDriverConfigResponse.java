@@ -23,6 +23,10 @@ public final class GcpFilestoreCsiDriverConfigResponse extends com.pulumi.resour
     @Import(name="enabled", required=true)
     private Boolean enabled;
 
+    /**
+     * @return Whether the GCP Filestore CSI driver is enabled for this cluster.
+     * 
+     */
     public Boolean enabled() {
         return this.enabled;
     }
@@ -51,6 +55,12 @@ public final class GcpFilestoreCsiDriverConfigResponse extends com.pulumi.resour
             $ = new GcpFilestoreCsiDriverConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Whether the GCP Filestore CSI driver is enabled for this cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             $.enabled = enabled;
             return this;

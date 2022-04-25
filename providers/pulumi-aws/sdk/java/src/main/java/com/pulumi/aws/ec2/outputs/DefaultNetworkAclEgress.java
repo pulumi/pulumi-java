@@ -13,47 +13,47 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DefaultNetworkAclEgress {
     /**
-     * The action to take.
+     * @return The action to take.
      * 
      */
     private final String action;
     /**
-     * The CIDR block to match. This must be a valid network mask.
+     * @return The CIDR block to match. This must be a valid network mask.
      * 
      */
     private final @Nullable String cidrBlock;
     /**
-     * The from port to match.
+     * @return The from port to match.
      * 
      */
     private final Integer fromPort;
     /**
-     * The ICMP type code to be used. Default 0.
+     * @return The ICMP type code to be used. Default 0.
      * 
      */
     private final @Nullable Integer icmpCode;
     /**
-     * The ICMP type to be used. Default 0.
+     * @return The ICMP type to be used. Default 0.
      * 
      */
     private final @Nullable Integer icmpType;
     /**
-     * The IPv6 CIDR block.
+     * @return The IPv6 CIDR block.
      * 
      */
     private final @Nullable String ipv6CidrBlock;
     /**
-     * The protocol to match. If using the -1 &#39;all&#39; protocol, you must specify a from and to port of 0.
+     * @return The protocol to match. If using the -1 &#39;all&#39; protocol, you must specify a from and to port of 0.
      * 
      */
     private final String protocol;
     /**
-     * The rule number. Used for ordering.
+     * @return The rule number. Used for ordering.
      * 
      */
     private final Integer ruleNo;
     /**
-     * The to port to match.
+     * @return The to port to match.
      * 
      */
     private final Integer toPort;
@@ -81,65 +81,65 @@ public final class DefaultNetworkAclEgress {
     }
 
     /**
-     * The action to take.
+     * @return The action to take.
      * 
-    */
+     */
     public String action() {
         return this.action;
     }
     /**
-     * The CIDR block to match. This must be a valid network mask.
+     * @return The CIDR block to match. This must be a valid network mask.
      * 
-    */
+     */
     public Optional<String> cidrBlock() {
         return Optional.ofNullable(this.cidrBlock);
     }
     /**
-     * The from port to match.
+     * @return The from port to match.
      * 
-    */
+     */
     public Integer fromPort() {
         return this.fromPort;
     }
     /**
-     * The ICMP type code to be used. Default 0.
+     * @return The ICMP type code to be used. Default 0.
      * 
-    */
+     */
     public Optional<Integer> icmpCode() {
         return Optional.ofNullable(this.icmpCode);
     }
     /**
-     * The ICMP type to be used. Default 0.
+     * @return The ICMP type to be used. Default 0.
      * 
-    */
+     */
     public Optional<Integer> icmpType() {
         return Optional.ofNullable(this.icmpType);
     }
     /**
-     * The IPv6 CIDR block.
+     * @return The IPv6 CIDR block.
      * 
-    */
+     */
     public Optional<String> ipv6CidrBlock() {
         return Optional.ofNullable(this.ipv6CidrBlock);
     }
     /**
-     * The protocol to match. If using the -1 &#39;all&#39; protocol, you must specify a from and to port of 0.
+     * @return The protocol to match. If using the -1 &#39;all&#39; protocol, you must specify a from and to port of 0.
      * 
-    */
+     */
     public String protocol() {
         return this.protocol;
     }
     /**
-     * The rule number. Used for ordering.
+     * @return The rule number. Used for ordering.
      * 
-    */
+     */
     public Integer ruleNo() {
         return this.ruleNo;
     }
     /**
-     * The to port to match.
+     * @return The to port to match.
      * 
-    */
+     */
     public Integer toPort() {
         return this.toPort;
     }

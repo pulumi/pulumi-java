@@ -28,6 +28,10 @@ public final class AutoscaleNotificationResponse extends com.pulumi.resources.In
     @Import(name="email")
     private @Nullable EmailNotificationResponse email;
 
+    /**
+     * @return the email notification.
+     * 
+     */
     public Optional<EmailNotificationResponse> email() {
         return Optional.ofNullable(this.email);
     }
@@ -39,6 +43,10 @@ public final class AutoscaleNotificationResponse extends com.pulumi.resources.In
     @Import(name="operation", required=true)
     private String operation;
 
+    /**
+     * @return the operation associated with the notification and its value must be &#34;scale&#34;
+     * 
+     */
     public String operation() {
         return this.operation;
     }
@@ -50,6 +58,10 @@ public final class AutoscaleNotificationResponse extends com.pulumi.resources.In
     @Import(name="webhooks")
     private @Nullable List<WebhookNotificationResponse> webhooks;
 
+    /**
+     * @return the collection of webhook notifications.
+     * 
+     */
     public Optional<List<WebhookNotificationResponse>> webhooks() {
         return Optional.ofNullable(this.webhooks);
     }
@@ -80,21 +92,45 @@ public final class AutoscaleNotificationResponse extends com.pulumi.resources.In
             $ = new AutoscaleNotificationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param email the email notification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder email(@Nullable EmailNotificationResponse email) {
             $.email = email;
             return this;
         }
 
+        /**
+         * @param operation the operation associated with the notification and its value must be &#34;scale&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder operation(String operation) {
             $.operation = operation;
             return this;
         }
 
+        /**
+         * @param webhooks the collection of webhook notifications.
+         * 
+         * @return builder
+         * 
+         */
         public Builder webhooks(@Nullable List<WebhookNotificationResponse> webhooks) {
             $.webhooks = webhooks;
             return this;
         }
 
+        /**
+         * @param webhooks the collection of webhook notifications.
+         * 
+         * @return builder
+         * 
+         */
         public Builder webhooks(WebhookNotificationResponse... webhooks) {
             return webhooks(List.of(webhooks));
         }

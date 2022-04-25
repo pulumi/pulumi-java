@@ -25,6 +25,10 @@ public final class ScriptReferenceResponse extends com.pulumi.resources.InvokeAr
     @Import(name="scriptArguments")
     private @Nullable String scriptArguments;
 
+    /**
+     * @return Optional command line arguments passed to the script to run.
+     * 
+     */
     public Optional<String> scriptArguments() {
         return Optional.ofNullable(this.scriptArguments);
     }
@@ -36,6 +40,10 @@ public final class ScriptReferenceResponse extends com.pulumi.resources.InvokeAr
     @Import(name="scriptData")
     private @Nullable String scriptData;
 
+    /**
+     * @return The location of scripts in the mounted volume.
+     * 
+     */
     public Optional<String> scriptData() {
         return Optional.ofNullable(this.scriptData);
     }
@@ -47,6 +55,10 @@ public final class ScriptReferenceResponse extends com.pulumi.resources.InvokeAr
     @Import(name="scriptSource")
     private @Nullable String scriptSource;
 
+    /**
+     * @return The storage source of the script: inline, workspace.
+     * 
+     */
     public Optional<String> scriptSource() {
         return Optional.ofNullable(this.scriptSource);
     }
@@ -58,6 +70,10 @@ public final class ScriptReferenceResponse extends com.pulumi.resources.InvokeAr
     @Import(name="timeout")
     private @Nullable String timeout;
 
+    /**
+     * @return Optional time period passed to timeout command.
+     * 
+     */
     public Optional<String> timeout() {
         return Optional.ofNullable(this.timeout);
     }
@@ -89,21 +105,45 @@ public final class ScriptReferenceResponse extends com.pulumi.resources.InvokeAr
             $ = new ScriptReferenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param scriptArguments Optional command line arguments passed to the script to run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scriptArguments(@Nullable String scriptArguments) {
             $.scriptArguments = scriptArguments;
             return this;
         }
 
+        /**
+         * @param scriptData The location of scripts in the mounted volume.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scriptData(@Nullable String scriptData) {
             $.scriptData = scriptData;
             return this;
         }
 
+        /**
+         * @param scriptSource The storage source of the script: inline, workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scriptSource(@Nullable String scriptSource) {
             $.scriptSource = scriptSource;
             return this;
         }
 
+        /**
+         * @param timeout Optional time period passed to timeout command.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeout(@Nullable String timeout) {
             $.timeout = timeout;
             return this;

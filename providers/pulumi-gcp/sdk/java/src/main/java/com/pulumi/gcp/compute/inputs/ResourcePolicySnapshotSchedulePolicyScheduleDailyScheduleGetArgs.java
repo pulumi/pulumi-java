@@ -21,6 +21,10 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleGetA
     @Import(name="daysInCycle", required=true)
     private Output<Integer> daysInCycle;
 
+    /**
+     * @return The number of days between snapshots.
+     * 
+     */
     public Output<Integer> daysInCycle() {
         return this.daysInCycle;
     }
@@ -32,6 +36,10 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleGetA
     @Import(name="startTime", required=true)
     private Output<String> startTime;
 
+    /**
+     * @return The start time of the schedule. The timestamp is an RFC3339 string.
+     * 
+     */
     public Output<String> startTime() {
         return this.startTime;
     }
@@ -61,20 +69,44 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleGetA
             $ = new ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param daysInCycle The number of days between snapshots.
+         * 
+         * @return builder
+         * 
+         */
         public Builder daysInCycle(Output<Integer> daysInCycle) {
             $.daysInCycle = daysInCycle;
             return this;
         }
 
+        /**
+         * @param daysInCycle The number of days between snapshots.
+         * 
+         * @return builder
+         * 
+         */
         public Builder daysInCycle(Integer daysInCycle) {
             return daysInCycle(Output.of(daysInCycle));
         }
 
+        /**
+         * @param startTime The start time of the schedule. The timestamp is an RFC3339 string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(Output<String> startTime) {
             $.startTime = startTime;
             return this;
         }
 
+        /**
+         * @param startTime The start time of the schedule. The timestamp is an RFC3339 string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             return startTime(Output.of(startTime));
         }

@@ -25,6 +25,10 @@ public final class HeaderActionParametersResponse extends com.pulumi.resources.I
     @Import(name="headerAction", required=true)
     private String headerAction;
 
+    /**
+     * @return Action to perform
+     * 
+     */
     public String headerAction() {
         return this.headerAction;
     }
@@ -36,6 +40,10 @@ public final class HeaderActionParametersResponse extends com.pulumi.resources.I
     @Import(name="headerName", required=true)
     private String headerName;
 
+    /**
+     * @return Name of the header to modify
+     * 
+     */
     public String headerName() {
         return this.headerName;
     }
@@ -54,6 +62,10 @@ public final class HeaderActionParametersResponse extends com.pulumi.resources.I
     @Import(name="value")
     private @Nullable String value;
 
+    /**
+     * @return Value for the specified action
+     * 
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
@@ -85,11 +97,23 @@ public final class HeaderActionParametersResponse extends com.pulumi.resources.I
             $ = new HeaderActionParametersResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param headerAction Action to perform
+         * 
+         * @return builder
+         * 
+         */
         public Builder headerAction(String headerAction) {
             $.headerAction = headerAction;
             return this;
         }
 
+        /**
+         * @param headerName Name of the header to modify
+         * 
+         * @return builder
+         * 
+         */
         public Builder headerName(String headerName) {
             $.headerName = headerName;
             return this;
@@ -100,6 +124,12 @@ public final class HeaderActionParametersResponse extends com.pulumi.resources.I
             return this;
         }
 
+        /**
+         * @param value Value for the specified action
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable String value) {
             $.value = value;
             return this;

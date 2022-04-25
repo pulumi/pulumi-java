@@ -26,6 +26,10 @@ public final class LastPatchInstallationSummaryResponse extends com.pulumi.resou
     @Import(name="error", required=true)
     private ApiErrorResponse error;
 
+    /**
+     * @return The errors that were encountered during execution of the operation. The details array contains the list of them.
+     * 
+     */
     public ApiErrorResponse error() {
         return this.error;
     }
@@ -37,6 +41,10 @@ public final class LastPatchInstallationSummaryResponse extends com.pulumi.resou
     @Import(name="excludedPatchCount", required=true)
     private Integer excludedPatchCount;
 
+    /**
+     * @return The number of all available patches but excluded explicitly by a customer-specified exclusion list match.
+     * 
+     */
     public Integer excludedPatchCount() {
         return this.excludedPatchCount;
     }
@@ -48,6 +56,10 @@ public final class LastPatchInstallationSummaryResponse extends com.pulumi.resou
     @Import(name="failedPatchCount", required=true)
     private Integer failedPatchCount;
 
+    /**
+     * @return The count of patches that failed installation.
+     * 
+     */
     public Integer failedPatchCount() {
         return this.failedPatchCount;
     }
@@ -59,6 +71,10 @@ public final class LastPatchInstallationSummaryResponse extends com.pulumi.resou
     @Import(name="installationActivityId", required=true)
     private String installationActivityId;
 
+    /**
+     * @return The activity ID of the operation that produced this result. It is used to correlate across CRP and extension logs.
+     * 
+     */
     public String installationActivityId() {
         return this.installationActivityId;
     }
@@ -70,6 +86,10 @@ public final class LastPatchInstallationSummaryResponse extends com.pulumi.resou
     @Import(name="installedPatchCount", required=true)
     private Integer installedPatchCount;
 
+    /**
+     * @return The count of patches that successfully installed.
+     * 
+     */
     public Integer installedPatchCount() {
         return this.installedPatchCount;
     }
@@ -81,6 +101,10 @@ public final class LastPatchInstallationSummaryResponse extends com.pulumi.resou
     @Import(name="lastModifiedTime", required=true)
     private String lastModifiedTime;
 
+    /**
+     * @return The UTC timestamp when the operation began.
+     * 
+     */
     public String lastModifiedTime() {
         return this.lastModifiedTime;
     }
@@ -92,6 +116,10 @@ public final class LastPatchInstallationSummaryResponse extends com.pulumi.resou
     @Import(name="maintenanceWindowExceeded", required=true)
     private Boolean maintenanceWindowExceeded;
 
+    /**
+     * @return Describes whether the operation ran out of time before it completed all its intended actions
+     * 
+     */
     public Boolean maintenanceWindowExceeded() {
         return this.maintenanceWindowExceeded;
     }
@@ -103,6 +131,10 @@ public final class LastPatchInstallationSummaryResponse extends com.pulumi.resou
     @Import(name="notSelectedPatchCount", required=true)
     private Integer notSelectedPatchCount;
 
+    /**
+     * @return The number of all available patches but not going to be installed because it didn&#39;t match a classification or inclusion list entry.
+     * 
+     */
     public Integer notSelectedPatchCount() {
         return this.notSelectedPatchCount;
     }
@@ -114,6 +146,10 @@ public final class LastPatchInstallationSummaryResponse extends com.pulumi.resou
     @Import(name="pendingPatchCount", required=true)
     private Integer pendingPatchCount;
 
+    /**
+     * @return The number of all available patches expected to be installed over the course of the patch installation operation.
+     * 
+     */
     public Integer pendingPatchCount() {
         return this.pendingPatchCount;
     }
@@ -125,6 +161,10 @@ public final class LastPatchInstallationSummaryResponse extends com.pulumi.resou
     @Import(name="startTime", required=true)
     private String startTime;
 
+    /**
+     * @return The UTC timestamp when the operation began.
+     * 
+     */
     public String startTime() {
         return this.startTime;
     }
@@ -136,6 +176,10 @@ public final class LastPatchInstallationSummaryResponse extends com.pulumi.resou
     @Import(name="status", required=true)
     private String status;
 
+    /**
+     * @return The overall success or failure status of the operation. It remains &#34;InProgress&#34; until the operation completes. At that point it will become &#34;Unknown&#34;, &#34;Failed&#34;, &#34;Succeeded&#34;, or &#34;CompletedWithWarnings.&#34;
+     * 
+     */
     public String status() {
         return this.status;
     }
@@ -174,56 +218,122 @@ public final class LastPatchInstallationSummaryResponse extends com.pulumi.resou
             $ = new LastPatchInstallationSummaryResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param error The errors that were encountered during execution of the operation. The details array contains the list of them.
+         * 
+         * @return builder
+         * 
+         */
         public Builder error(ApiErrorResponse error) {
             $.error = error;
             return this;
         }
 
+        /**
+         * @param excludedPatchCount The number of all available patches but excluded explicitly by a customer-specified exclusion list match.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludedPatchCount(Integer excludedPatchCount) {
             $.excludedPatchCount = excludedPatchCount;
             return this;
         }
 
+        /**
+         * @param failedPatchCount The count of patches that failed installation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failedPatchCount(Integer failedPatchCount) {
             $.failedPatchCount = failedPatchCount;
             return this;
         }
 
+        /**
+         * @param installationActivityId The activity ID of the operation that produced this result. It is used to correlate across CRP and extension logs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder installationActivityId(String installationActivityId) {
             $.installationActivityId = installationActivityId;
             return this;
         }
 
+        /**
+         * @param installedPatchCount The count of patches that successfully installed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder installedPatchCount(Integer installedPatchCount) {
             $.installedPatchCount = installedPatchCount;
             return this;
         }
 
+        /**
+         * @param lastModifiedTime The UTC timestamp when the operation began.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastModifiedTime(String lastModifiedTime) {
             $.lastModifiedTime = lastModifiedTime;
             return this;
         }
 
+        /**
+         * @param maintenanceWindowExceeded Describes whether the operation ran out of time before it completed all its intended actions
+         * 
+         * @return builder
+         * 
+         */
         public Builder maintenanceWindowExceeded(Boolean maintenanceWindowExceeded) {
             $.maintenanceWindowExceeded = maintenanceWindowExceeded;
             return this;
         }
 
+        /**
+         * @param notSelectedPatchCount The number of all available patches but not going to be installed because it didn&#39;t match a classification or inclusion list entry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notSelectedPatchCount(Integer notSelectedPatchCount) {
             $.notSelectedPatchCount = notSelectedPatchCount;
             return this;
         }
 
+        /**
+         * @param pendingPatchCount The number of all available patches expected to be installed over the course of the patch installation operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pendingPatchCount(Integer pendingPatchCount) {
             $.pendingPatchCount = pendingPatchCount;
             return this;
         }
 
+        /**
+         * @param startTime The UTC timestamp when the operation began.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             $.startTime = startTime;
             return this;
         }
 
+        /**
+         * @param status The overall success or failure status of the operation. It remains &#34;InProgress&#34; until the operation completes. At that point it will become &#34;Unknown&#34;, &#34;Failed&#34;, &#34;Succeeded&#34;, or &#34;CompletedWithWarnings.&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             $.status = status;
             return this;

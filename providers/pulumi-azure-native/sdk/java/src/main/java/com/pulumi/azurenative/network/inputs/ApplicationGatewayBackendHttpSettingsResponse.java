@@ -30,6 +30,10 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends com.pul
     @Import(name="affinityCookieName")
     private @Nullable String affinityCookieName;
 
+    /**
+     * @return Cookie name to use for the affinity cookie.
+     * 
+     */
     public Optional<String> affinityCookieName() {
         return Optional.ofNullable(this.affinityCookieName);
     }
@@ -41,6 +45,10 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends com.pul
     @Import(name="authenticationCertificates")
     private @Nullable List<SubResourceResponse> authenticationCertificates;
 
+    /**
+     * @return Array of references to application gateway authentication certificates.
+     * 
+     */
     public Optional<List<SubResourceResponse>> authenticationCertificates() {
         return Optional.ofNullable(this.authenticationCertificates);
     }
@@ -52,6 +60,10 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends com.pul
     @Import(name="connectionDraining")
     private @Nullable ApplicationGatewayConnectionDrainingResponse connectionDraining;
 
+    /**
+     * @return Connection draining of the backend http settings resource.
+     * 
+     */
     public Optional<ApplicationGatewayConnectionDrainingResponse> connectionDraining() {
         return Optional.ofNullable(this.connectionDraining);
     }
@@ -63,6 +75,10 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends com.pul
     @Import(name="cookieBasedAffinity")
     private @Nullable String cookieBasedAffinity;
 
+    /**
+     * @return Cookie based affinity.
+     * 
+     */
     public Optional<String> cookieBasedAffinity() {
         return Optional.ofNullable(this.cookieBasedAffinity);
     }
@@ -74,6 +90,10 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends com.pul
     @Import(name="etag", required=true)
     private String etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public String etag() {
         return this.etag;
     }
@@ -85,6 +105,10 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends com.pul
     @Import(name="hostName")
     private @Nullable String hostName;
 
+    /**
+     * @return Host header to be sent to the backend servers.
+     * 
+     */
     public Optional<String> hostName() {
         return Optional.ofNullable(this.hostName);
     }
@@ -96,6 +120,10 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends com.pul
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -107,6 +135,10 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends com.pul
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Name of the backend http settings that is unique within an Application Gateway.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -118,6 +150,10 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends com.pul
     @Import(name="path")
     private @Nullable String path;
 
+    /**
+     * @return Path which should be used as a prefix for all HTTP requests. Null means no path will be prefixed. Default value is null.
+     * 
+     */
     public Optional<String> path() {
         return Optional.ofNullable(this.path);
     }
@@ -129,6 +165,10 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends com.pul
     @Import(name="pickHostNameFromBackendAddress")
     private @Nullable Boolean pickHostNameFromBackendAddress;
 
+    /**
+     * @return Whether to pick host header should be picked from the host name of the backend server. Default value is false.
+     * 
+     */
     public Optional<Boolean> pickHostNameFromBackendAddress() {
         return Optional.ofNullable(this.pickHostNameFromBackendAddress);
     }
@@ -140,6 +180,10 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends com.pul
     @Import(name="port")
     private @Nullable Integer port;
 
+    /**
+     * @return The destination port on the backend.
+     * 
+     */
     public Optional<Integer> port() {
         return Optional.ofNullable(this.port);
     }
@@ -151,6 +195,10 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends com.pul
     @Import(name="probe")
     private @Nullable SubResourceResponse probe;
 
+    /**
+     * @return Probe resource of an application gateway.
+     * 
+     */
     public Optional<SubResourceResponse> probe() {
         return Optional.ofNullable(this.probe);
     }
@@ -162,6 +210,10 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends com.pul
     @Import(name="probeEnabled")
     private @Nullable Boolean probeEnabled;
 
+    /**
+     * @return Whether the probe is enabled. Default value is false.
+     * 
+     */
     public Optional<Boolean> probeEnabled() {
         return Optional.ofNullable(this.probeEnabled);
     }
@@ -173,6 +225,10 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends com.pul
     @Import(name="protocol")
     private @Nullable String protocol;
 
+    /**
+     * @return The protocol used to communicate with the backend.
+     * 
+     */
     public Optional<String> protocol() {
         return Optional.ofNullable(this.protocol);
     }
@@ -184,6 +240,10 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends com.pul
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The provisioning state of the backend HTTP settings resource.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -195,6 +255,10 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends com.pul
     @Import(name="requestTimeout")
     private @Nullable Integer requestTimeout;
 
+    /**
+     * @return Request timeout in seconds. Application Gateway will fail the request if response is not received within RequestTimeout. Acceptable values are from 1 second to 86400 seconds.
+     * 
+     */
     public Optional<Integer> requestTimeout() {
         return Optional.ofNullable(this.requestTimeout);
     }
@@ -206,6 +270,10 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends com.pul
     @Import(name="trustedRootCertificates")
     private @Nullable List<SubResourceResponse> trustedRootCertificates;
 
+    /**
+     * @return Array of references to application gateway trusted root certificates.
+     * 
+     */
     public Optional<List<SubResourceResponse>> trustedRootCertificates() {
         return Optional.ofNullable(this.trustedRootCertificates);
     }
@@ -217,6 +285,10 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends com.pul
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of the resource.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -262,99 +334,219 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends com.pul
             $ = new ApplicationGatewayBackendHttpSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param affinityCookieName Cookie name to use for the affinity cookie.
+         * 
+         * @return builder
+         * 
+         */
         public Builder affinityCookieName(@Nullable String affinityCookieName) {
             $.affinityCookieName = affinityCookieName;
             return this;
         }
 
+        /**
+         * @param authenticationCertificates Array of references to application gateway authentication certificates.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationCertificates(@Nullable List<SubResourceResponse> authenticationCertificates) {
             $.authenticationCertificates = authenticationCertificates;
             return this;
         }
 
+        /**
+         * @param authenticationCertificates Array of references to application gateway authentication certificates.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationCertificates(SubResourceResponse... authenticationCertificates) {
             return authenticationCertificates(List.of(authenticationCertificates));
         }
 
+        /**
+         * @param connectionDraining Connection draining of the backend http settings resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionDraining(@Nullable ApplicationGatewayConnectionDrainingResponse connectionDraining) {
             $.connectionDraining = connectionDraining;
             return this;
         }
 
+        /**
+         * @param cookieBasedAffinity Cookie based affinity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cookieBasedAffinity(@Nullable String cookieBasedAffinity) {
             $.cookieBasedAffinity = cookieBasedAffinity;
             return this;
         }
 
+        /**
+         * @param etag A unique read-only string that changes whenever the resource is updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param hostName Host header to be sent to the backend servers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostName(@Nullable String hostName) {
             $.hostName = hostName;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param name Name of the backend http settings that is unique within an Application Gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param path Path which should be used as a prefix for all HTTP requests. Null means no path will be prefixed. Default value is null.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(@Nullable String path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param pickHostNameFromBackendAddress Whether to pick host header should be picked from the host name of the backend server. Default value is false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pickHostNameFromBackendAddress(@Nullable Boolean pickHostNameFromBackendAddress) {
             $.pickHostNameFromBackendAddress = pickHostNameFromBackendAddress;
             return this;
         }
 
+        /**
+         * @param port The destination port on the backend.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(@Nullable Integer port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param probe Probe resource of an application gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder probe(@Nullable SubResourceResponse probe) {
             $.probe = probe;
             return this;
         }
 
+        /**
+         * @param probeEnabled Whether the probe is enabled. Default value is false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder probeEnabled(@Nullable Boolean probeEnabled) {
             $.probeEnabled = probeEnabled;
             return this;
         }
 
+        /**
+         * @param protocol The protocol used to communicate with the backend.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(@Nullable String protocol) {
             $.protocol = protocol;
             return this;
         }
 
+        /**
+         * @param provisioningState The provisioning state of the backend HTTP settings resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param requestTimeout Request timeout in seconds. Application Gateway will fail the request if response is not received within RequestTimeout. Acceptable values are from 1 second to 86400 seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestTimeout(@Nullable Integer requestTimeout) {
             $.requestTimeout = requestTimeout;
             return this;
         }
 
+        /**
+         * @param trustedRootCertificates Array of references to application gateway trusted root certificates.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trustedRootCertificates(@Nullable List<SubResourceResponse> trustedRootCertificates) {
             $.trustedRootCertificates = trustedRootCertificates;
             return this;
         }
 
+        /**
+         * @param trustedRootCertificates Array of references to application gateway trusted root certificates.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trustedRootCertificates(SubResourceResponse... trustedRootCertificates) {
             return trustedRootCertificates(List.of(trustedRootCertificates));
         }
 
+        /**
+         * @param type Type of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

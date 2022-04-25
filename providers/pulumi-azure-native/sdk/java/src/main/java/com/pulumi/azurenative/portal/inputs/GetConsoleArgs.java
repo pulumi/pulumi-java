@@ -19,6 +19,10 @@ public final class GetConsoleArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="consoleName", required=true)
     private String consoleName;
 
+    /**
+     * @return The name of the console
+     * 
+     */
     public String consoleName() {
         return this.consoleName;
     }
@@ -47,6 +51,12 @@ public final class GetConsoleArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetConsoleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param consoleName The name of the console
+         * 
+         * @return builder
+         * 
+         */
         public Builder consoleName(String consoleName) {
             $.consoleName = consoleName;
             return this;

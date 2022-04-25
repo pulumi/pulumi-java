@@ -26,6 +26,10 @@ public final class FhirServiceExportConfigurationArgs extends com.pulumi.resourc
     @Import(name="storageAccountName")
     private @Nullable Output<String> storageAccountName;
 
+    /**
+     * @return The name of the default export storage account.
+     * 
+     */
     public Optional<Output<String>> storageAccountName() {
         return Optional.ofNullable(this.storageAccountName);
     }
@@ -54,11 +58,23 @@ public final class FhirServiceExportConfigurationArgs extends com.pulumi.resourc
             $ = new FhirServiceExportConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param storageAccountName The name of the default export storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountName(@Nullable Output<String> storageAccountName) {
             $.storageAccountName = storageAccountName;
             return this;
         }
 
+        /**
+         * @param storageAccountName The name of the default export storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountName(String storageAccountName) {
             return storageAccountName(Output.of(storageAccountName));
         }

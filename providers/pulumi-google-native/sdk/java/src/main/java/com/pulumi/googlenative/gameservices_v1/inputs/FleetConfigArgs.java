@@ -26,6 +26,10 @@ public final class FleetConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="fleetSpec")
     private @Nullable Output<String> fleetSpec;
 
+    /**
+     * @return Agones fleet spec. Example spec: `https://agones.dev/site/docs/reference/fleet/`.
+     * 
+     */
     public Optional<Output<String>> fleetSpec() {
         return Optional.ofNullable(this.fleetSpec);
     }
@@ -37,6 +41,10 @@ public final class FleetConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the FleetConfig.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -66,20 +74,44 @@ public final class FleetConfigArgs extends com.pulumi.resources.ResourceArgs {
             $ = new FleetConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fleetSpec Agones fleet spec. Example spec: `https://agones.dev/site/docs/reference/fleet/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fleetSpec(@Nullable Output<String> fleetSpec) {
             $.fleetSpec = fleetSpec;
             return this;
         }
 
+        /**
+         * @param fleetSpec Agones fleet spec. Example spec: `https://agones.dev/site/docs/reference/fleet/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fleetSpec(String fleetSpec) {
             return fleetSpec(Output.of(fleetSpec));
         }
 
+        /**
+         * @param name The name of the FleetConfig.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the FleetConfig.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

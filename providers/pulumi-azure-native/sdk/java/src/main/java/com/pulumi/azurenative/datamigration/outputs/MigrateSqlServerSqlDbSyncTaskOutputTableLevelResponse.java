@@ -11,78 +11,78 @@ import java.util.Objects;
 @CustomType
 public final class MigrateSqlServerSqlDbSyncTaskOutputTableLevelResponse {
     /**
-     * Number of applied deletes
+     * @return Number of applied deletes
      * 
      */
     private final Double cdcDeleteCounter;
     /**
-     * Number of applied inserts
+     * @return Number of applied inserts
      * 
      */
     private final Double cdcInsertCounter;
     /**
-     * Number of applied updates
+     * @return Number of applied updates
      * 
      */
     private final Double cdcUpdateCounter;
     /**
-     * Number of data errors occurred
+     * @return Number of data errors occurred
      * 
      */
     private final Double dataErrorsCounter;
     /**
-     * Name of the database
+     * @return Name of the database
      * 
      */
     private final String databaseName;
     /**
-     * Full load end time
+     * @return Full load end time
      * 
      */
     private final String fullLoadEndedOn;
     /**
-     * Estimate to finish full load
+     * @return Estimate to finish full load
      * 
      */
     private final String fullLoadEstFinishTime;
     /**
-     * Full load start time
+     * @return Full load start time
      * 
      */
     private final String fullLoadStartedOn;
     /**
-     * Number of rows applied in full load
+     * @return Number of rows applied in full load
      * 
      */
     private final Double fullLoadTotalRows;
     /**
-     * Result identifier
+     * @return Result identifier
      * 
      */
     private final String id;
     /**
-     * Last modified time on target
+     * @return Last modified time on target
      * 
      */
     private final String lastModifiedTime;
     /**
-     * Result type
+     * @return Result type
      * Expected value is &#39;TableLevelOutput&#39;.
      * 
      */
     private final String resultType;
     /**
-     * Current state of the table migration
+     * @return Current state of the table migration
      * 
      */
     private final String state;
     /**
-     * Name of the table
+     * @return Name of the table
      * 
      */
     private final String tableName;
     /**
-     * Total number of applied changes
+     * @return Total number of applied changes
      * 
      */
     private final Double totalChangesApplied;
@@ -122,108 +122,108 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputTableLevelResponse {
     }
 
     /**
-     * Number of applied deletes
+     * @return Number of applied deletes
      * 
-    */
+     */
     public Double cdcDeleteCounter() {
         return this.cdcDeleteCounter;
     }
     /**
-     * Number of applied inserts
+     * @return Number of applied inserts
      * 
-    */
+     */
     public Double cdcInsertCounter() {
         return this.cdcInsertCounter;
     }
     /**
-     * Number of applied updates
+     * @return Number of applied updates
      * 
-    */
+     */
     public Double cdcUpdateCounter() {
         return this.cdcUpdateCounter;
     }
     /**
-     * Number of data errors occurred
+     * @return Number of data errors occurred
      * 
-    */
+     */
     public Double dataErrorsCounter() {
         return this.dataErrorsCounter;
     }
     /**
-     * Name of the database
+     * @return Name of the database
      * 
-    */
+     */
     public String databaseName() {
         return this.databaseName;
     }
     /**
-     * Full load end time
+     * @return Full load end time
      * 
-    */
+     */
     public String fullLoadEndedOn() {
         return this.fullLoadEndedOn;
     }
     /**
-     * Estimate to finish full load
+     * @return Estimate to finish full load
      * 
-    */
+     */
     public String fullLoadEstFinishTime() {
         return this.fullLoadEstFinishTime;
     }
     /**
-     * Full load start time
+     * @return Full load start time
      * 
-    */
+     */
     public String fullLoadStartedOn() {
         return this.fullLoadStartedOn;
     }
     /**
-     * Number of rows applied in full load
+     * @return Number of rows applied in full load
      * 
-    */
+     */
     public Double fullLoadTotalRows() {
         return this.fullLoadTotalRows;
     }
     /**
-     * Result identifier
+     * @return Result identifier
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Last modified time on target
+     * @return Last modified time on target
      * 
-    */
+     */
     public String lastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
-     * Result type
+     * @return Result type
      * Expected value is &#39;TableLevelOutput&#39;.
      * 
-    */
+     */
     public String resultType() {
         return this.resultType;
     }
     /**
-     * Current state of the table migration
+     * @return Current state of the table migration
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * Name of the table
+     * @return Name of the table
      * 
-    */
+     */
     public String tableName() {
         return this.tableName;
     }
     /**
-     * Total number of applied changes
+     * @return Total number of applied changes
      * 
-    */
+     */
     public Double totalChangesApplied() {
         return this.totalChangesApplied;
     }

@@ -23,6 +23,10 @@ public final class LatestOperationResultResponse extends com.pulumi.resources.In
     @Import(name="errorCode", required=true)
     private String errorCode;
 
+    /**
+     * @return Error code on failure.
+     * 
+     */
     public String errorCode() {
         return this.errorCode;
     }
@@ -34,6 +38,10 @@ public final class LatestOperationResultResponse extends com.pulumi.resources.In
     @Import(name="errorMessage", required=true)
     private String errorMessage;
 
+    /**
+     * @return The error message.
+     * 
+     */
     public String errorMessage() {
         return this.errorMessage;
     }
@@ -45,6 +53,10 @@ public final class LatestOperationResultResponse extends com.pulumi.resources.In
     @Import(name="httpMethod", required=true)
     private String httpMethod;
 
+    /**
+     * @return The HttpMethod - PUT/POST/DELETE for the operation.
+     * 
+     */
     public String httpMethod() {
         return this.httpMethod;
     }
@@ -56,6 +68,10 @@ public final class LatestOperationResultResponse extends com.pulumi.resources.In
     @Import(name="operationUrl", required=true)
     private String operationUrl;
 
+    /**
+     * @return The URL to use to check long-running operation status
+     * 
+     */
     public String operationUrl() {
         return this.operationUrl;
     }
@@ -67,6 +83,10 @@ public final class LatestOperationResultResponse extends com.pulumi.resources.In
     @Import(name="requestUri", required=true)
     private String requestUri;
 
+    /**
+     * @return Request URI of the operation.
+     * 
+     */
     public String requestUri() {
         return this.requestUri;
     }
@@ -78,6 +98,10 @@ public final class LatestOperationResultResponse extends com.pulumi.resources.In
     @Import(name="status", required=true)
     private String status;
 
+    /**
+     * @return The current status of the operation.
+     * 
+     */
     public String status() {
         return this.status;
     }
@@ -111,31 +135,67 @@ public final class LatestOperationResultResponse extends com.pulumi.resources.In
             $ = new LatestOperationResultResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param errorCode Error code on failure.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorCode(String errorCode) {
             $.errorCode = errorCode;
             return this;
         }
 
+        /**
+         * @param errorMessage The error message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorMessage(String errorMessage) {
             $.errorMessage = errorMessage;
             return this;
         }
 
+        /**
+         * @param httpMethod The HttpMethod - PUT/POST/DELETE for the operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpMethod(String httpMethod) {
             $.httpMethod = httpMethod;
             return this;
         }
 
+        /**
+         * @param operationUrl The URL to use to check long-running operation status
+         * 
+         * @return builder
+         * 
+         */
         public Builder operationUrl(String operationUrl) {
             $.operationUrl = operationUrl;
             return this;
         }
 
+        /**
+         * @param requestUri Request URI of the operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestUri(String requestUri) {
             $.requestUri = requestUri;
             return this;
         }
 
+        /**
+         * @param status The current status of the operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             $.status = status;
             return this;

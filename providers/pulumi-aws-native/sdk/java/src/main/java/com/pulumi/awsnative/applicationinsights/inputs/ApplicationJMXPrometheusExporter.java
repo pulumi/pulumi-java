@@ -25,6 +25,10 @@ public final class ApplicationJMXPrometheusExporter extends com.pulumi.resources
     @Import(name="hostPort")
     private @Nullable String hostPort;
 
+    /**
+     * @return Java agent host port
+     * 
+     */
     public Optional<String> hostPort() {
         return Optional.ofNullable(this.hostPort);
     }
@@ -36,6 +40,10 @@ public final class ApplicationJMXPrometheusExporter extends com.pulumi.resources
     @Import(name="jMXURL")
     private @Nullable String jMXURL;
 
+    /**
+     * @return JMX service URL.
+     * 
+     */
     public Optional<String> jMXURL() {
         return Optional.ofNullable(this.jMXURL);
     }
@@ -47,6 +55,10 @@ public final class ApplicationJMXPrometheusExporter extends com.pulumi.resources
     @Import(name="prometheusPort")
     private @Nullable String prometheusPort;
 
+    /**
+     * @return Prometheus exporter port.
+     * 
+     */
     public Optional<String> prometheusPort() {
         return Optional.ofNullable(this.prometheusPort);
     }
@@ -77,16 +89,34 @@ public final class ApplicationJMXPrometheusExporter extends com.pulumi.resources
             $ = new ApplicationJMXPrometheusExporter(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hostPort Java agent host port
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostPort(@Nullable String hostPort) {
             $.hostPort = hostPort;
             return this;
         }
 
+        /**
+         * @param jMXURL JMX service URL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jMXURL(@Nullable String jMXURL) {
             $.jMXURL = jMXURL;
             return this;
         }
 
+        /**
+         * @param prometheusPort Prometheus exporter port.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prometheusPort(@Nullable String prometheusPort) {
             $.prometheusPort = prometheusPort;
             return this;

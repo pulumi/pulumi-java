@@ -25,6 +25,10 @@ public final class GoogleCloudRetailV2betaConditionResponse extends com.pulumi.r
     @Import(name="activeTimeRange", required=true)
     private List<GoogleCloudRetailV2betaConditionTimeRangeResponse> activeTimeRange;
 
+    /**
+     * @return Range of time(s) specifying when Condition is active. Condition true if any time range matches.
+     * 
+     */
     public List<GoogleCloudRetailV2betaConditionTimeRangeResponse> activeTimeRange() {
         return this.activeTimeRange;
     }
@@ -36,6 +40,10 @@ public final class GoogleCloudRetailV2betaConditionResponse extends com.pulumi.r
     @Import(name="queryTerms", required=true)
     private List<GoogleCloudRetailV2betaConditionQueryTermResponse> queryTerms;
 
+    /**
+     * @return A list (up to 10 entries) of terms to match the query on. If not specified, match all queries. If many query terms are specified, the condition is matched if any of the terms is a match (i.e. using the OR operator).
+     * 
+     */
     public List<GoogleCloudRetailV2betaConditionQueryTermResponse> queryTerms() {
         return this.queryTerms;
     }
@@ -65,20 +73,44 @@ public final class GoogleCloudRetailV2betaConditionResponse extends com.pulumi.r
             $ = new GoogleCloudRetailV2betaConditionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param activeTimeRange Range of time(s) specifying when Condition is active. Condition true if any time range matches.
+         * 
+         * @return builder
+         * 
+         */
         public Builder activeTimeRange(List<GoogleCloudRetailV2betaConditionTimeRangeResponse> activeTimeRange) {
             $.activeTimeRange = activeTimeRange;
             return this;
         }
 
+        /**
+         * @param activeTimeRange Range of time(s) specifying when Condition is active. Condition true if any time range matches.
+         * 
+         * @return builder
+         * 
+         */
         public Builder activeTimeRange(GoogleCloudRetailV2betaConditionTimeRangeResponse... activeTimeRange) {
             return activeTimeRange(List.of(activeTimeRange));
         }
 
+        /**
+         * @param queryTerms A list (up to 10 entries) of terms to match the query on. If not specified, match all queries. If many query terms are specified, the condition is matched if any of the terms is a match (i.e. using the OR operator).
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryTerms(List<GoogleCloudRetailV2betaConditionQueryTermResponse> queryTerms) {
             $.queryTerms = queryTerms;
             return this;
         }
 
+        /**
+         * @param queryTerms A list (up to 10 entries) of terms to match the query on. If not specified, match all queries. If many query terms are specified, the condition is matched if any of the terms is a match (i.e. using the OR operator).
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryTerms(GoogleCloudRetailV2betaConditionQueryTermResponse... queryTerms) {
             return queryTerms(List.of(queryTerms));
         }

@@ -23,6 +23,10 @@ public final class GoogleCloudDialogflowCxV3TestRunDifferenceResponse extends co
     @Import(name="description", required=true)
     private String description;
 
+    /**
+     * @return A description of the diff, showing the actual output vs expected output.
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -34,6 +38,10 @@ public final class GoogleCloudDialogflowCxV3TestRunDifferenceResponse extends co
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The type of diff.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -63,11 +71,23 @@ public final class GoogleCloudDialogflowCxV3TestRunDifferenceResponse extends co
             $ = new GoogleCloudDialogflowCxV3TestRunDifferenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description A description of the diff, showing the actual output vs expected output.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param type The type of diff.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

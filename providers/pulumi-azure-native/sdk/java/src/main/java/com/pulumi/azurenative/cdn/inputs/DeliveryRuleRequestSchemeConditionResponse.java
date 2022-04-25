@@ -26,6 +26,11 @@ public final class DeliveryRuleRequestSchemeConditionResponse extends com.pulumi
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the condition for the delivery rule.
+     * Expected value is &#39;RequestScheme&#39;.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -37,6 +42,10 @@ public final class DeliveryRuleRequestSchemeConditionResponse extends com.pulumi
     @Import(name="parameters", required=true)
     private RequestSchemeMatchConditionParametersResponse parameters;
 
+    /**
+     * @return Defines the parameters for the condition.
+     * 
+     */
     public RequestSchemeMatchConditionParametersResponse parameters() {
         return this.parameters;
     }
@@ -66,11 +75,24 @@ public final class DeliveryRuleRequestSchemeConditionResponse extends com.pulumi
             $ = new DeliveryRuleRequestSchemeConditionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the condition for the delivery rule.
+         * Expected value is &#39;RequestScheme&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param parameters Defines the parameters for the condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(RequestSchemeMatchConditionParametersResponse parameters) {
             $.parameters = parameters;
             return this;

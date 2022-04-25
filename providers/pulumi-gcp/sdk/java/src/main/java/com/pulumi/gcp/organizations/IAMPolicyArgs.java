@@ -20,6 +20,10 @@ public final class IAMPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="orgId", required=true)
     private Output<String> orgId;
 
+    /**
+     * @return The numeric ID of the organization in which you want to manage the audit logging config.
+     * 
+     */
     public Output<String> orgId() {
         return this.orgId;
     }
@@ -56,11 +60,23 @@ public final class IAMPolicyArgs extends com.pulumi.resources.ResourceArgs {
             $ = new IAMPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param orgId The numeric ID of the organization in which you want to manage the audit logging config.
+         * 
+         * @return builder
+         * 
+         */
         public Builder orgId(Output<String> orgId) {
             $.orgId = orgId;
             return this;
         }
 
+        /**
+         * @param orgId The numeric ID of the organization in which you want to manage the audit logging config.
+         * 
+         * @return builder
+         * 
+         */
         public Builder orgId(String orgId) {
             return orgId(Output.of(orgId));
         }

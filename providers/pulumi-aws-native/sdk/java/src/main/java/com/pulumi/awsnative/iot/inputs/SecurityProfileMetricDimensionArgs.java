@@ -27,6 +27,10 @@ public final class SecurityProfileMetricDimensionArgs extends com.pulumi.resourc
     @Import(name="dimensionName", required=true)
     private Output<String> dimensionName;
 
+    /**
+     * @return A unique identifier for the dimension.
+     * 
+     */
     public Output<String> dimensionName() {
         return this.dimensionName;
     }
@@ -38,6 +42,10 @@ public final class SecurityProfileMetricDimensionArgs extends com.pulumi.resourc
     @Import(name="operator")
     private @Nullable Output<SecurityProfileMetricDimensionOperator> operator;
 
+    /**
+     * @return Defines how the dimensionValues of a dimension are interpreted.
+     * 
+     */
     public Optional<Output<SecurityProfileMetricDimensionOperator>> operator() {
         return Optional.ofNullable(this.operator);
     }
@@ -67,20 +75,44 @@ public final class SecurityProfileMetricDimensionArgs extends com.pulumi.resourc
             $ = new SecurityProfileMetricDimensionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dimensionName A unique identifier for the dimension.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dimensionName(Output<String> dimensionName) {
             $.dimensionName = dimensionName;
             return this;
         }
 
+        /**
+         * @param dimensionName A unique identifier for the dimension.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dimensionName(String dimensionName) {
             return dimensionName(Output.of(dimensionName));
         }
 
+        /**
+         * @param operator Defines how the dimensionValues of a dimension are interpreted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(@Nullable Output<SecurityProfileMetricDimensionOperator> operator) {
             $.operator = operator;
             return this;
         }
 
+        /**
+         * @param operator Defines how the dimensionValues of a dimension are interpreted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(SecurityProfileMetricDimensionOperator operator) {
             return operator(Output.of(operator));
         }

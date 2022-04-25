@@ -12,13 +12,13 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AttestorAttestationAuthorityNotePublicKeyPkixPublicKey {
     /**
-     * A PEM-encoded public key, as described in
+     * @return A PEM-encoded public key, as described in
      * `https://tools.ietf.org/html/rfc7468#section-13`
      * 
      */
     private final @Nullable String publicKeyPem;
     /**
-     * The signature algorithm used to verify a message against
+     * @return The signature algorithm used to verify a message against
      * a signature using this key. These signature algorithm must
      * match the structure and any object identifiers encoded in
      * publicKeyPem (i.e. this algorithm must match that of the
@@ -36,21 +36,21 @@ public final class AttestorAttestationAuthorityNotePublicKeyPkixPublicKey {
     }
 
     /**
-     * A PEM-encoded public key, as described in
+     * @return A PEM-encoded public key, as described in
      * `https://tools.ietf.org/html/rfc7468#section-13`
      * 
-    */
+     */
     public Optional<String> publicKeyPem() {
         return Optional.ofNullable(this.publicKeyPem);
     }
     /**
-     * The signature algorithm used to verify a message against
+     * @return The signature algorithm used to verify a message against
      * a signature using this key. These signature algorithm must
      * match the structure and any object identifiers encoded in
      * publicKeyPem (i.e. this algorithm must match that of the
      * public key).
      * 
-    */
+     */
     public Optional<String> signatureAlgorithm() {
         return Optional.ofNullable(this.signatureAlgorithm);
     }

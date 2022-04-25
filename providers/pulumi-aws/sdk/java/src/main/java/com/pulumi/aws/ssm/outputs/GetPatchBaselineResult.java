@@ -14,17 +14,17 @@ import javax.annotation.Nullable;
 public final class GetPatchBaselineResult {
     private final @Nullable Boolean defaultBaseline;
     /**
-     * The description of the baseline.
+     * @return The description of the baseline.
      * 
      */
     private final String description;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     /**
-     * The name of the baseline.
+     * @return The name of the baseline.
      * 
      */
     private final String name;
@@ -54,23 +54,23 @@ public final class GetPatchBaselineResult {
         return Optional.ofNullable(this.defaultBaseline);
     }
     /**
-     * The description of the baseline.
+     * @return The description of the baseline.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The name of the baseline.
+     * @return The name of the baseline.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

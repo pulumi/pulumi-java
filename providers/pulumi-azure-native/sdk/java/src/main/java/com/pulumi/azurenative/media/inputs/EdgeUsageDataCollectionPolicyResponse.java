@@ -22,6 +22,10 @@ public final class EdgeUsageDataCollectionPolicyResponse extends com.pulumi.reso
     @Import(name="dataCollectionFrequency")
     private @Nullable String dataCollectionFrequency;
 
+    /**
+     * @return Usage data collection frequency in ISO 8601 duration format e.g. PT10M , PT5H.
+     * 
+     */
     public Optional<String> dataCollectionFrequency() {
         return Optional.ofNullable(this.dataCollectionFrequency);
     }
@@ -33,6 +37,10 @@ public final class EdgeUsageDataCollectionPolicyResponse extends com.pulumi.reso
     @Import(name="dataReportingFrequency")
     private @Nullable String dataReportingFrequency;
 
+    /**
+     * @return Usage data reporting frequency in ISO 8601 duration format e.g. PT10M , PT5H.
+     * 
+     */
     public Optional<String> dataReportingFrequency() {
         return Optional.ofNullable(this.dataReportingFrequency);
     }
@@ -44,6 +52,10 @@ public final class EdgeUsageDataCollectionPolicyResponse extends com.pulumi.reso
     @Import(name="eventHubDetails")
     private @Nullable EdgeUsageDataEventHubResponse eventHubDetails;
 
+    /**
+     * @return Details of Event Hub where the usage will be reported.
+     * 
+     */
     public Optional<EdgeUsageDataEventHubResponse> eventHubDetails() {
         return Optional.ofNullable(this.eventHubDetails);
     }
@@ -55,6 +67,10 @@ public final class EdgeUsageDataCollectionPolicyResponse extends com.pulumi.reso
     @Import(name="maxAllowedUnreportedUsageDuration")
     private @Nullable String maxAllowedUnreportedUsageDuration;
 
+    /**
+     * @return Maximum time for which the functionality of the device will not be hampered for not reporting the usage data.
+     * 
+     */
     public Optional<String> maxAllowedUnreportedUsageDuration() {
         return Optional.ofNullable(this.maxAllowedUnreportedUsageDuration);
     }
@@ -86,21 +102,45 @@ public final class EdgeUsageDataCollectionPolicyResponse extends com.pulumi.reso
             $ = new EdgeUsageDataCollectionPolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataCollectionFrequency Usage data collection frequency in ISO 8601 duration format e.g. PT10M , PT5H.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataCollectionFrequency(@Nullable String dataCollectionFrequency) {
             $.dataCollectionFrequency = dataCollectionFrequency;
             return this;
         }
 
+        /**
+         * @param dataReportingFrequency Usage data reporting frequency in ISO 8601 duration format e.g. PT10M , PT5H.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataReportingFrequency(@Nullable String dataReportingFrequency) {
             $.dataReportingFrequency = dataReportingFrequency;
             return this;
         }
 
+        /**
+         * @param eventHubDetails Details of Event Hub where the usage will be reported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventHubDetails(@Nullable EdgeUsageDataEventHubResponse eventHubDetails) {
             $.eventHubDetails = eventHubDetails;
             return this;
         }
 
+        /**
+         * @param maxAllowedUnreportedUsageDuration Maximum time for which the functionality of the device will not be hampered for not reporting the usage data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxAllowedUnreportedUsageDuration(@Nullable String maxAllowedUnreportedUsageDuration) {
             $.maxAllowedUnreportedUsageDuration = maxAllowedUnreportedUsageDuration;
             return this;

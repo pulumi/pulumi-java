@@ -28,6 +28,13 @@ public final class FolderFeedState extends com.pulumi.resources.ResourceArgs {
     @Import(name="assetNames")
     private @Nullable Output<List<String>> assetNames;
 
+    /**
+     * @return A list of the full names of the assets to receive updates. You must specify either or both of
+     * assetNames and assetTypes. Only asset updates matching specified assetNames and assetTypes are
+     * exported to the feed. For example: //compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1.
+     * See https://cloud.google.com/apis/design/resourceNames#fullResourceName for more info.
+     * 
+     */
     public Optional<Output<List<String>>> assetNames() {
         return Optional.ofNullable(this.assetNames);
     }
@@ -43,6 +50,14 @@ public final class FolderFeedState extends com.pulumi.resources.ResourceArgs {
     @Import(name="assetTypes")
     private @Nullable Output<List<String>> assetTypes;
 
+    /**
+     * @return A list of types of the assets to receive updates. You must specify either or both of assetNames
+     * and assetTypes. Only asset updates matching specified assetNames and assetTypes are exported to
+     * the feed. For example: &#34;compute.googleapis.com/Disk&#34;
+     * See https://cloud.google.com/asset-inventory/docs/supported-asset-types for a list of all
+     * supported asset types.
+     * 
+     */
     public Optional<Output<List<String>>> assetTypes() {
         return Optional.ofNullable(this.assetTypes);
     }
@@ -56,6 +71,12 @@ public final class FolderFeedState extends com.pulumi.resources.ResourceArgs {
     @Import(name="billingProject")
     private @Nullable Output<String> billingProject;
 
+    /**
+     * @return The project whose identity will be used when sending messages to the
+     * destination pubsub topic. It also specifies the project for API
+     * enablement check, quota, and billing.
+     * 
+     */
     public Optional<Output<String>> billingProject() {
         return Optional.ofNullable(this.billingProject);
     }
@@ -72,6 +93,15 @@ public final class FolderFeedState extends com.pulumi.resources.ResourceArgs {
     @Import(name="condition")
     private @Nullable Output<FolderFeedConditionGetArgs> condition;
 
+    /**
+     * @return A condition which determines whether an asset update should be published. If specified, an asset
+     * will be returned only when the expression evaluates to true. When set, expression field
+     * must be a valid CEL expression on a TemporalAsset with name temporal_asset. Example: a Feed with
+     * expression &#34;temporal_asset.deleted == true&#34; will only publish Asset deletions. Other fields of
+     * condition are optional.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<FolderFeedConditionGetArgs>> condition() {
         return Optional.ofNullable(this.condition);
     }
@@ -84,6 +114,11 @@ public final class FolderFeedState extends com.pulumi.resources.ResourceArgs {
     @Import(name="contentType")
     private @Nullable Output<String> contentType;
 
+    /**
+     * @return Asset content type. If not specified, no content but the asset name and type will be returned.
+     * Possible values are `CONTENT_TYPE_UNSPECIFIED`, `RESOURCE`, `IAM_POLICY`, `ORG_POLICY`, and `ACCESS_POLICY`.
+     * 
+     */
     public Optional<Output<String>> contentType() {
         return Optional.ofNullable(this.contentType);
     }
@@ -95,6 +130,10 @@ public final class FolderFeedState extends com.pulumi.resources.ResourceArgs {
     @Import(name="feedId")
     private @Nullable Output<String> feedId;
 
+    /**
+     * @return This is the client-assigned asset feed identifier and it needs to be unique under a specific parent.
+     * 
+     */
     public Optional<Output<String>> feedId() {
         return Optional.ofNullable(this.feedId);
     }
@@ -107,6 +146,11 @@ public final class FolderFeedState extends com.pulumi.resources.ResourceArgs {
     @Import(name="feedOutputConfig")
     private @Nullable Output<FolderFeedFeedOutputConfigGetArgs> feedOutputConfig;
 
+    /**
+     * @return Output configuration for asset feed destination.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<FolderFeedFeedOutputConfigGetArgs>> feedOutputConfig() {
         return Optional.ofNullable(this.feedOutputConfig);
     }
@@ -118,6 +162,10 @@ public final class FolderFeedState extends com.pulumi.resources.ResourceArgs {
     @Import(name="folder")
     private @Nullable Output<String> folder;
 
+    /**
+     * @return The folder this feed should be created in.
+     * 
+     */
     public Optional<Output<String>> folder() {
         return Optional.ofNullable(this.folder);
     }
@@ -129,6 +177,10 @@ public final class FolderFeedState extends com.pulumi.resources.ResourceArgs {
     @Import(name="folderId")
     private @Nullable Output<String> folderId;
 
+    /**
+     * @return The ID of the folder where this feed has been created. Both [FOLDER_NUMBER] and folders/[FOLDER_NUMBER] are accepted.
+     * 
+     */
     public Optional<Output<String>> folderId() {
         return Optional.ofNullable(this.folderId);
     }
@@ -140,6 +192,10 @@ public final class FolderFeedState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The format will be folders/{folder_number}/feeds/{client-assigned_feed_identifier}.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -177,100 +233,271 @@ public final class FolderFeedState extends com.pulumi.resources.ResourceArgs {
             $ = new FolderFeedState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param assetNames A list of the full names of the assets to receive updates. You must specify either or both of
+         * assetNames and assetTypes. Only asset updates matching specified assetNames and assetTypes are
+         * exported to the feed. For example: //compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1.
+         * See https://cloud.google.com/apis/design/resourceNames#fullResourceName for more info.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assetNames(@Nullable Output<List<String>> assetNames) {
             $.assetNames = assetNames;
             return this;
         }
 
+        /**
+         * @param assetNames A list of the full names of the assets to receive updates. You must specify either or both of
+         * assetNames and assetTypes. Only asset updates matching specified assetNames and assetTypes are
+         * exported to the feed. For example: //compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1.
+         * See https://cloud.google.com/apis/design/resourceNames#fullResourceName for more info.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assetNames(List<String> assetNames) {
             return assetNames(Output.of(assetNames));
         }
 
+        /**
+         * @param assetNames A list of the full names of the assets to receive updates. You must specify either or both of
+         * assetNames and assetTypes. Only asset updates matching specified assetNames and assetTypes are
+         * exported to the feed. For example: //compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1.
+         * See https://cloud.google.com/apis/design/resourceNames#fullResourceName for more info.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assetNames(String... assetNames) {
             return assetNames(List.of(assetNames));
         }
 
+        /**
+         * @param assetTypes A list of types of the assets to receive updates. You must specify either or both of assetNames
+         * and assetTypes. Only asset updates matching specified assetNames and assetTypes are exported to
+         * the feed. For example: &#34;compute.googleapis.com/Disk&#34;
+         * See https://cloud.google.com/asset-inventory/docs/supported-asset-types for a list of all
+         * supported asset types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assetTypes(@Nullable Output<List<String>> assetTypes) {
             $.assetTypes = assetTypes;
             return this;
         }
 
+        /**
+         * @param assetTypes A list of types of the assets to receive updates. You must specify either or both of assetNames
+         * and assetTypes. Only asset updates matching specified assetNames and assetTypes are exported to
+         * the feed. For example: &#34;compute.googleapis.com/Disk&#34;
+         * See https://cloud.google.com/asset-inventory/docs/supported-asset-types for a list of all
+         * supported asset types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assetTypes(List<String> assetTypes) {
             return assetTypes(Output.of(assetTypes));
         }
 
+        /**
+         * @param assetTypes A list of types of the assets to receive updates. You must specify either or both of assetNames
+         * and assetTypes. Only asset updates matching specified assetNames and assetTypes are exported to
+         * the feed. For example: &#34;compute.googleapis.com/Disk&#34;
+         * See https://cloud.google.com/asset-inventory/docs/supported-asset-types for a list of all
+         * supported asset types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assetTypes(String... assetTypes) {
             return assetTypes(List.of(assetTypes));
         }
 
+        /**
+         * @param billingProject The project whose identity will be used when sending messages to the
+         * destination pubsub topic. It also specifies the project for API
+         * enablement check, quota, and billing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder billingProject(@Nullable Output<String> billingProject) {
             $.billingProject = billingProject;
             return this;
         }
 
+        /**
+         * @param billingProject The project whose identity will be used when sending messages to the
+         * destination pubsub topic. It also specifies the project for API
+         * enablement check, quota, and billing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder billingProject(String billingProject) {
             return billingProject(Output.of(billingProject));
         }
 
+        /**
+         * @param condition A condition which determines whether an asset update should be published. If specified, an asset
+         * will be returned only when the expression evaluates to true. When set, expression field
+         * must be a valid CEL expression on a TemporalAsset with name temporal_asset. Example: a Feed with
+         * expression &#34;temporal_asset.deleted == true&#34; will only publish Asset deletions. Other fields of
+         * condition are optional.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder condition(@Nullable Output<FolderFeedConditionGetArgs> condition) {
             $.condition = condition;
             return this;
         }
 
+        /**
+         * @param condition A condition which determines whether an asset update should be published. If specified, an asset
+         * will be returned only when the expression evaluates to true. When set, expression field
+         * must be a valid CEL expression on a TemporalAsset with name temporal_asset. Example: a Feed with
+         * expression &#34;temporal_asset.deleted == true&#34; will only publish Asset deletions. Other fields of
+         * condition are optional.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder condition(FolderFeedConditionGetArgs condition) {
             return condition(Output.of(condition));
         }
 
+        /**
+         * @param contentType Asset content type. If not specified, no content but the asset name and type will be returned.
+         * Possible values are `CONTENT_TYPE_UNSPECIFIED`, `RESOURCE`, `IAM_POLICY`, `ORG_POLICY`, and `ACCESS_POLICY`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentType(@Nullable Output<String> contentType) {
             $.contentType = contentType;
             return this;
         }
 
+        /**
+         * @param contentType Asset content type. If not specified, no content but the asset name and type will be returned.
+         * Possible values are `CONTENT_TYPE_UNSPECIFIED`, `RESOURCE`, `IAM_POLICY`, `ORG_POLICY`, and `ACCESS_POLICY`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentType(String contentType) {
             return contentType(Output.of(contentType));
         }
 
+        /**
+         * @param feedId This is the client-assigned asset feed identifier and it needs to be unique under a specific parent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder feedId(@Nullable Output<String> feedId) {
             $.feedId = feedId;
             return this;
         }
 
+        /**
+         * @param feedId This is the client-assigned asset feed identifier and it needs to be unique under a specific parent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder feedId(String feedId) {
             return feedId(Output.of(feedId));
         }
 
+        /**
+         * @param feedOutputConfig Output configuration for asset feed destination.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder feedOutputConfig(@Nullable Output<FolderFeedFeedOutputConfigGetArgs> feedOutputConfig) {
             $.feedOutputConfig = feedOutputConfig;
             return this;
         }
 
+        /**
+         * @param feedOutputConfig Output configuration for asset feed destination.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder feedOutputConfig(FolderFeedFeedOutputConfigGetArgs feedOutputConfig) {
             return feedOutputConfig(Output.of(feedOutputConfig));
         }
 
+        /**
+         * @param folder The folder this feed should be created in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder folder(@Nullable Output<String> folder) {
             $.folder = folder;
             return this;
         }
 
+        /**
+         * @param folder The folder this feed should be created in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder folder(String folder) {
             return folder(Output.of(folder));
         }
 
+        /**
+         * @param folderId The ID of the folder where this feed has been created. Both [FOLDER_NUMBER] and folders/[FOLDER_NUMBER] are accepted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder folderId(@Nullable Output<String> folderId) {
             $.folderId = folderId;
             return this;
         }
 
+        /**
+         * @param folderId The ID of the folder where this feed has been created. Both [FOLDER_NUMBER] and folders/[FOLDER_NUMBER] are accepted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder folderId(String folderId) {
             return folderId(Output.of(folderId));
         }
 
+        /**
+         * @param name The format will be folders/{folder_number}/feeds/{client-assigned_feed_identifier}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The format will be folders/{folder_number}/feeds/{client-assigned_feed_identifier}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

@@ -19,6 +19,10 @@ public final class GetConfigurationProfilePreferenceArgs extends com.pulumi.reso
     @Import(name="configurationProfilePreferenceName", required=true)
     private String configurationProfilePreferenceName;
 
+    /**
+     * @return The configuration profile preference name.
+     * 
+     */
     public String configurationProfilePreferenceName() {
         return this.configurationProfilePreferenceName;
     }
@@ -30,6 +34,10 @@ public final class GetConfigurationProfilePreferenceArgs extends com.pulumi.reso
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetConfigurationProfilePreferenceArgs extends com.pulumi.reso
             $ = new GetConfigurationProfilePreferenceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param configurationProfilePreferenceName The configuration profile preference name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationProfilePreferenceName(String configurationProfilePreferenceName) {
             $.configurationProfilePreferenceName = configurationProfilePreferenceName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

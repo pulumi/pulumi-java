@@ -30,6 +30,10 @@ public final class CommonEncryptionCbcsArgs extends com.pulumi.resources.Resourc
     @Import(name="clearTracks")
     private @Nullable Output<List<TrackSelectionArgs>> clearTracks;
 
+    /**
+     * @return Representing which tracks should not be encrypted
+     * 
+     */
     public Optional<Output<List<TrackSelectionArgs>>> clearTracks() {
         return Optional.ofNullable(this.clearTracks);
     }
@@ -41,6 +45,10 @@ public final class CommonEncryptionCbcsArgs extends com.pulumi.resources.Resourc
     @Import(name="contentKeys")
     private @Nullable Output<StreamingPolicyContentKeysArgs> contentKeys;
 
+    /**
+     * @return Representing default content key for each encryption scheme and separate content keys for specific tracks
+     * 
+     */
     public Optional<Output<StreamingPolicyContentKeysArgs>> contentKeys() {
         return Optional.ofNullable(this.contentKeys);
     }
@@ -52,6 +60,10 @@ public final class CommonEncryptionCbcsArgs extends com.pulumi.resources.Resourc
     @Import(name="drm")
     private @Nullable Output<CbcsDrmConfigurationArgs> drm;
 
+    /**
+     * @return Configuration of DRMs for current encryption scheme
+     * 
+     */
     public Optional<Output<CbcsDrmConfigurationArgs>> drm() {
         return Optional.ofNullable(this.drm);
     }
@@ -63,6 +75,10 @@ public final class CommonEncryptionCbcsArgs extends com.pulumi.resources.Resourc
     @Import(name="enabledProtocols")
     private @Nullable Output<EnabledProtocolsArgs> enabledProtocols;
 
+    /**
+     * @return Representing supported protocols
+     * 
+     */
     public Optional<Output<EnabledProtocolsArgs>> enabledProtocols() {
         return Optional.ofNullable(this.enabledProtocols);
     }
@@ -94,42 +110,96 @@ public final class CommonEncryptionCbcsArgs extends com.pulumi.resources.Resourc
             $ = new CommonEncryptionCbcsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clearTracks Representing which tracks should not be encrypted
+         * 
+         * @return builder
+         * 
+         */
         public Builder clearTracks(@Nullable Output<List<TrackSelectionArgs>> clearTracks) {
             $.clearTracks = clearTracks;
             return this;
         }
 
+        /**
+         * @param clearTracks Representing which tracks should not be encrypted
+         * 
+         * @return builder
+         * 
+         */
         public Builder clearTracks(List<TrackSelectionArgs> clearTracks) {
             return clearTracks(Output.of(clearTracks));
         }
 
+        /**
+         * @param clearTracks Representing which tracks should not be encrypted
+         * 
+         * @return builder
+         * 
+         */
         public Builder clearTracks(TrackSelectionArgs... clearTracks) {
             return clearTracks(List.of(clearTracks));
         }
 
+        /**
+         * @param contentKeys Representing default content key for each encryption scheme and separate content keys for specific tracks
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentKeys(@Nullable Output<StreamingPolicyContentKeysArgs> contentKeys) {
             $.contentKeys = contentKeys;
             return this;
         }
 
+        /**
+         * @param contentKeys Representing default content key for each encryption scheme and separate content keys for specific tracks
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentKeys(StreamingPolicyContentKeysArgs contentKeys) {
             return contentKeys(Output.of(contentKeys));
         }
 
+        /**
+         * @param drm Configuration of DRMs for current encryption scheme
+         * 
+         * @return builder
+         * 
+         */
         public Builder drm(@Nullable Output<CbcsDrmConfigurationArgs> drm) {
             $.drm = drm;
             return this;
         }
 
+        /**
+         * @param drm Configuration of DRMs for current encryption scheme
+         * 
+         * @return builder
+         * 
+         */
         public Builder drm(CbcsDrmConfigurationArgs drm) {
             return drm(Output.of(drm));
         }
 
+        /**
+         * @param enabledProtocols Representing supported protocols
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabledProtocols(@Nullable Output<EnabledProtocolsArgs> enabledProtocols) {
             $.enabledProtocols = enabledProtocols;
             return this;
         }
 
+        /**
+         * @param enabledProtocols Representing supported protocols
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabledProtocols(EnabledProtocolsArgs enabledProtocols) {
             return enabledProtocols(Output.of(enabledProtocols));
         }

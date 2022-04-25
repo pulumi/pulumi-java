@@ -24,6 +24,10 @@ public final class UserPropertyResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return User property name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -35,6 +39,10 @@ public final class UserPropertyResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="value", required=true)
     private Object value;
 
+    /**
+     * @return User property value. Type: string (or Expression with resultType string).
+     * 
+     */
     public Object value() {
         return this.value;
     }
@@ -64,11 +72,23 @@ public final class UserPropertyResponse extends com.pulumi.resources.InvokeArgs 
             $ = new UserPropertyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name User property name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param value User property value. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Object value) {
             $.value = value;
             return this;

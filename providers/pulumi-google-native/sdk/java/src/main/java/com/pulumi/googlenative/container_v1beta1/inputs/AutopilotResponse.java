@@ -23,6 +23,10 @@ public final class AutopilotResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="enabled", required=true)
     private Boolean enabled;
 
+    /**
+     * @return Enable Autopilot
+     * 
+     */
     public Boolean enabled() {
         return this.enabled;
     }
@@ -51,6 +55,12 @@ public final class AutopilotResponse extends com.pulumi.resources.InvokeArgs {
             $ = new AutopilotResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Enable Autopilot
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             $.enabled = enabled;
             return this;

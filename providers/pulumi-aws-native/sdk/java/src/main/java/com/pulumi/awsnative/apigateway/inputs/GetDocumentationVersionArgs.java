@@ -19,6 +19,10 @@ public final class GetDocumentationVersionArgs extends com.pulumi.resources.Invo
     @Import(name="documentationVersion", required=true)
     private String documentationVersion;
 
+    /**
+     * @return The version identifier of the API documentation snapshot.
+     * 
+     */
     public String documentationVersion() {
         return this.documentationVersion;
     }
@@ -30,6 +34,10 @@ public final class GetDocumentationVersionArgs extends com.pulumi.resources.Invo
     @Import(name="restApiId", required=true)
     private String restApiId;
 
+    /**
+     * @return The identifier of the API.
+     * 
+     */
     public String restApiId() {
         return this.restApiId;
     }
@@ -59,11 +67,23 @@ public final class GetDocumentationVersionArgs extends com.pulumi.resources.Invo
             $ = new GetDocumentationVersionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param documentationVersion The version identifier of the API documentation snapshot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder documentationVersion(String documentationVersion) {
             $.documentationVersion = documentationVersion;
             return this;
         }
 
+        /**
+         * @param restApiId The identifier of the API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restApiId(String restApiId) {
             $.restApiId = restApiId;
             return this;

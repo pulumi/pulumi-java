@@ -22,6 +22,10 @@ public final class MonitoredProjectArgs extends com.pulumi.resources.ResourceArg
     @Import(name="metricsScope", required=true)
     private Output<String> metricsScope;
 
+    /**
+     * @return Required. The resource name of the existing Metrics Scope that will monitor this project. Example: locations/global/metricsScopes/{SCOPING_PROJECT_ID_OR_NUMBER}
+     * 
+     */
     public Output<String> metricsScope() {
         return this.metricsScope;
     }
@@ -33,6 +37,10 @@ public final class MonitoredProjectArgs extends com.pulumi.resources.ResourceArg
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Immutable. The resource name of the `MonitoredProject`. On input, the resource name includes the scoping project ID and monitored project ID. On output, it contains the equivalent project numbers. Example: `locations/global/metricsScopes/{SCOPING_PROJECT_ID_OR_NUMBER}/projects/{MONITORED_PROJECT_ID_OR_NUMBER}`
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -62,20 +70,44 @@ public final class MonitoredProjectArgs extends com.pulumi.resources.ResourceArg
             $ = new MonitoredProjectArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param metricsScope Required. The resource name of the existing Metrics Scope that will monitor this project. Example: locations/global/metricsScopes/{SCOPING_PROJECT_ID_OR_NUMBER}
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricsScope(Output<String> metricsScope) {
             $.metricsScope = metricsScope;
             return this;
         }
 
+        /**
+         * @param metricsScope Required. The resource name of the existing Metrics Scope that will monitor this project. Example: locations/global/metricsScopes/{SCOPING_PROJECT_ID_OR_NUMBER}
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricsScope(String metricsScope) {
             return metricsScope(Output.of(metricsScope));
         }
 
+        /**
+         * @param name Immutable. The resource name of the `MonitoredProject`. On input, the resource name includes the scoping project ID and monitored project ID. On output, it contains the equivalent project numbers. Example: `locations/global/metricsScopes/{SCOPING_PROJECT_ID_OR_NUMBER}/projects/{MONITORED_PROJECT_ID_OR_NUMBER}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Immutable. The resource name of the `MonitoredProject`. On input, the resource name includes the scoping project ID and monitored project ID. On output, it contains the equivalent project numbers. Example: `locations/global/metricsScopes/{SCOPING_PROJECT_ID_OR_NUMBER}/projects/{MONITORED_PROJECT_ID_OR_NUMBER}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

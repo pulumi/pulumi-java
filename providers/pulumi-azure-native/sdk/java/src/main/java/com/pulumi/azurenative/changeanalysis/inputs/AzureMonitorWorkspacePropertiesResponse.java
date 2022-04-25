@@ -25,6 +25,10 @@ public final class AzureMonitorWorkspacePropertiesResponse extends com.pulumi.re
     @Import(name="includeChangeDetails")
     private @Nullable String includeChangeDetails;
 
+    /**
+     * @return The mode of includeChangeDetails feature. The flag configures whether to include or exclude content of the change before and after values.
+     * 
+     */
     public Optional<String> includeChangeDetails() {
         return Optional.ofNullable(this.includeChangeDetails);
     }
@@ -36,6 +40,10 @@ public final class AzureMonitorWorkspacePropertiesResponse extends com.pulumi.re
     @Import(name="workspaceId")
     private @Nullable String workspaceId;
 
+    /**
+     * @return The Azure Monitor workspace ID - the unique identifier for the Log Analytics workspace.
+     * 
+     */
     public Optional<String> workspaceId() {
         return Optional.ofNullable(this.workspaceId);
     }
@@ -47,6 +55,10 @@ public final class AzureMonitorWorkspacePropertiesResponse extends com.pulumi.re
     @Import(name="workspaceResourceId")
     private @Nullable String workspaceResourceId;
 
+    /**
+     * @return The Azure Monitor workspace ARM Resource ID. The resource ID should be in the following format: /subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.OperationalInsights/workspaces/{workspaceName}
+     * 
+     */
     public Optional<String> workspaceResourceId() {
         return Optional.ofNullable(this.workspaceResourceId);
     }
@@ -77,16 +89,34 @@ public final class AzureMonitorWorkspacePropertiesResponse extends com.pulumi.re
             $ = new AzureMonitorWorkspacePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param includeChangeDetails The mode of includeChangeDetails feature. The flag configures whether to include or exclude content of the change before and after values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeChangeDetails(@Nullable String includeChangeDetails) {
             $.includeChangeDetails = includeChangeDetails;
             return this;
         }
 
+        /**
+         * @param workspaceId The Azure Monitor workspace ID - the unique identifier for the Log Analytics workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceId(@Nullable String workspaceId) {
             $.workspaceId = workspaceId;
             return this;
         }
 
+        /**
+         * @param workspaceResourceId The Azure Monitor workspace ARM Resource ID. The resource ID should be in the following format: /subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.OperationalInsights/workspaces/{workspaceName}
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceResourceId(@Nullable String workspaceResourceId) {
             $.workspaceResourceId = workspaceResourceId;
             return this;

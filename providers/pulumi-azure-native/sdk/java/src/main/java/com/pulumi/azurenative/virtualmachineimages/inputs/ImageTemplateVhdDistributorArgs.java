@@ -28,6 +28,10 @@ public final class ImageTemplateVhdDistributorArgs extends com.pulumi.resources.
     @Import(name="artifactTags")
     private @Nullable Output<Map<String,String>> artifactTags;
 
+    /**
+     * @return Tags that will be applied to the artifact once it has been created/updated by the distributor.
+     * 
+     */
     public Optional<Output<Map<String,String>>> artifactTags() {
         return Optional.ofNullable(this.artifactTags);
     }
@@ -39,6 +43,10 @@ public final class ImageTemplateVhdDistributorArgs extends com.pulumi.resources.
     @Import(name="runOutputName", required=true)
     private Output<String> runOutputName;
 
+    /**
+     * @return The name to be used for the associated RunOutput.
+     * 
+     */
     public Output<String> runOutputName() {
         return this.runOutputName;
     }
@@ -51,6 +59,11 @@ public final class ImageTemplateVhdDistributorArgs extends com.pulumi.resources.
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Type of distribution.
+     * Expected value is &#39;VHD&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -81,29 +94,67 @@ public final class ImageTemplateVhdDistributorArgs extends com.pulumi.resources.
             $ = new ImageTemplateVhdDistributorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param artifactTags Tags that will be applied to the artifact once it has been created/updated by the distributor.
+         * 
+         * @return builder
+         * 
+         */
         public Builder artifactTags(@Nullable Output<Map<String,String>> artifactTags) {
             $.artifactTags = artifactTags;
             return this;
         }
 
+        /**
+         * @param artifactTags Tags that will be applied to the artifact once it has been created/updated by the distributor.
+         * 
+         * @return builder
+         * 
+         */
         public Builder artifactTags(Map<String,String> artifactTags) {
             return artifactTags(Output.of(artifactTags));
         }
 
+        /**
+         * @param runOutputName The name to be used for the associated RunOutput.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runOutputName(Output<String> runOutputName) {
             $.runOutputName = runOutputName;
             return this;
         }
 
+        /**
+         * @param runOutputName The name to be used for the associated RunOutput.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runOutputName(String runOutputName) {
             return runOutputName(Output.of(runOutputName));
         }
 
+        /**
+         * @param type Type of distribution.
+         * Expected value is &#39;VHD&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of distribution.
+         * Expected value is &#39;VHD&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

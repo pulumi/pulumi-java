@@ -16,83 +16,83 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SqlServerSinkResponse {
     /**
-     * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+     * @return If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
      */
     private final @Nullable Object disableMetricsCollection;
     /**
-     * The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
+     * @return The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
      * 
      */
     private final @Nullable Object maxConcurrentConnections;
     /**
-     * SQL pre-copy script. Type: string (or Expression with resultType string).
+     * @return SQL pre-copy script. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object preCopyScript;
     /**
-     * Sink retry count. Type: integer (or Expression with resultType integer).
+     * @return Sink retry count. Type: integer (or Expression with resultType integer).
      * 
      */
     private final @Nullable Object sinkRetryCount;
     /**
-     * Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * @return Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
      */
     private final @Nullable Object sinkRetryWait;
     /**
-     * SQL writer stored procedure name. Type: string (or Expression with resultType string).
+     * @return SQL writer stored procedure name. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object sqlWriterStoredProcedureName;
     /**
-     * SQL writer table type. Type: string (or Expression with resultType string).
+     * @return SQL writer table type. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object sqlWriterTableType;
     /**
-     * Whether to use table lock during bulk copy. Type: boolean (or Expression with resultType boolean).
+     * @return Whether to use table lock during bulk copy. Type: boolean (or Expression with resultType boolean).
      * 
      */
     private final @Nullable Object sqlWriterUseTableLock;
     /**
-     * SQL stored procedure parameters.
+     * @return SQL stored procedure parameters.
      * 
      */
     private final @Nullable Map<String,StoredProcedureParameterResponse> storedProcedureParameters;
     /**
-     * The stored procedure parameter name of the table type. Type: string (or Expression with resultType string).
+     * @return The stored procedure parameter name of the table type. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object storedProcedureTableTypeParameterName;
     /**
-     * The option to handle sink table, such as autoCreate. For now only &#39;autoCreate&#39; value is supported. Type: string (or Expression with resultType string).
+     * @return The option to handle sink table, such as autoCreate. For now only &#39;autoCreate&#39; value is supported. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object tableOption;
     /**
-     * Copy sink type.
+     * @return Copy sink type.
      * Expected value is &#39;SqlServerSink&#39;.
      * 
      */
     private final String type;
     /**
-     * SQL upsert settings.
+     * @return SQL upsert settings.
      * 
      */
     private final @Nullable SqlUpsertSettingsResponse upsertSettings;
     /**
-     * Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.
+     * @return Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.
      * 
      */
     private final @Nullable Object writeBatchSize;
     /**
-     * Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * @return Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
      */
     private final @Nullable Object writeBatchTimeout;
     /**
-     * Write behavior when copying data into sql server. Type: SqlWriteBehaviorEnum (or Expression with resultType SqlWriteBehaviorEnum)
+     * @return Write behavior when copying data into sql server. Type: SqlWriteBehaviorEnum (or Expression with resultType SqlWriteBehaviorEnum)
      * 
      */
     private final @Nullable Object writeBehavior;
@@ -134,115 +134,115 @@ public final class SqlServerSinkResponse {
     }
 
     /**
-     * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+     * @return If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
-    */
+     */
     public Optional<Object> disableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
     /**
-     * The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
+     * @return The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
      * 
-    */
+     */
     public Optional<Object> maxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
     /**
-     * SQL pre-copy script. Type: string (or Expression with resultType string).
+     * @return SQL pre-copy script. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> preCopyScript() {
         return Optional.ofNullable(this.preCopyScript);
     }
     /**
-     * Sink retry count. Type: integer (or Expression with resultType integer).
+     * @return Sink retry count. Type: integer (or Expression with resultType integer).
      * 
-    */
+     */
     public Optional<Object> sinkRetryCount() {
         return Optional.ofNullable(this.sinkRetryCount);
     }
     /**
-     * Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * @return Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
-    */
+     */
     public Optional<Object> sinkRetryWait() {
         return Optional.ofNullable(this.sinkRetryWait);
     }
     /**
-     * SQL writer stored procedure name. Type: string (or Expression with resultType string).
+     * @return SQL writer stored procedure name. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> sqlWriterStoredProcedureName() {
         return Optional.ofNullable(this.sqlWriterStoredProcedureName);
     }
     /**
-     * SQL writer table type. Type: string (or Expression with resultType string).
+     * @return SQL writer table type. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> sqlWriterTableType() {
         return Optional.ofNullable(this.sqlWriterTableType);
     }
     /**
-     * Whether to use table lock during bulk copy. Type: boolean (or Expression with resultType boolean).
+     * @return Whether to use table lock during bulk copy. Type: boolean (or Expression with resultType boolean).
      * 
-    */
+     */
     public Optional<Object> sqlWriterUseTableLock() {
         return Optional.ofNullable(this.sqlWriterUseTableLock);
     }
     /**
-     * SQL stored procedure parameters.
+     * @return SQL stored procedure parameters.
      * 
-    */
+     */
     public Map<String,StoredProcedureParameterResponse> storedProcedureParameters() {
         return this.storedProcedureParameters == null ? Map.of() : this.storedProcedureParameters;
     }
     /**
-     * The stored procedure parameter name of the table type. Type: string (or Expression with resultType string).
+     * @return The stored procedure parameter name of the table type. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> storedProcedureTableTypeParameterName() {
         return Optional.ofNullable(this.storedProcedureTableTypeParameterName);
     }
     /**
-     * The option to handle sink table, such as autoCreate. For now only &#39;autoCreate&#39; value is supported. Type: string (or Expression with resultType string).
+     * @return The option to handle sink table, such as autoCreate. For now only &#39;autoCreate&#39; value is supported. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> tableOption() {
         return Optional.ofNullable(this.tableOption);
     }
     /**
-     * Copy sink type.
+     * @return Copy sink type.
      * Expected value is &#39;SqlServerSink&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * SQL upsert settings.
+     * @return SQL upsert settings.
      * 
-    */
+     */
     public Optional<SqlUpsertSettingsResponse> upsertSettings() {
         return Optional.ofNullable(this.upsertSettings);
     }
     /**
-     * Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.
+     * @return Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.
      * 
-    */
+     */
     public Optional<Object> writeBatchSize() {
         return Optional.ofNullable(this.writeBatchSize);
     }
     /**
-     * Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * @return Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
-    */
+     */
     public Optional<Object> writeBatchTimeout() {
         return Optional.ofNullable(this.writeBatchTimeout);
     }
     /**
-     * Write behavior when copying data into sql server. Type: SqlWriteBehaviorEnum (or Expression with resultType SqlWriteBehaviorEnum)
+     * @return Write behavior when copying data into sql server. Type: SqlWriteBehaviorEnum (or Expression with resultType SqlWriteBehaviorEnum)
      * 
-    */
+     */
     public Optional<Object> writeBehavior() {
         return Optional.ofNullable(this.writeBehavior);
     }

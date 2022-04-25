@@ -26,6 +26,10 @@ public final class RelatedUrlArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="label")
     private @Nullable Output<String> label;
 
+    /**
+     * @return Label to describe usage of the URL
+     * 
+     */
     public Optional<Output<String>> label() {
         return Optional.ofNullable(this.label);
     }
@@ -37,6 +41,10 @@ public final class RelatedUrlArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="url")
     private @Nullable Output<String> url;
 
+    /**
+     * @return Specific URL to associate with the note
+     * 
+     */
     public Optional<Output<String>> url() {
         return Optional.ofNullable(this.url);
     }
@@ -66,20 +74,44 @@ public final class RelatedUrlArgs extends com.pulumi.resources.ResourceArgs {
             $ = new RelatedUrlArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param label Label to describe usage of the URL
+         * 
+         * @return builder
+         * 
+         */
         public Builder label(@Nullable Output<String> label) {
             $.label = label;
             return this;
         }
 
+        /**
+         * @param label Label to describe usage of the URL
+         * 
+         * @return builder
+         * 
+         */
         public Builder label(String label) {
             return label(Output.of(label));
         }
 
+        /**
+         * @param url Specific URL to associate with the note
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(@Nullable Output<String> url) {
             $.url = url;
             return this;
         }
 
+        /**
+         * @param url Specific URL to associate with the note
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(String url) {
             return url(Output.of(url));
         }

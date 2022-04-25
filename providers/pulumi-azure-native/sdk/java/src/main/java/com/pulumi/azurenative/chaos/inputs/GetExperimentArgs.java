@@ -19,6 +19,10 @@ public final class GetExperimentArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="experimentName", required=true)
     private String experimentName;
 
+    /**
+     * @return String that represents a Experiment resource name.
+     * 
+     */
     public String experimentName() {
         return this.experimentName;
     }
@@ -30,6 +34,10 @@ public final class GetExperimentArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return String that represents an Azure resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetExperimentArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetExperimentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param experimentName String that represents a Experiment resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder experimentName(String experimentName) {
             $.experimentName = experimentName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName String that represents an Azure resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

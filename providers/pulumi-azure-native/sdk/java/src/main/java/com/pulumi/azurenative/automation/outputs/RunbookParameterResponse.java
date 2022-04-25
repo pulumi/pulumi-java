@@ -14,22 +14,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class RunbookParameterResponse {
     /**
-     * Gets or sets the default value of parameter.
+     * @return Gets or sets the default value of parameter.
      * 
      */
     private final @Nullable String defaultValue;
     /**
-     * Gets or sets a Boolean value to indicate whether the parameter is mandatory or not.
+     * @return Gets or sets a Boolean value to indicate whether the parameter is mandatory or not.
      * 
      */
     private final @Nullable Boolean isMandatory;
     /**
-     * Get or sets the position of the parameter.
+     * @return Get or sets the position of the parameter.
      * 
      */
     private final @Nullable Integer position;
     /**
-     * Gets or sets the type of the parameter.
+     * @return Gets or sets the type of the parameter.
      * 
      */
     private final @Nullable String type;
@@ -47,30 +47,30 @@ public final class RunbookParameterResponse {
     }
 
     /**
-     * Gets or sets the default value of parameter.
+     * @return Gets or sets the default value of parameter.
      * 
-    */
+     */
     public Optional<String> defaultValue() {
         return Optional.ofNullable(this.defaultValue);
     }
     /**
-     * Gets or sets a Boolean value to indicate whether the parameter is mandatory or not.
+     * @return Gets or sets a Boolean value to indicate whether the parameter is mandatory or not.
      * 
-    */
+     */
     public Optional<Boolean> isMandatory() {
         return Optional.ofNullable(this.isMandatory);
     }
     /**
-     * Get or sets the position of the parameter.
+     * @return Get or sets the position of the parameter.
      * 
-    */
+     */
     public Optional<Integer> position() {
         return Optional.ofNullable(this.position);
     }
     /**
-     * Gets or sets the type of the parameter.
+     * @return Gets or sets the type of the parameter.
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }

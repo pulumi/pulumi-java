@@ -29,6 +29,10 @@ public final class BatchAccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accountName")
     private @Nullable Output<String> accountName;
 
+    /**
+     * @return A name for the Batch account which must be unique within the region. Batch account names must be between 3 and 24 characters in length and must use only numbers and lowercase letters. This name is used as part of the DNS name that is used to access the Batch service in the region in which the account is created. For example: http://accountname.region.batch.azure.com/.
+     * 
+     */
     public Optional<Output<String>> accountName() {
         return Optional.ofNullable(this.accountName);
     }
@@ -40,6 +44,10 @@ public final class BatchAccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="autoStorage")
     private @Nullable Output<AutoStorageBasePropertiesArgs> autoStorage;
 
+    /**
+     * @return The properties related to the auto-storage account.
+     * 
+     */
     public Optional<Output<AutoStorageBasePropertiesArgs>> autoStorage() {
         return Optional.ofNullable(this.autoStorage);
     }
@@ -51,6 +59,10 @@ public final class BatchAccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="encryption")
     private @Nullable Output<EncryptionPropertiesArgs> encryption;
 
+    /**
+     * @return Configures how customer data is encrypted inside the Batch account. By default, accounts are encrypted using a Microsoft managed key. For additional control, a customer-managed key can be used instead.
+     * 
+     */
     public Optional<Output<EncryptionPropertiesArgs>> encryption() {
         return Optional.ofNullable(this.encryption);
     }
@@ -62,6 +74,10 @@ public final class BatchAccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="identity")
     private @Nullable Output<BatchAccountIdentityArgs> identity;
 
+    /**
+     * @return The identity of the Batch account.
+     * 
+     */
     public Optional<Output<BatchAccountIdentityArgs>> identity() {
         return Optional.ofNullable(this.identity);
     }
@@ -73,6 +89,10 @@ public final class BatchAccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="keyVaultReference")
     private @Nullable Output<KeyVaultReferenceArgs> keyVaultReference;
 
+    /**
+     * @return A reference to the Azure key vault associated with the Batch account.
+     * 
+     */
     public Optional<Output<KeyVaultReferenceArgs>> keyVaultReference() {
         return Optional.ofNullable(this.keyVaultReference);
     }
@@ -84,6 +104,10 @@ public final class BatchAccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The region in which to create the account.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -95,6 +119,10 @@ public final class BatchAccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="poolAllocationMode")
     private @Nullable Output<PoolAllocationMode> poolAllocationMode;
 
+    /**
+     * @return The pool allocation mode also affects how clients may authenticate to the Batch Service API. If the mode is BatchService, clients may authenticate using access keys or Azure Active Directory. If the mode is UserSubscription, clients must use Azure Active Directory. The default is BatchService.
+     * 
+     */
     public Optional<Output<PoolAllocationMode>> poolAllocationMode() {
         return Optional.ofNullable(this.poolAllocationMode);
     }
@@ -106,6 +134,10 @@ public final class BatchAccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="publicNetworkAccess")
     private @Nullable Output<PublicNetworkAccessType> publicNetworkAccess;
 
+    /**
+     * @return If not specified, the default value is &#39;enabled&#39;.
+     * 
+     */
     public Optional<Output<PublicNetworkAccessType>> publicNetworkAccess() {
         return Optional.ofNullable(this.publicNetworkAccess);
     }
@@ -117,6 +149,10 @@ public final class BatchAccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the Batch account.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -128,6 +164,10 @@ public final class BatchAccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return The user-specified tags associated with the account.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -165,92 +205,212 @@ public final class BatchAccountArgs extends com.pulumi.resources.ResourceArgs {
             $ = new BatchAccountArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName A name for the Batch account which must be unique within the region. Batch account names must be between 3 and 24 characters in length and must use only numbers and lowercase letters. This name is used as part of the DNS name that is used to access the Batch service in the region in which the account is created. For example: http://accountname.region.batch.azure.com/.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(@Nullable Output<String> accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param accountName A name for the Batch account which must be unique within the region. Batch account names must be between 3 and 24 characters in length and must use only numbers and lowercase letters. This name is used as part of the DNS name that is used to access the Batch service in the region in which the account is created. For example: http://accountname.region.batch.azure.com/.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             return accountName(Output.of(accountName));
         }
 
+        /**
+         * @param autoStorage The properties related to the auto-storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoStorage(@Nullable Output<AutoStorageBasePropertiesArgs> autoStorage) {
             $.autoStorage = autoStorage;
             return this;
         }
 
+        /**
+         * @param autoStorage The properties related to the auto-storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoStorage(AutoStorageBasePropertiesArgs autoStorage) {
             return autoStorage(Output.of(autoStorage));
         }
 
+        /**
+         * @param encryption Configures how customer data is encrypted inside the Batch account. By default, accounts are encrypted using a Microsoft managed key. For additional control, a customer-managed key can be used instead.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryption(@Nullable Output<EncryptionPropertiesArgs> encryption) {
             $.encryption = encryption;
             return this;
         }
 
+        /**
+         * @param encryption Configures how customer data is encrypted inside the Batch account. By default, accounts are encrypted using a Microsoft managed key. For additional control, a customer-managed key can be used instead.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryption(EncryptionPropertiesArgs encryption) {
             return encryption(Output.of(encryption));
         }
 
+        /**
+         * @param identity The identity of the Batch account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(@Nullable Output<BatchAccountIdentityArgs> identity) {
             $.identity = identity;
             return this;
         }
 
+        /**
+         * @param identity The identity of the Batch account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(BatchAccountIdentityArgs identity) {
             return identity(Output.of(identity));
         }
 
+        /**
+         * @param keyVaultReference A reference to the Azure key vault associated with the Batch account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultReference(@Nullable Output<KeyVaultReferenceArgs> keyVaultReference) {
             $.keyVaultReference = keyVaultReference;
             return this;
         }
 
+        /**
+         * @param keyVaultReference A reference to the Azure key vault associated with the Batch account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultReference(KeyVaultReferenceArgs keyVaultReference) {
             return keyVaultReference(Output.of(keyVaultReference));
         }
 
+        /**
+         * @param location The region in which to create the account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The region in which to create the account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param poolAllocationMode The pool allocation mode also affects how clients may authenticate to the Batch Service API. If the mode is BatchService, clients may authenticate using access keys or Azure Active Directory. If the mode is UserSubscription, clients must use Azure Active Directory. The default is BatchService.
+         * 
+         * @return builder
+         * 
+         */
         public Builder poolAllocationMode(@Nullable Output<PoolAllocationMode> poolAllocationMode) {
             $.poolAllocationMode = poolAllocationMode;
             return this;
         }
 
+        /**
+         * @param poolAllocationMode The pool allocation mode also affects how clients may authenticate to the Batch Service API. If the mode is BatchService, clients may authenticate using access keys or Azure Active Directory. If the mode is UserSubscription, clients must use Azure Active Directory. The default is BatchService.
+         * 
+         * @return builder
+         * 
+         */
         public Builder poolAllocationMode(PoolAllocationMode poolAllocationMode) {
             return poolAllocationMode(Output.of(poolAllocationMode));
         }
 
+        /**
+         * @param publicNetworkAccess If not specified, the default value is &#39;enabled&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicNetworkAccess(@Nullable Output<PublicNetworkAccessType> publicNetworkAccess) {
             $.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
 
+        /**
+         * @param publicNetworkAccess If not specified, the default value is &#39;enabled&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicNetworkAccess(PublicNetworkAccessType publicNetworkAccess) {
             return publicNetworkAccess(Output.of(publicNetworkAccess));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the Batch account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the Batch account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags The user-specified tags associated with the account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The user-specified tags associated with the account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

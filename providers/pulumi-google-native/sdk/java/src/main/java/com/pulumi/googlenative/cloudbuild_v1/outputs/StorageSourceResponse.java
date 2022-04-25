@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class StorageSourceResponse {
     /**
-     * Google Cloud Storage bucket containing the source (see [Bucket Name Requirements](https://cloud.google.com/storage/docs/bucket-naming#requirements)).
+     * @return Google Cloud Storage bucket containing the source (see [Bucket Name Requirements](https://cloud.google.com/storage/docs/bucket-naming#requirements)).
      * 
      */
     private final String bucket;
     /**
-     * Google Cloud Storage generation for the object. If the generation is omitted, the latest generation will be used.
+     * @return Google Cloud Storage generation for the object. If the generation is omitted, the latest generation will be used.
      * 
      */
     private final String generation;
     /**
-     * Google Cloud Storage object containing the source. This object must be a zipped (`.zip`) or gzipped archive file (`.tar.gz`) containing source to build.
+     * @return Google Cloud Storage object containing the source. This object must be a zipped (`.zip`) or gzipped archive file (`.tar.gz`) containing source to build.
      * 
      */
     private final String object;
@@ -36,23 +36,23 @@ public final class StorageSourceResponse {
     }
 
     /**
-     * Google Cloud Storage bucket containing the source (see [Bucket Name Requirements](https://cloud.google.com/storage/docs/bucket-naming#requirements)).
+     * @return Google Cloud Storage bucket containing the source (see [Bucket Name Requirements](https://cloud.google.com/storage/docs/bucket-naming#requirements)).
      * 
-    */
+     */
     public String bucket() {
         return this.bucket;
     }
     /**
-     * Google Cloud Storage generation for the object. If the generation is omitted, the latest generation will be used.
+     * @return Google Cloud Storage generation for the object. If the generation is omitted, the latest generation will be used.
      * 
-    */
+     */
     public String generation() {
         return this.generation;
     }
     /**
-     * Google Cloud Storage object containing the source. This object must be a zipped (`.zip`) or gzipped archive file (`.tar.gz`) containing source to build.
+     * @return Google Cloud Storage object containing the source. This object must be a zipped (`.zip`) or gzipped archive file (`.tar.gz`) containing source to build.
      * 
-    */
+     */
     public String object() {
         return this.object;
     }

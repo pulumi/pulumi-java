@@ -28,6 +28,10 @@ public final class InMageDiskExclusionInputArgs extends com.pulumi.resources.Res
     @Import(name="diskSignatureOptions")
     private @Nullable Output<List<InMageDiskSignatureExclusionOptionsArgs>> diskSignatureOptions;
 
+    /**
+     * @return The guest disk signature based option for disk exclusion.
+     * 
+     */
     public Optional<Output<List<InMageDiskSignatureExclusionOptionsArgs>>> diskSignatureOptions() {
         return Optional.ofNullable(this.diskSignatureOptions);
     }
@@ -39,6 +43,10 @@ public final class InMageDiskExclusionInputArgs extends com.pulumi.resources.Res
     @Import(name="volumeOptions")
     private @Nullable Output<List<InMageVolumeExclusionOptionsArgs>> volumeOptions;
 
+    /**
+     * @return The volume label based option for disk exclusion.
+     * 
+     */
     public Optional<Output<List<InMageVolumeExclusionOptionsArgs>>> volumeOptions() {
         return Optional.ofNullable(this.volumeOptions);
     }
@@ -68,28 +76,64 @@ public final class InMageDiskExclusionInputArgs extends com.pulumi.resources.Res
             $ = new InMageDiskExclusionInputArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param diskSignatureOptions The guest disk signature based option for disk exclusion.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskSignatureOptions(@Nullable Output<List<InMageDiskSignatureExclusionOptionsArgs>> diskSignatureOptions) {
             $.diskSignatureOptions = diskSignatureOptions;
             return this;
         }
 
+        /**
+         * @param diskSignatureOptions The guest disk signature based option for disk exclusion.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskSignatureOptions(List<InMageDiskSignatureExclusionOptionsArgs> diskSignatureOptions) {
             return diskSignatureOptions(Output.of(diskSignatureOptions));
         }
 
+        /**
+         * @param diskSignatureOptions The guest disk signature based option for disk exclusion.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskSignatureOptions(InMageDiskSignatureExclusionOptionsArgs... diskSignatureOptions) {
             return diskSignatureOptions(List.of(diskSignatureOptions));
         }
 
+        /**
+         * @param volumeOptions The volume label based option for disk exclusion.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeOptions(@Nullable Output<List<InMageVolumeExclusionOptionsArgs>> volumeOptions) {
             $.volumeOptions = volumeOptions;
             return this;
         }
 
+        /**
+         * @param volumeOptions The volume label based option for disk exclusion.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeOptions(List<InMageVolumeExclusionOptionsArgs> volumeOptions) {
             return volumeOptions(Output.of(volumeOptions));
         }
 
+        /**
+         * @param volumeOptions The volume label based option for disk exclusion.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeOptions(InMageVolumeExclusionOptionsArgs... volumeOptions) {
             return volumeOptions(List.of(volumeOptions));
         }

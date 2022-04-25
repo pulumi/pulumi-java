@@ -27,6 +27,10 @@ public final class CbcsDrmConfigurationResponse extends com.pulumi.resources.Inv
     @Import(name="fairPlay")
     private @Nullable StreamingPolicyFairPlayConfigurationResponse fairPlay;
 
+    /**
+     * @return FairPlay configurations
+     * 
+     */
     public Optional<StreamingPolicyFairPlayConfigurationResponse> fairPlay() {
         return Optional.ofNullable(this.fairPlay);
     }
@@ -38,6 +42,10 @@ public final class CbcsDrmConfigurationResponse extends com.pulumi.resources.Inv
     @Import(name="playReady")
     private @Nullable StreamingPolicyPlayReadyConfigurationResponse playReady;
 
+    /**
+     * @return PlayReady configurations
+     * 
+     */
     public Optional<StreamingPolicyPlayReadyConfigurationResponse> playReady() {
         return Optional.ofNullable(this.playReady);
     }
@@ -49,6 +57,10 @@ public final class CbcsDrmConfigurationResponse extends com.pulumi.resources.Inv
     @Import(name="widevine")
     private @Nullable StreamingPolicyWidevineConfigurationResponse widevine;
 
+    /**
+     * @return Widevine configurations
+     * 
+     */
     public Optional<StreamingPolicyWidevineConfigurationResponse> widevine() {
         return Optional.ofNullable(this.widevine);
     }
@@ -79,16 +91,34 @@ public final class CbcsDrmConfigurationResponse extends com.pulumi.resources.Inv
             $ = new CbcsDrmConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fairPlay FairPlay configurations
+         * 
+         * @return builder
+         * 
+         */
         public Builder fairPlay(@Nullable StreamingPolicyFairPlayConfigurationResponse fairPlay) {
             $.fairPlay = fairPlay;
             return this;
         }
 
+        /**
+         * @param playReady PlayReady configurations
+         * 
+         * @return builder
+         * 
+         */
         public Builder playReady(@Nullable StreamingPolicyPlayReadyConfigurationResponse playReady) {
             $.playReady = playReady;
             return this;
         }
 
+        /**
+         * @param widevine Widevine configurations
+         * 
+         * @return builder
+         * 
+         */
         public Builder widevine(@Nullable StreamingPolicyWidevineConfigurationResponse widevine) {
             $.widevine = widevine;
             return this;

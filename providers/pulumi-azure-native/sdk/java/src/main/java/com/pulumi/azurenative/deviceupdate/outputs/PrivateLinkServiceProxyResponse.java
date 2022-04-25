@@ -16,22 +16,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PrivateLinkServiceProxyResponse {
     /**
-     * Group connectivity information.
+     * @return Group connectivity information.
      * 
      */
     private final @Nullable List<GroupConnectivityInformationResponse> groupConnectivityInformation;
     /**
-     * NRP resource ID.
+     * @return NRP resource ID.
      * 
      */
     private final @Nullable String id;
     /**
-     * Remote private endpoint connection details.
+     * @return Remote private endpoint connection details.
      * 
      */
     private final @Nullable PrivateLinkServiceProxyResponseRemotePrivateEndpointConnection remotePrivateEndpointConnection;
     /**
-     * Remote private link service connection state
+     * @return Remote private link service connection state
      * 
      */
     private final @Nullable PrivateLinkServiceConnectionStateResponse remotePrivateLinkServiceConnectionState;
@@ -49,30 +49,30 @@ public final class PrivateLinkServiceProxyResponse {
     }
 
     /**
-     * Group connectivity information.
+     * @return Group connectivity information.
      * 
-    */
+     */
     public List<GroupConnectivityInformationResponse> groupConnectivityInformation() {
         return this.groupConnectivityInformation == null ? List.of() : this.groupConnectivityInformation;
     }
     /**
-     * NRP resource ID.
+     * @return NRP resource ID.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * Remote private endpoint connection details.
+     * @return Remote private endpoint connection details.
      * 
-    */
+     */
     public Optional<PrivateLinkServiceProxyResponseRemotePrivateEndpointConnection> remotePrivateEndpointConnection() {
         return Optional.ofNullable(this.remotePrivateEndpointConnection);
     }
     /**
-     * Remote private link service connection state
+     * @return Remote private link service connection state
      * 
-    */
+     */
     public Optional<PrivateLinkServiceConnectionStateResponse> remotePrivateLinkServiceConnectionState() {
         return Optional.ofNullable(this.remotePrivateLinkServiceConnectionState);
     }

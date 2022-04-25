@@ -32,6 +32,11 @@ public final class AzureVmWorkloadProtectionPolicyResponse extends com.pulumi.re
     @Import(name="backupManagementType", required=true)
     private String backupManagementType;
 
+    /**
+     * @return This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+     * Expected value is &#39;AzureWorkload&#39;.
+     * 
+     */
     public String backupManagementType() {
         return this.backupManagementType;
     }
@@ -43,6 +48,10 @@ public final class AzureVmWorkloadProtectionPolicyResponse extends com.pulumi.re
     @Import(name="makePolicyConsistent")
     private @Nullable Boolean makePolicyConsistent;
 
+    /**
+     * @return Fix the policy inconsistency
+     * 
+     */
     public Optional<Boolean> makePolicyConsistent() {
         return Optional.ofNullable(this.makePolicyConsistent);
     }
@@ -54,6 +63,10 @@ public final class AzureVmWorkloadProtectionPolicyResponse extends com.pulumi.re
     @Import(name="protectedItemsCount")
     private @Nullable Integer protectedItemsCount;
 
+    /**
+     * @return Number of items associated with this policy.
+     * 
+     */
     public Optional<Integer> protectedItemsCount() {
         return Optional.ofNullable(this.protectedItemsCount);
     }
@@ -65,6 +78,10 @@ public final class AzureVmWorkloadProtectionPolicyResponse extends com.pulumi.re
     @Import(name="settings")
     private @Nullable SettingsResponse settings;
 
+    /**
+     * @return Common settings for the backup management
+     * 
+     */
     public Optional<SettingsResponse> settings() {
         return Optional.ofNullable(this.settings);
     }
@@ -76,6 +93,10 @@ public final class AzureVmWorkloadProtectionPolicyResponse extends com.pulumi.re
     @Import(name="subProtectionPolicy")
     private @Nullable List<SubProtectionPolicyResponse> subProtectionPolicy;
 
+    /**
+     * @return List of sub-protection policies which includes schedule and retention
+     * 
+     */
     public Optional<List<SubProtectionPolicyResponse>> subProtectionPolicy() {
         return Optional.ofNullable(this.subProtectionPolicy);
     }
@@ -87,6 +108,10 @@ public final class AzureVmWorkloadProtectionPolicyResponse extends com.pulumi.re
     @Import(name="workLoadType")
     private @Nullable String workLoadType;
 
+    /**
+     * @return Type of workload for the backup management
+     * 
+     */
     public Optional<String> workLoadType() {
         return Optional.ofNullable(this.workLoadType);
     }
@@ -120,35 +145,78 @@ public final class AzureVmWorkloadProtectionPolicyResponse extends com.pulumi.re
             $ = new AzureVmWorkloadProtectionPolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backupManagementType This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+         * Expected value is &#39;AzureWorkload&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupManagementType(String backupManagementType) {
             $.backupManagementType = backupManagementType;
             return this;
         }
 
+        /**
+         * @param makePolicyConsistent Fix the policy inconsistency
+         * 
+         * @return builder
+         * 
+         */
         public Builder makePolicyConsistent(@Nullable Boolean makePolicyConsistent) {
             $.makePolicyConsistent = makePolicyConsistent;
             return this;
         }
 
+        /**
+         * @param protectedItemsCount Number of items associated with this policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectedItemsCount(@Nullable Integer protectedItemsCount) {
             $.protectedItemsCount = protectedItemsCount;
             return this;
         }
 
+        /**
+         * @param settings Common settings for the backup management
+         * 
+         * @return builder
+         * 
+         */
         public Builder settings(@Nullable SettingsResponse settings) {
             $.settings = settings;
             return this;
         }
 
+        /**
+         * @param subProtectionPolicy List of sub-protection policies which includes schedule and retention
+         * 
+         * @return builder
+         * 
+         */
         public Builder subProtectionPolicy(@Nullable List<SubProtectionPolicyResponse> subProtectionPolicy) {
             $.subProtectionPolicy = subProtectionPolicy;
             return this;
         }
 
+        /**
+         * @param subProtectionPolicy List of sub-protection policies which includes schedule and retention
+         * 
+         * @return builder
+         * 
+         */
         public Builder subProtectionPolicy(SubProtectionPolicyResponse... subProtectionPolicy) {
             return subProtectionPolicy(List.of(subProtectionPolicy));
         }
 
+        /**
+         * @param workLoadType Type of workload for the backup management
+         * 
+         * @return builder
+         * 
+         */
         public Builder workLoadType(@Nullable String workLoadType) {
             $.workLoadType = workLoadType;
             return this;

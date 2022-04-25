@@ -15,22 +15,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ServiceSourceConfiguration {
     /**
-     * Describes resources needed to authenticate access to some source repositories. See Authentication Configuration below for more details.
+     * @return Describes resources needed to authenticate access to some source repositories. See Authentication Configuration below for more details.
      * 
      */
     private final @Nullable ServiceSourceConfigurationAuthenticationConfiguration authenticationConfiguration;
     /**
-     * Whether continuous integration from the source repository is enabled for the App Runner service. If set to `true`, each repository change (source code commit or new image version) starts a deployment. Defaults to `true`.
+     * @return Whether continuous integration from the source repository is enabled for the App Runner service. If set to `true`, each repository change (source code commit or new image version) starts a deployment. Defaults to `true`.
      * 
      */
     private final @Nullable Boolean autoDeploymentsEnabled;
     /**
-     * Description of a source code repository. See Code Repository below for more details.
+     * @return Description of a source code repository. See Code Repository below for more details.
      * 
      */
     private final @Nullable ServiceSourceConfigurationCodeRepository codeRepository;
     /**
-     * Description of a source image repository. See Image Repository below for more details.
+     * @return Description of a source image repository. See Image Repository below for more details.
      * 
      */
     private final @Nullable ServiceSourceConfigurationImageRepository imageRepository;
@@ -48,30 +48,30 @@ public final class ServiceSourceConfiguration {
     }
 
     /**
-     * Describes resources needed to authenticate access to some source repositories. See Authentication Configuration below for more details.
+     * @return Describes resources needed to authenticate access to some source repositories. See Authentication Configuration below for more details.
      * 
-    */
+     */
     public Optional<ServiceSourceConfigurationAuthenticationConfiguration> authenticationConfiguration() {
         return Optional.ofNullable(this.authenticationConfiguration);
     }
     /**
-     * Whether continuous integration from the source repository is enabled for the App Runner service. If set to `true`, each repository change (source code commit or new image version) starts a deployment. Defaults to `true`.
+     * @return Whether continuous integration from the source repository is enabled for the App Runner service. If set to `true`, each repository change (source code commit or new image version) starts a deployment. Defaults to `true`.
      * 
-    */
+     */
     public Optional<Boolean> autoDeploymentsEnabled() {
         return Optional.ofNullable(this.autoDeploymentsEnabled);
     }
     /**
-     * Description of a source code repository. See Code Repository below for more details.
+     * @return Description of a source code repository. See Code Repository below for more details.
      * 
-    */
+     */
     public Optional<ServiceSourceConfigurationCodeRepository> codeRepository() {
         return Optional.ofNullable(this.codeRepository);
     }
     /**
-     * Description of a source image repository. See Image Repository below for more details.
+     * @return Description of a source image repository. See Image Repository below for more details.
      * 
-    */
+     */
     public Optional<ServiceSourceConfigurationImageRepository> imageRepository() {
         return Optional.ofNullable(this.imageRepository);
     }

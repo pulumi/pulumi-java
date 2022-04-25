@@ -36,6 +36,10 @@ public final class TrailEventSelector extends com.pulumi.resources.InvokeArgs {
     @Import(name="excludeManagementEventSources")
     private @Nullable List<String> excludeManagementEventSources;
 
+    /**
+     * @return An optional list of service event sources from which you do not want management events to be logged on your trail. In this release, the list can be empty (disables the filter), or it can filter out AWS Key Management Service events by containing &#34;kms.amazonaws.com&#34;. By default, ExcludeManagementEventSources is empty, and AWS KMS events are included in events that are logged to your trail.
+     * 
+     */
     public Optional<List<String>> excludeManagementEventSources() {
         return Optional.ofNullable(this.excludeManagementEventSources);
     }
@@ -47,6 +51,10 @@ public final class TrailEventSelector extends com.pulumi.resources.InvokeArgs {
     @Import(name="includeManagementEvents")
     private @Nullable Boolean includeManagementEvents;
 
+    /**
+     * @return Specify if you want your event selector to include management events for your trail.
+     * 
+     */
     public Optional<Boolean> includeManagementEvents() {
         return Optional.ofNullable(this.includeManagementEvents);
     }
@@ -58,6 +66,10 @@ public final class TrailEventSelector extends com.pulumi.resources.InvokeArgs {
     @Import(name="readWriteType")
     private @Nullable TrailEventSelectorReadWriteType readWriteType;
 
+    /**
+     * @return Specify if you want your trail to log read-only events, write-only events, or all. For example, the EC2 GetConsoleOutput is a read-only API operation and RunInstances is a write-only API operation.
+     * 
+     */
     public Optional<TrailEventSelectorReadWriteType> readWriteType() {
         return Optional.ofNullable(this.readWriteType);
     }
@@ -98,20 +110,44 @@ public final class TrailEventSelector extends com.pulumi.resources.InvokeArgs {
             return dataResources(List.of(dataResources));
         }
 
+        /**
+         * @param excludeManagementEventSources An optional list of service event sources from which you do not want management events to be logged on your trail. In this release, the list can be empty (disables the filter), or it can filter out AWS Key Management Service events by containing &#34;kms.amazonaws.com&#34;. By default, ExcludeManagementEventSources is empty, and AWS KMS events are included in events that are logged to your trail.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludeManagementEventSources(@Nullable List<String> excludeManagementEventSources) {
             $.excludeManagementEventSources = excludeManagementEventSources;
             return this;
         }
 
+        /**
+         * @param excludeManagementEventSources An optional list of service event sources from which you do not want management events to be logged on your trail. In this release, the list can be empty (disables the filter), or it can filter out AWS Key Management Service events by containing &#34;kms.amazonaws.com&#34;. By default, ExcludeManagementEventSources is empty, and AWS KMS events are included in events that are logged to your trail.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludeManagementEventSources(String... excludeManagementEventSources) {
             return excludeManagementEventSources(List.of(excludeManagementEventSources));
         }
 
+        /**
+         * @param includeManagementEvents Specify if you want your event selector to include management events for your trail.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeManagementEvents(@Nullable Boolean includeManagementEvents) {
             $.includeManagementEvents = includeManagementEvents;
             return this;
         }
 
+        /**
+         * @param readWriteType Specify if you want your trail to log read-only events, write-only events, or all. For example, the EC2 GetConsoleOutput is a read-only API operation and RunInstances is a write-only API operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readWriteType(@Nullable TrailEventSelectorReadWriteType readWriteType) {
             $.readWriteType = readWriteType;
             return this;

@@ -34,6 +34,10 @@ public final class SqlScheduledMaintenanceArgs extends com.pulumi.resources.Reso
     @Import(name="canReschedule")
     private @Nullable Output<Boolean> canReschedule;
 
+    /**
+     * @return If the scheduled maintenance can be rescheduled.
+     * 
+     */
     public Optional<Output<Boolean>> canReschedule() {
         return Optional.ofNullable(this.canReschedule);
     }
@@ -45,6 +49,10 @@ public final class SqlScheduledMaintenanceArgs extends com.pulumi.resources.Reso
     @Import(name="scheduleDeadlineTime")
     private @Nullable Output<String> scheduleDeadlineTime;
 
+    /**
+     * @return Maintenance cannot be rescheduled to start beyond this deadline.
+     * 
+     */
     public Optional<Output<String>> scheduleDeadlineTime() {
         return Optional.ofNullable(this.scheduleDeadlineTime);
     }
@@ -56,6 +64,10 @@ public final class SqlScheduledMaintenanceArgs extends com.pulumi.resources.Reso
     @Import(name="startTime")
     private @Nullable Output<String> startTime;
 
+    /**
+     * @return The start time of any upcoming scheduled maintenance for this instance.
+     * 
+     */
     public Optional<Output<String>> startTime() {
         return Optional.ofNullable(this.startTime);
     }
@@ -96,29 +108,65 @@ public final class SqlScheduledMaintenanceArgs extends com.pulumi.resources.Reso
             return canDefer(Output.of(canDefer));
         }
 
+        /**
+         * @param canReschedule If the scheduled maintenance can be rescheduled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder canReschedule(@Nullable Output<Boolean> canReschedule) {
             $.canReschedule = canReschedule;
             return this;
         }
 
+        /**
+         * @param canReschedule If the scheduled maintenance can be rescheduled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder canReschedule(Boolean canReschedule) {
             return canReschedule(Output.of(canReschedule));
         }
 
+        /**
+         * @param scheduleDeadlineTime Maintenance cannot be rescheduled to start beyond this deadline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduleDeadlineTime(@Nullable Output<String> scheduleDeadlineTime) {
             $.scheduleDeadlineTime = scheduleDeadlineTime;
             return this;
         }
 
+        /**
+         * @param scheduleDeadlineTime Maintenance cannot be rescheduled to start beyond this deadline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduleDeadlineTime(String scheduleDeadlineTime) {
             return scheduleDeadlineTime(Output.of(scheduleDeadlineTime));
         }
 
+        /**
+         * @param startTime The start time of any upcoming scheduled maintenance for this instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(@Nullable Output<String> startTime) {
             $.startTime = startTime;
             return this;
         }
 
+        /**
+         * @param startTime The start time of any upcoming scheduled maintenance for this instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             return startTime(Output.of(startTime));
         }

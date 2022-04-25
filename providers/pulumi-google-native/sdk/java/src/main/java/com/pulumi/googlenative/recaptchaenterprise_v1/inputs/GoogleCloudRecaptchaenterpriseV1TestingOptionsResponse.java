@@ -24,6 +24,10 @@ public final class GoogleCloudRecaptchaenterpriseV1TestingOptionsResponse extend
     @Import(name="testingChallenge", required=true)
     private String testingChallenge;
 
+    /**
+     * @return For challenge-based keys only (CHECKBOX, INVISIBLE), all challenge requests for this site will return nocaptcha if NOCAPTCHA, or an unsolvable challenge if CHALLENGE.
+     * 
+     */
     public String testingChallenge() {
         return this.testingChallenge;
     }
@@ -35,6 +39,10 @@ public final class GoogleCloudRecaptchaenterpriseV1TestingOptionsResponse extend
     @Import(name="testingScore", required=true)
     private Double testingScore;
 
+    /**
+     * @return All assessments for this Key will return this score. Must be between 0 (likely not legitimate) and 1 (likely legitimate) inclusive.
+     * 
+     */
     public Double testingScore() {
         return this.testingScore;
     }
@@ -64,11 +72,23 @@ public final class GoogleCloudRecaptchaenterpriseV1TestingOptionsResponse extend
             $ = new GoogleCloudRecaptchaenterpriseV1TestingOptionsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param testingChallenge For challenge-based keys only (CHECKBOX, INVISIBLE), all challenge requests for this site will return nocaptcha if NOCAPTCHA, or an unsolvable challenge if CHALLENGE.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testingChallenge(String testingChallenge) {
             $.testingChallenge = testingChallenge;
             return this;
         }
 
+        /**
+         * @param testingScore All assessments for this Key will return this score. Must be between 0 (likely not legitimate) and 1 (likely legitimate) inclusive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testingScore(Double testingScore) {
             $.testingScore = testingScore;
             return this;

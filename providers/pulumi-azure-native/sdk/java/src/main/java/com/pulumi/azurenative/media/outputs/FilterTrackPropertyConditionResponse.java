@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class FilterTrackPropertyConditionResponse {
     /**
-     * The track property condition operation.
+     * @return The track property condition operation.
      * 
      */
     private final String operation;
     /**
-     * The track property type.
+     * @return The track property type.
      * 
      */
     private final String property;
     /**
-     * The track property value.
+     * @return The track property value.
      * 
      */
     private final String value;
@@ -36,23 +36,23 @@ public final class FilterTrackPropertyConditionResponse {
     }
 
     /**
-     * The track property condition operation.
+     * @return The track property condition operation.
      * 
-    */
+     */
     public String operation() {
         return this.operation;
     }
     /**
-     * The track property type.
+     * @return The track property type.
      * 
-    */
+     */
     public String property() {
         return this.property;
     }
     /**
-     * The track property value.
+     * @return The track property value.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

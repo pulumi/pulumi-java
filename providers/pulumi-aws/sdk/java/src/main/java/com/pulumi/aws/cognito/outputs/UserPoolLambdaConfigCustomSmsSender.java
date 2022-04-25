@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class UserPoolLambdaConfigCustomSmsSender {
     /**
-     * The Lambda Amazon Resource Name of the Lambda function that Amazon Cognito triggers to send SMS notifications to users.
+     * @return The Lambda Amazon Resource Name of the Lambda function that Amazon Cognito triggers to send SMS notifications to users.
      * 
      */
     private final String lambdaArn;
     /**
-     * The Lambda version represents the signature of the &#34;request&#34; attribute in the &#34;event&#34; information Amazon Cognito passes to your custom SMS Lambda function. The only supported value is `V1_0`.
+     * @return The Lambda version represents the signature of the &#34;request&#34; attribute in the &#34;event&#34; information Amazon Cognito passes to your custom SMS Lambda function. The only supported value is `V1_0`.
      * 
      */
     private final String lambdaVersion;
@@ -29,16 +29,16 @@ public final class UserPoolLambdaConfigCustomSmsSender {
     }
 
     /**
-     * The Lambda Amazon Resource Name of the Lambda function that Amazon Cognito triggers to send SMS notifications to users.
+     * @return The Lambda Amazon Resource Name of the Lambda function that Amazon Cognito triggers to send SMS notifications to users.
      * 
-    */
+     */
     public String lambdaArn() {
         return this.lambdaArn;
     }
     /**
-     * The Lambda version represents the signature of the &#34;request&#34; attribute in the &#34;event&#34; information Amazon Cognito passes to your custom SMS Lambda function. The only supported value is `V1_0`.
+     * @return The Lambda version represents the signature of the &#34;request&#34; attribute in the &#34;event&#34; information Amazon Cognito passes to your custom SMS Lambda function. The only supported value is `V1_0`.
      * 
-    */
+     */
     public String lambdaVersion() {
         return this.lambdaVersion;
     }

@@ -13,13 +13,13 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ClusterNodeConfigKubeletConfig {
     /**
-     * If true, enables CPU CFS quota enforcement for
+     * @return If true, enables CPU CFS quota enforcement for
      * containers that specify CPU limits.
      * 
      */
     private final @Nullable Boolean cpuCfsQuota;
     /**
-     * The CPU CFS quota period value. Specified
+     * @return The CPU CFS quota period value. Specified
      * as a sequence of decimal numbers, each with optional fraction and a unit suffix,
      * such as `&#34;300ms&#34;`. Valid time units are &#34;ns&#34;, &#34;us&#34; (or &#34;µs&#34;), &#34;ms&#34;, &#34;s&#34;, &#34;m&#34;,
      * &#34;h&#34;. The value must be a positive duration.
@@ -27,7 +27,7 @@ public final class ClusterNodeConfigKubeletConfig {
      */
     private final @Nullable String cpuCfsQuotaPeriod;
     /**
-     * The CPU management policy on the node. See
+     * @return The CPU management policy on the node. See
      * [K8S CPU Management Policies](https://kubernetes.io/docs/tasks/administer-cluster/cpu-management-policies/).
      * One of `&#34;none&#34;` or `&#34;static&#34;`. Defaults to `none` when `kubelet_config` is unset.
      * 
@@ -45,29 +45,29 @@ public final class ClusterNodeConfigKubeletConfig {
     }
 
     /**
-     * If true, enables CPU CFS quota enforcement for
+     * @return If true, enables CPU CFS quota enforcement for
      * containers that specify CPU limits.
      * 
-    */
+     */
     public Optional<Boolean> cpuCfsQuota() {
         return Optional.ofNullable(this.cpuCfsQuota);
     }
     /**
-     * The CPU CFS quota period value. Specified
+     * @return The CPU CFS quota period value. Specified
      * as a sequence of decimal numbers, each with optional fraction and a unit suffix,
      * such as `&#34;300ms&#34;`. Valid time units are &#34;ns&#34;, &#34;us&#34; (or &#34;µs&#34;), &#34;ms&#34;, &#34;s&#34;, &#34;m&#34;,
      * &#34;h&#34;. The value must be a positive duration.
      * 
-    */
+     */
     public Optional<String> cpuCfsQuotaPeriod() {
         return Optional.ofNullable(this.cpuCfsQuotaPeriod);
     }
     /**
-     * The CPU management policy on the node. See
+     * @return The CPU management policy on the node. See
      * [K8S CPU Management Policies](https://kubernetes.io/docs/tasks/administer-cluster/cpu-management-policies/).
      * One of `&#34;none&#34;` or `&#34;static&#34;`. Defaults to `none` when `kubelet_config` is unset.
      * 
-    */
+     */
     public String cpuManagerPolicy() {
         return this.cpuManagerPolicy;
     }

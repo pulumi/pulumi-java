@@ -27,6 +27,10 @@ public final class GenericContainerExtendedInfoResponse extends com.pulumi.resou
     @Import(name="containerIdentityInfo")
     private @Nullable ContainerIdentityInfoResponse containerIdentityInfo;
 
+    /**
+     * @return Container identity information
+     * 
+     */
     public Optional<ContainerIdentityInfoResponse> containerIdentityInfo() {
         return Optional.ofNullable(this.containerIdentityInfo);
     }
@@ -38,6 +42,10 @@ public final class GenericContainerExtendedInfoResponse extends com.pulumi.resou
     @Import(name="rawCertData")
     private @Nullable String rawCertData;
 
+    /**
+     * @return Public key of container cert
+     * 
+     */
     public Optional<String> rawCertData() {
         return Optional.ofNullable(this.rawCertData);
     }
@@ -49,6 +57,10 @@ public final class GenericContainerExtendedInfoResponse extends com.pulumi.resou
     @Import(name="serviceEndpoints")
     private @Nullable Map<String,String> serviceEndpoints;
 
+    /**
+     * @return Azure Backup Service Endpoints for the container
+     * 
+     */
     public Optional<Map<String,String>> serviceEndpoints() {
         return Optional.ofNullable(this.serviceEndpoints);
     }
@@ -79,16 +91,34 @@ public final class GenericContainerExtendedInfoResponse extends com.pulumi.resou
             $ = new GenericContainerExtendedInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param containerIdentityInfo Container identity information
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerIdentityInfo(@Nullable ContainerIdentityInfoResponse containerIdentityInfo) {
             $.containerIdentityInfo = containerIdentityInfo;
             return this;
         }
 
+        /**
+         * @param rawCertData Public key of container cert
+         * 
+         * @return builder
+         * 
+         */
         public Builder rawCertData(@Nullable String rawCertData) {
             $.rawCertData = rawCertData;
             return this;
         }
 
+        /**
+         * @param serviceEndpoints Azure Backup Service Endpoints for the container
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceEndpoints(@Nullable Map<String,String> serviceEndpoints) {
             $.serviceEndpoints = serviceEndpoints;
             return this;

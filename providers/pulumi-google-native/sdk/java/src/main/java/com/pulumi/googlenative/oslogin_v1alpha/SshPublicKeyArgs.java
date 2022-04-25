@@ -22,6 +22,10 @@ public final class SshPublicKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="expirationTimeUsec")
     private @Nullable Output<String> expirationTimeUsec;
 
+    /**
+     * @return An expiration time in microseconds since epoch.
+     * 
+     */
     public Optional<Output<String>> expirationTimeUsec() {
         return Optional.ofNullable(this.expirationTimeUsec);
     }
@@ -33,6 +37,10 @@ public final class SshPublicKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="key")
     private @Nullable Output<String> key;
 
+    /**
+     * @return Public key text in SSH format, defined by RFC4253 section 6.6.
+     * 
+     */
     public Optional<Output<String>> key() {
         return Optional.ofNullable(this.key);
     }
@@ -70,20 +78,44 @@ public final class SshPublicKeyArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SshPublicKeyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expirationTimeUsec An expiration time in microseconds since epoch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expirationTimeUsec(@Nullable Output<String> expirationTimeUsec) {
             $.expirationTimeUsec = expirationTimeUsec;
             return this;
         }
 
+        /**
+         * @param expirationTimeUsec An expiration time in microseconds since epoch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expirationTimeUsec(String expirationTimeUsec) {
             return expirationTimeUsec(Output.of(expirationTimeUsec));
         }
 
+        /**
+         * @param key Public key text in SSH format, defined by RFC4253 section 6.6.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(@Nullable Output<String> key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param key Public key text in SSH format, defined by RFC4253 section 6.6.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             return key(Output.of(key));
         }

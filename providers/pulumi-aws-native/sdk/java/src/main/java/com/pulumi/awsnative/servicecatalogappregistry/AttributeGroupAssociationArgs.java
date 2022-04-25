@@ -20,6 +20,10 @@ public final class AttributeGroupAssociationArgs extends com.pulumi.resources.Re
     @Import(name="application", required=true)
     private Output<String> application;
 
+    /**
+     * @return The name or the Id of the Application.
+     * 
+     */
     public Output<String> application() {
         return this.application;
     }
@@ -31,6 +35,10 @@ public final class AttributeGroupAssociationArgs extends com.pulumi.resources.Re
     @Import(name="attributeGroup", required=true)
     private Output<String> attributeGroup;
 
+    /**
+     * @return The name or the Id of the AttributeGroup.
+     * 
+     */
     public Output<String> attributeGroup() {
         return this.attributeGroup;
     }
@@ -60,20 +68,44 @@ public final class AttributeGroupAssociationArgs extends com.pulumi.resources.Re
             $ = new AttributeGroupAssociationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param application The name or the Id of the Application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder application(Output<String> application) {
             $.application = application;
             return this;
         }
 
+        /**
+         * @param application The name or the Id of the Application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder application(String application) {
             return application(Output.of(application));
         }
 
+        /**
+         * @param attributeGroup The name or the Id of the AttributeGroup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attributeGroup(Output<String> attributeGroup) {
             $.attributeGroup = attributeGroup;
             return this;
         }
 
+        /**
+         * @param attributeGroup The name or the Id of the AttributeGroup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attributeGroup(String attributeGroup) {
             return attributeGroup(Output.of(attributeGroup));
         }

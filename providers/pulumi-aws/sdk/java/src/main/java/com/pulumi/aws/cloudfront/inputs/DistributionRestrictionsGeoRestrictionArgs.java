@@ -25,6 +25,12 @@ public final class DistributionRestrictionsGeoRestrictionArgs extends com.pulumi
     @Import(name="locations")
     private @Nullable Output<List<String>> locations;
 
+    /**
+     * @return The [ISO 3166-1-alpha-2 codes][4] for which you
+     * want CloudFront either to distribute your content (`whitelist`) or not
+     * distribute your content (`blacklist`).
+     * 
+     */
     public Optional<Output<List<String>>> locations() {
         return Optional.ofNullable(this.locations);
     }
@@ -38,6 +44,12 @@ public final class DistributionRestrictionsGeoRestrictionArgs extends com.pulumi
     @Import(name="restrictionType", required=true)
     private Output<String> restrictionType;
 
+    /**
+     * @return The method that you want to use to restrict
+     * distribution of your content by country: `none`, `whitelist`, or
+     * `blacklist`.
+     * 
+     */
     public Output<String> restrictionType() {
         return this.restrictionType;
     }
@@ -67,24 +79,64 @@ public final class DistributionRestrictionsGeoRestrictionArgs extends com.pulumi
             $ = new DistributionRestrictionsGeoRestrictionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param locations The [ISO 3166-1-alpha-2 codes][4] for which you
+         * want CloudFront either to distribute your content (`whitelist`) or not
+         * distribute your content (`blacklist`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder locations(@Nullable Output<List<String>> locations) {
             $.locations = locations;
             return this;
         }
 
+        /**
+         * @param locations The [ISO 3166-1-alpha-2 codes][4] for which you
+         * want CloudFront either to distribute your content (`whitelist`) or not
+         * distribute your content (`blacklist`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder locations(List<String> locations) {
             return locations(Output.of(locations));
         }
 
+        /**
+         * @param locations The [ISO 3166-1-alpha-2 codes][4] for which you
+         * want CloudFront either to distribute your content (`whitelist`) or not
+         * distribute your content (`blacklist`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder locations(String... locations) {
             return locations(List.of(locations));
         }
 
+        /**
+         * @param restrictionType The method that you want to use to restrict
+         * distribution of your content by country: `none`, `whitelist`, or
+         * `blacklist`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restrictionType(Output<String> restrictionType) {
             $.restrictionType = restrictionType;
             return this;
         }
 
+        /**
+         * @param restrictionType The method that you want to use to restrict
+         * distribution of your content by country: `none`, `whitelist`, or
+         * `blacklist`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restrictionType(String restrictionType) {
             return restrictionType(Output.of(restrictionType));
         }

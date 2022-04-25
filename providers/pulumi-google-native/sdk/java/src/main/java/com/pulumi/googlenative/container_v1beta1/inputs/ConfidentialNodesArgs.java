@@ -26,6 +26,10 @@ public final class ConfidentialNodesArgs extends com.pulumi.resources.ResourceAr
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return Whether Confidential Nodes feature is enabled.
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -54,11 +58,23 @@ public final class ConfidentialNodesArgs extends com.pulumi.resources.ResourceAr
             $ = new ConfidentialNodesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Whether Confidential Nodes feature is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Whether Confidential Nodes feature is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }

@@ -17,17 +17,17 @@ public final class GetWebAppRelayServiceConnectionSlotResult {
     private final @Nullable String entityName;
     private final @Nullable String hostname;
     /**
-     * Resource Id.
+     * @return Resource Id.
      * 
      */
     private final String id;
     /**
-     * Kind of resource.
+     * @return Kind of resource.
      * 
      */
     private final @Nullable String kind;
     /**
-     * Resource Name.
+     * @return Resource Name.
      * 
      */
     private final String name;
@@ -35,7 +35,7 @@ public final class GetWebAppRelayServiceConnectionSlotResult {
     private final @Nullable String resourceConnectionString;
     private final @Nullable String resourceType;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
@@ -79,23 +79,23 @@ public final class GetWebAppRelayServiceConnectionSlotResult {
         return Optional.ofNullable(this.hostname);
     }
     /**
-     * Resource Id.
+     * @return Resource Id.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Kind of resource.
+     * @return Kind of resource.
      * 
-    */
+     */
     public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
-     * Resource Name.
+     * @return Resource Name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
@@ -109,9 +109,9 @@ public final class GetWebAppRelayServiceConnectionSlotResult {
         return Optional.ofNullable(this.resourceType);
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

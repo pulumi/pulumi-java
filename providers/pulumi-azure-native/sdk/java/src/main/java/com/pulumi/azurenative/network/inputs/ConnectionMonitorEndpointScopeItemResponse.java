@@ -25,6 +25,10 @@ public final class ConnectionMonitorEndpointScopeItemResponse extends com.pulumi
     @Import(name="address")
     private @Nullable String address;
 
+    /**
+     * @return The address of the endpoint item. Supported types are IPv4/IPv6 subnet mask or IPv4/IPv6 IP address.
+     * 
+     */
     public Optional<String> address() {
         return Optional.ofNullable(this.address);
     }
@@ -53,6 +57,12 @@ public final class ConnectionMonitorEndpointScopeItemResponse extends com.pulumi
             $ = new ConnectionMonitorEndpointScopeItemResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param address The address of the endpoint item. Supported types are IPv4/IPv6 subnet mask or IPv4/IPv6 IP address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder address(@Nullable String address) {
             $.address = address;
             return this;

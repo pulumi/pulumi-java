@@ -22,6 +22,11 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleArg
     @Import(name="dayOfWeeks", required=true)
     private Output<List<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekArgs>> dayOfWeeks;
 
+    /**
+     * @return May contain up to seven (one for each day of the week) snapshot times.
+     * Structure is documented below.
+     * 
+     */
     public Output<List<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekArgs>> dayOfWeeks() {
         return this.dayOfWeeks;
     }
@@ -50,15 +55,36 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleArg
             $ = new ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dayOfWeeks May contain up to seven (one for each day of the week) snapshot times.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dayOfWeeks(Output<List<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekArgs>> dayOfWeeks) {
             $.dayOfWeeks = dayOfWeeks;
             return this;
         }
 
+        /**
+         * @param dayOfWeeks May contain up to seven (one for each day of the week) snapshot times.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dayOfWeeks(List<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekArgs> dayOfWeeks) {
             return dayOfWeeks(Output.of(dayOfWeeks));
         }
 
+        /**
+         * @param dayOfWeeks May contain up to seven (one for each day of the week) snapshot times.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dayOfWeeks(ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekArgs... dayOfWeeks) {
             return dayOfWeeks(List.of(dayOfWeeks));
         }

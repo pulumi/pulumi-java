@@ -23,6 +23,10 @@ public final class ConnectionPhysicalConnectionRequirementsArgs extends com.pulu
     @Import(name="availabilityZone")
     private @Nullable Output<String> availabilityZone;
 
+    /**
+     * @return The availability zone of the connection. This field is redundant and implied by `subnet_id`, but is currently an api requirement.
+     * 
+     */
     public Optional<Output<String>> availabilityZone() {
         return Optional.ofNullable(this.availabilityZone);
     }
@@ -34,6 +38,10 @@ public final class ConnectionPhysicalConnectionRequirementsArgs extends com.pulu
     @Import(name="securityGroupIdLists")
     private @Nullable Output<List<String>> securityGroupIdLists;
 
+    /**
+     * @return The security group ID list used by the connection.
+     * 
+     */
     public Optional<Output<List<String>>> securityGroupIdLists() {
         return Optional.ofNullable(this.securityGroupIdLists);
     }
@@ -45,6 +53,10 @@ public final class ConnectionPhysicalConnectionRequirementsArgs extends com.pulu
     @Import(name="subnetId")
     private @Nullable Output<String> subnetId;
 
+    /**
+     * @return The subnet ID used by the connection.
+     * 
+     */
     public Optional<Output<String>> subnetId() {
         return Optional.ofNullable(this.subnetId);
     }
@@ -75,33 +87,75 @@ public final class ConnectionPhysicalConnectionRequirementsArgs extends com.pulu
             $ = new ConnectionPhysicalConnectionRequirementsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param availabilityZone The availability zone of the connection. This field is redundant and implied by `subnet_id`, but is currently an api requirement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
             $.availabilityZone = availabilityZone;
             return this;
         }
 
+        /**
+         * @param availabilityZone The availability zone of the connection. This field is redundant and implied by `subnet_id`, but is currently an api requirement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availabilityZone(String availabilityZone) {
             return availabilityZone(Output.of(availabilityZone));
         }
 
+        /**
+         * @param securityGroupIdLists The security group ID list used by the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroupIdLists(@Nullable Output<List<String>> securityGroupIdLists) {
             $.securityGroupIdLists = securityGroupIdLists;
             return this;
         }
 
+        /**
+         * @param securityGroupIdLists The security group ID list used by the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroupIdLists(List<String> securityGroupIdLists) {
             return securityGroupIdLists(Output.of(securityGroupIdLists));
         }
 
+        /**
+         * @param securityGroupIdLists The security group ID list used by the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroupIdLists(String... securityGroupIdLists) {
             return securityGroupIdLists(List.of(securityGroupIdLists));
         }
 
+        /**
+         * @param subnetId The subnet ID used by the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetId(@Nullable Output<String> subnetId) {
             $.subnetId = subnetId;
             return this;
         }
 
+        /**
+         * @param subnetId The subnet ID used by the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetId(String subnetId) {
             return subnetId(Output.of(subnetId));
         }

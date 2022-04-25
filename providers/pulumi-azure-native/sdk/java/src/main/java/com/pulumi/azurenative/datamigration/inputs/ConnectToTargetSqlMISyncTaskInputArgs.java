@@ -25,6 +25,10 @@ public final class ConnectToTargetSqlMISyncTaskInputArgs extends com.pulumi.reso
     @Import(name="azureApp", required=true)
     private Output<AzureActiveDirectoryAppArgs> azureApp;
 
+    /**
+     * @return Azure Active Directory Application the DMS instance will use to connect to the target instance of Azure SQL Database Managed Instance and the Azure Storage Account
+     * 
+     */
     public Output<AzureActiveDirectoryAppArgs> azureApp() {
         return this.azureApp;
     }
@@ -36,6 +40,10 @@ public final class ConnectToTargetSqlMISyncTaskInputArgs extends com.pulumi.reso
     @Import(name="targetConnectionInfo", required=true)
     private Output<MiSqlConnectionInfoArgs> targetConnectionInfo;
 
+    /**
+     * @return Connection information for Azure SQL Database Managed Instance
+     * 
+     */
     public Output<MiSqlConnectionInfoArgs> targetConnectionInfo() {
         return this.targetConnectionInfo;
     }
@@ -65,20 +73,44 @@ public final class ConnectToTargetSqlMISyncTaskInputArgs extends com.pulumi.reso
             $ = new ConnectToTargetSqlMISyncTaskInputArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param azureApp Azure Active Directory Application the DMS instance will use to connect to the target instance of Azure SQL Database Managed Instance and the Azure Storage Account
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureApp(Output<AzureActiveDirectoryAppArgs> azureApp) {
             $.azureApp = azureApp;
             return this;
         }
 
+        /**
+         * @param azureApp Azure Active Directory Application the DMS instance will use to connect to the target instance of Azure SQL Database Managed Instance and the Azure Storage Account
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureApp(AzureActiveDirectoryAppArgs azureApp) {
             return azureApp(Output.of(azureApp));
         }
 
+        /**
+         * @param targetConnectionInfo Connection information for Azure SQL Database Managed Instance
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetConnectionInfo(Output<MiSqlConnectionInfoArgs> targetConnectionInfo) {
             $.targetConnectionInfo = targetConnectionInfo;
             return this;
         }
 
+        /**
+         * @param targetConnectionInfo Connection information for Azure SQL Database Managed Instance
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetConnectionInfo(MiSqlConnectionInfoArgs targetConnectionInfo) {
             return targetConnectionInfo(Output.of(targetConnectionInfo));
         }

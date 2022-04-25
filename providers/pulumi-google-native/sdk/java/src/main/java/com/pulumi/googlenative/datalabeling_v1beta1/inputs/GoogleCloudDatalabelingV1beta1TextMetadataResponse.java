@@ -23,6 +23,10 @@ public final class GoogleCloudDatalabelingV1beta1TextMetadataResponse extends co
     @Import(name="languageCode", required=true)
     private String languageCode;
 
+    /**
+     * @return The language of this text, as a [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt). Default value is en-US.
+     * 
+     */
     public String languageCode() {
         return this.languageCode;
     }
@@ -51,6 +55,12 @@ public final class GoogleCloudDatalabelingV1beta1TextMetadataResponse extends co
             $ = new GoogleCloudDatalabelingV1beta1TextMetadataResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param languageCode The language of this text, as a [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt). Default value is en-US.
+         * 
+         * @return builder
+         * 
+         */
         public Builder languageCode(String languageCode) {
             $.languageCode = languageCode;
             return this;

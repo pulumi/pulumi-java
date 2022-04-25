@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ArgumentResponse {
     /**
-     * Flag to indicate whether the argument represents a secret and want to be removed from build logs.
+     * @return Flag to indicate whether the argument represents a secret and want to be removed from build logs.
      * 
      */
     private final @Nullable Boolean isSecret;
     /**
-     * The name of the argument.
+     * @return The name of the argument.
      * 
      */
     private final String name;
     /**
-     * The value of the argument.
+     * @return The value of the argument.
      * 
      */
     private final String value;
@@ -39,23 +39,23 @@ public final class ArgumentResponse {
     }
 
     /**
-     * Flag to indicate whether the argument represents a secret and want to be removed from build logs.
+     * @return Flag to indicate whether the argument represents a secret and want to be removed from build logs.
      * 
-    */
+     */
     public Optional<Boolean> isSecret() {
         return Optional.ofNullable(this.isSecret);
     }
     /**
-     * The name of the argument.
+     * @return The name of the argument.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The value of the argument.
+     * @return The value of the argument.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

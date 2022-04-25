@@ -13,27 +13,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SharedPrivateLinkResourcePropertiesResponse {
     /**
-     * The group id from the provider of resource the shared private link resource is for.
+     * @return The group id from the provider of resource the shared private link resource is for.
      * 
      */
     private final @Nullable String groupId;
     /**
-     * The resource id of the resource the shared private link resource is for.
+     * @return The resource id of the resource the shared private link resource is for.
      * 
      */
     private final @Nullable ResourceReferenceResponse privateLink;
     /**
-     * The location of the shared private link resource
+     * @return The location of the shared private link resource
      * 
      */
     private final @Nullable String privateLinkLocation;
     /**
-     * The request message for requesting approval of the shared private link resource.
+     * @return The request message for requesting approval of the shared private link resource.
      * 
      */
     private final @Nullable String requestMessage;
     /**
-     * Status of the shared private link resource. Can be Pending, Approved, Rejected, Disconnected, or Timeout.
+     * @return Status of the shared private link resource. Can be Pending, Approved, Rejected, Disconnected, or Timeout.
      * 
      */
     private final @Nullable String status;
@@ -53,37 +53,37 @@ public final class SharedPrivateLinkResourcePropertiesResponse {
     }
 
     /**
-     * The group id from the provider of resource the shared private link resource is for.
+     * @return The group id from the provider of resource the shared private link resource is for.
      * 
-    */
+     */
     public Optional<String> groupId() {
         return Optional.ofNullable(this.groupId);
     }
     /**
-     * The resource id of the resource the shared private link resource is for.
+     * @return The resource id of the resource the shared private link resource is for.
      * 
-    */
+     */
     public Optional<ResourceReferenceResponse> privateLink() {
         return Optional.ofNullable(this.privateLink);
     }
     /**
-     * The location of the shared private link resource
+     * @return The location of the shared private link resource
      * 
-    */
+     */
     public Optional<String> privateLinkLocation() {
         return Optional.ofNullable(this.privateLinkLocation);
     }
     /**
-     * The request message for requesting approval of the shared private link resource.
+     * @return The request message for requesting approval of the shared private link resource.
      * 
-    */
+     */
     public Optional<String> requestMessage() {
         return Optional.ofNullable(this.requestMessage);
     }
     /**
-     * Status of the shared private link resource. Can be Pending, Approved, Rejected, Disconnected, or Timeout.
+     * @return Status of the shared private link resource. Can be Pending, Approved, Rejected, Disconnected, or Timeout.
      * 
-    */
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }

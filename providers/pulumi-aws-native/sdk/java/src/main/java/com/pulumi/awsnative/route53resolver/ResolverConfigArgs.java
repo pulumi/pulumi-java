@@ -21,6 +21,10 @@ public final class ResolverConfigArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="autodefinedReverseFlag", required=true)
     private Output<ResolverConfigAutodefinedReverseFlag> autodefinedReverseFlag;
 
+    /**
+     * @return Represents the desired status of AutodefinedReverse. The only supported value on creation is DISABLE. Deletion of this resource will return AutodefinedReverse to its default value (ENABLED).
+     * 
+     */
     public Output<ResolverConfigAutodefinedReverseFlag> autodefinedReverseFlag() {
         return this.autodefinedReverseFlag;
     }
@@ -32,6 +36,10 @@ public final class ResolverConfigArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="resourceId", required=true)
     private Output<String> resourceId;
 
+    /**
+     * @return ResourceId
+     * 
+     */
     public Output<String> resourceId() {
         return this.resourceId;
     }
@@ -61,20 +69,44 @@ public final class ResolverConfigArgs extends com.pulumi.resources.ResourceArgs 
             $ = new ResolverConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autodefinedReverseFlag Represents the desired status of AutodefinedReverse. The only supported value on creation is DISABLE. Deletion of this resource will return AutodefinedReverse to its default value (ENABLED).
+         * 
+         * @return builder
+         * 
+         */
         public Builder autodefinedReverseFlag(Output<ResolverConfigAutodefinedReverseFlag> autodefinedReverseFlag) {
             $.autodefinedReverseFlag = autodefinedReverseFlag;
             return this;
         }
 
+        /**
+         * @param autodefinedReverseFlag Represents the desired status of AutodefinedReverse. The only supported value on creation is DISABLE. Deletion of this resource will return AutodefinedReverse to its default value (ENABLED).
+         * 
+         * @return builder
+         * 
+         */
         public Builder autodefinedReverseFlag(ResolverConfigAutodefinedReverseFlag autodefinedReverseFlag) {
             return autodefinedReverseFlag(Output.of(autodefinedReverseFlag));
         }
 
+        /**
+         * @param resourceId ResourceId
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(Output<String> resourceId) {
             $.resourceId = resourceId;
             return this;
         }
 
+        /**
+         * @param resourceId ResourceId
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(String resourceId) {
             return resourceId(Output.of(resourceId));
         }

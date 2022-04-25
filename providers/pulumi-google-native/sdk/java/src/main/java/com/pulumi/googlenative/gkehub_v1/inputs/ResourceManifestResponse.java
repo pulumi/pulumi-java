@@ -24,6 +24,10 @@ public final class ResourceManifestResponse extends com.pulumi.resources.InvokeA
     @Import(name="clusterScoped", required=true)
     private Boolean clusterScoped;
 
+    /**
+     * @return Whether the resource provided in the manifest is `cluster_scoped`. If unset, the manifest is assumed to be namespace scoped. This field is used for REST mapping when applying the resource in a cluster.
+     * 
+     */
     public Boolean clusterScoped() {
         return this.clusterScoped;
     }
@@ -35,6 +39,10 @@ public final class ResourceManifestResponse extends com.pulumi.resources.InvokeA
     @Import(name="manifest", required=true)
     private String manifest;
 
+    /**
+     * @return YAML manifest of the resource.
+     * 
+     */
     public String manifest() {
         return this.manifest;
     }
@@ -64,11 +72,23 @@ public final class ResourceManifestResponse extends com.pulumi.resources.InvokeA
             $ = new ResourceManifestResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clusterScoped Whether the resource provided in the manifest is `cluster_scoped`. If unset, the manifest is assumed to be namespace scoped. This field is used for REST mapping when applying the resource in a cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterScoped(Boolean clusterScoped) {
             $.clusterScoped = clusterScoped;
             return this;
         }
 
+        /**
+         * @param manifest YAML manifest of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder manifest(String manifest) {
             $.manifest = manifest;
             return this;

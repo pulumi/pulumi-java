@@ -24,6 +24,10 @@ public final class AndroidDeviceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="androidModelId", required=true)
     private Output<String> androidModelId;
 
+    /**
+     * @return The id of the Android device to be used. Use the TestEnvironmentDiscoveryService to get supported options.
+     * 
+     */
     public Output<String> androidModelId() {
         return this.androidModelId;
     }
@@ -35,6 +39,10 @@ public final class AndroidDeviceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="androidVersionId", required=true)
     private Output<String> androidVersionId;
 
+    /**
+     * @return The id of the Android OS version to be used. Use the TestEnvironmentDiscoveryService to get supported options.
+     * 
+     */
     public Output<String> androidVersionId() {
         return this.androidVersionId;
     }
@@ -46,6 +54,10 @@ public final class AndroidDeviceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="locale", required=true)
     private Output<String> locale;
 
+    /**
+     * @return The locale the test device used for testing. Use the TestEnvironmentDiscoveryService to get supported options.
+     * 
+     */
     public Output<String> locale() {
         return this.locale;
     }
@@ -57,6 +69,10 @@ public final class AndroidDeviceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="orientation", required=true)
     private Output<String> orientation;
 
+    /**
+     * @return How the device is oriented during the test. Use the TestEnvironmentDiscoveryService to get supported options.
+     * 
+     */
     public Output<String> orientation() {
         return this.orientation;
     }
@@ -88,38 +104,86 @@ public final class AndroidDeviceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AndroidDeviceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param androidModelId The id of the Android device to be used. Use the TestEnvironmentDiscoveryService to get supported options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder androidModelId(Output<String> androidModelId) {
             $.androidModelId = androidModelId;
             return this;
         }
 
+        /**
+         * @param androidModelId The id of the Android device to be used. Use the TestEnvironmentDiscoveryService to get supported options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder androidModelId(String androidModelId) {
             return androidModelId(Output.of(androidModelId));
         }
 
+        /**
+         * @param androidVersionId The id of the Android OS version to be used. Use the TestEnvironmentDiscoveryService to get supported options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder androidVersionId(Output<String> androidVersionId) {
             $.androidVersionId = androidVersionId;
             return this;
         }
 
+        /**
+         * @param androidVersionId The id of the Android OS version to be used. Use the TestEnvironmentDiscoveryService to get supported options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder androidVersionId(String androidVersionId) {
             return androidVersionId(Output.of(androidVersionId));
         }
 
+        /**
+         * @param locale The locale the test device used for testing. Use the TestEnvironmentDiscoveryService to get supported options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locale(Output<String> locale) {
             $.locale = locale;
             return this;
         }
 
+        /**
+         * @param locale The locale the test device used for testing. Use the TestEnvironmentDiscoveryService to get supported options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locale(String locale) {
             return locale(Output.of(locale));
         }
 
+        /**
+         * @param orientation How the device is oriented during the test. Use the TestEnvironmentDiscoveryService to get supported options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder orientation(Output<String> orientation) {
             $.orientation = orientation;
             return this;
         }
 
+        /**
+         * @param orientation How the device is oriented during the test. Use the TestEnvironmentDiscoveryService to get supported options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder orientation(String orientation) {
             return orientation(Output.of(orientation));
         }

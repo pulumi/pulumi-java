@@ -26,6 +26,10 @@ public final class FirewallPolicySNATResponse extends com.pulumi.resources.Invok
     @Import(name="privateRanges")
     private @Nullable List<String> privateRanges;
 
+    /**
+     * @return List of private IP addresses/IP address ranges to not be SNAT.
+     * 
+     */
     public Optional<List<String>> privateRanges() {
         return Optional.ofNullable(this.privateRanges);
     }
@@ -54,11 +58,23 @@ public final class FirewallPolicySNATResponse extends com.pulumi.resources.Invok
             $ = new FirewallPolicySNATResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param privateRanges List of private IP addresses/IP address ranges to not be SNAT.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateRanges(@Nullable List<String> privateRanges) {
             $.privateRanges = privateRanges;
             return this;
         }
 
+        /**
+         * @param privateRanges List of private IP addresses/IP address ranges to not be SNAT.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateRanges(String... privateRanges) {
             return privateRanges(List.of(privateRanges));
         }

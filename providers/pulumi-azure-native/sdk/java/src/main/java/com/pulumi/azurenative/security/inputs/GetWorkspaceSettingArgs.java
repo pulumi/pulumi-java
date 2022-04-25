@@ -19,6 +19,10 @@ public final class GetWorkspaceSettingArgs extends com.pulumi.resources.InvokeAr
     @Import(name="workspaceSettingName", required=true)
     private String workspaceSettingName;
 
+    /**
+     * @return Name of the security setting
+     * 
+     */
     public String workspaceSettingName() {
         return this.workspaceSettingName;
     }
@@ -47,6 +51,12 @@ public final class GetWorkspaceSettingArgs extends com.pulumi.resources.InvokeAr
             $ = new GetWorkspaceSettingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param workspaceSettingName Name of the security setting
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceSettingName(String workspaceSettingName) {
             $.workspaceSettingName = workspaceSettingName;
             return this;

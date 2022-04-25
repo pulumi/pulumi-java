@@ -19,6 +19,10 @@ public final class SecurityPolicyRuleRateLimitOptionsThresholdResponse extends c
     @Import(name="count", required=true)
     private Integer count;
 
+    /**
+     * @return Number of HTTP(S) requests for calculating the threshold.
+     * 
+     */
     public Integer count() {
         return this.count;
     }
@@ -30,6 +34,10 @@ public final class SecurityPolicyRuleRateLimitOptionsThresholdResponse extends c
     @Import(name="intervalSec", required=true)
     private Integer intervalSec;
 
+    /**
+     * @return Interval over which the threshold is computed.
+     * 
+     */
     public Integer intervalSec() {
         return this.intervalSec;
     }
@@ -59,11 +67,23 @@ public final class SecurityPolicyRuleRateLimitOptionsThresholdResponse extends c
             $ = new SecurityPolicyRuleRateLimitOptionsThresholdResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param count Number of HTTP(S) requests for calculating the threshold.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(Integer count) {
             $.count = count;
             return this;
         }
 
+        /**
+         * @param intervalSec Interval over which the threshold is computed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder intervalSec(Integer intervalSec) {
             $.intervalSec = intervalSec;
             return this;

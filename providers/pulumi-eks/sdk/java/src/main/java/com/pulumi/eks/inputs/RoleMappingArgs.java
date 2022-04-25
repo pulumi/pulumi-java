@@ -25,6 +25,10 @@ public final class RoleMappingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="groups", required=true)
     private Output<List<String>> groups;
 
+    /**
+     * @return A list of groups within Kubernetes to which the role is mapped.
+     * 
+     */
     public Output<List<String>> groups() {
         return this.groups;
     }
@@ -36,6 +40,10 @@ public final class RoleMappingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="roleArn", required=true)
     private Output<String> roleArn;
 
+    /**
+     * @return The ARN of the IAM role to add.
+     * 
+     */
     public Output<String> roleArn() {
         return this.roleArn;
     }
@@ -47,6 +55,10 @@ public final class RoleMappingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="username", required=true)
     private Output<String> username;
 
+    /**
+     * @return The user name within Kubernetes to map to the IAM role. By default, the user name is the ARN of the IAM role.
+     * 
+     */
     public Output<String> username() {
         return this.username;
     }
@@ -77,33 +89,75 @@ public final class RoleMappingArgs extends com.pulumi.resources.ResourceArgs {
             $ = new RoleMappingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param groups A list of groups within Kubernetes to which the role is mapped.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groups(Output<List<String>> groups) {
             $.groups = groups;
             return this;
         }
 
+        /**
+         * @param groups A list of groups within Kubernetes to which the role is mapped.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groups(List<String> groups) {
             return groups(Output.of(groups));
         }
 
+        /**
+         * @param groups A list of groups within Kubernetes to which the role is mapped.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groups(String... groups) {
             return groups(List.of(groups));
         }
 
+        /**
+         * @param roleArn The ARN of the IAM role to add.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(Output<String> roleArn) {
             $.roleArn = roleArn;
             return this;
         }
 
+        /**
+         * @param roleArn The ARN of the IAM role to add.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(String roleArn) {
             return roleArn(Output.of(roleArn));
         }
 
+        /**
+         * @param username The user name within Kubernetes to map to the IAM role. By default, the user name is the ARN of the IAM role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(Output<String> username) {
             $.username = username;
             return this;
         }
 
+        /**
+         * @param username The user name within Kubernetes to map to the IAM role. By default, the user name is the ARN of the IAM role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(String username) {
             return username(Output.of(username));
         }

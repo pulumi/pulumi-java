@@ -25,6 +25,10 @@ public final class PersonalComputeInstanceSettingsResponse extends com.pulumi.re
     @Import(name="assignedUser")
     private @Nullable AssignedUserResponse assignedUser;
 
+    /**
+     * @return A user explicitly assigned to a personal compute instance.
+     * 
+     */
     public Optional<AssignedUserResponse> assignedUser() {
         return Optional.ofNullable(this.assignedUser);
     }
@@ -53,6 +57,12 @@ public final class PersonalComputeInstanceSettingsResponse extends com.pulumi.re
             $ = new PersonalComputeInstanceSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param assignedUser A user explicitly assigned to a personal compute instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assignedUser(@Nullable AssignedUserResponse assignedUser) {
             $.assignedUser = assignedUser;
             return this;

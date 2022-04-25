@@ -13,52 +13,52 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetPortalResult {
     /**
-     * Contains the configuration information of an alarm created in an AWS IoT SiteWise Monitor portal. You can use the alarm to monitor an asset property and get notified when the asset property value is outside a specified range.
+     * @return Contains the configuration information of an alarm created in an AWS IoT SiteWise Monitor portal. You can use the alarm to monitor an asset property and get notified when the asset property value is outside a specified range.
      * 
      */
     private final @Nullable AlarmsProperties alarms;
     /**
-     * The email address that sends alarm notifications.
+     * @return The email address that sends alarm notifications.
      * 
      */
     private final @Nullable String notificationSenderEmail;
     /**
-     * The ARN of the portal, which has the following format.
+     * @return The ARN of the portal, which has the following format.
      * 
      */
     private final @Nullable String portalArn;
     /**
-     * The AWS SSO application generated client ID (used with AWS SSO APIs).
+     * @return The AWS SSO application generated client ID (used with AWS SSO APIs).
      * 
      */
     private final @Nullable String portalClientId;
     /**
-     * The AWS administrator&#39;s contact email address.
+     * @return The AWS administrator&#39;s contact email address.
      * 
      */
     private final @Nullable String portalContactEmail;
     /**
-     * A description for the portal.
+     * @return A description for the portal.
      * 
      */
     private final @Nullable String portalDescription;
     /**
-     * The ID of the portal.
+     * @return The ID of the portal.
      * 
      */
     private final @Nullable String portalId;
     /**
-     * A friendly name for the portal.
+     * @return A friendly name for the portal.
      * 
      */
     private final @Nullable String portalName;
     /**
-     * The public root URL for the AWS IoT AWS IoT SiteWise Monitor application portal.
+     * @return The public root URL for the AWS IoT AWS IoT SiteWise Monitor application portal.
      * 
      */
     private final @Nullable String portalStartUrl;
     /**
-     * The ARN of a service role that allows the portal&#39;s users to access your AWS IoT SiteWise resources on your behalf.
+     * @return The ARN of a service role that allows the portal&#39;s users to access your AWS IoT SiteWise resources on your behalf.
      * 
      */
     private final @Nullable String roleArn;
@@ -88,72 +88,72 @@ public final class GetPortalResult {
     }
 
     /**
-     * Contains the configuration information of an alarm created in an AWS IoT SiteWise Monitor portal. You can use the alarm to monitor an asset property and get notified when the asset property value is outside a specified range.
+     * @return Contains the configuration information of an alarm created in an AWS IoT SiteWise Monitor portal. You can use the alarm to monitor an asset property and get notified when the asset property value is outside a specified range.
      * 
-    */
+     */
     public Optional<AlarmsProperties> alarms() {
         return Optional.ofNullable(this.alarms);
     }
     /**
-     * The email address that sends alarm notifications.
+     * @return The email address that sends alarm notifications.
      * 
-    */
+     */
     public Optional<String> notificationSenderEmail() {
         return Optional.ofNullable(this.notificationSenderEmail);
     }
     /**
-     * The ARN of the portal, which has the following format.
+     * @return The ARN of the portal, which has the following format.
      * 
-    */
+     */
     public Optional<String> portalArn() {
         return Optional.ofNullable(this.portalArn);
     }
     /**
-     * The AWS SSO application generated client ID (used with AWS SSO APIs).
+     * @return The AWS SSO application generated client ID (used with AWS SSO APIs).
      * 
-    */
+     */
     public Optional<String> portalClientId() {
         return Optional.ofNullable(this.portalClientId);
     }
     /**
-     * The AWS administrator&#39;s contact email address.
+     * @return The AWS administrator&#39;s contact email address.
      * 
-    */
+     */
     public Optional<String> portalContactEmail() {
         return Optional.ofNullable(this.portalContactEmail);
     }
     /**
-     * A description for the portal.
+     * @return A description for the portal.
      * 
-    */
+     */
     public Optional<String> portalDescription() {
         return Optional.ofNullable(this.portalDescription);
     }
     /**
-     * The ID of the portal.
+     * @return The ID of the portal.
      * 
-    */
+     */
     public Optional<String> portalId() {
         return Optional.ofNullable(this.portalId);
     }
     /**
-     * A friendly name for the portal.
+     * @return A friendly name for the portal.
      * 
-    */
+     */
     public Optional<String> portalName() {
         return Optional.ofNullable(this.portalName);
     }
     /**
-     * The public root URL for the AWS IoT AWS IoT SiteWise Monitor application portal.
+     * @return The public root URL for the AWS IoT AWS IoT SiteWise Monitor application portal.
      * 
-    */
+     */
     public Optional<String> portalStartUrl() {
         return Optional.ofNullable(this.portalStartUrl);
     }
     /**
-     * The ARN of a service role that allows the portal&#39;s users to access your AWS IoT SiteWise resources on your behalf.
+     * @return The ARN of a service role that allows the portal&#39;s users to access your AWS IoT SiteWise resources on your behalf.
      * 
-    */
+     */
     public Optional<String> roleArn() {
         return Optional.ofNullable(this.roleArn);
     }

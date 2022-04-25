@@ -24,6 +24,10 @@ public final class DiskConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="bootDiskSizeGb", required=true)
     private Integer bootDiskSizeGb;
 
+    /**
+     * @return Optional. Size in GB of the boot disk (default is 500GB).
+     * 
+     */
     public Integer bootDiskSizeGb() {
         return this.bootDiskSizeGb;
     }
@@ -35,6 +39,10 @@ public final class DiskConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="bootDiskType", required=true)
     private String bootDiskType;
 
+    /**
+     * @return Optional. Type of the boot disk (default is &#34;pd-standard&#34;). Valid values: &#34;pd-balanced&#34; (Persistent Disk Balanced Solid State Drive), &#34;pd-ssd&#34; (Persistent Disk Solid State Drive), or &#34;pd-standard&#34; (Persistent Disk Hard Disk Drive). See Disk types (https://cloud.google.com/compute/docs/disks#disk-types).
+     * 
+     */
     public String bootDiskType() {
         return this.bootDiskType;
     }
@@ -46,6 +54,10 @@ public final class DiskConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="numLocalSsds", required=true)
     private Integer numLocalSsds;
 
+    /**
+     * @return Number of attached SSDs, from 0 to 4 (default is 0). If SSDs are not attached, the boot disk is used to store runtime logs and HDFS (https://hadoop.apache.org/docs/r1.2.1/hdfs_user_guide.html) data. If one or more SSDs are attached, this runtime bulk data is spread across them, and the boot disk contains only basic config and installed binaries.
+     * 
+     */
     public Integer numLocalSsds() {
         return this.numLocalSsds;
     }
@@ -76,16 +88,34 @@ public final class DiskConfigResponse extends com.pulumi.resources.InvokeArgs {
             $ = new DiskConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bootDiskSizeGb Optional. Size in GB of the boot disk (default is 500GB).
+         * 
+         * @return builder
+         * 
+         */
         public Builder bootDiskSizeGb(Integer bootDiskSizeGb) {
             $.bootDiskSizeGb = bootDiskSizeGb;
             return this;
         }
 
+        /**
+         * @param bootDiskType Optional. Type of the boot disk (default is &#34;pd-standard&#34;). Valid values: &#34;pd-balanced&#34; (Persistent Disk Balanced Solid State Drive), &#34;pd-ssd&#34; (Persistent Disk Solid State Drive), or &#34;pd-standard&#34; (Persistent Disk Hard Disk Drive). See Disk types (https://cloud.google.com/compute/docs/disks#disk-types).
+         * 
+         * @return builder
+         * 
+         */
         public Builder bootDiskType(String bootDiskType) {
             $.bootDiskType = bootDiskType;
             return this;
         }
 
+        /**
+         * @param numLocalSsds Number of attached SSDs, from 0 to 4 (default is 0). If SSDs are not attached, the boot disk is used to store runtime logs and HDFS (https://hadoop.apache.org/docs/r1.2.1/hdfs_user_guide.html) data. If one or more SSDs are attached, this runtime bulk data is spread across them, and the boot disk contains only basic config and installed binaries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numLocalSsds(Integer numLocalSsds) {
             $.numLocalSsds = numLocalSsds;
             return this;

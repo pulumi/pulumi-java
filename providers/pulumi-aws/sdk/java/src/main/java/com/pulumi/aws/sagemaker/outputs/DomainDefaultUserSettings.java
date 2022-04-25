@@ -17,32 +17,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DomainDefaultUserSettings {
     /**
-     * The execution role ARN for the user.
+     * @return The execution role ARN for the user.
      * 
      */
     private final String executionRole;
     /**
-     * The Jupyter server&#39;s app settings. See Jupyter Server App Settings below.
+     * @return The Jupyter server&#39;s app settings. See Jupyter Server App Settings below.
      * 
      */
     private final @Nullable DomainDefaultUserSettingsJupyterServerAppSettings jupyterServerAppSettings;
     /**
-     * The kernel gateway app settings. See Kernel Gateway App Settings below.
+     * @return The kernel gateway app settings. See Kernel Gateway App Settings below.
      * 
      */
     private final @Nullable DomainDefaultUserSettingsKernelGatewayAppSettings kernelGatewayAppSettings;
     /**
-     * The security groups.
+     * @return The security groups.
      * 
      */
     private final @Nullable List<String> securityGroups;
     /**
-     * The sharing settings. See Sharing Settings below.
+     * @return The sharing settings. See Sharing Settings below.
      * 
      */
     private final @Nullable DomainDefaultUserSettingsSharingSettings sharingSettings;
     /**
-     * The TensorBoard app settings. See TensorBoard App Settings below.
+     * @return The TensorBoard app settings. See TensorBoard App Settings below.
      * 
      */
     private final @Nullable DomainDefaultUserSettingsTensorBoardAppSettings tensorBoardAppSettings;
@@ -64,44 +64,44 @@ public final class DomainDefaultUserSettings {
     }
 
     /**
-     * The execution role ARN for the user.
+     * @return The execution role ARN for the user.
      * 
-    */
+     */
     public String executionRole() {
         return this.executionRole;
     }
     /**
-     * The Jupyter server&#39;s app settings. See Jupyter Server App Settings below.
+     * @return The Jupyter server&#39;s app settings. See Jupyter Server App Settings below.
      * 
-    */
+     */
     public Optional<DomainDefaultUserSettingsJupyterServerAppSettings> jupyterServerAppSettings() {
         return Optional.ofNullable(this.jupyterServerAppSettings);
     }
     /**
-     * The kernel gateway app settings. See Kernel Gateway App Settings below.
+     * @return The kernel gateway app settings. See Kernel Gateway App Settings below.
      * 
-    */
+     */
     public Optional<DomainDefaultUserSettingsKernelGatewayAppSettings> kernelGatewayAppSettings() {
         return Optional.ofNullable(this.kernelGatewayAppSettings);
     }
     /**
-     * The security groups.
+     * @return The security groups.
      * 
-    */
+     */
     public List<String> securityGroups() {
         return this.securityGroups == null ? List.of() : this.securityGroups;
     }
     /**
-     * The sharing settings. See Sharing Settings below.
+     * @return The sharing settings. See Sharing Settings below.
      * 
-    */
+     */
     public Optional<DomainDefaultUserSettingsSharingSettings> sharingSettings() {
         return Optional.ofNullable(this.sharingSettings);
     }
     /**
-     * The TensorBoard app settings. See TensorBoard App Settings below.
+     * @return The TensorBoard app settings. See TensorBoard App Settings below.
      * 
-    */
+     */
     public Optional<DomainDefaultUserSettingsTensorBoardAppSettings> tensorBoardAppSettings() {
         return Optional.ofNullable(this.tensorBoardAppSettings);
     }

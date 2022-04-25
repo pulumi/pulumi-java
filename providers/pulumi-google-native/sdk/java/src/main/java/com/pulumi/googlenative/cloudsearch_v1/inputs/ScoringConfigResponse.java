@@ -23,6 +23,10 @@ public final class ScoringConfigResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="disableFreshness", required=true)
     private Boolean disableFreshness;
 
+    /**
+     * @return Whether to use freshness as a ranking signal. By default, freshness is used as a ranking signal. Note that this setting is not available in the Admin UI.
+     * 
+     */
     public Boolean disableFreshness() {
         return this.disableFreshness;
     }
@@ -34,6 +38,10 @@ public final class ScoringConfigResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="disablePersonalization", required=true)
     private Boolean disablePersonalization;
 
+    /**
+     * @return Whether to personalize the results. By default, personal signals will be used to boost results.
+     * 
+     */
     public Boolean disablePersonalization() {
         return this.disablePersonalization;
     }
@@ -63,11 +71,23 @@ public final class ScoringConfigResponse extends com.pulumi.resources.InvokeArgs
             $ = new ScoringConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param disableFreshness Whether to use freshness as a ranking signal. By default, freshness is used as a ranking signal. Note that this setting is not available in the Admin UI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableFreshness(Boolean disableFreshness) {
             $.disableFreshness = disableFreshness;
             return this;
         }
 
+        /**
+         * @param disablePersonalization Whether to personalize the results. By default, personal signals will be used to boost results.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disablePersonalization(Boolean disablePersonalization) {
             $.disablePersonalization = disablePersonalization;
             return this;

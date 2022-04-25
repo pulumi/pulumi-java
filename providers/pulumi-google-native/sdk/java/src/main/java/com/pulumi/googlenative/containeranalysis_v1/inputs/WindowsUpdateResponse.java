@@ -26,6 +26,10 @@ public final class WindowsUpdateResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="categories", required=true)
     private List<CategoryResponse> categories;
 
+    /**
+     * @return The list of categories to which the update belongs.
+     * 
+     */
     public List<CategoryResponse> categories() {
         return this.categories;
     }
@@ -37,6 +41,10 @@ public final class WindowsUpdateResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="description", required=true)
     private String description;
 
+    /**
+     * @return The localized description of the update.
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -48,6 +56,10 @@ public final class WindowsUpdateResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="identity", required=true)
     private IdentityResponse identity;
 
+    /**
+     * @return Required - The unique identifier for the update.
+     * 
+     */
     public IdentityResponse identity() {
         return this.identity;
     }
@@ -59,6 +71,10 @@ public final class WindowsUpdateResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="kbArticleIds", required=true)
     private List<String> kbArticleIds;
 
+    /**
+     * @return The Microsoft Knowledge Base article IDs that are associated with the update.
+     * 
+     */
     public List<String> kbArticleIds() {
         return this.kbArticleIds;
     }
@@ -70,6 +86,10 @@ public final class WindowsUpdateResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="lastPublishedTimestamp", required=true)
     private String lastPublishedTimestamp;
 
+    /**
+     * @return The last published timestamp of the update.
+     * 
+     */
     public String lastPublishedTimestamp() {
         return this.lastPublishedTimestamp;
     }
@@ -81,6 +101,10 @@ public final class WindowsUpdateResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="supportUrl", required=true)
     private String supportUrl;
 
+    /**
+     * @return The hyperlink to the support information for the update.
+     * 
+     */
     public String supportUrl() {
         return this.supportUrl;
     }
@@ -92,6 +116,10 @@ public final class WindowsUpdateResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="title", required=true)
     private String title;
 
+    /**
+     * @return The localized title of the update.
+     * 
+     */
     public String title() {
         return this.title;
     }
@@ -126,44 +154,98 @@ public final class WindowsUpdateResponse extends com.pulumi.resources.InvokeArgs
             $ = new WindowsUpdateResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param categories The list of categories to which the update belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder categories(List<CategoryResponse> categories) {
             $.categories = categories;
             return this;
         }
 
+        /**
+         * @param categories The list of categories to which the update belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder categories(CategoryResponse... categories) {
             return categories(List.of(categories));
         }
 
+        /**
+         * @param description The localized description of the update.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param identity Required - The unique identifier for the update.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(IdentityResponse identity) {
             $.identity = identity;
             return this;
         }
 
+        /**
+         * @param kbArticleIds The Microsoft Knowledge Base article IDs that are associated with the update.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kbArticleIds(List<String> kbArticleIds) {
             $.kbArticleIds = kbArticleIds;
             return this;
         }
 
+        /**
+         * @param kbArticleIds The Microsoft Knowledge Base article IDs that are associated with the update.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kbArticleIds(String... kbArticleIds) {
             return kbArticleIds(List.of(kbArticleIds));
         }
 
+        /**
+         * @param lastPublishedTimestamp The last published timestamp of the update.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastPublishedTimestamp(String lastPublishedTimestamp) {
             $.lastPublishedTimestamp = lastPublishedTimestamp;
             return this;
         }
 
+        /**
+         * @param supportUrl The hyperlink to the support information for the update.
+         * 
+         * @return builder
+         * 
+         */
         public Builder supportUrl(String supportUrl) {
             $.supportUrl = supportUrl;
             return this;
         }
 
+        /**
+         * @param title The localized title of the update.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(String title) {
             $.title = title;
             return this;

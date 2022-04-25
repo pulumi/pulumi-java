@@ -26,6 +26,10 @@ public final class EncryptionScopeKeyVaultPropertiesArgs extends com.pulumi.reso
     @Import(name="keyUri")
     private @Nullable Output<String> keyUri;
 
+    /**
+     * @return The object identifier for a key vault key object. When applied, the encryption scope will use the key referenced by the identifier to enable customer-managed key support on this encryption scope.
+     * 
+     */
     public Optional<Output<String>> keyUri() {
         return Optional.ofNullable(this.keyUri);
     }
@@ -54,11 +58,23 @@ public final class EncryptionScopeKeyVaultPropertiesArgs extends com.pulumi.reso
             $ = new EncryptionScopeKeyVaultPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyUri The object identifier for a key vault key object. When applied, the encryption scope will use the key referenced by the identifier to enable customer-managed key support on this encryption scope.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyUri(@Nullable Output<String> keyUri) {
             $.keyUri = keyUri;
             return this;
         }
 
+        /**
+         * @param keyUri The object identifier for a key vault key object. When applied, the encryption scope will use the key referenced by the identifier to enable customer-managed key support on this encryption scope.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyUri(String keyUri) {
             return keyUri(Output.of(keyUri));
         }

@@ -15,32 +15,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetResourceVersionResult {
     /**
-     * The Amazon Resource Name (ARN) of the type, here the ResourceVersion. This is used to uniquely identify a ResourceVersion resource
+     * @return The Amazon Resource Name (ARN) of the type, here the ResourceVersion. This is used to uniquely identify a ResourceVersion resource
      * 
      */
     private final @Nullable String arn;
     /**
-     * Indicates if this type version is the current default version
+     * @return Indicates if this type version is the current default version
      * 
      */
     private final @Nullable Boolean isDefaultVersion;
     /**
-     * The provisioning behavior of the type. AWS CloudFormation determines the provisioning type during registration, based on the types of handlers in the schema handler package submitted.
+     * @return The provisioning behavior of the type. AWS CloudFormation determines the provisioning type during registration, based on the types of handlers in the schema handler package submitted.
      * 
      */
     private final @Nullable ResourceVersionProvisioningType provisioningType;
     /**
-     * The Amazon Resource Name (ARN) of the type without the versionID.
+     * @return The Amazon Resource Name (ARN) of the type without the versionID.
      * 
      */
     private final @Nullable String typeArn;
     /**
-     * The ID of the version of the type represented by this resource instance.
+     * @return The ID of the version of the type represented by this resource instance.
      * 
      */
     private final @Nullable String versionId;
     /**
-     * The scope at which the type is visible and usable in CloudFormation operations.
+     * @return The scope at which the type is visible and usable in CloudFormation operations.
      * 
      * Valid values include:
      * 
@@ -68,42 +68,42 @@ public final class GetResourceVersionResult {
     }
 
     /**
-     * The Amazon Resource Name (ARN) of the type, here the ResourceVersion. This is used to uniquely identify a ResourceVersion resource
+     * @return The Amazon Resource Name (ARN) of the type, here the ResourceVersion. This is used to uniquely identify a ResourceVersion resource
      * 
-    */
+     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * Indicates if this type version is the current default version
+     * @return Indicates if this type version is the current default version
      * 
-    */
+     */
     public Optional<Boolean> isDefaultVersion() {
         return Optional.ofNullable(this.isDefaultVersion);
     }
     /**
-     * The provisioning behavior of the type. AWS CloudFormation determines the provisioning type during registration, based on the types of handlers in the schema handler package submitted.
+     * @return The provisioning behavior of the type. AWS CloudFormation determines the provisioning type during registration, based on the types of handlers in the schema handler package submitted.
      * 
-    */
+     */
     public Optional<ResourceVersionProvisioningType> provisioningType() {
         return Optional.ofNullable(this.provisioningType);
     }
     /**
-     * The Amazon Resource Name (ARN) of the type without the versionID.
+     * @return The Amazon Resource Name (ARN) of the type without the versionID.
      * 
-    */
+     */
     public Optional<String> typeArn() {
         return Optional.ofNullable(this.typeArn);
     }
     /**
-     * The ID of the version of the type represented by this resource instance.
+     * @return The ID of the version of the type represented by this resource instance.
      * 
-    */
+     */
     public Optional<String> versionId() {
         return Optional.ofNullable(this.versionId);
     }
     /**
-     * The scope at which the type is visible and usable in CloudFormation operations.
+     * @return The scope at which the type is visible and usable in CloudFormation operations.
      * 
      * Valid values include:
      * 
@@ -111,7 +111,7 @@ public final class GetResourceVersionResult {
      * 
      * PUBLIC: The type is publically visible and usable within any Amazon account.
      * 
-    */
+     */
     public Optional<ResourceVersionVisibility> visibility() {
         return Optional.ofNullable(this.visibility);
     }

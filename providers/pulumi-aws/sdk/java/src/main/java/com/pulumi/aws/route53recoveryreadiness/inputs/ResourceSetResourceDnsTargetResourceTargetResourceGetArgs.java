@@ -23,6 +23,10 @@ public final class ResourceSetResourceDnsTargetResourceTargetResourceGetArgs ext
     @Import(name="nlbResource")
     private @Nullable Output<ResourceSetResourceDnsTargetResourceTargetResourceNlbResourceGetArgs> nlbResource;
 
+    /**
+     * @return NLB resource a DNS Target Resource points to. Required if `r53_resource` is not set.
+     * 
+     */
     public Optional<Output<ResourceSetResourceDnsTargetResourceTargetResourceNlbResourceGetArgs>> nlbResource() {
         return Optional.ofNullable(this.nlbResource);
     }
@@ -34,6 +38,10 @@ public final class ResourceSetResourceDnsTargetResourceTargetResourceGetArgs ext
     @Import(name="r53Resource")
     private @Nullable Output<ResourceSetResourceDnsTargetResourceTargetResourceR53ResourceGetArgs> r53Resource;
 
+    /**
+     * @return Route53 resource a DNS Target Resource record points to.
+     * 
+     */
     public Optional<Output<ResourceSetResourceDnsTargetResourceTargetResourceR53ResourceGetArgs>> r53Resource() {
         return Optional.ofNullable(this.r53Resource);
     }
@@ -63,20 +71,44 @@ public final class ResourceSetResourceDnsTargetResourceTargetResourceGetArgs ext
             $ = new ResourceSetResourceDnsTargetResourceTargetResourceGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param nlbResource NLB resource a DNS Target Resource points to. Required if `r53_resource` is not set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nlbResource(@Nullable Output<ResourceSetResourceDnsTargetResourceTargetResourceNlbResourceGetArgs> nlbResource) {
             $.nlbResource = nlbResource;
             return this;
         }
 
+        /**
+         * @param nlbResource NLB resource a DNS Target Resource points to. Required if `r53_resource` is not set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nlbResource(ResourceSetResourceDnsTargetResourceTargetResourceNlbResourceGetArgs nlbResource) {
             return nlbResource(Output.of(nlbResource));
         }
 
+        /**
+         * @param r53Resource Route53 resource a DNS Target Resource record points to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder r53Resource(@Nullable Output<ResourceSetResourceDnsTargetResourceTargetResourceR53ResourceGetArgs> r53Resource) {
             $.r53Resource = r53Resource;
             return this;
         }
 
+        /**
+         * @param r53Resource Route53 resource a DNS Target Resource record points to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder r53Resource(ResourceSetResourceDnsTargetResourceTargetResourceR53ResourceGetArgs r53Resource) {
             return r53Resource(Output.of(r53Resource));
         }

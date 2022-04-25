@@ -12,12 +12,12 @@ import java.util.Objects;
 @CustomType
 public final class BoundingPolyResponse {
     /**
-     * A description of this polygon.
+     * @return A description of this polygon.
      * 
      */
     private final String label;
     /**
-     * List of the vertices of this polygon.
+     * @return List of the vertices of this polygon.
      * 
      */
     private final List<VertexResponse> vertices;
@@ -31,16 +31,16 @@ public final class BoundingPolyResponse {
     }
 
     /**
-     * A description of this polygon.
+     * @return A description of this polygon.
      * 
-    */
+     */
     public String label() {
         return this.label;
     }
     /**
-     * List of the vertices of this polygon.
+     * @return List of the vertices of this polygon.
      * 
-    */
+     */
     public List<VertexResponse> vertices() {
         return this.vertices;
     }

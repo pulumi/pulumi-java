@@ -14,37 +14,37 @@ import java.util.Objects;
 @CustomType
 public final class ManagedIntegrationRuntimeStatusResponse {
     /**
-     * The time at which the integration runtime was created, in ISO8601 format.
+     * @return The time at which the integration runtime was created, in ISO8601 format.
      * 
      */
     private final String createTime;
     /**
-     * The workspace name which the integration runtime belong to.
+     * @return The workspace name which the integration runtime belong to.
      * 
      */
     private final String dataFactoryName;
     /**
-     * The last operation result that occurred on this integration runtime.
+     * @return The last operation result that occurred on this integration runtime.
      * 
      */
     private final ManagedIntegrationRuntimeOperationResultResponse lastOperation;
     /**
-     * The list of nodes for managed integration runtime.
+     * @return The list of nodes for managed integration runtime.
      * 
      */
     private final List<ManagedIntegrationRuntimeNodeResponse> nodes;
     /**
-     * The errors that occurred on this integration runtime.
+     * @return The errors that occurred on this integration runtime.
      * 
      */
     private final List<ManagedIntegrationRuntimeErrorResponse> otherErrors;
     /**
-     * The state of integration runtime.
+     * @return The state of integration runtime.
      * 
      */
     private final String state;
     /**
-     * The type of integration runtime.
+     * @return The type of integration runtime.
      * Expected value is &#39;Managed&#39;.
      * 
      */
@@ -69,52 +69,52 @@ public final class ManagedIntegrationRuntimeStatusResponse {
     }
 
     /**
-     * The time at which the integration runtime was created, in ISO8601 format.
+     * @return The time at which the integration runtime was created, in ISO8601 format.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * The workspace name which the integration runtime belong to.
+     * @return The workspace name which the integration runtime belong to.
      * 
-    */
+     */
     public String dataFactoryName() {
         return this.dataFactoryName;
     }
     /**
-     * The last operation result that occurred on this integration runtime.
+     * @return The last operation result that occurred on this integration runtime.
      * 
-    */
+     */
     public ManagedIntegrationRuntimeOperationResultResponse lastOperation() {
         return this.lastOperation;
     }
     /**
-     * The list of nodes for managed integration runtime.
+     * @return The list of nodes for managed integration runtime.
      * 
-    */
+     */
     public List<ManagedIntegrationRuntimeNodeResponse> nodes() {
         return this.nodes;
     }
     /**
-     * The errors that occurred on this integration runtime.
+     * @return The errors that occurred on this integration runtime.
      * 
-    */
+     */
     public List<ManagedIntegrationRuntimeErrorResponse> otherErrors() {
         return this.otherErrors;
     }
     /**
-     * The state of integration runtime.
+     * @return The state of integration runtime.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * The type of integration runtime.
+     * @return The type of integration runtime.
      * Expected value is &#39;Managed&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

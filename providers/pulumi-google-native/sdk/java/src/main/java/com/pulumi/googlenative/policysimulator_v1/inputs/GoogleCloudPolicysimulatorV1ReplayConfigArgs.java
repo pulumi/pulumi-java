@@ -28,6 +28,10 @@ public final class GoogleCloudPolicysimulatorV1ReplayConfigArgs extends com.pulu
     @Import(name="logSource")
     private @Nullable Output<GoogleCloudPolicysimulatorV1ReplayConfigLogSource> logSource;
 
+    /**
+     * @return The logs to use as input for the Replay.
+     * 
+     */
     public Optional<Output<GoogleCloudPolicysimulatorV1ReplayConfigLogSource>> logSource() {
         return Optional.ofNullable(this.logSource);
     }
@@ -39,6 +43,10 @@ public final class GoogleCloudPolicysimulatorV1ReplayConfigArgs extends com.pulu
     @Import(name="policyOverlay")
     private @Nullable Output<Map<String,String>> policyOverlay;
 
+    /**
+     * @return A mapping of the resources that you want to simulate policies for and the policies that you want to simulate. Keys are the full resource names for the resources. For example, `//cloudresourcemanager.googleapis.com/projects/my-project`. For examples of full resource names for Google Cloud services, see https://cloud.google.com/iam/help/troubleshooter/full-resource-names. Values are Policy objects representing the policies that you want to simulate. Replays automatically take into account any IAM policies inherited through the resource hierarchy, and any policies set on descendant resources. You do not need to include these policies in the policy overlay.
+     * 
+     */
     public Optional<Output<Map<String,String>>> policyOverlay() {
         return Optional.ofNullable(this.policyOverlay);
     }
@@ -68,20 +76,44 @@ public final class GoogleCloudPolicysimulatorV1ReplayConfigArgs extends com.pulu
             $ = new GoogleCloudPolicysimulatorV1ReplayConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param logSource The logs to use as input for the Replay.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logSource(@Nullable Output<GoogleCloudPolicysimulatorV1ReplayConfigLogSource> logSource) {
             $.logSource = logSource;
             return this;
         }
 
+        /**
+         * @param logSource The logs to use as input for the Replay.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logSource(GoogleCloudPolicysimulatorV1ReplayConfigLogSource logSource) {
             return logSource(Output.of(logSource));
         }
 
+        /**
+         * @param policyOverlay A mapping of the resources that you want to simulate policies for and the policies that you want to simulate. Keys are the full resource names for the resources. For example, `//cloudresourcemanager.googleapis.com/projects/my-project`. For examples of full resource names for Google Cloud services, see https://cloud.google.com/iam/help/troubleshooter/full-resource-names. Values are Policy objects representing the policies that you want to simulate. Replays automatically take into account any IAM policies inherited through the resource hierarchy, and any policies set on descendant resources. You do not need to include these policies in the policy overlay.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyOverlay(@Nullable Output<Map<String,String>> policyOverlay) {
             $.policyOverlay = policyOverlay;
             return this;
         }
 
+        /**
+         * @param policyOverlay A mapping of the resources that you want to simulate policies for and the policies that you want to simulate. Keys are the full resource names for the resources. For example, `//cloudresourcemanager.googleapis.com/projects/my-project`. For examples of full resource names for Google Cloud services, see https://cloud.google.com/iam/help/troubleshooter/full-resource-names. Values are Policy objects representing the policies that you want to simulate. Replays automatically take into account any IAM policies inherited through the resource hierarchy, and any policies set on descendant resources. You do not need to include these policies in the policy overlay.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyOverlay(Map<String,String> policyOverlay) {
             return policyOverlay(Output.of(policyOverlay));
         }

@@ -26,6 +26,11 @@ public final class ContentKeyPolicyX509CertificateTokenKeyArgs extends com.pulum
     @Import(name="odataType", required=true)
     private Output<String> odataType;
 
+    /**
+     * @return The discriminator for derived types.
+     * Expected value is &#39;#Microsoft.Media.ContentKeyPolicyX509CertificateTokenKey&#39;.
+     * 
+     */
     public Output<String> odataType() {
         return this.odataType;
     }
@@ -37,6 +42,10 @@ public final class ContentKeyPolicyX509CertificateTokenKeyArgs extends com.pulum
     @Import(name="rawBody", required=true)
     private Output<String> rawBody;
 
+    /**
+     * @return The raw data field of a certificate in PKCS 12 format (X509Certificate2 in .NET)
+     * 
+     */
     public Output<String> rawBody() {
         return this.rawBody;
     }
@@ -66,20 +75,46 @@ public final class ContentKeyPolicyX509CertificateTokenKeyArgs extends com.pulum
             $ = new ContentKeyPolicyX509CertificateTokenKeyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param odataType The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.ContentKeyPolicyX509CertificateTokenKey&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(Output<String> odataType) {
             $.odataType = odataType;
             return this;
         }
 
+        /**
+         * @param odataType The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.ContentKeyPolicyX509CertificateTokenKey&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(String odataType) {
             return odataType(Output.of(odataType));
         }
 
+        /**
+         * @param rawBody The raw data field of a certificate in PKCS 12 format (X509Certificate2 in .NET)
+         * 
+         * @return builder
+         * 
+         */
         public Builder rawBody(Output<String> rawBody) {
             $.rawBody = rawBody;
             return this;
         }
 
+        /**
+         * @param rawBody The raw data field of a certificate in PKCS 12 format (X509Certificate2 in .NET)
+         * 
+         * @return builder
+         * 
+         */
         public Builder rawBody(String rawBody) {
             return rawBody(Output.of(rawBody));
         }

@@ -20,6 +20,10 @@ public final class AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMap
     @Import(name="recordColumnDelimiter", required=true)
     private Output<String> recordColumnDelimiter;
 
+    /**
+     * @return The Column Delimiter.
+     * 
+     */
     public Output<String> recordColumnDelimiter() {
         return this.recordColumnDelimiter;
     }
@@ -31,6 +35,10 @@ public final class AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMap
     @Import(name="recordRowDelimiter", required=true)
     private Output<String> recordRowDelimiter;
 
+    /**
+     * @return The Row Delimiter.
+     * 
+     */
     public Output<String> recordRowDelimiter() {
         return this.recordRowDelimiter;
     }
@@ -60,20 +68,44 @@ public final class AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMap
             $ = new AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersCsvArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param recordColumnDelimiter The Column Delimiter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recordColumnDelimiter(Output<String> recordColumnDelimiter) {
             $.recordColumnDelimiter = recordColumnDelimiter;
             return this;
         }
 
+        /**
+         * @param recordColumnDelimiter The Column Delimiter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recordColumnDelimiter(String recordColumnDelimiter) {
             return recordColumnDelimiter(Output.of(recordColumnDelimiter));
         }
 
+        /**
+         * @param recordRowDelimiter The Row Delimiter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recordRowDelimiter(Output<String> recordRowDelimiter) {
             $.recordRowDelimiter = recordRowDelimiter;
             return this;
         }
 
+        /**
+         * @param recordRowDelimiter The Row Delimiter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recordRowDelimiter(String recordRowDelimiter) {
             return recordRowDelimiter(Output.of(recordRowDelimiter));
         }

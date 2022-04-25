@@ -28,6 +28,10 @@ public final class FirewallPolicyInsightsArgs extends com.pulumi.resources.Resou
     @Import(name="isEnabled")
     private @Nullable Output<Boolean> isEnabled;
 
+    /**
+     * @return A flag to indicate if the insights are enabled on the policy.
+     * 
+     */
     public Optional<Output<Boolean>> isEnabled() {
         return Optional.ofNullable(this.isEnabled);
     }
@@ -39,6 +43,10 @@ public final class FirewallPolicyInsightsArgs extends com.pulumi.resources.Resou
     @Import(name="logAnalyticsResources")
     private @Nullable Output<FirewallPolicyLogAnalyticsResourcesArgs> logAnalyticsResources;
 
+    /**
+     * @return Workspaces needed to configure the Firewall Policy Insights.
+     * 
+     */
     public Optional<Output<FirewallPolicyLogAnalyticsResourcesArgs>> logAnalyticsResources() {
         return Optional.ofNullable(this.logAnalyticsResources);
     }
@@ -50,6 +58,10 @@ public final class FirewallPolicyInsightsArgs extends com.pulumi.resources.Resou
     @Import(name="retentionDays")
     private @Nullable Output<Integer> retentionDays;
 
+    /**
+     * @return Number of days the insights should be enabled on the policy.
+     * 
+     */
     public Optional<Output<Integer>> retentionDays() {
         return Optional.ofNullable(this.retentionDays);
     }
@@ -80,29 +92,65 @@ public final class FirewallPolicyInsightsArgs extends com.pulumi.resources.Resou
             $ = new FirewallPolicyInsightsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param isEnabled A flag to indicate if the insights are enabled on the policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEnabled(@Nullable Output<Boolean> isEnabled) {
             $.isEnabled = isEnabled;
             return this;
         }
 
+        /**
+         * @param isEnabled A flag to indicate if the insights are enabled on the policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEnabled(Boolean isEnabled) {
             return isEnabled(Output.of(isEnabled));
         }
 
+        /**
+         * @param logAnalyticsResources Workspaces needed to configure the Firewall Policy Insights.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logAnalyticsResources(@Nullable Output<FirewallPolicyLogAnalyticsResourcesArgs> logAnalyticsResources) {
             $.logAnalyticsResources = logAnalyticsResources;
             return this;
         }
 
+        /**
+         * @param logAnalyticsResources Workspaces needed to configure the Firewall Policy Insights.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logAnalyticsResources(FirewallPolicyLogAnalyticsResourcesArgs logAnalyticsResources) {
             return logAnalyticsResources(Output.of(logAnalyticsResources));
         }
 
+        /**
+         * @param retentionDays Number of days the insights should be enabled on the policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionDays(@Nullable Output<Integer> retentionDays) {
             $.retentionDays = retentionDays;
             return this;
         }
 
+        /**
+         * @param retentionDays Number of days the insights should be enabled on the policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionDays(Integer retentionDays) {
             return retentionDays(Output.of(retentionDays));
         }

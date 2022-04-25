@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PipelineContentConfig {
     /**
-     * The Amazon S3 bucket in which you want Elastic Transcoder to save transcoded files and playlists.
+     * @return The Amazon S3 bucket in which you want Elastic Transcoder to save transcoded files and playlists.
      * 
      */
     private final @Nullable String bucket;
     /**
-     * The Amazon S3 storage class, `Standard` or `ReducedRedundancy`, that you want Elastic Transcoder to assign to the files and playlists that it stores in your Amazon S3 bucket.
+     * @return The Amazon S3 storage class, `Standard` or `ReducedRedundancy`, that you want Elastic Transcoder to assign to the files and playlists that it stores in your Amazon S3 bucket.
      * 
      */
     private final @Nullable String storageClass;
@@ -31,16 +31,16 @@ public final class PipelineContentConfig {
     }
 
     /**
-     * The Amazon S3 bucket in which you want Elastic Transcoder to save transcoded files and playlists.
+     * @return The Amazon S3 bucket in which you want Elastic Transcoder to save transcoded files and playlists.
      * 
-    */
+     */
     public Optional<String> bucket() {
         return Optional.ofNullable(this.bucket);
     }
     /**
-     * The Amazon S3 storage class, `Standard` or `ReducedRedundancy`, that you want Elastic Transcoder to assign to the files and playlists that it stores in your Amazon S3 bucket.
+     * @return The Amazon S3 storage class, `Standard` or `ReducedRedundancy`, that you want Elastic Transcoder to assign to the files and playlists that it stores in your Amazon S3 bucket.
      * 
-    */
+     */
     public Optional<String> storageClass() {
         return Optional.ofNullable(this.storageClass);
     }

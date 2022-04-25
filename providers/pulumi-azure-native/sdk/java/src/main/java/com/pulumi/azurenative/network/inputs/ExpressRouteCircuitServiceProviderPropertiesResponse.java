@@ -26,6 +26,10 @@ public final class ExpressRouteCircuitServiceProviderPropertiesResponse extends 
     @Import(name="bandwidthInMbps")
     private @Nullable Integer bandwidthInMbps;
 
+    /**
+     * @return The BandwidthInMbps.
+     * 
+     */
     public Optional<Integer> bandwidthInMbps() {
         return Optional.ofNullable(this.bandwidthInMbps);
     }
@@ -37,6 +41,10 @@ public final class ExpressRouteCircuitServiceProviderPropertiesResponse extends 
     @Import(name="peeringLocation")
     private @Nullable String peeringLocation;
 
+    /**
+     * @return The peering location.
+     * 
+     */
     public Optional<String> peeringLocation() {
         return Optional.ofNullable(this.peeringLocation);
     }
@@ -48,6 +56,10 @@ public final class ExpressRouteCircuitServiceProviderPropertiesResponse extends 
     @Import(name="serviceProviderName")
     private @Nullable String serviceProviderName;
 
+    /**
+     * @return The serviceProviderName.
+     * 
+     */
     public Optional<String> serviceProviderName() {
         return Optional.ofNullable(this.serviceProviderName);
     }
@@ -78,16 +90,34 @@ public final class ExpressRouteCircuitServiceProviderPropertiesResponse extends 
             $ = new ExpressRouteCircuitServiceProviderPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bandwidthInMbps The BandwidthInMbps.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bandwidthInMbps(@Nullable Integer bandwidthInMbps) {
             $.bandwidthInMbps = bandwidthInMbps;
             return this;
         }
 
+        /**
+         * @param peeringLocation The peering location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peeringLocation(@Nullable String peeringLocation) {
             $.peeringLocation = peeringLocation;
             return this;
         }
 
+        /**
+         * @param serviceProviderName The serviceProviderName.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceProviderName(@Nullable String serviceProviderName) {
             $.serviceProviderName = serviceProviderName;
             return this;

@@ -13,28 +13,28 @@ import javax.annotation.Nullable;
 @CustomType
 public final class LBFrontendIPConfigurationResourceSettingsResponse {
     /**
-     * Gets or sets the frontend IP configuration name.
+     * @return Gets or sets the frontend IP configuration name.
      * 
      */
     private final @Nullable String name;
     /**
-     * Gets or sets the IP address of the Load Balancer.This is only specified if a specific
+     * @return Gets or sets the IP address of the Load Balancer.This is only specified if a specific
      * private IP address shall be allocated from the subnet specified in subnetRef.
      * 
      */
     private final @Nullable String privateIpAddress;
     /**
-     * Gets or sets PrivateIP allocation method (Static/Dynamic).
+     * @return Gets or sets PrivateIP allocation method (Static/Dynamic).
      * 
      */
     private final @Nullable String privateIpAllocationMethod;
     /**
-     * Defines reference to subnet.
+     * @return Defines reference to subnet.
      * 
      */
     private final @Nullable SubnetReferenceResponse subnet;
     /**
-     * Gets or sets the csv list of zones.
+     * @return Gets or sets the csv list of zones.
      * 
      */
     private final @Nullable String zones;
@@ -54,38 +54,38 @@ public final class LBFrontendIPConfigurationResourceSettingsResponse {
     }
 
     /**
-     * Gets or sets the frontend IP configuration name.
+     * @return Gets or sets the frontend IP configuration name.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Gets or sets the IP address of the Load Balancer.This is only specified if a specific
+     * @return Gets or sets the IP address of the Load Balancer.This is only specified if a specific
      * private IP address shall be allocated from the subnet specified in subnetRef.
      * 
-    */
+     */
     public Optional<String> privateIpAddress() {
         return Optional.ofNullable(this.privateIpAddress);
     }
     /**
-     * Gets or sets PrivateIP allocation method (Static/Dynamic).
+     * @return Gets or sets PrivateIP allocation method (Static/Dynamic).
      * 
-    */
+     */
     public Optional<String> privateIpAllocationMethod() {
         return Optional.ofNullable(this.privateIpAllocationMethod);
     }
     /**
-     * Defines reference to subnet.
+     * @return Defines reference to subnet.
      * 
-    */
+     */
     public Optional<SubnetReferenceResponse> subnet() {
         return Optional.ofNullable(this.subnet);
     }
     /**
-     * Gets or sets the csv list of zones.
+     * @return Gets or sets the csv list of zones.
      * 
-    */
+     */
     public Optional<String> zones() {
         return Optional.ofNullable(this.zones);
     }

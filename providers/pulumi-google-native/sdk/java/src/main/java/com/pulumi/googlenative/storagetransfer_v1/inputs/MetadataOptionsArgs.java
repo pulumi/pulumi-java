@@ -33,6 +33,10 @@ public final class MetadataOptionsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="acl")
     private @Nullable Output<MetadataOptionsAcl> acl;
 
+    /**
+     * @return Specifies how each object&#39;s ACLs should be preserved for transfers between Google Cloud Storage buckets. If unspecified, the default behavior is the same as ACL_DESTINATION_BUCKET_DEFAULT.
+     * 
+     */
     public Optional<Output<MetadataOptionsAcl>> acl() {
         return Optional.ofNullable(this.acl);
     }
@@ -44,6 +48,10 @@ public final class MetadataOptionsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="gid")
     private @Nullable Output<MetadataOptionsGid> gid;
 
+    /**
+     * @return Specifies how each file&#39;s GID attribute should be handled by the transfer. If unspecified, the default behavior is the same as GID_SKIP when the source is a POSIX file system.
+     * 
+     */
     public Optional<Output<MetadataOptionsGid>> gid() {
         return Optional.ofNullable(this.gid);
     }
@@ -55,6 +63,10 @@ public final class MetadataOptionsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="kmsKey")
     private @Nullable Output<MetadataOptionsKmsKey> kmsKey;
 
+    /**
+     * @return Specifies how each object&#39;s Cloud KMS customer-managed encryption key (CMEK) is preserved for transfers between Google Cloud Storage buckets. If unspecified, the default behavior is the same as KMS_KEY_DESTINATION_BUCKET_DEFAULT.
+     * 
+     */
     public Optional<Output<MetadataOptionsKmsKey>> kmsKey() {
         return Optional.ofNullable(this.kmsKey);
     }
@@ -66,6 +78,10 @@ public final class MetadataOptionsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="mode")
     private @Nullable Output<MetadataOptionsMode> mode;
 
+    /**
+     * @return Specifies how each file&#39;s mode attribute should be handled by the transfer. If unspecified, the default behavior is the same as MODE_SKIP when the source is a POSIX file system.
+     * 
+     */
     public Optional<Output<MetadataOptionsMode>> mode() {
         return Optional.ofNullable(this.mode);
     }
@@ -77,6 +93,10 @@ public final class MetadataOptionsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="storageClass")
     private @Nullable Output<MetadataOptionsStorageClass> storageClass;
 
+    /**
+     * @return Specifies the storage class to set on objects being transferred to Google Cloud Storage buckets. If unspecified, the default behavior is the same as STORAGE_CLASS_DESTINATION_BUCKET_DEFAULT.
+     * 
+     */
     public Optional<Output<MetadataOptionsStorageClass>> storageClass() {
         return Optional.ofNullable(this.storageClass);
     }
@@ -88,6 +108,10 @@ public final class MetadataOptionsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="symlink")
     private @Nullable Output<MetadataOptionsSymlink> symlink;
 
+    /**
+     * @return Specifies how symlinks should be handled by the transfer. If unspecified, the default behavior is the same as SYMLINK_SKIP when the source is a POSIX file system.
+     * 
+     */
     public Optional<Output<MetadataOptionsSymlink>> symlink() {
         return Optional.ofNullable(this.symlink);
     }
@@ -99,6 +123,10 @@ public final class MetadataOptionsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="temporaryHold")
     private @Nullable Output<MetadataOptionsTemporaryHold> temporaryHold;
 
+    /**
+     * @return Specifies how each object&#39;s temporary hold status should be preserved for transfers between Google Cloud Storage buckets. If unspecified, the default behavior is the same as TEMPORARY_HOLD_PRESERVE.
+     * 
+     */
     public Optional<Output<MetadataOptionsTemporaryHold>> temporaryHold() {
         return Optional.ofNullable(this.temporaryHold);
     }
@@ -110,6 +138,10 @@ public final class MetadataOptionsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="uid")
     private @Nullable Output<MetadataOptionsUid> uid;
 
+    /**
+     * @return Specifies how each file&#39;s UID attribute should be handled by the transfer. If unspecified, the default behavior is the same as UID_SKIP when the source is a POSIX file system.
+     * 
+     */
     public Optional<Output<MetadataOptionsUid>> uid() {
         return Optional.ofNullable(this.uid);
     }
@@ -145,74 +177,170 @@ public final class MetadataOptionsArgs extends com.pulumi.resources.ResourceArgs
             $ = new MetadataOptionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param acl Specifies how each object&#39;s ACLs should be preserved for transfers between Google Cloud Storage buckets. If unspecified, the default behavior is the same as ACL_DESTINATION_BUCKET_DEFAULT.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acl(@Nullable Output<MetadataOptionsAcl> acl) {
             $.acl = acl;
             return this;
         }
 
+        /**
+         * @param acl Specifies how each object&#39;s ACLs should be preserved for transfers between Google Cloud Storage buckets. If unspecified, the default behavior is the same as ACL_DESTINATION_BUCKET_DEFAULT.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acl(MetadataOptionsAcl acl) {
             return acl(Output.of(acl));
         }
 
+        /**
+         * @param gid Specifies how each file&#39;s GID attribute should be handled by the transfer. If unspecified, the default behavior is the same as GID_SKIP when the source is a POSIX file system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gid(@Nullable Output<MetadataOptionsGid> gid) {
             $.gid = gid;
             return this;
         }
 
+        /**
+         * @param gid Specifies how each file&#39;s GID attribute should be handled by the transfer. If unspecified, the default behavior is the same as GID_SKIP when the source is a POSIX file system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gid(MetadataOptionsGid gid) {
             return gid(Output.of(gid));
         }
 
+        /**
+         * @param kmsKey Specifies how each object&#39;s Cloud KMS customer-managed encryption key (CMEK) is preserved for transfers between Google Cloud Storage buckets. If unspecified, the default behavior is the same as KMS_KEY_DESTINATION_BUCKET_DEFAULT.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKey(@Nullable Output<MetadataOptionsKmsKey> kmsKey) {
             $.kmsKey = kmsKey;
             return this;
         }
 
+        /**
+         * @param kmsKey Specifies how each object&#39;s Cloud KMS customer-managed encryption key (CMEK) is preserved for transfers between Google Cloud Storage buckets. If unspecified, the default behavior is the same as KMS_KEY_DESTINATION_BUCKET_DEFAULT.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKey(MetadataOptionsKmsKey kmsKey) {
             return kmsKey(Output.of(kmsKey));
         }
 
+        /**
+         * @param mode Specifies how each file&#39;s mode attribute should be handled by the transfer. If unspecified, the default behavior is the same as MODE_SKIP when the source is a POSIX file system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(@Nullable Output<MetadataOptionsMode> mode) {
             $.mode = mode;
             return this;
         }
 
+        /**
+         * @param mode Specifies how each file&#39;s mode attribute should be handled by the transfer. If unspecified, the default behavior is the same as MODE_SKIP when the source is a POSIX file system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(MetadataOptionsMode mode) {
             return mode(Output.of(mode));
         }
 
+        /**
+         * @param storageClass Specifies the storage class to set on objects being transferred to Google Cloud Storage buckets. If unspecified, the default behavior is the same as STORAGE_CLASS_DESTINATION_BUCKET_DEFAULT.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageClass(@Nullable Output<MetadataOptionsStorageClass> storageClass) {
             $.storageClass = storageClass;
             return this;
         }
 
+        /**
+         * @param storageClass Specifies the storage class to set on objects being transferred to Google Cloud Storage buckets. If unspecified, the default behavior is the same as STORAGE_CLASS_DESTINATION_BUCKET_DEFAULT.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageClass(MetadataOptionsStorageClass storageClass) {
             return storageClass(Output.of(storageClass));
         }
 
+        /**
+         * @param symlink Specifies how symlinks should be handled by the transfer. If unspecified, the default behavior is the same as SYMLINK_SKIP when the source is a POSIX file system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder symlink(@Nullable Output<MetadataOptionsSymlink> symlink) {
             $.symlink = symlink;
             return this;
         }
 
+        /**
+         * @param symlink Specifies how symlinks should be handled by the transfer. If unspecified, the default behavior is the same as SYMLINK_SKIP when the source is a POSIX file system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder symlink(MetadataOptionsSymlink symlink) {
             return symlink(Output.of(symlink));
         }
 
+        /**
+         * @param temporaryHold Specifies how each object&#39;s temporary hold status should be preserved for transfers between Google Cloud Storage buckets. If unspecified, the default behavior is the same as TEMPORARY_HOLD_PRESERVE.
+         * 
+         * @return builder
+         * 
+         */
         public Builder temporaryHold(@Nullable Output<MetadataOptionsTemporaryHold> temporaryHold) {
             $.temporaryHold = temporaryHold;
             return this;
         }
 
+        /**
+         * @param temporaryHold Specifies how each object&#39;s temporary hold status should be preserved for transfers between Google Cloud Storage buckets. If unspecified, the default behavior is the same as TEMPORARY_HOLD_PRESERVE.
+         * 
+         * @return builder
+         * 
+         */
         public Builder temporaryHold(MetadataOptionsTemporaryHold temporaryHold) {
             return temporaryHold(Output.of(temporaryHold));
         }
 
+        /**
+         * @param uid Specifies how each file&#39;s UID attribute should be handled by the transfer. If unspecified, the default behavior is the same as UID_SKIP when the source is a POSIX file system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uid(@Nullable Output<MetadataOptionsUid> uid) {
             $.uid = uid;
             return this;
         }
 
+        /**
+         * @param uid Specifies how each file&#39;s UID attribute should be handled by the transfer. If unspecified, the default behavior is the same as UID_SKIP when the source is a POSIX file system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uid(MetadataOptionsUid uid) {
             return uid(Output.of(uid));
         }

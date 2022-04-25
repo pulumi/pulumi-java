@@ -26,6 +26,10 @@ public final class FirewallRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="endIpAddress")
     private @Nullable Output<String> endIpAddress;
 
+    /**
+     * @return Gets or sets the end IP address of the firewall rule range.
+     * 
+     */
     public Optional<Output<String>> endIpAddress() {
         return Optional.ofNullable(this.endIpAddress);
     }
@@ -37,6 +41,10 @@ public final class FirewallRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ruleName")
     private @Nullable Output<String> ruleName;
 
+    /**
+     * @return Gets or sets the name of the firewall rules.
+     * 
+     */
     public Optional<Output<String>> ruleName() {
         return Optional.ofNullable(this.ruleName);
     }
@@ -48,6 +56,10 @@ public final class FirewallRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="startIpAddress")
     private @Nullable Output<String> startIpAddress;
 
+    /**
+     * @return Gets or sets the start IP address of the firewall rule range.
+     * 
+     */
     public Optional<Output<String>> startIpAddress() {
         return Optional.ofNullable(this.startIpAddress);
     }
@@ -78,29 +90,65 @@ public final class FirewallRuleArgs extends com.pulumi.resources.ResourceArgs {
             $ = new FirewallRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endIpAddress Gets or sets the end IP address of the firewall rule range.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endIpAddress(@Nullable Output<String> endIpAddress) {
             $.endIpAddress = endIpAddress;
             return this;
         }
 
+        /**
+         * @param endIpAddress Gets or sets the end IP address of the firewall rule range.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endIpAddress(String endIpAddress) {
             return endIpAddress(Output.of(endIpAddress));
         }
 
+        /**
+         * @param ruleName Gets or sets the name of the firewall rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleName(@Nullable Output<String> ruleName) {
             $.ruleName = ruleName;
             return this;
         }
 
+        /**
+         * @param ruleName Gets or sets the name of the firewall rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleName(String ruleName) {
             return ruleName(Output.of(ruleName));
         }
 
+        /**
+         * @param startIpAddress Gets or sets the start IP address of the firewall rule range.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startIpAddress(@Nullable Output<String> startIpAddress) {
             $.startIpAddress = startIpAddress;
             return this;
         }
 
+        /**
+         * @param startIpAddress Gets or sets the start IP address of the firewall rule range.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startIpAddress(String startIpAddress) {
             return startIpAddress(Output.of(startIpAddress));
         }

@@ -27,6 +27,10 @@ public final class GooglePrivacyDlpV2InfoTypeLimitArgs extends com.pulumi.resour
     @Import(name="infoType")
     private @Nullable Output<GooglePrivacyDlpV2InfoTypeArgs> infoType;
 
+    /**
+     * @return Type of information the findings limit applies to. Only one limit per info_type should be provided. If InfoTypeLimit does not have an info_type, the DLP API applies the limit against all info_types that are found but not specified in another InfoTypeLimit.
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2InfoTypeArgs>> infoType() {
         return Optional.ofNullable(this.infoType);
     }
@@ -38,6 +42,10 @@ public final class GooglePrivacyDlpV2InfoTypeLimitArgs extends com.pulumi.resour
     @Import(name="maxFindings")
     private @Nullable Output<Integer> maxFindings;
 
+    /**
+     * @return Max findings limit for the given infoType.
+     * 
+     */
     public Optional<Output<Integer>> maxFindings() {
         return Optional.ofNullable(this.maxFindings);
     }
@@ -67,20 +75,44 @@ public final class GooglePrivacyDlpV2InfoTypeLimitArgs extends com.pulumi.resour
             $ = new GooglePrivacyDlpV2InfoTypeLimitArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param infoType Type of information the findings limit applies to. Only one limit per info_type should be provided. If InfoTypeLimit does not have an info_type, the DLP API applies the limit against all info_types that are found but not specified in another InfoTypeLimit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder infoType(@Nullable Output<GooglePrivacyDlpV2InfoTypeArgs> infoType) {
             $.infoType = infoType;
             return this;
         }
 
+        /**
+         * @param infoType Type of information the findings limit applies to. Only one limit per info_type should be provided. If InfoTypeLimit does not have an info_type, the DLP API applies the limit against all info_types that are found but not specified in another InfoTypeLimit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder infoType(GooglePrivacyDlpV2InfoTypeArgs infoType) {
             return infoType(Output.of(infoType));
         }
 
+        /**
+         * @param maxFindings Max findings limit for the given infoType.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxFindings(@Nullable Output<Integer> maxFindings) {
             $.maxFindings = maxFindings;
             return this;
         }
 
+        /**
+         * @param maxFindings Max findings limit for the given infoType.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxFindings(Integer maxFindings) {
             return maxFindings(Output.of(maxFindings));
         }

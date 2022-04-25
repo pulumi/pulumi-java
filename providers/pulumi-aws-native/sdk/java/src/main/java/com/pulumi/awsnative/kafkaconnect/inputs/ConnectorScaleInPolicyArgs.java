@@ -24,6 +24,10 @@ public final class ConnectorScaleInPolicyArgs extends com.pulumi.resources.Resou
     @Import(name="cpuUtilizationPercentage", required=true)
     private Output<Integer> cpuUtilizationPercentage;
 
+    /**
+     * @return Specifies the CPU utilization percentage threshold at which connector scale in should trigger.
+     * 
+     */
     public Output<Integer> cpuUtilizationPercentage() {
         return this.cpuUtilizationPercentage;
     }
@@ -52,11 +56,23 @@ public final class ConnectorScaleInPolicyArgs extends com.pulumi.resources.Resou
             $ = new ConnectorScaleInPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cpuUtilizationPercentage Specifies the CPU utilization percentage threshold at which connector scale in should trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpuUtilizationPercentage(Output<Integer> cpuUtilizationPercentage) {
             $.cpuUtilizationPercentage = cpuUtilizationPercentage;
             return this;
         }
 
+        /**
+         * @param cpuUtilizationPercentage Specifies the CPU utilization percentage threshold at which connector scale in should trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpuUtilizationPercentage(Integer cpuUtilizationPercentage) {
             return cpuUtilizationPercentage(Output.of(cpuUtilizationPercentage));
         }

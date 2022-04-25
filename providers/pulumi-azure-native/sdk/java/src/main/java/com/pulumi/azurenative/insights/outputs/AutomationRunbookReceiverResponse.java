@@ -13,37 +13,37 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AutomationRunbookReceiverResponse {
     /**
-     * The Azure automation account Id which holds this runbook and authenticate to Azure resource.
+     * @return The Azure automation account Id which holds this runbook and authenticate to Azure resource.
      * 
      */
     private final String automationAccountId;
     /**
-     * Indicates whether this instance is global runbook.
+     * @return Indicates whether this instance is global runbook.
      * 
      */
     private final Boolean isGlobalRunbook;
     /**
-     * Indicates name of the webhook.
+     * @return Indicates name of the webhook.
      * 
      */
     private final @Nullable String name;
     /**
-     * The name for this runbook.
+     * @return The name for this runbook.
      * 
      */
     private final String runbookName;
     /**
-     * The URI where webhooks should be sent.
+     * @return The URI where webhooks should be sent.
      * 
      */
     private final @Nullable String serviceUri;
     /**
-     * Indicates whether to use common alert schema.
+     * @return Indicates whether to use common alert schema.
      * 
      */
     private final @Nullable Boolean useCommonAlertSchema;
     /**
-     * The resource id for webhook linked to this runbook.
+     * @return The resource id for webhook linked to this runbook.
      * 
      */
     private final String webhookResourceId;
@@ -67,51 +67,51 @@ public final class AutomationRunbookReceiverResponse {
     }
 
     /**
-     * The Azure automation account Id which holds this runbook and authenticate to Azure resource.
+     * @return The Azure automation account Id which holds this runbook and authenticate to Azure resource.
      * 
-    */
+     */
     public String automationAccountId() {
         return this.automationAccountId;
     }
     /**
-     * Indicates whether this instance is global runbook.
+     * @return Indicates whether this instance is global runbook.
      * 
-    */
+     */
     public Boolean isGlobalRunbook() {
         return this.isGlobalRunbook;
     }
     /**
-     * Indicates name of the webhook.
+     * @return Indicates name of the webhook.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The name for this runbook.
+     * @return The name for this runbook.
      * 
-    */
+     */
     public String runbookName() {
         return this.runbookName;
     }
     /**
-     * The URI where webhooks should be sent.
+     * @return The URI where webhooks should be sent.
      * 
-    */
+     */
     public Optional<String> serviceUri() {
         return Optional.ofNullable(this.serviceUri);
     }
     /**
-     * Indicates whether to use common alert schema.
+     * @return Indicates whether to use common alert schema.
      * 
-    */
+     */
     public Optional<Boolean> useCommonAlertSchema() {
         return Optional.ofNullable(this.useCommonAlertSchema);
     }
     /**
-     * The resource id for webhook linked to this runbook.
+     * @return The resource id for webhook linked to this runbook.
      * 
-    */
+     */
     public String webhookResourceId() {
         return this.webhookResourceId;
     }

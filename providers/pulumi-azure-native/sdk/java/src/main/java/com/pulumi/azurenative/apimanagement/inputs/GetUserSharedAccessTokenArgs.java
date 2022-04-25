@@ -21,6 +21,10 @@ public final class GetUserSharedAccessTokenArgs extends com.pulumi.resources.Inv
     @Import(name="expiry", required=true)
     private String expiry;
 
+    /**
+     * @return The Expiry time of the Token. Maximum token expiry time is set to 30 days. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
+     * 
+     */
     public String expiry() {
         return this.expiry;
     }
@@ -32,6 +36,10 @@ public final class GetUserSharedAccessTokenArgs extends com.pulumi.resources.Inv
     @Import(name="keyType", required=true)
     private KeyType keyType;
 
+    /**
+     * @return The Key to be used to generate token for user.
+     * 
+     */
     public KeyType keyType() {
         return this.keyType;
     }
@@ -43,6 +51,10 @@ public final class GetUserSharedAccessTokenArgs extends com.pulumi.resources.Inv
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -54,6 +66,10 @@ public final class GetUserSharedAccessTokenArgs extends com.pulumi.resources.Inv
     @Import(name="serviceName", required=true)
     private String serviceName;
 
+    /**
+     * @return The name of the API Management service.
+     * 
+     */
     public String serviceName() {
         return this.serviceName;
     }
@@ -65,6 +81,10 @@ public final class GetUserSharedAccessTokenArgs extends com.pulumi.resources.Inv
     @Import(name="userId", required=true)
     private String userId;
 
+    /**
+     * @return User identifier. Must be unique in the current API Management service instance.
+     * 
+     */
     public String userId() {
         return this.userId;
     }
@@ -97,26 +117,56 @@ public final class GetUserSharedAccessTokenArgs extends com.pulumi.resources.Inv
             $ = new GetUserSharedAccessTokenArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expiry The Expiry time of the Token. Maximum token expiry time is set to 30 days. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expiry(String expiry) {
             $.expiry = expiry;
             return this;
         }
 
+        /**
+         * @param keyType The Key to be used to generate token for user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyType(KeyType keyType) {
             $.keyType = keyType;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param serviceName The name of the API Management service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             $.serviceName = serviceName;
             return this;
         }
 
+        /**
+         * @param userId User identifier. Must be unique in the current API Management service instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userId(String userId) {
             $.userId = userId;
             return this;
