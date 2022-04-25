@@ -23,6 +23,7 @@ jobs:
         provider:
         - aws
         - aws-native
+        - awsx
         - azure-native
         - docker
         - eks
